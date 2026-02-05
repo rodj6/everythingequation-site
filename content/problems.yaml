@@ -1,0 +1,25 @@
+# This YAML file defines all problems for the Everything Equation platform.
+# Each problem must specify at least:
+# - id: A unique identifier (slug) used in URL and JSON-LD.
+# - title: A human‑readable name of the problem.
+# - claim: A concise claim summarising the core question or hypothesis.
+# - status: One of [draft, public].
+# - papers: A list of associated paper IDs (matching entries in papers.yaml).
+#
+# Additional optional fields:
+# - statement: A Markdown description of the problem beyond the claim.
+# - connections: A list of related problem IDs.
+# - monograph: A section number or key mapping this problem into the monograph.
+#
+# Example entry:
+#
+# - id: example-problem
+#   title: Example Problem
+#   claim: Short description of the problem.
+#   statement: |
+#     A longer multi‑line description of the problem goes here.
+#   papers:
+#     - example-paper
+#   connections:
+#     - another-problem
+#   status: draft

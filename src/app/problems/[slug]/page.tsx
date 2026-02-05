@@ -1,0 +1,106 @@
+import { notFound } from 'next/navigation';
+import { loadProblems, loadPapers } from '@/lib/registry';
+import Card from '@/components/card';
+import { MdxWrapper } from '@/components/mdx-components';
+
+export const dynamicParams = true;
+
+/**
+ * Generate static params for all public problems. Draft problems are
+ * compiled but excluded from the site navigation and sitemap. By
+ * generating params explicitly we enable static generation of problem
+ * pages while still allowing dynamic fallback for new entries.
+ */
+export async function generateStaticParams() {
+  const problems = await loadProblems();
+  return problems
+    .filter((p) => p.status === 'public')
+    .map((p) => ({ slug: p.id }));
+}
+
+/**
+ * Problem detail page. Displays the claim, statement, supporting papers
+ * and connections. Manual MDX content is rendered if present.
+ */
+export default async function ProblemDetail({ params }: { params: { slug: string } }) {
+  const slug = params.slug;
+  const problems = await loadProblems();
+  const problem = problems.find((p) => p.id === slug);
+  if (!problem) {
+    return notFound();
+  }
+  // If problem is draft we still build the page but not accessible via nav.
+  const papers = await loadPapers();
+  const supportedPapers = papers.filter((paper) => paper.problems?.includes(problem.id) && paper.status === 'public');
+  // Determine connections to other problems.
+  const connections = (problem.connections || []).map((id) => problems.find((p) => p.id === id)).filter(Boolean) as typeof problems;
+  // Attempt to import manual MDX if it exists.
+  let ManualComponent: React.ComponentType | null = null;
+  if (problem.manualPath) {
+    try {
+      // Dynamic import relative to the compiled project root. This pattern
+      // allows Next.js to include all MDX files under content/manual.
+      const mod = await import(`../../../../content/manual/problems/${slug}.mdx`);
+      ManualComponent = mod.default;
+    } catch (err) {
+      ManualComponent = null;
+    }
+  }
+  return (
+    <article className="prose dark:prose-invert max-w-none">
+      <h1>{problem.title}</h1>
+      <p className="lead">{problem.claim}</p>
+      {problem.statement && <div dangerouslySetInnerHTML={{ __html: problem.statement }} />}
+      {ManualComponent && (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold">Notes</h2>
+          <MdxWrapper>
+            <ManualComponent />
+          </MdxWrapper>
+        </section>
+      )}
+      {supportedPapers.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold">Supporting Papers</h2>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {supportedPapers.map((paper) => (
+              <Card
+                key={paper.id}
+                href={`/papers/${paper.id}`}
+                title={paper.title}
+                description={paper.metadata?.description?.substring(0, 120) || ''}
+              />
+            ))}
+          </div>
+        </section>
+      )}
+      {connections.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold">Related Problems</h2>
+          <ul>
+            {connections.map((p) => (
+              <li key={p.id}>
+                <a href={`/problems/${p.id}`} className="text-blue-600 hover:text-blue-800 underline">
+                  {p.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {/* Structured data for the problem page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ResearchProject',
+            'name': problem.title,
+            'url': `https://everythingequation.com/problems/${problem.id}`,
+            'description': problem.claim,
+          }),
+        }}
+      />
+    </article>
+  );
+}

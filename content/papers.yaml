@@ -1,0 +1,15 @@
+# This YAML file defines all scholarly papers curated for Everything Equation.
+# Each paper must specify at least:
+# - id: A unique identifier (slug) used in URL and JSON-LD.
+# - title: The official title of the paper.
+# - doi: The Digital Object Identifier (DOI) of the paper (optional if zenodoId is provided).
+# - zenodoId: A Zenodo record ID for retrieving metadata directly from Zenodo (optional if doi is provided).
+# - authors: A list of author names (optional – metadata will be fetched from Zenodo if omitted).
+# - status: One of [draft, public].
+# - problems: A list of problem IDs supported or addressed by the paper.
+# - role: A string describing the paper’s role in the monograph (optional).
+# - monograph: A section number or key mapping this paper into the monograph (optional).
+#
+# The registry loader will fetch metadata from Zenodo at build time and cache it under `.cache/zenodo.json`. If
+# both `doi` and `zenodoId` are omitted, the loader will attempt to infer metadata based solely on the ID,
+# which is discouraged. Draft papers are compiled but excluded from navigation and search results.
