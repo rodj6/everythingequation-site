@@ -40,13 +40,54 @@ export interface ProblemEntry {
 }
 
 export interface PaperEntry {
+  /**
+   * Canonical slug used in the URL (e.g. `zenodo-18081205`). Derived
+   * from the original registry identifier by stripping prefixes and
+   * replacing colons with hyphens.
+   */
   id: string;
-  title: string;
+  /**
+   * Original registry identifier (e.g. `paper:zenodo:18081205`).
+   */
+  rawId: string;
+  /**
+   * Optional DOI associated with the paper. Not always present in the
+   * registry but may be inferred from metadata.
+   */
   doi?: string;
+  /**
+   * The Zenodo record ID used to fetch metadata (e.g. `18081205`).
+   */
   zenodoId?: string;
-  authors?: string[];
+  /**
+   * List of problem slugs supported by this paper (derived from the
+   * `supports` field in the registry). These slugs correspond to
+   * `ProblemEntry.id` values.
+   */
   problems?: string[];
+  /**
+   * Optional list of author names if provided directly in the registry.
+   * Otherwise derived from Zenodo metadata.
+   */
+  authors?: string[];
+  /**
+   * The role of the paper within the corpus (e.g. foundational,
+   * application, etc.).
+   */
   role?: string;
+  /**
+   * Flag indicating whether the paper should be highlighted on the
+   * homepage or other contexts. Derived from `featured` in the registry.
+   */
+  featured?: boolean;
+  /**
+   * Optional notes attached to the paper registry entry.
+   */
+  notes?: string;
+  /**
+   * Monograph section, if any (not present in current registry but
+   * included for future compatibility).
+   */
   monograph?: string;
   status: PaperStatus;
 }
@@ -151,17 +192,42 @@ async function fetchZenodo(record: string): Promise<ZenodoMetadata | null> {
  * executed server‑side.
  */
 export async function loadPapers(): Promise<LoadedPaper[]> {
-  const entries = await loadYamlFile<PaperEntry>('content/papers.yaml');
+  // Read the raw YAML document. Support both array and object formats.
+  const fullPath = path.join(ROOT, 'content/papers.yaml');
+  const source = await fs.readFile(fullPath, 'utf8');
+  const doc = yaml.load(source) as any;
+  let items: any[] = [];
+  if (Array.isArray(doc)) {
+    items = doc;
+  } else if (doc && typeof doc === 'object' && Array.isArray(doc.papers)) {
+    items = doc.papers;
+  }
   const cache = await loadZenodoCache();
   let changed = false;
   const loaded: LoadedPaper[] = [];
-  for (const entry of entries) {
+  for (const raw of items) {
+    // Derive slug from raw.id by stripping `paper:` prefix and replacing
+    // colons with hyphens.
+    const rawId: string = raw.id || '';
+    let slug = rawId;
+    if (slug.startsWith('paper:')) {
+      slug = slug.slice('paper:'.length);
+    }
+    slug = slug.replace(/:/g, '-');
+    const zenodoId: string | undefined = raw.zenodo?.toString() || raw.zenodoId;
+    const doi: string | undefined = raw.doi;
+    const status: PaperStatus = raw.visibility === 'public' ? 'public' : 'draft';
+    const problems: string[] | undefined = raw.supports
+      ? (raw.supports as string[]).map((p) => (p.startsWith('problem:') ? p.slice('problem:'.length) : p))
+      : raw.problems;
+    const role: string | undefined = raw.role;
+    const featured: boolean | undefined = raw.featured;
+    const notes: string | undefined = raw.notes;
+    // Look up Zenodo metadata using the Zenodo ID or DOI.
     let metadata: ZenodoMetadata | null = null;
-    const key = entry.id;
-    // Determine which record identifier to use.
-    const record = entry.zenodoId || entry.doi;
+    const key = slug;
+    const record = zenodoId || doi;
     if (record) {
-      // Use cached metadata if available.
       if (cache[key]) {
         metadata = cache[key];
       } else {
@@ -172,11 +238,20 @@ export async function loadPapers(): Promise<LoadedPaper[]> {
         }
       }
     }
-    // Compute manual MDX path if present.
-    const manualPath = await resolveManualPath('papers', entry.id);
+    const entry: PaperEntry = {
+      id: slug,
+      rawId,
+      doi,
+      zenodoId,
+      problems,
+      role,
+      featured,
+      notes,
+      status,
+    };
+    const manualPath = await resolveManualPath('papers', slug);
     loaded.push({ ...entry, metadata, manualPath });
   }
-  // Save cache if there were modifications.
   if (changed) {
     await saveZenodoCache(cache);
   }
@@ -268,7 +343,7 @@ export async function generateGraph() {
     graph.push({
       '@type': 'ScholarlyArticle',
       '@id': `/papers/${paper.id}`,
-      name: paper.title,
+      name: paper.metadata?.title ?? paper.role ?? paper.rawId,
       url: paper.metadata?.url ?? null,
       doi: paper.metadata?.doi ?? paper.doi ?? null,
       creator: paper.metadata?.creators ?? paper.authors ?? [],
@@ -349,8 +424,9 @@ export async function generateFeed(baseUrl: string): Promise<string> {
     if (paper.status !== 'public') continue;
     const link = `${baseUrl}/papers/${paper.id}`;
     const pubDate = paper.metadata?.published ?? updated;
+    const title = paper.metadata?.title ?? paper.role ?? paper.rawId;
     entries.push(
-      `  <entry>\n    <id>${link}</id>\n    <title>${escapeXml(paper.title)}</title>\n    <updated>${pubDate}</updated>\n    <link href="${link}" />\n    <summary>${escapeXml(paper.metadata?.description ?? '')}</summary>\n  </entry>`
+      `  <entry>\n    <id>${link}</id>\n    <title>${escapeXml(title)}</title>\n    <updated>${pubDate}</updated>\n    <link href="${link}" />\n    <summary>${escapeXml(paper.metadata?.description ?? '')}</summary>\n  </entry>`
     );
   }
   return `<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n  <id>${feedId}</id>\n  <title>Everything Equation Publications</title>\n  <updated>${updated}</updated>\n  <link href="${baseUrl}/feed.xml" rel="self" />\n  <author>\n    <name>Everything Equation</name>\n  </author>\n${entries.join('\n')}\n</feed>`;

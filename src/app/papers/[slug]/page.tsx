@@ -33,33 +33,46 @@ export default async function PaperDetail({ params }: { params: { slug: string }
   }
   return (
     <article className="prose dark:prose-invert max-w-none">
-      <h1>{paper.title}</h1>
+      {/* Use metadata title if available, fall back to role or rawId */}
+      <h1>{paper.metadata?.title ?? paper.role ?? paper.rawId}</h1>
       {paper.metadata?.creators && paper.metadata.creators.length > 0 && (
         <p><strong>Authors:</strong> {paper.metadata.creators.join(', ')}</p>
       )}
-      {paper.doi && (
+      {(paper.doi || paper.metadata?.doi) && (
         <p>
           <strong>DOI:</strong>{' '}
-          <a href={`https://doi.org/${paper.doi}`} className="underline text-blue-600 hover:text-blue-800">
-            {paper.doi}
+          <a
+            href={`https://doi.org/${paper.doi ?? paper.metadata?.doi}`}
+            className="underline text-blue-600 hover:text-blue-800"
+          >
+            {paper.doi ?? paper.metadata?.doi}
           </a>
         </p>
       )}
       {paper.metadata?.url && (
         <p>
           <strong>Zenodo:</strong>{' '}
-          <a href={paper.metadata.url} className="underline text-blue-600 hover:text-blue-800">View record</a>
+          <a href={paper.metadata.url} className="underline text-blue-600 hover:text-blue-800">
+            View record
+          </a>
         </p>
       )}
       {paper.metadata?.files && paper.metadata.files.length > 0 && (
         <p>
           <strong>PDF:</strong>{' '}
-          <a href={paper.metadata.files[0].url} className="underline text-blue-600 hover:text-blue-800">Download</a>
+          <a href={paper.metadata.files[0].url} className="underline text-blue-600 hover:text-blue-800">
+            Download
+          </a>
         </p>
       )}
       {paper.role && (
         <p>
           <strong>Role:</strong> {paper.role}
+        </p>
+      )}
+      {paper.notes && (
+        <p>
+          <strong>Notes:</strong> {paper.notes}
         </p>
       )}
       {paper.monograph && (
@@ -92,7 +105,7 @@ export default async function PaperDetail({ params }: { params: { slug: string }
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ScholarlyArticle',
-            'name': paper.title,
+            'name': paper.metadata?.title ?? paper.role ?? paper.rawId,
             'url': `https://everythingequation.com/papers/${paper.id}`,
             'identifier': paper.doi ?? paper.metadata?.doi ?? undefined,
             'author': paper.metadata?.creators ?? paper.authors ?? [],

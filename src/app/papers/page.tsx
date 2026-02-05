@@ -16,14 +16,14 @@ export default async function PapersPage() {
         <p>No public papers defined.</p>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {publicPapers.map((p) => (
-            <Card
-              key={p.id}
-              href={`/papers/${p.id}`}
-              title={p.title}
-              description={p.metadata?.description?.substring(0, 120) || ''}
-            />
-          ))}
+        {publicPapers.map((p) => (
+          <Card
+            key={p.id}
+            href={`/papers/${p.id}`}
+            title={p.metadata?.title ?? p.role ?? p.rawId}
+            description={p.metadata?.description?.substring(0, 120) || ''}
+          />
+        ))}
         </div>
       )}
     </div>
