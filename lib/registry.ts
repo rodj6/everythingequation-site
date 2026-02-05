@@ -6,13 +6,36 @@ export type ProblemStatus = 'draft' | 'public';
 export type PaperStatus = 'draft' | 'public';
 
 export interface ProblemEntry {
+  /**
+   * Internal identifier used as the slug for the URL. This is derived
+   * from the `slug` field in the registry. Historically `id` served
+   * double duty as both slug and identifier; with the new registry
+   * format we use the slug as the canonical path segment.
+   */
   id: string;
+  /**
+   * Original registry identifier (e.g. `problem:standard-model`).
+   */
+  rawId: string;
   title: string;
+  /**
+   * Short summary or claim describing the problem. Derived from
+   * `direct_answer` in the registry.
+   */
   claim: string;
-  statement?: string;
-  papers?: string[];
-  connections?: string[];
+  /** Optional domain tag (e.g. Physics, Mathematics/PDE). */
+  domain?: string;
+  /** Optional maturity or completion level (e.g. complete). */
+  maturity?: string;
+  /** Optional list of monograph references (strings like "Appendix H.1"). */
+  monograph_refs?: string[];
+  /** A single monograph section derived from the first reference. */
   monograph?: string;
+  /** List of associated papers or Zenodo identifiers. */
+  papers?: string[];
+  /** List of related problem slugs. */
+  connections?: string[];
+  /** Draft or public. */
   status: ProblemStatus;
 }
 
@@ -161,10 +184,52 @@ export async function loadPapers(): Promise<LoadedPaper[]> {
 }
 
 export async function loadProblems(): Promise<LoadedProblem[]> {
-  const entries = await loadYamlFile<ProblemEntry>('content/problems.yaml');
+  // Read the raw YAML document. Support both array and object formats.
+  const fullPath = path.join(ROOT, 'content/problems.yaml');
+  const source = await fs.readFile(fullPath, 'utf8');
+  const doc = yaml.load(source) as any;
+  let items: any[] = [];
+  if (Array.isArray(doc)) {
+    items = doc;
+  } else if (doc && typeof doc === 'object' && Array.isArray(doc.problems)) {
+    items = doc.problems;
+  }
   const loaded: LoadedProblem[] = [];
-  for (const entry of entries) {
-    const manualPath = await resolveManualPath('problems', entry.id);
+  for (const raw of items) {
+    // Derive slug and id. Prefer explicit slug, fallback to id.
+    const slug: string = raw.slug || raw.id || '';
+    const rawId: string = raw.id || slug;
+    // Map fields.
+    const domain: string | undefined = raw.domain;
+    const maturity: string | undefined = raw.maturity;
+    const claim: string = raw.direct_answer || raw.claim || '';
+    const monographRefs: string[] | undefined = raw.monograph_refs;
+    const monograph: string | undefined = monographRefs && monographRefs.length > 0 ? monographRefs[0] : undefined;
+    const supportedBy: string[] | undefined = raw.supported_by || raw.papers;
+    // Map connection hints: convert 'problem:slug' to slug if prefix present
+    let connections: string[] | undefined;
+    if (raw.connections_hint) {
+      connections = raw.connections_hint.map((c: string) => {
+        return c.startsWith('problem:') ? c.slice('problem:'.length) : c;
+      });
+    } else if (raw.connections) {
+      connections = raw.connections;
+    }
+    const status: ProblemStatus = raw.status || 'draft';
+    const entry: ProblemEntry = {
+      id: slug,
+      rawId,
+      title: raw.title || '',
+      claim,
+      domain,
+      maturity,
+      monograph_refs: monographRefs,
+      monograph,
+      papers: supportedBy,
+      connections,
+      status,
+    };
+    const manualPath = await resolveManualPath('problems', slug);
     loaded.push({ ...entry, manualPath });
   }
   return loaded;

@@ -31,7 +31,11 @@ export default async function ProblemDetail({ params }: { params: { slug: string
   }
   // If problem is draft we still build the page but not accessible via nav.
   const papers = await loadPapers();
-  const supportedPapers = papers.filter((paper) => paper.problems?.includes(problem.id) && paper.status === 'public');
+  const supportedPapers = papers.filter((paper) => {
+    if (paper.status !== 'public') return false;
+    const list = paper.problems || [];
+    return list.includes(problem.rawId) || list.includes(problem.id);
+  });
   // Determine connections to other problems.
   const connections = (problem.connections || []).map((id) => problems.find((p) => p.id === id)).filter(Boolean) as typeof problems;
   // Attempt to import manual MDX if it exists.
@@ -50,7 +54,14 @@ export default async function ProblemDetail({ params }: { params: { slug: string
     <article className="prose dark:prose-invert max-w-none">
       <h1>{problem.title}</h1>
       <p className="lead">{problem.claim}</p>
-      {problem.statement && <div dangerouslySetInnerHTML={{ __html: problem.statement }} />}
+      {/* Display optional metadata */}
+      <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">
+        {problem.domain && <span><strong>Domain:</strong> {problem.domain}</span>}{' '}
+        {problem.maturity && <span><strong>Maturity:</strong> {problem.maturity}</span>}{' '}
+        {problem.monograph_refs && problem.monograph_refs.length > 0 && (
+          <span><strong>Monograph:</strong> {problem.monograph_refs.join(', ')}</span>
+        )}
+      </div>
       {ManualComponent && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Notes</h2>

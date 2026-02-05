@@ -1,25 +1,144 @@
-# This YAML file defines all problems for the Everything Equation platform.
-# Each problem must specify at least:
-# - id: A unique identifier (slug) used in URL and JSON-LD.
-# - title: A human‑readable name of the problem.
-# - claim: A concise claim summarising the core question or hypothesis.
-# - status: One of [draft, public].
-# - papers: A list of associated paper IDs (matching entries in papers.yaml).
-#
-# Additional optional fields:
-# - statement: A Markdown description of the problem beyond the claim.
-# - connections: A list of related problem IDs.
-# - monograph: A section number or key mapping this problem into the monograph.
-#
-# Example entry:
-#
-# - id: example-problem
-#   title: Example Problem
-#   claim: Short description of the problem.
-#   statement: |
-#     A longer multi‑line description of the problem goes here.
-#   papers:
-#     - example-paper
-#   connections:
-#     - another-problem
-#   status: draft
+version: 1
+problems:
+  - id: problem:standard-model
+    slug: standard-model
+    title: Standard Model of Particle Physics
+    domain: Physics
+    status: public
+    maturity: complete
+    direct_answer: >
+      Law-level derivation of the Standard Model gauge group, fermion content, anomaly cancellation,
+      and family multiplicity from Tier–0 closure and admissibility.
+    monograph_refs:
+      - "Appendix H.1"
+    supported_by:
+      - zenodo:18474556
+      - zenodo:18475611
+      - zenodo:UNKNOWN_GENERATIONS_DOI
+    connections_hint:
+      - problem:grand-unified-theory
+      - problem:mathematical-foundations
+
+  - id: problem:grand-unified-theory
+    slug: grand-unified-theory
+    title: Grand Unified Theory
+    domain: Physics
+    status: public
+    maturity: complete
+    direct_answer: >
+      Structural derivation of an admissible grand unified gauge group via determinant closure and law-level rigidity.
+    monograph_refs:
+      - "Appendix H.1"
+    supported_by:
+      - zenodo:18474556
+    connections_hint:
+      - problem:standard-model
+      - problem:quantum-gravity
+
+  - id: problem:quantum-gravity
+    slug: quantum-gravity
+    title: Quantum Gravity and Spacetime Structure
+    domain: Physics
+    status: public
+    maturity: complete
+    direct_answer: >
+      Lawful emergence of spacetime dimensionality, null structure, and causal geometry via recursive gauge collapse
+      and stability selection.
+    monograph_refs:
+      - "Appendix I.4"
+      - "Appendix H.2"
+    supported_by:
+      - zenodo:18384959
+      - zenodo:18230232
+    connections_hint:
+      - problem:cosmological-constant
+      - problem:grand-unified-theory
+
+  - id: problem:cosmological-constant
+    slug: cosmological-constant
+    title: Cosmological Constant Problem
+    domain: Physics
+    status: public
+    maturity: complete
+    direct_answer: >
+      Vacuum energy control via the canonical Λ-field and universal spectral budget constraints.
+    monograph_refs:
+      - "Appendix J.3"
+    supported_by:
+      - zenodo:18092342
+      - zenodo:18092618
+    connections_hint:
+      - problem:arrow-of-time
+      - problem:quantum-gravity
+
+  - id: problem:arrow-of-time
+    slug: arrow-of-time
+    title: Arrow of Time and Time Asymmetry
+    domain: Physics
+    status: public
+    maturity: complete
+    direct_answer: >
+      Emergence of irreversible time asymmetry from spectral thermodynamics and law-level energy constraints.
+    monograph_refs:
+      - "Appendix I.3"
+    supported_by:
+      - zenodo:17545541
+      - zenodo:17548423
+    connections_hint:
+      - problem:cosmological-constant
+
+  - id: problem:navier-stokes
+    slug: navier-stokes
+    title: Navier–Stokes Global Regularity
+    domain: Mathematics/PDE
+    status: public
+    maturity: complete
+    direct_answer: >
+      Closure mechanism controlling high-frequency surplus yields regularity and boundedness in 3D Navier–Stokes.
+    monograph_refs:
+      - "Appendix I.1"
+      - "Appendix I.2"
+    supported_by:
+      - zenodo:18371918
+      - zenodo:18371954
+      - zenodo:18372004
+      - zenodo:18372079
+      - zenodo:18372181
+      - zenodo:18372250
+      - zenodo:18356771
+    connections_hint:
+      - problem:mathematical-foundations
+
+  - id: problem:mathematical-foundations
+    slug: mathematical-foundations
+    title: Foundations of Mathematical Lawhood
+    domain: Mathematics/Foundations
+    status: public
+    maturity: complete
+    direct_answer: >
+      Mathematics arises as closure-stable, fixed-point admissible structure governed by the Everything Equation.
+    monograph_refs:
+      - "Appendix J.2"
+    supported_by:
+      - zenodo:17813117
+      - zenodo:18344573
+    connections_hint:
+      - problem:standard-model
+      - problem:navier-stokes
+
+  - id: problem:lawhood
+    slug: lawhood
+    title: What Is a Physical or Mathematical Law?
+    domain: Foundations
+    status: public
+    maturity: complete
+    direct_answer: >
+      Lawhood is characterized by ΩΔ∂-closure, admissibility, and fixed-point stability rather than phenomenological fit.
+    monograph_refs:
+      - "Appendix J.1"
+    supported_by:
+      - zenodo:18081205
+      - zenodo:18080442
+    connections_hint:
+      - problem:mathematical-foundations
+      - problem:standard-model
