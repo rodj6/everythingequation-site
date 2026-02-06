@@ -115,4 +115,4 @@ export default async function ProblemDetail({ params }: { params: { slug: string
     </article>
   );
 }
-title={paper.metadata
+=
