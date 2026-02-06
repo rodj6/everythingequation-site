@@ -54,7 +54,7 @@ export default async function MonographPage() {
                         <Card
                           key={paper.id}
                           href={`/papers/${paper.id}`}
-                          title={paper.title}
+                          title={paper.metadata?.title ?? paper.role ?? paper.id}
                           description={paper.metadata?.description?.substring(0, 120) || ''}
                         />
                       ))}
