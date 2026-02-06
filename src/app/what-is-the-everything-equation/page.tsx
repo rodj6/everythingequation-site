@@ -1,4 +1,5 @@
 import { MdxWrapper } from '@/components/mdx-components';
+export const dynamic = 'force-static';
 
 export default async function WhatIsTheEverythingEquationPage() {
   let ManualComponent: React.ComponentType | null = null;
