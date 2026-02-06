@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="border-b border-slate-200 dark:border-slate-700">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-        <h1 className="text-2xl font-bold"><Link href="/">Everything Equation</Link></h1>
+        <h1 className="text-2xl font-bold"><Link href="/">The Everything Equation</Link></h1>
         <nav className="hidden md:flex space-x-4">
           {navItems.map((item) => {
             const active = pathname === item.href;
