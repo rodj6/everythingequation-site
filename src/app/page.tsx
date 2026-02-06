@@ -28,7 +28,7 @@ export default async function HomePage() {
             <section>
       <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
         <h3 className="text-2xl font-semibold mb-2">
-          What is the Everything Equation? <span className="font-mono">E = …</span>
+          What is the Everything Equation? <span className="font-mono">E =𝓏 = Ω Δ ∂ (𝓏)n>
         </h3>
         <p className="mb-4">
           The Everything Equation is a unifying structural principle proposed to govern physical law, mathematics, and information under a single closure condition.
