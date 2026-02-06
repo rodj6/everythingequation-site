@@ -17,7 +17,7 @@ export default async function HomePage() {
   const latestPapers = publicPapers.slice(0, 3);
   return (
     <div className="space-y-12">
-      // src/app/page.tsx
+      
   <section className="text-center">
   <h2 className="text-3xl font-bold mb-2">
     Welcome to the Everything Equation</h2>
