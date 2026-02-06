@@ -1,14 +1,12 @@
 # Overview
 
-# The Everything Equation is a **lawhood criterion**: a structural condition that a candidate description must satisfy to qualify as an **admissible law** (as opposed to a contingent model, a gauge artifact, a presentation-dependent formalism, or a non-robust construction).
+The Everything Equation is a **lawhood criterion**: a structural condition that a candidate description must satisfy to qualify as an **admissible law** (as opposed to a contingent model, a gauge artifact, a presentation-dependent formalism, or a non-robust construction).
 
 It is **not** an equation of motion. It does not introduce new fields by itself. Instead, it specifies a fixed-point requirement under three universal operations:
 
-**∂**: boundary normalization (canonical restriction / removal of representation artifacts)
-
-**Δ**: persistence filtering (elimination of non-stable structure)
-
-**Ω**: closure completion (reflective completion under admissible re-expression)
+* **∂**: boundary normalization (canonical restriction / removal of representation artifacts)
+* **Δ**: persistence filtering (elimination of non-stable structure)
+* **Ω**: closure completion (reflective completion under admissible re-expression)
 
 The result is a compact principle: a lawful structure is one that is **invariant** under boundary normalization, persistence filtering, and closure completion.
 
@@ -18,27 +16,23 @@ The result is a compact principle: a lawful structure is one that is **invariant
 
 ## Canonical form (exact)
 
-# > **𝓛 = Ω Δ ∂ (𝓛)**
->
->
+> **𝓛 = Ω Δ ∂ (𝓛)**
 
 ## LaTeX form (exact)
 
-# [\mathcal{L} = \Omega \Delta \partial(\mathcal{L})]
+[
+\mathcal{L} = \Omega \Delta \partial(\mathcal{L})
+]
 
 ## Fixed-point reading
 
-# The equation is a **fixed-point condition**. A candidate law (\mathcal{L}) is admissible if applying the pipeline “boundary → persistence → closure” returns the same law:
+The equation is a **fixed-point condition**. A candidate law (\mathcal{L}) is admissible if applying the pipeline “boundary → persistence → closure” returns the same law:
 
-Start with (\mathcal{L})
-
-Apply (\partial(\mathcal{L}))
-
-Apply (\Delta(\partial(\mathcal{L})))
-
-Apply (\Omega(\Delta(\partial(\mathcal{L}))))
-
-Admissibility means you end where you started
+1. Start with (\mathcal{L})
+2. Apply (\partial(\mathcal{L}))
+3. Apply (\Delta(\partial(\mathcal{L})))
+4. Apply (\Omega(\Delta(\partial(\mathcal{L}))))
+5. Admissibility means you end where you started
 
 In other words: **admissible law = fixed point of (\Omega\Delta\partial)**.
 
@@ -46,99 +40,83 @@ In other words: **admissible law = fixed point of (\Omega\Delta\partial)**.
 
 # What “closure” means here
 
-# In this framework, “closure” is a precise structural idea: **complete the candidate under the admissible transformations of the domain**, so that the result is invariant under re-expression and stable under completion.
+In this framework, “closure” is a precise structural idea: **complete the candidate under the admissible transformations of the domain**, so that the result is invariant under re-expression and stable under completion.
 
 There are three distinct roles:
 
 ## 1) Boundary normalization: ∂
 
-# (\partial) enforces a canonical boundary description and removes representation-dependent degrees of freedom. In physics this corresponds to canonical boundary data / gauge-normalized structure; in mathematics it corresponds to representation-independence under admissible re-presentations.
+(\partial) enforces a canonical boundary description and removes representation-dependent degrees of freedom. In physics this corresponds to canonical boundary data / gauge-normalized structure; in mathematics it corresponds to representation-independence under admissible re-presentations.
 
 ## 2) Persistence filtering: Δ
 
-# (\Delta) removes structure that does not persist under the domain’s notion of stabilization.
+(\Delta) removes structure that does not persist under the domain’s notion of stabilization.
 
-In physics, (\Delta) corresponds to persistence under collapse / coarse-graining / record formation: non-persistent structure is filtered out.
-
-In mathematics, the analogous role is **inferential persistence**: what survives admissible weakening, proof-environment variation, and re-expression.
+* In physics, (\Delta) corresponds to persistence under collapse / coarse-graining / record formation: non-persistent structure is filtered out.
+* In mathematics, the analogous role is **inferential persistence**: what survives admissible weakening, proof-environment variation, and re-expression.
 
 ## 3) Closure completion: Ω
 
-# (\Omega) completes the surviving structure under admissible transformations so that the result is globally consistent and stable under re-expression. Categorically, (\Omega) is treated as a **reflective completion**: it maps a candidate to the “closest” closed object satisfying the closure constraints.
+(\Omega) completes the surviving structure under admissible transformations so that the result is globally consistent and stable under re-expression. Categorically, (\Omega) is treated as a **reflective completion**: it maps a candidate to the “closest” closed object satisfying the closure constraints.
 
 ## Why the three-stage pipeline matters
 
-# The key point is that closure is not taken to be “add everything”; it is “complete under admissibility.” The fixed-point criterion enforces:
+The key point is that closure is not taken to be “add everything”; it is “complete under admissibility.” The fixed-point criterion enforces:
 
-invariance under presentation changes ((\partial))
-
-stability under persistence selection ((\Delta))
-
-completion under admissible re-expression ((\Omega))
+* invariance under presentation changes ((\partial))
+* stability under persistence selection ((\Delta))
+* completion under admissible re-expression ((\Omega))
 
 ---
 
 ## Key Terms (glossary)
 
-# **Ω (Omega)**: closure / completion operator. Produces the reflectively completed, admissible-closure form of a candidate.
-
-**Δ (Delta)**: persistence filter. Removes non-stable / non-persistent structure under the domain’s stabilization notion.
-
-**∂ (Boundary operator)**: boundary normalization / canonical restriction. Removes representation artifacts and enforces canonical boundary form.
-
-**𝓛 (law object)**: the candidate “law-level structure” being tested for admissibility under (\Omega\Delta\partial).
-
-**fixed point**: an object (X) such that (X = F(X)) for a specified map (F); here (F = \Omega\Delta\partial).
-
-**admissibility**: qualification as “lawful” in the framework; operationally, being a fixed point of (\Omega\Delta\partial) (under the chosen domain instantiation).
+* **Ω (Omega)**: closure / completion operator. Produces the reflectively completed, admissible-closure form of a candidate.
+* **Δ (Delta)**: persistence filter. Removes non-stable / non-persistent structure under the domain’s stabilization notion.
+* **∂ (Boundary operator)**: boundary normalization / canonical restriction. Removes representation artifacts and enforces canonical boundary form.
+* **𝓛 (law object)**: the candidate “law-level structure” being tested for admissibility under (\Omega\Delta\partial).
+* **fixed point**: an object (X) such that (X = F(X)) for a specified map (F); here (F = \Omega\Delta\partial).
+* **admissibility**: qualification as “lawful” in the framework; operationally, being a fixed point of (\Omega\Delta\partial) (under the chosen domain instantiation).
 
 ---
 
 # How to use this site (Problems vs Papers vs Monograph)
 
-# This site is organized around two core content types:
+This site is organized around two core content types:
 
 ## Problems
 
-# Major target problems (e.g., Standard Model structure, quantum gravity structure, unification, foundational mathematics). These pages describe what is being resolved and what the resolution must account for.
+Major target problems (e.g., Standard Model structure, quantum gravity structure, unification, foundational mathematics). These pages describe what is being resolved and what the resolution must account for.
 
 ## Papers
 
-# Individual scholarly papers that support one or more Problems. These are the detailed technical artifacts: definitions, theorems, constructions, derivations, computational pipelines, and falsifiers/anchors where applicable.
+Individual scholarly papers that support one or more Problems. These are the detailed technical artifacts: definitions, theorems, constructions, derivations, computational pipelines, and falsifiers/anchors where applicable.
 
 There is also a third resource:
 
 ## Monograph
 
-# The monograph is the integrated “engine + map” view of the program: it explains how the pieces compose into a unified framework and how the pipeline is intended to be used across domains.
+The monograph is the integrated “engine + map” view of the program: it explains how the pieces compose into a unified framework and how the pipeline is intended to be used across domains.
 
 **Navigation:**
 
-Problems: **/problems**
-
-Papers: **/papers**
-
-Monograph: **/monograph**
+* Problems: **/problems**
+* Papers: **/papers**
+* Monograph: **/monograph**
 
 ---
 
 # What this framework claims to resolve (high-level list)
 
-# This page is not a complete index of results. The site contains separate Problem and Paper pages for each technical development. At the highest level, the framework is positioned to address:
+This page is not a complete index of results. The site contains separate Problem and Paper pages for each technical development. At the highest level, the framework is positioned to address:
 
-**Law selection**: distinguishing “law-level” structure from model-level, presentation-level, or non-robust structure.
-
-**Unification as admissibility**: reframing unification problems as closure/admissibility problems rather than purely dynamical guesswork.
-
-**Gauge / representation redundancy**: treating invariance under admissible re-expression as structurally mandatory, not aesthetic.
-
-**Robustness vs fragility in mathematics**: classifying mathematical statements and structures by persistence under admissible perturbations (e.g., axiom sensitivity vs closure-stable structure).
-
-**Renormalization / universality as closure**: interpreting RG fixed points and universality classes as explicit instantiations of (\Omega\Delta\partial)-stability.
-
-**Record-bearing vs record-silent structure (physics)**: separating persistence-bearing structures from coherent transport that does not accumulate stable internal records.
-
-**Parameter determination (conditional, in horizon mode)**: when additional boundary/horizon constraints are imposed, turning parts of the “values problem” into a constrained compute-then-test pipeline.
+* **Law selection**: distinguishing “law-level” structure from model-level, presentation-level, or non-robust structure.
+* **Unification as admissibility**: reframing unification problems as closure/admissibility problems rather than purely dynamical guesswork.
+* **Gauge / representation redundancy**: treating invariance under admissible re-expression as structurally mandatory, not aesthetic.
+* **Robustness vs fragility in mathematics**: classifying mathematical statements and structures by persistence under admissible perturbations (e.g., axiom sensitivity vs closure-stable structure).
+* **Renormalization / universality as closure**: interpreting RG fixed points and universality classes as explicit instantiations of (\Omega\Delta\partial)-stability.
+* **Record-bearing vs record-silent structure (physics)**: separating persistence-bearing structures from coherent transport that does not accumulate stable internal records.
+* **Parameter determination (conditional, in horizon mode)**: when additional boundary/horizon constraints are imposed, turning parts of the “values problem” into a constrained compute-then-test pipeline.
 
 These are stated at a program level. Each claim has to be evaluated by its corresponding Papers.
 
@@ -148,37 +126,28 @@ These are stated at a program level. Each claim has to be evaluated by its corre
 
 ## Physicist path (concept → instantiation → anchors)
 
-# Start here (this page): understand the fixed-point criterion and operator roles.
-
-Read the monograph overview for the integrated pipeline and how it maps into physics structure: **/monograph**
-
-Use Problems to navigate to the specific target you care about (e.g., Standard Model structure, quantum gravity structure): **/problems**
-
-For any claim you want to validate, go to the corresponding technical Paper(s): **/papers**
+1. Start here (this page): understand the fixed-point criterion and operator roles.
+2. Read the monograph overview for the integrated pipeline and how it maps into physics structure: **/monograph**
+3. Use Problems to navigate to the specific target you care about (e.g., Standard Model structure, quantum gravity structure): **/problems**
+4. For any claim you want to validate, go to the corresponding technical Paper(s): **/papers**
 
 This path is best if you want the “why this is not just another model” framing first, then the concrete instantiations.
 
 ## Mathematician path (admissibility → fixed points → sector lifts)
 
-# Start here (this page): fixed-point lawhood and the tri-operator structure.
-
-Read the monograph to see how the abstract closure architecture is instantiated and how fixed points are used as admissibility objects: **/monograph**
-
-Use Problems to locate the mathematical sector targets and classification goals: **/problems**
-
-Go to Papers for the explicit lattice/fixed-point machinery, operator axioms, and sectorial constructions: **/papers**
+1. Start here (this page): fixed-point lawhood and the tri-operator structure.
+2. Read the monograph to see how the abstract closure architecture is instantiated and how fixed points are used as admissibility objects: **/monograph**
+3. Use Problems to locate the mathematical sector targets and classification goals: **/problems**
+4. Go to Papers for the explicit lattice/fixed-point machinery, operator axioms, and sectorial constructions: **/papers**
 
 This path is best if you want to interpret the framework as a fixed-point admissibility program first, before looking at physical specialization.
 
 ## Quick map (minimal time, maximal orientation)
 
-# Read Sections 1–3 of this page.
-
-Skim the monograph’s “map” perspective: **/monograph**
-
-Use Problems to see the targets: **/problems**
-
-Use Papers as the technical ground truth: **/papers**
+1. Read Sections 1–3 of this page.
+2. Skim the monograph’s “map” perspective: **/monograph**
+3. Use Problems to see the targets: **/problems**
+4. Use Papers as the technical ground truth: **/papers**
 
 ---
 
@@ -186,31 +155,27 @@ Use Papers as the technical ground truth: **/papers**
 
 ## What is claimed (scope)
 
-# The Everything Equation is a **lawhood criterion**: it defines admissibility as fixed-point stability under (\Omega\Delta\partial).
-
-The framework is **domain-instantiable**: the operator roles are stable, but their concrete meaning depends on the domain (physics vs mathematics vs information).
-
-The program is structured so that claims are backed by **papers**, not by this explainer page.
+* The Everything Equation is a **lawhood criterion**: it defines admissibility as fixed-point stability under (\Omega\Delta\partial).
+* The framework is **domain-instantiable**: the operator roles are stable, but their concrete meaning depends on the domain (physics vs mathematics vs information).
+* The program is structured so that claims are backed by **papers**, not by this explainer page.
 
 ## What is not claimed (scope limits)
 
-# This page does **not** claim that a single short equation replaces the Standard Model, GR, or QFT. Existing theories remain the operational content; the framework is about admissibility and selection.
-
-The framework does **not** claim that every open problem is solved “by definition.” Each resolution must be carried by explicit constructions, derivations, and (where applicable) falsifiers.
-
-The framework does **not** claim that every domain necessarily admits the same instantiation of (\partial), (\Delta), and (\Omega). The roles are fixed; the realizations must be specified and defended.
+* This page does **not** claim that a single short equation replaces the Standard Model, GR, or QFT. Existing theories remain the operational content; the framework is about admissibility and selection.
+* The framework does **not** claim that every open problem is solved “by definition.” Each resolution must be carried by explicit constructions, derivations, and (where applicable) falsifiers.
+* The framework does **not** claim that every domain necessarily admits the same instantiation of (\partial), (\Delta), and (\Omega). The roles are fixed; the realizations must be specified and defended.
 
 ## How to evaluate it
 
-# Treat the Everything Equation as a structural test:
+Treat the Everything Equation as a structural test:
 
-Identify the candidate law object (\mathcal{L}) in your domain.
-
-Specify (\partial), (\Delta), and (\Omega) concretely (what counts as canonical restriction, what counts as persistence, what counts as admissible closure).
-
-Check whether (\mathcal{L}) is a fixed point:[\mathcal{L} \stackrel{?}{=} \Omega \Delta \partial(\mathcal{L}).]
-
-Compare what survives the pipeline with what is empirically or mathematically forced.
+1. Identify the candidate law object (\mathcal{L}) in your domain.
+2. Specify (\partial), (\Delta), and (\Omega) concretely (what counts as canonical restriction, what counts as persistence, what counts as admissible closure).
+3. Check whether (\mathcal{L}) is a fixed point:
+   [
+   \mathcal{L} \stackrel{?}{=} \Omega \Delta \partial(\mathcal{L}).
+   ]
+4. Compare what survives the pipeline with what is empirically or mathematically forced.
 
 If you want the integrated map of how this program is applied across problems and papers, use the monograph: **/monograph**.
 
@@ -218,219 +183,225 @@ If you want the integrated map of how this program is applied across problems an
 
 ## Addendum: what remains after closure — (K_\infty) and the resonance skeleton (CRS(^\ast))
 
-# The Everything Equation identifies admissible laws as fixed points of the composite operator (\Omega\Delta\partial). A natural next question is:
+The Everything Equation identifies admissible laws as fixed points of the composite operator (\Omega\Delta\partial). A natural next question is:
 
 > Once a system is (\partial)-normalized, (\Delta)-persistent, and (\Omega)-closed, what further structure is still detectable — and what is genuinely “left over” as invariant core?
->
->
 
 One answer is a refinement layer built around two objects:
 
-the Lawhood Collapse Core (K_\infty)
-
-the Causal Resonance Skeleton CRS(^\ast)
+* the Lawhood Collapse Core (K_\infty)
+* the Causal Resonance Skeleton CRS(^\ast)
 
 These do not replace the Everything Equation. They describe additional structure inside the fixed-point regime, where (\mathcal{L}) is already admissible.
 
 ### 1) (K_\infty): the intersection core over all admissible law-actions
 
-# Fix a Tier–0 carrier category (\mathbf{T0}) with admissible embeddings (\mathbf{Emb}\subseteq \mathbf{T0}), and a Tier–0 operator stack ((\partial,\Delta,\Omega)) acting functorially (boundary normalization, persistence collapse, reflective closure).
+Fix a Tier–0 carrier category (\mathbf{T0}) with admissible embeddings (\mathbf{Emb}\subseteq \mathbf{T0}), and a Tier–0 operator stack ((\partial,\Delta,\Omega)) acting functorially (boundary normalization, persistence collapse, reflective closure).
 
 Now consider not only (\partial,\Delta,\Omega), but the class of admissible Tier–0 law systems (L:\mathbf{T0}\to\mathbf{T0}) that:
 
-respect admissible embeddings,
-
-commute (up to natural isomorphism) with (\partial,\Delta,\Omega),
-
-and preserve the derived coherence data (defined below) up to canonical identification.
+* respect admissible embeddings,
+* commute (up to natural isomorphism) with (\partial,\Delta,\Omega),
+* and preserve the derived coherence data (defined below) up to canonical identification.
 
 For any such law system (L), define the objects it fixes up to equivalence:
 
-[\mathrm{Fix}(L) := {\mathbb{F}\in \mathrm{Ob}(\mathbf{T0}) : L(\mathbb{F})\cong \mathbb{F}}.]
+[
+\mathrm{Fix}(L) := {\mathbb{F}\in \mathrm{Ob}(\mathbf{T0}) : L(\mathbb{F})\cong \mathbb{F}}.
+]
 
 Then the Lawhood Collapse Core is:
 
-[K_\infty := \bigcap_{L}\mathrm{Fix}(L),]
+[
+K_\infty := \bigcap_{L}\mathrm{Fix}(L),
+]
 
 the intersection taken over all admissible law systems (L) in the chosen admissibility class.
 
-**Interpretation.**While (\Omega\Delta\partial) selects a canonical admissible completion, (K_\infty) selects what is invariant even under additional admissible law-level actions that respect the Tier–0 stack. It is the “core of cores”: what no admissible law-action can move.
+**Interpretation.**
+While (\Omega\Delta\partial) selects a canonical admissible completion, (K_\infty) selects what is invariant even under additional admissible law-level actions that respect the Tier–0 stack. It is the “core of cores”: what no admissible law-action can move.
 
 ### 2) Coherence as the rigidity anchor (Hessians → reversible coherence flow)
 
-# This refinement layer introduces a concrete rigidity anchor via coherence.
+This refinement layer introduces a concrete rigidity anchor via coherence.
 
 Assume a faithful realization functor:
 
-[\mathcal{U}:\mathbf{T0}\to \mathbf{Hilb}_{\mathrm{fd}}]
+[
+\mathcal{U}:\mathbf{T0}\to \mathbf{Hilb}_{\mathrm{fd}}
+]
 
 and for each object (\mathbb{F}), a monotone (dissipative) semigroup
 
-[\Phi_t^{\mathbb{F}} = e^{-tH_{\mathbb{F}}}\qquad (t\ge 0)]
+[
+\Phi_t^{\mathbb{F}} = e^{-tH_{\mathbb{F}}}\qquad (t\ge 0)
+]
 
 generated by a positive self-adjoint “Hessian” (H_{\mathbb{F}}\ge 0), functorial with respect to admissible embeddings.
 
 Define a bounded functional calculus (C_{\mathbb{F}}:=h(H_{\mathbb{F}})) (with (h) strictly increasing, (h(0)=0)) and the associated reversible coherence flow:
 
-[U_t^{\mathbb{F}} := e^{itC_{\mathbb{F}}}\qquad (t\in\mathbb{R}).]
+[
+U_t^{\mathbb{F}} := e^{itC_{\mathbb{F}}}\qquad (t\in\mathbb{R}).
+]
 
 This coherence/Hessian data provides a canonical place where “hidden moduli” can be ruled out.
 
 ### 3) Rigidity Axiom (RA): no hidden moduli beyond coherence/Hessian data
 
-# The key extra assumption is a Rigidity Axiom (RA) on the invariant subcategory (the objects already fixed by (\partial,\Delta,\Omega), and coherence-stable):
+The key extra assumption is a Rigidity Axiom (RA) on the invariant subcategory (the objects already fixed by (\partial,\Delta,\Omega), and coherence-stable):
 
-**(RA1)**: isomorphism of invariant objects is equivalent to existence of a unitary Hessian-intertwiner.
+* **(RA1)**: isomorphism of invariant objects is equivalent to existence of a unitary Hessian-intertwiner.
+* **(RA2)**: the realization functor is fully faithful on invariants, so any unitary Hessian-intertwiner lifts uniquely to an isomorphism in (\mathbf{T0}).
 
-**(RA2)**: the realization functor is fully faithful on invariants, so any unitary Hessian-intertwiner lifts uniquely to an isomorphism in (\mathbf{T0}).
-
-**What RA buys.**Under RA, any admissible law system (L) cannot “silently” move an invariant object while preserving coherence. In effect: coherence data becomes complete coordinates on invariant structure.
+**What RA buys.**
+Under RA, any admissible law system (L) cannot “silently” move an invariant object while preserving coherence. In effect: coherence data becomes complete coordinates on invariant structure.
 
 This yields a clean characterization: under the stated compatibility assumptions, (K_\infty) coincides with the objects that are simultaneously (\partial)-fixed, (\Delta)-fixed, (\Omega)-fixed, and coherence-stable.
 
 ### 4) CRS(^\ast): nontrivial structure above the core via strong fixedness
 
-# If rigidity is strong enough, ordinary object-level fixedness can become too coarse: many admissible laws may fix all invariant objects up to isomorphism. To avoid trivialization, CRS(^\ast) upgrades the notion of “fixed”:
+If rigidity is strong enough, ordinary object-level fixedness can become too coarse: many admissible laws may fix all invariant objects up to isomorphism. To avoid trivialization, CRS(^\ast) upgrades the notion of “fixed”:
 
 > Don’t only ask whether (L(\mathbb{F})\cong \mathbb{F}); ask whether (L) acts trivially on the entire endomorphism monoid of (\mathbb{F}), up to inner conjugacy.
->
->
 
 Formally, for invariant (\mathbb{F}) and an admissible law (L), say (L) **strongly fixes** (\mathbb{F}) if there exists an isomorphism (\phi:L(\mathbb{F})\cong \mathbb{F}) such that:
 
-[\forall f\in \mathrm{End}(\mathbb{F}),\qquad \phi\circ L(f)\circ \phi^{-1}=f.]
+[
+\forall f\in \mathrm{End}(\mathbb{F}),\qquad \phi\circ L(f)\circ \phi^{-1}=f.
+]
 
 Define the set of strong fixers:
 
-[\mathrm{SFixers}([\mathbb{F}]) := {,L:\ L\ \text{strongly fixes}\ \mathbb{F},}.]
+[
+\mathrm{SFixers}([\mathbb{F}]) := {,L:\ L\ \text{strongly fixes}\ \mathbb{F},}.
+]
 
 Then CRS(^\ast) equips isomorphism classes of invariant objects with a prerequisite preorder:
 
-[[\mathbb{A}]\preceq^\ast[\mathbb{B}]\quad:\Longleftrightarrow\quad\mathrm{SFixers}([\mathbb{B}])\subseteq \mathrm{SFixers}([\mathbb{A}]).]
+[
+[\mathbb{A}]\preceq^\ast[\mathbb{B}]
+\quad:\Longleftrightarrow\quad
+\mathrm{SFixers}([\mathbb{B}])\subseteq \mathrm{SFixers}([\mathbb{A}]).
+]
 
-**Interpretation.**If ([\mathbb{A}]\preceq^\ast[\mathbb{B}]), then (\mathbb{A}) is “harder to move”: any admissible law that strongly fixes (\mathbb{B}) must also strongly fix (\mathbb{A}). This induces a meaningful notion of dependency / prerequisite structure among invariants.
+**Interpretation.**
+If ([\mathbb{A}]\preceq^\ast[\mathbb{B}]), then (\mathbb{A}) is “harder to move”: any admissible law that strongly fixes (\mathbb{B}) must also strongly fix (\mathbb{A}). This induces a meaningful notion of dependency / prerequisite structure among invariants.
 
 ### 5) Layers and acyclicity: a nontrivial skeleton above the core
 
-# Using inclusion chains of strong-fixer sets, one assigns a layer index (\ell([\mathbb{F}])) (“height from the top”), producing strata:
+Using inclusion chains of strong-fixer sets, one assigns a layer index (\ell([\mathbb{F}])) (“height from the top”), producing strata:
 
-**Layer(_0)**: the CRS(^\ast) core (maximally strongly fixed)
-
-**Layer(_1), Layer(_2), …**: increasingly “moveable” invariant classes under admissible laws
-
-**Layer(_\infty)**: infinite-height cases (if present)
+* **Layer(_0)**: the CRS(^\ast) core (maximally strongly fixed)
+* **Layer(_1), Layer(_2), …**: increasingly “moveable” invariant classes under admissible laws
+* **Layer(_\infty)**: infinite-height cases (if present)
 
 A key structural claim is that, after quotienting out mutual-equivalence (classes with identical strong-fixer sets), the induced partial order is **acyclic above the core**: cycles are quarantined into the quotient equivalence, and the remaining skeleton is directed and layered.
 
 ### How this relates back to the Everything Equation
 
-# The Everything Equation provides a canonical admissibility fixed point:
+The Everything Equation provides a canonical admissibility fixed point:
 
-[\mathcal{L} = \Omega \Delta \partial(\mathcal{L}).]
+[
+\mathcal{L} = \Omega \Delta \partial(\mathcal{L}).
+]
 
 The (K_\infty) / CRS(^\ast) layer asks a second question inside admissibility:
 
-What is invariant under all admissible law-actions that respect the Tier–0 stack and coherence? ((K_\infty))
-
-How are invariant structures ordered by how strongly they resist lawful transformations? (CRS(^\ast), layers, acyclicity)
+* What is invariant under all admissible law-actions that respect the Tier–0 stack and coherence? ((K_\infty))
+* How are invariant structures ordered by how strongly they resist lawful transformations? (CRS(^\ast), layers, acyclicity)
 
 In short:
 
-(\Omega\Delta\partial) defines what counts as a law.
-
-(K_\infty) and CRS(^\ast) describe the internal invariant skeleton that remains once lawhood is enforced.
+* (\Omega\Delta\partial) defines what counts as a law.
+* (K_\infty) and CRS(^\ast) describe the internal invariant skeleton that remains once lawhood is enforced.
 
 ---
 
 ## Maximal stress test: PDE regularity under adversarial dynamics (I–VI)
 
-# A common objection to any “lawhood criterion” is that it is too abstract to survive contact with hard analysis. The most hostile environment for that critique is **PDE regularity theory**, where:
+A common objection to any “lawhood criterion” is that it is too abstract to survive contact with hard analysis. The most hostile environment for that critique is **PDE regularity theory**, where:
 
-scaling can be critical or supercritical,
-
-dissipation can be absent (Euler) or anomalous,
-
-limits can be singular (vanishing viscosity),
-
-shocks can form (compressible flow),
-
-and many plausible “closure” ideas fail on explicit obstructions.
+* scaling can be critical or supercritical,
+* dissipation can be absent (Euler) or anomalous,
+* limits can be singular (vanishing viscosity),
+* shocks can form (compressible flow),
+* and many plausible “closure” ideas fail on explicit obstructions.
 
 To address that directly, this framework was stress-tested against a six-paper PDE program that isolates exactly where closure succeeds, where it can fail, and what must be true near any genuine breakdown. The outcome is not a collection of heuristics; it is a set of explicit implications and “only-if” failure channels.
 
 ### What was tested
 
-# The program treats PDE dynamics as an adversarial testbed for the Tier–0 pipeline:
+The program treats PDE dynamics as an adversarial testbed for the Tier–0 pipeline:
 
-critical / supercritical high-frequency cascades (3D Navier–Stokes),
-
-inviscid dynamics with anomalous dissipation (Euler via defect measures),
-
-vanishing viscosity as a continuity / stability test for the closure objects,
-
-compressible flow with shock formation (dissipation concentrates on singular sets),
-
-universality beyond fluid mechanics (closure mechanism as PDE-agnostic),
-
-failure modes: a complete classification of how/why closure can break near a maximal time.
+* critical / supercritical high-frequency cascades (3D Navier–Stokes),
+* inviscid dynamics with anomalous dissipation (Euler via defect measures),
+* vanishing viscosity as a continuity / stability test for the closure objects,
+* compressible flow with shock formation (dissipation concentrates on singular sets),
+* universality beyond fluid mechanics (closure mechanism as PDE-agnostic),
+* failure modes: a complete classification of how/why closure can break near a maximal time.
 
 ### The core analytic reduction: “strict margin ⇒ deterministic contraction ⇒ closure”
 
-# Across the series, the nonlinear PDE specifics are pushed into one place: a **high-frequency strict margin inequality** at the packet level. In its representative form (see the series capstone), this is:
+Across the series, the nonlinear PDE specifics are pushed into one place: a **high-frequency strict margin inequality** at the packet level. In its representative form (see the series capstone), this is:
 
-[2D_j(s)\ \ge\ |N_j(s)|+|R_j(s)| + m_\star,T_j,E_{\ge j}(s)\quad\text{for all sufficiently large }j,]
+[
+2D_j(s)\ \ge\ |N_j(s)|+|R_j(s)| + m_\star,T_j,E_{\ge j}(s)
+\quad\text{for all sufficiently large }j,
+]
 
 where (E_{\ge j}) is a canonized high-frequency tail carrier, (D_j) is the persistence/dissipation term, (N_j) is transfer, (R_j) is a remainder ledger, and (T_j) is the packet scale.
 
 The point is structural:
 
-If strict margin holds at high frequencies, then contraction of the high-frequency tail is deterministic (not PDE-dependent), and decay of the tail forces the intended closure conclusion (regularity / continuation / compactness), depending on the PDE class.
+* If strict margin holds at high frequencies, then contraction of the high-frequency tail is deterministic (not PDE-dependent), and decay of the tail forces the intended closure conclusion (regularity / continuation / compactness), depending on the PDE class.
 
 This is stated as a universality theorem: once a PDE admits (i) a canonized tail drift identity, (ii) a nonnegative persistence term, and (iii) “single multiplier pricing,” then strict margin is the only remaining obstruction to deterministic tail contraction.
 
 ### Concrete results (what survives in each extreme regime)
 
-# **(1) 3D Navier–Stokes (viscous, critical/supercritical behavior).**Paper I shows: if a strict high-frequency margin holds uniformly above some dyadic shell, then every Leray–Hopf solution becomes instantly smooth for all positive times. This is a direct “closure ⇒ regularity” implication, with no small-data assumption and no contradiction argument: the mechanism is explicit (packet drift → contraction → heat-rate tail decay → Sobolev smoothing).
+**(1) 3D Navier–Stokes (viscous, critical/supercritical behavior).**
+Paper I shows: if a strict high-frequency margin holds uniformly above some dyadic shell, then every Leray–Hopf solution becomes instantly smooth for all positive times. This is a direct “closure ⇒ regularity” implication, with no small-data assumption and no contradiction argument: the mechanism is explicit (packet drift → contraction → heat-rate tail decay → Sobolev smoothing).
 
-**(2) Euler (inviscid) with anomalous dissipation.**Paper II repeats the logic in the inviscid setting, but with persistence supplied not by viscosity, but by a defect measure in the local energy balance (Duchon–Robert). Under the analogous strict margin hypothesis at high frequencies (defect dominating transfer by a packetized margin, with frequency-growing contraction scales), inviscid closure forces instantaneous regularity. This explicitly stress-tests the framework in the regime where classical dissipative smoothing is absent and time-reversibility would otherwise dominate.
+**(2) Euler (inviscid) with anomalous dissipation.**
+Paper II repeats the logic in the inviscid setting, but with persistence supplied not by viscosity, but by a defect measure in the local energy balance (Duchon–Robert). Under the analogous strict margin hypothesis at high frequencies (defect dominating transfer by a packetized margin, with frequency-growing contraction scales), inviscid closure forces instantaneous regularity. This explicitly stress-tests the framework in the regime where classical dissipative smoothing is absent and time-reversibility would otherwise dominate.
 
-**(3) Vanishing viscosity (continuity of closure).**Paper III isolates the precise point where a “viscous closure mechanism” can fail to transfer to the Euler limit. It proves that if closure continuity fails, it must occur through an explicit, finite list of channels—no hidden failure modes. In particular, failure can only arise from:
+**(3) Vanishing viscosity (continuity of closure).**
+Paper III isolates the precise point where a “viscous closure mechanism” can fail to transfer to the Euler limit. It proves that if closure continuity fails, it must occur through an explicit, finite list of channels—no hidden failure modes. In particular, failure can only arise from:
 
-carrier mismatch (packet scale not convergent),
-
-transfer instability,
-
-persistence mismatch/leakage (defect and viscous persistence fail to identify),
-
-cutoff artifact persistence (remainder does not vanish).
+* carrier mismatch (packet scale not convergent),
+* transfer instability,
+* persistence mismatch/leakage (defect and viscous persistence fail to identify),
+* cutoff artifact persistence (remainder does not vanish).
 
 This matters because it converts a vague objection (“limits are subtle”) into a concrete statement: either closure continuity holds or one of the named mechanisms is responsible.
 
-**(4) Compressible flow with shocks.**Paper IV treats shock formation as a persistence object rather than an uncontrolled breakdown. In the viscous stage, strict margin yields tail contraction and high-frequency regularization of the relevant compressible quantities. In the inviscid limit, viscous dissipation concentrates to a nonnegative Radon measure supported on shock sets, and the closure margin constrains admissible singularity structure through that persistence term.
+**(4) Compressible flow with shocks.**
+Paper IV treats shock formation as a persistence object rather than an uncontrolled breakdown. In the viscous stage, strict margin yields tail contraction and high-frequency regularization of the relevant compressible quantities. In the inviscid limit, viscous dissipation concentrates to a nonnegative Radon measure supported on shock sets, and the closure margin constrains admissible singularity structure through that persistence term.
 
-**(5) Universality beyond fluids.**Paper V abstracts the closure engine into axioms that do not reference incompressibility, vorticity structure, or model-specific cancellations. It proves: in any PDE class satisfying the structural prerequisites (canonized drift identity + nonnegative persistence + packetization + single multiplier pricing), strict margin implies deterministic one-step contraction and high-frequency closure. This is the stress test that guards against the claim “your mechanism only works because Navier–Stokes has special structure.”
+**(5) Universality beyond fluids.**
+Paper V abstracts the closure engine into axioms that do not reference incompressibility, vorticity structure, or model-specific cancellations. It proves: in any PDE class satisfying the structural prerequisites (canonized drift identity + nonnegative persistence + packetization + single multiplier pricing), strict margin implies deterministic one-step contraction and high-frequency closure. This is the stress test that guards against the claim “your mechanism only works because Navier–Stokes has special structure.”
 
-**(6) Failure modes and necessary conditions (capstone).**Paper VI proves a sharp equivalence: no failure channels at a maximal time (\Longleftrightarrow) eventual strict margin (\Longleftrightarrow) deterministic tail contraction (\Longleftrightarrow) no blowup within the admissible class. In particular, for Navier–Stokes it yields a clean necessity statement:
+**(6) Failure modes and necessary conditions (capstone).**
+Paper VI proves a sharp equivalence: no failure channels at a maximal time (\Longleftrightarrow) eventual strict margin (\Longleftrightarrow) deterministic tail contraction (\Longleftrightarrow) no blowup within the admissible class. In particular, for Navier–Stokes it yields a clean necessity statement:
 
 > If a genuine finite-time singularity exists, then near the blowup time and at arbitrarily high cutoffs, one must see margin collapse or multiplier blowup (or, failing those, carrier invalidation).
->
->
 
 This is exactly the kind of “referee-grade” stress test people ask for: it does not assume global regularity; it identifies what must happen if regularity fails.
 
 ### Why this matters for the Everything Equation
 
-# The Everything Equation is a fixed-point criterion for admissibility:
+The Everything Equation is a fixed-point criterion for admissibility:
 
-[\mathcal{L} = \Omega \Delta \partial(\mathcal{L}).]
+[
+\mathcal{L} = \Omega \Delta \partial(\mathcal{L}).
+]
 
 The PDE stress-test series operationalizes that criterion in the most adversarial analytic setting:
 
-(\partial) corresponds to canonicalization of representations (canonized drift identities, boundary-normalized carriers).
-
-(\Delta) corresponds to persistence selection (viscous dissipation, defect measures, shock entropy production as nonnegative persistence objects).
-
-(\Omega) corresponds to closure/completion (deterministic contraction to a closure-stable representative; elimination of “hidden modes” by explicit failure-channel classification).
+* (\partial) corresponds to canonicalization of representations (canonized drift identities, boundary-normalized carriers).
+* (\Delta) corresponds to persistence selection (viscous dissipation, defect measures, shock entropy production as nonnegative persistence objects).
+* (\Omega) corresponds to closure/completion (deterministic contraction to a closure-stable representative; elimination of “hidden modes” by explicit failure-channel classification).
 
 In short: the closure pipeline is not asserted; it is exercised against the full range of PDE pathologies—high-frequency surplus, inviscid anomalies, singular limits, shocks, and explicit obstructions—and what remains is a sharp, testable structural core.
 
@@ -442,40 +413,54 @@ This is the strongest kind of “stress test” a lawhood criterion can face: ei
 
 ### Primary reference
 
-# **The Tier-0 Framework: A Law-Level Closure and Selection Principle for Physics, Mathematics, and Information**DOI: [10.5281/zenodo.18342623](https://doi.org/10.5281/zenodo.18342623)
+* **The Tier-0 Framework: A Law-Level Closure and Selection Principle for Physics, Mathematics, and Information**
+  DOI: [10.5281/zenodo.18342623](https://doi.org/10.5281/zenodo.18342623)
 
 ### Core Everything Equation papers
 
-# **The Everything Equation: A Universal Closure Principle for Law Structure**DOI: [10.5281/zenodo.18081205](https://doi.org/10.5281/zenodo.18081205)
+* **The Everything Equation: A Universal Closure Principle for Law Structure**
+  DOI: [10.5281/zenodo.18081205](https://doi.org/10.5281/zenodo.18081205)
 
-**The Everything Equation in Physics: A Universal Closure Principle for Physical Law**DOI: [10.5281/zenodo.18080442](https://doi.org/10.5281/zenodo.18080442)
+* **The Everything Equation in Physics: A Universal Closure Principle for Physical Law**
+  DOI: [10.5281/zenodo.18080442](https://doi.org/10.5281/zenodo.18080442)
 
 ### Mathematical sector
 
-# **Mathematics as Closure-Stable Structure: A Fixed-Point Admissibility Framework**DOI: [10.5281/zenodo.18344573](https://doi.org/10.5281/zenodo.18344573)
+* **Mathematics as Closure-Stable Structure: A Fixed-Point Admissibility Framework**
+  DOI: [10.5281/zenodo.18344573](https://doi.org/10.5281/zenodo.18344573)
 
 ### Translation papers
 
-# **A Bidirectional Translation Between Tier-0 Closure and Probabilistic Inference**DOI: [10.5281/zenodo.18383199](https://doi.org/10.5281/zenodo.18383199)
+* **A Bidirectional Translation Between Tier-0 Closure and Probabilistic Inference**
+  DOI: [10.5281/zenodo.18383199](https://doi.org/10.5281/zenodo.18383199)
 
-**A Bidirectional Translation Between Analytic Closure Proofs and Law-Level Admissibility**DOI: [10.5281/zenodo.18373510](https://doi.org/10.5281/zenodo.18373510)
+* **A Bidirectional Translation Between Analytic Closure Proofs and Law-Level Admissibility**
+  DOI: [10.5281/zenodo.18373510](https://doi.org/10.5281/zenodo.18373510)
 
-**Normalization, Persistence, and Closure in Navier–Stokes Theory: A Packet-Level Translation of PDE Dynamics into a Law-Level Framework**DOI: [10.5281/zenodo.18356771](https://doi.org/10.5281/zenodo.18356771)
+* **Normalization, Persistence, and Closure in Navier–Stokes Theory: A Packet-Level Translation of PDE Dynamics into a Law-Level Framework**
+  DOI: [10.5281/zenodo.18356771](https://doi.org/10.5281/zenodo.18356771)
 
 ### PDE stress-test series (I–VI)
 
-# **Closure and Regularity in Partial Differential Equations I: From High-Frequency Surplus to Regularity in 3D Navier–Stokes**DOI: [10.5281/zenodo.18371918](https://doi.org/10.5281/zenodo.18371918)
+* **Closure and Regularity in Partial Differential Equations I: From High-Frequency Surplus to Regularity in 3D Navier–Stokes**
+  DOI: [10.5281/zenodo.18371918](https://doi.org/10.5281/zenodo.18371918)
 
-**Closure and Regularity in Partial Differential Equations II: Inviscid Closure and Anomalous Dissipation in the Euler Equations**DOI: [10.5281/zenodo.18371954](https://doi.org/10.5281/zenodo.18371954)
+* **Closure and Regularity in Partial Differential Equations II: Inviscid Closure and Anomalous Dissipation in the Euler Equations**
+  DOI: [10.5281/zenodo.18371954](https://doi.org/10.5281/zenodo.18371954)
 
-**Closure and Regularity in Partial Differential Equations III: Continuity of Closure in the Vanishing Viscosity Limit**DOI: [10.5281/zenodo.18372004](https://doi.org/10.5281/zenodo.18372004)
+* **Closure and Regularity in Partial Differential Equations III: Continuity of Closure in the Vanishing Viscosity Limit**
+  DOI: [10.5281/zenodo.18372004](https://doi.org/10.5281/zenodo.18372004)
 
-**Closure and Regularity in Partial Differential Equations IV: Shock Formation, Dissipation, and Closure in Compressible Flow**DOI: [10.5281/zenodo.18372079](https://doi.org/10.5281/zenodo.18372079)
+* **Closure and Regularity in Partial Differential Equations IV: Shock Formation, Dissipation, and Closure in Compressible Flow**
+  DOI: [10.5281/zenodo.18372079](https://doi.org/10.5281/zenodo.18372079)
 
-**Closure and Regularity in Partial Differential Equations V: A Universality Test of the Strict Margin Closure Mechanism**DOI: [10.5281/zenodo.18372181](https://doi.org/10.5281/zenodo.18372181)
+* **Closure and Regularity in Partial Differential Equations V: A Universality Test of the Strict Margin Closure Mechanism**
+  DOI: [10.5281/zenodo.18372181](https://doi.org/10.5281/zenodo.18372181)
 
-**Closure and Regularity in Partial Differential Equations VI: Failure Modes and Obstructions to Analytic Closure**DOI: [10.5281/zenodo.18372250](https://doi.org/10.5281/zenodo.18372250)
+* **Closure and Regularity in Partial Differential Equations VI: Failure Modes and Obstructions to Analytic Closure**
+  DOI: [10.5281/zenodo.18372250](https://doi.org/10.5281/zenodo.18372250)
 
 ### Additional Tier-0 reference
 
-# **The Tier-0 Framework and the Everything Equation: A Law-Level Closure and Selection Architecture for Physics, Mathematics, and Information**DOI: [10.5281/zenodo.18493638](https://doi.org/10.5281/zenodo.18493638)
+* **The Tier-0 Framework and the Everything Equation: A Law-Level Closure and Selection Architecture for Physics, Mathematics, and Information**
+  DOI: [10.5281/zenodo.18493638](https://doi.org/10.5281/zenodo.18493638)
