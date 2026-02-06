@@ -17,13 +17,17 @@ export default async function HomePage() {
   const latestPapers = publicPapers.slice(0, 3);
   return (
     <div className="space-y-12">
-      <section className="text-center">
-        <h2 className="text-3xl font-bold mb-4">Welcome to The Everything Equation</h2>
-        <p className="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-300">
-          A premium research platform curating open problems and scholarly
-          articles, connecting ideas across disciplines.
-        </p>
-      </section>
+      // src/app/page.tsx
+  <section className="text-center">
+  <h2 className="text-3xl font-bold mb-2">
+    Welcome to the Everything Equation</h2>
+  <p className="text-lg font-semibold mb-4 text-slate-600 dark:text-slate-400">
+    And The Tier‑0 Framework</p>
+  <p className="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-300">
+    A premium research platform curating open problems and scholarly
+    articles, connecting ideas across disciplines.
+    </p>
+  </section>
       {/* Gateway card introducing the Everything Equation */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
