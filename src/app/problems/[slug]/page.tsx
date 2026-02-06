@@ -78,7 +78,7 @@ export default async function ProblemDetail({ params }: { params: { slug: string
               <Card
                 key={paper.id}
                 href={`/papers/${paper.id}`}
-                title={paper.title}
+                title={paper.metadata?.title ?? paper.role ?? paper.id}
                 description={paper.metadata?.description?.substring(0, 120) || ''}
               />
             ))}
