@@ -16,25 +16,27 @@ The result is a compact principle: a lawful structure is one that is **invariant
 
 ## Canonical form (exact)
 
-> **𝓛 = Ω Δ ∂ (𝓛)**
+𝓛 = Ω Δ ∂ (𝓛)
 
 ## LaTeX form (exact)
 
-[
+```latex
+\[
 \mathcal{L} = \Omega \Delta \partial(\mathcal{L})
-]
+\]
+```
 
 ## Fixed-point reading
 
-The equation is a **fixed-point condition**. A candidate law (\mathcal{L}) is admissible if applying the pipeline “boundary → persistence → closure” returns the same law:
+The equation is a **fixed-point condition**. A candidate law 𝓛 is admissible if applying the pipeline “boundary → persistence → closure” returns the same law:
 
-1. Start with (\mathcal{L})
-2. Apply (\partial(\mathcal{L}))
-3. Apply (\Delta(\partial(\mathcal{L})))
-4. Apply (\Omega(\Delta(\partial(\mathcal{L}))))
+1. Start with 𝓛
+2. Apply ∂(𝓛)
+3. Apply Δ(∂(𝓛))
+4. Apply Ω(Δ(∂(𝓛)))
 5. Admissibility means you end where you started
 
-In other words: **admissible law = fixed point of (\Omega\Delta\partial)**.
+In other words: **admissible law = fixed point of ΩΔ∂**.
 
 ---
 
@@ -46,26 +48,26 @@ There are three distinct roles:
 
 ## 1) Boundary normalization: ∂
 
-(\partial) enforces a canonical boundary description and removes representation-dependent degrees of freedom. In physics this corresponds to canonical boundary data / gauge-normalized structure; in mathematics it corresponds to representation-independence under admissible re-presentations.
+∂ enforces a canonical boundary description and removes representation-dependent degrees of freedom. In physics this corresponds to canonical boundary data / gauge-normalized structure; in mathematics it corresponds to representation-independence under admissible re-presentations.
 
 ## 2) Persistence filtering: Δ
 
-(\Delta) removes structure that does not persist under the domain’s notion of stabilization.
+Δ removes structure that does not persist under the domain’s notion of stabilization.
 
-* In physics, (\Delta) corresponds to persistence under collapse / coarse-graining / record formation: non-persistent structure is filtered out.
+* In physics, Δ corresponds to persistence under collapse / coarse-graining / record formation: non-persistent structure is filtered out.
 * In mathematics, the analogous role is **inferential persistence**: what survives admissible weakening, proof-environment variation, and re-expression.
 
 ## 3) Closure completion: Ω
 
-(\Omega) completes the surviving structure under admissible transformations so that the result is globally consistent and stable under re-expression. Categorically, (\Omega) is treated as a **reflective completion**: it maps a candidate to the “closest” closed object satisfying the closure constraints.
+Ω completes the surviving structure under admissible transformations so that the result is globally consistent and stable under re-expression. Categorically, Ω is treated as a **reflective completion**: it maps a candidate to the “closest” closed object satisfying the closure constraints.
 
 ## Why the three-stage pipeline matters
 
 The key point is that closure is not taken to be “add everything”; it is “complete under admissibility.” The fixed-point criterion enforces:
 
-* invariance under presentation changes ((\partial))
-* stability under persistence selection ((\Delta))
-* completion under admissible re-expression ((\Omega))
+* invariance under presentation changes (∂)
+* stability under persistence selection (Δ)
+* completion under admissible re-expression (Ω)
 
 ---
 
@@ -74,9 +76,9 @@ The key point is that closure is not taken to be “add everything”; it is “
 * **Ω (Omega)**: closure / completion operator. Produces the reflectively completed, admissible-closure form of a candidate.
 * **Δ (Delta)**: persistence filter. Removes non-stable / non-persistent structure under the domain’s stabilization notion.
 * **∂ (Boundary operator)**: boundary normalization / canonical restriction. Removes representation artifacts and enforces canonical boundary form.
-* **𝓛 (law object)**: the candidate “law-level structure” being tested for admissibility under (\Omega\Delta\partial).
-* **fixed point**: an object (X) such that (X = F(X)) for a specified map (F); here (F = \Omega\Delta\partial).
-* **admissibility**: qualification as “lawful” in the framework; operationally, being a fixed point of (\Omega\Delta\partial) (under the chosen domain instantiation).
+* **𝓛 (law object)**: the candidate “law-level structure” being tested for admissibility under ΩΔ∂.
+* **fixed point**: an object X such that X = F(X) for a specified map F; here F = ΩΔ∂.
+* **admissibility**: qualification as “lawful” in the framework; operationally, being a fixed point of ΩΔ∂ (under the chosen domain instantiation).
 
 ---
 
@@ -114,7 +116,7 @@ This page is not a complete index of results. The site contains separate Problem
 * **Unification as admissibility**: reframing unification problems as closure/admissibility problems rather than purely dynamical guesswork.
 * **Gauge / representation redundancy**: treating invariance under admissible re-expression as structurally mandatory, not aesthetic.
 * **Robustness vs fragility in mathematics**: classifying mathematical statements and structures by persistence under admissible perturbations (e.g., axiom sensitivity vs closure-stable structure).
-* **Renormalization / universality as closure**: interpreting RG fixed points and universality classes as explicit instantiations of (\Omega\Delta\partial)-stability.
+* **Renormalization / universality as closure**: interpreting RG fixed points and universality classes as explicit instantiations of ΩΔ∂-stability.
 * **Record-bearing vs record-silent structure (physics)**: separating persistence-bearing structures from coherent transport that does not accumulate stable internal records.
 * **Parameter determination (conditional, in horizon mode)**: when additional boundary/horizon constraints are imposed, turning parts of the “values problem” into a constrained compute-then-test pipeline.
 
@@ -155,7 +157,7 @@ This path is best if you want to interpret the framework as a fixed-point admiss
 
 ## What is claimed (scope)
 
-* The Everything Equation is a **lawhood criterion**: it defines admissibility as fixed-point stability under (\Omega\Delta\partial).
+* The Everything Equation is a **lawhood criterion**: it defines admissibility as fixed-point stability under ΩΔ∂.
 * The framework is **domain-instantiable**: the operator roles are stable, but their concrete meaning depends on the domain (physics vs mathematics vs information).
 * The program is structured so that claims are backed by **papers**, not by this explainer page.
 
@@ -163,63 +165,71 @@ This path is best if you want to interpret the framework as a fixed-point admiss
 
 * This page does **not** claim that a single short equation replaces the Standard Model, GR, or QFT. Existing theories remain the operational content; the framework is about admissibility and selection.
 * The framework does **not** claim that every open problem is solved “by definition.” Each resolution must be carried by explicit constructions, derivations, and (where applicable) falsifiers.
-* The framework does **not** claim that every domain necessarily admits the same instantiation of (\partial), (\Delta), and (\Omega). The roles are fixed; the realizations must be specified and defended.
+* The framework does **not** claim that every domain necessarily admits the same instantiation of ∂, Δ, and Ω. The roles are fixed; the realizations must be specified and defended.
 
 ## How to evaluate it
 
 Treat the Everything Equation as a structural test:
 
-1. Identify the candidate law object (\mathcal{L}) in your domain.
-2. Specify (\partial), (\Delta), and (\Omega) concretely (what counts as canonical restriction, what counts as persistence, what counts as admissible closure).
-3. Check whether (\mathcal{L}) is a fixed point:
-   [
-   \mathcal{L} \stackrel{?}{=} \Omega \Delta \partial(\mathcal{L}).
-   ]
+1. Identify the candidate law object 𝓛 in your domain.
+2. Specify ∂, Δ, and Ω concretely (what counts as canonical restriction, what counts as persistence, what counts as admissible closure).
+3. Check whether 𝓛 is a fixed point:
+
+```latex
+\[
+\mathcal{L} \stackrel{?}{=} \Omega \Delta \partial(\mathcal{L})
+\]
+```
+
 4. Compare what survives the pipeline with what is empirically or mathematically forced.
 
 If you want the integrated map of how this program is applied across problems and papers, use the monograph: **/monograph**.
 
 ---
 
-## Addendum: what remains after closure — (K_\infty) and the resonance skeleton (CRS(^\ast))
+## Addendum: what remains after closure — K∞ and the resonance skeleton (CRS*)
 
-The Everything Equation identifies admissible laws as fixed points of the composite operator (\Omega\Delta\partial). A natural next question is:
+The Everything Equation identifies admissible laws as fixed points of the composite operator ΩΔ∂. A natural next question is:
 
-> Once a system is (\partial)-normalized, (\Delta)-persistent, and (\Omega)-closed, what further structure is still detectable — and what is genuinely “left over” as invariant core?
+> Once a system is ∂-normalized, Δ-persistent, and Ω-closed, what further structure is still detectable — and what is genuinely “left over” as invariant core?
 
 One answer is a refinement layer built around two objects:
 
-* the Lawhood Collapse Core (K_\infty)
-* the Causal Resonance Skeleton CRS(^\ast)
+* the Lawhood Collapse Core K∞
+* the Causal Resonance Skeleton CRS*
 
-These do not replace the Everything Equation. They describe additional structure inside the fixed-point regime, where (\mathcal{L}) is already admissible.
+These do not replace the Everything Equation. They describe additional structure inside the fixed-point regime, where 𝓛 is already admissible.
 
-### 1) (K_\infty): the intersection core over all admissible law-actions
+### 1) K∞: the intersection core over all admissible law-actions
 
-Fix a Tier–0 carrier category (\mathbf{T0}) with admissible embeddings (\mathbf{Emb}\subseteq \mathbf{T0}), and a Tier–0 operator stack ((\partial,\Delta,\Omega)) acting functorially (boundary normalization, persistence collapse, reflective closure).
+Fix a Tier–0 carrier category T0 with admissible embeddings Emb ⊆ T0, and a Tier–0 operator stack (∂, Δ, Ω) acting functorially (boundary normalization, persistence collapse, reflective closure).
 
-Now consider not only (\partial,\Delta,\Omega), but the class of admissible Tier–0 law systems (L:\mathbf{T0}\to\mathbf{T0}) that:
+Now consider not only ∂, Δ, Ω, but the class of admissible Tier–0 law systems L: T0 → T0 that:
 
 * respect admissible embeddings,
-* commute (up to natural isomorphism) with (\partial,\Delta,\Omega),
+* commute (up to natural isomorphism) with ∂, Δ, Ω,
 * and preserve the derived coherence data (defined below) up to canonical identification.
 
-For any such law system (L), define the objects it fixes up to equivalence:
+For any such law system L, define the objects it fixes up to equivalence:
 
-[
-\mathrm{Fix}(L) := {\mathbb{F}\in \mathrm{Ob}(\mathbf{T0}) : L(\mathbb{F})\cong \mathbb{F}}.
-]
+```latex
+\[
+\mathrm{Fix}(L) := \{\mathbb{F}\in \mathrm{Ob}(\mathbf{T0}) : L(\mathbb{F})\cong \mathbb{F}\}.
+\]
+```
 
 Then the Lawhood Collapse Core is:
 
-[
+```latex
+\[
 K_\infty := \bigcap_{L}\mathrm{Fix}(L),
-]
+\]
+```
 
-the intersection taken over all admissible law systems (L) in the chosen admissibility class.
+the intersection taken over all admissible law systems L in the chosen admissibility class.
 
 **Interpretation.**
-While (\Omega\Delta\partial) selects a canonical admissible completion, (K_\infty) selects what is invariant even under additional admissible law-level actions that respect the Tier–0 stack. It is the “core of cores”: what no admissible law-action can move.
+While ΩΔ∂ selects a canonical admissible completion, K∞ selects what is invariant even under additional admissible law-level actions that respect the Tier–0 stack. It is the “core of cores”: what no admissible law-action can move.
 
 ### 2) Coherence as the rigidity anchor (Hessians → reversible coherence flow)
 
@@ -227,100 +237,114 @@ This refinement layer introduces a concrete rigidity anchor via coherence.
 
 Assume a faithful realization functor:
 
-[
+```latex
+\[
 \mathcal{U}:\mathbf{T0}\to \mathbf{Hilb}_{\mathrm{fd}}
-]
+\]
+```
 
-and for each object (\mathbb{F}), a monotone (dissipative) semigroup
+and for each object F, a monotone (dissipative) semigroup
 
-[
+```latex
+\[
 \Phi_t^{\mathbb{F}} = e^{-tH_{\mathbb{F}}}\qquad (t\ge 0)
-]
+\]
+```
 
-generated by a positive self-adjoint “Hessian” (H_{\mathbb{F}}\ge 0), functorial with respect to admissible embeddings.
+generated by a positive self-adjoint “Hessian” H_F ≥ 0, functorial with respect to admissible embeddings.
 
-Define a bounded functional calculus (C_{\mathbb{F}}:=h(H_{\mathbb{F}})) (with (h) strictly increasing, (h(0)=0)) and the associated reversible coherence flow:
+Define a bounded functional calculus C_F := h(H_F) (with h strictly increasing, h(0)=0) and the associated reversible coherence flow:
 
-[
+```latex
+\[
 U_t^{\mathbb{F}} := e^{itC_{\mathbb{F}}}\qquad (t\in\mathbb{R}).
-]
+\]
+```
 
 This coherence/Hessian data provides a canonical place where “hidden moduli” can be ruled out.
 
 ### 3) Rigidity Axiom (RA): no hidden moduli beyond coherence/Hessian data
 
-The key extra assumption is a Rigidity Axiom (RA) on the invariant subcategory (the objects already fixed by (\partial,\Delta,\Omega), and coherence-stable):
+The key extra assumption is a Rigidity Axiom (RA) on the invariant subcategory (the objects already fixed by ∂, Δ, Ω, and coherence-stable):
 
 * **(RA1)**: isomorphism of invariant objects is equivalent to existence of a unitary Hessian-intertwiner.
-* **(RA2)**: the realization functor is fully faithful on invariants, so any unitary Hessian-intertwiner lifts uniquely to an isomorphism in (\mathbf{T0}).
+* **(RA2)**: the realization functor is fully faithful on invariants, so any unitary Hessian-intertwiner lifts uniquely to an isomorphism in T0.
 
 **What RA buys.**
-Under RA, any admissible law system (L) cannot “silently” move an invariant object while preserving coherence. In effect: coherence data becomes complete coordinates on invariant structure.
+Under RA, any admissible law system L cannot “silently” move an invariant object while preserving coherence. In effect: coherence data becomes complete coordinates on invariant structure.
 
-This yields a clean characterization: under the stated compatibility assumptions, (K_\infty) coincides with the objects that are simultaneously (\partial)-fixed, (\Delta)-fixed, (\Omega)-fixed, and coherence-stable.
+This yields a clean characterization: under the stated compatibility assumptions, K∞ coincides with the objects that are simultaneously ∂-fixed, Δ-fixed, Ω-fixed, and coherence-stable.
 
-### 4) CRS(^\ast): nontrivial structure above the core via strong fixedness
+### 4) CRS*: nontrivial structure above the core via strong fixedness
 
-If rigidity is strong enough, ordinary object-level fixedness can become too coarse: many admissible laws may fix all invariant objects up to isomorphism. To avoid trivialization, CRS(^\ast) upgrades the notion of “fixed”:
+If rigidity is strong enough, ordinary object-level fixedness can become too coarse: many admissible laws may fix all invariant objects up to isomorphism. To avoid trivialization, CRS* upgrades the notion of “fixed”:
 
-> Don’t only ask whether (L(\mathbb{F})\cong \mathbb{F}); ask whether (L) acts trivially on the entire endomorphism monoid of (\mathbb{F}), up to inner conjugacy.
+> Don’t only ask whether L(F) ≅ F; ask whether L acts trivially on the entire endomorphism monoid of F, up to inner conjugacy.
 
-Formally, for invariant (\mathbb{F}) and an admissible law (L), say (L) **strongly fixes** (\mathbb{F}) if there exists an isomorphism (\phi:L(\mathbb{F})\cong \mathbb{F}) such that:
+Formally, for invariant F and an admissible law L, say L strongly fixes F if there exists an isomorphism φ: L(F) ≅ F such that:
 
-[
+```latex
+\[
 \forall f\in \mathrm{End}(\mathbb{F}),\qquad \phi\circ L(f)\circ \phi^{-1}=f.
-]
+\]
+```
 
 Define the set of strong fixers:
 
-[
-\mathrm{SFixers}([\mathbb{F}]) := {,L:\ L\ \text{strongly fixes}\ \mathbb{F},}.
-]
+```latex
+\[
+\mathrm{SFixers}([\mathbb{F}]) := \{\,L:\ L\ \text{strongly fixes}\ \mathbb{F}\,\}.
+\]
+```
 
-Then CRS(^\ast) equips isomorphism classes of invariant objects with a prerequisite preorder:
+Then CRS* equips isomorphism classes of invariant objects with a prerequisite preorder:
 
-[
+```latex
+\[
 [\mathbb{A}]\preceq^\ast[\mathbb{B}]
 \quad:\Longleftrightarrow\quad
 \mathrm{SFixers}([\mathbb{B}])\subseteq \mathrm{SFixers}([\mathbb{A}]).
-]
+\]
+```
 
 **Interpretation.**
-If ([\mathbb{A}]\preceq^\ast[\mathbb{B}]), then (\mathbb{A}) is “harder to move”: any admissible law that strongly fixes (\mathbb{B}) must also strongly fix (\mathbb{A}). This induces a meaningful notion of dependency / prerequisite structure among invariants.
+If [A] ⪯* [B], then A is “harder to move”: any admissible law that strongly fixes B must also strongly fix A. This induces a meaningful notion of dependency / prerequisite structure among invariants.
 
 ### 5) Layers and acyclicity: a nontrivial skeleton above the core
 
-Using inclusion chains of strong-fixer sets, one assigns a layer index (\ell([\mathbb{F}])) (“height from the top”), producing strata:
+Using inclusion chains of strong-fixer sets, one assigns a layer index ℓ([F]) (“height from the top”), producing strata:
 
-* **Layer(_0)**: the CRS(^\ast) core (maximally strongly fixed)
-* **Layer(_1), Layer(_2), …**: increasingly “moveable” invariant classes under admissible laws
-* **Layer(_\infty)**: infinite-height cases (if present)
+* **Layer₀**: the CRS* core (maximally strongly fixed)
+* **Layer₁, Layer₂, …**: increasingly “moveable” invariant classes under admissible laws
+* **Layer∞**: infinite-height cases (if present)
 
-A key structural claim is that, after quotienting out mutual-equivalence (classes with identical strong-fixer sets), the induced partial order is **acyclic above the core**: cycles are quarantined into the quotient equivalence, and the remaining skeleton is directed and layered.
+A key structural claim is that, after quotienting out mutual-equivalence (classes with identical strong-fixer sets), the induced partial order is acyclic above the core: cycles are quarantined into the quotient equivalence, and the remaining skeleton is directed and layered.
 
 ### How this relates back to the Everything Equation
 
 The Everything Equation provides a canonical admissibility fixed point:
 
-[
+```latex
+\[
 \mathcal{L} = \Omega \Delta \partial(\mathcal{L}).
-]
+\]
+```
 
-The (K_\infty) / CRS(^\ast) layer asks a second question inside admissibility:
+The K∞ / CRS* layer asks a second question inside admissibility:
 
-* What is invariant under all admissible law-actions that respect the Tier–0 stack and coherence? ((K_\infty))
-* How are invariant structures ordered by how strongly they resist lawful transformations? (CRS(^\ast), layers, acyclicity)
+* What is invariant under all admissible law-actions that respect the Tier–0 stack and coherence? (K∞)
+* How are invariant structures ordered by how strongly they resist lawful transformations? (CRS*, layers, acyclicity)
 
 In short:
 
-* (\Omega\Delta\partial) defines what counts as a law.
-* (K_\infty) and CRS(^\ast) describe the internal invariant skeleton that remains once lawhood is enforced.
+* ΩΔ∂ defines what counts as a law.
+* K∞ and CRS* describe the internal invariant skeleton that remains once lawhood is enforced.
 
 ---
 
 ## Maximal stress test: PDE regularity under adversarial dynamics (I–VI)
 
-A common objection to any “lawhood criterion” is that it is too abstract to survive contact with hard analysis. The most hostile environment for that critique is **PDE regularity theory**, where:
+A common objection to any “lawhood criterion” is that it is too abstract to survive contact with hard analysis. The most hostile environment for that critique is PDE regularity theory, where:
 
 * scaling can be critical or supercritical,
 * dissipation can be absent (Euler) or anomalous,
@@ -343,14 +367,16 @@ The program treats PDE dynamics as an adversarial testbed for the Tier–0 pipel
 
 ### The core analytic reduction: “strict margin ⇒ deterministic contraction ⇒ closure”
 
-Across the series, the nonlinear PDE specifics are pushed into one place: a **high-frequency strict margin inequality** at the packet level. In its representative form (see the series capstone), this is:
+Across the series, the nonlinear PDE specifics are pushed into one place: a high-frequency strict margin inequality at the packet level. In its representative form (see the series capstone), this is:
 
-[
-2D_j(s)\ \ge\ |N_j(s)|+|R_j(s)| + m_\star,T_j,E_{\ge j}(s)
+```latex
+\[
+2D_j(s)\ \ge\ |N_j(s)|+|R_j(s)| + m_\star\,T_j\,E_{\ge j}(s)
 \quad\text{for all sufficiently large }j,
-]
+\]
+```
 
-where (E_{\ge j}) is a canonized high-frequency tail carrier, (D_j) is the persistence/dissipation term, (N_j) is transfer, (R_j) is a remainder ledger, and (T_j) is the packet scale.
+where E_{≥j} is a canonized high-frequency tail carrier, D_j is the persistence/dissipation term, N_j is transfer, R_j is a remainder ledger, and T_j is the packet scale.
 
 The point is structural:
 
@@ -383,7 +409,7 @@ Paper IV treats shock formation as a persistence object rather than an uncontrol
 Paper V abstracts the closure engine into axioms that do not reference incompressibility, vorticity structure, or model-specific cancellations. It proves: in any PDE class satisfying the structural prerequisites (canonized drift identity + nonnegative persistence + packetization + single multiplier pricing), strict margin implies deterministic one-step contraction and high-frequency closure. This is the stress test that guards against the claim “your mechanism only works because Navier–Stokes has special structure.”
 
 **(6) Failure modes and necessary conditions (capstone).**
-Paper VI proves a sharp equivalence: no failure channels at a maximal time (\Longleftrightarrow) eventual strict margin (\Longleftrightarrow) deterministic tail contraction (\Longleftrightarrow) no blowup within the admissible class. In particular, for Navier–Stokes it yields a clean necessity statement:
+Paper VI proves a sharp equivalence: no failure channels at a maximal time ⇔ eventual strict margin ⇔ deterministic tail contraction ⇔ no blowup within the admissible class. In particular, for Navier–Stokes it yields a clean necessity statement:
 
 > If a genuine finite-time singularity exists, then near the blowup time and at arbitrarily high cutoffs, one must see margin collapse or multiplier blowup (or, failing those, carrier invalidation).
 
@@ -393,15 +419,17 @@ This is exactly the kind of “referee-grade” stress test people ask for: it d
 
 The Everything Equation is a fixed-point criterion for admissibility:
 
-[
+```latex
+\[
 \mathcal{L} = \Omega \Delta \partial(\mathcal{L}).
-]
+\]
+```
 
 The PDE stress-test series operationalizes that criterion in the most adversarial analytic setting:
 
-* (\partial) corresponds to canonicalization of representations (canonized drift identities, boundary-normalized carriers).
-* (\Delta) corresponds to persistence selection (viscous dissipation, defect measures, shock entropy production as nonnegative persistence objects).
-* (\Omega) corresponds to closure/completion (deterministic contraction to a closure-stable representative; elimination of “hidden modes” by explicit failure-channel classification).
+* ∂ corresponds to canonicalization of representations (canonized drift identities, boundary-normalized carriers).
+* Δ corresponds to persistence selection (viscous dissipation, defect measures, shock entropy production as nonnegative persistence objects).
+* Ω corresponds to closure/completion (deterministic contraction to a closure-stable representative; elimination of “hidden modes” by explicit failure-channel classification).
 
 In short: the closure pipeline is not asserted; it is exercised against the full range of PDE pathologies—high-frequency surplus, inviscid anomalies, singular limits, shocks, and explicit obstructions—and what remains is a sharp, testable structural core.
 
