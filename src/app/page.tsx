@@ -1,5 +1,6 @@
 import { loadProblems, loadPapers } from '@/lib/registry';
 import Card from '@/components/card';
+import Link from 'next/link';
 
 export const dynamic = 'force-static';
 
@@ -24,6 +25,20 @@ export default async function HomePage() {
         </p>
       </section>
       <section>
+            <section>
+      <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
+        <h3 className="text-2xl font-semibold mb-2">
+          What is the Everything Equation? <span className="font-mono">E = …</span>
+        </h3>
+        <p className="mb-4">
+          The Everything Equation is a unifying structural principle proposed to govern physical law, mathematics, and information under a single closure condition.
+        </p>
+        <Link href="/what-is-the-everything-equation" className="inline-block text-blue-600 hover:underline">
+          Learn more
+        </Link>
+      </div>
+    </section>
+
         <h3 className="text-2xl font-semibold mb-4">Latest Problems</h3>
         {latestProblems.length === 0 ? (
           <p>No public problems have been added yet.</p>
