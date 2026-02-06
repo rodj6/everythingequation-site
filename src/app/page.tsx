@@ -18,7 +18,7 @@ export default async function HomePage() {
   return (
     <div className="space-y-12">
       <section className="text-center">
-        <h2 className="text-3xl font-bold mb-4">Welcome to Everything Equation</h2>
+        <h2 className="text-3xl font-bold mb-4">Welcome to The Everything Equation</h2>
         <p className="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-300">
           A premium research platform curating open problems and scholarly
           articles, connecting ideas across disciplines.
