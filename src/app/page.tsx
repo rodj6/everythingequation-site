@@ -24,21 +24,26 @@ export default async function HomePage() {
           articles, connecting ideas across disciplines.
         </p>
       </section>
+      {/* Gateway card introducing the Everything Equation */}
       <section>
-            <section>
-      <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
-        <h3 className="text-2xl font-semibold mb-2">
-          What is the Everything Equation? <span className="font-mono">E =𝓏 = Ω Δ ∂ (𝓏)n>
-        </h3>
-        <p className="mb-4">
-          The Everything Equation is a unifying structural principle proposed to govern physical law, mathematics, and information under a single closure condition.
-        </p>
-        <Link href="/what-is-the-everything-equation" className="inline-block text-blue-600 hover:underline">
-          Learn more
-        </Link>
-      </div>
-    </section>
-
+        <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
+          <h3 className="text-2xl font-semibold mb-2">
+            What is the Everything Equation?{' '}
+            <span className="font-mono text-xl">𝓛 = Ω Δ ∂ (𝓛)</span>
+          </h3>
+          <p className="mb-4">
+            The Everything Equation is a unifying structural principle proposed to govern physical law, mathematics, and information under a single closure condition.
+          </p>
+          <Link
+            href="/what-is-the-everything-equation"
+            className="inline-block text-blue-600 hover:underline"
+          >
+            Learn more
+          </Link>
+        </div>
+      </section>
+      {/* Latest Problems */}
+      <section>
         <h3 className="text-2xl font-semibold mb-4">Latest Problems</h3>
         {latestProblems.length === 0 ? (
           <p>No public problems have been added yet.</p>
@@ -50,6 +55,7 @@ export default async function HomePage() {
           </div>
         )}
       </section>
+      {/* Latest Papers */}
       <section>
         <h3 className="text-2xl font-semibold mb-4">Latest Papers</h3>
         {latestPapers.length === 0 ? (
@@ -67,16 +73,17 @@ export default async function HomePage() {
           </div>
         )}
       </section>
-      {/* JSON‑LD for the home page */}
+      {/* JSON-LD for the home page */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'WebSite',
-            'name': 'Everything Equation',
-            'url': 'https://everythingequation.com',
-            'description': 'A premium research platform curating open problems and scholarly articles.',
+            name: 'Everything Equation',
+            url: 'https://everythingequation.com',
+            description:
+              'A premium research platform curating open problems and scholarly articles.',
           }),
         }}
       />
