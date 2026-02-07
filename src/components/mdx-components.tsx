@@ -1,7 +1,9 @@
 "use client";
 
+import React from 'react';
 import type { ComponentProps } from 'react';
 import { MDXProvider } from '@mdx-js/react';
+
 
 // Map standard MDX elements to Tailwind styled components. This ensures
 // consistent typography throughout the site when rendering MDX files.
