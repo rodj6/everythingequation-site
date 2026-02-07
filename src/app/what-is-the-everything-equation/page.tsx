@@ -1,19 +1,18 @@
 import { MdxWrapper } from '@/components/mdx-components';
 
-// Force Next.js to render this page as static at build time
 export const dynamic = 'force-static';
 
 // This page loads the MDX explainer for the Everything Equation and wraps it in the shared MDX wrapper.
-// If the MDX is missing, it falls back to a simple placeholder message.
+// If the MDX cannot be loaded at build time, it renders a descriptive error instead of a placeholder.
 export default async function WhatIsTheEverythingEquationPage() {
   let ManualComponent: React.ComponentType | null = null;
+  let error: any = null;
+
   try {
-    // Adjust the relative import to three parent directories so the MDX file is correctly resolved
     const mod = await import('../../../content/manual/pages/what-is-the-everything-equation.mdx');
     ManualComponent = mod.default;
-  } catch (error) {
-    // If the MDX cannot be loaded, leave ManualComponent null to trigger the fallback
-    ManualComponent = null;
+  } catch (err) {
+    error = err;
   }
 
   return (
@@ -26,8 +25,11 @@ export default async function WhatIsTheEverythingEquationPage() {
         </MdxWrapper>
       ) : (
         <div className="prose dark:prose-invert mt-8">
-          <h2>Coming soon</h2>
-          <p>Content coming soon.</p>
+          <h2>Error loading article</h2>
+          <p>
+            The Everything Equation article could not be loaded.
+            {error ? ` ${error.message}` : ''}
+          </p>
         </div>
       )}
     </div>
