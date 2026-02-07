@@ -1,4 +1,5 @@
-'use client';
+"use client";
+
 import type { ComponentProps } from 'react';
 import { MDXProvider } from '@mdx-js/react';
 
