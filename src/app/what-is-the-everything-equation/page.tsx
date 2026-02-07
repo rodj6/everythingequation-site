@@ -9,7 +9,7 @@ export default async function WhatIsTheEverythingEquationPage() {
   let error: any = null;
 
   try {
-    const mod = await import('../../../../content/manual/pages/what-is-the-everything-equation.mdx');
+    const mod = await import('../../../content/manual/pages/what-is-the-everything-equation.mdx');
     ManualComponent = mod.default;
   } catch (err) {
     error = err;
