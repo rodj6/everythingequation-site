@@ -49,6 +49,4 @@ export interface MdxWrapperProps {
  * surround any imported `.mdx` file to apply consistent styling.
  */
 export function MdxWrapper({ children }: MdxWrapperProps) {
-  rreturn <>{children}</>;
-    
-}
+ return <React.Fragment>{children}</React.Fragment>;
