@@ -8,8 +8,8 @@ export const dynamic = 'force-static';
 export default async function WhatIsTheEverythingEquationPage() {
   let ManualComponent: React.ComponentType | null = null;
   try {
-    // Adjust the relative import to four parent directories so the MDX file is correctly resolved
-    const mod = await import('../../../../content/manual/pages/what-is-the-everything-equation.mdx');
+    // Adjust the relative import to three parent directories so the MDX file is correctly resolved
+    const mod = await import('../../../content/manual/pages/what-is-the-everything-equation.mdx');
     ManualComponent = mod.default;
   } catch (error) {
     // If the MDX cannot be loaded, leave ManualComponent null to trigger the fallback
