@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "sync:zenodo": "ts-node scripts/sync-zenodo.ts"
+    "sync:zenodo": "ts-node scripts/sync-zenodo.ts",
+    "prebuild": "node scripts/generate-manual-mdx-maps.mjs",
+    "build": "npm run prebuild && next build"
   },
   "dependencies": {
     "next": "14.2.25",
@@ -28,11 +29,6 @@
     "@types/js-yaml": "4.0.8",
     "ts-node": "10.9.2",
     "@next/mdx": "14.0.0",
-   "@mdx-js/loader": "^3.1.0"
-  },
-  "scripts": {
-  "prebuild": "node scripts/generate-manual-mdx-maps.mjs",
-  "build": "next build"
-}
-
+    "@mdx-js/loader": "^3.1.0"
+  }
 }
