@@ -16,20 +16,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col">
-        <div className="relative min-h-screen w-full bg-slate-50">
-          {/* Background blobs */}
-          <div className="absolute bottom-0 left-[-20%] right-0 top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(255,0,182,.15),rgba(255,255,255,0))]" />
-          <div className="absolute bottom-0 right-[-20%] top-[-10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle_farthest-side,rgba(0,182,255,.15),rgba(255,255,255,0))]" />
+      <body className="min-h-screen flex flex-col bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased">
+        {/* Subtle background accents */}
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <div className="absolute -top-[40%] -left-[20%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--primary)/0.06),transparent)]" />
+          <div className="absolute -top-[30%] -right-[20%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--primary)/0.04),transparent)]" />
+        </div>
 
-          {/* Content above background */}
-          <div className="relative z-10 min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1 mx-auto max-w-7xl w-full px-4 sm:px-6 lg:px-8 py-8">
-              {children}
-            </main>
-            <Footer />
-          </div>
+        <div className="relative min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1 mx-auto w-full max-w-3xl px-6 sm:px-8 py-12 sm:py-16">
+            {children}
+          </main>
+          <Footer />
         </div>
       </body>
     </html>
