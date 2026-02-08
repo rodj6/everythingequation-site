@@ -22,13 +22,19 @@ export async function generateStaticParams() {
  * Problem detail page. Displays the claim, statement, supporting papers
  * and connections. Manual MDX content is rendered if present.
  */
-export default async function ProblemDetail({ params }: { params: { slug: string } }) {
+export default async function ProblemDetail({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const slug = params.slug;
   const problems = await loadProblems();
   const problem = problems.find((p) => p.id === slug);
+
   if (!problem) {
     return notFound();
   }
+
   // If problem is draft we still build the page but not accessible via nav.
   const papers = await loadPapers();
   const supportedPapers = papers.filter((paper) => {
@@ -36,32 +42,50 @@ export default async function ProblemDetail({ params }: { params: { slug: string
     const list = paper.problems || [];
     return list.includes(problem.rawId) || list.includes(problem.id);
   });
+
   // Determine connections to other problems.
-  const connections = (problem.connections || []).map((id) => problems.find((p) => p.id === id)).filter(Boolean) as typeof problems;
+  const connections = (problem.connections || [])
+    .map((id) => problems.find((p) => p.id === id))
+    .filter(Boolean) as typeof problems;
+
   // Attempt to import manual MDX if it exists.
   let ManualComponent: React.ComponentType | null = null;
   if (problem.manualPath) {
     try {
-      // Dynamic import relative to the compiled project root. This pattern
-      // allows Next.js to include all MDX files under content/manual.
-      const mod = await import(`../../../../content/manual/problems/${slug}.mdx`);
+      const mod = await import(
+        `../../../../content/manual/problems/${slug}.mdx`
+      );
       ManualComponent = mod.default;
-    } catch (err) {
+    } catch {
       ManualComponent = null;
     }
   }
+
   return (
     <article className="prose dark:prose-invert max-w-none">
       <h1>{problem.title}</h1>
       <p className="lead">{problem.claim}</p>
+
       {/* Display optional metadata */}
       <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        {problem.domain && <span><strong>Domain:</strong> {problem.domain}</span>}{' '}
-        {problem.maturity && <span><strong>Maturity:</strong> {problem.maturity}</span>}{' '}
+        {problem.domain && (
+          <span>
+            <strong>Domain:</strong> {problem.domain}
+          </span>
+        )}{' '}
+        {problem.maturity && (
+          <span>
+            <strong>Maturity:</strong> {problem.maturity}
+          </span>
+        )}{' '}
         {problem.monograph_refs && problem.monograph_refs.length > 0 && (
-          <span><strong>Monograph:</strong> {problem.monograph_refs.join(', ')}</span>
+          <span>
+            <strong>Monograph:</strong>{' '}
+            {problem.monograph_refs.join(', ')}
+          </span>
         )}
       </div>
+
       {ManualComponent && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Notes</h2>
@@ -70,6 +94,7 @@ export default async function ProblemDetail({ params }: { params: { slug: string
           </MdxWrapper>
         </section>
       )}
+
       {supportedPapers.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Supporting Papers</h2>
@@ -78,20 +103,31 @@ export default async function ProblemDetail({ params }: { params: { slug: string
               <Card
                 key={paper.id}
                 href={`/papers/${paper.id}`}
-                title={paper.metadata?.title ?? paper.role ?? paper.id}
-                description={paper.metadata?.description?.substring(0, 120) || ''}
+                title={
+                  paper.metadata?.title ??
+                  paper.role ??
+                  paper.id
+                }
+                description={
+                  paper.metadata?.description?.substring(0, 120) ||
+                  ''
+                }
               />
             ))}
           </div>
         </section>
       )}
+
       {connections.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Related Problems</h2>
           <ul>
             {connections.map((p) => (
               <li key={p.id}>
-                <a href={`/problems/${p.id}`} className="text-blue-600 hover:text-blue-800 underline">
+                <a
+                  href={`/problems/${p.id}`}
+                  className="text-blue-600 hover:text-blue-800 underline"
+                >
                   {p.title}
                 </a>
               </li>
@@ -99,6 +135,7 @@ export default async function ProblemDetail({ params }: { params: { slug: string
           </ul>
         </section>
       )}
+
       {/* Structured data for the problem page */}
       <script
         type="application/ld+json"
@@ -106,13 +143,12 @@ export default async function ProblemDetail({ params }: { params: { slug: string
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ResearchProject',
-            'name': problem.title,
-            'url': `https://everythingequation.com/problems/${problem.id}`,
-            'description': problem.claim,
+            name: problem.title,
+            url: `https://everythingequation.com/problems/${problem.id}`,
+            description: problem.claim,
           }),
         }}
       />
     </article>
   );
 }
-
