@@ -29,5 +29,10 @@
     "ts-node": "10.9.2",
     "@next/mdx": "14.0.0",
    "@mdx-js/loader": "^3.1.0"
-  }
+  },
+  "scripts": {
+  "prebuild": "node scripts/generate-manual-mdx-maps.mjs",
+  "build": "next build"
+}
+
 }
