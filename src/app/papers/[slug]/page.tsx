@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { loadPapers, loadProblems } from '@/lib/registry';
 import Card from '@/components/card';
 import { MdxWrapper } from '@/components/mdx-components';
+import { manualPapers } from '@/generated/manualPapers';
 
 export const dynamicParams = true;
 
@@ -24,15 +25,20 @@ export default async function PaperDetail({ params }: { params: { slug: string }
     (prob) => paper.problems?.includes(prob.id) && prob.status === 'public'
   );
 
-  // Manual MDX import
+  // Attempt to load manual MDX from generated map (if present).
   let ManualComponent: React.ComponentType | null = null;
-  if (paper.manualPath) {
-    try {
-      const mod = await import(`../../../../content/manual/papers/${slug}.mdx`);
+  try {
+    const loader = (manualPapers as Record<
+      string,
+      (() => Promise<{ default: React.ComponentType }>) | undefined
+    >)[slug];
+
+    if (typeof loader === 'function') {
+      const mod = await loader();
       ManualComponent = mod.default;
-    } catch {
-      ManualComponent = null;
     }
+  } catch {
+    ManualComponent = null;
   }
 
   return (
