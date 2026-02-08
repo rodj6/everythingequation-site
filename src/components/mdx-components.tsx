@@ -3,8 +3,7 @@
 import * as React from "react";
 import type { ComponentProps } from "react";
 
-
-
+// Map standard MDX elements to Tailwind styled components. This ensures
 // consistent typography throughout the site when rendering MDX files.
 export const mdxComponents = {
   h1: (props: ComponentProps<"h1">) => (
@@ -49,4 +48,5 @@ export interface MdxWrapperProps {
  * surround any imported `.mdx` file to apply consistent styling.
  */
 export function MdxWrapper({ children }: MdxWrapperProps) {
- return <React.Fragment>{children}</React.Fragment>;
+  return <React.Fragment>{children}</React.Fragment>;
+}
