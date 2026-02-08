@@ -1,37 +1,20 @@
-import { mdxComponents } from '@/components/mdx-components';
+"use client";
 
-export const dynamic = 'force-static';
+import * as React from "react";
+import { mdxComponents } from "@/components/mdx-components";
+import ManualComponent from "../../../content/manual/pages/what-is-the-everything-equation.mdx";
 
-// This page loads the MDX explainer for the Everything Equation and wraps it with our MDX components.
-// If the MDX cannot be loaded at build time, it renders a descriptive error instead of a placeholder.
+// NOTE:
+// - Removed `export const dynamic = 'force-static'` (server/static directive) because this page must run in a true client context.
+// - Removed async + dynamic import + fallback/error UI. No bypasses, no placeholders.
 
-export default async function WhatIsTheEverythingEquationPage() {
-  let ManualComponent: React.ComponentType | null = null;
-  let error: any = null;
-
-     const mod = await import('../../../content/manual/pages/what-is-the-everything-equation.mdx');
-    ManualComponent = mod.dfault; 
-  } catch (err) {
-    error = err;
-  }
-
+export default function WhatIsTheEverythingEquationPage() {
   return (
     <div className="mx-auto w-full max-w-3xl space-y-12 py-16">
       <h1 className="text-3xl font-bold">What is the Everything Equation?</h1>
-      {ManualComponent ? (
-        <>
-          {/* Render the MDX component */}
-          <ManualComponent components={mdxComponents} />
-        </>
-      ) : (
-        <div className="prose dark:prose-invert mt-8">
-          <h2>Error loading article</h2>
-          <p>
-            The Everything Equation article could not be loaded.
-            {error ? ` ${error.message}` : ''}
-          </p>
-        </div>
-      )}
+
+      {/* Render the MDX component with the shared component mapping */}
+      <ManualComponent components={mdxComponents} />
     </div>
   );
 }
