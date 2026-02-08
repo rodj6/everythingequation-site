@@ -189,7 +189,7 @@ async function fetchZenodo(record: string): Promise<ZenodoMetadata | null> {
  * missing or outdated, fetch it from the network and update the cache.
  * Returns the loaded papers augmented with their Zenodo data and manual
  * MDX paths. When running inside Next.js build the network calls will be
- * executed server‑side.
+ * executed server-side.
  */
 export async function loadPapers(): Promise<LoadedPaper[]> {
   // Read the raw YAML document. Support both array and object formats.
@@ -217,9 +217,16 @@ export async function loadPapers(): Promise<LoadedPaper[]> {
     const zenodoId: string | undefined = raw.zenodo?.toString() || raw.zenodoId;
     const doi: string | undefined = raw.doi;
     const status: PaperStatus = raw.visibility === 'public' ? 'public' : 'draft';
+
+    // ✅ PATCH: guard startsWith with typeof === 'string'
     const problems: string[] | undefined = raw.supports
-      ? (raw.supports as string[]).map((p) => (p.startsWith('problem:') ? p.slice('problem:'.length) : p))
+      ? (raw.supports as any[]).map((p) =>
+          typeof p === 'string' && p.startsWith('problem:')
+            ? p.slice('problem:'.length)
+            : p
+        )
       : raw.problems;
+
     const role: string | undefined = raw.role;
     const featured: boolean | undefined = raw.featured;
     const notes: string | undefined = raw.notes;
@@ -281,15 +288,19 @@ export async function loadProblems(): Promise<LoadedProblem[]> {
     const monographRefs: string[] | undefined = raw.monograph_refs;
     const monograph: string | undefined = monographRefs && monographRefs.length > 0 ? monographRefs[0] : undefined;
     const supportedBy: string[] | undefined = raw.supported_by || raw.papers;
-    // Map connection hints: convert 'problem:slug' to slug if prefix present
+
+    // ✅ PATCH: guard startsWith with typeof === 'string'
     let connections: string[] | undefined;
     if (raw.connections_hint) {
-      connections = raw.connections_hint.map((c: string) => {
-        return c.startsWith('problem:') ? c.slice('problem:'.length) : c;
-      });
+      connections = raw.connections_hint.map((c: any) =>
+        typeof c === 'string' && c.startsWith('problem:')
+          ? c.slice('problem:'.length)
+          : c
+      );
     } else if (raw.connections) {
       connections = raw.connections;
     }
+
     const status: ProblemStatus = raw.status || 'draft';
     const entry: ProblemEntry = {
       id: slug,
@@ -323,7 +334,7 @@ async function resolveManualPath(category: 'problems' | 'papers', slug: string):
 /**
  * Generate a simple site graph capturing the relationships between
  * problems and papers. Only public entries are included. The graph
- * conforms loosely to the JSON‑LD `@graph` structure used by schema.org.
+ * conforms loosely to the JSON-LD `@graph` structure used by schema.org.
  */
 export async function generateGraph() {
   const problems = await loadProblems();
@@ -354,7 +365,7 @@ export async function generateGraph() {
 
 /**
  * Generate the llms.txt content. This simple text file enumerates
- * public resources in a human‑readable format to aid large language
+ * public resources in a human-readable format to aid large language
  * models in discovering the site’s scope. Each line contains the type
  * and slug of the resource.
  */
@@ -417,7 +428,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
  */
 export async function generateFeed(baseUrl: string): Promise<string> {
   const papers = await loadPapers();
-  const feedId = `${baseUrl}/`; 
+  const feedId = `${baseUrl}/`;
   const updated = new Date().toISOString();
   const entries: string[] = [];
   for (const paper of papers) {
