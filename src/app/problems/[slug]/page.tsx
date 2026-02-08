@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { loadProblems, loadPapers } from '@/lib/registry';
 import Card from '@/components/card';
 import { MdxWrapper } from '@/components/mdx-components';
+import { manualProblems } from '@/generated/manualProblems';
 
 export const dynamicParams = true;
 
@@ -48,17 +49,20 @@ export default async function ProblemDetail({
     .map((id) => problems.find((p) => p.id === id))
     .filter(Boolean) as typeof problems;
 
-  // Attempt to import manual MDX if it exists.
+  // Attempt to load manual MDX from generated map (if present).
   let ManualComponent: React.ComponentType | null = null;
-  if (problem.manualPath) {
-    try {
-      const mod = await import(
-        `../../../../content/manual/problems/${slug}.mdx`
-      );
+  try {
+    const loader = (manualProblems as Record<
+      string,
+      (() => Promise<{ default: React.ComponentType }>) | undefined
+    >)[slug];
+
+    if (typeof loader === 'function') {
+      const mod = await loader();
       ManualComponent = mod.default;
-    } catch {
-      ManualComponent = null;
     }
+  } catch {
+    ManualComponent = null;
   }
 
   return (
@@ -103,15 +107,8 @@ export default async function ProblemDetail({
               <Card
                 key={paper.id}
                 href={`/papers/${paper.id}`}
-                title={
-                  paper.metadata?.title ??
-                  paper.role ??
-                  paper.id
-                }
-                description={
-                  paper.metadata?.description?.substring(0, 120) ||
-                  ''
-                }
+                title={paper.metadata?.title ?? paper.role ?? paper.id}
+                description={paper.metadata?.description?.substring(0, 120) || ''}
               />
             ))}
           </div>
