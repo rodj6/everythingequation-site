@@ -47,8 +47,12 @@ export default async function ProblemDetail({ params }: { params: { slug: string
   // Attempt to load manual MDX from generated map (if present).
   let ManualComponent: React.ComponentType | null = null;
   try {
-    const loader = manualProblems[slug as keyof typeof manualProblems];
-    if (loader) {
+    const loader = (manualProblems as Record<
+      string,
+      (() => Promise<{ default: React.ComponentType }>) | undefined
+    >)[slug];
+
+    if (typeof loader === 'function') {
       const mod = await loader();
       ManualComponent = mod.default;
     }
