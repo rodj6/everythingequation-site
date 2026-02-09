@@ -96,14 +96,13 @@ export default async function ProblemDetail({
         </div>
       )}
 
-      {ManualComponent && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold">Notes</h2>
-          <MdxWrapper>
-            <ManualComponent />
-          </MdxWrapper>
-        </section>
-      )}
+     {ManualComponent && (
+  <section className="mt-8">
+    <h2 className="text-xl font-semibold">Notes</h2>
+    <ManualMdxRenderer Component={ManualComponent} />
+  </section>
+)}
+
 
       {supportedPapers.length > 0 && (
         <section className="mt-8">
