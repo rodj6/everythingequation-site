@@ -1,16 +1,12 @@
 "use client";
 
 import * as React from "react";
-import { MdxWrapper } from "@/components/mdx-components";
+import { mdxComponents } from "@/components/mdx-components";
 
-type Props = {
+export default function ManualMdxRenderer({
+  Component,
+}: {
   Component: React.ComponentType<any>;
-};
-
-export default function ManualMdxRenderer({ Component }: Props) {
-  return (
-    <MdxWrapper>
-      <Component />
-    </MdxWrapper>
-  );
+}) {
+  return <Component components={mdxComponents} />;
 }
