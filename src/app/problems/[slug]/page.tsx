@@ -1,8 +1,7 @@
-import { notFound } from 'next/navigation';
-import { loadProblems, loadPapers } from '@/lib/registry';
-import Card from '@/components/card';
-import { manualProblems } from '@/generated/manualProblems';
-import ManualMdxRenderer from '@/components/manual-mdx-renderer';
+import { notFound } from "next/navigation";
+import { loadProblems, loadPapers } from "@/lib/registry";
+import Card from "@/components/card";
+import ProblemNotes from "@/components/problem-notes";
 
 export const dynamicParams = true;
 
@@ -15,7 +14,7 @@ export const dynamicParams = true;
 export async function generateStaticParams() {
   const problems = await loadProblems();
   return problems
-    .filter((p) => p.status === 'public')
+    .filter((p) => p.status === "public")
     .map((p) => ({ slug: p.id }));
 }
 
@@ -39,7 +38,7 @@ export default async function ProblemDetail({
   // If problem is draft we still build the page but not accessible via nav.
   const papers = await loadPapers();
   const supportedPapers = papers.filter((paper) => {
-    if (paper.status !== 'public') return false;
+    if (paper.status !== "public") return false;
     const list = paper.problems || [];
     return list.includes(problem.rawId) || list.includes(problem.id);
   });
@@ -48,23 +47,6 @@ export default async function ProblemDetail({
   const connections = (problem.connections || [])
     .map((id) => problems.find((p) => p.id === id))
     .filter(Boolean) as typeof problems;
-
-  // Attempt to load manual MDX from generated map (if present).
-  let ManualComponent: React.ComponentType | null = null;
-  let manualError: string | null = null;
-
-  try {
-    const loader = (manualProblems as Record<string, (() => Promise<any>) | undefined>)[slug];
-
-    if (typeof loader === 'function') {
-      const mod = await loader();
-      // MDX modules may export `default` OR `MDXContent` depending on the toolchain.
-      ManualComponent = (mod?.default ?? mod?.MDXContent ?? null) as React.ComponentType | null;
-    }
-  } catch (err: any) {
-    manualError = err?.message ?? String(err);
-    ManualComponent = null;
-  }
 
   return (
     <article className="prose dark:prose-invert max-w-none">
@@ -77,31 +59,21 @@ export default async function ProblemDetail({
           <span>
             <strong>Domain:</strong> {problem.domain}
           </span>
-        )}{' '}
+        )}{" "}
         {problem.maturity && (
           <span>
             <strong>Maturity:</strong> {problem.maturity}
           </span>
-        )}{' '}
+        )}{" "}
         {problem.monograph_refs && problem.monograph_refs.length > 0 && (
           <span>
-            <strong>Monograph:</strong> {problem.monograph_refs.join(', ')}
+            <strong>Monograph:</strong> {problem.monograph_refs.join(", ")}
           </span>
         )}
       </div>
 
-      {manualError && (
-        <div className="mt-6 rounded border border-red-300 bg-red-50 p-4 text-red-900 dark:border-red-900 dark:bg-red-950 dark:text-red-100">
-          <strong>Manual MDX import failed:</strong> {manualError}
-        </div>
-      )}
-
-      {ManualComponent && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold">Notes</h2>
-          <ManualMdxRenderer Component={ManualComponent} />
-        </section>
-      )}
+      {/* Notes (MDX) rendered client-side to avoid React context/runtime issues */}
+      <ProblemNotes slug={slug} />
 
       {supportedPapers.length > 0 && (
         <section className="mt-8">
@@ -112,7 +84,7 @@ export default async function ProblemDetail({
                 key={paper.id}
                 href={`/papers/${paper.id}`}
                 title={paper.metadata?.title ?? paper.role ?? paper.id}
-                description={paper.metadata?.description?.substring(0, 120) || ''}
+                description={paper.metadata?.description?.substring(0, 120) || ""}
               />
             ))}
           </div>
@@ -142,8 +114,8 @@ export default async function ProblemDetail({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ResearchProject',
+            "@context": "https://schema.org",
+            "@type": "ResearchProject",
             name: problem.title,
             url: `https://everythingequation.com/problems/${problem.id}`,
             description: problem.claim,
