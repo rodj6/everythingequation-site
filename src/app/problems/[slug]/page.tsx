@@ -51,17 +51,18 @@ export default async function ProblemDetail({
 
   // Attempt to load manual MDX from generated map (if present).
   let ManualComponent: React.ComponentType | null = null;
-  try {
-    const loader = (manualProblems as Record<
-      string,
-      (() => Promise<{ default: React.ComponentType }>) | undefined
-    >)[slug];
+  let manualError: string | null = null;
 
-    if (typeof loader === 'function') {
+  try {
+    const loader = (manualProblems as Record<string, (() => Promise<any>) | undefined>)[slug];
+
+    if (typeof loader === "function") {
       const mod = await loader();
-      ManualComponent = mod.default;
+      // MDX modules may export `default` OR `MDXContent` depending on the toolchain.
+      ManualComponent = (mod?.default ?? mod?.MDXContent ?? null) as React.ComponentType | null;
     }
-  } catch {
+  } catch (err: any) {
+    manualError = err?.message ?? String(err);
     ManualComponent = null;
   }
 
@@ -89,6 +90,11 @@ export default async function ProblemDetail({
           </span>
         )}
       </div>
+            {manualError && (
+        <div className="mt-6 rounded border border-red-300 bg-red-50 p-4 text-red-900 dark:border-red-900 dark:bg-red-950 dark:text-red-100">
+          <strong>Manual MDX import failed:</strong> {manualError}
+        </div>
+      )}
 
       {ManualComponent && (
         <section className="mt-8">
