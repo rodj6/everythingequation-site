@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation';
 import { loadProblems, loadPapers } from '@/lib/registry';
 import Card from '@/components/card';
-import { MdxWrapper } from '@/components/mdx-components';
 import { manualProblems } from '@/generated/manualProblems';
+import ManualMdxRenderer from '@/components/manual-mdx-renderer';
 
 export const dynamicParams = true;
 
@@ -56,7 +56,7 @@ export default async function ProblemDetail({
   try {
     const loader = (manualProblems as Record<string, (() => Promise<any>) | undefined>)[slug];
 
-    if (typeof loader === "function") {
+    if (typeof loader === 'function') {
       const mod = await loader();
       // MDX modules may export `default` OR `MDXContent` depending on the toolchain.
       ManualComponent = (mod?.default ?? mod?.MDXContent ?? null) as React.ComponentType | null;
@@ -85,25 +85,23 @@ export default async function ProblemDetail({
         )}{' '}
         {problem.monograph_refs && problem.monograph_refs.length > 0 && (
           <span>
-            <strong>Monograph:</strong>{' '}
-            {problem.monograph_refs.join(', ')}
+            <strong>Monograph:</strong> {problem.monograph_refs.join(', ')}
           </span>
         )}
       </div>
-            {manualError && (
+
+      {manualError && (
         <div className="mt-6 rounded border border-red-300 bg-red-50 p-4 text-red-900 dark:border-red-900 dark:bg-red-950 dark:text-red-100">
           <strong>Manual MDX import failed:</strong> {manualError}
         </div>
       )}
 
-   {ManualComponent && (
-  <section className="mt-8">
-    <h2 className="text-xl font-semibold">Notes</h2>
-    <ManualMdxRenderer Component={ManualComponent} />
-  </section>
-)}
-
-
+      {ManualComponent && (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold">Notes</h2>
+          <ManualMdxRenderer Component={ManualComponent} />
+        </section>
+      )}
 
       {supportedPapers.length > 0 && (
         <section className="mt-8">
