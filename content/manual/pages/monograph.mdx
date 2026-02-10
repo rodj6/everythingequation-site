@@ -10,20 +10,20 @@ The monograph is built from two complementary pillars that are intentionally des
 
 ### Part I — Engine (Tier–0 admissibility and selection)
 
-The Engine formalizes a Tier–0 operator architecture in which admissible laws arise as fixed points of a universal closure triple (∂, Δ, Ω) acting on a law space. The controlling identity is the Everything Equation:
+The Engine formalizes a Tier–0 operator architecture in which admissible laws arise as fixed points of a universal closure triple $(\partial,\Delta,\Omega)$ acting on a law space. The controlling identity is the Everything Equation:
 
 <h2 className="mt-10 mb-6 text-center text-2xl font-normal tracking-wide">
-  𝓛 = Ω Δ ∂ (𝓛)
+  $$\mathcal{L} = \Omega \Delta \partial(\mathcal{L})$$
 </h2>
-                                                                                
-The Engine treats this as a law of lawhood: a candidate “law” is admissible only if it is stable under boundary normalization (∂), persistence/collapse filtering (Δ), and reflective closure (Ω).
+
+The Engine treats this as a law of lawhood: a candidate “law” is admissible only if it is stable under boundary normalization $(\partial)$, persistence/collapse filtering $(\Delta)$, and reflective closure $(\Omega)$.
 
 Beyond the core closure rule, the Engine introduces:
 
-* a structured field stack (Λ, δ, C, Ω, M, T, I, Y) governing dissipation, collapse, coherence, closure, mirror structure, temporality, interaction, and memory;
-* three universal invariants (RSI, MCSI, BAI) that constrain admissible recursion budgets;
+* a structured field stack $(\Lambda, \delta, C, \Omega, M, T, I, Y)$ governing dissipation, collapse, coherence, closure, mirror structure, temporality, interaction, and memory;
+* three universal invariants $(\mathrm{RSI}, \mathrm{MCSI}, \mathrm{BAI})$ that constrain admissible recursion budgets;
 * an observer closure system with its own fixed-point identity (an “observer Everything Equation”);
-* a dimensionality operator selecting D = 4 in the stable regime;
+* a dimensionality operator selecting $D = 4$ in the stable regime;
 * a calibration map tying Tier–0 invariants and budgets to effective constants and couplings;
 * a rigidity program aimed at collapsing the remaining freedom down to a narrow admissible set.
 
@@ -68,7 +68,7 @@ This document is long by design. Here are stable entry points.
 
 ### Route B — Engine-first (for mathematicians and formalists)
 
-1. Read Part I definitions: law space, operators (∂, Δ, Ω), fixed points, invariants, closure operators.
+1. Read Part I definitions: law space, operators $(\partial,\Delta,\Omega)$, fixed points, invariants, closure operators.
 2. Read the fixed-point and stability sections (contraction structure, fixed-point existence/uniqueness).
 3. Then read Part II Map as an application layer: what the protocol outputs when instantiated.
 
@@ -79,138 +79,23 @@ This document is long by design. Here are stable entry points.
 
 ---
 
-## How the Work Is Organized
-
-### Monograph
-
-* The Tier–0 operator calculus and fixed-point lawhood criterion
-* The integrated field stack and invariants
-* The closure protocol (how to run the framework)
-* The structural map: registry, budgets, regimes, interaction graph, tie-break nodes
-* High-level rigidity program structure and where technical lemmas are delegated
-
-### Problems 
-
-Problems are the public-facing organization of the program. Each Problem page states:
-
-* what is being resolved,
-* what counts as a resolution,
-* what technical objects/papers support it,
-* what remains open or delegated.
-
-### Papers 
-
-Papers are the ground truth for details:
-
-* full proofs,
-* explicit derivations,
-* structural lemmas,
-* computation pipelines,
-* stress tests and obstruction classifications.
-
----
-
-## Anchors Introduced in the Monograph
-
-This page is not meant to reproduce the monograph. But it should show immediately that the framework is not just definitional. The monograph contains several explicit anchor-level demonstrations. Here are three that readers commonly use as litmus tests.
-
----
-
 ## Anchor 1 — General Relativity as a closure-stable output
 
-A recurring question is: can a lawhood criterion say anything nontrivial about gravity without inserting GR by hand?
-
-The monograph’s Tier–0 preview frames a minimal question:
-
-> If a universal long-range interaction exists, what form can it take while remaining stable under Tier–0 admissibility (∂ boundary normalization, Δ persistence filtering, Ω closure)?
-
-The closure constraints force four structural requirements on any candidate universal geometric law:
-
-* invariance under admissible description change (diffeomorphism invariance),
-* locality and finite differential order (exclusion of nonlocal and uncontrolled higher-derivative structure),
-* conservation enforced by closure (covariant conservation of the geometric side),
-* universality of coupling (a single metric coupling consistently to matter).
-
-Once those structural requirements are enforced, the remaining degrees of freedom collapse to a Lovelock-type uniqueness statement in D = 4: the only divergence-free symmetric rank-2 tensor built locally from the metric and its derivatives is a linear combination of the Einstein tensor and the metric.
-
-<p className="mt-4">The resulting field equation is the standard GR + Λ form:</p>
+<p className="mt-4">The resulting field equation is the standard GR + $\Lambda$ form:</p>
 
 <div className="mt-3 mb-6 ml-10 text-xl leading-relaxed font-[Cambria,Georgia,'Times_New_Roman',Times,serif] [font-variant-numeric:tabular-nums]">
-  <span className="italic">G</span><sub>μν</sub> + Λ <span className="italic">g</span><sub>μν</sub>
-  {" = "}8π <span className="italic">G</span> <span className="italic">T</span><sub>μν</sub>.
+  $$G_{\mu\nu} + \Lambda g_{\mu\nu} = 8\pi G\,T_{\mu\nu}$$
 </div>
-
-
 
 In the monograph’s framing, this is not treated as “a postulate.” It is treated as the unique closure-stable universal interaction under the Tier–0 admissibility pipeline in four dimensions.
 
-
-## Anchor 2 — Quantum measurement without observer-driven collapse
-
-The monograph includes a dedicated “quantum observer universe” development in which the Tier–0 structure is instantiated in the quantum setting.
-
-The core claim of that development is not interpretive it is structural:
-
-* the quantum Everything Equation selects the stable (classical/diagonal) sector as the admissible fixed-point set,
-* superpositions do not satisfy the fixed-point conditions,
-* the Born rule arises structurally within the closure architecture,
-* “consciousness causes collapse” is treated as a category error: ontic collapse is determined by the quantum closure map; cognition enters only at the level of epistemic update.
-
-A typical summary form in the monograph is:
-
-* ontic change: the physical state becomes a classical mixture under the quantum closure pipeline,
-* epistemic update: the observer subsystem updates its internal state upon acquiring information.
-
-The point is not that measurement becomes “easy.” The point is that the *type* of problem changes: collapse becomes an interface consequence of admissible closure, not an ad hoc axiom.
-
 ---
 
-## Anchor 3 — A worked example: recursive spectral curvature and the cosmological constant
-
-The monograph contains a fully worked Tier–0 example that aims to demonstrate the end-to-end power of the framework:
-
-* starting from Tier–0 closure plus the field stack and invariants,
-* using the spectral/budget machinery (Λ/δ/QG structure, coherence, mirror and temporal constraints),
-* applying the closure protocol under D = 4,
-* and producing a controlled derivation pipeline for a cosmological constant analysis.
-
-This example is not presented as a slogan; it is presented as a demonstration that the framework can be run in a nontrivial, quantitative setting with explicit budgets, invariants, and closure criteria.
-
----
-
-## The stress-test posture (why PDE theory appears in the monograph)
-
-A serious objection to any unifying framework is that it survives only in friendly regimes. The monograph explicitly treats PDE regularity theory and related analytic failure modes as a hostile test bed for closure claims.
-
-This is not an aside. It is part of the methodological stance:
-
-* closure claims are not accepted because they are aesthetically unified,
-* closure claims are accepted only if they survive maximal stress tests and failure-mode classification.
-
-The PDE series (hosted as individual Papers on this site) is treated as an analytic verification layer for the closure mechanism.
-
----
-
-## Using this Site Alongside the Monograph
-
-If you are arriving here from search (GR, cosmological constant, quantum measurement, closure, admissibility), this is the recommended workflow:
-
-1. Use this monograph page to get the integrated map of the program.
-2. Use **/problems** to locate the target area (gravity, Standard Model, quantum measurement, PDE regularity, etc.).
-3. Use **/papers** for the exact technical artifacts and proofs.
-
-* Problems: **/problems**
-* Papers: **/papers**
-
----
-
-## Status and scope 
-
-This monograph makes strong claims, but it also draws boundaries.
+## Status and scope
 
 ### Central Claims
 
-* A universal Tier–0 admissibility architecture: laws as fixed points under (∂, Δ, Ω).
+* A universal Tier–0 admissibility architecture: laws as fixed points under $(\partial,\Delta,\Omega)$.
 * A closure protocol that can be instantiated in multiple domains (physics, mathematics, information, cognition).
 * A structural map that localizes ambiguity into explicit tie-break nodes rather than leaving it implicit.
 * A rigidity posture: once closure, budgets, and invariants are enforced, admissible law space becomes highly constrained.
@@ -234,24 +119,16 @@ This monograph is deliberately written to be machine-ingestible:
 An AI (or any formal reader) can treat it as a protocol:
 
 1. Specify a law space.
-2. Specify ∂, Δ, Ω in that domain.
+2. Specify $\partial$, $\Delta$, $\Omega$ in that domain.
 3. Compute or characterize fixed points.
 4. Extract invariants, budgets, and admissible regimes.
 5. Localize underdetermination as explicit tie-break nodes.
 
 That is the intended “engine + map” structure.
 
-### Primary reference
-
-* **The Tier-0 Framework and the Everything Equation: A Law-Level Closure and Selection Architecture for Physics, Mathematics, and Information**
-  DOI: [10.5281/zenodo.18493638](https://doi.org/10.5281/zenodo.18493638)
-
 ---
 
-## Related navigation
 
-* Problems: **/problems**
-* Papers: **/papers**
 
 
 
