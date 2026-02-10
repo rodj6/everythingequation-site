@@ -20,14 +20,14 @@ That operator is the math-sector instantiation of the Tier-0 admissibility recur
 
 ## 1) The lawhood criterion (mathematics-sector Everything Equation)
 
-In physics, Tier-0 writes lawhood as a fixed-point condition:
+In physics, Tier-0 writes lawhood as a fixed-point condition:  
 L = Omega(Delta(partial(L))) and interprets the operators as boundary normalization, persistence or records, and closure completion.
 
 In mathematics, the same architecture applies, but with a different meaning of “persistence” (inferential, not thermodynamic):
 
 **Mathematical lawhood** is defined by:
 
-**M is lawful if and only if**
+**M is lawful if and only if**  
 M = OmegaM(DeltaM(partialM(M))).
 
 This is not rhetorical. It becomes formal once we specify:
@@ -42,7 +42,7 @@ This is not rhetorical. It becomes formal once we specify:
 
 You need a place for the operator to act.
 
-The mathematics paper chooses a complete lattice (M, <=) as the carrier, with examples like:
+The mathematics paper chooses a complete lattice (M, leq) as the carrier, with examples like:
 
 * a lattice of theories ordered by strength (theorem inclusion),
 * or a lattice of structure classes ordered by refinement.
@@ -62,7 +62,7 @@ Mathematics constantly re-encodes the same structure:
 * definitional expansions and eliminations,
 * Morita equivalence / bi-interpretability / “same content, different clothing.”
 
-The framework treats that as a formal equivalence relation “~” (or a designated class of morphisms), and requires normalization to respect it.
+The framework treats that as a formal equivalence relation (“equivalent-to”) or a designated class of morphisms, and requires normalization to respect it.
 
 If your “truth” changes under admissible re-presentation, it’s not law-level.
 
@@ -128,7 +128,7 @@ Formally:
 
 This is the decisive move: mathematical lawhood becomes a theorem-shaped property, not a metaphysical claim.
 
-You do not have to argue “does mathematics exist.”
+You do not have to argue “does mathematics exist.”  
 You specify admissibility, and fixed points exist.
 
 ---
@@ -174,7 +174,7 @@ Structures that fail any operator stage:
 
 This is exactly how independence phenomena are re-read:
 
-> Independence is not just “unprovable.”
+> Independence is not just “unprovable.”  
 > It is a structural signal of DeltaM-fragility under the chosen admissible perturbations.
 
 ---
@@ -194,7 +194,7 @@ The mathematics paper makes the corresponding claim:
 
 So “why is math effective in physics” is no longer mysterious:
 
-> Both are filtered by the same closure architecture.
+> Both are filtered by the same closure architecture.  
 > Physics inherits the closure-stable part of mathematics because both are fixed points (with different operator instantiations).
 
 ---
@@ -204,161 +204,10 @@ So “why is math effective in physics” is no longer mysterious:
 If something “isn’t law-level,” the framework doesn’t handwave it away. It classifies how it fails:
 
 * partialM failure: presentation dependence,
-* DeltaM failure: fragility under perturbation / no robust core,
+* DeltaM failure: fragility under perturbation or no robust core,
 * OmegaM failure: limit or refinement instability, non-canonical completion.
 
 That is the right kind of hardness: it turns foundational disputes into checklists.
-
----
-
-## Operator Spec Sheet: Mathematical Lawhood (Tier-0, Math Sector)
-
-This section fixes the operator choices used throughout the mathematical lawhood framework. Nothing here is rhetorical; each entry is a design decision that can be accepted, rejected, or replaced explicitly.
-
-### Carrier domain (what the operators act on)
-
-**Carrier:** a complete lattice M of mathematical law candidates, ordered by refinement or strength.
-
-Admissible realizations include:
-
-* a lattice of theories ordered by theorem inclusion,
-* a lattice of structure classes ordered by definitional refinement,
-* a reflective sublattice of model classes under admissible equivalence.
-
-**Required property:** completeness (arbitrary meets and joins exist).
-
-**Reason:** fixed-point existence is guaranteed only on complete lattices (Knaster–Tarski).
-
----
-
-### Admissible equivalence (what counts as “the same content”)
-
-**Equivalence relation:** admissible re-presentation equivalence.
-
-Typical instantiations:
-
-* definitional equivalence,
-* bi-interpretability,
-* Morita equivalence,
-* univalent identification (where applicable).
-
-**Constraint:** equivalence must preserve all invariants regarded as law-level (no outcome forcing).
-
-**Role:** this is the quotient applied by boundary normalization.
-
----
-
-### Boundary normalization operator (partialM)
-
-**Input:** arbitrary candidate structure in M.
-**Output:** canonical representative modulo admissible re-presentation.
-
-**Formal properties:**
-
-* monotone,
-* idempotent,
-* extensive,
-* invariant under admissible equivalence.
-
-**Interpretation:** removes presentation artifacts, encoding dependence, and syntactic scaffolding.
-
-If a structure changes under partialM, it is not law-level.
-
----
-
-### Persistence operator (DeltaM)
-
-**Purpose:** extract the inferentially robust core.
-
-**Perturbation class (explicit choice):**
-
-* conservative weakening of axioms,
-* conservative extension or reduction,
-* admissible axiom variation within a tolerance class,
-* admissible proof-theoretic or semantic perturbations.
-
-**Formal properties:**
-
-* monotone,
-* idempotent,
-* intensive (core extraction),
-* maximal among substructures stable under the chosen perturbations.
-
-**Interpretation:** removes fragile scaffolding that does not survive stress.
-
-Independence and axiom sensitivity correspond to DeltaM-failure.
-
----
-
-### Closure operator (OmegaM)
-
-**Purpose:** enforce canonical inevitability.
-
-**Closure class (explicit choice):**
-
-* closure under admissible morphisms,
-* reflective hulls,
-* canonical completions,
-* universal-property completions,
-* transport across admissible formalisms.
-
-**Formal properties:**
-
-* monotone,
-* idempotent,
-* extensive,
-* minimal among closed supersets.
-
-**Interpretation:** forces reappearance of canonical structure under admissible completion.
-
-If a construction does not canonically reappear, it fails OmegaM.
-
----
-
-### Composite admissibility map
-
-**Definition:**
-
-FM = OmegaM o DeltaM o partialM
-
-**Lawhood criterion:**
-
-A mathematical structure M is lawful if and only if
-M = FM(M).
-
-This is a fixed-point condition, not a proof requirement.
-
----
-
-### Fixed-point convention (what counts as “the” mathematics)
-
-The framework admits a **lattice of fixed points**. One must choose a convention.
-
-**Default convention (used here): minimal admissibility**
-
-* Mathematical lawhood = least fixed point of FM.
-* Interpretation: retain only what is *forced* by admissibility.
-* Excludes gratuitous closure not demanded by stability.
-
-**Alternative (explicitly allowed but not adopted here):**
-
-* maximal fixed point (maximal closure-stable completion),
-* or the full fixed-point lattice (structural pluralism).
-
-**Rationale for the minimal choice:**
-It aligns with how mathematics constrains physics, physics inherits only the closure-stable minimum, not arbitrary completions.
-
----
-
-### Failure diagnostics (non-negotiable)
-
-A candidate fails to be law-level if and only if at least one occurs:
-
-* partialM failure: representation dependence,
-* DeltaM failure: fragility under admissible perturbation,
-* OmegaM failure: non-canonical or unstable completion.
-
-There are no other failure modes.
 
 ---
 
