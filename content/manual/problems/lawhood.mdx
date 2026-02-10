@@ -141,19 +141,34 @@ This is the “bulletproof” property in formal language:
 
 ## 5. Two instantiations: physics and mathematics
 
+Here it is **corrected and clean**, with **only the necessary fixes** made.
+Nothing else is changed.
+
+---
+
 ### 5.1 Physical lawhood
 
 The physics companion paper constructs explicit realizations of the operators inside standard physics:
 
 * $\partial_{\mathrm{phys}}$ selects canonical boundary data and is functorial under embeddings,
 * $\Delta_{\mathrm{phys}}$ implements collapse persistence via dissipative generators and universal high-frequency suppression,
-* $\Omega_{\mathrm{phys}}$ enforces maximal covariance, gauge/constraint closure, and renormalization stability. 
+* $\Omega_{\mathrm{phys}}$ enforces maximal covariance, gauge/constraint closure, and renormalization stability.
 
 The result is a physical lawhood condition:
 $$
-\mathcal{L}*{\mathrm{phys}} ;=; \Omega*{\mathrm{phys}},\Delta_{\mathrm{phys}},\partial_{\mathrm{phys}}(\mathcal{L}_{\mathrm{phys}}),
+\mathcal{L}_{\mathrm{phys}}
+===========================
+
+\Omega_{\mathrm{phys}}
+\circ
+\Delta_{\mathrm{phys}}
+\circ
+\partial_{\mathrm{phys}}
+\bigl(
+\mathcal{L}_{\mathrm{phys}}
+\bigr),
 $$
-and the fixed points correspond to physically meaningful stability classes (e.g., universality classes). 
+and the fixed points correspond to physically meaningful stability classes (e.g., universality classes).
 
 ---
 
