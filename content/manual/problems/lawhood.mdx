@@ -171,22 +171,30 @@ $$
 and the fixed points correspond to physically meaningful stability classes (e.g., universality classes).
 
 ---
-
 ### 5.2 Mathematical lawhood
 
 The mathematics paper makes the math-sector recursion fully formal by choosing:
 
 * a complete lattice carrier $(M,\le)$,
 * admissible re-presentation equivalence,
-* monotone idempotent operators $\partial_M,\Delta_M,\Omega_M$ with explicit axioms. 
+* monotone idempotent operators $\partial_M,\Delta_M,\Omega_M$ with explicit axioms.
 
 A structure is admissible iff it is a fixed point:
 $$
-M ;=; \Omega_M,\Delta_M,\partial_M(M).
+M
+=
+
+\Omega_M
+\circ
+\Delta_M
+\circ
+\partial_M
+\bigl(
+M
+\bigr).
 $$
 
-
-Then Knaster–Tarski guarantees fixed points exist once the carrier and operators meet the monotonicity requirements. 
+Then Knaster–Tarski guarantees fixed points exist once the carrier and operators meet the monotonicity requirements.
 
 This yields a clean classification:
 
