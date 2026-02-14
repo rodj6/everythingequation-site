@@ -20,13 +20,10 @@ export default function AboutPage() {
         organizing principle:
       </p>
 
-      <p>
-        <span className="text-base md:text-lg">
-          {'$$'}
-          \mathcal{L} \;=\; \Omega \Delta \partial(\mathcal{L})
-          {'$$'}
-        </span>
-      </p>
+      {/* TSX-safe equation rendering (no raw LaTeX) */}
+      <div className="not-prose my-6 rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-center shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+        <div className="font-mono text-lg">𝓛 = Ω Δ ∂(𝓛)</div>
+      </div>
 
       <p>
         In plain terms: a proposed <strong>Tier-0 closure criterion</strong> for “lawhood.” Rather than
@@ -68,7 +65,9 @@ export default function AboutPage() {
       <h3>What you’ll find here</h3>
 
       <ul>
-        <li>A unified vocabulary (closure, invariants, admissibility, budget/rigidity constraints) used across domains.</li>
+        <li>
+          A unified vocabulary (closure, invariants, admissibility, budget/rigidity constraints) used across domains.
+        </li>
         <li>Conceptual overviews that explain what each area is trying to do before you dive into artifacts.</li>
         <li>Formal papers and releases that serve as the evidence layer, linked directly to the Problems they support.</li>
       </ul>
