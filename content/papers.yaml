@@ -1,5 +1,8 @@
 version: 1
 papers:
+  # =========================
+  # Foundational / Tier-0 / Lawhood
+  # =========================
   - id: paper:zenodo:18081205
     zenodo: 18081205
     visibility: public
@@ -15,10 +18,27 @@ papers:
     supports:
       - problem:lawhood
 
-  - id: paper:zenodo:17813117
-    zenodo: 17813117
+  - id: paper:zenodo:18493638
+    zenodo: 18493638
     visibility: public
-    role: Consolidation of Tier–0 admissibility framework
+    featured: true
+    role: Tier-0 framework + Everything Equation (law-level closure/selection architecture across domains)
+    supports:
+      - problem:lawhood
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:18342623
+    zenodo: 18342623
+    visibility: public
+    role: Tier-0 framework statement (law-level closure and selection principle)
+    supports:
+      - problem:lawhood
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:18399919
+    zenodo: 18399919
+    visibility: public
+    role: Tier-0 as a fixed-point admissibility grand unified theory of mathematics
     supports:
       - problem:mathematical-foundations
 
@@ -29,6 +49,80 @@ papers:
     supports:
       - problem:mathematical-foundations
 
+  - id: paper:zenodo:17813117
+    zenodo: 17813117
+    visibility: public
+    role: Consolidation of Tier–0 admissibility framework
+    supports:
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:18383199
+    zenodo: 18383199
+    visibility: public
+    role: Bidirectional translation between Tier-0 closure and probabilistic inference
+    supports:
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:18373510
+    zenodo: 18373510
+    visibility: public
+    role: Bidirectional translation between analytic closure proofs and law-level admissibility
+    supports:
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:17826373
+    zenodo: 17826373
+    visibility: public
+    role: Beyond Gödel (Tier-0 completeness & semantic boundary of lawhood)
+    supports:
+      - problem:lawhood
+      - problem:mathematical-foundations
+
+  - id: paper:zenodo:17823404
+    zenodo: 17823404
+    visibility: public
+    role: Law of endogenous constraint (selection and stabilization principle underlying physical law)
+    supports:
+      - problem:lawhood
+
+  - id: paper:zenodo:17859631
+    zenodo: 17859631
+    visibility: public
+    role: Tier–Omega monad (trans-recursive completion of the Everything Equation for physical law)
+    supports:
+      - problem:lawhood
+
+  - id: paper:zenodo:17851714
+    zenodo: 17851714
+    visibility: public
+    role: Kappa Law (geometric rigidity and stability of physical law in law-space)
+    supports:
+      - problem:lawhood
+
+  - id: paper:zenodo:18287259
+    zenodo: 18287259
+    visibility: public
+    role: Φ-void theorem (why lawful closure requires local violation)
+    supports:
+      - problem:lawhood
+
+  - id: paper:zenodo:18288303
+    zenodo: 18288303
+    visibility: public
+    role: Record–flow duality (law-level equivalence between record silence and closure flow)
+    supports: []
+
+  - id: paper:zenodo:18309541
+    zenodo: 18309541
+    visibility: public
+    role: Class-mismatch problem (why some true theorems are structurally undiscoverable)
+    supports:
+      - problem:mathematical-foundations
+
+
+  # =========================
+  # Cosmological Constant / Λ-field / Dark sector / Cosmology
+  # =========================
   - id: paper:zenodo:18092342
     zenodo: 18092342
     visibility: public
@@ -43,6 +137,45 @@ papers:
     supports:
       - problem:cosmological-constant
 
+  - id: paper:zenodo:17550178
+    zenodo: 17550178
+    visibility: public
+    role: Cosmological constant via spectral thermodynamic invariance
+    supports:
+      - problem:cosmological-constant
+
+  - id: paper:zenodo:18278767
+    zenodo: 18278767
+    visibility: public
+    role: Dark energy as a closure background (Tier-0 law-level classification)
+    supports:
+      - problem:cosmological-constant
+
+  - id: paper:zenodo:18261716
+    zenodo: 18261716
+    visibility: public
+    role: Dark matter as record-silent curvature (law-level classification within Tier-0)
+    supports:
+      - problem:cosmological-constant
+
+  - id: paper:zenodo:18298571
+    zenodo: 18298571
+    visibility: public
+    role: Dark matter, light, and computation as projections of a single lawful structure
+    supports:
+      - problem:cosmological-constant
+
+  - id: paper:zenodo:18073598
+    zenodo: 18073598
+    visibility: public
+    role: Global spatial closure without boundary (cosmological topology under Tier-0 admissibility)
+    supports:
+      - problem:cosmological-constant
+
+
+  # =========================
+  # Arrow of Time (existing)
+  # =========================
   - id: paper:zenodo:17545541
     zenodo: 17545541
     visibility: public
@@ -57,6 +190,10 @@ papers:
     supports:
       - problem:arrow-of-time
 
+
+  # =========================
+  # Quantum Gravity / Spacetime / Observer stack
+  # =========================
   - id: paper:zenodo:18384959
     zenodo: 18384959
     visibility: public
@@ -71,6 +208,66 @@ papers:
     supports:
       - problem:quantum-gravity
 
+  - id: paper:zenodo:18478728
+    zenodo: 18478728
+    visibility: public
+    role: Admissibility and physical state classification in the q-desic quantum-gravity framework
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18333465
+    zenodo: 18333465
+    visibility: public
+    role: Gravity as closure geometry (law-level unification of light, radiation, and free fall)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18330896
+    zenodo: 18330896
+    visibility: public
+    role: Closure limits on observer absoluteness (global equivalence, Υ-collapse, timelike friendliness)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18320372
+    zenodo: 18320372
+    visibility: public
+    role: Observer locus instability (Ψ-admissibility and limits of observer motion)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18318743
+    zenodo: 18318743
+    visibility: public
+    role: Υ-collapse problem (global closure, identity equivalence, Class VI stability)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:17872725
+    zenodo: 17872725
+    visibility: public
+    role: Minimal structural unification of QFT and gravity with exact vacuum stability
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:17889989
+    zenodo: 17889989
+    visibility: public
+    role: Inverse mass–energy map in GR (structural reconstruction of mass from curvature)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18014526
+    zenodo: 18014526
+    visibility: public
+    role: Momentum-conserving warp bubbles in GR (distributional geometry, boundary flux, spectral isolation)
+    supports:
+      - problem:quantum-gravity
+
+
+  # =========================
+  # Standard Model / GUT / Particle structure
+  # =========================
   - id: paper:zenodo:18474556
     zenodo: 18474556
     visibility: public
@@ -88,6 +285,32 @@ papers:
     supports:
       - problem:standard-model
 
+  - id: paper:zenodo:18493242
+    zenodo: 18493242
+    visibility: public
+    role: Across-the-board no-go theorem for exact Yukawa prediction
+    supports:
+      - problem:grand-unified-theory
+      - problem:standard-model
+
+  - id: paper:zenodo:18358761
+    zenodo: 18358761
+    visibility: public
+    role: Why nature has three fermion generations (closure-based selection resolution)
+    supports:
+      - problem:standard-model
+
+  - id: paper:zenodo:18045190
+    zenodo: 18045190
+    visibility: public
+    role: Antimatter as orientation conjugacy (annihilation, matter dominance, CP asymmetry)
+    supports:
+      - problem:standard-model
+
+
+  # =========================
+  # PDE Series (Navier–Stokes hub)
+  # =========================
   - id: paper:zenodo:18371918
     zenodo: 18371918
     visibility: public
@@ -119,7 +342,7 @@ papers:
   - id: paper:zenodo:18372181
     zenodo: 18372181
     visibility: public
-    role: PDE V — universality test of strict margin closure
+    role: PDE V — universality test of strict margin closure mechanism
     supports:
       - problem:navier-stokes
 
@@ -137,18 +360,147 @@ papers:
     supports:
       - problem:navier-stokes
 
-  - id: paper:zenodo:17550178
-    zenodo: 17550178
+
+  # =========================
+  # Riemann / Zeta / RH (no Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18601590
+    zenodo: 18601590
     visibility: public
-    role: "Cosmological Constant Problem via Spectral Thermodynamic Invariance"
-    supports:
-      - problem:cosmological-constant    
-      
-     
-  - id: paper:zenodo:UNKNOWN_GENERATIONS_DOI
-    zenodo: UNKNOWN_GENERATIONS_DOI
-    visibility: draft
-    role: Family multiplicity (three generations) via closure-based selection
-    supports:
-      - problem:standard-model
-    notes: "Needs Zenodo record/DOI; keep as draft until filled."
+    featured: true
+    role: Canonical determinant model for ζ and a sharp boundary-positivity criterion (RH-equivalent claim)
+    supports: []
+
+  - id: paper:zenodo:18602639
+    zenodo: 18602639
+    visibility: public
+    role: No-go for functorial positivity-selecting operators in boundary-positivity approaches to RH
+    supports: []
+
+
+  # =========================
+  # Odd Perfect Numbers (no Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18446275
+    zenodo: 18446275
+    visibility: public
+    role: Structural constraints, valuation conservation, and σ-graph obstructions (odd perfect numbers)
+    supports: []
+
+  - id: paper:zenodo:18451695
+    zenodo: 18451695
+    visibility: public
+    role: Resolution hunt (cyclotomic smoothness, σ-closure, structural obstructions to odd perfect numbers)
+    supports: []
+
+  - id: paper:zenodo:18453978
+    zenodo: 18453978
+    visibility: public
+    role: Final bottleneck (structural obstructions to odd perfect numbers)
+    supports: []
+
+
+  # =========================
+  # Quantum measurement / probability / agency (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:17823241
+    zenodo: 17823241
+    visibility: public
+    role: Complete operator-theoretic resolution of the quantum measurement problem
+    supports: []
+
+  - id: paper:zenodo:17864384
+    zenodo: 17864384
+    visibility: public
+    role: Structural origin of the Born rule (rigidity of the probability exponent)
+    supports: []
+
+  - id: paper:zenodo:18028427
+    zenodo: 18028427
+    visibility: public
+    role: Agency beyond pure unitarity (closure-stable decision, probability rigidity, epistemic limits)
+    supports: []
+
+  - id: paper:zenodo:18205246
+    zenodo: 18205246
+    visibility: public
+    role: Admissibility forces QSOT axioms (closure-based extension of multipartite quantum states over time)
+    supports: []
+
+
+  # =========================
+  # Coherence / light / diffraction / curvature (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18219057
+    zenodo: 18219057
+    visibility: public
+    role: Coherence field (canonical reversible operator arising from curvature)
+    supports: []
+
+  - id: paper:zenodo:18240403
+    zenodo: 18240403
+    visibility: public
+    role: Ordered structure in constrained coherent light (extension of "Code of Reality" diffraction phenomenon)
+    supports: []
+
+
+  # =========================
+  # Superconductivity (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18136089
+    zenodo: 18136089
+    visibility: public
+    role: Structural law of superconductivity (dissipationless coherence from admissibility and closure)
+    supports: []
+
+  - id: paper:zenodo:18167274
+    zenodo: 18167274
+    visibility: public
+    role: Superconductivity is bounded (universal critical temperature ceiling from spectral dissipation)
+    supports: []
+
+
+  # =========================
+  # Atmosphere / geomagnetic coupling (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18112487
+    zenodo: 18112487
+    visibility: public
+    role: Structural regulation of atmospheric oxygen loss (boundary-based interpretation of geomagnetic coupling)
+    supports: []
+
+
+  # =========================
+  # Branching networks / Steiner (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18249067
+    zenodo: 18249067
+    visibility: public
+    role: Branching networks as a lawhood problem (Tier-0 admissibility beyond Steiner optimization)
+    supports: []
+
+
+  # =========================
+  # AI / alignment / epistemic risk (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:17997598
+    zenodo: 17997598
+    visibility: public
+    role: Alignment as structural advantage (alignment emerges from incentive geometry, not objectives)
+    supports: []
+
+  - id: paper:zenodo:18264814
+    zenodo: 18264814
+    visibility: public
+    role: Beyond functional introspection (capacity, scaffolding, epistemic risk in advanced language models)
+    supports: []
+
+
+  # =========================
+  # Constraint–crystallization (misc)
+  # =========================
+  - id: paper:zenodo:17645357
+    zenodo: 17645357
+    visibility: public
+    role: Constraint–crystallization law
+    supports: []
