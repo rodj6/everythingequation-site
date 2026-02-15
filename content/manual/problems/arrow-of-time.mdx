@@ -1,222 +1,296 @@
-# Arrow of Time and Time Asymmetry
+# The Arrow of Time and *Time Asymmetry*
 
-## Time does not flow because dynamics say so.
+**Why the universe remembers the past but not the future — derived from spectral structure, not assumed as a boundary condition. A quantitative, falsifiable quantum arrow of time from the same admissibility principle that governs measurement, gravity, and the architecture of physical law.**
 
-## It flows because irreversibility is forced.
+$$
+\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})
+$$
 
-Most physical laws are time-reversal symmetric.
-Yet the world is not. 
+## Contents
 
-Entropy increases. Records accumulate. Radiation disperses. Memory works in one direction only.
-
-For a century, physics has tried to explain this asymmetry by adding ***'something extra'***:
-special initial conditions, coarse-graining choices, environments, observers, or appeals to probability.
-
-This program takes a sharper position:
-
-> **The arrow of time is not an assumption, not a convention, and not a psychological artifact.
-> It is a structural consequence of spectral positivity and calibrated dissipation.**
-
-The supporting papers provide the proofs.
-This page provides the logic.
-
----
-
-## Central Claim
-
-Within a broad but explicit admissible class of quantum systems, irreversibility is unavoidable once three conditions are met:
-
-1. spectral positivity,
-2. calibrated coarse-graining,
-3. finite propagation of information.
-
-From these alone, one obtains:
-
-* a **strictly monotone Lyapunov functional** after a finite crossover time,
-* a **quantitative arrow of time** compatible with unitary, open, and cosmological regimes,
-* and a sharp **no-go theorem** showing exactly when a universal arrow is impossible.
-
-This is not “entropy usually increases.”
-This is **a theorem with failure modes**.
+1. [The Deepest Asymmetry in Nature](#the-deepest-asymmetry-in-nature)
+2. [Why the Arrow of Time Has Resisted Explanation](#why-the-arrow-of-time-has-resisted-explanation)
+3. [The Core Idea: Spectral Thermodynamics](#the-core-idea-spectral-thermodynamics)
+4. [The Fejér–Hardy Calibration: Extracting Irreversibility from Spectral Data](#the-fejér-hardy-calibration)
+5. [The KMS Scale: Where Temperature Lives in the Spectrum](#the-kms-scale)
+6. [The Lyapunov Monotone: A Clock That Only Ticks Forward](#the-lyapunov-monotone)
+7. [The No-Go Theorem: Why a Universal Strict Arrow Is Impossible](#the-no-go-theorem)
+8. [The Maximal Universality Envelope](#the-maximal-universality-envelope)
+9. [Quantum Energy Conditions: The Laws That Enforce the Arrow](#quantum-energy-conditions)
+10. [The Generalised Second Law — Unbroken and Unbanded](#the-generalised-second-law)
+11. [The Cosmological Arrow](#the-cosmological-arrow)
+12. [Falsifiable Predictions](#falsifiable-predictions)
+13. [What This Means for Physics](#what-this-means-for-physics)
 
 ---
 
-## Limitations of the Standard Framing
+## The Deepest Asymmetry in Nature
 
-Traditional accounts of the arrow of time fall into three categories:
+Every fundamental law of physics — Newton's mechanics, Maxwell's electrodynamics, Einstein's general relativity, the Schrödinger equation, the Standard Model Lagrangian — is symmetric under time reversal. Run the equations backwards and they produce equally valid solutions. At the level of fundamental law, the past and the future are interchangeable.
 
-* **Statistical**: entropy increases because typical states are high-entropy.
-* **Environmental**: openness, decoherence, or baths create irreversibility.
-* **Cosmological**: the Past Hypothesis sets a low-entropy boundary.
+And yet the universe is overwhelmingly, spectacularly asymmetric in time. Eggs break but do not unbreak. Coffee cools but does not spontaneously heat. Stars burn hydrogen into helium but the reverse does not happen at stellar scales. Memory records the past, never the future. The entire structure of causation, entropy, thermodynamics, and lived experience points in one temporal direction.
 
-Each captures part of the truth but none explains why irreversibility becomes mandatory once certain structural features are present.
+> **The arrow of time** — the fact that the macroscopic world evolves irreversibly despite time-symmetric microscopic laws — is one of the deepest unsolved problems in the foundations of physics.
 
-This framework isolates the missing piece:
-
-> **Irreversibility arises when spectral transfer exceeds a calibrated dissipation floor.**
-
-Not as a story. As an inequality.
+The work presented here provides a quantitative, mathematically rigorous derivation of the quantum arrow of time from spectral structure. Not assumed. Not postulated. *Derived* — from the same spectral framework that governs quantum gravity, the cosmological constant, and the architecture of physical law under the closure admissibility principle $\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})$.
 
 ---
 
-## The engine: spectral thermodynamics
+## Why the Arrow of Time Has Resisted Explanation
 
-The construction does not start with entropy.
-It starts with spectral data.
+The difficulty is not finding *a* mechanism for irreversibility — it is finding one that is rigorous, universal, and compatible with the time-reversal symmetry of fundamental physics.
 
-Given a canonical generator built from:
+**Boltzmann's statistical mechanics** gives a probabilistic arrow: systems evolve toward higher-entropy macrostates because there are more of them. But this reasoning is symmetric — it applies equally well to the past, predicting (incorrectly) that the past was also higher entropy. Resolving this requires the **Past Hypothesis**: an assumption that the early universe began in a state of extraordinarily low entropy. This works, but it relocates the mystery rather than resolving it.
 
-* a geometric Dirac-type core, and
-* a calibrated boundary bridge,
+**Decoherence** explains why quantum superpositions are practically irreversible: interaction with the environment rapidly entangles system and bath, suppressing interference. But decoherence is a consequence of the arrow of time (it requires a low-entropy environment), not its cause.
 
-one extracts a **boundary spectral slope** that splits canonically into:
+**Eigenstate thermalisation (ETH)** explains why few-body observables in high-energy eigenstates of generic Hamiltonians look thermal. This underpins equilibration in many-body quantum systems, but it is an eigenstate property of specific Hamiltonians — not a universal mechanism, and it does not apply to integrable or many-body localised systems.
 
-* a continuous (AC) sector, and
-* a discrete (atomic) sector.
+**Poincaré recurrence** sets a hard limit: any finite closed quantum system in a unitary evolution will eventually return arbitrarily close to its initial state. A truly universal, strictly monotone arrow of time for all finite closed systems is therefore *mathematically impossible*.
 
-This split is not optional. It is guaranteed by general Herglotz theory and positivity.
-
-From this single object, one builds:
-
-* heat-scale spectral packets,
-* a calibrated evaluator that kills spurious drift,
-* and a log-determinant Lyapunov functional.
-
-The arrow of time is not postulated, it's read off from how this object evolves.
+> The common failure: every approach either assumes an initial condition (Past Hypothesis), applies only to special classes of systems (ETH), or is limited by recurrence. None provides a universal, quantitative, spectral mechanism that works across all physically relevant regimes while honestly confronting the limits imposed by unitarity.
 
 ---
 
-## The key mechanism: floor versus budget
+## The Core Idea: Spectral Thermodynamics
 
-At each spectral scale, two forces compete:
+The Tier-0 framework takes a fundamentally different approach. Instead of starting from statistical mechanics and asking why entropy increases, it starts from the spectral data of a canonical generator and *derives* irreversibility from the structure of that spectrum.
 
-* the dissipation floor, coming from calibrated spectral weight inside the packet window,
-* the budget, coming from leakage outside the window.
+The construction begins with a canonical generator:
 
-The central result is brutally simple:
+$$
+Q := D + B, \qquad Q = Q^*
+$$
 
-> **After a finite crossover time, the floor dominates the budget.
-> From that point on, monotonic decay is forced.**
+where $D$ is a self-adjoint Dirac-type operator on a Euclidean collar with interface $\Sigma$, and $B$ is a bounded, self-adjoint, $\Theta$-even perturbation — the spectral bridge, the same object that appears in the quantum gravity and cosmological constant programmes.
 
-This is not asymptotic hand-waving.
-The crossover time is finite, explicit, and measurable.
+From $Q$, a **boundary spectral slope** is extracted via a regularised determinant:
 
----
+$$
+s_\sigma(t) := \partial_t \, \operatorname{Im} \log \operatorname{det}_2\!\big(I - \hat{B}(\sigma + it)\big)
+$$
 
-## What “time asymmetry” means here
+This slope $s_\sigma$ is even, belongs to $BV_{\rm loc}$, and determines a **Herglotz function** — a function analytic in the upper half-plane with positive imaginary part — whose representing measure splits into two structurally distinct components:
 
-Time asymmetry is not defined by clocks or coordinates.
+$$
+d\mu_\sigma(\xi) = s_\sigma^{\rm ac}(\xi)\,d\xi + \sum_k \pi m_k\big(\delta_{\xi_k} + \delta_{-\xi_k}\big)
+$$
 
-It is defined operationally:
+The **absolutely continuous (AC) part** encodes continuous thermal transport — the channels through which energy and entropy flow irreversibly. The **atomic part** encodes quantised transfer channels — discrete spectral features that carry specific amounts of information.
 
-* a functional exists that **cannot increase** under admissible evolution,
-* and **strictly decreases** once the crossover is passed.
-
-This functional is built from spectral transfer alone, no probabilistic assumptions, no observer dependence.
-
-That is the arrow.
+This is the key insight: *irreversibility is encoded in the spectral structure of the canonical generator*. The AC spectrum drives thermal behaviour; atoms carry quantised transfers. The arrow of time is not a global postulate — it is a spectral fact.
 
 ---
 
-## Sharp No-Go Theorem and Its Significance
+## The Fejér–Hardy Calibration
 
-The framework also proves something negative and important:
+The spectral slope $s_\sigma$ contains the information about irreversibility, but extracting it requires a calibrated evaluator — a mathematical instrument that reads the slope at the origin with a known, universal normalisation.
 
-> **There is no strictly monotone arrow for all finite closed systems under exact unitary evolution.**
+The **three-window Fejér–Hardy evaluator** $E_{\rm FH}$ is constructed from Fejér kernels at three scales $(T/2, T, 2T)$ with coefficients $(\alpha_0, \beta_1, \beta_2) = (1, \tfrac{1}{4}, \tfrac{1}{24})$ chosen to satisfy:
 
-This is not a limitation of the method.
-It is a mathematical obstruction.
+$$
+E_{\rm FH}[s_\sigma] = \frac{3}{32\pi}\,s_\sigma(0) + O(T^{-1})
+$$
 
-Poincaré recurrence and unitary reversibility forbid a universal arrow in that regime.
+uniformly in the strip parameter $\sigma > 0$. The constant $\frac{3}{32\pi}$ is the same universal calibration constant that appears in the quantum gravity spectral bridge and the cosmological constant resolution — derived from Fourier analysis, not assumed.
 
-This no-go result does two things:
+The **drift-kill ratio** $\rho_* = 7/24 < 1$ ensures that the three-window cancellation suppresses linear drifts and side-lobe leakage. For applications requiring sharper control, a **quintic Fejér–Hardy comb** upgrades the remainder to $O(T^{-2})$ — critical for the unbanded Generalised Second Law.
 
-* it prevents overclaiming,
-* and it precisely identifies what must be added for an arrow to exist.
+A separate **localised approximate-identity** $E_{{\rm at};T,\xi_0}$ recovers each atomic weight exactly:
 
----
+$$
+\lim_{T \to \infty} E_{{\rm at};T,\xi_0}[d\mu_\sigma] = m(\xi_0)
+$$
 
-## The universality envelope 
-
-Within that constraint, the framework achieves maximal universality:
-
-* **Open systems (GKLS / CPTP)**: strict arrow from spectral dissipation.
-* **Systems with continuous spectrum**: strict arrow from AC transfer.
-* **Integrable or many-body localized systems**: arrow via vanishing dephasing or explicit coarse-graining.
-* **Finite closed systems**: almost-monotone arrow, with exceptions of zero density.
-* **Cosmological settings**: a global arrow under a Past Hypothesis, compatible with horizon thermodynamics.
-
-Each regime is treated explicitly. None are hand-waved.
+Both calibrations are **non-circular**: they act directly on the spectral data $(s_\sigma, d\mu_\sigma)$ before any reconstruction of $B$ from the Herglotz measure.
 
 ---
 
-## Energy conditions lock the direction
+## The KMS Scale
 
-The arrow here is not free to point both ways.
+Near a horizon with surface gravity $\kappa > 0$, the AC part of the Herglotz transform locks onto a universal thermal scale:
 
-Universal quantum energy inequalities, a sharp quantum null energy condition, and a full generalized second law are all derived from the same spectral construction.
+$$
+F_\sigma^{\rm ac}(\xi) = \frac{1}{2}\tanh\!\Big(\frac{\beta\xi}{2}\Big)\,\operatorname{Tr}_\Sigma G(\xi) + O(\Lambda^{-\delta}), \qquad \beta = \frac{2\pi}{\kappa}
+$$
 
-These results mean:
+where $G(\xi)$ is the greybody factor — the transmission probability through the potential barrier near the horizon — and $\beta = 2\pi/\kappa$ is the Unruh/Hawking inverse temperature.
 
-* negative-energy fluctuations are bounded,
-* entropy production has a fixed sign,
-* and time-reversed decay is structurally forbidden once the conditions are met.
+This is the **AC ≡ KMS identification**: the absolutely continuous part of the spectral slope is not merely reminiscent of thermal physics — it *is* thermal physics. The Kubo–Martin–Schwinger condition, the mathematical foundation of quantum statistical mechanics, emerges directly from the spectral data of the canonical generator in any near-horizon collar.
 
-The arrow is ***aligned*** with energy flow, not chosen independently.
-
----
-
-## Light, horizons, and irreversibility
-
-Null propagation plays a special role:
-
-* light carries no proper time,
-* but it carries coherence.
-
-The framework cleanly separates:
-
-* null coherence channels, and
-* record-bearing timelike channels.
-
-Irreversibility lives in the latter.
-
-This is why the construction naturally interfaces with:
-
-* Unruh and Hawking thermality,
-* horizon entropy,
-* and cosmological time asymmetry.
+The $\tanh(\beta\xi/2)$ factor is the spectral fingerprint of the Fermi–Dirac/Bose–Einstein statistics familiar from quantum thermal physics. Its appearance here is not assumed from thermodynamics — it is derived from the boundary scattering data of $Q$.
 
 ---
 
-## Claims and Non-Claims
+## The Lyapunov Monotone: A Clock That Only Ticks Forward
 
-**Claimed:**
+The central irreversibility result is the construction of a **log-determinant Lyapunov functional** that is strictly decreasing after an explicit, finite capacity crossover.
 
-* A quantitative arrow of time follows from spectral positivity and calibrated dissipation.
-* A strictly monotone Lyapunov functional exists after finite crossover in all admissible regimes.
-* A universal arrow is impossible for finite closed unitary systems, and the obstruction is explicit.
-* Energy conditions and the arrow share a single spectral origin.
+Heat-scale Fejér packets $W_j$ at scales $T_j \sim 2^{2j}$ (parabolic scaling matching diffusive transport) define band operators $T_j(t)$ and a packet Lyapunov:
 
-**Not claimed:**
+$$
+M_j(t) := -\log\det\big(I - T_j(t)^* T_j(t)\big)
+$$
 
-* That entropy always increases in every imaginable system.
-* That time asymmetry is psychological or observer-dependent.
-* That classical intuition alone explains the arrow.
-* That dynamics must be modified.
+The key inequality — the **floor-versus-budget** competition — governs the sign of $\dot{M}_j$:
+
+$$
+\frac{d}{dt}M_j(t) \le -\gamma\,\operatorname{Tr}(Q_j(t)) + \frac{C}{T_j}\,M_j(t)
+$$
+
+The first term is the **dissipation floor**: a coercive, strictly negative contribution from the AC spectral channel that drives irreversible decay. The second term is the **off-window budget**: leakage from neighbouring spectral bands that could, in principle, counteract the decay.
+
+> **The capacity crossover**: there exists an explicit, finite time $t_{j,*}$ after which the floor dominates the budget and $\dot{M}_j < 0$ strictly. This time is computable from the spectral data: $t_{j,*} \downarrow 0$ as $T_j \to \infty$ at fixed initial spectral energy.
+
+A **weighted band summation** with $\omega_j = 2^{-\theta|j|}$ ($\theta > 1$) produces a global Lyapunov:
+
+$$
+\boxed{M_{\rm glob}(t) = \sum_j \omega_j M_j(t), \qquad \dot{M}_{\rm glob} \le -\Gamma\sum_j \omega_j\operatorname{Tr}(Q_j) + \frac{C}{T_{\min}}M_{\rm glob} < 0}
+$$
+
+for all $t \ge t_*$. This is a **model-independent, strictly monotone quantum arrow of time** — not for a specific system, but for the entire class of systems satisfying physically standard axioms.
+
+---
+
+## The No-Go Theorem: Why a Universal Strict Arrow Is Impossible
+
+The framework is honest about its limits.
+
+$$
+\boxed{\text{No-go: No functional } \mathcal{L}(\rho_t) \text{ can be strictly decreasing for all } t \ge 0 \text{ and all finite closed unitary systems.}}
+$$
+
+The proof combines two elementary observations: if $\mathcal{L}$ is unitarily invariant, then $\mathcal{L}(\rho_t) = \mathcal{L}(\rho_0)$ for all $t$ (constant, not decreasing). If $\mathcal{L}$ is not unitarily invariant, then time-shifting the evolution produces a contradiction — and Poincaré recurrence ensures the orbit returns arbitrarily close to its starting point.
+
+This is not a weakness of the framework. It is a theorem *within* the framework, establishing the precise boundary of what is possible.
+
+> **Corollary:** Any universal strict arrow requires at least one of: (i) coarse-graining or macroscopic projection, (ii) GKLS openness (environmental coupling), (iii) a low-entropy initial condition (Past Hypothesis), or (iv) an infinite-volume / continuous-spectrum limit that breaks recurrence.
+
+The Tier-0 framework then proves that the arrow it constructs is **maximally universal** — it covers every physically relevant regime within this honest constraint.
 
 ---
 
-## Significance
+## The Maximal Universality Envelope
 
-This reframes the arrow of time from a philosophical problem into a structural one.
+Having established what is impossible, the framework systematically covers every case that *is* possible:
 
-The question is no longer:
-“Why does entropy increase?”
+**AC / GKLS systems** (continuous spectrum or open quantum dynamics): Strict Lyapunov monotonicity holds after the capacity crossover. This is the generic case — any system with nontrivial absolutely continuous spectrum or environmental coupling exhibits a quantitative arrow.
 
-It is:
+**Integrable / MBL systems** (pure-point spectrum, many-body localised): These lack AC spectrum, so the standard mechanism does not apply directly. Two complementary routes recover the arrow. First, **vanishing dephasing**: adding infinitesimal GKLS dephasing ($\epsilon > 0$, diagonal in the energy eigenbasis) produces a strict H-theorem and Lyapunov monotonicity on any fixed macroscopic time window, with the limit $\epsilon \downarrow 0$ preserving monotonicity. Second, **explicit coarse-graining**: energy-window averaging at Fejér packet checkpoints produces a discrete monotone that approximates the dephasing limit.
 
-> **When does spectral transfer force irreversibility and when is it mathematically impossible?**
+**Finite closed systems** (Poincaré recurrence active): The arrow cannot be everywhere strict. Instead, the framework proves an **almost-monotone arrow**: $M_\Delta$ is nonincreasing outside a set of exceptional times with zero upper Banach density. The recurrences exist but are sparse — they occupy a vanishing fraction of time.
 
-This framework answers both.
+**Cosmological scale**: Under a Past Hypothesis and local KMS collars at causal horizons, a global cosmological Lyapunov $\mathcal{M}_{\rm cosmo}(t)$ is constructed that is nonincreasing for all time beyond a finite crossover, with strict local decay wherever greybody factors are positive. Horizon sectors contribute nondecreasing Bekenstein–Hawking entropy, consistent with the sign of the Lyapunov derivative.
 
 ---
+
+## Quantum Energy Conditions: The Laws That Enforce the Arrow
+
+The arrow of time is underwritten by quantum energy conditions — fundamental inequalities constraining the stress-energy tensor in quantum field theory. The framework derives these from the same spectral construction, universally across a broad state class.
+
+### Spectral Quantum Energy Inequality (QEI)
+
+Classical pointwise energy conditions (weak, strong, dominant) fail in quantum field theory — quantum states can have locally negative energy density. But *averaged* energy conditions persist. The spectral QEI provides a universal lower bound:
+
+$$
+\int_{\mathbb{R}} s_\sigma(t)\,g_T(t)\,dt \ge -\,C\,T^{-1}
+$$
+
+The negative energy is bounded: it cannot be arbitrarily large and it vanishes in the large-$T$ limit. The bound is **state-universal** — it holds for all normal finite-order Hadamard states, not just vacuum or KMS states.
+
+### Sharp QNEC with Rigidity
+
+The quantum null energy condition (QNEC) bounds the null-null stress-energy in terms of the second derivative of entanglement entropy:
+
+$$
+\langle T_{kk}(u) \rangle \ge \frac{1}{2\pi}\,\partial_u^2 S_{\rm out}(u)
+$$
+
+The framework proves this in the **distributional sense** with a **rigidity clause**: equality holds if and only if the modular spectral measure in the tube is purely atomic at zero — meaning the state is locally flow-invariant with no positive-frequency excitations.
+
+This rigidity is physically stringent. In standard QFT states (vacuum, KMS, quasi-free excitations), the modular spectral measure is continuous on $(0,\infty)$, so the inequality is **strict**. Saturation requires degenerate situations where all local excitations decouple from the generator — topological zero-modes or trivial perturbations.
+
+### Global ANEC
+
+Along complete null generators, the averaged null energy condition holds:
+
+$$
+\int_{-\infty}^{\infty} \langle T_{kk}(u) \rangle\,du \ge 0
+$$
+
+This is derived from the band-to-global limit of the spectral QNEC, with equality only when $d\mu_\sigma$ vanishes on $(0,\infty)$.
+
+---
+
+## The Generalised Second Law — Unbroken and Unbanded
+
+The **Generalised Second Law** (GSL) states that the total entropy — radiation entropy plus one-quarter the horizon area — never decreases. Previous derivations required band decompositions with inter-band "ledger" terms that complicated the global statement. The Tier-0 framework proves a **full, unbanded GSL** using the quintic Fejér–Hardy comb:
+
+$$
+\frac{d}{dt}\Big(S_{\rm rad}(t) + \tfrac{1}{4}A(t)\Big) \ge -\,C_\Lambda - C\,T^{-2}
+$$
+
+Taking $T \to \infty$ and then $\Lambda \to \infty$ yields $\dot{\mathcal{G}}(t) \ge 0$ — the GSL, clean, without band ledgers.
+
+The $O(T^{-2})$ remainder (not $O(T^{-1})$) is critical — this is what the upgrade from cubic to quintic Fejér–Hardy evaluation buys. The area proxy $A(t) = c_0 a_0 + c_1 a_1 + c_2 a_2$ uses heat-kernel coefficients with uniquely determined coefficients from a $3 \times 3$ SDW matching system, and the entire construction is invariant across the calibrated Fejér class.
+
+---
+
+## The Cosmological Arrow
+
+The framework connects the local spectral arrow to the large-scale temporal asymmetry of the universe.
+
+Under three physically standard assumptions — a Past Hypothesis of low initial entropy, semiclassical QFT on an FLRW background with bounded local curvature, and local KMS collars at causal horizons — the global cosmological Lyapunov:
+
+$$
+\mathcal{M}_{\rm cosmo}(t) := \int_{\Sigma_t}\Big(M_{\rm glob}^{\rm matter} + M_{\rm glob}^{\rm rad}\Big)\,d\operatorname{vol}_{\Sigma_t}
+$$
+
+is nonincreasing for all $t$ beyond a finite crossover, with strict local decay wherever greybody factors are positive. Horizon sectors contribute nondecreasing Bekenstein–Hawking/Gibbons–Hawking entropy.
+
+The Past Hypothesis is not an artefact of the framework — it is proven to be **necessary**: without a low-entropy initial condition, high-entropy equilibrium states satisfy the spectral criteria yet exhibit no arrow. This honest acknowledgment sharpens the conceptual status of the initial condition: it is not arbitrary but required by any consistent macroscopic temporal asymmetry.
+
+---
+
+## Falsifiable Predictions
+
+The framework produces specific, quantitative, testable predictions.
+
+**Universal DC gain and $T^{-1}$ rate.** The Fejér–Hardy evaluator converges to $\frac{3}{32\pi}s_\sigma(0)$ with rate $O(T^{-1})$ (or $O(T^{-2})$ with the quintic comb). The rate is computable and checkable on any Dirac-type background.
+
+**Channel invariance.** The Dirac and modular channels must produce the same calibration constant $\kappa_{\rm FH}$ within the certified error. Persistent discrepancy falsifies the framework.
+
+**Floor-versus-budget competition.** The capacity crossover time $t_{j,*}$ is explicitly computable from spectral data. If the floor fails to dominate the budget after the predicted crossover, the Lyapunov construction is falsified.
+
+**Almost-monotonicity for finite systems.** The exceptional set of times where monotonicity fails must have zero upper Banach density. A dense set of reversals would contradict the theorem.
+
+**Bandwise Page-drop.** The DN rectangle construction predicts a one-shot entropy-production lower bound $\Delta S \ge c_{\rm int} - o(1)$ on each spectral band. This is measurable in specific quantum systems.
+
+**GSL remainder scaling.** The unbanded GSL predicts $O(T^{-2})$ remainders. A persistent $O(T^{-1})$ tail after fixing windows and localisation would falsify the quintic Fejér–Hardy calibration.
+
+**QNEC rigidity.** Saturation of the sharp QNEC requires the modular spectral measure to be purely atomic at zero. Any strictly positive Fejér-averaged slope at large $T$ (beyond the $O(T^{-2})$ tail) falsifies saturation for that state.
+
+---
+
+## What This Means for Physics
+
+**The arrow of time is a spectral fact, not a cosmological assumption.** The absolutely continuous spectrum of the canonical generator $Q = D + B$ drives irreversible decay through calibrated Fejér packets. The arrow does not depend on special initial conditions for individual systems — it depends on the spectral type of the generator.
+
+**The no-go theorem is a feature, not a bug.** By proving exactly what is impossible (a universal strict arrow for all finite closed unitary systems) and then achieving everything that *is* possible, the framework establishes the precise boundary of temporal asymmetry in quantum physics. The maximal universality envelope covers AC/GKLS systems, integrable/MBL, finite closed systems with sparse exceptions, and the cosmological arrow.
+
+**Quantum energy conditions enforce the arrow.** The sharp QNEC, global ANEC, and unbanded GSL are not separate results — they are consequences of the same spectral construction. The Fejér–Hardy calibration that extracts the arrow also proves the energy conditions, with the same universal constant $\frac{3}{32\pi}$ appearing throughout.
+
+**The Generalised Second Law holds without band ledgers.** The quintic Fejér–Hardy comb eliminates the need for inter-band accounting that complicated previous derivations, giving a clean $\dot{\mathcal{G}} \ge 0$ in the double limit.
+
+**The arrow is part of a larger architecture.** The same closure admissibility principle $\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})$ that derives the arrow of time also governs quantum measurement, the Born rule, the cosmological constant, spacetime dimensionality, and quantum gravity. Time asymmetry is not a puzzle requiring an ad hoc solution — it is a structural consequence of closure admissibility. The Δ-mediated irreversibility that produces the arrow is the same mechanism that creates records, distinguishes past from future, and generates the operational content of time itself.
+
+> One equation. One admissibility principle. The deepest asymmetry in nature — derived.
+
+---
+
+*Author: Jeremy Rodgers · Framework: Tier-0 / The Everything Equation*
+*Supporting papers: See the full technical papers on Spectral Thermodynamics and the Quantum Arrow of Time, and Universal Quantum Energy Conditions from Spectral Thermodynamics, for complete proofs, appendices, and formal statements.*
+
+$$\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})$$
+
+*© 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.*
