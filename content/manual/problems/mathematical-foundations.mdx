@@ -12,7 +12,7 @@ $$
 2. [What Mathematical Practice Actually Shows](#what-mathematical-practice-actually-shows)
 3. [The Lawhood Criterion: Fixed-Point Admissibility](#the-lawhood-criterion)
 4. [The Carrier: Where Mathematical Candidates Live](#the-carrier)
-5. [The Three Operators — Formal Axioms, Not Vibes](#the-three-operators)
+5. [The Three Operators - Formal Axioms, Not Vibes](#the-three-operators)
 6. [Fixed Points Exist: Knaster–Tarski and Mathematical Reality](#fixed-points-exist)
 7. [Beyond Gödel: Completeness at the Operator Level](#beyond-gödel)
 8. [The Class Mismatch Problem: True but Undiscoverable](#the-class-mismatch-problem)
@@ -27,11 +27,11 @@ $$
 
 ## The Wrong Starting Point
 
-Foundational debates in mathematics almost always begin in the wrong place. They argue about ontology — are mathematical objects real entities floating in a Platonic realm, or are they just symbols we push around? They argue about syntax — what can be proved in which axiom system? They argue about whether mathematics is discovered or invented, as though those were the only two options.
+Foundational debates in mathematics almost always begin in the wrong place. They argue about ontology,  are mathematical objects real entities floating in a Platonic realm, or are they just symbols we push around? They argue about syntax.  What can be proved in which axiom system? They argue about whether mathematics is discovered or invented, as though those were the only two options.
 
 These debates have run for centuries without resolution, and there is a structural reason for that: they are asking the wrong question. The question is not *what mathematical objects are*. The question is **what qualifies a mathematical structure as law rather than artifact**.
 
-Much of what mathematicians manipulate is scaffolding: axioms, proof calculi, encodings, representational conventions. These are indispensable for human reasoning, but they are not invariant content. Change the encoding and the scaffolding changes. Weaken the axioms and some statements collapse. Translate between set theory and type theory and what survives is not the notation — it is something deeper.
+Much of what mathematicians manipulate is scaffolding: axioms, proof calculi, encodings, representational conventions. These are indispensable for human reasoning, but they are not invariant content. Change the encoding and the scaffolding changes. Weaken the axioms and some statements collapse. Translate between set theory and type theory and what survives is not the notation, it is something deeper.
 
 > The Tier-0 programme provides a precise criterion for that deeper something: **mathematical reality is the closure-stable residue under admissible re-presentation, inferential persistence, and canonical completion.**
 
@@ -45,11 +45,11 @@ Before stating the criterion formally, consider what mathematical practice itsel
 
 **Re-presentation invariance.** The same mathematical content survives translation between radically different languages. Groups appear identically in set-theoretic, categorical, and type-theoretic presentations. The fundamental theorem of algebra holds whether you encode it via Galois theory, complex analysis, or algebraic topology. The "real content" is what survives these changes of clothing.
 
-**Collapse of inessential scaffolding.** Some mathematical statements are robust — they survive weakening of axioms, changes of proof environment, perturbation of foundational assumptions. Others are fragile: their truth value shifts under forcing, changes between models, or small variations in axiom strength. There is a practical, observable distinction between a robust core and dispensable superstructure.
+**Collapse of inessential scaffolding.** Some mathematical statements are robust, they survive weakening of axioms, changes of proof environment, perturbation of foundational assumptions. Others are fragile: their truth value shifts under forcing, changes between models, or small variations in axiom strength. There is a practical, observable distinction between a robust core and dispensable superstructure.
 
-**Canonical reappearance.** Certain constructions — universal properties, spectral decompositions, variational extremals, symmetry structures, completions — recur with mechanical inevitability across domains that were never designed to share them. This is not human aesthetic preference. It is structural necessity.
+**Canonical reappearance.** Certain constructions, universal properties, spectral decompositions, variational extremals, symmetry structures, completions, recur with mechanical inevitability across domains that were never designed to share them. This is not human aesthetic preference. It is structural necessity.
 
-> These three phenomena are precisely the abstract roles of $\partial$, $\Delta$, and $\Omega$ in the Everything Equation. The mathematical sector inherits the same operator architecture — with a critical difference in what "persistence" means.
+> These three phenomena are precisely the abstract roles of $\partial$, $\Delta$, and $\Omega$ in the Everything Equation. The mathematical sector inherits the same operator architecture with a critical difference in what "persistence" means.
 
 ---
 
@@ -63,7 +63,7 @@ $$
 
 where $\partial$ is boundary normalisation, $\Delta$ is persistence selection, and $\Omega$ is global closure completion.
 
-Mathematics inherits these operator roles with one critical change: persistence is not physical irreversibility or record formation. It is **inferential persistence** — survival under proof environments, weakening, admissible perturbations, and re-expression. The $\Delta$ that governs mathematics is not thermodynamic; it is a robustness filter on the space of candidate mathematical structures.
+Mathematics inherits these operator roles with one critical change: persistence is not physical irreversibility or record formation. It is inferential persistence, survival under proof environments, weakening, admissible perturbations, and re-expression. The $\Delta$ that governs mathematics is not thermodynamic; it is a robustness filter on the space of candidate mathematical structures.
 
 The mathematics-sector lawhood criterion:
 
@@ -71,7 +71,7 @@ $$
 \boxed{M = \Omega_{\mathsf{M}} \circ \Delta_{\mathsf{M}} \circ \partial_{\mathsf{M}}(M)}
 $$
 
-A mathematical structure $M$ is **lawful** (admissible, mathematically real in the structural sense) if and only if it is a fixed point of this composite admissibility map.
+A mathematical structure $M$ is lawful (admissible, mathematically real in the structural sense) if and only if it is a fixed point of this composite admissibility map.
 
 This is not a metaphor and not an analogy to physics. The papers make this precise by placing candidates into a complete lattice, requiring operator monotonicity, and proving fixed-point existence via Knaster–Tarski. Mathematical lawhood is a theorem-shaped property.
 
@@ -79,17 +79,17 @@ This is not a metaphor and not an analogy to physics. The papers make this preci
 
 ## The Carrier: Where Mathematical Candidates Live
 
-To define admissibility without committing to a single foundational school, the framework works on a **carrier domain** — a complete lattice $(\mathfrak{M}, \leq)$ of candidate mathematical law objects.
+To define admissibility without committing to a single foundational school, the framework works on a carrier domain, a complete lattice $(\mathfrak{M}, \leq)$ of candidate mathematical law objects.
 
-The canonical example is a **lattice of theories** ordered by inclusion of theorem sets (equivalently, logical strength). A theory $T$ refines $S$ if $\mathrm{Thm}(T) \subseteq \mathrm{Thm}(S)$. Under mild closure assumptions, this forms a complete lattice with meets given by intersection and joins by generated theory from a union.
+The canonical example is a lattice of theories ordered by inclusion of theorem sets (equivalently, logical strength). A theory $T$ refines $S$ if $\mathrm{Thm}(T) \subseteq \mathrm{Thm}(S)$. Under mild closure assumptions, this forms a complete lattice with meets given by intersection and joins by generated theory from a union.
 
-Alternative carriers include lattices of structure classes ordered by refinement, or categorical carriers with equivalence classes under bi-interpretability or Morita equivalence. The Grand Unified Theory paper constructs a **universal carrier** via MacNeille completion of the presentation preorder — a branch-neutral complete lattice that embeds presentations from set theory, type theory, category theory, and any other foundational framework without privileging any one.
+Alternative carriers include lattices of structure classes ordered by refinement, or categorical carriers with equivalence classes under bi-interpretability or Morita equivalence. The Grand Unified Theory paper constructs a universal carrier via MacNeille completion of the presentation preorder, a branch-neutral complete lattice that embeds presentations from set theory, type theory, category theory, and any other foundational framework without privileging any one.
 
-The completeness requirement is not stylistic. It is what makes fixed-point existence non-negotiable: **a monotone endomap on a complete lattice has fixed points**. This is the structural guarantee that admissible mathematical objects exist.
+The completeness requirement is not stylistic. It is what makes fixed-point existence non-negotiable: a monotone endomap on a complete lattice has fixed points. This is the structural guarantee that admissible mathematical objects exist.
 
 ---
 
-## The Three Operators — Formal Axioms, Not Vibes
+## The Three Operators - Formal Axioms, Not Vibes
 
 The operators are defined as monotone, idempotent endomaps on the carrier lattice, each with a distinct semantic role and explicit axioms.
 
@@ -99,15 +99,15 @@ $\partial_{\mathsf{M}}$ enforces representation-independence: it canonicalises a
 
 Required properties: monotone, idempotent, extensive (normal-form completion), invariant under the admissible equivalence relation $\sim$ (which may be definitional equivalence, bi-interpretability, Morita equivalence, or univalence-style identification depending on the carrier).
 
-**What it does:** $\partial_{\mathsf{M}}$ deletes presentation artifacts. A structure that changes under admissible re-presentation fails $\partial_{\mathsf{M}}$ and is not law-level. This is not a judgment — it is a structural diagnosis.
+**What it does:** $\partial_{\mathsf{M}}$ deletes presentation artifacts. A structure that changes under admissible re-presentation fails $\partial_{\mathsf{M}}$ and is not law-level. This is not a judgment, it's a structural diagnosis.
 
 ### Robustness collapse $\Delta_{\mathsf{M}}$
 
-$\Delta_{\mathsf{M}}$ extracts the inferentially persistent core — the maximal subobject invariant under an explicitly chosen perturbation class.
+$\Delta_{\mathsf{M}}$ extracts the inferentially persistent core, the maximal subobject invariant under an explicitly chosen perturbation class.
 
 Required properties: monotone, idempotent, intensive (core extraction), maximal among subobjects invariant under the designated admissible perturbations (conservative weakening, conservative extension/reduction, axiom variation within a specified tolerance class).
 
-**What it does:** $\Delta_{\mathsf{M}}$ deletes scaffolding that fails under structural stress. Independence and axiom-sensitivity become a precise diagnostic: a statement that does not survive $\Delta_{\mathsf{M}}$-robustness under the chosen perturbation class cannot be elevated to law-level structure. The Continuum Hypothesis, for instance, varies across admissible forcing extensions — it fails $\Delta_{\mathsf{M}}$-robustness and is therefore classified as non-lawful, regardless of its internal coherence within a given model.
+**What it does:** $\Delta_{\mathsf{M}}$ deletes scaffolding that fails under structural stress. Independence and axiom-sensitivity become a precise diagnostic: a statement that does not survive $\Delta_{\mathsf{M}}$-robustness under the chosen perturbation class cannot be elevated to law-level structure. The Continuum Hypothesis, for instance, varies across admissible forcing extensions, it fails $\Delta_{\mathsf{M}}$-robustness and is therefore classified as non-lawful, regardless of its internal coherence within a given model.
 
 ### Closure completion $\Omega_{\mathsf{M}}$
 
@@ -115,7 +115,7 @@ $\Omega_{\mathsf{M}}$ enforces canonical completion: closure under admissible mo
 
 Required properties: monotone, idempotent, extensive, minimal admissible closure.
 
-**What it does:** $\Omega_{\mathsf{M}}$ formalises the phenomenon that certain constructions reappear canonically across domains — universal properties, spectral decompositions, completions, symmetry objects — not because humans prefer them, but because closure forces them. Objects defined by universal properties are unique up to canonical isomorphism precisely because they arise as minimal closed completions under a specified class of morphisms. This is an $\Omega$-phenomenon.
+**What it does:** $\Omega_{\mathsf{M}}$ formalises the phenomenon that certain constructions reappear canonically across domains, universal properties, spectral decompositions, completions, symmetry objects, not because humans prefer them, but because closure forces them. Objects defined by universal properties are unique up to canonical isomorphism precisely because they arise as minimal closed completions under a specified class of morphisms. This is an $\Omega$-phenomenon.
 
 ---
 
@@ -133,23 +133,23 @@ $$
 \boxed{\mathrm{Fix}(F_{\mathsf{M}}) = \{M \in \mathfrak{M} : F_{\mathsf{M}}(M) = M\} \text{ is nonempty and forms a complete lattice}}
 $$
 
-$F_{\mathsf{M}}$ has a **least fixed point** $\mathrm{lfp}(F_{\mathsf{M}})$ and a **greatest fixed point** $\mathrm{gfp}(F_{\mathsf{M}})$, characterised by:
+$F_{\mathsf{M}}$ has a least fixed point $\mathrm{lfp}(F_{\mathsf{M}})$ and a greatest fixed point $\mathrm{gfp}(F_{\mathsf{M}})$, characterised by:
 
 $$
 \mathrm{lfp}(F_{\mathsf{M}}) = \bigwedge\{X \in \mathfrak{M} : F_{\mathsf{M}}(X) \leq X\}, \qquad \mathrm{gfp}(F_{\mathsf{M}}) = \bigvee\{X \in \mathfrak{M} : X \leq F_{\mathsf{M}}(X)\}
 $$
 
-Three admissibility conventions are available, each compatible with the formalism. **Fixed-point realism** takes all of $\mathrm{Fix}(F_{\mathsf{M}})$ as mathematical reality. **Minimal admissibility** takes $\mathrm{lfp}(F_{\mathsf{M}})$ — the smallest closure-stable residue forced by admissibility. **Maximal closure** takes $\mathrm{gfp}(F_{\mathsf{M}})$ — the largest completion stable under the operators. The programme's default stance is minimal admissibility: lawhood means the smallest structure that admissibility forces, not an arbitrary maximal completion.
+Three admissibility conventions are available, each compatible with the formalism. Fixed-point realism takes all of $\mathrm{Fix}(F_{\mathsf{M}})$ as mathematical reality. Minimal admissibility takes $\mathrm{lfp}(F_{\mathsf{M}})$ - the smallest closure-stable residue forced by admissibility. Maximal closure takes $\mathrm{gfp}(F_{\mathsf{M}})$ - the largest completion stable under the operators. The programme's default stance is minimal admissibility: lawhood means the smallest structure that admissibility forces, not an arbitrary maximal completion.
 
-No metaphysical postulates are required. No "true universe of sets" is needed. Mathematical existence is a fixed-point property — a stability criterion, not an ontological commitment.
+No metaphysical postulates are required. No "true universe of sets" is needed. Mathematical existence is a fixed-point property, a stability criterion, not an ontological commitment.
 
 ---
 
 ## Beyond Gödel: Completeness at the Operator Level
 
-Gödel's incompleteness theorems place sharp constraints on any sufficiently expressive, recursively axiomatisable formal system: there exist true statements unprovable within the system, and the system cannot prove its own consistency. This has shaped mathematical logic for nearly a century. But incompleteness applies to a specific class of objects — recursively enumerable axiom systems with syntactic proof predicates.
+Gödel's incompleteness theorems place sharp constraints on any sufficiently expressive, recursively axiomatisable formal system: there exist true statements unprovable within the system, and the system cannot prove its own consistency. This has shaped mathematical logic for nearly a century. But incompleteness applies to a specific class of objects recursively enumerable axiom systems with syntactic proof predicates.
 
-The Tier-0 recursion $L = \Omega\Delta\partial(L)$ is not such an object. It is not a recursively enumerable axiom set. It does not operate via syntactic derivation rules. It defines lawhood as a fixed point of a semantic operator on law-space — a fundamentally different logical tier.
+The Tier-0 recursion $L = \Omega\Delta\partial(L)$ is not such an object. It is not a recursively enumerable axiom set. It does not operate via syntactic derivation rules. It defines lawhood as a fixed point of a semantic operator on law-space, a fundamentally different logical tier.
 
 The **Gödel Boundary Condition** makes this separation precise:
 
@@ -159,7 +159,7 @@ $$
 
 The operator-level recursive image of $L$ under the Tier-0 triple cannot be captured as a theorem of the recursively axiomatisable theory $\mathrm{Th}(L)$ associated with $L$. The generator that produces the law lies strictly outside the theorem-space of the law it generates.
 
-This is not a bug. It is a necessary structural feature. From this boundary condition, the **Tier-0 Completeness Theorem** follows: the Tier-0 recursion is complete at the operator level — it uniquely fixes admissible law objects and is closed under its own notion of recursion — while every formal theory $\mathrm{Th}(L)$ instantiated within it remains necessarily Gödel-incomplete.
+This is not a bug. It is a necessary structural feature. From this boundary condition, the **Tier-0 Completeness Theorem** follows: the Tier-0 recursion is complete at the operator level, it uniquely fixes admissible law objects and is closed under its own notion of recursion while every formal theory $\mathrm{Th}(L)$ instantiated within it remains necessarily Gödel-incomplete.
 
 > The resolution: **incompleteness is a property of theorem-spaces, not of the generative operator systems that give rise to them.** A complete law can produce necessarily incomplete descriptions. Physical theories appear internally constrained yet externally grounded because the constraints arise from an operator structure that is, by construction, not reducible to the theoremhood of any single formalisation.
 
@@ -179,9 +179,9 @@ The admissibility framework distinguishes what is *real* from what is *reachable
 
 The Class Mismatch paper formalises a phenomenon that is empirically obvious but has lacked a structural explanation: some problems resist all efforts by certain solver classes, not because the relevant truth is absent, but because the solver's kinetic signature is incompatible with the problem's intrinsic class.
 
-Within the Tier-0 solver taxonomy, problems and solvers carry intrinsic **kinetic classes** (C-Class I–VI), determined by their Anchor–Flow oscillation patterns and $\Gamma$-texture statistics. A solver survives only when its kinetic signature matches the target class and remains stable under recursive constraint filtering.
+Within the Tier-0 solver taxonomy, problems and solvers carry intrinsic kinetic classes (C-Class I–VI), determined by their Anchor–Flow oscillation patterns and $\Gamma$-texture statistics. A solver survives only when its kinetic signature matches the target class and remains stable under recursive constraint filtering.
 
-When there is a **class mismatch**, the solver experiences $\Gamma$-friction beyond admissible thresholds. The required Anchor–Flow oscillation is destroyed, preventing stable closure deposits. The solver traverses without accumulating — experiencing the problem as "random" or "patternless" even when stable invariants exist.
+When there is a class mismatch, the solver experiences $\Gamma$-friction beyond admissible thresholds. The required Anchor–Flow oscillation is destroyed, preventing stable closure deposits. The solver traverses without accumulating experiencing the problem as "random" or "patternless" even when stable invariants exist.
 
 This produces a corollary that is distinct from both Gödel incompleteness and computational complexity:
 
@@ -189,7 +189,7 @@ This produces a corollary that is distinct from both Gödel incompleteness and c
 
 "True" here means $\Xi$-stable: an invariant that holds in the admissible law-set of the relevant world. "Undiscoverable" means no solver confined to a given kinetic class can produce a stable Anchor deposit encoding the theorem while remaining $\Sigma$-admissible and $\Gamma$-stable.
 
-This is not incompleteness in Gödel's sense (syntactic derivability inside a recursively axiomatised system relying on self-reference). It is a **kinetic admissibility obstruction**: a theorem may be perfectly well-defined and true in the semantic closure of the world, yet unreachable for a solver whose permissible dynamics cannot realise the required closure deposition without $\Gamma$-collapse.
+This is not incompleteness in Gödel's sense (syntactic derivability inside a recursively axiomatised system relying on self-reference). It is a kinetic admissibility obstruction: a theorem may be perfectly well-defined and true in the semantic closure of the world, yet unreachable for a solver whose permissible dynamics cannot realise the required closure deposition without $\Gamma$-collapse.
 
 The explanatory power is immediate: it explains why some problem domains appear patternless to certain solvers, why AI systems stall on particular task classes despite scale, why human cognition can miss simple-to-state truths, and why brute force fails when the obstruction is kinetic rather than computational.
 
@@ -197,23 +197,23 @@ The explanatory power is immediate: it explains why some problem domains appear 
 
 ## A Grand Unified Theory of Mathematics
 
-A Grand Unified Theory of mathematics — in the strongest non-rhetorical sense — must supply a single structural principle that produces a mathematically well-defined universe of admissible objects, explains why the same core objects reappear across number theory, geometry, topology, algebra, analysis, and foundations, and yields a calculus of correspondences that transports invariants between domains without privileging any one encoding.
+A Grand Unified Theory of mathematics in the strongest non-rhetorical sense must supply a single structural principle that produces a mathematically well-defined universe of admissible objects, explains why the same core objects reappear across number theory, geometry, topology, algebra, analysis, and foundations, and yields a calculus of correspondences that transports invariants between domains without privileging any one encoding.
 
 The GUT paper constructs exactly this from Tier-0 admissibility, meeting five explicit criteria: one principle (not a catalogue), internal rigour (standard mathematical language with explicit hypotheses), cross-domain transport (a composition law for correspondences between realisations), canonical realisations with invariant consensus, and non-vacuity (the principle rules things out).
 
 The construction proceeds through several layers.
 
-**The universal carrier** $(\mathcal{M}, \leq)$ is built via MacNeille completion of the presentation preorder. This is branch-neutral: it embeds presentations from set theory, type theory, category theory, and any other framework into a single complete lattice, without privileging any one foundation. The MacNeille completion is canonical — it is the unique (up to isomorphism) completion that preserves existing meets and joins.
+**The universal carrier** $(\mathcal{M}, \leq)$ is built via MacNeille completion of the presentation preorder. This is branch-neutral: it embeds presentations from set theory, type theory, category theory, and any other framework into a single complete lattice, without privileging any one foundation. The MacNeille completion is canonical. It's the unique (up to isomorphism) completion that preserves existing meets and joins.
 
-**A concrete default Tier-0 triple** is specified on this carrier. $\partial_{\mathsf{M}}$ quotients by observational equivalence (presentations with the same perturbation-stable observational content are identified). $\Delta_{\mathsf{M}}$ extracts the perturbation-robust core — the maximal subobject that is invariant under the chosen class of admissible perturbations. $\Omega_{\mathsf{M}}$ completes under reflective closure.
+**A concrete default Tier-0 triple** is specified on this carrier. $\partial_{\mathsf{M}}$ quotients by observational equivalence (presentations with the same perturbation-stable observational content are identified). $\Delta_{\mathsf{M}}$ extracts the perturbation-robust core, the maximal subobject that is invariant under the chosen class of admissible perturbations. $\Omega_{\mathsf{M}}$ completes under reflective closure.
 
-**The universal math engine** $\mathbb{M}_\infty := \mathrm{gfp}(F_{\mathsf{M}})$ is the greatest admissible fixed point — the maximal closure-stable mathematical structure. It satisfies the **fractal fixed-point law**:
+**The universal math engine** $\mathbb{M}_\infty := \mathrm{gfp}(F_{\mathsf{M}})$ is the greatest admissible fixed point, the maximal closure-stable mathematical structure. It satisfies the fractal fixed-point law:
 
 $$
 \mathbb{M}_\infty = \Omega_{\mathsf{M}}\,\Delta_{\mathsf{M}}\,\partial_{\mathsf{M}}(\mathbb{M}_\infty)
 $$
 
-This structure is self-generating: the admissibility operators applied to $\mathbb{M}_\infty$ return $\mathbb{M}_\infty$ itself. It contains, as sub-fixed-points, all the familiar canonical constructions that recur across mathematical domains — and it explains their recurrence as a consequence of closure stability rather than historical accident.
+This structure is self-generating: the admissibility operators applied to $\mathbb{M}_\infty$ return $\mathbb{M}_\infty$ itself. It contains, as sub-fixed-points, all the familiar canonical constructions that recur across mathematical domains and it explains their recurrence as a consequence of closure stability rather than historical accident.
 
 ---
 
@@ -221,11 +221,11 @@ This structure is self-generating: the admissibility operators applied to $\math
 
 The Tier-0 operator framework is not an isolated philosophical position. It admits precise, bidirectional translations to established mathematical and physical frameworks.
 
-**Tier-0 ↔ PDE closure.** A complete Rosetta table maps the Tier-0 operators to their PDE-analytic counterparts: $\partial$ corresponds to presentation enumeration (equivalent weak formulations), $\Delta$ to dissipation and defect selection (irreversible energy cascade, anomalous dissipation measures), and $\Omega$ to completion by admissible continuation (existence of limit solutions, attainment of sharp constants). The central equivalence theorem proves that Tier-0 admissibility is equivalent to the standard PDE closure package (weak-strong uniqueness, energy identity, attainment) — not by analogy, but by formal bidirectional implication.
+**Tier-0 ↔ PDE closure.** A complete Rosetta table maps the Tier-0 operators to their PDE-analytic counterparts: $\partial$ corresponds to presentation enumeration (equivalent weak formulations), $\Delta$ to dissipation and defect selection (irreversible energy cascade, anomalous dissipation measures), and $\Omega$ to completion by admissible continuation (existence of limit solutions, attainment of sharp constants). The central equivalence theorem proves that Tier-0 admissibility is equivalent to the standard PDE closure package (weak-strong uniqueness, energy identity, attainment) not by analogy, but by formal bidirectional implication.
 
 **Tier-0 ↔ Probabilistic frameworks.** A parallel translation maps $\Omega$ to probability-theoretic closure operations (measure completion, regular conditional probabilities, martingale convergence), $\Delta$ to filtration-adapted selection and stopping, and $\partial$ to the quotient by null-set equivalence. Admissibility under the Tier-0 triple translates to a combined closure-selection-normalisation package in probability theory.
 
-These translations are not decorative. They demonstrate that the Tier-0 framework is not adding new mathematical content — it is providing a unified lens through which existing mathematical structures are recognised as instances of a single admissibility mechanism. The same fixed-point architecture that governs lawhood in the abstract governs PDE well-posedness, probabilistic closure, and every other domain where "the right answer" is characterised by stability under canonical operations.
+These translations are not decorative. They demonstrate that the Tier-0 framework is not adding new mathematical content, it's providing a unified lens through which existing mathematical structures are recognised as instances of a single admissibility mechanism. The same fixed-point architecture that governs lawhood in the abstract governs PDE well-posedness, probabilistic closure, and every other domain where "the right answer" is characterised by stability under canonical operations.
 
 ---
 
@@ -245,7 +245,7 @@ $$
 
 where $\mathcal{R}$ is the realisation functor mapping physical candidates to their underlying mathematical structures.
 
-Wigner's "unreasonable effectiveness" of mathematics in physics is therefore not mysterious within Tier-0. Mathematics and physics are filtered by the same closure architecture. Physics inherits the most closure-stable mathematics because both are fixed points of the same mechanism — with different operator instantiations encoding the different domains. Mathematics constrains physics because both are selected by closure, not because physics "copies" mathematics as an external language.
+Wigner's "unreasonable effectiveness" of mathematics in physics is therefore not mysterious within Tier-0. Mathematics and physics are filtered by the same closure architecture. Physics inherits the most closure-stable mathematics because both are fixed points of the same mechanism with different operator instantiations encoding the different domains. Mathematics constrains physics because both are selected by closure, not because physics "copies" mathematics as an external language.
 
 ---
 
@@ -253,13 +253,13 @@ Wigner's "unreasonable effectiveness" of mathematics in physics is therefore not
 
 The admissibility framework does not take sides in the traditional ontological debate. It dissolves it by replacing the object-vs-tool dichotomy with a structural criterion.
 
-**Platonism** treats mathematical entities as ontologically primitive — numbers and sets exist as objects independent of physical reality and cognition. The framework does not require this. Mathematical reality is not grounded in object-existence but in fixed-point stability. "Existence" is reinterpreted as closure-stable invariance. Platonism is over-strong ontology: it posits more than admissibility requires.
+**Platonism** treats mathematical entities as ontologically primitive numbers and sets exist as objects independent of physical reality and cognition. The framework does not require this. Mathematical reality is not grounded in object-existence but in fixed-point stability. "Existence" is reinterpreted as closure-stable invariance. Platonism is over-strong ontology: it posits more than admissibility requires.
 
-**Formalism** identifies mathematics with symbol manipulation within axiomatic systems. This captures a real fact — reasoning is implemented via formal languages and proofs — but fails to account for the systematic reappearance of the same structures across axiomatisations, the distinction between robust and fragile statements, and the sense in which mathematics constrains physics rather than being freely chosen. Formalism is under-strong reduction: it sees only the presentation layer.
+**Formalism** identifies mathematics with symbol manipulation within axiomatic systems. This captures a real fact, reasoning is implemented via formal languages and proofs but fails to account for the systematic reappearance of the same structures across axiomatisations, the distinction between robust and fragile statements, and the sense in which mathematics constrains physics rather than being freely chosen. Formalism is under-strong reduction: it sees only the presentation layer.
 
-**Fictionalism and instrumentalism** treat mathematics as a useful but non-real story. The framework agrees that much of mathematical practice involves tools and conventions — but these are precisely what the admissibility operators eliminate. What remains is not fiction but closure-stable residue with structural necessity.
+**Fictionalism and instrumentalism** treat mathematics as a useful but non-real story. The framework agrees that much of mathematical practice involves tools and conventions but these are precisely what the admissibility operators eliminate. What remains is not fiction but closure-stable residue with structural necessity.
 
-**Structuralism** — the position that mathematical objects are positions in structures and identity is determined by structural role — is the view most naturally aligned with Tier-0. The framework strengthens it by providing an explicit criterion for which structures are real: those that are fixed points of the admissibility map. Not every formal structure qualifies. Admissibility is selective.
+**Structuralism**, the position that mathematical objects are positions in structures and identity is determined by structural role is the view most naturally aligned with Tier-0. The framework strengthens it by providing an explicit criterion for which structures are real: those that are fixed points of the admissibility map. Not every formal structure qualifies. Admissibility is selective.
 
 The unified reclassification:
 
@@ -286,7 +286,7 @@ Precision about scope is essential.
 
 **Not a claim of computability.** Fixed points exist by Knaster–Tarski, but identifying specific fixed points or deciding admissibility for particular structures may be undecidable. The framework is a law-level criterion, not an algorithmic proof system. Admissibility determines what is real; solver classes determine what is reachable.
 
-**Not vacuous.** The framework makes discriminating structural predictions: which statements should be presentation-dependent ($\partial_{\mathsf{M}}$-failure), which should be fragile under perturbation ($\Delta_{\mathsf{M}}$-failure), which constructions should reappear canonically ($\Omega_{\mathsf{M}}$-closure). These predictions can be tested against the structural record of mathematical practice — what persists across reformulations, what collapses under weakening, what reappears as canonical completion.
+**Not vacuous.** The framework makes discriminating structural predictions: which statements should be presentation-dependent ($\partial_{\mathsf{M}}$-failure), which should be fragile under perturbation ($\Delta_{\mathsf{M}}$-failure), which constructions should reappear canonically ($\Omega_{\mathsf{M}}$-closure). These predictions can be tested against the structural record of mathematical practice what persists across reformulations, what collapses under weakening, what reappears as canonical completion.
 
 ---
 
@@ -294,17 +294,17 @@ Precision about scope is essential.
 
 **Mathematical reality is a fixed-point property.** Not a metaphysical postulate, not a sociological convention, not a computational output. It is the closure-stable residue under normalisation, robustness collapse, and canonical completion. The Knaster–Tarski theorem guarantees that such residues exist whenever the carrier is a complete lattice and the operators are monotone.
 
-**Independence is structural fragility, not epistemic limitation.** When a statement's truth value varies across admissible perturbations of the foundational environment, it fails $\Delta_{\mathsf{M}}$-robustness. This is not merely "we cannot prove it" — it is "the statement is not a law-level invariant of mathematics." The Continuum Hypothesis is meaningful within specific presentations but is not closure-stable mathematical law.
+**Independence is structural fragility, not epistemic limitation.** When a statement's truth value varies across admissible perturbations of the foundational environment, it fails $\Delta_{\mathsf{M}}$-robustness. This is not merely "we cannot prove it", it is "the statement is not a law-level invariant of mathematics." The Continuum Hypothesis is meaningful within specific presentations but is not closure-stable mathematical law.
 
-**Canonical reappearance is closure forcing.** The structures that dominate mathematics — universal properties, spectra, symmetry objects, variational principles — are precisely those with high $\Omega_{\mathsf{M}}$-closure scores. They reappear not because mathematicians prefer elegance, but because closure forces their existence as minimal completions under admissible morphisms.
+**Canonical reappearance is closure forcing.** The structures that dominate mathematics universal properties, spectra, symmetry objects, variational principles are precisely those with high $\Omega_{\mathsf{M}}$-closure scores. They reappear not because mathematicians prefer elegance, but because closure forces their existence as minimal completions under admissible morphisms.
 
-**Gödel incompleteness lives at the theorem level, not the law level.** The Tier-0 operator recursion is complete in the operator-theoretic sense — it uniquely fixes admissible objects and is closed under its own recursion — while every formal theory it generates remains necessarily incomplete. The apparent tension between the completeness of law and the incompleteness of formalisation is resolved by a clean separation of tiers.
+**Gödel incompleteness lives at the theorem level, not the law level.** The Tier-0 operator recursion is complete in the operator-theoretic sense it uniquely fixes admissible objects and is closed under its own recursion while every formal theory it generates remains necessarily incomplete. The apparent tension between the completeness of law and the incompleteness of formalisation is resolved by a clean separation of tiers.
 
-**Discoverability is separate from reality.** True theorems can be structurally undiscoverable by solver classes whose kinetic signatures are incompatible with the problem's intrinsic class. This is not Gödel incompleteness and not computational complexity — it is a kinetic admissibility obstruction that explains why some truths resist entire methodological traditions.
+**Discoverability is separate from reality.** True theorems can be structurally undiscoverable by solver classes whose kinetic signatures are incompatible with the problem's intrinsic class. This is not Gödel incompleteness and not computational complexity, it's a kinetic admissibility obstruction that explains why some truths resist entire methodological traditions.
 
-**Mathematics and physics are co-selected.** Both are fixed points of the same closure mechanism with different operator instantiations. Physics is the energetically and boundary-realisable subset of admissible mathematical structure. Mathematics constrains physics because both are selected by closure — and physics necessarily inherits the most closure-stable mathematics.
+**Mathematics and physics are co-selected.** Both are fixed points of the same closure mechanism with different operator instantiations. Physics is the energetically and boundary-realisable subset of admissible mathematical structure. Mathematics constrains physics because both are selected by closure and physics necessarily inherits the most closure-stable mathematics.
 
-> One admissibility recursion. One fixed-point criterion. The foundations of mathematical lawhood — derived from closure, not assumed from ontology.
+> One admissibility recursion. One fixed-point criterion. The foundations of mathematical lawhood derived from closure, not assumed from ontology.
 
 ---
 
