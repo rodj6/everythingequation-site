@@ -144,6 +144,29 @@ problems:
       - problem:mathematical-foundations
       - problem:standard-model
 
+    - id: problem:quantum-measurement
+    slug: quantum-measurement
+    title: Quantum Measurement and the Origin of the Born Rule
+    domain: Physics/Foundations
+    status: public
+    maturity: complete
+    direct_answer: >
+      Definite outcomes and |ψ|² probability weights emerge from closure-stable admissibility
+      constraints. Measurement is not an external postulate but a structural consequence of
+      operator-theoretic stability, probability rigidity, and decision-level closure.
+    monograph_refs:
+      - "Appendix I.5"
+    supported_by:
+      - zenodo:17823241
+      - zenodo:17864384
+      - zenodo:18028427
+      - zenodo:18205246
+    connections_hint:
+      - problem:quantum-gravity
+      - problem:lawhood
+      - problem:mathematical-foundations
+
+
       - id: mdx-sanity-test
         slug: mdx-sanity-test
         title: MDX Sanity Test
