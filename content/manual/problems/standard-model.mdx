@@ -1,6 +1,6 @@
 # The Standard Model of Particle Physics
 
-**A law-level reconstruction of the gauge group, fermion content, generation count, and anomaly structure from determinant-closed SO(10) admissibility — within the Tier-0 framework.**
+**A law-level reconstruction of the gauge group, fermion content, generation count, and anomaly structure from determinant-closed $\mathrm{SO}(10)$ admissibility — within the Tier-0 framework.**
 
 ---
 
@@ -28,7 +28,7 @@ The Standard Model of particle physics is not merely successful — it is unreas
 
 And yet the Standard Model has a secret: it does not explain itself.
 
-The gauge group SU(3) × SU(2) × U(1). The chiral fermion content — quarks and leptons arranged in left-handed doublets and right-handed singlets. The specific hypercharge assignments that produce fractional electric charges. The cancellation of quantum anomalies across an intricate web of representation-theoretic constraints. The existence of exactly three generations of matter. All of these features are inputs to the Standard Model, not outputs of it. They are written into the Lagrangian by hand, on the basis that they work. Physics has never explained *why* they work — why this particular structure, out of the vast space of algebraically conceivable alternatives, is the one that nature selected.
+The gauge group $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$. The chiral fermion content — quarks and leptons arranged in left-handed doublets and right-handed singlets. The specific hypercharge assignments that produce fractional electric charges. The cancellation of quantum anomalies across an intricate web of representation-theoretic constraints. The existence of exactly three generations of matter. All of these features are inputs to the Standard Model, not outputs of it. They are written into the Lagrangian by hand, on the basis that they work. Physics has never explained *why* they work — why this particular structure, out of the vast space of algebraically conceivable alternatives, is the one that nature selected.
 
 This is not an aesthetic complaint. It is a structural question with precise mathematical content: *is there a principled reason why the observed particle content of the universe takes the form it does, or is it an accident?*
 
@@ -36,219 +36,154 @@ The work presented here answers that question. Within the Tier-0 framework and i
 
 ---
 
-## 2. What "Structural Reconstruction" Means
-
-It is important to be precise about what this body of work does and does not claim.
-
-This is a *reconstruction*, not a model. No symmetry-breaking history is assumed. No renormalization-group running to high energies. No Yukawa couplings or fermion masses. No speculative ultraviolet completion — no supersymmetry, no string theory, no extra dimensions. The analysis operates entirely at the level of representation theory, admissibility constraints, and structural selection.
-
-The question being asked is: given the admissibility principles of the Tier-0 framework — the same principles that resolve the quantum measurement problem and derive the Born rule — what is the minimal, structurally consistent unification carrier from which the observed Standard Model can descend? And does that descent produce the Standard Model uniquely, or merely as one option among many?
-
-The answer is uniqueness. Under the declared admissibility and minimality criteria, there is exactly one carrier, one matter representation per generation, one hypercharge embedding, and one generation count that survives. Everything else is excluded.
-
----
-
 ## 3. The Observed Infrared Record
 
 The reconstruction target — the structure that must be reproduced — is the experimentally observed low-energy particle content:
 
-**Gauge group:** SU(3)_c × SU(2)_L × U(1)_Y — the strong force, the weak force, and hypercharge.
+**Gauge group:**
+$$
+\mathrm{SU}(3)_c \times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y
+$$
 
 **One-generation chiral fermion content** (in left-handed Weyl notation):
 
-| Multiplet | SU(3) | SU(2) | Hypercharge Y |
-|-----------|-------|-------|---------------|
-| Q_L (quark doublet) | 3 | 2 | +1/6 |
-| u_R^c (up-type singlet) | 3̄ | 1 | −2/3 |
-| d_R^c (down-type singlet) | 3̄ | 1 | +1/3 |
-| L_L (lepton doublet) | 1 | 2 | −1/2 |
-| e_R^c (charged lepton singlet) | 1 | 1 | +1 |
-| ν_R (right-handed neutrino) | 1 | 1 | 0 |
-
-**Anomaly cancellation:** All local gauge anomalies, mixed gauge anomalies, mixed gauge–gravity anomalies, and the Witten SU(2)_L global anomaly must cancel — and do, for this specific content.
-
-**Three generations:** This entire package is replicated three times, producing three families of quarks and leptons with identical gauge quantum numbers but different masses.
-
-Every one of these features is treated as a *record predicate* — a non-negotiable empirical fact that any admissible completion must reproduce. The reconstruction asks: what is the minimal structure from which all of these predicates follow as inherited consequences?
+| Multiplet | $\mathrm{SU}(3)$ | $\mathrm{SU}(2)$ | Hypercharge $Y$ |
+| --------- | ---------------- | ---------------- | --------------- |
+| $Q_L$     | $3$              | $2$              | $+\tfrac{1}{6}$ |
+| $u_R^{c}$ | $\bar{3}$        | $1$              | $-\tfrac{2}{3}$ |
+| $d_R^{c}$ | $\bar{3}$        | $1$              | $+\tfrac{1}{3}$ |
+| $L_L$     | $1$              | $2$              | $-\tfrac{1}{2}$ |
+| $e_R^{c}$ | $1$              | $1$              | $+1$            |
+| $\nu_R$   | $1$              | $1$              | $0$             |
 
 ---
 
-## 4. Why Representation Theory Alone Is Not Enough
+## 5. Determinant-Closed Admissibility: How $\mathrm{SO}(10)$ Is Forced
 
-The embedding of the Standard Model into SO(10) grand unification is textbook material, established by Georgi, Glashow, Fritzsch, and Minkowski in the 1970s. That a single SO(10) spinor representation 16_F can host one complete generation of Standard Model fermions is well known.
+The selection of $\mathrm{SO}(10)$ as the unification carrier is not an assumption. It is derived.
 
-But knowing that SO(10) *can* contain the Standard Model is not the same as knowing that SO(10) *must*. Pure group-theoretic descent permits many algebraically consistent alternatives:
+The question is: among all candidate completions, which one is *forced* by the admissibility recursion
 
-Incomplete multiplets — partial representations without their conjugates, patched together to cancel anomalies. Ad hoc hypercharge rescalings — the U(1)_Y normalization treated as a free parameter, floated to accommodate different embeddings. Additional chiral exotics — new fermions at the Standard Model scale, added to restore anomaly cancellation after non-standard decompositions. Record-silent sectors — hidden structure at the unification scale that plays no role in observed physics but inflates the mathematical apparatus.
+$$
+\mathcal{L} = \Omega \Delta \partial(\mathcal{L}) , ?
+$$
 
-Without a selection principle, all of these are algebraically permissible. The Standard Model *could* descend from SO(10), or from SU(5), or from E_6, or from a patchwork of smaller groups with exotics bolted on. Representation theory alone does not distinguish between these options.
+The unique minimizer is **$\mathrm{SO}(10)$** (equivalently $\mathrm{Spin}(10)$), with one generation hosted in the spinor representation
 
-This is why admissibility matters. The closure and admissibility framework does not invent new structure — it *excludes* structure that fails the admissibility test. It functions as a filter: among all algebraically conceivable descents, which ones are structurally consistent, minimally complex, and free of pathological features?
-
----
-
-## 5. Determinant-Closed Admissibility: How SO(10) Is Forced
-
-The selection of SO(10) as the unification carrier is not an assumption. It is derived.
-
-The derivation begins from the Standard Model record predicates — the gauge group, chiral spectrum, anomaly constraints, and neutrino mass evidence — treated as hard constraints. Any admissible UV completion must reproduce these predicates at low energies. The question is: among all candidate completions, which one is *forced* by the admissibility recursion 𝓛 = ΩΔ∂(𝓛)?
-
-The selection uses a complexity functional that simultaneously penalizes four structural features of any candidate completion, all evaluated after quotienting out record-silent redundancies:
-
-**Anomaly load** — post-quotient residual anomaly that must be canceled, measuring how much additional structure is needed for consistency. **Fermionic representation budget** — the total dimensionality and multiplicity of matter representations, measuring representational economy. **Higgs-sector budget** — the number and size of scalar representations needed for symmetry breaking and mass generation, evaluated after collapsing prediction-degenerate branches. **Group-rank overgrowth** — the rank of the UV gauge group beyond what the Standard Model record requires, measuring unnecessary structural inflation.
-
-The crucial point is that these penalties are not tunable fit parameters. They are algebraic quantities fixed by the admissibility structure itself — endomorphism-level scalars that do not deform spacetime or alter physical content. They measure structural complexity in a representation-invariant way.
-
-Applying these constraints exhaustively across all candidate completions produces a sharp result:
-
-**SU(5)** fails. While Georgi-Glashow SU(5) is historically important, it excludes the right-handed neutrino from the fundamental matter representation (the 5̄ + 10 decomposition accounts for only 15 of the 16 states in a full generation). Accommodating neutrino mass requires additional structure — either a singlet added by hand or higher representations — increasing the complexity budget. More fundamentally, the minimal SU(5) Higgs sector faces the doublet-triplet splitting problem, requiring fine-tuning that violates the admissibility discipline.
-
-**Flipped SU(5)** fails. Rearranging the fermion assignments within SU(5) × U(1) introduces abelian mixing freedom that violates the embedding-fixed hypercharge discipline.
-
-**E_6 and larger exceptional groups** fail. These carriers have strictly higher rank and require larger matter representations (the 27 of E_6, for instance), producing chiral exotics at the Standard Model scale that must be made heavy by additional mechanisms — inflating the Higgs and representation budgets beyond minimality.
-
-**Patchwork constructions** fail. Any approach that realizes the Standard Model spectrum from multiple smaller representations without embedding into a single irreducible carrier requires additional structure to enforce anomaly cancellation, producing strictly higher complexity.
-
-The unique minimizer is **SO(10)** (equivalently Spin(10)), with one generation hosted in the spinor representation **16_F**. This is the Ω-initial completion: the unique admissible fixed point of the closure recursion applied to the Standard Model record predicates.
-
-The framework further selects a unique Δ-stable symmetry-breaking architecture (up to record-equivalence) with minimal Higgs content, and enforces structural rigidity of the neutrino sector via a seesaw-type effective mass mechanism — without assuming any of these features as inputs.
+$$
+16_F.
+$$
 
 ---
 
 ## 6. One Generation from One Irreducible
 
-The sharpest statement of the reconstruction is:
+> **One complete generation of Standard Model fermions — including the right-handed neutrino — is hosted by a single irreducible representation of $\mathrm{SO}(10)$: the spinor $16_F$.**
 
-> **One complete generation of Standard Model fermions — including the right-handed neutrino — is hosted by a single irreducible representation of SO(10): the spinor 16_F.**
+The Standard Model fermion spectrum is the *complete restriction* of $16_F$ to the infrared gauge group
 
-The Standard Model fermion spectrum is the *complete restriction* of 16_F to the infrared gauge group SU(3) × SU(2) × U(1). No fields are added. No fields are removed. No incomplete multiplets are permitted. What you see at low energies is exactly what the representation contains.
+$$
+\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1).
+$$
 
 Two structural consequences follow immediately:
 
-**Chirality is inherited.** The restricted spectrum is chiral — the left-handed and right-handed fields have different gauge quantum numbers, and there is no vectorlike pairing that would allow mass terms at the unification scale. This is not an imposed condition; it is a property of the 16_F restriction. The Standard Model is chiral because the SO(10) spinor is chiral.
+**Chirality is inherited.**
+The restricted spectrum is chiral because the $\mathrm{SO}(10)$ spinor is chiral.
 
-**The right-handed neutrino is structural.** The 16_F contains 16 states. The Standard Model without a right-handed neutrino accounts for only 15. The sixteenth state is ν_R — a gauge singlet with zero hypercharge. It is present because the representation demands it, not because neutrino phenomenology was used as input. The subsequent discovery of neutrino oscillations (implying neutrino mass, which requires ν_R or equivalent structure) is therefore a *postdiction* of the representation-theoretic framework, not a coincidence.
+**The right-handed neutrino is structural.**
+The 16th state is $\nu_R$ — required by the representation, not added by hand.
 
 ---
 
-## 7. Hypercharge: Locked by Embedding, Not Chosen by Hand
+## 7. Hypercharge: Locked by Embedding
 
-One of the most subtle features of the Standard Model is its hypercharge structure. The U(1)_Y assignments — the fractional numbers like +1/6 for quarks and −1/2 for leptons — look arbitrary from the Standard Model perspective. They are chosen to make anomaly cancellation work and to produce the correct electric charges via Q = T₃ + Y, but there is no internal explanation for their values.
+In the $\mathrm{SO}(10)$ reconstruction, hypercharge is not an independent parameter. The $\mathrm{U}(1)_Y$ generator is embedding-fixed.
 
-In the SO(10) reconstruction, hypercharge is not an independent parameter. It is **embedding-fixed**: the U(1)_Y generator is identified as a specific abelian direction inside the SO(10) algebra, and its normalization is locked by the trace structure of the simple carrier.
+The resulting normalization is equivalent to the canonical GUT relation
 
-This means:
+$$
+k_Y = \frac{5}{3}.
+$$
 
-No arbitrary rescaling of Y is permitted. No independent abelian mixing unrelated to the embedding. No hypercharge assignments chosen separately from the carrier representation.
-
-The resulting normalization is equivalent to the canonical GUT convention k_Y = 5/3, relating the GUT-normalized U(1) coupling to the Standard Model hypercharge coupling. This famous numerical factor — one of the classic signatures of grand unification — is not assumed. It is *derived* from the admissibility framework using only anomaly closure on the minimal chiral template and a kinetic normalization matching criterion, without ever assuming an SU(5) or SO(10) embedding as input.
-
-The consequence is hypercharge *quantization*: the allowed Y-charges of all Standard Model fermions are fixed discretely by the representation-theoretic weight data of the restricted 16_F multiplet. Fractional electric charges are not tunable inputs. They are inherited discrete charge spectra of an embedded abelian generator.
+Hypercharge quantization follows discretely from the weight data of the restricted $16_F$ multiplet.
 
 ---
 
 ## 8. Anomaly Cancellation: Inherited, Not Engineered
 
-Quantum anomalies — the failure of classical symmetries to survive quantization — are among the most powerful structural constraints in particle physics. If the anomalies of a gauge theory do not cancel, the theory is mathematically inconsistent: it produces nonsensical predictions and violates unitarity.
+Because the infrared fermion spectrum is the *complete* restriction of a single $16_F$ with embedding-fixed hypercharge, every anomaly condition is satisfied as an inherited algebraic identity.
 
-The Standard Model's anomaly cancellation is remarkable. Across six distinct anomaly conditions (cubic gauge anomalies, mixed gauge anomalies, mixed gauge-gravity anomalies, and the Witten SU(2) global anomaly), the contributions from quarks and leptons cancel with extraordinary precision. In the Standard Model, this cancellation looks like a miraculous numerical coincidence — or, at best, an input that constrains the allowed matter content.
+Representative cancellations include:
 
-In the SO(10) reconstruction, anomaly cancellation is automatic.
+$$
+\mathrm{SU}(3)^2!-!\mathrm{U}(1):\quad
+\frac{1}{6} - \frac{1}{3} + \frac{1}{6} = 0
+$$
 
-Because the infrared fermion spectrum is the *complete* restriction of a single 16_F with embedding-fixed hypercharge, every anomaly condition is satisfied as an *inherited algebraic identity* of the restricted representation. No additional chiral fermions are needed. No exotics are introduced. No numerical tuning is performed.
+$$
+\mathrm{SU}(2)^2!-!\mathrm{U}(1):\quad
+\frac{1}{4} - \frac{1}{4} = 0
+$$
 
-Representative cancellations include: the SU(3)²-U(1) mixed anomaly cancels by the identity 1/6 − 1/3 + 1/6 = 0 across the quark multiplets; the SU(2)²-U(1) anomaly cancels by 1/4 − 1/4 = 0 between quark and lepton doublets; and the Witten SU(2)_L global anomaly is satisfied because each generation contains exactly four left-handed SU(2) doublets — an even number, as required.
+The Witten $\mathrm{SU}(2)_L$ global anomaly is satisfied because each generation contains exactly four left-handed $\mathrm{SU}(2)$ doublets — an even number.
 
-The anomaly structure of the Standard Model is not a coincidence. It is a theorem — a consequence of the matter content being a complete restriction of an irreducible carrier from a simple group with embedding-fixed abelian charges.
-
----
-
-## 9. Why Three Generations? A Closure Selection Resolution
-
-The reconstruction so far establishes the gauge group, one-generation fermion content, hypercharge quantization, and anomaly cancellation. But the Standard Model contains three copies of this generation structure — three families of quarks and leptons with identical gauge quantum numbers and different masses. Why three?
-
-This is one of the longest-standing unexplained parameters in physics. The Standard Model is anomaly-free for *any* number of generations. The Lagrangian does not supply an intrinsic mechanism for selecting N_gen = 3. Historically, the question has been addressed through flavor symmetries, landscape arguments, and anthropic reasoning — none of which produce a structural necessity.
-
-The Tier-0 framework provides a different type of answer. Rather than asking why nature *chose* three generations, the question is reframed: **which generation counts survive closure with robust viability, without invoking fine-tuning, landscape selection, or additional hidden structure?**
-
-The analysis treats N_gen as a discrete law parameter and subjects it to a "compute-then-test" admissibility pipeline with three independent filters:
-
-**CP-capacity threshold.** For N_gen ≤ 2, all rephasing-invariant CP-violating quantities vanish identically — the theory is structurally incapable of producing the CP violation that is experimentally observed. This is not a matter of parameter choice; it is an algebraic identity. Two or fewer generations cannot accommodate CP violation. The lower bound is sharp: **N_gen ≥ 3 is required for CP capacity**.
-
-**Horizon perturbativity.** For N_gen ≥ 4 in the minimal sequential-chiral, single-Higgs carrier, a one-loop Riccati horizon bound forces large Yukawa couplings into a finite perturbative window. The renormalization-group running of gauge couplings hits Landau poles below the unification horizon, destroying perturbative control. Higher generation counts progressively accelerate this failure.
-
-**Electroweak and Higgs viability.** For N_gen ≥ 4, non-decoupling of heavy chiral fermions in the single-doublet carrier forces the oblique electroweak precision parameters (S, T) and Higgs signal-strength constraints into simultaneous compatibility only on a set of measure zero — a positive-codimension locus in the physical parameter manifold. Under the measurable no-tuning discipline (viability must occur on a set with nonempty interior), this is classified as inadmissible.
-
-The combined result is that N_gen = 1 and N_gen = 2 fail CP capacity, and N_gen ≥ 4 fails robust viability. The admissible set is a singleton:
-
-> **Adm(N_gen) = {3}**
-
-Three generations are the unique closure-stable fixed point. They are not selected by anthropic reasoning or landscape statistics, but by the intersection of structural admissibility constraints already implicit in the minimal Standard Model carrier.
-
-A canonical minimality functional J(N) = N + c/N provides additional robustness: its discrete minimizer is N = 3 on an entire stability interval of coefficients (6 ≤ c < 12), so the selection does not depend on a pointwise normalization choice.
+Anomaly cancellation is inherited, not tuned.
 
 ---
 
-## 10. What Cannot Be Predicted: The Yukawa Boundary
+## 9. Why Three Generations?
 
-A framework strong enough to fix the gauge group, carrier, generation count, and numerical invariants like the Born-rule exponent naturally invites the question: can it also predict fermion masses and mixing angles?
+The admissibility pipeline yields a discrete selector on the generation count $N_{\text{gen}}$.
 
-The answer is no — and this is itself a provable theorem, not a limitation of the present analysis.
+The combined constraints produce:
 
-The Yukawa couplings — the continuous flavor parameters that determine mass hierarchies and mixing — live on a quotient parameter manifold 𝒫₃ = (Y_u, Y_d, Y_e) / 𝒢₃, where 𝒢₃ is the flavor-rephasing symmetry group. Non-fine-tuned admissibility requires viability on a set with nonempty interior in 𝒫₃ (the same robustness criterion used for generation selection). Under the no-silent-tie-breaking discipline — the requirement that selection cannot invoke structure invisible to the record — this alone blocks any law-level selector from outputting a unique point in flavor space.
+$$
+\mathrm{Adm}(N_{\text{gen}}) = {3}.
+$$
 
-The proof closes remaining loopholes. While Yukawa data are *budget-visible* to the admissibility comparison through coarse endomorphism channels (supertrace quantities like Str(E) and Str(E²)), even the strongest Ω-projected Yukawa scalar extracted from these channels is not law-level rigid: it obeys only a universal inequality and permits a trivial branch. Furthermore, even after conditioning on *all* other law-level invariants fixed by the framework — gauge structure, unification carrier, generation count, hypercharge normalization, Born-rule rigidity, the fine-structure constant, and the cosmological constant — the Yukawa manifold does not collapse to a point or discrete family. The conditioned viable set retains nonempty interior.
-
-This is a sharp structural boundary:
-
-> **Exact Yukawa ratios are not law-level quantities. Any proposal to predict fermion masses must either introduce additional record-visible selector structure or relax the lawhood axioms themselves.**
-
-The numerical flavor problem is therefore not an unfinished law-level derivation. It is a boundary on what law-level completion can supply. Fermion masses are real physical quantities, but their specific values belong to the domain of contingent physical data — like initial conditions — rather than to the domain of structural law.
-
-This result is as important as the positive derivations. It tells you exactly where the Tier-0 programme stops and empirical measurement begins, and it does so as a theorem rather than an admission of defeat.
+Three generations are the unique closure-stable fixed point.
 
 ---
 
-## 11. Antimatter, CP Violation, and Cosmological Selection
+## 10. The Yukawa Boundary
 
-The same closure framework that reconstructs the Standard Model also addresses one of the most striking features of the observed universe: the overwhelming dominance of matter over antimatter.
+The Yukawa couplings live on a quotient parameter manifold
 
-In the standard cosmological picture, the matter-antimatter asymmetry is treated as a microphysical problem — a tiny initial imbalance in baryon number, amplified by CP-violating processes and out-of-equilibrium dynamics in the early universe (the Sakharov conditions). Despite decades of effort, no fully satisfactory baryogenesis mechanism has been identified within the Standard Model.
+$$
+\mathcal{P}_3 = (Y_u, Y_d, Y_e) / \mathcal{G}_3.
+$$
 
-The Tier-0 framework reframes the problem entirely. Matter and antimatter are identified as **orientation-conjugate realizations of the same invariant law-objects** — distinguished only by the sign of their kinetic (Γ) orientation while sharing identical closure (Φ) content. Annihilation is a forced cancellation of conjugate kinetic degrees into flow carriers (radiation), with preservation of the underlying closure structure. It is not an ontic destruction of substance but a kinetic neutralization.
+Under non-fine-tuned admissibility, viability must occur on a set with nonempty interior.
 
-The critical result is cosmological: after stable closure formation ("Φ-lock"), any macroscopic persistent coexistence of both kinetic orientations in a long-horizon viable world is *inadmissible*. Sustained conjugate coupling induces global kinetic collapse and loss of dynamical viability. The universe is matter-dominated not because of a finely tuned early-universe imbalance, but because **only configurations that preserve closure stability and kinetic viability are admissible as realized cosmologies**.
+The result:
 
-Observed CP asymmetry is then a footprint of this world-level structural selection, rather than an independent explanatory primitive. The matter dominance of the universe joins measurement, probability, and particle content as another consequence of the same closure-based admissibility framework.
+> **Exact Yukawa ratios are not law-level quantities.**
+
+They cannot be fixed by closure alone.
 
 ---
 
-## 12. How This Differs from Conventional Grand Unification
+## 11. Matter–Antimatter Selection
 
-The relationship between this work and conventional SO(10) grand unification deserves explicit clarification.
+Matter and antimatter are orientation-conjugate realizations of the same invariant law-objects, distinguished by kinetic orientation while sharing identical closure content.
 
-**What is the same:** The embedding SU(3) × SU(2) × U(1) ⊂ SO(10) is standard. The decomposition of 16_F into Standard Model representations is textbook. The anomaly cancellation properties are conventional results. All of these are reproduced exactly.
+Persistent coexistence of both kinetic orientations in a long-horizon viable world is inadmissible under closure stability.
 
-**What is different:** The difference is not the decomposition but the *claim*.
+Matter dominance is therefore a structural selection consequence.
 
-| Feature | Conventional SO(10) GUT | This reconstruction |
-|---------|------------------------|-------------------|
-| **Carrier selection** | Assumed (chosen by physicists) | Derived (forced by admissibility) |
-| **Symmetry breaking** | Modeled with scalar sectors | Not assumed (no dynamics) |
-| **Coupling unification** | Required (RG running) | Not required (not used as input) |
-| **Low-energy exotics** | Tolerated (made heavy by tuning) | Forbidden (admissibility filter) |
-| **Additional Higgs reps** | Introduced freely | Constrained by budget minimality |
-| **Generation count** | Accommodated but not explained | Derived (closure selection) |
-| **Hypercharge normalization** | Inherited from SU(5) assumption | Derived without assuming any group |
-| **Neutrino sector** | Model-dependent | Structurally rigid (seesaw forced) |
+---
 
-The core distinction:
+## 12. Conventional vs Structural $\mathrm{SO}(10)$
 
-> **Conventional SO(10):** "Here is a model that *could* unify the Standard Model."
->
-> **This reconstruction:** "Here is the unique admissible structure that *must* reproduce the Standard Model, given the declared closure and admissibility constraints."
+| Feature                   | Conventional SO(10) GUT | This reconstruction |
+| ------------------------- | ----------------------- | ------------------- |
+| Carrier selection         | Assumed                 | Derived             |
+| Generation count          | Accommodated            | Derived             |
+| Hypercharge normalization | Assumed                 | Derived             |
+| Exotics                   | Tolerated               | Forbidden           |
 
-The shift from *possibility* to *necessity* is the central methodological contribution.
+The shift is from possibility to necessity.
 
 ---
 
@@ -256,31 +191,39 @@ The shift from *possibility* to *necessity* is the central methodological contri
 
 ### The Standard Model is not an accident
 
-The gauge group SU(3) × SU(2) × U(1), the chiral fermion content, hypercharge quantization, anomaly cancellation, and three generations are not arbitrary features of a theory that happens to work. They are the unique admissible low-energy realization of a determinant-closed unification carrier under structural closure constraints. The Standard Model is the only particle physics that can exist under these admissibility conditions.
+The gauge group
 
-### Unification is forced, not assumed
+$$
+\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)
+$$
 
-SO(10) is not selected because it is mathematically elegant or because physicists find it appealing. It is selected because it is the unique Ω-initial completion of the Standard Model record predicates — the minimizer of a structural complexity functional under anomaly closure, representational economy, and neutrino rigidity. The unification carrier is as structurally determined as the gauge group it produces.
+the chiral fermion content, hypercharge quantization, anomaly cancellation, and three generations are the unique admissible low-energy realization of a determinant-closed unification carrier.
 
-### The right-handed neutrino is a prediction, not an option
+### The unification carrier is forced
 
-The representation-theoretic framework demands ν_R as the sixteenth component of the SO(10) spinor. Its existence is a structural consequence of the carrier selection, independent of any phenomenological motivation. The experimental observation of neutrino mass and mixing is consistent with this prediction — and would be unexplained without it.
+$\mathrm{SO}(10)$ is the unique $\Omega$-initial completion of the Standard Model record predicates.
 
-### The generation count is a law, not a parameter
+### The right-handed neutrino is predicted
 
-Three fermion generations are the unique closure-stable fixed point of a measurable admissibility pipeline. Fewer generations lack CP-violation capacity. More generations fail robust viability under perturbativity, electroweak precision, and Higgs constraints. The number three is as structurally necessary as the gauge group itself.
+It is the 16th component of $16_F$.
 
-### Fermion masses are *not* law-level quantities — and this is provable
+### The generation count is fixed
 
-The same framework that derives so much discrete structure proves that continuous flavor parameters (Yukawa couplings, masses, mixing angles) cannot be fixed by law-level closure. This is not a gap in the theory but a theorem about the boundary of lawhood. It tells physics exactly what can and cannot be derived from first principles, and it does so rigorously.
+$$
+N_{\text{gen}} = 3
+$$
 
-### The framework integrates with the full Tier-0 programme
+### Fermion masses are not law-level
 
-The Standard Model reconstruction sits within a larger architecture. Quantum measurement is resolved by the closure pipeline T_Q = Ω_Q Δ_Q ∂_Q. The Born rule exponent p = 2 is derived from law-space geometry. Temporal quantum states inherit admissibility constraints from the QSOT framework. Agency and decision theory gain a physical foundation in closure-stable fixed points. And the Standard Model itself — the particle content of the physical world — is reconstructed from the same admissibility principle:
+Flavor parameters lie beyond closure rigidity.
 
-> **𝓛 = Ω Δ ∂(𝓛)**
+### Unified by one principle
 
-One equation governs measurement, probability, particle content, and the large-scale structure of the universe. The Standard Model is one of its inevitable consequences.
+Everything follows from the same structural identity:
+
+$$
+\mathcal{L} = \Omega \Delta \partial(\mathcal{L})
+$$
 
 ---
 
