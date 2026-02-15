@@ -401,31 +401,35 @@ papers:
 
 
   # =========================
-  # Quantum measurement / probability / agency (no dedicated Problem hub yet -> supports empty for now)
+  # Quantum measurement / probability / agency
   # =========================
   - id: paper:zenodo:17823241
     zenodo: 17823241
     visibility: public
     role: Complete operator-theoretic resolution of the quantum measurement problem
-    supports: []
+    supports:
+      - problem:quantum-measurement
 
   - id: paper:zenodo:17864384
     zenodo: 17864384
     visibility: public
     role: Structural origin of the Born rule (rigidity of the probability exponent)
-    supports: []
+    supports:
+      - problem:quantum-measurement
 
   - id: paper:zenodo:18028427
     zenodo: 18028427
     visibility: public
     role: Agency beyond pure unitarity (closure-stable decision, probability rigidity, epistemic limits)
-    supports: []
+    supports:
+      - problem:quantum-measurement
 
   - id: paper:zenodo:18205246
     zenodo: 18205246
     visibility: public
     role: Admissibility forces QSOT axioms (closure-based extension of multipartite quantum states over time)
-    supports: []
+    supports:
+      - problem:quantum-measurement
 
 
   # =========================
