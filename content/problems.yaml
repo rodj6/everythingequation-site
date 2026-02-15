@@ -15,7 +15,7 @@ problems:
     supported_by:
       - zenodo:18474556
       - zenodo:18475611
-      - zenodo:UNKNOWN_GENERATIONS_DOI
+      - zenodo:18358761
     connections_hint:
       - problem:grand-unified-theory
       - problem:mathematical-foundations
@@ -144,7 +144,7 @@ problems:
       - problem:mathematical-foundations
       - problem:standard-model
 
-    - id: problem:quantum-measurement
+  - id: problem:quantum-measurement
     slug: quantum-measurement
     title: Quantum Measurement and the Origin of the Born Rule
     domain: Physics/Foundations
@@ -166,11 +166,10 @@ problems:
       - problem:lawhood
       - problem:mathematical-foundations
 
-
-      - id: mdx-sanity-test
-        slug: mdx-sanity-test
-        title: MDX Sanity Test
-        domain: Test
-        status: public
-        maturity: draft
-        direct_answer: Sanity test for manual MDX rendering pipeline.
+  - id: mdx-sanity-test
+    slug: mdx-sanity-test
+    title: MDX Sanity Test
+    domain: Test
+    status: public
+    maturity: draft
+    direct_answer: Sanity test for manual MDX rendering pipeline.
