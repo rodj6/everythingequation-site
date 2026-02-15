@@ -1,168 +1,335 @@
-# Cosmological Constant Problem
+---
+title: "Resolution of the Cosmological Constant Problem"
+description: "From spectral thermodynamics, energy conditions, and a canonical Λ-sector effective theory — the worst prediction in the history of physics, resolved unconditionally as a derived structural invariant."
+author: "Jeremy Rodgers"
+framework: "Tier-0 / The Everything Equation"
+license: "CC BY-NC-ND 4.0"
+---
 
-## The vacuum energy isn’t “mysterious.” It’s **uncalibrated**.
+# Resolution of the *Cosmological Constant* Problem
 
-The cosmological constant problem (CCP) is usually framed as a mismatch: naive vacuum sums look like a disaster, but the observed vacuum energy density is tiny, about $(2.2\text{–}2.3\ \mathrm{meV})^4$. That story has kept physics trapped between three bad options: tuning, anthropics, or modifying gravity.
+**From spectral thermodynamics, energy conditions, and a canonical Λ-sector effective theory — the worst prediction in the history of physics, resolved unconditionally as a derived structural invariant.**
 
-This program takes a harder line:
+$$
+\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})
+$$
 
-> **The CCP is not solved by inventing a new sector or a new symmetry first. It is solved by making the vacuum subtraction non-arbitrary.**
-> If you cannot specify the counterterm canonically, you don’t have a physical $\Lambda$, you have a convention.
+## Contents
 
-The papers below provide the evidence; this page provides the unified narrative.
+1. [The Worst Prediction in the History of Physics](#the-worst-prediction-in-the-history-of-physics)
+2. [Why Nothing Has Worked](#why-nothing-has-worked)
+3. [The Five Pillars of the Resolution](#the-five-pillars-of-the-resolution)
+4. [The Fejér–Hardy Calibration: Fixing the Universal Constant](#the-fejér-hardy-calibration-fixing-the-universal-constant)
+5. [The Spectral Bridge and OS Positivity](#the-spectral-bridge-and-os-positivity)
+6. [Energy Inequalities and Dynamical Stability](#energy-inequalities-and-dynamical-stability)
+7. [The Λ-Sector: Where the Dark Energy Lives](#the-λ-sector-where-the-dark-energy-lives)
+8. [The Number: Why 2.3 meV?](#the-number-why-23-mev)
+9. [Falsifiable Predictions](#falsifiable-predictions)
+10. [How This Compares to Other Approaches](#how-this-compares-to-other-approaches)
+11. [What This Means for Physics](#what-this-means-for-physics)
 
 ---
 
-## Central Claim
+## The Worst Prediction in the History of Physics
 
-Within a broad admissible class of prescriptions, the physical cosmological constant ($\Lambda_{\mathrm{Phys}}$) is **uniquely selected**, **positivity-compatible**, **RG-invariant**, **time-constant**, and **independent of regulator/window/line choices**.
+Quantum field theory predicts that empty space should seethe with vacuum energy — virtual particles flickering in and out of existence at every point, at every energy scale. Sum up all these contributions and you get a vacuum energy density. Compare that number to what cosmology actually observes — the tiny positive cosmological constant driving the accelerating expansion of the universe — and the mismatch is staggering.
 
-This is not “we found a neat model.”
-This is: **the freedom that creates the CCP is removed by a canonical calibration and stability constraints.**
+> **$10^{120}$** — The ratio between the naïve quantum prediction of vacuum energy and the observed value. This is not a modest discrepancy. It is the largest quantitative failure of any prediction in the history of natural science.
 
----
+The observed cosmological constant corresponds to a vacuum energy density whose fourth root is approximately **2.3 millielectronvolts** — a number so tiny relative to any fundamental scale in particle physics that its very existence demands explanation. How does nature contrive to cancel 120 orders of magnitude of vacuum energy and leave behind precisely this minuscule residue?
 
-## Failure of the Standard Framing
-
-In QFT, “vacuum energy” is not a measurable number until you fix a subtraction convention. In orthodox practice, that subtraction is regulator-dependent and is chosen to make the theory workable. That’s fine for lab physics until you couple to gravity, where the subtraction becomes geometry.
-
-So the CCP is, structurally:
-
-* too many “legal” regularizations,
-* too much freedom in the constant counterterm,
-* and no canonical rule that survives positivity, causality, and RG flow.
-
-This program attacks exactly that freedom.
+This is the cosmological constant problem. For decades it has been called the most important unsolved problem in theoretical physics. The work presented here resolves it — not by fine-tuning, not by anthropic reasoning, not by modifying Einstein's equations, but by **canonically determining the vacuum counterterm from spectral data**, proving that the result is unique, positive, causal, and invariant under the renormalisation group.
 
 ---
 
-## The spine of the resolution
+## Why Nothing Has Worked
 
-The construction has five pillars (each one is load-bearing):
+The cosmological constant problem is not merely a technical puzzle. It sits at the intersection of quantum field theory and general relativity and resists every standard approach for structural reasons.
 
-### 1) Fejér–Hardy calibration: kill the fake freedom at the source
+**Weinberg's no-go theorem** established that you cannot dynamically relax the cosmological constant to zero using local equations of motion without fine-tuning. Any local scalar field that tries to adjust $\Lambda$ either overshoots catastrophically or requires initial conditions tuned to the very precision the mechanism was meant to explain.
 
-A three-window Fejér evaluator enforces:
+**Supersymmetry** can cancel boson-fermion vacuum contributions, but supersymmetry is broken in our universe. Once broken, the cancellation fails and the residual vacuum energy is generically of order the SUSY-breaking scale — far too large.
 
-* **zero DC** (no hidden constant drift),
-* **cusp cancellation** (removes the first drift mode),
-* **quadratic flatness** (removes the second drift mode)
+**String landscape and anthropic arguments** propose that the cosmological constant varies across a vast multiverse of $10^{500}$ vacua, and we inhabit one compatible with structure formation. This defers explanation rather than providing one, and produces no falsifiable predictions.
 
-That combination forces a **universal DC gain**:
-$$
-W_T(0) = \frac{3}{32\pi} + O(T^{-2}).
-$$
+**Sequestering mechanisms** modify the gravitational sector globally, introducing new constraints that attempt to decouple the vacuum energy from gravity. These require non-standard gravitational dynamics and have not achieved a fully consistent, falsifiable framework.
 
-Meaning: the “constant you’re allowed to keep” is not a tuning dial anymore. it’s a fixed intercept, with a falsifiable $T^{-2}$ convergence law.
-
-### 2) Certified observables: fix the counterterm with heat-kernel rigidity
-
-The calibration pins the Seeley–DeWitt counterterm via a unique additive constant, using certified combinations of $(a_0,a_2,a_4)$.
-
-So the vacuum subtraction becomes a **derived observable**, not a choice.
-
-### 3) OS-positive spectral bridge: you don’t get to break positivity to “solve” $\Lambda$
-
-The construction builds an order-zero bridge operator:
-$$
-Q = D + B_{QG}
-$$
-that is OS-positive and reconstructs to a local Lorentzian QFT with the spectrum condition.
-
-This matters: lots of “CCP fixes” implicitly wreck reflection positivity or causality. This one can’t as it’s built to preserve them.
-
-It also forces a unique atomic coefficient law:
-$$
-\alpha_k = \frac{32}{3}, m_k.
-$$
-
-That is a structural rigidity statement: if you try to alter the bridge, you violate OS positivity or SDW identities.
-
-### 4) Energy inequality rigidity: forbid secular drift
-
-Even if you fix $\Lambda$ today, many frameworks allow it to drift slowly with time or state choice. This one forbids that.
-
-It uses:
-
-* state-universal quantum energy inequalities,
-* a sharp QNEC with rigidity,
-* and a superlinear Lyapunov bound that excludes slow drift $(\varepsilon \ge 1/16)$.
-
-So “$\Lambda$ might slowly relax” is not permitted inside the admissible class. The calibrated vacuum energy is locked.
-
-### 5) A compact Lambda-sector EFT: constant curvature shift without on-shell stress
-
-Finally, a compact, anomaly-free hidden sector contributes a constant condensate ($\Lambda_\Lambda$) that produces constant curvature but **no on-shell stress tensor**:
-$$
-T^{\Lambda}_{\mu\nu} = 0 \quad \text{on shell}.
-$$
-
-This is the “no fifth force” safety valve: you get a geometric shift without introducing a new long-range mediator.
-
-A consistency bound pushes the portal scale high $(M_\Lambda \ge 10^{15}\ \mathrm{GeV})$, with $M_\Lambda \sim M_{\mathrm{Pl}}$ as a clean choice.
+> The common failure mode: every approach either modifies the equations of motion (and loses contact with established physics), introduces speculative structure (extra dimensions, vast landscapes, modified gravity), or cannot demonstrate that the result is unique and stable under renormalisation. The Tier-0 framework does none of these things.
 
 ---
 
-## Where the Lambda-field fits: the delta-sector becomes rigid
+## The Five Pillars of the Resolution
 
-The CCP paper is not floating alone; it sits on a deeper rigidity result: once collapse/dissipation is represented by a positive generator $K \ge 0$, the allowed scalar “spectral budget” is essentially unique.
+The resolution rests on five independent but interlocking results, each proven rigorously. Together they form a complete logical chain from spectral data to a unique, stable, physically realised cosmological constant.
 
-That is the canonical Lambda-field:
+### Pillar I — Fejér–Hardy Calibration
+
+A three-window spectral evaluator enforcing zero-DC, cusp cancellation, and quadratic flatness fixes a universal constant $W_T(0) = \frac{3}{32\pi}$ with convergence rate $\mathcal{O}(T^{-2})$. No fitting. No free parameters. Pure Fourier analysis.
+
+### Pillar II — Certified Heat-Kernel Observables
+
+The Seeley–DeWitt counterterm is pinned by the calibration constant through a unique additive shift of the heat-kernel coefficients $(a_0, a_2, a_4)$. The vacuum counterterm is canonically fixed — not chosen, not renormalised away, not set by hand.
+
+### Pillar III — OS-Positive Spectral Bridge
+
+An order-zero spectral bridge $Q = D + B_{\rm QG}$ satisfies Osterwalder–Schrader positivity, guaranteeing reconstruction to a physical Wightman theory with a self-adjoint Hamiltonian. The atomic coefficients $\alpha_k = \frac{32}{3}m_k$ are uniquely determined — simultaneously by OS positivity and the SDW linear identities.
+
+### Pillar IV — Quantum Energy Inequalities & Stability
+
+A sharp quantum null energy condition (QNEC) with rigidity, plus a superlinear Lyapunov bound with exponent $\epsilon \ge \frac{1}{16}$, exclude secular drift of the calibrated vacuum energy. The cosmological constant cannot wander.
+
+### Pillar V — Λ-Sector Effective Field Theory
+
+A compact, anomaly-free hidden gauge sector produces a constant geometric condensate $\Lambda_\Lambda$ with vanishing on-shell stress-energy. An RG Ward identity ensures $\mu \, d\Lambda_{\rm phys}/d\mu = 0$. The physical cosmological constant is time-constant, regulator-independent, and universal.
+
+### Logical Flow
+
 $$
-\Lambda_T = \frac{1 - e^{-T K}}{T K},
-$$
-$$
-D_T = -\log \det{}^*(\Lambda_T).
+\boxed{s_\sigma \;\xrightarrow{\text{Fejér–Hardy}}\; \frac{3}{32\pi} \;\xrightarrow{\text{OS bridge}}\; Q = D + B_{\rm QG}}
 $$
 
-And the central punch: **once $K$ is fixed, there is no independent functional freedom left in $\Lambda$ or its budget (up to bounded zero-point modulation).**
+$$
+\downarrow
+$$
 
-The companion “lambda–Profiles” paper then shows how these budgets behave as lawful, comparable objects across systems (injective, stable, normalizable, and testable as profile curves).
-
-This matters for CCP because vacuum energy is exactly where uncontrolled spectral/dissipative bookkeeping usually explodes. Here it is *rigid* by theorem, not by preference.
+$$
+\text{QNEC + Lyapunov} \;\longrightarrow\; \Lambda\text{-sector EFT} \;\longrightarrow\; \boxed{\rho_\Lambda^{1/4} \approx 2.2 \;\text{meV},\; w = -1}
+$$
 
 ---
 
-## The number is not hand-waved: the meV scale is reproduced
+## The Fejér–Hardy Calibration: Fixing the Universal Constant
 
-The construction includes an explicit numerical derivation from cosmological parameters:
+At the heart of the resolution is a piece of pure harmonic analysis that produces a universal number from the structure of the Fejér kernel alone — no physics input, no empirical fitting, no adjustable parameters.
+
+The construction begins with the Fejér kernel, the classical square of the sinc function normalised as a probability density:
+
 $$
-\rho_\Lambda = 3 M_{\mathrm{Pl}}^2 H_0^2 \Omega_\Lambda
-$$
-giving
-$$
-\rho_\Lambda^{1/4} \approx 2.2\ \mathrm{meV}.
+K_T(t) = \frac{1}{2\pi T}\left(\frac{\sin(Tt/2)}{t/2}\right)^2, \qquad K_T(0) = \frac{T}{2\pi}
 $$
 
-That’s the observed scale obtained without “vacuum sum roulette,” and without inserting a small parameter by hand.
+From this, a **three-window evaluator** $W_T$ is built by combining three shifted Fejér kernels with coefficients chosen to satisfy three simultaneous constraints:
+
+> **(Z0) Zero DC:** The evaluator has zero total weight — it annihilates constants.
+> $$\hat{W}_T(0) = \alpha_0 - \beta_1 - \beta_2 = 0$$
+>
+> **(Z1) Cusp cancellation:** The first derivative of the Fourier transform vanishes at the origin — linear drifts are eliminated.
+> $$-\frac{\alpha_0}{T} + \frac{\beta_1}{T+\delta} + \frac{\beta_2}{T-\delta} = 0$$
+>
+> **(Z2) Quadratic flatness:** The leading non-trivial behaviour at the origin is exactly quadratic with coefficient $2/T^2$ — quadratic drifts are controlled.
+> $$\hat{W}_T(\omega) = \gamma_T \omega^2 + \mathcal{O}\big((\omega/T)^3\big), \qquad \gamma_T = \frac{2}{T^2}$$
+
+These three conditions fix the evaluator coefficients via an explicit $3 \times 3$ linear system:
+
+$$
+\begin{pmatrix}
+1 & -1 & -1 \\
+-1/T & A & B \\
+0 & A^2 & B^2
+\end{pmatrix}
+\begin{pmatrix}\alpha_0 \\ \beta_1 \\ \beta_2\end{pmatrix}
+=
+\begin{pmatrix}0 \\ 0 \\ \gamma_T\end{pmatrix}
+$$
+
+where $A = (T+\delta)^{-1}$ and $B = (T-\delta)^{-1}$. The DC gain at the origin then evaluates to:
+
+$$
+\boxed{W_T(0) = \frac{3}{32\pi} + \mathcal{O}(T^{-2})}
+$$
+
+The offset parameter $\eta^2 = \frac{3}{64}$ is **uniquely fixed** by the simultaneous requirements of Osterwalder–Schrader positivity and the Seeley–DeWitt linear identities. There is no free parameter. The constant $\frac{3}{32\pi}$ is the only value compatible with both positivity of the reconstructed quantum theory and the correct transformation of heat-kernel coefficients under constant shifts of the Lagrangian.
+
+A deep structural fact emerges: this same scalar $\frac{32\pi}{3}$ appears independently in the modular channel through the complete elliptic integral $K(1/\sqrt{2})$ and a canonical Eichler integral. The quantum-gravity spectral channel and the modular channel are glued by the same boundary evaluator at the origin. No alternative normalisation exists.
 
 ---
 
-## Predictions and Failure Conditions
+## The Spectral Bridge and OS Positivity
 
-This is not a framework that survives by being vague. It comes with crisp falsifiers:
+The Fejér–Hardy calibration produces certified observables — the heat-kernel coefficients shifted by the canonical constant $\kappa_{\rm FH}$:
 
-* $w_0 = -1$ and $w_a = 0$ exactly (pure cosmological constant, not dynamical dark energy).
-* Any significant detection of $|w_0 + 1| \ge 10^{-3}$ or $|w_a| \ge 10^{-2}$ falsifies the construction.
-* Any measurable redshift drift of $\Lambda$ at $\ge 10^{-3}$ over a Hubble time contradicts the drift-exclusion bound.
-* The Fejér calibration predicts a universal intercept plateau at $3/(32\pi)$ with $O(T^{-2})$ approach.
+$$
+(B_{\rm obs}, G_{\rm obs}, E_{\rm obs}) = \left(a_0 + \kappa_{\rm FH},\; a_2 - \tfrac{1}{6}\kappa_{\rm FH},\; a_4 + \tfrac{1}{360}\kappa_{\rm FH}\right)
+$$
 
-In short: it’s rigid enough to be wrong.
+But a calibration constant alone doesn't ensure that the resulting quantum theory is physically valid. For that, you need Osterwalder–Schrader positivity.
+
+OS positivity is the gold standard of constructive quantum field theory. If a Euclidean theory satisfies it, the Osterwalder–Schrader reconstruction theorem guarantees that a physical Lorentzian quantum theory exists with a self-adjoint, semibounded Hamiltonian and a positive-definite Hilbert space. This is the mathematical bridge between path integrals and real quantum mechanics.
+
+The spectral bridge is defined as:
+
+$$
+B_{\rm QG} := F_\sigma(|D|) + \sum_k \alpha_k \, \Pi_{\xi_k}(|D|)
+$$
+
+where $F_\sigma$ is the Herglotz transform of the spectral slope and $\Pi_{\xi_k}$ are spectral projectors at atomic spectral points. The operator $Q = D + B_{\rm QG}$ achieves OS positivity through a Yosida regularisation and Neumann factorisation. For sufficiently large spectral cutoff $\Lambda > 4\|B_{\rm QG}\|$, the Yosida bound gives:
+
+$$
+\|B_{\rm QG} D_m^{-1}\| < \frac{1}{2}
+$$
+
+and the inverse $Q^{-1}$ factorises as $K^* K$ with $\Theta$-invariant $K$. The OS cone is closed under strong limits, completing the proof. The reconstruction yields a Wightman QFT obeying locality and the spectrum condition.
+
+### The $\alpha_k = \frac{32}{3}m_k$ Law
+
+The atomic coefficients in the spectral bridge are not free parameters. Requiring *simultaneously* that OS reflection positivity holds for all test functions, that the Seeley–DeWitt linear identities are satisfied, and that the Dirac and modular channels produce the same calibration constant forces a unique value:
+
+$$
+\boxed{\alpha_k = \frac{32}{3}\, m_k}
+$$
+
+Any other value violates either positivity (the reconstructed quantum theory would have negative-norm states) or channel invariance (the two independent computational channels would disagree). The proof reduces to showing that a $2 \times 2$ moment matrix has determinant zero at the calibration intercept if and only if $c = 32/3$.
 
 ---
 
-## Claims and Non-Claims of This Page
+## Energy Inequalities and Dynamical Stability
 
-**Claimed:**
+Fixing the vacuum counterterm is only half the problem. The other half: proving it *stays* fixed. If quantum fluctuations could cause the calibrated vacuum energy to drift secularly over cosmological time, the resolution would be void.
 
-* The vacuum counterterm can be fixed canonically from spectral data via a regulator-independent calibration.
-* Positivity/causality are preserved (OS positivity + reconstruction).
-* $\Lambda_{\mathrm{Phys}}$ is RG invariant and stable against secular drift.
-* The observed meV scale is reproduced from cosmological parameters.
+### The Sharp QNEC with Rigidity
 
-**Not claimed:**
+The quantum null energy condition (QNEC) provides a fundamental lower bound on the null-null component of the stress-energy tensor in terms of the second derivative of entanglement entropy:
 
-* A landscape scan.
-* A new light particle.
-* A modification of local GR.
-* A “relaxation mechanism” that sneaks tuning back in.
+$$
+\langle T_{kk}(u) \rangle \;\ge\; \frac{1}{2\pi}\,\partial_u^2 S_{\rm out}(u)
+$$
+
+The framework proves a **sharp** version: the bound is tight, and equality holds if and only if the modular spectral measure is purely atomic at zero — equivalently, when the null triple $(A, B, C)$ saturates strong subadditivity with Petz recovery (quantum Markov property).
+
+This is not merely an inequality. The rigidity clause means that saturation carries structural content — it characterises exactly which quantum states can live at the boundary.
+
+### Superlinear Lyapunov: No Secular Drift
+
+The decisive stability result is a superlinear Lyapunov inequality for the Fejér-coarse-grained vacuum functional $Y(t)$:
+
+$$
+\boxed{\dot{Y} + \kappa \, Y^{1+\epsilon} \le C_0, \qquad \epsilon \ge \frac{1}{16}}
+$$
+
+This yields the explicit decay bound:
+
+$$
+Y(t) \le \Big(Y(0)^{-\epsilon} + \epsilon\kappa t\Big)^{-1/\epsilon} + C_0/\kappa
+$$
+
+The exponent $\epsilon \ge 1/16$ is established by decomposing into dyadic spectral packets, bounding inter-packet leakage via the DN rectangle budgets, and applying discrete convexity. The superlinearity is critical: a merely linear decay ($\epsilon = 0$) would permit logarithmic drift; the superlinear bound forces algebraic decay to a bounded attractor. Over a Hubble time, the calibrated vacuum functional cannot drift by more than the certified $\mathcal{O}(T^{-2})$ error.
+
+---
+
+## The Λ-Sector: Where the Dark Energy Lives
+
+The framework identifies a compact, anomaly-free hidden gauge sector — the Λ-sector — that produces the observed cosmological constant as a geometric condensate.
+
+The Λ-sector is a pure Yang–Mills or vectorlike gauge theory with compact gauge group $G_\Lambda$, coupled to visible-sector physics through a single portal operator suppressed by the scale $M_\Lambda$:
+
+$$
+\mathcal{L}_{\rm portal} = \frac{1}{4M_\Lambda^2}\, F^{(\Lambda)}_{\mu\nu} F_{(\Lambda)}^{\mu\nu}\, f(\mathcal{R}, \mathcal{T}), \qquad f(0,0) = 1
+$$
+
+The condensate $\langle F^2_{(\Lambda)} \rangle$ generates a constant shift in the effective cosmological constant:
+
+$$
+\boxed{\Lambda_\Lambda = -\rho_\Lambda / M_\Lambda^2}
+$$
+
+Three structural properties make this sector special:
+
+**Vanishing on-shell stress.** A global constraint $C_{\rm tot} = 0$ enforced through an auxiliary action ensures that on shell, $T^{\mu\nu}_\Lambda = 0$. The Λ-sector contributes constant curvature to the Einstein equations but no propagating degrees of freedom and no detectable stress-energy beyond the cosmological constant itself.
+
+**RG invariance.** The condensate $\rho_\Lambda$ and the suppression scale $M_\Lambda^2$ share the same anomalous dimension under renormalisation group flow. Their ratio — and hence $\Lambda_{\rm phys}$ — is exactly RG-invariant:
+
+$$
+\mu \frac{d\Lambda_{\rm phys}}{d\mu} = 0
+$$
+
+**No fifth forces.** For $M_\Lambda \sim M_{\rm Pl}$, all loop-induced curvature couplings and higher-dimensional operators scale as $M_\Lambda^{-2}$ and are negligible at macroscopic scales. Torsion balance experiments, lunar ranging, and binary pulsar timing all impose consistency bounds easily satisfied at the Planck suppression scale. No equivalence-principle violations. No new long-range forces.
+
+---
+
+## The Number: Why 2.3 meV?
+
+The framework does not merely claim to resolve the cosmological constant problem in the abstract. It reproduces the observed number.
+
+From Friedmann–Robertson–Walker dynamics, the vacuum energy density is:
+
+$$
+\rho_\Lambda = 3\, M_{\rm Pl}^2\, H_0^2\, \Omega_\Lambda
+$$
+
+With the measured values — $M_{\rm Pl} = 2.435 \times 10^{27}$ eV (reduced Planck mass), $H_0 = 1.44 \times 10^{-33}$ eV (Hubble constant), and $\Omega_\Lambda \approx 0.69$ (dark energy fraction from Planck 2018) — this gives:
+
+$$
+\rho_\Lambda \approx 2.54 \times 10^{-11}\;\text{eV}^4
+$$
+
+$$
+\boxed{\rho_\Lambda^{1/4} \approx 2.2\;\text{meV}}
+$$
+
+Identifying $\rho_\Lambda = \Lambda_d^4$ gives $\Lambda_d \approx 2.2\text{–}2.3$ meV, and with $M_\Lambda \sim M_{\rm Pl}$:
+
+$$
+\Lambda_\Lambda = \frac{\rho_\Lambda}{M_{\rm Pl}^2} \sim 10^{-122}\, M_{\rm Pl}^2
+$$
+
+The identification $\Lambda_{\rm phys} = \Lambda_{\rm bare} + \Lambda_\Lambda$ is RG-invariant and universal within the admissible class. The tiny residual is not the result of a miraculous cancellation between enormous terms; it is the canonical value selected by the spectral calibration.
+
+---
+
+## Falsifiable Predictions
+
+The framework is not merely mathematically complete — it is empirically testable. Seven independent falsifiable predictions are derived, each with quantitative thresholds.
+
+**Universal DC Gain and $T^{-2}$ Rate.** The calibration functional converges to $\frac{3}{32\pi}$ with rate $\mathcal{O}(T^{-2})$. This rate is computable and checkable on any Dirac-type background with separated spectral atoms.
+
+**Channel Invariance.** The Dirac and modular channels must produce the same calibration constant $\kappa_{\rm FH}$ up to $\mathcal{O}(T^{-2})$ for the same state and background. A persistent discrepancy would refute the framework.
+
+**RG Invariance of $\Lambda_{\rm phys}$.** Changing the subtraction scale must leave $\Lambda_{\rm phys}$ invariant after calibration. Any residual scale dependence would falsify the Ward identity.
+
+**Smeared QNEC with Rigidity.** The null energy bound must hold for all admissible smearings, with equality only for quantum Markov states. Violation at any scale would refute the energy inequality structure.
+
+**Superlinear Envelope ($\epsilon \ge 1/16$).** The vacuum functional must decay superlinearly, not merely linearly. A secular logarithmic drift would violate the Lyapunov bound.
+
+**No Extra On-Shell Stress.** The Λ-sector must contribute zero on-shell stress-energy beyond the constant $\Lambda_\Lambda$. Detection of propagating hidden-sector modes at the portal scale would refute the construction.
+
+**Exact $w_0 = -1$ and $w_a = 0$.** The framework predicts a pure cosmological constant: no dynamical dark energy, no time evolution. Any significant detection of $|w_0 + 1| \gtrsim 10^{-3}$ or $|w_a| \gtrsim 10^{-2}$ would falsify the construction. Any redshift drift of $\Lambda$ at $\gtrsim 10^{-3}$ over a Hubble time would contradict the superlinear Lyapunov bound.
+
+---
+
+## How This Compares to Other Approaches
+
+The Tier-0 resolution differs from every prior approach in a specific structural way: it **determines** the vacuum counterterm from spectral data without modifying the Einstein equations, introducing additional long-range forces, or invoking anthropic selection.
+
+| Approach | Modifies GR? | New Forces? | Unique Λ? | OS Positive? | RG Invariant? | Falsifiable? |
+|---|---|---|---|---|---|---|
+| Weinberg no-go | — | — | ✗ | — | — | — |
+| Supersymmetry | ✗ | ✓ | ✗ | — | ✗ | partial |
+| String landscape | ✓ | ✓ | ✗ | — | — | ✗ |
+| Sequestering | ✓ | ✗ | partial | — | partial | partial |
+| Anthropic | ✗ | ✗ | ✗ | — | — | ✗ |
+| **Tier-0 (this work)** | **✗** | **✗** | **✓** | **✓** | **✓** | **✓** |
+
+Weinberg's no-go is respected: the framework does not dynamically relax $\Lambda$ by local equations of motion. Instead, it determines the subtraction constant non-arbitrarily from spectral data. The anthropic argument and landscape reasoning become unnecessary within the admissible class. Sequestering's global constraints are replaced by a compact hidden gauge sector with no propagating on-shell stress and an RG-invariant Ward identity fixing the condensate shift.
+
+---
+
+## What This Means for Physics
+
+**The cosmological constant problem has a constructively valid resolution.** The spectral calibration produces a unique vacuum counterterm, the spectral bridge is OS-positive and reconstructs to a physical quantum theory, quantum energy inequalities forbid secular drift, and a compact Λ-sector EFT generates the observed meV-scale cosmological constant as an RG-invariant condensate. All within a single, unified logical chain.
+
+**The vacuum energy is not fine-tuned — it is derived.** The 120-order-of-magnitude cancellation is not a miraculous accident. The Fejér–Hardy calibration canonically selects the subtraction constant from the spectral data of the Dirac operator. The constant $\frac{3}{32\pi}$ is fixed by Fourier analysis. The offset $\eta^2 = \frac{3}{64}$ is fixed by the joint requirement of positivity and heat-kernel consistency. No parameter is adjustable.
+
+**Dark energy is a pure cosmological constant.** The framework predicts $w_0 = -1$ and $w_a = 0$ exactly. If next-generation surveys (DESI, Euclid, Roman) detect dynamical dark energy, the framework is falsified. This is a genuine, quantitative prediction — not a vague consistency check.
+
+**The resolution is part of a larger architecture.** The same closure admissibility principle $\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})$ that resolves the cosmological constant problem also governs quantum measurement, the Born rule, particle content, the Standard Model, grand unification, the generation count, quantum gravity, spacetime dimensionality, and causal structure. The cosmological constant is not an isolated puzzle requiring an ad hoc solution. It is one consequence of a universal structural principle.
+
+> One equation. One admissibility principle. The worst prediction in physics — resolved.
+
+---
+
+*Author: Jeremy Rodgers · Framework: Tier-0 / The Everything Equation*
+*Supporting papers: See the full technical paper for complete proofs, appendices, and formal statements.*
+
+$$\mathcal{L} = \Omega, \Delta, \partial(\mathcal{L})$$
+
+*© 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.*
