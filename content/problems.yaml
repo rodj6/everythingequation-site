@@ -51,6 +51,15 @@ problems:
     supported_by:
       - zenodo:18384959
       - zenodo:18230232
+      - zenodo:18478728
+      - zenodo:18333465
+      - zenodo:18330896
+      - zenodo:18320372
+      - zenodo:18318743
+      - zenodo:17872725
+      - zenodo:17889989
+      - zenodo:18014526
+      - zenodo:17538401
     connections_hint:
       - problem:cosmological-constant
       - problem:grand-unified-theory
@@ -68,9 +77,37 @@ problems:
     supported_by:
       - zenodo:18092342
       - zenodo:18092618
+      - zenodo:18278767
+      - zenodo:18261716
+      - zenodo:18298571
+      - zenodo:18073598
+      - zenodo:17550178
     connections_hint:
       - problem:arrow-of-time
       - problem:quantum-gravity
+
+  - id: problem:dark-sector
+    slug: dark-sector
+    title: Dark Matter and Dark Energy
+    domain: Physics/Cosmology
+    status: public
+    maturity: complete
+    direct_answer: >
+      The dark sector is structurally reclassified: dark energy arises as an Ω-dominant closure background,
+      while dark matter appears as Λ-silent (record-silent) curvature modes rather than an independent particle fluid.
+      Observed gravitational anomalies are treated as lawful projections of closure-stable geometry and spectral budget structure.
+    monograph_refs:
+      - "Appendix J.3"
+    supported_by:
+      - zenodo:18278767
+      - zenodo:18261716
+      - zenodo:18298571
+      - zenodo:18092342
+      - zenodo:18092618
+    connections_hint:
+      - problem:cosmological-constant
+      - problem:quantum-gravity
+      - problem:lawhood
 
   - id: problem:arrow-of-time
     slug: arrow-of-time
@@ -123,6 +160,10 @@ problems:
     supported_by:
       - zenodo:17813117
       - zenodo:18344573
+      - zenodo:18399919
+      - zenodo:18383199
+      - zenodo:18373510
+      - zenodo:17826373
     connections_hint:
       - problem:standard-model
       - problem:navier-stokes
@@ -140,9 +181,16 @@ problems:
     supported_by:
       - zenodo:18081205
       - zenodo:18080442
+      - zenodo:18493638
+      - zenodo:18342623
+      - zenodo:17823404
+      - zenodo:17851714
+      - zenodo:17859631
+      - zenodo:18287259
     connections_hint:
       - problem:mathematical-foundations
       - problem:standard-model
+      - problem:quantum-gravity
 
   - id: problem:quantum-measurement
     slug: quantum-measurement
@@ -165,4 +213,3 @@ problems:
       - problem:quantum-gravity
       - problem:lawhood
       - problem:mathematical-foundations
-
