@@ -1,6 +1,6 @@
 # Tier-1 Dynamical Realization: The Coupled Dirac–Λ System
 
-Tier-0 says what a law must be: a fixed point of closure, collapse, and boundary normalization. It selects the admissible gauge group, the generation count, the dimensionality of spacetime, and the structural inevitability of the dissipative channel — all before dynamics is written down.
+Tier-0 says what a law must be: a fixed point of closure, collapse, and boundary normalization. It selects the admissible gauge group, the generation count, the dimensionality of spacetime, and the structural inevitability of the dissipative channel all before dynamics is written down.
 
 But selection is not realization. A closure criterion can tell you *which* laws are admissible without telling you *how* those laws act on fields, produce masses, or generate the specific physical content we observe. The question that every visitor to this site eventually asks is: where are the equations? Where is the dynamical system that turns the Everything Equation into physics you can compute with?
 
@@ -8,7 +8,7 @@ This page answers that question.
 
 The Coupled Dirac–Λ System is the Tier-1 dynamical realization of the Tier-0 programme. It is a constrained operator system consisting of a Dirac-type carrier encoding geometry, gauge fields, and fermions, coupled through a scale-by-scale capacity inequality to an independent irreversible entropy channel. A single ultraviolet anchor fixes the unique normalization. Constrained stationarity is enforced through a Karush–Kuhn–Tucker (KKT) framework with a nonnegative measure-valued dual variable.
 
-The low-energy expansion recovers Einstein gravity, Yang–Mills gauge theory, and fermionic dynamics — the standard content of fundamental physics. Beyond this, the coupled system forces three nontrivial structural consequences from the same equations, without additional input: the Born rule exponent $p = 2$, the structural exclusion of the strong CP phase $\theta = 0$ (no axion required), and a quantitative measurement dissipation bound with $1/T$ decoherence suppression at large scales. KKT saturation determines all fermion masses as structural outputs of the constraint architecture.
+The low-energy expansion recovers Einstein gravity, Yang–Mills gauge theory, and fermionic dynamics, the standard content of fundamental physics. Beyond this, the coupled system forces three nontrivial structural consequences from the same equations, without additional input: the Born rule exponent $p = 2$, the structural exclusion of the strong CP phase $\theta = 0$ (no axion required), and a quantitative measurement dissipation bound with $1/T$ decoherence suppression at large scales. KKT saturation determines all fermion masses as structural outputs of the constraint architecture.
 
 The system is falsifiable. It is falsified if the UV anchor is unsolvable, if the capacity inequality fails, if the IR admissibility bound is exceeded, or if the derived mass predictions disagree with observation.
 
@@ -16,7 +16,7 @@ The system is falsifiable. It is falsified if the UV anchor is unsolvable, if th
 
 ## 1. The Problem Tier-1 Solves
 
-Every unification programme faces the same structural gap. You can write down a framework — strings, loops, noncommutative geometry, asymptotic safety — and show that it is *compatible* with the Standard Model. Compatibility is cheap. The hard question is: does the framework *determine* the Standard Model? Does it fix the parameters, or does it leave them as inputs?
+Every unification programme faces the same structural gap. You can write down a framework strings, loops, noncommutative geometry, asymptotic safety and show that it is *compatible* with the Standard Model. Compatibility is cheap. The hard question is: does the framework *determine* the Standard Model? Does it fix the parameters, or does it leave them as inputs?
 
 The Standard Model has roughly 19 free parameters: six quark masses, three lepton masses, three CKM mixing angles plus one CP phase, three gauge couplings, the Higgs mass, the Higgs vacuum expectation value, and the QCD vacuum angle $\theta$. Every existing unification programme either inputs these parameters by hand or generates a landscape of possibilities so vast that prediction becomes meaningless.
 
@@ -38,7 +38,7 @@ The dissipative generator, constructed canonically from the Hessian of a record-
 
 $$c_M > 0$$
 
-The sole continuous normalization parameter — fixed by the UV anchor, not chosen by hand.
+The sole continuous normalization parameter fixed by the UV anchor, not chosen by hand.
 
 $$\mu \geq 0$$
 
@@ -54,13 +54,13 @@ The complete coupled system consists of eight equations, with all conventions fi
 
 $$\mathcal{S}[g_E, A, \psi] := \mathrm{Tr}_*\!\big(f(\mathcal{D}_E^2/\Lambda^2)\big) + \langle \psi, \mathcal{D}_E \psi \rangle$$
 
-The spectral action encodes all bosonic and fermionic dynamics in the spectrum of $\mathcal{D}_E$. The cutoff function $f$ and trace prescription $\mathrm{Tr}_*$ are fixed once globally. This is the standard Chamseddine–Connes spectral action — well-established, heavily studied, and known to recover the correct low-energy content.
+The spectral action encodes all bosonic and fermionic dynamics in the spectrum of $\mathcal{D}_E$. The cutoff function $f$ and trace prescription $\mathrm{Tr}_*$ are fixed once globally. This is the standard Chamseddine–Connes spectral action well-established, heavily studied, and known to recover the correct low-energy content.
 
 ### (E2) Fejér operator and Λ-budget
 
 $$\Lambda_T(K) := \frac{1 - e^{-TK}}{TK}, \qquad D_T(K) := -\log\det_*\!\big(\Lambda_T(K)\big|_{H_{\mathrm{diss}}}\big)$$
 
-The Fejér operator $\Lambda_T(K)$ is the time-averaged contraction semigroup — the canonical object encoding how an irreversible generator dissipates structure at proper-time scale $T$. The $\Lambda$-budget $D_T(K)$ measures the total dissipative capacity available at that scale. The mixed determinant scheme $\det_*$ (Fredholm numerator, zeta-regularised denominator) is fixed globally.
+The Fejér operator $\Lambda_T(K)$ is the time-averaged contraction semigroup, the canonical object encoding how an irreversible generator dissipates structure at proper-time scale $T$. The $\Lambda$-budget $D_T(K)$ measures the total dissipative capacity available at that scale. The mixed determinant scheme $\det_*$ (Fredholm numerator, zeta-regularised denominator) is fixed globally.
 
 In finite dimensions with eigenvalues $\{\kappa_j\}$ of $K$: $D_T(K) = \sum_j q(T\kappa_j)$ where $q(x) = -\log((1-e^{-x})/x)$.
 
@@ -94,7 +94,7 @@ The system must remain within a bounded admissibility window at the IR scale. $B
 
 $$\mathcal{L}[g_E, A, \psi;\, \mu] := \mathcal{S}[g_E, A, \psi] + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\!\big(S_\Omega(\mathcal{D}_E; T) - D_T(K)\big)\,d\mu(T)$$
 
-with $\mu \geq 0$, complementary slackness $\int(D_T - S_\Omega)\,d\mu = 0$, and stationarity $\delta_{(g_E,A,\psi)}\mathcal{L} = 0$. The dual measure $\mu$ is not chosen — it is forced by the constraint architecture.
+with $\mu \geq 0$, complementary slackness $\int(D_T - S_\Omega)\,d\mu = 0$, and stationarity $\delta_{(g_E,A,\psi)}\mathcal{L} = 0$. The dual measure $\mu$ is not chosen, it's forced by the constraint architecture.
 
 ### (E8) Saturation equations (mass determination)
 
@@ -102,7 +102,7 @@ At the $m = N_{\mathrm{mass}}$ saturated scales $T_1 < \cdots < T_m$ where $S_\O
 
 $$\Phi_k(y) := S_\Omega(\mathcal{D}_E(y); T_k) - D_{T_k}(K) = 0, \qquad k = 1, \ldots, N_{\mathrm{mass}}$$
 
-These are the mass equations. Each saturation point is a scale where the reversible and irreversible channels are in exact balance — where Flow becomes Anchor. Each such locking is a mass.
+These are the mass equations. Each saturation point is a scale where the reversible and irreversible channels are in exact balance where Flow becomes Anchor. Each such locking is a mass.
 
 ---
 
@@ -114,7 +114,7 @@ $$\mathcal{S}[g_E, A, \psi] \;\approx\; \int_{M_E}\!\sqrt{g_E}\,\Big(\alpha_0\La
 
 The coefficients $\alpha_0$ (cosmological constant), $\alpha_2$ (Einstein–Hilbert), and $\alpha_4$ (Yang–Mills) are determined by the fixed cutoff moments and trace normalization. This is the standard Chamseddine–Connes result. Higher-curvature terms ($R^2$, $R_{\mu\nu}R^{\mu\nu}$, Gauss–Bonnet) appear at the next order.
 
-What the spectral action alone does *not* do is fix the Yukawa couplings, determine particle masses, or exclude the strong CP angle. Those require the $\Lambda$-channel coupling — equations (E4)–(E8).
+What the spectral action alone does *not* do is fix the Yukawa couplings, determine particle masses, or exclude the strong CP angle. Those require the $\Lambda$-channel coupling equations (E4)–(E8).
 
 ---
 
@@ -126,7 +126,7 @@ Because the dissipative generator enters as $(-\log\det_*)$ of a positive operat
 
 $$c \;\longmapsto\; D_T(cK)$$
 
-is continuous and strictly increasing on $(0, \infty)$, provided the dissipative generator preserves positivity under scaling. This monotonicity is structural — a consequence of operator positivity and the logarithmic determinant — not an arbitrary assumption.
+is continuous and strictly increasing on $(0, \infty)$, provided the dissipative generator preserves positivity under scaling. This monotonicity is structuralm a consequence of operator positivity and the logarithmic determinant not an arbitrary assumption.
 
 > **Theorem (No continuous freedom after UV anchoring).** Fix the Tier-1 structure and the background data. (1) The Dirac carrier $\mathcal{D}_E$ is fixed on the background $(M, g_E, A, \psi)$. (2) The entropy kernel $g$, the functionals $S_\Omega$ and $D_T$, and the determinant convention $\det_*$ are all fixed globally. (3) The capacity inequality $S_\Omega(\mathcal{D}_E; T) \leq D_T(K)$ holds for all $T \in [T_{\mathrm{UV}}, T_{\mathrm{IR}}]$. (4) The UV anchor $S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(c_M K_{M_{\mathrm{rec}}})$ is imposed. Then no continuous per-background tuning parameter survives: if a Tier-1 realization exists on that background, it is uniquely normalized.
 
@@ -136,7 +136,7 @@ is continuous and strictly increasing on $(0, \infty)$, provided the dissipative
 
 In particular, Tier-1 induces a normalization rule: Background $\longmapsto c_M$, which is either undefined (package falsified on that background) or uniquely defined. What would count as illicit tuning? Multiplying $\mathcal{D}_E$ by an arbitrary background-dependent constant, rescaling the entropy kernel $g$ per background, or altering the determinant convention $\det_*$ per background. None of these are permitted: the carrier, kernels, and determinant prescription are fixed globally, and the UV anchor then fixes the only remaining scalar normalization.
 
-This is why the system has zero free parameters in the conventional sense. The 19 Standard Model parameters are not inputs — they are structural outputs of the saturation equations (E8), uniquely determined once the UV anchor (E5) sets the normalization.
+This is why the system has zero free parameters in the conventional sense. The 19 Standard Model parameters are not inputs they are structural outputs of the saturation equations (E8), uniquely determined once the UV anchor (E5) sets the normalization.
 
 ---
 
@@ -150,7 +150,7 @@ By complementary slackness, $\mu$ is supported only where the capacity inequalit
 
 **Jacobian analysis.** The saturation map $\Phi: \mathcal{M}_Y \to \mathbb{R}^{N_{\mathrm{mass}}}$ given by $\Phi_k(y) = S_\Omega(\mathcal{D}_E(y); T_k) - D_{T_k}(K)$ has Jacobian entries involving the saturation kernel $h(u) = g(u)\,q(u)$, where $q(x) = -\log((1-e^{-x})/x)$ is the entropy kernel. The entropy kernel is strictly positive and strictly increasing on $(0, \infty)$, with asymptotics $q(x) \sim x/2$ as $x \downarrow 0$ and $q(x) \sim \log x$ as $x \to \infty$.
 
-**Local uniqueness.** If the Jacobian $D\Phi(y^*)$ is nondegenerate — which is structurally favoured by the strict monotonicity of $q$ and the distinct saturation scales $T_k$ — then the implicit function theorem gives local uniqueness of the Yukawa parameter vector $y^*$.
+**Local uniqueness.** If the Jacobian $D\Phi(y^*)$ is nondegenerate which is structurally favoured by the strict monotonicity of $q$ and the distinct saturation scales $T_k$ - then the implicit function theorem gives local uniqueness of the Yukawa parameter vector $y^*$.
 
 The chain of determination is:
 
@@ -167,7 +167,7 @@ The coupled system forces three physical results that follow from equations (E1)
 
 ### 7.1 Born Rule Rigidity: Why $p = 2$
 
-The Born rule — that measurement probabilities are given by $P_k = |\langle\psi|\phi_k\rangle|^2$ — is usually taken as an axiom of quantum mechanics. In the Tier-1 system, it is a theorem.
+The Born rule - that measurement probabilities are given by $P_k = |\langle\psi|\phi_k\rangle|^2$ - is usually taken as an axiom of quantum mechanics. In the Tier-1 system, it is a theorem.
 
 The argument proceeds through two independent routes that converge on the same answer:
 
@@ -179,7 +179,7 @@ The conclusion: $p = 2$ is the unique exponent for which saturation contractivit
 
 ### 7.2 Strong CP Exclusion: Why $\theta = 0$ Without an Axion
 
-The strong CP problem — why the QCD vacuum angle $\theta$ is experimentally consistent with zero despite having no known reason to be — has driven decades of axion searches. In the Tier-1 system, $\theta = 0$ is forced structurally.
+The strong CP problem, why the QCD vacuum angle $\theta$ is experimentally consistent with zero despite having no known reason to be, has driven decades of axion searches. In the Tier-1 system, $\theta = 0$ is forced structurally.
 
 Three independent mechanisms converge:
 
@@ -187,7 +187,7 @@ The spectral action $\mathrm{Tr}_*(f(\mathcal{D}_E^2/\Lambda^2))$ is CP-even (si
 
 Within any single topological sector, the topological charge $Q_{\mathrm{top}} \in \mathbb{Z}$ is a constant (Chern–Weil), and a $\theta$-term added externally is a constant imaginary shift that does not affect functional derivatives, KKT stationarity, or complementary slackness. It is dynamically inert.
 
-Most decisively: for $\theta \neq 0$, the Euclidean gauge weight $e^{-S_{\mathrm{YM}} - i\theta Q_{\mathrm{top}}}$ is complex-valued. Osterwalder–Schrader reflection positivity — which requires a positive Euclidean measure to construct a positive-norm Hilbert space — is obstructed. Without OS positivity, there is no physical quantum theory: no positive-definite inner product, no unitarity, no probabilities.
+Most decisively: for $\theta \neq 0$, the Euclidean gauge weight $e^{-S_{\mathrm{YM}} - i\theta Q_{\mathrm{top}}}$ is complex-valued. Osterwalder–Schrader reflection positivity, which requires a positive Euclidean measure to construct a positive-norm Hilbert space is obstructed. Without OS positivity, there is no physical quantum theory: no positive-definite inner product, no unitarity, no probabilities.
 
 $$\theta = 0 \quad\text{(structural, not fine-tuned; no axion required)}$$
 
@@ -213,7 +213,7 @@ The capacity inequality has a direct spectral consequence. Fix the effective ban
 
 $$N_{[a,b]}(T) := \#\{n : T\lambda_n \in [a,b]\} \;\leq\; \frac{D_{T_{\mathrm{IR}}}(K)}{g_0\,\min_{x \in [a,b]} q(x)}$$
 
-This is a non-tunable spectral envelope: the total spectral complexity of the Dirac carrier is bounded by the irreversible budget. The bound depends only on the fixed global scheme and the uniquely determined $c_M$. It is not a choice — it is a consequence.
+This is a non-tunable spectral envelope: the total spectral complexity of the Dirac carrier is bounded by the irreversible budget. The bound depends only on the fixed global scheme and the uniquely determined $c_M$. It is not a choice, it's a consequence.
 
 Under heat-kernel comparability, this yields an upper bound on the cosmological term $a_0(\mathcal{D}_E^2)$, determined solely by the UV anchor normalization.
 
@@ -229,7 +229,7 @@ $$\frac{\delta \mathcal{S}}{\delta A} + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]
 
 $$\mathcal{D}_E\psi = 0 \qquad\text{(Dirac equation)}$$
 
-The dual measure $\mu$ is supported on the saturation set where $S_\Omega = D_T$. At unsaturated scales, the constraint is slack and contributes nothing to the equations of motion. The system reduces to the familiar Einstein, Yang–Mills, and Dirac equations — plus spectral backreaction from the $\Lambda$-channel at the scales where it matters.
+The dual measure $\mu$ is supported on the saturation set where $S_\Omega = D_T$. At unsaturated scales, the constraint is slack and contributes nothing to the equations of motion. The system reduces to the familiar Einstein, Yang–Mills, and Dirac equations plus spectral backreaction from the $\Lambda$-channel at the scales where it matters.
 
 ---
 
@@ -291,6 +291,6 @@ One equation. One admissibility principle. One dynamical system. Zero free param
 
 **Author:** Jeremy Rodgers
 **Framework:** Tier-0 / The Everything Equation
-**Supporting paper:** *A Coupled Dirac–Λ Dynamical System: Unified Field Equations with Derived Structural Consequences* — see the papers section for the full technical document with complete proofs, standing assumptions, and witness protocol.
+**Supporting paper:** *A Coupled Dirac–Λ Dynamical System: Unified Field Equations with Derived Structural Consequences* - see the papers section for the full technical document with complete proofs, standing assumptions, and witness protocol.
 
 © 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
