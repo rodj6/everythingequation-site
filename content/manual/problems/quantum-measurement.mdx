@@ -1,6 +1,6 @@
 # Quantum Measurement and the Born Rule
 
-**The measurement problem and the Born exponent, resolved from the Tier-1 field equations — no interpretational postulates, no modified dynamics, no observers required.**
+**The measurement problem and the Born exponent, resolved from the Tier-1 field equations. No interpretational postulates, no modified dynamics, no observers required.**
 
 ---
 
@@ -27,17 +27,17 @@
 
 Quantum mechanics has two sharply separable unsolved problems at its foundation.
 
-The first is **record selection** — the measurement problem proper. Unitary dynamics permits coherent superpositions, yet macroscopic experiments yield stable records: classical events that behave as if off-diagonal coherence has been eliminated in a preferred sector. There is nothing in the standard formalism that explains when this happens, what constitutes a "measurement," or why one outcome rather than another is recorded.
+The first is record selection, the measurement problem proper. Unitary dynamics permits coherent superpositions, yet macroscopic experiments yield stable records: classical events that behave as if off-diagonal coherence has been eliminated in a preferred sector. There is nothing in the standard formalism that explains when this happens, what constitutes a "measurement," or why one outcome rather than another is recorded.
 
-The second is the **Born exponent**. For a pure state $|\psi\rangle = \sum_k \alpha_k |\phi_k\rangle$, the outcome probabilities are observed to be:
+The second is the Born exponent. For a pure state $|\psi\rangle = \sum_k \alpha_k |\phi_k\rangle$, the outcome probabilities are observed to be:
 
 $$\mathbb{P}(k) = |\alpha_k|^2$$
 
-Why squared amplitudes? Why not cubed? Why not $|\alpha_k|^{3/2}$? The quadratic form has been confirmed by every experiment ever conducted, but it has been accepted as an axiom — a postulate with no deeper origin — for nearly a century.
+Why squared amplitudes? Why not cubed? Why not $|\alpha_k|^{3/2}$? The quadratic form has been confirmed by every experiment ever conducted, but it has been accepted as an axiom, a postulate with no deeper origin for nearly a century.
 
 These are not aesthetic complaints. They constitute structural incompleteness at the core of the most empirically successful theory in physics.
 
-This page presents a resolution of both problems from the Tier-1 field equations — the coupled Dirac–$\Lambda$ system. No new interpretational axioms are introduced. No dynamics is modified. No observers are invoked. The Born rule and the elimination of persistent coherence are derived as structural consequences of saturation geometry in a capacity-limited operator system.
+This page presents a resolution of both problems from the Tier-1 field equations, the coupled Dirac–$\Lambda$ system. No new interpretational axioms are introduced. No dynamics is modified. No observers are invoked. The Born rule and the elimination of persistent coherence are derived as structural consequences of saturation geometry in a capacity-limited operator system.
 
 ---
 
@@ -47,11 +47,11 @@ This page presents a resolution of both problems from the Tier-1 field equations
 
 **Many-Worlds** removes collapse by declaring every outcome realized in a branching multiverse. This avoids collapse but introduces an infinite ontological commitment and faces a notorious difficulty in recovering the Born rule probabilities without circular reasoning.
 
-**Bohmian mechanics** restores determinism through hidden variables, but the Born rule must be assumed as an equilibrium distribution — it is not derived.
+**Bohmian mechanics** restores determinism through hidden variables, but the Born rule must be assumed as an equilibrium distribution it is not derived.
 
 **GRW and objective collapse theories** modify the Schrödinger equation with stochastic collapse terms. The collapse is phenomenological; the Born rule remains built in.
 
-**Decoherence theory** has made profound progress in explaining the suppression of interference. But decoherence alone produces a diagonal density matrix without selecting a single outcome. It explains why we don't see interference — not why we see one definite result.
+**Decoherence theory** has made profound progress in explaining the suppression of interference. But decoherence alone produces a diagonal density matrix without selecting a single outcome. It explains why we don't see interference not why we see one definite result.
 
 **Gleason-type results** show that, given a Hilbert space and additivity on projectors, probability measures are forced to be the trace rule. But Gleason does not explain why the underlying geometry should be Hilbert in the first place, or why the exponent is quadratic.
 
@@ -61,63 +61,63 @@ Every one of these approaches either assumes the Born rule, assumes collapse, as
 
 ## 3. The Tier-1 Setting: Capacity-Limited Record Formation
 
-The resolution works inside the [coupled Dirac–$\Lambda$ system](/tier-1) — the Tier-1 dynamical realization. Rather than adding interpretational machinery to quantum mechanics, we show that the Tier-1 constraint architecture already contains a measurement theory.
+The resolution works inside the [coupled Dirac–$\Lambda$ system](/tier-1) - the Tier-1 dynamical realization. Rather than adding interpretational machinery to quantum mechanics, we show that the Tier-1 constraint architecture already contains a measurement theory.
 
-The coupled system pairs a reversible **Dirac carrier** $\mathcal{D}_E$ on a compact Euclidean spin 4-manifold (encoding geometry, gauge fields, and fermions via the spectral action) with an independent irreversible **$\Lambda$-channel** generated by a positive selfadjoint operator $K \geq 0$ on a dissipative subspace.
+The coupled system pairs a reversible Dirac carrier $\mathcal{D}_E$ on a compact Euclidean spin 4-manifold (encoding geometry, gauge fields, and fermions via the spectral action) with an independent irreversible **$\Lambda$-channel** generated by a positive selfadjoint operator $K \geq 0$ on a dissipative subspace.
 
-The coupling is enforced scale-by-scale by the **capacity inequality**:
+The coupling is enforced scale-by-scale by the capacity inequality:
 
 $$S_\Omega(\mathcal{D}_E; T) \leq D_T(K) \qquad \forall\, T \in [T_{\mathrm{UV}}, T_{\mathrm{IR}}]$$
 
 where $S_\Omega$ is the Dirac-side record budget (how much spectral information the carrier can encode at scale $T$) and $D_T(K)$ is the $\Lambda$-budget (how much irreversible capacity is available to anchor it).
 
-A single **UV anchor** fixes the unique normalization:
+A single UV anchor fixes the unique normalization:
 
 $$S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(K)$$
 
-Stationarity is enforced through a KKT variational structure with a nonnegative multiplier measure $\mu \geq 0$, subject to complementary slackness: $\mu$ is supported only on the **active set** — the scales where the capacity inequality holds with equality.
+Stationarity is enforced through a KKT variational structure with a nonnegative multiplier measure $\mu \geq 0$, subject to complementary slackness: $\mu$ is supported only on the active set, the scales where the capacity inequality holds with equality.
 
 The key idea is simple and powerful:
 
 > *Record formation corresponds to saturation events of the capacity inequality. At active scales, persistent record-coherence carries a strictly positive capacity cost and is therefore infeasible.*
 
-This is the mechanism that will produce collapse and the Born rule — not from interpretation, but from constrained optimization with an irreversible capacity bound.
+This is the mechanism that will produce collapse and the Born rule, not from interpretation, but from constrained optimization with an irreversible capacity bound.
 
 ---
 
 ## 4. Active Scales Exist: No All-Slack Loophole
 
-A potential loophole in any semi-infinite inequality formulation is the possibility that the constraint remains strictly slack at all scales — in which case no saturation-driven rigidity could be invoked. In the coupled Dirac–$\Lambda$ system, this loophole is closed by construction.
+A potential loophole in any semi-infinite inequality formulation is the possibility that the constraint remains strictly slack at all scales in which case no saturation-driven rigidity could be invoked. In the coupled Dirac–$\Lambda$ system, this loophole is closed by construction.
 
 > **Theorem (Nonempty Active Set).** The UV anchor $S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(K)$ implies that $T_{\mathrm{UV}}$ is a saturated scale. Hence the active set $\mathcal{S} \neq \varnothing$.
 
 The proof is immediate: the anchor *is* equality at $T_{\mathrm{UV}}$. There is at least one scale where the system operates at exact capacity.
 
-This is not a technicality. It is the structural guarantee that the collapse mechanism has a trigger point. Furthermore, whenever the unconstrained Dirac-side gradient is nonzero in the Yukawa directions — which is the generic situation for nontrivial parameter determination — the capacity inequality must become active at additional scales beyond the anchor. The mechanism operates wherever the system saturates.
+This is not a technicality. It is the structural guarantee that the collapse mechanism has a trigger point. Furthermore, whenever the unconstrained Dirac-side gradient is nonzero in the Yukawa directions which is the generic situation for nontrivial parameter determination, the capacity inequality must become active at additional scales beyond the anchor. The mechanism operates wherever the system saturates.
 
 ---
 
 ## 5. The Canonical Record Algebra: No Measurement Basis by Hand
 
-A longstanding objection to measurement theories is the "preferred basis problem" — who chooses the measurement basis? In the Tier-1 system, nobody does. The basis is determined intrinsically by the stationary state.
+A longstanding objection to measurement theories is the "preferred basis problem" who chooses the measurement basis? In the Tier-1 system, nobody does. The basis is determined intrinsically by the stationary state.
 
 At a saturated KKT stationary configuration, the induced faithful normal state $\omega$ on the observable algebra $\mathcal{A}$ defines a modular automorphism group $\sigma_t^\omega$ via the Tomita–Takesaki theorem:
 
 $$\sigma_t^\omega(A) = \Delta_\omega^{it} A \Delta_\omega^{-it}$$
 
-The **record algebra** is the fixed-point algebra of this modular flow:
+The record algebra is the fixed-point algebra of this modular flow:
 
 $$\mathcal{R} := \mathrm{Fix}(\sigma_t^\omega) = \lbrace A \in \mathcal{A} : \sigma_t^\omega(A) = A \;\; \forall\, t \in \mathbb{R} \rbrace$$
 
-Elements of $\mathcal{R}$ are precisely those observables whose expectation values are invariant under the intrinsic modular time of the stationary state. They are dynamically stable — natural candidates for records.
+Elements of $\mathcal{R}$ are precisely those observables whose expectation values are invariant under the intrinsic modular time of the stationary state. They are dynamically stable natural candidates for records.
 
 A canonical conditional expectation $\mathcal{E}_{\mathcal{R}} : \mathcal{A} \to \mathcal{R}$ is obtained by modular averaging (ergodic average of $\sigma_t^\omega$). This is the record projection: it removes all components that cannot remain invariant under the saturated modular structure.
 
-Within the record algebra, a maximal abelian subalgebra (MASA) $\mathcal{P} \subset \mathcal{R}$ serves as the **pointer algebra**, with associated pointer projections $\lbrace P_k \rbrace$ giving the classical outcome sectors.
+Within the record algebra, a maximal abelian subalgebra (MASA) $\mathcal{P} \subset \mathcal{R}$ serves as the pointer algebra, with associated pointer projections $\lbrace P_k \rbrace$ giving the classical outcome sectors.
 
 > **Theorem (Pointer Uniqueness).** Pointer algebras inside $\mathcal{R}$ are unique up to unitary conjugacy within the record sector.
 
-The pointer sector is not an arbitrary choice. It is determined by the modular invariance of the stationary state and is unique up to record-sector symmetry — physically, relabeling or degeneracy freedom.
+The pointer sector is not an arbitrary choice. It is determined by the modular invariance of the stationary state and is unique up to record-sector symmetry physically, relabeling or degeneracy freedom.
 
 ---
 
@@ -125,9 +125,9 @@ The pointer sector is not an arbitrary choice. It is determined by the modular i
 
 This is the core result. At an active scale, the capacity constraint forces the Dirac carrier into the record sector. No projection postulate is assumed; collapse is enforced by feasibility.
 
-The mechanism requires one structural property of the globally fixed record functional $F_T(u) = g(Tu)\,q(Tu)$: **strong convexity** on the effective spectral band. This is not a tunable assumption — it is a property of the globally fixed filter $g$, which is part of the model definition.
+The mechanism requires one structural property of the globally fixed record functional $F_T(u) = g(Tu)\,q(Tu)$: strong convexity on the effective spectral band. This is not a tunable assumption, it's a property of the globally fixed filter $g$, which is part of the model definition.
 
-Under strong convexity, the Dirac-side budget satisfies a **pinching gap inequality**:
+Under strong convexity, the Dirac-side budget satisfies a pinching gap inequality:
 
 $$S_\Omega(A; T) - S_\Omega(\mathcal{E}_{\mathcal{R}}(A); T) \;\geq\; \frac{m_T}{2} \|A - \mathcal{E}_{\mathcal{R}}(A)\|_2^2$$
 
@@ -141,7 +141,7 @@ $$S_\Omega(A; T^*) = D_{T^*}(K)$$
 
 The $\Lambda$-budget $D_{T^*}(K)$ depends only on the irreversible generator $K$, whose normalization is already fixed by the UV anchor. Pinching the Dirac carrier does not alter $K$.
 
-If $A$ has any nonzero off-record component, the pinching gap inequality says $S_\Omega(A; T^*) &gt; S_\Omega(\mathcal{E}_{\mathcal{R}}(A); T^*)$ — but there is no slack available to absorb the increase. Any off-record coherence would violate the capacity inequality.
+If $A$ has any nonzero off-record component, the pinching gap inequality says $S_\Omega(A; T^*) &gt; S_\Omega(\mathcal{E}_{\mathcal{R}}(A); T^*)$ - but there is no slack available to absorb the increase. Any off-record coherence would violate the capacity inequality.
 
 > **Theorem (Collapse at Saturation).** At any active scale $T^* \in \mathcal{S}$ where strong convexity holds, feasibility and complementary slackness force:
 >
@@ -149,17 +149,17 @@ If $A$ has any nonzero off-record component, the pinching gap inequality says $S
 >
 > The Dirac carrier is block-diagonal in the canonical pointer sector. Off-record coherence is zero. Collapse is structural.
 
-This is not an interpretation. It is a feasibility condition: at an active scale, the only admissible stationary configurations are record-diagonal relative to the canonical record algebra. Superpositions in the pointer sector are not forbidden by fiat — they are algebraically incompatible with operating at capacity.
+This is not an interpretation. It is a feasibility condition: at an active scale, the only admissible stationary configurations are record-diagonal relative to the canonical record algebra. Superpositions in the pointer sector are not forbidden by fiat, they are algebraically incompatible with operating at capacity.
 
 ---
 
 ## 7. Why the Square: Born Exponent Rigidity from Modular Implementability
 
-Section 6 establishes that superpositions must collapse at active scales. But collapse alone does not fix the probability rule. We now show that the quadratic exponent $p = 2$ is forced by the geometry of the saturation dynamics — not postulated, not chosen by convention.
+Section 6 establishes that superpositions must collapse at active scales. But collapse alone does not fix the probability rule. We now show that the quadratic exponent $p = 2$ is forced by the geometry of the saturation dynamics not postulated, not chosen by convention.
 
-The mechanism is **modular implementability**: at a saturated KKT stationary configuration, the linearised saturation dynamics must be compatible with the Tomita–Takesaki modular structure of the stationary state.
+The mechanism is modular implementability: at a saturated KKT stationary configuration, the linearised saturation dynamics must be compatible with the Tomita–Takesaki modular structure of the stationary state.
 
-Specifically: the linearised response operator $R$ on the tangent/response space $\mathsf{T}$ must be implementable by a strongly continuous unitary group $U(t) = e^{itG}$ on the GNS Hilbert space $\mathcal{H}_\omega$ of the stationary state. This is a standard requirement in operator-algebraic linear response theory — the saturated fixed point admits a stable unitary linear response representation in the canonical Hilbert space.
+Specifically: the linearised response operator $R$ on the tangent/response space $\mathsf{T}$ must be implementable by a strongly continuous unitary group $U(t) = e^{itG}$ on the GNS Hilbert space $\mathcal{H}_\omega$ of the stationary state. This is a standard requirement in operator-algebraic linear response theory, the saturated fixed point admits a stable unitary linear response representation in the canonical Hilbert space.
 
 > **Theorem (Hilbertization Rigidity).** Under modular implementability, any metric structure on the response space $\mathsf{T}$ compatible with the implemented dynamics must be induced by an inner product transported from $\mathcal{H}_\omega$.
 
@@ -169,11 +169,11 @@ $$p \neq 2 \;\;\Longrightarrow\;\; \text{not Hilbert} \;\;\Longrightarrow\;\; \t
 
 For $p &gt; 2$: the Schatten geometry exhibits dominant positive curvature, resisting the volume contraction needed for stable fixed points.
 
-For $p &lt; 2$: dominant negative curvature produces hyperbolic instability — geodesics diverge, the spectral gap vanishes.
+For $p &lt; 2$: dominant negative curvature produces hyperbolic instability geodesics diverge, the spectral gap vanishes.
 
 At $p = 2$: the Hilbert–Schmidt geometry is flat ($\mathrm{Ric}(g_2) = 0$), the GNS inner product is the natural metric, and unitary modular implementation proceeds without obstruction.
 
-The strengthened form — **modular identification** — requires the response flow generator to agree (up to a scalar) with the modular generator $\log \Delta_\omega$ on the response sector. Under this condition, the induced metric on $\mathsf{T}$ is uniquely fixed by the GNS inner product, with no alternative geometry compatible.
+The strengthened form modular identification requires the response flow generator to agree (up to a scalar) with the modular generator $\log \Delta_\omega$ on the response sector. Under this condition, the induced metric on $\mathsf{T}$ is uniquely fixed by the GNS inner product, with no alternative geometry compatible.
 
 ---
 
@@ -209,7 +209,7 @@ No probabilistic axioms beyond standard positivity, normalization, and covarianc
 
 ## 9. The Irreversible Cost of Measurement
 
-The coupled system provides quantitative information about the irreversible cost of record formation — information that is absent from all other approaches to the measurement problem.
+The coupled system provides quantitative information about the irreversible cost of record formation information that is absent from all other approaches to the measurement problem.
 
 At any active scale $T^*$, the $\Lambda$-channel activation is strictly positive:
 
@@ -221,11 +221,11 @@ $$P(T) \sim \begin{cases} \frac{1}{2}\sum_j \kappa_j &amp; (T \to 0^+) \\ N_{\ma
 
 where $\lbrace \kappa_j \rbrace$ are eigenvalues of the dissipative generator. The crossover from constant to $1/T$ behaviour occurs at $T_{\mathrm{cross}} \sim 1/\kappa_{\mathrm{typ}}$.
 
-The capacity inequality imposes a **decoherence rate bound**:
+The capacity inequality imposes a decoherence rate bound:
 
 $$\Gamma_{\mathrm{dec}}(T) \leq \frac{N_{\mathrm{diss}}}{T} + O(e^{-T\kappa_1})$$
 
-This $1/T$ suppression of decoherence at large scales is **absent in standard decoherence theory**. Environmental decoherence models typically yield rates that are constant or increase with system size. The coupled Dirac–$\Lambda$ system predicts that sufficiently far into the IR regime, the irreversible channel itself becomes the bottleneck and suppresses decoherence relative to the environmental rate.
+This $1/T$ suppression of decoherence at large scales is absent in standard decoherence theory. Environmental decoherence models typically yield rates that are constant or increase with system size. The coupled Dirac–$\Lambda$ system predicts that sufficiently far into the IR regime, the irreversible channel itself becomes the bottleneck and suppresses decoherence relative to the environmental rate.
 
 This is a testable prediction. It is also structurally distinct from Landauer's principle: Landauer bounds energy cost per bit erased; the capacity inequality bounds total bit capacity transferable from the reversible to irreversible channels at scale $T$. These are complementary constraints.
 
@@ -237,7 +237,7 @@ The entire derivation involves Hilbert spaces, selfadjoint operators, conditiona
 
 The record algebra $\mathcal{R}$ is defined algebraically by modular invariance of a stationary state. Collapse at saturation is enforced by the capacity constraint. The Born rule is forced by Hilbertization and covariance on pointer projections.
 
-A photographic plate in an empty room implements the saturation mechanism. Cosmic microwave background photons interacting with interstellar dust implement it. The process is universal and automatic. Observation — an agent learning which outcome occurred — is an epistemic update. The physical state was already determined by the constraint architecture.
+A photographic plate in an empty room implements the saturation mechanism. Cosmic microwave background photons interacting with interstellar dust implement it. The process is universal and automatic. Observation, an agent learning which outcome occurred is an epistemic update. The physical state was already determined by the constraint architecture.
 
 ---
 
@@ -342,7 +342,7 @@ All global conventions are part of the model definition and are not adjustable. 
   </tbody>
 </table>
 
-The critical distinction is not merely that the Tier-1 framework derives more results. It is that the derivations share a single structural source — the capacity inequality and KKT saturation structure of the coupled Dirac–$\Lambda$ system. Collapse, record uniqueness, the Born rule, and its quadratic exponent all follow from the same constrained operator dynamics. No other framework in the literature achieves this.
+The critical distinction is not merely that the Tier-1 framework derives more results. It is that the derivations share a single structural source, the capacity inequality and KKT saturation structure of the coupled Dirac–$\Lambda$ system. Collapse, record uniqueness, the Born rule, and its quadratic exponent all follow from the same constrained operator dynamics. No other framework in the literature achieves this.
 
 The relationship to Gleason is particularly important. Gleason shows that *given* a Hilbert space and additivity, the trace rule follows. The Tier-1 system goes further: it shows *why* the underlying geometry must be Hilbert (modular implementability forces $L^2$/GNS), after which the trace rule is uniquely determined.
 
@@ -350,15 +350,15 @@ The relationship to Gleason is particularly important. Gleason shows that *given
 
 ## 13. Where This Comes From: The Tier-0 Structural Origin
 
-The results above are self-contained within the Tier-1 field equations — the coupled Dirac–$\Lambda$ system with its capacity inequality, UV anchor, and KKT stationarity. They do not require any framework beyond this.
+The results above are self-contained within the Tier-1 field equations, the coupled Dirac–$\Lambda$ system with its capacity inequality, UV anchor, and KKT stationarity. They do not require any framework beyond this.
 
 But there is a structural reason *why* this particular dynamical system has the architecture it does, and understanding that reason illuminates why the measurement resolution takes the form it takes.
 
-The Tier-0 programme begins with a single admissibility condition — the Everything Equation:
+The Tier-0 programme begins with a single admissibility condition, the Everything Equation:
 
 $$\mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})$$
 
-A state or law $\mathcal{L}$ is admissible if and only if it is a fixed point of three operators: $\partial$ (boundary — exposes candidate degrees of freedom), $\Delta$ (collapse — enforces constraints, eliminates unstable modes), and $\Omega$ (closure — projects onto the stable subspace, idempotent).
+A state or law $\mathcal{L}$ is admissible if and only if it is a fixed point of three operators: $\partial$ (boundary exposes candidate degrees of freedom), $\Delta$ (collapse enforces constraints, eliminates unstable modes), and $\Omega$ (closure projects onto the stable subspace, idempotent).
 
 When this abstract criterion is instantiated as a concrete dynamical system, the three operators map onto the Tier-1 architecture:
 
@@ -368,9 +368,9 @@ The **$\Lambda$-channel** is the $\Delta$-sector: irreversible, contractive, rec
 
 The **capacity inequality** $S_\Omega \leq D_T$ is the $\partial$-normalised interface: the boundary condition coupling the two sectors, enforcing that spectral information (flow) cannot exceed dissipative capacity (anchor) at any scale.
 
-The Tier-0 framework also predicted the structural results now proven at Tier-1. The No-Superposition Theorem (a Tier-0 result) showed that superpositions cannot be fixed points of the closure pipeline. At Tier-1, this becomes the quantitative statement that off-record coherence carries a strictly positive capacity cost at saturation — the pinching gap inequality. The Tier-0 Born exponent rigidity (from Schatten geometry on law-space) finds its concrete instantiation in the Hilbertization theorem: modular implementability forces $L^2$ geometry and excludes $p \neq 2$.
+The Tier-0 framework also predicted the structural results now proven at Tier-1. The No-Superposition Theorem (a Tier-0 result) showed that superpositions cannot be fixed points of the closure pipeline. At Tier-1, this becomes the quantitative statement that off-record coherence carries a strictly positive capacity cost at saturation, the pinching gap inequality. The Tier-0 Born exponent rigidity (from Schatten geometry on law-space) finds its concrete instantiation in the Hilbertization theorem: modular implementability forces $L^2$ geometry and excludes $p \neq 2$.
 
-The descent is structural: Tier-0 determines *what* must hold for admissible law. Tier-1 determines *how* it holds in a concrete operator system. The measurement resolution is the same resolution at both levels — but at Tier-1 it is a theorem chain inside a specific dynamical system with explicit equations, computable quantities, and falsifiable predictions.
+The descent is structural: Tier-0 determines *what* must hold for admissible law. Tier-1 determines *how* it holds in a concrete operator system. The measurement resolution is the same resolution at both levels but at Tier-1 it is a theorem chain inside a specific dynamical system with explicit equations, computable quantities, and falsifiable predictions.
 
 ---
 
@@ -378,24 +378,24 @@ The descent is structural: Tier-0 determines *what* must hold for admissible law
 
 ### The measurement problem is resolved within Tier-1
 
-Collapse is not a mystery, not a postulate, and not a matter of interpretation. At any active scale in the coupled Dirac–$\Lambda$ system, the capacity inequality forces the Dirac carrier into the canonical record sector. Superpositions in the pointer basis are algebraically infeasible at saturation. The record algebra is determined intrinsically by the modular structure of the stationary state — no measurement basis is inserted by hand.
+Collapse is not a mystery, not a postulate, and not a matter of interpretation. At any active scale in the coupled Dirac–$\Lambda$ system, the capacity inequality forces the Dirac carrier into the canonical record sector. Superpositions in the pointer basis are algebraically infeasible at saturation. The record algebra is determined intrinsically by the modular structure of the stationary state, no measurement basis is inserted by hand.
 
 ### The Born rule is a theorem, not an axiom
 
-The probability rule governing quantum mechanics — the single most empirically confirmed statistical law in all of science — is derived from the saturation geometry of the coupled system. Modular implementability forces Hilbert/GNS geometry. The trace rule follows as the unique positive, normalized, unitarily covariant evaluation on pointer projections. The exponent $p = 2$ is a structural invariant, not a convention.
+The probability rule governing quantum mechanics, the single most empirically confirmed statistical law in all of science is derived from the saturation geometry of the coupled system. Modular implementability forces Hilbert/GNS geometry. The trace rule follows as the unique positive, normalized, unitarily covariant evaluation on pointer projections. The exponent $p = 2$ is a structural invariant, not a convention.
 
 ### The framework makes quantitative, testable predictions
 
-The $1/T$ suppression of decoherence at large scales is absent from standard decoherence theory. The strict positivity of $\Lambda$-channel activation at saturation events is a quantitative bound. The falsifiers are sharp and enumerated. This is not metaphysics — it is operator theory with experimental consequences.
+The $1/T$ suppression of decoherence at large scales is absent from standard decoherence theory. The strict positivity of $\Lambda$-channel activation at saturation events is a quantitative bound. The falsifiers are sharp and enumerated. This is not metaphysics, it's operator theory with experimental consequences.
 
 ### A single structural source unifies the results
 
-Collapse, the record sector, the Born rule, and the quadratic exponent all emerge from the same coupled system: the capacity inequality, the UV anchor, KKT stationarity, and complementary slackness. They are not four separate results grafted together. They are four consequences of one constraint architecture — the Tier-1 dynamical realization of the Everything Equation.
+Collapse, the record sector, the Born rule, and the quadratic exponent all emerge from the same coupled system: the capacity inequality, the UV anchor, KKT stationarity, and complementary slackness. They are not four separate results grafted together. They are four consequences of one constraint architecture, the Tier-1 dynamical realization of the Everything Equation.
 
 ---
 
 **Author:** Jeremy Rodgers
 **Framework:** Tier-0 / The Everything Equation
-**Supporting paper:** *Saturation Geometry and the Structural Emergence of Measurement and the Born Rule in the Coupled Dirac–Λ System* — see the papers section for the full technical document with complete proofs, standing assumptions, and logical dependency diagram.
+**Supporting paper:** *Saturation Geometry and the Structural Emergence of Measurement and the Born Rule in the Coupled Dirac–Λ System* - see the papers section for the full technical document with complete proofs, standing assumptions, and logical dependency diagram.
 
 © 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
