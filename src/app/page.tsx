@@ -15,19 +15,20 @@ export default async function HomePage() {
   const publicPapers = papers.filter((p) => p.status === 'public');
   const latestProblems = publicProblems.slice(0, 3);
   const latestPapers = publicPapers.slice(0, 3);
+
   return (
     <div className="space-y-12">
-      
-  <section className="text-center">
-  <h2 className="text-3xl font-bold mb-2">
-    Welcome to the Everything Equation</h2>
-  <p className="text-lg font-semibold mb-4 text-slate-600 dark:text-slate-400">
-    And The Tier‑0 Framework</p>
-  <p className="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-300">
-    A premium research platform curating open problems and scholarly
-    articles, connecting ideas across disciplines.
-    </p>
-  </section>
+      <section className="text-center">
+        <h2 className="text-3xl font-bold mb-2">Welcome to the Everything Equation</h2>
+        <p className="text-lg font-semibold mb-4 text-slate-600 dark:text-slate-400">
+          And The Tier-0 Framework
+        </p>
+        <p className="mx-auto max-w-3xl text-lg text-slate-700 dark:text-slate-300">
+          A premium research platform curating open problems and scholarly articles, connecting ideas
+          across disciplines.
+        </p>
+      </section>
+
       {/* Gateway card introducing the Everything Equation */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
@@ -36,16 +37,48 @@ export default async function HomePage() {
             <span className="font-mono text-xl">𝓛=ΩΔ∂(𝓛)</span>
           </h3>
           <p className="mb-4">
-            The Everything Equation is a unifying structural principle proposed to govern physical law, mathematics, and information under a single closure condition.
+            The Everything Equation is a unifying structural principle proposed to govern physical law,
+            mathematics, and information under a single closure condition.
           </p>
-          <Link
-            href="/what-is-the-everything-equation"
-            className="inline-block text-blue-600 hover:underline"
-          >
+          <Link href="/what-is-the-everything-equation" className="inline-block text-blue-600 hover:underline">
             Learn more
           </Link>
         </div>
       </section>
+
+      {/* NEW: Tier-1 dynamical realization card */}
+      <section>
+        <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-emerald-500 bg-slate-100 dark:bg-slate-800 p-6">
+          <h3 className="text-2xl font-semibold mb-2">Tier-1 Dynamical Realization</h3>
+          <p className="mb-4 text-slate-700 dark:text-slate-300">
+            Tier-0 provides a closure/admissibility criterion. Tier-1 makes it concrete: a coupled Dirac–Λ
+            operator system whose low-energy expansion recovers GR + Yang–Mills + fermions, while enforcing
+            non-tunable admissibility constraints.
+          </p>
+
+          <div className="rounded-md border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-black/20 p-4">
+            <div className="font-mono text-sm sm:text-base leading-relaxed space-y-2">
+              <div>𝑆[g, A, ψ] = Tr∗( f(D²/Λ²) ) + ⟨ψ, Dψ⟩</div>
+              <div>𝑆Ω(D; T) ≤ D_T(K)  for T ∈ [T_UV, T_IR]</div>
+              <div>UV anchor: 𝑆Ω(D; T_UV) = D_{T_UV}(c_M K)</div>
+              <div>KKT stationarity: δ( S + ∫(𝑆Ω − D_T) dμ ) = 0</div>
+            </div>
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-4">
+            <Link href="/monograph" className="inline-block text-emerald-700 dark:text-emerald-400 hover:underline">
+              View Tier-1 field equations
+            </Link>
+            <Link
+              href="/problems/quantum-gravity"
+              className="inline-block text-slate-700 dark:text-slate-300 hover:underline"
+            >
+              See downstream physics problems
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Latest Problems */}
       <section>
         <h3 className="text-2xl font-semibold mb-4">Latest Problems</h3>
@@ -59,6 +92,7 @@ export default async function HomePage() {
           </div>
         )}
       </section>
+
       {/* Latest Papers */}
       <section>
         <h3 className="text-2xl font-semibold mb-4">Latest Papers</h3>
@@ -77,6 +111,7 @@ export default async function HomePage() {
           </div>
         )}
       </section>
+
       {/* JSON-LD for the home page */}
       <script
         type="application/ld+json"
@@ -86,8 +121,7 @@ export default async function HomePage() {
             '@type': 'WebSite',
             name: 'Everything Equation',
             url: 'https://everythingequation.com',
-            description:
-              'A premium research platform curating open problems and scholarly articles.',
+            description: 'A premium research platform curating open problems and scholarly articles.',
           }),
         }}
       />
