@@ -1,5 +1,3 @@
-// src/app/tier-1/page.tsx
-
 import Tier1Article from "@/components/tier-1";
 
 export const metadata = {
@@ -13,7 +11,6 @@ export const dynamic = "force-static";
 export default function Tier1Page() {
   return (
     <div className="mx-auto w-full max-w-5xl space-y-10 py-16">
-      {/* H1 should live in the article component to avoid duplicate headings */}
       <Tier1Article />
     </div>
   );
