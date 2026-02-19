@@ -1,4 +1,4 @@
-# Tier-1 Dynamical Realization: The Coupled Dirac–Λ System
+# Tier-1 Dynamical Realization: The Coupled Dirac–$\Lambda$ System
 
 Tier-0 says what a law must be: a fixed point of closure, collapse, and boundary normalization. It selects the admissible gauge group, the generation count, the dimensionality of spacetime, and the structural inevitability of the dissipative channel — all before dynamics is written down.
 
@@ -6,7 +6,7 @@ But selection is not realization. A closure criterion can tell you *which* laws 
 
 This page answers that question.
 
-The Coupled Dirac–Λ System is the Tier-1 dynamical realization of the Tier-0 programme. It is a constrained operator system consisting of a Dirac-type carrier encoding geometry, gauge fields, and fermions, coupled through a scale-by-scale capacity inequality to an independent irreversible entropy channel. A single ultraviolet anchor fixes the unique normalization. Constrained stationarity is enforced through a Karush–Kuhn–Tucker (KKT) framework with a nonnegative measure-valued dual variable.
+The Coupled Dirac–$\Lambda$ System is the Tier-1 dynamical realization of the Tier-0 programme. It is a constrained operator system consisting of a Dirac-type carrier encoding geometry, gauge fields, and fermions, coupled through a scale-by-scale capacity inequality to an independent irreversible entropy channel. A single ultraviolet anchor fixes the unique normalization. Constrained stationarity is enforced through a Karush–Kuhn–Tucker (KKT) framework with a nonnegative measure-valued dual variable.
 
 The low-energy expansion recovers Einstein gravity, Yang–Mills gauge theory, and fermionic dynamics — the standard content of fundamental physics. Beyond this, the coupled system forces three nontrivial structural consequences from the same equations, without additional input: the Born rule exponent $p = 2$, the structural exclusion of the strong CP phase $\theta = 0$ (no axion required), and a quantitative measurement dissipation bound with $1/T$ decoherence suppression at large scales. KKT saturation determines all fermion masses as structural outputs of the constraint architecture.
 
@@ -26,21 +26,29 @@ Tier-1 is designed to close this gap. Not by adding more structure, but by coupl
 
 ## 2. The Field Content
 
-The system lives on a compact oriented Euclidean spin 4-manifold $(M_E, g_E)$ with a Hermitian vector bundle $E \to M_E$ carrying a unitary connection $A$. The field content is:
+The system lives on a compact oriented Euclidean spin $4$-manifold $(M_E, g_E)$ with a Hermitian vector bundle $E \to M_E$ carrying a unitary connection $A$. The field content is:
 
-$$\mathcal{D}_E = \gamma_E^\mu \nabla_\mu$$
+$$
+\mathcal{D}*E = \gamma_E^\mu \nabla*\mu
+$$
 
 The Dirac operator, determined by the metric $g_E$ and the connection $A$. It is essentially selfadjoint with compact resolvent and discrete spectrum. The Weitzenböck identity $\mathcal{D}_E^2 = -\nabla^*\nabla + \mathbf{E}$ ensures that $\mathcal{D}_E^2$ encodes both geometric curvature invariants and Yang–Mills field strengths.
 
-$$K = c_M K_{M_{\mathrm{rec}}} \geq 0$$
+$$
+K = c_M K_{M_{\mathrm{rec}}} \geq 0
+$$
 
 The dissipative generator, constructed canonically from the Hessian of a record-sector monotone (relative entropy at a faithful reference state) via the Friedrichs representation theorem. The decomposition $H_* = H_0 \oplus H_{\mathrm{diss}}$ separates stationary from dissipative directions.
 
-$$c_M > 0$$
+$$
+c_M > 0
+$$
 
 The sole continuous normalization parameter — fixed by the UV anchor, not chosen by hand.
 
-$$\mu \geq 0$$
+$$
+\mu \geq 0
+$$
 
 The KKT dual measure on $[T_{\mathrm{UV}}, T_{\mathrm{IR}}]$, enforcing the capacity constraint through complementary slackness.
 
@@ -48,31 +56,39 @@ The KKT dual measure on $[T_{\mathrm{UV}}, T_{\mathrm{IR}}]$, enforcing the capa
 
 ## 3. The Eight Field Equations
 
-The complete coupled system consists of eight equations, with all conventions fixed globally. This is the Tier-1 version of $L = \Omega\,\Delta\,\partial(L)$: a concrete, computable, falsifiable dynamical system.
+The complete coupled system consists of eight equations, with all conventions fixed globally. This is the Tier-1 version of $\mathcal{L} = \Omega,\Delta,\partial(\mathcal{L})$: a concrete, computable, falsifiable dynamical system.
 
 ### (E1) Spectral action
 
-$$\mathcal{S}[g_E, A, \psi] := \mathrm{Tr}_*\!\big(f(\mathcal{D}_E^2/\Lambda^2)\big) + \langle \psi, \mathcal{D}_E \psi \rangle$$
+$$
+\mathcal{S}[g_E, A, \psi] := \mathrm{Tr}_*!\big(f(\mathcal{D}_E^2/\Lambda^2)\big) + \langle \psi, \mathcal{D}_E \psi \rangle
+$$
 
-The spectral action encodes all bosonic and fermionic dynamics in the spectrum of $\mathcal{D}_E$. The cutoff function $f$ and trace prescription $\mathrm{Tr}_*$ are fixed once globally. This is the standard Chamseddine–Connes spectral action — well-established, heavily studied, and known to recover the correct low-energy content.
+The spectral action encodes all bosonic and fermionic dynamics in the spectrum of $\mathcal{D}*E$. The cutoff function $f$ and trace prescription $\mathrm{Tr}**$ are fixed once globally. This is the standard Chamseddine–Connes spectral action — well-established, heavily studied, and known to recover the correct low-energy content.
 
-### (E2) Fejér operator and Λ-budget
+### (E2) Fejér operator and $\Lambda$-budget
 
-$$\Lambda_T(K) := \frac{1 - e^{-TK}}{TK}, \qquad D_T(K) := -\log\det_*\!\big(\Lambda_T(K)\big|_{H_{\mathrm{diss}}}\big)$$
+$$
+\Lambda_T(K) := \frac{1 - e^{-TK}}{TK}, \qquad D_T(K) := -\log\det_*!\big(\Lambda_T(K)\big|*{H*{\mathrm{diss}}}\big)
+$$
 
 The Fejér operator $\Lambda_T(K)$ is the time-averaged contraction semigroup — the canonical object encoding how an irreversible generator dissipates structure at proper-time scale $T$. The $\Lambda$-budget $D_T(K)$ measures the total dissipative capacity available at that scale. The mixed determinant scheme $\det_*$ (Fredholm numerator, zeta-regularised denominator) is fixed globally.
 
-In finite dimensions with eigenvalues $\{\kappa_j\}$ of $K$: $D_T(K) = \sum_j q(T\kappa_j)$ where $q(x) = -\log((1-e^{-x})/x)$.
+In finite dimensions with eigenvalues ${\kappa_j}$ of $K$: $D_T(K) = \sum_j q(T\kappa_j)$ where $q(x) = -\log((1-e^{-x})/x)$.
 
 ### (E3) Dirac-side record budget
 
-$$S_\Omega(\mathcal{D}_E; T) := \mathrm{Tr}'\!\Big(g(T\mathcal{D}_E^2)\,\big(-\log \Lambda_T(\mathcal{D}_E^2)\big)\Big)$$
+$$
+S_\Omega(\mathcal{D}_E; T) := \mathrm{Tr}'!\Big(g(T\mathcal{D}_E^2),\big(-\log \Lambda_T(\mathcal{D}_E^2)\big)\Big)
+$$
 
 The Dirac-side entropy functional: how much spectral information the Dirac carrier can encode at scale $T$, weighted by the globally fixed record filter $g$. The prime on the trace excludes the kernel of $\mathcal{D}_E$.
 
 ### (E4) Capacity inequality
 
-$$S_\Omega(\mathcal{D}_E; T) \leq D_T(K) \qquad \forall\, T \in [T_{\mathrm{UV}}, T_{\mathrm{IR}}]$$
+$$
+S_\Omega(\mathcal{D}*E; T) \leq D_T(K) \qquad \forall, T \in [T*{\mathrm{UV}}, T_{\mathrm{IR}}]
+$$
 
 > **This is the equation that makes the system more than a spectral-action model.**
 
@@ -80,27 +96,35 @@ The capacity inequality couples the reversible Dirac channel to the irreversible
 
 ### (E5) UV anchor
 
-$$S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(c_M K_{M_{\mathrm{rec}}})$$
+$$
+S_\Omega(\mathcal{D}*E; T*{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(c_M K_{M_{\mathrm{rec}}})
+$$
 
 The capacity inequality is *saturated* at the UV scale. This single equation determines the unique normalization $c_M$. There is no second parameter. There is no knob.
 
 ### (E6) IR admissibility
 
-$$\big|S_\Omega(\mathcal{D}_E; T_{\mathrm{IR}}) - D_{T_{\mathrm{IR}}}(K)\big| \leq B_{\max}$$
+$$
+\big|S_\Omega(\mathcal{D}*E; T*{\mathrm{IR}}) - D_{T_{\mathrm{IR}}}(K)\big| \leq B_{\max}
+$$
 
 The system must remain within a bounded admissibility window at the IR scale. $B_{\max}$ is a deterministic output of the fixed scheme, not a tuning parameter.
 
 ### (E7) KKT Lagrangian
 
-$$\mathcal{L}[g_E, A, \psi;\, \mu] := \mathcal{S}[g_E, A, \psi] + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\!\big(S_\Omega(\mathcal{D}_E; T) - D_T(K)\big)\,d\mu(T)$$
+$$
+\mathcal{L}[g_E, A, \psi;, \mu] := \mathcal{S}[g_E, A, \psi] + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}!\big(S_\Omega(\mathcal{D}_E; T) - D_T(K)\big),d\mu(T)
+$$
 
-with $\mu \geq 0$, complementary slackness $\int(D_T - S_\Omega)\,d\mu = 0$, and stationarity $\delta_{(g_E,A,\psi)}\mathcal{L} = 0$. The dual measure $\mu$ is not chosen — it is forced by the constraint architecture.
+with $\mu \geq 0$, complementary slackness $\int(D_T - S_\Omega),d\mu = 0$, and stationarity $\delta_{(g_E,A,\psi)}\mathcal{L} = 0$. The dual measure $\mu$ is not chosen — it is forced by the constraint architecture.
 
 ### (E8) Saturation equations (mass determination)
 
 At the $m = N_{\mathrm{mass}}$ saturated scales $T_1 < \cdots < T_m$ where $S_\Omega = D_T$:
 
-$$\Phi_k(y) := S_\Omega(\mathcal{D}_E(y); T_k) - D_{T_k}(K) = 0, \qquad k = 1, \ldots, N_{\mathrm{mass}}$$
+$$
+\Phi_k(y) := S_\Omega(\mathcal{D}*E(y); T_k) - D*{T_k}(K) = 0, \qquad k = 1, \ldots, N_{\mathrm{mass}}
+$$
 
 These are the mass equations. Each saturation point is a scale where the reversible and irreversible channels are in exact balance — where Flow becomes Anchor. Each such locking is a mass.
 
@@ -110,7 +134,9 @@ These are the mass equations. Each saturation point is a scale where the reversi
 
 The heat-kernel expansion of the spectral action yields:
 
-$$\mathcal{S}[g_E, A, \psi] \;\approx\; \int_{M_E}\!\sqrt{g_E}\,\Big(\alpha_0\Lambda^4 + \alpha_2\Lambda^2 R(g_E) + \alpha_4\,\mathrm{tr}(F_{\mu\nu}F^{\mu\nu}) + \cdots\Big) + \int_{M_E}\!\sqrt{g_E}\,\bar\psi\,\mathcal{D}_E\psi$$
+$$
+\mathcal{S}[g_E, A, \psi] ;\approx; \int_{M_E}!\sqrt{g_E},\Big(\alpha_0\Lambda^4 + \alpha_2\Lambda^2 R(g_E) + \alpha_4,\mathrm{tr}(F_{\mu\nu}F^{\mu\nu}) + \cdots\Big) + \int_{M_E}!\sqrt{g_E},\bar\psi,\mathcal{D}_E\psi
+$$
 
 The coefficients $\alpha_0$ (cosmological constant), $\alpha_2$ (Einstein–Hilbert), and $\alpha_4$ (Yang–Mills) are determined by the fixed cutoff moments and trace normalization. This is the standard Chamseddine–Connes result. Higher-curvature terms ($R^2$, $R_{\mu\nu}R^{\mu\nu}$, Gauss–Bonnet) appear at the next order.
 
@@ -124,17 +150,19 @@ This is the structural result that separates the Tier-1 system from every other 
 
 Because the dissipative generator enters as $(-\log\det_*)$ of a positive operator and scaling $K \mapsto cK$ scales its eigenvalues monotonically, the map
 
-$$c \;\longmapsto\; D_T(cK)$$
+$$
+c ;\longmapsto; D_T(cK)
+$$
 
 is continuous and strictly increasing on $(0, \infty)$, provided the dissipative generator preserves positivity under scaling. This monotonicity is structural — a consequence of operator positivity and the logarithmic determinant — not an arbitrary assumption.
 
-> **Theorem (No continuous freedom after UV anchoring).** Fix the Tier-1 structure and the background data. (1) The Dirac carrier $\mathcal{D}_E$ is fixed on the background $(M, g_E, A, \psi)$. (2) The entropy kernel $g$, the functionals $S_\Omega$ and $D_T$, and the determinant convention $\det_*$ are all fixed globally. (3) The capacity inequality $S_\Omega(\mathcal{D}_E; T) \leq D_T(K)$ holds for all $T \in [T_{\mathrm{UV}}, T_{\mathrm{IR}}]$. (4) The UV anchor $S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(c_M K_{M_{\mathrm{rec}}})$ is imposed. Then no continuous per-background tuning parameter survives: if a Tier-1 realization exists on that background, it is uniquely normalized.
+> **Theorem (No continuous freedom after UV anchoring).** Fix the Tier-1 structure and the background data. (1) The Dirac carrier $\mathcal{D}*E$ is fixed on the background $(M, g_E, A, \psi)$. (2) The entropy kernel $g$, the functionals $S*\Omega$ and $D_T$, and the determinant convention $\det_*$ are all fixed globally. (3) The capacity inequality $S_\Omega(\mathcal{D}*E; T) \leq D_T(K)$ holds for all $T \in [T*{\mathrm{UV}}, T_{\mathrm{IR}}]$. (4) The UV anchor $S_\Omega(\mathcal{D}*E; T*{\mathrm{UV}}) = D_{T_{\mathrm{UV}}}(c_M K_{M_{\mathrm{rec}}})$ is imposed. Then no continuous per-background tuning parameter survives: if a Tier-1 realization exists on that background, it is uniquely normalized.
 
-**Proof.** Since $\mathcal{D}_E$ and the Tier-1 kernel choices are fixed, the value $S_* := S_\Omega(\mathcal{D}_E; T_{\mathrm{UV}})$ is a fixed scalar. Define the function $F(c) := D_{T_{\mathrm{UV}}}(c\,K_{M_{\mathrm{rec}}})$. By structural monotonicity, $F$ is strictly increasing on $(0, \infty)$. The anchor equation $F(c_M) = S_*$ therefore admits at most one solution $c_M > 0$. The UV anchor fixes the only possible normalization scalar, and no continuous freedom remains. $\square$
+**Proof.** Since $\mathcal{D}*E$ and the Tier-1 kernel choices are fixed, the value $S** := S_\Omega(\mathcal{D}*E; T*{\mathrm{UV}})$ is a fixed scalar. Define the function $F(c) := D_{T_{\mathrm{UV}}}(c,K_{M_{\mathrm{rec}}})$. By structural monotonicity, $F$ is strictly increasing on $(0, \infty)$. The anchor equation $F(c_M) = S_*$ therefore admits at most one solution $c_M > 0$. The UV anchor fixes the only possible normalization scalar, and no continuous freedom remains. $\square$
 
-> **Corollary (No Hidden Knob).** For fixed background data and fixed Tier-1 structure, the admissible set of normalization scalars is either empty or a singleton: $|\{c_M > 0 : \text{(E5) holds}\}| \leq 1$. The Tier-1 realization is either *falsified* (no solution) or *uniquely normalized* (exactly one solution). It is never an adjustable parameter.
+> **Corollary (No Hidden Knob).** For fixed background data and fixed Tier-1 structure, the admissible set of normalization scalars is either empty or a singleton: $\big|{c_M > 0 : \text{(E5) holds}}\big| \leq 1$. The Tier-1 realization is either *falsified* (no solution) or *uniquely normalized* (exactly one solution). It is never an adjustable parameter.
 
-In particular, Tier-1 induces a normalization rule: Background $\longmapsto c_M$, which is either undefined (package falsified on that background) or uniquely defined. What would count as illicit tuning? Multiplying $\mathcal{D}_E$ by an arbitrary background-dependent constant, rescaling the entropy kernel $g$ per background, or altering the determinant convention $\det_*$ per background. None of these are permitted: the carrier, kernels, and determinant prescription are fixed globally, and the UV anchor then fixes the only remaining scalar normalization.
+In particular, Tier-1 induces a normalization rule: Background $\longmapsto c_M$, which is either undefined (package falsified on that background) or uniquely defined. What would count as illicit tuning? Multiplying $\mathcal{D}*E$ by an arbitrary background-dependent constant, rescaling the entropy kernel $g$ per background, or altering the determinant convention $\det**$ per background. None of these are permitted: the carrier, kernels, and determinant prescription are fixed globally, and the UV anchor then fixes the only remaining scalar normalization.
 
 This is why the system has zero free parameters in the conventional sense. The 19 Standard Model parameters are not inputs — they are structural outputs of the saturation equations (E8), uniquely determined once the UV anchor (E5) sets the normalization.
 
@@ -148,15 +176,15 @@ By complementary slackness, $\mu$ is supported only where the capacity inequalit
 
 **Finite active-scale reduction.** By Carathéodory's theorem for convex cones, the KKT measure can be replaced by an atomic measure $\widetilde{\mu} = \sum_{k=1}^m \alpha_k \delta_{T_k}$ with at most $m \leq N_{\mathrm{mass}}$ atoms satisfying the same Yukawa-direction stationarity. If the rank condition holds (the gradient vectors $\nabla_y S_\Omega(T_k)$ span $\mathbb{R}^{N_{\mathrm{mass}}}$), then $m = N_{\mathrm{mass}}$ exactly.
 
-**Jacobian analysis.** The saturation map $\Phi: \mathcal{M}_Y \to \mathbb{R}^{N_{\mathrm{mass}}}$ given by $\Phi_k(y) = S_\Omega(\mathcal{D}_E(y); T_k) - D_{T_k}(K)$ has Jacobian entries involving the saturation kernel $h(u) = g(u)\,q(u)$, where $q(x) = -\log((1-e^{-x})/x)$ is the entropy kernel. The entropy kernel is strictly positive and strictly increasing on $(0, \infty)$, with asymptotics $q(x) \sim x/2$ as $x \downarrow 0$ and $q(x) \sim \log x$ as $x \to \infty$.
+**Jacobian analysis.** The saturation map $\Phi: \mathcal{M}*Y \to \mathbb{R}^{N*{\mathrm{mass}}}$ given by $\Phi_k(y) = S_\Omega(\mathcal{D}*E(y); T_k) - D*{T_k}(K)$ has Jacobian entries involving the saturation kernel $h(u) = g(u),q(u)$, where $q(x) = -\log((1-e^{-x})/x)$ is the entropy kernel. The entropy kernel is strictly positive and strictly increasing on $(0, \infty)$, with asymptotics $q(x) \sim x/2$ as $x \downarrow 0$ and $q(x) \sim \log x$ as $x \to \infty$.
 
 **Local uniqueness.** If the Jacobian $D\Phi(y^*)$ is nondegenerate — which is structurally favoured by the strict monotonicity of $q$ and the distinct saturation scales $T_k$ — then the implicit function theorem gives local uniqueness of the Yukawa parameter vector $y^*$.
 
 The chain of determination is:
 
-1. **UV anchor** → $c_M$ (unique, by the No Hidden Knob theorem)
-2. **Carathéodory + rank condition** → $\{T_1, \ldots, T_{N_{\mathrm{mass}}}\}$ (saturation scales)
-3. **IFT + Jacobian nondegeneracy** → $y^* = (y_1^*, \ldots, y_{N_{\mathrm{mass}}}^*)$ (locally unique)
+1. **UV anchor** $\to c_M$ (unique, by the No Hidden Knob theorem)
+2. **Carathéodory + rank condition** $\to {T_1, \ldots, T_{N_{\mathrm{mass}}}}$ (saturation scales)
+3. **IFT + Jacobian nondegeneracy** $\to y^* = (y_1^*, \ldots, y_{N_{\mathrm{mass}}}^*)$ (locally unique)
 4. **Therefore:** all masses and couplings are structural outputs
 
 ---
@@ -189,7 +217,9 @@ Within any single topological sector, the topological charge $Q_{\mathrm{top}} \
 
 Most decisively: for $\theta \neq 0$, the Euclidean gauge weight $e^{-S_{\mathrm{YM}} - i\theta Q_{\mathrm{top}}}$ is complex-valued. Osterwalder–Schrader reflection positivity — which requires a positive Euclidean measure to construct a positive-norm Hilbert space — is obstructed. Without OS positivity, there is no physical quantum theory: no positive-definite inner product, no unitarity, no probabilities.
 
-$$\theta = 0 \quad\text{(structural, not fine-tuned; no axion required)}$$
+$$
+\theta = 0 \quad\text{(structural, not fine-tuned; no axion required)}
+$$
 
 CKM CP violation remains compatible: the complex Yukawa couplings enter through the fermionic action $\langle\psi, \mathcal{D}_E\psi\rangle$, which is real by selfadjointness. The Euclidean measure remains positive. The framework admits weak CP violation (needed for baryogenesis) while excluding strong CP violation.
 
@@ -197,11 +227,15 @@ CKM CP violation remains compatible: the complex Yukawa couplings enter through 
 
 At each saturation scale $T_*$ (where $S_\Omega = D_{T_*}$), the capacity inequality forces a quantitative lower bound on the irreversible channel activation. The marginal dissipative cost $P(T) = dD_T/dT$ satisfies:
 
-$$P(T) = \sum_{j=1}^{N_{\mathrm{diss}}}\bigg[\frac{1}{T} - \frac{\kappa_j}{e^{T\kappa_j}-1}\bigg] \;\sim\; \begin{cases} \frac{1}{2}\sum_j \kappa_j & (T \to 0^+) \\ N_{\mathrm{diss}}/T & (T \to \infty) \end{cases}$$
+$$
+P(T) = \sum_{j=1}^{N_{\mathrm{diss}}}\bigg[\frac{1}{T} - \frac{\kappa_j}{e^{T\kappa_j}-1}\bigg] ;\sim; \begin{cases} \frac{1}{2}\sum_j \kappa_j & (T \to 0^+) \ N_{\mathrm{diss}}/T & (T \to \infty) \end{cases}
+$$
 
 The crossover from constant to $1/T$ behaviour occurs at $T_{\mathrm{cross}} \sim 1/\kappa_{\mathrm{typ}}$. This implies a decoherence rate bound:
 
-$$\Gamma_{\mathrm{dec}}(T) \;\leq\; \frac{N_{\mathrm{diss}}}{T} + O(e^{-T\kappa_1})$$
+$$
+\Gamma_{\mathrm{dec}}(T) ;\leq; \frac{N_{\mathrm{diss}}}{T} + O(e^{-T\kappa_1})
+$$
 
 The $1/T$ suppression of decoherence at large scales is absent in standard decoherence theory. It is a testable prediction. The bound is structurally distinct from Landauer's principle: Landauer bounds energy per bit; the capacity inequality bounds total bit count at scale $T$.
 
@@ -211,7 +245,9 @@ The $1/T$ suppression of decoherence at large scales is absent in standard decoh
 
 The capacity inequality has a direct spectral consequence. Fix the effective band $[a, b]$ where the record filter satisfies $g \geq g_0 > 0$. Then the number of Dirac eigenvalues falling in that band at scale $T$ is bounded:
 
-$$N_{[a,b]}(T) := \#\{n : T\lambda_n \in [a,b]\} \;\leq\; \frac{D_{T_{\mathrm{IR}}}(K)}{g_0\,\min_{x \in [a,b]} q(x)}$$
+$$
+N_{[a,b]}(T) := #{n : T\lambda_n \in [a,b]} ;\leq; \frac{D_{T_{\mathrm{IR}}}(K)}{g_0,\min_{x \in [a,b]} q(x)}
+$$
 
 This is a non-tunable spectral envelope: the total spectral complexity of the Dirac carrier is bounded by the irreversible budget. The bound depends only on the fixed global scheme and the uniquely determined $c_M$. It is not a choice — it is a consequence.
 
@@ -223,11 +259,17 @@ Under heat-kernel comparability, this yields an upper bound on the cosmological 
 
 KKT stationarity yields the constrained Euler–Lagrange system:
 
-$$\frac{\delta \mathcal{S}}{\delta g_E} + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\frac{\delta S_\Omega}{\delta g_E}\,d\mu(T) = 0 \qquad\text{(Einstein + spectral backreaction)}$$
+$$
+\frac{\delta \mathcal{S}}{\delta g_E} + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\frac{\delta S_\Omega}{\delta g_E},d\mu(T) = 0 \qquad\text{(Einstein + spectral backreaction)}
+$$
 
-$$\frac{\delta \mathcal{S}}{\delta A} + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\frac{\delta S_\Omega}{\delta A}\,d\mu(T) = 0 \qquad\text{(Yang–Mills + constraint current)}$$
+$$
+\frac{\delta \mathcal{S}}{\delta A} + \int_{[T_{\mathrm{UV}}, T_{\mathrm{IR}}]}\frac{\delta S_\Omega}{\delta A},d\mu(T) = 0 \qquad\text{(Yang–Mills + constraint current)}
+$$
 
-$$\mathcal{D}_E\psi = 0 \qquad\text{(Dirac equation)}$$
+$$
+\mathcal{D}_E\psi = 0 \qquad\text{(Dirac equation)}
+$$
 
 The dual measure $\mu$ is supported on the saturation set where $S_\Omega = D_T$. At unsaturated scales, the constraint is slack and contributes nothing to the equations of motion. The system reduces to the familiar Einstein, Yang–Mills, and Dirac equations — plus spectral backreaction from the $\Lambda$-channel at the scales where it matters.
 
@@ -237,7 +279,9 @@ The dual measure $\mu$ is supported on the saturation set where $S_\Omega = D_T$
 
 The same curvature datum that generates the dissipative generator $K$ also supports a bounded selfadjoint operator $C = h(A)$ generating a unitary group $U(t) = e^{-itC}$:
 
-$$\text{curvature datum} \;\Longrightarrow\; \begin{cases} K \geq 0 \;\Rightarrow\; \Lambda_T,\; D_T & \text{(irreversible)} \\ C = C^* \;\Rightarrow\; e^{-itC} & \text{(reversible)} \end{cases}$$
+$$
+\text{curvature datum} ;\Longrightarrow; \begin{cases} K \geq 0 ;\Rightarrow; \Lambda_T,; D_T & \text{(irreversible)} \ C = C^* ;\Rightarrow; e^{-itC} & \text{(reversible)} \end{cases}
+$$
 
 This reversible/irreversible decomposition is not an add-on. It is the deepest structural feature of the Tier-1 system. The capacity inequality couples the two channels: the reversible Dirac carrier (coherent, unitary, wave-like) is constrained by the irreversible $\Lambda$ budget (dissipative, contractive, record-bearing). Every mass, every measurement, every irreversible process in the physical world lives at a saturation point where these two channels meet.
 
@@ -283,7 +327,7 @@ Tier-0 provides selection: $D = 4$, $SU(3) \times SU(2) \times U(1)$, $N_g = 3$,
 
 Tier-1 provides realization: the eight field equations (E1)–(E8), the UV anchor, the capacity inequality, the KKT framework, the saturation equations, and the derived consequences (Born rule, $\theta = 0$, measurement dissipation bound).
 
-Together they form a complete system. Tier-0 determines *what* is admissible. Tier-1 determines *how* the admissible structure acts on fields, produces masses, and generates predictions. The Everything Equation $L = \Omega\,\Delta\,\partial(L)$ is the fixed-point criterion. The Coupled Dirac–$\Lambda$ System is the unique dynamical realization satisfying it.
+Together they form a complete system. Tier-0 determines *what* is admissible. Tier-1 determines *how* the admissible structure acts on fields, produces masses, and generates predictions. The Everything Equation $\mathcal{L} = \Omega,\Delta,\partial(\mathcal{L})$ is the fixed-point criterion. The Coupled Dirac–$\Lambda$ System is the unique dynamical realization satisfying it.
 
 One equation. One admissibility principle. One dynamical system. Zero free parameters.
 
@@ -291,6 +335,6 @@ One equation. One admissibility principle. One dynamical system. Zero free param
 
 **Author:** Jeremy Rodgers
 **Framework:** Tier-0 / The Everything Equation
-**Supporting paper:** *A Coupled Dirac–Λ Dynamical System: Unified Field Equations with Derived Structural Consequences* — see the papers section for the full technical document with complete proofs, standing assumptions, and witness protocol.
+**Supporting paper:** *A Coupled Dirac–$\Lambda$ Dynamical System: Unified Field Equations with Derived Structural Consequences* — see the papers section for the full technical document with complete proofs, standing assumptions, and witness protocol.
 
 © 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
