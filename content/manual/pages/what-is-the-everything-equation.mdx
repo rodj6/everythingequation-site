@@ -676,6 +676,222 @@ In hard PDE regimes, $\partial$ canonizes the carrier, $\Delta$ is the strict-ma
 
 ---
 
+## Explicit Tier-0 → Tier-1 Derivation Chain: Coupled Dirac–$\Lambda$ Operator System
+
+Below is an explicit **Tier-0 → Tier-1 derivation chain** showing how the fixed-point admissibility criterion
+
+$$
+\mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})
+$$
+
+leads — under a standard physics realization — to the **Coupled Dirac–$\Lambda$ operator system** **(E1)–(E8)**.
+
+This is presented as a *realization + forced constraints* chain: Tier-0 fixes the admissibility architecture; Tier-1 supplies a concrete realization in which the architecture becomes the eight equations.
+
+---
+
+### 0) Tier-0 datum: what $\mathcal{L}$ is
+
+A Tier-0 **law object** is specified as operator-algebraic data
+
+$$
+\mathcal{L} \;\equiv\; \bigl(\mathcal{A},\;\Phi_t,\;\partial,\;\Omega\bigr),
+$$
+
+where:
+
+- $\mathcal{A}$: a unital observable algebra (e.g.\ $C^*$ or von Neumann).
+- $\Phi_t : \mathcal{A} \to \mathcal{A}$: a **unital CP semigroup** (the $\Delta$-dynamics: irreversible persistence / record formation).
+- $\partial$: canonical boundary normalization (quotients and normalizes representation artifacts).
+- $\Omega$: reflective closure completion (completion under admissible re-expression).
+
+The **record algebra** is the fixed-point algebra of $\Phi_t$:
+
+$$
+R \;:=\; \{A \in \mathcal{A} :\; \Phi_t(A) = A \;\forall\, t \ge 0\}.
+$$
+
+This is the persistence filter $\Delta$ in concrete form: what survives as records.
+
+---
+
+### 1) Tier-1 realization choice: reversible carrier + irreversible persistence channel
+
+To *realize* Tier-0 in physics one must specify a concrete sector in which:
+
+- the **$\Omega$-closed reversible face** is represented by a spectral/geometric carrier,
+- the **$\Delta$-persistence face** is represented by a positive dissipative generator.
+
+This is a **realization choice** — Tier-0 fixes the admissibility architecture; Tier-1 chooses an instantiation. In this Tier-1 instantiation the choice is:
+
+**Reversible carrier.** Let $(M_E, g_E)$ be a compact oriented Euclidean spin 4-manifold, $E \to M_E$ a Hermitian bundle with unitary connection $A$, and define
+
+$$
+D_E = \gamma_E^\mu \nabla_\mu,
+$$
+
+essentially self-adjoint with compact resolvent and discrete spectrum.
+
+**Irreversible channel.** Let the persistence semigroup be generated (on the dissipative directions) by a positive self-adjoint operator, encoded as
+
+$$
+K \;:=\; c_M \, K_{M\mathrm{rec}} \;\ge\; 0,
+$$
+
+with a single global normalization scalar $c_M > 0$.
+
+At this point Tier-1 has introduced two operators $(D_E, K)$ corresponding to the reversible $\Omega$-sector and the irreversible $\Delta$-sector.
+
+---
+
+### 2) Making the fixed-point criterion computable: common scale parameter
+
+Tier-0 fixed-point admissibility is a structural statement; to test it in physics one needs a common comparison parameter that both faces can be evaluated against. In this Tier-1 system this is the **proper-time scale**
+
+$$
+T \in [T_{\mathrm{UV}},\, T_{\mathrm{IR}}].
+$$
+
+#### (A) Dirac-side record demand $S_\Omega(D_E;\, T)$
+
+Define the Fejér operator
+
+$$
+\boxed{\Lambda_T(K) \;:=\; \frac{1 - e^{-TK}}{TK}.} \tag{E2}
+$$
+
+Define the Dirac-side record/entropy functional
+
+$$
+\boxed{S_\Omega(D_E;\,T)
+\;:=\; \operatorname{Tr}'\!\Bigl(g(T D_E^2)\,\bigl(-\log \Lambda_T(D_E^2)\bigr)\Bigr),} \tag{E3}
+$$
+
+where $g$ is a globally fixed record filter and $\operatorname{Tr}'$ omits $\ker D_E$. This measures how much record-encodable spectral structure the reversible carrier attempts to support at scale $T$.
+
+#### (B) $\Delta$-side available persistence capacity $D_T(K)$
+
+Using the Fejér operator **(E2)**, define the $\Lambda$-budget
+
+$$
+D_T(K) \;:=\; -\log \det{}_*\!\Bigl(\Lambda_T(K)\big|_{H_{\mathrm{diss}}}\Bigr).
+$$
+
+Tier-0 is thus instantiated into two scale-indexed quantities
+
+$$
+T \mapsto S_\Omega(D_E;\,T), \qquad T \mapsto D_T(K).
+$$
+
+---
+
+### 3) Fixed-point invariance forces the capacity inequality (E4)
+
+Tier-0 says the admissible law is unchanged by the pipeline $\Omega\Delta\partial$. In this realization:
+
+- $S_\Omega(D_E;\,T)$ **(E3)** is the reversible channel's scale-$T$ *record demand*,
+- $D_T(K)$ is the irreversible channel's scale-$T$ *record capacity*.
+
+**Lemma (fixed-point feasibility).** Under the realization $(D_E, K)$ and the definitions **(E2)**–**(E3)**: if $S_\Omega(D_E;\,T) > D_T(K)$ for some $T$, then $\Omega\Delta\partial(\mathcal{L}) \not\simeq \mathcal{L}$.
+
+*Proof sketch.* If demand exceeds capacity at scale $T$, the persistence filter $\Delta$ cannot stabilize the demanded structure as records. The composite map $\Omega\Delta\partial$ therefore collapses or removes the excess, producing a strictly smaller admissible object — violating fixed-point invariance. $\square$
+
+Therefore fixed-point admissibility implies the feasibility constraint
+
+$$
+\boxed{S_\Omega(D_E;\,T) \;\le\; D_T(K) \qquad \forall\; T \in [T_{\mathrm{UV}},\, T_{\mathrm{IR}}].} \tag{E4}
+$$
+
+This is the precise bridge from Tier-0 invariance to a hard coupling constraint: **record demand cannot exceed record capacity at any admissible scale**.
+
+---
+
+### 4) $\partial$-normalization fixes the scaling gauge: UV anchor (E5)
+
+In the Tier-1 realization the only remaining continuous scaling freedom in the irreversible channel is $K \mapsto c\, K_{M\mathrm{rec}}$. Tier-0 boundary normalization $\partial$ eliminates representation-level scale gauges. In this instantiation that means $c_M$ cannot be left adjustable. The canonical removal of this freedom pins the inequality at the UV endpoint $T_{\mathrm{UV}}$:
+
+$$
+\boxed{S_\Omega(D_E;\,T_{\mathrm{UV}}) \;=\; D_{T_{\mathrm{UV}}}(c_M K_{M\mathrm{rec}}).} \tag{E5}
+$$
+
+Under the monotonicity of $c \mapsto D_{T_{\mathrm{UV}}}(c\, K_{M\mathrm{rec}})$, this fixes $c_M$ uniquely or falsifies the package.
+
+---
+
+### 5) $\Omega$-stability imposes an IR admissibility window (E6)
+
+$\Omega$ is reflective completion: the admissible completion must be globally stable under the allowed re-expressions of the scheme. In the Tier-1 realization this is implemented by requiring the coupling does not drift arbitrarily far from admissibility at the IR boundary:
+
+$$
+\boxed{\bigl|S_\Omega(D_E;\,T_{\mathrm{IR}}) - D_{T_{\mathrm{IR}}}(K)\bigr| \;\le\; B_{\max},} \tag{E6}
+$$
+
+with $B_{\max}$ fixed by the global scheme, not per-background tuning.
+
+---
+
+### 6) Enforcing the continuum constraint: KKT in measure form (E7)
+
+We now have an objective (the reversible dynamics $S[g_E, A, \psi]$) and a continuum family of inequality constraints **(E4)**. Stationarity under a continuum of inequality constraints is enforced canonically by KKT with a nonnegative dual measure $\mu \ge 0$ on $[T_{\mathrm{UV}}, T_{\mathrm{IR}}]$. The Lagrangian is
+
+$$
+\boxed{
+\mathcal{L}[g_E, A, \psi;\, \mu]
+\;:=\; S[g_E, A, \psi]
+\;+\; \int_{T_{\mathrm{UV}}}^{T_{\mathrm{IR}}}
+\Bigl(S_\Omega(D_E;\,T) - D_T(K)\Bigr)\, d\mu(T),
+} \tag{E7}
+$$
+
+with KKT conditions:
+
+$$
+\mu \ge 0, \qquad
+\int \bigl(D_T(K) - S_\Omega(D_E;\,T)\bigr)\, d\mu(T) = 0, \qquad
+\delta_{(g_E,\, A,\, \psi)}\,\mathcal{L} = 0.
+$$
+
+---
+
+### 7) Complementary slackness $\Rightarrow$ discrete saturation scales $\Rightarrow$ mass equations (E8)
+
+Complementary slackness implies $\mu$ is supported only on the saturation set $\{S_\Omega(D_E;\,T) = D_T(K)\}$. If the internal moduli affecting $D_E$ are parameterized by a finite Yukawa vector $y \in \mathbb{R}^{N_{\mathrm{mass}}}$, then on an active set of saturation scales $T_k$ one obtains the finite saturation system
+
+$$
+\boxed{\Phi_k(y) \;:=\; S_\Omega(D_E(y);\,T_k) - D_{T_k}(K) = 0, \qquad k = 1, \dots, N_{\mathrm{mass}}.} \tag{E8}
+$$
+
+Under the standing rank/nondegeneracy hypotheses on the saturation Jacobian, this is the mass-determination mechanism.
+
+---
+
+### 8) Where (E1) enters: the reversible action
+
+The constraint architecture **(E2)**–**(E8)** is forced by Tier-0 fixed-point admissibility once the reversible/irreversible realization is specified. The Tier-1 choice for the reversible functional is the canonical spectral action:
+
+$$
+\boxed{
+S[g_E, A, \psi]
+\;:=\; \operatorname{Tr}_*\!\bigl(f(D_E^2/\Lambda^2)\bigr) + \langle\psi,\, D_E\,\psi\rangle.
+} \tag{E1}
+$$
+
+This provides the standard low-energy expansion (GR + Yang–Mills + fermions). The Tier-0→Tier-1 novelty is the $\Delta$-coupling constraints **(E4)**–**(E8)**.
+
+---
+
+### Operator-to-equation map
+
+| Tier-0 operator | Role in realization |
+|---|---|
+| $\partial$ (boundary normalization) | Remove scaling gauge via UV pinning **(E5)** + global scheme fixation |
+| $\Delta$ (persistence/records) | CP semigroup $\Phi_t$, positive generator $K$, Fejér operator and budget **(E2)** |
+| $\Omega$ (reflective closure) | Dirac-side record demand **(E3)**, feasibility constraint **(E4)**, IR stability window **(E6)** |
+| Fixed point $\mathcal{L} = \Omega\Delta\partial(\mathcal{L})$ | Stable coupled feasibility at all scales; variational enforcement yields KKT **(E7)** and saturation equations **(E8)** |
+| Reversible face choice | Spectral action dynamics **(E1)** |
+
+---
+
 ## Related papers
 
 ### Primary reference
