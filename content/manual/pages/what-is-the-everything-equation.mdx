@@ -678,13 +678,22 @@ In hard PDE regimes, $\partial$ canonizes the carrier, $\Delta$ is the strict-ma
 
 ## Explicit Tier-0 → Tier-1 Derivation Chain: Coupled Dirac–$\Lambda$ Operator System
 
+The Everything Equation $\mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})$ is a **law-level admissibility criterion**: it operates at the highest level of abstraction, selecting which candidate structures qualify as laws at all. But the framework is explicitly hierarchical. When the Tier-0 fixed-point criterion is realized in the concrete domain of fundamental physics with a spectral/geometric reversible carrier and a CP-semigroup persistence channel, it forces a specific coupled operator system: the **Coupled Dirac–$\Lambda$ equations (E1)–(E8)**. These are the Everything Equation instantiated at **Tier-1**: the level at which abstract admissibility becomes the traditionally recognized target of unification, a self-consistent set of equations governing all known forces and matter.
+
+This is not a coincidence of notation. The Dirac–$\Lambda$ system is what the fixed-point criterion becomes once a physics realization is chosen and it achieves precisely what a physical "theory of everything" is conventionally required to achieve: a unified, constraint-closed description of the Standard Model forces and fermionic matter. The explicit construction of this unification showing that the gauge structure, fermionic spectrum, and mass hierarchy are jointly forced by capacity-constrained record admissibility rather than introduced by hand is carried out in full in:
+
+> **Determinant-Closed Unification from a Capacity-Constrained Dirac–$\Lambda$ System: A Record-Admissible Forcing of the Standard Model**
+> DOI: [10.5281/zenodo.18709502](https://doi.org/10.5281/zenodo.18709502)
+
+The derivation chain below makes the logical spine of that construction explicit: how each of **(E1)–(E8)** is forced, step by step, from the Tier-0 operators $\partial$, $\Delta$, and $\Omega$.
+
 Below is an explicit **Tier-0 → Tier-1 derivation chain** showing how the fixed-point admissibility criterion
 
 $$
 \mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})
 $$
 
-leads — under a standard physics realization — to the **Coupled Dirac–$\Lambda$ operator system** **(E1)–(E8)**.
+leads under a standard physics realization to the **Coupled Dirac–$\Lambda$ operator system** **(E1)–(E8)**.
 
 This is presented as a *realization + forced constraints* chain: Tier-0 fixes the admissibility architecture; Tier-1 supplies a concrete realization in which the architecture becomes the eight equations.
 
@@ -722,7 +731,7 @@ To *realize* Tier-0 in physics one must specify a concrete sector in which:
 - the **$\Omega$-closed reversible face** is represented by a spectral/geometric carrier,
 - the **$\Delta$-persistence face** is represented by a positive dissipative generator.
 
-This is a **realization choice** — Tier-0 fixes the admissibility architecture; Tier-1 chooses an instantiation. In this Tier-1 instantiation the choice is:
+This is a realization choice Tier-0 fixes the admissibility architecture; Tier-1 chooses an instantiation. In this Tier-1 instantiation the choice is:
 
 **Reversible carrier.** Let $(M_E, g_E)$ be a compact oriented Euclidean spin 4-manifold, $E \to M_E$ a Hermitian bundle with unitary connection $A$, and define
 
@@ -746,7 +755,7 @@ At this point Tier-1 has introduced two operators $(D_E, K)$ corresponding to th
 
 ### 2) Making the fixed-point criterion computable: common scale parameter
 
-Tier-0 fixed-point admissibility is a structural statement; to test it in physics one needs a common comparison parameter that both faces can be evaluated against. In this Tier-1 system this is the **proper-time scale**
+Tier-0 fixed-point admissibility is a structural statement; to test it in physics one needs a common comparison parameter that both faces can be evaluated against. In this Tier-1 system this is the proper-time scale
 
 $$
 T \in [T_{\mathrm{UV}},\, T_{\mathrm{IR}}].
@@ -794,7 +803,7 @@ Tier-0 says the admissible law is unchanged by the pipeline $\Omega\Delta\partia
 
 **Lemma (fixed-point feasibility).** Under the realization $(D_E, K)$ and the definitions **(E2)**–**(E3)**: if $S_\Omega(D_E;\,T) > D_T(K)$ for some $T$, then $\Omega\Delta\partial(\mathcal{L}) \not\simeq \mathcal{L}$.
 
-*Proof sketch.* If demand exceeds capacity at scale $T$, the persistence filter $\Delta$ cannot stabilize the demanded structure as records. The composite map $\Omega\Delta\partial$ therefore collapses or removes the excess, producing a strictly smaller admissible object — violating fixed-point invariance. $\square$
+*Proof sketch.* If demand exceeds capacity at scale $T$, the persistence filter $\Delta$ cannot stabilize the demanded structure as records. The composite map $\Omega\Delta\partial$ therefore collapses or removes the excess, producing a strictly smaller admissible object violating fixed-point invariance. $\square$
 
 Therefore fixed-point admissibility implies the feasibility constraint
 
@@ -882,13 +891,36 @@ This provides the standard low-energy expansion (GR + Yang–Mills + fermions). 
 
 ### Operator-to-equation map
 
-| Tier-0 operator | Role in realization |
-|---|---|
-| $\partial$ (boundary normalization) | Remove scaling gauge via UV pinning **(E5)** + global scheme fixation |
-| $\Delta$ (persistence/records) | CP semigroup $\Phi_t$, positive generator $K$, Fejér operator and budget **(E2)** |
-| $\Omega$ (reflective closure) | Dirac-side record demand **(E3)**, feasibility constraint **(E4)**, IR stability window **(E6)** |
-| Fixed point $\mathcal{L} = \Omega\Delta\partial(\mathcal{L})$ | Stable coupled feasibility at all scales; variational enforcement yields KKT **(E7)** and saturation equations **(E8)** |
-| Reversible face choice | Spectral action dynamics **(E1)** |
+<table>
+  <thead>
+    <tr>
+      <th>Tier-0 operator</th>
+      <th>Role in realization</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$\partial$ (boundary normalization)</td>
+      <td>Remove scaling gauge via UV pinning <strong>(E5)</strong> + global scheme fixation</td>
+    </tr>
+    <tr>
+      <td>$\Delta$ (persistence/records)</td>
+      <td>CP semigroup $\Phi_t$, positive generator $K$, Fejér operator and budget <strong>(E2)</strong></td>
+    </tr>
+    <tr>
+      <td>$\Omega$ (reflective closure)</td>
+      <td>Dirac-side record demand <strong>(E3)</strong>, feasibility constraint <strong>(E4)</strong>, IR stability window <strong>(E6)</strong></td>
+    </tr>
+    <tr>
+      <td>Fixed point $\mathcal{L} = \Omega\Delta\partial(\mathcal{L})$</td>
+      <td>Stable coupled feasibility at all scales; variational enforcement yields KKT <strong>(E7)</strong> and saturation equations <strong>(E8)</strong></td>
+    </tr>
+    <tr>
+      <td>Reversible face choice</td>
+      <td>Spectral action dynamics <strong>(E1)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ---
 
