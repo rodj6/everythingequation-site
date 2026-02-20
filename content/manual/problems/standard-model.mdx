@@ -1,310 +1,445 @@
-# The Standard Model of Particle Physics
+# The Standard Model: Forced by a Single Equation Package
 
-**A law-level reconstruction of the gauge group, fermion content, generation count, and anomaly structure from determinant-closed $\mathrm{SO}(10)$ admissibility.**
-
----
-
-## Contents
-
-1. [The Deepest Question in Particle Physics](#1-the-deepest-question-in-particle-physics)
-2. [What "Structural Reconstruction" Means](#2-what-structural-reconstruction-means)
-3. [The Observed Infrared Record](#3-the-observed-infrared-record)
-4. [Why Representation Theory Alone Is Not Enough](#4-why-representation-theory-alone-is-not-enough)
-5. [Determinant-Closed Admissibility: How SO(10) Is Forced](#5-determinant-closed-admissibility-how-so10-is-forced)
-6. [One Generation from One Irreducible](#6-one-generation-from-one-irreducible)
-7. [Hypercharge: Locked by Embedding, Not Chosen by Hand](#7-hypercharge-locked-by-embedding-not-chosen-by-hand)
-8. [Anomaly Cancellation: Inherited, Not Engineered](#8-anomaly-cancellation-inherited-not-engineered)
-9. [Why Three Generations? A Closure Selection Resolution](#9-why-three-generations-a-closure-selection-resolution)
-10. [What Cannot Be Predicted: The Yukawa Boundary](#10-what-cannot-be-predicted-the-yukawa-boundary)
-11. [Antimatter, CP Violation, and Cosmological Selection](#11-antimatter-cp-violation-and-cosmological-selection)
-12. [How This Differs from Conventional Grand Unification](#12-how-this-differs-from-conventional-grand-unification)
-13. [What This Means for Particle Physics](#13-what-this-means-for-particle-physics)
+**A Tier-1 derivation of $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$
+as the unique feasible internal gauge–matter structure from a capacity-coupled
+Dirac–$\Lambda$ system, no Standard Model assumed as input.**
 
 ---
 
-## 1. The Deepest Question in Particle Physics
+## The Question Physics Has Never Answered
 
-The Standard Model of particle physics is not merely successful, it is unreasonably successful. Its predictions have been confirmed to more than ten decimal places. It accounts for three of the four known fundamental forces, classifies every observed elementary particle, and has survived every experimental test thrown at it for half a century.
+The Standard Model of particle physics is the most precisely tested theory in
+the history of science. Its gauge group
 
-And yet the Standard Model has a secret: it does not explain itself.
+$$
+G_{\mathrm{SM}} \;\cong\; \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)
+$$
 
-The gauge group $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$. The chiral fermion content quarks and leptons arranged in left-handed doublets and right-handed singlets. The specific hypercharge assignments that produce fractional electric charges. The cancellation of quantum anomalies across an intricate web of representation-theoretic constraints. The existence of exactly three generations of matter. All of these features are inputs to the Standard Model, not outputs of it. They are written into the Lagrangian by hand, on the basis that they work. Physics has never explained why they work or why this particular structure, out of the vast space of algebraically conceivable alternatives, is the one that nature selected.
+describes three of the four fundamental forces, organises all known elementary
+particles, and has survived every experimental test for fifty years. And yet
+no one has ever explained why this group, and not some other.
 
-This is not an aesthetic complaint. It is a structural question with precise mathematical content: *is there a principled reason why the observed particle content of the universe takes the form it does, or is it an accident?*
+Why $\mathrm{SU}(3)$ for the strong force, and not $\mathrm{SU}(4)$ or
+$\mathrm{SU}(5)$? Why three colours of quark? Why the specific hypercharge
+assignments that govern how particles couple to the electromagnetic field?
+Why exactly three generations? The Standard Model records all of these facts
+faithfully. It does not explain any of them.
 
-The work presented here answers that question. Within the Tier-0 framework and its determinant-closed admissibility discipline, the Standard Model gauge group, fermion representations, hypercharge quantization, anomaly cancellation, and generation count are not chosen, they are inherited as the unique admissible low-energy realization of a structurally forced unification carrier.
+The present work changes that. Starting from a single coupled equation package
+with no Standard Model gauge group as input, the framework derives
+$\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ as the **unique
+feasible internal structure**. The gauge group is not chosen. It is forced.
+
+The full technical derivation is in:
+
+> **Determinant-Constrained Forcing of the Standard Model from a
+> Capacity-Coupled Dirac–$\Lambda$ System**
+>
+> Jeremy Rodgers - February 2026
+>
+> DOI: [10.5281/zenodo.18718045](https://doi.org/10.5281/zenodo.18718045)
 
 ---
 
-## 3. The Observed Infrared Record
+## Two Levels, One Result
 
-The reconstruction target: The structure that must be reproduced is the experimentally observed low-energy particle content:
+The framework operates on two levels that express the same constraint at
+different resolutions.
 
-**Gauge group:**
+At the **law level**, the Everything Equation
+
 $$
-\mathrm{SU}(3)_c \times \mathrm{SU}(2)_L \times \mathrm{U}(1)_Y
+\mathcal{L} \;=\; \Omega\,\Delta\,\partial(\mathcal{L})
 $$
 
-**One-generation chiral fermion content** (in left-handed Weyl notation):
+is a fixed-point admissibility criterion: a candidate structure is law-bearing
+if and only if it survives boundary normalization ($\partial$), persistence
+filtering ($\Delta$), and closure completion ($\Omega$) unchanged. This is
+the highest level of abstraction, a universal sieve that operates across
+physics, mathematics, and information theory alike.
 
-<table>
-  <thead>
-    <tr>
-      <th>Multiplet</th>
-      <th>$\mathrm{SU}(3)$</th>
-      <th>$\mathrm{SU}(2)$</th>
-      <th>Hypercharge $Y$</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>$Q_L$</td>
-      <td>$3$</td>
-      <td>$2$</td>
-      <td>$+\tfrac{1}{6}$</td>
-    </tr>
-    <tr>
-      <td>$u_R^{c}$</td>
-      <td>$\bar{3}$</td>
-      <td>$1$</td>
-      <td>$-\tfrac{2}{3}$</td>
-    </tr>
-    <tr>
-      <td>$d_R^{c}$</td>
-      <td>$\bar{3}$</td>
-      <td>$1$</td>
-      <td>$+\tfrac{1}{3}$</td>
-    </tr>
-    <tr>
-      <td>$L_L$</td>
-      <td>$1$</td>
-      <td>$2$</td>
-      <td>$-\tfrac{1}{2}$</td>
-    </tr>
-    <tr>
-      <td>$e_R^{c}$</td>
-      <td>$1$</td>
-      <td>$1$</td>
-      <td>$+1$</td>
-    </tr>
-    <tr>
-      <td>$\nu_R$</td>
-      <td>$1$</td>
-      <td>$1$</td>
-      <td>$0$</td>
-    </tr>
-  </tbody>
-</table>
+At the physics level, Tier-1, this abstract criterion is instantiated
+concretely as the **Coupled Dirac–$\Lambda$ equation package**: a Dirac-type
+spectral carrier encoding geometry, gauge structure, and matter content,
+coupled to a determinant-defined irreversible budget through a capacity
+inequality over a UV–IR window.
 
-
+These are not two separate theories that happen to agree. The Tier-1 system
+is what the Everything Equation *becomes* when you choose a physics realization.
+The forcing result at Tier-1 $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$
+is the only feasible package is the Everything Equation's fixed-point
+criterion fully unpacked into the language of fundamental physics.
 
 ---
 
-## 5. Determinant-Closed Admissibility: How $\mathrm{SO}(10)$ Is Forced
+## The Coupled Dirac–$\Lambda$ Equation Package
 
-The selection of $\mathrm{SO}(10)$ as the unification carrier is not an assumption. It is derived.
+The Tier-1 system is built around two scale-resolved budgets evaluated at a
+proper-time scale $T \in [T_{\mathrm{UV}}, T_{\mathrm{IR}}]$.
 
-The question is: among all candidate completions, which one is *forced* by the admissibility recursion
-
-$$
-\mathcal{L} = \Omega \Delta \partial(\mathcal{L})
-$$
-
-The unique minimizer is **$\mathrm{SO}(10)$** (equivalently $\mathrm{Spin}(10)$), with one generation hosted in the spinor representation
+**The Dirac-side record budget** encodes the spectral load of the geometric
+carrier geometry plus internal gauge group and matter representations at
+scale $T$:
 
 $$
-16_F
+S_\Omega(\mathcal{D}_E;\,T)
+\;:=\; \operatorname{Tr}'\!\bigl(F(T\mathcal{D}_E^2)\bigr),
 $$
 
+where $F = g \cdot q$ is a globally fixed record kernel combining a scheme-fixed
+filter $g$ with the universal Fejér/entropy kernel
+$q(x) = -\log\!\bigl(\tfrac{1-e^{-x}}{x}\bigr)$,
+and $\operatorname{Tr}'$ restricts to the kernel-removed sector.
+
+**The $\Lambda$-side dissipative budget** encodes the irreversible record
+capacity of the persistence sector. For a fixed positive generator
+$K = c_M K_{\mathrm{rec}}$, define the Fejér operator
+
+$$
+\Lambda_T(K) \;:=\; \frac{1-e^{-TK}}{TK}
+$$
+
+and the $\Lambda$-budget
+
+$$
+D_T(K) \;:=\; -\log\det{}_*\!\bigl(\Lambda_T(K)\bigr).
+$$
+
+The fundamental coupling is the capacity inequality, the physical
+expression of the Everything Equation's fixed-point requirement:
+
+$$
+\boxed{S_\Omega(\mathcal{D}_E;\,T) \;\le\; D_T(K)
+\qquad \forall\; T \in [T_{\mathrm{UV}},\, T_{\mathrm{IR}}].}
+\tag{E4}
+$$
+
+**Record demand cannot exceed record capacity at any admissible scale.**
+
+Two further constraints complete the package. The UV anchor pins the
+unique normalization of the dissipative sector at the ultraviolet endpoint:
+
+$$
+S_\Omega(\mathcal{D}_E;\,T_{\mathrm{UV}})
+\;=\; D_{T_{\mathrm{UV}}}(c_M K_{\mathrm{rec}}),
+\tag{E5}
+$$
+
+fixing $c_M$ uniquely. The **IR admissibility tolerance** constrains how
+far the two budgets can diverge at the infrared endpoint:
+
+$$
+\bigl|S_\Omega(\mathcal{D}_E;\,T_{\mathrm{IR}}) - D_{T_{\mathrm{IR}}}(K)\bigr|
+\;\le\; B_{\max},
+\tag{E6}
+$$
+
+with $B_{\max}$ scheme-fixed not tuned per background.
+
+The internal package $(G, R)$ gauge group and matter representations enters
+entirely through the Dirac operator $\mathcal{D}_E(G, R)$. The forcing problem
+is to prove that only one $(G, R)$ can simultaneously satisfy feasibility,
+the UV anchor, and IR admissibility across the full window.
 
 ---
 
-## 6. One Generation from One Irreducible
+## The Internal UV Load: What Gets Measured
 
-> **One complete generation of Standard Model fermions including the right-handed neutrino is hosted by a single irreducible representation of $\mathrm{SO}(10)$: the spinor $16_F$.**
-
-The Standard Model fermion spectrum is the *complete restriction* of $16_F$ to the infrared gauge group
+The key object connecting the gauge–matter content to the capacity constraints
+is the internal UV load
 
 $$
-\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1).
+L_{\mathrm{int}}(G,R) \;=\; a_6\!\bigl(\mathcal{D}_E(G,R)^2\bigr),
 $$
 
-Two structural consequences follow immediately:
+the $a_6$ heat-kernel coefficient of the Dirac square. This is a computable
+algebraic invariant that tracks the total spectral burden of the internal
+package fermion multiplicities, gauge curvature energy, Dynkin indices,
+and hypercharge moments all contribute with strictly positive coefficients:
 
-**Chirality is inherited.**
-The restricted spectrum is chiral because the $\mathrm{SO}(10)$ spinor is chiral.
+$$
+L_{\mathrm{int}}(G,R)
+\;\ge\;
+A_0\,\dim(R_{\mathrm{ferm}})
+\;+\;
+A_{\mathrm{conf}}\!\sum_{H \subset G_{\mathrm{conf}}}\! I_H(R_{\mathrm{ferm}})
+\;+\;
+A_2\, I_{SU(2)}(R_{\mathrm{doublets}})
+\;+\;
+A_1\, M_2(Y;\,R_{\mathrm{ferm}}).
+$$
 
-**The right-handed neutrino is structural.**
-The 16th state is $\nu_R$ - required by the representation, not added by hand.
+This is the **HK$^+$ comparison inequality**: a scheme-locked lower bound on
+the UV load in terms of pure representation theory. Every additional gauge
+factor or charged matter summand that participates in the record-bearing
+sector strictly increases at least one of these terms and therefore strictly
+increases $L_{\mathrm{int}}$.
 
 ---
 
-## 7. Hypercharge: Locked by Embedding
+## The Forcing Mechanism: A Double Squeeze
 
-In the $\mathrm{SO}(10)$ reconstruction, hypercharge is not an independent parameter. The $\mathrm{U}(1)_Y$ generator is embedding-fixed.
-
-The resulting normalization is equivalent to the canonical GUT relation
+The UV anchor links the dissipative normalization $c_M$ to the UV load by
 
 $$
-k_Y = \frac{5}{3}.
+c_M \;=\; \alpha_{\mathrm{UV}}\, L_{\mathrm{int}}(G,R).
 $$
 
-Hypercharge quantization follows discretely from the weight data of the restricted $16_F$ multiplet.
+Larger internal packages require larger $c_M$. But the IR admissibility
+tolerance then places an explicit load cap on how large $c_M$ can be:
+
+$$
+L_{\mathrm{int}}(G,R) \;\le\; \widehat{L}^{\max}_{\mathrm{int}}
+\;=\;
+\frac{1}{\alpha_{\mathrm{UV}}}
+\exp\!\left(\frac{C_{\Omega,\mathrm{IR}} + B_{\max} - D_{T_{\mathrm{IR}}}(K_{\mathrm{rec}})}{N_{\mathrm{diss}}}\right).
+$$
+
+The critical observation is what happens to this cap when the internal
+package is enlarged. Each enlargement:
+
+- Raises $L_{\mathrm{int}}$ polynomially (more gauge and matter content).
+- Raises $N_{\mathrm{diss}}$ the effective dissipative channel count 
+  because each new record-bearing degree of freedom requires a corresponding
+  irreversible stabilization channel.
+- Tightens the cap exponentially (because $N_{\mathrm{diss}}$ appears in
+  the denominator of an exponent).
+
+**Enlargement pushes the load up and the allowable cap down simultaneously.**
+
+This is the double-squeeze mechanism, and it is decisive. Once a single
+strict cap–gap separation is established against the first competitor, all
+further enlargements are automatically excluded:
+
+$$
+L_{\mathrm{SM}}^{\mathrm{LB}} \;=\; 0.396
+\;<\;
+\widehat{L}^{\max}_{\mathrm{int}} \;\approx\; 0.595
+\;<\;
+L_{N=5}^{\mathrm{LB}} \;=\; 0.702.
+$$
+
+The Standard Model internal package sits below the cap. The first admissible
+competitor ($N=5$, five colours of quark instead of three) sits above it.
+Every further enlargement sits further above it. The squeeze is strict.
 
 ---
 
-## 8. Anomaly Cancellation: Inherited, Not Engineered
+## Why Three Colours: The Witten Constraint and $N=3$
 
-Because the infrared fermion spectrum is the *complete* restriction of a single $16_F$ with embedding-fixed hypercharge, every anomaly condition is satisfied as an inherited algebraic identity.
+A central structural result concerns the confining multiplicity $N$ the
+number of colours of quark. Within the framework, $N$ is not assumed.
+It is classified.
 
-Representative cancellations include:
+The classification proceeds through three implementability conditions:
+
+**GI (record-bearing implementability):** the internal symmetry acts unitarily
+on the record-bearing GNS Hilbert space of the stationary state. In $d=4$,
+this is equivalent to anomaly cancellation, not as an external axiom, but
+as a derived consequence of implementability. Any internal symmetry with
+uncancelled anomalies fails to implement on the record-bearing sector and is
+excluded.
+
+**GI$^+$ (Yukawa implementability):** there exist gauge-invariant Yukawa
+intertwiners coupling fermion doublets through $\mathrm{SU}(2)$-doublet
+scalars. This forces a one-parameter family of integer charge solutions,
+parameterized by $N$:
 
 $$
-\mathrm{SU}(3)^2 - \mathrm{U}(1):\quad
-\frac{1}{6} - \frac{1}{3} + \frac{1}{6} = 0
+\ell = -Nq, \quad h_u = Nq, \quad h_d = -Nq,
+\quad u = -(N+1)q, \quad d = (N-1)q, \quad e = 2Nq.
 $$
 
+This is the Standard Model hypercharge assignment derived, not assumed.
+
+**GI$^{++}$ (record-coherent abelian coupling):** the Higgs scalar carries
+nonzero charge under the rank-one abelian channel. This excludes the
+anomaly-free but record-decoupled alternatives where $h_u = h_d = 0$.
+
+With charge classification complete, the **Witten global $\mathrm{SU}(2)$
+anomaly** imposes the decisive parity constraint. The total number of
+left-handed $\mathrm{SU}(2)$ doublets is $N + 1$ (from $N$ quark doublets
+and one lepton doublet). Global anomaly vanishing requires this to be even:
+
 $$
-\mathrm{SU}(2)^2 - \mathrm{U}(1):\quad
-\frac{1}{4} - \frac{1}{4} = 0
+N + 1 \;\equiv\; 0 \pmod{2}
+\quad\Longleftrightarrow\quad
+N \;\text{ is odd.}
 $$
 
-The Witten $\mathrm{SU}(2)_L$ global anomaly is satisfied because each generation contains exactly four left-handed $\mathrm{SU}(2)$ doublets an even number.
-
-Anomaly cancellation is inherited, not tuned.
+Admissible values are $N = 1, 3, 5, 7, \ldots$ The double-squeeze mechanism
+then eliminates everything above $N = 3$: the first competitor $N = 5$ already
+violates the load cap. **The confining multiplicity is forced to be $N = 3$.**
+Three colours of quark is not an assumption. It is a theorem.
 
 ---
 
-## 9. Why Three Generations?
+## The Forced Standard Model: Main Result
 
-The admissibility pipeline yields a discrete selector on the generation count $N_{\text{gen}}$.
+Combining charge classification, Witten parity, and the double-squeeze forcing:
 
-The combined constraints produce:
+**Theorem (Cap–gap forcing of the Standard Model).** Fix the coupled
+Dirac–$\Lambda$ equation package with globally fixed scheme and work in the
+record-admissible stationary class. Under the GI/GI$^+$/GI$^{++}$ implementability
+conditions and the Witten parity constraint, the cap–gap separation forces:
 
+1. The confining multiplicity is $N = 3$.
+2. The confining factor is $\mathrm{SU}(3)$ (unique minimal-index option at $N=3$).
+3. The unique feasible internal gauge group is
 $$
-\mathrm{Adm}(N_{\text{gen}}) = {3}.
+G \;\cong\; \mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1).
 $$
+4. The hypercharge assignment is forced (up to overall sign) to the unique
+GI/GI$^+$/GI$^{++}$ solution, the Standard Model hypercharge in primitive
+normalization.
+5. No strict enlargement of this package is feasible.
 
-Three generations are the unique closure-stable fixed point.
+Once the internal package is fixed, the standard heat-kernel expansion of
+the spectral action applied to $\mathcal{D}_E(G_{\mathrm{SM}}, R_{\mathrm{SM}})$
+recovers the **full Standard Model Lagrangian coupled to gravity**:
+Einstein–Hilbert + Yang–Mills + Dirac + Higgs + Yukawa. The low-energy
+physics of every known force and particle follows from the forced internal
+package, nothing beyond what the coupled constraints require.
 
 ---
 
-## 10. The Yukawa Boundary
+## The Record-Admissible Stationary Class
 
-The Yukawa couplings live on a quotient parameter manifold
+A subtle but important point: the dissipative generator $K_{\mathrm{rec}}$
+could in principle have eigenvalues approaching zero, producing solutions
+with arbitrarily weak irreversibility. Such solutions are dynamically
+degenerate, they cannot sustain stable long-range information storage 
+and the cap–gap mechanism would fail to apply uniformly.
 
-$$
-\mathcal{P}_3 = (Y_u, Y_d, Y_e) / \mathcal{G}_3.
-$$
+The framework closes this gap by defining the **record-admissible stationary
+class**: solutions satisfying three internal conditions:
 
-Under non-fine-tuned admissibility, viability must occur on a set with nonempty interior.
+- **Nontrivial pinching gap**: the capacity inequality saturates at at least
+one active scale with a gap bounded away from zero.
+- **Full-channel engagement**: every independent KKT constraint direction has
+a corresponding irreversible stabilization channel.
+- **Dissipative coercivity**: the dissipative generator is bounded away from
+zero uniformly across all engaged channels.
 
-The result:
+The key consequence is a lemma: **record-admissibility forces a uniform
+spectral gap** in $K_{\mathrm{rec}}$ without any external spectral assumption.
+The cap–gap mechanism becomes automatic rather than conditional.
 
-> **Exact Yukawa ratios are not law-level quantities.**
-
-They cannot be fixed by closure alone.
-
----
-
-## 11. Matter – Antimatter Selection
-
-Matter and antimatter are orientation-conjugate realizations of the same invariant law-objects, distinguished by kinetic orientation while sharing identical closure content.
-
-Persistent coexistence of both kinetic orientations in a long-horizon viable world is inadmissible under closure stability.
-
-Matter dominance is therefore a structural selection consequence.
-
----
-
-## 12. Conventional vs Structural $\mathrm{SO}(10)$
-
-<table>
-  <thead>
-    <tr>
-      <th>Feature</th>
-      <th>Conventional $\mathrm{SO}(10)$ GUT</th>
-      <th>This reconstruction</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Carrier selection</td>
-      <td>Assumed</td>
-      <td>Derived</td>
-    </tr>
-    <tr>
-      <td>Generation count</td>
-      <td>Accommodated</td>
-      <td>Derived</td>
-    </tr>
-    <tr>
-      <td>Hypercharge normalization</td>
-      <td>Assumed</td>
-      <td>Derived</td>
-    </tr>
-    <tr>
-      <td>Exotics</td>
-      <td>Tolerated</td>
-      <td>Forbidden</td>
-    </tr>
-  </tbody>
-</table>
-
-
-The shift is from possibility to necessity.
+**The Standard Model forcing theorem is unconditional within the
+record-admissible stationary class.** The only external input beyond the
+Tier-1 equation package is the physical requirement that records be stable
+under strict irreversibility, which is simply the requirement that the
+universe be a place where information can be stored.
 
 ---
 
-## 13. What This Means for Particle Physics
+## Strong CP: A Further Structural Consequence
 
-### The Standard Model is not an accident
+The framework also addresses one of the deepest unsolved problems in particle
+physics: why is the strong CP phase experimentally consistent with zero,
+despite no known symmetry reason requiring it?
 
-The gauge group
+Within the Coupled Dirac–$\Lambda$ framework, the vanishing of the strong CP
+phase is a structural consequence of record-admissibility and positivity
+constraints not a fine-tuning, not a new axion symmetry, but a derived
+result internal to the same equation package that forces the gauge group.
+The details are in the companion paper:
+
+> **Structural Vanishing of the Strong CP Phase in the Coupled Dirac–$\Lambda$
+> Framework: A Record-Admissibility and Positivity-Based Resolution**
+> DOI: [10.5281/zenodo.18717563](https://doi.org/10.5281/zenodo.18717563)
+
+---
+
+## What This Result Does and Does Not Claim
+
+**What it claims:**
+
+The coupled Dirac–$\Lambda$ system, under its admissibility axioms and a
+globally fixed scheme, admits a unique feasible internal gauge–matter package:
+$\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$ with minimal chiral
+Yukawa-supporting matter content. The gauge group is forced. The hypercharge
+assignment is forced. Three colours of quark is forced. Anomaly cancellation
+is forced. The full Standard Model Lagrangian coupled to gravity is recovered
+from the forced package. The result is unconditional within the
+record-admissible class and requires no external unification framework.
+
+**What it does not claim:**
+
+- Numerical values of coupling constants at low energies.
+- Fermion mass ratios or CKM mixing angles as specific numbers.
+- The number of fermion generations (generation counting requires additional
+  structure beyond the single-generation forcing argument here).
+- Supersymmetry, extra dimensions, or any structure beyond what the
+  coupled constraints force.
+
+The result is structural: among all possible gauge–matter packages, only one
+is feasible. What that package contains, its symmetries, representations,
+and charge assignments, is precisely the Standard Model.
+
+---
+
+## Falsifiability
+
+The framework is falsifiable in four concrete ways:
+
+**Anchor failure:** if no value of $c_M$ can satisfy the UV anchor at
+$T_{\mathrm{UV}}$ for the Standard Model package, the framework is wrong.
+
+**Capacity violation:** if $S_\Omega > D_T(K)$ at any admissible scale for
+the forced package, the framework is wrong.
+
+**IR violation:** if the IR admissibility tolerance $B_{\max}$ cannot be
+scheme-fixed to accommodate the Standard Model package while excluding
+$N=5$, the framework is wrong.
+
+**Empirical detection of non-SM structure:** if experiment discovers a new
+gauge factor or charged matter species participating in the record-bearing
+sector, the framework is wrong.
+
+---
+
+## One Equation. One Answer.
+
+Fifty years of particle physics have been organized around a gauge group
+that was discovered, not derived. The Standard Model is the best description
+of nature ever constructed and until now, no one has been able to explain
+why it is what it is.
+
+The coupled Dirac–$\Lambda$ system provides that explanation. Not by adding
+new symmetry principles or extending the model upward into a larger structure,
+but by showing that the Standard Model gauge group is the **only internal
+package that fits**, the only one whose spectral load sits below the capacity
+cap, whose charge structure closes under implementability, whose fermion
+content satisfies the Witten parity condition, and whose dissipative structure
+does not violate the UV–IR coupling across the full admissible window.
+
+The gauge group of the universe was never a choice. It was always forced.
 
 $$
-\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)
+\mathcal{L} \;=\; \Omega\,\Delta\,\partial(\mathcal{L}).
 $$
 
-the chiral fermion content, hypercharge quantization, anomaly cancellation, and three generations are the unique admissible low-energy realization of a determinant-closed unification carrier.
+One admissibility condition. One equation package. One gauge group.
 
-### The unification carrier is forced
+---
 
-$\mathrm{SO}(10)$ is the unique $\Omega$-initial completion of the Standard Model record predicates.
+## Full Technical Paper
 
-### The right-handed neutrino is predicted
-
-It is the 16th component of $16_F$.
-
-### The generation count is fixed
-
-$$
-N_{\text{gen}} = 3
-$$
-
-### Fermion masses are not law-level
-
-Flavor parameters lie beyond closure rigidity.
-
-### Unified by one principle
-
-Everything follows from the same structural identity:
-
-$$
-\mathcal{L} = \Omega \Delta \partial(\mathcal{L})
-$$
+> **Determinant-Constrained Forcing of the Standard Model from a
+> Capacity-Coupled Dirac–$\Lambda$ System**
+>
+> Jeremy Rodgers - February 2026
+>
+> *Tier-1 derivation of the Standard Model internal gauge–matter structure from
+> a single coupled Dirac–$\Lambda$ equation package. No Standard Model gauge
+> group assumed as input. All forcing is performed inside the equation package
+> by feasibility, anchoring, and stability under a globally fixed scheme.
+> Result is unconditional within the record-admissible stationary class.*
 
 ---
 
 **Author:** Jeremy Rodgers
 **Framework:** Tier-0 / The Everything Equation
-**Supporting papers:** See the papers section below for full technical details, proofs, and formal statements.
-
-© 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
-
-
-
-
-
-
-
+**Supporting papers:** See the papers section for full technical details,
+proofs, and formal statements.
