@@ -126,7 +126,7 @@ papers:
   - id: paper:zenodo:18092342
     zenodo: 18092342
     visibility: public
-    role: Canonical Λ-field: uniqueness and dissipative generators
+    role: "Canonical Λ-field: uniqueness and dissipative generators"
     supports:
       - problem:cosmological-constant
 
@@ -177,7 +177,7 @@ papers:
 
 
   # =========================
-  # Arrow of Time
+  # Arrow of Time (existing)
   # =========================
   - id: paper:zenodo:17545541
     zenodo: 17545541
@@ -200,7 +200,7 @@ papers:
   - id: paper:zenodo:18688812
     zenodo: 18688812
     visibility: public
-    role: A Coupled Dirac–Λ Dynamical System: Constrained Spectral Unification with Structural Consequences
+    role: "A Coupled Dirac–Λ Dynamical System: Constrained Spectral Unification with Structural Consequences"
     supports:
       - problem:cosmological-constant
       - problem:quantum-gravity
@@ -208,8 +208,98 @@ papers:
 
 
   # =========================
-  # Standard Model / GUT / Particle structure (UPDATED)
+  # Quantum Gravity / Spacetime / Observer stack
   # =========================
+  - id: paper:zenodo:18384959
+    zenodo: 18384959
+    visibility: public
+    role: Dimensionality as stability/selection output (recursive gauge collapse)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18230232
+    zenodo: 18230232
+    visibility: public
+    role: Null structure and law-level invariance (light/time/closure)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18478728
+    zenodo: 18478728
+    visibility: public
+    role: Admissibility and physical state classification in the q-desic quantum-gravity framework
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18333465
+    zenodo: 18333465
+    visibility: public
+    role: Gravity as closure geometry (law-level unification of light, radiation, and free fall)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18330896
+    zenodo: 18330896
+    visibility: public
+    role: Closure limits on observer absoluteness (global equivalence, Υ-collapse, timelike friendliness)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18320372
+    zenodo: 18320372
+    visibility: public
+    role: Observer locus instability (Ψ-admissibility and limits of observer motion)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18318743
+    zenodo: 18318743
+    visibility: public
+    role: Υ-collapse problem (global closure, identity equivalence, Class VI stability)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:17872725
+    zenodo: 17872725
+    visibility: public
+    role: Minimal structural unification of QFT and gravity with exact vacuum stability
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:17889989
+    zenodo: 17889989
+    visibility: public
+    role: Inverse mass–energy map in GR (structural reconstruction of mass from curvature)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18014526
+    zenodo: 18014526
+    visibility: public
+    role: Momentum-conserving warp bubbles in GR (distributional geometry, boundary flux, spectral isolation)
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:17538401
+    zenodo: 17538401
+    visibility: public
+    role: Unified spectral framework for quantum gravity (canonical bridge, Fejér–Hardy normalization, and global closure)
+    supports:
+      - problem:quantum-gravity
+
+
+  # =========================
+  # Standard Model / GUT / Particle structure
+  # =========================
+  - id: paper:zenodo:18709502
+    zenodo: 18709502
+    visibility: public
+    featured: true
+    role: Determinant-Closed Unification from a Capacity-Constrained Dirac–Λ System
+    supports:
+      - problem:grand-unified-theory
+      - problem:standard-model
+
   - id: paper:zenodo:18718045
     zenodo: 18718045
     visibility: public
@@ -224,15 +314,6 @@ papers:
     visibility: public
     role: Structural Vanishing of the Strong CP Phase in the Coupled Dirac–Λ Framework
     supports:
-      - problem:standard-model
-
-  - id: paper:zenodo:18709502
-    zenodo: 18709502
-    visibility: public
-    featured: true
-    role: Determinant-Closed Unification from a Capacity-Constrained Dirac–Λ System
-    supports:
-      - problem:grand-unified-theory
       - problem:standard-model
 
   - id: paper:zenodo:18474556
@@ -276,7 +357,99 @@ papers:
 
 
   # =========================
-  # Quantum measurement / probability / agency (UPDATED)
+  # PDE Series (Navier–Stokes hub)
+  # =========================
+  - id: paper:zenodo:18371918
+    zenodo: 18371918
+    visibility: public
+    role: PDE I — Navier–Stokes regularity from closure
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18371954
+    zenodo: 18371954
+    visibility: public
+    role: PDE II — Euler inviscid closure and anomalous dissipation
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18372004
+    zenodo: 18372004
+    visibility: public
+    role: PDE III — continuity of closure in the vanishing viscosity limit
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18372079
+    zenodo: 18372079
+    visibility: public
+    role: PDE IV — shock formation, dissipation, and closure in compressible flow
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18372181
+    zenodo: 18372181
+    visibility: public
+    role: PDE V — a universality test of the strict margin closure mechanism
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18372250
+    zenodo: 18372250
+    visibility: public
+    role: PDE VI — failure modes and obstructions to analytic closure
+    supports:
+      - problem:navier-stokes
+
+  - id: paper:zenodo:18356771
+    zenodo: 18356771
+    visibility: public
+    role: "Packet-level translation: normalization/persistence/closure in Navier–Stokes theory"
+    supports:
+      - problem:navier-stokes
+
+
+  # =========================
+  # Riemann / Zeta / RH (no Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18601590
+    zenodo: 18601590
+    visibility: public
+    featured: true
+    role: Canonical determinant model for ζ and a sharp boundary-positivity criterion equivalent to RH
+    supports: []
+
+  - id: paper:zenodo:18602639
+    zenodo: 18602639
+    visibility: public
+    role: No-go for functorial positivity-selecting operators in boundary-positivity approaches to RH
+    supports: []
+
+
+  # =========================
+  # Odd Perfect Numbers (no Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18446275
+    zenodo: 18446275
+    visibility: public
+    role: Structural constraints, valuation conservation, and σ-graph obstructions in the odd perfect number problem
+    supports: []
+
+  - id: paper:zenodo:18451695
+    zenodo: 18451695
+    visibility: public
+    role: The resolution hunt — cyclotomic smoothness, σ-closure, and structural obstructions to odd perfect numbers
+    supports: []
+
+  - id: paper:zenodo:18453978
+    zenodo: 18453978
+    visibility: public
+    role: The final bottleneck — structural obstructions to odd perfect numbers
+    supports: []
+
+
+  # =========================
+  # Quantum measurement / probability / agency
   # =========================
   - id: paper:zenodo:18704783
     zenodo: 18704783
@@ -285,3 +458,109 @@ papers:
     role: Saturation geometry and the structural emergence of measurement and the Born rule in a capacity-constrained Dirac–Λ system
     supports:
       - problem:quantum-measurement
+
+  - id: paper:zenodo:17823241
+    zenodo: 17823241
+    visibility: public
+    role: Complete operator-theoretic resolution of the quantum measurement problem
+    supports:
+      - problem:quantum-measurement
+
+  - id: paper:zenodo:17864384
+    zenodo: 17864384
+    visibility: public
+    role: Structural origin of the Born rule (rigidity of the probability exponent)
+    supports:
+      - problem:quantum-measurement
+
+  - id: paper:zenodo:18028427
+    zenodo: 18028427
+    visibility: public
+    role: Agency beyond pure unitarity (closure-stable decision, probability rigidity, epistemic limits)
+    supports:
+      - problem:quantum-measurement
+
+  - id: paper:zenodo:18205246
+    zenodo: 18205246
+    visibility: public
+    role: Admissibility forces QSOT axioms (closure-based extension of multipartite quantum states over time)
+    supports:
+      - problem:quantum-measurement
+
+
+  # =========================
+  # Coherence / light / diffraction / curvature (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18219057
+    zenodo: 18219057
+    visibility: public
+    role: Coherence field (canonical reversible operator arising from curvature)
+    supports: []
+
+  - id: paper:zenodo:18240403
+    zenodo: 18240403
+    visibility: public
+    role: Ordered structure in constrained coherent light (extension of "Code of Reality" diffraction phenomenon)
+    supports: []
+
+
+  # =========================
+  # Superconductivity (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18136089
+    zenodo: 18136089
+    visibility: public
+    role: Structural law of superconductivity (dissipationless coherence from admissibility and closure)
+    supports: []
+
+  - id: paper:zenodo:18167274
+    zenodo: 18167274
+    visibility: public
+    role: Superconductivity is bounded (universal critical temperature ceiling from spectral dissipation)
+    supports: []
+
+
+  # =========================
+  # Atmosphere / geomagnetic coupling (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18112487
+    zenodo: 18112487
+    visibility: public
+    role: Structural regulation of atmospheric oxygen loss (boundary-based interpretation of geomagnetic coupling)
+    supports: []
+
+
+  # =========================
+  # Branching networks / Steiner (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:18249067
+    zenodo: 18249067
+    visibility: public
+    role: Branching networks as a lawhood problem (Tier-0 admissibility beyond Steiner optimization)
+    supports: []
+
+
+  # =========================
+  # AI / alignment / epistemic risk (no dedicated Problem hub yet -> supports empty for now)
+  # =========================
+  - id: paper:zenodo:17997598
+    zenodo: 17997598
+    visibility: public
+    role: Alignment as structural advantage (alignment emerges from incentive geometry, not objectives)
+    supports: []
+
+  - id: paper:zenodo:18264814
+    zenodo: 18264814
+    visibility: public
+    role: Beyond functional introspection (capacity, scaffolding, epistemic risk in advanced language models)
+    supports: []
+
+
+  # =========================
+  # Constraint–crystallization (misc)
+  # =========================
+  - id: paper:zenodo:17645357
+    zenodo: 17645357
+    visibility: public
+    role: Constraint–crystallization law
+    supports: []
