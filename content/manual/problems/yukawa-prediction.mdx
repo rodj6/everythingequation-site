@@ -1,0 +1,620 @@
+# The Yukawa Prediction Problem: A Proven Boundary
+
+**A no-go theorem establishing that exact fermion mass ratios are not
+outputs of the Coupled Dirac–$\Lambda$ system, and a precise identification
+of what additional structure any predictive extension must supply.**
+
+---
+
+## The Question Every Unified Theory Must Face
+
+The Standard Model contains 13 free parameters in the Yukawa sector alone.
+The electron is about 350,000 times lighter than the top quark. The muon
+sits in between at a ratio of roughly 1:200 relative to the tau. The quark
+mass hierarchies are even more extreme. None of these numbers have been
+explained. They are measured, recorded, and inserted, not derived.
+
+This is the **Yukawa prediction problem**: can a fundamental theory predict
+fermion mass ratios from first principles, or are they irreducibly
+contingent facts about the particular universe we happen to inhabit?
+
+The question has a long history of optimistic but ultimately inconclusive
+answers. Grand unified theories constrain some ratios at the unification
+scale, but require threshold corrections and running that reintroduce
+freedom. String landscape approaches produce distributions rather than
+predictions. Numerological approaches find patterns but lack mechanisms.
+
+The Coupled Dirac–$\Lambda$ framework is the first approach powerful enough
+to force the Standard Model gauge group itself, so the question arises
+naturally and urgently: does it also predict exact Yukawa ratios?
+
+The answer is proven, not conjectured.
+
+**No. And here is precisely why.**
+
+The full technical proof is in:
+
+> **No-Go Theorem for Exact Yukawa Prediction in the Coupled
+> Dirac–$\Lambda$ Dynamical System**
+>
+> Jeremy Rodgers - February 2026
+>
+> DOI: [10.5281/zenodo.18721002](https://doi.org/10.5281/zenodo.18721002)
+
+---
+
+## What the Framework Already Fixes
+
+Before establishing what cannot be predicted, it is worth being precise
+about what the Coupled Dirac–$\Lambda$ system *does* fix because the
+Yukawa sector is not undetermined because "nothing is pinned." Several
+nontrivial numerical invariants are structural outputs of the same
+equation package:
+
+- The **gauge group** $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$
+  is forced by the double-squeeze mechanism acting on the internal UV load.
+- The **spacetime dimension** $d = 4$ is forced by UV–IR scheme compatibility.
+- The **hypercharge assignment** is forced (up to sign) by implementability
+  and the Witten parity constraint.
+- The **Born exponent** $p = 2$ is fixed by the Hilbert–Schmidt flatness
+  condition on the moduli-space metric.
+- The **fine-structure constant** $\alpha$ and **cosmological constant**
+  $\Lambda_*$ are fixed in companion work by spectral boundary conditions.
+- The **strong CP phase** $\theta = 0$ is forced by record-bearing
+  admissibility.
+
+The saturation system (E8) also locally determines the Yukawa parameter
+vector $y^*$ by the implicit function theorem given a fixed background,
+fixed active scales, and the nondegeneracy condition $\det D\Phi(y^*) \neq 0$,
+the solution is locally unique.
+
+So the Yukawa sector is constrained. The no-go result does not say the
+framework is silent on fermion masses. It says something more precise and
+more interesting: **exact Yukawa ratios, quantities like $m_e/m_t \approx
+2.8 \times 10^{-6}$ - are not law-level outputs of (E1)–(E8) as universal
+structural necessities**. They are locally determined given external data,
+but they are not globally forced the way the gauge group is.
+
+---
+
+## The Physical Yukawa Manifold
+
+To understand why, one must understand the geometry of the Yukawa parameter
+space.
+
+The Yukawa sector is specified by three complex $3\times 3$ matrices
+$(Y_u, Y_d, Y_e)$ - the up-type, down-type, and lepton Yukawa couplings.
+But these matrices depend on the chosen flavor bases for the chiral
+fermion fields. Two configurations related by a flavor-basis rotation
+
+$$
+(Y_u, Y_d, Y_e)
+\;\mapsto\;
+(U_Q Y_u U_u^\dagger,\;
+ U_Q Y_d U_d^\dagger,\;
+ U_L Y_e U_e^\dagger)
+$$
+
+under the flavor-basis redundancy group
+
+$$
+\mathcal{G}_3
+\;:=\; U(3)_Q \times U(3)_u \times U(3)_d \times U(3)_L \times U(3)_e,
+\qquad \dim_{\mathbb{R}}\mathcal{G}_3 = 45,
+$$
+
+are physically identical. They predict the same fermion masses, the same
+mixing angles, the same CKM matrix entries. They are the same physics
+expressed in a different basis.
+
+The **physical Yukawa manifold** is the quotient:
+
+$$
+\mathcal{P}_3 \;:=\; \{(Y_u, Y_d, Y_e)\} \big/ \mathcal{G}_3.
+$$
+
+Points in $\mathcal{P}_3$ are genuine physical configurations, distinct
+predictions about observable mass ratios and mixing angles. The
+$45$-dimensional fiber over each physical point is pure basis freedom,
+physically invisible.
+
+The question of Yukawa prediction is therefore precisely: does the system
+(E1)–(E8) select a unique point in $\mathcal{P}_3$, or does it leave an
+open region viable?
+
+---
+
+## The Three Independent Obstructions
+
+The no-go theorem establishes that exact Yukawa ratios cannot be outputs
+of (E1)–(E8) through three independent mechanisms. Each closes a different
+loophole. Together they constitute a proof from which there is no escape
+within the equation package.
+
+---
+
+### Obstruction 1: The Saturation System Is Blind to Basis Choice
+
+The central structural fact is simple and devastating:
+
+**Lemma ($\mathcal{G}_3$-invariance of $S_\Omega$).** For each fixed
+proper-time scale $T > 0$, the Dirac-side record budget
+
+$$
+S_\Omega(\mathcal{D}_E;\,T)
+\;=\; \sum_{n \geq 1} g(T\lambda_n)\, q(T\lambda_n)
+$$
+
+depends on the Yukawa matrices $(Y_u, Y_d, Y_e)$ **only through the
+eigenvalues** $\{\lambda_n\}$ of $\mathcal{D}_E^2$. Eigenvalues are
+invariant under unitary equivalence. Therefore $S_\Omega$ is constant
+on $\mathcal{G}_3$-orbits.
+
+The immediate consequence is decisive:
+
+**Corollary.** The saturation equations (E8), $\Phi_k(y) = 0$ for
+$k = 1, \ldots, N_{\mathrm{mass}}$, are constant on $\mathcal{G}_3$-orbits.
+If $y^*$ satisfies (E8), then every point in the entire 45-dimensional
+orbit $\mathcal{G}_3 \cdot y^*$ also satisfies (E8).
+
+And more:
+
+**Lemma (Orbit freedom is unconstrained).** No equation in (E1)–(E8)
+constrains the $\mathcal{G}_3$-orbit direction of $y$. All eight equations
+are $\mathcal{G}_3$-invariant - (E3) and (E8) by the eigenvalue argument
+above, (E1) by unitarity of the spectral action, (E4)–(E7) because
+$D_T(K)$ is independent of $y$ entirely.
+
+The projection $\pi: \mathcal{M}_Y \to \mathcal{P}_3$ is a smooth
+submersion. Any open neighborhood of $y^*$ in $\mathcal{M}_Y$ maps to an
+open set in $\mathcal{P}_3$. Therefore:
+
+$$
+\mathrm{int}_{\mathcal{P}_3}(\mathcal{V}_3) \;\neq\; \emptyset.
+$$
+
+**The viable Yukawa set has nonempty interior in the physical manifold
+$\mathcal{P}_3$.** The system does not select a point. It selects an
+open region. Any exact Yukawa ratio would confine viability to a
+positive-codimension subset, a set of measure zero which contradicts
+this.
+
+**Theorem (No admissible Yukawa selector).** There is no admissible map
+from the solution set of (E1)–(E8) to $\mathcal{P}_3$ that outputs a
+unique point without introducing additional equations constraining the
+$\mathcal{G}_3$-orbit directions, equations that are not present in
+(E1)–(E8).
+
+The selector dichotomy is sharp: any rule built solely from the
+Dirac–$\Lambda$ budgets and the Dirac spectrum is constant on
+$\mathcal{G}_3$-orbits and therefore cannot distinguish points within
+an orbit. To break the orbit degeneracy requires genuinely new structure.
+
+---
+
+### Obstruction 2: The Fermion Endomorphism Scalar Is Not Pinned
+
+A potential loophole: even if the saturation equations cannot select a
+unique orbit, perhaps a secondary spectral invariant visible to the
+heat-kernel expansion is independently rigid?
+
+The candidate is the **fermion endomorphism quadratic scalar**
+
+$$
+b(\mu_L)
+\;:=\; \frac{1}{(4\pi)^2}\int_M \mathrm{Tr}_{\mathrm{ferm}}(E_Y^2)\,
+\sqrt{g}\,d^4x
+\;\geq\; 0,
+$$
+
+where $E_Y$ encodes the inter-generation Yukawa mixing in the fermion
+block of the Dirac endomorphism. This quantity appears in the $a_4$
+heat-kernel coefficient and is the leading Yukawa-mixing contribution
+to the spectral action. It is $\mathcal{G}_3$-invariant and hence a
+well-defined function on $\mathcal{P}_3$.
+
+Could the capacity inequality or the saturation equations pin $b(\mu_L)$
+to a specific value, thereby collapsing the orbit freedom?
+
+**Proposition (Capacity inequality is one-sided in $b(\mu_L)$).**
+The capacity inequality (E4) imposes a one-sided upper bound on the
+total spectral sum $S_\Omega$. Reducing $b(\mu_L)$ - by taking $E_Y \to 0$
+- reduces the eigenvalues of $\mathcal{D}_E^2$ (by the Weyl minimax
+principle), which reduces $S_\Omega$, which makes (E4) *easier* to
+satisfy. For any $b_0 \geq 0$, there exists a configuration with
+$b(\mu_L) = b_0$ that satisfies (E4).
+
+The capacity inequality provides no lower bound on $b(\mu_L)$.
+
+**Theorem (No rigidity of $b(\mu_L)$).** The saturation equations (E8)
+fix the total spectral sums $S_\Omega(\mathcal{D}_E(y);\,T_k) = D_{T_k}(K)$
+at the active scales, but not $b(\mu_L)$ separately. Multiple configurations
+with different values of $b(\mu_L)$ can achieve the same spectral sums by
+compensating adjustments in the diagonal mass terms $E_{\mathrm{diag}}$.
+
+The key supporting result, the non-total-saturation lemma also
+matters here. If $S_\Omega(\mathcal{D}_E;\,T) = D_T(K)$ held for all
+$T$ on an open interval, real-analyticity of $F(T) = S_\Omega(T) - D_T(K)$
+and the identity principle would force $F \equiv 0$, which would require
+the $g$-weighted spectral measure of $\mathcal{D}_E^2$ to exactly reproduce
+the spectrum of the fixed operator $K$ - a per-background retuning
+explicitly prohibited by the no-retuning condition (Assumption B4).
+Therefore total saturation is impossible; saturation occurs only at
+finitely many discrete active scales. The saturation equations fix the
+spectral sum at those scales, not $b(\mu_L)$ independently.
+
+**The fermion endomorphism loophole is closed.**
+
+---
+
+### Obstruction 3: All Other Fixed Outputs Are Orthogonal to the Yukawa Sector
+
+The framework fixes several other quantities: the Born exponent $p = 2$,
+the fine-structure constant $\alpha$, the cosmological constant $\Lambda_*$,
+the generation number $N_g = 3$, and the full gauge scaffold. Could
+conditioning on all of these simultaneously collapse the viable Yukawa
+set to a point or discrete family?
+
+**Lemma (Conditioning data are $y$-orthogonal).** The KKT stationarity
+condition (E7) decomposes into three independent sectors:
+
+$$
+\frac{\delta\mathcal{S}}{\delta g_E}
++ \int \frac{\delta S_\Omega}{\delta g_E}\,d\mu = 0
+\quad\text{(metric sector)},
+$$
+
+$$
+\frac{\delta\mathcal{S}}{\delta A}
++ \int \frac{\delta S_\Omega}{\delta A}\,d\mu = 0
+\quad\text{(gauge sector)},
+$$
+
+$$
+\nabla_y\mathcal{S}
++ \int \nabla_y S_\Omega\,d\mu = 0
+\quad\text{($y$-sector, equation (E8))}.
+$$
+
+The conditions fixing $p = 2$, $\alpha$, and $\Lambda_*$ arise from
+the metric and gauge sectors. They add **zero equations** to the
+$y$-sector. $N_g = 3$ fixes the dimension of $\mathcal{M}_Y$ but
+imposes no constraint on the specific point $y^*$ within it. The
+gauge scaffold is discrete and representation-theoretic orthogonal
+to continuous Yukawa parameters.
+
+**Theorem (Conditioning does not collapse $\mathcal{P}_3$).** After
+conditioning on all fixed outputs of (E1)–(E8), the viable Yukawa set
+still satisfies
+
+$$
+\mathrm{int}_{\mathcal{P}_3}\!\bigl(\mathcal{V}_3^{\mathrm{cond}}\bigr)
+\;\neq\; \emptyset.
+$$
+
+If some nontrivial smooth function $f: \mathcal{P}_3 \to \mathbb{R}$
+were universally constant on the viable set and encoding an exact mass
+ratiom then the viable set would be contained in a level set
+$f^{-1}(c)$. But a level set of a nontrivial smooth function on a
+manifold has empty interior. This contradicts the nonempty interior
+result. Therefore no such exact relation exists.
+
+**The conditioning loophole is closed.**
+
+---
+
+## The Across-the-Board Corollary
+
+Combining the three independent obstructions:
+
+**Corollary (Across-the-board no-go for exact Yukawa prediction).**
+Under the standing assumptions of the Coupled Dirac–$\Lambda$ framework,
+with the discrete scaffold fixed and all other fixed outputs imported:
+
+1. **No selector.** No admissible map from the solution set of
+(E1)–(E8) to $\mathcal{P}_3$ outputs a unique physical Yukawa class
+without introducing additional equations on the $\mathcal{G}_3$-orbit
+directions.
+
+2. **No endomorphism rigidity.** The fermion endomorphism quadratic
+scalar $b(\mu_L) \geq 0$ satisfies only a universal lower bound; its
+value is not determined by (E1)–(E8).
+
+3. **No relational collapse.** After conditioning on all other fixed
+outputs, the viable Yukawa set retains nonempty interior in
+$\mathcal{P}_3$; no exact mass ratio is forced as a relational
+consequence.
+
+*Exact Yukawa ratios are not law-level outputs of the Coupled
+Dirac–$\Lambda$ system (E1)–(E8).*
+
+---
+
+## The Same Boundary from Law Level: The Tier-0 Result
+
+The no-go theorem above is a Tier-1 result. It operates inside the Coupled
+Dirac–$\Lambda$ equation package (E1)–(E8) and establishes, using the
+concrete machinery of spectral operators, heat-kernel coefficients, and
+KKT stationarity, that the 45-dimensional orbit freedom of the flavor
+redundancy group $\mathcal{G}_3$ is structurally unconstrained by the
+equation system.
+
+A separate paper establishes the **same boundary at Tier-0**, at the
+level of lawhood itself, before any specific equation package is chosen:
+
+> **An Across-the-Board No-Go Theorem for Exact Yukawa Prediction**
+>
+> Jeremy Rodgers - February 2026
+>
+> DOI: [10.5281/zenodo.18493242](https://doi.org/10.5281/zenodo.18493242)
+
+This is not a restatement of the Tier-1 result in different language.
+It is an independent proof from more primitive assumptions, which
+makes the conclusion significantly stronger. If the Tier-1 argument
+showed that (E1)–(E8) cannot do it, the Tier-0 argument shows that
+**no physically lawful framework can do it** because the obstruction
+lives at the level of what lawhood itself requires, not at the level
+of any particular equation system.
+
+### What Tier-0 Lawhood Requires
+
+The Tier-0 framework formalizes the minimal conditions under which a
+theory deserves to be called physically lawful. These are not modeling
+preferences, they are necessities:
+
+**Closure stability** under $\Omega\Delta\partial$: a law description
+must be a fixed point of the composite operator that canonicalizes
+representations ($\partial$), extracts the record signature ($\Delta$),
+and completes to a stable closure ($\Omega$). A law that does not
+survive this cycle is not a law, it dissolves under its own
+re-expression.
+
+**No silent tie-breaking**: any law-level selection procedure must be
+deterministic at the record level. If a construction is non-unique
+under record-silent equivalence, the output must be set-valued unless
+an explicit, record-visible selector criterion is provided. No numerical
+value may be fixed by an unrecorded convention, arbitrary branch choice,
+or hidden tuning parameter.
+
+**Non-fine-tuned admissibility**: the viable set for any continuously
+parameterized sector must have nonempty interior in the relevant
+parameter manifold. Confinement to a set of measure zero, a single
+point, a discrete family, or a positive-codimension subvariety is
+forbidden unless a record-visible mechanism forces it.
+
+These three axioms, applied to the physical Yukawa manifold
+$\mathcal{P}_3 = (Y_u, Y_d, Y_e)/\mathcal{G}_3$, immediately block
+any exact Yukawa prediction without new selector structure.
+
+### The Tier-0 Argument in Three Steps
+
+**Step 1 (No selector over $\mathcal{P}_3$).** Suppose a law-level
+determinate Yukawa selector existed, a map that outputs a unique
+point of $\mathcal{P}_3$ from the law structure alone. This would
+confine viability to a single point or positive-codimension locus,
+giving empty interior. This contradicts non-fine-tuned admissibility.
+The no-silent-tie-breaking axiom then rules out rescuing the collapse
+by arbitrary branch choice. Therefore no law-level selector over
+$\mathcal{P}_3$ exists.
+
+**Step 2 (No rigidity of the $\Omega$-visible Yukawa scalar).** The
+strongest available loophole is that the admissible determinant
+comparison through which Tier-0 selects other rigid invariants is
+*budget-visible* to the Yukawa sector. Specifically, the inter-generation
+mixing endomorphism $E_Y$ contributes to the $\mathrm{Str}(E^2)$
+channel of the heat-package at fourth order, producing an
+$\Omega$-projected quadratic scalar $b(\mu_L) \geq 0$. Could this
+scalar be rigidly fixed by closure, thereby indirectly pinning Yukawa
+ratios?
+
+The answer is no. Closure imposes only the universal inequality
+$b(\mu_L) \geq 0$ and admits a trivial branch $b(\mu_L) = 0$ when the
+mixing component vanishes. No closure-forcing mechanism fixes the
+numerical value. Budget visibility does not become law-level rigidity.
+
+**Step 3 (No implicit fixation by conditioning).** The final loophole:
+perhaps Yukawa ratios are not selected directly, but become implicitly
+fixed once all other law-level invariants are conditioned on the gauge
+scaffold, generation number $N_g = 3$, hypercharge normalization, the
+Born exponent $p = 2$, the fine-structure constant $\alpha$, the
+cosmological constant $\Lambda_*$. Could the combination of all these
+collapse $\mathcal{P}_3$ to a point?
+
+No. The Tier-0 selection of $N_g = 3$ is itself a *robust* fixed-point
+selection, it's certified precisely because the viable Yukawa set for
+three generations has nonempty interior in $\mathcal{P}_3$. Conditioning
+on $N_g = 3$ therefore preserves the interior, not destroys it. All
+other fixed invariants are determined by conditions orthogonal to the
+Yukawa sector. Conditioning adds zero new constraints on $\mathcal{P}_3$.
+The viable set retains nonempty interior after full conditioning.
+
+### The Tier-0 Across-the-Board Theorem
+
+**Theorem (Tier-0 across-the-board no-go).** Under the physically
+lawful axioms closure stability, no silent tie-breaking, and
+non-fine-tuned admissibility, and with the full law-level scaffold
+fixed (gauge group, $N_g = 3$, hypercharge normalization, $p = 2$,
+$\alpha$, $\Lambda_*$):
+
+$$
+\mathrm{int}_{\mathcal{P}_3}\!\bigl(\mathcal{V}_3^{\mathrm{cond}}\bigr)
+\;\neq\; \emptyset.
+$$
+
+No nontrivial exact algebraic relation among Yukawa invariants, no
+exact mass ratio $m_e/m_t$, no mixing angle identity, no CP-phase
+constraint, is a law-level output. Any proposal that predicts exact
+Yukawa numbers must either introduce additional record-visible selector
+structure acting on $\mathcal{P}_3$, or relax the lawhood axioms
+themselves.
+
+### Why Two Levels Makes the Result Stronger
+
+The Tier-1 and Tier-0 results are logically independent. The Tier-1
+proof works inside a specific equation package and shows the
+$\mathcal{G}_3$-orbit freedom is not broken by any of (E1)–(E8).
+The Tier-0 proof works from abstract lawhood axioms and shows the
+same freedom cannot be broken by *any* closure-stable selection
+procedure whatsoever.
+
+Neither result implies the other. A critic of the Tier-1 result
+could say: "perhaps a different equation package would do it." The
+Tier-0 result forecloses that response, the obstruction is not in
+the choice of equations, it is in the axioms of lawhood. A critic
+of the Tier-0 result could say: "perhaps those axioms are too
+restrictive for a concrete physical framework." The Tier-1 result
+forecloses that response even within the fully specified Coupled
+Dirac–$\Lambda$ system, the boundary holds by explicit computation.
+
+The two results converge on the same boundary from opposite directions.
+That convergence is not a coincidence. Tier-1 and Tier-0 express the
+same constraint at different levels of abstraction and the constraint
+they agree on is: **exact fermion mass ratios are not what laws
+determine.**
+
+---
+
+---
+
+## What the No-Go Theorem Is Not Saying
+
+This result requires careful reading. It is not saying:
+
+**That the Yukawa sector is unconstrained.** The saturation system
+(E8) locally determines the Yukawa parameter vector given fixed
+external data. The framework constrains the Yukawa sector; it just
+does not universally select a unique point in $\mathcal{P}_3$.
+
+**That flavor hierarchies cannot be qualitatively explained.**
+The framework may well explain *why* hierarchies exist through
+the structure of the saturation mechanism and the heat-kernel
+coefficients without predicting the exact numerical values.
+
+**That Yukawa data are irrelevant to the spectral action.** The
+Yukawa matrices enter through the endomorphism $\mathbf{E}$ of the
+Dirac operator and affect the spectral action coefficients. They are
+not invisible, they are just underdetermined at the orbit level.
+
+**That no extension can predict Yukawa ratios.** The no-go theorem
+is a statement about (E1)–(E8) as currently defined. It identifies
+exactly what is missing: additional equations constraining the
+$\mathcal{G}_3$-orbit directions in $\mathcal{M}_Y$. Any extension
+claiming to predict exact mass ratios must supply this structure.
+This is not a criticism, it's a precise specification of what
+the next level of the theory must contain.
+
+---
+
+## The Contrast With Rigid Invariants
+
+The Yukawa sector is not undetermined because the framework is weak.
+It is undetermined because the specific fixing mechanisms available
+in (E1)–(E8) do not reach the $\mathcal{G}_3$-orbit directions.
+
+Compare with what *is* fixed:
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Fixed by</th>
+      <th>Mechanism</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gauge group $G_{\mathrm{SM}}$</td>
+      <td>Cap–gap separation</td>
+      <td>Double-squeeze on UV load</td>
+    </tr>
+    <tr>
+      <td>Spacetime dimension $d = 4$</td>
+      <td>UV/IR scheme compatibility</td>
+      <td>Heat-kernel scaling class</td>
+    </tr>
+    <tr>
+      <td>Hypercharge assignment</td>
+      <td>GI/GI$^{+}$/GI$^{++}$ + Witten</td>
+      <td>Implementability + parity</td>
+    </tr>
+    <tr>
+      <td>Strong CP phase $\theta = 0$</td>
+      <td>Record-admissibility</td>
+      <td>Positivity obstruction</td>
+    </tr>
+    <tr>
+      <td>Born exponent $p = 2$</td>
+      <td>Moduli-space metric</td>
+      <td>Hilbert–Schmidt flatness</td>
+    </tr>
+    <tr>
+      <td><strong>Exact Yukawa ratios</strong></td>
+      <td><strong>Not fixed</strong></td>
+      <td><strong>$\mathcal{G}_3$-orbit underdetermined</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+The gauge group is forced because every enlargement violates a quantitative
+inequality. The strong CP phase is forced because $\theta \neq 0$ destroys
+the positive-norm Hilbert space. These are structural necessities, there
+is no way through.
+
+Exact Yukawa ratios are different. The system constrains them to a region.
+That region has nonempty interior. There is room to move within it without
+violating any equation in (E1)–(E8). The freedom is not a gap in the
+framework, it is a precisely characterised residual, with a precise
+mathematical description of what additional structure would close it.
+
+---
+
+## A Precise Specification for What Comes Next
+
+The no-go theorem is, in this sense, a **construction guide** for the
+next layer of the theory.
+
+Any framework that genuinely predicts exact Yukawa ratios must introduce
+equations that:
+
+- Are not already present in (E1)–(E8),
+- Are not $\mathcal{G}_3$-invariant (otherwise they cannot distinguish
+  orbit directions),
+- Are record-visible (otherwise they are physically meaningless),
+- Break the orbit degeneracy in $\mathcal{M}_Y$ in a way that collapses
+  $\mathcal{V}_3$ to a subset of empty interior in $\mathcal{P}_3$.
+
+This is a precise characterization. It tells you exactly what a
+predictive theory of Yukawa couplings must contain, not by analogy
+or intuition, but by theorem.
+
+The Coupled Dirac–$\Lambda$ framework has drawn a precise boundary
+between what is structurally forced and what requires additional input.
+The gauge group of the universe is on one side of that boundary.
+The fermion mass ratios are on the other.
+
+Both facts are equally informative.
+
+---
+
+## Full Technical Paper
+
+> **No-Go Theorem for Exact Yukawa Prediction in the Coupled
+> Dirac–$\Lambda$ Dynamical System**
+>
+> Jeremy Rodgers - February 2026
+>
+> DOI: [10.5281/zenodo.18xxx](https://doi.org/10.5281/zenodo.18xxx)
+>
+> *Proves that exact fermion mass ratios are not structural outputs of
+> (E1)–(E8) via three independent mechanisms: $\mathcal{G}_3$-orbit
+> underdetermination, no rigidity of the fermion endomorphism scalar
+> $b(\mu_L)$, and $y$-orthogonality of all other fixed outputs.
+> Identifies precisely what additional structure a predictive extension
+> must supply.*
+
+---
+
+**Author:** Jeremy Rodgers
+**Framework:** Tier-0 / The Everything Equation
+**Supporting papers:** See the papers section for full technical details,
+proofs, and formal statements.
