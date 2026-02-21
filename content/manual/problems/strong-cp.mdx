@@ -1,0 +1,421 @@
+# The Strong CP Problem: Structural Vanishing of $\theta$
+
+**A three-layer proof that $\theta = 0$ is a structural consequence of the
+Coupled Dirac–$\Lambda$ framework, not fine-tuned, not axion-relaxed, but
+forced by the same equation package that derives the Standard Model gauge group.**
+
+---
+
+## The Problem That Has Resisted Every Solution
+
+The QCD Lagrangian admits a perfectly legal topological term:
+
+$$
+\mathcal{L}_\theta
+\;=\; \theta\,\frac{g_s^2}{32\pi^2}\,
+\mathrm{Tr}(F_{\mu\nu}\tilde{F}^{\mu\nu}),
+$$
+
+where $\tilde{F}^{\mu\nu} = \tfrac{1}{2}\epsilon^{\mu\nu\rho\sigma}F_{\rho\sigma}$
+is the dual field strength. This term violates CP symmetry. There is nothing
+in the Standard Model that forbids it or requires it to be small.
+
+Yet experiment is brutal: the measured bound on the neutron electric dipole
+moment constrains
+
+$$
+|\theta| \;<\; 10^{-10}.
+$$
+
+Ten decimal places of fine-tuning, with no known reason. This is the
+strong CP problem, one of the deepest unexplained facts in all of physics.
+
+The leading proposals each require new structure that has never been observed.
+The Peccei–Quinn mechanism introduces a new global $U(1)$ symmetry,
+spontaneously broken, producing a pseudo-Goldstone boson, the axion whose
+vacuum expectation value dynamically relaxes $\theta$ to zero. After nearly
+fifty years of searching, no axion has been found. The Nelson–Barr mechanism
+requires CP to be exact at high energies and broken spontaneously, demanding
+further model-building. The massless up quark solution is disfavored by
+lattice QCD.
+
+All of these approaches share a common posture: they accept that $\theta$ is
+a free parameter in nature, then search for a mechanism that drives it to zero.
+
+The work presented here takes a different position entirely.
+
+> *Within the Coupled Dirac–$\Lambda$ framework, $\theta = 0$ is not driven
+> to zero. It is structurally excluded from being anything else.*
+
+No axion. No Peccei–Quinn symmetry. No new fields or parameters. The
+vanishing is forced by the same equation package that derives the Standard
+Model gauge group as a consequence of what it means for physics to be
+record-bearing at all.
+
+The full technical derivation is in:
+
+> **Structural Vanishing of the Strong CP Phase in the Coupled Dirac–$\Lambda$
+> System**
+>
+> Jeremy Rodgers — February 2026
+>
+> DOI: [10.5281/zenodo.18717563](https://doi.org/10.5281/zenodo.18717563)
+
+---
+
+## The Framework: Record-Bearing Physics
+
+The Coupled Dirac–$\Lambda$ framework is formulated in Euclidean signature.
+The Dirac operator $\mathcal{D}_E$ acts on a compact Euclidean spin
+4-manifold $(M_E, g_E)$, and physical content, a positive-norm Hilbert space
+with unitary time evolution is obtained exclusively through
+**Osterwalder–Schrader (OS) reconstruction**.
+
+This is not a technical detail. It is the key structural constraint.
+
+OS reconstruction imposes specific requirements on the Euclidean measure.
+Most critically, the Euclidean functional integral must define a positive
+state on the observable algebra: a linear functional $\omega$ satisfying
+$\omega(A^* A) \geq 0$ for all observables $A$. Without this, there is no
+consistent notion of probabilities, no positive-norm Hilbert space, and
+no valid quantum theory.
+
+In the Coupled Dirac–$\Lambda$ framework, this positivity requirement has
+a deeper source. The framework is record-bearing: admissible stationary
+realizations require the existence of a record algebra $R \subset \mathcal{A}$
+and a positive coarse-graining map
+
+$$
+E_R : \mathcal{A} \to R, \qquad E_R(A^* A) \geq 0 \;\forall\, A \in \mathcal{A}.
+$$
+
+This is not an optional axiom. It is what makes the framework's saturation
+and forcing mechanisms work, the record algebra is the carrier of the
+KKT stationarity structure that derives the Standard Model. Remove positive
+coarse-graining, and the entire Tier-1 forcing argument collapses.
+
+The key theorem establishes that positivity is not assumed but derived:
+
+**Theorem (Positivity forced by record conditional expectation).** If a
+positive record coarse-graining map $E_R$ exists, then the induced state
+$\omega = \varphi \circ E_R$ is automatically positive:
+
+$$
+\omega(A^* A) \;=\; \varphi(E_R(A^* A)) \;\geq\; 0 \qquad \forall\, A \in \mathcal{A}.
+$$
+
+The consequence is immediate: if a Euclidean weight fails to define any
+positive state on $\mathcal{A}$, no positive record conditional expectation
+can exist, and the realization is not record-bearing. **Any weight that
+destroys positivity destroys the entire record-bearing structure of the framework.**
+
+---
+
+## Three Independent Layers of Exclusion
+
+The paper establishes $\theta = 0$ through three distinct and independent
+arguments. Each alone is partial. Together they constitute a complete
+structural exclusion from which there is no escape.
+
+---
+
+### Layer 1: The Spectral Action Cannot Generate $\theta$
+
+The bosonic spectral action is
+
+$$
+\mathcal{S}_{\mathrm{bos}}[g_E, A]
+\;=\; \mathrm{Tr}_*\!\bigl(f(\mathcal{D}_E^2/\Lambda^2)\bigr),
+$$
+
+where $f$ is a positive even cutoff function.
+
+**Theorem (The spectral action is CP-even).** The Dirac square
+$\mathcal{D}_E^2$ is invariant under both charge conjugation ($C\mathcal{D}_E^2 C^{-1} = \mathcal{D}_E^2$)
+and parity ($P\mathcal{D}_E^2 P^{-1} = \mathcal{D}_E^2$).
+Therefore the bosonic spectral action is CP-invariant, and
+**cannot generate a CP-odd term at any order in the heat-kernel expansion**.
+
+The heat-kernel expansion of the spectral action produces the
+Einstein–Hilbert term, the Yang–Mills term, the cosmological constant,
+and higher-derivative gravity corrections all CP-even. The topological
+$\theta$-term $\mathrm{Tr}(F \wedge F)$ is CP-odd and is therefore
+absent from every term in the expansion. This is not a cancellation or
+a tuning. It is a structural impossibility: CP-odd terms cannot appear
+in the output of a CP-even functional.
+
+**The dynamics of the Coupled Dirac–$\Lambda$ framework do not generate $\theta$.**
+
+---
+
+### Layer 2: Adding $\theta$ Externally Is Variationally Inert
+
+Suppose one attempts to add the $\theta$-term by hand externally, as an
+independent parameter. Within any fixed topological sector
+$\{A : Q_{\mathrm{top}}(A) = Q_0\}$, the topological charge is constant.
+The $\theta$-term contributes only a constant phase
+$e^{-i\theta Q_0}$ to the Euclidean weight.
+
+**Proposition (Within-sector inertness).** For any observable $\mathcal{O}$
+and any fixed topological sector $Q_{\mathrm{top}} = Q_0$:
+
+$$
+\langle \mathcal{O} \rangle_\theta
+\;=\; \frac{e^{-i\theta Q_0} \int_{Q_0} \mathcal{O}\, e^{-S_{\mathrm{YM}}}\, \mathcal{D}A}
+{e^{-i\theta Q_0} \int_{Q_0} e^{-S_{\mathrm{YM}}}\, \mathcal{D}A}
+\;=\; \langle \mathcal{O} \rangle_{\theta=0}.
+$$
+
+The phase cancels exactly in every normalized correlator. **Within a fixed
+topological sector, $\theta$ has no variational effect whatsoever.**
+
+Since the KKT variational principle of the Coupled Dirac–$\Lambda$ framework
+operates within a fixed topological sector, it does not sum over sectors, 
+an externally added $\theta$ is invisible to the stationarity conditions.
+It cannot shift the solution, tilt the cap–gap separation, or alter the
+forced internal package. It is, variationally, as if it were not there.
+
+---
+
+### Layer 3: Nonzero $\theta$ Destroys Record-Bearing Admissibility
+
+The first two layers establish that $\theta$ is not generated and not
+variationally relevant. The third layer is the decisive structural blow:
+**nonzero $\theta$ is incompatible with the framework existing at all.**
+
+When the full Euclidean measure receives contributions from multiple
+topological sectors which is the regime in which $\theta$ is a
+physical parameter. The cross-sector weight is
+
+$$
+d\mu_\theta
+\;=\; e^{-S_{\mathrm{YM}} - i\theta Q_{\mathrm{top}}}\, \mathcal{D}A.
+$$
+
+For $\theta \neq 0 \pmod{2\pi}$, different topological sectors receive
+different complex phases. Choose an observable $A$ concentrated on two
+sectors $\mathcal{C}_{n_1}$ and $\mathcal{C}_{n_2}$ with $n_1 \neq n_2$.
+Then:
+
+$$
+\omega_{\mu_\theta}(A^* A)
+\;=\; \frac{1}{Z_{\mu_\theta}}\Bigl(
+e^{-in_1\theta}\!\int_{\mathcal{C}_{n_1}}\! A^* A\, e^{-S_{\mathrm{YM}}}\,\mathcal{D}A
+\;+\;
+e^{-in_2\theta}\!\int_{\mathcal{C}_{n_2}}\! A^* A\, e^{-S_{\mathrm{YM}}}\,\mathcal{D}A
+\Bigr).
+$$
+
+This is a complex linear combination of two positive reals with
+*distinct* unit-circle phases, a sum that is not real and not
+nonnegative. **Positivity of the state fails.**
+
+**Lemma.** For $\theta \neq 0 \pmod{2\pi}$ with cross-sector contributions,
+there exists $A \in \mathcal{A}$ such that
+$\omega_{\mu_\theta}(A^* A) \notin [0, \infty)$.
+Therefore no positive record conditional expectation $E_R$ can exist, and
+the realization is not record-bearing.
+
+**Theorem (Record-admissibility obstruction).** For $\theta \neq 0 \pmod{2\pi}$,
+the Euclidean weight $d\mu_\theta$ fails to define a positive state on
+$\mathcal{A}$. Consequently:
+
+- No positive record conditional expectation $E_R$ exists.
+- The framework is not record-bearing.
+- OS reconstruction cannot yield a positive-norm Hilbert space.
+- The Tier-1 forcing mechanism which requires a record algebra cannot
+  operate.
+
+$$
+\boxed{\theta = 0 \quad \text{(structural, not fine-tuned).}}
+$$
+
+The exclusion is not circular. Positivity is not assumed as an independent
+axiom, it's derived from the existence of a positive coarse-graining map
+$E_R$. The argument is: $\theta \neq 0$ prevents any such $E_R$ from
+existing, hence prevents the framework from being record-bearing at all.
+The conclusion is structural.
+
+---
+
+## The Complete Three-Layer Picture
+
+<table>
+  <thead>
+    <tr>
+      <th>Layer</th>
+      <th>Statement</th>
+      <th>What it excludes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Generation</strong></td>
+      <td>Spectral action is CP-even</td>
+      <td>$\theta$ is not produced dynamically</td>
+    </tr>
+    <tr>
+      <td><strong>Inertness</strong></td>
+      <td>Within-sector $\theta$ is a constant phase</td>
+      <td>Adding $\theta$ has no variational effect</td>
+    </tr>
+    <tr>
+      <td><strong>Record-admissibility</strong></td>
+      <td>$\theta \neq 0$ destroys positive state; record algebra impossible</td>
+      <td>$\theta \neq 0$ is framework-inadmissible</td>
+    </tr>
+  </tbody>
+</table>
+
+The first two layers are unconditional within the Coupled Dirac–$\Lambda$
+framework. The third is unconditional within the record-bearing OS-reconstructible
+Euclidean formulation. All three are independent: each closes a different
+possible route by which $\theta \neq 0$ could survive.
+
+---
+
+## CKM CP Violation Is Fully Compatible
+
+A sharp potential objection: if the framework excludes CP-odd structure,
+how does it accommodate the observed CP violation in the weak sector?
+
+The answer lies in a precise structural asymmetry between the two kinds
+of CP violation.
+
+The CKM CP-violating phase enters through the Yukawa coupling in the
+fermionic action $\langle \psi, \mathcal{D}_E \psi \rangle$. Because
+$\mathcal{D}_E$ is self-adjoint, this action is real-valued despite
+the complex Yukawa matrices, the fermionic determinant remains real and
+non-negative, and no complex phase enters the Euclidean weight. OS
+reconstruction is unaffected.
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th><strong>CKM (weak CP)</strong></th>
+      <th><strong>$\theta$ (strong CP)</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Source</strong></td>
+      <td>Complex Yukawa couplings</td>
+      <td>Topological term</td>
+    </tr>
+    <tr>
+      <td><strong>Action contribution</strong></td>
+      <td>Real ($\langle\psi, \mathcal{D}_E\psi\rangle$)</td>
+      <td>Complex weight ($e^{-i\theta Q_{\mathrm{top}}}$)</td>
+    </tr>
+    <tr>
+      <td><strong>Measure positivity</strong></td>
+      <td>Preserved</td>
+      <td>Destroyed</td>
+    </tr>
+    <tr>
+      <td><strong>OS-compatible?</strong></td>
+      <td>Yes</td>
+      <td>No (for $\theta \neq 0$)</td>
+    </tr>
+    <tr>
+      <td><strong>Status</strong></td>
+      <td>Determined by Yukawa structure</td>
+      <td>Excluded</td>
+    </tr>
+  </tbody>
+</table>
+The framework provides **exactly the right amount of CP violation**: enough
+for baryogenesis in the weak sector (Sakharov's conditions require CP
+violation), and precisely zero in the strong sector (where experiment
+requires $|\theta| < 10^{-10}$). This is not a coincidence or a tuning.
+It is a structural feature of the equation package.
+
+---
+
+## Connection to the Broader Framework
+
+This result is not a standalone patch. It is an organic consequence of
+the same Euclidean structure that does everything else in the Coupled
+Dirac–$\Lambda$ programme:
+
+- The **spectral action** whose CP-evenness excludes $\theta$ also provides
+  the Einstein–Hilbert + Yang–Mills + Higgs dynamics once the forced
+  internal package is fixed.
+- The **record-bearing admissibility** that obstruction $\theta \neq 0$
+  also drives the cap–gap mechanism that forces the Standard Model gauge
+  group $\mathrm{SU}(3)\times\mathrm{SU}(2)\times\mathrm{U}(1)$.
+- The **OS reconstruction requirement** that prevents $\theta \neq 0$ from
+  defining a positive Hilbert space is the same requirement that validates
+  the physical interpretation of all the Tier-1 forcing results.
+
+One equation package. One admissibility criterion. And among its consequences:
+the gauge group of the universe, the vanishing of the strong CP phase, and
+the compatibility of weak CP violation with baryogenesis.
+
+---
+
+## Falsifiability
+
+The structural exclusion makes two sharp, falsifiable predictions:
+
+**A nonzero neutron electric dipole moment** implying $|\theta| > 0$ would
+falsify the framework. Current experiments constrain $|\theta| < 10^{-10}$;
+next-generation nEDM experiments aim for sensitivity around $10^{-27}$ to
+$10^{-28}$ - a further seven orders of magnitude. The framework predicts
+exactly zero.
+
+**An axion detection** consistent with the Peccei–Quinn mechanism would
+indicate that PQ is the actual resolution of strong CP. The structural
+argument would remain mathematically valid within the framework, but the
+framework's claim to be the complete description of the relevant physics
+would be falsified.
+
+Both predictions are concrete, near-term testable, and unambiguous.
+
+---
+
+## What This Result Means
+
+For fifty years, the strong CP problem has been treated as evidence that
+the Standard Model is incomplete, a signal that new fields, new symmetries,
+or new dynamics must exist beyond what we know.
+
+The three-layer exclusion presented here reverses that inference. Within
+the Coupled Dirac–$\Lambda$ framework, the Standard Model is not incomplete
+with respect to strong CP. The smallness of $\theta$ is not a clue pointing
+beyond the Standard Model. It is a structural consequence of the same
+physics that determines the Standard Model itself.
+
+The vacuum angle was never a free parameter waiting to be explained.
+In a record-bearing universe, a universe where information can be
+stably stored, where coarse-graining maps are positive, where
+Osterwalder–Schrader reconstruction yields a valid Hilbert space, 
+$\theta$ was always exactly zero. No axion required.
+
+$$
+\mathcal{L} \;=\; \Omega\,\Delta\,\partial(\mathcal{L}).
+$$
+
+---
+
+## Full Technical Paper
+
+> **Structural Vanishing of the Strong CP Phase in the Coupled
+> Dirac–$\Lambda$ System**
+>
+> Jeremy Rodgers - February 2026
+>
+> DOI: [10.5281/zenodo.18717563](https://doi.org/10.5281/zenodo.18717563)
+>
+> *Three-layer structural proof that $\theta = 0$ within the record-bearing
+> Euclidean Dirac–$\Lambda$ realization. No axion, no Peccei–Quinn symmetry,
+> no new fields. The exclusion is unconditional within the record-admissible
+> stationary class and falsifiable by neutron EDM measurement.*
+
+---
+
+**Author:** Jeremy Rodgers
+**Framework:** Tier-0 / The Everything Equation
+**Supporting papers:** See the papers section for full technical details,
+proofs, and formal statements.
