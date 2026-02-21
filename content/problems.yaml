@@ -16,9 +16,50 @@ problems:
       - zenodo:18474556
       - zenodo:18475611
       - zenodo:18358761
+      - zenodo:18718045
     connections_hint:
       - problem:grand-unified-theory
       - problem:mathematical-foundations
+      - problem:strong-cp
+      - problem:yukawa-prediction
+
+  - id: problem:strong-cp
+    slug: strong-cp
+    title: Strong CP Problem
+    domain: Physics
+    status: public
+    maturity: complete
+    manualPath: true
+    direct_answer: >
+      Structural vanishing of the QCD vacuum angle θ: within the coupled Dirac–Λ Tier-1 realization,
+      θ is not a free tunable parameter in admissible stationary sectors and is forced to vanish (or
+      be rendered physically inactive) by record-admissibility and positivity constraints.
+    monograph_refs: []
+    supported_by:
+      - zenodo:18717563
+    connections_hint:
+      - problem:standard-model
+      - problem:grand-unified-theory
+      - problem:lawhood
+
+  - id: problem:yukawa-prediction
+    slug: yukawa-prediction
+    title: Exact Yukawa Prediction
+    domain: Physics
+    status: public
+    maturity: complete
+    manualPath: true
+    direct_answer: >
+      An across-the-board no-go result: within the capacity-coupled Dirac–Λ realization, exact Yukawa
+      prediction is structurally obstructed by admissibility and implementability constraints, preventing
+      a universal exact determination of Yukawa parameters as rigid outputs of the framework.
+    monograph_refs: []
+    supported_by:
+      - zenodo:18721002
+    connections_hint:
+      - problem:standard-model
+      - problem:grand-unified-theory
+      - problem:lawhood
 
   - id: problem:grand-unified-theory
     slug: grand-unified-theory
@@ -32,9 +73,12 @@ problems:
       - "Appendix H.1"
     supported_by:
       - zenodo:18474556
+      - zenodo:18709502
     connections_hint:
       - problem:standard-model
       - problem:quantum-gravity
+      - problem:strong-cp
+      - problem:yukawa-prediction
 
   - id: problem:quantum-gravity
     slug: quantum-gravity
@@ -209,6 +253,7 @@ problems:
       - zenodo:17864384
       - zenodo:18028427
       - zenodo:18205246
+      - zenodo:18704783
     connections_hint:
       - problem:quantum-gravity
       - problem:lawhood
