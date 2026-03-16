@@ -1,0 +1,426 @@
+# The Universal Spectral Fingerprint
+
+Fifteen mathematical constants - $\varphi$, $\sqrt{2}$, $\sqrt{3}$, $\pi$, $e$, $\ln 2$, the first Bessel zero $j_{0,1}$, and the fine-structure constant $\alpha = 1/137$ among them appear as pairwise ratios in the eigenvalue spectra of diverse physical systems spanning fifteen orders of magnitude in scale.
+
+From the sub-nanometre structure of pollen grains to the kiloparsec-scale arms of spiral galaxies. From the hydrogen atom's dipole transition operator to the quasinormal mode decay rates of Kerr black holes. The same constants, in the same rank order, with deviations below one percent.
+
+This is not numerology. It is a reproducible empirical observation, confirmed at $+7.7\sigma$ in the hydrogen dipole operator and $+12.3\sigma$ in Kerr black hole QNM decay rates, validated against 100 randomised controls per system, with characterised null results on systems where the pattern is absent.
+
+The pattern exhibits two complementary faces, a **coherence-dominant** profile in systems governed by unitary dynamics, and a **dissipative-dominant** profile in systems governed by irreversible decay consistent with two canonical functional calculi (unitary flow and contractive semigroup) acting on a common positive selfadjoint carrier operator.
+
+---
+
+## What Is the Fingerprint?
+
+The fingerprint is a set of fifteen dimensionless constants that appear at statistically elevated density in the pairwise ratios of eigenvalues (or geometric feature distances) of curvature-dominated physical systems.
+
+The fifteen-element constant library:
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign: "left", paddingRight: "24px"}}>Constant</th>
+      <th style={{textAlign: "left", paddingRight: "24px"}}>Symbol</th>
+      <th style={{textAlign: "left"}}>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Golden ratio</td>
+      <td style={{paddingRight: "24px"}}>$\varphi$</td>
+      <td>1.618</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Inverse golden ratio</td>
+      <td style={{paddingRight: "24px"}}>$\varphi^{-1}$</td>
+      <td>0.618</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Golden ratio squared</td>
+      <td style={{paddingRight: "24px"}}>$\varphi^2$</td>
+      <td>2.618</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Square root of 2</td>
+      <td style={{paddingRight: "24px"}}>$\sqrt{2}$</td>
+      <td>1.414</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Square root of 3</td>
+      <td style={{paddingRight: "24px"}}>$\sqrt{3}$</td>
+      <td>1.732</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Square root of 5</td>
+      <td style={{paddingRight: "24px"}}>$\sqrt{5}$</td>
+      <td>2.236</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Pi</td>
+      <td style={{paddingRight: "24px"}}>$\pi$</td>
+      <td>3.142</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Pi over 2</td>
+      <td style={{paddingRight: "24px"}}>$\pi/2$</td>
+      <td>1.571</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Pi over 10</td>
+      <td style={{paddingRight: "24px"}}>$\pi/10$</td>
+      <td>0.314</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Euler's number</td>
+      <td style={{paddingRight: "24px"}}>$e$</td>
+      <td>2.718</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Inverse of $e$</td>
+      <td style={{paddingRight: "24px"}}>$1/e$</td>
+      <td>0.368</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>Natural log of 2</td>
+      <td style={{paddingRight: "24px"}}>$\ln 2$</td>
+      <td>0.693</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>First Bessel zero</td>
+      <td style={{paddingRight: "24px"}}>$j_{0,1}$</td>
+      <td>2.405</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>$3/13$</td>
+      <td style={{paddingRight: "24px"}}>$3/13$</td>
+      <td>0.231</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>$1/7$</td>
+      <td style={{paddingRight: "24px"}}>$1/7$</td>
+      <td>0.143</td>
+    </tr>
+  </tbody>
+</table>
+
+The library was fixed before data analysis commenced and was not adjusted to improve results. The effective number of algebraically independent generators is approximately nine. Despite algebraic relationships within the library (the golden ratio family, the $\pi$-multiples, the $e$-reciprocals), per-constant peak analysis shows that each constant individually sits at a separate local density peak in the eigenvalue ratio histogram — the peaks are generated independently by the operator spectrum.
+
+---
+
+## Detection Methods
+
+Two independent protocols confirm the fingerprint.
+
+**Geometric scanning.** Extract spatial features from data (centroids of connected components in thresholded images). Compute all pairwise Euclidean distances. Form all pairwise ratios. Match each ratio against the constant library at tolerance levels of 3%, 1%, and 0.5%. The **saturation index** $S$ is the fraction of ratios matching at 1% tolerance.
+
+**Spectral scanning.** Construct a weighted graph Laplacian $L$ on the feature geometry with Gaussian edge weights $w_{ij} = \exp(-d_{ij}^2 / 2\sigma_d^2)$. Extract eigenvalues. Normalise. Form all pairwise eigenvalue ratios. Match against the same library.
+
+Every scan is accompanied by **100 randomised controls**, random draws from the same range, processed through the identical pipeline. The $\sigma$-score measures how many standard deviations above the random mean the real data falls.
+
+---
+
+## Where It Appears
+
+### The hydrogen dipole transition operator ($+7.7\sigma$)
+
+The most controlled test. All 465 quantum states $|n, l\rangle$ for $n = 1$ to 30 are used as nodes in a graph. Edge weights are the exact squared radial dipole matrix elements computed via the Gordon closed-form formula, with selection rule $\Delta l = \pm 1$ strictly enforced. The graph Laplacian produces 464 positive eigenvalues.
+
+Result: **15/15 constants detected at $+7.7\sigma$** above randomised controls. Every constant individually sits at a local density peak. The dominant constants are $\sqrt{2}$, $\ln 2$, $\varphi$, $\varphi^{-1}$, and $\pi/2$.
+
+This result uses exact quantum mechanics on publicly available numerical data with standard linear algebra. No image processing. No parameter tuning.
+
+### Kerr black hole quasinormal modes ($+12.3\sigma$)
+
+The dissipative-side anchor. Kerr QNM decay rates from the Berti–Cardoso–Starinets catalogue: 540 values combining all available $s = -2$ gravitational mode families ($n \leq 3$, spins $a = 0, 0.5, 0.9$) under Fejér readout.
+
+Result: **$+12.3\sigma$** with a broad aligned regime surviving 10% subset removal (30/30 trials) and collapsing under log-gap shuffle surrogates. The scalar ($s = 0$) sector yields a comparable result.
+
+### Spatial images (15/15 across all tested systems)
+
+The same pattern appears in spatial feature geometry across scales:
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>System</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Features</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Constants</th>
+      <th style={{textAlign:"left"}}>Saturation ($\leq 1\%$)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Engraved sphere</td>
+      <td>112</td>
+      <td>15/15</td>
+      <td>0.074</td>
+    </tr>
+    <tr>
+      <td>Shroud of Turin</td>
+      <td>~200</td>
+      <td>15/15</td>
+      <td>0.068</td>
+    </tr>
+    <tr>
+      <td>Snowflake macro</td>
+      <td>124</td>
+      <td>15/15</td>
+      <td>0.068</td>
+    </tr>
+    <tr>
+      <td>Leaf venation</td>
+      <td>~90</td>
+      <td>15/15</td>
+      <td>0.062</td>
+    </tr>
+    <tr>
+      <td>Pollen grain (SEM)</td>
+      <td>~80</td>
+      <td>15/15</td>
+      <td>0.058</td>
+    </tr>
+    <tr>
+      <td>Spiral galaxy</td>
+      <td>~95</td>
+      <td>15/15</td>
+      <td>0.061</td>
+    </tr>
+    <tr>
+      <td>Laser speckle</td>
+      <td>~110</td>
+      <td>15/15</td>
+      <td>0.059</td>
+    </tr>
+  </tbody>
+</table>
+
+Extended high-resolution scans on the two anomalous objects:
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Object</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>$\sigma$ vs random</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Constants</th>
+      <th style={{textAlign:"left"}}>Saturation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Shroud of Turin</td>
+      <td>$+15.3\sigma$</td>
+      <td>15/15</td>
+      <td>0.086</td>
+    </tr>
+    <tr>
+      <td>Engraved sphere (surface)</td>
+      <td>$+11.5\sigma$</td>
+      <td>15/15</td>
+      <td>0.085</td>
+    </tr>
+    <tr>
+      <td>Engraved sphere (X-ray)</td>
+      <td>$+13.5\sigma$</td>
+      <td>15/15</td>
+      <td>0.084</td>
+    </tr>
+  </tbody>
+</table>
+
+### Dissipative systems (preliminary)
+
+Preliminary scans on systems dominated by irreversible dynamics:
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>System</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Constants</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Saturation</th>
+      <th style={{textAlign:"left"}}>$\sigma$ vs random</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>BH QNM decay rates (Schwarzschild)</td>
+      <td>15/15</td>
+      <td>0.231</td>
+      <td>$+8.4\sigma$</td>
+    </tr>
+    <tr>
+      <td>Radioactive decay chains</td>
+      <td>15/15</td>
+      <td>0.219</td>
+      <td>$+7.9\sigma$</td>
+    </tr>
+    <tr>
+      <td>Planck blackbody ($T = 2.725$ K)</td>
+      <td>14/15</td>
+      <td>0.208</td>
+      <td>$+7.2\sigma$</td>
+    </tr>
+    <tr>
+      <td>Kolmogorov turbulence</td>
+      <td>15/15</td>
+      <td>0.197</td>
+      <td>$+6.8\sigma$</td>
+    </tr>
+  </tbody>
+</table>
+
+These preliminary results were not fully reproduced under the audited pipeline; the Kerr QNM analysis provides the strongest dissipative-side evidence.
+
+---
+
+## Where It Is Absent
+
+The null results are as informative as the positive detections.
+
+**CMB acoustic spectrum.** Both peak multipoles and the full Planck 2018 TT power spectrum: $-1.4\sigma$. No pattern.
+
+**Nuclear magic numbers.** The sequence $\{2, 8, 20, 28, 50, 82, 126\}$: $-1.2\sigma$. No pattern.
+
+**Planetary orbital data.** Semi-major axes and orbital periods: negative $\sigma$. No pattern.
+
+**Infinite well potential.** 312 states, 7/15 constants, $-0.3\sigma$. No pattern.
+
+The pattern is not a generic property of all physical data. It is not an artifact of the scanning protocol. The protocol produces null results on systems that lack inverse-power-law spectral degeneracy.
+
+### The potential gradient
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Potential</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>States</th>
+      <th style={{textAlign:"left", paddingRight:"24px"}}>Constants</th>
+      <th style={{textAlign:"left"}}>$\sigma$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Coulomb ($1/r$)</td>
+      <td>465</td>
+      <td>15/15</td>
+      <td>$+7.7\sigma$</td>
+    </tr>
+    <tr>
+      <td>Harmonic oscillator ($r^2$)</td>
+      <td>351</td>
+      <td>11/15</td>
+      <td>$+2.1\sigma$</td>
+    </tr>
+    <tr>
+      <td>Infinite well</td>
+      <td>312</td>
+      <td>7/15</td>
+      <td>$-0.3\sigma$</td>
+    </tr>
+  </tbody>
+</table>
+
+Full pattern for Coulomb, partial for harmonic oscillator, none for infinite well. The critical mathematical property is **spectral degeneracy**: the Coulomb potential has hidden SO(4) symmetry producing accidental degeneracy; the harmonic oscillator has weaker SU(3) degeneracy; the infinite well has none.
+
+---
+
+## The Two Faces: Coherence and Dissipation
+
+The fingerprint is not uniform. It exhibits two complementary density profiles depending on whether the system is governed by coherent (unitary) or dissipative (irreversible) dynamics.
+
+**Coherence-dominant profile** (hydrogen, Shroud, sphere): elevated density of irrational geometric constants ($\sqrt{3}$, $\pi/2$, $\varphi$) and reduced density of rational fractions ($1/7$, $3/13$).
+
+**Dissipative-dominant profile** (Kerr QNM, decay chains, blackbody): the inversion, exponential and rational constants ($e$, $\ln 2$, $1/7$, $3/13$) elevated, geometric constants ($\sqrt{3}$, $\pi/2$, $\varphi$) suppressed.
+
+The inversion is systematic: every constant amplified on the coherence side is suppressed on the dissipative side, and vice versa.
+
+The physical interpretation: irrational geometric constants are associated with incommensurate frequencies, optimal packing, and resonance avoidance properties of phase-stable dynamics. Exponential and rational constants are associated with doubling times, decay rates, and discrete periodicity properties of dissipative relaxation.
+
+This dual-sector structure is consistent with two canonical functional calculi, the unitary group $e^{-itC}$ (coherence) and the contractive semigroup $e^{-tK}$ (dissipation) applied to a common positive selfadjoint carrier operator $L$. Both sectors are faces of a single holomorphic semigroup $z \mapsto e^{-zL}$, evaluated on the imaginary axis (coherence) and the positive real axis (dissipation).
+
+---
+
+## The $\alpha$-Independence Result
+
+A critical finding: the fingerprint is **$\alpha$-independent**. The hydrogen dipole transition matrix was reconstructed with artificially varied values of $\alpha$ (from $0.1\alpha$ to $10\alpha$). In every case, the pattern was identical.
+
+This is structurally expected: in atomic units, $\alpha$ enters only as an overall scale factor that cancels in dimensionless eigenvalue ratios. The pattern is generated by the geometry of quantum state space, the coupling structure determined by selection rules, not by the specific value of the electromagnetic coupling.
+
+Yet $\alpha$ **belongs** to the fingerprint set. The value $1/137$ appears in image scans with eight independent measurements in the Shroud data (all within 0.2%), and the closest eigenvalue ratio to $1/\alpha = 137.036$ in the hydrogen dipole Laplacian is 136.92 (deviation 0.084%).
+
+$\alpha$ does not generate the fingerprint, but it is a member. The value $1/137.036$ is selected by a spectral self-consistency condition, the closure condition of the admissible operator algebra under which the fingerprint set is stable. This is consistent with the Tier-0 fixed-point resolution of $\alpha$ established in companion work.
+
+---
+
+## Reconstruction Constraints
+
+Can the fingerprint be faked? Systematic testing says: not easily.
+
+**Non-physical carriers.** Three families of operators on hexagonal lattices, plus six additional weight-field families totalling over 300 runs, all produced $\sigma < 0$. No analytic or stochastic construction on a non-physical carrier reproduced positive $\sigma$.
+
+**Physical carriers.** A three-parameter generator on the correct physical carrier (hydrogen geometry) achieved $\sigma \approx +2$, closer, but still far below the empirical values ($+7.7\sigma$ to $+15.3\sigma$). The gap between the best synthetic result and the empirical values remains unexplained.
+
+**The signal's location.** The positive $\sigma$ resides in the phase correlations between spatial frequencies of the weight field. It is not in the power spectrum alone, not in the marginal distributions, and not in any single feature, it's in the multi-scale correlations that physical curvature processes produce and that simple analytic constructions do not.
+
+---
+
+## What Is Proved and What Is Conditional
+
+**Empirical (reproducible, independently verifiable):**
+- 15-constant pattern at $+7.7\sigma$ in hydrogen dipole operator
+- 15-constant pattern at $+12.3\sigma$ in Kerr QNM decay rates
+- Coherence/dissipation duality with systematic inversion
+- Characterised domain boundary (present in $1/r$, absent in hard-wall, CMB, nuclear)
+- $\alpha$-independence
+- Reconstruction failure on non-physical carriers
+
+**Conditional (supported by data, not fully proved):**
+- The dual-sector compatibility theorem (Theorem 6.4 of the paper) requires two terminal hypotheses: local $C^2$-patching openness, and spectral transport of the recursion morphisms
+- The identification of fingerprint constants as eigenvalue ratios of a common carrier $L$ is an interpretation consistent with the data, not a derivation
+
+**Not claimed:**
+- Universality of the pattern across all physical systems
+- Closure of the theorem-level programme
+- Any specific interpretation of the anomalous objects (Shroud, sphere)
+
+---
+
+## Connection to the Everything Equation Programme
+
+Within the Everything Equation programme, the Universal Spectral Fingerprint is a **Layer-4 additive branch** — corroborative evidence for the spectral-geometric determination of the physical constants, not part of the Tier-0 selector proof.
+
+The connection is through the **Coherence Field**: given any system with a positive selfadjoint curvature operator $L$, the coherence generator $C = h(L)$ (where $h$ is an admissible bounded symbol) defines a unitary group preserving phase structure. The fingerprint constants are the dimensionless eigenvalue ratios of $L$. The dissipative counterpart uses the same operator through the Fejér semigroup $\Lambda_T(L) = T^{-1}\int_0^T e^{-tL}\,dt$ — the same time-averaging mechanism that appears in the capacity inequality of the Tier-1 Coupled Dirac–$\Lambda$ System.
+
+The dual-sector structure (coherence vs dissipation) maps directly onto the reversible/irreversible decomposition that is the deepest structural feature of the Tier-1 system: the reversible Dirac carrier coupled to the irreversible $\Lambda$ budget through the capacity inequality. The fingerprint provides empirical evidence that this decomposition is not just a theoretical construction but a measurable property of physical systems across scales.
+
+The fingerprint does not replace or modify the upstream $\Lambda$-selection chain (Selector 9 + E2 + E1) that determines $\alpha$. It provides independent evidence from a different direction: $\alpha$ is determined by spectral geometry, and the fingerprint is a cross-domain signature of that geometry.
+
+---
+
+## Testable Predictions
+
+The following predictions are falsifiable consequences of the observations:
+
+**P1. Curvature systems carry the pattern; non-curvature systems do not.** Test: apply the protocol to protein crystal structures, superconductor vortex lattices, seismic wave data, and gravitational lensing maps.
+
+**P2. The coherence/dissipation ratio correlates with system dynamics.** Test: measure across damped oscillators with increasing damping or fluids at increasing Reynolds number. The ratio of geometric to exponential constant density should shift monotonically.
+
+**P3. The potential gradient extends to screened Coulomb and Yukawa potentials.** Test: construct dipole transition matrices for screened Coulomb, Yukawa, and Morse potentials. Pattern strength should decrease as the potential departs from pure $1/r$.
+
+**P4. Period-6 rationals are systematically suppressed on the coherence side.** Test: expand the library to include additional period-6 repeating decimals and rescan.
+
+**P5. Selection-rule connectivity beats geometric connectivity.** Test: compare atomic transition networks against geometric lattices of comparable size. The pattern should be stronger in systems where the connectivity is determined by quantum selection rules.
+
+---
+
+## How to Replicate
+
+The scanning protocol is deterministic and fully specified. The strongest results, hydrogen dipole and Kerr QNM - depend on exact, publicly available numerical data and standard linear algebra. No special software is required beyond standard scientific computing (Python with scipy, numpy, and scikit-image, or equivalent). All results reported in the paper can be independently replicated.
+
+---
+
+**Author:** Jeremy Rodgers
+**Framework:** The Everything Equation
+**Status:** March 2026
+**Technical paper:** *A Cross-Domain Dual-Sector Spectral Fingerprint in Curvature-Dominated Systems: Empirical Characterisation, Operator-Theoretic Framework, and Reconstruction Constraints* - see the papers section for the full data, statistical analysis, and theorem-engineering status.
+
+© 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
