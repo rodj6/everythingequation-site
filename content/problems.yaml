@@ -23,6 +23,7 @@ problems:
       - problem:strong-cp
       - problem:yukawa-prediction
       - problem:spectral-action-yukawa-gap
+      - problem:fine-structure-constant
 
   - id: problem:strong-cp
     slug: strong-cp
@@ -89,6 +90,7 @@ problems:
       - problem:strong-cp
       - problem:yukawa-prediction
       - problem:quantum-measurement
+      - problem:fine-structure-constant
 
   - id: problem:universal-spectral-fingerprint
     slug: universal-spectral-fingerprint
@@ -108,6 +110,29 @@ problems:
       - problem:quantum-gravity
       - problem:lawhood
       - problem:mathematical-foundations
+      - problem:fine-structure-constant
+
+  - id: problem:fine-structure-constant
+    slug: fine-structure-constant
+    title: Why Is the Fine-Structure Constant 1/137?
+    domain: Physics/Foundations
+    status: public
+    maturity: complete
+    manualPath: true
+    direct_answer: >
+      Within the Dirac–Λ framework, the Standard Model parameter set is reduced to a single
+      geometric modulus, but Tier-1 cannot determine that modulus internally. The Everything
+      Equation resolves the remaining ambiguity at Tier-0: the one-parameter family collapses
+      to a unique fixed point, yielding the fine-structure constant as a law-level output rather
+      than a free physical input.
+    monograph_refs: []
+    supported_by: []
+    connections_hint:
+      - problem:standard-model
+      - problem:grand-unified-theory
+      - problem:spectral-action-yukawa-gap
+      - problem:lawhood
+      - problem:universal-spectral-fingerprint
 
   - id: problem:grand-unified-theory
     slug: grand-unified-theory
@@ -128,6 +153,7 @@ problems:
       - problem:strong-cp
       - problem:yukawa-prediction
       - problem:spectral-action-yukawa-gap
+      - problem:fine-structure-constant
 
   - id: problem:quantum-gravity
     slug: quantum-gravity
@@ -156,6 +182,7 @@ problems:
     connections_hint:
       - problem:cosmological-constant
       - problem:grand-unified-theory
+      - problem:universal-spectral-fingerprint
 
   - id: problem:cosmological-constant
     slug: cosmological-constant
@@ -260,6 +287,7 @@ problems:
     connections_hint:
       - problem:standard-model
       - problem:navier-stokes
+      - problem:universal-spectral-fingerprint
 
   - id: problem:lawhood
     slug: lawhood
@@ -284,6 +312,8 @@ problems:
       - problem:mathematical-foundations
       - problem:standard-model
       - problem:quantum-gravity
+      - problem:universal-spectral-fingerprint
+      - problem:fine-structure-constant
 
   - id: problem:quantum-measurement
     slug: quantum-measurement
