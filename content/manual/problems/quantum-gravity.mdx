@@ -1,354 +1,317 @@
 # Quantum Gravity and Spacetime Structure
 
-**From a canonical spectral bridge with Osterwalder-Schrader positivity to the derivation of dimensionality, null structure, and the equivalence principle, all as consequences of closure admissibility under $\mathcal{L} = \Omega,\Delta,\partial(\mathcal{L})$.**
-
----
-
-## Contents
-
-1. [The Problem That Has Defeated Physics for a Century](#1-the-problem-that-has-defeated-physics-for-a-century)
-2. [Why Every Standard Approach Fails](#2-why-every-standard-approach-fails)
-3. [A Unified Spectral Framework for Quantum Gravity](#3-a-unified-spectral-framework-for-quantum-gravity)
-4. [The Canonical Spectral Bridge](#4-the-canonical-spectral-bridge)
-5. [The Fejér–Hardy Constant: A Universal Normalisation](#5-the-fejérhardy-constant-a-universal-normalisation)
-6. [Osterwalder-Schrader Positivity: The Constructive QFT Core](#6-osterwalder-schrader-positivity-the-constructive-qft-core)
-7. [Small-Data Global Closure: The Einstein Equations Coupled](#7-small-data-global-closure-the-einstein-equations-coupled)
-8. [The Structural Unification of QFT and General Relativity](#8-the-structural-unification-of-qft-and-general-relativity)
-9. [Why Spacetime Has 3+1 Dimensions](#9-why-spacetime-has-31-dimensions)
-10. [Light, Time, and the Null Structure of Causality](#10-light-time-and-the-null-structure-of-causality)
-11. [Gravity as Closure Geometry](#11-gravity-as-closure-geometry)
-12. [Falsifiable Observables and Certified Predictions](#12-falsifiable-observables-and-certified-predictions)
-13. [Observer Limits, $\Upsilon$-Collapse, and the Architecture of Reality](#13-observer-limits-υ-collapse-and-the-architecture-of-reality)
-14. [Extensions: Warp Geometry, q-desics, and the Inverse Mass-Energy Map](#14-extensions-warp-geometry-q-desics-and-the-inverse-mass-energy-map)
-15. [What This Means for Physics](#15-what-this-means-for-physics)
+**From five standard physical requirements to the Einstein equations: proved, not assumed, via contractive quantum Markov semigroup structure, canonical spectral bridge, and Osterwalder–Schrader positivity.**
 
 ---
 
 ## 1. The Problem That Has Defeated Physics for a Century
 
-Quantum mechanics and general relativity are the two most successful theories in the history of science. Quantum field theory predicts the anomalous magnetic moment of the electron to twelve decimal places. General relativity predicts the precession of Mercury's orbit, the bending of light around galaxies, and the waveforms of gravitational radiation from colliding black holes all confirmed with extraordinary precision.
+Quantum mechanics and general relativity are the two most successful theories in the history of science. Quantum field theory predicts the anomalous magnetic moment of the electron to twelve decimal places. General relativity predicts the precession of Mercury's orbit, the bending of light around galaxies, and the waveforms of gravitational radiation from colliding black holes, all confirmed with extraordinary precision.
 
 These two theories are also structurally incompatible.
 
-Quantum field theory is formulated on a fixed background metric. It requires a linear Hilbert space with a rigid $L^2$ probability structure. General relativity, by contrast, is a background-independent theory of spacetime geometry whose dynamics follow from the Einstein-Hilbert action. The metric is not a fixed stage, it's a dynamical variable that curves and deforms in response to matter and energy.
+Quantum field theory is formulated on a fixed background metric. It requires a linear Hilbert space with a rigid $L^2$ probability structure. General relativity, by contrast, is a background-independent theory of spacetime geometry whose dynamics follow from the Einstein–Hilbert action. The metric is not a fixed stage, it's a dynamical variable that curves and deforms in response to matter and energy.
 
-The incompatibility is not merely aesthetic. Attempts to quantise gravity perturbatively produce non-renormalisable divergences, an infinite tower of counterterms that cannot be absorbed into a finite number of parameters. Attempts to import quantum principles directly into curved spacetime fail to produce a universal vacuum structure or a consistent treatment of vacuum energy. The cosmological constant problem, the $10^{120}$-fold discrepancy between quantum vacuum energy predictions and the observed near-flatness of spacetime is the worst prediction in the history of physics.
+The incompatibility is not merely aesthetic. Attempts to quantise gravity perturbatively produce non-renormalisable divergences, an infinite tower of counterterms that cannot be absorbed into a finite number of parameters. The cosmological constant problem, the $10^{120}$-fold discrepancy between quantum vacuum energy predictions and the observed near-flatness of spacetime is the worst prediction in the history of physics.
 
 For a century, this impasse has defined the frontier of fundamental physics. String theory, loop quantum gravity, asymptotic safety, causal set theory, noncommutative geometry all have contributed insights, none has achieved closure.
 
-The work presented here takes a fundamentally different approach. It does not attempt to quantise the metric, modify the Einstein equations, introduce extra dimensions, or assume supersymmetry. Instead, it asks: what *must* the quantum-gravitational framework look like if it is required to satisfy the same closure admissibility principle that governs measurement, probability, and particle content?
-
-The answer is a canonical, background-covariant spectral coupling that satisfies every structural requirement simultaneously and is mathematically complete in the constructive QFT sense.
+The work presented here takes a fundamentally different approach. It does not attempt to quantise the metric, modify the Einstein equations, introduce extra dimensions, or assume supersymmetry. Instead, it proves that **Einstein gravity is forced by the minimal structural requirements of quantum mechanics itself**, positive Hilbert space, microcausality, stable records, a local effective field theory limit, and local fermions.
 
 ---
 
 ## 2. Why Every Standard Approach Fails
 
-Understanding why the Tier-0 approach works requires understanding precisely why conventional approaches do not.
+Understanding why this approach works requires understanding precisely why conventional approaches do not.
 
-**Perturbative quantum gravity** treats the metric as $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ and quantises the perturbation $h_{\mu\nu}$ as a spin-2 field. The resulting theory is non-renormalisable: at each loop order, new divergent counterterms appear that are not present in the original Lagrangian. No finite set of parameters can absorb all the infinities. The theory is predictive only as a low-energy effective field theory, not as a fundamental framework.
+**Perturbative quantum gravity** treats the metric as $g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu}$ and quantises the perturbation $h_{\mu\nu}$ as a spin-2 field. The resulting theory is non-renormalisable: at each loop order, new divergent counterterms appear. The theory is predictive only as a low-energy effective field theory, not as a fundamental framework.
 
 **Higher-curvature gravity** adds terms like $R^2$ and $R_{\mu\nu}R^{\mu\nu}$ to the action, which can improve renormalisability. But these higher-derivative theories generically introduce ghost modes propagating degrees of freedom with negative kinetic energy that render the vacuum unstable.
 
 **String theory** achieves UV finiteness by replacing point particles with extended objects, but requires extra dimensions, supersymmetry, and a landscape of $10^{500}$ vacua that makes prediction effectively impossible without additional selection principles.
 
-**Loop quantum gravity** discretises spacetime at the Planck scale using spin networks and spin foams, but struggles to recover a smooth semiclassical limit and has not produced falsifiable predictions at accessible energies.
+**Loop quantum gravity** discretises spacetime at the Planck scale using spin networks, but struggles to recover a smooth semiclassical limit and has not produced falsifiable predictions at accessible energies.
 
-**Semiclassical gravity** couples a classical metric to quantum matter via $G_{\mu\nu} = 8\pi G \langle T_{\mu\nu}\rangle$, but this produces internal inconsistencies: the expectation value of the stress-energy tensor contains vacuum energy contributions that backreact catastrophically on the geometry.
+**Semiclassical gravity** couples a classical metric to quantum matter via $G_{\mu\nu} = 8\pi G \langle T_{\mu\nu}\rangle$, but the expectation value of the stress-energy tensor contains vacuum energy contributions that backreact catastrophically on the geometry.
 
 The common thread: every approach either modifies the equations (and loses contact with established physics), introduces speculative structure (extra dimensions, supersymmetric partners, discretised geometry), or fails to produce a self-consistent framework that simultaneously reproduces general relativity *and* quantum field theory in the appropriate limits.
 
-The Tier-0 framework addresses all of these failures at once, not by choosing a particular quantisation scheme, but by deriving the structural conditions that any consistent quantum-gravitational theory must satisfy.
+---
+
+## 3. The Universal Reduction Theorem
+
+The central result of the quantum gravity programme is not a new equation. It is a **forcing theorem**: Einstein gravity is not assumed, it's the unique low-energy consequence of five standard physical requirements that any acceptable quantum theory must satisfy.
+
+### The five requirements
+
+These are the minimal structural properties used throughout mainstream relativistic QFT and classical GR:
+
+**(UQ1) Positive-norm Hilbert space and unitary time evolution.** A physical Hilbert space with positive-definite inner product and a strongly continuous unitary time-translation group.
+
+**(UQ2) Microcausality.** A net of local observable algebras satisfying spacelike commutativity, localised observers do not influence each other instantaneously outside the lightcone.
+
+**(UQ3) Stable macroscopic records.** A macroscopic record sector (coarse-grained observables) that becomes persistent and jointly consultable without contextual disturbance.
+
+**(UQ4) Local finite-derivative low-energy limit.** A classical low-energy effective description expressible as a local finite-derivative expansion in curvature and its covariant derivatives.
+
+**(UQ5) Local fermions.** A fermionic sector satisfying the canonical anticommutation relations, compatible with locality and positivity.
+
+### The forcing chain
+
+The proof proceeds through a single logical chain, established across a five-paper series:
+
+**Step 1: Contractive QMS structure is forced.** Requirements UQ1–UQ3 together force a contractive completely positive semigroup on the record sector. This is the universal reduction: any theory satisfying these requirements necessarily has quantum Markov semigroup structure on its macroscopic observables.
+
+**Step 2: Algebraic collapse forces commutative records.** The contractive QMS structure, combined with local consultability (UQ3) and microcausality (UQ2), forces the record algebra $\mathcal{R}$ to be commutative.
+
+**Step 3: Smooth manifold emerges.** By the Gelfand–Naimark theorem, the commutative record algebra $\mathcal{R}$ is isomorphic to $C(M)$ for a compact Hausdorff space $M$. Spectral regularity of the QMS generator promotes this to a smooth manifold.
+
+**Step 4: Spin structure and Dirac operator emerge.** Local fermions (UQ5) with the canonical anticommutation relations and spectral dimension $\chi_s = 8$ force spin structure and a Dirac-type first-order generator $D$ on $M$.
+
+**Step 5: Spectral triple via Connes reconstruction.** The data $(\mathcal{R}, \mathcal{H}, D)$ satisfy the axioms of a spectral triple. By Connes' reconstruction theorem, this is equivalent to Riemannian geometry on $M$.
+
+**Step 6: Spectral action and heat-kernel asymptotics.** The unique admissible action functional on the spectral triple is the spectral action $\mathrm{Tr}(f(D^2/\Lambda^2))$. Its heat-kernel expansion gives:
+
+$$
+S \sim f_4 \Lambda^4 a_0 + f_2 \Lambda^2 a_2 + f_0\, a_4 + \cdots
+$$
+
+where the Seeley–DeWitt coefficients $a_{2k}$ encode curvature invariants.
+
+**Step 7: Einstein equations via Lovelock uniqueness.** In four dimensions, the leading-order second-derivative gravitational Lagrangian is uniquely $\mathcal{L} = c_0 + c_1 R$ (Einstein–Hilbert with cosmological constant). Lovelock's theorem fixes the field equations to be the Einstein equations. Higher-curvature corrections are present but determined by the same spectral data with no independent tunings.
+
+> **Universality Theorem.** Any relativistic quantum theory satisfying UQ1–UQ5 must reduce in the low-energy regime to Einstein gravity with cosmological constant. The Einstein equations are not assumed, they are forced by consistency.
 
 ---
 
-## 3. A Unified Spectral Framework for Quantum Gravity
+## 4. The Five-Paper Series
 
-The centrepiece of the quantum gravity programme is a mathematically rigorous spectral construction that achieves what the field calls global unconditional closure, a precise technical definition meaning:
+The proof is distributed across five papers, each establishing a distinct layer:
 
-1. The spectral bridge $\mathfrak{B}_{\mathrm{QG}}$ is **canonical** - independent of all auxiliary choices (Wick rotation path, strip parameter, smoothing window).
-2. The Euclidean theory with covariance $Q^{-1}$ for $Q = D_{g_E} + \mathfrak{B}_{\mathrm{QG}}$ satisfies **Osterwalder-Schrader positivity**, guaranteeing that a physical Wightman theory with a self-adjoint, semibounded Hamiltonian can be reconstructed.
-3. The coupled Einstein-spectral system enjoys **small-data global existence and uniqueness** in generalised harmonic gauge.
-4. There exist **falsifiable observables** with certified, outward-rounded intervals derived from geometric heat-kernel and zeta-function data.
+**Paper 1: The Canonical Spectral Bridge.** Constructs a background-covariant spectral coupling $\mathfrak{B}_{\mathrm{QG}}(g_E) = F_\sigma(|D_{g_E}|) + \sum_k \alpha_k \Pi_{\{\xi_k\}}(|D_{g_E}|)$ from a holomorphic Fredholm determinant via Herglotz transform. Proves canonical independence (Wick path, strip, smoothing window), the universal Fejér–Hardy constant $3/(32\pi)$, OS positivity for the coupled operator $Q = D_{g_E} + \mathfrak{B}_{\mathrm{QG}}$, and small-data global existence for the GH-gauge Einstein spectral system.
 
-No other approach to quantum gravity simultaneously achieves all four of these conditions. Let us see how each is established.
+**Paper 2: Spectral Rigidity and Capacity Constraints.** Establishes compact resolvent stability, Weyl asymptotic invariance under the canonical perturbation, the capacity inequality framework with positive dissipative generator $K \geq 0$, OS-derived trace inequalities, and the spectral envelope. The leading Weyl coefficient is rigidly geometric:
+
+$$
+N_Q(\lambda) = \frac{1}{8\pi^2}\mathrm{Vol}(\mathcal{M})\,\lambda^4 + O(\lambda^3)
+$$
+
+**Paper 3: Algebraic Collapse and Structural Closure.** Proves algebraic collapse at active constraints, modular rigidity ($p = 2$ enforced by implementability, the Born rule is derived, not assumed), primitive completeness within the GKSL class, minimal carrier classification, and sector exclusion via OS measure positivity.
+
+**Paper 4: From Stable Records to Einstein Gravity.** The universal reduction theorem: any theory satisfying UQ1–UQ5 necessarily induces a contractive QMS on its record sector, forces commutativity, excludes nonlocal dynamics, requires heat-kernel asymptotics, and reduces to the canonical QMS–spectral framework whose low-energy limit is uniquely Einsteinian.
+
+**Paper 5: The Universality Theorem.** The capstone: proves Einstein dynamics are forced by contractive QMS structure and discharges all five verification obligations required for unconditionality, primitivity of the QMS, nondegeneracy of the mass Hessian, the Schatten trace-class bound, positivity of the internal spectral gap, and contractivity of the metric self-consistency map.
 
 ---
 
-## 4. The Canonical Spectral Bridge
+## 5. The Canonical Spectral Bridge
 
-The construction begins on an oriented, time-oriented, globally hyperbolic spin $4$-manifold $(\mathcal{M}, g)$ of bounded geometry and its Euclideanisation $(\mathcal{M}, g_E)$. Let $D_{g_E}$ denote the Euclidean Dirac operator, essentially self-adjoint under completeness and bounded geometry.
+The spectral bridge is the mathematical object that couples quantum structure to gravitational geometry. It is constructed on an oriented, globally hyperbolic spin 4-manifold $(\mathcal{M}, g)$ and its Euclideanisation $(\mathcal{M}, g_E)$.
 
-The spectral bridge is constructed from a holomorphic Fredholm determinant. Fix a compactly localised cutoff $\chi \in C_c^\infty(\mathcal{M})$ and define the regularised operator:
+Starting from a compactly localised cutoff $\chi$ and the regularised operator $\widehat{B}(\lambda) := \chi\,\vartheta(D_{g_E}^2 + \lambda^2/\Lambda^2)(D_{g_E}^2 + \lambda^2)^{-1}\chi$, one forms the regularised Fredholm determinant $\Delta(\lambda) = \det_2(I - \widehat{B}(\lambda))$ and the boundary slope $s_\sigma(t) = \partial_t \operatorname{Im}\log\Delta(\sigma + it)$.
 
-$$
-\widehat{B}(\lambda) := \chi,\vartheta!\left(\frac{D_{g_E}^2 + \lambda^2}{\Lambda^2}\right)(D_{g_E}^2 + \lambda^2)^{-1}\chi
-$$
-
-for $\operatorname{Re}\lambda \geq \sigma_* \gg 1$. This is holomorphic in $\lambda$ with values in the Hilbert-Schmidt class $\mathfrak{S}_2$, with operator norm strictly less than one in the relevant half-plane.
-
-From this, define the regularised Fredholm determinant $\Delta(\lambda) := \det_2(I - \widehat{B}(\lambda))$ and the boundary slope:
+The canonical bridge is:
 
 $$
-s_\sigma(t) := \partial_t,\operatorname{Im}\log\Delta(\sigma + it)
+\mathfrak{B}_{\mathrm{QG}}(g_E) = F_\sigma(|D_{g_E}|) + \sum_k \alpha_k\,\Pi_{\{\xi_k\}}(|D_{g_E}|)
 $$
 
-The boundary slope encodes the spectral information of the gravitational geometry in a form that can be processed by harmonic analysis. It is mapped via a normalised Herglotz transform into a bounded Borel function of $|D_{g_E}|$, producing the canonical bridge:
+where $F_\sigma$ is the Herglotz transform of the Fejér-smoothed boundary slope and the coefficients $\alpha_k = \frac{32}{3}m_k$ are canonically determined, no empirical fitting.
 
-$$
-\mathfrak{B}*{\mathrm{QG}}(g_E) := F*\sigma(|D_{g_E}|) + \sum_k \alpha_k,\Pi_{{\xi_k}}(|D_{g_E}|)
-$$
-
-where $F_\sigma$ is the Herglotz transform of the Fejér-smoothed boundary slope, $\Pi_{{\xi_k}}$ are spectral projectors of $|D|$ at atomic spectral points, and the coefficients $\alpha_k = \frac{32}{3}m_k$ are canonically determined by the symmetric atomic masses $m_k$ - with no empirical fitting.
-
-Three independence results establish canonicity:
-
-**Wick-path independence.** Changing the Euclideanisation path within a homotopy class adds the boundary values of a holomorphic function. The Fejér packet functional annihilates such coboundaries by integration by parts and moment conditions, and Fejér-Hardy uniqueness completes the argument.
-
-**Strip independence.** For any $\sigma, \sigma' \geq \sigma_*$, Cauchy-Riemann equations and two integrations by parts show that the normalised slope functionals coincide.
-
-**Diffeomorphism covariance.** The spectral functional calculus intertwines spectral measures under spin-preserving diffeomorphisms: $U_\phi,\mathfrak{B}*{\mathrm{QG}}(g_E),U*\phi^{-1} = \mathfrak{B}_{\mathrm{QG}}(\phi^*g_E)$.
-
-The bridge is therefore background-covariant and free of all auxiliary choices. It is a *spectral invariant* of the gravitational geometry.
+Three independence results establish canonicity: **Wick-path independence** (coboundary annihilation by the Fejér packet + Hardy uniqueness), **strip independence** (Cauchy–Riemann equations + two integrations by parts), and **diffeomorphism covariance** (spectral functional calculus intertwines spectral measures).
 
 ---
 
-## 5. The Fejér–Hardy Constant: A Universal Normalisation
+## 6. The Fejér–Hardy Constant: A Universal Normalisation
 
-At the heart of the spectral framework lies a universal constant derived by explicit Fourier analysis not assumed, not fitted, not adjusted.
-
-Let $P_T(t) = \frac{1}{2\pi T}\left(\frac{\sin(Tt/2)}{t/2}\right)^2$ be the Fejér kernel with $\kappa_T = P_T(0) = T/(2\pi)$, and let $W_T$ be a three-window, moment-solved cosine packet. Then for any even $s \in BV_{\mathrm{loc}}(\mathbb{R})$:
+At the heart of the spectral framework lies a universal constant derived by explicit Fourier analysis:
 
 $$
-\lim_{T \to \infty} \frac{1}{\kappa_T^2}\int_{\mathbb{R}} W_T(t),\partial_t(P_T * s)(t),dt = \frac{3}{32\pi},s(0)
+\lim_{T \to \infty} \frac{1}{\kappa_T^2}\int_{\mathbb{R}} W_T(t)\,\partial_t(P_T * s)(t)\,dt = \frac{3}{32\pi}\,s(0)
 $$
 
-This is the **Fejér-Hardy evaluator constant**: $3/(32\pi)$. It is derived from the Fourier structure of the Fejér kernel and the moment conditions on the cosine packet. It is verified by explicit computation on the test function $s(t) = (1 + t^2)^{-1}$ with known Fourier transform $\hat{s}(\omega) = \pi e^{-|\omega|}$.
+where $P_T$ is the Fejér kernel, $W_T$ is a three-window moment-solved cosine packet, and $\kappa_T = T/(2\pi)$.
 
-The constant determines the canonical finite-rank coefficients: a symmetric spectral atom of mass $m_k$ at $\pm\xi_k$ contributes $(3/8)m_k$ to the boundary evaluator, yielding $\alpha_k = \frac{32}{3}m_k$ upon matching.
+This is the **Fejér–Hardy evaluator constant**: $3/(32\pi)$. It determines the canonical finite-rank coefficients and establishes that no alternative normalisation is possible — the Fejér–Hardy uniqueness theorem shows this is the *only* consistent boundary extraction.
 
-The Fejér-Hardy uniqueness theorem further establishes that the evaluator is the *only* consistent boundary extraction: if the normalised functional vanishes on a holomorphic function's boundary slope, then the boundary slope itself vanishes at the origin. No alternative normalisation is possible.
-
-A deep structural connection emerges: the same scalar $32\pi/3$ appears independently in the modular (VMN) channel through $K(1/\sqrt{2})$ and a canonical Eichler integral. The quantum-gravity spectral channel and the modular channel are glued by the *same boundary evaluator at the origin*. No free normalisation remains.
+The same scalar $32\pi/3$ appears independently in the modular (VMN) channel. The quantum-gravity spectral channel and the modular channel are glued by the same boundary evaluator at the origin.
 
 ---
 
-## 6. Osterwalder-Schrader Positivity: The Constructive QFT Core
+## 7. Osterwalder–Schrader Positivity: The Constructive QFT Core
 
-Osterwalder-Schrader (OS) positivity is the gold standard for constructive quantum field theory. If a Euclidean theory satisfies OS positivity, it admits analytic continuation to a physical Minkowski-signature theory with a self-adjoint, semibounded Hamiltonian and a positive-definite Hilbert space. This is the *reconstruction theorem* - the mathematical bridge between Euclidean path integrals and physical quantum mechanics.
+OS positivity is the gold standard for constructive quantum field theory. If a Euclidean theory satisfies OS positivity, the Osterwalder–Schrader reconstruction theorem guarantees a physical Wightman theory with a self-adjoint, semibounded Hamiltonian and a positive-definite Hilbert space.
 
-The spectral framework proves OS positivity for the bounded perturbation $Q = D_{g_E} + \mathfrak{B}_{\mathrm{QG}}(g_E)$ through half-space factorisation.
-
-Assume a reflection structure: an antiunitary involution $\Theta$ on $L^2(\mathcal{M}, S)$ with $\Theta^2 = 1$ and $\Theta D_{g_E}\Theta = D_{g_E}$. In a collar near $t = 0$, the Dirac operator decomposes as $D_{g_E} = \Gamma^0(\partial_t + A)$ with $A(-t) = A(t)$. The Lax-Phillips / Calderón boundary construction yields a Dirichlet-to-Neumann operator $K \geq 0$ on the boundary $\Sigma = {t = 0}$ generating a contraction semigroup, and:
+The framework proves OS positivity for the coupled operator $Q = D_{g_E} + \mathfrak{B}_{\mathrm{QG}}$ through half-space factorisation. A Dirichlet-to-Neumann operator $K \geq 0$ on the boundary $\Sigma = \{t = 0\}$ generates a contraction semigroup, and:
 
 $$
-\langle f,,\Theta Q^{-1} g\rangle = \int_0^\infty!!\int_0^\infty \langle f(t),,e^{-(t+s)K},g(s)\rangle_{L^2(\Sigma)},dt,ds
+\langle f,\,\Theta Q^{-1} g\rangle = \int_0^\infty\!\!\int_0^\infty \langle f(t),\,e^{-(t+s)K}\,g(s)\rangle\,dt\,ds
 $$
 
-OS reflection positivity follows immediately:
+OS reflection positivity follows immediately because $K \geq 0$ and $e^{-uK}$ is a contraction semigroup. Self-adjointness of $Q$ follows from Kato–Rellich because $\mathfrak{B}_{\mathrm{QG}}$ is bounded.
 
-$$
-\langle f,,Q^{-1}\Theta f\rangle = \left|\int_0^\infty e^{-tK}f(t),dt\right|^2 \geq 0
-$$
+The consequence: the spectral framework produces a **constructively valid quantum theory** on curved spacetime, not merely a formal expression, but a theory with a positive-definite Hilbert space, unitary time evolution, and a self-adjoint Hamiltonian.
 
-since $K \geq 0$ and $e^{-uK}$ is a contraction semigroup. Self-adjointness of $Q$ follows from Kato-Rellich because $\mathfrak{B}_{\mathrm{QG}}$ is bounded.
-
-The consequence: OS reconstruction yields a Wightman theory with a self-adjoint, semibounded Hamiltonian. The spectral framework produces a *physically realisable* quantum field theory on curved spacetime, not merely a formal expression, but a constructively valid quantum theory in the rigorous mathematical sense.
+Note: the Dirichlet-to-Neumann operator $K$ appearing here is the same class of object as the $K_{\mathrm{OS}}$ identified as the missing boundary operator of the Standard Model spectral triple in the companion Dirac–$\Lambda$ programme. The OS boundary operator plays a central structural role across both the quantum gravity and the particle physics layers of the framework.
 
 ---
 
-## 7. Small-Data Global Closure: The Einstein Equations Coupled
+## 8. Small-Data Global Closure
 
-The final piece of the spectral framework is the PDE closure: the coupled Einstein-spectral system admits small-data global existence and uniqueness in generalised harmonic (GH) gauge.
+The coupled Einstein–spectral system admits small-data global existence and uniqueness in generalised harmonic gauge.
 
-In GH gauge, the Einstein equations reduce to a quasilinear wave system $\Box_g g = \mathcal{N}(g, \partial g)$ with gauge source terms. For the uncoupled case, Lindblad-Rodnianski-type results establish small-data global existence and decay in weighted Sobolev spaces.
-
-Coupling to the spectral sector enters through a bounded zero-order source $F_{\mathrm{spec}}(u)$ linear in the perturbation $u = (h, k)$:
+The spectral channel enters as a bounded zero-order source:
 
 $$
-|F_{\mathrm{spec}}(u)(t)|*{H^{s-1}*\delta} \leq C|\mathfrak{B}*{\mathrm{QG}}|*{\mathrm{op}}|u(t)|*{H^s*\delta}
+\|F_{\mathrm{spec}}(u)(t)\|_{H^{s-1}_\delta} \leq C\|\mathfrak{B}_{\mathrm{QG}}\|_{\mathrm{op}}\|u(t)\|_{H^s_\delta}
 $$
 
-Because $\mathfrak{B}_{\mathrm{QG}}$ is bounded, a consequence of the spectral functional calculus, the coupling enters as a zero-order perturbation that does not change the principal symbol of the wave system. Standard GH energy estimates and Klainerman-Sobolev decay yield global control:
+Because $\mathfrak{B}_{\mathrm{QG}}$ is bounded, the coupling does not change the principal symbol of the wave system. Standard GH energy estimates and Klainerman–Sobolev decay give global control. For sufficiently small initial data, the bounded coupling term is absorbed by the integrable decay weight, and Grönwall's inequality gives global existence with decay.
 
-$$
-\frac{d}{dt}\mathcal{E}*s(t) \leq -c,\langle t\rangle^{-1-\eta}\mathcal{E}*s(t) + C|\mathfrak{B}*{\mathrm{QG}}|*{\mathrm{op}}\mathcal{E}_s(t)
-$$
-
-For sufficiently small initial data, the bounded coupling term is absorbed by the integrable decay weight, and Grönwall's inequality gives global existence with decay $\mathcal{E}_s(t) \lesssim \mathcal{E}_s(0)\langle t\rangle^{-\eta}$.
-
-This is a global result not merely perturbative or local-in-time. The spectral channel does not destabilise the Einstein dynamics. Gravity and quantum structure coexist in a mathematically well-posed coupled system.
+This is a **global result**, not merely perturbative or local-in-time. The spectral channel does not destabilise the Einstein dynamics. Gravity and quantum structure coexist in a mathematically well-posed coupled system.
 
 ---
 
-## 8. The Structural Unification of QFT and General Relativity
+## 9. The Structural Closure Layer
 
-Beyond the spectral framework, the programme establishes a complete dynamical unification through a single scalar structural mediator $\chi$ - interpreted as the local deviation from the Tier-$\Omega$ monadic fixed point.
+Paper 3 establishes the operator-algebraic backbone through five structural results:
 
-The unified action is:
+**Algebraic collapse at active constraints.** At scales where the capacity inequality saturates, the algebra of observables collapses to a finite-dimensional structure, this is the mechanism that forces discrete mass spectra from continuous spectral data.
 
-$$
-\mathcal{L}*{\mathrm{unified}} = \sqrt{-g}\left[\frac{1}{16\pi G}R - \frac{1}{2}\xi_R\chi^2 R - \frac{1}{4}F^a*{\mu\nu}F^{a\mu\nu} + \bar{\psi}i\gamma^\mu D_\mu\psi + \frac{1}{2}(\nabla\chi)^2 - \frac{\lambda}{4}\chi^4 + \mathcal{L}_{\mathrm{matter}}\right]
-$$
+**Modular rigidity ($p = 2$).** The Hilbert–Schmidt ($p = 2$) geometry is the unique admissible metric on the moduli space, enforced by implementability of the QMS dynamics. The Born rule, that probabilities are given by $|\langle\psi|\phi\rangle|^2$ is a **derived consequence**, not a postulate.
 
-Every term is fixed by dimensional analysis and structural necessity. No higher-curvature operators. No extra dimensions. No vacuum fine-tuning. The key structural properties:
+**Primitive completeness.** The GKSL generator structure is complete: every admissible QMS on the record algebra admits a GKSL generator with the correct constraint count.
 
-**Exact classical limits.** Setting $\chi \to 0$ recovers pure Einstein gravity ($G_{\mu\nu} = 0$). Setting $g_{\mu\nu} \to \eta_{\mu\nu}$ recovers flat-space QFT with the Standard Model Lagrangian. Both limits are exact, with no residue terms.
+**Minimal carrier classification.** The admissible carrier structures are classified, this determines which geometric backgrounds are compatible with the QMS constraints.
 
-**Vanishing cosmological constant.** The effective cosmological constant vanishes identically at the physical vacuum $\chi_0 = 0$. An exact bidual spectral projection forbids vacuum counterterms in the renormalised effective action, enforcing $\Lambda_{\mathrm{eff}} = 0$ to all orders in perturbation theory as a *derived structural invariant* - not a fine-tuning condition.
-
-**Born-rule rigidity in curved backgrounds.** The $L^2$ Hilbert-Schmidt geometry is the unique renormalisation-stable probability metric. Non-quadratic probability laws are dynamically excluded under the flow. The Born rule does not merely survive quantisation on curved spacetime, it's the only probability structure that can.
-
-**Yang-Mills mass gap preservation.** The non-Abelian gauge sector reduces exactly to ordinary four-dimensional Yang-Mills theory at the fixed point, and the unconditional spectral mass gap is preserved under full coupling to the $\chi$ sector, ensuring infrared confinement stability.
-
-**No fifth forces.** The scalar $\chi$ propagates as an exactly massless field in flat spacetime and acquires only curvature-induced effective mass in weakly curved backgrounds. No fifth forces, equivalence-principle violations, or scalar gravitational radiation modes arise.
+**Sector exclusion via OS measure positivity.** Sectors that violate OS positivity are excluded from the admissible class. This is the mechanism that forces $\theta = 0$ (no strong CP violation) and excludes non-physical gauge configurations.
 
 ---
 
-## 9. Why Spacetime Has 3+1 Dimensions
+## 10. Connection to the Everything Equation Programme
 
-Perhaps the most striking result in the programme is the derivation of dimensionality itself.
+Within the Everything Equation programme, the quantum gravity paper series provides the rigorous operator-theoretic foundation for several Tier-0 results:
 
-In essentially all standard formulations of physics, the number of spatial dimensions is fixed at the outset: one *assumes* a manifold of prescribed dimension. Even in noncommutative geometry, the spectral data typically presuppose a dimensional regime through regularity axioms.
+**Lovelock selection.** The Tier-0 derivation of GR (the operators $\Omega\Delta\partial$ selecting the gravitational law-form) is the structural version of what Papers 4–5 prove rigorously: $\partial$ collapses higher-derivative Lagrangians to second order, $\Delta$ removes ghost sectors (Ostrogradsky), $\Omega$ canonicalises to the Lovelock family. In four dimensions, this is uniquely Einstein–Hilbert.
 
-The Tier-0 framework takes a different stance: **dimensionality is not assumed; it is selected as the unique closure-stable residue of a recursive admissibility procedure**.
+**Newton's constant.** The Iyer–Wald derivation of $G$ (requiring the law-stable record functional to coincide with Noether-charge entropy) is the Tier-0 expression of the capacity constraint structure proved in Paper 2.
 
-The construction begins from *pre-dimensional spectral data* $(\mathcal{A}, \mathcal{H}, D)$ - a noncommutative operator algebra acting on a separable Hilbert space with an unfixed generator $D$. No ambient dimension is assumed. The usual spectral-triple axioms (compact resolvent, bounded commutators, regularity) are treated as *possible outcomes* of the recursion, not inputs.
+**The DN operator.** The Dirichlet-to-Neumann operator $K \geq 0$ appearing in the OS positivity proof is the same structural object as $K_{\mathrm{OS}}$, the missing boundary operator of the Standard Model spectral triple, connecting the quantum gravity programme to the Coupled Dirac–$\Lambda$ System.
 
-The central mechanism is **recursive gauge collapse**. Define a noncommutativity defect energy:
+**The capacity inequality.** The scale-by-scale constraint $S_\Omega \leq D_T(K)$ proved in Paper 2 is the same capacity inequality that forces three generations, determines fermion masses, and provides the normalization bridge for $\alpha^{-1} = 137$ in the Tier-1 system.
 
-$$
-\mathcal{E}*\ell := \sum*{i < j}|[X_i^{(\ell)}, X_j^{(\ell)}]|^2
-$$
-
-Under the Tier-0 recursion, this energy obeys a superlinear coercive decay:
-
-$$
-\mathcal{E}*{\ell+1} \leq \mathcal{E}*\ell - c_d,\mathcal{E}_\ell^{1+\alpha}, \qquad \alpha > 0
-$$
-
-where $c_d$ is a dimensional coercivity constant. Dimension is then defined as the minimal integer $d$ for which a commutator-Sobolev coercivity certificate $|[D,f]| \gtrsim |f|_{H^1_d}$ persists under the full $\partial\Delta\Omega$ recursion.
-
-The result: the only closure-stable configuration supporting both a three-generator commuting spatial derivation module *and* a fourth derivation inducing irreversible scaling is a $(3+1)$-type fixed point. Time emerges as the monotone recursion-depth coordinate required to reach stabilisation:
-
-$$
-t_L := \min{n \in \mathbb{N} : (\partial\Delta\Omega)^n(L) = (\partial\Delta\Omega)^{n+1}(L)}
-$$
-
-Time is not a primitive parameter. It is a closure residue, the index of how many admissibility layers are needed for stabilisation. The arrow of time, the distinction between spatial and temporal directions, and the number of each are all *derived* from the same recursive structure.
-
----
-
-## 10. Light, Time, and the Null Structure of Causality
-
-The speed of light $c$ is typically presented as a kinematic fact of relativistic spacetime, the invariant speed limit built into the metric. The Tier-0 framework reveals it as something deeper: a **closure invariant of causal structure**.
-
-The analysis makes a sharp distinction between null and timelike sectors:
-
-**Null structure (light, gravitational radiation)** is characterised by the absence of proper time. Null trajectories carry no internal clock, accumulate no records, and support no dissipative evolution. They are $\Omega$-closed and invariant fixed points of the admissibility recursion with respect to temporal collapse. Light is not fundamentally a "time-evolving thing with a velocity" but the observable activation of spacetime's null relational structure under electromagnetic coupling.
-
-**Timelike structure (massive matter, observers)** necessarily acquires operational time through $\Delta$-mediated irreversibility and record formation. Proper time is inseparable from collapse-bearing, record-forming dynamics.
-
-The constant $c$ therefore does not describe the speed of a signal through a medium. It describes the boundary between structures that can form records (and therefore experience time) and structures that cannot. This boundary is fixed by closure, it's the same for electromagnetic radiation and gravitational radiation because both occupy the null sector, not because of a dynamical coincidence.
-
-The result: the invariance of $c$, the vanishing of photon proper time, and the coincidence of light-speed and gravity-speed propagation are all structural consequences of the same admissibility principle — not independent postulates.
+**Record-flow duality.** The contractive QMS on the record algebra (Papers 3–5) is the rigorous instantiation of the $\Delta$-sector (irreversible, contractive, record-bearing) in the Tier-0 reversible/irreversible decomposition.
 
 ---
 
 ## 11. Gravity as Closure Geometry
 
-With the spectral framework, the structural unification, and the null/timelike classification in hand, gravity itself receives a complete structural account.
+The programme produces a structural classification of gravity that goes beyond the standard description:
 
-Gravity is not a propagating substance analogous to light. It is an **$\Omega$-stable closure geometry** whose manifestations differ by sector:
+**Gravitational waves** are null-sector excitations, they propagate at $c$ because they occupy the same causal boundary as light. They are record-silent during transit, carrying phase and correlation without proper-time accumulation.
 
-**Gravitational waves** are null, coherence-dominated excitations constrained to the causal boundary. They propagate at $c$ because they occupy the same null sector as light record-silent during transit, carrying phase and correlation without proper-time accumulation.
+**Static and dynamical gravity** (free fall, orbital mechanics, cosmological structure) arise from curvature persistence sourced by record-bearing matter. The **equivalence principle**, the universality of free fall is a structural consequence: if gravity is realised as closure geometry organising admissible worldlines rather than as a charge-carrying field, then trajectories cannot depend on microphysical details.
 
-**Static and dynamical gravity** (free fall, orbital mechanics, cosmological structure) arise from $\Delta$-mediated curvature persistence sourced by record-bearing matter in the $\Lambda$-sector. The equivalence principle, the universality of free fall is a sector consequence of motion in closure geometry. If gravity is not mediated by a charge-carrying field but realised as $\Omega$-stable closure geometry organising admissible worldlines, then trajectories cannot depend on the microphysical details selected by $\Delta$.
+**The speed of light $c$** is a closure invariant, the boundary between structures that can form records (and therefore experience time) and structures that cannot. This boundary is the same for electromagnetic and gravitational radiation because both occupy the null sector.
 
-**Quantum gravity** is the problem of consistent record formation on a curvature background that is itself $\Omega$-closed and partially record-silent. The apparent divide between classical geometry and quantum behaviour arises from sector misclassification, treating gravity as if it were a local, record-bearing field of the same type as matter. The correct quantum completion is spectral: governed by admissible operator constraints (semiboundedness, positivity, stability under coarse-graining) rather than by a naïve graviton gas.
-
-This classification explains why gravitational quantisation is *difficult*: gravity occupies a partially record-silent role, structuring causal relations and persistence without itself generically instantiating localisable, dissipative records. The spectral framework provides exactly the right type of completion, one that respects the closure character of gravity rather than forcing it into a matter-like mould.
+These are structural interpretations consistent with the proved theorems. The rigorous content is: the universal reduction theorem forces Einstein dynamics, the OS positivity proof constructs the physical Hilbert space, and the capacity constraints determine the spectral content. The sector classification is the Tier-0 reading of these results.
 
 ---
 
-## 12. Falsifiable Observables and Certified Predictions
+## 12. Dimensionality and Spacetime Structure
 
-The framework is not merely mathematically complete - it is empirically testable.
+The emergence of smooth four-dimensional manifold structure is a **derived consequence** of the forcing chain, not an input:
 
-Three falsifiable observables are defined as certified linear functionals of Seeley-DeWitt heat-kernel coefficients:
+**Step 1:** Algebraic collapse forces the record algebra $\mathcal{R}$ to be commutative.
+
+**Step 2:** Gelfand–Naimark gives a topological space $M$.
+
+**Step 3:** Spectral regularity of the QMS generator promotes $M$ to a smooth manifold.
+
+**Step 4:** Local fermions with CAR and spectral dimension $\chi_s = 8$ force spin structure and a Dirac operator.
+
+The specific number $3 + 1$ emerges because: three spatial dimensions are the unique configuration supporting both a commuting spatial derivation module from the spectral triple and the correct spectral dimension for the Dirac operator, while the single temporal direction is forced by the monotone dissipative structure of the QMS, the direction along which records accumulate and the Lyapunov functional decreases.
+
+Within the Tier-0 framework, this is expressed as: dimensionality is the unique closure-stable residue of recursive admissibility applied to pre-dimensional spectral data. The formal proof of $D = 4$ specifically requires the spectral dimension calculation and the spin structure forcing from Paper 5.
+
+---
+
+## 13. Falsifiable Observables and Certified Predictions
+
+The framework is not merely mathematically complete, it's empirically testable.
+
+Three falsifiable observables are defined as certified linear functionals of Seeley–DeWitt heat-kernel coefficients:
 
 $$
-\mathcal{B}*{\mathrm{obs}} = L_B[a_0, a_2, a_4], \qquad \mathcal{G}*{\mathrm{obs}} = L_G[a_0, a_2, a_4], \qquad \mathcal{E}_{\mathrm{obs}} = L_E[a_0, a_2, a_4]
+\mathcal{B}_{\mathrm{obs}} = L_B[a_0, a_2, a_4], \qquad \mathcal{G}_{\mathrm{obs}} = L_G[a_0, a_2, a_4], \qquad \mathcal{E}_{\mathrm{obs}} = L_E[a_0, a_2, a_4]
 $$
 
-where $L_\bullet$ are explicit rational combinations of the Seeley-DeWitt coefficients and the Fejér normalisation constant. Using outward rounding, each observable yields a certified numerical interval not a point prediction, but a bounded range within which the physical value must lie if the framework is correct.
+Using outward rounding, each observable yields a **certified numerical interval**, not a point prediction, but a bounded range within which the physical value must lie if the framework is correct. An empirical value falling outside the certified interval would refute the framework.
 
-The recipe is deterministic, reproducible, and falsifiable: an empirical value falling outside the certified interval would refute the framework.
+The five verification obligations discharged in Paper 5 provide additional falsification channels:
+- If the QMS on any physical record sector fails to be primitive
+- If the mass Hessian at any saturation point is degenerate
+- If the Schatten trace-class bound fails for any admissible generator
+- If the internal spectral gap vanishes
+- If the metric self-consistency map fails to be contractive
 
-Additionally, the recursive gauge collapse mechanism predicts a specific non-Kolmogorov dissipation anomaly, a spectral tail with exponent $\alpha > 5/3$ in appropriate high-coherence regimes providing an independent falsification channel.
-
----
-
-## 13. Observer Limits, $\Upsilon$-Collapse, and the Architecture of Reality
-
-The programme extends beyond the quantum-gravitational dynamics to address the structural limits of observation itself.
-
-**$\Upsilon$-collapse** is a Class VI law-level phenomenon distinct from quantum measurement ($\Delta$-collapse) in which globally entangled closure structures resolve into a single admissible equivalence class. It is characterised as a *topological equivalence recognition event*: collapse occurs precisely when the global closure lattice admits a unique $\Upsilon$-consistent equivalence class under $\Omega\Delta\partial$, and persistent superposition corresponds to the absence of such uniqueness.
-
-This explains non-local memory coherence, identity persistence across time, and the structural limits on observer absoluteness established by recent no-go theorems (timelike friendliness results). Apparent paradoxes in quantum observer scenarios correspond to **inadmissible $\Psi$-paths** attempted reindexings of perspective that exceed admissible kinetic bounds or violate global equivalence constraints rather than physical inconsistencies.
-
-The Observer-Locus Instability Problem is resolved by **$\Psi$-admissibility conditions** governing allowed observer shifts, forbidden locus paths, and instability thresholds. Observer freedom is real but not arbitrary. Paradox is excluded by law-level constraints rather than by interpretive fiat.
+Each is a concrete, testable condition.
 
 ---
 
-## 14. Extensions: Warp Geometry, q-desics, and the Inverse Mass-Energy Map
-
-The framework generates results in domains that might seem unexpected for a quantum gravity programme:
-
-**Momentum-conserving warp bubbles.** The closure framework provides a conservation-consistent treatment of warp-bubble spacetimes with distributional geometry and generalised junction conditions. A control-volume momentum theorem proves that warp-bubble acceleration is possible *only* through boundary momentum flux reactionless propulsion is excluded by construction. Feasibility is reduced to three independent quantitative constraint families, making both success and failure sharply decidable.
-
-**q-desic admissibility.** The quantum-gravitational generalisation of classical geodesic motion (Koch-Riahinia-Rincón q-desics) receives a systematic admissibility classification. Without modifying the q-desic equations, explicit admissibility criteria partition the state space into admissible, inadmissible, and marginal classes, clarifying which quantum-gravitational corrections to geodesic motion are physically meaningful.
-
-**The inverse mass-energy map.** The relation $E = mc^2$ is extended to a full bidirectional correspondence: rest mass density is expressed as a purely geometric quantity $\rho = \frac{c^2}{8\pi G}G_{\mu\nu}u^\mu u^\nu$, consistent across ADM Hamiltonian, variational, PDE, spectral, and thermodynamic formulations of general relativity. This inverse map is identified as a canonical example of a Law-Space Monad with invariant $c^2$, connecting general relativity to the broader Tier-0 operator-theoretic framework.
-
----
-
-## 15. What This Means for Physics
+## 14. What This Means for Physics
 
 ### Quantum gravity has a constructively valid solution
 
-The spectral framework satisfies every requirement for mathematical completeness in the constructive QFT sense: canonical independence, OS positivity, small-data global closure, and falsifiable observables with certified intervals. This is not a conjecture or a programme, it is a proven result.
+The spectral framework satisfies every requirement for mathematical completeness in the constructive QFT sense: canonical independence, OS positivity, small-data global closure, and falsifiable observables with certified intervals. This is a proved result.
 
-### The cosmological constant problem is resolved
+### Einstein gravity is forced, not assumed
 
-The unified $\chi$-action enforces $\Lambda_{\mathrm{eff}} = 0$ at the physical vacuum as a derived structural invariant, not a fine-tuning condition. The bidual spectral projection forbids vacuum counterterms to all orders in perturbation theory.
+The universal reduction theorem shows that any theory satisfying five standard physical requirements must produce Einstein gravity at low energies. GR is not one option among many, it's the unique option compatible with quantum mechanics, locality, and stable records.
 
-### Spacetime dimensionality is derived, not assumed
+### The Born rule is derived
 
-The number $3+1$ is the unique closure-stable fixed point of recursive gauge collapse starting from pre-dimensional spectral data. Spatial dimensions and temporal direction are structural residues of admissibility, not primitive inputs.
+Modular rigidity ($p = 2$) is proved from implementability of the QMS dynamics. The Born rule is a structural consequence of the contractive semigroup structure, not an independent postulate.
 
-### $c$ is a closure invariant, not a signal speed
+### Manifold structure emerges from algebra
 
-The invariant speed of light and gravitational radiation, the vanishing of photon proper time, and the boundary between record-bearing and record-free structure are all consequences of the same admissibility principle.
+Smooth four-dimensional geometry is not assumed, it's derived from the commutative record algebra via Gelfand–Naimark, spectral regularity, and Connes reconstruction. Spacetime is an *output* of the framework.
 
-### Gravity is classified, not just described
+### The framework connects to the full programme
 
-Gravity is $\Omega$-stable closure geometry. Gravitational waves are null-sector excitations. The equivalence principle is a sector consequence of motion in closure geometry. Quantum gravity is a spectral completion, not a matter-like quantisation.
+The OS boundary operator, the capacity inequality, the spectral action, and the record-flow decomposition all appear in both the quantum gravity series and the Coupled Dirac–$\Lambda$ System. The same mathematical structures that force Einstein gravity also force three generations, determine fermion masses, and yield $\alpha^{-1} = 137$ on the adopted $S^3$ carrier.
 
-### The framework produces a single, integrated architecture
-
-Quantum measurement. The Born rule. Particle content and the Standard Model. Grand unification. The generation count. And now: quantum gravity, spacetime structure, dimensionality, the cosmological constant, causal structure, and the limits of observation. All from:
+One equation. One admissibility principle. One architecture from quantum gravity to particle masses.
 
 $$
-\mathcal{L} = \Omega,\Delta,\partial(\mathcal{L})
+\mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})
 $$
 
-One equation. One admissibility principle. One architecture for physical law.
+---
+
+## Technical Papers
+
+**The Canonical QMS–Spectral Quantum Gravity Series:**
+
+> *A Unified Spectral Framework for Quantum Gravity: Canonical Bridge, Fejér–Hardy Normalization, and Global Closure*
+> Jeremy Rodgers - [DOI: 10.5281/zenodo.17538401](https://doi.org/10.5281/zenodo.17538401)
+
+> *Spectral Rigidity and Capacity Constraints in Canonical Spectral Quantum Gravity: Compact Resolvent Stability, Weyl Invariance, and OS-Derived Trace Inequalities*
+> Jeremy Rodgers - [DOI: 10.5281/zenodo.18792625](https://doi.org/10.5281/zenodo.18792625)
+
+> *Algebraic Collapse, Modular Rigidity, and Sector Exclusion in Contractive Quantum Markov Semigroups: Structural Closure of the Canonical QMS Program*
+> Jeremy Rodgers - [DOI: 10.5281/zenodo.18792714](https://doi.org/10.5281/zenodo.18792714)
+
+> *From Stable Records to Einstein Gravity: A Universal Reduction Theorem for Quantum Gravity*
+> Jeremy Rodgers
+
+> *A Universality Theorem for Quantum Gravity: Einstein Dynamics Forced by Contractive Quantum Markov Semigroup Structure*
+> Jeremy Rodgers
 
 ---
 
 **Author:** Jeremy Rodgers
-**Framework:** Tier-0 / The Everything Equation
-**Supporting papers:** See the papers section below for full technical details, proofs, and formal statements.
+**Framework:** The Everything Equation
+**Status:** March 2026
 
 © 2026 Jeremy Rodgers. All rights reserved. Content released under CC BY-NC-ND 4.0 unless otherwise stated.
