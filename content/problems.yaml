@@ -17,6 +17,9 @@ problems:
       - zenodo:18475611
       - zenodo:18358761
       - zenodo:18718045
+      - zenodo:18736273
+      - zenodo:19041471
+      - zenodo:19042647
     connections_hint:
       - problem:grand-unified-theory
       - problem:mathematical-foundations
@@ -24,6 +27,29 @@ problems:
       - problem:yukawa-prediction
       - problem:spectral-action-yukawa-gap
       - problem:fine-structure-constant
+      - problem:three-fermion-generations
+
+  - id: problem:three-fermion-generations
+    slug: three-fermion-generations
+    title: Why Exactly Three Fermion Generations?
+    domain: Physics/Particle Physics
+    status: public
+    maturity: complete
+    manualPath: true
+    direct_answer: >
+      The generation count is not a free input. In the coupled Dirac–Λ framework,
+      a double-squeeze mechanism forces N = 3 uniquely: N ≤ 2 is excluded by the
+      CP-capacity barrier, while N ≥ 4 is excluded by load–cap crossing in the
+      capacity inequality. Exactly three generations are admissible.
+    monograph_refs: []
+    supported_by:
+      - zenodo:18358761
+      - zenodo:18736273
+      - zenodo:19041471
+    connections_hint:
+      - problem:standard-model
+      - problem:grand-unified-theory
+      - problem:spectral-action-yukawa-gap
 
   - id: problem:strong-cp
     slug: strong-cp
@@ -59,6 +85,7 @@ problems:
     monograph_refs: []
     supported_by:
       - zenodo:18721002
+      - zenodo:19041701
     connections_hint:
       - problem:standard-model
       - problem:grand-unified-theory
@@ -79,11 +106,16 @@ problems:
       missing boundary-channel constraint on the internal Dirac operator and its admissible couplings.
     monograph_refs: []
     supported_by:
-      - zenodo:18688812
+      - zenodo:19041187
       - zenodo:18709502
       - zenodo:18718045
       - zenodo:18717563
       - zenodo:18721002
+      - zenodo:19041612
+      - zenodo:19041701
+      - zenodo:19042647
+      - zenodo:19042717
+      - zenodo:19041471
     connections_hint:
       - problem:standard-model
       - problem:grand-unified-theory
@@ -91,6 +123,7 @@ problems:
       - problem:yukawa-prediction
       - problem:quantum-measurement
       - problem:fine-structure-constant
+      - problem:three-fermion-generations
 
   - id: problem:universal-spectral-fingerprint
     slug: universal-spectral-fingerprint
@@ -105,7 +138,8 @@ problems:
       (unitary) and dissipative (irreversible) dynamics and may reflect a shared positive selfadjoint
       spectral carrier governing multi-scale physical structure.
     monograph_refs: []
-    supported_by: []
+    supported_by:
+      - zenodo:19026722
     connections_hint:
       - problem:quantum-gravity
       - problem:lawhood
@@ -126,7 +160,11 @@ problems:
       to a unique fixed point, yielding the fine-structure constant as a law-level output rather
       than a free physical input.
     monograph_refs: []
-    supported_by: []
+    supported_by:
+      - zenodo:19028471
+      - zenodo:19042717
+      - zenodo:19041187
+      - zenodo:19026722
     connections_hint:
       - problem:standard-model
       - problem:grand-unified-theory
@@ -147,6 +185,8 @@ problems:
     supported_by:
       - zenodo:18474556
       - zenodo:18709502
+      - zenodo:18718045
+      - zenodo:18721002
     connections_hint:
       - problem:standard-model
       - problem:quantum-gravity
@@ -154,6 +194,7 @@ problems:
       - problem:yukawa-prediction
       - problem:spectral-action-yukawa-gap
       - problem:fine-structure-constant
+      - problem:three-fermion-generations
 
   - id: problem:quantum-gravity
     slug: quantum-gravity
@@ -179,6 +220,11 @@ problems:
       - zenodo:17889989
       - zenodo:18014526
       - zenodo:17538401
+      - zenodo:18792625
+      - zenodo:18792714
+      - zenodo:18792786
+      - zenodo:18792878
+      - zenodo:19041187
     connections_hint:
       - problem:cosmological-constant
       - problem:grand-unified-theory
@@ -202,6 +248,7 @@ problems:
       - zenodo:18298571
       - zenodo:18073598
       - zenodo:17550178
+      - zenodo:19041187
     connections_hint:
       - problem:arrow-of-time
       - problem:quantum-gravity
@@ -279,11 +326,12 @@ problems:
       - "Appendix J.2"
     supported_by:
       - zenodo:17813117
-      - zenodo:18344573
+      - zenodo:18883301
       - zenodo:18399919
       - zenodo:18383199
       - zenodo:18373510
       - zenodo:17826373
+      - zenodo:19027222
     connections_hint:
       - problem:standard-model
       - problem:navier-stokes
@@ -303,7 +351,7 @@ problems:
       - zenodo:18081205
       - zenodo:18080442
       - zenodo:18493638
-      - zenodo:18342623
+      - zenodo:19027222
       - zenodo:17823404
       - zenodo:17851714
       - zenodo:17859631
@@ -333,6 +381,7 @@ problems:
       - zenodo:18028427
       - zenodo:18205246
       - zenodo:18704783
+      - zenodo:19041187
     connections_hint:
       - problem:quantum-gravity
       - problem:lawhood
