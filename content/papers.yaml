@@ -27,10 +27,10 @@ papers:
       - problem:lawhood
       - problem:mathematical-foundations
 
-  - id: paper:zenodo:18342623
-    zenodo: 18342623
+  - id: paper:zenodo:19027222
+    zenodo: 19027222
     visibility: public
-    role: Tier-0 framework statement (law-level closure and selection principle)
+    role: "The Tier-0 Framework: A Law-Level Closure and Selection Principle for Physics"
     supports:
       - problem:lawhood
       - problem:mathematical-foundations
@@ -42,10 +42,10 @@ papers:
     supports:
       - problem:mathematical-foundations
 
-  - id: paper:zenodo:18344573
-    zenodo: 18344573
+  - id: paper:zenodo:18883301
+    zenodo: 18883301
     visibility: public
-    role: Fixed-point admissibility foundation for mathematics
+    role: "Mathematics as Closure-Stable Structure: A Fixed-Point Admissibility Framework"
     supports:
       - problem:mathematical-foundations
 
@@ -177,7 +177,7 @@ papers:
 
 
   # =========================
-  # Arrow of Time (existing)
+  # Arrow of Time
   # =========================
   - id: paper:zenodo:17545541
     zenodo: 17545541
@@ -197,14 +197,17 @@ papers:
   # =========================
   # Tier-1 Dynamical Realization (Dirac–Λ)
   # =========================
-  - id: paper:zenodo:18688812
-    zenodo: 18688812
+  - id: paper:zenodo:19041187
+    zenodo: 19041187
     visibility: public
-    role: "A Coupled Dirac–Λ Dynamical System: Constrained Spectral Unification with Structural Consequences"
+    featured: true
+    role: "The Coupled Dirac–Λ Dynamical System: Unified Operator Equations for a Capacity-Constrained Spectral Action Framework"
     supports:
       - problem:cosmological-constant
       - problem:quantum-gravity
       - problem:quantum-measurement
+      - problem:spectral-action-yukawa-gap
+      - problem:fine-structure-constant
 
 
   # =========================
@@ -283,7 +286,35 @@ papers:
   - id: paper:zenodo:17538401
     zenodo: 17538401
     visibility: public
-    role: Unified spectral framework for quantum gravity (canonical bridge, Fejér–Hardy normalization, and global closure)
+    role: "A Unified Spectral Framework for Quantum Gravity: Canonical Bridge, Fejér–Hardy Normalization, and Global Closure"
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18792625
+    zenodo: 18792625
+    visibility: public
+    role: "Spectral Rigidity and Capacity Constraints in Canonical Spectral Quantum Gravity: Compact Resolvent Stability, Weyl Invariance, and OS-Derived Trace Inequalities"
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18792714
+    zenodo: 18792714
+    visibility: public
+    role: "Algebraic Collapse, Modular Rigidity, and Sector Exclusion in Contractive Quantum Markov Semigroups: Structural Closure of the Canonical QMS Program"
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18792786
+    zenodo: 18792786
+    visibility: public
+    role: "From Stable Records to Einstein Gravity: A Universal Reduction Theorem for Quantum Gravity within the Standard Physical Problem Class"
+    supports:
+      - problem:quantum-gravity
+
+  - id: paper:zenodo:18792878
+    zenodo: 18792878
+    visibility: public
+    role: "A Universality Theorem for Quantum Gravity: Einstein Dynamics Forced by Contractive Quantum Markov Semigroup Structure"
     supports:
       - problem:quantum-gravity
 
@@ -291,6 +322,48 @@ papers:
   # =========================
   # Standard Model / GUT / Particle structure
   # =========================
+  - id: paper:zenodo:19041471
+    zenodo: 19041471
+    visibility: public
+    featured: true
+    role: "Generation Forcing in the Capacity-Constrained Dirac–Lambda Framework: The Capacity Box Construction"
+    supports:
+      - problem:standard-model
+      - problem:spectral-action-yukawa-gap
+
+  - id: paper:zenodo:19041612
+    zenodo: 19041612
+    visibility: public
+    role: "KOS as the Osterwalder–Schrader Boundary Operator of the Standard Model Spectral Triple"
+    supports:
+      - problem:spectral-action-yukawa-gap
+
+  - id: paper:zenodo:19041701
+    zenodo: 19041701
+    visibility: public
+    role: "The Fermion Mass Prediction Problem in the Coupled Dirac–Lambda Framework: Balance Equations and Multi-Scale KKT Forcing"
+    supports:
+      - problem:standard-model
+      - problem:yukawa-prediction
+      - problem:spectral-action-yukawa-gap
+
+  - id: paper:zenodo:19042647
+    zenodo: 19042647
+    visibility: public
+    featured: true
+    role: "Structural Closure of the Coupled Dirac–Lambda Framework: Global Mass Determination and Scheme Rigidity"
+    supports:
+      - problem:standard-model
+      - problem:spectral-action-yukawa-gap
+
+  - id: paper:zenodo:19042717
+    zenodo: 19042717
+    visibility: public
+    role: "Geometric Fixed-Point Existence and Spectral Rigidity in the Coupled Dirac–Lambda System"
+    supports:
+      - problem:spectral-action-yukawa-gap
+      - problem:fine-structure-constant
+
   - id: paper:zenodo:18709502
     zenodo: 18709502
     visibility: public
@@ -299,6 +372,7 @@ papers:
     supports:
       - problem:grand-unified-theory
       - problem:standard-model
+      - problem:spectral-action-yukawa-gap
 
   - id: paper:zenodo:18718045
     zenodo: 18718045
@@ -308,6 +382,7 @@ papers:
     supports:
       - problem:standard-model
       - problem:grand-unified-theory
+      - problem:spectral-action-yukawa-gap
 
   - id: paper:zenodo:18717563
     zenodo: 18717563
@@ -316,6 +391,7 @@ papers:
     supports:
       - problem:standard-model
       - problem:strong-cp
+      - problem:spectral-action-yukawa-gap
 
   - id: paper:zenodo:18721002
     zenodo: 18721002
@@ -325,6 +401,7 @@ papers:
       - problem:standard-model
       - problem:grand-unified-theory
       - problem:yukawa-prediction
+      - problem:spectral-action-yukawa-gap
 
   - id: paper:zenodo:18474556
     zenodo: 18474556
@@ -496,6 +573,31 @@ papers:
     role: Admissibility forces QSOT axioms (closure-based extension of multipartite quantum states over time)
     supports:
       - problem:quantum-measurement
+
+
+  # =========================
+  # Fine-structure constant
+  # =========================
+  - id: paper:zenodo:19028471
+    zenodo: 19028471
+    visibility: public
+    featured: true
+    role: "Resolution of the Fine-Structure Constant Problem: Tier-1 No-Go, Tier-0 Selection, and the Modular Identity at τ = i"
+    supports:
+      - problem:fine-structure-constant
+
+
+  # =========================
+  # Universal spectral fingerprint
+  # =========================
+  - id: paper:zenodo:19026722
+    zenodo: 19026722
+    visibility: public
+    featured: true
+    role: "A Cross-Domain Dual-Sector Spectral Fingerprint: Paper, Methods, and Reproducibility Materials"
+    supports:
+      - problem:universal-spectral-fingerprint
+      - problem:fine-structure-constant
 
 
   # =========================
