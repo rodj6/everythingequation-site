@@ -1,18 +1,32 @@
 # The Missing Object: How the Dirichlet-to-Neumann Operator Closes the Spectral Action Programme
 
-The Chamseddine–Connes spectral action is one of the most elegant constructions in mathematical physics. It derives the entire bosonic Lagrangian of the Standard Model, Einstein gravity, Yang–Mills gauge theory, the Higgs mechanism from a single operator-theoretic principle: the action is a spectral invariant of the Dirac operator on a product geometry.
+*Solving the Yukawa coupling problem and the fermion mass problem in the Chamseddine–Connes noncommutative geometry Standard Model, the first spectral framework to determine all nine fermion masses from first principles.*
 
-But the spectral action has a gap. It has always had a gap. The bosonic sector is derived; the fermionic sector is not. The Yukawa couplings, the nine masses of the charged fermions, the mixing angles, the CP phase go in by hand through the internal Dirac operator $D_F$. The spectral action tells you the shape of the Lagrangian but not the values of its couplings. The gauge sector is determined; the flavour sector is free.
+## The 28-Year Gap Is Closed
 
-This is not a minor gap. It is the central remaining problem of the noncommutative geometry approach to fundamental physics. Every paper in the programme since Connes' 1996 work has either worked around it or acknowledged it as open. The question has always been: **what constrains the internal Dirac operator?** What additional structure, beyond the spectral action itself, determines the Yukawa sector?
+Since 1996, the Chamseddine–Connes spectral action has been one of the most mathematically elegant approaches to fundamental physics. It derives the entire bosonic Standard Model, Einstein gravity, Yang–Mills gauge fields, the Higgs mechanism from a single principle: the action is a spectral invariant of the Dirac operator on a product geometry.
 
-This page describes the answer. The missing object is the **Dirichlet-to-Neumann operator** $K_{\mathrm{OS}}$, the Osterwalder–Schrader boundary operator of the Standard Model spectral triple, constructed as the DN map of $D_A^2$ on a collar boundary. It provides a dissipative budget that constrains the spectral action at every proper-time scale, closing the Yukawa sector and eliminating the continuous freedom that the spectral action alone leaves open.
+But for 28 years, it has had the same open problem known variously as the **Yukawa coupling problem**, the **fermion mass problem**, or simply the **undetermined internal Dirac operator**. The bosonic sector is derived. **The fermionic sector is not.** The nine fermion masses, the mixing angles, the CP phase, the entire Yukawa sector go in by hand through an unexplained choice of the finite Dirac operator $D_F$. As Barrett noted in his 2006 analysis of the noncommutative Standard Model: the Connes–Chamseddine class of Dirac operators "requires an unexplained choice of $D_F$ which is rather special" and "there are no constraints on the parameters of the fermion mass matrix." Every paper in the spectral Standard Model programme since Connes' original work has either worked around this or acknowledged it as the central remaining gap. It has been the single most repeated criticism of the spectral action approach: *"It beautifully derives gravity and gauge fields, but fermion masses are still free parameters."*
+
+**That gap is now closed.**
+
+The missing object is the **Dirichlet-to-Neumann operator** $K_{\mathrm{OS}}$ (also known in the computational and Russian literature as the **Poincaré–Steklov operator**, and in medical imaging as the **voltage-to-current map**) the Osterwalder–Schrader boundary operator of the Standard Model spectral triple, constructed as the DN map of $D_A^2$ on a collar boundary. Coupled to the spectral action through a scale-by-scale capacity inequality, this single operator:
+
+- **Forces exactly three fermion generations**, not two, not four, but three, from a double-squeeze mechanism
+- **Determines all nine charged fermion masses** uniquely on a fixed carrier, via KKT saturation equations with no free parameters in the mass sector
+- **Predicts $\sin^2\theta_W(M_Z) = 0.2316$** (0.2% accuracy) from the gauge trace factors $(k_1, k_2, k_3) = (20, 12, 12)$
+- **Excludes the strong CP phase** ($\theta = 0$, structurally, no axion required)
+- **Yields $\alpha^{-1} = 137$** through the E9\*\* normalization bridge, with zero free parameters on the adopted $S^3$ carrier
+
+The object itself is not exotic. It is the standard Dirichlet-to-Neumann map, one of the most studied operators in spectral geometry and inverse problems applied to the specific geometric setting of the Standard Model spectral triple with a collar boundary. It was always available. It just needed to be identified, constructed, and connected to the spectral action through the right coupling principle.
+
+This is, to our knowledge, the first time a spectral framework has determined the fermion mass sector from first principles rather than inputting it by hand.
 
 ---
 
 ## 1. The Gap in the Spectral Action
 
-The spectral action principle, due to Chamseddine and Connes, says: the bosonic action of a physical theory is
+The spectral action programme, also called the **noncommutative geometry Standard Model**, the **Connes–Chamseddine model**, or the **spectral Standard Model**, is built on a single principle due to Chamseddine and Connes (1997): the bosonic action of a physical theory is
 
 $$
 S_{\mathrm{bos}} = \mathrm{Tr}\!\left(f\!\left(\frac{D^2}{\Lambda^2}\right)\right)
@@ -33,9 +47,9 @@ where the Seeley–DeWitt coefficients $a_{2k}$ encode the geometric and gauge c
 
 This is a remarkable achievement. The entire bosonic Standard Model Lagrangian emerges from the spectrum of a single operator.
 
-**But the Yukawa couplings are free.** The internal Dirac operator $D_F$ on the finite space $F$ encodes the fermion mass matrices. Its entries are the Yukawa coupling constants. Nothing in the spectral action principle constrains these entries. They appear as free parameters in $D_F$, exactly as they appear as free parameters in the conventional Standard Model.
+**But the Yukawa couplings are free.** The internal Dirac operator $D_F$ on the finite space $F$ encodes the fermion mass matrices. Its entries are the Yukawa coupling constants. Nothing in the spectral action principle constrains these entries. They appear as free parameters in $D_F$, exactly as they appear as free parameters in the conventional Standard Model. As the Wikipedia article on Yukawa couplings states: "The Yukawa coupling for any given fermion in the Standard Model is an input to the theory. The ultimate reason for these couplings is not known: it would be something that a better, deeper theory should explain."
 
-The spectral action programme reduces the problem from "why these gauge groups and this Lagrangian?" (which it answers) to "why these Yukawa couplings?" (which it does not). The programme has always known this. The question is what additional structure could close the gap without destroying the elegance of the spectral approach.
+The spectral action programme reduces the problem from "why these gauge groups and this Lagrangian?" (which it answers) to "**why these Yukawa couplings?**" (which it does not). This is the fermion mass problem in noncommutative geometry. The question is what additional structure could close the gap without destroying the elegance of the spectral approach.
 
 ---
 
@@ -157,7 +171,7 @@ The specific reasons $K_{\mathrm{OS}}$ was not identified earlier:
 
 **The capacity inequality is a new coupling.** Even if you construct $K_{\mathrm{OS}}$, you need a principle telling you how it constrains the spectral action. The capacity inequality $S_\Omega \leq D_T$ is that principle. It says the Dirac spectral content is bounded by the DN dissipative budget. This is a new structural ingredient, it does not follow from the spectral action principle alone.
 
-**The connection to OS reconstruction was not exploited.** The fact that the DN map is the OS boundary operator and therefore that its positivity is equivalent to the existence of a physical quantum theory was known in the axiomatic QFT literature but had not been connected to the spectral action programme. Making this connection is what identifies $K_{\mathrm{OS}}$ as the unique candidate for the missing boundary operator.
+**The connection to OS reconstruction was not exploited.** The fact that the DN map is the OS boundary operator, and therefore that its positivity is equivalent to the existence of a physical quantum theory was known in the axiomatic QFT literature but had not been connected to the spectral action programme. Making this connection is what identifies $K_{\mathrm{OS}}$ as the unique candidate for the missing boundary operator.
 
 ---
 
@@ -175,9 +189,9 @@ The missing object is not one among many candidates. It is the unique operator s
 
 ## 7. Structural Boundaries
 
-The identification of $K_{\mathrm{OS}}$ also reveals what the boundary operator **cannot** do. These are structural boundaries proved limitations, not gaps.
+The identification of $K_{\mathrm{OS}}$ also reveals what the boundary operator **cannot** do. These are structural boundaries, proved limitations, not gaps.
 
-**Exact Yukawa ratios are not law-level outputs.** On a fixed carrier, the nine fermion masses are uniquely determined by the KKT saturation equations. But the exact mass ratios depend on the geometric deficit $G_M(T)$ the carrier-specific spectral data and are therefore carrier-specific, not universal. This is proved by independent no-go theorems: within the E1–E8 system (G₃-orbit freedom on the physical Yukawa quotient manifold) and at the Tier-0 lawhood level (across-the-board no-go under minimal lawhood axioms). The mass hierarchy is law-level; the exact ratios are not.
+**Exact Yukawa ratios are not law-level outputs.** On a fixed carrier, the nine fermion masses are uniquely determined by the KKT saturation equations. But the exact mass ratios depend on the geometric deficit $G_M(T)$  the carrier-specific spectral data, and are therefore carrier-specific, not universal. This is proved by independent no-go theorems: within the E1–E8 system (G₃-orbit freedom on the physical Yukawa quotient manifold) and at the Tier-0 lawhood level (across-the-board no-go under minimal lawhood axioms). The mass hierarchy is law-level; the exact ratios are not.
 
 **The strong coupling $\alpha_s$ is structurally inaccessible.** The gauge trace factors $(k_1, k_2, k_3) = (20, 12, 12)$ determine $k_1/k_2$ (giving $\sin^2\theta_W$) but the strong coupling $g_3$ requires the absolute normalisation of $k_3$, which is blocked by two independent obstructions (Gauge Coupling Classification Theorem, GC-1/GC-2).
 
@@ -201,7 +215,7 @@ $K_{\mathrm{OS}}$ connects the spectral action programme to several well-establi
 
 ## 9. Summary
 
-The spectral action programme of Chamseddine and Connes derives the bosonic Standard Model from the spectrum of a Dirac operator. It leaves the Yukawa couplings, the fermion masses, as free parameters.
+The spectral action programme of Chamseddine and Connes derives the bosonic Standard Model from the spectrum of a Dirac operator. It leaves the Yukawa couplings, the fermion masses as free parameters.
 
 The missing object is the Dirichlet-to-Neumann operator $K_{\mathrm{OS}}$, constructed as the DN map of the squared Dirac operator on a collar boundary of the product geometry $M_4 \times F$. It is the Osterwalder–Schrader boundary operator of the Standard Model spectral triple.
 
@@ -216,44 +230,6 @@ Through the capacity inequality $S_\Omega \leq D_T(K_{\mathrm{OS}})$, this singl
 The object was not exotic or speculative. It was the standard Dirichlet-to-Neumann map, one of the most studied operators in spectral geometry applied to the specific geometric setting of the Standard Model spectral triple with a collar boundary. It was always available. It just needed to be identified, constructed, and connected to the spectral action through the capacity inequality.
 
 The Yukawa sector is no longer free. The missing object closes the programme.
-
----
-
-## Technical Papers
-
-The full construction, proofs, and structural closure are established across the following paper series:
-
-**The Coupled Dirac–Λ System**
-
-> *The Coupled Dirac–Λ Dynamical System: Unified Operator Equations for a Capacity-Constrained Spectral Action Framework*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19041187](https://doi.org/10.5281/zenodo.19041187)
-
-> *Generation Forcing in the Capacity-Constrained Dirac–Lambda Framework: The Capacity Box Construction*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19041471](https://doi.org/10.5281/zenodo.19041471)
-
-> *KOS as the Osterwalder–Schrader Boundary Operator of the Standard Model Spectral Triple*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19041612](https://doi.org/10.5281/zenodo.19041612)
-
-> *The Fermion Mass Prediction Problem in the Coupled Dirac–Lambda Framework: Balance Equations and Multi-Scale KKT Forcing*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19041701](https://doi.org/10.5281/zenodo.19041701)
-
-> *Structural Closure of the Coupled Dirac–Lambda Framework: Global Mass Determination and Scheme Rigidity*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19042647](https://doi.org/10.5281/zenodo.19042647)
-
-> *Geometric Fixed-Point Existence and Spectral Rigidity in the Coupled Dirac–Lambda System*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.19042717](https://doi.org/10.5281/zenodo.19042717)
-
-**Spectral Quantum Gravity and Canonical Closure**
-
-> *A Unified Spectral Framework for Quantum Gravity: Canonical Bridge, Fejér–Hardy Normalization, and Global Closure*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.17538401](https://doi.org/10.5281/zenodo.17538401)
-
-> *Spectral Rigidity and Capacity Constraints in Canonical Spectral Quantum Gravity: Compact Resolvent Stability, Weyl Invariance, and OS-Derived Trace Inequalities*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.18792625](https://doi.org/10.5281/zenodo.18792625)
-
-> *Algebraic Collapse, Modular Rigidity, and Sector Exclusion in Contractive Quantum Markov Semigroups: Structural Closure of the Canonical QMS Program*
-> Jeremy Rodgers — [DOI: 10.5281/zenodo.18792714](https://doi.org/10.5281/zenodo.18792714)
-
 
 ---
 
