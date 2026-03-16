@@ -22,6 +22,7 @@ problems:
       - problem:mathematical-foundations
       - problem:strong-cp
       - problem:yukawa-prediction
+      - problem:spectral-action-yukawa-gap
 
   - id: problem:strong-cp
     slug: strong-cp
@@ -41,6 +42,7 @@ problems:
       - problem:standard-model
       - problem:grand-unified-theory
       - problem:lawhood
+      - problem:spectral-action-yukawa-gap
 
   - id: problem:yukawa-prediction
     slug: yukawa-prediction
@@ -60,6 +62,33 @@ problems:
       - problem:standard-model
       - problem:grand-unified-theory
       - problem:lawhood
+      - problem:spectral-action-yukawa-gap
+
+  - id: problem:spectral-action-yukawa-gap
+    slug: spectral-action-yukawa-gap
+    title: The Yukawa Gap in the Spectral Action
+    domain: Physics/Mathematical Physics
+    status: public
+    maturity: complete
+    manualPath: true
+    direct_answer: >
+      The Chamseddine–Connes spectral action determines the bosonic Standard Model sector but leaves
+      the Yukawa sector unconstrained. In the Dirac–Λ framework, this gap is closed by the Dirichlet-to-Neumann
+      Osterwalder–Schrader boundary operator K_OS together with the capacity inequality, which supplies the
+      missing boundary-channel constraint on the internal Dirac operator and its admissible couplings.
+    monograph_refs: []
+    supported_by:
+      - zenodo:18688812
+      - zenodo:18709502
+      - zenodo:18718045
+      - zenodo:18717563
+      - zenodo:18721002
+    connections_hint:
+      - problem:standard-model
+      - problem:grand-unified-theory
+      - problem:strong-cp
+      - problem:yukawa-prediction
+      - problem:quantum-measurement
 
   - id: problem:grand-unified-theory
     slug: grand-unified-theory
@@ -79,6 +108,7 @@ problems:
       - problem:quantum-gravity
       - problem:strong-cp
       - problem:yukawa-prediction
+      - problem:spectral-action-yukawa-gap
 
   - id: problem:quantum-gravity
     slug: quantum-gravity
@@ -258,3 +288,4 @@ problems:
       - problem:quantum-gravity
       - problem:lawhood
       - problem:mathematical-foundations
+      - problem:spectral-action-yukawa-gap
