@@ -54,7 +54,7 @@ export default async function HomePage() {
         </p>
       </section>
 
-      {/* 🔥 CORE SYSTEM HOOK (NEW — MOST IMPORTANT BLOCK) */}
+      {/* 🔥 CORE SYSTEM HOOK (UNIQUE + NON-REDUNDANT) */}
       <section>
         <div className="max-w-3xl mx-auto rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-md p-8">
 
@@ -82,17 +82,14 @@ export default async function HomePage() {
             ↓ forces ↓
           </div>
 
-          {/* OUTPUTS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-medium text-slate-800 dark:text-slate-200">
-            <div>• N = 3 fermion generations</div>
-            <div>• α⁻¹ ≈ 137</div>
-            <div>• sin²θ<sub>W</sub> ≈ 0.2316</div>
-            <div>• Discrete fermion mass spectrum</div>
-          </div>
+          {/* COMPRESSED OUTPUT LINE (NO DUPLICATION) */}
+          <p className="text-center text-sm font-medium text-slate-800 dark:text-slate-200">
+            N = 3, α⁻¹ ≈ 137, sin²θ<sub>W</sub> ≈ 0.2316, discrete fermion masses
+          </p>
 
           {/* EXPLANATION */}
-          <p className="text-xs text-slate-500 mt-6 text-center">
-            A constrained spectral system where physical parameters are not inputs — they arise as solutions.
+          <p className="text-xs text-slate-500 mt-4 text-center">
+            Physical parameters arise as solutions of a constrained spectral system, not free inputs.
           </p>
 
           <div className="text-center mt-6">
@@ -103,31 +100,24 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TIER-1 */}
+      {/* TIER-1 (EXPLANATION ONLY — NO EQUATIONS) */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-1: Forced Physical System</h2>
 
           <p className="mb-4 text-slate-700 dark:text-slate-300">
-            The framework yields a coupled Dirac–Λ operator system whose spectral action
-            reproduces General Relativity, Yang–Mills gauge theory, and fermionic matter.
-            A capacity inequality couples coherent and dissipative sectors,
-            enforcing non-tunable structural constraints.
+            The coupled Dirac–Λ system is the concrete realization of the framework.
+            Its spectral action reproduces General Relativity, Yang–Mills gauge theory,
+            and fermionic matter.
           </p>
 
-          <div className="rounded-md border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-black/20 p-4 space-y-4">
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast(f(D_E^2/\Lambda^2)) + \langle \psi, D_E\psi \rangle`
-            )} />
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S_{\Omega}(D_E;T)\le D_T(K)`
-            )} />
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`\delta\!\left(S+\int (S_{\Omega}-D_T)\,d\mu\right)=0`
-            )} />
-          </div>
+          <p className="text-slate-700 dark:text-slate-300">
+            A capacity inequality couples coherent and dissipative sectors, and
+            constrained variational structure (KKT stationarity) determines physical
+            parameters through saturation conditions.
+          </p>
 
-          <div className="mt-4 flex flex-wrap gap-4">
+          <div className="mt-4">
             <Link href="/tier-1" className="text-blue-600 hover:underline">
               View full field equations
             </Link>
@@ -135,18 +125,18 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS */}
+      {/* RESULTS (EXPANDED — NOT DUPLICATE) */}
       <section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">What the System Produces</h2>
 
           <ul className="space-y-2 text-slate-700 dark:text-slate-300">
-            <li>• Exactly 3 fermion generations</li>
+            <li>• Exactly 3 fermion generations (capacity constraint)</li>
             <li>• Fine-structure constant α⁻¹ ≈ 137</li>
             <li>• Weinberg angle sin²θ_W ≈ 0.2316</li>
             <li>• Fermion mass hierarchy from KKT saturation</li>
-            <li>• Strong CP phase θ = 0</li>
-            <li>• Bare cosmological constant suppressed</li>
+            <li>• Strong CP phase θ = 0 (structural exclusion)</li>
+            <li>• Bare cosmological constant suppressed at law level</li>
           </ul>
         </div>
       </section>
