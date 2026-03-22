@@ -26,7 +26,7 @@ export default async function HomePage() {
   return (
     <div className="space-y-16">
 
-      {/* HERO — SYSTEM FIRST */}
+      {/* HERO */}
       <section className="text-center max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">
           The Everything Equation Programme
@@ -34,7 +34,7 @@ export default async function HomePage() {
 
         <p className="text-xl text-slate-700 dark:text-slate-300 mb-6">
           A unified physics framework in which a concrete field-equation system
-          is not freely chosen; it's structurally forced.
+          is not freely chosen — it is structurally forced.
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -49,12 +49,61 @@ export default async function HomePage() {
           This is not a single equation replacing existing physics.
           It is a two-level architecture: a law-selection principle (Tier-0)
           coupled to a concrete field system (Tier-1).
-          Existing theories remain the operational content, the framework determines
+          Existing theories remain the operational content — the framework determines
           which structures are admissible and how physical parameters arise.
         </p>
       </section>
 
-      {/* TIER-1 - PHYSICS FIRST */}
+      {/* 🔥 CORE SYSTEM HOOK (NEW — MOST IMPORTANT BLOCK) */}
+      <section>
+        <div className="max-w-3xl mx-auto rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-md p-8">
+
+          <h2 className="text-xl font-semibold text-center mb-6">
+            Core System (Compact Form)
+          </h2>
+
+          {/* EQUATIONS */}
+          <div className="space-y-4 text-center text-lg font-mono">
+            <div dangerouslySetInnerHTML={renderKatex(
+              String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast(f(D_E^2/\Lambda^2)) + \langle \psi, D_E \psi \rangle`
+            )} />
+
+            <div dangerouslySetInnerHTML={renderKatex(
+              String.raw`S_{\Omega}(D_E;T) \le D_T(K)`
+            )} />
+
+            <div dangerouslySetInnerHTML={renderKatex(
+              String.raw`\delta\!\left(S + \int (S_{\Omega} - D_T)\, d\mu \right) = 0`
+            )} />
+          </div>
+
+          {/* FORCE INDICATOR */}
+          <div className="text-center my-6 text-slate-500 text-sm">
+            ↓ forces ↓
+          </div>
+
+          {/* OUTPUTS */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm font-medium text-slate-800 dark:text-slate-200">
+            <div>• N = 3 fermion generations</div>
+            <div>• α⁻¹ ≈ 137</div>
+            <div>• sin²θ<sub>W</sub> ≈ 0.2316</div>
+            <div>• Discrete fermion mass spectrum</div>
+          </div>
+
+          {/* EXPLANATION */}
+          <p className="text-xs text-slate-500 mt-6 text-center">
+            A constrained spectral system where physical parameters are not inputs — they arise as solutions.
+          </p>
+
+          <div className="text-center mt-6">
+            <Link href="/tier-1" className="text-blue-600 hover:underline text-sm">
+              Inspect the full system →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* TIER-1 */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-1: Forced Physical System</h2>
@@ -68,16 +117,13 @@ export default async function HomePage() {
 
           <div className="rounded-md border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-black/20 p-4 space-y-4">
             <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast\!\big(f(D_E^2/\Lambda^2)\big)+\langle \psi, D_E\psi\rangle`,
-              true
+              String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast(f(D_E^2/\Lambda^2)) + \langle \psi, D_E\psi \rangle`
             )} />
             <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S_{\Omega}(D_E;T)\le D_T(K)`,
-              true
+              String.raw`S_{\Omega}(D_E;T)\le D_T(K)`
             )} />
             <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`\delta\!\left(S+\int (S_{\Omega}-D_T)\,d\mu\right)=0`,
-              true
+              String.raw`\delta\!\left(S+\int (S_{\Omega}-D_T)\,d\mu\right)=0`
             )} />
           </div>
 
@@ -89,23 +135,23 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS - THIS IS WHAT IT DOES */}
+      {/* RESULTS */}
       <section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">What the System Produces</h2>
 
           <ul className="space-y-2 text-slate-700 dark:text-slate-300">
-            <li>• Exactly 3 fermion generations (capacity constraint)</li>
+            <li>• Exactly 3 fermion generations</li>
             <li>• Fine-structure constant α⁻¹ ≈ 137</li>
             <li>• Weinberg angle sin²θ_W ≈ 0.2316</li>
             <li>• Fermion mass hierarchy from KKT saturation</li>
-            <li>• Strong CP phase θ = 0 (structural exclusion)</li>
-            <li>• Bare cosmological constant suppressed at law level</li>
+            <li>• Strong CP phase θ = 0</li>
+            <li>• Bare cosmological constant suppressed</li>
           </ul>
         </div>
       </section>
 
-      {/* WHY THIS EXISTS - TIER-0 */}
+      {/* TIER-0 */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-0: Law Selection Principle</h2>
@@ -113,21 +159,14 @@ export default async function HomePage() {
           <div
             className="my-4"
             dangerouslySetInnerHTML={renderKatex(
-              String.raw`\mathcal{L}=\Omega\Delta\partial(\mathcal{L})`,
-              true
+              String.raw`\mathcal{L}=\Omega\Delta\partial(\mathcal{L})`
             )}
           />
 
           <p className="text-slate-700 dark:text-slate-300">
-            This fixed-point condition defines what qualifies as a physical law.
-            It enforces invariance under presentation removal, admissibility filtering,
-            and canonical completion.
-          </p>
-
-          <p className="mt-4 text-slate-700 dark:text-slate-300">
-            On any nontrivial structure, this forces a dual-sector operator split
-            (coherent + dissipative), which admits a canonical spectral realization, 
-            the Dirac–Λ system above.
+            A fixed-point condition defining what qualifies as a physical law.
+            On any nontrivial structure, it forces a dual-sector operator split,
+            which admits a canonical spectral realization.
           </p>
 
           <Link href="/what-is-the-everything-equation" className="mt-4 inline-block text-blue-600 hover:underline">
@@ -136,10 +175,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ARCHITECTURE PIPELINE */}
+      {/* PIPELINE */}
       <section className="max-w-3xl mx-auto text-center">
         <h2 className="text-xl font-semibold mb-4">System Architecture</h2>
-
         <p className="text-slate-700 dark:text-slate-300">
           Law-level closure → Dual-sector operators → Spectral realization → Physical predictions
         </p>
@@ -170,18 +208,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* STRUCTURED DATA */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Everything Equation",
-            description: "Two-tier framework where a law-selection principle forces physical field equations.",
-          }),
-        }}
-      />
     </div>
   );
 }
