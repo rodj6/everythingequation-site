@@ -34,7 +34,7 @@ export default async function HomePage() {
 
         <p className="text-xl text-slate-700 dark:text-slate-300 mb-6">
           A unified physics framework in which a concrete field-equation system
-          is not freely chosen — it is structurally forced.
+          is not freely chosen, it's structurally forced.
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -49,12 +49,12 @@ export default async function HomePage() {
           This is not a single equation replacing existing physics.
           It is a two-level architecture: a law-selection principle (Tier-0)
           coupled to a concrete field system (Tier-1).
-          Existing theories remain the operational content — the framework determines
+          Existing theories remain the operational content, the framework determines
           which structures are admissible and how physical parameters arise.
         </p>
       </section>
 
-      {/* TIER-1 — PHYSICS FIRST */}
+      {/* TIER-1 - PHYSICS FIRST */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-1: Forced Physical System</h2>
@@ -89,7 +89,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS — THIS IS WHAT IT DOES */}
+      {/* RESULTS - THIS IS WHAT IT DOES */}
       <section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">What the System Produces</h2>
@@ -105,7 +105,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* WHY THIS EXISTS — TIER-0 */}
+      {/* WHY THIS EXISTS - TIER-0 */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-0: Law Selection Principle</h2>
@@ -126,7 +126,7 @@ export default async function HomePage() {
 
           <p className="mt-4 text-slate-700 dark:text-slate-300">
             On any nontrivial structure, this forces a dual-sector operator split
-            (coherent + dissipative), which admits a canonical spectral realization —
+            (coherent + dissipative), which admits a canonical spectral realization, 
             the Dirac–Λ system above.
           </p>
 
