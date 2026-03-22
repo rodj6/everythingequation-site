@@ -34,7 +34,7 @@ export default async function HomePage() {
 
         <p className="text-xl text-slate-700 dark:text-slate-300 mb-6">
           A unified physics framework in which a concrete field-equation system
-          is not freely chosen — it is structurally forced.
+          is not freely chosen; it's structurally forced.
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -49,12 +49,12 @@ export default async function HomePage() {
           This is not a single equation replacing existing physics.
           It is a two-level architecture: a law-selection principle (Tier-0)
           coupled to a concrete field system (Tier-1).
-          Existing theories remain the operational content — the framework determines
+          Existing theories remain the operational content, the framework determines
           which structures are admissible and how physical parameters arise.
         </p>
       </section>
 
-      {/* 🔥 CORE SYSTEM HOOK (UNIQUE + NON-REDUNDANT) */}
+      {/* CORE SYSTEM HOOK (UNIQUE + NON-REDUNDANT) */}
       <section>
         <div className="max-w-3xl mx-auto rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-md p-8">
 
@@ -100,7 +100,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TIER-1 (EXPLANATION ONLY — NO EQUATIONS) */}
+      {/* TIER-1 (EXPLANATION ONLY - NO EQUATIONS) */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-1: Forced Physical System</h2>
@@ -125,7 +125,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS (EXPANDED — NOT DUPLICATE) */}
+      {/* RESULTS (EXPANDED - NOT DUPLICATE) */}
       <section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">What the System Produces</h2>
