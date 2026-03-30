@@ -229,6 +229,7 @@ problems:
       - problem:cosmological-constant
       - problem:grand-unified-theory
       - problem:universal-spectral-fingerprint
+      - problem:observer-theory
 
   - id: problem:cosmological-constant
     slug: cosmological-constant
@@ -336,6 +337,7 @@ problems:
       - problem:standard-model
       - problem:navier-stokes
       - problem:universal-spectral-fingerprint
+      - problem:consciousness
 
   - id: problem:lawhood
     slug: lawhood
@@ -362,6 +364,8 @@ problems:
       - problem:quantum-gravity
       - problem:universal-spectral-fingerprint
       - problem:fine-structure-constant
+      - problem:observer-theory
+      - problem:consciousness
 
   - id: problem:quantum-measurement
     slug: quantum-measurement
@@ -382,8 +386,52 @@ problems:
       - zenodo:18205246
       - zenodo:18704783
       - zenodo:19041187
+      - zenodo:19324253
     connections_hint:
       - problem:quantum-gravity
       - problem:lawhood
       - problem:mathematical-foundations
       - problem:spectral-action-yukawa-gap
+      - problem:observer-theory
+      - problem:consciousness
+
+  - id: problem:observer-theory
+    slug: observer-theory
+    title: Observer Theory and Record-Based Systems
+    domain: Physics/Foundations
+    status: public
+    maturity: research
+    direct_answer: >
+      Observer structure is not primitive but arises from record-stable subalgebras
+      and admissibility constraints. Systems capable of persistent self-referential
+      record closure (SRC) form a distinct class of physically admissible observers,
+      extending quantum measurement into a structural theory of observation.
+    monograph_refs: []
+    supported_by:
+      - zenodo:19324253
+    connections_hint:
+      - problem:quantum-measurement
+      - problem:consciousness
+      - problem:lawhood
+      - problem:quantum-gravity
+
+  - id: problem:consciousness
+    slug: consciousness
+    title: Consciousness and the Hard Problem
+    domain: Physics/Foundations
+    status: public
+    maturity: research
+    direct_answer: >
+      Consciousness is identified as the unique fixed point of a reduced canonicalization
+      operator on orbit space, with exponential convergence, observable certification,
+      and a structural separation between conscious (RCO) and non-conscious systems.
+      The framework provides a non-circular bridge between physical field structure
+      and phenomenal experience, together with explicit falsifiers and empirical validation.
+    monograph_refs: []
+    supported_by:
+      - zenodo:19324253
+    connections_hint:
+      - problem:observer-theory
+      - problem:quantum-measurement
+      - problem:lawhood
+      - problem:mathematical-foundations
