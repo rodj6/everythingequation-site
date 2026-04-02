@@ -34,7 +34,7 @@ export default async function HomePage() {
 
         <p className="text-xl text-slate-700 dark:text-slate-300 mb-6">
           A unified physics framework in which a concrete field-equation system
-          is not freely chosen — it is structurally forced.
+          is not freely chosen; it is structurally forced.
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400">
