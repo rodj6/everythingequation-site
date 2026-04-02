@@ -34,7 +34,7 @@ export default async function HomePage() {
 
         <p className="text-xl text-slate-700 dark:text-slate-300 mb-6">
           A unified physics framework in which a concrete field-equation system
-          is not freely chosen; it's structurally forced.
+          is not freely chosen — it is structurally forced.
         </p>
 
         <p className="text-lg text-slate-600 dark:text-slate-400">
@@ -47,14 +47,13 @@ export default async function HomePage() {
       <section className="max-w-3xl mx-auto text-center">
         <p className="text-sm text-slate-600 dark:text-slate-400">
           This is not a single equation replacing existing physics.
-          It is a two-level architecture: a law-selection principle (Tier-0)
-          coupled to a concrete field system (Tier-1).
-          Existing theories remain the operational content, the framework determines
-          which structures are admissible and how physical parameters arise.
+          It is a layered architecture: a concrete constrained field system (Tier-1),
+          a law-selection principle (Tier-0), and now a structural inevitability theorem
+          showing why any viable notion of physical law must induce the same certification architecture.
         </p>
       </section>
 
-      {/* CORE SYSTEM HOOK (UNIQUE + NON-REDUNDANT) */}
+      {/* CORE SYSTEM HOOK */}
       <section>
         <div className="max-w-3xl mx-auto rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-md p-8">
 
@@ -62,32 +61,34 @@ export default async function HomePage() {
             Core System (Compact Form)
           </h2>
 
-          {/* EQUATIONS */}
           <div className="space-y-4 text-center text-lg font-mono">
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast(f(D_E^2/\Lambda^2)) + \langle \psi, D_E \psi \rangle`
-            )} />
+            <div
+              dangerouslySetInnerHTML={renderKatex(
+                String.raw`S[g,A,\psi]=\mathrm{Tr}^\ast(f(D_E^2/\Lambda^2)) + \langle \psi, D_E \psi \rangle`
+              )}
+            />
 
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`S_{\Omega}(D_E;T) \le D_T(K)`
-            )} />
+            <div
+              dangerouslySetInnerHTML={renderKatex(
+                String.raw`S_{\Omega}(D_E;T) \le D_T(K)`
+              )}
+            />
 
-            <div dangerouslySetInnerHTML={renderKatex(
-              String.raw`\delta\!\left(S + \int (S_{\Omega} - D_T)\, d\mu \right) = 0`
-            )} />
+            <div
+              dangerouslySetInnerHTML={renderKatex(
+                String.raw`\delta\!\left(S + \int (S_{\Omega} - D_T)\, d\mu \right) = 0`
+              )}
+            />
           </div>
 
-          {/* FORCE INDICATOR */}
           <div className="text-center my-6 text-slate-500 text-sm">
             ↓ forces ↓
           </div>
 
-          {/* COMPRESSED OUTPUT LINE (NO DUPLICATION) */}
           <p className="text-center text-sm font-medium text-slate-800 dark:text-slate-200">
             N = 3, α⁻¹ ≈ 137, sin²θ<sub>W</sub> ≈ 0.2316, discrete fermion masses
           </p>
 
-          {/* EXPLANATION */}
           <p className="text-xs text-slate-500 mt-4 text-center">
             Physical parameters arise as solutions of a constrained spectral system, not free inputs.
           </p>
@@ -100,7 +101,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* TIER-1 (EXPLANATION ONLY - NO EQUATIONS) */}
+      {/* TIER-1 */}
       <section>
         <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
           <h2 className="text-2xl font-semibold mb-3">Tier-1: Forced Physical System</h2>
@@ -125,7 +126,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS (EXPANDED - NOT DUPLICATE) */}
+      {/* RESULTS */}
       <section>
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-semibold mb-4">What the System Produces</h2>
@@ -159,17 +160,59 @@ export default async function HomePage() {
             which admits a canonical spectral realization.
           </p>
 
-          <Link href="/what-is-the-everything-equation" className="mt-4 inline-block text-blue-600 hover:underline">
-            Learn the full framework
-          </Link>
+          <div className="mt-4">
+            <Link href="/what-is-the-everything-equation" className="text-blue-600 hover:underline">
+              Learn the full Tier-0 framework
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* LAWHOOD NECESSITY */}
+      <section>
+        <div className="max-w-3xl mx-auto rounded-lg border-t-4 border-blue-500 bg-slate-100 dark:bg-slate-800 p-6">
+          <h2 className="text-2xl font-semibold mb-3">
+            Why This Architecture Is Unavoidable
+          </h2>
+
+          <p className="text-slate-700 dark:text-slate-300 mb-4">
+            The newest lawhood paper closes the remaining foundational objection:
+            why these operators, and not some different architecture?
+            Starting from no formal framework at all, only the pre-theoretic demand
+            that “law” must exclude notation artifacts, chronicles, accidents, and fragments,
+            it proves that any viable notion of physical law must implement the same
+            quotient → filter → closure structure.
+          </p>
+
+          <div className="rounded-md border border-slate-200 dark:border-slate-700 bg-white/60 dark:bg-black/20 p-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm text-slate-800 dark:text-slate-200">
+              <div><strong>∂</strong>: semantic invariance</div>
+              <div><strong>Δ</strong>: genericity + robustness</div>
+              <div><strong>Ω</strong>: composability / closure</div>
+            </div>
+          </div>
+
+          <p className="text-slate-700 dark:text-slate-300 mt-4">
+            In other words: the Everything Equation is not just one candidate framework among many.
+            At the role level, every repaired alternative converges to the same certification skeleton.
+          </p>
+
+          <div className="mt-4 flex flex-wrap gap-4">
+            <Link href="/problems/lawhood-necessity" className="text-blue-600 hover:underline">
+              Read the lawhood necessity theorem
+            </Link>
+            <Link href="/problems/lawhood" className="text-blue-600 hover:underline">
+              See the broader lawhood framework
+            </Link>
+          </div>
         </div>
       </section>
 
       {/* PIPELINE */}
-      <section className="max-w-3xl mx-auto text-center">
-        <h2 className="text-xl font-semibold mb-4">System Architecture</h2>
+      <section className="max-w-4xl mx-auto text-center">
+        <h2 className="text-xl font-semibold mb-4">Verification Chain</h2>
         <p className="text-slate-700 dark:text-slate-300">
-          Law-level closure → Dual-sector operators → Spectral realization → Physical predictions
+          Lawhood necessity → Tier-0 closure law → dual-sector operators → Tier-1 spectral realization → physical predictions
         </p>
       </section>
 
