@@ -14,20 +14,23 @@ The equation says: a structure is a law if and only if it is a fixed point of th
 three-stage pipeline of presentation collapse, admissibility filtering, and canonical 
 completion.
 
-Two theorems elevate this from a proposal to a proven result:
+Three results elevate this from a proposal to a proved theorem:
 
-1. **The operator triple $(\partial, \Delta, \Omega)$ is inevitable**. Any 
+1. **The adjoint architecture is derived, not postulated.** A Lawhood 
+   Representation Package (LRP) based on four minimal lawhood requirements  
+   semanticity, nomic genericity, robust admissibility, and descent-complete 
+   composability produces the Universal Canonicality Axiom (AX-U) as a corollary.
+   The operator structure is forced by what it means to be a law.
+
+2. **The operator triple $(\partial, \Delta, \Omega)$ is inevitable.** Any 
    law-certification procedure satisfying four minimal structural requirements must 
    equal $\Omega \circ \Delta \circ \partial$. The operators are not chosen; they 
-   are forced.
+   are forced. A sharper typed form makes the domain/codomain structure explicit.
 
-2. **The fixed point is unique** under five structural conditions requiring only 
-   Noetherian descent and capacity-operator visibility, the diagnostic iteration 
+3. **The fixed point is unique** under five structural conditions requiring only 
+   Noetherian descent and capacity-operator visibility. The diagnostic iteration 
    converges to a unique fixed point up to $\Omega$-equivalence, with no spectral 
    gap hypothesis.
-
-These are Theorem 1 (Inevitability) and Theorem 2 (Unconditional Convergence and 
-Uniqueness) of the Tier-0 framework paper.
 
 What does the architecture produce when instantiated on the adopted $S^3$ spectral 
 carrier? The fine structure constant $\alpha^{-1} = 137$, derived with zero free 
@@ -36,22 +39,17 @@ $\sin^2\theta_W = 0.232$, within 0.2% of experiment. Newton's constant $G$,
 derived via Lovelock selection and Iyer–Wald normalization. The cosmological 
 constant $\rho_\Lambda = (2.25\;\mathrm{meV})^4$. The gauge group 
 $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$, the generation 
-structure, and the mass hierarchy, all from a terminal backbone of two structural 
-principles and no adjustable parameters.
-
-That is the compression: roughly twenty Standard Model parameters, plus the 
-cosmological constant, plus $G$, plus $H_0$ - reduced to zero free parameters 
-under the two-principle backbone on the adopted carrier.
+structure, and the mass hierarchy, all from a terminal backbone with zero 
+empirical axioms under the now-closed operational record definition.
 
 ---
 
 ## The Three Operators
 
-The operators act on a poset $P$ of pre-law objects. Their properties 
+The operators act on a poset $P$ of pre-law objects. Their properties: 
 deflationary, inflationary, monotone, idempotent, are not assumed. They follow 
-as theorems from a single structural axiom (AX-U) requiring each stage to be 
-**canonical**: defined by a universal/adjoint property of the order structure, not 
-by a discretionary choice.
+as theorems from the Universal Canonicality Axiom, which is itself derived from 
+four primitive lawhood requirements via the Lawhood Representation Package.
 
 **$\partial$ - Presentation Collapse**
 
@@ -61,12 +59,14 @@ $\partial(x) \leq x$. Two candidates are presentation-equivalent if and only if
 $\partial$ maps them to the same object.
 
 In physics: gauge normalization, canonical boundary data, coordinate-independent 
-formulation. In mathematics: representation-independence under admissible 
-re-presentation.
+formulation. The $\partial$-quotient also removes silent multiplicity factors,  
+tensor components on which the entire selected operator family acts as scalar 
+multiples of the identity. These carry no law-visible information and are 
+representation scaffolding.
 
 **$\Delta$ - Admissibility Filtering**
 
-Enforces consistency constraints, unitarity, positivity, spectral bounds and 
+Enforces consistency constraints unitarity, positivity, spectral bounds and 
 removes structure that does not persist under stabilization. Deflationary: 
 $\Delta(x) \leq x$. What survives $\Delta$ forms the **record algebra**:
 
@@ -88,11 +88,11 @@ consistent and stable under re-expression. Inflationary: $x \leq \Omega(x)$.
 
 The decomposition is minimal. Fewer stages cannot diagnose all failure modes:
 
-- Some candidates fail *locally*, they are ill-defined on boundaries or 
+- Some candidates fail *locally* - they are ill-defined on boundaries or 
   subsystems. This requires $\partial$.
-- Some fail *dynamically*, they exist locally but do not persist under 
+- Some fail *dynamically* - they exist locally but do not persist under 
   iteration. This requires $\Delta$.
-- Some fail *globally*, they work in pieces but cannot be coherently completed. 
+- Some fail *globally* - they work in pieces but cannot be coherently completed. 
   This requires $\Omega$.
 
 The failure modes are irreducible. The dependency order is fixed: local 
@@ -104,27 +104,79 @@ The structure is forced by the logic of admissibility itself.
 
 ---
 
-## Inevitability: A Theorem, Not a Choice
+## Inevitability: Derived, Not Postulated
 
 The strongest result of the Tier-0 framework is that the Everything Equation is 
-not a proposal layered onto physics from outside. Given a poset of pre-law objects 
-with minimal lattice structure, **any** law-certification operator $F$ satisfying 
-four natural conditions must equal $\Omega \circ \Delta \circ \partial$:
+not a proposal layered onto physics from outside. It is the unique answer to the 
+question: *what is the minimal structure a law-certification procedure must have?*
+
+The argument proceeds in two stages.
+
+### Stage 1: Deriving AX-U from the Lawhood Representation Package
+
+Before proving inevitability, the paper derives the Universal Canonicality Axiom 
+(AX-U) itself from more primitive requirements. A **Lawhood Representation Package** 
+(LRP) consists of a semantic quotient, a family of admissibility tests, and a 
+structural closure operator. It imposes four requirements that any non-arbitrary 
+lawhood concept must satisfy:
+
+1. **Semantic quotient with typed domains** - there is a surjective semantics map 
+   $\partial: P \twoheadrightarrow Q$ separating content from presentation.
+
+2. **Nomic admissibility as local generic stability**, a specified family of tests 
+   filters for consistency, persistence, pullback stability, and *nomic genericity*: 
+   membership in the law-candidate class must be determined by invariant local 
+   structural predicates, not by naming contingent realized global data. The greatest 
+   admissible subobject exists: $\Delta(x) := \bigvee\{a \in A : a \leq x\}$.
+
+3. **Lawhood as least descent-complete structural closure**, a law is not just 
+   admissible; it is admissible and closed under local-to-global descent. The least 
+   law extending an admissible core exists: $\Omega(a) := \bigwedge\{\ell \in \mathbf{Law} : a \leq \ell\}$.
+
+4. **Stage separation**, witnesses show the three stages are genuinely distinct.
+
+Under these four requirements, AX-U follows as a theorem: $\partial$ is the right 
+adjoint to the inclusion of presentation-collapsed objects, $\Delta$ is the right 
+adjoint to the inclusion of admissible objects, and $\Omega$ is the left adjoint to 
+the inclusion of lawful objects. The adjoint architecture is a *corollary* of what 
+it means to be a law, not a stipulation about lattice structure.
+
+The **nomic genericity principle** is the key primitive that separates laws from 
+extensional descriptions. The actual world-history can be presentation-invariant, 
+consistent, and globally coherent while still not qualifying as a law because it 
+is a description of contingent data, not a locally generative structural constraint. 
+This is the single extra hinge beyond routine structural requirements.
+
+### Stage 2: Operator Inevitability
+
+With AX-U derived, the inevitability result is unconditional. Given a poset of 
+pre-law objects with the LRP structure, **any** law-certification operator $F$ 
+satisfying four natural conditions must equal $\Omega \circ \Delta \circ \partial$:
 
 1. **Presentation invariance**: $F(x) = F(\partial(x))$ - the result depends only 
    on the $\partial$-collapsed content
-2. **Admissible core retention**: $\Delta(\partial(x)) \leq F(x)$ the admissible 
+2. **Admissible core retention**: $\Delta(\partial(x)) \leq F(x)$ - the admissible 
    core is never thrown away
-3. **Law-valuedness**: $F(x) \in P_\Omega$ outputs are law-objects
+3. **Law-valuedness**: $F(x) \in P_\Omega$ - outputs are law-objects
 4. **Minimal completion**: the output is the smallest law-object above the 
    admissible core
 
-These four conditions are not strong assumptions. They are the minimum requirements 
-for a certification procedure to be a certification procedure. Under them, 
-$F = \Omega \circ \Delta \circ \partial$ uniquely and necessarily.
+The typed form makes this sharper: $F: P \to \mathbf{Law}$ factors as 
+$\Omega \circ \Delta \circ \partial$ with explicit domain/codomain typing at each 
+stage. Under the LRP, all apparent rival architectures, semantics-first, 
+predicate-only, one-step reflective, alternative orderings, iterative interleaving 
+are either absorbed or ill-typed.
 
-The Everything Equation is therefore not a hypothesis. It is the unique answer to 
-the question: *what is the minimal structure a law-certification procedure must have?*
+### Rival Elimination
+
+Once the four conditions are demanded, any certifier either factors through 
+$\Omega\Delta\partial$ or it fails semanticity, admits accidents, or is not minimal. 
+A law cannot depend on coordinates, gauge, encoding, or presentation: that forces 
+the quotient $\partial$. A law cannot be a fragile pattern or a dressed-up description 
+of the one world that happened: that forces the largest semantic core surviving 
+invariant robustness tests ($\Delta$) and forbids contingent naming. A law cannot 
+stay a local patch: it must be the least descent-complete structurally closed object 
+extending that admissible core ($\Omega$).
 
 ---
 
@@ -138,30 +190,32 @@ on physical carriers.
 
 The foundational equation $L = \Omega\,\Delta\,\partial(L)$ and its operator 
 inevitability theorem. Determines universal law structure: the fixed-point equation, 
-its uniqueness, the operator algebra, the gravitational law-form, the cosmological 
-constant suppression mechanism, the modular fixed-point structure, and the 
-compressed axiom backbone. These results are independent of any carrier geometry.
+its uniqueness, the operator algebra, the kernel structure $q(0) = 0$, the modular 
+fixed point (Selector 9), CCP suppression, IR marginality, and the gravitational 
+law-form. These results are independent of any carrier geometry.
 
 **Layer 2 - Admissible Law Spaces**
 
 The capacity inequality, KKT stationarity, and admissibility constraints define 
 the space of physically realizable law-objects. This layer determines which 
-instantiations of the Tier-0 law are viable on a given carrier.
+instantiations of the Tier-0 law are viable on a given carrier. All no-go theorems 
+and elimination cascades belong here.
 
 **Layer 3 - Canonical Selection**
 
-AX-EDGE, Selector 9 (modular $j$-zero at the elliptic fixed point), and 
-AX-UAC-CORE(min) select the canonical law-object and determine the UV stiffness 
-scale $\Lambda \approx 57{,}039$ GeV, resolving the formerly open $\beta$-closure 
-problem. The collar width $\Lambda_{\mathrm{ad}} \approx 109$ GeV is derived from 
-Model-B collar geometry with AX-EDGE and Weyl ratio asymptotics.
+Selects the canonical representative inside each admissible class. Includes the 
+$\Omega$-JKM canonical Wald representative, horizon-edge selection, AX-EDGE 
+selector (uniqueness via Functorial Germ Factorization), and support-selection 
+necessity. The structural principle is *Functorial Germ Factorization*: canonical 
+selection factors through the minimal admissible germ and is insensitive to 
+continuation data.
 
 **Layer 4 - Interface Realization (Tier-1)**
 
-The Coupled Dirac–$\Lambda$ System: nine field equations (E1–E8 plus the E9** 
-normalization bridge) on the adopted $S^3$ carrier, producing numerical values of 
-physical constants through spectral projection equations. This is where the 
-abstract law-form meets concrete physics.
+The Coupled Dirac–$\Lambda$ System: field equations on the adopted $S^3$ carrier, 
+producing numerical values of physical constants through spectral projection 
+equations. This is where the abstract law-form meets concrete physics. Layer 4 does 
+not generate a new law-object.
 
 The bridge between layers is the UV stiffness scale $\Lambda$: its **selection 
 mechanism** is Layer 3 (Selector 9 identifies $\Lambda$ through a modular invariant 
@@ -189,13 +243,17 @@ gravitational law-form through three lemmas:
   class to the Lovelock family
 
 **Result**: the $\Omega\Delta\partial$-fixed gravitational law-object lies in the 
-Lovelock class in four spacetime dimensions, this is exactly 
+Lovelock class. In four spacetime dimensions, this is exactly 
 $\mathcal{L}_\mathrm{grav} = c_0 + c_1 R$ (Einstein–Hilbert). General relativity 
 is selected, not assumed.
 
+A scale-covariance corollary establishes that $\Omega$ selects the *form* but 
+cannot fix the dimensionful coefficients $\{c_0, c_1\}$ - the Iyer–Wald bridge 
+is therefore necessary and non-redundant.
+
 ### Newton's Constant $G$
 
-The gravitational coupling is derived through three layers:
+The gravitational coupling is derived through three steps:
 
 1. Lovelock selection (above) gives $\mathcal{L} = c_0 + c_1 R$
 2. The Iyer–Wald theorem gives the unique first-law-compatible entropy as the 
@@ -210,15 +268,15 @@ $$
    in the weak-field static limit.
 
 $G$ is fixed by internal consistency, the unique coupling making the law-stable 
-record functional and the thermodynamic first law coincide. This identification is 
-conditional on the compressed backbone AX-UAC-CORE(min), which absorbs the 
-relevant locality and canonicalization axioms.
+record functional and the thermodynamic first law coincide. This derivation is 
+conditional on AX-UAC-CORE(min), which is now derived via the admissibility-transfer 
+theorem.
 
 ### Cosmological Constant Suppression
 
 Tier-0 determines the structural necessity of an admissibility kernel governing 
 mode activation in the spectral action. The specific functional form of the 
-kernel - $q(x) = -\log((1 - e^{-x})/x)$ is realized in the Tier-1 spectral 
+kernel $q(x) = -\log((1 - e^{-x})/x)$ is realized in the Tier-1 spectral 
 projection, but its structural property $q(0) = 0$ is a Tier-0 consequence: it 
 follows from the fixed-point requirement on the admissibility operator.
 
@@ -246,37 +304,16 @@ $$
 u^* = \Lambda^2 T_\mathrm{match} = 2\pi^2 \cdot \frac{\sqrt{3}}{2} = 17.0947\ldots
 $$
 
-This is a modular invariant of the law equation itself carrier-independent, 
+This is a modular invariant of the law equation itself, carrier-independent, 
 Layer 3. Combined with E2 (split stationarity) and E1 (boundary balance), Selector 9 
 determines $\Lambda \approx 57{,}039$ GeV, resolving the $\beta$-closure problem 
 that was formerly the central open question of the programme. The numerical value 
 of $\Lambda$ in physical units requires Layer 4.
 
-### The E9** Normalization Bridge
-
-The E9** equation connects the collar DN operator to the absolute gauge coupling:
-
-$$
-\frac{f_0}{192\pi^2} = \frac{1}{\beta}\,B_{\mathrm{ren}}(T^*;\beta)
-$$
-
-where $B_{\mathrm{ren}}$ is the renormalized boundary functional evaluated at the 
-intrinsic crossing scale $T^*$. Combined with the spectral-action gauge 
-normalization, this yields:
-
-$$
-\alpha^{-1}(\beta) = \mathcal{C}\,\frac{B_{\mathrm{ren}}(T^*;\beta)}{\beta}, \qquad \mathcal{C} = \frac{34 \times 192\pi}{9} \approx 2278.70
-$$
-
-With $\beta$ determined upstream by Selector 9 + E2 + E1, the result is 
-$\alpha^{-1} = 137$ with zero free parameters on the adopted $S^3$ carrier. E9** 
-is not a variational equation but a normalization identity: it bridges the collar 
-boundary spectral data to the absolute coupling, completing the Tier-1 equation set.
-
 ### Record-Flow Duality and the Dark Sector
 
 The fixed-point criterion produces a sharp structural distinction between two 
-law-level roles that has immediate physical consequences:
+law-level roles:
 
 **Record-bearing (Anchor) sector**: produces $\Delta$-persistent, consultable 
 records. Irreversibility is essential to this role.
@@ -350,7 +387,7 @@ status.
       <td style={{paddingRight: "24px"}}>$G$</td>
       <td style={{paddingRight: "24px"}}>derived</td>
       <td style={{paddingRight: "24px"}}>$6.674 \times 10^{-11}$</td>
-      <td>Lovelock + Iyer–Wald</td>
+      <td>Lovelock + Iyer–Wald (CORE now derived)</td>
     </tr>
     <tr>
       <td style={{paddingRight: "24px"}}>$\rho_\Lambda$</td>
@@ -391,22 +428,13 @@ status.
 - Born rule exponent $p = 2$ derived from saturation geometry
 - Measurement dissipation bound with $1/T$ decoherence suppression
 
-**Structural boundaries** (proved inaccessible - hard no-go theorems, not gaps):
+**Structural boundaries** (proved inaccessible hard no-go theorems, not gaps):
 
-- Strong coupling $\alpha_s(M_Z)$ - blocked by two independent obstructions 
-  (Gauge Coupling Classification Theorem GC-1/GC-2)
+- Strong coupling $\alpha_s(M_Z)$ = blocked by two independent obstructions 
+  (finite-trace reweighting no-go and Fejér linearization)
 - Exact Yukawa ratios, not law-level outputs; the hierarchy is forced but exact 
-  numerical mass ratios are carrier-specific, depending on the geometric deficit 
-  $G_M(T)$. Proved by independent no-go theorems at both Tier-1 (G₃-orbit freedom, 
-  $b(\mu_L)$ non-rigidity) and Tier-0 (across-the-board no-go under minimal 
-  lawhood axioms)
-
-A systematic search for hidden formulas - new constants derivable from the 
-architecture that had not been computed - was completed in March 2026. Eight 
-results were recorded (structural notes, negative results, and arithmetic 
-structure findings). The conclusion: the architecture is **information-efficient**. 
-The existing derivation pipelines already compress nearly all structural content 
-from the Standard Model spectral data. No new derivable constants were found.
+  numerical mass ratios are carrier-specific. Proved by independent no-go theorems 
+  at both Tier-1 and Tier-0
 
 ---
 
@@ -435,23 +463,49 @@ admissible realizations:
 This single principle absorbs: gravity normalization ($G$), cross-sector 
 normalization, entropy uniqueness (Wald/JKM ambiguity), horizon edge selection.
 
-The foundational derivability of AX-UAC-CORE(min) - whether it is an irreducible 
-axiom or a derivable consequence of realization-germ rigidity is the single open 
-foundational question of the programme. Five constructive routes have been 
-investigated; the bottleneck is a same-law $\Delta$-semigroup transfer lemma.
+**CORE is now derived.** The admissibility-transfer theorem shows that 
+$\Omega\Delta\partial$-admissibility on the Tier-1 NCG carrier forces all three 
+CORE clauses on the $\partial$-reduced physical observable algebra via two 
+structural principles that are not new axioms but applications of existing 
+Tier-0 machinery:
+
+- **AX-TC (Tensor-Core Admissibility)**: fully closed, follows from nuclearity of 
+  $C(S^3)$ and finite-dimensionality of $\mathcal{A}_F$. Excludes the direct-sum 
+  countermodel.
+- **PSMC$_F$ (Pair-Silent Multiplicity Collapse)**: the explicit finite-sector 
+  application of the existing Tier-0 $\partial$-quotient. The quark-color factor, 
+  on which the entire selected operator family $(D_F^*, K_{\mathrm{OS},F}^*)$ acts 
+  as scalar multiples of the identity, is collapsed as representation scaffolding 
+  before primitivity is tested. This is not a new axiom, it's the $\partial$-quotient 
+  doing its job on a specific factor.
+
+The route to this result required resolving a structural obstruction: the color 
+commutant problem. On the Standard Model finite spectral triple, the quark-color 
+$M_3(\mathbb{C})$ factor commutes with $D_F^*$ because Yukawa data is color-blind. 
+The dissipative boundary operator $K_{\mathrm{OS},F}^* = |D_F^*|\tanh(\beta|D_F^*|)$ 
+is a function of $|D_F^*|$, so the operator pair carries no more 
+representation-theoretic information than $D_F^*$ alone on the color factor. The 
+resolution is PSMC$_F$: the color factor is a pair-silent multiplicity, both 
+operators act as $(\cdot) \otimes I_3$ - and the $\partial$-quotient removes it.
+
+On the $\partial$-reduced physical observable algebra, the Connes–Sauvageot 
+carré-du-champ form provides a closed, conservative, completely Dirichlet, 
+primitive form with unique faithful invariant state and unique dynamics. CORE closes.
 
 **Principle 2 - AX-H9-COUNT(min)**
 
 Positive bulk density of $\Delta$-persistent records at scale $E^*$: 
 $n(L; E^*) \asymp L^3(E^*)^3$ (volume-law). This is the single substantive 
 physical hinge that breaks the scale-covariance obstruction preventing coefficient 
-fixing. It is not absorbed by CORE(min).
+fixing. It is not absorbed by CORE.
 
-Under an interpretive option defining "record" operationally as locally 
-consultable and $\Delta$-persistent from the start COUNT(min) becomes a theorem 
-of Tier-0 + CORE(min) alone, and the empirical axiom floor reduces to zero.
+Under the now-formally-closed Option (b) operational record definition, defining 
+"record" as a locally consultable, $\Delta$-persistent observable with bounded 
+support, which is already the working definition throughout the programme  
+COUNT(min) becomes a theorem of Tier-0 + AX-UAC-CORE(min) alone, via a derivation 
+chain through shell elimination, a 0–1 law, and automatic local support.
 
-**Everything else follows from these two principles plus the proved theorems.**
+**Under Option (b), the empirical axiom floor is zero.**
 
 <table style={{borderCollapse: "collapse"}}>
   <thead>
@@ -479,8 +533,8 @@ of Tier-0 + CORE(min) alone, and the empirical axiom floor reduces to zero.
     </tr>
     <tr>
       <td style={{paddingRight: "24px"}}><strong>Terminal</strong></td>
-      <td style={{paddingRight: "24px"}}><strong>AX-UAC-CORE(min) + COUNT(min)</strong></td>
-      <td><strong>2</strong></td>
+      <td style={{paddingRight: "24px"}}><strong>CORE derived + COUNT theorem-level</strong></td>
+      <td><strong>0</strong></td>
     </tr>
   </tbody>
 </table>
@@ -500,7 +554,7 @@ The framework is falsifiable. These would definitively refute it:
 - CCP suppression fails: the admissibility kernel does not satisfy $q(0) = 0$
 - Lovelock selection fails: $\Omega\Delta\partial$ on metric Lagrangians does not 
   produce second-order field equations
-- AX-UAC-CORE(min) is shown inconsistent with the operator framework
+- AX-UAC-CORE(min) is shown inconsistent with the existing operator framework
 
 **Structural falsifiers**:
 - Two distinct normalized states on 
@@ -508,8 +562,10 @@ The framework is falsifiable. These would definitively refute it:
   $\Omega\Delta\partial$-admissible (non-uniqueness of $\tau^*$)
 - An observable or consistency check requires two independent normalization 
   constants
-- Proof that bulk persistence is generically forbidden by admissibility (would 
-  reinstate the scale-covariance obstruction and block the $L_H$ derivation)
+- The canonical dynamics $\Phi^*$ is not unique under $\Omega\Delta\partial$ 
+  constraints
+- Proof that bulk persistence is generically forbidden by admissibility 
+  (would reinstate the scale-covariance no-go and block the $L_H$ derivation)
 
 ---
 
@@ -533,28 +589,24 @@ For Navier–Stokes this means: if a genuine finite-time singularity exists, the
 near the blowup time at arbitrarily high cutoffs one must see margin collapse, 
 multiplier blowup, or carrier invalidation. Closure cannot fail in any other way.
 
-This is what it looks like when $\partial$, $\Delta$, $\Omega$ are exercised against 
-full analytic obstruction not asserted, but operationalized, tested, and either 
-surviving or failing through explicitly named channels.
-
 ---
 
 ## Worked Example: Why the Equation Is Not Optional
 
 Consider a one-dimensional scalar conservation law $u_t + (f(u))_x = 0$. 
 
-Weak solutions are not unique once shocks form, many distributions satisfy the 
+Weak solutions are not unique once shocks form many distributions satisfy the 
 PDE but disagree on shock dynamics. The raw equation is not law-bearing. The 
 Everything Equation is the natural normal form of admissibility in this setting:
 
 - **$\partial$**: restrict to weak solutions (the canonical admissible presentation 
   class); quotient away presentation-level choices that do not change the weak 
   content
-- **$\Delta$**: apply the entropy condition $\eta(u)_t + q(u)_x \leq 0$  the 
+- **$\Delta$**: apply the entropy condition $\eta(u)_t + q(u)_x \leq 0$ - the 
   persistence filter that removes unstable oscillatory solutions and enforces 
   irreversibility across shocks
 - **$\Omega$**: complete to the unique entropy solution via vanishing viscosity, 
-  Kruzkov semigroup, or front-tracking the minimal globally stable completion
+  Kruzkov semigroup, or front-tracking, the minimal globally stable completion
 
 The fixed-point condition $L = \Omega(\Delta(\partial(L)))$ holds for exactly the 
 entropy solution semigroup, and for nothing weaker. The pipeline is not imposed 
@@ -593,7 +645,7 @@ the explicit machinery.
 ## Primary Reference
 
 > **The Tier-0 Framework: A Law-Level Closure and Selection Principle for Physics**  
-> Jeremy Rodgers - March 2026  
+> Jeremy Rodgers - April 2026  
 > DOI: [10.5281/zenodo.18881896](https://doi.org/10.5281/zenodo.18881896)
 
 >
