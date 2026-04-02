@@ -1,0 +1,372 @@
+# Why Any Viable Notion of Physical Law Requires Four Structural Conditions
+
+$$
+\mathcal{L} = \Omega\,\Delta\,\partial(\mathcal{L})
+$$
+
+The most common objection to the Everything Equation is not about its 
+consequences, the derivations of $\alpha$, $G$, the gauge group, and the 
+generation count but about its *starting point*. Why these three operators? 
+Why this particular architecture? Could a different foundational framework 
+produce a different answer?
+
+This paper settles the question. Starting from *no formal framework at all*  
+only the pre-theoretic demand that "law" must be distinguishable from four 
+categories of non-law, it proves that every viable notion of physical law 
+must induce the same three-stage architecture, in the same order, with the 
+same operator properties. There is no alternative that avoids it.
+
+---
+
+## The Pre-Theoretic Demand
+
+We begin with no equations, no lattice theory, no operator algebra. We ask only: 
+what must "law" mean in order to be a useful category at all?
+
+A law is supposed to be something more than each of the following:
+
+1. A syntactic expression or representational artifact.
+2. An accidental or coincidental pattern.
+3. A complete description of one particular realized world-history.
+4. A fragmentary or local rule that cannot be composed or extended.
+
+If a candidate notion of "law" fails to exclude even one of these, it admits 
+objects that are manifestly not laws. These are formalized as four **pathology 
+classes**:
+
+- **$\mathcal{F}_1$: Notation artifacts.** Candidates whose lawhood verdict 
+  changes under re-expression; coordinate change, gauge transformation, 
+  representation change of the same physical content.
+- **$\mathcal{F}_2$: Extensional chronicles.** Complete descriptions of one 
+  realized configuration, specified by naming contingent global data rather than 
+  by invariant structural predicates. The world-book, a covariant complete 
+  state-history of the actual universe is the canonical example. It is 
+  presentation-invariant, consistent, and already global. But it explains nothing, 
+  predicts nothing about other configurations, and is not reusable.
+- **$\mathcal{F}_3$: Accidental/fragile regularities.** Candidates that do not 
+  survive admissible perturbation, refinement, or deformation. The 
+  baryon-to-photon ratio, fine-tuned cellular automaton patterns, unstable 
+  equilibrium configurations.
+- **$\mathcal{F}_4$: Non-composable fragments.** Locally consistent but unable 
+  to be glued, extended, or composed into globally coherent law-objects. Kepler's 
+  two-body laws treated as fundamental rather than approximate. Sector rules that 
+  are individually consistent but jointly contradictory.
+
+A **viable lawhood concept** is a predicate $\mathsf{Law}(-)$ that excludes all 
+four pathology classes: if $\mathsf{Law}(x)$ is true, then $x$ is not in 
+$\mathcal{F}_1 \cup \mathcal{F}_2 \cup \mathcal{F}_3 \cup \mathcal{F}_4$.
+
+---
+
+## Pathology Exclusion Forces Structural Roles
+
+The central result is a structural implication, not just a list of examples. 
+Exclusion of each pathology class forces a corresponding structural role on 
+the lawhood predicate. And conversely: absence of each role *entails* admission 
+of the corresponding non-law pathology.
+
+**Notation-exclusion forces a quotient.** If the lawhood predicate doesn't factor 
+through an equivalence relation on presentations, then the same free scalar field 
+Lagrangian in Cartesian vs. Rindler coordinates same physics, different 
+expressions can receive different lawhood verdicts. That's $\mathcal{F}_1$.
+
+**Chronicle-exclusion forces nomic genericity.** If the predicate doesn't restrict 
+to nomically generic candidates, it admits the world-book, a complete 
+state-history of the realized universe, formulated covariantly. The world-book is 
+presentation-invariant (passes the quotient), trivially robust (the realized world 
+does not fail to be itself), and trivially composable (it's already global). But it 
+is a chronicle, not a law. Excluding it forces the requirement that law-candidates 
+be determined by invariant structural predicates in the allowed local language, not 
+by naming contingent global data.
+
+**Accident-exclusion forces robustness.** If the predicate imposes no robustness 
+requirement, it admits fine-tuned patterns and unstable equilibria as laws. 
+That's $\mathcal{F}_3$.
+
+**Fragment-exclusion forces closure/composability.** If the predicate imposes no 
+composability requirement, it admits local rules on overlapping patches that 
+disagree on overlaps. That's $\mathcal{F}_4$.
+
+### Irreducibility
+
+No proper subset of the four roles excludes all four pathology classes. For each 
+role, there exists a candidate satisfying the remaining three roles but lying in 
+the corresponding pathology class:
+
+- **Drop the quotient** (keep genericity, robustness, composability): the same 
+  law in two coordinate systems receives different verdicts. $\mathcal{F}_1$.
+- **Drop genericity** (keep quotient, robustness, composability): the world-book 
+  is presentation-invariant, robust, composable but is a chronicle. $\mathcal{F}_2$.
+- **Drop robustness** (keep quotient, genericity, composability): a fine-tuned 
+  ratio, stated in invariant language and composed globally, is fragile. $\mathcal{F}_3$.
+- **Drop composability** (keep quotient, genericity, robustness): locally 
+  consistent, robust, generic rules on patches that disagree on overlaps. $\mathcal{F}_4$.
+
+The four roles are independent and irreducible. A smaller list can always be 
+manufactured by bundling conditions but the *exclusion roles* cannot be reduced. 
+Each addresses a pathology class unreachable by the others.
+
+---
+
+## Four Roles, Three Operators
+
+The four exclusion roles reduce to three certification operators. The key 
+observation: nomic genericity and robustness are both *semantic screening roles*,  
+they both act on the semantic quotient $Q$ by removing candidates that fail a test. 
+Genericity removes candidates specifiable only by contingent global data. Robustness 
+removes candidates that don't survive admissible deformation. Both are deflationary 
+operations on $Q$ and can be jointly realized inside a single admissibility operator 
+$\Delta$ without loss of logical content.
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign: "left", paddingRight: "24px"}}>Operator</th>
+      <th style={{textAlign: "left", paddingRight: "24px"}}>Role(s) realized</th>
+      <th style={{textAlign: "left"}}>Character</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{paddingRight: "24px"}}>$\partial$</td>
+      <td style={{paddingRight: "24px"}}>R1 (semantic invariance)</td>
+      <td>deflationary</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>$\Delta$</td>
+      <td style={{paddingRight: "24px"}}>R2 + R3 (genericity + robustness)</td>
+      <td>deflationary</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "24px"}}>$\Omega$</td>
+      <td style={{paddingRight: "24px"}}>R4 (descent-complete composability)</td>
+      <td>inflationary</td>
+    </tr>
+  </tbody>
+</table>
+
+This distinction, four primitive exclusion roles, three certification operators,  
+prevents the easy attack "you have four conditions but only three operators; 
+something is wrong." Nothing is wrong. Two screening roles merge into one screening 
+operator.
+
+### Forced Ordering
+
+The ordering $\Omega \circ \Delta \circ \partial$ is the unique well-typed, 
+law-valued composition. This is a theorem, not a convention:
+
+- **$\partial$ must come first**: $\Delta$ and $\Omega$ are semantic operations 
+  that must act on semantic content, not on presentation-laden objects. Applying 
+  them before $\partial$ violates R1.
+- **$\Delta$ must precede $\Omega$**: completing an inadmissible object produces 
+  an inadmissible completion. $\Omega$ is law-valued only on admissible inputs.
+
+The remaining orderings ($\Delta\Omega\partial$, $\Omega\partial\Delta$, etc.) 
+either apply semantic operations to presentations or complete inadmissible content. 
+Only $\Omega \circ \Delta \circ \partial$ avoids both failures.
+
+### Forced Properties
+
+Under R1–R4, the operator properties are forced:
+
+- $\partial$ is monotone, idempotent, and deflationary: removing artifacts from 
+  artifact-free content produces no change, and removal can only decrease 
+  information content.
+- $\Delta$ is monotone, idempotent, and deflationary: the admissible core of 
+  the admissible core is itself.
+- $\Omega$ is monotone, idempotent, and inflationary: a descent-complete object 
+  is already complete, and completion can only add content.
+
+### The Fixed-Point Condition
+
+With the three operators, their ordering, and their properties established, 
+lawhood has a clean characterization: a candidate $L$ satisfies all four 
+requirements if and only if it is a fixed point of the role-composite:
+
+$$
+L = \Omega\,\Delta\,\partial(L)
+$$
+
+This is unconditional, it uses only the fact that the three roles exist and 
+have the derived properties.
+
+---
+
+## Every Alternative Converges to the Same Architecture
+
+Four rival foundational approaches are examined. Each either fails to exclude at 
+least one pathology or, when repaired, induces explicit role-equivalents of the 
+same quotient/filter/closure structure.
+
+**Category-theoretic universal-property frameworks.** Laws as terminal/initial 
+objects in a category of admissible theories. Native coverage: quotient (via 
+isomorphism equivalence) and partial composability (via terminal objects). 
+Failures: admits chronicles (a terminal object in the category of all consistent 
+theories could be the world-book) and fragile objects (universal properties say 
+nothing about perturbative stability). After repair: 
+$\partial_\mathrm{cat} \to \Delta_\mathrm{cat} \to \Omega_\mathrm{cat}$.
+
+**Information-theoretic minimality.** Laws as maximally compressed descriptions 
+(Kolmogorov complexity, MDL). Failures: machine-dependence blocks exact semantic 
+invariance (R1); short programs can encode specific histories (R2); compression 
+says nothing about robustness (R3) or composability (R4). After repair: coding 
+quotient $\to$ generic-robust filter $\to$ global completion.
+
+**Logical / axiomatic closure systems.** Laws as deductive closures of consistent 
+axiom sets. Failures: a complete theory of one specific model is deductively closed 
+but is a chronicle (R2); deductive closure says nothing about physical robustness 
+(R3). After repair: interpretation-equivalence quotient $\to$ genericity + 
+robustness filter $\to$ deductive + global closure.
+
+**Purely dynamical definitions.** Laws as fixed points of a physical flow (RG, 
+coarse-graining). Failures: a fixed point can be a specific solution rather than 
+a law (the Ising model at criticality is an RG fixed point, but criticality is 
+not a law of nature - R2); fixed points of a local flow need not compose globally 
+(R4). After repair: scheme/conjugacy quotient $\to$ law/solution genericity + 
+robustness $\to$ global sector closure.
+
+<table style={{borderCollapse: "collapse"}}>
+  <thead>
+    <tr>
+      <th style={{textAlign: "left", paddingRight: "16px"}}>Approach</th>
+      <th style={{textAlign: "center", paddingRight: "12px"}}>R1</th>
+      <th style={{textAlign: "center", paddingRight: "12px"}}>R2</th>
+      <th style={{textAlign: "center", paddingRight: "12px"}}>R3</th>
+      <th style={{textAlign: "center", paddingRight: "12px"}}>R4</th>
+      <th style={{textAlign: "left", paddingLeft: "12px"}}>Induced structure</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style={{paddingRight: "16px"}}>Category-theoretic</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✓</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>partial</td>
+      <td style={{paddingLeft: "12px"}}>$\partial_\mathrm{cat} \to \Delta_\mathrm{cat} \to \Omega_\mathrm{cat}$</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "16px"}}>Information-theoretic</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>partial</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>heuristic</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{paddingLeft: "12px"}}>coding $q$ $\to$ filter $\to$ completion</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "16px"}}>Axiomatic closure</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>partial</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>partial</td>
+      <td style={{paddingLeft: "12px"}}>$\partial_\mathrm{logic} \to \Delta_\mathrm{logic} \to \Omega_\mathrm{logic}$</td>
+    </tr>
+    <tr>
+      <td style={{paddingRight: "16px"}}>Dynamical</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>partial</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✓</td>
+      <td style={{textAlign: "center", paddingRight: "12px"}}>✗</td>
+      <td style={{paddingLeft: "12px"}}>$\partial_\mathrm{dyn} \to \Delta_\mathrm{dyn} \to \Omega_\mathrm{dyn}$</td>
+    </tr>
+  </tbody>
+</table>
+
+The mathematical realizations differ; the roles do not. Every rival framework, 
+once repaired to exclude all four pathology classes, converges to the same 
+architecture.
+
+---
+
+## Two Levels of Inevitability
+
+The paper draws a precise line between what is unconditional and what requires 
+additional structure.
+
+### Unconditional (role-level)
+
+These results require only the minimal background structure and the pre-theoretic 
+demand that lawhood exclude the four pathology classes:
+
+1. Four exclusion roles are necessary.
+2. Absence of any role entails admission of the corresponding pathology.
+3. The four roles are irreducible.
+4. Rival frameworks converge to the same role-structure.
+5. Four roles reduce to three operators (two screening roles merge).
+6. The ordering $\Omega \circ \Delta \circ \partial$ is the unique well-typed, 
+   law-valued composition.
+
+### The Bridge to Full Factorization
+
+Role inevitability establishes that every viable certification architecture must 
+perform quotient $\to$ filter $\to$ closure in that order. It does not yet 
+establish that a specific certifier map $F$ must *equal* 
+$\Omega \circ \Delta \circ \partial$ as an exact operator identity.
+
+The gap is precise. Role inevitability gives roles, ordering, and properties. 
+It does not give: a typed quotient *map* (rather than a bare equivalence relation), 
+a greatest admissible-core *map* (rather than a predicate), a least lawful-completion 
+*map* (rather than a bare subclass), or the exactness of the certifier with respect 
+to those extremals.
+
+The **Extremal Certifier Bridge** (ECB), four clauses: typed semantic quotient, 
+greatest admissible core, least lawful completion, and certifier exactness is the 
+weakest sufficient bridge. Under ECB, every universal certifier factors uniquely as 
+$F = \Omega \circ \Delta \circ \partial$. Each ECB clause is individually necessary 
+for full factorization.
+
+ECB is not a new principle. It is already present in the Tier-0 framework paper in 
+distributed form across LRP-1 through LRP-3 and the typed inevitability theorem. 
+The contribution of this paper is isolating ECB explicitly and proving it is the 
+weakest sufficient version.
+
+### Strictly Stronger (optional)
+
+Two further claims require strictly more:
+
+- **Stage irreducibility**, the three operators are separately recoverable as 
+  diagnostic stages. This requires AX-Sep (optional). It is not part of the bridge 
+  to composite factorization.
+- **Fixed-point uniqueness**, the physically realized fixed point is unique up to 
+  $\Omega$-equivalence. This requires the Noetherianity and capacity-operator 
+  conditions (C1–C5) of the Tier-0 uniqueness theorem.
+
+---
+
+## What This Means for the Sceptic
+
+If you think the Everything Equation is "just one possible framework," this paper 
+says: name your alternative. If it is a viable notion of lawhood if it excludes 
+notation artifacts, chronicles, accidents, and fragments then it must perform the 
+same three jobs in the same order with the same operator properties. The only 
+remaining freedom is in the mathematical realization, not in the architecture.
+
+The framework is not one option among many. It is the unique structural skeleton 
+that every non-arbitrary lawhood concept must instantiate. The specific physical 
+content, the Lovelock selection, the CCP suppression, the modular fixed point, 
+the generation count is what you get when that skeleton is exercised on the 
+physical state space. But the skeleton itself is forced by logic alone.
+
+If lawhood changes under redescription, it is notation, not law. If it admits a 
+complete chronicle of the actual world, it has collapsed law into model. If it 
+admits fragile coincidences, it has collapsed law into accident. If it admits 
+local rules that do not glue, it has collapsed law into fragment.
+
+So any viable lawhood concept must perform four jobs: quotient presentation, 
+exclude chronicles, exclude accidents, and enforce global composability. 
+Operationally those four jobs reduce to three stages: quotient, admissibility 
+filter, closure. The order is forced. If you also require a universal certifier 
+with greatest admissible cores and least lawful completions, the weakest typed 
+upgrade then it is $\Omega\Delta\partial$ and nothing else.
+
+---
+
+## Primary Reference
+
+> **The Necessity of Lawhood Primitives: Why Any Non-Arbitrary Notion of Physical Law Requires Four Structural Conditions**  
+> Jeremy Rodgers - April 2026  
+> DOI: [10.5281/zenodo.19382264](https://doi.org/10.5281/zenodo.19382264)
+
+> **Supporting paper:** [The Tier-0 Framework: A Law-Level Closure and Selection Principle for Physics](https://doi.org/10.5281/zenodo.19382264) — April 2026
+
+>
