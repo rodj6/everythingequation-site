@@ -338,6 +338,7 @@ problems:
       - problem:navier-stokes
       - problem:universal-spectral-fingerprint
       - problem:consciousness
+      - problem:lawhood-necessity
 
   - id: problem:lawhood
     slug: lawhood
@@ -366,6 +367,28 @@ problems:
       - problem:fine-structure-constant
       - problem:observer-theory
       - problem:consciousness
+      - problem:lawhood-necessity
+
+  - id: problem:lawhood-necessity
+    slug: lawhood-necessity
+    title: Why Lawhood Requires Canonical Closure
+    domain: Foundations/Physics
+    status: public
+    maturity: research
+    manualPath: true
+    direct_answer: >
+      Any viable lawhood concept must implement presentation-invariant certification,
+      admissibility filtering, and canonical completion. The lawhood necessity result
+      argues that these roles are not optional philosophical add-ons but the minimal
+      structural requirements for any non-vacuous notion of physical law, forcing the
+      ΩΔ∂ architecture in exact certification form.
+    monograph_refs: []
+    supported_by: []
+    connections_hint:
+      - problem:lawhood
+      - problem:mathematical-foundations
+      - problem:quantum-measurement
+      - problem:fine-structure-constant
 
   - id: problem:quantum-measurement
     slug: quantum-measurement
@@ -394,6 +417,7 @@ problems:
       - problem:spectral-action-yukawa-gap
       - problem:observer-theory
       - problem:consciousness
+      - problem:lawhood-necessity
 
   - id: problem:observer-theory
     slug: observer-theory
