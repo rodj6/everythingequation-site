@@ -13,7 +13,14 @@ export const site = {
 
   /** Tagline shown in the hero and used in metadata. */
   tagline:
-    "Shadow Theory gives a formal argument that the reality we experience is not source reality itself. It is not a simulation, and not a Matrix-style illusion. It is a projected shadow of deeper structure, and physics is the study of what that shadow reveals, hides, and lets us reconstruct.",
+    "**Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.**
+
+This is not a simulation hypothesis or a Matrix-style illusion. The world we experience is real. Shadow Theory proposes that it is a mathematically structured shadow of a deeper reality.
+
+Rather than treating physics as the direct study of ultimate reality, Shadow Theory treats it as the study of the shadow we can observe, what it faithfully represents, what information it loses, and what can and cannot be reconstructed from it.
+
+The six-paper foundation develops the mathematics needed to distinguish observation from source structure, determine when missing information can be recovered, and formally establish what can and cannot be claimed about the underlying reality.
+",
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
