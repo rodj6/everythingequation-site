@@ -1,464 +1,271 @@
-version: 1
+version: 2
+# ============================================================================
+# OPEN PROBLEM REGISTRY
+#
+# Each entry is a research target in the Shadow Theory programme.
+#
+# Fields:
+#   id / slug     - stable identifier; slug becomes the URL /problems/<slug>
+#   title         - display title
+#   domain        - topical domain label
+#   programme     - featured | additional | legacy
+#                   featured   -> shown in the main open-problem programme
+#                   additional -> listed under further targets
+#                   legacy     -> archived; shown only in the archive section
+#   status        - public | draft  (draft entries are hidden)
+#   maturity      - open | active | legacy-notes
+#   legacy_notes  - true when an older manual MDX note exists for this slug.
+#                   Those notes are historical drafts from the earlier
+#                   Everything Equation era and are displayed behind a
+#                   prominent historical-draft banner.
+#   target        - neutral statement of the research target. Keep this
+#                   inside the public claim boundary: it states what the
+#                   programme aims at, not what has been established.
+#
+# To add a new open problem: copy a block, change the fields, and (optionally)
+# add a note file at content/manual/problems/<slug>.mdx.
+# ============================================================================
 problems:
+  # ----------------------------------------------------------------
+  # FEATURED PROGRAMME
+  # ----------------------------------------------------------------
   - id: standard-model
     slug: standard-model
-    title: Standard Model of Particle Physics
-    domain: Physics
+    title: Standard Model Structure
+    domain: Particle Physics
+    programme: featured
     status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      Law-level derivation of the Standard Model gauge group, fermion content, anomaly cancellation,
-      and family multiplicity from Tier–0 closure and admissibility.
-    monograph_refs:
-      - "Appendix H.1"
-    supported_by:
-      - zenodo:18474556
-      - zenodo:18475611
-      - zenodo:18358761
-      - zenodo:18718045
-      - zenodo:18736273
-      - zenodo:19041471
-      - zenodo:19042647
-    connections_hint:
-      - problem:grand-unified-theory
-      - problem:mathematical-foundations
-      - problem:strong-cp
-      - problem:yukawa-prediction
-      - problem:spectral-action-yukawa-gap
-      - problem:fine-structure-constant
-      - problem:three-fermion-generations
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Whether the gauge group, fermion content, and family structure of the
+      Standard Model can be constrained or derived as statused branch results
+      of the Shadow Theory programme. Any such result requires its own public
+      branch packet; earlier notes on this page are historical drafts.
 
-  - id: problem:three-fermion-generations
+  - id: fine-structure-constant
+    slug: fine-structure-constant
+    title: Fine-Structure Constant
+    domain: Particle Physics
+    programme: featured
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      A structural account of the fine-structure constant (the observed value
+      near 1/137), treated as a downstream branch target. No statused public
+      claim is currently licensed; earlier derivation notes are historical
+      drafts pending reclassification through Papers 1-6.
+
+  - id: dark-sector
+    slug: dark-sector
+    title: Dark Sector
+    domain: Cosmology / Particle Physics
+    programme: featured
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Dark matter and dark-sector structure as branch targets of the
+      programme: what completion and compilation discipline would be required
+      to make any dark-sector proposal a statused public artifact.
+
+  - id: cosmological-constant
+    slug: cosmological-constant
+    title: Cosmological Constant
+    domain: Cosmology
+    programme: featured
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The value and smallness of the cosmological constant / dark energy
+      density, held as a branch target. Paper 5 contains a schematic
+      effective-route firewall example in this area; it is explicitly not a
+      flagship physics result.
+
+  - id: quantum-gravity
+    slug: quantum-gravity
+    title: Quantum Gravity
+    domain: Gravitation
+    programme: featured
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      A consistent account of gravitation at quantum scales, approached
+      through the programme's readout/completion discipline: which parts of
+      the problem are readout artifacts, which are certified closure
+      obstructions, and what a statused Tier-1 emission would require.
+
+  - id: quantum-measurement
+    slug: quantum-measurement
+    title: Quantum Measurement
+    domain: Quantum Foundations
+    programme: featured
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The quantum measurement problem reframed through the distinction between
+      bounded readouts and realization structure established in Paper 1, and
+      the obstruction criterion of Paper 2.
+
+  # ----------------------------------------------------------------
+  # ADDITIONAL TARGETS
+  # ----------------------------------------------------------------
+  - id: three-fermion-generations
     slug: three-fermion-generations
-    title: Why Exactly Three Fermion Generations?
-    domain: Physics/Particle Physics
+    title: Three Fermion Generations
+    domain: Particle Physics
+    programme: additional
     status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      The generation count is not a free input. In the coupled Dirac–Λ framework,
-      a double-squeeze mechanism forces N = 3 uniquely: N ≤ 2 is excluded by the
-      CP-capacity barrier, while N ≥ 4 is excluded by load–cap crossing in the
-      capacity inequality. Exactly three generations are admissible.
-    monograph_refs: []
-    supported_by:
-      - zenodo:18358761
-      - zenodo:18736273
-      - zenodo:19041471
-    connections_hint:
-      - problem:standard-model
-      - problem:grand-unified-theory
-      - problem:spectral-action-yukawa-gap
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Why exactly three fermion generations occur. Earlier notes asserting a
+      forced N = 3 result belong to the superseded framework era and are
+      retained as historical drafts; the question is held as an open branch
+      target.
 
-  - id: problem:strong-cp
+  - id: strong-cp
     slug: strong-cp
     title: Strong CP Problem
-    domain: Physics
+    domain: Particle Physics
+    programme: additional
     status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      Structural vanishing of the QCD vacuum angle θ: within the coupled Dirac–Λ Tier-1 realization,
-      θ is not a free tunable parameter in admissible stationary sectors and is forced to vanish (or
-      be rendered physically inactive) by record-admissibility and positivity constraints.
-    monograph_refs: []
-    supported_by:
-      - zenodo:18717563
-    connections_hint:
-      - problem:standard-model
-      - problem:grand-unified-theory
-      - problem:lawhood
-      - problem:spectral-action-yukawa-gap
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The vanishing or suppression of the QCD vacuum angle, held as an open
+      branch target requiring its own branch packet.
 
-  - id: problem:yukawa-prediction
+  - id: yukawa-prediction
     slug: yukawa-prediction
-    title: Exact Yukawa Prediction
-    domain: Physics
+    title: Yukawa Couplings and Fermion Masses
+    domain: Particle Physics
+    programme: additional
     status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      An across-the-board no-go result: within the capacity-coupled Dirac–Λ realization, exact Yukawa
-      prediction is structurally obstructed by admissibility and implementability constraints, preventing
-      a universal exact determination of Yukawa parameters as rigid outputs of the framework.
-    monograph_refs: []
-    supported_by:
-      - zenodo:18721002
-      - zenodo:19041701
-    connections_hint:
-      - problem:standard-model
-      - problem:grand-unified-theory
-      - problem:lawhood
-      - problem:spectral-action-yukawa-gap
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Structural constraints on Yukawa couplings and fermion mass patterns as
+      a branch target of the programme.
 
-  - id: problem:spectral-action-yukawa-gap
+  - id: spectral-action-yukawa-gap
     slug: spectral-action-yukawa-gap
-    title: The Yukawa Gap in the Spectral Action
-    domain: Physics/Mathematical Physics
+    title: Spectral Action / Yukawa Gap
+    domain: Mathematical Physics
+    programme: additional
     status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      The Chamseddine–Connes spectral action determines the bosonic Standard Model sector but leaves
-      the Yukawa sector unconstrained. In the Dirac–Λ framework, this gap is closed by the Dirichlet-to-Neumann
-      Osterwalder–Schrader boundary operator K_OS together with the capacity inequality, which supplies the
-      missing boundary-channel constraint on the internal Dirac operator and its admissible couplings.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19041187
-      - zenodo:18709502
-      - zenodo:18718045
-      - zenodo:18717563
-      - zenodo:18721002
-      - zenodo:19041612
-      - zenodo:19041701
-      - zenodo:19042647
-      - zenodo:19042717
-      - zenodo:19041471
-    connections_hint:
-      - problem:standard-model
-      - problem:grand-unified-theory
-      - problem:strong-cp
-      - problem:yukawa-prediction
-      - problem:quantum-measurement
-      - problem:fine-structure-constant
-      - problem:three-fermion-generations
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The gap between spectral-action-style bosonic structure and realistic
+      Yukawa / fermion-mass data, treated as an open structural question.
 
-  - id: problem:universal-spectral-fingerprint
-    slug: universal-spectral-fingerprint
-    title: Universal Spectral Fingerprint in Physical Systems
-    domain: Physics/Mathematical Physics
-    status: public
-    maturity: research
-    manualPath: true
-    direct_answer: >
-      Diverse curvature-dominated physical systems exhibit a common pattern of dimensionless eigenvalue
-      ratios drawn from a fixed library of mathematical constants. The phenomenon appears across coherent
-      (unitary) and dissipative (irreversible) dynamics and may reflect a shared positive selfadjoint
-      spectral carrier governing multi-scale physical structure.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19026722
-    connections_hint:
-      - problem:quantum-gravity
-      - problem:lawhood
-      - problem:mathematical-foundations
-      - problem:fine-structure-constant
-
-  - id: problem:fine-structure-constant
-    slug: fine-structure-constant
-    title: Why Is the Fine-Structure Constant 1/137?
-    domain: Physics/Foundations
-    status: public
-    maturity: complete
-    manualPath: true
-    direct_answer: >
-      Within the Dirac–Λ framework, the Standard Model parameter set is reduced to a single
-      geometric modulus, but Tier-1 cannot determine that modulus internally. The Everything
-      Equation resolves the remaining ambiguity at Tier-0: the one-parameter family collapses
-      to a unique fixed point, yielding the fine-structure constant as a law-level output rather
-      than a free physical input.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19028471
-      - zenodo:19042717
-      - zenodo:19041187
-      - zenodo:19026722
-    connections_hint:
-      - problem:standard-model
-      - problem:grand-unified-theory
-      - problem:spectral-action-yukawa-gap
-      - problem:lawhood
-      - problem:universal-spectral-fingerprint
-
-  - id: problem:grand-unified-theory
+  - id: grand-unified-theory
     slug: grand-unified-theory
-    title: Grand Unified Theory
-    domain: Physics
+    title: Unification Beyond the Standard Model
+    domain: Particle Physics
+    programme: additional
     status: public
-    maturity: complete
-    direct_answer: >
-      Structural derivation of an admissible grand unified gauge group via determinant closure and law-level rigidity.
-    monograph_refs:
-      - "Appendix H.1"
-    supported_by:
-      - zenodo:18474556
-      - zenodo:18709502
-      - zenodo:18718045
-      - zenodo:18721002
-    connections_hint:
-      - problem:standard-model
-      - problem:quantum-gravity
-      - problem:strong-cp
-      - problem:yukawa-prediction
-      - problem:spectral-action-yukawa-gap
-      - problem:fine-structure-constant
-      - problem:three-fermion-generations
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Whether and how unification structure beyond the Standard Model can be
+      posed as a well-formed completion target in the programme.
 
-  - id: problem:quantum-gravity
-    slug: quantum-gravity
-    title: Quantum Gravity and Spacetime Structure
-    domain: Physics
+  - id: universal-spectral-fingerprint
+    slug: universal-spectral-fingerprint
+    title: Universal Spectral Fingerprint
+    domain: Mathematical Physics
+    programme: additional
     status: public
-    maturity: complete
-    direct_answer: >
-      Lawful emergence of spacetime dimensionality, null structure, and causal geometry via recursive gauge collapse
-      and stability selection.
-    monograph_refs:
-      - "Appendix I.4"
-      - "Appendix H.2"
-    supported_by:
-      - zenodo:18384959
-      - zenodo:18230232
-      - zenodo:18478728
-      - zenodo:18333465
-      - zenodo:18330896
-      - zenodo:18320372
-      - zenodo:18318743
-      - zenodo:17872725
-      - zenodo:17889989
-      - zenodo:18014526
-      - zenodo:17538401
-      - zenodo:18792625
-      - zenodo:18792714
-      - zenodo:18792786
-      - zenodo:18792878
-      - zenodo:19041187
-    connections_hint:
-      - problem:cosmological-constant
-      - problem:grand-unified-theory
-      - problem:universal-spectral-fingerprint
-      - problem:observer-theory
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Whether a universal spectral signature of admissible structure can be
+      characterized; held as an exploratory open target.
 
-  - id: problem:cosmological-constant
-    slug: cosmological-constant
-    title: Cosmological Constant Problem
-    domain: Physics
-    status: public
-    maturity: complete
-    direct_answer: >
-      Vacuum energy control via the canonical Λ-field and universal spectral budget constraints.
-    monograph_refs:
-      - "Appendix J.3"
-    supported_by:
-      - zenodo:18092342
-      - zenodo:18092618
-      - zenodo:18278767
-      - zenodo:18261716
-      - zenodo:18298571
-      - zenodo:18073598
-      - zenodo:17550178
-      - zenodo:19041187
-    connections_hint:
-      - problem:arrow-of-time
-      - problem:quantum-gravity
-
-  - id: problem:dark-sector
-    slug: dark-sector
-    title: Dark Matter and Dark Energy
-    domain: Physics/Cosmology
-    status: public
-    maturity: complete
-    direct_answer: >
-      The dark sector is structurally reclassified: dark energy arises as an Ω-dominant closure background,
-      while dark matter appears as Λ-silent (record-silent) curvature modes rather than an independent particle fluid.
-      Observed gravitational anomalies are treated as lawful projections of closure-stable geometry and spectral budget structure.
-    monograph_refs:
-      - "Appendix J.3"
-    supported_by:
-      - zenodo:18278767
-      - zenodo:18261716
-      - zenodo:18298571
-      - zenodo:18092342
-      - zenodo:18092618
-    connections_hint:
-      - problem:cosmological-constant
-      - problem:quantum-gravity
-      - problem:lawhood
-
-  - id: problem:arrow-of-time
-    slug: arrow-of-time
-    title: Arrow of Time and Time Asymmetry
-    domain: Physics
-    status: public
-    maturity: complete
-    direct_answer: >
-      Emergence of irreversible time asymmetry from spectral thermodynamics and law-level energy constraints.
-    monograph_refs:
-      - "Appendix I.3"
-    supported_by:
-      - zenodo:17545541
-      - zenodo:17548423
-    connections_hint:
-      - problem:cosmological-constant
-
-  - id: problem:navier-stokes
-    slug: navier-stokes
-    title: Navier–Stokes Global Regularity
-    domain: Mathematics/PDE
-    status: public
-    maturity: complete
-    direct_answer: >
-      Closure mechanism controlling high-frequency surplus yields regularity and boundedness in 3D Navier–Stokes.
-    monograph_refs:
-      - "Appendix I.1"
-      - "Appendix I.2"
-    supported_by:
-      - zenodo:18371918
-      - zenodo:18371954
-      - zenodo:18372004
-      - zenodo:18372079
-      - zenodo:18372181
-      - zenodo:18372250
-      - zenodo:18356771
-    connections_hint:
-      - problem:mathematical-foundations
-
-  - id: problem:mathematical-foundations
-    slug: mathematical-foundations
-    title: Foundations of Mathematical Lawhood
-    domain: Mathematics/Foundations
-    status: public
-    maturity: complete
-    direct_answer: >
-      Mathematics arises as closure-stable, fixed-point admissible structure governed by the Everything Equation.
-    monograph_refs:
-      - "Appendix J.2"
-    supported_by:
-      - zenodo:17813117
-      - zenodo:18883301
-      - zenodo:18399919
-      - zenodo:18383199
-      - zenodo:18373510
-      - zenodo:17826373
-      - zenodo:19027222
-    connections_hint:
-      - problem:standard-model
-      - problem:navier-stokes
-      - problem:universal-spectral-fingerprint
-      - problem:consciousness
-      - problem:lawhood-necessity
-
-  - id: problem:lawhood
+  - id: lawhood
     slug: lawhood
-    title: What Is a Physical or Mathematical Law?
-    domain: Foundations
+    title: Lawhood
+    domain: Foundations of Physics
+    programme: additional
     status: public
-    maturity: complete
-    direct_answer: >
-      Lawhood is characterized by ΩΔ∂-closure, admissibility, and fixed-point stability rather than phenomenological fit.
-    monograph_refs:
-      - "Appendix J.1"
-    supported_by:
-      - zenodo:18081205
-      - zenodo:18080442
-      - zenodo:18493638
-      - zenodo:19027222
-      - zenodo:17823404
-      - zenodo:17851714
-      - zenodo:17859631
-      - zenodo:18287259
-      - zenodo:19390155
-    connections_hint:
-      - problem:mathematical-foundations
-      - problem:standard-model
-      - problem:quantum-gravity
-      - problem:universal-spectral-fingerprint
-      - problem:fine-structure-constant
-      - problem:observer-theory
-      - problem:consciousness
-      - problem:lawhood-necessity
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      What makes a candidate law a physical law. This was the organizing
+      question of the earlier Everything Equation programme; it is now held as
+      a branch target whose earlier treatments are historical background to
+      Papers 1-6.
 
-  - id: problem:lawhood-necessity
+  - id: lawhood-necessity
     slug: lawhood-necessity
-    title: Why Lawhood Requires Canonical Closure
-    domain: Foundations/Physics
+    title: Lawhood Necessity
+    domain: Foundations of Physics
+    programme: additional
     status: public
-    maturity: research
-    manualPath: true
-    direct_answer: >
-      Any viable lawhood concept must implement presentation-invariant certification,
-      admissibility filtering, and canonical completion. The lawhood necessity result
-      argues that these roles are not optional philosophical add-ons but the minimal
-      structural requirements for any non-vacuous notion of physical law, forcing the
-      ΩΔ∂ architecture in exact certification form.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19390155
-    connections_hint:
-      - problem:lawhood
-      - problem:mathematical-foundations
-      - problem:quantum-measurement
-      - problem:fine-structure-constant
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Whether any viable notion of physical law forces a common certification
+      architecture, restated as an open structural question under the
+      six-paper stack.
 
-  - id: problem:quantum-measurement
-    slug: quantum-measurement
-    title: Quantum Measurement and the Origin of the Born Rule
-    domain: Physics/Foundations
+  - id: mathematical-foundations
+    slug: mathematical-foundations
+    title: Mathematical Foundations
+    domain: Mathematics
+    programme: additional
     status: public
-    maturity: complete
-    direct_answer: >
-      Definite outcomes and |ψ|² probability weights emerge from closure-stable admissibility
-      constraints. Measurement is not an external postulate but a structural consequence of
-      operator-theoretic stability, probability rigidity, and decision-level closure.
-    monograph_refs:
-      - "Appendix I.5"
-    supported_by:
-      - zenodo:17823241
-      - zenodo:17864384
-      - zenodo:18028427
-      - zenodo:18205246
-      - zenodo:18704783
-      - zenodo:19041187
-      - zenodo:19324253
-    connections_hint:
-      - problem:quantum-gravity
-      - problem:lawhood
-      - problem:mathematical-foundations
-      - problem:spectral-action-yukawa-gap
-      - problem:observer-theory
-      - problem:consciousness
-      - problem:lawhood-necessity
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The foundational status of the closure, admissibility, and completion
+      mathematics underlying the framework, including its relation to
+      category-theoretic and proof-theoretic foundations.
 
-  - id: problem:observer-theory
-    slug: observer-theory
-    title: Observer Theory and Record-Based Systems
-    domain: Physics/Foundations
+  - id: navier-stokes
+    slug: navier-stokes
+    title: Navier-Stokes Regularity
+    domain: Mathematics / PDE
+    programme: additional
     status: public
-    maturity: research
-    direct_answer: >
-      Observer structure is not primitive but arises from record-stable subalgebras
-      and admissibility constraints. Systems capable of persistent self-referential
-      record closure (SRC) form a distinct class of physically admissible observers,
-      extending quantum measurement into a structural theory of observation.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19324253
-    connections_hint:
-      - problem:quantum-measurement
-      - problem:consciousness
-      - problem:lawhood
-      - problem:quantum-gravity
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Global regularity of the three-dimensional Navier-Stokes equations,
+      held as an external mathematical target; earlier notes are historical
+      drafts.
 
-  - id: problem:consciousness
+  - id: arrow-of-time
+    slug: arrow-of-time
+    title: Arrow of Time
+    domain: Statistical Mechanics
+    programme: additional
+    status: public
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      The thermodynamic arrow of time examined through coarse-grained readout
+      structure, connecting to the statistical-mechanics instance treated in
+      Paper 1.
+
+  # ----------------------------------------------------------------
+  # LEGACY ARCHIVE
+  # ----------------------------------------------------------------
+  - id: consciousness-field-theorem
     slug: consciousness-field-theorem
-    title: Consciousness and the Hard Problem
-    domain: Physics/Foundations
+    title: Consciousness Field Notes (Legacy)
+    domain: Legacy
+    programme: legacy
     status: public
-    maturity: research
-    manualPath: true
-    direct_answer: >
-      Consciousness is identified as the unique fixed point of a reduced canonicalization
-      operator on orbit space, with exponential convergence, observable certification,
-      and a structural separation between conscious (RCO) and non-conscious systems.
-      The framework provides a non-circular bridge between physical field structure
-      and phenomenal experience, together with explicit falsifiers and empirical validation.
-    monograph_refs: []
-    supported_by:
-      - zenodo:19324253
-    connections_hint:
-      - problem:observer-theory
-      - problem:quantum-measurement
-      - problem:lawhood
-      - problem:mathematical-foundations
+    maturity: legacy-notes
+    legacy_notes: true
+    target: >
+      Speculative notes from the earlier programme era, retained only as a
+      historical draft. Not part of the current Shadow Theory research
+      programme.

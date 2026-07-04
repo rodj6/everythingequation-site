@@ -1,0 +1,30 @@
+## Reading notes
+
+The paper's central move is to separate two relations that are usually
+conflated. For a realization/readout map $\rho: \mathcal{C} \to S$:
+
+- **Quotient presentation**: $S \cong \mathcal{C}/\sim_\rho$ — always holds
+  when $S = \mathrm{Img}(\rho)$. The readout is *exact*.
+- **Realization-structure equivalence**: $S \simeq_{\mathrm{real}} \mathcal{C}$
+  — requires the readout domain to recover the full realization-relevant
+  structure via admissible recovery maps.
+
+<Theorem title="Domain-level non-equivalence (informal)">
+If no admissible realization-faithful section of $\rho$ exists, then
+$S \not\simeq_{\mathrm{real}} \mathcal{C}$ even though
+$S \cong \mathcal{C}/\sim_\rho$ as a quotient.
+</Theorem>
+
+The statistical-mechanics instance is handled with care: the decisive
+obstruction is not fiber multiplicity but the absence of an admissible
+*invariant* package-role class in some macro-fiber under the
+macro-indiscernibility symmetry group — proved via an equivariant no-selector
+theorem and verified in a concrete finite occupation-number model.
+
+<ClaimBoundary>
+The results are confined to a formally defined class of ordinary
+nondegenerate macro-only coarse-grained presentations. Faithful, enriched,
+degenerate, representative-rigid, and ensemble-targeted presentations are
+classified as explicit exceptions. The paper does not claim every
+coarse-graining is non-faithful.
+</ClaimBoundary>

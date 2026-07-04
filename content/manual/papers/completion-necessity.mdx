@@ -1,0 +1,28 @@
+## Reading notes
+
+Paper 1 is a non-equivalence principle, not an obstruction machine. This
+paper supplies the missing certificate: it fixes a public target, a frozen
+readout state, and a lost realization role, and defines **essential closure
+slots** generated from the target specification alone.
+
+<Definition title="Certified active failure profile">
+A certified verdict that a lost role $u$ is required by an essential slot $s$
+and that no checked repair, discharge, or public surrogate clears that slot.
+</Definition>
+
+<Theorem title="Bridge principle (informal)">
+Readout loss <em>plus</em> certified active slot failure blocks sound full
+public closure. Neither alone suffices.
+</Theorem>
+
+The first-order instantiation distinguishes a checker-accepted derivation
+from resolved public proof closure from the frozen base, and is explicitly
+conditional on declared certified subcalculi.
+
+<ClaimBoundary>
+Certified proof failure forbids resolved closure from the frozen base. It
+does not assert the target formula is false, globally unprovable, or that no
+checker-accepted derivation of any kind exists. The paper emits a
+completion-need record; it does not construct completions or prove
+initiality.
+</ClaimBoundary>

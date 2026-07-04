@@ -1,96 +1,24 @@
+/**
+ * CONTENT REGISTRY LOADER
+ *
+ * Reads content/papers.yaml and content/problems.yaml, merges cached Zenodo
+ * metadata (.cache/zenodo.json), and exposes typed loaders used by every page.
+ *
+ * You normally never need to edit this file. To change site content, edit
+ * the YAML registries and MDX files under content/ instead.
+ */
 import fs from 'fs/promises';
+import { existsSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 
-export type ProblemStatus = 'draft' | 'public';
-export type PaperStatus = 'draft' | 'public';
+export type Visibility = 'draft' | 'public';
+export type PaperCategory = 'canonical' | 'branch' | 'historical';
+export type Programme = 'featured' | 'additional' | 'legacy';
 
-export interface ProblemEntry {
-  /**
-   * Internal identifier used as the slug for the URL. This is derived
-   * from the `slug` field in the registry. Historically `id` served
-   * double duty as both slug and identifier; with the new registry
-   * format we use the slug as the canonical path segment.
-   */
-  id: string;
-  /**
-   * Original registry identifier (e.g. `problem:standard-model`).
-   */
-  rawId: string;
-  title: string;
-  /**
-   * Short summary or claim describing the problem. Derived from
-   * `direct_answer` in the registry.
-   */
-  claim: string;
-  /** Optional domain tag (e.g. Physics, Mathematics/PDE). */
-  domain?: string;
-  /** Optional maturity or completion level (e.g. complete). */
-  maturity?: string;
-  /** Optional list of monograph references (strings like "Appendix H.1"). */
-  monograph_refs?: string[];
-  /** A single monograph section derived from the first reference. */
-  monograph?: string;
-  /** List of associated papers or Zenodo identifiers. */
-  papers?: string[];
-  /** List of related problem slugs. */
-  connections?: string[];
-  /** Draft or public. */
-  status: ProblemStatus;
-}
-
-export interface PaperEntry {
-  /**
-   * Canonical slug used in the URL (e.g. `zenodo-18081205`). Derived
-   * from the original registry identifier by stripping prefixes and
-   * replacing colons with hyphens.
-   */
-  id: string;
-  /**
-   * Original registry identifier (e.g. `paper:zenodo:18081205`).
-   */
-  rawId: string;
-  /**
-   * Optional DOI associated with the paper. Not always present in the
-   * registry but may be inferred from metadata.
-   */
-  doi?: string;
-  /**
-   * The Zenodo record ID used to fetch metadata (e.g. `18081205`).
-   */
-  zenodoId?: string;
-  /**
-   * List of problem slugs supported by this paper (derived from the
-   * `supports` field in the registry). These slugs correspond to
-   * `ProblemEntry.id` values.
-   */
-  problems?: string[];
-  /**
-   * Optional list of author names if provided directly in the registry.
-   * Otherwise derived from Zenodo metadata.
-   */
-  authors?: string[];
-  /**
-   * The role of the paper within the corpus (e.g. foundational,
-   * application, etc.).
-   */
-  role?: string;
-  /**
-   * Flag indicating whether the paper should be highlighted on the
-   * homepage or other contexts. Derived from `featured` in the registry.
-   */
-  featured?: boolean;
-  /**
-   * Optional notes attached to the paper registry entry.
-   */
-  notes?: string;
-  /**
-   * Monograph section, if any (not present in current registry but
-   * included for future compatibility).
-   */
-  monograph?: string;
-  status: PaperStatus;
-}
+// ---------------------------------------------------------------------------
+// Types
+// ---------------------------------------------------------------------------
 
 export interface ZenodoMetadata {
   id: string;
@@ -103,351 +31,251 @@ export interface ZenodoMetadata {
   files?: Array<{ filename: string; url: string }>;
 }
 
-export interface LoadedProblem extends ProblemEntry {
-  manualPath: string | null;
+export interface LoadedPaper {
+  /** URL slug: /papers/<slug> */
+  slug: string;
+  /** Original registry identifier (e.g. paper:shadow:1 or paper:zenodo:123). */
+  rawId: string;
+  /** 1-6 for the canonical stack; undefined otherwise. */
+  number?: number;
+  category: PaperCategory;
+  status: Visibility;
+  featured: boolean;
+  /** Explicit title from YAML (canonical papers) — falls back to Zenodo title. */
+  title?: string;
+  subtitle?: string;
+  role?: string;
+  summary?: string;
+  version?: string;
+  date?: string;
+  zenodoId?: string;
+  doi?: string;
+  /** Problem slugs this paper supports. */
+  supports: string[];
+  /** Cached Zenodo metadata, when available. */
+  metadata: ZenodoMetadata | null;
+  /** Whether a manual notes MDX exists at content/manual/papers/<slug>.mdx */
+  hasNotes: boolean;
+  /** Best display title (YAML title, else Zenodo title, else role, else slug). */
+  displayTitle: string;
+  /** Resolved DOI link if a DOI is known. */
+  doiUrl: string | null;
+  /** Resolved Zenodo record link if a record ID is known. */
+  zenodoUrl: string | null;
 }
 
-export interface LoadedPaper extends PaperEntry {
-  metadata: ZenodoMetadata | null;
-  manualPath: string | null;
+export interface LoadedProblem {
+  slug: string;
+  rawId: string;
+  title: string;
+  domain?: string;
+  programme: Programme;
+  status: Visibility;
+  maturity?: string;
+  legacyNotes: boolean;
+  /** Neutral statement of the research target. */
+  target: string;
+  /** Whether a manual notes MDX exists at content/manual/problems/<slug>.mdx */
+  hasNotes: boolean;
 }
+
+// ---------------------------------------------------------------------------
+// Internals
+// ---------------------------------------------------------------------------
 
 const ROOT = process.cwd();
+const CACHE_PATH = path.join(ROOT, '.cache/zenodo.json');
 
-/**
- * Load a YAML file relative to the project root.
- */
-async function loadYamlFile<T>(relPath: string): Promise<T[]> {
-  const fullPath = path.join(ROOT, relPath);
-  const source = await fs.readFile(fullPath, 'utf8');
-  const doc = yaml.load(source);
-  if (Array.isArray(doc)) {
-    return doc as unknown as T[];
-  }
-  return [];
-}
-
-/**
- * Load or initialise the Zenodo metadata cache. The cache is a map from
- * paper ID (slug) to the retrieved Zenodo metadata. The cache file lives
- * under `.cache/zenodo.json`. If it does not exist, an empty cache is
- * returned.
- */
 async function loadZenodoCache(): Promise<Record<string, ZenodoMetadata>> {
   try {
-    const cachePath = path.join(ROOT, '.cache/zenodo.json');
-    const contents = await fs.readFile(cachePath, 'utf8');
-    return JSON.parse(contents) as Record<string, ZenodoMetadata>;
-  } catch (err) {
+    return JSON.parse(await fs.readFile(CACHE_PATH, 'utf8'));
+  } catch {
     return {};
   }
 }
 
 async function saveZenodoCache(cache: Record<string, ZenodoMetadata>): Promise<void> {
-  const cachePath = path.join(ROOT, '.cache/zenodo.json');
-  await fs.mkdir(path.dirname(cachePath), { recursive: true });
-  await fs.writeFile(cachePath, JSON.stringify(cache, null, 2), 'utf8');
+  await fs.mkdir(path.dirname(CACHE_PATH), { recursive: true });
+  await fs.writeFile(CACHE_PATH, JSON.stringify(cache, null, 2), 'utf8');
 }
 
 /**
- * Fetch metadata for a Zenodo record given its record ID or DOI. This
- * function calls the Zenodo API and returns a subset of the metadata
- * fields we care about. If the fetch fails for any reason the function
- * returns null.
+ * Fetch metadata for a Zenodo record. Never throws; returns null on any
+ * failure so builds succeed offline. A 5s timeout keeps builds fast.
+ * Set SKIP_ZENODO=1 to skip all network fetches (cache-only builds).
  */
-async function fetchZenodo(record: string): Promise<ZenodoMetadata | null> {
+export async function fetchZenodo(record: string): Promise<ZenodoMetadata | null> {
+  if (process.env.SKIP_ZENODO === '1') return null;
   try {
-    const idNumber = record.match(/^\d+$/) ? record : undefined;
-    const endpoint = idNumber
-      ? `https://zenodo.org/api/records/${idNumber}`
-      : `https://zenodo.org/api/records/?doi=${encodeURIComponent(record)}`;
-    const res = await fetch(endpoint, { next: { revalidate: 86400 } });
+    const isId = /^\d+$/.test(record);
+    const endpoint = isId
+      ? `https://zenodo.org/api/records/${record}`
+      : `https://zenodo.org/api/records/?q=doi:%22${encodeURIComponent(record)}%22`;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 5000);
+    const res = await fetch(endpoint, { signal: controller.signal });
+    clearTimeout(timer);
     if (!res.ok) return null;
     const data = await res.json();
-    // If we looked up by DOI the API returns an array of hits under hits.hits
-    const recordData: any = Array.isArray(data?.hits?.hits) ? data.hits.hits[0] : data;
-    if (!recordData) return null;
-    const files = (recordData?.files || []).map((f: any) => ({ filename: f.key || f.filename, url: f.links.self }));
-    const creators = (recordData?.metadata?.creators || []).map((c: any) => c.name || `${c.given_name} ${c.family_name}`);
+    const rec: any = Array.isArray(data?.hits?.hits) ? data.hits.hits[0] : data;
+    if (!rec) return null;
     return {
-      id: recordData.id?.toString() ?? record,
-      doi: recordData?.metadata?.doi ?? recordData.doi ?? undefined,
-      title: recordData?.metadata?.title,
-      url: recordData?.links?.html,
-      creators,
-      description: recordData?.metadata?.description,
-      published: recordData?.metadata?.publication_date,
-      files,
-    } as ZenodoMetadata;
-  } catch (err) {
-    return null;
-  }
-}
-
-/**
- * Load and merge Zenodo metadata for the given papers. If metadata is
- * missing or outdated, fetch it from the network and update the cache.
- * Returns the loaded papers augmented with their Zenodo data and manual
- * MDX paths. When running inside Next.js build the network calls will be
- * executed server-side.
- */
-export async function loadPapers(): Promise<LoadedPaper[]> {
-  // Read the raw YAML document. Support both array and object formats.
-  const fullPath = path.join(ROOT, 'content/papers.yaml');
-  const source = await fs.readFile(fullPath, 'utf8');
-  const doc = yaml.load(source) as any;
-  let items: any[] = [];
-  if (Array.isArray(doc)) {
-    items = doc;
-  } else if (doc && typeof doc === 'object' && Array.isArray(doc.papers)) {
-    items = doc.papers;
-  }
-  const cache = await loadZenodoCache();
-  let changed = false;
-  const loaded: LoadedPaper[] = [];
-  for (const raw of items) {
-    // Derive slug from raw.id by stripping `paper:` prefix and replacing
-    // colons with hyphens.
-    const rawId: string = raw.id || '';
-    let slug = rawId;
-    if (slug.startsWith('paper:')) {
-      slug = slug.slice('paper:'.length);
-    }
-    slug = slug.replace(/:/g, '-');
-    const zenodoId: string | undefined = raw.zenodo?.toString() || raw.zenodoId;
-    const doi: string | undefined = raw.doi;
-    const status: PaperStatus = raw.visibility === 'public' ? 'public' : 'draft';
-
-    // ✅ PATCH: guard startsWith with typeof === 'string'
-    const problems: string[] | undefined = raw.supports
-      ? (raw.supports as any[]).map((p) =>
-          typeof p === 'string' && p.startsWith('problem:')
-            ? p.slice('problem:'.length)
-            : p
-        )
-      : raw.problems;
-
-    const role: string | undefined = raw.role;
-    const featured: boolean | undefined = raw.featured;
-    const notes: string | undefined = raw.notes;
-    // Look up Zenodo metadata using the Zenodo ID or DOI.
-    let metadata: ZenodoMetadata | null = null;
-    const key = slug;
-    const record = zenodoId || doi;
-    if (record) {
-      if (cache[key]) {
-        metadata = cache[key];
-      } else {
-        metadata = await fetchZenodo(record);
-        if (metadata) {
-          cache[key] = metadata;
-          changed = true;
-        }
-      }
-    }
-    const entry: PaperEntry = {
-      id: slug,
-      rawId,
-      doi,
-      zenodoId,
-      problems,
-      role,
-      featured,
-      notes,
-      status,
+      id: rec.id?.toString() ?? record,
+      doi: rec?.metadata?.doi ?? rec.doi ?? undefined,
+      title: rec?.metadata?.title,
+      url: rec?.links?.html,
+      creators: (rec?.metadata?.creators || []).map(
+        (c: any) => c.name || `${c.given_name ?? ''} ${c.family_name ?? ''}`.trim()
+      ),
+      description: rec?.metadata?.description,
+      published: rec?.metadata?.publication_date,
+      files: (rec?.files || []).map((f: any) => ({
+        filename: f.key || f.filename,
+        url: f?.links?.self,
+      })),
     };
-    const manualPath = await resolveManualPath('papers', slug);
-    loaded.push({ ...entry, metadata, manualPath });
-  }
-  if (changed) {
-    await saveZenodoCache(cache);
-  }
-  return loaded;
-}
-
-export async function loadProblems(): Promise<LoadedProblem[]> {
-  // Read the raw YAML document. Support both array and object formats.
-  const fullPath = path.join(ROOT, 'content/problems.yaml');
-  const source = await fs.readFile(fullPath, 'utf8');
-  const doc = yaml.load(source) as any;
-  let items: any[] = [];
-  if (Array.isArray(doc)) {
-    items = doc;
-  } else if (doc && typeof doc === 'object' && Array.isArray(doc.problems)) {
-    items = doc.problems;
-  }
-  const loaded: LoadedProblem[] = [];
-  for (const raw of items) {
-    // Derive slug and id. Prefer explicit slug, fallback to id.
-    const slug: string = raw.slug || raw.id || '';
-    const rawId: string = raw.id || slug;
-    // Map fields.
-    const domain: string | undefined = raw.domain;
-    const maturity: string | undefined = raw.maturity;
-    const claim: string = raw.direct_answer || raw.claim || '';
-    const monographRefs: string[] | undefined = raw.monograph_refs;
-    const monograph: string | undefined = monographRefs && monographRefs.length > 0 ? monographRefs[0] : undefined;
-    const supportedBy: string[] | undefined = raw.supported_by || raw.papers;
-
-    // ✅ PATCH: guard startsWith with typeof === 'string'
-    let connections: string[] | undefined;
-    if (raw.connections_hint) {
-      connections = raw.connections_hint.map((c: any) =>
-        typeof c === 'string' && c.startsWith('problem:')
-          ? c.slice('problem:'.length)
-          : c
-      );
-    } else if (raw.connections) {
-      connections = raw.connections;
-    }
-
-    const status: ProblemStatus = raw.status || 'draft';
-    const entry: ProblemEntry = {
-      id: slug,
-      rawId,
-      title: raw.title || '',
-      claim,
-      domain,
-      maturity,
-      monograph_refs: monographRefs,
-      monograph,
-      papers: supportedBy,
-      connections,
-      status,
-    };
-    const manualPath = await resolveManualPath('problems', slug);
-    loaded.push({ ...entry, manualPath });
-  }
-  return loaded;
-}
-
-async function resolveManualPath(category: 'problems' | 'papers', slug: string): Promise<string | null> {
-  const possible = path.join(ROOT, `content/manual/${category}/${slug}.mdx`);
-  try {
-    await fs.access(possible);
-    return possible;
   } catch {
     return null;
   }
 }
 
-/**
- * Generate a simple site graph capturing the relationships between
- * problems and papers. Only public entries are included. The graph
- * conforms loosely to the JSON-LD `@graph` structure used by schema.org.
- */
-export async function generateGraph() {
-  const problems = await loadProblems();
-  const papers = await loadPapers();
-  const graph: any[] = [];
-  for (const prob of problems) {
-    if (prob.status !== 'public') continue;
-    graph.push({
-      '@type': 'Thing',
-      '@id': `/problems/${prob.id}`,
-      name: prob.title,
-      description: prob.claim,
+function hasManual(kind: 'papers' | 'problems' | 'pages', slug: string): boolean {
+  return existsSync(path.join(ROOT, 'content', 'manual', kind, `${slug}.mdx`));
+}
+
+// ---------------------------------------------------------------------------
+// Papers
+// ---------------------------------------------------------------------------
+
+let papersPromise: Promise<LoadedPaper[]> | null = null;
+
+async function loadPapersUncached(): Promise<LoadedPaper[]> {
+  const source = await fs.readFile(path.join(ROOT, 'content/papers.yaml'), 'utf8');
+  const doc = yaml.load(source) as any;
+  const items: any[] = Array.isArray(doc) ? doc : doc?.papers ?? [];
+  const cache = await loadZenodoCache();
+  let cacheChanged = false;
+
+  const loaded: LoadedPaper[] = [];
+  for (const raw of items) {
+    const rawId: string = raw.id || '';
+    let slug: string = raw.slug || rawId.replace(/^paper:/, '').replace(/:/g, '-');
+    const zenodoId: string | undefined = raw.zenodo != null ? String(raw.zenodo) : undefined;
+
+    // Zenodo metadata: cache first, network as fallback (never fatal).
+    let metadata: ZenodoMetadata | null = null;
+    if (zenodoId) {
+      if (cache[slug]) {
+        metadata = cache[slug];
+      } else {
+        metadata = await fetchZenodo(zenodoId);
+        if (metadata) {
+          cache[slug] = metadata;
+          cacheChanged = true;
+        }
+      }
+    }
+
+    const doi: string | undefined = raw.doi ?? metadata?.doi ?? undefined;
+    const title: string | undefined = raw.title ?? metadata?.title ?? undefined;
+    const category: PaperCategory =
+      raw.category === 'canonical' || raw.category === 'branch'
+        ? raw.category
+        : 'historical';
+
+    loaded.push({
+      slug,
+      rawId,
+      number: typeof raw.number === 'number' ? raw.number : undefined,
+      category,
+      status: raw.visibility === 'public' ? 'public' : 'draft',
+      featured: Boolean(raw.featured),
+      title,
+      subtitle: raw.subtitle,
+      role: raw.role,
+      summary: raw.summary,
+      version: raw.version,
+      date: raw.date ?? metadata?.published,
+      zenodoId,
+      doi,
+      supports: Array.isArray(raw.supports)
+        ? raw.supports.map((p: any) =>
+            typeof p === 'string' && p.startsWith('problem:') ? p.slice(8) : String(p)
+          )
+        : [],
+      metadata,
+      hasNotes: hasManual('papers', slug),
+      displayTitle: title ?? raw.role ?? slug,
+      doiUrl: doi ? `https://doi.org/${doi}` : null,
+      zenodoUrl: metadata?.url ?? (zenodoId ? `https://zenodo.org/records/${zenodoId}` : null),
     });
   }
-  for (const paper of papers) {
-    if (paper.status !== 'public') continue;
-    graph.push({
-      '@type': 'ScholarlyArticle',
-      '@id': `/papers/${paper.id}`,
-      name: paper.metadata?.title ?? paper.role ?? paper.rawId,
-      url: paper.metadata?.url ?? null,
-      doi: paper.metadata?.doi ?? paper.doi ?? null,
-      creator: paper.metadata?.creators ?? paper.authors ?? [],
-    });
+
+  if (cacheChanged) {
+    try {
+      await saveZenodoCache(cache);
+    } catch {
+      /* read-only FS at runtime is fine */
+    }
   }
-  return { '@context': 'https://schema.org', '@graph': graph };
+  return loaded;
 }
 
-/**
- * Generate the llms.txt content. This simple text file enumerates
- * public resources in a human-readable format to aid large language
- * models in discovering the site’s scope. Each line contains the type
- * and slug of the resource.
- */
-export async function generateLlmsTxt(): Promise<string> {
+export async function loadPapers(): Promise<LoadedPaper[]> {
+  if (!papersPromise) papersPromise = loadPapersUncached();
+  return papersPromise;
+}
+
+export async function getCanonicalPapers(): Promise<LoadedPaper[]> {
+  const papers = await loadPapers();
+  return papers
+    .filter((p) => p.category === 'canonical' && p.status === 'public')
+    .sort((a, b) => (a.number ?? 99) - (b.number ?? 99));
+}
+
+export async function getPaper(slug: string): Promise<LoadedPaper | undefined> {
+  const papers = await loadPapers();
+  return papers.find((p) => p.slug === slug);
+}
+
+// ---------------------------------------------------------------------------
+// Problems
+// ---------------------------------------------------------------------------
+
+let problemsPromise: Promise<LoadedProblem[]> | null = null;
+
+async function loadProblemsUncached(): Promise<LoadedProblem[]> {
+  const source = await fs.readFile(path.join(ROOT, 'content/problems.yaml'), 'utf8');
+  const doc = yaml.load(source) as any;
+  const items: any[] = Array.isArray(doc) ? doc : doc?.problems ?? [];
+
+  return items.map((raw: any): LoadedProblem => {
+    const slug: string = raw.slug || String(raw.id).replace(/^problem:/, '');
+    const programme: Programme =
+      raw.programme === 'featured' || raw.programme === 'legacy'
+        ? raw.programme
+        : 'additional';
+    return {
+      slug,
+      rawId: raw.id ?? slug,
+      title: raw.title ?? slug,
+      domain: raw.domain,
+      programme,
+      status: raw.status === 'public' ? 'public' : 'draft',
+      maturity: raw.maturity,
+      legacyNotes: Boolean(raw.legacy_notes),
+      target: raw.target ?? raw.direct_answer ?? '',
+      hasNotes: hasManual('problems', slug),
+    };
+  });
+}
+
+export async function loadProblems(): Promise<LoadedProblem[]> {
+  if (!problemsPromise) problemsPromise = loadProblemsUncached();
+  return problemsPromise;
+}
+
+export async function getProblem(slug: string): Promise<LoadedProblem | undefined> {
   const problems = await loadProblems();
-  const papers = await loadPapers();
-  const lines: string[] = [];
-  lines.push('# List of public resources for Everything Equation');
-  for (const p of problems) {
-    if (p.status === 'public') {
-      lines.push(`problem ${p.id}`);
-    }
-  }
-  for (const p of papers) {
-    if (p.status === 'public') {
-      lines.push(`paper ${p.id}`);
-    }
-  }
-  return lines.join('\n');
-}
-
-/**
- * Generate an XML sitemap including all publicly accessible pages. Each
- * URL is listed with a weekly change frequency. Only public problems
- * and papers are included; draft entries are omitted.
- */
-export async function generateSitemap(baseUrl: string): Promise<string> {
-  const problems = await loadProblems();
-  const papers = await loadPapers();
-  const urls: string[] = [];
-  // Static routes
-  const staticRoutes = ['/', '/problems', '/papers', '/monograph', '/research-intelligence', '/about'];
-  for (const route of staticRoutes) {
-    urls.push(route);
-  }
-  for (const prob of problems) {
-    if (prob.status === 'public') {
-      urls.push(`/problems/${prob.id}`);
-    }
-  }
-  for (const paper of papers) {
-    if (paper.status === 'public') {
-      urls.push(`/papers/${paper.id}`);
-    }
-  }
-  const lastmod = new Date().toISOString();
-  const sitemapItems = urls
-    .map((url) => {
-      return `  <url>\n    <loc>${baseUrl}${url}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>weekly</changefreq>\n  </url>`;
-    })
-    .join('\n');
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapItems}\n</urlset>`;
-}
-
-/**
- * Generate a minimal Atom feed for the site. Each public paper is
- * represented as an entry with its title, link and publication date
- * (if available). Problems are not included in the feed. The feed
- * identifies the site as the author.
- */
-export async function generateFeed(baseUrl: string): Promise<string> {
-  const papers = await loadPapers();
-  const feedId = `${baseUrl}/`;
-  const updated = new Date().toISOString();
-  const entries: string[] = [];
-  for (const paper of papers) {
-    if (paper.status !== 'public') continue;
-    const link = `${baseUrl}/papers/${paper.id}`;
-    const pubDate = paper.metadata?.published ?? updated;
-    const title = paper.metadata?.title ?? paper.role ?? paper.rawId;
-    entries.push(
-      `  <entry>\n    <id>${link}</id>\n    <title>${escapeXml(title)}</title>\n    <updated>${pubDate}</updated>\n    <link href="${link}" />\n    <summary>${escapeXml(paper.metadata?.description ?? '')}</summary>\n  </entry>`
-    );
-  }
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n  <id>${feedId}</id>\n  <title>Everything Equation Publications</title>\n  <updated>${updated}</updated>\n  <link href="${baseUrl}/feed.xml" rel="self" />\n  <author>\n    <name>Everything Equation</name>\n  </author>\n${entries.join('\n')}\n</feed>`;
-}
-
-function escapeXml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&apos;');
+  return problems.find((p) => p.slug === slug);
 }

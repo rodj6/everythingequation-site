@@ -1,5 +1,168 @@
-version: 1
+version: 2
+# ============================================================================
+# PAPER REGISTRY
+#
+# Two kinds of entries live here:
+#
+#  1. CANONICAL Shadow Theory papers (category: canonical). These are the
+#     public authority stack (Papers 1-6). They carry their own title,
+#     summary, version, and optional zenodo/doi fields. When a paper is
+#     uploaded to Zenodo, fill in `zenodo:` (the numeric record ID) and/or
+#     `doi:`; the site will then show and link the DOI automatically.
+#
+#  2. HISTORICAL papers (no `category` field, or category: historical).
+#     These are earlier Everything Equation / Tier-0 / Tier-1 era records.
+#     They remain listed for archival completeness but are presented as
+#     historical background, not controlling public authority.
+#
+#  To add a BRANCH paper later, use category: branch.
+# ============================================================================
 papers:
+  # ============================================================
+  # CANONICAL SHADOW THEORY STACK (Papers 1-6)
+  # ============================================================
+  - id: paper:shadow:1
+    slug: readout-non-equivalence
+    number: 1
+    category: canonical
+    visibility: public
+    featured: true
+    title: "The Readout Non-Equivalence Theorem for Bounded Realized Domains"
+    subtitle: "Bounded readouts are not complete realization packages when no admissible faithful recovery exists"
+    role: "Establishes the non-equivalence principle: an exact readout, quotient, or bounded presentation does not by itself recover the realization-relevant structure of the domain it summarizes."
+    version: "v3"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      Distinguishes quotient/readout presentation from realization-structure
+      equivalence and proves they come apart: a readout domain can be an exact
+      quotient of the space it summarizes while failing to be
+      realization-structure equivalent to it. Includes an equivariant
+      no-selector theorem and a worked finite statistical-mechanics model, with
+      explicit exception classes. This is the foundational principle of Shadow
+      Theory: a shadow is an exact projected interface, not the source-level
+      structure itself.
+    supports: []
+
+  - id: paper:shadow:2
+    slug: completion-necessity
+    number: 2
+    category: canonical
+    visibility: public
+    featured: true
+    title: "Completion Necessity for Readout-Non-Equivalent Domains"
+    subtitle: "Certified active slot failure and the obstruction to full public closure"
+    role: "Establishes the obstruction criterion: readout loss becomes a genuine public obstruction only when it is certified as an active, uncleared failure of an essential public closure slot."
+    version: "v5"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      Proves the precise additional condition under which a lost realization
+      role becomes a genuine obstruction: a certified active failure profile on
+      an essential closure slot with no checked repair or public surrogate.
+      Blocks the common overread that readout loss automatically obstructs
+      anything, instantiates the theorem for first-order proof targets, and
+      emits a completion-need record for downstream categorical completion
+      theory.
+    supports: []
+
+  - id: paper:shadow:3
+    slug: canonical-completion-object
+    number: 3
+    category: canonical
+    visibility: public
+    featured: true
+    title: "The Canonical Completion Object Theorem for Shadow Theory"
+    subtitle: "Canonical completion as a certified initiality criterion in a public admissible completion category"
+    role: "Establishes conditional canonicality: a public completion is canonical exactly when it is a certified initial object in the public admissible completion category."
+    version: "v4"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      Defines when a response to a certified completion need is canonical. The
+      answer is categorical and deliberately conditional: canonical completion
+      is certified initiality, not an automatic consequence of completion need.
+      Formalizes the public completion context, certified category data, typed
+      refinement morphisms, a seven-valued status classifier, and the output
+      card handed to Paper 4.
+    supports: []
+
+  - id: paper:shadow:4
+    slug: tier-1-shadow-compiler
+    number: 4
+    category: canonical
+    visibility: public
+    featured: true
+    title: "The Tier-1 Shadow Compiler Theorem"
+    subtitle: "Down-compiling canonical completion outputs into statused Tier-1 artifacts"
+    role: "Establishes down-compilation discipline: a canonical completion output becomes a public Tier-1 artifact only through a total, deterministic, gate-cleared, residue-aware down-compiler."
+    version: "v3"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      A canonical completion object is not itself a Tier-1 artifact. This paper
+      defines the down-compile operator, proves total compiler emission over an
+      eight-member public output codomain (including declared failure and
+      residue outputs), and establishes conditional gate-soundness and
+      success-class soundness theorems, preserving the stack's anti-overclaim
+      boundaries throughout.
+    supports: []
+
+  - id: paper:shadow:5
+    slug: framework-mathematics
+    number: 5
+    category: canonical
+    visibility: public
+    featured: true
+    title: "Shadow Theory Framework Mathematics"
+    subtitle: "Runtime, status, residue, equation artifact, and audit calculus"
+    role: "Establishes the runtime calculus: route decisions, status algebra, residue algebra, equation-artifact grammar, claim licensing, testing, audit, and forbidden-promotion discipline."
+    version: "v14"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      Supplies the declared runtime, status, residue, equation-artifact, and
+      audit calculus that governs what can be publicly claimed after Papers
+      1-4. Central results are claim-cap theorems: every emitted output is
+      bounded by its route, status, residues, success class, score coordinates,
+      obligations, audit outcomes, and forbidden-promotion discipline. The
+      Everything Equation appears only as a declared closure-fixed law-packet
+      schema within declared scope.
+    supports: []
+
+  - id: paper:shadow:6
+    slug: shadow-theory-synthesis
+    number: 6
+    category: canonical
+    visibility: public
+    featured: true
+    title: "Shadow Theory Synthesis"
+    subtitle: "Bounded readouts, completion, canonical closure, Tier-1 emission, and the scoped law-packet discipline"
+    role: "The capstone synthesis: composes the five preceding results into a single typed synthesis object with a graph-theoretic claim-promotion discipline and the Scoped Shadow Fixed-Point Law-Packet Theorem."
+    version: "final"
+    date: "2026-06-01"
+    zenodo: null
+    doi: null
+    summary: >
+      Composes the stack rather than reproving it: typed upstream interface
+      objects, a synthesis input bundle, a synthesis invariant, and a finite
+      promotion graph in which forbidden promotions are edges rather than claim
+      classes. Its principal theorem licenses a fixed point of a typed operator
+      chain only as a scoped, residue-visible, status-certified, claim-bounded
+      closure-fixed law packet - the Everything Equation schema, explicitly not
+      source-level equality, empirical validation, or a solved theory of
+      everything.
+    supports: []
+
+  # ============================================================
+  # HISTORICAL PAPERS (Everything Equation / Tier-0 / Tier-1 era)
+  # Superseded as controlling public authority by Papers 1-6.
+  # ============================================================
   # =========================
   # Foundational / Tier-0 / Lawhood
   # =========================
