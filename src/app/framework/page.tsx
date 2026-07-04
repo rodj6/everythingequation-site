@@ -64,14 +64,17 @@ export default async function FrameworkPage() {
           One chain, six links
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-mute">
-          Shadow Theory is a public mathematical framework for a single question, asked
-          carefully: <span className="text-fg">when is a bounded description — a readout, a
-          shadow — enough, and what does it take to soundly claim more?</span>
+          Shadow Theory begins from a direct claim: <span className="text-fg">the reality
+          we experience is not source reality itself.</span> It is not a simulation
+          hypothesis, and not a Matrix-style illusion. It is a structured shadow of a
+          deeper reality, and physics is the study of what that shadow reveals, what it
+          hides, and what can be reconstructed from it.
         </p>
         <p className="mt-4 leading-relaxed text-mute">
-          The framework is built as a chain of six papers. Each proves one step and hands
-          a typed interface to the next. Nothing downstream is allowed to claim more than
-          upstream results license — that discipline is itself part of the mathematics.
+          The six-paper framework builds the mathematics behind that claim step by step.
+          It explains why observation is not the same thing as underlying realization,
+          when lost structure matters, when completion is possible, and how to state
+          theoretical claims without mistaking the shadow for the source.
         </p>
       </section>
 
