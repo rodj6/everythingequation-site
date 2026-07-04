@@ -13,7 +13,7 @@ export const site = {
 
   /** Tagline shown in the hero and used in metadata. */
   tagline:
-    "Shadow Theory says the reality we experience is not source reality itself — and not a simulation — but a projected shadow of a deeper structure.",
+    "Shadow Theory gives a formal argument that the reality we experience is not source reality itself. It is not a simulation, and not a Matrix-style illusion. It is a projected shadow of deeper structure, and physics is the study of what that shadow reveals, hides, and lets us reconstruct.",
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
