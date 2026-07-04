@@ -13,9 +13,9 @@ export const site = {
 
   /** Tagline shown in the hero and used in metadata. */
   tagline:
-    "**Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.**
+    "Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.
 
-This is not a simulation hypothesis or a Matrix-style illusion. The world we experience is real. Shadow Theory proposes that it is a mathematically structured shadow of a deeper reality.
+This is not a simulation hypothesis. The world we experience is real. Shadow Theory proposes that it is a mathematically structured shadow of a deeper reality.
 
 Rather than treating physics as the direct study of ultimate reality, Shadow Theory treats it as the study of the shadow we can observe, what it faithfully represents, what information it loses, and what can and cannot be reconstructed from it.
 
