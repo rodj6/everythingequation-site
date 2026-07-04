@@ -124,25 +124,47 @@ export default async function HomePage() {
           />
           <p className="section-label relative">Synthesis layer</p>
           <h2 id="schema-heading" className="relative mt-2 text-xl font-bold tracking-tight sm:text-2xl">
-            The Everything Equation, correctly scoped
+            The Everything Equation, from shorthand to typed form
           </h2>
+
+          <p className="relative mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
+            Original compact form
+          </p>
           <div
-            className="relative mt-4 text-lg"
+            className="relative mt-2 text-lg"
             dangerouslySetInnerHTML={tex(
-              String.raw`L \;=\; \Omega_{T1}\,\Delta\,\partial\,[\,L\,]`
+              String.raw`L \;=\; \Omega\,\Delta\,\partial[\,L\,]`
+            )}
+          />
+          <p className="relative mx-auto mt-2 max-w-xl text-sm leading-relaxed text-mute">
+            This was the broad public shorthand for the Everything Equation: a law becomes
+            complete only after it passes through aperture, obstruction, and completion
+            structure.
+          </p>
+
+          <p className="relative mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
+            Typed Shadow Theory form
+          </p>
+          <div
+            className="relative mt-2 text-lg"
+            dangerouslySetInnerHTML={tex(
+              String.raw`L \;=\; \Omega_{T1}\,\Delta\,\partial[\,L\,]`
             )}
           />
           <p className="relative mx-auto mt-3 max-w-xl text-sm leading-relaxed text-mute">
-            Within Shadow Theory, this is a <em>scoped closure-fixed law-packet schema</em>:
-            a fixed-point condition licensed only as a residue-visible, status-certified,
-            claim-bounded closure of a scoped law packet. It is not a claim that one
-            equation solves everything, and it is not empirical validation.
+            The updated form is a scope correction. The operator{" "}
+            <span dangerouslySetInnerHTML={tex(String.raw`\Omega_{T1}`, false)} /> marks
+            the public Tier-1 completion/readout operator, not hidden source magic and not
+            a universal solver. The equation keeps the original idea, but makes the claim
+            precise: public laws close only through declared readout-facing machinery, with
+            residues and statuses exposed.
           </p>
+
           <Link
             href="/framework#everything-equation"
             className="relative mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong"
           >
-            How the schema is licensed →
+            How the equation is formulated →
           </Link>
         </div>
       </section>
