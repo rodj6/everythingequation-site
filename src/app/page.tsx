@@ -33,7 +33,7 @@ export default async function HomePage() {
         />
         <div className="mx-auto max-w-3xl text-center">
           <p className="section-label animate-rise">
-            A public mathematical framework · Papers 1–6
+            A mathematical Theory of Everything architecture · Papers 1–6
           </p>
           <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="text-luminous">Shadow Theory</span>
