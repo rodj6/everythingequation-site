@@ -105,9 +105,7 @@ export default async function HomePage() {
               The six-paper stack
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              Each paper proves one link in a single chain — from bounded readouts to
-              statused public artifacts. Together with the public loading manifest, they
-              are the controlling public authority of Shadow Theory.
+              The six papers build the theory from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops the mathematics for what that shadow reveals, hides, and allows us to reconstruct.
             </p>
           </div>
           <Link href="/papers" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
