@@ -12,14 +12,14 @@ export const site = {
   name: "Shadow Theory",
 
   /** Tagline shown in the hero and used in metadata. */
-  tagline: "A public architecture for readout, completion, and shadow compilation.",
+  tagline: "A mathematical Theory of Everything architecture: what can be observed, what must be completed, and what can be claimed.",
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
    * feeds, and llms.txt. Keep it inside the public claim boundary.
    */
   description:
-    "Shadow Theory is a six-paper public mathematical framework for distinguishing readout from realization, certifying closure obstructions, defining conditional canonical completion, down-compiling completion outputs into statused Tier-1 artifacts, and governing public claims through a runtime, status, residue, and audit calculus.",
+    "Shadow Theory is a mathematical Theory of Everything architecture developed across six canonical papers. It separates observation from underlying realization, identifies when missing structure becomes a real obstruction, defines when completion is possible, and controls what can be translated into public, checkable theoretical claims.",
 
   /**
    * Canonical base URL. Set NEXT_PUBLIC_SITE_URL in Vercel project settings
@@ -50,19 +50,18 @@ export const site = {
    * Public claim boundary. Rendered on the About page and in llms.txt.
    * Do not weaken these lines without updating the loading manifest.
    */
-  claimBoundary: {
-    is: [
-      "A public mathematical framework: definitions, theorems, statuses, and claim discipline.",
-      "A six-paper canonical foundation (Papers 1–6) plus a public loading manifest.",
-      "A research programme with statused open problems and bounded public claims.",
-    ],
-    isNot: [
-      "Not a claim that one equation solves everything.",
-      "Not empirically validated physics.",
-      "Not peer-reviewed or expert-approved unless separately stated on a specific record.",
-      "Not build-ready engineering, and not a deployed physical model.",
-    ],
-  },
-} as const;
+claimBoundary: {
+  is: [
+    "A mathematical Theory of Everything architecture developed through six canonical papers.",
+    "A formal framework for separating observation from underlying realization, identifying when missing structure becomes a real obstruction, and controlling what can be stated publicly.",
+    "A research programme with defined theorem layers, open problems, paper records, and statused claims.",
+  ],
+  isNot: [
+    "The framework is mathematical and theoretical; experimental confirmation is a separate stage.",
+    "The Everything Equation is treated as a disciplined closure schema, not a slogan that one line replaces physics.",
+    "Peer review, expert approval, and empirical validation are recorded only when they exist for a specific paper or result.",
+    "Engineering implementation, physical deployment, and applied models are outside the current public claim unless explicitly documented later.",
+  ],
+},} as const;
 
 export type Site = typeof site;
