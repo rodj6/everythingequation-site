@@ -39,8 +39,7 @@ export default async function HomePage() {
             <span className="text-luminous">Shadow Theory</span>
           </h1>
           <p className="animate-rise-2 mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute sm:text-xl">
-            {site.tagline} A six-paper foundation for what can be read, completed,
-            compiled, and claimed.
+            {site.tagline}
           </p>
 
           <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -66,31 +65,31 @@ export default async function HomePage() {
               aria-hidden="true"
               className="glow-cyan pointer-events-none absolute -top-20 left-1/2 h-40 w-3/4 -translate-x-1/2"
             />
-            <p className="section-label relative">The spine of the stack</p>
+            <p className="section-label relative">The theory in plain English</p>
             <ol className="relative mt-4 space-y-2.5 text-left text-[0.95rem] leading-relaxed text-fg/90">
               <li>
                 <span className="font-mono text-glow">1 · </span>
-                Exact readout is not realization equivalence.
+                The reality we observe is not source reality itself.
               </li>
               <li>
                 <span className="font-mono text-glow">2 · </span>
-                Readout loss obstructs only when certified as an active closure failure.
+                What we call physics is the structured shadow that source reality presents to us.
               </li>
               <li>
                 <span className="font-mono text-glow">3 · </span>
-                Canonical completion is certified initiality — conditional, never automatic.
+                Observation can preserve some structure while losing other structure.
               </li>
               <li>
                 <span className="font-mono text-glow">4 · </span>
-                Canonical completion becomes public artifact only through down-compilation.
+                Lost structure matters when it blocks a complete public account of the theory.
               </li>
               <li>
                 <span className="font-mono text-glow">5 · </span>
-                Public claims are licensed by runtime status, residue, route, and audit.
+                Shadow Theory develops rules for when missing structure can be completed and when it cannot.
               </li>
               <li>
                 <span className="font-mono text-glow">6 · </span>
-                The synthesis is a scoped law-packet discipline — not a universal slogan.
+                The Everything Equation is the compact closure form of that architecture, not a slogan that one line replaces physics.
               </li>
             </ol>
           </div>
@@ -152,14 +151,14 @@ export default async function HomePage() {
 
       {/* ================= CLAIM BOUNDARY ================= */}
       <section aria-labelledby="boundary-heading" className="mx-auto max-w-3xl">
-        <p className="section-label text-center">High trust means saying both</p>
+        <p className="section-label text-center">Framework position</p>
         <h2 id="boundary-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
-          What this is — and what it is not
+          Research scope and current status
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
-              This is
+              Research scope
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
               {site.claimBoundary.is.map((line) => (
@@ -169,7 +168,7 @@ export default async function HomePage() {
           </div>
           <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-              This is not
+              Current status
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
               {site.claimBoundary.isNot.map((line) => (
