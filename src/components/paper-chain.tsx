@@ -1,5 +1,5 @@
 /**
- * PAPER CHAIN — the seven-paper canonical sequence, rendered as a semantic
+ * PAPER CHAIN: the seven-paper canonical sequence, rendered as a semantic
  * ordered list. Papers 1–6 form the mathematical source–readout foundation
  * (a responsive grid); Paper 7, the physical-witness layer, gets a
  * distinguished full-width card. Fully server-rendered.
@@ -19,12 +19,22 @@ const stageWord: Record<number, string> = {
 
 const stageLine: Record<number, string> = {
   1: "An exact readout quotient need not be equivalent to its source: descent and equivariant reconstruction obstructions.",
-  2: "Lost structure obstructs exactly the questions whose correct answers vary within a readout fiber — and every repair must separate those states.",
+  2: "Lost structure obstructs exactly the questions whose correct answers vary within a readout fiber; every repair must separate those states.",
   3: "The coarsest extension on which a nominated family of invariant source relations becomes well defined: terminal, unique, selector-free.",
-  4: "When abstract completions are realized by genuine geometry — orbit spaces, invariant relations, and derived variational response.",
+  4: "Realizes abstract completions through orbit spaces, invariant relations, and derived variational response.",
   5: "When observable dynamics close autonomously, and the exact price when they do not: memory, initial-state terms, minimal dynamical completion.",
-  6: "The boundary theorem: an essential non-gauge fiber distinction makes a readout a non-source projection, relative to that model and target.",
-  7: "The abstract architecture instantiated in Randall–Sundrum (RS2) gravity: same brane readout, different futures — with the interpretation boundary proved, not assumed.",
+  6: "An essential non-gauge fiber distinction proves that a readout is a non-source projection relative to the stated model and target.",
+  7: "Within RS2 gravity, identical instantaneous brane readouts evolve into different futures, yielding exact projected dynamics and observable residues.",
+};
+
+const resultWord: Record<number, string> = {
+  1: "distinguishes",
+  2: "tests",
+  3: "constructs",
+  4: "realizes",
+  5: "derives",
+  6: "proves",
+  7: "demonstrates",
 };
 
 function stageOf(p: LoadedPaper, i: number): number {
@@ -36,16 +46,27 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
   const foundation = papers.filter((p) => p !== witness);
 
   return (
-    <div>
+    <div className="paper-architecture">
+      <div className="mb-4 grid gap-2 text-[0.67rem] font-semibold uppercase tracking-[0.16em] text-faint sm:grid-cols-3">
+        <p className="rounded-full border border-edge px-3 py-1.5 text-center">
+          Papers 1–3 · obstruction and completion
+        </p>
+        <p className="rounded-full border border-edge px-3 py-1.5 text-center">
+          Papers 4–6 · realization and dynamics
+        </p>
+        <p className="rounded-full border border-[hsl(var(--green)/0.32)] px-3 py-1.5 text-center text-greenc">
+          Paper 7 · physical witness
+        </p>
+      </div>
       <ol
-        className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        className="paper-chain-grid grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         aria-label="Papers 1–6: the mathematical foundation"
       >
         {foundation.map((p, i) => (
           <li key={p.slug} className="relative">
             <Link
               href={`/papers/${p.slug}`}
-              className="card-surface card-surface-hover group flex h-full flex-col p-5"
+              className="card-surface card-surface-hover paper-stage group flex h-full flex-col p-5"
             >
               <div className="flex items-baseline justify-between">
                 <span className="font-mono text-2xl font-bold text-glow/90">
@@ -61,13 +82,16 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
               <p className="mt-2 text-sm leading-relaxed text-mute">
                 {stageLine[stageOf(p, i)]}
               </p>
+              <span className="mt-4 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-glow/80">
+                {resultWord[stageOf(p, i)]} stage {String(stageOf(p, i)).padStart(2, "0")}
+              </span>
               {i < foundation.length - 1 ? (
-                <span aria-hidden="true" className="mt-4 block font-mono text-xs text-faint">
-                  ↓ hands off to Paper {String(stageOf(p, i) + 1).padStart(2, "0")}
+                <span aria-hidden="true" className="mt-2 block font-mono text-xs text-faint">
+                  → Paper {String(stageOf(p, i) + 1).padStart(2, "0")}
                 </span>
               ) : (
-                <span aria-hidden="true" className="mt-4 block font-mono text-xs text-faint">
-                  ↓ instantiated by Paper 07
+                <span aria-hidden="true" className="mt-2 block font-mono text-xs text-faint">
+                  → instantiated by Paper 07
                 </span>
               )}
             </Link>
@@ -78,7 +102,7 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
       {witness ? (
         <Link
           href={`/papers/${witness.slug}`}
-          className="card-surface card-surface-hover group mt-4 flex flex-col border-l-4 border-l-[hsl(var(--green))] p-5 sm:p-6"
+          className="card-surface card-surface-hover paper-witness group mt-4 flex flex-col border-l-4 border-l-[hsl(var(--green))] p-5 sm:p-6"
           aria-label="Paper 7: the physical witness"
         >
           <div className="flex items-baseline justify-between">
@@ -91,9 +115,17 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
             {witness.displayTitle}
           </h3>
           <p className="mt-2 max-w-3xl text-sm leading-relaxed text-mute">{stageLine[7]}</p>
-          <span aria-hidden="true" className="mt-4 block font-mono text-xs text-greenc">
-            ■ physical witness — model-relative, not an ontological proof
-          </span>
+          <ul className="mt-4 flex flex-wrap gap-2 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-greenc">
+            <li className="rounded-full border border-[hsl(var(--green)/0.32)] px-3 py-1.5">
+              identical readout · distinct future
+            </li>
+            <li className="rounded-full border border-[hsl(var(--green)/0.32)] px-3 py-1.5">
+              exact projected Einstein equation
+            </li>
+            <li className="rounded-full border border-[hsl(var(--green)/0.32)] px-3 py-1.5">
+              parameter-free cross-regime relation
+            </li>
+          </ul>
         </Link>
       ) : null}
     </div>

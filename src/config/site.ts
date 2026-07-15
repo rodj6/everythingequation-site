@@ -1,5 +1,5 @@
 /**
- * SITE-WIDE CONFIGURATION — edit this file to change global site identity.
+ * SITE-WIDE CONFIGURATION: edit this file to change global site identity.
  *
  * This is the single source of truth for the site name, tagline, description,
  * base URL, and author information. Page metadata, machine-readable endpoints
@@ -11,8 +11,12 @@ export const site = {
   /** Public framework / site name. */
   name: "Shadow Theory",
 
-  /** Tagline shown in the hero and used in metadata. */
-  tagline: `Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.
+  /** Concise site-wide description used outside the homepage hero. */
+  tagline:
+    "A seven-paper framework for source structure, observable projection, exact completion, and projected dynamics.",
+
+  /** Restored homepage wording. Keep this text unchanged. */
+  heroStatement: `Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.
 
 This is not a simulation hypothesis. The world we experience is real. Shadow Theory proposes that it is a mathematically structured shadow of a deeper reality.
 
@@ -22,10 +26,10 @@ The seven-paper foundation develops the mathematics needed to distinguish observ
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
-   * feeds, and llms.txt. Keep it inside the public claim boundary.
+   * feeds, and llms.txt.
    */
   description:
-    "Shadow Theory is a seven-paper mathematical Theory of Everything architecture built around a direct claim: the reality we experience is not source reality itself, but a projected shadow of deeper structure. The framework studies what that shadow reveals, what it hides, and what can be reconstructed from it — and realizes the architecture in Randall–Sundrum gravity as a concrete physical witness.",
+    "Shadow Theory is a seven-paper mathematical and physical framework that establishes exact criteria for source–readout non-equivalence, minimal completion, projected dynamics, and internal identifiability, then realizes the architecture in Randall–Sundrum gravity.",
 
   /**
    * Canonical base URL. Set NEXT_PUBLIC_SITE_URL in Vercel project settings
@@ -44,17 +48,17 @@ The seven-paper foundation develops the mathematics needed to distinguish observ
    * and structured data. Paper records themselves live in content/papers.yaml.
    */
   canonicalStack: [
-    "Paper 1 — Source–Readout Non-Equivalence",
-    "Paper 2 — Target-Relative Necessity of Completion",
-    "Paper 3 — Canonical Minimal Source Completion",
-    "Paper 4 — Geometric Realization of Completed Source Relations",
-    "Paper 5 — Observable Quotients and Exact Projected Dynamics",
-    "Paper 6 — Non-Source Projection and Internal Identifiability",
-    "Paper 7 — Bulk-to-Brane Projection in Randall–Sundrum Gravity (physical witness)",
+    "Paper 1: Source–Readout Non-Equivalence",
+    "Paper 2: Target-Relative Necessity of Completion",
+    "Paper 3: Canonical Minimal Source Completion",
+    "Paper 4: Geometric Realization of Completed Source Relations",
+    "Paper 5: Observable Quotients and Exact Projected Dynamics",
+    "Paper 6: Non-Source Projection and Internal Identifiability",
+    "Paper 7: Bulk-to-Brane Projection in Randall–Sundrum Gravity (physical witness)",
   ],
 
   /**
-   * THE MONOGRAPH — fixed Version 1.0 publication record.
+   * THE MONOGRAPH: fixed Version 1.0 publication record.
    * The web edition at /monograph is the complete text of this same work;
    * the Zenodo record is the canonical citable publication.
    */
@@ -84,22 +88,19 @@ The seven-paper foundation develops the mathematics needed to distinguish observ
   },
 
   /**
-   * Public claim boundary. Rendered on the About page and in llms.txt.
-   * These lines are the programme's public claim discipline — do not weaken
-   * them without deliberate review.
+   * Research position rendered on the homepage and About page.
    */
-  claimBoundary: {
-    is: [
-      "A mathematical Theory of Everything architecture built on a direct thesis: the reality we experience is a projected shadow of source reality, not source reality itself.",
-      "A seven-paper proof framework for studying what the projection reveals, what it hides, and what can be reconstructed without mistaking the shadow for the source — six mathematical papers plus a concrete physical witness in Randall–Sundrum gravity.",
-      "A research programme for open problems in mathematics and theoretical physics, with explicit paper records, declared assumptions and limitations, and bounded public claims.",
+  researchPosition: {
+    establishes: [
+      "A seven-paper mathematical framework that separates reduced source structure from bounded readout and proves exact descent, reconstruction, completion, closure, and identifiability results.",
+      "A canonical minimal-completion construction that determines the least additional structure required by a nominated family of source relations.",
+      "An RS2 physical witness in which identical instantaneous brane readouts evolve into different futures, together with the exact projected Einstein equation and a parameter-free cross-regime relation.",
     ],
-    isNot: [
-      "This is not simulation theory: the claim is not that we live inside a computer program, game, or Matrix-style artificial world.",
-      "Experimental confirmation, peer review, and expert approval are separate records; they are not implied by the framework alone.",
-      "The Everything Equation is a mathematical closure schema from the broader programme, not a theorem of the seven-paper sequence and not a slogan that one line replaces all physics.",
-      "The framework's theorems are model-relative: they do not prove that our universe is a projection of a hidden source, and Paper 7's witness is a result about the Randall–Sundrum model, not an unrestricted ontological claim.",
-      "Engineering implementation, physical deployment, and applied models are future work unless a specific public record says otherwise.",
+    programme: [
+      "Every canonical result states its hypotheses, domain, target, and mathematical conclusion directly.",
+      "Experimental tests, peer review, and engineering realizations are tracked as distinct stages of the research programme.",
+      "The Everything Equation functions as the broader programme's compact closure schema; the seven-paper sequence supplies the exact mathematics of source-to-readout structure.",
+      "Open problems remain active branch targets until a dedicated public result establishes them.",
     ],
   },
 } as const;

@@ -1,5 +1,5 @@
 /**
- * TOP NAVIGATION — edit this file to add, remove, or reorder nav tabs.
+ * TOP NAVIGATION: edit this file to add, remove, or reorder nav tabs.
  *
  * Both the desktop header and the mobile menu read from this single list.
  * To add a new tab:

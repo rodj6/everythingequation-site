@@ -18,9 +18,8 @@ version: 2
 #                   Those notes are historical drafts from the earlier
 #                   Everything Equation era and are displayed behind a
 #                   prominent historical-draft banner.
-#   target        - neutral statement of the research target. Keep this
-#                   inside the public claim boundary: it states what the
-#                   programme aims at, not what has been established.
+#   target        - affirmative statement of the research target, the question
+#                   to resolve, and the result a dedicated record must establish.
 #
 # To add a new open problem: copy a block, change the fields, and (optionally)
 # add a note file at content/manual/problems/<slug>.mdx.
@@ -40,10 +39,9 @@ problems:
     target: >
       Whether the gauge group, fermion content, and family structure of the
       Standard Model can be constrained or derived within the Shadow Theory
-      programme. Any such result requires its own public paper or record with
-      declared assumptions, support appropriate to the claim, explicit
-      limitations, and a clear claim boundary; earlier notes on this page are
-      historical drafts.
+      programme. A dedicated result would state its assumptions and domain,
+      provide mathematical or empirical support, and identify the exact
+      structure derived. Earlier notes on this page remain historical drafts.
 
   - id: fine-structure-constant
     slug: fine-structure-constant
@@ -54,10 +52,11 @@ problems:
     maturity: legacy-notes
     legacy_notes: true
     target: >
-      A structural account of the fine-structure constant (the observed value
-      near 1/137), treated as a downstream branch target. No public claim is
-      currently made; earlier derivation notes are historical drafts pending
-      reassessment against the seven-paper canonical sequence.
+      Derive a structural account of the fine-structure constant, whose
+      observed inverse is near 137, as a downstream branch result with explicit
+      assumptions, normalization, and an independently checkable prediction.
+      Earlier derivation notes remain historical drafts for reassessment
+      against the seven-paper canonical sequence.
 
   - id: dark-sector
     slug: dark-sector
@@ -69,10 +68,9 @@ problems:
     legacy_notes: true
     target: >
       Dark matter and dark-sector structure as branch targets of the
-      programme: what any dark-sector proposal would need to establish —
-      declared assumptions and domain, mathematical or empirical support
-      appropriate to the claim, and explicit limitations — before a public
-      claim is made.
+      programme: identify the source structure, projection mechanism,
+      observable residues, and discriminating tests a dark-sector proposal
+      must establish in a dedicated public record.
 
   - id: cosmological-constant
     slug: cosmological-constant
@@ -84,9 +82,9 @@ problems:
     legacy_notes: true
     target: >
       The value and smallness of the cosmological constant / dark energy
-      density, held as a branch target. No current canonical paper claims a
-      result on this problem; earlier framework-era discussion of it is
-      historical.
+      density, held as a branch target requiring a derived mechanism,
+      normalization, and observable consequences. Earlier framework-era
+      discussion remains historical context.
 
   - id: quantum-gravity
     slug: quantum-gravity
@@ -271,6 +269,5 @@ problems:
     maturity: legacy-notes
     legacy_notes: true
     target: >
-      Speculative notes from the earlier programme era, retained only as a
-      historical draft. Not part of the current Shadow Theory research
-      programme.
+      Speculative notes from the earlier programme era, retained as a
+      historical development trace outside the current research programme.

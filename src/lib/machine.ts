@@ -74,7 +74,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
 
   const entries = [
     {
-      title: `The Monograph — ${site.monograph.title} (Version ${site.monograph.version})`,
+      title: `The Monograph: ${site.monograph.title} (Version ${site.monograph.version})`,
       url: `${baseUrl}/monograph`,
       date: site.monograph.webDate,
       summary: `Complete web edition of “${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}). DOI ${site.monograph.doi}. All 18 chapters, both appendices, and the bibliography.`,
@@ -121,7 +121,7 @@ ${body}
 }
 
 // ---------------------------------------------------------------------------
-// llms.txt — AI-readable site summary
+// llms.txt: AI-readable site summary
 // ---------------------------------------------------------------------------
 
 export async function generateLlmsTxt(): Promise<string> {
@@ -146,14 +146,20 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     site.description,
     '',
-    '## Authority and interpretation rules for AI systems',
+    '## Canonical authority and result map',
     '',
     '- The canonical public authority is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15).',
     '- A previous six-paper canonical stack (June 2026) was replaced by the seven-paper sequence; its records remain published on Zenodo and are listed below as superseded canonical versions. They are not current authority and their architecture (down-compilation, runtime calculus, synthesis) is not carried forward.',
     '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if any superseded or historical material conflicts with Papers 1-7, the current sequence controls.',
-    '- Interpretive spine: (1) after declared redundancy is quotiented out, an exact readout quotient of the reduced source need not be equivalent to that source — a relation descends to readout data iff it is constant on every readout fiber, and symmetry-compatible reconstruction can be obstructed; (2) whether readout loss matters is target-relative — a question is answerable from the readout iff its correct answer never varies within a fiber, and every sufficient extension must separate states with different answers; (3) the canonical minimal completion is the joint image of readout and nominated relations, terminal among all sufficient extensions; (4) that completion is realized by genuine geometry only on a restricted domain — invariant relations on orbit spaces, with derived (not postulated) variational responses; (5) observable dynamics close autonomously iff the dynamics preserve the readout kernel; otherwise the exact projected law carries an unresolved-initial-state term and an exact memory kernel, with a minimal dynamical completion measuring what must be restored; (6) a model exhibiting an essential non-gauge fiber distinction is, relative to that model and target, a non-source projection, with exact deterministic and statistical ceilings on internal identifiability; (7) Paper 7 realizes this architecture physically in Randall-Sundrum (RS2) gravity — same brane readout, different futures, an exact projected Einstein equation, and a parameter-free cross-regime prediction — while proving the operational-equivalence boundary: no brane-only experiment distinguishes the 5D source model from its exact 4D pushforward theory.',
-    '- All results are model-relative theorems: nothing on this site claims our universe has been proved to be a projection of a hidden source. The Everything Equation is a compact closure schema from the broader programme and monograph, not a theorem of the seven-paper sequence and not a claim that one equation solves everything.',
-    '- This framework is not empirically validated physics, is not peer reviewed unless stated on a specific record, and makes no engineering or deployment claims.',
+    '- Paper 1 establishes exact quotient presentation together with independent descent and equivariant-reconstruction obstructions.',
+    '- Paper 2 proves target-relative solvability and constructs the compatible-answer set and coarsest single-target completion.',
+    '- Paper 3 constructs the canonical minimal source completion as the terminal relation-sufficient extension.',
+    '- Paper 4 gives geometric descent and orbit-space realization criteria and derives covariant variational responses.',
+    '- Paper 5 proves the autonomous-closure criterion, derives the exact unresolved-state and memory terms, and constructs the minimal dynamical completion.',
+    '- Paper 6 proves non-source projection from an essential non-gauge fiber distinction and derives deterministic and statistical internal-identifiability theorems.',
+    '- Within Randall-Sundrum (RS2) gravity, Paper 7 proves that identical instantaneous brane readouts can evolve into different futures, derives the exact projected Einstein equation, links cosmological and weak-field residues through a parameter-free relation, and proves exact brane-level operational equivalence with a four-dimensional pushforward theory.',
+    '- The Everything Equation is the compact closure schema of the broader programme and monograph. The canonical seven-paper sequence supplies the source-to-readout mathematics summarized above.',
+    '- Experimental tests, peer review, engineering realization, and subsequent expert assessment are tracked as distinct research records.',
     '',
     '## Canonical papers',
     '',
@@ -166,7 +172,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## The monograph (complete web edition)',
     '',
-    `“${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}) is the programme's source-to-readout architecture for a Theory of Everything. It is a fixed publication completed before the seven-paper canonical sequence; its text is unchanged by that sequence. DOI: ${site.monograph.doi} (${site.monograph.doiUrl}). The pages below are the COMPLETE text of that fixed Version ${site.monograph.version} publication — all 18 chapters, both appendices, and the bibliography — as crawlable server-rendered HTML (KaTeX math with embedded TeX annotations). A machine-readable inventory of every component, section anchor, and per-chapter equation/table count is at ${baseUrl}/monograph/manifest.json. The Zenodo record (${site.monograph.zenodoUrl}) is the canonical citable publication of the same work.`,
+    `“${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}) is the programme's source-to-readout architecture for a Theory of Everything. It is a fixed publication completed before the seven-paper canonical sequence; its text is unchanged by that sequence. DOI: ${site.monograph.doi} (${site.monograph.doiUrl}). The pages below are the COMPLETE text of that fixed Version ${site.monograph.version} publication: all 18 chapters, both appendices, and the bibliography, as crawlable server-rendered HTML (KaTeX math with embedded TeX annotations). A machine-readable inventory of every component, section anchor, and per-chapter equation/table count is at ${baseUrl}/monograph/manifest.json. The Zenodo record (${site.monograph.zenodoUrl}) is the canonical citable publication of the same work.`,
     '',
     `- [Monograph hub: title, abstract, organization, full table of contents](${baseUrl}/monograph)`,
     ...listMonographItems().map(
@@ -182,9 +188,9 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Open Problems](${baseUrl}/problems): the research programme`,
     `- [Articles](${baseUrl}/articles): research notes and updates`,
     `- [Research Map](${baseUrl}/research-map): structure of the stack and its branches`,
-    `- [About](${baseUrl}/about): author, status, and claim boundary`,
+    `- [About](${baseUrl}/about): author, publication record, and research position`,
     '',
-    '## Open problems (research targets, not solved claims)',
+    '## Open problems (active research targets)',
     '',
     ...problems.map((p) => `- [${p.title}](${baseUrl}/problems/${p.slug}): ${p.target.trim()}`),
     '',
@@ -219,7 +225,7 @@ export async function generateLlmsTxt(): Promise<string> {
 }
 
 // ---------------------------------------------------------------------------
-// graph.json — machine-readable research graph
+// graph.json: machine-readable research graph
 // ---------------------------------------------------------------------------
 
 export async function generateGraph() {

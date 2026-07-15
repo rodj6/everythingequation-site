@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * SITE HEADER — desktop nav + accessible mobile menu.
+ * SITE HEADER: desktop nav + accessible mobile menu.
  * Navigation items come from src/config/navigation.ts (edit there, not here).
  */
 import Link from "next/link";

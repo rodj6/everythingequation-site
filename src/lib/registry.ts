@@ -41,7 +41,7 @@ export interface LoadedPaper {
   category: PaperCategory;
   status: Visibility;
   featured: boolean;
-  /** Explicit title from YAML (canonical papers) — falls back to Zenodo title. */
+  /** Explicit title from YAML (canonical papers), with Zenodo title as fallback. */
   title?: string;
   subtitle?: string;
   role?: string;

@@ -13,7 +13,7 @@ export const dynamic = "force-static";
 const m = site.monograph;
 
 export const metadata: Metadata = {
-  title: `The Monograph — ${m.title}`,
+  title: `The Monograph: ${m.title}`,
   description: `Complete web edition of “${m.title}: ${m.subtitle}” (Version ${m.version}, ${m.published}), the Shadow Theory monograph. DOI ${m.doi}. All 18 chapters, both appendices, and the bibliography as crawlable HTML.`,
   alternates: { canonical: "/monograph" },
   keywords: [...m.keywords],
@@ -65,7 +65,7 @@ export default function MonographPage() {
     isPartOf: { "@type": "WebSite", name: site.name, url: site.url },
     hasPart: items.map((i) => ({
       "@type": "Chapter",
-      name: i.label ? `${i.label} — ${i.title}` : i.title,
+      name: i.label ? `${i.label}: ${i.title}` : i.title,
       position: i.order,
       url: `${site.url}/monograph/${i.slug}`,
     })),
@@ -115,7 +115,7 @@ export default function MonographPage() {
             href={`/monograph/${first.slug}`}
             className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
           >
-            Start reading — Chapter 1
+            Start reading · Chapter 1
           </Link>
           <a
             href="#contents"
@@ -127,13 +127,28 @@ export default function MonographPage() {
 
         <p className="mt-6 text-xs leading-relaxed text-faint">
           This page and its {items.length} linked parts are the complete web edition of the
-          fixed Version {m.version} publication — every chapter, equation, table, appendix
+          fixed Version {m.version} publication: every chapter, equation, table, appendix
           and reference of the Zenodo record, as crawlable HTML. The{" "}
           <a href={m.zenodoUrl} className="underline hover:text-fg">
             Zenodo record
           </a>{" "}
           is the canonical citable publication.
         </p>
+
+        <dl className="mt-8 grid grid-cols-2 gap-2 sm:grid-cols-5" aria-label="Monograph contents at a glance">
+          {[
+            [totals.chapters, "chapters"],
+            [totals.sections, "sections"],
+            [totals.numberedEquations, "equations"],
+            [totals.tables, "tables"],
+            [totals.bibliographyEntries, "references"],
+          ].map(([value, label]) => (
+            <div key={label} className="monograph-stat rounded-lg border border-edge bg-[hsl(var(--surface)/0.58)] px-3 py-3">
+              <dt className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-faint">{label}</dt>
+              <dd className="mt-1 font-mono text-lg font-semibold text-glow">{value}</dd>
+            </div>
+          ))}
+        </dl>
       </header>
 
       {/* ================= POSITION IN THE PROGRAMME ================= */}
@@ -145,7 +160,7 @@ export default function MonographPage() {
           </h2>
           <p className="mt-3 text-[0.95rem] leading-relaxed text-fg/90">
             The <Link href="/papers" className="text-glow underline decoration-1 underline-offset-2">seven canonical papers</Link>{" "}
-            fix the public Shadow Theory framework — source–readout non-equivalence,
+            fix the public Shadow Theory framework: source–readout non-equivalence,
             target-relative obstruction, canonical minimal completion, geometric
             realization, projected dynamics, internal identifiability, and the
             Randall–Sundrum physical witness. The monograph is the programme's broader
@@ -165,7 +180,7 @@ export default function MonographPage() {
             <Link href="/problems" className="text-glow underline decoration-1 underline-offset-2">
               open problems
             </Link>
-            . The scientific tests, limitations and claim-status boundaries are stated in{" "}
+            . The scientific tests, limitations, and research programme are stated in{" "}
             <Link
               href="/monograph/scientific-scope-tests-and-open-problems"
               className="text-glow underline decoration-1 underline-offset-2"

@@ -5,6 +5,7 @@ import { getCanonicalPapers, loadProblems } from "@/lib/registry";
 import { listArticles } from "@/lib/articles";
 import PaperChain from "@/components/paper-chain";
 import { ProblemCard, ArticleCard } from "@/components/cards";
+import ProjectionField from "@/components/projection-field";
 
 export const dynamic = "force-static";
 
@@ -38,8 +39,8 @@ export default async function HomePage() {
           <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="text-luminous">Shadow Theory</span>
           </h1>
-          <p className="animate-rise-2 mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute sm:text-xl">
-            {site.tagline}
+          <p className="animate-rise-2 mx-auto mt-5 max-w-3xl whitespace-pre-line text-lg leading-relaxed text-mute sm:text-xl">
+            {site.heroStatement}
           </p>
 
           <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
@@ -62,6 +63,10 @@ export default async function HomePage() {
               Read the papers
             </Link>
           </div>
+        </div>
+
+        <div className="animate-rise-3 mx-auto mt-10 max-w-5xl">
+          <ProjectionField />
         </div>
 
         {/* Interpretive spine */}
@@ -87,7 +92,7 @@ export default async function HomePage() {
               </li>
               <li>
                 <span className="font-mono text-glow">4 · </span>
-                Whether lost structure matters depends on the question being asked — loss obstructs only the questions whose answers it changes.
+                Whether lost structure matters depends on the question being asked. Loss obstructs exactly the questions whose answers it changes.
               </li>
               <li>
                 <span className="font-mono text-glow">5 · </span>
@@ -95,11 +100,11 @@ export default async function HomePage() {
               </li>
               <li>
                 <span className="font-mono text-glow">6 · </span>
-                One concrete physical model — Randall–Sundrum braneworld gravity — realizes the whole architecture as a witness: a brane observer's present state provably cannot determine its own future.
+                Randall–Sundrum braneworld gravity realizes the architecture physically: identical instantaneous brane readouts can evolve into different futures.
               </li>
               <li>
                 <span className="font-mono text-glow">7 · </span>
-                The framework also proves its own boundary: these are theorems about declared models, not a proof that our universe is such a projection.
+                Together, the seven papers establish a rigorous source-to-observable programme: they identify when deeper structure is mathematically necessary, determine what information must be restored, and derive concrete physical residues that can be investigated.
               </li>
             </ol>
           </div>
@@ -128,7 +133,7 @@ export default async function HomePage() {
             <p className="mt-2 max-w-3xl text-lg text-mute">{site.monograph.subtitle}</p>
             <p className="mt-4 max-w-3xl leading-relaxed text-fg/90">
               The monograph develops the programme's source-to-readout architecture for a
-              Theory of Everything — one source object, one realization map, and coupled
+              Theory of Everything: one source object, one realization map, and coupled
               quantum, record, geometric, gravitational, matter, cosmological, temporal
               and observer readouts, with nine companion theorem programmes ahead. It is a
               fixed Version {site.monograph.version} publication, textually identical to
@@ -164,7 +169,7 @@ export default async function HomePage() {
               The seven-paper sequence
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              Papers 1–6 build the source–readout mathematics from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops exact criteria for what that shadow reveals, hides, and allows us to reconstruct. Paper 7 then realizes the whole architecture in a concrete physical model — Randall–Sundrum gravity — as its physical witness.
+              Papers 1–6 build the source–readout mathematics from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops exact criteria for what that shadow reveals, hides, and allows us to reconstruct. Paper 7 then realizes the whole architecture in Randall–Sundrum gravity as its physical witness.
             </p>
           </div>
           <Link href="/papers" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
@@ -229,29 +234,29 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ================= CLAIM BOUNDARY ================= */}
-      <section aria-labelledby="boundary-heading" className="mx-auto max-w-3xl">
+      {/* ================= RESEARCH POSITION ================= */}
+      <section aria-labelledby="position-heading" className="mx-auto max-w-3xl">
         <p className="section-label text-center">Framework position</p>
-        <h2 id="boundary-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
-          Research scope and current status
+        <h2 id="position-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+          Established results and programme trajectory
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
-              Research scope
+              Established results
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.is.map((line) => (
+              {site.researchPosition.establishes.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
           </div>
           <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-              Current status
+              Programme trajectory
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.isNot.map((line) => (
+              {site.researchPosition.programme.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
@@ -268,8 +273,8 @@ export default async function HomePage() {
               Open problems
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              Downstream branch targets of the stack. Each is a research target with a
-              declared claim boundary — none is presented as solved.
+              Downstream branch targets of the stack, each defined by a concrete research
+              question and the evidence required to establish a result.
             </p>
           </div>
           <Link href="/problems" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">

@@ -3,7 +3,7 @@
 The dynamical layer. A bounded observation operator
 $K: \mathcal{H}_{\mathrm{src}} \to \mathcal{H}_{\mathrm{obs}}$ always produces
 an exact observable quotient $\mathcal{H}_K = \mathcal{H}_{\mathrm{src}}/\ker K$,
-canonically bijective onto $\mathrm{Ran}\,K$ — with bounded inverse in the
+canonically bijective onto $\mathrm{Ran}\,K$, with bounded inverse in the
 inherited norm exactly when the range is closed. The paper insists on keeping
 four phenomena apart: **(D1)** exact loss ($\ker K \neq \{0\}$), **(D2)**
 unstable inversion (nonclosed range), **(D3)** controlled low-rank
@@ -21,10 +21,11 @@ is equivalent to $PLQ = 0$.
 
 When closure fails, the exact projected equation (a Mori–Zwanzig-type
 identity, derived purely by variation of constants) carries two extra terms:
-a deterministic unresolved-initial-state term $\eta_{z_0}(t)$ — explicitly
-*not* a stochastic force — and an exact memory kernel
-$\mathcal{K}(\tau) = PLQ\,e^{\tau QLQ}QLP$ — explicitly *not* a friction
-coefficient. No ensemble, Markov, or timescale approximation appears
+a deterministic unresolved-initial-state term $\eta_{z_0}(t)$. This term is
+specified by the unresolved initial state rather than by a stochastic force.
+The second contribution is the exact memory kernel
+$\mathcal{K}(\tau) = PLQ\,e^{\tau QLQ}QLP$, a history operator rather than a
+postulated friction coefficient. The derivation uses no ensemble, Markov, or timescale approximation
 anywhere.
 
 <Theorem title="Minimal dynamical completion">
@@ -32,23 +33,23 @@ The unresolved response map descends to an injective map on
 $E_{\mathrm{dyn}} = \mathcal{H}_Q/N_Q$, the coarsest extension of the resolved
 state determining every resolved response; every sufficient extension maps
 onto it. In finite dimensions its size is the rank of a Kalman-type
-observability matrix. Minimality is relative to the declared target —
-directions in $N_Q$ are not "physically absent" in any absolute sense.
+observability matrix. Minimality is relative to the declared target;
+directions in $N_Q$ remain part of the source even when that target cannot see them.
 </Theorem>
 
 The same architecture is carried into field theory: eliminating a quadratic
 sector yields the exact Schur-complement effective operator $A - BC^{-1}B^*$
 (possibly, but not automatically, nonlocal), and stationary elimination in a
 diffeomorphism-invariant action yields a covariant effective stress-energy
-defined as a genuine variational response, with total — not sectorwise —
-covariant conservation and an explicit exchange current between sectors.
+defined as a genuine variational response, with conservation of the total
+stress-energy and an explicit exchange current between sectors.
 
-<ClaimBoundary>
-No empirical proposition: the paper does not claim the physical universe has
-hidden variables, memory, or any particular effective correction — a memory
-kernel is a formula, and physical content lies entirely in whatever model
-supplies $K$, $L$, and the action. The Schur theorem is stated for bounded
-operators and is classical tree-level elimination, not the quantum effective
-action. The paper is deliberately self-contained: cross-references to
-Papers 1–4 are context only.
-</ClaimBoundary>
+<ResultScope>
+Paper 5 establishes exact operator statements parameterized by the observation
+map $K$, generator $L$, and action. A specified physical model supplies those
+objects and therefore determines the content of its memory and effective
+corrections. The Schur theorem applies to bounded operators and classical
+tree-level elimination; quantum effective actions require their own
+construction. The paper is self-contained, with Papers 1–4 providing
+conceptual context.
+</ResultScope>

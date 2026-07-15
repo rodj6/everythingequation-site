@@ -2,7 +2,7 @@
  * SERVER-SIDE MDX RENDERER
  *
  * Renders an MDX module (from a generated import map) on the server so the
- * content is present in the initial HTML — readable by crawlers and AI
+ * content is present in the initial HTML, readable by crawlers and AI
  * systems without JavaScript.
  */
 import { mdxComponents } from "@/components/mdx-components";

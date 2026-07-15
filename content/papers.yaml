@@ -31,14 +31,14 @@ papers:
     featured: true
     title: "Source–Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions"
     subtitle: "An exact readout quotient of a reduced source need not be equivalent to that source"
-    role: "Establishes the foundational distinction: after declared redundancy is quotiented out, the readout always presents the source exactly as a quotient — yet a physically invariant relation can fail to descend, and no symmetry-compatible rule need recover the realized state."
+    role: "Establishes the foundational distinction: after declared redundancy is quotiented out, the readout presents the source exactly as a quotient while physically invariant relations can fail to descend and equivariant reconstruction can be obstructed."
     date: "2026-07-15"
     zenodo: 21369967
     doi: "10.5281/zenodo.21369967"
     summary: >
       Proves that when gauge and coordinate redundancy are quotiented out
       first, the public readout always presents the reduced source exactly as
-      the quotient by equality of readouts — and that this exactness is fully
+      the quotient by equality of readouts. This exactness is fully
       compatible with non-equivalence. Two independent obstructions are
       established: a physically invariant source relation descends through the
       readout if and only if it is constant on every readout fiber, and a
@@ -57,16 +57,16 @@ papers:
     featured: true
     title: "Target-Relative Necessity of Completion: When Readout Loss Obstructs, and What a Sufficient Extension Must Retain"
     subtitle: "Whether discarded distinctions matter is a property of the question asked, not of the readout alone"
-    role: "Makes obstruction target-relative: a question is answerable from the readout exactly when its correct answer never varies within a readout fiber, and every sufficient extension must separate states with different correct answers — with the joint target image as the coarsest such extension."
+    role: "Makes obstruction target-relative: a question is answerable from the readout exactly when its correct answer never varies within a readout fiber, and every sufficient extension must separate states with different correct answers, with the joint target image as the coarsest such extension."
     date: "2026-07-15"
     zenodo: 21370501
     doi: "10.5281/zenodo.21370501"
     summary: >
-      A lossy readout discards distinctions, but it does not follow that the
-      discarded distinctions matter. This paper proves a target is exactly
+      Determines exactly when distinctions discarded by a lossy readout matter.
+      This paper proves a target is exactly
       solvable from the readout if and only if its correct-answer map is
       constant on every readout fiber; when that fails, the honest residual is
-      the compatible-answer set — a set, not a probability — and every
+      the compatible-answer set, the pointwise-least sound set-valued rule, and every
       sufficient repair must separate states with different answers, with the
       joint target image as the universally coarsest completion. Realized
       concretely for flat U(1) connections on a circle, where curvature
@@ -82,14 +82,14 @@ papers:
     featured: true
     title: "Canonical Minimal Source Completion: The Coarsest Readout Extension on Which a Nominated Family of Source Relations Becomes Well Defined"
     subtitle: "Existence, uniqueness, and exact minimality of the completion, without selecting any fiber representative"
-    role: "Constructs the canonical minimal completion: for any nominated family of invariant source relations, the joint image of readout and relations is terminal among all relation-sufficient extensions — the coarsest enrichment on which every nominated relation becomes well defined."
+    role: "Constructs the canonical minimal completion: for any nominated family of invariant source relations, the joint image of readout and relations is terminal among all relation-sufficient extensions, making it the coarsest enrichment on which every nominated relation becomes well defined."
     date: "2026-07-15"
     zenodo: 21370763
     doi: "10.5281/zenodo.21370763"
     summary: >
       Given a lossy readout and a nominated family of physically invariant
       relations that the readout fails to determine, this paper constructs the
-      coarsest extension on which all of them become well defined — the joint
+      coarsest extension on which all of them become well defined: the joint
       image of readout and relations, equivalently the quotient by agreement of
       readout and every nominated relation. The completion is terminal: every
       sufficient extension maps uniquely onto it, giving existence, uniqueness
@@ -107,7 +107,7 @@ papers:
     featured: true
     title: "Geometric Realization of Completed Source Relations: Descent, Orbit Spaces, Invariant Relations, and Variational Response in Shadow Theory"
     subtitle: "When the abstract minimal completion is realized by genuine geometry, and how completed relations enter field equations"
-    role: "Realizes the completion geometrically: compatible local data glue to global fields unique up to bundle isomorphism, invariant relations descend to the orbit space of physical configurations, and relation-dependent actions yield derived — not postulated — covariant responses in the Einstein, Yang–Mills, and matter equations."
+    role: "Realizes the completion geometrically: compatible local data glue to global fields unique up to bundle isomorphism, invariant relations descend to the orbit space of physical configurations, and relation-dependent actions derive covariant responses in the Einstein, Yang–Mills, and matter equations."
     date: "2026-07-15"
     zenodo: 21370985
     doi: "10.5281/zenodo.21370985"
@@ -115,16 +115,16 @@ papers:
       Identifies precisely when the abstract minimal completion of Paper 3 can
       be built from real geometry. Čech descent constructs global metrics,
       bundles, connections, and matter fields unique up to bundle isomorphism;
-      gauge- and diffeomorphism-invariant relations — holonomy, Wilson
-      observables, characteristic numbers, operator spectra — descend to the
+      gauge- and diffeomorphism-invariant relations such as holonomy, Wilson
+      observables, characteristic numbers, and operator spectra descend to the
       orbit space of physical configurations and realize the completion on the
       restricted domain, with an exactly solved flat U(1) circle example where
       holonomy alone reconstructs the source though local curvature vanishes.
       Relation-dependent invariant actions then yield correctly normalized
       stress-energy, current, and matter responses, with Ward–Noether
-      identities enforcing covariant conservation. No claim of universal
-      realizability is made: the realization boundary is the content of the
-      theorems.
+      identities enforcing covariant conservation. The descent and cocycle
+      conditions characterize the exact geometric realization domain and its
+      failure modes.
     supports: []
 
   - id: paper:shadow2:5
@@ -146,12 +146,12 @@ papers:
       failure of autonomous dynamics. An induced observable evolution exists if
       and only if the source semigroup preserves the readout kernel; when it
       fails, the exact projected equation carries a deterministic
-      unresolved-initial-state term and an exact memory kernel — no stochastic,
-      Markovian, or timescale approximation anywhere. The minimal dynamical
+      unresolved-initial-state term and an exact memory kernel, derived without
+      stochastic, Markovian, or timescale approximations. The minimal dynamical
       completion is constructed and computed by a Kalman-type observability
       rank in finite dimensions, and sector elimination yields Schur-complement
-      effective operators and a covariant effective stress-energy with total —
-      not sectorwise — conservation.
+      effective operators and a covariant effective stress-energy whose total
+      conservation includes explicit exchange between sectors.
     supports: []
 
   - id: paper:shadow2:6
@@ -161,25 +161,25 @@ papers:
     visibility: public
     featured: true
     title: "Non-Source Projection and Internal Identifiability"
-    subtitle: "The boundary theorem: when an observable tier is provably a non-source projection, and what internal observation can identify"
-    role: "Integrates the sequence into a boundary theorem: any model exhibiting an essential non-gauge distinction inside a readout fiber is, relative to that model and target, a non-source projection — with exact deterministic and statistical ceilings on what an internal observer can ever identify."
+    subtitle: "Exact criteria for non-source projection, dynamical descent, and internal identifiability"
+    role: "Integrates the sequence into the non-source projection theorem: an essential non-gauge distinction inside a readout fiber proves non-source projection for the stated model and target, with exact deterministic and statistical identifiability results."
     date: "2026-07-15"
     zenodo: 21371451
     doi: "10.5281/zenodo.21371451"
     summary: >
       Proves that once a model exhibits two physically inequivalent source
       states sharing the same readout but demanding different answers to a
-      nominated target, that readout is — relative to the model and target — a
-      non-source projection. The dynamical consequences divide sharply:
+      nominated target, that readout is a non-source projection for the stated
+      model and target. The dynamical consequences divide sharply:
       fiber-preserving evolution descends to an autonomous law even when the
       readout is noninjective, so dynamical closure is evidence of fiber
       preservation, not fiber triviality; fiber-breaking evolution admits no
       deterministic instantaneous law. Under explicit factorization hypotheses,
       no internal probe, statistic, or test at any sample size distinguishes
       fiber members, and a strong lumpability theorem gives the exact condition
-      for a projected Markov process to remain Markov. The mathematics does not
-      supply a source domain or witness: those must be instantiated by a
-      physical model, and the boundary is marked explicitly.
+      for a projected Markov process to remain Markov. The theorem gives the
+      exact specification a physical model must instantiate: source domain,
+      physical equivalence, readout, target, and essential witness pair.
     supports: []
 
   - id: paper:shadow2:7
@@ -189,26 +189,24 @@ papers:
     visibility: public
     featured: true
     title: "Bulk-to-Brane Projection, Dynamical Nonclosure, and Observable Residues in Randall–Sundrum Gravity"
-    subtitle: "The physical witness: a concrete model-relative projection and nonclosure result in RS2, with its exact discrimination boundary"
-    role: "The physical-witness layer: constructs gauge-inequivalent RS2 bulk states with identical brane readout and different brane futures, derives the exact projected Einstein equation, extracts a parameter-free cross-regime prediction, and proves the operational-equivalence boundary that caps its own interpretation."
+    subtitle: "The physical witness: identical brane readouts, different futures, and linked observable residues in RS2"
+    role: "Within RS2 gravity, Paper 7 proves that identical instantaneous brane readouts can evolve into different futures, derives the exact projected Einstein equation, and links cosmological and weak-field residues through a parameter-free relation."
     date: "2026-07-15"
     zenodo: 21371861
     doi: "10.5281/zenodo.21371861"
     summary: >
-      Working inside the positive-tension Randall–Sundrum (RS2) braneworld —
-      an additional physical postulate, not derived — this paper delivers the
-      framework's concrete physical witness: an explicit pair of
+      Working inside the positive-tension Randall–Sundrum (RS2) braneworld,
+      this paper delivers the framework's concrete physical witness: an explicit pair of
       five-dimensional gravitational states identical to a brane observer now
       that evolve to differ later, so the instantaneous brane state admits no
       deterministic evolution law over the full source domain. It derives the
       exact projected Einstein equation line by line, obtains the positive
       high-density rho-squared term and bulk-state dark-radiation term, and
       eliminates the common AdS radius to yield a parameter-free cross-regime
-      relation linking cosmology to weak-field gravity. Crucially it proves its
-      own limit: every brane-only experiment is reproduced exactly by a
-      four-dimensional pushforward theory, so the result is a model-relative
-      projection and nonclosure theorem, not a proof that our universe is
-      five-dimensional.
+      relation linking cosmology to weak-field gravity. A pushforward theorem
+      proves that every brane-only protocol is reproduced exactly by a
+      four-dimensional theory of the brane record, establishing the full
+      operational-equivalence result.
     supports: []
 
   # ============================================================
@@ -222,7 +220,7 @@ papers:
     visibility: public
     featured: false
     title: "The Readout Non-Equivalence Theorem for Bounded Realized Domains"
-    subtitle: "Superseded canonical version — replaced by Paper 1, Source–Readout Non-Equivalence"
+    subtitle: "Superseded canonical version, replaced by Paper 1, Source–Readout Non-Equivalence"
     role: "Former canonical Paper 1 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Source–Readout Non-Equivalence."
     version: "v3"
     date: "2026-06-01"
@@ -237,7 +235,7 @@ papers:
     visibility: public
     featured: false
     title: "Completion Necessity for Readout-Non-Equivalent Domains"
-    subtitle: "Superseded canonical version — replaced by Paper 2, Target-Relative Necessity of Completion"
+    subtitle: "Superseded canonical version, replaced by Paper 2, Target-Relative Necessity of Completion"
     role: "Former canonical Paper 2 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Target-Relative Necessity of Completion."
     version: "v5"
     date: "2026-06-01"
@@ -252,7 +250,7 @@ papers:
     visibility: public
     featured: false
     title: "The Canonical Completion Object Theorem for Shadow Theory"
-    subtitle: "Superseded canonical version — replaced by Paper 3, Canonical Minimal Source Completion"
+    subtitle: "Superseded canonical version, replaced by Paper 3, Canonical Minimal Source Completion"
     role: "Former canonical Paper 3 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Canonical Minimal Source Completion."
     version: "v4"
     date: "2026-06-01"
@@ -267,7 +265,7 @@ papers:
     visibility: public
     featured: false
     title: "The Tier-1 Shadow Compiler Theorem"
-    subtitle: "Superseded canonical version — the current sequence has no down-compilation stage; see the seven-paper sequence"
+    subtitle: "Superseded canonical version; the current sequence has no down-compilation stage. See the seven-paper sequence"
     role: "Former canonical Paper 4 (June 2026). Superseded by the seven-paper sequence. Its down-compilation architecture is not carried forward; the current Paper 4 is Geometric Realization of Completed Source Relations."
     version: "v3"
     date: "2026-06-01"
@@ -282,7 +280,7 @@ papers:
     visibility: public
     featured: false
     title: "Shadow Theory Framework Mathematics"
-    subtitle: "Superseded canonical version — the current sequence has no runtime-calculus stage; see the seven-paper sequence"
+    subtitle: "Superseded canonical version; the current sequence has no runtime-calculus stage. See the seven-paper sequence"
     role: "Former canonical Paper 5 (June 2026). Superseded by the seven-paper sequence. Its runtime/status/residue calculus is not carried forward; the current Paper 5 is Observable Quotients and Exact Projected Dynamics."
     version: "v14"
     date: "2026-06-01"
@@ -297,7 +295,7 @@ papers:
     visibility: public
     featured: false
     title: "Shadow Theory Synthesis"
-    subtitle: "Superseded canonical version — the current sequence has no synthesis capstone; see the seven-paper sequence"
+    subtitle: "Superseded canonical version; the current sequence has no synthesis capstone. See the seven-paper sequence"
     role: "Former canonical Paper 6 (June 2026). Superseded by the seven-paper sequence. Its synthesis/law-packet architecture is not carried forward; the current sequence closes with the boundary theorem (Paper 6) and the RS2 physical witness (Paper 7)."
     version: "final"
     date: "2026-06-01"

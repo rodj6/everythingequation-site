@@ -1,22 +1,21 @@
 ## Reading notes
 
-A surjective, noninjective readout necessarily discards distinctions. The
-paper's point is that *it does not follow that the discarded distinctions
-matter* — whether they matter is a property of the question asked, not of the
-readout alone. A **target** $Q$ is formalized as a correct-answer map
+A surjective, noninjective readout necessarily discards distinctions. Paper 2
+determines exactly when those distinctions matter: the answer is a property of
+the question asked, not of the readout alone. A **target** $Q$ is formalized as a correct-answer map
 $a_Q: S \to A_Q$ on the reduced source.
 
 <Theorem title="Exact target-solvability criterion">
 $Q$ admits an exact readout-only solution if and only if $a_Q$ is constant on
 every fiber of $p$. Consequently a lost source relation obstructs $Q$
-precisely when it is <em>active</em> for $Q$ — when the realized answer varies
+precisely when it is <em>active</em> for $Q$, meaning that the realized answer varies
 across some readout fiber. Globally inactive loss never obstructs: that is
 what makes coarse descriptions viable, not defective.
 </Theorem>
 
 When exactness fails, no auxiliary quantity computed from the readout can
 repair it (everything readout-computed is still fiber-constant). The honest
-residual is the **compatible-answer set** $\mathsf A_Q(t) = a_Q(p^{-1}(t))$ —
+residual is the **compatible-answer set** $\mathsf A_Q(t) = a_Q(p^{-1}(t))$,
 the unique pointwise-least uniformly sound set-valued rule. It is a set, not
 a probability: a probabilistic prediction answers a different target and
 requires extra input not contained in the readout.
@@ -26,12 +25,12 @@ Every readout extension sufficient for $Q$ must separate every pair of source
 states with different correct answers, and the joint target image
 $E_Q = \mathrm{Im}(p, a_Q)$ is itself sufficient and universally coarsest:
 every sufficient extension surjects uniquely onto it. This is the floor any
-repair must contain — it is not reconstruction of the source.
+repair must contain. It retains target-relevant distinctions rather than reconstructing the source.
 </Theorem>
 
 The worked example is flat $U(1)$ connections on a circle. Curvature is a
 deliberately restricted readout that collapses the whole flat moduli space
-$S_{\mathrm{flat}} \cong U(1)$ to a point — perfectly adequate for the
+$S_{\mathrm{flat}} \cong U(1)$ to a point. This is perfectly adequate for the
 flatness target, fatal for the charged-scalar spectral target. The spectrum
 sees holonomy only up to inversion: the minimal spectral completion is the
 inversion quotient coordinatized by $\cos\theta$, strictly coarser than the
@@ -40,12 +39,11 @@ targets, two different minimal completions. The same criterion decides
 finite-time dynamical closure: an autonomous readout propagator exists iff
 the future readout is constant on present readout fibers.
 
-<ClaimBoundary>
-The paper does not claim every lossy readout requires completion — the
-opposite is routine. The universal property identifies the floor of what a
-repair must retain; it does not furnish an operationally accessible repair,
-and "completion" here is neither metric completion nor hidden-variable
-adjunction. Nothing here claims physical reality is a projection of a hidden
-source; the mathematics constrains what a given projection can deliver for a
-nominated target, and nothing more.
-</ClaimBoundary>
+<ResultScope>
+Completion is target-relative. Fiber-constant targets remain exactly solvable
+from a lossy readout, while active targets require the separation proved by the
+universal property. The construction determines the least sufficient
+information structure; operational access is a separate realization problem.
+Here, completion means a readout extension by target-relevant distinctions,
+distinct from metric completion and hidden-variable adjunction.
+</ResultScope>

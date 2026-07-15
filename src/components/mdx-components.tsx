@@ -15,8 +15,8 @@
  *   <ProofSketch>...</ProofSketch>
  *   <Remark>...</Remark>
  *   <EquationPanel title="..." note="...">$$ ... $$</EquationPanel>
- *   <StatusCard status="..." route="..." residues="..." claims="..." />
- *   <ClaimBoundary>...</ClaimBoundary>
+ *   <StatusCard status="..." route="..." residues="..." result="..." />
+ *   <ResultScope>...</ResultScope>
  *
  * See ARTICLE_AUTHORING_GUIDE.md for examples.
  */
@@ -106,7 +106,7 @@ export const mdxComponents = {
   Remark: (p: EnvProps) => <MathEnv kind="Remark" color="muted" {...p} />,
   EquationPanel,
   StatusCard,
-  ClaimBoundary,
+  ResultScope,
 };
 
 /* ---------------------------------------------------------------------------
@@ -134,18 +134,19 @@ function MathEnv({
     color === "cyan" ? "text-glow" : color === "violet" ? "text-vio" : "text-mute";
   return (
     <section
-      className={`card-surface my-6 border-l-4 ${accent} px-5 py-4 [&>p:first-of-type]:mt-2`}
+      className={`card-surface math-environment my-6 border-l-4 ${accent} px-5 py-4 [&>p:first-of-type]:mt-2`}
+      data-kind={kind.toLowerCase().replace(" ", "-")}
     >
       <p className={`m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] ${label}`}>
         {kind}
-        {title ? <span className="normal-case tracking-normal text-fg"> — {title}</span> : null}
+        {title ? <span className="normal-case tracking-normal text-fg">: {title}</span> : null}
       </p>
       <div className="text-[0.97rem]">{children}</div>
     </section>
   );
 }
 
-/** Luminous panel for display equations, with optional caption/boundary note. */
+/** Luminous panel for display equations, with an optional contextual note. */
 function EquationPanel({
   title,
   note,
@@ -156,7 +157,7 @@ function EquationPanel({
   children?: ReactNode;
 }) {
   return (
-    <figure className="card-surface relative my-8 overflow-hidden px-6 py-5">
+    <figure className="card-surface equation-panel relative my-8 overflow-hidden px-6 py-5">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -top-16 left-1/2 h-32 w-2/3 -translate-x-1/2 glow-cyan"
@@ -174,25 +175,25 @@ function EquationPanel({
   );
 }
 
-/** Finite-state status card, mirroring the framework's status discipline. */
+/** Finite-state status card for research records. */
 function StatusCard({
   status,
   route,
   residues,
-  claims,
+  result,
   children,
 }: {
   status?: string;
   route?: string;
   residues?: string;
-  claims?: string;
+  result?: string;
   children?: ReactNode;
 }) {
   const rows: Array<[string, string | undefined]> = [
     ["Status", status],
     ["Route", route],
     ["Residues", residues],
-    ["Licensed claims", claims],
+    ["Established result", result],
   ];
   return (
     <aside className="card-surface my-6 px-5 py-4" aria-label="Status card">
@@ -214,15 +215,15 @@ function StatusCard({
   );
 }
 
-/** Amber panel marking explicit claim boundaries. */
-function ClaimBoundary({ children }: { children?: ReactNode }) {
+/** Amber panel stating the exact scope of a result. */
+function ResultScope({ children }: { children?: ReactNode }) {
   return (
     <aside
       className="my-6 rounded-xl border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.06)] px-5 py-4"
-      aria-label="Claim boundary"
+      aria-label="Result scope"
     >
       <p className="m-0 mb-2 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-        Claim boundary
+        Result scope
       </p>
       <div className="text-sm leading-relaxed text-fg/90 [&>p]:mt-2 [&>p:first-child]:mt-0">
         {children}

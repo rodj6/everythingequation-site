@@ -8,7 +8,7 @@ export default function NotFound() {
         This readout has no realization
       </h1>
       <p className="mt-4 text-mute">
-        The page you requested doesn't exist — or has been superseded. Try the paper
+        The page you requested is unavailable or has been superseded. Try the paper
         index or the research map.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">

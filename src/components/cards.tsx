@@ -1,5 +1,5 @@
 /**
- * CARD COMPONENTS — paper, problem, and article cards used across index pages.
+ * CARD COMPONENTS: paper, problem, and article cards used across index pages.
  * Server-rendered; all text is crawlable HTML.
  */
 import Link from "next/link";
@@ -37,8 +37,14 @@ export function Badge({ kind }: { kind: string }) {
 }
 
 export function PaperCard({ paper }: { paper: LoadedPaper }) {
+  const paperClass =
+    paper.category === "canonical"
+      ? paper.number === 7
+        ? "paper-index-card paper-index-witness"
+        : "paper-index-card"
+      : "";
   return (
-    <article className="card-surface card-surface-hover relative flex h-full flex-col p-5">
+    <article className={`card-surface card-surface-hover relative flex h-full flex-col overflow-hidden p-5 ${paperClass}`}>
       <div className="flex items-center gap-2">
         {paper.number ? (
           <span className="font-mono text-sm font-bold text-glow">
@@ -65,13 +71,16 @@ export function PaperCard({ paper }: { paper: LoadedPaper }) {
           <span>DOI pending Zenodo upload</span>
         ) : null}
       </div>
+      <span className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-glow">
+        Read result →
+      </span>
     </article>
   );
 }
 
 export function ProblemCard({ problem }: { problem: LoadedProblem }) {
   return (
-    <article className="card-surface card-surface-hover relative flex h-full flex-col p-5">
+    <article className="card-surface card-surface-hover problem-index-card relative flex h-full flex-col overflow-hidden p-5">
       <div className="flex flex-wrap items-center gap-2">
         <span className="inline-block rounded-full border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.07)] px-2.5 py-0.5 font-mono text-[0.68rem] font-medium uppercase tracking-wider text-amberc">
           Open problem
@@ -88,6 +97,9 @@ export function ProblemCard({ problem }: { problem: LoadedProblem }) {
         </Link>
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-mute">{problem.target}</p>
+      <span className="mt-auto pt-4 text-xs font-semibold uppercase tracking-[0.14em] text-amberc">
+        Investigate target →
+      </span>
     </article>
   );
 }

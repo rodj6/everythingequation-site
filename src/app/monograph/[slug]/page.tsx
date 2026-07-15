@@ -27,7 +27,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const item = getMonographItem(params.slug);
   if (!item) return {};
-  const prefix = item.label ? `${item.label} — ` : "";
+  const prefix = item.label ? `${item.label}: ` : "";
   return {
     title: `${prefix}${item.title} · The Monograph`,
     description: `${prefix}${item.title}. From “${m.title}” (Version ${m.version}, ${m.published}, doi:${m.doi}). ${item.description}`.slice(0, 300),
@@ -58,7 +58,7 @@ export default async function MonographItemPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Chapter",
-    name: item.label ? `${item.label} — ${item.title}` : item.title,
+    name: item.label ? `${item.label}: ${item.title}` : item.title,
     position: item.order,
     url: `${site.url}/monograph/${item.slug}`,
     author: { "@type": "Person", name: site.author.name },
@@ -123,6 +123,19 @@ export default async function MonographItemPage({
             doi:{m.doi}
           </a>
         </p>
+        <div className="mt-5" aria-label={`Reading position ${item.order} of ${listMonographItems().length}`}>
+          <div className="mb-2 flex items-center justify-between font-mono text-[0.65rem] uppercase tracking-[0.14em] text-faint">
+            <span>Reading position</span>
+            <span>{item.order} / {listMonographItems().length}</span>
+          </div>
+          <progress
+            className="monograph-progress h-1.5 w-full overflow-hidden rounded-full"
+            max={listMonographItems().length}
+            value={item.order}
+          >
+            {item.order} of {listMonographItems().length}
+          </progress>
+        </div>
       </header>
 
       {/* In-chapter contents */}
@@ -157,7 +170,7 @@ export default async function MonographItemPage({
           {prev ? (
             <Link
               href={`/monograph/${prev.slug}`}
-              className="group block text-sm"
+              className="card-surface card-surface-hover group block h-full px-4 py-3 text-sm"
               rel="prev"
             >
               <span className="font-mono text-[0.65rem] uppercase tracking-wider text-faint">
@@ -170,7 +183,7 @@ export default async function MonographItemPage({
           ) : null}
         </div>
         <div className="text-sm sm:text-center">
-          <Link href="/monograph" className="font-medium text-glow hover:text-glow-strong">
+          <Link href="/monograph" className="card-surface card-surface-hover flex h-full items-center justify-center px-4 py-3 font-medium text-glow hover:text-glow-strong">
             Table of contents
           </Link>
         </div>
@@ -178,7 +191,7 @@ export default async function MonographItemPage({
           {next ? (
             <Link
               href={`/monograph/${next.slug}`}
-              className="group block text-sm"
+              className="card-surface card-surface-hover group block h-full px-4 py-3 text-sm"
               rel="next"
             >
               <span className="font-mono text-[0.65rem] uppercase tracking-wider text-faint">

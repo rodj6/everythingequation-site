@@ -26,17 +26,17 @@ const stageWord: Record<number, string> = {
  * reads in order, but the dependencies are not a single assembly line:
  * Papers 1–3 are the abstract completion core; Paper 4 realizes it
  * geometrically; Paper 5 is the (self-contained) dynamical layer; Paper 6
- * integrates 1–5 into a boundary theorem; Paper 7 instantiates the whole
+ * integrates 1–5 into the non-source projection theorem; Paper 7 instantiates the whole
  * architecture physically.
  */
 const handoff: Record<number, string> = {
   1: "Hands the descent criterion to Paper 2 (answer maps) and Paper 3 (relation families); its equivariant obstruction returns in Paper 6's reconstruction corollary.",
   2: "Supplies the single-target completion and the flat-U(1) spectral rigidity input that Paper 3 generalizes to families of relations.",
   3: "Emits the canonical minimal completion that Paper 4 realizes geometrically; its target-relative minimality is the phenomenon Papers 5 and 6 meet again dynamically.",
-  4: "Defers all dynamical questions — closure, retention, memory — to Paper 5; its orbit-space architecture is one of Paper 6's three standard specializations.",
+  4: "Hands closure, retention, and memory to Paper 5; its orbit-space architecture is one of Paper 6's three standard specializations.",
   5: "Provides the closure criterion, exact memory equation, and minimal dynamical completion that Paper 6 restates as its projected-law dichotomy and Paper 7 instantiates in RS2.",
-  6: "Proves the boundary theorem the sequence needs a witness for — and states exactly what a physical model must supply: a source domain, an equivalence, a readout, and a witness pair.",
-  7: "Supplies that witness in RS2 gravity, and proves the operational-equivalence boundary that caps the whole sequence's interpretation.",
+  6: "Proves the non-source projection theorem and states exactly what a physical model must supply: a source domain, an equivalence, a readout, a target, and a witness pair.",
+  7: "Supplies that witness in RS2 gravity, derives linked physical residues, and proves exact operational equivalence for brane-only protocols.",
 };
 
 export default async function ResearchMapPage() {
@@ -67,7 +67,7 @@ export default async function ResearchMapPage() {
           The dependencies are not a single assembly line. Papers 1–3 form the abstract
           completion core; Paper 4 realizes it geometrically; Paper 5 is the dynamical
           layer (deliberately self-contained); Paper 6 integrates everything into a
-          model-relative boundary theorem; Paper 7 is the physical witness that theorem
+          non-source projection theorem; Paper 7 is the physical witness that theorem
           calls for.
         </p>
       </header>
@@ -82,7 +82,7 @@ export default async function ResearchMapPage() {
             const n = p.number ?? i + 1;
             const isWitness = n === 7;
             return (
-              <li key={p.slug} className="relative pb-10 last:pb-0">
+              <li key={p.slug} className="research-node relative pb-10 last:pb-0">
                 <span
                   aria-hidden="true"
                   className={
@@ -126,9 +126,8 @@ export default async function ResearchMapPage() {
         </h2>
         <p className="mt-2 max-w-3xl text-mute">
           Open problems attach downstream of the seven-paper foundation as branch
-          targets. Each is a research target with a declared claim boundary — none is
-          presented as solved, and none is public framework content without its own
-          public paper or record stating its assumptions, support, and limitations.
+          targets. Each identifies a concrete question and the assumptions, method,
+          support, and result a dedicated public record must establish.
         </p>
 
         <div className="card-surface mt-8 p-6">

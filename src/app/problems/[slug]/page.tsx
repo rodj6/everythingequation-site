@@ -67,12 +67,11 @@ export default async function ProblemPage({ params }: { params: { slug: string }
 
       <section className="mt-6 rounded-xl border border-edge bg-surface px-5 py-4 text-sm leading-relaxed text-mute">
         <p className="m-0">
-          <strong className="text-fg">Claim discipline.</strong> Within {site.name}, a
-          result on this problem becomes public framework content only through its own
-          public paper or record: declared assumptions and domain of validity,
-          mathematical or empirical support appropriate to the claim, explicit
-          limitations, and a clear claim boundary. Until such a record is published
-          here, this page licenses no solved-problem claim.
+          <strong className="text-fg">Research protocol.</strong> Within {site.name}, a
+          result on this problem enters the framework through a dedicated public paper
+          or record containing its assumptions, domain of validity, method, mathematical
+          or empirical support, and exact conclusion. This page defines the target and
+          connects the work that bears on it.
         </p>
       </section>
 
@@ -83,8 +82,8 @@ export default async function ProblemPage({ params }: { params: { slug: string }
           </p>
           The notes that follow were written during the earlier Everything Equation /
           Tier-0 era of this programme. They are retained as a development trace. Their
-          claims are <strong>not</strong> current Shadow Theory results and are
-          superseded as authority by Papers 1–7.
+          canonical authority resides in Papers 1–7; the notes remain available as a
+          development trace.
         </aside>
       ) : null}
 

@@ -21,7 +21,7 @@ export default function ArticlesPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Articles</h1>
         <p className="mt-4 text-lg leading-relaxed text-mute">
           Research notes, reading guides, explanations, and programme updates. New
-          articles are added as MDX files — see the authoring guide in the repository.
+          articles are added as MDX files; see the authoring guide in the repository.
         </p>
       </header>
 

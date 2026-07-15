@@ -30,7 +30,7 @@ export default async function PapersPage() {
           The seven canonical papers are the controlling public authority of Shadow
           Theory. Superseded canonical versions are the June 2026 six-paper stack the
           current sequence replaced. Historical papers are the earlier Everything
-          Equation / Tier-0 era archive — retained for the record, superseded as
+          Equation / Tier-0 era archive, retained for the record and superseded as
           authority.
         </p>
       </header>
@@ -42,7 +42,7 @@ export default async function PapersPage() {
         >
           <p className="section-label">Looking for the monograph?</p>
           <p className="mt-2 font-semibold text-fg">
-            A Source-to-Readout Architecture for a Theory of Everything — Version 1.0
+            A Source-to-Readout Architecture for a Theory of Everything · Version 1.0
           </p>
           <p className="mt-1 text-sm text-mute">
             The complete web edition (18 chapters, two appendices, bibliography) lives at{" "}
@@ -73,8 +73,8 @@ export default async function PapersPage() {
             Branch papers
           </h2>
           <p className="mt-1 text-sm text-mute">
-            Branch results downstream of the canonical sequence — each published as its
-            own record with declared assumptions, limitations, and claim boundary.
+            Branch results downstream of the canonical sequence, each published as its
+            own record with declared assumptions, methods, results, and research domain.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {branch.map((p) => (
@@ -120,7 +120,7 @@ export default async function PapersPage() {
         <p className="mt-1 max-w-3xl text-sm leading-relaxed text-mute">
           {historical.length} records from the earlier programme era. These remain
           publicly available on Zenodo, but they are historical background and branch
-          development traces — where they conflict with Papers 1–7, the canonical
+          development traces. Where they conflict with Papers 1–7, the canonical
           sequence controls.
         </p>
         <ul className="mt-6 divide-y divide-edge overflow-hidden rounded-xl border border-edge">

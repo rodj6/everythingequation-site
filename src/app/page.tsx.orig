@@ -169,29 +169,29 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ================= CLAIM BOUNDARY ================= */}
-      <section aria-labelledby="boundary-heading" className="mx-auto max-w-3xl">
+      {/* ================= RESEARCH POSITION ================= */}
+      <section aria-labelledby="position-heading" className="mx-auto max-w-3xl">
         <p className="section-label text-center">Framework position</p>
-        <h2 id="boundary-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
-          Research scope and current status
+        <h2 id="position-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
+          Established results and programme trajectory
         </h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
-              Research scope
+              Established results
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.is.map((line) => (
+              {site.researchPosition.establishes.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
           </div>
           <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-              Current status
+              Programme trajectory
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.isNot.map((line) => (
+              {site.researchPosition.programme.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
@@ -208,8 +208,8 @@ export default async function HomePage() {
               Open problems
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              Downstream branch targets of the stack. Each is a research target with a
-              declared claim boundary — none is presented as solved.
+              Downstream branch targets of the stack, each defined by a research question
+              and the evidence required to establish a result.
             </p>
           </div>
           <Link href="/problems" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">

@@ -20,15 +20,15 @@ const tex = (src: string, displayMode = true) => ({
 const vocabulary: Array<{ term: string; def: string }> = [
   {
     term: "Readout / shadow",
-    def: "An exact bounded presentation — a quotient, measurement, macrostate, or public summary — of a richer realization structure. A shadow is not false or illusory: it presents the source exactly as a quotient, and its internal laws may be fully valid at its own level. It simply is not the source-level structure itself.",
+    def: "An exact bounded presentation of a richer realization structure, such as a quotient, measurement, macrostate, or public summary. A shadow presents the source exactly as a quotient, can support valid internal laws, and remains distinct from the source-level structure.",
   },
   {
     term: "Reduced source",
-    def: "The space of admissible realization states after all declared gauge and coordinate redundancy has been quotiented out. Every non-equivalence claim in the framework is about the reduced source, never about raw descriptions — so a nontrivial readout fiber is genuine physical multiplicity, not gauge residue (Paper 1).",
+    def: "The space of admissible realization states after all declared gauge and coordinate redundancy has been quotiented out. Every non-equivalence result concerns this reduced source, so a nontrivial readout fiber represents genuine physical multiplicity after gauge residue has been removed (Paper 1).",
   },
   {
     term: "Descent",
-    def: "A physically invariant source relation descends through the readout — is a function of readout data alone — exactly when it is constant on every readout fiber. Only after descent is established may a quantity be called an observable of the readout level (Paper 1).",
+    def: "A physically invariant source relation descends through the readout, becoming a function of readout data alone, exactly when it is constant on every readout fiber. Descent is the criterion that makes a source relation an observable of the readout level (Paper 1).",
   },
   {
     term: "Target and correct-answer map",
@@ -36,31 +36,31 @@ const vocabulary: Array<{ term: string; def: string }> = [
   },
   {
     term: "Canonical minimal completion",
-    def: "For a nominated family of invariant source relations, the coarsest readout extension on which every relation becomes well defined — the joint image of readout and relations. It is terminal: every sufficient extension maps uniquely onto it. Minimal means least retained distinction, and completion is not reconstruction of the source (Paper 3).",
+    def: "For a nominated family of invariant source relations, the joint image of readout and relations is the coarsest extension on which every relation becomes well defined. It is terminal: every sufficient extension maps uniquely onto it. Minimality measures retained distinctions; reconstruction occurs exactly when the nominated family separates source points (Paper 3).",
   },
   {
     term: "Geometric realization / orbit space",
-    def: "The physical geometric source is the orbit space of admissible field configurations under allowed bundle isomorphisms and diffeomorphisms. Invariant global relations — holonomy, Wilson observables, characteristic numbers, spectra — descend to it and realize the abstract completion on a restricted domain; not every abstract completion is geometrically realizable (Paper 4).",
+    def: "The physical geometric source is the orbit space of admissible field configurations under allowed bundle isomorphisms and diffeomorphisms. Invariant global relations such as holonomy, Wilson observables, characteristic numbers, and spectra descend to it. Descent and cocycle conditions characterize the exact domain on which the abstract completion has a geometric realization (Paper 4).",
   },
   {
     term: "Closure and memory",
-    def: "Observable dynamics close autonomously exactly when the source evolution preserves the readout kernel. When closure fails, the exact projected law carries a deterministic unresolved-initial-state term and an exact memory kernel — no stochastic or Markovian approximation — and the minimal dynamical completion measures exactly what state must be restored (Paper 5).",
+    def: "Observable dynamics close autonomously exactly when the source evolution preserves the readout kernel. When closure fails, the exact projected law carries a deterministic unresolved-initial-state term and an exact memory kernel derived without stochastic or Markovian approximation. The minimal dynamical completion measures exactly what state must be restored (Paper 5).",
   },
   {
     term: "Non-source projection",
-    def: "A readout tier exhibiting an essential non-gauge fiber distinction — two physically inequivalent source states with the same readout but different correct answers to a nominated target. Relative to that model and target, the readout is provably not the physical state space but a faithful quotient of a larger one (Paper 6).",
+    def: "A readout tier exhibiting an essential non-gauge fiber distinction: two physically inequivalent source states with the same readout but different correct answers to a nominated target. For that model and target, the readout is provably a faithful quotient of a larger physical state space (Paper 6).",
   },
   {
-    term: "Internal identifiability ceiling",
-    def: "Under the hypothesis that every admissible internal probe factors through the readout, no probe value, derived statistic, or deterministic selector distinguishes members of a common readout fiber — and under the statistical counterpart, no test at any sample size does either. Both ceilings are separate, explicit hypotheses (Paper 6).",
+    term: "Internal identifiability theorem",
+    def: "When every admissible internal probe factors through the readout, all probe values, derived statistics, and deterministic selectors agree across a common readout fiber. Under the statistical counterpart, every test at every sample size has the same outcome law across the fiber. These are separate factorization theorems (Paper 6).",
   },
   {
     term: "Physical witness",
-    def: "A concrete physical model that instantiates the abstract architecture. Paper 7 supplies one in Randall–Sundrum (RS2) gravity: gauge-inequivalent bulk states with identical instantaneous brane readout and different brane futures. The witness is model-relative — it does not prove our universe is such a projection.",
+    def: "A concrete physical model that instantiates the abstract architecture. Paper 7 supplies one in Randall–Sundrum (RS2) gravity: gauge-inequivalent bulk states with identical instantaneous brane readout and different brane futures, an exact projected Einstein equation, and linked observable residues.",
   },
   {
-    term: "Operational-equivalence boundary",
-    def: "The proved limit of interpretation: every brane-only experiment, including adaptive protocols, is reproduced exactly by a four-dimensional pushforward theory of the brane record. So no brane-only observation can establish that the five-dimensional source representation is ontologically fundamental (Paper 7).",
+    term: "Operational equivalence",
+    def: "Every brane-only experiment, including adaptive protocols, is reproduced exactly by a four-dimensional pushforward theory of the brane record. The two source representations therefore generate the same complete brane-level outcome law (Paper 7).",
   },
 ];
 
@@ -76,11 +76,11 @@ export default async function FrameworkPage() {
           One sequence, seven papers
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-mute">
-          Shadow Theory begins from a direct claim: <span className="text-fg">the reality
-          we experience is not source reality itself.</span> It is not a simulation
-          hypothesis, and not a Matrix-style illusion. It is a structured shadow of a
-          deeper reality, and physics is the study of what that shadow reveals, what it
-          hides, and what can be reconstructed from it.
+          Shadow Theory treats experienced reality as a structured readout of deeper
+          source structure. <span className="text-fg">The observable world is physically
+          real at its own tier</span>, with laws and relations inherited through a
+          projection. The framework studies exactly what the readout preserves, which
+          distinctions it identifies, and what additional structure reconstruction requires.
         </p>
         <p className="mt-4 leading-relaxed text-mute">
           The seven-paper foundation builds the mathematics behind that claim step by
@@ -89,7 +89,7 @@ export default async function FrameworkPage() {
           structure actually matters, what any completion must retain, when completions
           are realized by genuine geometry, when observable dynamics close, and what an
           internal observer can ever identify. Paper 7 instantiates the whole
-          architecture in Randall–Sundrum gravity — the sequence's physical witness.
+          architecture in Randall–Sundrum gravity as the sequence's physical witness.
         </p>
       </section>
 
@@ -111,37 +111,37 @@ export default async function FrameworkPage() {
             {
               n: 1,
               t: "An exact readout is not the source",
-              b: "After declared gauge and coordinate redundancy is quotiented out, the public readout always presents the reduced source exactly as a quotient — and that exactness is fully compatible with non-equivalence. Paper 1 proves two independent obstructions: a physically invariant relation is a function of readout data exactly when it is constant on every readout fiber, and a symmetry-compatible deterministic representative exists exactly when every readout stabilizer fixes a point of its fiber. A finite occupation model and the Hopf fibration realize both.",
+              b: "After declared gauge and coordinate redundancy is quotiented out, the public readout presents the reduced source exactly as a quotient while remaining compatible with non-equivalence. Paper 1 proves two independent obstructions: a physically invariant relation is a function of readout data exactly when it is constant on every readout fiber, and a symmetry-compatible deterministic representative exists exactly when every readout stabilizer fixes a point of its fiber. A finite occupation model and the Hopf fibration realize both.",
             },
             {
               n: 2,
               t: "Loss obstructs only relative to a target",
-              b: "A lossy readout discards distinctions, but whether they matter is a property of the question asked. Paper 2 proves a target is exactly solvable from the readout if and only if its correct answer never varies within a readout fiber. When solvability fails, the honest residual is the set of compatible answers — not a probability — and every sufficient repair must separate states with different answers, with the joint target image as the coarsest completion any repair must contain.",
+              b: "A lossy readout discards distinctions, and whether they matter is a property of the question asked. Paper 2 proves a target is exactly solvable from the readout if and only if its correct answer never varies within a readout fiber. When solvability fails, the compatible-answer set is the unique pointwise-least sound set-valued rule. Every sufficient repair must separate states with different answers, with the joint target image as the coarsest completion any repair must contain.",
             },
             {
               n: 3,
               t: "The minimal completion is canonical",
-              b: "Given a nominated family of invariant source relations, Paper 3 constructs the coarsest readout extension on which all of them become well defined, and proves it terminal: every sufficient extension maps uniquely onto it. Existence, uniqueness up to unique isomorphism, and exact minimality follow — without ever selecting a preferred representative of any fiber, and without resurrecting gauge redundancy already quotiented away.",
+              b: "Given a nominated family of invariant source relations, Paper 3 constructs the coarsest readout extension on which all of them become well defined, and proves it terminal: every sufficient extension maps uniquely onto it. Existence, uniqueness up to unique isomorphism, and exact minimality follow without selecting a preferred representative of any fiber or resurrecting gauge redundancy already quotiented away.",
             },
             {
               n: 4,
-              t: "Completions can be realized by geometry — within a boundary",
-              b: "Paper 4 identifies when the abstract completion is realized by genuine geometry: compatible local metric, bundle, connection, and matter data glue to global fields unique up to bundle isomorphism, and invariant relations — holonomy, Wilson observables, characteristic numbers, spectra — descend to the orbit space of physical configurations. On the flat U(1) circle, holonomy alone reconstructs the source even though local curvature vanishes. Relation-dependent invariant actions then yield derived, correctly normalized responses in the Einstein, Yang–Mills, and matter equations. No universal realizability is claimed: the realization boundary is the theorem.",
+              t: "Geometric descent realizes the completion",
+              b: "Paper 4 characterizes geometric realization exactly: compatible local metric, bundle, connection, and matter data glue to global fields unique up to bundle isomorphism, while holonomy, Wilson observables, characteristic numbers, and spectra descend to the orbit space of physical configurations. On the flat U(1) circle, holonomy alone reconstructs the source even though local curvature vanishes. Relation-dependent invariant actions then derive correctly normalized responses in the Einstein, Yang–Mills, and matter equations. The descent and cocycle conditions determine the complete realization domain.",
             },
             {
               n: 5,
               t: "Observable dynamics close only under an exact condition",
-              b: "Paper 5 is the dynamical layer. An induced evolution on the observable state exists if and only if the source dynamics preserve the readout kernel. When that fails, the exact projected equation carries a deterministic unresolved-initial-state term and an exact memory kernel — with no stochastic, Markovian, or timescale approximation anywhere — and the minimal dynamical completion measures exactly how much hidden state must be restored, computed in finite dimensions by a Kalman-type observability rank. Sector elimination yields Schur-complement effective operators and a covariant effective stress-energy with total, not sectorwise, conservation.",
+              b: "Paper 5 is the dynamical layer. An induced evolution on the observable state exists if and only if the source dynamics preserve the readout kernel. When that fails, the exact projected equation carries a deterministic unresolved-initial-state term and an exact memory kernel derived without stochastic, Markovian, or timescale approximations. The minimal dynamical completion measures exactly how much source state must be restored, computed in finite dimensions by a Kalman-type observability rank. Sector elimination yields Schur-complement effective operators and a covariant effective stress-energy with explicit exchange and total conservation.",
             },
             {
               n: 6,
-              t: "The boundary theorem: non-source projection and its ceilings",
-              b: "Paper 6 integrates the sequence: any model exhibiting an essential non-gauge distinction inside a readout fiber — same readout, different correct answers — is, relative to that model and target, a non-source projection. Dynamical closure is evidence of fiber preservation, not fiber triviality. Under explicit factorization hypotheses, no internal probe, statistic, or test at any sample size distinguishes fiber members. The mathematics deliberately stops at the boundary: it does not supply a source domain or a witness. That must come from a physical model.",
+              t: "Non-source projection and internal identifiability",
+              b: "Paper 6 integrates the sequence: an essential non-gauge distinction inside a readout fiber, meaning the same readout with different correct answers, proves non-source projection for the stated model and target. Dynamical closure demonstrates fiber preservation rather than fiber triviality. Under explicit factorization hypotheses, every internal probe, statistic, and test at every sample size agrees across fiber members. The theorem also specifies exactly what a physical witness must supply.",
             },
             {
               n: 7,
               t: "The physical witness: Randall–Sundrum gravity",
-              b: "Paper 7 supplies the witness. In the positive-tension RS2 braneworld it constructs an explicit pair of gauge-inequivalent bulk states with identical instantaneous brane readout and different brane futures, so no deterministic law on the brane's present state reproduces all source trajectories. It derives the exact projected Einstein equation line by line, evaluates it to a positive high-density ρ² term and a bulk-state dark-radiation term, and eliminates the AdS radius to obtain a parameter-free cross-regime relation linking cosmology to weak-field gravity. And it proves its own interpretive limit: a four-dimensional pushforward theory reproduces every brane-only experiment exactly, so this is a model-relative projection result — not a proof that our universe is five-dimensional.",
+              b: "Within RS2 gravity, Paper 7 proves that identical instantaneous brane readouts can evolve into different futures, so the full source dynamics admit no deterministic brane-only evolution law. It derives the exact projected Einstein equation line by line, evaluates the positive high-density ρ² term and bulk-state dark-radiation term, and eliminates the AdS radius to obtain a parameter-free relation linking cosmology to weak-field gravity. Its pushforward theorem proves that every brane-only protocol has an exact four-dimensional representation.",
             },
           ].map((s) => (
             <article key={s.n} className="card-surface p-6">

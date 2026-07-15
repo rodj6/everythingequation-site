@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Shadow Theory: the project, the author, publication status, and the public claim boundary.",
+    "About Shadow Theory: the project, its seven canonical results, the author, publication record, and research programme.",
   alternates: { canonical: "/about" },
 };
 
@@ -28,8 +28,8 @@ export default function AboutPage() {
         <div className="mt-4 space-y-4 leading-relaxed text-fg/90">
           <p>
             <strong>{site.name}</strong> is a public mathematical framework built around a
-            simple observation with consequences: bounded descriptions — measurements,
-            macrostates, summaries, public presentations — are <em>readouts</em> of richer
+            simple observation with consequences: bounded descriptions such as measurements,
+            macrostates, summaries, and public presentations are <em>readouts</em> of richer
             structure, and an exact readout is not the same thing as the structure it
             summarizes.
           </p>
@@ -39,10 +39,9 @@ export default function AboutPage() {
             sufficient completion retain, and what is the canonical minimal one; when is
             a completion realized by genuine geometry; when do observable dynamics close
             autonomously, and at what exact price when they do not; and what can an
-            internal observer ever identify. The seven canonical papers prove these
-            steps — six mathematical papers, and a seventh that realizes the whole
-            architecture in Randall–Sundrum gravity as a concrete, model-relative
-            physical witness.
+            internal observer ever identify. The first six canonical papers prove
+            these mathematical steps. Paper 7 realizes the whole architecture in
+            Randall–Sundrum gravity as a concrete physical witness.
           </p>
           <p>
             This site is the framework's public home. It hosts the canonical papers, the
@@ -75,45 +74,45 @@ export default function AboutPage() {
         <div className="mt-4 space-y-4 leading-relaxed text-fg/90">
           <p>
             The canonical papers are public framework papers by an independent
-            researcher. Where a paper has a Zenodo record and DOI, its page links them
-            directly. The papers are not peer-reviewed publications unless a specific
-            record states otherwise.
+            researcher. Every canonical paper has a Zenodo record and DOI linked directly
+            from its page. Publication, peer review, empirical testing, and subsequent
+            expert assessment remain distinct records in the research lifecycle.
           </p>
           <p>
             The current canonical sequence (Papers 1–7, published 2026-07-15) replaced
             an earlier six-paper canonical stack from June 2026; those records remain
             published and are listed as superseded canonical versions. The historical
-            archive — the earlier Everything Equation / Tier-0 era — also remains
+            archive, covering the earlier Everything Equation / Tier-0 era, also remains
             available for the record. Both are superseded as controlling public
             authority by Papers 1–7.
           </p>
         </div>
       </section>
 
-      <section aria-labelledby="boundary-heading">
-        <h2 id="boundary-heading" className="text-2xl font-bold tracking-tight">
-          The claim boundary
+      <section aria-labelledby="position-heading">
+        <h2 id="position-heading" className="text-2xl font-bold tracking-tight">
+          Research position
         </h2>
         <p className="mt-4 leading-relaxed text-mute">
-          High trust requires saying clearly what is and is not being claimed.
+          The programme distinguishes established results from the next stages of research.
         </p>
         <div className="mt-6 grid gap-4 sm:grid-cols-2">
           <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
-              This is
+              Established results
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.is.map((line) => (
+              {site.researchPosition.establishes.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>
           </div>
           <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-              This is not
+              Programme trajectory
             </p>
             <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.isNot.map((line) => (
+              {site.researchPosition.programme.map((line) => (
                 <li key={line}>{line}</li>
               ))}
             </ul>

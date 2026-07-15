@@ -1,5 +1,5 @@
 /**
- * SITE-WIDE CONFIGURATION — edit this file to change global site identity.
+ * HISTORICAL SITE CONFIGURATION: retained as a development trace.
  *
  * This is the single source of truth for the site name, tagline, description,
  * base URL, and author information. Page metadata, machine-readable endpoints
@@ -22,7 +22,7 @@ The six-paper foundation develops the mathematics needed to distinguish observat
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
-   * feeds, and llms.txt. Keep it inside the public claim boundary.
+   * feeds, and llms.txt.
    */
   description:
     "Shadow Theory is a six-paper mathematical Theory of Everything architecture built around a direct claim: the reality we experience is not source reality itself, but a projected shadow of deeper structure. The framework studies what that shadow reveals, what it hides, and what can be reconstructed from it.",
@@ -44,29 +44,27 @@ The six-paper foundation develops the mathematics needed to distinguish observat
    * and structured data. Paper records themselves live in content/papers.yaml.
    */
   canonicalStack: [
-    "Paper 1 — Readout Non-Equivalence Theorem",
-    "Paper 2 — Completion Necessity",
-    "Paper 3 — Canonical Completion Object Theorem",
-    "Paper 4 — Tier-1 Shadow Compiler Theorem",
-    "Paper 5 — Shadow Theory Framework Mathematics",
-    "Paper 6 — Shadow Theory Synthesis",
+    "Paper 1: Readout Non-Equivalence Theorem",
+    "Paper 2: Completion Necessity",
+    "Paper 3: Canonical Completion Object Theorem",
+    "Paper 4: Tier-1 Shadow Compiler Theorem",
+    "Paper 5: Shadow Theory Framework Mathematics",
+    "Paper 6: Shadow Theory Synthesis",
   ],
 
   /**
-   * Public claim boundary. Rendered on the About page and in llms.txt.
-   * Do not weaken these lines without updating the loading manifest.
+   * Historical research position from the six-paper site.
    */
-  claimBoundary: {
-    is: [
+  researchPosition: {
+    establishes: [
       "A mathematical Theory of Everything architecture built on a direct thesis: the reality we experience is a projected shadow of source reality, not source reality itself.",
       "A six-paper proof framework for studying what the projection reveals, what it hides, and what can be reconstructed without mistaking the shadow for the source.",
       "A research programme for open problems in mathematics and theoretical physics, with explicit paper records, status levels, and bounded public claims.",
     ],
-    isNot: [
-      "This is not simulation theory: the claim is not that we live inside a computer program, game, or Matrix-style artificial world.",
-      "Experimental confirmation, peer review, and expert approval are separate records; they are not implied by the framework alone.",
-      "The Everything Equation is a mathematical closure schema, not a slogan that one line replaces all physics.",
-      "Engineering implementation, physical deployment, and applied models are future work unless a specific public record says otherwise.",
+    programme: [
+      "Experimental confirmation, peer review, and expert assessment are tracked as separate records.",
+      "The Everything Equation is the mathematical closure schema of the broader programme.",
+      "Engineering implementation, physical deployment, and applied models are subsequent research stages.",
     ],
   },
 } as const;

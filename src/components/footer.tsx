@@ -45,10 +45,9 @@ export default function Footer() {
 
         <div className="mt-10 border-t border-edge pt-6">
           <p className="text-xs leading-relaxed text-faint">
-            © {new Date().getFullYear()} {site.author.name}. {site.name} is a public
-            mathematical framework presented with explicit claim boundaries: it is not
-            empirically validated physics, and no result here claims that one equation
-            solves everything.
+            © {new Date().getFullYear()} {site.author.name}. {site.name} publishes a
+            seven-paper mathematical foundation, an RS2 physical witness, the complete
+            monograph, and an open research programme with explicit result domains.
           </p>
         </div>
       </div>

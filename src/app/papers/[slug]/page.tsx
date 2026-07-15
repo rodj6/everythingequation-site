@@ -168,8 +168,8 @@ export default async function PaperPage({ params }: { params: { slug: string } }
           ) : null}
           {!paper.doiUrl && !paper.zenodoUrl && paper.category === "canonical" ? (
             <p className="rounded-lg border border-edge px-4 py-2 text-sm text-mute">
-              DOI and Zenodo record pending publication — this page will link them once
-              the record ID is added to <code className="font-mono">content/papers.yaml</code>.
+              Publication metadata will appear here when its record ID is added to{" "}
+              <code className="font-mono">content/papers.yaml</code>.
             </p>
           ) : null}
         </div>

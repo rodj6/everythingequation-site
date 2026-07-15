@@ -25,7 +25,7 @@
   --accent: 187 80% 62%;             /* observatory cyan */
   --accent-strong: 187 90% 72%;
   --violet: 258 82% 74%;             /* projection violet */
-  --amber: 38 92% 62%;               /* claim-boundary amber */
+  --amber: 38 92% 62%;               /* research-status amber */
   --green: 152 55% 55%;              /* statused green */
 
   --ring: 187 80% 62%;
@@ -38,6 +38,10 @@ html {
 
 body {
   background-color: hsl(var(--background));
+  background-image:
+    radial-gradient(circle at 50% -20%, hsl(var(--accent) / 0.055), transparent 38rem),
+    linear-gradient(180deg, hsl(var(--background)), hsl(226 52% 3.8%));
+  background-attachment: fixed;
   color: hsl(var(--foreground));
   font-feature-settings: "kern", "liga", "calt";
 }
@@ -143,6 +147,25 @@ a[id]:empty {
   50%      { opacity: 1; }
 }
 
+@keyframes projection-flow {
+  to { stroke-dashoffset: -80; }
+}
+
+@keyframes projection-pulse {
+  0%, 100% { opacity: 0.58; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.22); }
+}
+
+@keyframes projection-breathe {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes section-reveal {
+  from { opacity: 0.72; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 .animate-drift         { animation: drift 26s ease-in-out infinite; }
 .animate-drift-reverse { animation: drift-reverse 32s ease-in-out infinite; }
 .animate-rise          { animation: rise-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
@@ -150,6 +173,14 @@ a[id]:empty {
 .animate-rise-2        { animation: rise-in 0.7s 0.16s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .animate-rise-3        { animation: rise-in 0.7s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .animate-shimmer       { animation: shimmer 4s ease-in-out infinite; }
+
+@supports (animation-timeline: view()) {
+  main > div > section {
+    animation: section-reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 24%;
+  }
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -180,9 +211,13 @@ a[id]:empty {
 /* Hairline card */
 .card-surface {
   background:
-    linear-gradient(180deg, hsl(var(--surface-raised) / 0.5), hsl(var(--surface) / 0.9));
+    linear-gradient(145deg, hsl(var(--surface-raised) / 0.64), hsl(var(--surface) / 0.93));
   border: 1px solid hsl(var(--border));
   border-radius: 1rem;
+  box-shadow:
+    inset 0 1px 0 hsl(var(--foreground) / 0.035),
+    0 18px 50px -42px hsl(var(--accent) / 0.36);
+  backdrop-filter: blur(12px);
 }
 
 .card-surface-hover {
@@ -194,6 +229,185 @@ a[id]:empty {
   box-shadow: 0 12px 40px -18px hsl(var(--accent) / 0.25);
 }
 
+.paper-architecture {
+  position: relative;
+}
+
+.paper-chain-grid {
+  counter-reset: paper-stage;
+}
+
+.paper-stage {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.paper-stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, hsl(var(--accent) / 0.13), transparent 34%) top left / 100% 1px no-repeat,
+    radial-gradient(circle at 90% 12%, hsl(var(--violet) / 0.09), transparent 28%);
+}
+
+.paper-stage::after {
+  content: "";
+  position: absolute;
+  right: -1px;
+  top: 2.8rem;
+  height: 1px;
+  width: 2.35rem;
+  background: linear-gradient(90deg, hsl(var(--accent) / 0.55), transparent);
+  transform: translateX(55%);
+}
+
+.paper-witness {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 88% 10%, hsl(var(--green) / 0.11), transparent 30%),
+    linear-gradient(145deg, hsl(var(--surface-raised) / 0.68), hsl(var(--surface) / 0.94));
+}
+
+.paper-witness::after {
+  content: "";
+  position: absolute;
+  right: -4rem;
+  bottom: -5rem;
+  width: 15rem;
+  height: 15rem;
+  border: 1px solid hsl(var(--green) / 0.14);
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 2.4rem hsl(var(--green) / 0.025),
+    0 0 0 4.8rem hsl(var(--green) / 0.018);
+  pointer-events: none;
+}
+
+.paper-index-card::before,
+.problem-index-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(var(--accent) / 0.72), transparent 72%);
+}
+
+.paper-index-card::after {
+  content: "";
+  position: absolute;
+  right: -3rem;
+  top: -3rem;
+  width: 8rem;
+  height: 8rem;
+  border: 1px solid hsl(var(--violet) / 0.12);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.paper-index-witness::before {
+  background: linear-gradient(90deg, hsl(var(--green) / 0.82), transparent 72%);
+}
+
+.problem-index-card::before {
+  background: linear-gradient(90deg, hsl(var(--amber) / 0.65), transparent 72%);
+}
+
+.research-node::after {
+  content: "";
+  position: absolute;
+  left: -2rem;
+  top: 0.65rem;
+  width: 1.75rem;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(var(--accent) / 0.08), hsl(var(--accent) / 0.48));
+}
+
+.research-node h3,
+.research-node p {
+  transition: color 0.2s ease;
+}
+
+.research-node:hover h3 {
+  color: hsl(var(--accent-strong));
+}
+
+.monograph-stat {
+  position: relative;
+  overflow: hidden;
+}
+
+.monograph-stat::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, hsl(var(--accent) / 0.58), transparent);
+}
+
+.monograph-progress {
+  display: block;
+  border: 0;
+  background: hsl(var(--surface-raised));
+  color: hsl(var(--accent));
+  appearance: none;
+}
+
+.monograph-progress::-webkit-progress-bar {
+  background: hsl(var(--surface-raised));
+  border-radius: 999px;
+}
+
+.monograph-progress::-webkit-progress-value {
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--violet)));
+  border-radius: 999px;
+}
+
+.monograph-progress::-moz-progress-bar {
+  background: linear-gradient(90deg, hsl(var(--accent)), hsl(var(--violet)));
+  border-radius: 999px;
+}
+
+.math-environment {
+  position: relative;
+  overflow: hidden;
+}
+
+.math-environment::after {
+  content: "";
+  position: absolute;
+  right: -2.5rem;
+  top: -2.5rem;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid hsl(var(--violet) / 0.1);
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.math-environment[data-kind="theorem"]::before,
+.math-environment[data-kind="lemma"]::before,
+.math-environment[data-kind="proposition"]::before {
+  content: "PROVED";
+  position: absolute;
+  right: 1rem;
+  top: 0.85rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: hsl(var(--violet) / 0.46);
+}
+
+.equation-panel {
+  box-shadow:
+    inset 0 1px 0 hsl(var(--accent) / 0.08),
+    0 24px 70px -52px hsl(var(--accent) / 0.62);
+}
+
 /* Small uppercase section label */
 .section-label {
   font-size: 0.72rem;
@@ -201,4 +415,71 @@ a[id]:empty {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: hsl(var(--accent));
+}
+
+/* ============================================================
+   SOURCE-TO-READOUT HERO DIAGRAM
+   ============================================================ */
+
+.projection-field {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(180deg, hsl(var(--surface-raised) / 0.58), hsl(var(--surface) / 0.68)),
+    linear-gradient(90deg, hsl(var(--accent) / 0.035) 1px, transparent 1px),
+    linear-gradient(hsl(var(--accent) / 0.035) 1px, transparent 1px);
+  background-size: auto, 32px 32px, 32px 32px;
+  box-shadow:
+    inset 0 1px 0 hsl(var(--foreground) / 0.05),
+    0 32px 90px -55px hsl(var(--accent) / 0.46);
+}
+
+.projection-field::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 52% 46%, hsl(var(--accent) / 0.1), transparent 36%);
+}
+
+.projection-label {
+  fill: hsl(var(--muted-foreground));
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
+
+.projection-ray {
+  fill: none;
+  stroke: hsl(var(--accent));
+  stroke-width: 1.25;
+  stroke-dasharray: 8 12;
+  stroke-dashoffset: 0;
+  opacity: 0.62;
+  animation: projection-flow 5.6s linear infinite;
+}
+
+.projection-ray-delay-1 { animation-delay: -1.8s; }
+.projection-ray-delay-2 { animation-delay: -3.6s; }
+
+.projection-node {
+  fill: hsl(var(--accent-strong));
+  filter: drop-shadow(0 0 7px hsl(var(--accent) / 0.7));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: projection-pulse 3.8s ease-in-out infinite;
+}
+
+.projection-glow {
+  animation: projection-breathe 5.2s ease-in-out infinite;
+}
+
+@media (max-width: 640px) {
+  .projection-label {
+    font-size: 13px;
+    letter-spacing: 1.4px;
+  }
 }

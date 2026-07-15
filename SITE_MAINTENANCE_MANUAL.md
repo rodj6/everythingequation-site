@@ -1,4 +1,4 @@
-# Site Maintenance Manual — Shadow Theory Website
+# Site Maintenance Manual: Shadow Theory Website
 
 This manual explains how the redesigned site works and how to update it. It is
 written so that you (or any AI you hand it to) can make correct changes months
@@ -11,10 +11,10 @@ from now without remembering the internals.
 A statically generated Next.js 14 (App Router) site presenting **Shadow
 Theory** as the public framework, with:
 
-- the seven canonical papers (Papers 1–7, published 2026-07-15) as the controlling public authority — Papers 1–6 are the source–readout mathematics, Paper 7 the Randall–Sundrum physical witness;
+- the seven canonical papers (Papers 1–7, published 2026-07-15) as the controlling public authority: Papers 1–6 are the source–readout mathematics, Paper 7 the Randall–Sundrum physical witness;
 - the superseded June 2026 six-paper canonical stack, preserved as publication history (category: superseded);
 - the historical Everything Equation / Tier-0 era papers as an archive;
-- an open-problem research programme with claim-boundary discipline;
+- an open-problem research programme with explicit research targets and publication routes;
 - an MDX article system;
 - KaTeX math rendering (server-side, crawlable);
 - machine-readable endpoints: `/sitemap.xml`, `/feed.xml`, `/llms.txt`,
@@ -38,7 +38,7 @@ content/                      ← YOUR CONTENT LIVES HERE
   manual/pages/*.mdx          ← legacy pages served at /legacy/<slug>
 
 src/config/
-  site.ts                     ← site name, tagline, URL, author, claim boundary
+  site.ts                     ← site name, tagline, URL, author, research position
   navigation.ts               ← top navigation tabs (one list)
 
 src/app/                      ← pages (App Router)
@@ -56,7 +56,7 @@ src/app/                      ← pages (App Router)
   globals.css                 ← design system (CSS variables), KaTeX rules
 
 src/components/               ← header, footer, cards, paper-chain,
-                                mdx-components (Theorem, ClaimBoundary, …),
+                                mdx-components (Theorem, ResultScope, …),
                                 mdx-content (server MDX renderer)
 src/mdx-components.tsx        ← Next.js MDX convention file (do not move)
 src/lib/
@@ -82,9 +82,9 @@ Unchanged from before: **push to GitHub → Vercel builds and deploys.**
 - Vercel runs `npm run build`, which runs the prebuild content-map generator
   and then `next build`. Everything is statically generated.
 - No environment variables are required. Optional:
-  - `NEXT_PUBLIC_SITE_URL` — overrides the canonical base URL
+  - `NEXT_PUBLIC_SITE_URL`: overrides the canonical base URL
     (defaults to `https://everythingequation.com` in `src/config/site.ts`).
-  - `SKIP_ZENODO=1` — skip Zenodo network fetches during build (cache-only).
+  - `SKIP_ZENODO=1`: skip Zenodo network fetches during build (cache-only).
 - The GitHub Action `.github/workflows/sync-zenodo.yml` refreshes Zenodo
   metadata daily and commits `.cache/zenodo.json`, which triggers a redeploy.
 
@@ -145,7 +145,7 @@ The Version 1.0 TOE monograph ("A Source-to-Readout Architecture for a Theory
 of Everything", DOI 10.5281/zenodo.21366204) is published on the site as a
 complete web edition:
 
-- `content/monograph/*.mdx` — one file per chapter (18), appendix (A, B), and
+- `content/monograph/*.mdx`: one file per chapter (18), appendix (A, B), and
   the bibliography. These were converted from the authoritative Zenodo V1.0
   LaTeX source. **Do not regenerate or hand-edit the scientific text**; the
   Zenodo record is fixed. Frontmatter fields: `title`, `kind`
@@ -153,7 +153,7 @@ complete web edition:
   `description`.
 - Section anchors are explicit `<a id="…"></a>` elements placed before each
   numbered heading (plus the original LaTeX label anchors). The prebuild
-  scanner reads them to build tables of contents — keep them intact.
+  scanner reads them to build tables of contents: keep them intact.
 - Publication identity (title, subtitle, DOI, Zenodo URL, version, license)
   lives in `src/config/site.ts` under `monograph`.
 - Pages: `src/app/monograph/page.tsx` (hub: abstract, organization, full TOC,
@@ -180,13 +180,13 @@ When you upload a paper (or a new version) to Zenodo:
    record ID (from the record URL, e.g. `18081205`), and/or set `doi:` to the
    DOI string. **A DOI set here always wins over cached metadata.**
 2. Run `npm run sync:zenodo` to refresh `.cache/zenodo.json` (optional but
-   recommended — it fills in title/authors/date from Zenodo).
+   recommended: it fills in title/authors/date from Zenodo).
 3. Commit both files and push.
 
-Verify: open the paper page — the DOI button should link to
+Verify: open the paper page: the DOI button should link to
 `https://doi.org/<your-doi>` and "View on Zenodo" to the record.
 
-Note: a *new version* on Zenodo usually gets a **new record ID and DOI** —
+Note: a *new version* on Zenodo usually gets a **new record ID and DOI**;
 update both fields. The daily GitHub Action keeps cached metadata fresh but
 never changes your YAML.
 
@@ -208,7 +208,7 @@ Body text in Markdown/MDX. Inline math $E = mc^2$ and display math:
 $$ \int_0^\infty e^{-x^2}\,dx = \frac{\sqrt{\pi}}{2} $$
 ```
 
-2. Push. The prebuild script indexes it automatically — it appears on
+2. Push. The prebuild script indexes it automatically: it appears on
    `/articles`, the homepage (three latest), sitemap, feed, llms.txt and
    graph.json. Nothing else to edit.
 
@@ -238,10 +238,10 @@ Edit the MDX file. Optionally add `updated: "2026-09-01"` to the frontmatter
    If `legacy_notes: true`, the page shows a historical-draft banner above them.
 3. Push.
 
-**Claim-boundary rule:** the `target` text must describe a research target,
-not assert a solved result. A solved-result claim requires its own published
-paper or record first, with declared assumptions, support appropriate to the
-claim, explicit limitations, and a clear claim boundary.
+**Research-target rule:** the `target` text states the question to resolve. A
+result enters the public framework through its own paper or record, with
+declared assumptions, a reproducible method, support appropriate to the
+result, and an exact conclusion.
 
 ## 10. How to add a top navigation tab
 
@@ -259,7 +259,7 @@ the sitemap it must be in `navigation` (it is, once you add the line above).
 ## 11. How math rendering works
 
 - MDX pipeline: `remark-math` parses `$...$` / `$$...$$`; `rehype-katex`
-  renders it to KaTeX HTML **at build time** — math is real crawlable HTML,
+  renders it to KaTeX HTML **at build time**: math is real crawlable HTML,
   not client-side JavaScript.
 - KaTeX CSS is imported once in `src/app/layout.tsx`
   (`import "katex/dist/katex.min.css"`).
@@ -267,7 +267,7 @@ the sitemap it must be in `navigation` (it is, once you add the line above).
   horizontally scrollable so long equations never overflow the phone screen.
   Don't remove that block.
 - In TSX pages (not MDX), render math with
-  `katex.renderToString(...)` — see the hero equation in `src/app/page.tsx`.
+  `katex.renderToString(...)`: see the hero equation in `src/app/page.tsx`.
 
 ## 12. MDX components for research writing
 
@@ -282,20 +282,20 @@ wired up by `src/mdx-components.tsx`):
 <ProofSketch>…</ProofSketch>
 <Remark>…</Remark>
 
-<EquationPanel title="Label" note="Boundary note under the equation.">
+<EquationPanel title="Label" note="Result-domain note under the equation.">
 $$ L = \Omega_{T1}\,\Delta\,\partial\,[L] $$
 </EquationPanel>
 
-<StatusCard status="…" claims="…">
+<StatusCard status="…" result="…">
   Optional extra text.
 </StatusCard>
 
 (StatusCard is a legacy presentational component; `route` and `residues`
 fields exist only for backwards compatibility with superseded-era pages.)
 
-<ClaimBoundary>
-  What this result does NOT claim.
-</ClaimBoundary>
+<ResultScope>
+  The assumptions, domain, exact conclusion, and exception classes.
+</ResultScope>
 ```
 
 See `ARTICLE_AUTHORING_GUIDE.md` for full templates.
@@ -305,7 +305,7 @@ See `ARTICLE_AUTHORING_GUIDE.md` for full templates.
 `npm run build` (and `npm run dev`) first runs
 `scripts/generate-content-maps.mjs`, which scans `content/` and writes import
 maps to `src/generated/` (`manualPapers.ts`, `manualProblems.ts`,
-`manualPages.ts`, `articles.ts` — the last one includes parsed article
+`manualPages.ts`, `articles.ts`: the last one includes parsed article
 frontmatter). The script **never modifies your content files**.
 
 `src/lib/registry.ts` reads the YAML registries at build time and merges
@@ -335,7 +335,7 @@ Crawler/AI accessibility implementation notes:
 - Every page sets a canonical URL and Open Graph/Twitter metadata; paper pages
   emit `ScholarlyArticle` JSON-LD, article pages emit `Article` JSON-LD, the
   layout emits `WebSite` JSON-LD.
-- Only `/legacy/*` pages are marked `noindex` (intentionally — they are
+- Only `/legacy/*` pages are marked `noindex` (intentionally: they are
   superseded historical pages, still crawlable via `follow`).
 - To check indexability of a page: view source, confirm there is no
   `<meta name="robots" content="noindex">` and the content appears in the HTML.
@@ -348,7 +348,7 @@ content/problems.yaml
 content/articles/*.mdx
 content/manual/papers/*.mdx
 content/manual/problems/*.mdx
-src/config/site.ts          (identity, tagline, claim boundary, base URL)
+src/config/site.ts          (identity, tagline, research position, base URL)
 src/config/navigation.ts    (nav tabs)
 ```
 
@@ -357,8 +357,8 @@ src/config/navigation.ts    (nav tabs)
 ```
 src/generated/*             (overwritten on every build)
 scripts/*                   (build machinery)
-src/lib/*                   (loaders/generators — edit only for new features)
-src/mdx-components.tsx      (Next.js convention file — do not move/rename)
+src/lib/*                   (loaders/generators: edit only for new features)
+src/mdx-components.tsx      (Next.js convention file: do not move/rename)
 next.config.mjs             (MDX pipeline + legacy redirects)
 .cache/zenodo.json          (managed by sync script / GitHub Action)
 ```
@@ -372,12 +372,12 @@ next.config.mjs             (MDX pipeline + legacy redirects)
 - **Build fails after YAML edit** → indentation error; YAML needs exactly two
   spaces per level. Validate with `npm run build` locally.
 - **DOI not showing** → `doi:` still `null` in `content/papers.yaml`
-  (YAML wins over the cache), or record not yet synced — run
+  (YAML wins over the cache), or record not yet synced: run
   `npm run sync:zenodo`.
 - **New nav tab 404s** → you added the nav entry but not the page under
   `src/app/<route>/page.tsx` (or vice versa).
 - **MDX component renders as plain text** → typo in the component name; names
-  are case-sensitive (`<ClaimBoundary>`, not `<Claimboundary>`).
+  are case-sensitive (`<ResultScope>`, with the capital S).
 
 ## 18. Pre-push checklist
 
@@ -391,8 +391,8 @@ npm start            # spot-check locally:
 3. An equation-heavy page looks right (e.g. /articles/how-to-read-the-stack).
 4. Narrow the browser to phone width: menu opens, equations scroll, no overflow.
 5. `/sitemap.xml`, `/feed.xml`, `/llms.txt`, `/graph.json` respond.
-6. New content contains no unlicensed claims (see the claim boundary in
-   `src/config/site.ts`).
+6. New content leads with its established result and states its assumptions,
+   domain, and exception classes (see `researchPosition` in `src/config/site.ts`).
 
 ## 19. Vercel/GitHub deployment checklist
 
@@ -400,7 +400,7 @@ npm start            # spot-check locally:
 2. Watch the deployment in the Vercel dashboard (build takes a few minutes).
 3. Visit the production URL; hard-refresh (Ctrl/Cmd+Shift+R).
 4. Check the changed page and `/sitemap.xml` in production.
-5. If the build fails on Vercel: read the build log — it is almost always a
+5. If the build fails on Vercel: read the build log: it is almost always a
    YAML syntax error or MDX syntax error introduced in the last commit.
 
 ## 20. Worked example: publishing a new Zenodo paper end-to-end
@@ -409,7 +409,7 @@ Suppose you upload a hypothetical branch paper, "Holonomy Separation for
 Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
 `19999999` and DOI `10.5281/zenodo.19999999`.
 
-1. `content/papers.yaml` — add after the canonical block:
+1. `content/papers.yaml`: add after the canonical block:
 
 ```yaml
   - id: paper:branch:holonomy-separation
@@ -426,7 +426,7 @@ Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
     doi: 10.5281/zenodo.19999999
     summary: >
       Two or three sentences for the paper page, including what the result
-      assumes and what it does not claim.
+      establishes, its assumptions, and its exact domain.
     supports: []
 ```
 
@@ -436,7 +436,7 @@ Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
 2. Create `content/manual/papers/holonomy-separation-higher-genus.mdx` with
    reading notes (optional).
 3. `npm run sync:zenodo` (pulls title/creators/date into the cache).
-4. `npm run build` — verify no errors; `npm start` and check
+4. `npm run build`: verify no errors; `npm start` and check
    `http://localhost:3000/papers/holonomy-separation-higher-genus` shows the
    DOI button.
 5. Commit `content/`, `.cache/zenodo.json`; push. Vercel deploys.

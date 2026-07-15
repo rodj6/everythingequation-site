@@ -1,7 +1,7 @@
-# Article Authoring Guide — Shadow Theory Website
+# Article Authoring Guide: Shadow Theory Website
 
 How to write articles, paper notes, and open-problem pages in MDX.
-(For registry mechanics — YAML fields, DOIs, deployment — see
+(For registry mechanics, YAML fields, DOIs, and deployment, see
 `SITE_MAINTENANCE_MANUAL.md`.)
 
 ---
@@ -34,14 +34,14 @@ $$
 S \cong \mathcal{C} / \sim_\rho
 $$
 
-<ClaimBoundary>
-State explicitly what this article does not claim.
-</ClaimBoundary>
+<ResultScope>
+State the hypotheses, domain, and exact conclusion of the result.
+</ResultScope>
 ```
 
 ## 2. Paper notes template
 
-Create `content/manual/papers/<paper-slug>.mdx` — rendered as the "Notes"
+Create `content/manual/papers/<paper-slug>.mdx`. It is rendered as the "Notes"
 section of `/papers/<paper-slug>`. No frontmatter needed.
 
 ```mdx
@@ -53,27 +53,27 @@ What the paper proves, in plain language.
 Statement with $inline$ math.
 </Theorem>
 
-<ClaimBoundary>
-Explicit non-claims and exception classes.
-</ClaimBoundary>
+<ResultScope>
+Exact theorem domain, required inputs, and exception classes.
+</ResultScope>
 ```
 
 ## 3. Open-problem notes template
 
 Create `content/manual/problems/<problem-slug>.mdx`. Same format as paper
 notes. If the registry entry has `legacy_notes: true`, the site automatically
-shows a historical-draft banner above your MDX — set it to `false` once you
+shows a historical-draft banner above your MDX. Set it to `false` once you
 replace old-era notes with current ones.
 
 ## 4. Writing display equations
 
 - Use `$$ ... $$` on their own lines for display math.
-- Long equations are fine — they scroll horizontally on phones automatically.
+- Long equations are fine; they scroll horizontally on phones automatically.
 - Prefer `\mathrm{}` for multi-letter operators: `\mathrm{Init}`,
   `\mathrm{Img}`.
 - Avoid bare `<` in math (MDX may read it as JSX); use `\lt` or spaces:
   `$a \lt b$`.
-- Never paste Unicode approximations (α⁻¹, 𝓛) into formal math — always LaTeX
+- Use LaTeX rather than Unicode approximations (α⁻¹, 𝓛) in formal math
   (`\alpha^{-1}`, `\mathcal{L}`).
 
 ## 5. Research components
@@ -87,13 +87,13 @@ replace old-era notes with current ones.
 <ProofSketch>…</ProofSketch>
 <Remark>…</Remark>
 
-<EquationPanel title="Panel label" note="Caption / boundary note.">
+<EquationPanel title="Panel label" note="Caption or result-domain note.">
 $$ L = \Omega_{T1}\,\Delta\,\partial\,[L] $$
 </EquationPanel>
 
 <StatusCard
   status="open research target"
-  claims="no solved-problem claim; formal results only, with declared assumptions"
+  result="Exact formal result with declared assumptions and domain"
 >
   Optional free text below the fields.
 </StatusCard>
@@ -101,11 +101,11 @@ $$ L = \Omega_{T1}\,\Delta\,\partial\,[L] $$
 StatusCard is a legacy presentational component kept for backwards
 compatibility (it also accepts `route` and `residues` fields used by
 superseded-era pages). Current articles normally need only `status` and
-`claims` — or just a `<ClaimBoundary>` block.
+`result`, or just a `<ResultScope>` block.
 
-<ClaimBoundary>
-What is *not* claimed. Use this liberally.
-</ClaimBoundary>
+<ResultScope>
+The result's assumptions, domain, exact conclusion, and exception classes.
+</ResultScope>
 ```
 
 All components accept normal Markdown and math inside them.
@@ -122,21 +122,17 @@ onto the universally coarsest one.
 ```
 
 For a paper's own citation block, the paper page generates one automatically
-from the registry — you don't write it by hand.
+from the registry; you don't write it by hand.
 
-## 7. Preventing overclaiming
+## 7. Publishing precise results
 
-Before publishing, check every sentence against these rules (the programme's
-claim discipline):
+Before publishing, make every sentence answer one of these questions:
 
-- Don't say or imply: one equation solves everything; empirically validated;
-  proves a TOE; peer reviewed / expert approved (unless separately true);
-  build-ready engineering; private machinery as public proof.
-- Branch results are not canonical Shadow Theory without their own public
-  paper or record: declared assumptions and domain, mathematical or empirical
-  support appropriate to the claim, explicit limitations, and a clear claim
-  boundary.
-- Safe framing verbs: *defines, proves (for theorems), establishes, licenses,
-  targets, holds as an open problem, is conditional on*.
-- When in doubt, add a `<ClaimBoundary>` block. It reads as strength, not
-  weakness — claim discipline is the framework's identity.
+- What does the work *define, construct, derive, prove, demonstrate,* or *enable*?
+- Which source domain, target, hypotheses, and physical inputs determine that result?
+- Which negative mathematical result is established, such as failure of descent,
+  reconstruction obstruction, dynamical nonclosure, or internal non-identifiability?
+- Which next-stage records cover experiment, peer review, engineering realization,
+  or expert assessment?
+- Does a `<ResultScope>` block make the theorem domain and exception classes easier
+  to use correctly?

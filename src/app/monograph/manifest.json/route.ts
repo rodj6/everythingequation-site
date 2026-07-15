@@ -1,5 +1,5 @@
 /**
- * /monograph/manifest.json — machine-readable inventory of the complete
+ * /monograph/manifest.json: machine-readable inventory of the complete
  * monograph web edition. Lets an AI system, agent, or crawler determine that
  * it has located every component of the work, in order, with per-item stats.
  * Generated at build time from the same metadata as the human-facing pages.
