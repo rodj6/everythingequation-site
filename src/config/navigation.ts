@@ -16,7 +16,10 @@ export interface NavItem {
 export const navigation: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/framework", label: "Framework" },
+<<<<<<< HEAD
   { href: "/monograph", label: "Monograph" },
+=======
+>>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
   { href: "/papers", label: "Papers" },
   { href: "/problems", label: "Open Problems" },
   { href: "/articles", label: "Articles" },

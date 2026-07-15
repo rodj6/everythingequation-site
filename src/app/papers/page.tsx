@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+>>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
 import { loadPapers } from "@/lib/registry";
 import { PaperCard } from "@/components/cards";
 
@@ -33,6 +36,7 @@ export default async function PapersPage() {
         </p>
       </header>
 
+<<<<<<< HEAD
       <section aria-label="The monograph">
         <Link
           href="/monograph"
@@ -50,6 +54,8 @@ export default async function PapersPage() {
         </Link>
       </section>
 
+=======
+>>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
       <section aria-labelledby="canonical-heading">
         <h2 id="canonical-heading" className="text-2xl font-bold tracking-tight">
           Canonical stack

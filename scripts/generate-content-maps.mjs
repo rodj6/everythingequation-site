@@ -97,6 +97,7 @@ ${imports.join(',\n')}
   await fs.writeFile(path.join(outDir, 'articles.ts'), body);
 }
 
+<<<<<<< HEAD
 /**
  * MONOGRAPH WEB EDITION (content/monograph/*.mdx)
  *
@@ -187,6 +188,8 @@ ${imports.join(',\n')}
   await fs.writeFile(path.join(outDir, 'monograph.ts'), body);
 }
 
+=======
+>>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
 async function main() {
   await fs.mkdir(outDir, { recursive: true });
   await Promise.all([
@@ -194,7 +197,10 @@ async function main() {
     generateManualMap('papers', 'manualPapers', 'manualPapers.ts'),
     generateManualMap('pages', 'manualPages', 'manualPages.ts'),
     generateArticles(),
+<<<<<<< HEAD
     generateMonograph(),
+=======
+>>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
   ]);
   console.log('Content maps generated.');
 }
