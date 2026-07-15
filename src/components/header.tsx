@@ -6,7 +6,7 @@
  */
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { navigation } from "@/config/navigation";
 import { site } from "@/config/site";
 
@@ -31,31 +31,63 @@ function Glyph() {
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const menuButton = useRef<HTMLButtonElement>(null);
 
   // Close the mobile menu on navigation and on Escape.
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    if (!open) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      menuButton.current?.focus();
+    };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1280px)");
+    const closeAtDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setOpen(false);
+    };
+    desktop.addEventListener("change", closeAtDesktop);
+    return () => desktop.removeEventListener("change", closeAtDesktop);
   }, []);
 
+  useEffect(() => {
+    if (!open) return;
+
+    const root = document.documentElement;
+    const previousOverflow = root.style.overflow;
+    const previousPaddingRight = root.style.paddingRight;
+    const scrollbarWidth = window.innerWidth - root.clientWidth;
+    root.style.overflow = "hidden";
+    if (scrollbarWidth > 0) root.style.paddingRight = `${scrollbarWidth}px`;
+
+    return () => {
+      root.style.overflow = previousOverflow;
+      root.style.paddingRight = previousPaddingRight;
+    };
+  }, [open]);
+
   const isActive = (href: string) =>
-    href === "/" ? pathname === "/" : pathname.startsWith(href);
+    href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
 
   return (
     <header className="sticky top-0 z-50 border-b border-edge bg-[hsl(var(--background)/0.82)] backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-content items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-semibold tracking-tight text-fg"
+          aria-label={`${site.name} homepage`}
+          className="flex min-w-0 items-center gap-2.5 font-semibold tracking-tight text-fg"
         >
           <Glyph />
-          <span className="text-[1.05rem]">{site.name}</span>
+          <span className="truncate text-[1.05rem]">{site.name}</span>
         </Link>
 
         {/* Desktop navigation */}
-        <nav aria-label="Primary" className="hidden md:block">
+        <nav aria-label="Primary" className="hidden xl:block">
           <ul className="flex items-center gap-1">
             {navigation.map((item) => (
               <li key={item.href}>
@@ -78,12 +110,13 @@ export default function Header() {
 
         {/* Mobile menu button */}
         <button
+          ref={menuButton}
           type="button"
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-10 w-10 items-center justify-center rounded-md border border-edge text-fg md:hidden"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-edge text-fg transition-colors hover:bg-[hsl(var(--surface-raised))] xl:hidden"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             {open ? (
@@ -100,13 +133,14 @@ export default function Header() {
         <nav
           id="mobile-menu"
           aria-label="Primary mobile"
-          className="border-t border-edge bg-[hsl(var(--background)/0.98)] md:hidden"
+          className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-edge bg-[hsl(var(--background)/0.98)] shadow-2xl xl:hidden"
         >
-          <ul className="mx-auto max-w-content space-y-1 px-4 py-4">
+          <ul className="mx-auto max-w-content space-y-1 px-4 py-3 sm:px-6">
             {navigation.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={() => setOpen(false)}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={
                     "block rounded-lg px-4 py-3 text-base " +

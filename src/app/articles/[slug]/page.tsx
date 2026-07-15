@@ -16,9 +16,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const meta = getArticleMeta(params.slug);
+  const { slug } = await params;
+  const meta = getArticleMeta(slug);
   if (!meta) return {};
   return {
     title: meta.title,
@@ -35,8 +36,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
-  const meta = getArticleMeta(params.slug);
+export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const meta = getArticleMeta(slug);
   if (!meta || meta.status === "draft") notFound();
 
   const loader = (articleImports as Record<string, (() => Promise<any>) | undefined>)[meta.slug];

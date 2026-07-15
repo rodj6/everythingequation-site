@@ -17,18 +17,20 @@ export function generateStaticParams() {
   return Object.keys(manualPages).map((slug) => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   return {
-    title: titles[params.slug] ?? `${params.slug} (Legacy)`,
+    title: titles[slug] ?? `${slug} (Legacy)`,
     description:
       "Historical page from the Everything Equation era, retained as a development trace. Superseded as public authority by the Shadow Theory canonical stack.",
-    alternates: { canonical: `/legacy/${params.slug}` },
+    alternates: { canonical: `/legacy/${slug}` },
     robots: { index: false, follow: true },
   };
 }
 
-export default function LegacyPage({ params }: { params: { slug: string } }) {
-  const loader = (manualPages as Record<string, (() => Promise<any>) | undefined>)[params.slug];
+export default async function LegacyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const loader = (manualPages as Record<string, (() => Promise<any>) | undefined>)[slug];
   if (!loader) notFound();
 
   return (
@@ -36,7 +38,7 @@ export default function LegacyPage({ params }: { params: { slug: string } }) {
       <header>
         <p className="section-label">Legacy archive</p>
         <h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-4xl">
-          {titles[params.slug] ?? params.slug}
+          {titles[slug] ?? slug}
         </h1>
       </header>
 

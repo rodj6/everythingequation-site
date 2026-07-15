@@ -8,7 +8,7 @@ from now without remembering the internals.
 
 ## 1. What this site is
 
-A statically generated Next.js 14 (App Router) site presenting **Shadow
+A statically generated Next.js 16 (App Router) site presenting **Shadow
 Theory** as the public framework, with:
 
 - the seven canonical papers (Papers 1–7, published 2026-07-15) as the controlling public authority: Papers 1–6 are the source–readout mathematics, Paper 7 the Randall–Sundrum physical witness;
@@ -20,7 +20,7 @@ Theory** as the public framework, with:
 - machine-readable endpoints: `/sitemap.xml`, `/feed.xml`, `/llms.txt`,
   `/graph.json`, `/robots.txt`.
 
-Stack: Next.js 14.2 · React 18 · TypeScript · Tailwind CSS · MDX
+Stack: Next.js 16 · React 19 · TypeScript · Tailwind CSS · MDX
 (`@next/mdx` + `remark-math` + `rehype-katex` + `remark-frontmatter`) ·
 YAML content registries · js-yaml.
 

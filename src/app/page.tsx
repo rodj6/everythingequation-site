@@ -45,8 +45,14 @@ export default async function HomePage() {
 
           <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
-              href="/monograph"
+              href="/atlas"
               className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
+            >
+              Enter the Reality Atlas
+            </Link>
+            <Link
+              href="/monograph"
+              className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
             >
               Read the monograph
             </Link>
@@ -68,6 +74,27 @@ export default async function HomePage() {
         <div className="animate-rise-3 mx-auto mt-10 max-w-5xl">
           <ProjectionField />
         </div>
+
+        <Link href="/atlas" className="atlas-home-portal animate-rise-3 mx-auto mt-10 block max-w-5xl">
+          <div className="atlas-home-portal-visual" aria-hidden="true">
+            <span className="atlas-home-orbit atlas-home-orbit-a" />
+            <span className="atlas-home-orbit atlas-home-orbit-b" />
+            <span className="atlas-home-core">Ω</span>
+            <span className="atlas-home-aperture">Δ</span>
+            <span className="atlas-home-field">Ψ</span>
+            <span className="atlas-home-readout">T1</span>
+          </div>
+          <div className="atlas-home-portal-copy">
+            <p className="section-label">Interactive model · 12 canonical chapters</p>
+            <h2>Explore the complete architecture of reality</h2>
+            <p>
+              Orbit the full Ω-to-Tier-1 construction, zoom into the recursive aperture,
+              inspect the coherent–dissipative field, and trace gravity, matter, constants,
+              quantum records, cosmology and time back to their source-producing structures.
+            </p>
+            <span>Open the Reality Atlas <b>→</b></span>
+          </div>
+        </Link>
 
         {/* Interpretive spine */}
         <div className="animate-rise-3 mx-auto mt-14 max-w-3xl">

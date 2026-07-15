@@ -17,9 +17,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const problem = await getProblem(params.slug);
+  const { slug } = await params;
+  const problem = await getProblem(slug);
   if (!problem) return {};
   return {
     title: `${problem.title} (Open Problem)`,
@@ -28,8 +29,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProblemPage({ params }: { params: { slug: string } }) {
-  const problem = await getProblem(params.slug);
+export default async function ProblemPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const problem = await getProblem(slug);
   if (!problem || problem.status !== "public") notFound();
 
   const papers = await loadPapers();

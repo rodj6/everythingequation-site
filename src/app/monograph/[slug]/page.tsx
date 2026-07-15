@@ -23,9 +23,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const item = getMonographItem(params.slug);
+  const { slug } = await params;
+  const item = getMonographItem(slug);
   if (!item) return {};
   const prefix = item.label ? `${item.label}: ` : "";
   return {
@@ -44,9 +45,10 @@ export async function generateMetadata({
 export default async function MonographItemPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const item = getMonographItem(params.slug);
+  const { slug } = await params;
+  const item = getMonographItem(slug);
   if (!item) notFound();
 
   const { prev, next } = getAdjacentItems(item.slug);

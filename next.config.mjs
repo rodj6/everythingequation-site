@@ -1,8 +1,12 @@
 import createMDX from "@next/mdx";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+
+const projectRoot = dirname(fileURLToPath(import.meta.url));
 
 const withMDX = createMDX({
   extension: /\.mdx?$/,
@@ -18,6 +22,7 @@ const withMDX = createMDX({
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  outputFileTracingRoot: projectRoot,
 
   // Legacy routes from the Everything Equation era. Old URLs keep working
   // but land on the current Shadow Theory pages.

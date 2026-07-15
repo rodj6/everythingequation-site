@@ -11,13 +11,31 @@ import { navigation } from '@/config/navigation';
 import { loadPapers, loadProblems, getCanonicalPapers } from '@/lib/registry';
 import { listArticles } from '@/lib/articles';
 import { listMonographItems, monographTotals } from '@/lib/monograph';
+import {
+  atlasEdges,
+  atlasNodes,
+  atlasStats,
+  observableRoutes,
+} from '@/data/reality-atlas';
 
 function esc(s: string): string {
   return s
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+function normalizeBaseUrl(baseUrl: string): string {
+  return baseUrl.replace(/\/+$/, '');
+}
+
+function atomTimestamp(value: string): string {
+  const normalized = /^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T00:00:00Z` : value;
+  const timestamp = Date.parse(normalized);
+  if (!Number.isFinite(timestamp)) throw new Error(`Invalid feed date: ${value}`);
+  return new Date(timestamp).toISOString();
 }
 
 // ---------------------------------------------------------------------------
@@ -25,6 +43,7 @@ function esc(s: string): string {
 // ---------------------------------------------------------------------------
 
 export async function generateSitemap(baseUrl: string): Promise<string> {
+  const canonicalBase = normalizeBaseUrl(baseUrl);
   const papers = (await loadPapers()).filter((p) => p.status === 'public');
   const problems = (await loadProblems()).filter((p) => p.status === 'public');
   const articles = listArticles();
@@ -32,7 +51,12 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
     ...navigation.map((n) => ({
       loc: n.href,
-      priority: n.href === '/' ? '1.0' : n.href === '/monograph' ? '0.9' : '0.8',
+      priority:
+        n.href === '/'
+          ? '1.0'
+          : n.href === '/monograph' || n.href === '/atlas'
+            ? '0.9'
+            : '0.8',
     })),
     ...listMonographItems().map((i) => ({
       loc: `/monograph/${i.slug}`,
@@ -52,10 +76,11 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     })),
   ];
 
-  const body = urls
+  const uniqueUrls = [...new Map(urls.map((item) => [item.loc, item])).values()];
+  const body = uniqueUrls
     .map(
       (u) =>
-        `  <url><loc>${esc(baseUrl + u.loc)}</loc>${
+        `  <url><loc>${esc(canonicalBase + u.loc)}</loc>${
           u.lastmod ? `<lastmod>${esc(u.lastmod)}</lastmod>` : ''
         }<priority>${u.priority}</priority></url>`
     )
@@ -69,25 +94,26 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
 // ---------------------------------------------------------------------------
 
 export async function generateFeed(baseUrl: string): Promise<string> {
+  const canonicalBase = normalizeBaseUrl(baseUrl);
   const articles = listArticles();
   const canonical = await getCanonicalPapers();
 
   const entries = [
     {
       title: `The Monograph: ${site.monograph.title} (Version ${site.monograph.version})`,
-      url: `${baseUrl}/monograph`,
+      url: `${canonicalBase}/monograph`,
       date: site.monograph.webDate,
       summary: `Complete web edition of “${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}). DOI ${site.monograph.doi}. All 18 chapters, both appendices, and the bibliography.`,
     },
     ...articles.map((a) => ({
       title: a.title,
-      url: `${baseUrl}/articles/${a.slug}`,
+      url: `${canonicalBase}/articles/${a.slug}`,
       date: a.updated || a.date || '2026-01-01',
       summary: a.description || '',
     })),
     ...canonical.map((p) => ({
       title: `Paper ${p.number}: ${p.displayTitle}`,
-      url: `${baseUrl}/papers/${p.slug}`,
+      url: `${canonicalBase}/papers/${p.slug}`,
       date: p.date || '2026-01-01',
       summary: p.summary || p.role || '',
     })),
@@ -100,7 +126,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
     <title>${esc(e.title)}</title>
     <link href="${esc(e.url)}"/>
     <id>${esc(e.url)}</id>
-    <updated>${esc(e.date)}T00:00:00Z</updated>
+    <updated>${esc(atomTimestamp(e.date))}</updated>
     <summary>${esc(e.summary.trim())}</summary>
     <author><name>${esc(site.author.name)}</name></author>
   </entry>`
@@ -111,10 +137,10 @@ export async function generateFeed(baseUrl: string): Promise<string> {
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>${esc(site.name)}</title>
   <subtitle>${esc(site.tagline)}</subtitle>
-  <link href="${esc(baseUrl)}/feed.xml" rel="self"/>
-  <link href="${esc(baseUrl)}"/>
-  <id>${esc(baseUrl)}/</id>
-  <updated>${esc(updated)}T00:00:00Z</updated>
+  <link href="${esc(canonicalBase)}/feed.xml" rel="self"/>
+  <link href="${esc(canonicalBase)}"/>
+  <id>${esc(canonicalBase)}/</id>
+  <updated>${esc(atomTimestamp(updated))}</updated>
 ${body}
 </feed>
 `;
@@ -125,7 +151,7 @@ ${body}
 // ---------------------------------------------------------------------------
 
 export async function generateLlmsTxt(): Promise<string> {
-  const baseUrl = site.url;
+  const baseUrl = normalizeBaseUrl(site.url);
   const canonical = await getCanonicalPapers();
   const problems = (await loadProblems()).filter(
     (p) => p.status === 'public' && p.programme !== 'legacy'
@@ -183,6 +209,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '## Key pages',
     '',
     `- [Framework](${baseUrl}/framework): the seven-paper sequence and core vocabulary`,
+    `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -217,7 +244,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     `- ${baseUrl}/sitemap.xml`,
     `- ${baseUrl}/feed.xml (Atom)`,
-    `- ${baseUrl}/graph.json (research graph: papers, problems, articles, relations)`,
+    `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
   ];
@@ -229,13 +256,14 @@ export async function generateLlmsTxt(): Promise<string> {
 // ---------------------------------------------------------------------------
 
 export async function generateGraph() {
-  const baseUrl = site.url;
+  const baseUrl = normalizeBaseUrl(site.url);
   const papers = (await loadPapers()).filter((p) => p.status === 'public');
   const problems = (await loadProblems()).filter((p) => p.status === 'public');
   const articles = listArticles();
   const canonical = papers
     .filter((p) => p.category === 'canonical')
     .sort((a, b) => (a.number ?? 99) - (b.number ?? 99));
+  const publicProblemSlugs = new Set(problems.map((problem) => problem.slug));
 
   const nodes = [
     ...papers.map((p) => ({
@@ -292,9 +320,59 @@ export async function generateGraph() {
       title: i.title,
       url: `${baseUrl}/monograph/${i.slug}`,
     })),
+    {
+      id: 'atlas',
+      type: 'interactive-atlas',
+      title: 'The Reality Atlas',
+      contract: 'Typed multiscale atlas A = (V, E, F), canonical equations G10.83-G10.86',
+      levelsOfDetail: [0, 1, 2, 3, 4],
+      stats: atlasStats,
+      url: `${baseUrl}/atlas`,
+    },
+    ...atlasNodes.map((node) => ({
+      id: `atlas:${node.id}`,
+      type: 'atlas-node',
+      atlasId: node.id,
+      tier: node.tier,
+      kind: node.kind,
+      levelOfDetail: node.lod,
+      title: node.label,
+      summary: node.summary,
+      chapter: node.chapter,
+      section: node.section,
+      mathematicalType: node.mathematicalType,
+      stateVariables: node.stateVariables,
+      domain: node.domain,
+      codomain: node.codomain,
+      regularity: node.regularity,
+      boundaryClass: node.boundaryClass,
+      covariance: node.covariance,
+      units: node.units,
+      branchDomain: node.branchDomain,
+      approximationOrder: node.approximationOrder,
+      errorNorm: node.errorNorm,
+      gate: node.gate ?? null,
+      recoveryLimits: node.recovery ?? [],
+      equations: node.equations,
+      url: `${baseUrl}/atlas?focus=${encodeURIComponent(node.id)}`,
+    })),
+    ...observableRoutes.map((route) => ({
+      id: `atlas-route:${route.id}`,
+      type: 'atlas-observable-route',
+      title: route.label,
+      description: route.description,
+      output: route.output,
+      stages: route.nodeIds.length,
+      url: `${baseUrl}/atlas?focus=${encodeURIComponent(route.nodeIds.at(-1) ?? 'omega')}`,
+    })),
   ];
 
-  const edges: Array<{ from: string; to: string; relation: string }> = [];
+  const edges: Array<{
+    from: string;
+    to: string;
+    relation: string;
+    [key: string]: unknown;
+  }> = [];
   // Monograph containment + reading order
   const monoItems = listMonographItems();
   for (let i = 0; i < monoItems.length; i++) {
@@ -327,7 +405,9 @@ export async function generateGraph() {
   // Papers supporting problems
   for (const p of papers) {
     for (const prob of p.supports) {
-      edges.push({ from: `paper:${p.slug}`, to: `problem:${prob}`, relation: 'supports' });
+      if (publicProblemSlugs.has(prob)) {
+        edges.push({ from: `paper:${p.slug}`, to: `problem:${prob}`, relation: 'supports' });
+      }
     }
   }
   // Open problems branch downstream of the seven-paper foundation
@@ -343,6 +423,46 @@ export async function generateGraph() {
     }
   }
 
+  edges.push({ from: 'monograph', to: 'atlas', relation: 'architecture-visualized-by' });
+  for (const node of atlasNodes) {
+    edges.push({
+      from: 'atlas',
+      to: `atlas:${node.id}`,
+      relation: 'contains-typed-node',
+      levelOfDetail: node.lod,
+    });
+  }
+  for (const atlasEdge of atlasEdges) {
+    edges.push({
+      id: `atlas-edge:${atlasEdge.id}`,
+      from: `atlas:${atlasEdge.from}`,
+      to: `atlas:${atlasEdge.to}`,
+      relation: `atlas-${atlasEdge.kind}`,
+      label: atlasEdge.label,
+      map: atlasEdge.map,
+      domain: atlasEdge.domain,
+      codomain: atlasEdge.codomain,
+      linearization: atlasEdge.linearization,
+      adjoint: atlasEdge.adjoint,
+      validityDomain: atlasEdge.validityDomain,
+      verifier: atlasEdge.verifier,
+      errorModel: atlasEdge.errorModel,
+      partial: atlasEdge.partial,
+    });
+  }
+  for (const route of observableRoutes) {
+    const routeId = `atlas-route:${route.id}`;
+    edges.push({ from: 'atlas', to: routeId, relation: 'offers-observable-trace' });
+    route.nodeIds.forEach((nodeId, order) => {
+      edges.push({
+        from: routeId,
+        to: `atlas:${nodeId}`,
+        relation: 'trace-step',
+        order,
+      });
+    });
+  }
+
   return {
     name: site.name,
     description: site.description,
@@ -351,6 +471,12 @@ export async function generateGraph() {
     authority: {
       canonicalStack: site.canonicalStack,
       note: 'Papers 1-7 (published 2026-07-15) are the controlling public authority; Paper 7 is the physical-witness layer. Superseded records are the June 2026 six-paper stack, preserved as publication history. Historical papers are archival background.',
+    },
+    atlas: {
+      contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier.',
+      forwardPath: 'source preparation -> aperture selection -> canonical field -> coupled Tier-1 closure -> observable',
+      reversePath: 'observable -> ordered trace route -> residual source-producing structure',
+      url: `${baseUrl}/atlas`,
     },
     nodes,
     edges,

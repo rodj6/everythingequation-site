@@ -18,9 +18,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const paper = await getPaper(params.slug);
+  const { slug } = await params;
+  const paper = await getPaper(slug);
   if (!paper) return {};
   const description =
     paper.summary?.trim() || paper.role || site.description;
@@ -37,8 +38,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function PaperPage({ params }: { params: { slug: string } }) {
-  const paper = await getPaper(params.slug);
+export default async function PaperPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const paper = await getPaper(slug);
   if (!paper || paper.status !== "public") notFound();
 
   const problems = await loadProblems();

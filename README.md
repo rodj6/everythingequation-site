@@ -6,8 +6,23 @@ completion, geometric realization, exact projected dynamics, and internal
 identifiability, completed by a Randall–Sundrum physical witness, plus an
 open-problem research programme and article system.
 
-Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, MDX, and KaTeX.
+Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS, MDX, and KaTeX.
 Statically generated; deployed via GitHub → Vercel.
+
+## The Reality Atlas
+
+`/atlas` is the interactive source-to-observable model. It combines a procedural
+WebGL architecture with a complete two-dimensional fallback, guided descent,
+free orbit/zoom exploration, equation inspectors, typed interfaces, search, and
+forward/reverse observable traces. Its scientific content is defined in
+`src/data/reality-atlas.ts`; the definitive twelve-chapter mathematical source is
+preserved under `content/reality-model/`.
+
+The main atlas interface lives in `src/components/atlas/`. Every atlas node has a
+stable identifier, mathematical type, domain, codomain, regularity, covariance,
+units, equations, and explicit upstream/downstream interfaces. Topology is
+certified during compilation, so broken node, route, tour, or edge references
+fail the build rather than silently producing an incomplete map.
 
 ## Quick start
 

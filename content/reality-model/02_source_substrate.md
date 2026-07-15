@@ -1,0 +1,1014 @@
+# The Source-to-Readout Construction
+
+## The source substrate and Tier-0 law
+
+### 1. Source objects
+
+The source signature fixed in the canonical foundation is
+
+\[
+\Sigma_\Omega=
+(V,\preceq,P_{\rm dep},M_{\rm dep},\iota_M,
+\mathsf{Supp},\mathsf{Lin},\mathsf{Inv},\mathsf{Bnd}).
+\tag{S2.1}
+\]
+
+A raw source object \(X\in\mathsf S_0\) consists of:
+
+\[
+\begin{aligned}
+V_X &: \text{a set of source loci},\\
+\preceq_X &\subseteq V_X\times V_X:
+   \text{a reflexive transitive dependency relation},\\
+P_X &: \text{a set of deposition-potential tokens},\\
+M_X &\subseteq P_X: \text{the marked tokens},\\
+\operatorname{supp}_X(m)&\Subset V_X:
+   \text{the finite support of }m,\\
+\ell_X(m)&:\text{the lineage carried by }m,\\
+\operatorname{inv}_X(m)&:\text{its source-invariant label},\\
+\operatorname{bnd}_X(m)&:\text{its intrinsic boundary type}.
+\end{aligned}
+\tag{S2.2}
+\]
+
+Write
+
+\[
+x\prec_Xy
+\quad\Longleftrightarrow\quad
+x\preceq_Xy\ \text{and}\ y\npreceq_Xx.
+\tag{S2.3}
+\]
+
+The symmetric part \(x\simeq_Xy\) of the preorder is a source redescription relation. The reduced dependency carrier is the partially ordered set
+
+\[
+\overline V_X=V_X/{\simeq_X},
+\qquad
+[x]\le_X[y]\Longleftrightarrow x\preceq_Xy.
+\tag{S2.4}
+\]
+
+A marked support is admissible when its reduced support is finite, nonempty and contains a strict pair:
+
+\[
+1\le|\overline{\operatorname{supp}}_X(m)|<\infty,
+\qquad
+\exists[x]\ne[y]\in\overline{\operatorname{supp}}_X(m):
+[x]<_X[y].
+\tag{S2.5}
+\]
+
+The quotient (S2.4) is performed before source relations are compared. A distinction erased by \(\simeq_X\) is a redescription; a distinction surviving in \(\overline V_X\) is source structure.
+
+### 2. Strong source morphisms
+
+A strong source morphism \(f:X\to X'\) is a tuple
+
+\[
+f=(f_V,f_P,f_M,f_{\rm Lin},f_{\rm Inv},f_{\rm Bnd})
+\tag{S2.6}
+\]
+
+where \(f_V:V_X\to V_{X'}\), \(f_P:P_X\to P_{X'}\), and
+\(f_M=f_P|_{M_X}:M_X\to M_{X'}\); the remaining components are maps
+between the corresponding lineage, invariant and boundary sorts.  They
+satisfy:
+
+\[
+\begin{aligned}
+x\preceq_Xy&\Longrightarrow f_Vx\preceq_{X'}f_Vy,\\
+f_P(M_X)&\subseteq M_{X'},\\
+f_V(\operatorname{supp}_X(m))
+&=\operatorname{supp}_{X'}(f_Mm),\\
+f_{V*}\ell_X(m)&\simeq_{\rm lin}\ell_{X'}(f_Mm),\\
+f_{\rm Inv}\operatorname{inv}_X(m)
+&=\operatorname{inv}_{X'}(f_Mm),\\
+f_{\rm Bnd}\operatorname{bnd}_X(m)
+&=\operatorname{bnd}_{X'}(f_Mm).
+\end{aligned}
+\tag{S2.7}
+\]
+
+In addition, \(f_V\) is injective on every reduced marked support and reflects strict dependency there:
+
+\[
+f_Vx\prec_{X'}f_Vy
+\quad\Longleftrightarrow\quad
+x\prec_Xy
+\qquad
+(x,y\in\operatorname{supp}_X(m)).
+\tag{S2.8}
+\]
+
+Identity maps are strong, and the composite of strong maps is strong because every condition in (S2.7)–(S2.8) is preserved under composition. The lawful source structures and strong maps therefore form a category.
+
+### 3. Elementary source cells
+
+Let \(\mathfrak A_\Omega\) be the source-local alphabet of:
+
+- finite dependency incidence;
+- mark and support incidence;
+- lineage composition;
+- invariant type;
+- intrinsic boundary type.
+
+It contains no Tier-1 physical label. An elementary source cell \(C\) is a finite model of \(\Sigma_\Omega\) whose reduced dependency relation is a finite poset and whose marked supports satisfy (S2.5). The essentially small cell category is denoted \(\mathfrak G_\Omega\).
+
+For each cell \(C\), a source face is a full finite subobject closed under:
+
+\[
+\text{predecessors},\qquad
+\text{marked support},\qquad
+\text{inherited lineage},\qquad
+\text{intrinsic boundary}.
+\tag{S2.9}
+\]
+
+The boundary \(\partial_\Omega C\) is the colimit of the proper source faces:
+
+\[
+\partial_\Omega C
+=\underset{F\subsetneq C}{\operatorname{colim}}\,F.
+\tag{S2.10}
+\]
+
+For a zero-dimensional cell, \(\partial_\Omega C=\mathbf0_\Omega\).
+
+The minimal nontrivial cell is the walking marked dependency
+
+\[
+X_\star=
+(\{0,1\},0\prec1,\{m_\star\},
+\operatorname{supp}(m_\star)=\{0,1\},
+\ell_\star,\operatorname{inv}_\star,\varnothing).
+\tag{S2.11}
+\]
+
+The cell family also contains the three-point chain \(C_3\), the fork \(C_\vee\), the cofork \(C_\wedge\), finite diamonds, finite lineage compositions, and every finite source-local incidence type generated from them.
+
+### 4. Lawful attachment
+
+A cell \(C\) attaches to \(X\) along a strong mark-reflecting boundary map \(a:\partial_\Omega C\to X\):
+
+\[
+\begin{array}{ccc}
+\partial_\Omega C & \xrightarrow{i_C} & C\\
+{\scriptstyle a}\downarrow && \downarrow\\
+X & \longrightarrow & X\cup_{\partial C}C .
+\end{array}
+\tag{S2.12}
+\]
+
+The pushout is admitted only when:
+
+\[
+\begin{aligned}
+&\text{existing strict pairs remain distinct},\\
+&\text{every new marked support is finite},\\
+&\text{lineage agrees on the attaching boundary},\\
+&\text{invariant and boundary labels agree on overlaps},\\
+&\text{no relation appears except one generated by the pushout}.
+\end{aligned}
+\tag{S2.13}
+\]
+
+The last condition is the no-free-extension condition. Formally, for the canonical injections \(j_X,j_C\),
+
+\[
+V_{X\cup_{\partial C}C}
+=j_X(V_X)\cup j_C(V_C),
+\tag{S2.14}
+\]
+
+and \(\preceq_{X\cup_{\partial C}C}\) is the least preorder containing the two image preorders subject to the boundary identifications. The token, lineage, invariant and boundary sorts obey the analogous generated-union property.
+
+#### Theorem S2.1 — attachment preservation
+
+Every attachment satisfying (S2.12)–(S2.14) preserves the source axioms.
+
+**Proof.** Finiteness of a pre-existing marked support is unchanged because \(j_X\) is injective on that support. A new marked support is the image of a finite support in \(C\), hence finite. Strict pairs in either input remain strict by (S2.13); the pushout introduces no reverse relation except one forced by an identified boundary path, which is excluded whenever it collapses a declared strict pair. Lineage, invariant and boundary compatibility on the overlap gives a unique induced value by the universal property of the pushout. Every output element lies in the image of \(X\) or \(C\), establishing no-free extension. \(\square\)
+
+### 5. Generated source operations
+
+For an isomorphism-saturated class \(A\subseteq\operatorname{Ob}\mathsf S_0\), define \(\mathscr O_\Omega^{\rm NFE}(A)\) by closing one step under:
+
+\[
+\begin{array}{ll}
+\text{strong images} &
+X\mapsto\operatorname{im}(f),\\
+\text{cell attachment} &
+X\mapsto X\cup_{\partial C}C,\\
+\text{presentation-preserving retracts} &
+X\overset r\longrightarrow Y\overset s\longrightarrow X,\quad r s=1_Y,\\
+\text{stabilizing directed colimits} &
+(X_i)_{i\in I}\mapsto\operatorname{colim}_{i\in I}X_i,\\
+\text{source isomorphism} &
+X\mapsto X',\quad X\simeq_{\rm src}X'.
+\end{array}
+\tag{S2.15}
+\]
+
+A directed system is stabilizing when every finite cell, marked support, strict pair, lineage, invariant and boundary value becomes constant after some stage. This condition prevents a strict dependency or lineage from disappearing only in the limit.
+
+Every operation in (S2.15) is also required to preserve at least one
+marked support containing a strict reduced dependency. In particular,
+a presentation-preserving retract may not delete every witness mark.
+This keeps the admitted fixed point inside the nontrivial source
+subcategory defined by (S2.5).
+
+The witness class is
+
+\[
+\mathcal W_0=
+\operatorname{IsoSat}
+\{F(C):C\in\mathfrak G_\Omega,\ C\ne\mathbf0_\Omega\},
+\tag{S2.16}
+\]
+
+where \(F(C)\) is the source object freely generated by the displayed data of \(C\).
+
+The law operator is
+
+\[
+\mathbb L_\Omega(A)
+=\operatorname{IsoSat}
+\bigl(\mathcal W_0\cup A\cup
+\mathscr O_\Omega^{\rm NFE}(A)\bigr).
+\tag{S2.17}
+\]
+
+### 6. The Tier-0 fixed point
+
+#### Theorem S2.2 — monotonicity and inflation
+
+For all isomorphism-saturated source classes \(A\subseteq B\),
+
+\[
+A\subseteq\mathbb L_\Omega(A),
+\qquad
+\mathbb L_\Omega(A)\subseteq\mathbb L_\Omega(B).
+\tag{S2.18}
+\]
+
+**Proof.** The first inclusion follows from the explicit \(A\) term in (S2.17). Every operation applied to an object or diagram in \(A\) is also available in \(B\), so \(\mathscr O_\Omega^{\rm NFE}(A)\subseteq\mathscr O_\Omega^{\rm NFE}(B)\). Isomorphism saturation preserves inclusion. \(\square\)
+
+By the Knaster–Tarski theorem, \(\mathbb L_\Omega\) has a least fixed point:
+
+\[
+\operatorname{Ob}\mathsf S_{\rm adm}
+=\mu\mathbb L_\Omega.
+\tag{S2.19}
+\]
+
+#### Theorem S2.3 — nontriviality
+
+\(\mathsf S_{\rm adm}\) is nonempty and contains at least two nonisomorphic source objects.
+
+**Proof.** The walking dependency \(X_\star\) and three-point chain \(C_3\) both belong to \(\mathcal W_0\subseteq\mu\mathbb L_\Omega\). Their reduced carriers have cardinalities two and three, so no strong source isomorphism exists between them. \(\square\)
+
+#### Theorem S2.4 — minimality
+
+If \(B\) is any isomorphism-saturated class containing \(\mathcal W_0\) and closed under \(\mathscr O_\Omega^{\rm NFE}\), then
+
+\[
+\mathsf S_{\rm adm}\subseteq B.
+\tag{S2.20}
+\]
+
+**Proof.** Such a \(B\) is a prefixed point of \(\mathbb L_\Omega\): \(\mathbb L_\Omega(B)\subseteq B\). The least fixed point is the intersection of all prefixed points containing the witnesses, hence is contained in \(B\). \(\square\)
+
+### 7. Formation depth and accessibility
+
+The transfinite sequence
+
+\[
+A_0=\varnothing,\qquad
+A_{\alpha+1}=\mathbb L_\Omega(A_\alpha),\qquad
+A_\lambda=\bigcup_{\beta<\lambda}A_\beta
+\tag{S2.21}
+\]
+
+assigns a formation rank
+
+\[
+r_\Omega(X)=\min\{\alpha:X\in A_{\alpha+1}\}.
+\tag{S2.22}
+\]
+
+Formation rank is not time. It measures the minimal depth of lawful source generation.
+
+Choose a regular cardinal \(\kappa\) larger than the cardinality of the
+source alphabet and every elementary cell.  The source presentation
+obeys the following small-generation condition:
+
+\[
+\begin{aligned}
+&\mathfrak G_\Omega\text{ is a }\mathbf U\text{-set of }
+\kappa\text{-presentable cells},\\
+&\text{every admitted attachment, image and retract is determined by
+fewer than }\kappa\text{ generators},\\
+&\text{every admitted stabilizing colimit used as one generation step
+has a cofinal subsystem of cardinality }<\kappa.
+\end{aligned}
+\tag{S2.22a}
+\]
+
+These are source-presentation hypotheses, not consequences of the word
+``stabilizing.''  Under (S2.22a), the operator is \(\kappa\)-ary and
+preserves unions of \(\kappa\)-directed chains:
+
+\[
+\mathbb L_\Omega\!\left(
+\operatorname{colim}_{i\in I}A_i\right)
+\cong
+\operatorname{colim}_{i\in I}\mathbb L_\Omega(A_i)
+\tag{S2.23}
+\]
+
+for every \(\kappa\)-filtered system.  Since every one-step output has
+fewer than \(\kappa\) antecedents, regularity of \(\kappa\) implies
+that all of those antecedents occur below one stage \(\alpha<\kappa\).
+Hence the closure sequence stabilizes by stage \(\kappa\):
+
+\[
+A_\kappa=A_{\kappa+1}
+=\operatorname{Ob}\mathsf S_{\rm adm}.
+\tag{S2.24}
+\]
+
+If (S2.22a) is relaxed to allow arbitrarily large one-step colimits,
+Knaster--Tarski still supplies the least fixed point (S2.19), but the
+bound (S2.24) is not asserted.  This separates fixed-point existence
+from the stronger accessibility estimate.
+
+### 8. Presentation independence
+
+Let \(\operatorname{Pres}(X)\) be the category of finite cell presentations of \(X\). An object is a strong colimit map
+
+\[
+\pi_D:\operatorname{colim}_{c\in D}F(C_c)\overset\sim\longrightarrow X,
+\tag{S2.25}
+\]
+
+and a morphism is a common refinement commuting with \(\pi_D\).
+
+The cell family is closed under source faces and finite unions along
+compatible faces. Therefore any two finite subpresentations
+\(D_1,D_2\) possess a common refinement \(D_1\vee D_2\). We also
+require that any parallel refinement maps become equal after a further
+common refinement. These two properties, rather than directedness
+alone, make \(\operatorname{Pres}(X)\) filtered.
+
+#### Theorem S2.5 — presentation invariance
+
+Every construction \(F\) on source objects that:
+
+\[
+\begin{aligned}
+&\text{is natural under strong source maps},\\
+&\text{sends lawful pushouts to compatible colimits},\\
+&\text{preserves stabilizing filtered colimits}
+\end{aligned}
+\tag{S2.26}
+\]
+
+is independent of the chosen cell presentation up to a unique canonical isomorphism.
+
+**Proof.** Two presentations map into their common refinement. Naturality and colimit preservation give two comparison isomorphisms into \(F(D_1\vee D_2)\). Filteredness makes the induced comparison independent of refinement, and a further common refinement proves the cocycle identity. \(\square\)
+
+This theorem applies to the invariant, lineage, order-complex and aperture-seed constructions below.
+
+### 9. Source ancestry
+
+For \(X\in\mathsf S_{\rm adm}\), define its cell ancestry as the category
+
+\[
+\operatorname{Anc}_\Omega(X)
+=\{(C,u):C\in\mathfrak G_\Omega,\ 
+u:F(C)\to X\text{ strong}\}.
+\tag{S2.27}
+\]
+
+Every locus, dependency, mark and lineage datum in \(X\) is covered by at least one ancestry map:
+
+\[
+X=\underset{(C,u)\in\operatorname{Anc}_\Omega(X)}
+{\operatorname{colim}}\operatorname{im}(u).
+\tag{S2.28}
+\]
+
+#### Theorem S2.6 — no-free-extension ancestry
+
+Equation (S2.28) holds for every admitted \(X\).
+
+**Proof.** It holds for witnesses by construction. Strong images and lawful attachments preserve cell ancestry because every output element lies in an input image or attached cell image. A presentation-preserving retract inherits the images selected by its section. A stabilizing directed colimit inherits every finite datum from a finite stage. The result follows by induction on formation rank (S2.22). \(\square\)
+
+Thus every lawful source distinction has a finite generated ancestry. There are no ungrounded source degrees of freedom.
+
+### 10. Invariant transport
+
+Let \(\mathsf{Inv}_\Omega\) be a symmetric monoidal category whose
+maximal subgroupoid records invariant equivalences. The source
+invariant package is a functor
+
+\[
+\boxed{
+\mathcal I_\Omega:
+\mathsf S_{\rm adm}\longrightarrow\mathsf{Inv}_\Omega
+}
+\tag{S2.29}
+\]
+
+whose value is
+
+\[
+\mathcal I_\Omega(X)=
+\bigl(
+I_{\rm id},I_{\rm dep},I_{\rm lin},
+I_{\rm bnd},I_{\rm mark},I_{\rm rec}
+\bigr)_X.
+\tag{S2.30}
+\]
+
+The components are:
+
+\[
+\begin{aligned}
+I_{\rm id}(X)&=[X]_{\simeq_{\rm src}},\\
+I_{\rm dep}(X)&=[N(\overline V_X)]_{\rm sh},\\
+I_{\rm lin}(X)&=[\ell_X]_{\rm hol},\\
+I_{\rm bnd}(X)&=[\mathsf{Bnd}_X],\\
+I_{\rm mark}(X)&=[M_X\to\operatorname{FinSub}(\overline V_X)],\\
+I_{\rm rec}(X)&=[\mathsf{DepPot}_X].
+\end{aligned}
+\tag{S2.31}
+\]
+
+Here \(N(\overline V_X)\) is the nerve of the reduced dependency poset, \([\cdot]_{\rm sh}\) denotes its simple-homotopy type, and \([\ell_X]_{\rm hol}\) denotes lineage transport modulo source redescription.
+
+For every strong source isomorphism \(f:X\to X'\),
+
+\[
+\mathcal I_\Omega(f):
+\mathcal I_\Omega(X)\overset\sim\longrightarrow
+\mathcal I_\Omega(X').
+\tag{S2.32}
+\]
+
+For a general strong embedding, invariant transport is covariant:
+
+\[
+\mathcal I_\Omega(g\circ f)
+=\mathcal I_\Omega(g)\circ\mathcal I_\Omega(f).
+\tag{S2.33}
+\]
+
+The invariants that must survive an aperture face \(a\) form a declared
+subfunctor \(\mathcal I_\Omega^a\subseteq\mathcal I_\Omega\).
+Aperture admissibility requires a natural transformation into the
+invariant record of the routed emission,
+
+\[
+\eta^a:
+\mathcal I_\Omega^a\circ\rho_0
+\Longrightarrow
+\mathcal I_{\rm emit}^a\circ\mathcal A_{1/2}^a.
+\tag{S2.34}
+\]
+
+On the CSCF route,
+\(\mathcal I_{\rm emit}^a|_{\mathsf{Spine}}
+=\mathcal I_{1/2}^a\); on an effective or residue route it records
+the exact invariant image and its defect. This equation gives exact
+content to “source invariants survive projection.”
+
+### 11. Deposition potential
+
+The source-side deposition potential is the functor
+
+\[
+\mathcal D_\Omega:
+\mathsf S_{\rm adm}\to\mathsf{DepPot}_\Omega,
+\tag{S2.35}
+\]
+
+with
+
+\[
+\mathcal D_\Omega(X)=
+(\mathsf{RecPot}_X,\mathsf{DepCond}_X,
+\mathsf{ObjCond}_X,\mathsf{Trace}_X).
+\tag{S2.36}
+\]
+
+Its components are constructed rather than separately postulated:
+
+\[
+\begin{aligned}
+\mathsf{RecPot}_X
+&=\{m\in M_X:\overline{\operatorname{supp}}_X(m)
+\text{ satisfies (S2.5)}\},\\
+\mathsf{DepCond}_X(m)
+&=\{\delta:\delta\text{ preserves boundary, lineage and }
+\mathcal I_\Omega^a\},\\
+\mathsf{ObjCond}_X(m)
+&=\{\delta:\delta\text{ admits a persistent separated image under }
+\mathcal A_{1/2}^a\},\\
+\mathsf{Trace}_X(m)
+&=(\operatorname{Anc}_\Omega(m),\ell_X(m),
+\operatorname{bnd}_X(m)).
+\end{aligned}
+\tag{S2.37}
+\]
+
+The first, second and fourth components of (S2.37) are source-side
+data. \(\mathsf{ObjCond}_X\) is a downstream relational annotation:
+it is evaluated only after \(\mathcal A_{1/2}^a\) has been constructed
+and is not used to define \(\mathbb L_\Omega\), \(\mathsf S_{\rm adm}\)
+or \(\operatorname{RecPre}\). This prevents objective persistence
+from entering the source fixed point circularly.
+
+The source recordability condition is
+
+\[
+\operatorname{RecPre}(X)=1
+\quad\Longleftrightarrow\quad
+\exists m\in\mathsf{RecPot}_X,\
+\exists\delta\in\mathsf{DepCond}_X(m).
+\tag{S2.38}
+\]
+
+Every \(X\in\mathsf S_{\rm adm}\) has at least one marked strict dependency, so the identity deformation belongs to \(\mathsf{DepCond}_X(m)\). Therefore
+
+\[
+X\in\mathsf S_{\rm adm}
+\quad\Longrightarrow\quad
+\operatorname{RecPre}(X)=1.
+\tag{S2.39}
+\]
+
+Recordability at source means only that a distinguishable lineaged dependency can be prepared. Objective persistence is a property of the realized aperture and field dynamics.
+
+### 12. Canonical realization seed
+
+For \(m\in\mathsf{RecPot}_X\), let
+
+\[
+P_m=\overline{\operatorname{supp}}_X(m)
+\tag{S2.40}
+\]
+
+be its finite reduced dependency poset. Its order complex \(\mathcal O(P_m)\) has an \(n\)-simplex for each strict chain
+
+\[
+x_0<x_1<\cdots<x_n.
+\tag{S2.41}
+\]
+
+Define the real chain spaces
+
+\[
+C_n(P_m)=
+\ell^2\{(x_0<\cdots<x_n)\subset P_m\},
+\tag{S2.42}
+\]
+
+with incidence boundary
+
+\[
+\partial_n[x_0,\ldots,x_n]
+=\sum_{j=0}^{n}(-1)^j
+[x_0,\ldots,\widehat{x_j},\ldots,x_n].
+\tag{S2.43}
+\]
+
+Then \(\partial_{n-1}\partial_n=0\). With the canonical counting inner product, define
+
+\[
+\Delta_{m,n}
+=\partial_{n+1}\partial_{n+1}^*
++\partial_n^*\partial_n
+\ge0.
+\tag{S2.44}
+\]
+
+The full incidence carrier seed is
+
+\[
+\mathcal H_m^{\rm seed}
+=\bigoplus_{n\ge0}C_n(P_m),
+\qquad
+K_m^{\rm seed}
+=\bigoplus_{n\ge0}\Delta_{m,n}.
+\tag{S2.45}
+\]
+
+Because \(P_m\) is finite, \(\mathcal H_m^{\rm seed}\) is finite dimensional and \(K_m^{\rm seed}\) is a bounded positive selfadjoint operator.
+
+Lineage and invariant data may assign positive simplex weights
+
+\[
+w_m(\sigma)
+=\exp[-\Phi_{\rm inv}(\sigma)-\Phi_{\rm lin}(\sigma)]>0.
+\tag{S2.46}
+\]
+
+Using the weighted inner product
+
+\[
+\langle c,c'\rangle_{w_m}
+=\sum_{\sigma}w_m(\sigma)\,
+\overline{c(\sigma)}c'(\sigma)
+\tag{S2.47}
+\]
+
+produces the weighted adjoint \(\partial^{*,w}\) and weighted seed
+
+\[
+K_{m,w}^{\rm seed}
+=\partial\partial^{*,w}
++\partial^{*,w}\partial
++V_{\rm bnd}+V_{\rm inv},
+\qquad
+V_{\rm bnd},V_{\rm inv}\ge0.
+\tag{S2.48}
+\]
+
+Equation (S2.48) is the canonical source-to-aperture handoff. It is pre-geometric: its simplices encode dependency chains, not spatial simplices, and its spectrum is dimensionless until a realization scale is selected.
+
+#### Proposition S2.7 — naturality of the seed
+
+If \(f:(X,m)\to(X',m')\) is a strong support isomorphism preserving weights, then the induced unitary \(U_f:\mathcal H_m^{\rm seed}\to\mathcal H_{m'}^{\rm seed}\) satisfies
+
+\[
+U_fK_{m,w}^{\rm seed}U_f^*
+=K_{m',w}^{\rm seed}.
+\tag{S2.49}
+\]
+
+**Proof.** The order isomorphism maps chains to chains and commutes with the alternating boundary. Weight preservation makes the chain map unitary. It therefore intertwines the boundary, its weighted adjoint and every invariant potential. \(\square\)
+
+### 13. The first spectral cell
+
+For the walking dependency \(X_\star\), the degree-zero boundary incidence matrix is
+
+\[
+B=
+\begin{pmatrix}
+-1\\
+1
+\end{pmatrix},
+\tag{S2.50}
+\]
+
+and the vertex Laplacian is
+
+\[
+K_{\star,0}^{\rm seed}=BB^*
+=
+\begin{pmatrix}
+1&-1\\
+-1&1
+\end{pmatrix}.
+\tag{S2.51}
+\]
+
+Its spectrum is
+
+\[
+\operatorname{spec}(K_{\star,0}^{\rm seed})=\{0,2\}.
+\tag{S2.52}
+\]
+
+The zero mode is the undifferentiated component. The positive mode is the first realized distinction. With edge weight \(w>0\),
+
+\[
+\operatorname{spec}(K_{\star,0}^{\rm seed}(w))=\{0,2w\}.
+\tag{S2.53}
+\]
+
+Thus the smallest lawful source cell already produces the two sectors required by the later field: a stationary kernel and a positive dissipative/coherent carrier mode.
+
+### 14. Directed realization limit
+
+A physical branch is not restricted to one finite marked support.  A
+directed prepared realization over \(X\) is the datum
+
+\[
+\mathbf Y
+=\bigl(I,\{m_i\}_{i\in I},\{u_{ij}\}_{i\le j}\bigr),
+\tag{S2.53a}
+\]
+
+where \(I\) is directed, each \(m_i\in M_X\), and
+\(u_{ij}:P_{m_i}\hookrightarrow P_{m_j}\) is a strong
+support embedding preserving order, lineage, invariant and boundary
+weights.  The identities and cocycle law are
+
+\[
+u_{ii}=1,
+\qquad
+u_{jk}u_{ij}=u_{ik}.
+\tag{S2.53b}
+\]
+
+Finite prepared realizations embed as constant systems.  Such systems
+and their cofinal natural transformations form
+\(\mathsf{Real}_0^{\rm dir}\), the actual domain of the directed seed
+map in (18.4). Applying the order-complex construction gives a
+filtered family
+
+\[
+(Y_i)_{i\in I},
+\qquad
+Y_i\hookrightarrow Y_j\quad(i\le j),
+\tag{S2.54}
+\]
+
+of compatible prepared supports with isometric chain embeddings
+
+\[
+U_{ij}:\mathcal H_i^{\rm seed}\to\mathcal H_j^{\rm seed},
+\qquad
+U_{jk}U_{ij}=U_{ik}.
+\tag{S2.55}
+\]
+
+The realization Hilbert space is the inductive limit
+
+\[
+\mathcal H_Y^{\rm pre}
+=\varinjlim_i\mathcal H_i^{\rm seed}.
+\tag{S2.56}
+\]
+
+Define its finite-energy algebraic domain by
+
+\[
+\mathcal D_Y^{\rm alg}
+=
+\left\{
+U_i\psi:
+\sup_{j\ge i}q_j^{\rm seed}[U_{ij}\psi]<\infty
+\right\}.
+\tag{S2.56a}
+\]
+
+The compatibility requirement includes density of
+\(\mathcal D_Y^{\rm alg}\) in the Hilbert inductive limit. Define the
+quadratic form on this domain by
+
+\[
+q_Y^{\rm pre}[U_i\psi]
+=\lim_{j\ge i}
+\langle U_{ij}\psi,K_j^{\rm seed}U_{ij}\psi\rangle.
+\tag{S2.57}
+\]
+
+Monotonicity and finite energy are therefore
+
+\[
+q_j^{\rm seed}[U_{ij}\psi]
+\ge q_i^{\rm seed}[\psi],
+\qquad
+\sup_j q_j^{\rm seed}[U_{ij}\psi]<\infty
+\quad(U_i\psi\in\mathcal D_Y^{\rm alg}).
+\tag{S2.58}
+\]
+
+together with form consistency on identified vectors:
+
+\[
+U_{ij}\psi=U_{kj}\phi
+\quad\Longrightarrow\quad
+\lim_{\ell\ge j}q_\ell[U_{i\ell}\psi]
+=\lim_{\ell\ge j}q_\ell[U_{k\ell}\phi].
+\tag{S2.58a}
+\]
+
+Under (S2.56a), (S2.58) and (S2.58a),
+\(q_Y^{\rm pre}\) is well defined, densely defined and nonnegative.
+Closability is the remaining analytic
+admissibility condition; it holds, for example, when the compatible
+forms are the restrictions of one closed form on the inductive limit.
+When it is closable, its closure defines the preliminary carrier
+
+\[
+K_Y^{\rm pre}
+\quad\text{by}\quad
+\overline q_Y^{\rm pre}[\psi,\phi]
+=\langle(K_Y^{\rm pre})^{1/2}\psi,
+(K_Y^{\rm pre})^{1/2}\phi\rangle.
+\tag{S2.59}
+\]
+
+The aperture receives
+\((\mathcal H_Y^{\rm pre},K_Y^{\rm pre})\), then applies
+redescription, visibility, relation completion, no-excess reduction
+and face-specific spectral completion. On the CSCF route the final
+\(K_Y^a\) is therefore a lawful refinement of a carrier already forced
+by source dependency; the other routes preserve the precise point at
+which such a refinement could not be completed.
+
+### 15. Aperture-preparation theorem
+
+Define the preparation map
+
+\[
+\operatorname{SeedPrep}_\Omega:
+\mathsf{Real}_0^{\rm dir}\dashrightarrow
+\mathsf{Seed}_{1/2}
+\tag{S2.60}
+\]
+
+by
+
+\[
+\operatorname{SeedPrep}_\Omega(Y)
+=(\mathcal H_Y^{\rm pre},\overline q_Y^{\rm pre},
+K_Y^{\rm pre},\mathcal I_\Omega(X),\mathsf{Trace}_Y,
+\operatorname{Cert}_0(X),\operatorname{Reg}_Y^{\rm pre}).
+\tag{S2.61}
+\]
+
+Here \(X=\rho_0(Y)\), and
+\(\operatorname{Reg}_Y^{\rm pre}\) records the dense form core,
+operator domain, weight class and inherited boundary class. The same
+complete interface is displayed again in (S2.71).
+
+#### Theorem S2.8 — source-to-aperture preparation
+
+For every finite prepared realization
+\(Y=J_{\rm real}(X,m)\), \(\operatorname{SeedPrep}_\Omega(Y)\)
+exists, is nonzero on \((\ker K_Y^{\rm pre})^\perp\), and is natural
+under strong support isomorphism. For every compatible directed
+realization satisfying (S2.56a), (S2.58)--(S2.58a) whose limit form is closable,
+the closed positive carrier \(K_Y^{\rm pre}\) exists uniquely.
+
+**Proof.** Finite existence and positivity follow from
+(S2.42)–(S2.48). A strict pair supplies a nonzero incidence boundary,
+so the positive operator in (S2.48) is not identically zero.
+Naturality is Proposition S2.7. In the directed case, (S2.58a) makes
+(S2.57) representative-independent, while the stated closability
+hypothesis gives a closed nonnegative form after completion. The first
+representation theorem yields a unique positive selfadjoint operator.
+\(\square\)
+
+The source-to-aperture route is now explicit:
+
+\[
+\boxed{
+(X,m)
+\longmapsto
+P_m
+\longmapsto
+\mathcal O(P_m)
+\longmapsto
+(\partial,\partial^*)
+\longmapsto
+K_Y^{\rm pre}
+\xmapsto{\ \mathcal A_{1/2}^{a}\ }
+\operatorname{Emit}^{a}(Y).
+}
+\tag{S2.62}
+\]
+
+On the \(\mathsf{CSCFEligible}\) route,
+\(\operatorname{Emit}^{a}(Y)=\mathfrak S_Y^a\) contains \(K_Y^a\);
+the other routes retain their effective response, obstruction or null
+output without coercion to a carrier.
+
+### 16. Source law in completed form
+
+The Tier-0 construction is summarized by
+
+\[
+\boxed{
+\begin{gathered}
+\Sigma_\Omega
+\xrightarrow{\ \mathfrak G_\Omega,\partial_\Omega,\Delta_\Omega\ }
+\mathbb L_\Omega,\\
+\operatorname{Ob}\mathsf S_{\rm adm}
+=\mu\mathbb L_\Omega,\\
+X\in\mathsf S_{\rm adm}
+\xrightarrow{\ m\in M_X\ }
+Y=J_{\rm real}(X,m),\\
+Y\xrightarrow{\ \operatorname{SeedPrep}_\Omega\ }
+(\mathcal H_Y^{\rm pre},K_Y^{\rm pre})
+\xmapsto{\ \mathcal A_{1/2}^{a}\ }
+\operatorname{Emit}^{a}(Y).
+\end{gathered}}
+\tag{S2.63}
+\]
+
+The historical schema
+
+\[
+L=\Omega\Delta\partial(L)
+\tag{S2.64}
+\]
+
+now resolves into two exact statements:
+
+\[
+\operatorname{Ob}\mathsf S_{\rm adm}
+=\mu\mathbb L_\Omega
+\tag{S2.65}
+\]
+
+for lawful source closure, and
+
+\[
+\operatorname{SeedPrep}_\Omega(X,m)
+=K^{\rm pre}\bigl(
+\mathcal O(\overline{\operatorname{supp}}_X(m)),
+\ell_X,\mathcal I_\Omega,\mathsf{Bnd}_X
+\bigr)
+\tag{S2.66}
+\]
+
+for the constructive handoff from lawful source structure to the Tier-0.5 aperture.
+
+### 17. Source certificates and functorial handoff
+
+Membership in the Tier-0 fixed point is represented by a formation
+certificate rather than by subtracting an object from a closure class.
+For \(X\in\mathsf S_0\), let
+
+\[
+\operatorname{Cert}_0(X)
+=\left\{
+(\alpha,D):
+X\simeq\operatorname{out}(D),\quad
+D\text{ is a well-founded diagram of operations (S2.15)},\quad
+\operatorname{ht}(D)<\alpha
+\right\}.
+\tag{S2.67}
+\]
+
+Then
+
+\[
+\boxed{
+X\in\mathsf S_{\rm adm}
+\quad\Longleftrightarrow\quad
+\operatorname{Cert}_0(X)\ne\varnothing .
+}
+\tag{S2.68}
+\]
+
+Under the small-generation hypothesis, a certificate may be chosen
+with height below \(\kappa\).  The certificate is presentation
+independent up to the common-refinement relation of Section 8.
+
+Let \(f:(X,m)\to(X',m')\) be a strong prepared-support morphism.  The
+induced simplicial chain map is denoted \(C_\bullet(f)\).  If it is
+isometric for the inherited weights and carries boundary potentials to
+boundary potentials, then
+
+\[
+C_\bullet(f)\partial=\partial' C_\bullet(f),
+\qquad
+C_\bullet(f)K_{m,w}^{\rm seed}
+=K_{m',w}^{\rm seed}C_\bullet(f).
+\tag{S2.69}
+\]
+
+For directed systems the maps (S2.69) pass to the inductive limit and
+give
+
+\[
+\operatorname{SeedPrep}_\Omega(f)
+K_Y^{\rm pre}
+\subseteq
+K_{Y'}^{\rm pre}\operatorname{SeedPrep}_\Omega(f).
+\tag{S2.70}
+\]
+
+The inclusion becomes equality on operator domains for a unitary
+support isomorphism.  Thus the source-to-seed construction is a partial
+functor on precisely the morphisms preserving its analytic domain.
+
+The complete interface object delivered to the aperture is
+
+\[
+\boxed{
+\mathbb Y_{\rm ap}
+=\left(
+\mathcal H_Y^{\rm pre},
+\overline q_Y^{\rm pre},
+K_Y^{\rm pre},
+\mathcal I_\Omega^a(X),
+\mathsf{Trace}_Y,
+\operatorname{Cert}_0(X),
+\operatorname{Reg}_Y^{\rm pre}
+\right),
+}
+\tag{S2.71}
+\]
+
+where \(\operatorname{Reg}_Y^{\rm pre}\) records the dense core,
+operator domain, weight class and boundary class.  No downstream face
+may change these data silently: it must transport them naturally or
+place the failed component in its typed aperture residue.
