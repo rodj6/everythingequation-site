@@ -92,13 +92,16 @@ $$ L = \Omega_{T1}\,\Delta\,\partial\,[L] $$
 </EquationPanel>
 
 <StatusCard
-  status="candidate"
-  route="R2 effective"
-  residues="r1, r4"
-  claims="bounded by cap table"
+  status="open research target"
+  claims="no solved-problem claim; formal results only, with declared assumptions"
 >
   Optional free text below the fields.
 </StatusCard>
+
+StatusCard is a legacy presentational component kept for backwards
+compatibility (it also accepts `route` and `residues` fields used by
+superseded-era pages). Current articles normally need only `status` and
+`claims` — or just a `<ClaimBoundary>` block.
 
 <ClaimBoundary>
 What is *not* claimed. Use this liberally.
@@ -112,9 +115,10 @@ All components accept normal Markdown and math inside them.
 Link DOIs and papers inline:
 
 ```mdx
-As established in [Paper 3](/papers/canonical-completion-object)
-([DOI](https://doi.org/10.5281/zenodo.XXXXXXX)), canonical completion is
-certified initiality.
+As established in [Paper 3](/papers/canonical-minimal-source-completion)
+([DOI](https://doi.org/10.5281/zenodo.21370763)), the canonical minimal
+completion is terminal: every relation-sufficient extension maps uniquely
+onto the universally coarsest one.
 ```
 
 For a paper's own citation block, the paper page generates one automatically
@@ -122,14 +126,16 @@ from the registry — you don't write it by hand.
 
 ## 7. Preventing overclaiming
 
-Before publishing, check every sentence against these rules (from the public
-loading manifest):
+Before publishing, check every sentence against these rules (the programme's
+claim discipline):
 
 - Don't say or imply: one equation solves everything; empirically validated;
   proves a TOE; peer reviewed / expert approved (unless separately true);
   build-ready engineering; private machinery as public proof.
-- Branch results are not canonical Shadow Theory without a **branch packet**
-  (route, status, residues, obligations, claim boundary).
+- Branch results are not canonical Shadow Theory without their own public
+  paper or record: declared assumptions and domain, mathematical or empirical
+  support appropriate to the claim, explicit limitations, and a clear claim
+  boundary.
 - Safe framing verbs: *defines, proves (for theorems), establishes, licenses,
   targets, holds as an open problem, is conditional on*.
 - When in doubt, add a `<ClaimBoundary>` block. It reads as strength, not

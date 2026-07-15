@@ -144,12 +144,16 @@ export default function MonographPage() {
             Where this sits in Shadow Theory
           </h2>
           <p className="mt-3 text-[0.95rem] leading-relaxed text-fg/90">
-            The <Link href="/papers" className="text-glow underline decoration-1 underline-offset-2">six canonical papers</Link>{" "}
-            fix the public Shadow Theory framework — readout, completion, compilation and
-            claim discipline. The monograph consolidates and extends that foundation into a
+            The <Link href="/papers" className="text-glow underline decoration-1 underline-offset-2">seven canonical papers</Link>{" "}
+            fix the public Shadow Theory framework — source–readout non-equivalence,
+            target-relative obstruction, canonical minimal completion, geometric
+            realization, projected dynamics, internal identifiability, and the
+            Randall–Sundrum physical witness. The monograph is the programme's broader
             source-to-readout architecture for a Theory of Everything: one source object,
             one realization map, and coupled quantum, record, geometric, gravitational,
-            matter, cosmological, temporal and observer readouts. From here the research
+            matter, cosmological, temporal and observer readouts. It is a fixed Version
+            1.0 publication, completed before the seven-paper sequence; its text is
+            unchanged by it. From here the research
             programme proceeds into the nine{" "}
             <Link
               href="/monograph/the-companion-theorem-programme"

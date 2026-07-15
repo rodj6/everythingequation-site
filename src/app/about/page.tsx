@@ -34,12 +34,15 @@ export default function AboutPage() {
             summarizes.
           </p>
           <p>
-            From that starting point, the framework develops a disciplined chain: when
-            does readout loss actually obstruct anything; when does an obstruction admit a
-            canonical completion; how does a completion become a public, statused
-            artifact; and what claims does each stage license. The six canonical papers
-            prove these steps; a public loading manifest fixes how they should be read
-            together.
+            From that starting point, the framework develops a disciplined sequence: when
+            does readout loss actually obstruct a nominated question; what must any
+            sufficient completion retain, and what is the canonical minimal one; when is
+            a completion realized by genuine geometry; when do observable dynamics close
+            autonomously, and at what exact price when they do not; and what can an
+            internal observer ever identify. The seven canonical papers prove these
+            steps — six mathematical papers, and a seventh that realizes the whole
+            architecture in Randall–Sundrum gravity as a concrete, model-relative
+            physical witness.
           </p>
           <p>
             This site is the framework's public home. It hosts the canonical papers, the
@@ -77,9 +80,12 @@ export default function AboutPage() {
             record states otherwise.
           </p>
           <p>
-            The historical archive on this site — the earlier Everything Equation /
-            Tier-0 era — remains available for the record but is superseded as
-            controlling public authority by Papers 1–6.
+            The current canonical sequence (Papers 1–7, published 2026-07-15) replaced
+            an earlier six-paper canonical stack from June 2026; those records remain
+            published and are listed as superseded canonical versions. The historical
+            archive — the earlier Everything Equation / Tier-0 era — also remains
+            available for the record. Both are superseded as controlling public
+            authority by Papers 1–7.
           </p>
         </div>
       </section>

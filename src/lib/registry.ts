@@ -13,7 +13,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 export type Visibility = 'draft' | 'public';
-export type PaperCategory = 'canonical' | 'branch' | 'historical';
+export type PaperCategory = 'canonical' | 'branch' | 'superseded' | 'historical';
 export type Programme = 'featured' | 'additional' | 'legacy';
 
 // ---------------------------------------------------------------------------
@@ -36,7 +36,7 @@ export interface LoadedPaper {
   slug: string;
   /** Original registry identifier (e.g. paper:shadow:1 or paper:zenodo:123). */
   rawId: string;
-  /** 1-6 for the canonical stack; undefined otherwise. */
+  /** 1-7 for the canonical sequence; undefined otherwise. */
   number?: number;
   category: PaperCategory;
   status: Visibility;
@@ -52,6 +52,8 @@ export interface LoadedPaper {
   doi?: string;
   /** Problem slugs this paper supports. */
   supports: string[];
+  /** For superseded records: slug of the current canonical paper that replaced it. */
+  supersededBy?: string;
   /** Cached Zenodo metadata, when available. */
   metadata: ZenodoMetadata | null;
   /** Whether a manual notes MDX exists at content/manual/papers/<slug>.mdx */
@@ -179,7 +181,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const doi: string | undefined = raw.doi ?? metadata?.doi ?? undefined;
     const title: string | undefined = raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
-      raw.category === 'canonical' || raw.category === 'branch'
+      raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'superseded'
         ? raw.category
         : 'historical';
 
@@ -204,6 +206,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
           )
         : [],
       metadata,
+      supersededBy: typeof raw.supersededBy === 'string' ? raw.supersededBy : undefined,
       hasNotes: hasManual('papers', slug),
       displayTitle: title ?? raw.role ?? slug,
       doiUrl: doi ? `https://doi.org/${doi}` : null,

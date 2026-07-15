@@ -18,14 +18,14 @@ This is not a simulation hypothesis. The world we experience is real. Shadow The
 
 Rather than treating physics as the direct study of ultimate reality, Shadow Theory treats it as the study of the shadow we can observe, what it faithfully represents, what information it loses, and what can and cannot be reconstructed from it.
 
-The six-paper foundation develops the mathematics needed to distinguish observation from source structure, determine when missing information can be recovered, and formally establish what can and cannot be claimed about the underlying reality.`,
+The seven-paper foundation develops the mathematics needed to distinguish observation from source structure, determine when missing information can be recovered, and formally establish what can and cannot be claimed about the underlying reality — and realizes that architecture in a concrete physical model as its witness.`,
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
    * feeds, and llms.txt. Keep it inside the public claim boundary.
    */
   description:
-    "Shadow Theory is a six-paper mathematical Theory of Everything architecture built around a direct claim: the reality we experience is not source reality itself, but a projected shadow of deeper structure. The framework studies what that shadow reveals, what it hides, and what can be reconstructed from it.",
+    "Shadow Theory is a seven-paper mathematical Theory of Everything architecture built around a direct claim: the reality we experience is not source reality itself, but a projected shadow of deeper structure. The framework studies what that shadow reveals, what it hides, and what can be reconstructed from it — and realizes the architecture in Randall–Sundrum gravity as a concrete physical witness.",
 
   /**
    * Canonical base URL. Set NEXT_PUBLIC_SITE_URL in Vercel project settings
@@ -44,12 +44,13 @@ The six-paper foundation develops the mathematics needed to distinguish observat
    * and structured data. Paper records themselves live in content/papers.yaml.
    */
   canonicalStack: [
-    "Paper 1 — Readout Non-Equivalence Theorem",
-    "Paper 2 — Completion Necessity",
-    "Paper 3 — Canonical Completion Object Theorem",
-    "Paper 4 — Tier-1 Shadow Compiler Theorem",
-    "Paper 5 — Shadow Theory Framework Mathematics",
-    "Paper 6 — Shadow Theory Synthesis",
+    "Paper 1 — Source–Readout Non-Equivalence",
+    "Paper 2 — Target-Relative Necessity of Completion",
+    "Paper 3 — Canonical Minimal Source Completion",
+    "Paper 4 — Geometric Realization of Completed Source Relations",
+    "Paper 5 — Observable Quotients and Exact Projected Dynamics",
+    "Paper 6 — Non-Source Projection and Internal Identifiability",
+    "Paper 7 — Bulk-to-Brane Projection in Randall–Sundrum Gravity (physical witness)",
   ],
 
   /**
@@ -84,18 +85,20 @@ The six-paper foundation develops the mathematics needed to distinguish observat
 
   /**
    * Public claim boundary. Rendered on the About page and in llms.txt.
-   * Do not weaken these lines without updating the loading manifest.
+   * These lines are the programme's public claim discipline — do not weaken
+   * them without deliberate review.
    */
   claimBoundary: {
     is: [
       "A mathematical Theory of Everything architecture built on a direct thesis: the reality we experience is a projected shadow of source reality, not source reality itself.",
-      "A six-paper proof framework for studying what the projection reveals, what it hides, and what can be reconstructed without mistaking the shadow for the source.",
-      "A research programme for open problems in mathematics and theoretical physics, with explicit paper records, status levels, and bounded public claims.",
+      "A seven-paper proof framework for studying what the projection reveals, what it hides, and what can be reconstructed without mistaking the shadow for the source — six mathematical papers plus a concrete physical witness in Randall–Sundrum gravity.",
+      "A research programme for open problems in mathematics and theoretical physics, with explicit paper records, declared assumptions and limitations, and bounded public claims.",
     ],
     isNot: [
       "This is not simulation theory: the claim is not that we live inside a computer program, game, or Matrix-style artificial world.",
       "Experimental confirmation, peer review, and expert approval are separate records; they are not implied by the framework alone.",
-      "The Everything Equation is a mathematical closure schema, not a slogan that one line replaces all physics.",
+      "The Everything Equation is a mathematical closure schema from the broader programme, not a theorem of the seven-paper sequence and not a slogan that one line replaces all physics.",
+      "The framework's theorems are model-relative: they do not prove that our universe is a projection of a hidden source, and Paper 7's witness is a result about the Randall–Sundrum model, not an unrestricted ontological claim.",
       "Engineering implementation, physical deployment, and applied models are future work unless a specific public record says otherwise.",
     ],
   },

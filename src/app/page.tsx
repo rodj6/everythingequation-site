@@ -33,7 +33,7 @@ export default async function HomePage() {
         />
         <div className="mx-auto max-w-3xl text-center">
           <p className="section-label animate-rise">
-            A mathematical Theory of Everything architecture · Papers 1–6
+            A mathematical Theory of Everything architecture · Papers 1–7
           </p>
           <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="text-luminous">Shadow Theory</span>
@@ -87,15 +87,19 @@ export default async function HomePage() {
               </li>
               <li>
                 <span className="font-mono text-glow">4 · </span>
-                Lost structure matters when it blocks a complete public account of the theory.
+                Whether lost structure matters depends on the question being asked — loss obstructs only the questions whose answers it changes.
               </li>
               <li>
                 <span className="font-mono text-glow">5 · </span>
-                Shadow Theory develops rules for when missing structure can be completed and when it cannot.
+                Shadow Theory develops exact rules for when missing structure can be completed, what any completion must retain, and when the observable level obeys its own laws.
               </li>
               <li>
                 <span className="font-mono text-glow">6 · </span>
-                The Everything Equation is the compact closure form of that architecture, not a slogan that one line replaces physics.
+                One concrete physical model — Randall–Sundrum braneworld gravity — realizes the whole architecture as a witness: a brane observer's present state provably cannot determine its own future.
+              </li>
+              <li>
+                <span className="font-mono text-glow">7 · </span>
+                The framework also proves its own boundary: these are theorems about declared models, not a proof that our universe is such a projection.
               </li>
             </ol>
           </div>
@@ -123,13 +127,15 @@ export default async function HomePage() {
             </h2>
             <p className="mt-2 max-w-3xl text-lg text-mute">{site.monograph.subtitle}</p>
             <p className="mt-4 max-w-3xl leading-relaxed text-fg/90">
-              The monograph consolidates and extends the six-paper foundation into a
-              source-to-readout architecture for a Theory of Everything — one source
-              object, one realization map, and coupled quantum, record, geometric,
-              gravitational, matter, cosmological, temporal and observer readouts, with
-              nine companion theorem programmes ahead. The complete Version{" "}
-              {site.monograph.version} text is readable here as a web edition: 18 chapters,
-              two appendices, and the full bibliography.
+              The monograph develops the programme's source-to-readout architecture for a
+              Theory of Everything — one source object, one realization map, and coupled
+              quantum, record, geometric, gravitational, matter, cosmological, temporal
+              and observer readouts, with nine companion theorem programmes ahead. It is a
+              fixed Version {site.monograph.version} publication, textually identical to
+              its Zenodo record; the current canonical foundation is the seven-paper
+              sequence published after it. The complete Version {site.monograph.version}{" "}
+              text is readable here as a web edition: 18 chapters, two appendices, and the
+              full bibliography.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Link
@@ -155,10 +161,10 @@ export default async function HomePage() {
           <div>
             <p className="section-label">Canonical foundation</p>
             <h2 id="stack-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-              The six-paper stack
+              The seven-paper sequence
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              The six papers build the theory from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops the mathematics for what that shadow reveals, hides, and allows us to reconstruct.
+              Papers 1–6 build the source–readout mathematics from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops exact criteria for what that shadow reveals, hides, and allows us to reconstruct. Paper 7 then realizes the whole architecture in a concrete physical model — Randall–Sundrum gravity — as its physical witness.
             </p>
           </div>
           <Link href="/papers" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
@@ -175,7 +181,7 @@ export default async function HomePage() {
             aria-hidden="true"
             className="glow-violet pointer-events-none absolute -bottom-24 left-1/2 h-48 w-3/4 -translate-x-1/2"
           />
-          <p className="section-label relative">Synthesis layer</p>
+          <p className="section-label relative">Programme context</p>
           <h2 id="schema-heading" className="relative mt-2 text-xl font-bold tracking-tight sm:text-2xl">
             The Everything Equation, from shorthand to typed form
           </h2>
@@ -208,9 +214,10 @@ export default async function HomePage() {
             The updated form is a scope correction. The operator{" "}
             <span dangerouslySetInnerHTML={tex(String.raw`\Omega_{T1}`, false)} /> marks
             the public Tier-1 completion/readout operator, not hidden source magic and not
-            a universal solver. The equation keeps the original idea, but makes the claim
-            precise: public laws close only through declared readout-facing machinery, with
-            residues and statuses exposed.
+            a universal solver. This schema is broader programme and monograph context —
+            the site's historical name comes from it — and it is not a theorem of the
+            seven-paper canonical sequence. The papers prove exact completion and closure
+            criteria; the schema is shorthand for the architecture they study.
           </p>
 
           <Link
@@ -304,12 +311,12 @@ export default async function HomePage() {
           Start at the beginning
         </h2>
         <p className="mt-3 text-mute">
-          The stack is designed to be read in order. Paper 1 establishes the single
+          The sequence is designed to be read in order. Paper 1 establishes the single
           distinction everything else builds on.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           <Link
-            href={`/papers/${canonical[0]?.slug ?? "readout-non-equivalence"}`}
+            href={`/papers/${canonical[0]?.slug ?? "source-readout-non-equivalence"}`}
             className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
           >
             Read Paper 1

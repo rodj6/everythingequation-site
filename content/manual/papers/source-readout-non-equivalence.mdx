@@ -1,0 +1,46 @@
+## Reading notes
+
+The paper's central move is to keep three relations rigorously apart. Start
+from a space $\Omega$ of admissible realization states, declare the physical
+equivalence $\simeq_{\mathrm{phys}}$ (gauge, coordinates, relabelling), and
+pass to the reduced source $S = \Omega/\!\simeq_{\mathrm{phys}}$ *before*
+anything else. The invariant readout then induces a surjection $p: S \to T$.
+
+- **Exact quotient presentation**: $T \cong S/\!\sim_p$ — *always* holds. The
+  readout labels the readout-equivalence classes without error or omission.
+- **Representative selection**: a section of $p$ picks one state per fiber. A
+  section is a convention, not an inverse.
+- **Source equivalence**: $p$ bijective. Only in this degenerate case does the
+  readout carry the whole reduced source.
+
+<Theorem title="Fiber–descent theorem">
+A physically invariant source relation $r: S \to V$ is a function of readout
+data alone — factors as $r = \bar r \circ p$ — if and only if $r$ is constant
+on every fiber of $p$. A relation that varies within a single fiber descends
+through no post-processing of the readout whatsoever.
+</Theorem>
+
+<Theorem title="Equivariant-section criterion">
+With a group $G$ acting on $S$ and $T$ and $p$ equivariant, a $G$-equivariant
+section of $p$ exists if and only if every readout stabilizer $G_t$ fixes a
+point of its fiber. A single fiber with empty stabilizer-fixed set excludes
+every symmetry-compatible deterministic reconstruction rule.
+</Theorem>
+
+Two worked models realize the obstructions: a finite marked-carrier occupation
+model (where the permutation group acts transitively on fibers, so no
+equivariant selector exists — though an equivariant *probability-valued* lift
+does, and an ensemble is not a realized state), and the Hopf fibration
+$h: S^3 \to S^2$, which also separates the equivariant obstruction from the
+independent topological obstruction of a nonvanishing first Chern class.
+
+<ClaimBoundary>
+Exactness of the quotient presentation implies neither singleton fibers, nor
+lawfulness or dynamical closure of the readout level. Noninjectivity alone
+identifies nothing lost and is not evidence of a physically real upstream
+source. Gauge redundancy is not lost structure — it is quotiented out before
+any loss claim. The theorems are about maps of sets, equivariant maps, and
+bundles; applying them to a physical theory requires that theory to
+independently supply the source domain, the equivalence, the readout, and a
+nominated non-descending relation or reconstruction obstruction.
+</ClaimBoundary>

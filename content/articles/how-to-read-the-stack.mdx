@@ -1,78 +1,138 @@
 ---
-title: "How to Read the Six-Paper Stack"
-description: "A reading guide: what each paper assumes, what it proves, and the interfaces between them."
+title: "How to Read the Seven-Paper Sequence"
+description: "A reading guide: what each paper assumes, what it proves, and the handoffs between them."
 date: "2026-07-03"
+updated: "2026-07-15"
 tags: [guide, papers]
 status: published
 ---
 
-The stack is designed to be read in order. Each paper proves one step and
-hands a typed interface to the next; nothing downstream claims more than
-upstream results license.
+The sequence is designed to be read in order. Papers 1–6 build the
+source–readout mathematics; Paper 7 realizes it in a concrete physical model.
+Every paper states its own hypotheses and marks its own limits; nothing
+downstream claims more than upstream results license.
 
 ## Paper 1 — the distinction
 
-Fix a realization/readout map $\rho: \mathcal{C} \to S$ from complete
-realization packages to bounded readouts. Two relations must be kept apart:
-the quotient presentation $S \cong \mathcal{C}/\sim_\rho$, which always holds
-for $S = \mathrm{Img}(\rho)$, and realization-structure equivalence, which
-requires admissible faithful recovery. Paper 1 proves these come apart, and
-pins down exactly when — including an equivariant no-selector theorem and
-explicit exception classes.
+Fix a space of admissible realization states $\Omega$, quotient out the
+declared gauge and coordinate redundancy to get the reduced source
+$S = \Omega/\!\simeq_{\mathrm{phys}}$, and let the invariant readout induce a
+surjection $p: S \to T$. Two facts must be kept apart: the readout *always*
+presents $T$ exactly as the quotient $S/\!\sim_p$ by equality of readouts —
+and that exactness is fully compatible with $p$ failing to be an equivalence.
 
-<Theorem title="Readout Non-Equivalence (informal)">
-If no admissible realization-faithful section of $\rho$ exists, the readout
-domain is not realization-structure equivalent to the package domain, even
-though it is an exact quotient of it.
+<Theorem title="Source–Readout Non-Equivalence (informal)">
+A physically invariant source relation is a function of readout data if and
+only if it is constant on every readout fiber; and a symmetry-compatible
+deterministic representative of the source exists if and only if every
+readout stabilizer fixes a point of its fiber. Either obstruction makes the
+readout non-equivalent to the source — while the exact quotient presentation
+continues to hold.
 </Theorem>
+
+A finite occupation model realizes the obstruction discretely; the Hopf
+fibration realizes it continuously, and separates it from the independent
+topological obstruction of a nonvanishing first Chern class.
 
 ## Paper 2 — the brake
 
 It is a recurring error to read Paper 1 as "readout loss is automatically a
-problem." Paper 2 proves the precise extra condition needed: a **certified
-active failure** of an essential public closure slot, with no checked repair
-or public surrogate. Without that certificate, no obstruction claim is
-licensed.
+problem." Paper 2 proves loss is **target-relative**: a question — formalized
+as a correct-answer map $a_Q: S \to A_Q$ — is exactly solvable from the
+readout if and only if $a_Q$ never varies within a readout fiber. Inactive
+loss does not obstruct; that is what makes coarse descriptions viable rather
+than defective. When loss is active, the honest residual is the
+*compatible-answer set* — a set, not a probability — and every sufficient
+repair must separate states with different correct answers, with the joint
+target image $E_Q = \mathrm{Im}(p, a_Q)$ as the coarsest completion any
+repair must contain. Worked concretely for flat $U(1)$ connections on a
+circle: curvature collapses the whole moduli space, yet the charged spectrum
+needs only holonomy up to inversion.
 
-## Paper 3 — conditional canonicality
+## Paper 3 — the canonical completion
 
-Given a certified completion need, when is a proposed completion *the*
-completion? Exactly when it is a certified initial object in the public
-admissible completion category:
+Given a nominated family of invariant source relations
+$\{r_\alpha: S \to V_\alpha\}$, Paper 3 constructs the coarsest readout
+extension on which all of them become well defined:
 
-<EquationPanel title="Canonical Completion Object" note="A canonicality criterion, not an existence theorem: completion need does not imply canonical completion.">
-$$\mathrm{CCO}_{\mathrm{pub}} = \mathrm{Init}\left(\mathbf{Comp}_{\mathrm{pub}}\right)$$
+<EquationPanel title="Canonical minimal completion" note="Terminal among all relation-sufficient extensions: every sufficient extension maps uniquely onto it. Minimal means least retained distinction — and completion is not reconstruction of the source.">
+$$E_A \;=\; \mathrm{Im}\,(p, R_A) \;\cong\; S/\!\sim_A$$
 </EquationPanel>
 
-## Paper 4 — from object to artifact
+Existence, uniqueness up to unique isomorphism, and exact minimality follow —
+without ever selecting a representative of any fiber, and without
+resurrecting gauge redundancy already quotiented away.
 
-A canonical completion object is still not a public artifact. Paper 4 defines
-the down-compiler — total, deterministic, route-legal, gate-cleared,
-residue-aware — and proves it emits exactly one statused output from an
-eight-member codomain that includes declared failure and residue outputs.
+## Paper 4 — geometric realization
 
-## Paper 5 — the runtime
+When can the abstract completion be built from real geometry? Paper 4 proves
+compatible local metric, bundle, connection, and matter data glue to global
+fields unique up to bundle isomorphism, defines the physical geometric source
+as the orbit space of admissible configurations, and shows that invariant
+global relations — holonomy, Wilson observables, characteristic numbers,
+operator spectra — descend to it and realize the completion on the restricted
+domain. On the flat $U(1)$ circle, holonomy alone reconstructs the reduced
+source even though local curvature vanishes identically. Relation-dependent
+invariant actions then yield *derived*, correctly normalized responses in the
+Einstein, Yang–Mills, and matter equations, with Ward–Noether identities
+enforcing covariant conservation. No universal realizability is claimed: the
+realization boundary is the theorem.
 
-Paper 5 supplies the calculus that governs public claims after compilation:
-routes, status algebra, residue algebra, the equation-artifact grammar, claim
-licensing, dry-test audit, downgrade logic, and forbidden-promotion
-discipline. Its claim-cap theorems bound every emitted output.
+## Paper 5 — projected dynamics
 
-## Paper 6 — the synthesis
+The dynamical layer. For a bounded observation operator $K$, an induced
+evolution on the observable state exists if and only if the source dynamics
+preserve $\ker K$. When that fails, the exact projected equation carries a
+deterministic unresolved-initial-state term and an exact memory kernel — with
+no stochastic, Markovian, or timescale approximation anywhere — and autonomous
+closure for every initial state is exactly the condition $PLQ = 0$. The
+*minimal dynamical completion* $E_{\mathrm{dyn}} = \mathcal{H}_Q/N_Q$ measures
+precisely how much hidden state must be restored, computed in finite
+dimensions by a Kalman-type observability rank. Sector elimination yields
+Schur-complement effective operators and a covariant effective stress-energy
+with total — not sectorwise — conservation.
 
-The capstone composes the five upstream interfaces into a single typed
-synthesis object and proves the Scoped Shadow Fixed-Point Law-Packet Theorem.
-That theorem is the precise, bounded sense in which the historical
-"Everything Equation" survives:
+## Paper 6 — the boundary theorem
 
-<EquationPanel title="Scoped law-packet schema" note="Licensed only as a scoped, residue-visible, status-certified, claim-bounded closure-fixed law packet — not as source-level equality or a solved theory of everything.">
-$$L \;=\; \Omega_{T1}\,\Delta\,\partial\,[\,L\,]$$
+Paper 6 integrates the sequence. If a model exhibits an *essential non-gauge
+fiber distinction* — two physically inequivalent source states with the same
+readout but different correct answers to a nominated target — then, relative
+to that model and target, the readout is a **non-source projection**. The
+dynamical consequences divide sharply: fiber-preserving evolution descends to
+an autonomous law even when the readout is noninjective (dynamical closure is
+evidence of fiber preservation, *not* fiber triviality), while fiber-breaking
+evolution admits no deterministic instantaneous law. Under explicit
+factorization hypotheses, no internal probe, statistic, or test at any sample
+size distinguishes fiber members. And the paper marks its own boundary: the
+mathematics does not supply a source domain, an equivalence, a readout, or a
+witness — those must come from a physical model.
+
+## Paper 7 — the physical witness
+
+Paper 7 supplies that witness, in the positive-tension Randall–Sundrum (RS2)
+braneworld — an additional physical postulate, not derived. It constructs an
+explicit gauge-inequivalent pair of bulk states with identical instantaneous
+brane readout and different brane futures, so no deterministic law on the
+brane's present state reproduces all source trajectories. It derives the
+exact projected Einstein equation line by line, evaluates it exactly in the
+Friedmann sector (a positive $\rho^2$ term and a bulk-state dark-radiation
+term $\mu/a^4$), and eliminates the common AdS radius between regimes to get
+a parameter-free cross-regime prediction:
+
+<EquationPanel title="Cross-regime relation" note="Violation falsifies minimal RS2; agreement at a nonzero value is a parameter-saving cross-regime success but does not falsify a 4D theory that treats the coefficients as independent.">
+$$A_\Psi = \tfrac{1}{2} A_\Phi, \qquad B = \tfrac{\kappa_4^4}{24} A_\Phi$$
 </EquationPanel>
+
+Finally it proves the *operational-equivalence boundary*: for every brane-only
+protocol, including adaptive ones, a four-dimensional pushforward theory
+reproduces the RS2 record distribution exactly. The result is positive at the
+level of model-relative projection and nonclosure, and deliberately negative
+at the level of unrestricted ontological discrimination — it is not a proof
+that our universe is five-dimensional.
 
 <StatusCard
-  status="Public framework papers (v-final drafts)"
-  route="Papers 1–6 + loading manifest"
-  claims="Formal theorems with declared assumptions; no empirical claims"
+  status="Public framework papers · Papers 1–7 · published 2026-07-15"
+  claims="Formal, model-relative theorems with declared hypotheses; no empirical claims"
 >
-DOIs will be linked on each paper page as Zenodo records are published.
+Each paper page links its Zenodo record and DOI directly.
 </StatusCard>

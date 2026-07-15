@@ -2,166 +2,314 @@ version: 2
 # ============================================================================
 # PAPER REGISTRY
 #
-# Two kinds of entries live here:
+# Three kinds of entries live here:
 #
 #  1. CANONICAL Shadow Theory papers (category: canonical). These are the
-#     public authority stack (Papers 1-6). They carry their own title,
-#     summary, version, and optional zenodo/doi fields. When a paper is
-#     uploaded to Zenodo, fill in `zenodo:` (the numeric record ID) and/or
-#     `doi:`; the site will then show and link the DOI automatically.
+#     current public authority sequence (Papers 1-7, published 2026-07-15).
+#     They carry their own title, summary, and zenodo/doi fields.
 #
-#  2. HISTORICAL papers (no `category` field, or category: historical).
-#     These are earlier Everything Equation / Tier-0 / Tier-1 era records.
-#     They remain listed for archival completeness but are presented as
-#     historical background, not controlling public authority.
+#  2. SUPERSEDED canonical versions (category: superseded). These are the
+#     six June 2026 canonical papers that the seven-paper sequence replaced.
+#     Their records stay published on Zenodo and their pages remain live,
+#     clearly marked as superseded. They are NOT current authority.
+#
+#  3. HISTORICAL papers (no `category` field, or category: historical).
+#     Earlier Everything Equation / Tier-0 / Tier-1 era records, retained
+#     for archival completeness only.
 #
 #  To add a BRANCH paper later, use category: branch.
 # ============================================================================
 papers:
   # ============================================================
-  # CANONICAL SHADOW THEORY STACK (Papers 1-6)
+  # CANONICAL SHADOW THEORY SEQUENCE (Papers 1-7, 2026-07-15)
   # ============================================================
-  - id: paper:shadow:1
-    slug: readout-non-equivalence
+  - id: paper:shadow2:1
+    slug: source-readout-non-equivalence
     number: 1
     category: canonical
     visibility: public
     featured: true
-    title: "The Readout Non-Equivalence Theorem for Bounded Realized Domains"
-    subtitle: "Bounded readouts are not complete realization packages when no admissible faithful recovery exists"
-    role: "Establishes the non-equivalence principle: an exact readout, quotient, or bounded presentation does not by itself recover the realization-relevant structure of the domain it summarizes."
-    version: "v3"
-    date: "2026-06-01"
-    zenodo: 21184299
-    doi: "10.5281/zenodo.21184299"
+    title: "Source–Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions"
+    subtitle: "An exact readout quotient of a reduced source need not be equivalent to that source"
+    role: "Establishes the foundational distinction: after declared redundancy is quotiented out, the readout always presents the source exactly as a quotient — yet a physically invariant relation can fail to descend, and no symmetry-compatible rule need recover the realized state."
+    date: "2026-07-15"
+    zenodo: 21369967
+    doi: "10.5281/zenodo.21369967"
     summary: >
-      Distinguishes quotient/readout presentation from realization-structure
-      equivalence and proves they come apart: a readout domain can be an exact
-      quotient of the space it summarizes while failing to be
-      realization-structure equivalent to it. Includes an equivariant
-      no-selector theorem and a worked finite statistical-mechanics model, with
-      explicit exception classes. This is the foundational principle of Shadow
-      Theory: a shadow is an exact projected interface, not the source-level
-      structure itself.
+      Proves that when gauge and coordinate redundancy are quotiented out
+      first, the public readout always presents the reduced source exactly as
+      the quotient by equality of readouts — and that this exactness is fully
+      compatible with non-equivalence. Two independent obstructions are
+      established: a physically invariant source relation descends through the
+      readout if and only if it is constant on every readout fiber, and a
+      symmetry-compatible deterministic representative exists if and only if
+      every readout stabilizer fixes a point of its fiber. A finite
+      marked-carrier occupation model and the Hopf fibration realize both
+      obstructions, keeping exact presentation, representative selection, and
+      source equivalence rigorously apart.
     supports: []
 
-  - id: paper:shadow:2
-    slug: completion-necessity
+  - id: paper:shadow2:2
+    slug: target-relative-necessity-of-completion
     number: 2
     category: canonical
     visibility: public
     featured: true
-    title: "Completion Necessity for Readout-Non-Equivalent Domains"
-    subtitle: "Certified active slot failure and the obstruction to full public closure"
-    role: "Establishes the obstruction criterion: readout loss becomes a genuine public obstruction only when it is certified as an active, uncleared failure of an essential public closure slot."
-    version: "v5"
-    date: "2026-06-01"
-    zenodo: 21184388
-    doi: "10.5281/zenodo.21184388"
+    title: "Target-Relative Necessity of Completion: When Readout Loss Obstructs, and What a Sufficient Extension Must Retain"
+    subtitle: "Whether discarded distinctions matter is a property of the question asked, not of the readout alone"
+    role: "Makes obstruction target-relative: a question is answerable from the readout exactly when its correct answer never varies within a readout fiber, and every sufficient extension must separate states with different correct answers — with the joint target image as the coarsest such extension."
+    date: "2026-07-15"
+    zenodo: 21370501
+    doi: "10.5281/zenodo.21370501"
     summary: >
-      Proves the precise additional condition under which a lost realization
-      role becomes a genuine obstruction: a certified active failure profile on
-      an essential closure slot with no checked repair or public surrogate.
-      Blocks the common overread that readout loss automatically obstructs
-      anything, instantiates the theorem for first-order proof targets, and
-      emits a completion-need record for downstream categorical completion
-      theory.
+      A lossy readout discards distinctions, but it does not follow that the
+      discarded distinctions matter. This paper proves a target is exactly
+      solvable from the readout if and only if its correct-answer map is
+      constant on every readout fiber; when that fails, the honest residual is
+      the compatible-answer set — a set, not a probability — and every
+      sufficient repair must separate states with different answers, with the
+      joint target image as the universally coarsest completion. Realized
+      concretely for flat U(1) connections on a circle, where curvature
+      collapses the whole moduli space yet the charged spectrum needs only
+      holonomy up to inversion.
     supports: []
 
-  - id: paper:shadow:3
-    slug: canonical-completion-object
+  - id: paper:shadow2:3
+    slug: canonical-minimal-source-completion
     number: 3
     category: canonical
     visibility: public
     featured: true
-    title: "The Canonical Completion Object Theorem for Shadow Theory"
-    subtitle: "Canonical completion as a certified initiality criterion in a public admissible completion category"
-    role: "Establishes conditional canonicality: a public completion is canonical exactly when it is a certified initial object in the public admissible completion category."
-    version: "v4"
-    date: "2026-06-01"
-    zenodo: 21184607
-    doi: "10.5281/zenodo.21184607"
+    title: "Canonical Minimal Source Completion: The Coarsest Readout Extension on Which a Nominated Family of Source Relations Becomes Well Defined"
+    subtitle: "Existence, uniqueness, and exact minimality of the completion, without selecting any fiber representative"
+    role: "Constructs the canonical minimal completion: for any nominated family of invariant source relations, the joint image of readout and relations is terminal among all relation-sufficient extensions — the coarsest enrichment on which every nominated relation becomes well defined."
+    date: "2026-07-15"
+    zenodo: 21370763
+    doi: "10.5281/zenodo.21370763"
     summary: >
-      Defines when a response to a certified completion need is canonical. The
-      answer is categorical and deliberately conditional: canonical completion
-      is certified initiality, not an automatic consequence of completion need.
-      Formalizes the public completion context, certified category data, typed
-      refinement morphisms, a seven-valued status classifier, and the output
-      card handed to Paper 4.
+      Given a lossy readout and a nominated family of physically invariant
+      relations that the readout fails to determine, this paper constructs the
+      coarsest extension on which all of them become well defined — the joint
+      image of readout and relations, equivalently the quotient by agreement of
+      readout and every nominated relation. The completion is terminal: every
+      sufficient extension maps uniquely onto it, giving existence, uniqueness
+      up to unique isomorphism, and exact minimality with no fiber
+      representative ever selected. Redundant and indispensable relation
+      coordinates, refinement towers for nested families, the gauge-reduced
+      form, and the topological form are all characterized.
     supports: []
 
-  - id: paper:shadow:4
-    slug: tier-1-shadow-compiler
+  - id: paper:shadow2:4
+    slug: geometric-realization-of-completed-source-relations
     number: 4
     category: canonical
     visibility: public
     featured: true
-    title: "The Tier-1 Shadow Compiler Theorem"
-    subtitle: "Down-compiling canonical completion outputs into statused Tier-1 artifacts"
-    role: "Establishes down-compilation discipline: a canonical completion output becomes a public Tier-1 artifact only through a total, deterministic, gate-cleared, residue-aware down-compiler."
-    version: "v3"
-    date: "2026-06-01"
-    zenodo: 21184944
-    doi: "10.5281/zenodo.21184944"
+    title: "Geometric Realization of Completed Source Relations: Descent, Orbit Spaces, Invariant Relations, and Variational Response in Shadow Theory"
+    subtitle: "When the abstract minimal completion is realized by genuine geometry, and how completed relations enter field equations"
+    role: "Realizes the completion geometrically: compatible local data glue to global fields unique up to bundle isomorphism, invariant relations descend to the orbit space of physical configurations, and relation-dependent actions yield derived — not postulated — covariant responses in the Einstein, Yang–Mills, and matter equations."
+    date: "2026-07-15"
+    zenodo: 21370985
+    doi: "10.5281/zenodo.21370985"
     summary: >
-      A canonical completion object is not itself a Tier-1 artifact. This paper
-      defines the down-compile operator, proves total compiler emission over an
-      eight-member public output codomain (including declared failure and
-      residue outputs), and establishes conditional gate-soundness and
-      success-class soundness theorems, preserving the stack's anti-overclaim
-      boundaries throughout.
+      Identifies precisely when the abstract minimal completion of Paper 3 can
+      be built from real geometry. Čech descent constructs global metrics,
+      bundles, connections, and matter fields unique up to bundle isomorphism;
+      gauge- and diffeomorphism-invariant relations — holonomy, Wilson
+      observables, characteristic numbers, operator spectra — descend to the
+      orbit space of physical configurations and realize the completion on the
+      restricted domain, with an exactly solved flat U(1) circle example where
+      holonomy alone reconstructs the source though local curvature vanishes.
+      Relation-dependent invariant actions then yield correctly normalized
+      stress-energy, current, and matter responses, with Ward–Noether
+      identities enforcing covariant conservation. No claim of universal
+      realizability is made: the realization boundary is the content of the
+      theorems.
     supports: []
 
-  - id: paper:shadow:5
-    slug: framework-mathematics
+  - id: paper:shadow2:5
+    slug: observable-quotients-and-exact-projected-dynamics
     number: 5
     category: canonical
     visibility: public
     featured: true
-    title: "Shadow Theory Framework Mathematics"
-    subtitle: "Runtime, status, residue, equation artifact, and audit calculus"
-    role: "Establishes the runtime calculus: route decisions, status algebra, residue algebra, equation-artifact grammar, claim licensing, testing, audit, and forbidden-promotion discipline."
-    version: "v14"
-    date: "2026-06-01"
-    zenodo: 21185124
-    doi: "10.5281/zenodo.21185124"
+    title: "Observable Quotients and Exact Projected Dynamics: Closure, Memory, Minimal Dynamical Completion, and Effective Field Operators"
+    subtitle: "When observable dynamics close autonomously, and the exact price when they do not"
+    role: "Develops the observable and dynamical layer: an induced observable evolution exists exactly when the dynamics preserve the readout kernel; otherwise the exact projected law carries an unresolved-initial-state term and a memory kernel, with a minimal dynamical completion measuring exactly what must be restored."
+    date: "2026-07-15"
+    zenodo: 21371251
+    doi: "10.5281/zenodo.21371251"
     summary: >
-      Supplies the declared runtime, status, residue, equation-artifact, and
-      audit calculus that governs what can be publicly claimed after Papers
-      1-4. Central results are claim-cap theorems: every emitted output is
-      bounded by its route, status, residues, success class, score coordinates,
-      obligations, audit outcomes, and forbidden-promotion discipline. The
-      Everything Equation appears only as a declared closure-fixed law-packet
-      schema within declared scope.
+      The dynamical layer of the framework. A bounded observation operator
+      always yields an exact observable quotient; the paper keeps sharply apart
+      exact loss, unstable inversion, controlled low-rank approximation, and
+      failure of autonomous dynamics. An induced observable evolution exists if
+      and only if the source semigroup preserves the readout kernel; when it
+      fails, the exact projected equation carries a deterministic
+      unresolved-initial-state term and an exact memory kernel — no stochastic,
+      Markovian, or timescale approximation anywhere. The minimal dynamical
+      completion is constructed and computed by a Kalman-type observability
+      rank in finite dimensions, and sector elimination yields Schur-complement
+      effective operators and a covariant effective stress-energy with total —
+      not sectorwise — conservation.
     supports: []
 
-  - id: paper:shadow:6
-    slug: shadow-theory-synthesis
+  - id: paper:shadow2:6
+    slug: non-source-projection-and-internal-identifiability
     number: 6
     category: canonical
     visibility: public
     featured: true
+    title: "Non-Source Projection and Internal Identifiability"
+    subtitle: "The boundary theorem: when an observable tier is provably a non-source projection, and what internal observation can identify"
+    role: "Integrates the sequence into a boundary theorem: any model exhibiting an essential non-gauge distinction inside a readout fiber is, relative to that model and target, a non-source projection — with exact deterministic and statistical ceilings on what an internal observer can ever identify."
+    date: "2026-07-15"
+    zenodo: 21371451
+    doi: "10.5281/zenodo.21371451"
+    summary: >
+      Proves that once a model exhibits two physically inequivalent source
+      states sharing the same readout but demanding different answers to a
+      nominated target, that readout is — relative to the model and target — a
+      non-source projection. The dynamical consequences divide sharply:
+      fiber-preserving evolution descends to an autonomous law even when the
+      readout is noninjective, so dynamical closure is evidence of fiber
+      preservation, not fiber triviality; fiber-breaking evolution admits no
+      deterministic instantaneous law. Under explicit factorization hypotheses,
+      no internal probe, statistic, or test at any sample size distinguishes
+      fiber members, and a strong lumpability theorem gives the exact condition
+      for a projected Markov process to remain Markov. The mathematics does not
+      supply a source domain or witness: those must be instantiated by a
+      physical model, and the boundary is marked explicitly.
+    supports: []
+
+  - id: paper:shadow2:7
+    slug: bulk-to-brane-projection
+    number: 7
+    category: canonical
+    visibility: public
+    featured: true
+    title: "Bulk-to-Brane Projection, Dynamical Nonclosure, and Observable Residues in Randall–Sundrum Gravity"
+    subtitle: "The physical witness: a concrete model-relative projection and nonclosure result in RS2, with its exact discrimination boundary"
+    role: "The physical-witness layer: constructs gauge-inequivalent RS2 bulk states with identical brane readout and different brane futures, derives the exact projected Einstein equation, extracts a parameter-free cross-regime prediction, and proves the operational-equivalence boundary that caps its own interpretation."
+    date: "2026-07-15"
+    zenodo: 21371861
+    doi: "10.5281/zenodo.21371861"
+    summary: >
+      Working inside the positive-tension Randall–Sundrum (RS2) braneworld —
+      an additional physical postulate, not derived — this paper delivers the
+      framework's concrete physical witness: an explicit pair of
+      five-dimensional gravitational states identical to a brane observer now
+      that evolve to differ later, so the instantaneous brane state admits no
+      deterministic evolution law over the full source domain. It derives the
+      exact projected Einstein equation line by line, obtains the positive
+      high-density rho-squared term and bulk-state dark-radiation term, and
+      eliminates the common AdS radius to yield a parameter-free cross-regime
+      relation linking cosmology to weak-field gravity. Crucially it proves its
+      own limit: every brane-only experiment is reproduced exactly by a
+      four-dimensional pushforward theory, so the result is a model-relative
+      projection and nonclosure theorem, not a proof that our universe is
+      five-dimensional.
+    supports: []
+
+  # ============================================================
+  # SUPERSEDED CANONICAL VERSIONS (June 2026 six-paper stack)
+  # Replaced as controlling public authority on 2026-07-15 by the
+  # seven-paper canonical sequence above. Records remain published.
+  # ============================================================
+  - id: paper:shadow:1
+    slug: readout-non-equivalence
+    category: superseded
+    visibility: public
+    featured: false
+    title: "The Readout Non-Equivalence Theorem for Bounded Realized Domains"
+    subtitle: "Superseded canonical version — replaced by Paper 1, Source–Readout Non-Equivalence"
+    role: "Former canonical Paper 1 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Source–Readout Non-Equivalence."
+    version: "v3"
+    date: "2026-06-01"
+    zenodo: 21184299
+    doi: "10.5281/zenodo.21184299"
+    supersededBy: source-readout-non-equivalence
+    supports: []
+
+  - id: paper:shadow:2
+    slug: completion-necessity
+    category: superseded
+    visibility: public
+    featured: false
+    title: "Completion Necessity for Readout-Non-Equivalent Domains"
+    subtitle: "Superseded canonical version — replaced by Paper 2, Target-Relative Necessity of Completion"
+    role: "Former canonical Paper 2 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Target-Relative Necessity of Completion."
+    version: "v5"
+    date: "2026-06-01"
+    zenodo: 21184388
+    doi: "10.5281/zenodo.21184388"
+    supersededBy: target-relative-necessity-of-completion
+    supports: []
+
+  - id: paper:shadow:3
+    slug: canonical-completion-object
+    category: superseded
+    visibility: public
+    featured: false
+    title: "The Canonical Completion Object Theorem for Shadow Theory"
+    subtitle: "Superseded canonical version — replaced by Paper 3, Canonical Minimal Source Completion"
+    role: "Former canonical Paper 3 (June 2026). Superseded by the seven-paper sequence; its subject is now treated, in rewritten form, by Canonical Minimal Source Completion."
+    version: "v4"
+    date: "2026-06-01"
+    zenodo: 21184607
+    doi: "10.5281/zenodo.21184607"
+    supersededBy: canonical-minimal-source-completion
+    supports: []
+
+  - id: paper:shadow:4
+    slug: tier-1-shadow-compiler
+    category: superseded
+    visibility: public
+    featured: false
+    title: "The Tier-1 Shadow Compiler Theorem"
+    subtitle: "Superseded canonical version — the current sequence has no down-compilation stage; see the seven-paper sequence"
+    role: "Former canonical Paper 4 (June 2026). Superseded by the seven-paper sequence. Its down-compilation architecture is not carried forward; the current Paper 4 is Geometric Realization of Completed Source Relations."
+    version: "v3"
+    date: "2026-06-01"
+    zenodo: 21184944
+    doi: "10.5281/zenodo.21184944"
+    supersededBy: geometric-realization-of-completed-source-relations
+    supports: []
+
+  - id: paper:shadow:5
+    slug: framework-mathematics
+    category: superseded
+    visibility: public
+    featured: false
+    title: "Shadow Theory Framework Mathematics"
+    subtitle: "Superseded canonical version — the current sequence has no runtime-calculus stage; see the seven-paper sequence"
+    role: "Former canonical Paper 5 (June 2026). Superseded by the seven-paper sequence. Its runtime/status/residue calculus is not carried forward; the current Paper 5 is Observable Quotients and Exact Projected Dynamics."
+    version: "v14"
+    date: "2026-06-01"
+    zenodo: 21185124
+    doi: "10.5281/zenodo.21185124"
+    supersededBy: observable-quotients-and-exact-projected-dynamics
+    supports: []
+
+  - id: paper:shadow:6
+    slug: shadow-theory-synthesis
+    category: superseded
+    visibility: public
+    featured: false
     title: "Shadow Theory Synthesis"
-    subtitle: "Bounded readouts, completion, canonical closure, Tier-1 emission, and the scoped law-packet discipline"
-    role: "The capstone synthesis: composes the five preceding results into a single typed synthesis object with a graph-theoretic claim-promotion discipline and the Scoped Shadow Fixed-Point Law-Packet Theorem."
+    subtitle: "Superseded canonical version — the current sequence has no synthesis capstone; see the seven-paper sequence"
+    role: "Former canonical Paper 6 (June 2026). Superseded by the seven-paper sequence. Its synthesis/law-packet architecture is not carried forward; the current sequence closes with the boundary theorem (Paper 6) and the RS2 physical witness (Paper 7)."
     version: "final"
     date: "2026-06-01"
     zenodo: 21185206
     doi: "10.5281/zenodo.21185206"
-    summary: >
-      Composes the stack rather than reproving it: typed upstream interface
-      objects, a synthesis input bundle, a synthesis invariant, and a finite
-      promotion graph in which forbidden promotions are edges rather than claim
-      classes. Its principal theorem licenses a fixed point of a typed operator
-      chain only as a scoped, residue-visible, status-certified, claim-bounded
-      closure-fixed law packet - the Everything Equation schema, explicitly not
-      source-level equality, empirical validation, or a solved theory of
-      everything.
+    supersededBy: bulk-to-brane-projection
     supports: []
 
   # ============================================================
   # HISTORICAL PAPERS (Everything Equation / Tier-0 / Tier-1 era)
-  # Superseded as controlling public authority by Papers 1-6.
+  # Superseded as controlling public authority by the canonical
+  # Shadow Theory sequence.
   # ============================================================
   # =========================
   # Foundational / Tier-0 / Lawhood

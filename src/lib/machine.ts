@@ -131,8 +131,12 @@ export async function generateLlmsTxt(): Promise<string> {
     (p) => p.status === 'public' && p.programme !== 'legacy'
   );
   const articles = listArticles();
-  const historical = (await loadPapers()).filter(
+  const allPapers = await loadPapers();
+  const historical = allPapers.filter(
     (p) => p.category === 'historical' && p.status === 'public'
+  );
+  const superseded = allPapers.filter(
+    (p) => p.category === 'superseded' && p.status === 'public'
   );
 
   const lines: string[] = [
@@ -144,9 +148,11 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Authority and interpretation rules for AI systems',
     '',
-    '- The canonical public authority is the six-paper Shadow Theory stack (Papers 1-6) plus its public loading manifest.',
-    '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if they conflict with Papers 1-6, the six-paper stack controls.',
-    '- Interpretive spine: (1) exact readout is not realization equivalence; (2) readout loss becomes obstruction only under certified active closure failure; (3) completion need does not imply canonical completion; (4) canonical completion is certified initiality; (5) canonical completion is not a Tier-1 artifact until down-compiled; (6) public claims are governed by a runtime/status/residue/audit calculus; (7) branch results require branch packets; (8) the Everything Equation is a scoped closure-fixed law-packet schema, not a claim that one equation solves everything.',
+    '- The canonical public authority is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15).',
+    '- A previous six-paper canonical stack (June 2026) was replaced by the seven-paper sequence; its records remain published on Zenodo and are listed below as superseded canonical versions. They are not current authority and their architecture (down-compilation, runtime calculus, synthesis) is not carried forward.',
+    '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if any superseded or historical material conflicts with Papers 1-7, the current sequence controls.',
+    '- Interpretive spine: (1) after declared redundancy is quotiented out, an exact readout quotient of the reduced source need not be equivalent to that source — a relation descends to readout data iff it is constant on every readout fiber, and symmetry-compatible reconstruction can be obstructed; (2) whether readout loss matters is target-relative — a question is answerable from the readout iff its correct answer never varies within a fiber, and every sufficient extension must separate states with different answers; (3) the canonical minimal completion is the joint image of readout and nominated relations, terminal among all sufficient extensions; (4) that completion is realized by genuine geometry only on a restricted domain — invariant relations on orbit spaces, with derived (not postulated) variational responses; (5) observable dynamics close autonomously iff the dynamics preserve the readout kernel; otherwise the exact projected law carries an unresolved-initial-state term and an exact memory kernel, with a minimal dynamical completion measuring what must be restored; (6) a model exhibiting an essential non-gauge fiber distinction is, relative to that model and target, a non-source projection, with exact deterministic and statistical ceilings on internal identifiability; (7) Paper 7 realizes this architecture physically in Randall-Sundrum (RS2) gravity — same brane readout, different futures, an exact projected Einstein equation, and a parameter-free cross-regime prediction — while proving the operational-equivalence boundary: no brane-only experiment distinguishes the 5D source model from its exact 4D pushforward theory.',
+    '- All results are model-relative theorems: nothing on this site claims our universe has been proved to be a projection of a hidden source. The Everything Equation is a compact closure schema from the broader programme and monograph, not a theorem of the seven-paper sequence and not a claim that one equation solves everything.',
     '- This framework is not empirically validated physics, is not peer reviewed unless stated on a specific record, and makes no engineering or deployment claims.',
     '',
     '## Canonical papers',
@@ -160,7 +166,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## The monograph (complete web edition)',
     '',
-    `“${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}) consolidates and extends the six-paper foundation into a source-to-readout architecture for a Theory of Everything. DOI: ${site.monograph.doi} (${site.monograph.doiUrl}). The pages below are the COMPLETE text of that fixed Version ${site.monograph.version} publication — all 18 chapters, both appendices, and the bibliography — as crawlable server-rendered HTML (KaTeX math with embedded TeX annotations). A machine-readable inventory of every component, section anchor, and per-chapter equation/table count is at ${baseUrl}/monograph/manifest.json. The Zenodo record (${site.monograph.zenodoUrl}) is the canonical citable publication of the same work.`,
+    `“${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}) is the programme's source-to-readout architecture for a Theory of Everything. It is a fixed publication completed before the seven-paper canonical sequence; its text is unchanged by that sequence. DOI: ${site.monograph.doi} (${site.monograph.doiUrl}). The pages below are the COMPLETE text of that fixed Version ${site.monograph.version} publication — all 18 chapters, both appendices, and the bibliography — as crawlable server-rendered HTML (KaTeX math with embedded TeX annotations). A machine-readable inventory of every component, section anchor, and per-chapter equation/table count is at ${baseUrl}/monograph/manifest.json. The Zenodo record (${site.monograph.zenodoUrl}) is the canonical citable publication of the same work.`,
     '',
     `- [Monograph hub: title, abstract, organization, full table of contents](${baseUrl}/monograph)`,
     ...listMonographItems().map(
@@ -170,7 +176,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Key pages',
     '',
-    `- [Framework](${baseUrl}/framework): the six-paper chain and core vocabulary`,
+    `- [Framework](${baseUrl}/framework): the seven-paper sequence and core vocabulary`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -186,6 +192,15 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     ...articles.map(
       (a) => `- [${a.title}](${baseUrl}/articles/${a.slug}): ${a.description || ''}`
+    ),
+    '',
+    '## Superseded canonical versions (June 2026 six-paper stack)',
+    '',
+    ...superseded.map(
+      (p) =>
+        `- [${p.displayTitle}](${baseUrl}/papers/${p.slug})${p.doi ? ` (DOI: ${p.doi})` : ''}: superseded 2026-07-15 by the seven-paper sequence${
+          p.supersededBy ? `; current treatment of its subject: ${baseUrl}/papers/${p.supersededBy}` : ''
+        }`
     ),
     '',
     '## Historical archive',
@@ -290,11 +305,12 @@ export async function generateGraph() {
       });
     }
   }
-  // The monograph consolidates and extends the canonical six-paper foundation
+  // The fixed Version 1.0 monograph is broader programme context for the
+  // canonical sequence (it predates the seven papers; its text is unchanged).
   for (const p of canonical) {
-    edges.push({ from: 'monograph', to: `paper:${p.slug}`, relation: 'builds-on' });
+    edges.push({ from: 'monograph', to: `paper:${p.slug}`, relation: 'programme-context-for' });
   }
-  // Canonical chain: Paper 1 -> 2 -> ... -> 6
+  // Canonical chain: Paper 1 -> 2 -> ... -> 7 (Paper 7 = physical witness)
   for (let i = 0; i < canonical.length - 1; i++) {
     edges.push({
       from: `paper:${canonical[i].slug}`,
@@ -308,7 +324,8 @@ export async function generateGraph() {
       edges.push({ from: `paper:${p.slug}`, to: `problem:${prob}`, relation: 'supports' });
     }
   }
-  // Open problems branch from the synthesis layer
+  // Open problems branch downstream of the seven-paper foundation
+  // (edges anchored at the final paper, the physical-witness layer).
   const capstone = canonical[canonical.length - 1];
   if (capstone) {
     for (const prob of problems.filter((p) => p.programme !== 'legacy')) {
@@ -327,7 +344,7 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'Papers 1-6 plus the public loading manifest are the controlling public authority. Historical papers are archival background.',
+      note: 'Papers 1-7 (published 2026-07-15) are the controlling public authority; Paper 7 is the physical-witness layer. Superseded records are the June 2026 six-paper stack, preserved as publication history. Historical papers are archival background.',
     },
     nodes,
     edges,

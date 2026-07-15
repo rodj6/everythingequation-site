@@ -15,6 +15,7 @@ export const articleMetas: ArticleMeta[] = [
     "title": "From the Everything Equation to Shadow Theory",
     "description": "What changed, what was kept, and why the older material is now a historical archive.",
     "date": "2026-07-03",
+    "updated": "2026-07-15",
     "tags": [
       "history",
       "programme"
@@ -23,9 +24,10 @@ export const articleMetas: ArticleMeta[] = [
   },
   {
     "slug": "how-to-read-the-stack",
-    "title": "How to Read the Six-Paper Stack",
-    "description": "A reading guide: what each paper assumes, what it proves, and the interfaces between them.",
+    "title": "How to Read the Seven-Paper Sequence",
+    "description": "A reading guide: what each paper assumes, what it proves, and the handoffs between them.",
     "date": "2026-07-03",
+    "updated": "2026-07-15",
     "tags": [
       "guide",
       "papers"
@@ -35,8 +37,9 @@ export const articleMetas: ArticleMeta[] = [
   {
     "slug": "introducing-shadow-theory",
     "title": "Introducing Shadow Theory",
-    "description": "The six-paper public stack is complete. Here is what it is, what it proves, and how to read this site.",
+    "description": "The seven-paper canonical sequence is complete. Here is what it is, what it proves, and how to read this site.",
     "date": "2026-07-03",
+    "updated": "2026-07-15",
     "tags": [
       "announcement",
       "framework"

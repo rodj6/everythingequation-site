@@ -15,6 +15,10 @@ const categoryBadge: Record<string, { label: string; cls: string }> = {
     label: "Branch",
     cls: "border-[hsl(var(--violet)/0.4)] bg-[hsl(var(--violet)/0.08)] text-vio",
   },
+  superseded: {
+    label: "Superseded",
+    cls: "border-[hsl(var(--amber)/0.4)] bg-[hsl(var(--amber)/0.07)] text-amberc",
+  },
   historical: {
     label: "Historical",
     cls: "border-edge-strong bg-raised text-mute",

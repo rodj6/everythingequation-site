@@ -104,6 +104,36 @@ export default async function PaperPage({ params }: { params: { slug: string } }
           <p className="mt-3 text-lg leading-relaxed text-mute">{paper.subtitle}</p>
         ) : null}
 
+        {paper.category === "superseded" ? (
+          <aside className="mt-6 rounded-xl border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.06)] px-5 py-4 text-sm leading-relaxed text-fg/90">
+            <p className="m-0 mb-1 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
+              Superseded canonical version
+            </p>
+            This record belongs to the June 2026 six-paper canonical stack, which was
+            replaced on 2026-07-15 by the current seven-paper canonical sequence. It is
+            preserved as publication history; it is not current authority, and its
+            architecture is not carried forward.{" "}
+            {paper.supersededBy ? (
+              <>
+                See the current sequence:{" "}
+                <Link
+                  href={`/papers/${paper.supersededBy}`}
+                  className="font-medium text-glow hover:text-glow-strong"
+                >
+                  current canonical paper →
+                </Link>
+              </>
+            ) : (
+              <>
+                See the{" "}
+                <Link href="/papers" className="font-medium text-glow hover:text-glow-strong">
+                  current canonical sequence →
+                </Link>
+              </>
+            )}
+          </aside>
+        ) : null}
+
         {paper.category === "historical" ? (
           <aside className="mt-6 rounded-xl border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.06)] px-5 py-4 text-sm leading-relaxed text-fg/90">
             <p className="m-0 mb-1 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
@@ -112,7 +142,7 @@ export default async function PaperPage({ params }: { params: { slug: string } }
             This paper belongs to the earlier Everything Equation / Tier-0 era of the
             programme. It is retained as historical background and development trace. It
             is superseded as controlling public authority by the canonical Shadow Theory
-            stack (Papers 1–6).
+            sequence (Papers 1–7).
           </aside>
         ) : null}
 

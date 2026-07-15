@@ -1,0 +1,54 @@
+## Reading notes
+
+The dynamical layer. A bounded observation operator
+$K: \mathcal{H}_{\mathrm{src}} \to \mathcal{H}_{\mathrm{obs}}$ always produces
+an exact observable quotient $\mathcal{H}_K = \mathcal{H}_{\mathrm{src}}/\ker K$,
+canonically bijective onto $\mathrm{Ran}\,K$ — with bounded inverse in the
+inherited norm exactly when the range is closed. The paper insists on keeping
+four phenomena apart: **(D1)** exact loss ($\ker K \neq \{0\}$), **(D2)**
+unstable inversion (nonclosed range), **(D3)** controlled low-rank
+approximation ($\lVert K - K_r \rVert = \sigma_{r+1}$), and **(D4)** failure
+of autonomous dynamics. Compactness supplies (D3) and by itself implies
+neither (D1) nor (D2); (D4) implies (D1) but not conversely.
+
+<Theorem title="Semigroup descent and autonomous closure">
+An induced evolution on the observable state exists if and only if the source
+semigroup preserves the readout kernel: $U(t)\ker K \subseteq \ker K$. For an
+orthogonal resolved/unresolved splitting with bounded generator $L$,
+autonomous first-order closure valid for <em>every</em> source initial state
+is equivalent to $PLQ = 0$.
+</Theorem>
+
+When closure fails, the exact projected equation (a Mori–Zwanzig-type
+identity, derived purely by variation of constants) carries two extra terms:
+a deterministic unresolved-initial-state term $\eta_{z_0}(t)$ — explicitly
+*not* a stochastic force — and an exact memory kernel
+$\mathcal{K}(\tau) = PLQ\,e^{\tau QLQ}QLP$ — explicitly *not* a friction
+coefficient. No ensemble, Markov, or timescale approximation appears
+anywhere.
+
+<Theorem title="Minimal dynamical completion">
+The unresolved response map descends to an injective map on
+$E_{\mathrm{dyn}} = \mathcal{H}_Q/N_Q$, the coarsest extension of the resolved
+state determining every resolved response; every sufficient extension maps
+onto it. In finite dimensions its size is the rank of a Kalman-type
+observability matrix. Minimality is relative to the declared target —
+directions in $N_Q$ are not "physically absent" in any absolute sense.
+</Theorem>
+
+The same architecture is carried into field theory: eliminating a quadratic
+sector yields the exact Schur-complement effective operator $A - BC^{-1}B^*$
+(possibly, but not automatically, nonlocal), and stationary elimination in a
+diffeomorphism-invariant action yields a covariant effective stress-energy
+defined as a genuine variational response, with total — not sectorwise —
+covariant conservation and an explicit exchange current between sectors.
+
+<ClaimBoundary>
+No empirical proposition: the paper does not claim the physical universe has
+hidden variables, memory, or any particular effective correction — a memory
+kernel is a formula, and physical content lies entirely in whatever model
+supplies $K$, $L$, and the action. The Schur theorem is stated for bounded
+operators and is classical tree-level elimination, not the quantum effective
+action. The paper is deliberately self-contained: cross-references to
+Papers 1–4 are context only.
+</ClaimBoundary>

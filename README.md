@@ -1,8 +1,10 @@
 # Shadow Theory — Public Research Website
 
-The public home of **Shadow Theory**: a six-paper mathematical framework for
-readout, completion, canonical closure, Tier-1 compilation, and claim
-licensing, plus an open-problem research programme and article system.
+The public home of **Shadow Theory**: a seven-paper mathematical framework for
+source–readout non-equivalence, target-relative obstruction, canonical minimal
+completion, geometric realization, exact projected dynamics, and internal
+identifiability, capped by a Randall–Sundrum physical witness — plus an
+open-problem research programme and article system.
 
 Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, MDX, and KaTeX.
 Statically generated; deployed via GitHub → Vercel.
@@ -39,7 +41,10 @@ Shortest possible version:
 
 ## Authority note
 
-The controlling public authority for all site copy is the canonical six-paper
-stack plus `00_PUBLIC_SHADOW_STACK_LOADING_MANIFEST.md`. Older Everything
-Equation / Tier-0 era materials are historical archive only. Public copy must
-stay inside the claim boundary defined in `src/config/site.ts`.
+The controlling public authority for all site copy is the canonical
+seven-paper Shadow Theory sequence (Papers 1–7, published 2026-07-15). The
+June 2026 six-paper stack is preserved only as superseded canonical versions;
+older Everything Equation / Tier-0 era materials are historical archive only.
+All results are model-relative theorems — public copy must never claim the
+universe has been proved to be a projection — and must stay inside the claim
+boundary defined in `src/config/site.ts`.

@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Open Problems",
   description:
-    "The Shadow Theory research programme: open problems held as downstream branch targets of the six-paper stack, each with a declared claim boundary.",
+    "The Shadow Theory research programme: open problems held as downstream branch targets of the seven-paper foundation, each with a declared claim boundary.",
   alternates: { canonical: "/problems" },
 };
 
@@ -25,13 +25,15 @@ export default async function ProblemsPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Open problems</h1>
         <p className="mt-4 text-lg leading-relaxed text-mute">
           These are research <em>targets</em>, held as downstream branches of the
-          six-paper stack. In Shadow Theory, a branch result becomes public framework
-          content only through a branch packet with declared route, status, residues, and
-          claim boundary — so nothing here is presented as solved.
+          seven-paper foundation. In Shadow Theory, a branch result becomes public
+          framework content only through its own public paper or record — declared
+          assumptions and domain, support appropriate to the claim, explicit
+          limitations, and a clear claim boundary — so nothing here is presented as
+          solved.
         </p>
         <p className="mt-3 text-sm leading-relaxed text-faint">
           Pages may include earlier notes from the Everything Equation era; those are
-          marked as historical drafts and are not statused claims.
+          marked as historical drafts and are not current claims.
         </p>
       </header>
 

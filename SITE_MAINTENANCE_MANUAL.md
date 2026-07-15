@@ -11,7 +11,8 @@ from now without remembering the internals.
 A statically generated Next.js 14 (App Router) site presenting **Shadow
 Theory** as the public framework, with:
 
-- the six canonical papers (Papers 1–6) as the controlling public authority;
+- the seven canonical papers (Papers 1–7, published 2026-07-15) as the controlling public authority — Papers 1–6 are the source–readout mathematics, Paper 7 the Randall–Sundrum physical witness;
+- the superseded June 2026 six-paper canonical stack, preserved as publication history (category: superseded);
 - the historical Everything Equation / Tier-0 era papers as an archive;
 - an open-problem research programme with claim-boundary discipline;
 - an MDX article system;
@@ -109,10 +110,10 @@ npm run build && npm start
 2. Copy one of the canonical entries at the top and edit its fields:
 
 ```yaml
-  - id: paper:shadow:7           # any unique id
+  - id: paper:shadow2:8          # any unique id
     slug: my-new-paper           # becomes /papers/my-new-paper
-    number: 7                    # only for canonical stack papers
-    category: canonical          # canonical | branch | historical
+    number: 8                    # only for canonical sequence papers
+    category: canonical          # canonical | branch | superseded | historical
     visibility: public           # public | draft (draft = hidden)
     featured: true
     title: "Full Paper Title"
@@ -131,9 +132,12 @@ npm run build && npm start
    (rendered as the "Notes" section).
 4. `npm run build` locally to verify, then commit and push.
 
-Paper categories: `canonical` (the six-paper stack; shown as the Canonical
-stack grid), `branch` (statused branch results), `historical` (archive list).
-Entries without a `category` field default to `historical`.
+Paper categories: `canonical` (the seven-paper sequence; Papers 1–6 render as
+the foundation grid and Paper 7 as the distinguished physical-witness card),
+`branch` (downstream branch results, each its own public record), `superseded` (the June 2026 six-paper
+canonical stack, preserved as publication history with a supersession banner;
+use `supersededBy: <slug>` to link the replacing paper), `historical`
+(archive list). Entries without a `category` field default to `historical`.
 
 ## 5b. The monograph web edition (/monograph)
 
@@ -235,8 +239,9 @@ Edit the MDX file. Optionally add `updated: "2026-09-01"` to the frontmatter
 3. Push.
 
 **Claim-boundary rule:** the `target` text must describe a research target,
-not assert a solved result. Solved-status claims require a published branch
-packet first.
+not assert a solved result. A solved-result claim requires its own published
+paper or record first, with declared assumptions, support appropriate to the
+claim, explicit limitations, and a clear claim boundary.
 
 ## 10. How to add a top navigation tab
 
@@ -281,9 +286,12 @@ wired up by `src/mdx-components.tsx`):
 $$ L = \Omega_{T1}\,\Delta\,\partial\,[L] $$
 </EquationPanel>
 
-<StatusCard status="…" route="…" residues="…" claims="…">
+<StatusCard status="…" claims="…">
   Optional extra text.
 </StatusCard>
+
+(StatusCard is a legacy presentational component; `route` and `residues`
+fields exist only for backwards compatibility with superseded-era pages.)
 
 <ClaimBoundary>
   What this result does NOT claim.
@@ -378,13 +386,13 @@ npm run build        # must complete with no errors
 npm start            # spot-check locally:
 ```
 
-1. Homepage renders; six-paper stack shows.
+1. Homepage renders; the seven-paper sequence shows (six foundation cards plus the Paper 7 physical-witness card).
 2. The new/edited page renders (paper, article, or problem).
 3. An equation-heavy page looks right (e.g. /articles/how-to-read-the-stack).
 4. Narrow the browser to phone width: menu opens, equations scroll, no overflow.
 5. `/sitemap.xml`, `/feed.xml`, `/llms.txt`, `/graph.json` respond.
-6. New content contains no unlicensed claims (see claim boundary in
-   `src/config/site.ts` and the loading manifest).
+6. New content contains no unlicensed claims (see the claim boundary in
+   `src/config/site.ts`).
 
 ## 19. Vercel/GitHub deployment checklist
 
@@ -397,35 +405,40 @@ npm start            # spot-check locally:
 
 ## 20. Worked example: publishing a new Zenodo paper end-to-end
 
-Suppose you upload "Paper 7 — Branch Packet Calculus" to Zenodo and it gets
-record ID `19999999` and DOI `10.5281/zenodo.19999999`.
+Suppose you upload a hypothetical branch paper, "Holonomy Separation for
+Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
+`19999999` and DOI `10.5281/zenodo.19999999`.
 
-1. `content/papers.yaml` — add at the end of the canonical block:
+1. `content/papers.yaml` — add after the canonical block:
 
 ```yaml
-  - id: paper:shadow:7
-    slug: branch-packet-calculus
-    number: 7
-    category: canonical
+  - id: paper:branch:holonomy-separation
+    slug: holonomy-separation-higher-genus
+    category: branch
     visibility: public
-    featured: true
-    title: "Branch Packet Calculus"
+    featured: false
+    title: "Holonomy Separation for Flat Connections on Higher-Genus Surfaces"
     subtitle: "Optional subtitle"
-    role: "Establishes the public branch packet calculus."
+    role: "Branch result: extends the Paper 4 separation question to a wider class of base manifolds, with declared assumptions and limitations."
     version: "v1"
     date: "2026-09-15"
     zenodo: 19999999
     doi: 10.5281/zenodo.19999999
     summary: >
-      Two or three sentences for the paper page.
+      Two or three sentences for the paper page, including what the result
+      assumes and what it does not claim.
     supports: []
 ```
 
-2. Create `content/manual/papers/branch-packet-calculus.mdx` with reading
-   notes (optional).
+(For a new *canonical* paper, use `category: canonical` and the next unused
+`number`; the current sequence ends at 7.)
+
+2. Create `content/manual/papers/holonomy-separation-higher-genus.mdx` with
+   reading notes (optional).
 3. `npm run sync:zenodo` (pulls title/creators/date into the cache).
 4. `npm run build` — verify no errors; `npm start` and check
-   `http://localhost:3000/papers/branch-packet-calculus` shows the DOI button.
+   `http://localhost:3000/papers/holonomy-separation-higher-genus` shows the
+   DOI button.
 5. Commit `content/`, `.cache/zenodo.json`; push. Vercel deploys.
 6. In production, confirm the paper appears on `/papers`, in `/sitemap.xml`,
    `/feed.xml`, `/llms.txt`, and `/graph.json`.
