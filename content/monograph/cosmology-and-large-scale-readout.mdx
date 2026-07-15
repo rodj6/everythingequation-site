@@ -1,0 +1,652 @@
+---
+title: "Cosmology and Large-Scale Readout"
+kind: chapter
+number: "12"
+label: "Chapter 12"
+part: 2
+order: 12
+description: 'Chapter 12 develops the cosmological readout of the theory: the FLRW background, gauge-invariant perturbations, thermal history, and the routes to CMB, large-scale-structure, lensing and gravitational-wave observables, all on the solved gravitational branch of Chapters 7–8.'
+---
+<a id="121-role-and-scope"></a>
+
+## 12.1 Role and Scope
+
+Chapter 12 develops the cosmological readout of the theory: the FLRW background, gauge-invariant perturbations, thermal history, and the routes to CMB, large-scale-structure, lensing and gravitational-wave observables, all on the solved gravitational branch of Chapters 7–8.
+
+Cosmology is the large-scale Tier-1 readout of a compatible geometry, matter/QFT state, any record-exclusive contribution, parameter branch, and initial-data class. It is not assumed at the source level. A physical cosmological branch must solve the background and perturbation equations on the same geometry, preserve the gravitational Ward identities, and connect consistently to thermal history and light-cone observables.
+
+<a id="122-effective-field-equation-and-exact-once-accounting"></a>
+
+## 12.2 Effective field equation and exact-once accounting
+
+The cosmological branch inherits
+
+$$
+G_{\mu\nu}[g]+\Lambda_{\rm br}g_{\mu\nu}
++\mathcal Q_{\mu\nu}^{\rm grav}
+=8\pi G_R\left(
+T_{\mu\nu}^{M,\rm dyn}
++T_{\mu\nu}^{\rm QFT,dyn}
++T_{\mu\nu}^{R,\rm tot}
++\chi_{\rm DM}T_{\mu\nu}^{\rm DM}
++\chi_{\rm DE}T_{\mu\nu}^{\rm DE}
+\right).
+$$
+
+The matter and quantum terms are the variations of the disjoint $S_M^{\rm dyn}$ and state-dependent $\Gamma_{\rm QFT,dyn}^{\rm ren}$ defined in Chapter 9. If a species is treated by the quantum functional, it is absent from $S_M^{\rm dyn}$. Pure-metric local terms from QFT renormalization occur only through $\Lambda_{\rm br}$, $G_R$, and $\Gamma_{\rm high}^{\rm grav}$. The record functional is the matched remainder after subtracting every term already represented in $S_M^{\rm dyn}$ or $\Gamma_{\rm QFT,dyn}^{\rm ren}$, with the EFT matching datum $\mathfrak m_R$ fixed before $\operatorname{Sol}_G(\cdot;\mathfrak m_R)$ is evaluated. Archive kinematics does not automatically supply an additional stress: if the record variables merely reparameterize already owned degrees of freedom, then $\Gamma_{R,\rm CTP}=0$ and $T_{\mu\nu}^{R}=0$. Here $\chi_{\rm DM},\chi_{\rm DE}\in\{0,1\}$. A switch is one only when its separately owned covariant action or kinetic functional contains degrees of freedom absent from both the matter and QFT terms, and is zero otherwise. Thus $T_{\mu\nu}^{\rm DM}$ and $T_{\mu\nu}^{\rm DE}$ are action-derived branch stresses rather than additional phenomenological copies.
+
+Here
+
+$$
+T_{\mu\nu}^{R,\rm tot}
+:=T_{\mu\nu}^{R}+\chi_{MR}T_{\mu\nu}^{MR},
+\qquad \chi_{MR}\in\{0,1\},
+$$
+
+where $T_{\mu\nu}^{R}$ is only the record-exclusive matched remainder. The interaction switch $\chi_{MR}$ is one only for a separately owned matter–record interaction absent from the matter, QFT and record-exclusive functionals; otherwise it is zero. Likewise $\chi_{\rm DE}=1$ only on a separately owned dynamical dark-energy branch and is zero on a pure-$\Lambda$ branch. The tensor $\mathcal Q_{\mu\nu}^{\rm grav}$ is obtained by varying the pure-metric higher-curvature action $\Gamma_{\rm high}^{\rm grav}$; it is not also inserted as an independent fluid or QFT stress.
+
+Covariance gives
+
+$$
+\nabla^\mu T_{\mu\nu}^{(A)}=J_\nu^{(A)},
+\qquad
+\sum_AJ_\nu^{(A)}=0,
+$$
+
+together with the interior Noether identity $\nabla^\mu\mathcal Q_{\mu\nu}^{\rm grav}=0$, with boundary fluxes cancelled by the boundary completion of $\Gamma_{\rm high}^{\rm grav}$. Every dynamical contribution appears exactly once in this equation and once in its perturbation.
+
+<a id="123-curvature-and-friedmann-conventions"></a>
+
+## 12.3 Curvature and Friedmann conventions
+
+Write
+
+$$
+\mathcal K_{\rm FLRW}
+=
+\frac{k_{\rm FLRW}}{a_0^2},
+\qquad
+\Omega_{k0}
+=
+-\frac{k_{\rm FLRW}}{a_0^2H_0^2},
+\tag{12.1}
+$$
+
+and, for $\bar a=a/a_0$,
+
+$$
+\Omega_k(\bar a)
+=
+\frac{\Omega_{k0}\bar a^{-2}}{E^2(\bar a)}.
+\tag{12.2}
+$$
+
+The canonical background equation is
+
+$$
+E^2(\bar a)
+=
+\Omega_{\Lambda,\rm br}
++\sum_{i\in\rm ordinary}\widehat\Omega_i(\bar a)
++\Omega_{k0}\bar a^{-2}
++\widehat\Omega_{\rm corr}(\bar a).
+\tag{12.3}
+$$
+
+A hatted term means an additive contribution to $E^2$. There is no simultaneous $\widehat\Omega_{\rm QG}$, $\widehat\Omega_{\rm rec}$, and $\widehat\Omega_{\rm corr}$ representation of the same action terms.
+
+Explicitly,
+
+$$
+\rho_{\rm crit,0}=\frac{3H_0^2}{8\pi G_R},
+\qquad
+\widehat\Omega_{\rm corr}(\bar a)
+=\frac{\rho_{\rm corr}(\bar a)}{\rho_{\rm crit,0}},
+\tag{12.4}
+$$
+
+and the $a=a_0$ closure relation is
+
+$$
+1
+=
+\Omega_{\Lambda,\rm br}
++\sum_{i\in\rm ordinary}\Omega_{i0}
++\Omega_{k0}
++\widehat\Omega_{\rm corr,0}.
+\tag{12.5}
+$$
+
+The acceleration equation is
+
+$$
+\frac{\ddot a}{a}
+=
+\frac{\Lambda_{\rm br}}3
+-\frac{4\pi G_R}{3}
+\sum_{i\in\rm ordinary}(\rho_i+3p_i)
+-\frac{4\pi G_R}{3}
+(\rho_{\rm corr}+3p_{\rm corr}).
+\tag{12.6}
+$$
+
+Perturbation wavenumbers are $k_{\rm com}$. Tensor equations use $k_{\rm FLRW}$ for background curvature; an unsubscripted $K$ is never used.
+
+With tensor harmonics normalized by $-D^2Q_{ij}^{(\lambda)} =k_{\rm com}^2Q_{ij}^{(\lambda)}$, so that the covariant tensor operator is $-(D^2-2k_{\rm FLRW})$, the canonical tensor equation is
+
+$$
+h_\lambda''+2\mathcal H h_\lambda'
++(k_{\rm com}^2+2k_{\rm FLRW})h_\lambda
+=16\pi G_Ra^2\Pi_\lambda^{\rm tot}
++S_\lambda^{\rm EFT}.
+\tag{12.7}
+$$
+
+$\Pi_\lambda^{\rm tot}$ and $S_\lambda^{\rm EFT}$ obey the same exactly-once action ownership as the effective field equation at the head of this chapter.
+
+<a id="124-critical-density-density-parameters-and-closure-relation"></a>
+
+## 12.4 Critical Density, Density Parameters, and Closure Relation
+
+The present critical density is
+
+$$
+\boxed{
+\rho_{crit,0}
+=
+\frac{3H_0^2}{8\pi G}.
+}
+\tag{12.8}
+$$
+
+For a density branch $i$,
+
+$$
+\boxed{
+\Omega_i
+=
+\frac{\rho_{i0}}{\rho_{crit,0}}.
+}
+\tag{12.9}
+$$
+
+The curvature density parameter $\Omega_{k0}$ is fixed by (12.1), and the general closure relation is (12.5). In the seed large-scale branch where QG corrections are negligible or absorbed into $\Omega_C$,
+
+$$
+\boxed{
+1
+=
+\Omega_{\Lambda,\rm br}
++\sum_{i\in\rm ordinary}\Omega_{i0}
++\Omega_{k0}
+\qquad(\widehat\Omega_{\rm corr,0}\ \text{negligible or absorbed by declared branch}).
+}
+\tag{12.10}
+$$
+
+Chapter 12 uses (12.5) as the general accounting form and (12.10) as the seed readout branch.
+
+-----
+
+Density parameters follow the normalized conventions of the background section: hatted quantities $\widehat\Omega_I(\bar a)=\rho_I(\bar a)/\rho_{\rm crit,0}$ are the present-critical additive contributions entering $E^2(\bar a)=H^2/H_0^2$; instantaneous fractions are $\Omega_I=\widehat\Omega_I/E^2$; the curvature contribution to $E^2$ is $\Omega_{k0}\bar a^{-2}$ with $\Omega_{k0}=-k_{\rm FLRW}/(a_0^2H_0^2)$, while the fractional curvature density is $\Omega_k(\bar a)=\Omega_{k0}\bar
+a^{-2}/E^2(\bar a)$; and the sole additive correction contribution is $\widehat\Omega_{\rm corr}=\rho_{\rm corr}/\rho_{\rm crit,0}$; any dimensionful correction entering $H^2$ is normalized by $H_0^2$ before it appears; unnormalized equalities such as $\Omega_{\rm QG}=\Delta_{\rm QG}$ are never used.
+
+<a id="125-continuity-equation-and-scaling-laws"></a>
+
+## 12.5 Continuity Equation and Scaling Laws
+
+For the declared branch-owned components $A$, including the record and correction accounts, the component continuity equations with exchange are
+
+$$
+\dot\rho_A+3H(\rho_A+p_A)=Q_A,
+\qquad
+\sum_AQ_A=0,
+\tag{12.11}
+$$
+
+the FLRW form of the covariant exchange identity of the effective field equation; no additional record or correction exchange term is counted beside the component sum. For each independently conserved perfect-fluid component,
+
+$$
+\boxed{
+\dot\rho_i+3H(\rho_i+p_i)=0.
+}
+\tag{12.12}
+$$
+
+More generally, for an independently conserved component with equation of state $w_I(\bar a)=p_I/\rho_I$,
+
+$$
+\rho_I(\bar a)=\rho_{I0}F_I(\bar a),
+\qquad
+F_I(\bar a)
+=
+\exp\left[-3\int_1^{\bar a}
+\left(1+w_I(\bar a')\right)d\ln\bar a'\right].
+\tag{12.13}
+$$
+
+Using $p_i=w_i\rho_i$ with constant $w_i$,
+
+$$
+\dot\rho_i+3H(1+w_i)\rho_i=0.
+$$
+
+Since $H=\dot a/a$,
+
+$$
+\frac{d\rho_i}{\rho_i}
+=
+-3(1+w_i)\frac{da}{a}.
+$$
+
+Therefore
+
+$$
+\boxed{
+\rho_i(a)=\rho_{i0}a^{-3(1+w_i)}.
+}
+\tag{12.14}
+$$
+
+The standard scalings are:
+
+$$
+\boxed{
+\rho_m(a)=\rho_{m0}a^{-3}
+\qquad
+(w_m=0),
+}
+\tag{12.15}
+$$
+
+$$
+\boxed{
+\rho_r(a)=\rho_{r0}a^{-4}
+\qquad
+(w_r=1/3),
+}
+\tag{12.16}
+$$
+
+$$
+\boxed{
+\rho_\Lambda(a)=\rho_{\Lambda0}
+\qquad
+(w_\Lambda=-1).
+}
+\tag{12.17}
+$$
+
+The curvature contribution to $E^2$ is the additive term $\Omega_{k0}\bar a^{-2}$, while the instantaneous fractional curvature density is $\Omega_k(\bar a)$ of (12.2); the two are distinct objects in the dimensionless Friedmann readout.
+
+-----
+
+<a id="126-scalar-vector-and-tensor-perturbations"></a>
+
+## 12.6 Scalar, vector, and tensor perturbations
+
+Use conformal time $d\eta=dt/\bar a$ and the covariant derivative $D_i$ of the reference constant-curvature spatial metric $\gamma_{ij}$, for which ${}^{(3)}R[\gamma]=6\mathcal K_{\rm FLRW}$. Decompose
+
+$$
+\begin{aligned}
+ds^2=\bar a^2(\eta)\{&-(1+2\phi)d\eta^2
++2(D_iB+S_i)d\eta\,dx^i\\
+&+[(1-2\psi)\gamma_{ij}+2D_iD_jE
++2D_{(i}F_{j)}+h_{ij}]dx^idx^j\},
+\end{aligned}
+$$
+
+with
+
+$$
+D^iS_i=D^iF_i=0,
+\qquad D^ih_{ij}=0,
+\qquad \gamma^{ij}h_{ij}=0.
+$$
+
+Under $\eta\mapsto\eta+T$ and $x^i\mapsto x^i+D^iL+L^i$, with $D_iL^i=0$, define $\sigma=B-E'$. The gauge-invariant Bardeen potentials \[[48](/monograph/bibliography#ref-Bardeen1980), [49](/monograph/bibliography#ref-KodamaSasaki1984), [50](/monograph/bibliography#ref-MaBertschinger1995)\] and vector shear are
+
+$$
+\Phi=\phi+\mathcal H\sigma+\sigma',
+\qquad
+\Psi=\psi-\mathcal H\sigma,
+\qquad
+V_i=S_i-F_i',
+\qquad \mathcal H=\frac{\bar a'}{\bar a}.
+$$
+
+For each species $A$,
+
+$$
+\delta\rho_A^{\rm gi}=\delta\rho_A+\bar\rho_A'\sigma,
+\qquad
+\delta p_A^{\rm gi}=\delta p_A+\bar p_A'\sigma,
+$$
+
+and the momentum and anisotropic stress split into scalar, transverse-vector, and transverse-traceless parts. The master perturbation equation is
+
+$$
+\delta G_{\mu\nu}
++\Lambda_{\rm br}\delta g_{\mu\nu}
++\delta\mathcal Q_{\mu\nu}^{\rm grav}
+=8\pi G_R\delta T_{\mu\nu}^{\rm owned},
+$$
+
+where $\delta T_{\mu\nu}^{\rm owned}$ contains each classical, renormalized-QFT, record-exclusive, separately owned interaction, dark-matter, and dynamical-dark-energy contribution exactly once. Scalar, vector, and tensor equations are obtained by the orthogonal SVT projectors on the chosen harmonic domain.
+
+In the spatially flat, uncorrected and noninteracting limit, introduce the scalar velocity potential by $\delta T^0{}_i=(\bar\rho+\bar p)D_iv^{\rm gi}$. The scalar Einstein equations are
+
+$$
+D^2\Psi-3\mathcal H(\Psi'+\mathcal H\Phi)
+=4\pi G_R\bar a^2\delta\rho^{\rm gi},
+$$
+
+$$
+\Psi'+\mathcal H\Phi
+=-4\pi G_R\bar a^2(\bar\rho+\bar p)v^{\rm gi},
+$$
+
+$$
+\Psi''+\mathcal H(\Phi'+2\Psi')
++(2\mathcal H'+\mathcal H^2)\Phi
++\frac13D^2(\Phi-\Psi)
+=4\pi G_R\bar a^2\delta p^{\rm gi},
+$$
+
+$$
+\left(D_iD_j-\frac13\gamma_{ij}D^2\right)(\Phi-\Psi)
+=8\pi G_R\bar a^2\Pi^{S}_{ij}.
+$$
+
+For illustration, a separately conserved barotropic species with constant $w_A=c_{s,A}^2$ obeys
+
+$$
+\delta_A'+(1+w_A)(\vartheta_A-3\Psi')=0,
+$$
+
+$$
+\vartheta_A'+\mathcal H(1-3w_A)\vartheta_A
++D^2\!\left(\Phi+\frac{c_{s,A}^2}{1+w_A}\delta_A\right)
+-D^2\sigma_A=0,
+$$
+
+where $\delta_A=\delta\rho_A^{\rm gi}/\bar\rho_A$, $\vartheta_A$ is the scalar velocity divergence, and $\sigma_A$ is the scalar anisotropic-stress potential. Time-dependent equations of state, entropy pressure, massive kinetic species, exchange currents, and EFT/record corrections are governed by the kinetic equation below and by the perturbation of the same covariant conservation law; they are not represented by adding independent duplicate sources.
+
+For transverse momentum $q_i^V$ and vector anisotropic-stress potential $\Pi_i^V$, defined so that its stress contribution is $D_{(i}\Pi^V_{j)}$, the vector constraint and propagation equations take the convention-fixed form
+
+$$
+(D^2+2\mathcal K_{\rm FLRW})V_i
+=-16\pi G_R\bar a^2q_i^V+S_i^{V,\rm grav},
+$$
+
+$$
+(\bar a^2V_i)'
+=16\pi G_R\bar a^4\Pi_i^V+\bar a^2\widetilde S_i^{V,\rm grav}.
+$$
+
+Consequently, an unsourced perfect-fluid vector shear decays according to
+
+$$
+(\bar a^2V_i)'=0,
+\qquad V_i\propto\bar a^{-2}.
+$$
+
+Any sustained vector mode must therefore identify a transverse momentum, anisotropic stress, topological source, or modified-gravity source in the field equation.
+
+For tensor harmonics satisfying $-D^2Q_{ij}^{(\lambda)}=k_{\rm com}^2Q_{ij}^{(\lambda)}$, write $h_{ij}=\sum_\lambda h_\lambda Q_{ij}^{(\lambda)}$. Then
+
+$$
+h_\lambda''+2\mathcal Hh_\lambda'
++(k_{\rm com}^2+2\mathcal K_{\rm FLRW})h_\lambda
+=16\pi G_R\bar a^2\Pi_\lambda^{\rm tot}
++S_\lambda^{\rm grav}.
+$$
+
+The curvature symbol $\mathcal K_{\rm FLRW}$ is used consistently here; $k_{\rm com}$ is the perturbation wavenumber.
+
+<a id="127-species-and-kinetic-evolution"></a>
+
+## 12.7 Species and kinetic evolution
+
+A kinetic species obeys
+
+$$
+p^\mu\nabla_\mu f_A
+-\Gamma^i_{\alpha\beta}p^\alpha p^\beta
+\frac{\partial f_A}{\partial p^i}
+=C_A[f]+S_A,
+\qquad
+T_A^{\mu\nu}=\int dP\,p^\mu p^\nu f_A.
+$$
+
+Fluids are the appropriate moment closures of this system. Dark-energy sound speed, nonadiabatic pressure, anisotropic stress, and exchange current, and dark-matter velocity dispersion or distribution function, must be specified on any branch that uses them. Physical perturbations require positive kinetic coefficients, absence of gradient instability, hyperbolicity, and a declared effective-theory range.
+
+<a id="128-initial-conditions-transfer-objects-and-predictions"></a>
+
+## 12.8 Initial conditions, transfer objects, and predictions
+
+Let $q_A(\mathbf k_{\rm com})$ denote the independent primordial or induced scalar, vector, and tensor modes on a selected initial hypersurface $\Sigma_*$. Their covariance is
+
+$$
+\langle q_A(\mathbf k_{\rm com})q_B^*(\mathbf k_{\rm com}')\rangle
+=
+(2\pi)^3\delta^{(3)}(\mathbf k_{\rm com}-\mathbf k_{\rm com}')
+\frac{2\pi^2}{k_{\rm com}^3}\mathcal P_{AB}(k_{\rm com}).
+$$
+
+The branch tag records whether $\mathcal P_{AB}$ is source-derived, generated by a specified primordial mechanism, induced by later readout dynamics, bounded, or calibrated. The transfer relation is
+
+$$
+X_I(\mathbf k_{\rm com},\eta)
+=
+\sum_A T_{IA}(k_{\rm com},\eta;\vartheta,\mathfrak b)q_A(\mathbf k_{\rm com}),
+$$
+
+where $\vartheta$ is the frozen parameter record and $\mathfrak b$ the frozen branch record. Transfer functions are obtained by solving the coupled Einstein–Boltzmann–record–QG system, not declared independently.
+
+The output supports:
+
+$$
+P_{IJ}(k_{\rm com},z)
+=
+\frac{2\pi^2}{k_{\rm com}^3}
+\sum_{A,B}
+T_{IA}(k_{\rm com},z)T_{JB}^*(k_{\rm com},z)\mathcal P_{AB}(k_{\rm com}),
+$$
+
+growth functions $D_I(k_{\rm com},a)$, logarithmic growth $f_I=d\ln D_I/d\ln a$, CMB source functions, lensing potentials $\Phi+\Psi$, and tensor transfer functions. Every prediction carries the initial-condition, parameter, scheme, nonlinear, baryonic, bias, and nuisance assumptions used to obtain it.
+
+Line-of-sight transfer integration follows \[[51](/monograph/bibliography#ref-SeljakZaldarriaga1996)\]; curved-model computation follows \[[52](/monograph/bibliography#ref-LewisChallinorLasenby2000)\].
+
+<a id="129-light-cone-and-propagation-object"></a>
+
+## 12.9 Light-cone and propagation object
+
+The observation map is evaluated on the solved geometry, not on a background coordinate distance by fiat. For a radial null ray,
+
+$$
+\chi(z)=\int_0^z\frac{dz'}{H(z')},
+$$
+
+and the transverse comoving distance is
+
+$$
+f_{\mathcal K}(\chi)=
+\begin{cases}
+\mathcal K_{\rm FLRW}^{-1/2}\sin(\sqrt{\mathcal K_{\rm FLRW}}\,\chi),&\mathcal K_{\rm FLRW}>0,\\
+\chi,&\mathcal K_{\rm FLRW}=0,\\
+(-\mathcal K_{\rm FLRW})^{-1/2}\sinh(\sqrt{-\mathcal K_{\rm FLRW}}\,\chi),&\mathcal K_{\rm FLRW}\lt 0.
+\end{cases}
+$$
+
+The luminosity and angular-diameter distances satisfy
+
+$$
+d_L=(1+z)f_{\mathcal K}(\chi),
+\qquad
+d_A=\frac{f_{\mathcal K}(\chi)}{1+z},
+$$
+
+only when photon number conservation, metric null propagation, and Etherington reciprocity pass. Otherwise the violated assumption and modified propagation kernel are included in $L_C$.
+
+<a id="1210-perturbation-and-thermal-history-handoffs"></a>
+
+## 12.10 Perturbation and Thermal-History Handoffs
+
+The cosmological readout must carry:
+
+$$
+\mathsf{CosOut}
+=
+(\mathsf{Background},
+\mathsf{SVT},
+\mathsf{Init},
+\mathsf{Thermal},
+\mathsf{Transfer},
+\mathsf{Growth},
+\mathsf{Lens},
+\mathsf{CMB},
+\mathsf{LSS},
+\mathsf{GW}).
+\tag{12.18}
+$$
+
+Scalar, vector, and tensor variables are gauge invariant or accompanied by a gauge certificate. The initialization type is the tagged disjoint union
+
+$$
+\mathsf{Init}
+=
+\mathsf{Reheat}(T_{\rm reh},w_{\rm reh},\Gamma_{\rm reh})
+\amalg
+\mathsf{BounceMatch}(\Sigma_-,\Sigma_+,\mathcal M_{\rm b})
+\amalg
+\mathsf{BoundaryInit}(\Sigma_i,\rho_i,\mathcal C_i),
+\tag{12.19}
+$$
+
+and exactly one tagged branch with a complete matching certificate is required. The typed thermal chain then contains baryogenesis/leptogenesis, BBN, recombination, and structure formation \[[53](/monograph/bibliography#ref-KofmanLindeStarobinsky1994), [54](/monograph/bibliography#ref-Sakharov1967), [55](/monograph/bibliography#ref-FukugitaYanagida1986), [56](/monograph/bibliography#ref-PitrouEtAl2018), [57](/monograph/bibliography#ref-Peebles1968)\]. Dark-energy sound speed and anisotropic stress and dark-matter stress/distribution data carry stability gates. Primordial and induced branches are distinguished.
+
+<a id="1211-dark-sector-branches-and-chapter-13-handoff"></a>
+
+## 12.11 Dark-Sector Branches and Chapter 13 Handoff
+
+The closure/dark-energy density branch is
+
+$$
+\boxed{
+\rho_C(a)=\rho_{C0}F_C(a).
+}
+\tag{12.20}
+$$
+
+The cosmological constant branch is
+
+$$
+\boxed{
+F_C(a)=1,
+\qquad
+w_C=-1.
+}
+\tag{12.21}
+$$
+
+For an evolving dark-energy branch,
+
+$$
+\boxed{
+F_C(a)
+=
+\exp
+\left[
+-3
+\int_1^a
+(1+w_C(a'))\,d\ln a'
+\right].
+}
+\tag{12.22}
+$$
+
+Chapter 13 owns the dark-energy dynamics, $\Lambda$ magnitude, dark matter microphysics, $\rho_{prim}$, $\rho_{ind}$, and $\mathcal P_\Lambda^{grav}$. Chapter 12 supplies their large-scale slots and branch notation.
+
+-----
+
+<a id="1212-low-boundary-cosmology"></a>
+
+## 12.12 Low-Boundary Cosmology
+
+The low-boundary condition is
+
+$$
+\boxed{
+\mathcal B_{cos}^{low}
+\Rightarrow
+S_{grav}^{early}\ll S_{grav}^{max}.
+}
+\tag{12.23}
+$$
+
+Here:
+
+  - **Low-boundary objects:**
+    
+      - **S grav early:**
+        
+          - **Symbol:** $S_{grav}^{early}$
+        
+          - **Type:** early-universe gravitational entropy measure or placeholder functional
+    
+      - **S grav max:**
+        
+          - **Symbol:** $S_{grav}^{max}$
+        
+          - **Type:** maximum/reference gravitational entropy
+    
+      - **Hierarchy:**
+        
+          - **Symbol:** $\ll$
+        
+          - **Type:** required gravitational entropy hierarchy for arrow orientation
+
+Equation (12.23) is a low-boundary condition and theorem target. Its source-level origin remains routed through $R6$. Its arrow-of-time consequences are handed to Chapter 14.
+
+-----
+
+<a id="1213-cosmology-to-arrow-handoff"></a>
+
+## 12.13 Cosmology-to-Arrow Handoff
+
+The arrow handoff is
+
+$$
+\boxed{
+H_{12\to14}
+=
+(
+\mathcal B_{cos}^{low},
+S_{grav}^{early}\ll S_{grav}^{max},
+a(t),
+H(a),
+\text{record/entropy orientation data},
+R6
+).
+}
+\tag{12.24}
+$$
+
+Chapter 14 may use this as cosmological input for entropy-arrow and record-orientation formalization.
+
+-----
+
+<a id="1214-cosmological-theorem-target"></a>
+
+## 12.14 Cosmological Theorem Target
+
+R6 begins with the effective field equation, the record-exclusive ownership match fixed before gravitational solution, a selected vacuum/dark branch, admissible background and perturbation initial data, the conservation identities, and the thermal handoffs above. It asks for a nonempty stable cosmological solution whose background, complete SVT system, transfer functions, light-cone observables, and dark-sector variables are mutually compatible. Let $\ell_Q$ denote the admitted short-distance or EFT length scale controlling the leading higher-curvature expansion on the branch. In the limit
+
+$$
+\ell_Q^2|\mathcal R|\to0,
+\qquad T_{\mu\nu}^{R,\rm tot}\to0,
+\qquad J_\nu^{(A)}\to0,
+$$
+
+the branch must reduce to the standard stable FLRW–Einstein–Boltzmann system. Numerical spectra, the source of the primordial covariance, and empirical comparison are companion-paper calculations.

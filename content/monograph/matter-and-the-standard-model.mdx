@@ -1,0 +1,574 @@
+---
+title: "Matter and the Standard Model"
+kind: chapter
+number: "9"
+label: "Chapter 9"
+part: 2
+order: 9
+description: 'The preceding chapters fixed the source axioms, the realization and readout architecture, and the geometry channel of the theory.'
+---
+The preceding chapters fixed the source axioms, the realization and readout architecture, and the geometry channel of the theory. The present chapter constructs the matter and Standard Model sector: the map that carries admissible realized structure into Standard Model field content. It formalizes the Standard Model gauge group, the gauge fields, the chiral representation content, the covariant derivative and field strengths, the gauge, fermion, Higgs, and Yukawa sectors, the matter closure Lagrangian, the matter action, and the effective stress-energy tensor through which the matter sector couples back to the geometry channel. The deep origin of the Standard Model and of its constants and masses remains an open problem of the companion theorem programme (R4 and R5 in Chapter 17); nothing in this chapter discharges it.
+
+The matter channel asks two distinct questions. The first is a recovery question: which Tier-1 gauge theory, field content, and interactions are present on a given admissible realization? The second is a source-selection question: which properties of that realization select one gauge-matter branch rather than another? These questions must not be conflated. The Standard Model equations below describe the recovered physical branch. Their source-level selection remains the subject of the R4 companion theorem.
+
+<a id="91-matter-readout"></a>
+
+## 9.1 Matter readout
+
+Whenever an admissible realization $Y$ supports a physically admitted matter branch, write the corresponding successful-branch restriction as
+
+$$
+\operatorname{Read}_M(Y)=
+\bigl(G_{M,Y},\mathcal R_{F,Y},\mathcal R_{H,Y},
+\mathscr A_{M,Y},H_Y,\mathcal Y_Y,
+S_{M,Y}^{\rm dyn},T^{M,\rm dyn}_{\mu\nu,Y}\bigr).
+$$
+
+Here $G_{M,Y}$ is the recovered global gauge group, $\mathcal R_{F,Y}$ and $\mathcal R_{H,Y}$ are its fermion and scalar representations, $\mathscr A_{M,Y}$ is the matter-sector gauge connection, $\mathcal Y_Y$ is the family of allowed Yukawa intertwiners, and $S_{M,Y}^{\rm dyn}$ is the matter action after excluding terms already represented by the state-dependent QFT functional. This notation describes a Tier-1 readout; it does not insert a gauge group or a Standard Model label into source admissibility.
+
+<a id="92-source-selection-as-a-mathematical-physics-problem"></a>
+
+## 9.2 Source selection as a mathematical-physics problem
+
+Let $\mathfrak B_M$ denote the class of compact gauge-matter candidates
+
+$$
+b=(G_{\rm loc},\Gamma_{\rm glob},\mathcal R_F,\mathcal R_H,
+N_{\rm fam},\mathcal Y,\mathcal O_{\leq 5},\mathcal N_\nu,
+\vartheta_{\rm top}),
+$$
+
+with
+
+$$
+G_b=\frac{U(1)^k\times\prod_A G_A}{\Gamma_{\rm glob}},
+$$
+
+where each $G_A$ is compact, connected, and simple, $\Gamma_{\rm glob}$ is a finite central subgroup, and the abelian charges form a primitive integral lattice. The source realization supplies an invariant signature
+
+$$
+I_M(Y)=
+(r_{\rm int},\chi_{\rm gr},\iota_{\rm mode},\nu_{\rm mult},
+\eta_{\rm stab},\tau_{\rm top}),
+$$
+
+constructed from its internal automorphisms, graded index data, stable-mode multiplicities, stabilizer, and topological or central-extension data. None of these entries is named after a Standard Model factor or particle.
+
+Let $\mathfrak B_M(Y)\subseteq\mathfrak B_M$ be the candidates for which there exists a source-generated realization extension whose readout has the invariant signature $I_M(Y)$, whose representations and intertwiners are well defined on the stated global quotient, and whose local and global anomaly conditions hold. A source-complexity functional
+
+$$
+\mathcal C_Y(b)=
+\inf_{w\,\mapsto\,b}
+\bigl(\rho_{\rm cl}(w),N_{\rm srcgen}^{\rm add}(w),N_{\rm rel}^{\rm add}(w),
+N_{\rm ker}^{\rm add}(w),N_{\rm mod}(b),C_{\rm top}(b)\bigr)
+$$
+
+orders admissible witnesses lexicographically by closure rank, additional source generators, relations and kernels, residual physical moduli, and topological presentation complexity. The selected matter branch is the isomorphism class
+
+$$
+\operatorname{Sel}_M(Y)
+=\operatorname*{arg\,min}_{b\in\mathfrak B_M(Y)}\mathcal C_Y(b).
+$$
+
+If this set is empty, the realization has no admitted gauge-matter branch. If it contains several inequivalent minimizers, the theory has not selected a unique matter branch. R4 must prove existence, stability under enlargement of the candidate class, and uniqueness or a physically controlled degeneracy for a nontrivial source family. The displayed Standard Model below is therefore the branch to be recovered and tested, not a label hidden in the definition of $I_M$ or $\mathfrak B_M(Y)$.
+
+<a id="93-standard-model-gauge-group-and-gauge-fields"></a>
+
+## 9.3 Standard Model Gauge Group and Gauge Fields
+
+Every recovered Standard Model branch uses
+
+$$
+G_{\rm SM}
+=
+\frac{SU(3)_c\times SU(2)_L\times U(1)_Y}
+{\Gamma_{\rm glob}^{\rm SM}},
+\qquad
+\Gamma_{\rm glob}^{\rm SM}
+\in\{1,\mathbb Z_2,\mathbb Z_3,\mathbb Z_6\}.
+\tag{9.1}
+$$
+
+The direct product is the covering presentation, not automatically the physical global group.
+
+The covariant derivative uses $g_Y$, while a normalized $g_1$ is related only by an explicitly declared convention. Electroweak breaking obeys
+
+$$
+\begin{pmatrix}A_\mu\\Z_\mu\end{pmatrix}
+=
+\begin{pmatrix}
+\sin\theta_W&\cos\theta_W\\
+\cos\theta_W&-\sin\theta_W
+\end{pmatrix}
+\begin{pmatrix}W_\mu^3\\B_\mu\end{pmatrix},
+\qquad
+\tan\theta_W=\frac{g_Y}{g_2},
+\tag{9.2}
+$$
+
+$$
+e=g_2\sin\theta_W=g_Y\cos\theta_W,
+\qquad
+Q=T_3+Y,
+\tag{9.3}
+$$
+
+with residual $U(1)_{\rm em}$.
+
+A branch is identified as the Standard Model branch only after the source-selection machinery has been evaluated; its gauge-field, representation, and Higgs content are those displayed in the surrounding sections, and the direct product is the covering presentation, not automatically the physical global group.
+
+<a id="94-recovered-standard-model-branch"></a>
+
+## 9.4 Recovered Standard Model branch
+
+Only after source selection may one identify a surviving branch as the Standard Model group (9.1), with the one-generation representation content tabulated in the next section. The primitive abelian charge lattice fixes charge normalization up to the separately recorded coupling convention. The source topological signature selects the actual global quotient; otherwise the local Lie algebra is recovered with controlled global-form degeneracy.
+
+Using left-handed conjugates for anomaly calculations,
+
+$$
+u_R^c:(\bar3,1,-2/3),
+\quad
+d_R^c:(\bar3,1,+1/3),
+\quad
+e_R^c:(1,1,+1).
+$$
+
+The mixed and abelian anomaly conditions are evaluated in Chapter 10. The pure-colour condition is
+
+$$
+\boxed{
+\mathcal A_{SU(3)^3}
+=
+2A(3)+A(\bar3)+A(\bar3)=0.
+}
+$$
+
+For self-containment, the complete perturbative one-generation gauge checklist, written entirely with left-handed Weyl fields and $T(\mathbf{fund})=1/2$, is
+
+$$
+\boxed{
+\begin{aligned}
+\mathcal A_{SU(3)^3}
+&=2A(3)+A(\bar3)+A(\bar3)=0,\\
+\mathcal A_{SU(3)^2Y}
+&=2\left(\frac16\right)T(3)
++\left(-\frac23\right)T(\bar3)
++\left(\frac13\right)T(\bar3)=0,\\
+\mathcal A_{SU(2)^2Y}
+&=3\left(\frac16\right)T(2)
++\left(-\frac12\right)T(2)=0,\\
+\mathcal A_{Y^3}
+&=6\left(\frac16\right)^3
++3\left(-\frac23\right)^3
++3\left(\frac13\right)^3
++2\left(-\frac12\right)^3+1=0,\\
+\mathcal A_{\mathrm{grav}^2Y}
+&=6\left(\frac16\right)
++3\left(-\frac23\right)
++3\left(\frac13\right)
++2\left(-\frac12\right)+1=0.
+\end{aligned}
+}
+$$
+
+Triangles containing one nonabelian generator and two abelian insertions vanish because the nonabelian generator is traceless on each irreducible multiplet. Four-dimensional chiral matter has no separate local pure gravitational anomaly; the mixed gravitational–hypercharge anomaly displayed above is the applicable local gravitational check. A sterile $\nu_R^c$ has $Y=0$ and changes none of these equations.
+
+There is no local perturbative $SU(2)^3$ anomaly for pseudoreal doublets, and the number of left-handed $SU(2)$ doublets per generation is $3+1=4$, so the ordinary Witten anomaly \[[18](/monograph/bibliography#ref-Witten1982)\] is absent. These computations establish anomaly integrity for the stated branch, not its source selection.
+
+The displayed branch is identified as the Standard Model branch only after the source-selection machinery above has been evaluated; the display itself is a recovery/readout statement, not a derivation.
+
+<a id="95-one-generation-representation-table"></a>
+
+## 9.5 One-Generation Representation Table
+
+The one-generation matter representation cell is
+
+$$
+\boxed{
+\mathcal{R}_{gen}
+=
+\{Q_L,u_R,d_R,L_L,e_R,(\nu_R)\}.
+}
+\tag{9.4}
+$$
+
+The Standard Model representation assignments are the following.
+
+| Field     |                           Description | $SU(3)_c$ | $SU(2)_L$ | $U(1)_Y$ |
+| :-------- | ------------------------------------: | ----------: | ----------: | ---------: |
+| $Q_L$   |             left-handed quark doublet |       $3$ |       $2$ |   $+1/6$ |
+| $u_R$   |            right-handed up-type quark |       $3$ |       $1$ |   $+2/3$ |
+| $d_R$   |          right-handed down-type quark |       $3$ |       $1$ |   $-1/3$ |
+| $L_L$   |            left-handed lepton doublet |       $1$ |       $2$ |   $-1/2$ |
+| $e_R$   |           right-handed charged lepton |       $1$ |       $1$ |     $-1$ |
+| $\nu_R$ | optional right-handed neutrino handle |       $1$ |       $1$ |      $0$ |
+
+The electric charge relation is
+
+$$
+\boxed{
+Q_{\mathrm{em}}=T_3+Y.
+}
+\tag{9.5}
+$$
+
+The deep source derivation of the gauge group, representation content, hypercharge pattern, and anomaly closure is routed through the Standard-Model selection programme R4 of Chapter 17.
+
+The representation table is the recovered readout content of the selected branch; the family multiplicity and the representation content remain R4 material until source-selected.
+
+<a id="96-three-generation-extension-and-source-generator-separation"></a>
+
+## 9.6 Three-Generation Extension and Source-Generator Separation
+
+$$
+N_{\rm srcgen}^{\rm add}
+=
+\text{number of additional generators required in a source witness},
+\tag{9.6}
+$$
+
+whereas
+
+$$
+N_{\rm fam}
+=
+\text{multiplicity of recovered chiral matter families}.
+\tag{9.7}
+$$
+
+They are different typed quantities. $N_{\rm fam}=3$ is a candidate-output property to be selected in R4, not a renamed source-generator cost.
+
+<a id="97-covariant-derivative-and-field-strengths"></a>
+
+## 9.7 Covariant Derivative and Field Strengths
+
+<a id="971-definition-961---covariant-derivative"></a>
+
+### 9.7.1 Definition 9.6.1 — Covariant Derivative
+
+For a field in representation $(SU(3)_c,SU(2)_L,U(1)_Y)$, define
+
+$$
+\boxed{
+D_\mu
+=
+\nabla_\mu
+-
+ig_3G_\mu^AT^A
+-
+ig_2W_\mu^a t^a
+-
+ig_YYB_\mu.
+}
+\tag{9.8}
+$$
+
+Here $\nabla_\mu$ is the spacetime covariant derivative fixed by Chapters 4 and 7, $T^A$ are $SU(3)_c$ generators, $t^a$ are $SU(2)_L$ generators, and $Y$ is the hypercharge operator/value on the representation.
+
+The hypercharge coupling in the covariant derivative is the ordinary electroweak coupling $g_Y$. The SU(5)-normalized running coupling is $g_1=\sqrt{5/3}\,g_Y$ and is used only in the renormalization-group conventions of Chapter 11; the two are never identified, and an unqualified $g_1$ never appears in the covariant derivative.
+
+<a id="972-definition-962---gauge-field-strengths"></a>
+
+### 9.7.2 Definition 9.6.2 — Gauge Field Strengths
+
+The $SU(3)_c$ field strength is
+
+$$
+\boxed{
+G_{\mu\nu}^A
+=
+\partial_\mu G_\nu^A-\partial_\nu G_\mu^A
++
+g_3 f^{ABC}G_\mu^B G_\nu^C.
+}
+\tag{9.9}
+$$
+
+The $SU(2)_L$ field strength is
+
+$$
+\boxed{
+W_{\mu\nu}^a
+=
+\partial_\mu W_\nu^a-\partial_\nu W_\mu^a
++
+g_2\epsilon^{abc}W_\mu^b W_\nu^c.
+}
+\tag{9.10}
+$$
+
+The $U(1)_Y$ field strength is
+
+$$
+\boxed{
+B_{\mu\nu}
+=
+\partial_\mu B_\nu-\partial_\nu B_\mu.
+}
+\tag{9.11}
+$$
+
+<a id="98-gauge-and-fermion-lagrangian-terms"></a>
+
+## 9.8 Gauge and Fermion Lagrangian Terms
+
+<a id="981-definition-971---gauge-kinetic-term"></a>
+
+### 9.8.1 Definition 9.7.1 — Gauge Kinetic Term
+
+The gauge kinetic Lagrangian is
+
+$$
+\boxed{
+\mathcal{L}_{gauge}
+=
+-\frac14G_{\mu\nu}^A G^{A\mu\nu}
+-\frac14W_{\mu\nu}^a W^{a\mu\nu}
+-\frac14B_{\mu\nu}B^{\mu\nu}.
+}
+\tag{9.12}
+$$
+
+<a id="982-definition-972---fermion-kinetic-term"></a>
+
+### 9.8.2 Definition 9.7.2 — Fermion Kinetic Term
+
+The fermion kinetic Lagrangian is
+
+$$
+\boxed{
+\mathcal{L}_{fermion}
+=
+\sum_{\psi\in\mathcal{R}_{SM}^{3G}}
+i\bar\psi\gamma^\mu D_\mu\psi.
+}
+\tag{9.13}
+$$
+
+The sum is over the chiral Standard Model matter multiplets in the three-generation representation. Exact anomaly cancellation arithmetic and the source-level explanation of the chiral representation pattern are assigned to Chapter 10 and $R4$.
+
+<a id="99-higgs-sector-and-electroweak-symmetry-breaking"></a>
+
+## 9.9 Higgs Sector and Electroweak Symmetry Breaking
+
+Symbol convention (Chapter 4): throughout Chapter 9 the unadorned symbol $H$ denotes the Higgs doublet. No Hamiltonian $\mathsf H_Y$ and no Hubble readout $H(a)$ appear in this chapter, so the local context is unambiguous.
+
+The Higgs field is a complex scalar doublet with representation
+
+$$
+\boxed{
+H\sim(1,2,+1/2).
+}
+\tag{9.14}
+$$
+
+The Higgs Lagrangian is
+
+$$
+\boxed{
+\mathcal{L}_H
+=
+(D_\mu H)^\dagger(D^\mu H)-V(H).
+}
+\tag{9.15}
+$$
+
+The Higgs potential is
+
+$$
+\boxed{
+V(H)
+=
+-\mu_H^2H^\dagger H
++
+\lambda_H(H^\dagger H)^2.
+}
+\tag{9.16}
+$$
+
+The vacuum scale is
+
+$$
+\boxed{
+v=\frac{\mu_H}{\sqrt{\lambda_H}}.
+}
+\tag{9.17}
+$$
+
+In unitary gauge,
+
+$$
+\boxed{
+H(x)
+=
+\frac{1}{\sqrt2}
+\begin{pmatrix}
+0\\
+v+h(x)
+\end{pmatrix}.
+}
+\tag{9.18}
+$$
+
+The electroweak vector boson and Higgs masses are
+
+$$
+\boxed{
+m_W=\frac12g_2v,
+}
+\tag{9.19}
+$$
+
+$$
+\boxed{
+m_Z=\frac12v\sqrt{g_Y^2+g_2^2},
+}
+\tag{9.20}
+$$
+
+$$
+\boxed{
+m_H=\sqrt{2\lambda_H}\,v.
+}
+\tag{9.21}
+$$
+
+The origin and values of $v$, $\lambda_H$, $\mu_H$, and the Higgs naturalness status are routed through $R5$.
+
+<a id="910-yukawa-sector-and-mass-relations"></a>
+
+## 9.10 Yukawa Sector and Mass Relations
+
+Yukawa data are invariant tensors with the correct dual orientations:
+
+$$
+\mathcal Y_d
+\in
+(R_{Q_L}^{\vee}\otimes R_H\otimes R_{d_R})^{G_{\rm SM}},
+\tag{9.22}
+$$
+
+$$
+\mathcal Y_u
+\in
+(R_{Q_L}^{\vee}\otimes R_{\widetilde H}\otimes R_{u_R})^{G_{\rm SM}},
+\tag{9.23}
+$$
+
+$$
+\mathcal Y_e
+\in
+(R_{L_L}^{\vee}\otimes R_H\otimes R_{e_R})^{G_{\rm SM}},
+\tag{9.24}
+$$
+
+and, for a Dirac-neutrino branch,
+
+$$
+\mathcal Y_\nu
+\in
+(R_{L_L}^{\vee}\otimes R_{\widetilde H}\otimes R_{\nu_R})^{G_{\rm SM}}.
+\tag{9.25}
+$$
+
+The dimension-five branch is
+
+$$
+\frac{c_{\alpha\beta}}{\Lambda_L}
+(\overline{L_\alpha^c}\,\widetilde H^*)
+(\widetilde H^\dagger L_\beta)+\mathrm{h.c.},
+\tag{9.26}
+$$
+
+subject to the global quotient and anomaly gates.
+
+<a id="911-matter-closure-lagrangian"></a>
+
+## 9.11 Matter Closure Lagrangian
+
+The matter-channel closure Lagrangian is
+
+$$
+\boxed{
+\mathcal{L}_{SM}^{closure}
+=
+\mathcal{L}_{gauge}
++
+\mathcal{L}_{fermion}
++
+\mathcal{L}_H
++
+\mathcal{L}_Y
++
+\mathcal{L}_{\nu}^{res}
++
+\mathcal{L}_{\theta}^{res}.
+}
+\tag{9.27}
+$$
+
+The term $\mathcal{L}_{\nu}^{res}$ is the neutrino-sector completion handle. It contains Dirac, Majorana, seesaw, or other neutrino completion structures if introduced in Chapter 10.
+
+The term $\mathcal{L}_{\theta}^{res}$ is the strong CP/topological residue handle. A standard representative is a topological $\theta$-term, with full treatment assigned to Chapter 10 and the parameter classification of Chapter 11.
+
+<a id="912-matter-action-qft-and-geometry"></a>
+
+## 9.12 Matter Action, QFT, and Geometry
+
+On a solved Lorentzian branch, split the matter variables into disjoint matter and quantum sets, $\Phi_M\cap\Phi_{\rm q}=\varnothing$, and write
+
+$$
+S_M^{\rm dyn}[g,\Phi_M]
+=\int_M d^4x\sqrt{-g}\,\mathcal L_M(\Phi_M)
++S_{M,\rm eff}^{\rm nonQFT}[g,\Phi_M],
+\qquad
+T_{\mu\nu}^{M,\rm dyn}
+=-\frac2{\sqrt{-g}}\frac{\delta S_M^{\rm dyn}}{\delta g^{\mu\nu}}.
+$$
+
+Here $S_{M,\rm eff}^{\rm nonQFT}$ contains only matter operators not already contained in the quantum effective action. The locally covariant QFT construction produces the closed-time-path functional
+
+$$
+\begin{aligned}
+\Gamma_{\rm QFT,CTP}^{\rm ren}
+[g^+,\Phi_{\rm q}^+;g^-,\Phi_{\rm q}^-\mid\omega]
+={}&\Gamma_{\rm QFT,dyn}^{\rm ren}
+[g^+,\Phi_{\rm q}^+;g^-,\Phi_{\rm q}^-\mid\omega]\\
+&+\Gamma_{\rm grav,loc}^{\rm ren}[g^+]
+-\Gamma_{\rm grav,loc}^{\rm ren}[g^-]+C_\omega .
+\end{aligned}
+$$
+
+The state-dependent part is normalized at a fixed reference configuration and contains no pure-metric local counterterm. Its stress is
+
+$$
+T_{\mu\nu}^{\rm QFT,dyn}
+=-\frac2{\sqrt{-g}}
+\left.
+\frac{\delta\Gamma_{\rm QFT,dyn}^{\rm ren}}
+{\delta g^{+\mu\nu}}\right|_{g^+=g^-}.
+$$
+
+The constant and Einstein–Hilbert projections of $\Gamma_{\rm grav,loc}^{\rm ren}$ renormalize $\Lambda_{\rm br}$ and $G_R$; its remaining pure-metric higher-curvature terms occur only in $\Gamma_{\rm high}^{\rm grav}$. The field equation may contain both $T_{\mu\nu}^{M,\rm dyn}$ and $T_{\mu\nu}^{\rm QFT,dyn}$ because their variables and operators are disjoint. If a matter species is treated fully quantum mechanically, its term is absent from $S_M^{\rm dyn}$. The combined Ward identity, including any explicitly modelled exchange current, must match the Bianchi identity of the gravitational equation.
+
+<a id="913-r4-selection-discipline"></a>
+
+## 9.13 R4 Selection Discipline
+
+The candidate universe is target neutral. Source witnesses may constrain rank, chirality, central quotients, invariant tensors, family multiplicity, and topological branches, but may not contain a renamed Standard Model answer. The source cost is lexicographic and preregistered; degeneracy is an output. R4 distinguishes:
+
+1.  Tier-1 recovery of a candidate matching established physics;
+
+2.  source selection of that candidate from the neutral universe;
+
+3.  uniqueness or controlled degeneracy of the selection.
+
+The authoritative R4 target, hypotheses, and conclusion are stated in Chapter 17. R4 remains an open problem; Tier-1 recovery, source selection, and uniqueness or controlled degeneracy are distinguished conclusions.
+
+<a id="914-companion-theorem-boundary"></a>
+
+## 9.14 Companion-Theorem Boundary
+
+R4 begins with the candidate class $\mathfrak B_M$, the source signature $I_M$, the admissible subset $\mathfrak B_M(Y)$, and the selection functional $\mathcal C_Y$. It must show that a nontrivial source family selects the Standard Model local and global structure, chirality, family multiplicity, Higgs representation, and allowed intertwiners without placing those labels in source admission. The recovery equations above then provide the physical branch to which that theorem must reduce.
+
+R5 begins with the same selected branch but concerns the numerical couplings, masses, mixing data, scales, and their renormalization. Those quantities are not derived merely by writing the Standard Model Lagrangian.

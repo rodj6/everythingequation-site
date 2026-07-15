@@ -1,0 +1,546 @@
+---
+title: "Temporal Order and the Arrow of Time"
+kind: chapter
+number: "14"
+label: "Chapter 14"
+part: 2
+order: 14
+description: 'This chapter defines the arrow-of-time readout channel of the monograph.'
+---
+This chapter defines the arrow-of-time readout channel of the monograph. The arrow is treated as a readout from low-boundary cosmology, record accumulation, admissible dependency order, entropy monotonicity, and retarded propagation support; it is not introduced as a primitive unexplained time direction. The chapter receives deposited record structures from Chapter 6, dependency and causal/geometric structure from Chapter 7, and the low-boundary cosmological condition from Chapter 12, and it preserves the Chapter 13 low-boundary cross-link. On these inputs it constructs the record filtration, the record entropy functional with its domain rule, the record accumulation monotonicity lemma with full proof, the arrow and temporal readout orders, the dependency-to-temporal-order descent with its non-circularity statement, the retarded Green-function route, and the measurement-selection boundary.
+
+The relevant open problems are R6, R7, and R9 of Chapter 17; all remain open throughout, and nothing in this chapter discharges them.
+
+<a id="141-role-of-this-chapter"></a>
+
+## 14.1 Role of This Chapter
+
+Chapter 14 defines the arrow-of-time readout channel of the monograph. It formalizes the route
+
+$$
+\boxed{
+\mathrm{ArrowOfTime}
+=
+\mathrm{Readout}
+(
+\mathcal B_{cos}^{low},
+\mathcal C_{macro},
+\mathcal A(t),
+\mathcal D_{causal}
+).
+}
+\tag{14.1}
+$$
+
+The arrow is treated as a readout from low-boundary cosmology, record accumulation, admissible dependency order, entropy monotonicity, and retarded propagation support. It is not introduced as a primitive unexplained time direction.
+
+This chapter receives deposited record structures from Chapter 6,
+
+$$
+\boxed{
+\mathcal R_{T1,Y},
+\quad
+\chi_i,
+\quad
+D_i^{\rm obj},
+\quad
+Z_i,
+\quad
+\mathbb E[\chi_i]=p_i
+}
+\tag{14.2}
+$$
+
+where $\mathbb E[\chi_i]=p_i$ remains an $R7$ obligation. It receives dependency and causal/geometric structure from Chapter 7,
+
+$$
+\boxed{
+\mathcal E_{adm},
+\quad
+\precsim_D,
+\quad
+g_{\mu\nu}^{eff}.
+}
+\tag{14.3}
+$$
+
+It receives the low-boundary cosmological condition from Chapter 12,
+
+$$
+\boxed{
+\mathcal B_{cos}^{low},
+\quad
+S_{grav}^{early}\ll S_{grav}^{max},
+\quad
+a(t),
+\quad
+H(a),
+}
+\tag{14.4}
+$$
+
+and preserves the low-boundary condition defined in Chapter 13.
+
+<a id="142-inherited-inputs-from-records-geometry-and-cosmology"></a>
+
+## 14.2 Inherited Inputs from Records, Geometry, and Cosmology
+
+The record-side inputs are the following.
+
+| Symbol                | Role                                                          | Defined in | Open problem |
+| :-------------------- | :------------------------------------------------------------ | :--------- | :----------- |
+| $\mathcal R_{T1,Y}$ | objective Tier-1 record obtained through the selected lineage | Chapter 6  | —            |
+| $\chi_i$            | realization selector                                          | Chapter 6  | R7           |
+| $D_i^{\rm obj}$     | objective record (post-$\operatorname{ObjPers}$)            | Chapter 6  | —            |
+| $Z_i$               | objectivity index                                             | Chapter 6  | —            |
+
+The geometry-side inputs are the following.
+
+| Symbol               | Role                               | Defined in |
+| :------------------- | :--------------------------------- | :--------- |
+| $\mathcal E_{adm}$ | admissible record-event class      | Chapter 7  |
+| $\precsim_D$       | reflexive dependency partial order | Chapter 7  |
+| $g_{\mu\nu}^{eff}$ | effective geometry/causal support  | Chapter 7  |
+
+The cosmology-side inputs are the following.
+
+| Symbol                     | Role                                      | Defined In         | Open problem |
+| :------------------------- | :---------------------------------------- | :----------------- | :----------- |
+| $\mathcal B_{cos}^{low}$ | low-boundary cosmological condition       | Chapters 12 and 13 | R6           |
+| $S_{grav}^{early}$       | early gravitational entropy measure/value | Chapters 12 and 14 | —            |
+| $S_{grav}^{max}$         | maximum/reference gravitational entropy   | Chapters 12 and 14 | —            |
+| $a(t)$, $H(a)$         | expansion context for arrow readout       | Chapter 12         | —            |
+
+Shadow Theory does not place an oriented Tier-1 time coordinate in the source. The temporal arrow is read out from an objective-event dependency order, a low gravitational-entropy boundary, retained records, and the causal support of the solved Lorentzian branch.
+
+<a id="143-pretemporal-dependency"></a>
+
+## 14.3 Pretemporal dependency
+
+Let $\mathcal E_Y^{\rm obj}$ be the directed union of objective-deposition events represented by the finite subarchives of Chapter 7, and let
+
+$$
+e\leadsto_Y f
+$$
+
+mean that the support or deposited content of $f$ counterfactually depends on $e$. This relation is defined before a Tier-1 chronological coordinate is chosen. Let $\triangleleft_Y$ be its transitive closure and let $\equiv_Y$ be the restriction of the declared physical-redescription equivalence $\sim_{\rm red}$ to objective events:
+
+$$
+e\equiv_Y f
+\quad\Longleftrightarrow\quad
+e\sim_{\rm red}f.
+$$
+
+A temporal branch is admissible only when $\leadsto_Y$ descends to this quotient and every mutual-reachability cycle lies within one $\equiv_Y$-class. Consequently
+
+$$
+\mathsf P_Y
+=\mathcal E_Y^{\rm obj}/\!\equiv_Y
+\cong
+\varinjlim_{I\Subset\mathcal A_Y^{\rm obj}}\mathsf P_{Y,I}
+$$
+
+is the realization-wide carrier already constructed in Chapter 7. On it define
+
+$$
+[e]\prec_D[f]
+\quad\Longleftrightarrow\quad
+[e]\ne[f]\ \text{and a directed dependency path joins }[e]\text{ to }[f].
+$$
+
+Its reflexive closure $\precsim_D$ is a partial order. A redescription-internal mutual-dependency cycle is represented by one equivalence class; quotienting it does not manufacture an internal chronology. If a cycle contains physically inequivalent objective events, this construction yields no temporal order for that branch rather than silently identifying those events.
+
+<a id="144-low-boundary-cosmology-and-gravitational-entropy"></a>
+
+## 14.4 Low-Boundary Cosmology and Gravitational Entropy
+
+The low-boundary condition is
+
+$$
+\boxed{
+\mathcal B_{cos}^{low}
+\Rightarrow
+S_{grav}^{early}\ll S_{grav}^{max}.
+}
+\tag{14.5}
+$$
+
+Here $S_{grav}^{early}$ is an early-universe gravitational entropy functional or value, $S_{grav}^{max}$ is a maximum/reference gravitational entropy, and
+
+$$
+\boxed{
+S_{grav}^{early}\ll S_{grav}^{max}
+}
+\tag{14.6}
+$$
+
+means that the early branch is in a gravitational-entropy state far below the maximum/reference value.
+
+The proof target for the source of $\mathcal B_{cos}^{low}$ is routed to R6. This chapter uses the low-boundary condition as an arrow-orientation input and does not derive its source.
+
+<a id="145-record-filtration-archives-live-records-and-retention"></a>
+
+## 14.5 Record Filtration: Archives, Live Records, and Retention
+
+For $p\in\mathsf P_\Omega$, its dependency down-set is
+
+$$
+\downarrow p:=\{q\in\mathsf P_\Omega:q\precsim_Dp\}.
+$$
+
+The archival record at $p$ is
+
+$$
+\mathfrak A(p)
+:=
+\operatorname{Archive}
+\left(
+\{\mathcal R(q):q\in\downarrow p\}
+\right),
+$$
+
+where $\operatorname{Archive}$ retains objective record lineages modulo persistence and admissible coarse-graining. The live-record object $\mathfrak R_{\rm live}(p)$ may forget or overwrite content; it is not identified with $\mathfrak A(p)$.
+
+For $p\precsim_Dq$, a retention morphism
+
+$$
+\iota_{pq}:\mathfrak A(p)\longrightarrow\mathfrak A(q)
+$$
+
+must satisfy
+
+$$
+\iota_{pp}=\operatorname{id},
+\qquad
+\iota_{qr}\circ\iota_{pq}=\iota_{pr}.
+$$
+
+The archive is cumulative on a branch precisely when $\iota_{pq}$ is injective on persistence-equivalence classes and record eligibility is monotone under $\iota_{pq}$. A physical memory system is allowed to lose live records while the archival theorem fails; no universal microscopic memory monotonicity is asserted.
+
+<a id="146-record-entropy-functional"></a>
+
+## 14.6 Record Entropy Functional
+
+Define the effective eligible archive count by
+
+$$
+N_{\rm rec}(p)
+:=
+\#_{\rm eff}
+\left\{
+D_i^{\rm obj}\in\mathfrak A(p):
+Z_i\ge Z_{\min}
+\text{ and persistence passes}
+\right\}.
+$$
+
+On the gated domain $N_{\rm rec}\ge1$,
+
+$$
+S_{\rm rec}^{\rm count}(p):=\log N_{\rm rec}(p).
+$$
+
+If an empty archive must be represented, the totalized convention is
+
+$$
+S_{\rm rec}^{\rm count,+}(p):=\log(1+N_{\rm rec}(p));
+$$
+
+the two conventions must be labelled and not intermixed. If $p\precsim_Dq$, $\iota_{pq}$ is injective, and eligibility is monotone, then
+
+$$
+N_{\rm rec}(q)\ge N_{\rm rec}(p)
+\quad\Longrightarrow\quad
+S_{\rm rec}^{\rm count}(q)\ge S_{\rm rec}^{\rm count}(p).
+$$
+
+This proposition concerns archive count only.
+
+<a id="147-record-accumulation-monotonicity-lemma"></a>
+
+## 14.7 Record Accumulation Monotonicity Lemma
+
+<a id="1471-lemma-1471---record-accumulation-monotonicity"></a>
+
+### 14.7.1 Lemma 14.7.1 — Record Accumulation Monotonicity
+
+If
+
+$$
+\boxed{
+\mathfrak R(t_1)\subseteq\mathfrak R(t_2)
+}
+\tag{14.7}
+$$
+
+and $S_{rec}(t)=\log N_{rec}(t)$ with $N_{rec}$ the effective count of persistent objective records, then
+
+$$
+\boxed{
+S_{rec}(t_2)\ge S_{rec}(t_1).
+}
+\tag{14.8}
+$$
+
+**Proof.** From $\mathfrak R(t_1)\subseteq\mathfrak R(t_2)$, every persistent objective record counted at $t_1$ is also represented at $t_2$. Therefore
+
+$$
+\boxed{
+N_{rec}(t_2)\ge N_{rec}(t_1).
+}
+\tag{14.9}
+$$
+
+The logarithm is monotone increasing on positive real numbers. Hence
+
+$$
+\log N_{rec}(t_2)\ge \log N_{rec}(t_1).
+$$
+
+Using $S_{rec}(t)=\log N_{rec}(t)$, this gives
+
+$$
+S_{rec}(t_2)\ge S_{rec}(t_1).
+$$
+
+$\square$
+
+Archive/record-count monotonicity is asserted only under injective retention and monotone eligibility: records are counted up to persistence equivalence, retention must preserve lineage and objectivity class, and the strict form of the arrow order requires at least one strict inclusion or entropy increase. Raw set inclusion alone is insufficient (invariant I8).
+
+<a id="148-entropy-family-and-comparison-relation"></a>
+
+## 14.8 Entropy family and comparison relation
+
+The entropy output is a typed family
+
+$$
+\mathsf{Ent}_A
+=
+(S_{\rm rec}^{\rm count},H_{\rm Sh},S_{\rm vN},S_{\rm th},S_{\rm grav},\mathcal C_{\rm ent}),
+$$
+
+not a single universal scalar.
+
+For a classical record distribution $P_p(r)$,
+
+$$
+H_{\rm Sh}(P_p)
+=-
+\sum_rP_p(r)\log P_p(r).
+$$
+
+For a density operator $\rho_p$,
+
+$$
+S_{\rm vN}(\rho_p)
+=-
+\operatorname{Tr}(\rho_p\log\rho_p).
+$$
+
+For a declared thermodynamic coarse-graining $\operatorname{CG}_{\rm th}$,
+
+$$
+S_{\rm th}(p)
+:=
+k_B\log\Omega
+\left(
+\operatorname{CG}_{\rm th}(p)
+\right)
+$$
+
+or the corresponding Gibbs functional. Its monotonicity requires the declared kinetic, molecular-chaos, Markovian, hydrodynamic, or other limit assumptions.
+
+The gravitational branch is selected from a typed family. For a causal horizon branch,
+
+$$
+S_{\rm gen}
+=
+\frac{A}{4G_R\hbar}+S_{\rm out};
+$$
+
+for a cosmological Weyl branch, a labelled functional such as
+
+$$
+S_{\rm Weyl}[\Sigma]
+=
+\lambda_W
+\int_\Sigma
+\mathcal W
+\left(
+C_{\mu\nu\rho\sigma}C^{\mu\nu\rho\sigma},
+R_{\alpha\beta}R^{\alpha\beta},\ldots
+\right)dV_\Sigma
+$$
+
+is a proxy whose normalization, foliation dependence, and domain must be declared. No universal local gravitational-entropy theorem is inferred from the proxy.
+
+The comparison object is the hypothesis-indexed relation
+
+$$
+\mathcal C_{\rm ent}
+\subseteq
+\mathsf{EntType}\times
+\mathsf{EntType}\times
+\mathsf{HypothesisClass}\times
+\{=,\le,\ge,\perp\}.
+$$
+
+Its generating maps include
+
+$$
+\mathfrak A
+\xrightarrow{\operatorname{Enc}}
+P_{\rm rec},
+\qquad
+\rho
+\xrightarrow{\operatorname{Meas}}
+P_{\rm rec},
+\qquad
+P_{\rm rec}
+\xrightarrow{\operatorname{CG}_{\rm th}}
+M_{\rm macro},
+\qquad
+g
+\xrightarrow{\operatorname{GravEnt}}
+S_{\rm grav}.
+$$
+
+The following rules are binding:
+
+  - archive-count growth does not imply Shannon-entropy growth;
+
+  - Shannon entropy after measurement is related to $S_{\rm vN}$ only through the chosen measurement/channel and its inequalities;
+
+  - $S_{\rm vN}$ is invariant under unitary evolution and need not increase under an arbitrary CPTP map;
+
+  - data-processing inequalities apply only to their declared channel/divergence;
+
+  - thermodynamic monotonicity does not by itself imply gravitational monotonicity;
+
+  - gravitational and record arrows agree only when an explicit comparison record in $\mathcal C_{\rm ent}$ passes.
+
+Entropy functionals and data-processing inequalities follow \[[60](/monograph/bibliography#ref-Shannon1948), [61](/monograph/bibliography#ref-VonNeumann1955), [62](/monograph/bibliography#ref-Lindblad1975)\].
+
+<a id="149-orientation-and-temporal-readout"></a>
+
+## 14.9 Orientation and Temporal Readout
+
+The low-boundary hypothesis is
+
+$$
+\mathcal B_{\rm cos}^{\rm low}
+\quad\Longrightarrow\quad
+S_{\rm grav}^{\rm early}\ll S_{\rm grav}^{\rm ref}.
+$$
+
+A temporal readout is an order embedding on the physical event carrier,
+
+$$
+\Theta_A:(\mathsf P_Y,\precsim_D)
+\longrightarrow(\mathcal T_Y,\preceq_t)
+$$
+
+such that
+
+$$
+p_1\precsim_Dp_2
+\quad\Longleftrightarrow\quad
+\Theta_A(p_1)\preceq_t\Theta_A(p_2).
+$$
+
+Its orientation is compatible with the low boundary and with archive retention. If a readout identifies two event classes, the identification is taken first and is admissible only when their dependency relations, retained archives, and entropy data agree; $\Theta_A$ then acts as an order embedding of that quotient. A total temporal order, when used, is only a linear extension of the physical partial order.
+
+The non-strict arrow relation is defined first on event classes:
+
+$$
+p_1\preceq_A^{\mathsf P}p_2
+\quad\Longleftrightarrow\quad
+\ p_1\precsim_Dp_2,\qquad
+\mathcal A_Y^{\rm obj}(p_1)\hookrightarrow\mathcal A_Y^{\rm obj}(p_2)
+\ \text{and}\
+S_{\rm rec}^{\rm count}(p_1)\le S_{\rm rec}^{\rm count}(p_2).
+$$
+
+Its strict part additionally requires strict archive growth or strict entropy growth. Because $\Theta_A$ is an order embedding, this relation has the well-defined temporal image
+
+$$
+t_1\preceq_A t_2
+\quad\Longleftrightarrow\quad
+\Theta_A^{-1}(t_1)\preceq_A^{\mathsf P}\Theta_A^{-1}(t_2),
+\qquad t_i\in\Theta_A(\mathsf P_Y).
+$$
+
+The arrow is therefore not smuggled into a neutral index parameter: dependency, boundary data, and record retention jointly orient the readout.
+
+<a id="1410-arrow-theorem-target"></a>
+
+## 14.10 Arrow theorem target
+
+The temporal-arrow subtarget $R6_{\rm arr}$ of R6 asks for a redescription-invariant dependency quotient, functorial archive formation under refinement, an order-embedded temporal readout, and compatibility among the low-boundary, archive, entropy, and retarded-propagation structures. It is a lemma suite within R6, not an additional residue, and is completed before the observer theorem R8 is attempted. The source of the low-boundary condition and a generalized second law for concrete realizations remain companion-paper results; global multi-sector compatibility remains R9.
+
+<a id="1411-non-circularity-of-the-temporal-order-descent"></a>
+
+## 14.11 Non-Circularity of the Temporal Order Descent
+
+<a id="14111-proposition-14101---temporal-order-descent-non-circularity"></a>
+
+### 14.11.1 Proposition 14.10.1 — Temporal Order Descent Non-Circularity
+
+The temporal readout order $\preceq_t$ is not assumed as primitive chronological time. It is defined from:
+
+1.  the dependency order $\precsim_D$ over admissible record-events;
+
+2.  the record inclusion/filtration condition $\mathfrak R(t_1)\subseteq\mathfrak R(t_2)$;
+
+3.  the low-boundary orientation $\mathcal B_{cos}^{low}$.
+
+**Proof sketch.** The construction begins with $\precsim_D$, the reflexive dependency partial order supplied by the geometry/record channel, not a primitive temporal direction. The index set $\mathcal T$ is introduced as a neutral readout index set for record families. Orientation is imposed only after the low-boundary condition and the record inclusion condition are applied. Thus the arrow direction is not presupposed in $\mathcal T$. It is produced by the combined dependency, record, and boundary data. Therefore the definition avoids circularly assuming the arrow it is intended to read out. $\square$
+
+The theorem-grade form of this statement is the temporal-order descent target of the arrow theorem programme ($R6_{\rm arr}$, Chapter 17).
+
+<a id="1412-retarded-propagation-and-green-function-support"></a>
+
+## 14.12 Retarded Propagation and Green-Function Support
+
+Let $P$ be a normally hyperbolic or Green-hyperbolic Tier-1 field operator on a globally hyperbolic solved spacetime. Retarded and advanced operators satisfy
+
+$$
+PG_{\rm ret/adv}f=f,
+\qquad
+G_{\rm ret/adv}Pf=f,
+$$
+
+on compactly supported test sections, with
+
+$$
+\operatorname{supp}(G_{\rm ret}f)
+\subseteq
+J^+(\operatorname{supp}f),
+\qquad
+\operatorname{supp}(G_{\rm adv}f)
+\subseteq
+J^-(\operatorname{supp}f).
+$$
+
+Equivalently, the retarded kernel $G_{\rm ret}(x,y)$ may be nonzero only when $y\in J^-(x)$. Retarded support is a compatibility consequence of the solved causal branch and boundary conditions; it is not used to define the pretemporal dependency relation.
+
+Green-hyperbolic operators on globally hyperbolic spacetimes follow \[[63](/monograph/bibliography#ref-BarGinouxPfaffle2007)\].
+
+<a id="1413-measurement-selection-boundary"></a>
+
+## 14.13 Measurement-Selection Boundary
+
+This chapter inherits the Chapter 6 selector conditions:
+
+$$
+\boxed{
+\chi_i\in\{0,1\},
+\qquad
+\sum_i\chi_i=1,
+\qquad
+\mathbb E[\chi_i]=p_i.
+}
+\tag{14.10}
+$$
+
+This chapter uses deposited records $\mathcal R_{T1}(t)$. It does not derive $\chi_i$. Arrow monotonicity must be compatible with selector-Born statistics, but the selector-origin theorem remains open under the companion programme R7 of Chapter 17.

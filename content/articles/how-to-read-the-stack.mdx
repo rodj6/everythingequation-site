@@ -1,0 +1,78 @@
+---
+title: "How to Read the Six-Paper Stack"
+description: "A reading guide: what each paper assumes, what it proves, and the interfaces between them."
+date: "2026-07-03"
+tags: [guide, papers]
+status: published
+---
+
+The stack is designed to be read in order. Each paper proves one step and
+hands a typed interface to the next; nothing downstream claims more than
+upstream results license.
+
+## Paper 1 — the distinction
+
+Fix a realization/readout map $\rho: \mathcal{C} \to S$ from complete
+realization packages to bounded readouts. Two relations must be kept apart:
+the quotient presentation $S \cong \mathcal{C}/\sim_\rho$, which always holds
+for $S = \mathrm{Img}(\rho)$, and realization-structure equivalence, which
+requires admissible faithful recovery. Paper 1 proves these come apart, and
+pins down exactly when — including an equivariant no-selector theorem and
+explicit exception classes.
+
+<Theorem title="Readout Non-Equivalence (informal)">
+If no admissible realization-faithful section of $\rho$ exists, the readout
+domain is not realization-structure equivalent to the package domain, even
+though it is an exact quotient of it.
+</Theorem>
+
+## Paper 2 — the brake
+
+It is a recurring error to read Paper 1 as "readout loss is automatically a
+problem." Paper 2 proves the precise extra condition needed: a **certified
+active failure** of an essential public closure slot, with no checked repair
+or public surrogate. Without that certificate, no obstruction claim is
+licensed.
+
+## Paper 3 — conditional canonicality
+
+Given a certified completion need, when is a proposed completion *the*
+completion? Exactly when it is a certified initial object in the public
+admissible completion category:
+
+<EquationPanel title="Canonical Completion Object" note="A canonicality criterion, not an existence theorem: completion need does not imply canonical completion.">
+$$\mathrm{CCO}_{\mathrm{pub}} = \mathrm{Init}\left(\mathbf{Comp}_{\mathrm{pub}}\right)$$
+</EquationPanel>
+
+## Paper 4 — from object to artifact
+
+A canonical completion object is still not a public artifact. Paper 4 defines
+the down-compiler — total, deterministic, route-legal, gate-cleared,
+residue-aware — and proves it emits exactly one statused output from an
+eight-member codomain that includes declared failure and residue outputs.
+
+## Paper 5 — the runtime
+
+Paper 5 supplies the calculus that governs public claims after compilation:
+routes, status algebra, residue algebra, the equation-artifact grammar, claim
+licensing, dry-test audit, downgrade logic, and forbidden-promotion
+discipline. Its claim-cap theorems bound every emitted output.
+
+## Paper 6 — the synthesis
+
+The capstone composes the five upstream interfaces into a single typed
+synthesis object and proves the Scoped Shadow Fixed-Point Law-Packet Theorem.
+That theorem is the precise, bounded sense in which the historical
+"Everything Equation" survives:
+
+<EquationPanel title="Scoped law-packet schema" note="Licensed only as a scoped, residue-visible, status-certified, claim-bounded closure-fixed law packet — not as source-level equality or a solved theory of everything.">
+$$L \;=\; \Omega_{T1}\,\Delta\,\partial\,[\,L\,]$$
+</EquationPanel>
+
+<StatusCard
+  status="Public framework papers (v-final drafts)"
+  route="Papers 1–6 + loading manifest"
+  claims="Formal theorems with declared assumptions; no empirical claims"
+>
+DOIs will be linked on each paper page as Zenodo records are published.
+</StatusCard>

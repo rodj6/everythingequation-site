@@ -1,62 +1,45 @@
-# Everything Equation Site
+# Shadow Theory — Public Research Website
 
-This repository contains the source code for **Everything Equation**, a
-premium research platform that curates open problems and key scholarly
-articles. The site is built with [Next.js](https://nextjs.org/)
-(App Router), TypeScript, MDX and Tailwind CSS, and is designed to be
-deployed on [Vercel](https://vercel.com/). Content is driven entirely
-from two YAML registries (`content/problems.yaml` and
-`content/papers.yaml`) and supplemented with manual MDX files for
-detailed commentary.
+The public home of **Shadow Theory**: a six-paper mathematical framework for
+readout, completion, canonical closure, Tier-1 compilation, and claim
+licensing, plus an open-problem research programme and article system.
 
-## Features
+Built with Next.js 14 (App Router), TypeScript, Tailwind CSS, MDX, and KaTeX.
+Statically generated; deployed via GitHub → Vercel.
 
-- **Static Generation** of problems and papers from YAML files.
-- **Manual MDX blocks** for each problem/paper which persist across
-  regenerations (`content/manual/problems/{slug}.mdx` and
-  `content/manual/papers/{slug}.mdx`).
-- **AI lighthouse outputs**: automatically generated `graph.json`,
-  `llms.txt`, `sitemap.xml` and `feed.xml` endpoints.
-- **Monograph view** grouping problems and papers into sections defined
-  in the registries.
-- **Tailwind CSS** for a clean grid layout and typography.
-- **Daily GitHub Action** to refresh Zenodo metadata and commit
-  updates.
-
-## Development
-
-To develop locally, ensure you have Node.js installed. Then run:
+## Quick start
 
 ```bash
 npm install
-npm run dev
+npm run dev          # http://localhost:3000
+npm run build        # full production build (run before pushing)
 ```
 
-The site will be served at `http://localhost:3000` by default.
+## Updating the site
 
-## Content Editing
+**Read `SITE_MAINTENANCE_MANUAL.md`** — it covers everything: adding papers,
+articles, and open problems; updating Zenodo DOIs; adding nav tabs; math
+rendering; machine-readable endpoints; and pre-push checklists.
 
-- Add or edit problems in `content/problems.yaml`. Each entry must
-  include an `id`, `title`, `claim`, `status` (`draft` or `public`)
-  and any related paper IDs.
-- Add or edit papers in `content/papers.yaml`. Each entry must
-  include an `id`, `title`, `status` and optionally a `doi` or
-  `zenodoId` along with the list of supported problems.
-- Create manual MDX files for deeper commentary under
-  `content/manual/problems/{slug}.mdx` or
-  `content/manual/papers/{slug}.mdx`. These files are never overwritten
-  by the build system.
+For writing MDX content, see `ARTICLE_AUTHORING_GUIDE.md`.
 
-## Deployment
+Shortest possible version:
 
-Deployment is designed for Vercel. After pushing this repository to
-GitHub, create a new Vercel project and import the repo. Set
-`NEXT_PUBLIC_SITE_URL` in the Vercel environment to your custom domain
-(e.g. `https://everythingequation.com`). The build command is `npm
-run build` and the output directory is `.next` (the default for
-Next.js).
+- Papers → edit `content/papers.yaml` (+ optional notes in
+  `content/manual/papers/`)
+- Articles → add `content/articles/<slug>.mdx`
+- Open problems → edit `content/problems.yaml`
+- Navigation → edit `src/config/navigation.ts`
+- Site identity → edit `src/config/site.ts`
 
-## License
+## Machine-readable endpoints
 
-This project is released under the MIT License. See
-[`LICENSE`](LICENSE) for details.
+`/sitemap.xml` · `/feed.xml` (Atom) · `/llms.txt` (AI summary) ·
+`/graph.json` (research graph) · `/robots.txt`
+
+## Authority note
+
+The controlling public authority for all site copy is the canonical six-paper
+stack plus `00_PUBLIC_SHADOW_STACK_LOADING_MANIFEST.md`. Older Everything
+Equation / Tier-0 era materials are historical archive only. Public copy must
+stay inside the claim boundary defined in `src/config/site.ts`.

@@ -1,0 +1,524 @@
+---
+title: "Flavour, Generations, Neutrinos, and Anomalies"
+kind: chapter
+number: "10"
+label: "Chapter 10"
+part: 2
+order: 10
+description: 'This chapter refines the matter channel of Chapter 9 into a typed flavor and generation layer.'
+---
+This chapter refines the matter channel of Chapter 9 into a typed flavor and generation layer. It formalizes generation replication, Yukawa diagonalization, quark and lepton mixing, physical CP phases, the neutrino-sector branches, and the strong CP/topological residue, and it executes the Standard Model one-generation anomaly cancellation arithmetic for the hypercharge assignments stated in Chapter 9. The deep origin of the flavour structure and of its parameters remains open under R4 and R5 of Chapter 17; the executed anomaly calculation establishes cancellation for the stated assignments but does not discharge either problem.
+
+The flavour sector takes the gauge and representation content of the recovered matter branch as fixed and studies the additional structure carried by family multiplicity, Yukawa matrices, neutrino masses, CP violation, and topology. The Standard Model anomaly arithmetic verifies consistency of the displayed branch; it does not by itself explain why that branch is selected at the source level.
+
+<a id="101-three-generation-matter-structure"></a>
+
+## 10.1 Three-Generation Matter Structure
+
+The three-generation structure is inherited from Chapter 9:
+
+$$
+\boxed{
+\mathcal R_{SM}^{3G}
+=
+\mathcal R_{gen}\otimes\mathbb C^3.
+}
+\tag{10.1}
+$$
+
+Generation indices are
+
+$$
+\boxed{
+r,s=1,2,3.
+}
+\tag{10.2}
+$$
+
+Generation-labeled fermion fields are
+
+$$
+\boxed{
+Q_L^r,\quad
+u_R^r,\quad
+d_R^r,\quad
+L_L^r,\quad
+e_R^r,\quad
+(\nu_R^r).
+}
+\tag{10.3}
+$$
+
+The exact source origin of the number of generations is assigned to R4. Chapter 10 treats (10.1) as the formal three-generation matter structure used for flavor definitions and anomaly replication.
+
+<a id="102-yukawa-matrices-and-diagonalization"></a>
+
+## 10.2 Yukawa Matrices and Diagonalization
+
+For $f=u,d,e,\nu$, define Yukawa matrices
+
+$$
+\boxed{
+Y_u,Y_d,Y_e,Y_\nu\in M_3(\mathbb C).
+}
+\tag{10.4}
+$$
+
+For Dirac-type Yukawa matrices, use biunitary diagonalization
+
+$$
+\boxed{
+Y_f
+=
+U_f^L\,y_f\,(U_f^R)^\dagger,
+}
+\tag{10.5}
+$$
+
+where
+
+$$
+\boxed{
+y_f=\mathrm{diag}(y_{f1},y_{f2},y_{f3}),
+\qquad
+y_{fi}\ge0.
+}
+\tag{10.6}
+$$
+
+After electroweak symmetry breaking,
+
+$$
+\boxed{
+M_f=\frac{v}{\sqrt2}Y_f,
+}
+\tag{10.7}
+$$
+
+and the mass eigenvalues are
+
+$$
+\boxed{
+m_{fi}=\frac{v}{\sqrt2}y_{fi}.
+}
+\tag{10.8}
+$$
+
+For neutrinos, (10.5) applies directly only on the Dirac branch. Majorana and seesaw branches are defined in the neutrino-sector section later in this chapter.
+
+<a id="103-ckm-quark-mixing"></a>
+
+## 10.3 CKM Quark Mixing
+
+The CKM matrix is
+
+$$
+\boxed{
+V_{\mathrm{CKM}}
+=
+(U_u^L)^\dagger U_d^L.
+}
+\tag{10.9}
+$$
+
+It is the left-handed charged-current quark mixing matrix. The charged-current interaction is
+
+$$
+\boxed{
+\mathcal L_{CC}^{q}
+=
+\frac{g_2}{\sqrt2}
+\bar u_L\gamma^\mu V_{\mathrm{CKM}}d_LW_\mu^+
++
+\mathrm{h.c.}
+}
+\tag{10.10}
+$$
+
+For three generations, the physical CKM parameter content is
+
+$$
+\boxed{
+3\ \text{mixing angles}
++
+1\ \text{Dirac CP-violating phase}.
+}
+\tag{10.11}
+$$
+
+The exact numerical values of these parameters are routed to $R5$ and Chapter 11.
+
+<a id="104-pmns-lepton-and-neutrino-mixing"></a>
+
+## 10.4 PMNS Lepton and Neutrino Mixing
+
+The PMNS matrix is
+
+$$
+\boxed{
+U_{\mathrm{PMNS}}
+=
+(U_e^L)^\dagger U_\nu.
+}
+\tag{10.12}
+$$
+
+It is the left-handed charged-current lepton mixing matrix. The charged-current interaction is
+
+$$
+\boxed{
+\mathcal L_{CC}^{\ell}
+=
+\frac{g_2}{\sqrt2}
+\bar e_L\gamma^\mu U_{\mathrm{PMNS}}\nu_LW_\mu^-
++
+\mathrm{h.c.}
+}
+\tag{10.13}
+$$
+
+For Dirac neutrinos, the physical PMNS mixing structure contains
+
+$$
+\boxed{
+3\ \text{mixing angles}
++
+1\ \text{Dirac CP-violating phase}.
+}
+\tag{10.14}
+$$
+
+For Majorana neutrinos, two additional Majorana phases may appear:
+
+$$
+\boxed{
+U_{\mathrm{PMNS}}^{Maj}
+=
+U_{\mathrm{PMNS}}^{Dirac}
+\cdot
+\mathrm{diag}(1,e^{i\alpha_1/2},e^{i\alpha_2/2}).
+}
+\tag{10.15}
+$$
+
+Majorana phases do not enter oscillation probabilities in the same way as the Dirac phase. Their values and physical origin are routed through $R5$.
+
+<a id="105-phase-counting-and-cp-invariants"></a>
+
+## 10.5 Phase Counting and CP Invariants
+
+A general $3\times3$ unitary matrix has
+
+$$
+\boxed{
+3\ \text{angles}
++
+6\ \text{phases}.
+}
+\tag{10.16}
+$$
+
+Field rephasings remove unphysical phases. For three generations:
+
+$$
+\boxed{
+V_{\mathrm{CKM}}:
+3\ \text{angles}
++
+1\ \text{physical Dirac CP phase}.
+}
+\tag{10.17}
+$$
+
+$$
+\boxed{
+U_{\mathrm{PMNS}}:
+3\ \text{angles}
++
+1\ \text{Dirac CP phase}
++
+2\ \text{Majorana phases if neutrinos are Majorana}.
+}
+\tag{10.18}
+$$
+
+The quark-sector Jarlskog invariant is
+
+$$
+\boxed{
+J_{\mathrm{CKM}}
+=
+\mathrm{Im}
+\left(
+V_{ij}V_{kl}V_{il}^\ast V_{kj}^\ast
+\right),
+}
+\tag{10.19}
+$$
+
+for distinct $i,k$ and distinct $j,l$. A nonzero value
+
+$$
+\boxed{
+J_{\mathrm{CKM}}\ne0
+}
+\tag{10.20}
+$$
+
+is a basis-invariant signal of CKM CP violation.
+
+The analogous leptonic invariant is
+
+$$
+\boxed{
+J_{\mathrm{PMNS}}
+=
+\mathrm{Im}
+\left(
+U_{\alpha i}U_{\beta j}U_{\alpha j}^\ast U_{\beta i}^\ast
+\right),
+}
+\tag{10.21}
+$$
+
+for distinct $\alpha,\beta$ and distinct $i,j$.
+
+<a id="106-anomaly-equations-and-per-generation-arithmetic"></a>
+
+## 10.6 Anomaly Equations and Per-Generation Arithmetic
+
+For anomaly calculations all fermions are written as left-handed Weyl fields:
+
+$$
+Q_L:(3,2,+\tfrac16),\quad
+u_R^c:(\bar3,1,-\tfrac23),\quad
+d_R^c:(\bar3,1,+\tfrac13),
+$$
+
+ 
+
+$$
+L_L:(1,2,-\tfrac12),\quad
+e_R^c:(1,1,+1),\quad
+\nu_R^c:(1,1,0).
+$$
+
+With $T(\mathbf{fund})=1/2$, the one-family checks are
+
+$$
+\begin{aligned}
+\mathcal A_{SU(3)^3}
+&=2A(3)+A(\bar3)+A(\bar3)=0,\\
+\mathcal A_{SU(3)^2Y}
+&=2(\tfrac16)T(3)+(-\tfrac23)T(\bar3)
++(\tfrac13)T(\bar3)=0,\\
+\mathcal A_{SU(2)^2Y}
+&=3(\tfrac16)T(2)+(-\tfrac12)T(2)=0,\\
+\mathcal A_{Y^3}
+&=6(\tfrac16)^3+3(-\tfrac23)^3+3(\tfrac13)^3
++2(-\tfrac12)^3+1=0,\\
+\mathcal A_{\mathrm{grav}^2Y}
+&=6(\tfrac16)+3(-\tfrac23)+3(\tfrac13)
++2(-\tfrac12)+1=0.
+\end{aligned}
+$$
+
+There is no local perturbative $SU(2)^3$ anomaly for pseudoreal doublets. The number of left-handed $SU(2)$ doublets per family is $3+1=4$, so the ordinary Witten anomaly is absent.
+
+<a id="107-full-physical-anomaly-condition"></a>
+
+## 10.7 Full Physical Anomaly Condition
+
+The arithmetic above is only the local anomaly diagnostic. The complete physical condition is the conjunction
+
+$$
+\mathcal C_{\rm anom}^{\rm full}(b)
+\Longleftrightarrow
+\left\{
+\begin{array}{l}
+I_6(b)=0,\\
+\nu_{\rm Witten}(b)=0,\\
+\nu_{\rm bordism}(b)=0,\\
+\text{all representations descend to }G_b,\\
+\text{line operators respect the global quotient},\\
+\text{the required spin or }\operatorname{Spin}^{G_b}\text{ structure exists},\\
+\text{the BV quantum master and Ward identities hold}.
+\end{array}
+\right.
+$$
+
+Here $I_6(b)=[\widehat A(TM)\operatorname{ch}_{\mathcal R_F}(F)]_6$ is the six-form anomaly polynomial of the chiral fermion representation, including the mixed gauge–gravitational terms. The condition requires cancellation of all applicable perturbative and global anomalies \[[39](/monograph/bibliography#ref-AlvarezGaumeWitten1984), [40](/monograph/bibliography#ref-DavighiGripaiosLohitsiri2020), [41](/monograph/bibliography#ref-Tong2017LineOperators)\], descent of every representation to the candidate group $G_b$, compatibility of line operators with the chosen quotient, and the required spin or $\operatorname{Spin}^G$ structure. The locally covariant BV/BRST theory must satisfy the corresponding quantum master and Ward identities. Thus $\mathcal C_{\rm anom}^{\rm full}$, rather than the triangle sums alone, is the anomaly-admissibility condition used in the matter-selection problem.
+
+For the quotient $G_{\rm SM}^{(n)}$ of Chapter 9, let $\mathcal R_b$ be the matter and Higgs representations and let $\Lambda_e(b)$ and $\Lambda_m(b)$ be its admitted electric weights and magnetic cocharacters. The two global-form conditions are evaluated explicitly as
+
+$$
+\mathcal C_{\rm desc}^{(n)}(b)=1
+\quad\Longleftrightarrow\quad
+R_f\!\left(z_6^{\,6/n}\right)=\mathbf 1_{R_f}
+\quad\text{for all }R_f\in\mathcal R_b,
+$$
+
+and
+
+$$
+\begin{aligned}
+\mathcal C_{\rm line}^{(n)}(b)=1
+&\quad\Longleftrightarrow\quad
+\chi_\lambda\!\left(z_6^{\,6/n}\right)=1
+&& (\lambda\in\Lambda_e(b)),\\
+&\hspace{4.6em}\text{and}\quad
+\langle\lambda,m\rangle\in\mathbb Z
+&& ((\lambda,m)\in\Lambda_e(b)\times\Lambda_m(b)).
+\end{aligned}
+$$
+
+The full condition contains $\mathcal C_{\rm desc}^{(n)}=\mathcal C_{\rm line}^{(n)}=1$. It therefore distinguishes global groups with identical Lie algebras by finite centre actions and by their genuine Wilson–’t Hooft line spectra.
+
+<a id="108-neutrino-sector-branches"></a>
+
+## 10.8 Neutrino-Sector Branches
+
+The Yukawa couplings entering every branch are the invariant tensors (9.22)–(9.25) of Chapter 9, not names assigned after candidate selection. The recovered renormalizable branch contains
+
+$$
+\mathcal L_Y
+=
+-\bar Q_LY_dHd_R
+-\bar Q_LY_u\widetilde Hu_R
+-\bar L_LY_eHe_R
++{\rm h.c.}
+\tag{10.22}
+$$
+
+<a id="1081-dirac-branch"></a>
+
+### 10.8.1 Dirac Branch
+
+The Dirac neutrino branch is
+
+$$
+\boxed{
+\mathcal L_\nu^D
+=
+-\bar L_LY_\nu\tilde H\nu_R
++
+\mathrm{h.c.}
+}
+\tag{10.23}
+$$
+
+After electroweak symmetry breaking,
+
+$$
+\boxed{
+M_\nu^D
+=
+\frac{v}{\sqrt2}Y_\nu.
+}
+\tag{10.24}
+$$
+
+<a id="1082-majorana-branch"></a>
+
+### 10.8.2 Majorana Branch
+
+If right-handed neutrinos exist, the Majorana mass branch is
+
+$$
+\boxed{
+\mathcal L_M
+=
+-\frac12
+\overline{(\nu_R)^c}M_R\nu_R
++
+\mathrm{h.c.}
+}
+\tag{10.25}
+$$
+
+<a id="1083-type-i-seesaw-branch"></a>
+
+### 10.8.3 Type-I Seesaw Branch
+
+The type-I seesaw branch gives the light-neutrino mass matrix
+
+$$
+\boxed{
+M_\nu^{light}
+\approx
+-
+M_D M_R^{-1}M_D^T.
+}
+\tag{10.26}
+$$
+
+The choice among neutrino branches, the derivation of $M_R$, the absolute neutrino mass scale, the mass ordering, and CP phases are routed through $R5$.
+
+<a id="1084-weinberg-operator-branch"></a>
+
+### 10.8.4 Weinberg Operator Branch
+
+The dimension-five Weinberg branch is
+
+$$
+\boxed{
+\mathcal L_5
+=
+\frac12
+(\boldsymbol\kappa_5)_{rs}
+(L_r^TCi\sigma_2H)
+(H^Ti\sigma_2L_s)
++{\rm h.c.},
+}
+\tag{10.27}
+$$
+
+with
+
+$$
+\boxed{
+M_\nu
+=
+-\frac{v^2}{2}\boldsymbol\kappa_5.
+}
+\tag{10.28}
+$$
+
+Massless, Dirac, right-handed Majorana, seesaw, and Weinberg branches remain separately tagged. The source selector returns one, a controlled degeneracy, or a failure; it never silently merges them.
+
+The dimension-five operator is Weinberg’s \[[42](/monograph/bibliography#ref-Weinberg1979)\]; the seesaw precedent is \[[44](/monograph/bibliography#ref-Minkowski1977)\].
+
+<a id="109-strong-cp-and-topological-residue"></a>
+
+## 10.9 Strong CP and Topological Residue
+
+The topological term is
+
+$$
+\boxed{
+\mathcal L_\theta
+=
+\frac{\theta g_3^2}{32\pi^2}
+G_{\mu\nu}^A\tilde G^{A\mu\nu}.
+}
+\tag{10.29}
+$$
+
+The physical strong CP parameter is
+
+$$
+\boxed{
+\bar\theta
+=
+\theta+\arg\det(Y_uY_d).
+}
+\tag{10.30}
+$$
+
+The smallness or vanishing of $\bar\theta$ is a CP/topological question routed to $R5$, $R4$, Chapter 11, and Chapter 17. The candidate universe distinguishes: unconstrained $\bar\theta$; exact or softly broken CP; Peccei–Quinn/axion completion \[[45](/monograph/bibliography#ref-PecceiQuinn1977)\]; source-topological cancellation; and excluded branches with explicit failure evidence. No branch is selected merely because the observed $\bar\theta$ is small.
+
+<a id="1010-source-and-parameter-questions"></a>
+
+## 10.10 Source and Parameter Questions
+
+The flavour architecture separates two theorem problems. R4 asks why the admissible source realization selects three chiral families, the observed representation pattern, and an anomaly-free global gauge structure. R5 asks whether the same source structure fixes or constrains the Yukawa spectra, mixing angles, CP phases, neutrino scales, and $\bar\theta$. The equations in this chapter provide the exact objects on which those theorems act.

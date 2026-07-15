@@ -1,13 +1,11 @@
-import { generateFeed } from '@/lib/registry';
+import { generateFeed } from "@/lib/machine";
+import { site } from "@/config/site";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://everythingequation.com';
-  const xml = await generateFeed(baseUrl);
+  const xml = await generateFeed(site.url);
   return new Response(xml, {
-    headers: {
-      'Content-Type': 'application/atom+xml; charset=utf-8',
-    },
+    headers: { "Content-Type": "application/atom+xml; charset=utf-8" },
   });
 }

@@ -1,0 +1,767 @@
+---
+title: "Parameters, Scales, and Renormalization"
+kind: chapter
+number: "11"
+label: "Chapter 11"
+part: 2
+order: 11
+description: 'Chapter 11 develops the parameter structure of the theory.'
+---
+<a id="111-role-and-scope"></a>
+
+## 11.1 Role and Scope
+
+Chapter 11 develops the parameter structure of the theory. It classifies interface constants, calibration invariants, dimensionless parameters, empirical inputs and derived quantities across the quantum, geometric, matter, cosmological and record sectors, and it fixes the renormalization-group and threshold-matching structure connecting parameter values at different scales.
+
+Chapter 11 receives matter and flavor parameters from Chapters 9–10, and prepares cosmological and dark-sector parameter handoffs for Chapters 12–13. It does not derive exact numerical values unless an explicit derivation is supplied. Its role is classification, counting, dimensional/status assignment, and proof-route control.
+
+The relevant open problems are the parameter-fixation programme R5 of Chapter 17 and, for the cosmological and dark-sector parameters routed explicitly to Chapters 12 and 13, the programme R6.
+
+-----
+
+A theory may determine a form of dynamics without determining every numerical parameter appearing in it. Shadow Theory therefore distinguishes four scientifically different situations: a parameter may be derived from source invariants, constrained to a finite or continuous family, calibrated from data, or left unresolved. These cases must not be conflated.
+
+<a id="112-parameter-spaces-and-source-constraints"></a>
+
+## 11.2 Parameter spaces and source constraints
+
+For a selected physical branch $b$, let $\Theta_b(\mu)$ be its renormalized parameter space at scheme and scale $(\mathfrak s,\mu)$, modulo gauge redundancy and field redefinitions. It contains the gauge couplings, Higgs parameters, Yukawa matrices, neutrino parameters, topological angles, gravitational couplings, and the cosmological or dark-sector parameters belonging to that branch.
+
+The source realization supplies invariant data $I_b(Y)$, and parameter fixation is the set-valued relation $\operatorname{FixParam}$ constructed later in this chapter. That relation may be empty, a unique equivalence class, a finite family, or a positive-dimensional set; those possibilities are mathematical properties of the constraint system, not labels assigned in advance. Local identifiability, degeneracy, and uncertainty are governed by the Jacobian analysis developed with the relation itself.
+
+<a id="113-renormalization-group-evolution-and-matching"></a>
+
+## 11.3 Renormalization-group evolution and matching
+
+Renormalized parameters satisfy
+
+$$
+\mu\frac{d\theta^a}{d\mu}=\beta^a(\theta).
+$$
+
+For gauge couplings at one loop,
+
+$$
+\mu\frac{dg_i}{d\mu}=\frac{b_i}{16\pi^2}g_i^3,
+\qquad
+\alpha_i^{-1}(\mu)=\alpha_i^{-1}(\mu_0)
+-\frac{b_i}{2\pi}\ln\frac{\mu}{\mu_0}.
+$$
+
+With the $SU(5)$-normalized $g_1=\sqrt{5/3}\,g_Y$, the minimal Standard Model coefficients are
+
+$$
+(b_1,b_2,b_3)=\left(\frac{41}{10},-\frac{19}{6},-7\right).
+$$
+
+If the ordinary coupling $g_Y$ is used instead, its coefficient is $b_Y=41/6$; explicitly,
+
+$$
+\mu\frac{dg_Y}{d\mu}
+=
+\frac{41/6}{16\pi^2}g_Y^3,
+\qquad
+\mu\frac{dg_1}{d\mu}
+=
+\frac{41/10}{16\pi^2}g_1^3.
+$$
+
+The convention must be stated rather than mixed, and the electroweak angle always uses $g_Y/g_2$, not $g_1/g_2$. Systematic multi-loop RG machinery follows \[[46](/monograph/bibliography#ref-MachacekVaughn1983)\].
+
+Across a threshold $M_n$,
+
+$$
+\theta^{(n-1)}(M_n)
+=\mathcal M_n\bigl(\theta^{(n)}(M_n),M_n\bigr),
+$$
+
+where $\mathcal M_n$ is the matching map appropriate to the chosen renormalization scheme and operator basis. Successive matching maps must compose consistently when several thresholds are crossed.
+
+<a id="114-parameter-classification"></a>
+
+## 11.4 Parameter classification
+
+The principal parameter families are:
+
+| Quantity                       |        Dimension | Defining equation                        | Basis in the present theory                             |
+| :----------------------------- | ---------------: | :--------------------------------------- | :------------------------------------------------------ |
+| $G_R,\Lambda_{\rm br}$       |   $M^{-2},M^2$ | gravitational action                     | source-derived, constrained, or calibrated branch value |
+| $g_3,g_2,g_Y$                |                1 | covariant derivative and RG flow         | values at stated $(\mu,\mathfrak s)$                  |
+| $\mu_H,\lambda_H,v$          |        $M,1,M$ | Higgs potential                          | R5 quantities                                           |
+| Yukawa eigenvalues and mixings |                1 | mass and mixing equations                | R5 quantities                                           |
+| neutrino masses and phases     |          $M,1$ | selected neutrino branch                 | branch-dependent R5 quantities                          |
+| $\bar\theta$                 |                1 | topological term                         | strong-CP question                                      |
+| $H_0,\Omega_{i0}$            |          $M,1$ | FLRW equations                           | cosmological branch inputs or outputs                   |
+| dark-sector functions          | branch-dependent | Chapter 13 action or kinetic description | R6 quantities                                           |
+
+“Derived” is reserved for a quantity obtained from $I_b(Y)$ without using that quantity or an equivalent observable as an input. Calibration and derivation remain distinct even when both produce a precise number. For an observable $O$ and independent input $a_j$, a conventional local sensitivity measure is
+
+$$
+\Delta_{a_j}(O)=\left|\frac{\partial\ln O}{\partial\ln a_j}\right|,
+\qquad
+\Delta_{\rm BG}(O)=\max_j\Delta_{a_j}(O).
+$$
+
+Naturalness is a statement about such declared sensitivities and radiative stability, not a substitute for a source derivation.
+
+<a id="115-r5-theorem-target"></a>
+
+## 11.5 R5 theorem target
+
+R5 is staged. After R2 and R4 select a matter/QFT branch, source-invariant constraints $F_b$, locally well-posed beta functions, consistent threshold maps, and an effective-theory domain containing the full trajectory define the matter/QFT parameter set $\operatorname{FixParam}_M$ and its identifiability, uncertainty, and scheme-equivalence class. Gravitational parameters are classified conditionally only after an admitted R3 branch exists. Cosmology-dependent parameters enter $\operatorname{FixParam}_C$ only after R6 has supplied a background and perturbation solution. No quantity classified at the post-R6 stage may be used as an upstream input to its own claimed derivation. Numerical masses, mixings, and cosmological parameters are companion-paper calculations built from this staged structure.
+
+<a id="116-parameter-theory-space-and-provenance"></a>
+
+## 11.6 Parameter theory space and provenance
+
+For a selected branch $b$, a maximum EFT operator dimension $D$, and loop/truncation order $L$, let
+
+$$
+\boxed{
+\Theta_b^{(D,L)}(\mu,\mathfrak s)
+}
+$$
+
+be the parameter manifold at scale $\mu$ and renormalization scheme $\mathfrak s$, modulo gauge redundancy, field redefinitions, flavor-basis transformations, and declared scheme equivalence. The truncation $(D,L)$ and its error are part of every output. No finite calculation is represented as fixation of an infinite EFT tower.
+
+The parameter vector contains, as applicable:
+
+  - $g_Y,g_2,g_3$;
+
+  - Higgs mass and quartic parameters;
+
+  - Yukawa matrices and mixing invariants;
+
+  - neutrino coefficients and thresholds;
+
+  - $\bar\theta$;
+
+  - $G_R,\Lambda_R,\ell_Q,\alpha_i,c_{nA}$;
+
+  - $v_\star$;
+
+  - $M_{\rm rec},Z_R,Y_R,\xi_R,\widehat m_R,\lambda_{3R},\lambda_{4R}$;
+
+  - HT flux/boundary parameters on that branch;
+
+  - cosmological and dark-sector parameters owned by their modules.
+
+Each source invariant is a record
+
+$$
+I_A
+=
+(\text{value},\text{type},\text{dimension},
+\text{scale law},\text{covariance},
+\text{uncertainty},\text{provenance},
+\text{derivation pointer}).
+$$
+
+Allowed provenance labels are:
+
+  - *source-derived*;
+
+  - *branch-selected*;
+
+  - *interface convention*;
+
+  - *empirically calibrated*;
+
+  - *externally dependent*;
+
+  - *unresolved*.
+
+An empirical datum cannot later be relabeled *source-derived*.
+
+<a id="117-realization-induced-parameter-constraints"></a>
+
+## 11.7 Realization-induced parameter constraints
+
+Let
+
+$$
+\Xi_b:
+\mathsf I_{\rm src}
+\longrightarrow
+\mathsf I_b^{\rm readout}
+$$
+
+be the invariant comparison map induced by the source-to-readout descent and the selected matter/geometry branch. Let
+
+$$
+\operatorname{Inv}_b:
+\Theta_b^{(D,L)}
+\longrightarrow
+\mathsf I_b^{\rm readout}
+$$
+
+compute the same typed invariants from a parameter representative. Neither map is chosen using observed target parameter values.
+
+Let $\Delta_{\mathsf I}$ be the fixed equality/defect map on the typed invariant fiber. Define
+
+$$
+\boxed{
+F_b(\theta;I_{\rm src})
+=
+\Delta_{\mathsf I}
+\left(
+\operatorname{Inv}_b(\theta),
+\Xi_b(I_{\rm src})
+\right).
+}
+$$
+
+For exact discrete invariants, zero defect means equality. For continuous invariants with a declared uncertainty object, zero means membership in the predeclared invariant interval or equivalence class. The defect map, its tolerance, and its provenance are fixed before empirical comparison.
+
+At a source/matching scale $\mu_\star$, define
+
+$$
+\boxed{
+\mathcal S_\star
+=
+\left\{
+[\theta_\star]:
+F_b(\theta_\star;I_{\rm src})=0,
+\quad
+G_\theta(\theta_\star)=1
+\right\}.
+}
+$$
+
+The gate $G_\theta$ contains positivity, unitarity, vacuum stability, branch consistency, EFT-domain, and dimensional requirements.
+
+<a id="118-fixparam-relation"></a>
+
+## 11.8 FixParam relation
+
+The parameter-fixation machinery is the set-valued relation
+
+$$
+\boxed{
+\operatorname{FixParam}:
+\mathsf I_{\rm src}
+\times\mathsf{Branch}
+\times\mathbb R_{>0}
+\times\mathsf{Scheme}
+\times\mathsf{MatchData}
+\rightrightarrows
+\mathsf{ParamSolution}.
+}
+$$
+
+For every $\theta_\star\in\mathcal S_\star$, evolve
+
+$$
+\boxed{
+\mu\frac{d\theta^a}{d\mu}
+=
+\beta_b^a(\theta;\mathfrak s).
+}
+$$
+
+At a threshold $M_j$, impose
+
+$$
+\boxed{
+\theta^{(j-1)}(M_j)
+=
+\mathcal M_j^{\mathfrak s_j\to\mathfrak s_{j-1}}
+\left[
+\theta^{(j)}(M_j);M_j,\mathcal D_j
+\right].
+}
+$$
+
+If $M_j$ depends on $\theta$, the mass and matching equations are solved simultaneously. Matching maps satisfy the cocycle condition
+
+$$
+\boxed{
+\mathcal M_{2\to0}
+=
+\mathcal M_{1\to0}
+\circ
+\mathcal M_{2\to1}
++O(L+1).
+}
+$$
+
+The output is
+
+$$
+\boxed{
+\operatorname{FixParam}(\cdots)
+=
+\left\{
+([\theta(\mu)]_{\rm scheme},
+\mathcal N_{\rm null},
+\Sigma_\theta,
+\mathcal P_{\rm prov},
+\mathcal E_{\rm trunc},
+\mathcal N_{\rm sens},
+\mathcal S_{\rm status})
+\right\}.
+}
+$$
+
+An empty solution set, finite branch degeneracy, continuous solution manifold, or unique solution is returned explicitly.
+
+<a id="119-scheme-covariance"></a>
+
+## 11.9 Scheme covariance
+
+For a scheme change
+
+$$
+\theta'=f_{\mathfrak s\to\mathfrak s'}(\theta),
+$$
+
+require
+
+$$
+\boxed{
+\beta'(\theta')
+=
+Df(\theta)\,\beta(\theta),
+}
+$$
+
+$$
+\boxed{
+F_b'(\theta';I)
+=
+F_b(f^{-1}(\theta');I),
+}
+$$
+
+and
+
+$$
+\mathcal O(\theta,\mathfrak s)
+=
+\mathcal O(\theta',\mathfrak s')
++O(L+1)
+$$
+
+for physical observables. A scheme-dependent coupling is not a source invariant by itself.
+
+<a id="1110-identifiability-and-degeneracy"></a>
+
+## 11.10 Identifiability and degeneracy
+
+Let $n=\dim\Theta_b^{(D,L)}$ after quotienting redundancies and define
+
+$$
+J_{Aa}
+=
+\frac{\partial F_A}{\partial\theta^a}.
+$$
+
+Local identifiability requires
+
+$$
+\boxed{
+\operatorname{rank}J=n.
+}
+$$
+
+If $\operatorname{rank}J=r\lt n$, the local solution has at least $n-r$ unresolved directions. These form $\mathcal N_{\rm null}$ and are not assigned zero uncertainty. Global uniqueness additionally requires injectivity of the invariant/RG/matching map modulo declared equivalences. Disconnected solutions are returned as a branch-degenerate solution family.
+
+<a id="1111-uncertainty-and-sensitivity"></a>
+
+## 11.11 Uncertainty and sensitivity
+
+At an isolated square regular solution,
+
+$$
+\boxed{
+\Sigma_{\theta_\star}
+=
+J^{-1}\Sigma_I(J^{-1})^T
++\Sigma_{\rm match}.
+}
+$$
+
+In the general identifiable subspace use the covariance-weighted pseudoinverse:
+
+$$
+\boxed{
+\Sigma_{\theta}^{\rm id}
+=
+J^+\Sigma_I(J^+)^T.
+}
+$$
+
+Let $U(\mu,\mu_\star)$ be the linearized RG propagator. Then
+
+$$
+\Sigma_\theta(\mu)
+=
+U\Sigma_{\theta_\star}U^T
++\Sigma_{\rm RG}
++\Sigma_{\rm threshold}.
+$$
+
+For an observable $\mathcal O$,
+
+$$
+\Sigma_{\mathcal O}
+=
+D_\theta\mathcal O
+\,\Sigma_\theta\,
+(D_\theta\mathcal O)^T.
+$$
+
+Exact source invariants have no statistical covariance unless the source theory supplies a measure or approximation error. Source-distribution, empirical-calibration, numerical, and truncation errors remain separately typed.
+
+Define source sensitivity
+
+$$
+\boxed{
+\Delta_{aA}
+=
+\left|
+\frac{\partial\log\theta^a}
+{\partial\log I_A}
+\right|.
+}
+$$
+
+A Barbieri–Giudice-type diagnostic is
+
+$$
+\Delta_{\rm BG}
+=
+\max_p
+\left|
+\frac{\partial\log v^2}{\partial\log p}
+\right|,
+$$
+
+with basis, scale, and scheme recorded. Naturalness classes are *symmetry-protected*, *multiplicatively stable*, *fixed-point-controlled*, *low-sensitivity*, *high-sensitivity (tuned)*, *branch-selected, not derived*, *empirically calibrated*, and *unclassified*. Classification is not parameter derivation.
+
+<a id="1112-interface-constants"></a>
+
+## 11.12 Interface Constants
+
+| Symbol    |                      Dimension | Channel(s)      | Role                             | Default Convention                  | Restored When                                                                | Status                                                           | Open Problem |
+| :-------- | -----------------------------: | :-------------- | :------------------------------- | :---------------------------------- | :--------------------------------------------------------------------------- | :--------------------------------------------------------------- | :----------- |
+| $c$     |                          speed | $\Pi_G,\Pi_C$ | causal/metric conversion         | $c=1$                             | causal cones, metric dimensional interpretation, cosmology units             | *interface constant*                                             | none         |
+| $\hbar$ |                         action | $\Pi_Q,\Pi_M$ | quantum action scale             | $\hbar=1$                         | quantum dimensional interpretation, path integrals, Planck-scale expressions | *interface constant*                                             | none         |
+| $G$     |         gravitational coupling | $\Pi_G,\Pi_C$ | geometry-matter conversion       | explicit in gravitational equations | Einstein equations, Planck units, cosmological normalization                 | *calibration invariant* / *dimensionless residue* through ratios | $R5$       |
+| $k_B$   | entropy/temperature conversion | $\Pi_C,\Pi_R$ | thermodynamic entropy conversion | $k_B=1$ where natural             | entropy, thermodynamic arrow, temperature dimensions                         | *interface constant*                                             | none         |
+
+The gravitational constant $G$ also participates in dimensionless pressure ratios through the Planck mass
+
+$$
+\boxed{
+M_P=G^{-1/2}
+}
+\tag{11.1}
+$$
+
+in natural units.
+
+-----
+
+<a id="1113-standard-model-parameter-table"></a>
+
+## 11.13 Standard Model Parameter Table
+
+<a id="11131-51-enumerated-minimal-standard-model-parameters"></a>
+
+### 11.13.1 5.1 Enumerated Minimal Standard Model Parameters
+
+| Class                             | Symbols                                              | Count | Dimension           | Channel   | Status                  | Open Problem | Defined In             |
+| :-------------------------------- | :--------------------------------------------------- | ----: | :------------------ | :-------- | :---------------------- | :----------- | :--------------------- |
+| Gauge couplings                   | $g_1{=}\sqrt{5/3}\,g_Y$, $g_2$, $g_3$          |     3 | dimensionless       | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 9, 11, 16, 17 |
+| Higgs potential                   | $\mu_H,\lambda_H$                                  |     2 | mass, dimensionless | $\Pi_M$ | *derivation open*       | $R5$       | Chapters 9, 11, 17     |
+| Quark Yukawa eigenvalues          | $y_u$, $y_c$, $y_t$, $y_d$, $y_s$, $y_b$ |     6 | dimensionless       | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 10, 11, 17    |
+| Charged lepton Yukawa eigenvalues | $y_e,y_\mu,y_\tau$                                 |     3 | dimensionless       | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 10, 11, 17    |
+| CKM angles                        | $\theta_{12}^q,\theta_{23}^q,\theta_{13}^q$        |     3 | dimensionless       | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 10, 11, 17    |
+| CKM CP phase                      | $\delta_{\mathrm{CKM}}$                            |     1 | dimensionless phase | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 10, 11, 17    |
+| QCD theta                         | $\theta_{\mathrm{QCD}}$ or $\bar\theta$          |     1 | dimensionless phase | $\Pi_M$ | *dimensionless residue* | $R5$       | Chapters 10, 11, 17    |
+
+A conventional minimal Standard Model count without neutrino masses is
+
+$$
+\boxed{
+\begin{aligned}
+&3\ \text{gauge couplings}
++
+2\ \text{Higgs parameters}
+\\
+&\quad
++
+9\ \text{charged-fermion Yukawa eigenvalues}
+\\
+&\quad
++
+4\ \text{CKM parameters}
++
+1\ \text{QCD theta parameter}
+=
+19.
+\end{aligned}
+}
+\tag{11.2}
+$$
+
+Neutrino parameters are counted separately in Section 6.
+
+<a id="11132-52-higgs-and-yukawa-relations"></a>
+
+### 11.13.2 5.2 Higgs and Yukawa Relations
+
+Chapter 9 supplied
+
+$$
+\boxed{
+M_f=\frac{v}{\sqrt2}Y_f,
+\qquad
+m_{fi}=\frac{v}{\sqrt2}y_{fi}.
+}
+\tag{11.3}
+$$
+
+The Higgs vacuum scale satisfies
+
+$$
+\boxed{
+v=\frac{\mu_H}{\sqrt{\lambda_H}}.
+}
+\tag{11.4}
+$$
+
+The electroweak scale and Yukawa eigenvalues are parameter-table entries, not source-derived constants at Chapter 11 level.
+
+-----
+
+<a id="1114-neutrino-parameter-branches"></a>
+
+## 11.14 Neutrino Parameter Branches
+
+<a id="11141-61-dirac-branch"></a>
+
+### 11.14.1 6.1 Dirac Branch
+
+| Parameter Class             | Symbols                                                                | Count | Dimension                    | Status                  | Open Problem | Defined In          |
+| :-------------------------- | :--------------------------------------------------------------------- | ----: | :--------------------------- | :---------------------- | :----------- | :------------------ |
+| Neutrino masses/eigenvalues | $m_{\nu_1}$, $m_{\nu_2}$, $m_{\nu_3}$ or $y_{\nu_i}$           |     3 | mass or dimensionless Yukawa | *derivation open*       | $R5$       | Chapters 10, 11, 17 |
+| PMNS angles                 | $\theta_{12}^{\ell}$, $\theta_{23}^{\ell}$, $\theta_{13}^{\ell}$ |     3 | dimensionless                | *dimensionless residue* | $R5$       | Chapters 10, 11, 17 |
+| Dirac CP phase              | $\delta_{\mathrm{PMNS}}$                                             |     1 | phase                        | *dimensionless residue* | $R5$       | Chapters 10, 11, 17 |
+
+Under this convention,
+
+$$
+\boxed{
+N_{\nu}^{Dirac}=7.
+}
+\tag{11.5}
+$$
+
+<a id="11142-62-majorana-branch"></a>
+
+### 11.14.2 6.2 Majorana Branch
+
+| Parameter Class     | Symbols                                                                |            Count | Dimension     | Status                  | Open Problem | Defined In          |
+| :------------------ | :--------------------------------------------------------------------- | ---------------: | :------------ | :---------------------- | :----------- | :------------------ |
+| Neutrino masses     | $m_{\nu_1},m_{\nu_2},m_{\nu_3}$                                      |                3 | mass          | *derivation open*       | $R5$       | Chapters 10, 11, 17 |
+| PMNS angles         | $\theta_{12}^{\ell}$, $\theta_{23}^{\ell}$, $\theta_{13}^{\ell}$ |                3 | dimensionless | *dimensionless residue* | $R5$       | Chapters 10, 11, 17 |
+| Dirac phase         | $\delta_{\mathrm{PMNS}}$                                             |                1 | phase         | *dimensionless residue* | $R5$       | Chapters 10, 11, 17 |
+| Majorana phases     | $\alpha_1,\alpha_2$                                                  |                2 | phase         | *dimensionless residue* | $R5$       | Chapters 10, 11, 17 |
+| Heavy seesaw scales | $M_R$ eigenvalues                                                    | branch-dependent | mass          | *derivation open*       | $R5$       | Chapters 10, 11, 17 |
+
+For the light-neutrino Majorana phase count,
+
+$$
+\boxed{
+N_{\nu}^{Maj}=9.
+}
+\tag{11.6}
+$$
+
+Heavy Majorana mass scales $M_R$ are additional branch parameters in seesaw models.
+
+-----
+
+<a id="1115-cosmology-and-dark-sector-parameter-table"></a>
+
+## 11.15 Cosmology and Dark-Sector Parameter Table
+
+| Symbol                     | Role                                |              Dimension | Channel         | Provenance                                  | Open Problem | Defined In      |
+| :------------------------- | :---------------------------------- | ---------------------: | :-------------- | :------------------------------------------ | :----------- | :-------------- |
+| $H_0$                    | present expansion scale             |           inverse time | $\Pi_C$       | *empirical input* / *derivation open*       | $R6$       | Chapter 12      |
+| $\Omega_b$               | baryon density fraction             |          dimensionless | $\Pi_C$       | *empirical input* / *dimensionless residue* | $R6$       | Chapter 12      |
+| $\Omega_r$               | radiation density fraction          |          dimensionless | $\Pi_C$       | *empirical input* / *dimensionless residue* | $R6$       | Chapter 12      |
+| $\Omega_k$               | curvature density fraction          |          dimensionless | $\Pi_C$       | *empirical input* / *dimensionless residue* | $R6$       | Chapter 12      |
+| $\Omega_{DM}$            | dark matter density fraction        |          dimensionless | $\Pi_C$       | *dimensionless residue*                     | $R6$       | Chapters 12, 13 |
+| $\Omega_C$               | dark energy/closure-sector fraction |          dimensionless | $\Pi_C$       | *dimensionless residue*                     | $R6$       | Chapters 12, 13 |
+| $\Lambda$                | cosmological constant               | inverse length squared | $\Pi_C,\Pi_G$ | *dimensionless residue* through ratios      | $R6$       | Chapter 13      |
+| $\rho_\Lambda$           | vacuum/dark energy density          |         energy density | $\Pi_C$       | *dimensionless residue* through ratios      | $R6$       | Chapter 13      |
+| $\rho_{C0}$              | closure-sector present density      |         energy density | $\Pi_C$       | *derivation open*                           | $R6$       | Chapter 13      |
+| $F_C(a)$                 | closure-sector evolution function   | dimensionless function | $\Pi_C$       | *derivation open*                           | $R6$       | Chapter 13      |
+| $w(a)$                   | dark-energy equation of state       | dimensionless function | $\Pi_C$       | *derivation open*                           | $R6$       | Chapter 13      |
+| $\rho_{prim}$            | primordial dark component           |         energy density | $\Pi_C$       | *derivation open*                           | $R6$       | Chapter 13      |
+| $\rho_{ind}$             | induced dark component              |         energy density | $\Pi_C$       | *derivation open*                           | $R6$       | Chapter 13      |
+| $\mathcal B_{cos}^{low}$ | low-boundary cosmological condition |          boundary data | $\Pi_C$       | *derivation open*                           | $R6$       | Chapters 12, 14 |
+
+-----
+
+<a id="1116-recordobjectivity-calibration-parameters"></a>
+
+## 11.16 Record/Objectivity Calibration Parameters
+
+| Symbol             | Role                          |                       Dimension | Channel         | Provenance              | Open Problem                    | Defined In         |
+| :----------------- | :---------------------------- | ------------------------------: | :-------------- | :---------------------- | :------------------------------ | :----------------- |
+| $Z_{\min}$       | objectivity threshold         | model-dependent / dimensionless | $\Pi_R$       | *calibration invariant* | $R9$ / Chapter 17 calibration | Chapters 6, 16     |
+| $S_{\min}$       | persistence threshold         | model-dependent / dimensionless | $\Pi_R$       | *calibration invariant* | $R9$ / Chapter 17 calibration | Chapters 6, 16     |
+| $\Delta t$       | record persistence interval   |                            time | $\Pi_R,\Pi_C$ | *calibration invariant* | $R9$ / Chapter 17 calibration | Chapters 6, 14, 16 |
+| $F_Z$ parameters | objectivity-index calibration |                 model-dependent | $\Pi_R$       | *calibration invariant* | $R9$ / Chapter 17 calibration | Chapters 6, 16     |
+
+The selector $\chi_i$ is not a parameter-table entry. It is a realization selector under R7.
+
+-----
+
+<a id="1117-qft-renormalization-and-threshold-structure"></a>
+
+## 11.17 QFT Renormalization and Threshold Structure
+
+Every renormalized parameter entry carries the QFT provenance fields fixed by the QFT sector: the scheme $\mathfrak s$, the renormalization scale $\mu$, the beta-function system and truncation order, the threshold-matching data across mass scales, and the residual scheme/truncation uncertainty. The feedback is the scheme-qualified loop $K_{\rm in}\to QFT\to K_{\rm out}$ with compatibility $K_{\rm out}\sim_{\rm scheme}K_{\rm in}$; it is distinct from empirical calibration feedback $K_{\rm cal}\to K_{\rm in}$, which is allowed only inside a declared calibration iteration and can never be cited as source derivation. Extraction of running couplings from the QFT sector establishes provenance, not R5 discharge.
+
+Decoupling and threshold matching follow \[[47](/monograph/bibliography#ref-AppelquistCarazzone1975)\]; the effective-Lagrangian framework follows \[[43](/monograph/bibliography#ref-Weinberg1979EFT)\].
+
+<a id="1118-dimensionless-closure-pressure-ratios"></a>
+
+## 11.18 Dimensionless Closure-Pressure Ratios
+
+The central dimensionless pressure ratios include
+
+$$
+\boxed{
+\alpha,\qquad
+\alpha_s,\qquad
+\frac{m_f}{v},\qquad
+\frac{m_\nu}{v}.
+}
+\tag{11.7}
+$$
+
+They also include
+
+$$
+\boxed{
+\frac{m_H}{M_P},
+\qquad
+\frac{v}{M_P},
+\qquad
+\Omega_i,
+\qquad
+\frac{\rho_\Lambda}{M_P^4}.
+}
+\tag{11.8}
+$$
+
+The CP and mixing pressure quantities include
+
+$$
+\boxed{
+\bar\theta,
+\qquad
+J_{\mathrm{CKM}},
+\qquad
+J_{\mathrm{PMNS}}.
+}
+\tag{11.9}
+$$
+
+These ratios and invariants are the primary $R5/R6$ pressure points because they are dimensionless or convention-independent and cannot be removed by unit choice.
+
+-----
+
+<a id="1119-parameter-count-reconciliation"></a>
+
+## 11.19 Parameter Count Reconciliation
+
+  - **Parameter-count reconciliation:**
+    
+      - **SM minimal no neutrinos:**
+        
+          - **Count:** 19
+        
+          - **Convention:**
+            
+              - 3 gauge couplings
+            
+              - 2 Higgs parameters
+            
+              - 9 charged-fermion Yukawa eigenvalues
+            
+              - 4 CKM parameters
+            
+              - 1 QCD theta parameter
+    
+      - **Neutrino Dirac extension:**
+        
+          - **Count:** “+7”
+        
+          - **Convention:**
+            
+              - 3 neutrino masses/eigenvalues
+            
+              - 3 PMNS angles
+            
+              - 1 Dirac CP phase
+    
+      - **Neutrino Majorana extension:**
+        
+          - **Count:** “+9”
+        
+          - **Convention:**
+            
+              - 3 neutrino masses
+            
+              - 3 PMNS angles
+            
+              - 1 Dirac phase
+            
+              - 2 Majorana phases
+        
+          - **Note:** heavy seesaw scales are additional branch parameters
+    
+      - **Cosmological dark sector:**
+        
+          - **Count:** branch-dependent
+        
+          - **Convention:** depends on $\Lambda$ branch, evolving dark-energy branch, dark matter microphysics, and low-boundary parameterization
+    
+      - **Record objectivity calibration:**
+        
+          - **Count:** model-dependent
+        
+          - **Convention:** depends on objectivity function F\_Z, persistence thresholds, and readout model
+
+Exact counts depend on branch choices and normalization conventions. Chapter 11 treats that dependence as controlled parameter structure.
+
+-----
+
+<a id="1120-higgs-and-naturalness-diagnostics"></a>
+
+## 11.20 Higgs and Naturalness Diagnostics
+
+| Symbol        | Role                               |     Dimension | Status                  | Open Problem | Defined In          |
+| :------------ | :--------------------------------- | ------------: | :---------------------- | :----------- | :------------------ |
+| $v$         | electroweak scale                  |          mass | *derivation open*       | $R5$       | Chapters 9, 11, 17  |
+| $\mu_H$     | Higgs potential mass parameter     |          mass | *derivation open*       | $R5$       | Chapters 9, 11, 17  |
+| $\lambda_H$ | Higgs quartic                      | dimensionless | *dimensionless residue* | $R5$       | Chapters 9, 11, 17  |
+| $m_H$       | Higgs mass                         |          mass | *derivation open*       | $R5$       | Chapters 9, 11, 17  |
+| $v/M_P$     | electroweak/Planck hierarchy ratio | dimensionless | *dimensionless residue* | $R5$       | Chapters 11, 16, 17 |
+
+Explaining or reclassifying the electroweak scale and the stability of the Higgs mass within the source-to-readout architecture remains part of the R5 programme of Chapter 17.
+
+-----
+
+<a id="1121-calibration-versus-derivation"></a>
+
+## 11.21 Calibration versus Derivation
+
+A parameter is derived only when it is obtained from source data without using that parameter, or an observable equivalent to it, as an input. A parameter fixed by comparison with measurement is calibrated, however precise the resulting value. Both are legitimate scientific situations, but conflating them would misstate what the theory has achieved. The staged R5 programme of Chapter 17 records, for every parameter family, which of the four classifications — derived, constrained, calibrated, unresolved — presently applies.

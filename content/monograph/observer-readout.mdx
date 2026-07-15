@@ -1,0 +1,321 @@
+---
+title: "Observer Readout"
+kind: chapter
+number: "15"
+label: "Chapter 15"
+part: 2
+order: 15
+description: 'This chapter defines the structural observer readout of the theory.'
+---
+This chapter defines the structural observer readout of the theory. It formalizes observer readout as an integrated, self-indexed, arrow-windowed record structure equipped with a first-person record aperture, a unity/binding condition, a typed qualitative-readout placeholder, and an observer readout map. The language of the chapter is strictly structural: it types the structures required for observer readout, states the conditions those structures must satisfy, and records the theorem targets that would have to be discharged for any stronger claim. It does not discharge first-person aperture finality, qualitative readout, unity, selfhood, or measurement selection.
+
+The remaining derivation is formulated as R8 in Chapter 17, with secondary dependence on R7 and R9; all remain open throughout, and nothing in this chapter discharges them. The claim boundary stated with the observer theorem programme at the end of this chapter governs every description of the qualitative-readout structure while R8 is active.
+
+<a id="151-role-of-this-chapter"></a>
+
+## 15.1 Role of This Chapter
+
+Chapter 15 defines the observer and conscious-record readout channel of the monograph. It expands the typed observer projection map
+
+$$
+\boxed{
+\Pi_O:\mathsf{Real}_0\to\mathcal O_O
+}
+\tag{15.1}
+$$
+
+and formalizes observer readout as an integrated, self-indexed, arrow-windowed record structure with a first-person aperture, unity/binding condition, qualitative-readout placeholder, and observer readout map.
+
+Chapter 15 formalizes the observer channel at a formally defined but partial level. The remaining derivation is formulated as R8 in Chapter 17; the chapter does not discharge first-person aperture finality, qualitative readout, unity, selfhood, or measurement selection.
+
+<a id="152-inherited-inputs-from-records-and-the-arrow-of-time"></a>
+
+## 15.2 Inherited Inputs from Records and the Arrow of Time
+
+This chapter receives record/objectivity inputs from Chapter 6,
+
+$$
+\boxed{
+\mathcal R_{T1,Y},
+\quad
+\mathcal Z_{obj,Y},
+\quad
+Z_i,
+\quad
+Z_{\min},
+}
+\tag{15.2}
+$$
+
+and arrow/temporal inputs from Chapter 14, comprising the temporal-arrow construction of that chapter:
+
+$$
+\boxed{
+\{\mathcal R_{T1}(t)\}_{t\in\mathcal T},
+\quad
+\preceq_t,
+\quad
+\preceq_A,
+\quad
+S_{rec},
+\quad
+\text{record history}.
+}
+\tag{15.3}
+$$
+
+Observer histories consume objective records obtained through the completed selection, deposition, and persistence lineage of Chapters 5–6, together with the arrow-ordered record histories of Chapter 14. The single-record selection problem itself is not an input datum: the chapter inherits the selector boundary from Chapters 6 and 14 rather than solving it, and that dependency is the programme R7 of Chapter 17.
+
+<a id="153-observer-seed-and-common-history-pullback"></a>
+
+## 15.3 Observer Seed and Common History Pullback
+
+For $Y\in\mathsf{Real}_0$, define the set of observer candidates
+
+$$
+\begin{gathered}
+\mathsf{ObsCand}(Y)
+=
+\{o:\mathsf{ObsSeed}(Y,o)\text{ passes substrate, boundary,}\\
+\text{persistence, and noncircularity gates}\}.
+\end{gathered}
+\tag{15.4}
+$$
+
+The observer route is set-valued. It does not assume a unique observer and does not insert first-person conclusions into source admission. Concretely, the candidates are subsystems with a stable physical boundary and persistent internal degrees of freedom, with no observer label used in source admission.
+
+For $o\in\mathsf{ObsCand}(Y)$, the common observer history is the pullback
+
+$$
+\mathsf H_{Y,o}
+=
+\mathsf{ObjHist}_{Y,o}
+\times_{\mathsf T_Y}
+\mathsf{ArrowHist}_{Y,o}.
+\tag{15.5}
+$$
+
+Thus every observer record is an objective record belonging to the same realization lineage and temporal support. Selection alone does not create an observer history; actual deposition and objective persistence are required first.
+
+An observer is not inserted as a primitive source label. It is a structured subsystem of a realized Tier-1 branch whose objective records are accessible, temporally integrated, self-indexed, sufficiently unified, and coupled to possible reports or actions. The construction in this chapter is structural. It supplies the starting point for the observer theorem programme but does not identify that structure with a completed theory of consciousness; structural comparison with global-workspace, integrated-information and related empirical frameworks \[[64](/monograph/bibliography#ref-DehaeneSergentChangeux2003), [65](/monograph/bibliography#ref-OizumiAlbantakisTononi2014), [66](/monograph/bibliography#ref-DoerigEtAl2019)\] is reserved for the companion programme.
+
+<a id="154-ordered-temporal-integration-window"></a>
+
+## 15.4 Ordered Temporal Integration Window
+
+Time is initially an ordered readout $(\mathsf T_Y,\precsim_Y)$, so an expression $t\pm\Delta$ is not defined unless a duration structure has separately been introduced. The canonical window is selected by order endpoints
+
+$$
+t^-_{Y,o}(t)\precsim_Y t
+\precsim_Y t^+_{Y,o}(t),
+\tag{15.6}
+$$
+
+$$
+W_{Y,o}(t)
+=
+\{\tau\in\mathsf T_Y:
+t^-_{Y,o}(t)\precsim_Y\tau
+\precsim_Yt^+_{Y,o}(t)\}.
+\tag{15.7}
+$$
+
+Endpoint selectors must be monotone, measurable on the declared order sigma-algebra, and stable under admissible redescription. Where a metric or clock duration is later available, it may parameterize these endpoints consistently with the order.
+
+<a id="155-internal-access-integration-and-the-first-person-package"></a>
+
+## 15.5 Internal Access, Integration, and the First-Person Package
+
+Let $\mathcal S_o$ be the physical state space of the observer candidate. Internal access is the relation
+
+$$
+\operatorname{Access}_{Y,o}
+\subseteq
+\mathcal S_o\times\mathcal A_Y^{\rm obj}\times\mathcal T_Y,
+$$
+
+where $(s,r,t)\in\operatorname{Access}_{Y,o}$ means that the state $s$ can use record $r$ in the candidate’s own state transitions, inference, control, or report coupling at $t$. Accessibility is tested by interventions on the record-to-state coupling; it is not defined retrospectively by successful reporting.
+
+The integration relation
+
+$$
+\operatorname{Int}_{Y,o}:
+\mathcal H_{Y,o}|_{W_{Y,o}(t)}
+\rightrightarrows
+\mathcal R_{Y,o}^{\rm int}(t)
+$$
+
+combines mutually accessible records across the window. It must be invariant under admissible redescription, compatible with subdivision of the window, and stable under perturbations inside the stated physical class. It may be set-valued when more than one integration is physically equivalent or when the data do not select a unique structure.
+
+One concrete realization uses the observer’s accessible record algebras. Let $\mathfrak A^{\rm acc}_{Y,o}(\tau)$ be the unital subalgebra generated by objective records accessible at $\tau$. Physical comparison at a common endpoint $t$ requires a normal unital $*$-monomorphism
+
+$$
+\jmath_{t\leftarrow\tau}:
+\mathfrak A^{\rm hist}_{Y,o}(\tau)
+\hookrightarrow
+\mathfrak A^{\rm hist}_{Y,o}(t),
+\qquad
+\jmath_{t\leftarrow t}=\mathrm{id},
+\qquad
+\jmath_{t\leftarrow\sigma}\jmath_{\sigma\leftarrow\tau}
+=\jmath_{t\leftarrow\tau},
+$$
+
+on every ordered triple in the window. This is the observable encoding supplied by the physical history or by a common Stinespring/history-algebra representation. Define
+
+$$
+\mathfrak A^{\rm int}_{Y,o}(t)
+=\left(
+\bigcup_{\tau\in W_{Y,o}(t)}
+\jmath_{t\leftarrow\tau}
+\bigl(\mathfrak A^{\rm acc}_{Y,o}(\tau)\bigr)
+\right)'',
+\qquad
+R^{\rm int}_{Y,o}(t)
+=\left(\mathfrak A^{\rm int}_{Y,o}(t),
+\omega_{Y,o}(t)|_{\mathfrak A^{\rm int}_{Y,o}(t)}\right).
+$$
+
+The double commutant is the smallest von Neumann algebra containing every physically encoded accessible algebra. For a noninvertible Schrödinger channel $\mathcal E_{\sigma\leftarrow\tau}$, the Heisenberg adjoint has the opposite direction,
+
+$$
+\mathcal E_{\sigma\leftarrow\tau}^{*}:
+\mathfrak A(\sigma)\longrightarrow\mathfrak A(\tau),
+$$
+
+and is used to pull later observables back for operational comparison; it is not misused as a forward embedding of the earlier algebra. If no canonical monomorphism exists, an admitted common dilation or correspondence must be supplied. If the effective dynamics admits several inequivalent dilations or correspondences, $\operatorname{Int}_{Y,o}$ returns the corresponding set of integrated pairs rather than choosing one without physical grounds. Subdivision compatibility is equality with the iterated generated algebras over any ordered partition of the same window.
+
+<a id="156-first-person-record-aperture"></a>
+
+## 15.6 First-Person Record Aperture
+
+The first-person aperture is the image of the operational access relation of the preceding section: a record enters the aperture of observer system $o$ exactly when the intervention-based access conditions hold within the normalized causal window. The aperture is a structural object; no phenomenal claim attaches to membership.
+
+<a id="157-self-indexing-and-the-self-index-posterior"></a>
+
+## 15.7 Self-Indexing and the Self-Index Posterior
+
+Let $\mathcal H_Y$ be the set of candidate observer histories compatible with current internal records and let $\sim_{\rm lineage}$ identify histories preserving the admitted observer lineage. The self-index map assigns the integrated record to the subsystem’s own boundary and history without importing an external identity label:
+
+$$
+\boxed{
+I_{\rm self,Y}:
+\mathsf R_{\rm int,Y}
+\longrightarrow
+\Delta(\mathcal H_Y/{\sim_{\rm lineage}}).
+}
+$$
+
+For a lineage class $[h]$,
+
+$$
+I_{\rm self,Y}([h]\mid R_{\rm int,Y})
+\propto
+L_Y(R_{\rm int,Y}\mid[h])\,\pi_Y([h]),
+$$
+
+with normalization over all compatible classes. $L_Y$ and $\pi_Y$ are fixed in advance for the observer comparison. Self-continuity over adjacent windows is quantified by a declared divergence $D_{\rm self}$:
+
+$$
+D_{\rm self}
+\left(
+I_{\rm self,Y}^{t},I_{\rm self,Y}^{t+\delta t}
+\right)
+\le\epsilon_{\rm self}.
+$$
+
+A diffuse or multimodal posterior is an allowed output; uniqueness is not assumed.
+
+<a id="158-unity"></a>
+
+## 15.8 Unity
+
+The self-index posterior of the preceding sections applies to the integrated record $\mathcal R_{Y,o}^{\rm int}(t)$; a diffuse or multimodal result represents ambiguous self-location rather than an automatically unique self. Let the accessible record structure define a finite weighted causal hypergraph $\mathcal G_{Y,o}(t)=(V,E,w)$, with nonnegative, redescription-invariant intervention weights. For $A\subset V$, let
+
+$$
+w(\partial A)=\sum_{e\cap A\ne\varnothing,\ e\cap A^c\ne\varnothing}w_e,
+\qquad
+\operatorname{vol}(A)=\sum_{v\in A}\sum_{e\ni v}w_e.
+$$
+
+A definite unity functional is the clipped minimum normalized cut
+
+$$
+\mathcal U_{Y,o}(t)
+=\min\!\left\{1,
+\inf_{\varnothing\ne A\subsetneq V}
+\frac{w(\partial A)}{\min\{\operatorname{vol}(A),
+\operatorname{vol}(A^c)\}}
+\right\},
+$$
+
+with zero assigned when a denominator vanishes or when fewer than two non-null vertices are present. The intervention protocol fixes the weights before $\mathcal U_{Y,o}$ is evaluated, and the same normalization is used throughout a comparison class. Unity requires $\mathcal U_{Y,o}\ge U_{\min}$ for a single declared threshold. In particular, a disconnected accessible structure has $\mathcal U_{Y,o}=0$; disjoint subsystems are not one observer merely because they are considered together.
+
+<a id="159-differentiation-report-coupling-and-stability"></a>
+
+## 15.9 Differentiation, report coupling, and stability
+
+The internal differentiation structure is
+
+$$
+\mathcal Q_{Y,o}(t)=
+(R_{Y,o}^{\rm int}(t),d_{Y,o}^{\rm int},
+\operatorname{Part}_{Y,o},\operatorname{Contrast}_{Y,o}),
+$$
+
+where $d^{\rm int}$ distinguishes integrated record states, $\operatorname{Part}$ describes admissible internal decompositions, and $\operatorname{Contrast}$ describes relations among accessible states. Reports or actions are generated only after this structure is formed:
+
+$$
+\mathcal K_{\rm rep,Y}:
+\mathcal Q_{Y,o}(t)\times\mathcal C_{Y,o}(t)
+\longrightarrow\Delta(\mathcal R\!ep_{Y,o}).
+$$
+
+The report map cannot define $\mathcal Q_{Y,o}$ retroactively. Conversely, the absence of a particular report channel does not by itself prove the absence of structural integration.
+
+Stability is formulated on a physical comparison family rather than by adding an undefined perturbation to a realization. Let $(\Lambda_o,d_\Lambda)$ be a metric family of observer branches in one fixed topological stratum, let $Y_\lambda$ be the realization represented by $\lambda$, choose a reference $\lambda_0$, and let
+
+$$
+\mathfrak C_{\lambda\leftarrow\lambda_0}:
+\mathfrak A^{\rm hist}_{\lambda_0,o}
+\dashrightarrow
+\mathfrak A^{\rm hist}_{\lambda,o}
+$$
+
+be the declared normal $*$-isomorphism, normal $*$-monomorphism, or operator-algebraic correspondence used to transport comparable states, integrated algebras, lineage distributions, and report maps. It induces a transport $\operatorname{Tr}_{\lambda\leftarrow\lambda_0}$ on observer structures. Before R8a is proved, each branch defines a closed set that may be empty,
+
+$$
+\mathfrak O_{\lambda,o}(t)=
+\left\{
+\begin{aligned}
+(&R_{\rm int},I_{{\rm self},Y_\lambda}(R_{\rm int}),
+\mathcal U_{Y_\lambda,o}(t),\\
+&\mathcal Q_{Y_\lambda,o}(t;R_{\rm int}),
+\mathcal K_{{\rm rep},Y_\lambda}):
+R_{\rm int}\in
+\operatorname{Int}_{Y_\lambda,o}
+(\mathcal H_{Y_\lambda,o}|_{W_{Y_\lambda,o}(t)})
+\end{aligned}
+\right\}
+$$
+
+with all physically admitted integrations included. If $d_{\rm 1P}$ is the comparison metric on individual first-person structures, let $d_H^{\rm 1P}$ be its Hausdorff metric when both compared closed sets are nonempty. On those branches, stability requires
+
+$$
+d_H^{\rm 1P}\!\left(
+\operatorname{Tr}_{\lambda\leftarrow\lambda_0}
+\mathfrak O_{\lambda_0,o}(t),
+\mathfrak O_{\lambda,o}(t)
+\right)
+\le L_o\,d_\Lambda(\lambda,\lambda_0)
+$$
+
+inside a declared radius. An empty output is instead a failed nonemptiness case for R8a and is not assigned a finite Hausdorff stability bound. Across a change of topological stratum, the comparison is made by an explicitly stated correspondence; a topology-changing bifurcation is classified as fragmentation or branch change and is not assumed to satisfy the same Lipschitz estimate. Fragmentation also occurs when accessible causal structure becomes disconnected, unity falls below threshold, no consistent lineage index exists, ordered windows cannot be joined, or the structure changes under a physically irrelevant redescription. A threshold transition may be discontinuous and should be treated as such.
+
+<a id="1510-observer-theorem-programme"></a>
+
+## 15.10 Observer theorem programme
+
+R8a asks whether, for a nontrivial class of physical observer candidates, objective and arrow-ordered histories yield stable integrated records, self-indexing, unity, internal differentiation, and report coupling invariant under admissible redescription. Its proof begins from the relations in this chapter.
+
+R8b is a separate question: whether the resulting structural account is sufficient for consciousness or qualitative finality. Nothing in R8a alone establishes that bridge. The distinction prevents an architectural description of observer readout from being mistaken for a completed explanation of subjective experience.

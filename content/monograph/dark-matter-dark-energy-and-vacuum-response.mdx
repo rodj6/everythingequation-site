@@ -1,0 +1,595 @@
+---
+title: "Dark Matter, Dark Energy, and Vacuum Response"
+kind: chapter
+number: "13"
+label: "Chapter 13"
+part: 2
+order: 13
+description: 'The two preceding chapters assembled the cosmological readout of the theory and its parameter classification.'
+---
+The two preceding chapters assembled the cosmological readout of the theory and its parameter classification. The present chapter defines the dark sector: the dark-energy and cosmological-constant branches, the vacuum-energy response, the dark-matter branch alternatives with their observational discriminators, the low-boundary cross-link, and the associated proof targets. The chapter receives the cosmological dark-sector interface from Chapter 12 and the parameter inputs from Chapter 11. It derives the relation between the equation of state and the branch evolution function from the continuity equation, states the cosmological-constant branch with $\rho_\Lambda=\Lambda/(8\pi G)$, types the vacuum projection map $\mathcal P_\Lambda^{grav}$ together with its quantitative suppression target, and splits the dark-matter density into primordial and induced components. It does not select a dark-sector branch and does not derive $\Lambda$, dark matter, dark energy, or the low-boundary source; in particular, the cosmological-constant problem remains open under the companion programme R6 of Chapter 17, with secondary open problems under R5 and R9; all remain active throughout, and nothing in this chapter discharges them.
+
+<a id="131-role-of-this-chapter"></a>
+
+## 13.1 Role of This Chapter
+
+Chapter 13 defines the dark-sector module of the monograph. It receives the cosmology-channel dark-sector interface from Chapter 12,
+
+$$
+\boxed{
+H_{12\to13}
+=
+(
+\rho_C(a),
+\rho_{C0},
+F_C(a),
+w_C(a),
+\rho_{DM}(a),
+\rho_\Lambda,
+\Lambda,
+\Omega_{DM},
+\Omega_C
+),
+}
+\tag{13.1}
+$$
+
+and the parameter inputs from Chapter 11,
+
+$$
+\boxed{
+\rho_\Lambda,
+\rho_{C0},
+F_C(a),
+w(a),
+\rho_{prim},
+\rho_{ind},
+\mathcal P_\Lambda^{grav}.
+}
+\tag{13.2}
+$$
+
+The corresponding theorem problem is the cosmology and dark-sector programme R6 of Chapter 17.
+
+Chapter 13 formalizes the dark-energy branch, the cosmological-constant branch, the vacuum-energy projection residue, the dark-matter branch split, the operational dark-matter discriminators, the low-boundary cross-link, and the associated proof targets. It does not select a dark-sector branch or derive $\Lambda$, dark matter, dark energy, or the low-boundary source.
+
+<a id="132-inherited-inputs-from-chapters-11-and-12"></a>
+
+## 13.2 Inherited Inputs from Chapters 11 and 12
+
+From Chapter 11, this chapter inherits the parameter values
+
+$$
+\boxed{
+\rho_\Lambda,\quad
+\rho_{C0},\quad
+F_C(a),\quad
+w_C(a),\quad
+\rho_{prim},\quad
+\rho_{ind},\quad
+\mathcal P_\Lambda^{grav}.
+}
+\tag{13.3}
+$$
+
+From Chapter 12, this chapter inherits the large-scale branch equation
+
+$$
+\boxed{
+\rho_C(a)=\rho_{C0}F_C(a),
+}
+\tag{13.4}
+$$
+
+and the FLRW/Friedmann context in which $\rho_C(a)$, $\rho_{DM}(a)$, $\rho_\Lambda$, and $\Lambda$ enter the expansion readout.
+
+The Chapter 12 low-boundary condition is also preserved:
+
+$$
+\boxed{
+\mathcal B_{cos}^{low}
+\Rightarrow
+S_{grav}^{early}\ll S_{grav}^{max}.
+}
+\tag{13.5}
+$$
+
+The dark sector is not a single assumed substance. It is the part of the cosmological readout not already accounted for by the recovered visible matter, radiation, curvature, and explicitly identified record or EFT corrections. The theory therefore distinguishes a cosmological constant, dynamical dark energy, primordial dark matter, and induced effective dark matter, and asks which of these branches is selected by the source realization.
+
+<a id="133-dark-energy"></a>
+
+## 13.3 Dark energy
+
+For a separately conserved dark-energy component, $p_{\rm DE}=w_{\rm DE}(\bar a)\rho_{\rm DE}$, and the density evolves as $\rho_{\rm DE}(\bar a)=\rho_{{\rm DE},0}F_C(\bar a)$ with the branch evolution function $F_C$ derived from the continuity equation in (13.8)–(13.10) below.
+
+A dynamical fluid branch must also specify
+
+$$
+\delta p_{\rm DE}^{\rm gi}
+=c_{s,{\rm DE}}^2\delta\rho_{\rm DE}^{\rm gi}
++\delta p_{\rm nad}^{\rm gi},
+$$
+
+its anisotropic stress, exchange current, initial perturbations, and stability range. These constitutive data describe a physical branch only when they arise from a separately owned covariant action or covariant closed-time-path fluid functional. For example, an irrotational scalar-fluid branch may use
+
+$$
+\Gamma_{\rm DE}[g,\varphi]
+=\int_M\sqrt{-g}\,P(X,\varphi)\,d^4x,
+\qquad
+X=-\frac12g^{\mu\nu}\nabla_\mu\varphi\nabla_\nu\varphi,
+$$
+
+$$
+T_{\mu\nu}^{\rm DE}
+=P_{,X}\nabla_\mu\varphi\nabla_\nu\varphi+Pg_{\mu\nu},
+\qquad
+p_{\rm DE}=P,
+\qquad
+\rho_{\rm DE}=2XP_{,X}-P.
+$$
+
+A more general fluid branch must provide its analogous covariant variational functional and derive its stress and exchange current from it. A prescribed $w_{\rm DE}$, sound speed, or anisotropic stress without such an owned functional is a phenomenological parametrization, not a physical dynamical-dark-energy branch of the theory. The constant-volume projection of any admitted dark-energy action is removed and included only in $\Lambda_{\rm br}$; its remaining dynamical stress appears exactly once in the gravitational and cosmological equations.
+
+<a id="134-dark-sector-output"></a>
+
+## 13.4 Dark-sector output
+
+The dark-sector record is
+
+$$
+D_C=
+(D_{\rm DE},D_{\rm DM},D_{\nu},D_{\rm int},D_{\rm stab},D_{\rm own}).
+$$
+
+<a id="1341-dark-energy"></a>
+
+### 13.4.1 Dark energy
+
+A fluid branch supplies
+
+$$
+T_{\mu\nu}^{\rm DE}
+=(\rho_{\rm DE}+p_{\rm DE})u_\mu u_\nu+p_{\rm DE}g_{\mu\nu}+\pi_{\mu\nu}^{\rm DE},
+$$
+
+with the equation of state and gauge-invariant sound-speed data of the preceding section, and with $c_s^2$, anisotropic stress, exchange current, and initial perturbations explicitly supplied. A field/EFT branch instead supplies its covariant action and kinetic matrix. The stability gate requires positive kinetic eigenvalues, absence of gradient instability, controlled strong-coupling scale, and a well-posed initial-value problem.
+
+Dark-energy EFT parameterization and linear-structure stability follow \[[58](/monograph/bibliography#ref-GubitosiPiazzaVernizzi2013), [59](/monograph/bibliography#ref-BelliniSawicki2014)\].
+
+<a id="1342-ownership-and-double-count-control"></a>
+
+### 13.4.2 Ownership and double-count control
+
+The following sources are mutually exclusive unless an explicit decomposition theorem proves otherwise:
+
+  - a cosmological constant in $\Gamma_{\rm EH}$;
+
+  - a matter-vacuum term in $\Gamma_{\rm QFT}^{\rm ren}$;
+
+  - a dynamic dark-energy action;
+
+  - a record-induced background term;
+
+  - a QG/EFT correction;
+
+  - the HT integration-constant branch.
+
+The ownership functional
+
+$$
+\operatorname{Own}_C:
+\mathsf{ActionTerm}
+\longrightarrow
+\{\mathrm{QFT},\mathrm{rec},\mathrm{QG},\mathrm{DE},\mathrm{HT}\}
+$$
+
+is single-valued on every action term. Failure of single ownership is a cosmological action double count and is excluded.
+
+<a id="135-dark-energy-and-closure-branch"></a>
+
+## 13.5 Dark-Energy and Closure Branch
+
+The dark-energy or closure branch is
+
+$$
+\boxed{
+\rho_C(a)=\rho_{C0}F_C(a).
+}
+\tag{13.6}
+$$
+
+Its pressure is written
+
+$$
+\boxed{
+p_C(a)=w_C(a)\rho_C(a).
+}
+\tag{13.7}
+$$
+
+The branch function $F_C(a)$ controls whether the dark-energy component behaves as a cosmological constant, an evolving fluid, or a more general closure-sector readout.
+
+The exact source origin and dynamics of $F_C(a)$ remain assigned to $R6$.
+
+<a id="136-the-relation-between-the-equation-of-state-and-the-branch-evolution-function"></a>
+
+## 13.6 The Relation Between the Equation of State and the Branch Evolution Function
+
+Start from the continuity equation for the closure branch:
+
+$$
+\boxed{
+\dot\rho_C+3H(1+w_C)\rho_C=0.
+}
+\tag{13.8}
+$$
+
+Using $H=\dot a/a$, rewrite
+
+$$
+\frac{d\rho_C}{\rho_C}
+=
+-3(1+w_C(a))\,d\ln a.
+$$
+
+Integrating from $a=1$ to $a$,
+
+$$
+\boxed{
+F_C(a)
+=
+\exp
+\left[
+-3
+\int_1^a
+(1+w_C(a'))\,d\ln a'
+\right].
+}
+\tag{13.9}
+$$
+
+For constant $w_C$,
+
+$$
+\boxed{
+F_C(a)=a^{-3(1+w_C)}.
+}
+\tag{13.10}
+$$
+
+Equations (13.8)–(13.10) are the continuity-derived branch relations of this chapter.
+
+<a id="137-cosmological-constant-branch"></a>
+
+## 13.7 Cosmological-Constant Branch
+
+The cosmological-constant branch is defined by
+
+$$
+\boxed{
+w_C=-1.
+}
+\tag{13.11}
+$$
+
+Substituting $w_C=-1$ into (13.10) gives
+
+$$
+\boxed{
+F_C(a)=1,
+}
+\tag{13.12}
+$$
+
+and therefore
+
+$$
+\boxed{
+\rho_C(a)=\rho_{C0}.
+}
+\tag{13.13}
+$$
+
+The cosmological constant and the effective vacuum density are related by
+
+$$
+\boxed{
+\rho_\Lambda=\frac{\Lambda}{8\pi G}.
+}
+\tag{13.14}
+$$
+
+Thus the cosmological-constant term enters the Friedmann equation through
+
+$$
+\boxed{
+\frac{\Lambda}{3}
+=
+\frac{8\pi G}{3}\rho_\Lambda.
+}
+\tag{13.15}
+$$
+
+The magnitude and source of $\Lambda$ are not fixed by (13.14); they belong to the cosmological-constant projection question of this chapter’s proof targets and to $R6$.
+
+<a id="138-vacuum-energy-projection-and-ownership"></a>
+
+## 13.8 Vacuum-Energy Projection and Ownership
+
+Let $\mathcal P_{\rm vac}$ be the preregistered renormalization projector onto the constant unit-operator functional $\int\sqrt{-g}\,d^4x$. It separates the constant vacuum term in the same action split as the gravitational sector (Chapter 7):
+
+$$
+S_M^{\rm cl}+\Gamma_{\rm QFT}^{\rm ren}
+=
+-\int d^4x\sqrt{-g}\,\rho_{\rm vac}^{\rm const}
++S_{M,\rm dyn}^{\rm cl}
++\Gamma_{\rm QFT,dyn}^{\rm ren},
+\tag{13.16}
+$$
+
+where both dynamic remainders lie in $\ker\mathcal P_{\rm vac}$. The constant contribution is assigned once to the branch variable $\Lambda_{\rm br}$. Classical stress, dynamic renormalized QFT stress, and dark-energy terms exclude the constant already assigned. A constant-shift response is claimed only for the declared HT/global branch and not for arbitrary spacetime-dependent vacuum contributions.
+
+<a id="139-ordinary-and-fixed-flux-gravitational-branches"></a>
+
+## 13.9 Ordinary and Fixed-Flux Gravitational Branches
+
+Let $\mathfrak b_G\in\{\mathrm{Ord},\mathrm{HT}\}$. These are alternative off-shell actions. The ordinary branch is
+
+$$
+S_G^{\rm Ord}[g]
+=\frac1{16\pi G_R}\int_M(R-2\Lambda_{\rm br})\,\mathrm{vol}_g.
+$$
+
+The Henneaux–Teitelboim branch is
+
+$$
+S_G^{\rm HT}[g,\lambda,A_3]
+=\frac1{16\pi G_R}\int_MR\,\mathrm{vol}_g
+-\frac1{8\pi G_R}\int_M\lambda(\mathrm{vol}_g-dA_3).
+$$
+
+Variation with respect to $A_3$ gives $d\lambda=0$, while variation with respect to $\lambda$ gives $\mathrm{vol}_g=dA_3$, subject to fixed-flux boundary data. On shell the integration constant is denoted $\lambda_{\rm HT}$; after the constant matter-vacuum term is included, the gravitational combination is $\Lambda_{\rm br}=\lambda_{\rm HT}+8\pi G_R\rho_{\rm vac}^{\rm const}$. The ordinary and HT actions are never summed.
+
+On a fixed-flux HT branch, a constant shift of matter vacuum energy may be absorbed into the integration constant,
+
+$$
+(\rho_{\rm vac}^{\rm const},\lambda_{\rm HT})
+\sim
+(\rho_{\rm vac}^{\rm const}+c,
+\lambda_{\rm HT}-8\pi G_Rc),
+$$
+
+leaving $\Lambda_{\rm br}=\lambda_{\rm HT}+8\pi G_R\rho_{\rm vac}^{\rm const}$ invariant within that fixed-flux sector. This statement does not prove that $\Lambda_{\rm br}$ is small, stable under all local radiative corrections, or equal to the observed value.
+
+<a id="1391-ht-fixed-flux-construction"></a>
+
+### 13.9.1 HT fixed-flux construction
+
+Fix a finite oriented cut-region family
+
+$$
+\mathfrak U_{\rm cut}
+=
+\{U_\alpha\}_{\alpha=1}^{N_{\rm cut}},
+\tag{13.17}
+$$
+
+three-form fields $\mathcal A_{3,\alpha}^{\rm HT}$, four-form strengths $F_{4,\alpha}=d\mathcal A_{3,\alpha}^{\rm HT}$, and independently varied multipliers $\sigma_\alpha$. Use
+
+$$
+S_{\rm HT}
+=
+\sum_\alpha
+\left[
+-\int_{U_\alpha}\sigma_\alpha\sqrt{-g}\,d^4x
++
+\int_{U_\alpha}\sigma_\alpha F_{4,\alpha}
+\right],
+\tag{13.18}
+$$
+
+with fixed-flux boundary condition
+
+$$
+\left.
+\delta\mathcal A_{3,\alpha}^{\rm HT}
+\right|_{B_{\rm flux}}=0.
+\tag{13.19}
+$$
+
+Independent variation gives
+
+$$
+F_{4,\alpha}
+=
+\sqrt{-g}\,d^4x
+\quad\text{on }U_\alpha,
+\tag{13.20}
+$$
+
+and
+
+$$
+d\sigma_\alpha=0
+\quad\text{on each connected }U_\alpha.
+\tag{13.21}
+$$
+
+The flux-volume relation is
+
+$$
+\int_{U_\alpha}F_{4,\alpha}
+=
+\operatorname{Vol}_g(U_\alpha).
+\tag{13.22}
+$$
+
+Its claim is limited: under the declared global fixed-flux boundary conditions, a constant matter-vacuum shift is transferred to the integration-constant branch. This does not prove radiative stability for arbitrary local effective operators.
+
+The covariant fixed-flux branch is the Henneaux–Teitelboim formulation \[[36](/monograph/bibliography#ref-HenneauxTeitelboim1989)\] with the boundary-term interpretation of \[[37](/monograph/bibliography#ref-BuchmullerDragon2022)\]; manifestly local vacuum-energy sequestering \[[38](/monograph/bibliography#ref-KaloperPadillaStefanyszynZahariade2016)\] is a distinct, stronger mechanism and is cited only as contrast. No claim is made that this branch predicts the observed value of the cosmological constant.
+
+<a id="1310-the-suppression-target-for-the-cosmological-constant"></a>
+
+## 13.10 The Suppression Target for the Cosmological Constant
+
+Define the dimensionless vacuum-pressure ratio
+
+$$
+\boxed{
+\epsilon_\Lambda
+=
+\frac{\rho_\Lambda^{eff}}{M_P^4}.
+}
+\tag{13.23}
+$$
+
+The suppression target is
+
+$$
+\boxed{
+\epsilon_\Lambda\ll1.
+}
+\tag{13.24}
+$$
+
+In Planck units, the observed-order pressure may be represented schematically as
+
+$$
+\boxed{
+\epsilon_\Lambda\sim10^{-120}.
+}
+\tag{13.25}
+$$
+
+Equation (13.25) is a magnitude pressure target, not a derived result. The explanation of the suppression from the raw vacuum scale to the gravitationally active value — the cosmological-constant problem — remains open under $R6$.
+
+The corresponding proof target is exact: explain or route the suppression from the raw vacuum density scale to the gravitationally active $\rho_\Lambda^{eff}$. Until such an explanation is supplied, the suppression remains an open problem of the R6 programme.
+
+<a id="1311-dark-matter-branch-split"></a>
+
+## 13.11 Dark-Matter Branch Split
+
+The dark-matter branch is split as
+
+$$
+\boxed{
+\rho_{DM}(a)=\rho_{prim}(a)+\rho_{ind}(a).
+}
+\tag{13.26}
+$$
+
+The primordial branch $\rho_{prim}$ is defined operationally by the following conditions.
+
+1.  Existence: it exists independently of late-time nonlinear structure formation.
+
+2.  Large-scale behavior: it behaves as nonrelativistic matter at large scale unless a branch states otherwise.
+
+3.  Friedmann role: it contributes to $\Omega_{DM}$.
+
+4.  Microphysics status: unresolved.
+
+5.  Open under R6.
+
+The induced branch $\rho_{ind}$ is defined operationally by the following conditions.
+
+1.  Emergence: it emerges from effective geometry, record-dependency, modified clustering, or projection-induced stress.
+
+2.  Environmental dependence: it may correlate with baryonic, structural, curvature, or record-geometric environments.
+
+3.  Gravitational role: it contributes gravitationally like dark matter in selected regimes.
+
+4.  Discriminator requirement: it requires operational discriminators from $\rho_{prim}$.
+
+5.  Open under R6.
+
+This chapter does not select either branch.
+
+Record stress, dark-sector stress, vacuum terms, and gravitational EFT corrections are singly owned: the action-ownership assignment gives each term exactly one owner, and no component may be counted in more than one branch of the cosmological accounting (Chapters 7, 12, and 16).
+
+<a id="1312-primordial-versus-induced-dark-matter-discriminators"></a>
+
+## 13.12 Primordial versus Induced Dark-Matter Discriminators
+
+| Discriminator            | Primordial branch $\rho_{prim}$   | Induced branch $\rho_{ind}$                                |
+| :----------------------- | :---------------------------------- | :----------------------------------------------------------- |
+| Early-universe abundance | present before nonlinear structure  | may emerge with structure, geometry, or projection regime    |
+| Clustering behavior      | particle/fluid-like                 | tied to record, geometry, baryonic, or environmental readout |
+| Lensing relation         | independent mass component          | effective lensing from geometry/readout modification         |
+| CMB imprint              | primordial density component        | constrained by projection/geometry effects                   |
+| Direct detection         | possible if particle carrier exists | not necessarily particle-detectable                          |
+| Baryonic correlation     | weak/generic                        | potentially stronger/environmental                           |
+
+The primordial-versus-induced distinction is tested through the observable routes of Chapter 16 and resolved under the R6 programme of Chapter 17.
+
+<a id="1313-branch-proof-targets"></a>
+
+## 13.13 Branch Proof Targets
+
+The theorem targets of this chapter remain targets; their proof obligations belong to the R6 programme of Chapter 17. Four questions are posed exactly.
+
+*Dark-energy dynamics.* Derive or classify $F_C(a)$, $w_C(a)$, and the closure/dark-energy branch from the source-to-Tier-1 cosmology projection. Until this is done, dark-energy dynamics remains underived.
+
+*Cosmological-constant projection.* Derive or classify $\mathcal P_\Lambda^{grav}$, $\rho_\Lambda^{eff}$, and the suppression of gravitationally active vacuum energy.
+
+*Dark-matter branch.* Derive, distinguish, or route the primordial and induced dark-matter components and their observational discriminators.
+
+*Low-boundary source.* Classify whether dark-sector branch structure couples to the low-boundary cosmological source.
+
+Naming these questions does not answer them; each remains open until the corresponding derivation, classification, or exclusion is supplied.
+
+<a id="1314-low-boundary-cross-link"></a>
+
+## 13.14 Low-Boundary Cross-Link
+
+This chapter preserves the low-boundary relation
+
+$$
+\boxed{
+\mathcal B_{cos}^{low}
+\Rightarrow
+S_{grav}^{early}\ll S_{grav}^{max}.
+}
+\tag{13.27}
+$$
+
+The module records only the possible coupling between dark-sector branch structure and the low-boundary source. Chapter 14 owns the arrow-of-time formalization.
+
+The corresponding proof target is the classification of this coupling, posed with the branch proof targets above.
+
+<a id="1315-dark-matter-branches"></a>
+
+## 13.15 Dark-Matter Branches
+
+A kinetic dark-matter branch lives on the future mass shell $P_m^+=\{(x,p):g_{\mu\nu}p^\mu p^\nu=-m^2,\ p^0>0\}$ and supplies the covariant phase-space equation
+
+$$
+\mathcal L_{\rm ps}f_{\rm DM}
+:=
+p^\mu\frac{\partial f_{\rm DM}}{\partial x^\mu}
+-\Gamma^i_{\alpha\beta}p^\alpha p^\beta
+\frac{\partial f_{\rm DM}}{\partial p^i}
++F_{\rm DM}^{\,i}\frac{\partial f_{\rm DM}}{\partial p^i}
+=C_{\rm DM}[f]+S_{\rm DM},
+$$
+
+$$
+T_{\rm DM}^{\mu\nu}=\int dP\,p^\mu p^\nu f_{\rm DM},
+$$
+
+where $dP$ is the invariant mass-shell measure and $F_{\rm DM}^{\,i}$ is any admitted nongeodesic force tangent to $P_m^+$ (zero for collisionless geodesic dark matter). An effective-fluid branch supplies $\rho_{\rm DM}$, $p_{\rm DM}$, sound speed, anisotropic stress, exchange current, and a range of validity as a moment closure of an owned kinetic or covariant action description. Its provenance may be written
+
+$$
+\rho_{\rm DM}=\rho_{\rm prim}+\rho_{\rm ind},
+$$
+
+without assuming that both terms are nonzero; the operational definitions of the two branches are those of the branch-split section above.
+
+The pure primordial and pure induced branches are exclusive. A hybrid branch is admissible only when the two contributions arise from disjoint action or kinetic terms and their exchange current is specified, so that the same effective stress is not counted twice.
+
+The two possibilities differ observationally through the discriminators tabulated earlier in this chapter; the CMB, clustering, lensing, phase-space, and structure-growth discriminators are outputs of the Chapter 12 transfer system.
+
+<a id="1316-r6-dark-sector-targets"></a>
+
+## 13.16 R6 Dark-Sector Targets
+
+The dark-sector part of R6 must determine or constrain: the branch $w_{\rm DE}(\bar a)$ and its stable perturbations; the gravitational response to constant vacuum shifts; the physical choice between the ordinary and HT branches; the primordial or induced origin of dark matter; and the relation of these branches to the low gravitational-entropy boundary. Naming a branch is not a derivation, but the equations above fix the exact physical alternatives and observables with which the companion paper begins.

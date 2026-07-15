@@ -1,0 +1,87 @@
+---
+title: "Mathematical Conventions and Notation"
+kind: chapter
+number: "4"
+label: "Chapter 4"
+part: 1
+order: 4
+description: 'Chapter 4 fixes the notation of the monograph: the mathematical language, physics conventions, map signatures, and symbol conventions used by Chapters 5–18.'
+---
+<a id="41-role-and-scope"></a>
+
+## 4.1 Role and Scope
+
+Chapter 4 fixes the notation of the monograph: the mathematical language, physics conventions, map signatures, and symbol conventions used by Chapters 5–18. The governing standard is:
+
+$$
+\boxed{
+\begin{aligned}
+&\text{One symbol has one canonical meaning, }\\
+&\quad
+\text{one defining chapter, }\\
+&\quad
+\text{and one open-problem route if incomplete.}
+\end{aligned}
+}
+\tag{4.1}
+$$
+
+Later chapters may refine definitions or prove propositions, but they must not introduce incompatible notation or silently rename load-bearing objects. Equations are numbered and citable, maps are typed with domain and codomain at first use, and every symbol is defined at its first load-bearing use or collected in Appendix A. Tensor derivations are carried out in Chapters 7, 8, and 16; this chapter fixes conventions only.
+
+<a id="42-units-metric-and-curvature"></a>
+
+## 4.2 Units, Metric, and Curvature
+
+Natural units $c=\hbar=1$ are used except where dimensions are displayed explicitly; the constants $c$, $\hbar$, $G$ and $k_B$ are written out whenever dimensional interpretation, gravitational normalization, thermodynamic entropy, or parameter classification requires them. The metric signature is $(-,+,+,+)$. The Riemann tensor is fixed by the commutator convention $R^\rho{}_{\sigma\mu\nu}v^\sigma
+=(\nabla_\mu\nabla_\nu-\nabla_\nu\nabla_\mu)v^\rho$, equivalently
+
+$$
+R^\rho{}_{\sigma\mu\nu}
+=
+\partial_\mu\Gamma^\rho_{\nu\sigma}
+-\partial_\nu\Gamma^\rho_{\mu\sigma}
++\Gamma^\rho_{\mu\lambda}\Gamma^\lambda_{\nu\sigma}
+-\Gamma^\rho_{\nu\lambda}\Gamma^\lambda_{\mu\sigma},
+\qquad
+R_{\mu\nu}=R^\rho{}_{\mu\rho\nu},
+\qquad
+R=g^{\mu\nu}R_{\mu\nu},
+\tag{4.2}
+$$
+
+and the Einstein tensor is $G_{\mu\nu}=R_{\mu\nu}-\frac12Rg_{\mu\nu}$.
+
+<a id="43-indices-and-summation"></a>
+
+## 4.3 Indices and Summation
+
+Greek indices $\mu,\nu,\rho,\sigma=0,1,2,3$ are spacetime indices; Latin indices $i,j,k=1,2,3$ are spatial. Internal indices are $a,b,c$ for gauge degrees of freedom and $r,s=1,2,3$ for flavour generations; $i,j$ also label measurement outcomes where the context makes this unambiguous, and Latin indices may label other internal or discrete degrees of freedom as specified locally. Einstein summation applies wherever repeated upper/lower indices are unambiguous. The covariant derivative is $\nabla_\mu$ and the metric is $g_{\mu\nu}$.
+
+<a id="44-maps-relations-and-record-stages"></a>
+
+## 4.4 Maps, Relations, and Record Stages
+
+A dashed arrow denotes a partial map, $\rightsquigarrow$ a relation or set-valued map, and $\simeq$ the equivalence appropriate to the category in question. A superscript $pre$, $cand$, $sel$, $act$ or $obj$ always refers to the corresponding record stage. The symbols $\mathcal H$, $\mathsf H$, $H(a)$ and $H$ denote respectively a Hilbert space, a Hamiltonian, the Hubble readout and the Higgs doublet.
+
+<a id="45-cosmological-and-gauge-normalizations"></a>
+
+## 4.5 Cosmological and Gauge Normalizations
+
+The curvature parameter is written
+
+$$
+\mathcal K_{\rm FLRW}=\frac{k_{\rm FLRW}}{a_0^2},
+\qquad
+\Omega_{k0}=-\frac{k_{\rm FLRW}}{a_0^2H_0^2}.
+\tag{4.3}
+$$
+
+The hypercharge coupling in the electroweak covariant derivative is $g_Y$; if grand-unified normalization is used, $g_1=\sqrt{5/3}\,g_Y$ is stated separately.
+
+A compact index of the notation used across more than one chapter is collected in Appendix A.
+
+<a id="46-toward-the-physical-sectors"></a>
+
+## 4.6 Toward the Physical Sectors
+
+The conventions above govern all subsequent chapters. Part II now develops the physical sectors, beginning with quantum theory and relativistic quantum field theory on a prepared realization.

@@ -1,0 +1,628 @@
+---
+title: "Integrated Physical Architecture and Observable Routes"
+kind: chapter
+number: "16"
+label: "Chapter 16"
+part: 3
+order: 16
+description: 'Shadow Theory is organized around a common-realization claim.'
+---
+<a id="161-one-source-several-compatible-physical-readouts"></a>
+
+## 16.1 One source, several compatible physical readouts
+
+Shadow Theory is organized around a common-realization claim. Quantum theory, relativistic fields, records, spacetime geometry, gravitation, matter, cosmology, temporal order and observer structure are not taken as mutually independent foundations. They are required to arise as compatible descriptions of a common admissible realization of source structure.
+
+Let $X\in\mathsf S_{\rm adm}$ be an admitted source object and let $Y\in\operatorname{RealPrep}_{\Omega}[X]$ be a realization supported by it. The physical construction may be written schematically as
+
+$$
+X\longmapsto Y\longmapsto
+\bigl(Q_Y,\mathcal A_Y,R_Y,G_Y,M_Y,C_Y,A_Y,O_Y\bigr),
+$$
+
+where $Q$ denotes quantum structure, $\mathcal A$ the relativistic field algebra and its physical states, $R$ objective record structure, $G$ geometry and gravitation, $M$ matter, $C$ cosmology, $A$ temporal orientation, and $O$ observer readout. The tuple is physical only when the comparison maps on shared interfaces agree. In categorical language, the admissible Tier-1 readouts form the coherent equalizer
+
+$$
+\mathsf{Comp}_{T1}
+=\operatorname{Eq}^{\rm coh}(\Delta_L,\Delta_R),
+$$
+
+where
+
+$$
+\Delta_L,\Delta_R:
+\prod_{\alpha}\mathsf O_\alpha
+\rightrightarrows
+\prod_{e\in E}\mathsf C_e
+$$
+
+collect the two ways of reaching each comparison object, together with the comparison isomorphisms and their path and loop coherence data. Here $\mathsf O_\alpha$ is the physical output class of sector $\alpha$, and $\mathsf C_e$ is the common comparison space for interface $e$. This is not an assertion that every source has a physical readout. It defines what compatibility means when a branch of the construction exists.
+
+Source identity is not part of the ordinary Tier-1 physical data. Distinct source realizations can project to equivalent physical descriptions. Their lineage remains relevant to the inverse problem—recovering which source fibres support a given readout—but is not added as an observable label to the physical state.
+
+<a id="162-the-integrated-source-to-readout-route"></a>
+
+## 16.2 The integrated source-to-readout route
+
+The main route can be displayed without identifying its stages:
+
+$$
+\begin{gathered}
+\mathsf S_{\rm adm}
+\longrightarrow Y\in\operatorname{RealPrep}_{\Omega}[X]
+\longrightarrow \mathsf{QFT}
+\longrightarrow Q
+\longrightarrow R^{\rm pre}
+\longrightarrow\cdots\longrightarrow R^{\rm obj},\\[0.5ex]
+Y\longrightarrow M\longrightarrow\mathsf{QFT},
+\qquad
+\mathsf{QFT}\longleftrightarrow G,\\[0.5ex]
+R^{\rm obj}\xrightarrow{\text{archive accumulation}}
+\mathcal A^{\rm obj}\longrightarrow\mathsf{PreGeom}
+\xrightarrow{\ \kappa^{\rm inf},\,d_{\rm rel}\ }
+\operatorname{Rec}_{\rm met}\longrightarrow G,\\[0.5ex]
+(G,M)\longrightarrow C\longrightarrow A,
+\qquad
+(R^{\rm obj},A)\longrightarrow O.
+\end{gathered}
+$$
+
+The record segment suppressed in the diagram is
+
+$$
+R^{\rm pre}
+\longrightarrow R^{\rm cand}
+\xrightarrow{\rm selection}R^{\rm sel}
+\xrightarrow{\rm deposition}R^{\rm act}
+\xrightarrow{\rm persistence}R^{\rm obj}.
+$$
+
+The distinctions are physical. Born weights specify outcome statistics; contextual selection identifies a realized alternative; deposition makes that alternative an actual record; and objectivity requires its stable, redundantly accessible persistence. Geometry and temporal order are constructed from objective records, not from unselected quantum alternatives.
+
+<a id="163-load-bearing-equations"></a>
+
+## 16.3 Load-bearing equations
+
+The following equations summarize the physical construction. Their definitions and assumptions remain in the sector chapters.
+
+<a id="1631-source-closure-and-realization"></a>
+
+### 16.3.1 Source closure and realization
+
+The admitted source class is the least source-local closure of the witness class:
+
+$$
+\operatorname{Ob}\mathsf S_{\rm adm}=\mu\mathbb L_{\rm src},
+\qquad
+\mathbb L_{\rm src}(A)
+=\operatorname{IsoSat}\!\left(
+\mathcal W_0\cup A\cup\mathscr O_1^{\rm NFE}(A)
+\right).
+$$
+
+The source law contains no Tier-1 success condition. Physical construction begins only after a realization $Y\in\operatorname{RealPrep}_{\Omega}[X]$ has been chosen or shown to exist.
+
+<a id="1632-quantum-probability-and-records"></a>
+
+### 16.3.2 Quantum probability and records
+
+For a state $\rho$ and POVM $E_Y$,
+
+$$
+\mu_{\rho,Y}(B)=\operatorname{Tr}\!\left(\rho E_Y(B)\right),
+\qquad
+\mu_{\rho,Y}(\Omega_Y)=1.
+$$
+
+A normal quantum instrument $\mathcal I_Y(B)$ supplies both the probability and the conditional state update. Its repeated composition determines cylinder probabilities for sequential histories. The selector must reproduce these probabilities without permitting a remote setting to change local marginal statistics.
+
+<a id="1633-from-objective-records-to-pregeometry"></a>
+
+### 16.3.3 From objective records to pregeometry
+
+Let $D_i^{\rm obj}$ denote objective records. Their intervention-sensitive influence is summarized by a bounded directed weight $\kappa^{\rm inf}(i,j)$. After quotienting only redescription-internal cycles, define on distinct quotient vertices
+
+$$
+w_{xy}
+=\sup_{i\in x,j\in y}
+\bigl(\kappa^{\rm inf}(i,j)+\kappa^{\rm inf}(j,i)\bigr),
+\qquad
+s_x=\sum_{y\ne x}w_{xy},
+$$
+
+and, when $w_{xy}>0$, normalize
+
+$$
+q_{xy}=\frac{w_{xy}}{\sqrt{s_xs_y}},
+\qquad
+c_{xy}=1-\log q_{xy}.
+$$
+
+Because $0\lt q_{xy}\le1$, the edge cost obeys $c_{xy}\ge1$. The relational distance is the extended path infimum
+
+$$
+d_{\rm rel}(x,y)=
+\inf_{x=x_0\sim\cdots\sim x_m=y}
+\sum_{r=0}^{m-1}c_{x_rx_{r+1}},
+$$
+
+with value $+\infty$ between disconnected components.
+
+Metric comparison uses a definite construction rather than an auxiliary distance chosen after fitting. For a normalized Lorentzian candidate $\widehat g_{C,I}$, require the comparison region $A_C$ to be compact, causally convex and causally distinguishing, with finite continuous time separation $\tau_C$. Its strong (Noldus) metric is
+
+$$
+d_{\rm str}^{C}(p,q)
+=\sup_{r\in A_C}
+\left|
+\tau_C(p,r)+\tau_C(r,p)
+-\tau_C(q,r)-\tau_C(r,q)
+\right|.
+$$
+
+For nonempty compact cell supports $B_x,B_y\subseteq A_C$, set
+
+$$
+d_C^{\rm cmp}(x,y)=d_H^{\,d_{\rm str}^{C}}(B_x,B_y).
+$$
+
+The order, measure and dimension come from that same geometry:
+
+$$
+x\prec_Cy\Longleftrightarrow
+B_x\times B_y\subset I^+_{\widehat g_{C,I}},
+\qquad
+\mu_C=(q_C)_*\overline{\operatorname{Vol}}_{|\widehat g_{C,I}|},
+\qquad
+n_C=\dim A_C.
+$$
+
+With a bandwidth $\epsilon_C>0$ fixed before comparison, define
+
+$$
+\begin{gathered}
+W_{xy}=\exp\!\left[-(d_C^{\rm cmp}(x,y)/\epsilon_C)^2\right]
+\quad(x\ne y),
+\qquad W_{xx}=0,\\
+D_x=\sum_yW_{xy},
+\qquad
+L_C=\mathbf1-D^{-1/2}WD^{-1/2}.
+\end{gathered}
+$$
+
+Weights at infinite distance are zero, and isolated cells are assigned zero blocks. This normalized graph Laplacian is self-adjoint and positive semidefinite and has a positivity-preserving heat semigroup. A Riemannian branch uses the geodesic metric of $\widehat g_{C,I}$ in place of $d_{\rm str}^{C}$ and carries no induced chronological order. If the causal regularity, finite positive volume, cell assignment, fixed bandwidth, dimension or same-geometry response conditions fail, the candidate remains raw and every affected discrepancy is $+\infty$.
+
+Together with the induced causal order, support measure, spectral data and refinement maps, this defines a set-valued reconstruction
+
+$$
+\operatorname{Rec}_{\rm met}((\mathfrak P_n)_n)
+\subseteq
+\{[M,g]_{\mathrm{Diff}\times\mathrm{Scale}}\}.
+$$
+
+The set can be empty, contain one equivalence class, or contain a family whose degeneracy is controlled relative to a predeclared observable vector or family covering every observable claimed in the relevant result. A family that is indistinguishable only for lensing is lensing-controlled, not globally controlled. Every other observable must propagate the full metric family unless its own predeclared comparison proves control. No preferred metric is selected without an additional physical argument.
+
+<a id="1634-gravity-and-relativistic-fields"></a>
+
+### 16.3.4 Gravity and relativistic fields
+
+On an admitted metric branch, let $\Psi_G=\varnothing$ for the ordinary branch and $\Psi_G=(\lambda,A_3)$ for the fixed-flux branch. The mutually exclusive gravitational actions are
+
+$$
+S_G^{\mathfrak b_G}[g,\Psi_G]
+=
+\begin{cases}
+\displaystyle
+\frac{1}{16\pi G_R}\int_M(R-2\Lambda_{\rm br})\,\mathrm{vol}_g
++S_{\partial M}^{\rm Ord},
+&\mathfrak b_G=\mathrm{Ord},\\[1.1ex]
+\displaystyle
+\frac{1}{16\pi G_R}\int_MR\,\mathrm{vol}_g
+-\frac{1}{8\pi G_R}\int_M\lambda(\mathrm{vol}_g-dA_3)
++S_{\partial M}^{\rm HT},
+&\mathfrak b_G=\mathrm{HT}.
+\end{cases}
+$$
+
+For non-null boundaries $S_{\partial M}^{\rm Ord}$ contains the Gibbons–Hawking–York term and the required Hayward joint terms; null components carry the standard null-boundary, null-joint and reparametrization terms. Every higher-curvature term has its own boundary completion. The HT completion also fixes the pullback or flux class of $A_3$, so that
+
+$$
+\delta\!\left(\int_{\partial M}A_3\right)=0
+$$
+
+or the corresponding canonical boundary data. In the HT branch $d\lambda=0$ and
+
+$$
+\Lambda_{\rm br}
+=\lambda_{\rm HT}+8\pi G_R\rho_{\rm vac}^{\rm const}.
+$$
+
+Split the matter and quantum variables so that no operator occurs in both $S_M^{\rm dyn}$ and the normalized state-dependent influence functional $\Gamma_{\rm QFT,dyn}^{\rm ren}$. Put the pure-metric local QFT counterterms on the gravitational side:
+
+$$
+S_{\rm grav}^{\rm ren}
+=S_G^{\mathfrak b_G}+\Gamma_{\rm high}^{\rm grav},
+$$
+
+where the constant and Einstein–Hilbert projections have already renormalized $\Lambda_{\rm br}$ and $G_R$. Causal backreaction then follows from
+
+$$
+\begin{aligned}
+\Gamma_{\rm tot,CTP}
+={}&S_{\rm grav}^{\rm ren}[g^+]-S_{\rm grav}^{\rm ren}[g^-]
++S_M^{\rm dyn}[g^+,\Phi_M^+]-S_M^{\rm dyn}[g^-,\Phi_M^-]\\
+&+\Gamma_{\rm QFT,dyn}^{\rm ren}
+[g^+,\Phi_q^+;g^-,\Phi_q^-\mid\omega]
++\Gamma_{R,\rm CTP}[g^\pm,R^\pm;\mathcal A^{\rm obj}]\\
+&+\chi_{MR}\Gamma_{MR,\rm CTP}
++\chi_{\rm DM}\bigl(
+\Gamma_{\rm DM}[g^+,\Phi_{\rm DM}^+]
+-\Gamma_{\rm DM}[g^-,\Phi_{\rm DM}^-]
+\bigr)\\
+&+\chi_{\rm DE}\bigl(
+\Gamma_{\rm DE}[g^+,\Phi_{\rm DE}^+]
+-\Gamma_{\rm DE}[g^-,\Phi_{\rm DE}^-]
+\bigr).
+\end{aligned}
+$$
+
+The objective archive first defines an unrestricted covariant closed-time-path influence functional
+
+$$
+\begin{aligned}
+\Gamma_{\rm arch,CTP}^{\rm full}
+={}&S_R[g^+,R^+,J^+]-S_R[g^-,R^-,J^-]\\
+&+\frac12\int J_A^\Delta K_{\rm ret}^{AB}J_B^\Sigma
++\frac{i}{2}\int J_A^\Delta N^{AB}J_B^\Delta ,
+\end{aligned}
+$$
+
+where the invariant spacetime measures are understood, $K_{\rm ret}$ has retarded support, $N$ is positive, and the record fields and currents reproduce the deposition and persistence data of $\mathcal A^{\rm obj}$. Its boundary data are inherited from the archive endpoints.
+
+At renormalization scale $\mu$, fix an EFT operator basis $\mathcal B_{\rm op}$ modulo the admitted redundancies and a matching decomposition
+
+$$
+\mathfrak m_R
+=\bigl(\mu,\mathcal B_{\rm op},
+\Pi_M,\Pi_{\rm QFT},\Pi_R,\Pi_{MR}\bigr),
+\qquad
+\Pi_a\Pi_b=\delta_{ab}\Pi_a,
+\qquad
+\sum_{a\in\{M,{\rm QFT},R,MR\}}\Pi_a=\mathbf1.
+$$
+
+The $M$ and QFT projections are matched to coefficients already carried by $S_M^{\rm dyn}$ and $\Gamma_{\rm QFT,dyn}^{\rm ren}$. The terms permitted to remain in the total action are therefore
+
+$$
+\Gamma_{R,\rm CTP}
+:=\Pi_R\Gamma_{\rm arch,CTP}^{\rm full},
+\qquad
+\Gamma_{MR,\rm CTP}
+:=\Pi_{MR}\Gamma_{\rm arch,CTP}^{\rm full},
+$$
+
+with
+
+$$
+\Gamma_{R,\rm CTP}+\Gamma_{MR,\rm CTP}
+=\Gamma_{\rm arch,CTP}^{\rm full}
+-\Pi_M\Gamma_{\rm arch,CTP}^{\rm full}
+-\Pi_{\rm QFT}\Gamma_{\rm arch,CTP}^{\rm full}.
+$$
+
+The matching scheme $\mathfrak m_R$ is fixed before the gravitational solution is sought and is transported with the same renormalization-group and threshold prescription as the already-owned coefficients. The $M$ and QFT projections are not added again in $\Gamma_{\rm tot,CTP}$. If the record variables merely reparameterize degrees of freedom already represented by the matter or QFT functionals, then $\Gamma_{R,\rm CTP}=0$ and $T_{\mu\nu}^{R}=0$. Likewise $\Gamma_{MR,\rm CTP}$ contains only a genuinely independent mixed interaction; otherwise $\chi_{MR}=0$. Archive kinematics alone is not an independent stress source.
+
+At the physical limit the effective gravitational equation is
+
+$$
+G_{\mu\nu}+\Lambda_{\rm br}g_{\mu\nu}
++\mathcal Q_{\mu\nu}^{\rm grav}
+=8\pi G_R
+\left(
+T_{\mu\nu}^{M,\rm dyn}
++T_{\mu\nu}^{\rm QFT,dyn}(\omega)
++T_{\mu\nu}^{R,\rm tot}
++\chi_{\rm DM}T_{\mu\nu}^{\rm DM}
++\chi_{\rm DE}T_{\mu\nu}^{\rm DE}
+\right),
+$$
+
+with
+
+$$
+\mathcal Q_{\mu\nu}^{\rm grav}
+=\frac{16\pi G_R}{\sqrt{-g}}
+\frac{\delta\Gamma_{\rm high}^{\rm grav}}{\delta g^{\mu\nu}}.
+$$
+
+Here
+
+$$
+T_{\mu\nu}^{R,\rm tot}
+:=T_{\mu\nu}^{R}+\chi_{MR}T_{\mu\nu}^{MR},
+$$
+
+with $T_{\mu\nu}^{R}$ the record-exclusive matched remainder. The switches $\chi_{MR},\chi_{\rm DM},\chi_{\rm DE}\in\{0,1\}$ are one only for independent action sectors absent from every other owned functional. A dynamical fluid dark-energy branch is admitted only when a covariant action produces its stress tensor; a pure-$\Lambda$ branch has $\chi_{\rm DE}=0$. The interior Noether identity $\nabla^\mu\mathcal Q_{\mu\nu}^{\rm grav}=0$, the field exchange currents and the boundary flux conditions give Bianchi-compatible conservation. For an admitted dimensional metric family, the gravitational relation is consequently
+
+$$
+\operatorname{Sol}_G
+(\mathcal M_{\rm dim},\omega,\mathcal A^{\rm obj},B;
+\mathfrak m_R),
+$$
+
+where the same fixed matching datum is used for every metric sibling. In the limit of negligible record and higher-curvature terms, the usual semiclassical and Einstein equations are recovered.
+
+<a id="1635-matter-and-parameters"></a>
+
+### 16.3.5 Matter and parameters
+
+The Tier-1 matter branch is organized around
+
+$$
+G_{\rm SM}^{\rm glob}
+=\frac{SU(3)_c\times SU(2)_L\times U(1)_Y}{\Gamma_{\rm glob}},
+$$
+
+with $q=6Y$ and
+
+$$
+z_6=(e^{2\pi i/3}\mathbf1_3,-\mathbf1_2,e^{i\pi/3}),
+\qquad
+\Gamma_{\rm glob}=\Gamma_n
+=\langle z_6^{\,6/n}\rangle,
+\qquad n\in\{1,2,3,6\}.
+$$
+
+The compact $U(1)_Y$ quotient uses the integer-charge convention in which $e^{i\alpha}$ acts as $e^{iq\alpha}$. Its coupling is
+
+$$
+g_q:=\frac{g_Y}{6},
+\qquad g_q\,q=g_Y\,Y,
+$$
+
+so the covariant derivative may retain the conventional term $-ig_YYB_\mu$ while quotient descent is tested with integer $q$. Each matter and Higgs representation must obey $R(z_6^{\,6/n})=\mathbf1_R$; genuine electric and magnetic lines must obey the corresponding centre-character and integral Dirac-pairing conditions. These finite tests supplement local and global anomaly cancellation, Higgs symmetry breaking and the Yukawa intertwiner conditions. The electroweak rotation obeys
+
+$$
+A_\mu=\sin\theta_W W^3_\mu+\cos\theta_W B_\mu,
+\qquad
+Z_\mu=\cos\theta_W W^3_\mu-\sin\theta_W B_\mu,
+$$
+
+$$
+e=g_2\sin\theta_W=g_Y\cos\theta_W.
+$$
+
+Parameters run according to
+
+$$
+\mu\frac{d\lambda^a}{d\mu}=\beta^a(\lambda),
+$$
+
+with threshold matching between effective descriptions. A parameter is source-derived only when its boundary condition follows from the source construction; otherwise it is identified as bounded, calibrated or presently free.
+
+<a id="1636-cosmology"></a>
+
+### 16.3.6 Cosmology
+
+For the FLRW branch,
+
+$$
+\mathcal K_{\rm FLRW}=\frac{k_{\rm FLRW}}{a_0^2},
+\qquad
+\Omega_{k0}=-\frac{k_{\rm FLRW}}{a_0^2H_0^2},
+\qquad
+\Omega_k(\bar a)
+=\frac{\Omega_{k0}\bar a^{-2}}{E^2(\bar a)}.
+$$
+
+The radial geodesic distance and the areal curvature radius are distinct:
+
+$$
+\chi(z)=\int_0^z\frac{dz'}{H(z')},
+\qquad
+\varrho(z)=f_{\mathcal K}(\chi(z)).
+$$
+
+The FLRW metric uses $\varrho$ in its area term, while null propagation and line-of-sight integrals use $\chi$.
+
+The background equations take the form
+
+$$
+H^2=\frac{8\pi G_R}{3}\rho_{\rm tot}
+-\frac{\mathcal K_{\rm FLRW}}{\bar a^2}
++\frac{\Lambda_{\rm br}}{3}
++\Delta_H^{\rm grav},
+$$
+
+$$
+\frac{\ddot a}{a}
+=-\frac{4\pi G_R}{3}(\rho_{\rm tot}+3p_{\rm tot})
++\frac{\Lambda_{\rm br}}{3}
++\Delta_a^{\rm grav}.
+$$
+
+Scalar, vector and tensor perturbations are developed in Chapter 12. The ordinary gravitational action and the Henneaux–Teitelboim fixed-flux construction are alternative branches, not terms to be added to one another.
+
+<a id="1637-temporal-order-and-observer-readout"></a>
+
+### 16.3.7 Temporal order and observer readout
+
+If $\precsim_D$ is the reflexive dependency order on objective events, temporal readout is an order embedding
+
+$$
+\Theta_A:(\mathsf P_Y,\precsim_D)
+\longrightarrow(\mathcal T_Y,\preceq_t),
+\qquad
+p_i\precsim_Dp_j
+\Longleftrightarrow
+\Theta_A(p_i)\preceq_t\Theta_A(p_j).
+$$
+
+A real-valued time coordinate may be chosen on a branch only as an additional order-preserving representation or linear extension; it is not part of the pregeometric input. Archive retention and the non-strict arrow relation are defined first on $\mathsf P_Y$ and are transported to $\Theta_A(\mathsf P_Y)$. If a temporal readout identifies event classes, that identification must first be quotiented and must preserve dependency, archive and entropy data, so the descended relation is well defined.
+
+The thermodynamic arrow requires, in addition, a low-boundary condition and specified coarse-graining; record growth alone is not identified with every entropy increase. For an observer candidate $o$ in realization $Y$, objective and arrow histories first form the pullback
+
+$$
+\mathcal H_{Y,o}
+=\operatorname{ObjHist}_{Y,o}
+\times_{\mathcal T_Y}
+\operatorname{ArrowHist}_{Y,o}.
+$$
+
+Over the ordered window $W_{Y,o}(t)$, let $R_{\rm int}\in\operatorname{Int}_{Y,o}(\mathcal H_{Y,o}|_{W_{Y,o}(t)})$. The structural observer readout is the family
+
+$$
+\mathfrak O_{Y,o}(t)=
+\left\{
+\bigl(R_{\rm int},I_{\rm self,Y}(R_{\rm int}),
+\mathcal U_{Y,o}(t),
+\mathcal Q_{Y,o}(t),
+\mathcal K_{\rm rep,Y}\bigr):
+R_{\rm int}\in
+\operatorname{Int}_{Y,o}
+(\mathcal H_{Y,o}|_{W_{Y,o}(t)})
+\right\}.
+$$
+
+It remains set-valued when the physical history does not select a unique integration. Accessible algebras at earlier times enter a common history algebra through normal unital $*$-monomorphisms $\jmath_{t\leftarrow\tau}$ satisfying the cocycle law; the oppositely directed Heisenberg adjoint of a noninvertible channel is used only as a pullback, not as a forward algebra embedding. Across a metric family of comparable observer branches, declared algebraic transports or correspondences induce a comparison of the closed output sets by the Hausdorff metric $d_H^{\rm 1P}$ associated with the individual-structure metric $d_{\rm 1P}$. Its members must satisfy the unity, differentiation, stability and report-coupling conditions of Chapter 15. This construction specifies the observer-readout problem; its extension to consciousness and qualitative finality is separated in R8b.
+
+<a id="164-compatibility-conditions"></a>
+
+## 16.4 Compatibility conditions
+
+The architecture is held together by a small number of physically meaningful commutation requirements:
+
+1.  **QFT–quantum:** restriction of the field-theoretic instrument to the detector algebra gives the quantum probabilities used in the measurement chapter.
+
+2.  **QFT–record:** the instrument creates record preforms only; selection, deposition and objectivity are later operations. Objective-archive kinematics contributes stress only through a separately matched record-exclusive functional, which is zero when those variables merely reparameterize already owned matter/QFT degrees of freedom.
+
+3.  **QFT–gravity:** variation of the state-dependent renormalized QFT closed-time-path effective action supplies $T_{\mu\nu}^{\rm QFT,dyn}$, and its Ward identity is compatible with the gravitational equation; pure-metric local terms remain on the gravitational side.
+
+4.  **Record–geometry:** pregeometry uses completed objective records and is invariant under admissible redescriptions of the archive.
+
+5.  **Geometry–cosmology:** the FLRW branch is a solution class of the same gravitational dynamics, not an unrelated cosmological model.
+
+6.  **Matter–cosmology:** matter, radiation and dark-sector stress tensors enter the cosmological equations exactly once.
+
+7.  **Record–arrow–observer:** temporal and observer constructions are based on the same objective event history and preserve its dependency order.
+
+On a branch satisfying all seven conditions, QFT and GR are compatible Tier-1 readouts of one realization; proving that such a simultaneous branch exists is R9. They are not joined as independently ultimate source theories.
+
+<a id="165-a-source-to-observable-route"></a>
+
+## 16.5 A source-to-observable route
+
+A concrete calculation begins with an admitted source branch and ends with a standard observable, without erasing intermediate nonuniqueness. Consider weak gravitational lensing.
+
+First select $X\in\mathsf S_{\rm adm}$ and a supported realization $Y\in\operatorname{RealPrep}_{\Omega}[X]$. Construct the matter/QFT and objective-record structures, then obtain the set
+
+$$
+\mathcal G_Y
+=\operatorname{Rec}_{\rm met}((\mathfrak P_{Y,n})_n).
+$$
+
+Because $\mathcal G_Y$ contains metric classes modulo diffeomorphism and overall scale, gravitational dynamics begins only after a declared dimensional lift. Let
+
+$$
+\pi_{\rm sc}:\operatorname{Met}_{\rm Lor}(M)/\operatorname{Diff}(M)
+\longrightarrow
+\operatorname{Met}_{\rm Lor}(M)/
+(\operatorname{Diff}(M)\times\mathbb R_{>0})
+$$
+
+be the scale quotient. On each admitted connected component of $\mathcal G_Y$, fix independently of the lensing data a normalization functional $\operatorname{Norm}_Y$ satisfying
+
+$$
+\operatorname{Norm}_Y([M,c^2g]_{\rm Diff})
+=c\,\operatorname{Norm}_Y([M,g]_{\rm Diff}),
+\qquad c>0,
+$$
+
+and a normalized section
+
+$$
+s_Y:\mathcal G_Y\longrightarrow
+\operatorname{Met}_{\rm Lor}(M)/\operatorname{Diff}(M),
+\qquad
+\pi_{\rm sc}\circ s_Y=\mathrm{id}_{\mathcal G_Y},
+\qquad
+\operatorname{Norm}_Y(s_Y(\gamma))=1.
+$$
+
+The normalization may be supplied by source-derived spectral data, a theoretically fixed reference scale, or an independent measurement not reused in the lensing test. Let $\mathcal L_{{\rm dim},Y}\subset\mathbb R_{>0}$ be the corresponding admissible length-scale family, also fixed before the lensing data are examined, and set
+
+$$
+\mathcal M_{{\rm dim},Y}
+=
+\left\{
+[M,\ell^2g_Y(\gamma)]_{\rm Diff}:
+\gamma\in\mathcal G_Y,\quad
+s_Y(\gamma)=[M,g_Y(\gamma)]_{\rm Diff},
+\ \ell\in\mathcal L_{{\rm dim},Y}
+\right\}.
+$$
+
+If no normalized section and admissible scale family exist, no dimensional gravitational branch is defined until independent scale information is supplied; the scale is not inferred from the lensing observable being predicted.
+
+For every candidate metric $g$, QFT state data $\omega_Y$, normal instruments $\mathcal I_Y$, selector coordinate $u_Y$, network $\mathcal N$, objective archive $\mathcal A_Y^{\rm obj}$, and boundary data $B_Y$, impose the same-branch conditions
+
+$$
+\mathcal A_Y^{\rm obj}\in
+\operatorname{ObjArch}_Y
+(g,\omega_Y,\mathcal I_Y,u_Y;\mathcal N),
+\qquad
+(R,J)\in\operatorname{Emb}_g(\mathcal A_Y^{\rm obj}).
+$$
+
+Thus the same normal instruments, selector, actual-deposition and objectivity chain regenerate the archive. Its covariant embedding first supplies the unrestricted kernel $\Gamma_{\rm arch,CTP}^{\rm full}$. Fix the EFT matching datum
+
+$$
+\mathfrak m_R
+=\bigl(\mu,\mathcal B_{\rm op},
+\Pi_M,\Pi_{\rm QFT},\Pi_R,\Pi_{MR}\bigr)
+$$
+
+before the gravitational equation is solved, and set
+
+$$
+\Gamma_{R,\rm CTP}
+=\Pi_R\Gamma_{\rm arch,CTP}^{\rm full},
+\qquad
+\Gamma_{MR,\rm CTP}
+=\Pi_{MR}\Gamma_{\rm arch,CTP}^{\rm full}.
+$$
+
+The $M$ and QFT projections are matched into their already-owned coefficients rather than added again. The record projection vanishes when archive variables merely reparameterize those degrees of freedom, and the mixed projection is retained only for a genuinely independent interaction. Only solutions satisfying this simultaneous closure and fixed matching scheme enter the full gravitational solution set
+
+$$
+\mathcal S_{G,Y}
+=\operatorname{Sol}_G
+(\mathcal M_{{\rm dim},Y},\omega_Y,\mathcal A_Y^{\rm obj},B_Y;
+\mathfrak m_R).
+$$
+
+Let $\Theta_{b,Y}^{\rm pre}\subseteq\Theta_b(\mu)$ contain the parameter points that are source-derived, theoretically bounded or independently calibrated before the lensing data are examined. For every $(g,\Phi)\in\mathcal S_{G,Y}$ and $\theta\in\Theta_{b,Y}^{\rm pre}$, solve the corresponding cosmological background and perturbation equations. This gives a family of matter power spectra $P_\delta(k,z;g,\theta)$. Here $\chi(z)=\int_0^z dz'/H(z')$ is geodesic line-of-sight distance and $\varrho=f_{\mathcal K}(\chi)$ is the comoving areal radius. In the Limber approximation the convergence spectrum is
+
+$$
+C_\ell^{\kappa\kappa}(g,\theta)
+=\int_0^{\chi_H}
+\frac{d\chi}{f_{\mathcal K}^2(\chi)}
+W_\kappa^2(\chi)
+P_\delta\!\left(
+\frac{\ell+\tfrac12}{f_{\mathcal K}(\chi)},z(\chi);g,\theta
+\right).
+$$
+
+For a spatially flat branch $f_{\mathcal K}(\chi)=\chi$, giving the familiar flat-space form \[[67](/monograph/bibliography#ref-BartelmannSchneider2001), [68](/monograph/bibliography#ref-LewisChallinor2006)\].
+
+If reconstruction is nonunique, the lensing prediction is the image set
+
+$$
+\mathcal C_\ell^{\kappa\kappa}(Y)
+=\left\{
+C_\ell^{\kappa\kappa}(g,\theta):
+(g,\Phi)\in\mathcal S_{G,Y},
+\ \theta\in\Theta_{b,Y}^{\rm pre}
+\right\}.
+$$
+
+A branch is excluded if this entire image misses the observational confidence region after all parameters designated as calibrated have been fixed independently. A small image here controls degeneracy only relative to the predeclared lensing observable family. It does not make the metric family globally controlled; predictions of other observables retain the full reconstructed family unless a predeclared observable vector covering those claims also has controlled image. Agreement is a consistency test unless the source construction fixed the relevant branch and parameters before the comparison. This route demonstrates calculational connectivity; it is not itself a numerical prediction.

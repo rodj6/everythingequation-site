@@ -1,0 +1,694 @@
+---
+title: "Records, Measurement, and Objectivity"
+kind: chapter
+number: "6"
+label: "Chapter 6"
+part: 2
+order: 6
+description: 'Chapter 6 defines the record, measurement, and objectivity channel of the TOE monograph.'
+---
+<a id="61-role-and-scope"></a>
+
+## 6.1 Role and Scope
+
+Chapter 6 defines the record, measurement, and objectivity channel of the TOE monograph. It receives the quantum-side measurement handoff from Chapter 5,
+
+$$
+\boxed{
+R_i=(E_i,p_i,\sigma_i,\lambda_i),
+\qquad
+p_i=\mathrm{Tr}(\rho E_i),
+}
+\tag{6.1}
+$$
+
+and formalizes the transition from Born-weighted record preforms to record candidates, selected records, actual depositions, objective records ($\mathcal R_{T1,Y}$ obtained through the selected lineage), objectivity support, persistence gates, and handoff structures for geometry, arrow, observer, integrated equations, and proof obligations.
+
+The record channel is the typed map
+
+$$
+\boxed{
+\Pi_R:\mathsf{Real}_0\to\mathcal{O}_R.
+}
+\tag{6.2}
+$$
+
+The central theorem boundary is the distinction between a Born probability weight and a realization selector:
+
+$$
+\boxed{
+p_i\ \text{is a probability weight},
+\qquad
+\chi_i\ \text{is a realization selector}.
+}
+\tag{6.3}
+$$
+
+The source-depth origin of $\chi_i$ and the proof of selector-Born compatibility remain active under the selection-depth programme R7 of Chapter 17.
+
+-----
+
+<a id="62-record-preform-space"></a>
+
+## 6.2 Record Preform Space
+
+For a discrete measurement outcome set $\Omega_Y^{disc}$, the record preform space is
+
+$$
+\boxed{
+\mathcal{P}^{rec}_Y
+=
+\left\{
+R_i=(E_i,p_i,\sigma_i,\lambda_i):
+i\in\Omega_Y^{disc}
+\right\}.
+}
+\tag{6.4}
+$$
+
+The components are:
+
+  - **Record preform components:**
+    
+      - **$E_i$:**
+        
+          - **Type:** Chapter 5 measurement effect
+        
+          - **Definition:** $E_i=E_Y(\{i\})$
+    
+      - **$p_i$:**
+        
+          - **Type:** Born probability weight
+        
+          - **Definition:** $p_i=\operatorname{Tr}(\rho E_i)$
+    
+      - **$\sigma_i$:**
+        
+          - **Type:** record-signature carrier
+        
+          - **Definition:** physical/informational signature type available for deposition and persistence tests
+    
+      - **$\lambda_i$:**
+        
+          - **Type:** outcome/readout label
+        
+          - **Definition:** label identifying the outcome element i in the measurement outcome set
+
+For a measurable outcome space $(\Omega_Y,\Sigma_Y)$, a record preform may be written over measurable $B\in\Sigma_Y$ as
+
+$$
+\boxed{
+R_B=(E_Y(B),\mu_{\rho,Y}(B),\sigma_B,\lambda_B).
+}
+\tag{6.5}
+$$
+
+The discrete notation is used in Chapter 6 because the selected-record expression is indexed by outcomes $i$.
+
+-----
+
+QFT-derived candidate preforms. Where the readout is relativistic, the record preform space receives its candidate instruments and preforms from the QFT instrument construction $\operatorname{Instr}_{\rm QFT}$ of Chapters 5 and 9: each normalized QFT instrument supplies a candidate preform family $\mathcal J^{\rm QFT}\subseteq\mathcal P^{rec}$ prior to deposition. Candidate formation is strictly separated from deposition and selection: no QFT instrument selects an outcome, and candidate deposition is not actual deposition.
+
+<a id="63-deposition-map-and-deposited-record-candidates"></a>
+
+## 6.3 Deposition Map and Deposited Record Candidates
+
+Candidate deposition is prepared by the typed preparation map
+
+$$
+\operatorname{PrepDep}:
+\mathcal P^{rec}\longrightarrow\mathcal D^{cand}
+$$
+
+acting on the record preforms delivered by Chapter 5, carrying order marker, support marker, redundancy data, and lineage $(\tau_i,\ell_i,\eta_i,\kappa_i)$. A record candidate is not an actual record: the stage chain
+
+$$
+\mathcal D^{cand}
+\xrightarrow{\ \text{selection}\ }
+\mathcal D^{sel}
+\xrightarrow{\ \operatorname{Dep}^{\rm act}\ }
+\mathcal D^{act}
+\xrightarrow{\ \operatorname{ObjPers}\ }
+\mathcal D^{obj}
+$$
+
+is strictly ordered, each stage has its own gate, and identifying candidate deposition with actual deposition is a type error. The selector, actual-deposition, and objectivity constructions follow in the next sections.
+
+<a id="64-contextual-realization-of-quantum-alternatives"></a>
+
+## 6.4 Contextual Realization of Quantum Alternatives
+
+For a finite or countable measurement network, choose a product probability space
+
+$$
+(\mathsf U_*,\Sigma_*,\mu_*)
+=
+([0,1]^{\mathbb N},\mathcal B([0,1])^{\otimes\mathbb N},
+\lambda^{\otimes\mathbb N}),
+\tag{6.6}
+$$
+
+with one coordinate for each execution occurrence or covariant joint block. The preparation of these coordinates is tied to the realization but is independent of freely chosen measurement settings and future choices. The outcome map may depend on the complete admissible measurement context; the probability measure on $\mathsf U_*$ may not.
+
+More precisely, for an admissible finite or countable measurement network $\mathcal N$, fix an injection of its execution occurrences into the coordinates of $\mathsf U_*$. Selector preparation is the setting-independent Markov kernel
+
+$$
+K_{\rm sel}(du\mid Y,\mathcal N)=\mu_*(du),
+\qquad
+\operatorname{SelPrep}_{\Omega}(Y,\mathcal N)
+=(\mathsf U_*,\Sigma_*,\mu_*,u).
+\tag{6.7}
+$$
+
+Here $u$ is a realization-indexed stochastic component, not an outcome inferred from a Tier-1 record. A network redescription permutes occurrence coordinates and leaves $\mu_*$ invariant. Constructing (6.7) from a concrete admitted source is an existence problem for R7; the probability space and the map it must realize are fixed here.
+
+If $p_{v,h}$ is the normalized outcome measure at occurrence $v$ conditional on a non-null past history $h$, standard-Borel measurability supplies a transport
+
+$$
+T_{v,h}:[0,1]\longrightarrow\Omega_{v,h},
+\qquad
+(T_{v,h})_*\lambda=p_{v,h}.
+\tag{6.8}
+$$
+
+For a finite ordered outcome set $\{o_1,\ldots,o_m\}$, the selector is the inverse-CDF rule
+
+$$
+\operatorname{Sel}_{v,h}(u)=o_k
+\quad\Longleftrightarrow\quad
+\sum_{i\lt k}p_i\le u_v\lt \sum_{i\le k}p_i.
+\tag{6.9}
+$$
+
+The construction is contextual because $T_{v,h}$ depends on the measurement implementation. It does not define a global noncontextual value for every quantum observable. For adaptive histories,
+
+$$
+P(o_1,\ldots,o_n)
+=
+\prod_{k=1}^nP_k(o_k\mid o_{\lt k}),
+\tag{6.10}
+$$
+
+with the corresponding kernel product for continuous outcomes. Standard measurability and consistency hypotheses give a unique countable-history measure.
+
+Entangled spacelike measurements are selected jointly. For local effects $E_a^x$ and $F_b^y$,
+
+$$
+p_{ab}^{xy}=\omega(E_a^xF_b^y),
+\qquad
+(a,b)=T_{xy}(u_{AB}).
+\tag{6.11}
+$$
+
+If the local instruments commute and are normalized,
+
+$$
+\sum_bp_{ab}^{xy}=\omega(E_a^x),
+\qquad
+\sum_ap_{ab}^{xy}=\omega(F_b^y),
+\tag{6.12}
+$$
+
+so the operational marginals are independent of the distant setting. This is no-signalling, not Bell locality \[[23](/monograph/bibliography#ref-Bell1964)\].
+
+<a id="65-contextual-inverse-transport-selector"></a>
+
+## 6.5 Contextual inverse-transport selector
+
+Let $p_{v,h}$ be the normalized outcome measure determined by the physical state and instrument at node/block $v$, conditional on a non-null history $h$. Since the outcome space is standard Borel, the registered context code supplies a measurable transport
+
+$$
+T_{v,h}:[0,1]\longrightarrow\Omega_{v,h},
+\qquad
+(T_{v,h})_*\lambda=p_{v,h}.
+\tag{6.13}
+$$
+
+For finite ordered outcomes $\{o_1,\ldots,o_m\}$, let $\xi(v)\in\mathsf{Occ}(\mathcal N)$ be the current execution occurrence. The inverse-CDF rule is
+
+$$
+\operatorname{Sel}_{v,h}(u)=o_k
+\Longleftrightarrow
+\sum_{i\lt k}p_i\le u_{\iota_{\mathcal N}(\xi(v))}
+\lt \sum_{i\le k}p_i.
+\tag{6.14}
+$$
+
+For a general standard-Borel outcome,
+
+$$
+\operatorname{Sel}_{v,h}(u)=
+T_{v,h}(u_{\iota_{\mathcal N}(\xi(v))}).
+\tag{6.15}
+$$
+
+The transport is implementation-context dependent. The theory requires equality of operational probabilities for operationally identical effects; it does not impose pointwise equality of selector values across distinct contexts and therefore does not construct a forbidden global noncontextual valuation \[[24](/monograph/bibliography#ref-KochenSpecker1967), [25](/monograph/bibliography#ref-Spekkens2005), [26](/monograph/bibliography#ref-KunjwalSpekkens2015)\].
+
+<a id="651-adaptive-and-sequential-histories"></a>
+
+### 6.5.1 Adaptive and sequential histories
+
+Let $H_n$ be the history after $n$ network steps. The conditional transition kernel is
+
+$$
+P_{n+1}(do\mid H_n)
+=p_{v_{n+1},H_n}(do).
+\tag{6.16}
+$$
+
+On a history of positive probability, (6.15) selects the next outcome using the coordinate addressed by the current execution occurrence $\xi(v_{n+1})$. The history $H_n$ determines only the measurable context and transport at that occurrence. If $P(H_n)=0$, the process enters the cemetery state $\dagger$; it does not invent a conditional outcome on a null event.
+
+For every finite cylinder,
+
+$$
+P(o_1,\ldots,o_n)
+=
+\prod_{k=1}^{n}P_k(o_k\mid o_{\lt k}),
+\tag{6.17}
+$$
+
+with the measure-theoretic kernel product replacing the finite product for continuous outcomes. Cylinder consistency and the Ionescu–Tulcea theorem produce a unique history measure on an infinite countable adaptive network under the stated standard-Borel and measurability hypotheses.
+
+<a id="652-composite-and-entangled-systems"></a>
+
+### 6.5.2 Composite and entangled systems
+
+A product state and product instrument use independent registered coordinates and reproduce the product measure. An entangled spacelike block is selected jointly, not in a preferred frame order. For local effects $E_a^x,F_b^y$,
+
+$$
+p_{ab}^{xy}=\omega(E_a^xF_b^y),
+\qquad
+(a,b)=T_{xy}(u_{\iota_{\mathcal N}(\xi(\{A,B\}))}).
+\tag{6.18}
+$$
+
+The block transport may depend on $(x,y)$, while $u$ and $\mu_\ast$ do not. If the local instruments commute on spacelike-separated algebras and are normalized,
+
+$$
+\sum_b p_{ab}^{xy}=\omega(E_a^x),
+\qquad
+\sum_a p_{ab}^{xy}=\omega(F_b^y),
+\tag{6.19}
+$$
+
+so the operational marginals are independent of the distant setting. This is operational no-signalling, not Bell locality.
+
+This statement concerns instrument/selection outcomes. Extension through actual deposition requires a separate local totalized kernel
+
+$$
+\mathbb D^{\rm act}_{Y,v}:
+\mathsf R^{\rm sel}_{Y,v}\times\mathsf{Setting}_v
+\times\mathsf{Past}_v
+\rightsquigarrow
+\mathcal P(\mathsf R^{\rm act,\bot}_{Y,v}),
+\tag{6.20}
+$$
+
+and, for each spacelike joint block, a kernel $\mathbb D^{\rm act}_{Y,AB}$ whose two marginals satisfy
+
+$$
+\operatorname{marg}_A\mathbb D^{\rm act}_{Y,AB}
+(\cdot\mid x,y,h)
+=
+\mathbb D^{\rm act}_{Y,A}(\cdot\mid x,h_A),
+\qquad
+\operatorname{marg}_B\mathbb D^{\rm act}_{Y,AB}
+(\cdot\mid x,y,h)
+=
+\mathbb D^{\rm act}_{Y,B}(\cdot\mid y,h_B).
+\tag{6.21}
+$$
+
+The marginals include no-click and deposition-failure atoms. The gate $G_{\rm NS}^{\rm dep}$ is exactly the certificate for (6.21). If it is absent, no-signalling is claimed only through the selected instrument outcomes and the deposition extension remains unresolved.
+
+<a id="66-selection-deposition-and-objectivity-are-distinct"></a>
+
+## 6.6 Selection, deposition, and objectivity are distinct
+
+The selector consumes a candidate family and returns exactly one selected candidate on every non-null context:
+
+$$
+\operatorname{Sel}:
+\mathsf R^{\rm cand}\times\mathsf{SelBundle}
+\rightsquigarrow\mathsf R^{\rm sel}.
+\tag{6.22}
+$$
+
+It does not deposit the candidate. The downstream maps are
+
+$$
+\operatorname{Dep}^{\rm act}:\mathsf R^{\rm sel}
+\rightsquigarrow\mathsf R^{\rm act,\bot},
+\qquad
+\operatorname{ObjPers}:\mathsf R^{\rm act}
+\rightsquigarrow\mathsf R^{\rm obj,\bot}.
+\tag{6.23}
+$$
+
+No-click, deposition failure, and objectivity failure are retained as operational outcomes. The distribution is never renormalized over successful deposits.
+
+<a id="67-actual-deposition-objectivity-and-no-postselection"></a>
+
+## 6.7 Actual deposition, objectivity, and no postselection
+
+After selection,
+
+$$
+\boxed{
+i_\star=\operatorname{Sel}(u_X;\omega,C),
+\qquad
+R_Y^{\rm sel}=R_{i_\star},
+\qquad
+D_Y^{\rm sel}:=(R_{i_\star},D_{i_\star}^{\rm cand}).
+}
+$$
+
+The selected-stage object therefore retains both the chosen quantum preform and its candidate-deposition blueprint. In graph notation $\mathsf R^{\rm sel}$ is the type of these $D^{\rm sel}$ objects; it is not identified with the earlier preform space.
+
+Actual deposition is
+
+$$
+\boxed{
+D_Y^{\rm act}
+=
+\operatorname{Dep}_Y^{\rm act}(D_Y^{\rm sel}).
+}
+$$
+
+Objectivity and persistence are evaluated only after actual deposition:
+
+$$
+\boxed{
+D_Y^{\rm obj}
+=
+\operatorname{ObjPers}_Y(D_Y^{\rm act}),
+\qquad
+Z(D_Y^{\rm act})\ge Z_{\min}.
+}
+$$
+
+The complete chain is
+
+$$
+\boxed{
+\mathsf Q
+\longrightarrow R^{\rm pre}
+\longrightarrow D^{\rm cand}
+\xrightarrow{\operatorname{Sel}}
+D^{\rm sel}
+\xrightarrow{\operatorname{Dep}^{\rm act}}
+D^{\rm act}
+\xrightarrow{\operatorname{ObjPers}}
+D^{\rm obj}.
+}
+$$
+
+If deposition or objectivity fails, the failure/no-click outcome remains in the operational outcome space. The theory never discards the selected result and resamples among successful deposits, because doing so would renormalize the Born distribution and could create a detection or signalling loophole.
+
+The total no-signalling gate is
+
+$$
+\boxed{
+G_{\rm NS}^{\rm total}
+=
+G_{\rm NS}^{\rm quantum}
+\land
+G_{\rm NS}^{\rm selector}
+\land
+G_{\rm NS}^{\rm deposition}.
+}
+$$
+
+<a id="68-the-five-stages-of-record-formation"></a>
+
+## 6.8 The Five Stages of Record Formation
+
+The physical distinction among preparation, selection, deposition and objectivity is fundamental:
+
+$$
+\boxed{
+R^{\rm pre}
+\xrightarrow{\operatorname{PrepDep}}
+R^{\rm cand}
+\xrightarrow{\operatorname{Sel}}
+R^{\rm sel}
+\xrightarrow{\operatorname{Dep}^{\rm act}}
+R^{\rm act}
+\xrightarrow{\operatorname{ObjPers}}
+R^{\rm obj}.
+}
+\tag{6.24}
+$$
+
+A quantum/QFT record preform contains the effect, probability, conditional state when defined, physical context and lineage. $\operatorname{PrepDep}$ adds the physical support needed for a possible deposit. $\operatorname{Sel}$ chooses one candidate according to (6.8)–(6.10). $\operatorname{Dep}^{\rm act}$ is the physical occurrence of the selected deposit. $\operatorname{ObjPers}$ tests whether that actual deposit becomes redundantly accessible and persistent.
+
+These arrows must not be collapsed. In particular,
+
+$$
+p_i=\operatorname{Tr}(\rho E_i)
+\quad\text{and}\quad
+\chi_i\in\{0,1\},\ \sum_i\chi_i=1
+\tag{6.25}
+$$
+
+are different kinds of object. The statistical compatibility target is
+
+$$
+\boxed{\mathbb E[\chi_i]=p_i,}
+\tag{6.26}
+$$
+
+not $p_i=\chi_i$.
+
+Actual deposition is described by a local transition kernel $\mathbb D^{\rm act}_{Y,v}$ from the selected record, local setting and causal past to actual deposits, including explicit no-click and failed-deposition alternatives. For a spacelike joint block $AB$, operational no-signalling through deposition requires
+
+$$
+\operatorname{marg}_A\mathbb D^{\rm act}_{Y,AB}
+(\,\cdot\mid x,y,h)
+=\mathbb D^{\rm act}_{Y,A}(\,\cdot\mid x,h_A),
+\qquad
+\operatorname{marg}_B\mathbb D^{\rm act}_{Y,AB}
+(\,\cdot\mid x,y,h)
+=\mathbb D^{\rm act}_{Y,B}(\,\cdot\mid y,h_B).
+\tag{6.27}
+$$
+
+The marginals in (6.27) include null and failed-deposition outcomes. Those outcomes are not discarded and the distribution is not renormalized over successful deposits. Otherwise a setting-dependent detection filter could be introduced after a perfectly no-signalling quantum selection.
+
+<a id="69-objectivity-structure-and-threshold"></a>
+
+## 6.9 Objectivity Structure and Threshold
+
+<a id="691-definition-681---objectivity-structure"></a>
+
+### 6.9.1 Definition 6.8.1 — Objectivity Structure
+
+The objectivity structure is
+
+$$
+\boxed{
+\mathcal{Z}_{obj,Y}
+=
+(
+\mathcal{E}^{env}_Y,
+\mathcal{N}^{red}_Y,
+A^{acc}_Y,
+S^{stab}_Y,
+Z_Y
+).
+}
+\tag{6.28}
+$$
+
+The components are:
+
+  - **Objectivity structure:**
+    
+      - **$\mathcal E^{\rm env}_Y$:**
+        
+          - **Symbol:** $\mathcal{E}^{env}_Y$
+        
+          - **Type:** environmental support/fragments
+    
+      - **$\mathcal N^{\rm red}_Y$:**
+        
+          - **Symbol:** $\mathcal{N}^{red}_Y$
+        
+          - **Type:** redundancy count or redundancy measure
+    
+      - **$A^{\rm acc}_Y$:**
+        
+          - **Symbol:** $A^{\rm acc}_Y$
+        
+          - **Type:** accessibility/inter-system availability structure
+    
+      - **$S^{\rm stab}_Y$:**
+        
+          - **Symbol:** $S^{\rm stab}_Y$
+        
+          - **Type:** stability/persistence structure
+    
+      - **$Z_Y$:**
+        
+          - **Symbol:** $Z_Y$
+        
+          - **Type:** objectivity-index assignment
+
+For a record candidate $D_i^{\rm cand}$, define
+
+$$
+\boxed{
+Z_i=F_Z(\eta_i,A_i,S_i,N_i).
+}
+\tag{6.29}
+$$
+
+Here $\eta_i$ is environmental/redundancy support data, $A_i$ is accessibility, $S_i$ is stability/persistence, and $N_i$ is redundancy count or redundancy measure.
+
+The objective-record condition is
+
+$$
+\boxed{
+Z_i\ge Z_{\min}.
+}
+\tag{6.30}
+$$
+
+The threshold $Z_{\min}$ is a Chapter 6/17/20 threshold parameter. It is not fixed as a universal empirical constant in Chapter 6.
+
+-----
+
+<a id="610-decoherence-redundancy-and-objectivity"></a>
+
+## 6.10 Decoherence, Redundancy, and Objectivity
+
+Decoherence, einselection, and redundancy-supported objectivity follow \[[27](/monograph/bibliography#ref-Zurek2003), [28](/monograph/bibliography#ref-OllivierPoulinZurek2004)\]; these results support candidate stability and objectivity thresholds only. Under a system–environment interaction,
+
+$$
+\sum_ic_i|s_i\rangle|E_0\rangle
+\longrightarrow
+\sum_ic_i|s_i\rangle|E_i\rangle,
+\tag{6.31}
+$$
+
+and
+
+$$
+\rho_S=\operatorname{Tr}_E|\Psi\rangle\langle\Psi|.
+\tag{6.32}
+$$
+
+When $\langle E_j|E_i\rangle\approx0$ for $i\ne j$, off-diagonal interference is suppressed in the corresponding pointer basis. Decoherence stabilizes record candidates; it neither selects one outcome nor proves actual deposition, and suppression of interference is not the same object as a source-depth derivation of the selected $\chi_i$ (the programme R7 of Chapter 17).
+
+For an actual deposit define the objectivity score
+
+$$
+Z(D^{\rm act})
+=
+F_Z\bigl(\eta(D^{\rm act}),A(D^{\rm act}),
+S(D^{\rm act}),N(D^{\rm act})\bigr),
+\tag{6.33}
+$$
+
+where $\eta$, $A$, $S$ and $N$ measure environmental support, accessibility, persistence and redundant encoding. Assume that $F_Z$ is coordinatewise nondecreasing, that the physical analysis independently establishes
+
+$$
+\eta\ge\eta_*,\qquad A\ge A_*,\qquad
+S\ge S_*,\qquad N\ge N_*,
+\tag{6.34}
+$$
+
+and that calibration performed independently of the evaluated deposit establishes
+
+$$
+F_Z(\eta_*,A_*,S_*,N_*)\ge Z_{\min}.
+\tag{6.35}
+$$
+
+Then monotonicity gives
+
+$$
+\boxed{Z(D^{\rm act})\ge Z_{\min}.}
+\tag{6.36}
+$$
+
+Equations (6.34)–(6.35) do not assume (6.36). They state independently testable sufficient conditions for an actual deposit to count as an objective record. The construction of concrete systems satisfying these bounds remains part of R7.
+
+Write $D_i^{\rm obj}$ for one objective record and reserve
+
+$$
+\mathcal A_Y^{\rm obj}
+=
+\{D_i^{\rm obj}:i\in I_Y^{\rm obj}\}
+\tag{6.37}
+$$
+
+for the objective archive. Event formation, pregeometry, temporal order and observer histories use (6.37) or its members. They do not use candidate or merely selected records as if those were objective events.
+
+<a id="6101-r7-starting-point"></a>
+
+### 6.10.1 R7 starting point
+
+**Measurement-realization theorem target (R7).** Under the standard-Borel, measurability, setting-independence, contextuality and instrument-normalization hypotheses above, prove that the selector produces the quantum/QFT history measures, that covariant joint blocks reproduce entangled correlations, that actual deposition preserves operational no-signalling including null outcomes, and that objective records satisfying (6.34)–(6.36) retain their realization lineage. A concrete source construction of the selector coordinates and a complete interacting-network proof remain companion-paper work.
+
+<a id="611-record-persistence-lemma"></a>
+
+## 6.11 Record Persistence Lemma
+
+Let $\Delta t$ denote the required arrow-compatible persistence interval. Let $S_{\min}$ be the persistence threshold for Chapter 6 record evaluation.
+
+<a id="6111-lemma-6111---persistence-gate"></a>
+
+### 6.11.1 Lemma 6.11.1 — Persistence Gate
+
+If $D_i^{\rm act}$ satisfies
+
+$$
+\boxed{
+S_i\ge S_{\min}
+}
+\tag{6.38}
+$$
+
+throughout the required interval $\Delta t$, and $D_i^{\rm act}$ remains lineage-linked to $R_i$ through $\kappa_i$, then
+
+$$
+\boxed{
+G_{pers}(D_i^{\rm act})=1.
+}
+\tag{6.39}
+$$
+
+<a id="6112-proof"></a>
+
+### 6.11.2 Proof
+
+By Definition 6.7.1, $G_{pers}$ evaluates whether record persistence can be certified over the required interval. By Definition 6.4.2, $\kappa_i$ carries the lineage link from $D_i^{\rm act}$ to $Y$ and $R_i$. If $S_i\ge S_{\min}$ throughout $\Delta t$ and the lineage link is maintained by $\kappa_i$, then the persistence and lineage conditions required by $G_{pers}$ are satisfied. Hence $G_{pers}(D_i^{\rm act})=1$. $\square$
+
+-----
+
+<a id="612-probability-vs-realization-theorem-target"></a>
+
+## 6.12 Probability-vs-Realization Theorem Target
+
+Born probability assignments define weights over record preforms, while selector variables define actual deposited Tier-1 records. A theorem-grade account must explain the statistical compatibility $\mathbb{E}[\chi_i]=p_i$ without identifying $p_i$ with $\chi_i$; this is part of the R7 programme of Chapter 17.
+
+This theorem target prevents the category error
+
+$$
+p_i=\chi_i
+$$
+
+from replacing the required compatibility theorem
+
+$$
+\mathbb{E}[\chi_i]=p_i.
+$$
+
+-----
+
+<a id="613-objective-records-downstream"></a>
+
+## 6.13 Objective Records Downstream
+
+Objective records, and only objective records, feed the constructions that follow: event formation and pregeometry in Chapter 7, the quantum–record–geometry bridge in Chapter 8, temporal order in Chapter 14, and observer readout in Chapter 15. Candidate and merely selected records carry statistical and contextual information but are never promoted to objective events. The measurement-realization theorem programme R7 is stated in Chapter 17.

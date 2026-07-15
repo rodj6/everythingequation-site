@@ -1,0 +1,436 @@
+---
+title: "The Source Closure Substrate"
+kind: chapter
+number: "2"
+label: "Chapter 2"
+part: 1
+order: 2
+description: 'Chapter 2 defines the upstream source substrate used by the TOE monograph.'
+---
+<a id="21-role-and-scope"></a>
+
+## 2.1 Role and Scope
+
+Chapter 2 defines the upstream source substrate used by the TOE monograph. Chapter 1 fixed the master architecture: the partial, set-valued source-to-readout relation
+
+$$
+\operatorname{Read}_{\Omega}:
+\mathsf S_0\rightsquigarrow\mathsf{Comp}_{T1},
+$$
+
+whose codomain is the coupled Tier-1 readout object containing quantum, geometry/gravity, matter, cosmology, record, and observer sectors. Chapter 2 supplies the domain-side mathematical structure on which the realization construction of Chapter 3 is built.
+
+The object expanded here is
+
+$$
+\boxed{
+\Omega_{src}
+=
+(
+\mathcal{X}_{\Omega},
+\mathcal{R}_{\Omega},
+\mathcal{K}_{\Omega},
+G_{\rm src},
+\mathcal{I}_{\Omega},
+\mathcal{D}_{\Omega}
+).
+}
+\tag{2.1}
+$$
+
+Chapter 2 has three technical obligations:
+
+1.  Define the structure class of each component in $\Omega_{src}$.
+
+2.  Define the source-local admissibility gate $G_{\rm src}$ as a conjunction of formal predicates.
+
+3.  Pose the source law R1 of Chapter 17 as a precise open problem rather than as an asserted solution.
+
+The output of Chapter 2 is a typed source-signature and admissibility domain:
+
+$$
+\boxed{
+\operatorname{Ob}\mathsf S_{\rm adm}
+=
+\mu\mathbb L_{\rm src}=\operatorname{MinCl}(\mathcal W_0).
+}
+\tag{2.2}
+$$
+
+This is the domain object handed to Chapter 3.
+
+-----
+
+<a id="22-source-signature-of-omega_src"></a>
+
+## 2.2 Source-Signature of $\Omega_{src}$
+
+The canonical source signature is the marked signature $\Sigma_{\rm src}$ of (2.3) below, with the distinguished deposition-potential subsort $\iota_M:\mathsf M_{\rm dep}\hookrightarrow\mathsf P_{\rm dep}$, finite support, lineage, invariant, and intrinsic-boundary data, and with $\mathsf S_0=\operatorname{Mod}_{\mathbf U}(\Sigma_{\rm src})$.
+
+<a id="23-structure-of-mathcalx_omega"></a>
+
+## 2.3 Structure of $\mathcal{X}_{\Omega}$
+
+The raw configuration class is the object class of $\mathsf S_0=\operatorname{Mod}_{\mathbf U}(\Sigma_{\rm src})$; the abbreviation $\mathcal X_{\Omega}$ denotes $\operatorname{Ob}\mathsf S_0$. Source configurations carry no spacetime, metric, coordinate, duration, Hilbert-space, field, action, gauge-group, particle, outcome-label, or desired-physics data.
+
+<a id="24-source-closure-and-source-local-admission"></a>
+
+## 2.4 Source Closure and Source-Local Admission
+
+<a id="241-pre-sectoral-source-structure"></a>
+
+### 2.4.1 Pre-sectoral source structure
+
+The source law must be stated without importing the physics it is intended to support. We therefore use the pre-sectoral signature
+
+$$
+\Sigma_{\rm src}
+=
+(\mathsf V_{\rm src},\preceq,
+\mathsf P_{\rm dep},\mathsf M_{\rm dep},\iota_M,
+\mathsf{Supp},\mathsf{Lin},\mathsf{Inv},\mathsf{Bnd}).
+\tag{2.3}
+$$
+
+The set $\mathsf V_{\rm src}$ carries a source dependency preorder $\preceq$. The sort $\mathsf P_{\rm dep}$ contains deposition-potential tokens and $\mathsf M_{\rm dep}$ is a distinguished marked subsort, with injection $\iota_M$. Each marked token has finite support in $\mathsf V_{\rm src}$, a lineage, source invariants and intrinsic boundary data.
+
+Nothing in (2.3) is a spacetime point, metric, coordinate, clock value, Hilbert vector, field, action, gauge group, particle label, measurement result or observer state. A marked token represents only the source-side possibility of a distinguishable, lineaged dependency that may later support a physical record.
+
+Let
+
+$$
+\mathsf S_0=\operatorname{Mod}_{\mathbf U}(\Sigma_{\rm src})
+\tag{2.4}
+$$
+
+over a fixed Grothendieck universe. For $X\in\mathsf S_0$, write $M_X$ for the image of its marked subsort. A source candidate satisfies
+
+$$
+M_X\ne\varnothing,
+\qquad
+1\le |\operatorname{supp}_X(m)|\lt \infty
+\quad(m\in M_X),
+\tag{2.5}
+$$
+
+and every marked support contains a strict dependency pair,
+
+$$
+\exists a,b\in\operatorname{supp}_X(m):
+a\prec_X b,
+\qquad
+a\prec_Xb\iff a\preceq_Xb\ \text{and}\ b\npreceq_Xa.
+\tag{2.6}
+$$
+
+Each marked token also carries a well-typed lineage
+
+$$
+\ell_X(m)\in\mathsf{Lin}_X(\operatorname{supp}_X(m)).
+\tag{2.7}
+$$
+
+<a id="242-admissible-transformations"></a>
+
+### 2.4.2 Admissible transformations
+
+A source morphism is **strong** when it preserves the dependency preorder, the marked-deposition predicate, finite support, strict pairs, lineage, source invariants and intrinsic boundary types. In particular, if $k:X\to X'$ is strong, then
+
+$$
+k_V(\operatorname{supp}_X(m))
+=
+\operatorname{supp}_{X'}(k_Pm),
+\qquad
+k_*\ell_X(m)\simeq_{\rm lin}\ell_{X'}(k_Pm),
+\tag{2.8}
+$$
+
+and $k_V$ is injective on each marked support. Strong morphisms form a category $\mathcal K_{\rm adm}$.
+
+The elementary source cells are fixed before any physical interpretation. Let $\mathfrak G_{\rm src}$ be the essentially small family of finite models $C$ of (2.3) for which the dependency relation is acyclic after quotienting its symmetric part, every marked support is finite and contains a strict pair, and every invariant and boundary label belongs to a fixed source-local alphabet $\mathfrak A_{\rm src}$. The alphabet records only finite incidence, support, lineage and intrinsic boundary types; it contains no spacetime, field, Hilbert-space, gauge, particle or outcome label. The family contains the initial empty source $\mathbf0_{\rm src}$, the walking marked dependency, all of its source faces, and at least one cell of every finite source-local incidence type in $\mathfrak A_{\rm src}$.
+
+For $C\in\mathfrak G_{\rm src}$, a **source face** is a full finite submodel closed under predecessor support, inherited lineage and intrinsic boundary maps. Write $\partial C$ for the colimit of the proper source faces of $C$; for a zero-dimensional generator take $\partial C=\mathbf0_{\rm src}$. A generator-relative attachment to $X$ is the specified diagram
+
+$$
+\begin{array}{ccc}
+\partial C & \xrightarrow{\ i_C\ } & C\\
+{\scriptstyle a}\!\downarrow && \downarrow\\
+X & \longrightarrow & X\cup_{\partial C}C
+\end{array}
+\tag{2.9}
+$$
+
+where $a$ is a strong, mark-reflecting map and the pushout satisfies (2.5)–(2.8). Thus an attachment may add only the interior generators and relations already present in $C$, along the declared boundary $a$; it cannot adjoin unrelated structure.
+
+The source operations are consequently the following generator-relative constructions:
+
+1.  images generated by strong morphisms between cell-generated source models;
+
+2.  finite pushouts of the form (2.9), and finite composites of such attachments, when strict marked pairs remain distinct;
+
+3.  retracts whose section and retraction preserve a chosen cell presentation, marked support and lineage;
+
+4.  directed colimits of cell-generated models in which every finite cell, marked support, strict pair, lineage, invariant and boundary datum eventually stabilizes;
+
+5.  transport along source isomorphisms.
+
+The word *generated* is literal. An output contains only cells, relations and labels induced by its input diagram and the relevant universal construction. One may not enlarge an image, attachment, retract or colimit by freely adjoining unrelated source elements or Tier-1 physical data. Let $\mathscr O_1^{\rm NFE}(A)$ denote the isomorphism-saturated class obtained from $A$ by one application of these no-free-extension, mark-preserving, generator-relative operations.
+
+<a id="243-minimal-source-closure"></a>
+
+### 2.4.3 Minimal source closure
+
+Let $X_\star$ be the walking marked dependency:
+
+$$
+X_\star
+=
+(\{0,1\},0\prec1,
+P_\star=M_\star=\{m_\star\},
+\operatorname{supp}(m_\star)=\{0,1\},
+\ell_\star,\mathsf{Inv}_\star,\mathsf{Bnd}_\star),
+\tag{2.10}
+$$
+
+Here $\mathsf{Inv}_\star$ is the source-invariant datum and $\mathsf{Bnd}_\star=\varnothing$.
+
+For each nonempty $C\in\mathfrak G_{\rm src}$, let $F(C)$ denote the source model freely generated by the cell subject only to its displayed incidence, dependency, marking, lineage and boundary equations. Define
+
+$$
+\mathcal W_0
+=
+\operatorname{IsoSat}
+\{F(C):C\in\mathfrak G_{\rm src},\ C\neq\mathbf0_{\rm src}\}.
+\tag{2.11}
+$$
+
+In particular $X_\star\in\mathcal W_0$, but the witness class also contains arbitrarily rich finite source-local cell configurations and all finite attachment patterns generated from their faces. This makes the least closure nontrivial without naming any desired Tier-1 theory. The empty cell and proper faces occur as attachment domains and boundary data; an admitted object itself must still satisfy (2.5)–(2.7).
+
+On the complete lattice of isomorphism-saturated source-candidate classes, ordered by inclusion, define
+
+$$
+\boxed{
+\mathbb L_{\rm src}(A)
+=
+\operatorname{IsoSat}
+\bigl(\mathcal W_0\cup A\cup\mathscr O_1^{\rm NFE}(A)\bigr).
+}
+\tag{2.12}
+$$
+
+The operator is monotone and inflationary. Its least fixed point \[[2](/monograph/bibliography#ref-Tarski1955)\] is
+
+$$
+\boxed{
+\operatorname{Ob}\mathsf S_{\rm adm}
+=
+\mu\mathbb L_{\rm src}
+=
+\bigcap\{A:\mathcal W_0\subseteq A,
+\ \mathscr O_1^{\rm NFE}(A)\subseteq A\}.
+}
+\tag{2.13}
+$$
+
+Equivalently, set
+
+$$
+A_0=\varnothing,
+\qquad
+A_{\alpha+1}=\mathbb L_{\rm src}(A_\alpha),
+\qquad
+A_\lambda=\bigcup_{\beta\lt \lambda}A_\beta
+\tag{2.14}
+$$
+
+at limit ordinals. The sequence stabilizes at a closure ordinal, and its stable value is (2.13). The morphisms of $\mathsf S_{\rm adm}$ are the strong morphisms $\mathcal K_{\rm adm}$ between admitted objects; arbitrary raw homomorphisms are not reintroduced after admission.
+
+Admission is therefore source-local. It asks whether a source is generated from the witness class by the permitted source operations while preserving marked dependency, lineage, invariants and intrinsic boundaries. It does **not** ask whether the source yields quantum mechanics, a Lorentzian metric, the Standard Model, a viable cosmology or empirical agreement. Those are downstream questions.
+
+<a id="244-r1-starting-point"></a>
+
+### 2.4.4 R1 starting point
+
+The first companion theorem is now well posed.
+
+**Source-closure theorem target (R1).** Prove that the category defined by (2.3)–(2.14) is nonempty and genuinely larger than a single walking dependency, that every generator-relative attachment (2.9) preserves the marked-source axioms, that the category is closed under the stated generated operations and stable under strong source isomorphism, and that it is minimal among source classes with those properties. Prove independence of the chosen finite cell presentation up to strong source isomorphism. Then determine which admitted cell-generated families possess physically successful realization branches and characterize which source invariants survive realization.
+
+The principal steps are monotonicity of $\mathbb L_{\rm src}$, preservation of marked structure by faces and attachments, compatibility of cell presentations under refinement, stabilization of (2.14), closure of strong morphisms under composition and the absence of freely adjoined Tier-1 structure. The family (2.11) establishes combinatorial nontriviality only. Proving that any of its closures has a physically successful readout, and classifying such families, remains the substance of R1 rather than an assumption of the monograph.
+
+<a id="25-source-invariant-package-mathcali_omega"></a>
+
+## 2.5 Source Invariant Package $\mathcal{I}_{\Omega}$
+
+<a id="251-definition-271---invariant-assignment"></a>
+
+### 2.5.1 Definition 2.7.1 — Invariant Assignment
+
+The invariant package is an assignment
+
+$$
+\boxed{
+\mathcal{I}_{\Omega}:
+\mathcal{X}_{\Omega}
+\longrightarrow
+\prod_{a\in A_I}\mathcal{V}_a
+}
+\tag{2.15}
+$$
+
+where $A_I$ is an index set of invariant types and $\mathcal{V}_a$ is the value class for invariant $I_a$. For $X\in\mathcal{X}_{\Omega}$,
+
+$$
+\boxed{
+\mathcal{I}_{\Omega}(X)
+=
+\{I_a(X)\}_{a\in A_I}.
+}
+\tag{2.16}
+$$
+
+The required architecture-level invariant families are:
+
+  - **Source invariant families:**
+    
+      - **I source identity:**
+        
+          - **Role:** preserves source-to-readout identity
+    
+      - **I relation continuity:**
+        
+          - **Role:** preserves relation/dependency continuity
+    
+      - **I transformation stability:**
+        
+          - **Role:** preserves admissible transformation equivalence class
+    
+      - **I recordability:**
+        
+          - **Role:** preserves source-side capacity for record-bearing realization
+    
+      - **I projection compatibility:**
+        
+          - **Role:** preserves compatibility with at least one Tier-1 projection route
+    
+      - **I no hidden residue:**
+        
+          - **Role:** preserves explicit classification of unresolved degrees of freedom
+
+<a id="252-axiom-272---invariant-preservation-under-mathcalk_omega"></a>
+
+### 2.5.2 Axiom 2.7.2 — Invariant Preservation Under $\mathcal{K}_{\Omega}$
+
+For every admissible $k:X\to X'$,
+
+$$
+\boxed{
+I_a(kX)\equiv_{\mathcal{I}} I_a(X)
+}
+\tag{2.17}
+$$
+
+for every invariant $I_a$ required by the admissibility gate.
+
+<a id="253-axiom-273---projection-preparation-availability"></a>
+
+### 2.5.3 Axiom 2.7.3 — Projection Preparation Availability
+
+If $X\in\operatorname{Ob}\mathsf S_{\rm adm}$, then the invariant package must be available to the realization construction:
+
+$$
+\boxed{
+\begin{gathered}
+X\in\operatorname{Ob}\mathsf S_{\rm adm}
+\Rightarrow
+\mathcal{I}_{\Omega}(X)
+\text{ is available as input-control data}\\
+\text{for }
+\operatorname{RealPrep}_{\Omega}
+\text{ and the physical restriction of Chapter 3}.
+\end{gathered}
+}
+\tag{2.18}
+$$
+
+Chapter 3 uses this invariant availability in the realization construction. Chapter 2 establishes the source-side condition only.
+
+-----
+
+<a id="26-depositionreadout-potential-mathcald_omega"></a>
+
+## 2.6 Deposition/Readout Potential $\mathcal{D}_{\Omega}$
+
+<a id="261-definition-281---source-side-deposition-potential"></a>
+
+### 2.6.1 Definition 2.8.1 — Source-Side Deposition Potential
+
+The deposition/readout potential is an assignment
+
+$$
+\boxed{
+\mathcal{D}_{\Omega}:
+\mathcal{X}_{\Omega}
+\longrightarrow
+\mathsf{DepPot}_{\Omega}
+}
+\tag{2.19}
+$$
+
+where $\mathsf{DepPot}_{\Omega}$ is the class of source-side deposition-potential structures.
+
+For $X\in\mathcal{X}_{\Omega}$,
+
+$$
+\boxed{
+\mathcal{D}_{\Omega}(X)
+=
+\left(
+\mathsf{RecPot}_X,
+\mathsf{DepCond}_X,
+\mathsf{ObjCond}_X,
+\mathsf{Trace}_X
+\right)
+}
+\tag{2.20}
+$$
+
+where:
+
+  - $\mathsf{RecPot}_X$ is the class of record-supporting potentials.
+
+  - $\mathsf{DepCond}_X$ is the source-side condition for deposition eligibility.
+
+  - $\mathsf{ObjCond}_X$ is the source-side condition for eventual objective record stability.
+
+  - $\mathsf{Trace}_X$ is source-side lineage data needed to connect record formation back to $X$.
+
+<a id="262-definition-282---recordability-precondition"></a>
+
+### 2.6.2 Definition 2.8.2 — Recordability Precondition
+
+A source configuration satisfies the recordability precondition if
+
+$$
+\boxed{
+\mathrm{RecPre}(X)=1
+\iff
+\mathsf{RecPot}_X\neq\varnothing
+\quad\text{and}\quad
+\exists \delta_X\in\mathsf{DepCond}_X
+\text{ compatible with }\mathcal{R}_X,\mathcal{I}_X.
+}
+\tag{2.21}
+$$
+
+The source gate requires
+
+$$
+G_{rec}(X)=1\Rightarrow \mathrm{RecPre}(X)=1.
+\tag{2.22}
+$$
+
+<a id="27-from-admission-to-realization"></a>
+
+## 2.7 From Admission to Realization
+
+Chapter 3 begins from the admitted source category $\mathsf S_{\rm adm}$ with its strong morphisms and marked deposition structure. It may assume only the source-local admission established here; it may not assume any Tier-1 projectability, Hilbert-space, metric, matter, cosmological, observer, or empirical success property of an admitted source. All such properties are constructed and tested downstream of realization.

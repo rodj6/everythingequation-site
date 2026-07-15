@@ -1,14 +1,47 @@
 import "./globals.css";
 import "katex/dist/katex.min.css";
 import type { Metadata } from "next";
-import Link from "next/link";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { site } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Everything Equation",
-  description: "A curated platform for research problems and papers.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  metadataBase: new URL(site.url),
+  title: {
+    default: `${site.name} — ${site.tagline}`,
+    template: `%s — ${site.name}`,
+  },
+  description: site.description,
+  authors: [{ name: site.author.name }],
+  alternates: {
+    canonical: "/",
+    types: { "application/atom+xml": "/feed.xml" },
+  },
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+    url: site.url,
+  },
+  twitter: {
+    card: "summary",
+    title: `${site.name} — ${site.tagline}`,
+    description: site.description,
+  },
+  robots: { index: true, follow: true },
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: site.url,
+  description: site.description,
+  author: {
+    "@type": "Person",
+    name: site.author.name,
+  },
 };
 
 export default function RootLayout({
@@ -18,59 +51,30 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col bg-[hsl(var(--background))] text-[hsl(var(--foreground))] antialiased">
-        {/* Subtle background accents */}
-        <div className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="absolute -top-[40%] -left-[20%] h-[800px] w-[800px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--primary)/0.06),transparent)]" />
-          <div className="absolute -top-[30%] -right-[20%] h-[700px] w-[700px] rounded-full bg-[radial-gradient(circle_farthest-side,hsl(var(--primary)/0.04),transparent)]" />
+      <body className="flex min-h-screen flex-col font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+
+        {/* Ambient background */}
+        <div aria-hidden="true" className="fixed inset-0 -z-10 overflow-hidden">
+          <div className="glow-cyan animate-drift absolute -left-[15%] -top-[25%] h-[720px] w-[720px] rounded-full" />
+          <div className="glow-violet animate-drift-reverse absolute -right-[18%] top-[10%] h-[640px] w-[640px] rounded-full" />
         </div>
 
-        <div className="relative min-h-screen flex flex-col">
-          {/* Mobile-only nav bar (fixes "no navigation on phone") */}
-          <div className="md:hidden sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-800/60 bg-[hsl(var(--background))]/90 backdrop-blur">
-            <div className="mx-auto w-full max-w-3xl px-4 py-3 flex items-center justify-between">
-              <Link href="/" className="font-semibold tracking-tight">
-                Everything Equation
-              </Link>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-surface focus:px-4 focus:py-2 focus:text-fg"
+        >
+          Skip to content
+        </a>
 
-              <details className="group">
-                <summary className="list-none cursor-pointer rounded-md border border-slate-300/70 dark:border-slate-700/70 px-3 py-1.5 text-sm">
-                  Menu
-                </summary>
-                <div className="mt-2 w-[240px] rounded-lg border border-slate-200 dark:border-slate-800 bg-[hsl(var(--background))] shadow-lg p-2">
-                  <nav className="flex flex-col gap-1 text-sm">
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/">
-                      Home
-                    </Link>
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/problems">
-                      Problems
-                    </Link>
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/papers">
-                      Papers
-                    </Link>
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/monograph">
-                      Monograph
-                    </Link>
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/research">
-                      Research
-                    </Link>
-                    <Link className="rounded-md px-2 py-1.5 hover:bg-slate-100 dark:hover:bg-slate-800" href="/about">
-                      About
-                    </Link>
-                  </nav>
-                </div>
-              </details>
-            </div>
-          </div>
-
-          {/* Desktop / existing header */}
-          <Header />
-
-          <main className="flex-1 mx-auto w-full max-w-3xl px-6 sm:px-8 py-12 sm:py-16">
-            {children}
-          </main>
-          <Footer />
-        </div>
+        <Header />
+        <main id="main" className="mx-auto w-full max-w-content flex-1 px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

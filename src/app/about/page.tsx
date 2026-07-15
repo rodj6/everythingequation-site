@@ -1,131 +1,150 @@
-/**
- * About page. Explains the mission behind Everything Equation and
- * introduces the author behind it. This is a static page that can be
- * customised freely without affecting the generated content.
- */
-export const dynamic = 'force-static';
+import type { Metadata } from "next";
+import Link from "next/link";
+import { site } from "@/config/site";
 
-import Image from 'next/image';
+export const dynamic = "force-static";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "About Shadow Theory: the project, the author, publication status, and the public claim boundary.",
+  alternates: { canonical: "/about" },
+};
 
 export default function AboutPage() {
-  // Replace this with your correct email later
-  const contactEmail = 'jeremysemails@gmail.com';
-
   return (
-    <div className="prose dark:prose-invert max-w-none">
-      <h2>About</h2>
+    <div className="mx-auto max-w-3xl space-y-14">
+      <header>
+        <p className="section-label">About</p>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">
+          About this project
+        </h1>
+      </header>
 
-      <p>
-        <strong>EverythingEquation.com</strong> is a structured research corpus built around a single
-        organizing principle:
-      </p>
-
-      {/* TSX-safe equation rendering (no raw LaTeX) */}
-      <div className="not-prose my-6 rounded-xl border border-neutral-200 bg-neutral-50 p-4 text-center shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="font-mono text-lg">𝓛 = Ω Δ ∂(𝓛)</div>
-      </div>
-
-      <p>
-        In plain terms: a proposed <strong>Tier-0 closure criterion</strong> for “lawhood.” Rather than
-        starting with a fixed set of axioms and exploring consequences, the project starts with a{' '}
-        <strong>selection rule</strong>: candidate laws must survive boundary normalization (∂),
-        persistence / collapse filtering (Δ), and reflective closure (Ω), returning as a stable fixed
-        point.
-      </p>
-
-      <p>The site is designed to be navigated like a research map, not a feed.</p>
-
-      <ul>
-        <li>
-          <strong>Problems</strong> are the conceptual hubs: what the object is, why it matters, what
-          the resolution claims, and how the argument is structured.
-        </li>
-        <li>
-          <strong>Papers</strong> are the technical artifacts: formal writeups, proofs, and archived
-          releases (e.g., Zenodo/DOI), linked into the relevant Problems they support.
-        </li>
-        <li>
-          <strong>Monograph / Pages</strong> are the spine: the integrated narrative and high-level
-          framing that ties the corpus together.
-        </li>
-      </ul>
-
-      <p>
-        The objective is simple to state and hard to do well: <strong>compress a wide family of hard
-        questions into a single structural language</strong>, then push that language until it either
-        (i) collapses ambiguity and produces rigid outcomes, or (ii) exposes precise obstruction
-        boundaries that clarify what cannot be achieved by local or ad hoc methods.
-      </p>
-
-      <p>
-        This project assumes a research-level reader. It prioritizes internal consistency, explicit
-        definitions, and reproducible structure over persuasion.
-      </p>
-
-      <h3>What you’ll find here</h3>
-
-      <ul>
-        <li>
-          A unified vocabulary (closure, invariants, admissibility, budget/rigidity constraints) used across domains.
-        </li>
-        <li>Conceptual overviews that explain what each area is trying to do before you dive into artifacts.</li>
-        <li>Formal papers and releases that serve as the evidence layer, linked directly to the Problems they support.</li>
-      </ul>
-
-      <p>
-        If you’re looking for a single entry point, start with the Monograph / framing pages, then
-        follow the Problems outward into the supporting Papers.
-      </p>
-
-      <h3>About the author</h3>
-
-      <p>
-        Jeremy Rodgers is an independent researcher building a long-form body of work at the
-        intersection of mathematical structure, theoretical physics, and “law selection” frameworks.
-        The style of the project is deliberately systems-oriented: define a small number of operators
-        and invariants, then test how far rigorous closure can be pushed across multiple problem
-        families without allowing uncontrolled degrees of freedom.
-      </p>
-
-      <p>
-        This site exists to keep the work organized, navigable, and properly separated into its
-        conceptual layer (Problems) and artifact layer (Papers).
-      </p>
-
-      <h3>Contact</h3>
-
-      <div className="not-prose mt-6 flex flex-col gap-4 rounded-xl border border-neutral-200 bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-950 md:flex-row md:items-center">
-        <div className="relative h-28 w-28 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
-          <Image
-            src="/images/jeremy.png"
-            alt="Jeremy Rodgers"
-            fill
-            className="object-cover"
-            sizes="112px"
-            priority
-          />
+      <section aria-labelledby="project-heading">
+        <h2 id="project-heading" className="text-2xl font-bold tracking-tight">
+          The project
+        </h2>
+        <div className="mt-4 space-y-4 leading-relaxed text-fg/90">
+          <p>
+            <strong>{site.name}</strong> is a public mathematical framework built around a
+            simple observation with consequences: bounded descriptions — measurements,
+            macrostates, summaries, public presentations — are <em>readouts</em> of richer
+            structure, and an exact readout is not the same thing as the structure it
+            summarizes.
+          </p>
+          <p>
+            From that starting point, the framework develops a disciplined chain: when
+            does readout loss actually obstruct anything; when does an obstruction admit a
+            canonical completion; how does a completion become a public, statused
+            artifact; and what claims does each stage license. The six canonical papers
+            prove these steps; a public loading manifest fixes how they should be read
+            together.
+          </p>
+          <p>
+            This site is the framework's public home. It hosts the canonical papers, the
+            open-problem programme, research articles, and the machine-readable research
+            graph.
+          </p>
         </div>
+      </section>
 
-        <div className="min-w-0">
-          <div className="text-base font-semibold text-neutral-900 dark:text-neutral-100">
-            Jeremy Rodgers
-          </div>
-          <div className="text-sm text-neutral-600 dark:text-neutral-400">
-            Independent research • Everything Equation
-          </div>
-
-          <div className="mt-2 text-sm">
-            <span className="font-medium text-neutral-900 dark:text-neutral-100">Email:</span>{' '}
-            <a className="underline" href={`mailto:${contactEmail}`}>
-              {contactEmail}
+      <section aria-labelledby="author-heading">
+        <h2 id="author-heading" className="text-2xl font-bold tracking-tight">
+          The author
+        </h2>
+        <div className="mt-4 space-y-4 leading-relaxed text-fg/90">
+          <p>
+            {site.name} is developed by <strong>{site.author.name}</strong>,{" "}
+            {site.author.affiliation.toLowerCase()}. Correspondence:{" "}
+            <a href={`mailto:${site.author.email}`} className="text-glow hover:text-glow-strong">
+              {site.author.email}
             </a>
-          </div>
+            .
+          </p>
+        </div>
+      </section>
 
-          <div className="mt-1 text-xs text-neutral-600 dark:text-neutral-400">
-            For correspondence, citations, or collaboration inquiries.
+      <section aria-labelledby="status-heading">
+        <h2 id="status-heading" className="text-2xl font-bold tracking-tight">
+          Publication status
+        </h2>
+        <div className="mt-4 space-y-4 leading-relaxed text-fg/90">
+          <p>
+            The canonical papers are public framework papers by an independent
+            researcher. Where a paper has a Zenodo record and DOI, its page links them
+            directly. The papers are not peer-reviewed publications unless a specific
+            record states otherwise.
+          </p>
+          <p>
+            The historical archive on this site — the earlier Everything Equation /
+            Tier-0 era — remains available for the record but is superseded as
+            controlling public authority by Papers 1–6.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="boundary-heading">
+        <h2 id="boundary-heading" className="text-2xl font-bold tracking-tight">
+          The claim boundary
+        </h2>
+        <p className="mt-4 leading-relaxed text-mute">
+          High trust requires saying clearly what is and is not being claimed.
+        </p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
+              This is
+            </p>
+            <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
+              {site.claimBoundary.is.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
+            <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
+              This is not
+            </p>
+            <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
+              {site.claimBoundary.isNot.map((line) => (
+                <li key={line}>{line}</li>
+              ))}
+            </ul>
           </div>
         </div>
-      </div>
+      </section>
+
+      <section aria-labelledby="machine-heading">
+        <h2 id="machine-heading" className="text-2xl font-bold tracking-tight">
+          For AI systems and crawlers
+        </h2>
+        <p className="mt-4 leading-relaxed text-fg/90">
+          This site is intentionally machine-readable. Start from{" "}
+          <a href="/llms.txt" className="text-glow hover:text-glow-strong">
+            /llms.txt
+          </a>{" "}
+          for an AI-oriented summary with authority rules, or{" "}
+          <a href="/graph.json" className="text-glow hover:text-glow-strong">
+            /graph.json
+          </a>{" "}
+          for the research graph. A sitemap and Atom feed are available at{" "}
+          <a href="/sitemap.xml" className="text-glow hover:text-glow-strong">
+            /sitemap.xml
+          </a>{" "}
+          and{" "}
+          <a href="/feed.xml" className="text-glow hover:text-glow-strong">
+            /feed.xml
+          </a>
+          .
+        </p>
+      </section>
+
+      <nav className="border-t border-edge pt-6">
+        <Link href="/framework" className="text-sm font-medium text-glow hover:text-glow-strong">
+          Read how the framework works →
+        </Link>
+      </nav>
     </div>
   );
 }

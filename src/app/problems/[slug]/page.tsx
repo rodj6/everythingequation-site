@@ -1,127 +1,118 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { loadProblems, loadPapers } from "@/lib/registry";
-import Card from "@/components/card";
-import ProblemNotes from "@/components/problem-notes";
+import { loadProblems, loadPapers, getProblem } from "@/lib/registry";
+import { site } from "@/config/site";
+import MdxContent from "@/components/mdx-content";
+import { manualProblems } from "@/generated/manualProblems";
 
-export const dynamicParams = true;
+export const dynamic = "force-static";
+export const dynamicParams = false;
 
-/**
- * Generate static params for all public problems. Draft problems are
- * compiled but excluded from the site navigation and sitemap. By
- * generating params explicitly we enable static generation of problem
- * pages while still allowing dynamic fallback for new entries.
- */
 export async function generateStaticParams() {
   const problems = await loadProblems();
-  return problems
-    .filter((p) => p.status === "public")
-    .map((p) => ({ slug: p.id }));
+  return problems.filter((p) => p.status === "public").map((p) => ({ slug: p.slug }));
 }
 
-/**
- * Problem detail page. Displays the claim, statement, supporting papers
- * and connections. Manual MDX content is rendered if present.
- */
-export default async function ProblemDetail({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}) {
-  const slug = params.slug;
-  const problems = await loadProblems();
-  const problem = problems.find((p) => p.id === slug);
+}): Promise<Metadata> {
+  const problem = await getProblem(params.slug);
+  if (!problem) return {};
+  return {
+    title: `${problem.title} (Open Problem)`,
+    description: problem.target.trim(),
+    alternates: { canonical: `/problems/${problem.slug}` },
+  };
+}
 
-  if (!problem) {
-    return notFound();
-  }
+export default async function ProblemPage({ params }: { params: { slug: string } }) {
+  const problem = await getProblem(params.slug);
+  if (!problem || problem.status !== "public") notFound();
 
-  // If problem is draft we still build the page but not accessible via nav.
   const papers = await loadPapers();
-  const supportedPapers = papers.filter((paper) => {
-    if (paper.status !== "public") return false;
-    const list = paper.problems || [];
-    return list.includes(problem.rawId) || list.includes(problem.id);
-  });
-
-  // Determine connections to other problems.
-  const connections = (problem.connections || [])
-    .map((id) => problems.find((p) => p.id === id))
-    .filter(Boolean) as typeof problems;
+  const supporting = papers.filter(
+    (p) => p.status === "public" && p.supports.includes(problem.slug)
+  );
+  const loader = (manualProblems as Record<string, (() => Promise<any>) | undefined>)[problem.slug];
 
   return (
-    <article className="prose dark:prose-invert max-w-none">
-      <h1>{problem.title}</h1>
-      <p className="lead">{problem.claim}</p>
-
-      {/* Display optional metadata */}
-      <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">
-        {problem.domain && (
-          <span>
-            <strong>Domain:</strong> {problem.domain}
+    <article className="mx-auto max-w-3xl">
+      <header>
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="inline-block rounded-full border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.07)] px-2.5 py-0.5 font-mono text-[0.68rem] font-medium uppercase tracking-wider text-amberc">
+            Open problem
           </span>
-        )}{" "}
-        {problem.maturity && (
-          <span>
-            <strong>Maturity:</strong> {problem.maturity}
-          </span>
-        )}{" "}
-        {problem.monograph_refs && problem.monograph_refs.length > 0 && (
-          <span>
-            <strong>Monograph:</strong> {problem.monograph_refs.join(", ")}
-          </span>
-        )}
-      </div>
+          {problem.domain ? (
+            <span className="font-mono text-[0.68rem] uppercase tracking-wider text-faint">
+              {problem.domain}
+            </span>
+          ) : null}
+        </div>
+        <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-4xl">
+          {problem.title}
+        </h1>
+      </header>
 
-      {/* Notes (MDX) rendered client-side to avoid React context/runtime issues */}
-      <ProblemNotes slug={slug} />
+      <section className="card-surface mt-6 border-l-4 border-l-[hsl(var(--amber))] px-5 py-4">
+        <p className="m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
+          Research target
+        </p>
+        <p className="mt-2 text-[0.97rem] leading-relaxed text-fg/90">
+          {problem.target.trim()}
+        </p>
+      </section>
 
-      {supportedPapers.length > 0 && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold">Supporting Papers</h2>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {supportedPapers.map((paper) => (
-              <Card
-                key={paper.id}
-                href={`/papers/${paper.id}`}
-                title={paper.metadata?.title ?? paper.role ?? paper.id}
-                description={paper.metadata?.description?.substring(0, 120) || ""}
-              />
-            ))}
-          </div>
+      <section className="mt-6 rounded-xl border border-edge bg-surface px-5 py-4 text-sm leading-relaxed text-mute">
+        <p className="m-0">
+          <strong className="text-fg">Claim discipline.</strong> Within {site.name}, a
+          result on this problem becomes public framework content only through a branch
+          packet: declared route, status, residues, proof obligations, validation
+          obligations, and claim boundary. Until such a packet is published here, this
+          page licenses no solved-problem claim.
+        </p>
+      </section>
+
+      {loader && problem.legacyNotes ? (
+        <aside className="mt-10 rounded-xl border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.06)] px-5 py-4 text-sm leading-relaxed text-fg/90">
+          <p className="m-0 mb-1 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
+            Historical draft below
+          </p>
+          The notes that follow were written during the earlier Everything Equation /
+          Tier-0 era of this programme. They are retained as a development trace. Their
+          claims are <strong>not</strong> statused Shadow Theory results and are
+          superseded as authority by Papers 1–6.
+        </aside>
+      ) : null}
+
+      {loader ? (
+        <section className="mt-4">
+          <MdxContent loader={loader} />
         </section>
-      )}
+      ) : null}
 
-      {connections.length > 0 && (
-        <section className="mt-8">
-          <h2 className="text-xl font-semibold">Related Problems</h2>
-          <ul>
-            {connections.map((p) => (
-              <li key={p.id}>
-                <a
-                  href={`/problems/${p.id}`}
-                  className="text-blue-600 hover:text-blue-800 underline"
-                >
-                  {p.title}
-                </a>
+      {supporting.length > 0 ? (
+        <section className="mt-10">
+          <h2 className="text-xl font-semibold">Related historical papers</h2>
+          <ul className="mt-3 space-y-2">
+            {supporting.map((p) => (
+              <li key={p.slug}>
+                <Link href={`/papers/${p.slug}`} className="text-glow hover:text-glow-strong">
+                  {p.displayTitle} →
+                </Link>
               </li>
             ))}
           </ul>
         </section>
-      )}
+      ) : null}
 
-      {/* Structured data for the problem page */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ResearchProject",
-            name: problem.title,
-            url: `https://everythingequation.com/problems/${problem.id}`,
-            description: problem.claim,
-          }),
-        }}
-      />
+      <nav className="mt-12 border-t border-edge pt-6">
+        <Link href="/problems" className="text-sm font-medium text-glow hover:text-glow-strong">
+          ← All open problems
+        </Link>
+      </nav>
     </article>
   );
 }

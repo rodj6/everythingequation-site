@@ -2,7 +2,203 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles */
+/* ============================================================
+   SHADOW THEORY DESIGN SYSTEM
+   Dark "mathematical observatory" theme.
+   Edit the CSS variables below to retune the whole site.
+   ============================================================ */
+
+:root {
+  /* Core surfaces */
+  --background: 224 50% 4.5%;        /* deep space navy-black */
+  --surface: 223 42% 8%;             /* card background */
+  --surface-raised: 222 38% 11%;     /* hover / raised card */
+  --border: 222 30% 17%;             /* hairline borders */
+  --border-strong: 221 28% 26%;
+
+  /* Text */
+  --foreground: 220 35% 93%;
+  --muted-foreground: 221 18% 66%;
+  --faint-foreground: 222 14% 48%;
+
+  /* Luminous accents */
+  --accent: 187 80% 62%;             /* observatory cyan */
+  --accent-strong: 187 90% 72%;
+  --violet: 258 82% 74%;             /* projection violet */
+  --amber: 38 92% 62%;               /* claim-boundary amber */
+  --green: 152 55% 55%;              /* statused green */
+
+  --ring: 187 80% 62%;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  @apply bg-white text-slate-900 antialiased dark:bg-slate-900 dark:text-slate-50;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-feature-settings: "kern", "liga", "calt";
+}
+
+::selection {
+  background: hsl(var(--accent) / 0.25);
+  color: hsl(var(--foreground));
+}
+
+/* Accessible focus states */
+:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   MATH RENDERING (KaTeX)
+   Display equations scroll horizontally on small screens instead
+   of overflowing or wrapping into unreadable fragments.
+   ============================================================ */
+
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0.25rem;
+  margin: 1.25rem 0;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--border-strong)) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.katex-display > .katex {
+  white-space: nowrap;
+}
+
+.katex {
+  font-size: 1.08em;
+}
+
+@media (max-width: 640px) {
+  .katex {
+    font-size: 1em;
+  }
+}
+
+/* ============================================================
+   IN-PAGE ANCHORS (monograph section/label anchors)
+   Empty <a id> targets placed before headings; the offset keeps
+   the heading visible below the sticky header after a jump.
+   ============================================================ */
+
+article a[id]:empty,
+a[id]:empty {
+  scroll-margin-top: 6rem;
+}
+
+/* ============================================================
+   BACKGROUND MOTIFS
+   ============================================================ */
+
+/* Fine grid used behind hero sections */
+.bg-observatory-grid {
+  background-image:
+    linear-gradient(hsl(var(--border) / 0.55) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
+}
+
+/* Luminous aurora blobs */
+.glow-cyan {
+  background: radial-gradient(circle farthest-side, hsl(var(--accent) / 0.16), transparent);
+}
+.glow-violet {
+  background: radial-gradient(circle farthest-side, hsl(var(--violet) / 0.14), transparent);
+}
+
+/* ============================================================
+   ANIMATIONS (all disabled under prefers-reduced-motion)
+   ============================================================ */
+
+@keyframes drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(3%, -4%, 0) scale(1.06); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+
+@keyframes drift-reverse {
+  0%   { transform: translate3d(0, 0, 0) scale(1.04); }
+  50%  { transform: translate3d(-3%, 3%, 0) scale(1); }
+  100% { transform: translate3d(0, 0, 0) scale(1.04); }
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.65; }
+  50%      { opacity: 1; }
+}
+
+.animate-drift         { animation: drift 26s ease-in-out infinite; }
+.animate-drift-reverse { animation: drift-reverse 32s ease-in-out infinite; }
+.animate-rise          { animation: rise-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-rise-1        { animation: rise-in 0.7s 0.08s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-rise-2        { animation: rise-in 0.7s 0.16s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-rise-3        { animation: rise-in 0.7s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.animate-shimmer       { animation: shimmer 4s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+
+/* Gradient headline text */
+.text-luminous {
+  background: linear-gradient(
+    100deg,
+    hsl(var(--foreground)) 20%,
+    hsl(var(--accent-strong)) 55%,
+    hsl(var(--violet)) 85%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hairline card */
+.card-surface {
+  background:
+    linear-gradient(180deg, hsl(var(--surface-raised) / 0.5), hsl(var(--surface) / 0.9));
+  border: 1px solid hsl(var(--border));
+  border-radius: 1rem;
+}
+
+.card-surface-hover {
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-surface-hover:hover {
+  border-color: hsl(var(--accent) / 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px -18px hsl(var(--accent) / 0.25);
+}
+
+/* Small uppercase section label */
+.section-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: hsl(var(--accent));
 }

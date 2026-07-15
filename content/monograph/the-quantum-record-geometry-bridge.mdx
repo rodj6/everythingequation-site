@@ -1,0 +1,510 @@
+---
+title: "The Quantum–Record–Geometry Bridge"
+kind: chapter
+number: "8"
+label: "Chapter 8"
+part: 2
+order: 8
+description: 'Chapter 8 defines the bridge from quantum channel data to record structures and from record structures to effective geometry/gravity readout.'
+---
+<a id="81-role-and-scope"></a>
+
+## 8.1 Role and Scope
+
+Chapter 8 defines the bridge from quantum channel data to record structures and from record structures to effective geometry/gravity readout. The bridge route is
+
+$$
+\boxed{
+\Pi_Q\to\Pi_R\to\Pi_G.
+}
+\tag{8.1}
+$$
+
+Chapter 5 supplies quantum data,
+
+$$
+\mathcal{H},\rho,\mathcal{A}_{obs},E_i,\mu_{\rho},\mathcal{I},R_i.
+$$
+
+Chapter 6 supplies record data,
+
+$$
+\boxed{
+R_i=(E_i,p_i,\sigma_i,\lambda_i),
+\qquad
+D_i^{\rm cand}=\operatorname{PrepDep}(R_i),
+\qquad
+\mathcal{R}_{T1,Y},
+\qquad
+\mathcal{Z}_{obj,Y}.
+}
+\tag{8.2}
+$$
+
+It also supplies the selector boundary
+
+$$
+\boxed{
+\mathbb{E}[\chi_i]=p_i
+}
+\tag{8.3}
+$$
+
+as an $R7$ proof obligation.
+
+Chapter 7 supplies geometry data,
+
+$$
+\mathcal{E}_{adm},
+\precsim_D,
+\kappa^{\rm inf},
+d_{\rm rel},
+\operatorname{Rec}_{\rm met},
+g_{\mu\nu}^{eff},
+G_{\mu\nu}[g^{eff}],
+(T_{\mu\nu}^{\rm cl},\langle T_{\mu\nu}^{\rm ren}\rangle_\omega,T_{\mu\nu}^{\rm rec}),
+\mathcal Q_{\mu\nu}^{\rm EFT}.
+$$
+
+Chapter 8 formalizes the bridge machinery connecting these objects. It does not discharge the quantum–gravity derivation; the corresponding theorem problem is R3 in Chapter 17.
+
+-----
+
+<a id="82-inherited-inputs-from-chapters-5-07"></a>
+
+## 8.2 Inherited Inputs from Chapters 5–07
+
+<a id="821-21-quantum-inputs"></a>
+
+### 8.2.1 2.1 Quantum Inputs
+
+The quantum-side bridge input is
+
+$$
+\boxed{
+(\rho,E,\mathcal{I},R_i),
+}
+\tag{8.4}
+$$
+
+where $\rho$ is a density state, $E$ is the POVM/effect structure, $\mathcal{I}$ is the instrument, and
+
+$$
+\boxed{
+p_i=\mathrm{Tr}(\rho E_i),
+\qquad
+R_i=(E_i,p_i,\sigma_i,\lambda_i).
+}
+\tag{8.5}
+$$
+
+<a id="83-qft-inputs"></a>
+
+## 8.3 QFT Inputs
+
+The bridge additionally receives typed inputs from the relativistic QFT sector (Chapter 5): the background datum $\operatorname{Bg}_{\rm QFT}(g)$ on the candidate geometry class; the physical algebra and reference-state data $(\mathcal A_{\rm phys},\omega)$; the normalized instruments $\operatorname{Instr}_{\rm QFT}$ whose records feed the record channel; and the renormalized stress expectation $\langle T_{\mu\nu}^{\rm ren}\rangle_\omega$. These inputs bind the bridge to the QFT–geometry fixed-point loop: geometry supplies the QFT background while QFT supplies stress to the gravitational solution relation, and the loop is a physical fixed-point condition rather than a feed-forward edge.
+
+<a id="831-22-record-inputs"></a>
+
+### 8.3.1 2.2 Record Inputs
+
+The record-side input is
+
+$$
+\boxed{
+(D_i^{\rm cand},D_{i_\ast}^{\rm obj},\mathcal{R}_{T1,Y},\mathcal{Z}_{obj,Y},\chi_i),
+}
+\tag{8.6}
+$$
+
+where
+
+$$
+\boxed{
+D_i^{\rm cand}=\operatorname{PrepDep}(R_i)
+}
+\tag{8.7}
+$$
+
+and $\chi_i$ is a selector variable satisfying the Chapter 6 selector constraints.
+
+<a id="832-23-geometry-inputs"></a>
+
+### 8.3.2 2.3 Geometry Inputs
+
+The geometry-side input is
+
+$$
+\boxed{
+(
+\mathcal{E}_{adm,Y},
+\precsim_{D,Y},
+\kappa^{\rm inf}_Y,
+d_{{\rm rel},Y},
+\operatorname{Rec}_{\rm met},
+g_{\mu\nu,Y}^{eff},
+G_{\mu\nu}[g^{eff}_Y],
+(T_{\mu\nu}^{\rm cl},\langle T_{\mu\nu}^{\rm ren}\rangle_\omega,T_{\mu\nu}^{\rm rec}),
+\mathcal Q_{\mu\nu}^{\rm EFT}
+).
+}
+\tag{8.8}
+$$
+
+These inputs are treated as typed bridge targets and constraints.
+
+-----
+
+<a id="84-the-quantum-record-geometry-route"></a>
+
+## 8.4 The Quantum–Record–Geometry Route
+
+The physical bridge can now be stated without repeating the constructions of the preceding chapters:
+
+$$
+\boxed{
+\begin{gathered}
+(\mathcal A,\omega,\mathcal I)
+\longrightarrow
+\{D_i^{\rm pre},p_i\}
+\xrightarrow{\operatorname{PrepDep}}
+\{D_i^{\rm cand}\}
+\xrightarrow{\operatorname{Sel}}
+D_{i_*}^{\rm sel}\\
+\xrightarrow{\operatorname{Dep}^{\rm act}}
+D_{i_*}^{\rm act}
+\xrightarrow{\operatorname{ObjPers}}
+D_{i_*}^{\rm obj}
+\xrightarrow{\operatorname{Acc}_{\rm obj}}
+\mathcal A_Y^{\rm obj}
+\xrightarrow{\operatorname{Int}_{\rm arch}}
+\kappa^{\rm inf}
+\longrightarrow
+(\prec_D,d_{\rm rel},L_{\rm inf},\nu)\\
+\xrightarrow{\operatorname{Rec}_{\rm met}}
+\mathcal M
+\xrightarrow{\text{dimensional calibration}}
+\mathcal M_{\rm dim}
+\xrightarrow{\operatorname{Sol}_G}
+\{(g,\Phi)\}_{\rm phys}.
+\end{gathered}
+}
+\tag{8.9}
+$$
+
+Each arrow in (8.9) has a distinct physical meaning. The Born measure weights alternatives; the selector realizes one alternative; actual deposition is a physical occurrence; objective persistence makes that occurrence available as a stable event; $\operatorname{Acc}_{\rm obj}$ accumulates persistent objective records into the predecessor-closed archive $\mathcal A_Y^{\rm obj}$; and only the archive intervention $\operatorname{Int}_{\rm arch}$ defines $\kappa^{\rm inf}$ through (7.2)–(7.5). Thus $\kappa^{\rm inf}$ is not a map from one objective record. Influence and volume data constrain a set of metric classes, and gravitational dynamics selects solutions within those reconstructed classes.
+
+The bridge is reciprocal rather than one-way. The QFT algebra, operational completion, state and instruments depend on the reconstructed geometry, while the state-dependent stress and the archive-induced record functional appear in (7.54). For fixed $Y$, network $\mathcal N$ and boundary data $B$, define
+
+$$
+\begin{aligned}
+&\operatorname{ObjArch}_Y(g,\omega,\mathcal I,u;\mathcal N)\\
+&\quad=
+\left\{
+\mathcal A^{\rm obj}:
+\begin{aligned}
+&\mathcal A^{\rm obj}\text{ is generated on }
+(g,\mathcal A[g],\omega)\\
+&\text{by (5.26), (6.7) and the full chain (6.24)}
+\end{aligned}
+\right\}.
+\end{aligned}
+\tag{8.10}
+$$
+
+Membership requires the same normal instruments $\mathcal I$, selector coordinate $u$, actual-deposition kernels and objectivity tests throughout; a pre-existing archive cannot be inserted into the gravitational branch. Let $\operatorname{PreGeom}(\mathcal A^{\rm obj})$ denote (7.2)–(7.14), and let $\operatorname{DimCal}$ denote the scale section and dimensional calibration (7.16), (7.37). The complete same-branch condition is
+
+$$
+\mathcal S_{\rm QFT-R-G}
+=
+\left\{
+\begin{aligned}
+&(g,\Phi,\omega,\mathcal I,u,\mathcal A^{\rm obj},
+\mathcal M_{\rm dim},\mathfrak m_R):\\
+&\mathfrak O_{\mathfrak D}[g]\text{ satisfies (5.14)--(5.17)},\\
+&\mathcal I\text{ is normal as in (5.18)},\\
+&\omega\text{ is an admitted state of }\mathcal A[g],\\
+&(\mathsf U_*,\Sigma_*,\mu_*,u)
+=\operatorname{SelPrep}_{\Omega}(Y,\mathcal N),\\
+&\mathcal A^{\rm obj}\in
+\operatorname{ObjArch}_Y(g,\omega,\mathcal I,u;\mathcal N),\\
+&\mathcal M_{\rm dim}\in
+\operatorname{DimCal}\!\left(
+\operatorname{Rec}_{\rm met}\!\left(
+\operatorname{PreGeom}(\mathcal A^{\rm obj})
+\right)\right),\\
+&\mathfrak m_R\text{ is the matching decomposition (7.47),}\\
+&\mathfrak m_R\text{ is fixed before }\operatorname{Sol}_G
+\text{ and used in (7.48)--(7.49)},\\
+&(g,\Phi)\in
+\operatorname{Sol}_G\!\left(
+\mathcal M_{\rm dim},\omega,\mathcal A^{\rm obj},B;\mathfrak m_R
+\right).
+\end{aligned}
+\right\}.
+\tag{8.11}
+$$
+
+Thus the archive used to infer geometry is regenerated by the same $g,\omega,\mathcal I,u$ whose stress and matched record-exclusive action source that geometry. The matching decomposition is fixed on that branch before the solution is sought; it cannot be chosen to fit $g$. The existence of (8.11), its nonuniqueness and its stability under source-local, record, matching-scale and state perturbations are part of R3 and R9. They are not implied merely by writing the simultaneous conditions.
+
+<a id="841-finite-illustration"></a>
+
+### 8.4.1 Finite illustration
+
+For a finite acyclic archive with quotient vertices $x_0,x_1,x_2,x_3$, suppose the nonzero symmetric influence weights are
+
+$$
+w_{01}=1,\qquad w_{12}=\frac12,\qquad w_{23}=1,
+\tag{8.12}
+$$
+
+and all other $w_{ij}$ vanish. Then
+
+$$
+s_0=1,\quad s_1=\frac32,\quad s_2=\frac32,\quad s_3=1,
+\tag{8.13}
+$$
+
+so that
+
+$$
+q_{01}=q_{23}=\sqrt{\frac23},
+\qquad q_{12}=\frac13.
+\tag{8.14}
+$$
+
+The edge costs are positive,
+
+$$
+c_{01}=c_{23}=1-\frac12\log\frac23,
+\qquad
+c_{12}=1+\log3,
+\tag{8.15}
+$$
+
+and
+
+$$
+d_{\rm rel}(x_0,x_3)
+=c_{01}+c_{12}+c_{23}.
+\tag{8.16}
+$$
+
+This calculation does not derive a continuum metric. It demonstrates that the intervention kernel leads to a normalized positive path geometry whose spectral and volume data can be compared, under refinement, with the candidate continua of (7.35).
+
+<a id="85-quantum-to-record-segment"></a>
+
+## 8.5 Quantum-to-Record Segment
+
+The first bridge segment is
+
+$$
+\boxed{
+(\rho,E_i)
+\mapsto
+p_i=\mathrm{Tr}(\rho E_i)
+\mapsto
+R_i=(E_i,p_i,\sigma_i,\lambda_i).
+}
+\tag{8.17}
+$$
+
+This segment is inherited from Chapter 5 and Chapter 6.
+
+The components are:
+
+  - **Quantum-to-record segment:**
+    
+      - **Rho:**
+        
+          - **Type:** density state
+    
+      - **$E_i$:**
+        
+          - **Type:** measurement effect
+    
+      - **$p_i$:**
+        
+          - **Type:** Born weight
+    
+      - **$\sigma_i$:**
+        
+          - **Type:** record-signature carrier
+    
+      - **$\lambda_i$:**
+        
+          - **Type:** outcome/readout label
+    
+      - **$R_i$:**
+        
+          - **Type:** quantum-side record preform
+    
+      - **R7 boundary:**
+        
+          - **Condition:** selector variable $\chi_i$ is not derived in this segment
+
+-----
+
+The quantum-to-record segment uses the full record-stage path: preform, candidate deposition, contextual selection, actual deposition, and objectivity, exactly as constructed in Chapters 5–6. Effects are never identified directly with records, nor candidate with actual deposition.
+
+<a id="86-record-to-admissible-event-segment"></a>
+
+## 8.6 Record-to-Admissible-Event Segment
+
+The second bridge segment is
+
+$$
+\boxed{
+R_i
+\mapsto
+D_i^{\rm cand}=\operatorname{PrepDep}(R_i)
+\mapsto
+e_i=\mathsf{Ev}(D_i^{\rm obj})
+\mapsto
+\mathcal{E}_{adm,Y}.
+}
+\tag{8.18}
+$$
+
+An event is admissible when
+
+$$
+\boxed{
+e_i\in\mathcal{E}_{adm,Y}
+\iff
+e_i=\mathsf{Ev}(D_i^{\rm obj}),\
+\mathcal{G}_{real,Y}(D_i^{\rm cand})=1,\
+Z_i\ge Z_{\min}.
+}
+\tag{8.19}
+$$
+
+Each event retains the Chapter 7 event tuple
+
+$$
+\boxed{
+e_i=(D_i^{\rm obj},\tau_i,\ell_i,Z_i,\kappa_i).
+}
+\tag{8.20}
+$$
+
+Thus the bridge to geometry passes through deposited, gate-admitted, objective, lineage-linked record-events.
+
+-----
+
+Only actual, objective records enter event formation; the record-to-event map factors through the cycle-safe dependency quotient of Chapter 7, and the bridge map $\Phi_{RP}$ consumes the quotient, not raw correlation data.
+
+<a id="87-quantum-gravity-correction-term"></a>
+
+## 8.7 Quantum-Gravity Correction Term
+
+The quantum-gravity correction is action-derived: the covariant gravitational EFT operator basis of the total effective action (Chapter 7) yields, by variation, the correction tensor $\mathcal Q_{\mu\nu}^{EFT}$; no separate lumped correction tensor is introduced beside it. Its ownership is unique (it is never counted inside matter, record, vacuum, or dark terms), it is symmetric, and its covariant divergence is controlled by the Ward/Bianchi exchange rule of the gravitational equation.
+
+<a id="88-planck-scale--classical-limit-suppression-target"></a>
+
+## 8.8 Planck-Scale / Classical-Limit Suppression Target
+
+Suppression is stated dimensionally correctly. With $\epsilon_Q(L)=(\ell_Q/L)^2$ the dimensionless suppression variable of the EFT ordering scale $\ell_Q$, the correction satisfies either the curvature-scaled bound $\mathcal Q_{\mu\nu}^{EFT}=O\!\left(L^{-2}\epsilon_Q(L)\right)$ or the relative bound $\|\mathcal Q^{EFT}\|/\|G[g]\|=O(\epsilon_Q(L))$ on the declared norm class; the unnormalized statement $\mathcal Q^{EFT}=O(\epsilon_Q)$ is never used. The choice of norm and the exponent’s derivation remain R3 work, and the ordinary GR limit is recovered as $\epsilon_Q\to0$ together with vanishing record stress.
+
+<a id="89-toy-reconstruction-a-finite-diamond-calculation"></a>
+
+## 8.9 Toy Reconstruction: A Finite Diamond Calculation
+
+Consider four objective record identities with dependency order
+
+$$
+p\prec a,
+\qquad
+p\prec b,
+\qquad
+a\prec q,
+\qquad
+b\prec q,
+\qquad
+a\parallel b.
+$$
+
+Let the directed capacities on the four cover edges be one and all other direct capacities zero. The undirected incident strength of every vertex is two. Hence each reconstruction edge has
+
+$$
+\boxed{
+q=\frac12,
+\qquad
+c=1+\log2.
+}
+$$
+
+In the ordering $(p,a,b,q)$,
+
+$$
+\boxed{
+d_{\rm rel}
+=
+\begin{pmatrix}
+0&c&c&2c\\
+c&0&2c&c\\
+c&2c&0&c\\
+2c&c&c&0
+\end{pmatrix}.
+}
+$$
+
+The normalized Laplacian is
+
+$$
+\boxed{
+\Delta
+=
+\begin{pmatrix}
+1&-\tfrac12&-\tfrac12&0\\
+-\tfrac12&1&0&-\tfrac12\\
+-\tfrac12&0&1&-\tfrac12\\
+0&-\tfrac12&-\tfrac12&1
+\end{pmatrix},
+}
+$$
+
+with eigenvalues
+
+$$
+0,1,1,2.
+$$
+
+Therefore
+
+$$
+P(\sigma)
+=
+\frac14
+(1+2e^{-\sigma}+e^{-2\sigma}),
+$$
+
+and
+
+$$
+\boxed{
+d_s(\sigma)
+=
+\frac{4\sigma}{e^\sigma+1}.
+}
+$$
+
+One order-faithful $1+1$-dimensional Minkowski representative is
+
+$$
+\iota(p)=(-1,0),
+\quad
+\iota(a)=(0,-1),
+\quad
+\iota(b)=(0,1),
+\quad
+\iota(q)=(1,0).
+$$
+
+The coordinates and metric are output representatives, not inputs. The four-point graph has no reliable dimension plateau and does not determine a unique continuum. The certified toy output is a finite controlled-degenerate family; it demonstrates the calculation and failure semantics rather than a dimension theorem.
+
+<a id="810-the-bridge-downstream"></a>
+
+## 8.10 The Bridge Downstream
+
+The same-branch closure assembled here—quantum theory, records, geometry and gravitation on one realization—is presupposed by the matter couplings of Chapter 9 and the cosmological branch of Chapter 12. Its existence and stability questions form the core of the R3 programme in Chapter 17.
