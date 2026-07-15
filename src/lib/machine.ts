@@ -10,10 +10,7 @@ import { site } from '@/config/site';
 import { navigation } from '@/config/navigation';
 import { loadPapers, loadProblems, getCanonicalPapers } from '@/lib/registry';
 import { listArticles } from '@/lib/articles';
-<<<<<<< HEAD
 import { listMonographItems, monographTotals } from '@/lib/monograph';
-=======
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
 
 function esc(s: string): string {
   return s
@@ -35,16 +32,12 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
     ...navigation.map((n) => ({
       loc: n.href,
-<<<<<<< HEAD
       priority: n.href === '/' ? '1.0' : n.href === '/monograph' ? '0.9' : '0.8',
     })),
     ...listMonographItems().map((i) => ({
       loc: `/monograph/${i.slug}`,
       lastmod: site.monograph.webDate,
       priority: '0.8',
-=======
-      priority: n.href === '/' ? '1.0' : '0.8',
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
     })),
     ...papers.map((p) => ({
       loc: `/papers/${p.slug}`,
@@ -80,15 +73,12 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
-<<<<<<< HEAD
     {
       title: `The Monograph — ${site.monograph.title} (Version ${site.monograph.version})`,
       url: `${baseUrl}/monograph`,
       date: site.monograph.webDate,
       summary: `Complete web edition of “${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}). DOI ${site.monograph.doi}. All 18 chapters, both appendices, and the bibliography.`,
     },
-=======
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
     ...articles.map((a) => ({
       title: a.title,
       url: `${baseUrl}/articles/${a.slug}`,
@@ -168,7 +158,6 @@ export async function generateLlmsTxt(): Promise<string> {
         ).trim()}${p.doiUrl ? ` DOI: ${p.doi}` : ''}`
     ),
     '',
-<<<<<<< HEAD
     '## The monograph (complete web edition)',
     '',
     `“${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}) consolidates and extends the six-paper foundation into a source-to-readout architecture for a Theory of Everything. DOI: ${site.monograph.doi} (${site.monograph.doiUrl}). The pages below are the COMPLETE text of that fixed Version ${site.monograph.version} publication — all 18 chapters, both appendices, and the bibliography — as crawlable server-rendered HTML (KaTeX math with embedded TeX annotations). A machine-readable inventory of every component, section anchor, and per-chapter equation/table count is at ${baseUrl}/monograph/manifest.json. The Zenodo record (${site.monograph.zenodoUrl}) is the canonical citable publication of the same work.`,
@@ -183,11 +172,6 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     `- [Framework](${baseUrl}/framework): the six-paper chain and core vocabulary`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
-=======
-    '## Key pages',
-    '',
-    `- [Framework](${baseUrl}/framework): the six-paper chain and core vocabulary`,
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
     `- [Articles](${baseUrl}/articles): research notes and updates`,
@@ -263,7 +247,6 @@ export async function generateGraph() {
       tags: a.tags ?? [],
       url: `${baseUrl}/articles/${a.slug}`,
     })),
-<<<<<<< HEAD
     {
       id: 'monograph',
       type: 'monograph',
@@ -311,11 +294,6 @@ export async function generateGraph() {
   for (const p of canonical) {
     edges.push({ from: 'monograph', to: `paper:${p.slug}`, relation: 'builds-on' });
   }
-=======
-  ];
-
-  const edges: Array<{ from: string; to: string; relation: string }> = [];
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
   // Canonical chain: Paper 1 -> 2 -> ... -> 6
   for (let i = 0; i < canonical.length - 1; i++) {
     edges.push({

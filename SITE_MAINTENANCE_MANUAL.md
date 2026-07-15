@@ -135,7 +135,6 @@ Paper categories: `canonical` (the six-paper stack; shown as the Canonical
 stack grid), `branch` (statused branch results), `historical` (archive list).
 Entries without a `category` field default to `historical`.
 
-<<<<<<< HEAD
 ## 5b. The monograph web edition (/monograph)
 
 The Version 1.0 TOE monograph ("A Source-to-Readout Architecture for a Theory
@@ -169,8 +168,6 @@ complete web edition:
   and version in `src/config/site.ts`, and reconvert the chapters from the new
   LaTeX source rather than editing the MDX in place.
 
-=======
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
 ## 6. How to update a Zenodo DOI or record ID
 
 When you upload a paper (or a new version) to Zenodo:

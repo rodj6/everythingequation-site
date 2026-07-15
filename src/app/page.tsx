@@ -33,17 +33,12 @@ export default async function HomePage() {
         />
         <div className="mx-auto max-w-3xl text-center">
           <p className="section-label animate-rise">
-<<<<<<< HEAD
             A public mathematical framework · Papers 1–6
-=======
-            A mathematical Theory of Everything architecture · Papers 1–6
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
           </p>
           <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="text-luminous">Shadow Theory</span>
           </h1>
           <p className="animate-rise-2 mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute sm:text-xl">
-<<<<<<< HEAD
             {site.tagline} A six-paper foundation for what can be read, completed,
             compiled, and claimed.
           </p>
@@ -234,215 +229,10 @@ export default async function HomePage() {
                 <li key={line}>{line}</li>
               ))}
             </ul>
-=======
-            {site.tagline}
-          </p>
-
-          <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link
-              href="/framework"
-              className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
-            >
-              Explore the framework
-            </Link>
-            <Link
-              href="/papers"
-              className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
-            >
-              Read the papers
-            </Link>
-          </div>
-        </div>
-
-        {/* Interpretive spine */}
-        <div className="animate-rise-3 mx-auto mt-14 max-w-3xl">
-          <div className="card-surface relative overflow-hidden px-6 py-6 sm:px-8">
-            <div
-              aria-hidden="true"
-              className="glow-cyan pointer-events-none absolute -top-20 left-1/2 h-40 w-3/4 -translate-x-1/2"
-            />
-            <p className="section-label relative">The theory in plain English</p>
-            <ol className="relative mt-4 space-y-2.5 text-left text-[0.95rem] leading-relaxed text-fg/90">
-              <li>
-                <span className="font-mono text-glow">1 · </span>
-                The reality we observe is not source reality itself.
-              </li>
-              <li>
-                <span className="font-mono text-glow">2 · </span>
-                What we call physics is the structured shadow that source reality presents to us.
-              </li>
-              <li>
-                <span className="font-mono text-glow">3 · </span>
-                Observation can preserve some structure while losing other structure.
-              </li>
-              <li>
-                <span className="font-mono text-glow">4 · </span>
-                Lost structure matters when it blocks a complete public account of the theory.
-              </li>
-              <li>
-                <span className="font-mono text-glow">5 · </span>
-                Shadow Theory develops rules for when missing structure can be completed and when it cannot.
-              </li>
-              <li>
-                <span className="font-mono text-glow">6 · </span>
-                The Everything Equation is the compact closure form of that architecture, not a slogan that one line replaces physics.
-              </li>
-            </ol>
           </div>
         </div>
       </section>
 
-      {/* ================= CANONICAL STACK ================= */}
-      <section aria-labelledby="stack-heading">
-        <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="section-label">Canonical foundation</p>
-            <h2 id="stack-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-              The six-paper stack
-            </h2>
-            <p className="mt-2 max-w-2xl text-mute">
-              The six papers build the theory from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops the mathematics for what that shadow reveals, hides, and allows us to reconstruct.
-            </p>
-          </div>
-          <Link href="/papers" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
-            All papers →
-          </Link>
-        </div>
-        <PaperChain papers={canonical} />
-      </section>
-
-      {/* ================= SYNTHESIS SCHEMA ================= */}
-      <section aria-labelledby="schema-heading" className="mx-auto max-w-3xl">
-        <div className="card-surface relative overflow-hidden px-6 py-8 text-center sm:px-10">
-          <div
-            aria-hidden="true"
-            className="glow-violet pointer-events-none absolute -bottom-24 left-1/2 h-48 w-3/4 -translate-x-1/2"
-          />
-          <p className="section-label relative">Synthesis layer</p>
-          <h2 id="schema-heading" className="relative mt-2 text-xl font-bold tracking-tight sm:text-2xl">
-            The Everything Equation, from shorthand to typed form
-          </h2>
-
-          <p className="relative mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
-            Original compact form
-          </p>
-          <div
-            className="relative mt-2 text-lg"
-            dangerouslySetInnerHTML={tex(
-              String.raw`L \;=\; \Omega\,\Delta\,\partial[\,L\,]`
-            )}
-          />
-          <p className="relative mx-auto mt-2 max-w-xl text-sm leading-relaxed text-mute">
-            This was the broad public shorthand for the Everything Equation: a law becomes
-            complete only after it passes through aperture, obstruction, and completion
-            structure.
-          </p>
-
-          <p className="relative mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
-            Typed Shadow Theory form
-          </p>
-          <div
-            className="relative mt-2 text-lg"
-            dangerouslySetInnerHTML={tex(
-              String.raw`L \;=\; \Omega_{T1}\,\Delta\,\partial[\,L\,]`
-            )}
-          />
-          <p className="relative mx-auto mt-3 max-w-xl text-sm leading-relaxed text-mute">
-            The updated form is a scope correction. The operator{" "}
-            <span dangerouslySetInnerHTML={tex(String.raw`\Omega_{T1}`, false)} /> marks
-            the public Tier-1 completion/readout operator, not hidden source magic and not
-            a universal solver. The equation keeps the original idea, but makes the claim
-            precise: public laws close only through declared readout-facing machinery, with
-            residues and statuses exposed.
-          </p>
-
-          <Link
-            href="/framework#everything-equation"
-            className="relative mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong"
-          >
-            How the equation is formulated →
-          </Link>
-        </div>
-      </section>
-
-      {/* ================= CLAIM BOUNDARY ================= */}
-      <section aria-labelledby="boundary-heading" className="mx-auto max-w-3xl">
-        <p className="section-label text-center">Framework position</p>
-        <h2 id="boundary-heading" className="mt-2 text-center text-2xl font-bold tracking-tight sm:text-3xl">
-          Research scope and current status
-        </h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div className="card-surface border-l-4 border-l-[hsl(var(--green))] p-5">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-greenc">
-              Research scope
-            </p>
-            <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.is.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
-          <div className="card-surface border-l-4 border-l-[hsl(var(--amber))] p-5">
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-              Current status
-            </p>
-            <ul className="mt-3 space-y-2.5 text-sm leading-relaxed text-fg/90">
-              {site.claimBoundary.isNot.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= OPEN PROBLEMS ================= */}
-      <section aria-labelledby="problems-heading">
-        <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <p className="section-label">Research programme</p>
-            <h2 id="problems-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-              Open problems
-            </h2>
-            <p className="mt-2 max-w-2xl text-mute">
-              Downstream branch targets of the stack. Each is a research target with a
-              declared claim boundary — none is presented as solved.
-            </p>
-          </div>
-          <Link href="/problems" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
-            Full programme →
-          </Link>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {problems.map((p) => (
-            <ProblemCard key={p.slug} problem={p} />
-          ))}
-        </div>
-      </section>
-
-      {/* ================= ARTICLES ================= */}
-      {articles.length > 0 ? (
-        <section aria-labelledby="articles-heading">
-          <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="section-label">Notes &amp; updates</p>
-              <h2 id="articles-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-                Latest articles
-              </h2>
-            </div>
-            <Link href="/articles" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
-              All articles →
-            </Link>
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {articles.map((a) => (
-              <ArticleCard key={a.slug} article={a} />
-            ))}
-          </div>
-        </section>
-      ) : null}
-
-<<<<<<< HEAD
       {/* ================= OPEN PROBLEMS ================= */}
       <section aria-labelledby="problems-heading">
         <div className="mb-8 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
@@ -489,8 +279,6 @@ export default async function HomePage() {
         </section>
       ) : null}
 
-=======
->>>>>>> 5964c8c4e638290cb6ad2d0944200027bc4a1f48
       {/* ================= FINAL CTA ================= */}
       <section className="mx-auto max-w-2xl pb-4 text-center">
         <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
