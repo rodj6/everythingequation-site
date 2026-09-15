@@ -6,6 +6,7 @@ import { listArticles } from "@/lib/articles";
 import PaperChain from "@/components/paper-chain";
 import { ProblemCard, ArticleCard } from "@/components/cards";
 import ProjectionField from "@/components/projection-field";
+import QuantumProgrammeFeature from "@/components/quantum-programme-feature";
 
 export const dynamic = "force-static";
 
@@ -51,10 +52,16 @@ export default async function HomePage() {
               Enter the Reality Atlas
             </Link>
             <Link
+              href="/quantum-measurement"
+              className="rounded-lg border border-[hsl(var(--violet)/0.5)] px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--violet))] hover:text-vio"
+            >
+              Quantum Measurement &amp; Born Rule
+            </Link>
+            <Link
               href="/monograph"
               className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
             >
-              Read the monograph
+              Read the TOE monograph
             </Link>
             <Link
               href="/framework"
@@ -138,6 +145,8 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <QuantumProgrammeFeature />
+
       {/* ================= THE MONOGRAPH ================= */}
       <section aria-labelledby="monograph-heading">
         <div className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
@@ -147,7 +156,7 @@ export default async function HomePage() {
           />
           <div className="relative">
             <p className="section-label">
-              The Monograph · Version {site.monograph.version} · {site.monograph.published}
+              The TOE Monograph · Version {site.monograph.version} · {site.monograph.published}
             </p>
             <h2
               id="monograph-heading"
@@ -297,7 +306,7 @@ export default async function HomePage() {
           <div>
             <p className="section-label">Research programme</p>
             <h2 id="problems-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">
-              Open problems
+              Research status and open problems
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
               Downstream branch targets of the stack, each defined by a concrete research

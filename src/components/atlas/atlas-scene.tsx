@@ -340,7 +340,7 @@ const ArchitectureEdges = memo(function ArchitectureEdges({
         lineWidth={adjacent ? 1.35 : 0.5}
         transparent
         opacity={adjacent ? 0.56 : 0.12}
-        dashed
+        dashed={edgeItem.relationship === "conceptual"}
         dashScale={6}
         dashSize={0.28}
         gapSize={0.2}
@@ -354,6 +354,7 @@ const TracePath = memo(function TracePath({ traceIds }: { traceIds: string[] }) 
     const from = atlasNodeMap.get(traceIds[index]);
     const to = atlasNodeMap.get(id);
     if (!from || !to) return null;
+    const relationship = atlasEdges.find((item) => item.from === from.id && item.to === to.id)?.relationship ?? "conceptual";
     return (
       <Line
         key={`${from.id}--${to.id}--trace`}
@@ -362,6 +363,10 @@ const TracePath = memo(function TracePath({ traceIds }: { traceIds: string[] }) 
         lineWidth={2}
         transparent
         opacity={0.9}
+        dashed={relationship === "conceptual"}
+        dashScale={6}
+        dashSize={0.28}
+        gapSize={0.2}
       />
     );
   });

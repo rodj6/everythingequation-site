@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Map",
   description:
-    "The structure of the Shadow Theory programme: the seven-paper canonical sequence from source–readout non-equivalence to the Randall–Sundrum physical witness, with open problems as downstream branch targets.",
+    "The Shadow Theory research map: source–readout foundation, two quantum measurement constitutions, their mathematical dependencies and conceptual relationships, and open branch targets.",
   alternates: { canonical: "/research-map" },
 };
 
@@ -72,6 +72,24 @@ export default async function ResearchMapPage() {
         </p>
       </header>
 
+      <section aria-labelledby="measurement-map-heading" className="card-surface p-6 sm:p-8">
+        <p className="section-label">Published programme · September 2026</p>
+        <h2 id="measurement-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Where quantum measurement enters</h2>
+        <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation identifies what a bounded description retains and what it loses. The measurement programme adds physical constitutions that specify event histories and material records. The relation to the foundation is conceptual; the interaction catalogue, guidance law and initial statistics are additional physical premises.</p>
+        <div className="mt-6 overflow-x-auto rounded-xl border border-edge">
+          <table className="w-full min-w-[38rem] text-left text-sm leading-relaxed">
+            <caption className="sr-only">Dependencies of the two quantum measurement constructions</caption>
+            <thead className="bg-raised text-fg"><tr><th className="p-4">Construction</th><th className="p-4">Physical premises</th><th className="p-4">Proved connection</th></tr></thead>
+            <tbody className="divide-y divide-edge text-mute">
+              <tr><th className="p-4 align-top font-medium text-glow"><Link href="/quantum-measurement/pilot-medium">Pilot medium →</Link></th><td className="p-4 align-top">P1–P4 interaction catalogue; independent spatial-gas preparation; finite graph and horizon</td><td className="p-4 align-top">Bond currents → exported packets → gas contacts and recombination → controlled complete Bell-path limit → autonomous physical records</td></tr>
+              <tr><th className="p-4 align-top font-medium text-vio"><Link href="/quantum-measurement/massive-configuration">Massive configuration →</Link></th><td className="p-4 align-top">Universal spinor inventory; kinetic-momentum guidance; complete initial equilibrium and finite independent ready stock</td><td className="p-4 align-top">Continuous configuration paths → trapped pointers and retained resources → autonomous finite programme → output and archive-history bounds</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-5 text-sm leading-relaxed text-mute">Each row is an assumption-to-result chain inside its own constitution. Neither row derives the other's motion law. The TOE monograph remains a separate fixed publication; the integrated quantum monograph preserves the earlier detector and record results alongside both completions.</p>
+        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/quantum-measurement">Programme and visual reading paths →</Link><Link href="/quantum-measurement/monograph">Complete technical monograph →</Link><Link href="/atlas?focus=measurement-programme">Locate the programme in the Atlas →</Link><Link href="/atlas/quantum-measurement">Read the Atlas field guide →</Link></div>
+      </section>
+
       {/* Sequence */}
       <section aria-labelledby="pipeline-heading">
         <h2 id="pipeline-heading" className="text-2xl font-bold tracking-tight">
@@ -122,7 +140,7 @@ export default async function ResearchMapPage() {
       {/* Branches */}
       <section aria-labelledby="branches-heading">
         <h2 id="branches-heading" className="text-2xl font-bold tracking-tight">
-          Downstream branch targets
+          Branch results and open targets
         </h2>
         <p className="mt-2 max-w-3xl text-mute">
           Open problems attach downstream of the seven-paper foundation as branch
@@ -144,7 +162,7 @@ export default async function ResearchMapPage() {
               >
                 {p.title}
                 <span className="mt-1 block font-mono text-[0.65rem] uppercase tracking-wider text-faint">
-                  branch target · open
+                  {p.maturity === "constitutive-results" ? "published constitutive results" : "branch target · open"}
                 </span>
               </Link>
             ))}

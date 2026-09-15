@@ -13,6 +13,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.author.name }],
+  keywords: ["Shadow Theory", "quantum measurement", "Born rule", "pilot medium", "Bell process", "massive configuration", "source readout", "mathematical physics"],
   alternates: {
     canonical: "/",
     types: { "application/atom+xml": "/feed.xml" },
@@ -38,6 +39,10 @@ const websiteJsonLd = {
   name: site.name,
   url: site.url,
   description: site.description,
+  hasPart: [
+    { "@type": "CollectionPage", name: "Quantum Measurement and the Born Rule", url: `${site.url}/quantum-measurement` },
+    { "@type": "Book", name: site.monograph.title, url: `${site.url}/monograph` },
+  ],
   author: {
     "@type": "Person",
     name: site.author.name,

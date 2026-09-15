@@ -152,6 +152,12 @@ export default function MonographPage() {
       </header>
 
       {/* ================= POSITION IN THE PROGRAMME ================= */}
+      <aside className="mx-auto max-w-3xl rounded-xl border border-[hsl(var(--violet)/0.3)] bg-[hsl(var(--violet)/0.04)] px-6 py-5 text-sm leading-relaxed text-mute">
+        <p className="font-semibold text-fg">A separate quantum measurement monograph is now available</p>
+        <p className="mt-2">The September 2026 Version 2 programme develops two constitutive completions of measurement, with full proofs and two companion papers. This TOE edition retains its original Version 1.0 text and DOI.</p>
+        <Link href="/quantum-measurement" className="mt-3 inline-block font-medium text-glow hover:text-glow-strong">Explore Quantum Measurement &amp; Born Rule →</Link>
+      </aside>
+
       <section aria-labelledby="position-heading" className="mx-auto max-w-3xl">
         <div className="card-surface px-6 py-6 sm:px-8">
           <p className="section-label">Where this sits in Shadow Theory</p>

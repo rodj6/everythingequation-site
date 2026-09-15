@@ -13,7 +13,7 @@ export const site = {
 
   /** Concise site-wide description used outside the homepage hero. */
   tagline:
-    "A seven-paper framework for source structure, observable projection, exact completion, and projected dynamics.",
+    "Source structure, observable projection, and the physics of measurement.",
 
   /** Restored homepage wording. Keep this text unchanged. */
   heroStatement: `Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.
@@ -29,7 +29,7 @@ The seven-paper foundation develops the mathematics needed to distinguish observ
    * feeds, and llms.txt.
    */
   description:
-    "Shadow Theory is a seven-paper mathematical and physical framework that establishes exact criteria for source–readout non-equivalence, minimal completion, projected dynamics, and internal identifiability, then realizes the architecture in Randall–Sundrum gravity.",
+    "Shadow Theory develops source-to-readout mathematics, a Randall–Sundrum physical witness, and two constitutive completions of quantum measurement. Read the complete monographs, proofs and companion papers.",
 
   /**
    * Canonical base URL. Set NEXT_PUBLIC_SITE_URL in Vercel project settings
@@ -95,12 +95,14 @@ The seven-paper foundation develops the mathematics needed to distinguish observ
       "A seven-paper mathematical framework that separates reduced source structure from bounded readout and proves exact descent, reconstruction, completion, closure, and identifiability results.",
       "A canonical minimal-completion construction that determines the least additional structure required by a nominated family of source relations.",
       "An RS2 physical witness in which identical instantaneous brane readouts evolve into different futures, together with the exact projected Einstein equation and a parameter-free cross-regime relation.",
+      "Two published constitutive completions of quantum measurement: a controlled pilot-medium Bell-path limit with material records, and a separate massive-configuration construction with retained-output and archive-history bounds.",
     ],
     programme: [
       "Every canonical result states its hypotheses, domain, target, and mathematical conclusion directly.",
       "Experimental tests, peer review, and engineering realizations are tracked as distinct stages of the research programme.",
       "The Everything Equation functions as the broader programme's compact closure schema; the seven-paper sequence supplies the exact mathematics of source-to-readout structure.",
       "Open problems remain active branch targets until a dedicated public result establishes them.",
+      "The measurement results hold within their stated interaction, guidance and preparation premises. Independent assessment and experimental verification are separate from those internal mathematical results.",
     ],
   },
 } as const;

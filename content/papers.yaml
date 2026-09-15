@@ -2,7 +2,7 @@ version: 2
 # ============================================================================
 # PAPER REGISTRY
 #
-# Three kinds of entries live here:
+# Four kinds of entries live here:
 #
 #  1. CANONICAL Shadow Theory papers (category: canonical). These are the
 #     current public authority sequence (Papers 1-7, published 2026-07-15).
@@ -17,9 +17,68 @@ version: 2
 #     Earlier Everything Equation / Tier-0 / Tier-1 era records, retained
 #     for archival completeness only.
 #
-#  To add a BRANCH paper later, use category: branch.
+#  4. BRANCH publications (category: branch), including the September 2026
+#     Quantum Measurement programme. The quantum publication identities live
+#     in src/config/quantum.ts; the registry here owns their editorial summaries.
 # ============================================================================
 papers:
+  # Quantum Measurement programme: publication identity and download paths are
+  # resolved from src/config/quantum.ts. These are independent branch records.
+  - id: paper:quantum:monograph
+    slug: quantum-measurement-monograph
+    category: branch
+    visibility: public
+    featured: true
+    role: "The integrated measurement programme: source dynamics, event laws, Born statistics and physical records, with two distinct constitutive completions."
+    summary: >
+      Develops the complete assumption-to-prediction chain of the quantum
+      measurement programme. The pilot-medium construction obtains a controlled
+      total-variation limit on complete tagged Bell paths in physical time,
+      together with material records on a fixed finite graph and horizon.
+      The massive-configuration construction supplies a separate operational
+      completion with guidance and initial equilibrium as premises, semibounded
+      material apparatus, retained outputs and archive-history bounds. Earlier
+      detector, preparation, protection and continuation theorems, proofs and
+      counterexamples remain part of this integrated Version 2 publication.
+      Neither construction follows from source/readout incompleteness alone.
+    supports: [quantum-measurement]
+
+  - id: paper:quantum:pilot-medium
+    slug: deterministic-pilot-medium
+    category: branch
+    visibility: public
+    featured: true
+    role: "A deterministic spatial pilot medium yields a controlled Bell-path limit and autonomous material records under its declared interaction catalogue and preparation assumptions."
+    summary: >
+      Canonical bond action supplies individual currents; conservative exporters
+      create signed packets; an independently prepared spatial gas supplies
+      contact histories; finite-speed recombination suppresses balanced traffic;
+      and carrier populations supply the residence denominator. These mechanisms
+      converge to the minimal Bell process on complete tagged paths on a finite
+      graph and horizon. A static finite clock Hamiltonian includes material
+      copies, retained fuel and reset receivers, an inaccessible reference and
+      noncommuting continuation. Finite resources give controlled deviations,
+      and recurrence limits the record-storage claim.
+    supports: [quantum-measurement]
+
+  - id: paper:quantum:massive-configuration
+    slug: massive-configuration-completion
+    category: branch
+    visibility: public
+    featured: true
+    role: "A separate massive-configuration constitution realizes finite measurement programmes with semibounded material dynamics, retained resources and controlled archive histories."
+    summary: >
+      Assumes a universal spinor Schrödinger inventory, kinetic-momentum
+      guidance and complete initial equilibrium with a finite independent ready
+      stock. Forced harmonic traps provide exact pointer paths and null laws;
+      coherent resources retain pending excitation, loss products, fuel and
+      reset receivers. A retained massive clock gives an autonomous realization.
+      Complete retained-output estimates and separate absolute archive-flux
+      bounds control finite-resource output and historical errors. This
+      continuous theory does not derive discrete Bell jumps. Explicit rivals
+      show that reliable records alone do not select its guidance law uniquely.
+    supports: [quantum-measurement]
+
   # ============================================================
   # CANONICAL SHADOW THEORY SEQUENCE (Papers 1-7, 2026-07-15)
   # ============================================================

@@ -11,6 +11,8 @@ import { navigation } from '@/config/navigation';
 import { loadPapers, loadProblems, getCanonicalPapers } from '@/lib/registry';
 import { listArticles } from '@/lib/articles';
 import { listMonographItems, monographTotals } from '@/lib/monograph';
+import { quantumPublications, quantumMonograph } from '@/config/quantum';
+import { listQuantumDocuments } from '@/lib/quantum';
 import {
   atlasEdges,
   atlasNodes,
@@ -49,12 +51,13 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    { loc: '/atlas/quantum-measurement', lastmod: quantumMonograph.published, priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
       priority:
         n.href === '/'
           ? '1.0'
-          : n.href === '/monograph' || n.href === '/atlas'
+          : n.href === '/monograph' || n.href === '/atlas' || n.href === '/quantum-measurement'
             ? '0.9'
             : '0.8',
     })),
@@ -63,10 +66,12 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
       lastmod: site.monograph.webDate,
       priority: '0.8',
     })),
+    ...quantumPublications.map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
+    ...listQuantumDocuments().map((document) => ({ loc: document.url, lastmod: quantumMonograph.published, priority: '0.8' })),
     ...papers.map((p) => ({
       loc: `/papers/${p.slug}`,
       lastmod: p.date,
-      priority: p.category === 'canonical' ? '0.9' : '0.5',
+      priority: p.category === 'canonical' || p.researchProgramme ? '0.9' : '0.5',
     })),
     ...problems.map((p) => ({ loc: `/problems/${p.slug}`, priority: '0.6' })),
     ...articles.map((a) => ({
@@ -99,6 +104,12 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    ...quantumPublications.map((publication) => ({
+      title: `${publication.title} (Version ${publication.version})`,
+      url: `${canonicalBase}${publication.webUrl}`,
+      date: publication.published,
+      summary: `${publication.description} Complete web edition, PDF, LaTeX and Markdown. DOI ${publication.doi}.`,
+    })),
     {
       title: `The Monograph: ${site.monograph.title} (Version ${site.monograph.version})`,
       url: `${canonicalBase}/monograph`,
@@ -174,7 +185,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Canonical authority and result map',
     '',
-    '- The canonical public authority is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15).',
+    '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions and are the current authority for their own measurement results.',
     '- A previous six-paper canonical stack (June 2026) was replaced by the seven-paper sequence; its records remain published on Zenodo and are listed below as superseded canonical versions. They are not current authority and their architecture (down-compilation, runtime calculus, synthesis) is not carried forward.',
     '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if any superseded or historical material conflicts with Papers 1-7, the current sequence controls.',
     '- Paper 1 establishes exact quotient presentation together with independent descent and equivariant-reconstruction obstructions.',
@@ -206,20 +217,39 @@ export async function generateLlmsTxt(): Promise<string> {
         `- [${i.label ? `${i.label}: ` : ''}${i.title}](${baseUrl}/monograph/${i.slug})`
     ),
     '',
+    '## Quantum Measurement and Born Rule (complete Version 2 publications)',
+    '',
+    `Published ${quantumMonograph.published} by ${quantumMonograph.author}, ${quantumMonograph.authorRole}. Programme overview: ${baseUrl}/quantum-measurement. Full inventory with stable anchors and source-comparison counts: ${baseUrl}/quantum-measurement/manifest.json.`,
+    '',
+    'The pilot-medium completion uses a declared P1-P4 interaction catalogue, independent spatial-gas preparation, conservative packet export, finite recombination and carrier population tracking. It yields controlled total-variation convergence on complete tagged paths to the minimal Bell process in unchanged physical time on a finite graph and horizon. Its finite autonomous apparatus retains material records; finite deviations and recurrence bound the claim.',
+    'The massive-configuration completion separately postulates the universal spinor inventory, kinetic-momentum guidance and complete initial equilibrium with a finite independent ready stock. It gives continuous physical configuration paths, semibounded apparatus dynamics, retained resources, a massive autonomous controller, and separate retained-output and archive-history error bounds. It does not assume or derive discrete Bell jumps for internal spin labels.',
+    'Source/readout incompleteness alone derives neither constitution, interaction catalogue, guidance law nor preparation statistics. Internal resolutions are conditional on their named premises. The publications do not establish independent verification or experimental confirmation. Their counterexamples and finite-resource scope restrictions are part of the results.',
+    'The integrated monograph and companion papers retain separate publication provenance; do not merge different statements into a new theorem. The TOE Version 1.0 text remains its own earlier publication. Historical Tier-0 quantum measurement notes at /problems/quantum-measurement remain accessible with their original anchors and are not the current Version 2 claims.',
+    '',
+    ...quantumPublications.flatMap((publication) => [
+      `- [${publication.title}](${baseUrl}${publication.webUrl}): Version ${publication.version}; DOI ${publication.doi}; publication record ${baseUrl}/papers/${publication.paperSlug}.`,
+      `  - [PDF](${baseUrl}${publication.pdfUrl}) · [LaTeX source](${baseUrl}${publication.texUrl}) · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
+    ]),
+    '',
+    '### Complete quantum web-edition reading inventory',
+    ...listQuantumDocuments().map((document) => `- [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url})`),
+    '',
     '## Key pages',
     '',
     `- [Framework](${baseUrl}/framework): the seven-paper sequence and core vocabulary`,
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
+    `- [Quantum Measurement](${baseUrl}/quantum-measurement): two constitutive completions, physical records, Born statistics, accessible explanations and full technical reading paths`,
+    `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
     `- [Articles](${baseUrl}/articles): research notes and updates`,
     `- [Research Map](${baseUrl}/research-map): structure of the stack and its branches`,
     `- [About](${baseUrl}/about): author, publication record, and research position`,
     '',
-    '## Open problems (active research targets)',
+    '## Research status and open problems',
     '',
-    ...problems.map((p) => `- [${p.title}](${baseUrl}/problems/${p.slug}): ${p.target.trim()}`),
+    ...problems.map((p) => `- [${p.title}](${baseUrl}/problems/${p.slug}) [${p.maturity === 'constitutive-results' ? 'published constitutive results' : 'active research target'}]: ${p.target.trim()}`),
     '',
     '## Articles',
     '',
@@ -245,6 +275,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/sitemap.xml`,
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
+    `- ${baseUrl}/quantum-measurement/manifest.json (all three quantum publications, reading inventory, stable anchors, content counts and source downloads)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
   ];
@@ -278,10 +309,13 @@ export async function generateGraph() {
       doi: p.doi ?? null,
       zenodo: p.zenodoId ?? null,
       url: `${baseUrl}/papers/${p.slug}`,
+      webEdition: p.webUrl ? `${baseUrl}${p.webUrl}` : null,
+      downloads: p.pdfUrl ? { pdf: `${baseUrl}${p.pdfUrl}`, latex: `${baseUrl}${p.texUrl}`, markdown: `${baseUrl}${p.markdownUrl}` } : null,
     })),
     ...problems.map((p) => ({
       id: `problem:${p.slug}`,
-      type: 'open-problem',
+      type: p.maturity === 'constitutive-results' ? 'research-programme' : 'open-problem',
+      maturity: p.maturity ?? 'open',
       programme: p.programme,
       title: p.title,
       domain: p.domain ?? null,
@@ -321,6 +355,27 @@ export async function generateGraph() {
       url: `${baseUrl}/monograph/${i.slug}`,
     })),
     {
+      id: 'quantum-measurement', type: 'research-programme',
+      title: 'Quantum Measurement and the Born Rule',
+      date: quantumMonograph.published, version: quantumMonograph.version,
+      status: 'published constitutive results; external verification not established by these publications',
+      url: `${baseUrl}/quantum-measurement`,
+      manifest: `${baseUrl}/quantum-measurement/manifest.json`,
+      scope: 'Two distinct constitutions. Source/readout incompleteness does not derive their interactions, guidance or preparation statistics.',
+    },
+    ...listQuantumDocuments().map((document) => ({
+      id: `quantum:${document.publicationId}:${document.slug}`,
+      type: 'quantum-web-edition-part', publicationId: document.publicationId,
+      title: document.title, label: document.label, kind: document.kind, order: document.order,
+      url: `${baseUrl}${document.url}`, sections: document.sections, stats: document.stats,
+      markdown: `${baseUrl}${document.markdownUrl}`,
+    })),
+    {
+      id: 'quantum-atlas-guide', type: 'atlas-field-guide',
+      title: 'Quantum Measurement Atlas field guide',
+      url: `${baseUrl}/atlas/quantum-measurement`,
+    },
+    {
       id: 'atlas',
       type: 'interactive-atlas',
       title: 'The Reality Atlas',
@@ -354,6 +409,8 @@ export async function generateGraph() {
       gate: node.gate ?? null,
       recoveryLimits: node.recovery ?? [],
       equations: node.equations,
+      provenance: node.provenance ?? null,
+      readingLinks: node.readingLinks ?? [],
       url: `${baseUrl}/atlas?focus=${encodeURIComponent(node.id)}`,
     })),
     ...observableRoutes.map((route) => ({
@@ -373,6 +430,21 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  for (const publication of quantumPublications) {
+    const publicationId = `paper:${publication.paperSlug}`;
+    edges.push({ from: 'quantum-measurement', to: publicationId, relation: 'published-as' });
+    const documents = listQuantumDocuments().filter((document) => document.publicationId === publication.id);
+    documents.forEach((document, index) => {
+      const documentId = `quantum:${document.publicationId}:${document.slug}`;
+      edges.push({ from: publicationId, to: documentId, relation: 'contains-web-edition-part' });
+      if (index < documents.length - 1) edges.push({ from: documentId, to: `quantum:${documents[index + 1].publicationId}:${documents[index + 1].slug}`, relation: 'reading-order' });
+    });
+    if (publication.id !== 'monograph') edges.push({ from: `paper:${quantumMonograph.paperSlug}`, to: publicationId, relation: 'companion-treatment', note: 'Independent publication provenance; statements and proofs retain their own hypotheses.' });
+  }
+  edges.push({ from: 'paper:source-readout-non-equivalence', to: 'quantum-measurement', relation: 'conceptual-context', note: 'The source/readout distinction motivates the programme; it does not derive the added physical premises.' });
+  edges.push({ from: 'quantum-measurement', to: 'problem:quantum-measurement', relation: 'current-results-and-historical-provenance' });
+  edges.push({ from: 'quantum-measurement', to: 'atlas:measurement-programme', relation: 'visualized-in' });
+  edges.push({ from: 'quantum-measurement', to: 'quantum-atlas-guide', relation: 'explained-by' });
   // Monograph containment + reading order
   const monoItems = listMonographItems();
   for (let i = 0; i < monoItems.length; i++) {
@@ -414,7 +486,7 @@ export async function generateGraph() {
   // (edges anchored at the final paper, the physical-witness layer).
   const capstone = canonical[canonical.length - 1];
   if (capstone) {
-    for (const prob of problems.filter((p) => p.programme !== 'legacy')) {
+    for (const prob of problems.filter((p) => p.programme !== 'legacy' && p.slug !== 'quantum-measurement')) {
       edges.push({
         from: `paper:${capstone.slug}`,
         to: `problem:${prob.slug}`,
@@ -438,6 +510,7 @@ export async function generateGraph() {
       from: `atlas:${atlasEdge.from}`,
       to: `atlas:${atlasEdge.to}`,
       relation: `atlas-${atlasEdge.kind}`,
+      relationship: atlasEdge.relationship,
       label: atlasEdge.label,
       map: atlasEdge.map,
       domain: atlasEdge.domain,
@@ -470,10 +543,10 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'Papers 1-7 (published 2026-07-15) are the controlling public authority; Paper 7 is the physical-witness layer. Superseded records are the June 2026 six-paper stack, preserved as publication history. Historical papers are archival background.',
+      note: 'Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Superseded June 2026 papers and historical quantum notes remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
-      contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier.',
+      contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',
       forwardPath: 'source preparation -> aperture selection -> canonical field -> coupled Tier-1 closure -> observable',
       reversePath: 'observable -> ordered trace route -> residual source-producing structure',
       url: `${baseUrl}/atlas`,

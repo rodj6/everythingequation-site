@@ -35,6 +35,13 @@ export async function generateMetadata({
       description,
       url: `${site.url}/papers/${paper.slug}`,
     },
+    other: {
+      citation_title: paper.displayTitle,
+      citation_author: site.author.name,
+      ...(paper.date ? { citation_publication_date: paper.date } : {}),
+      ...(paper.doi ? { citation_doi: paper.doi } : {}),
+      ...(paper.pdfUrl ? { citation_pdf_url: `${site.url}${paper.pdfUrl}` } : {}),
+    },
   };
 }
 
@@ -49,22 +56,30 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
+    "@type": paper.slug === "quantum-measurement-monograph" ? "Book" : "ScholarlyArticle",
     headline: paper.displayTitle,
     name: paper.displayTitle,
     author: {
       "@type": "Person",
       name: paper.metadata?.creators?.[0] ?? site.author.name,
+      affiliation: { "@type": "Organization", name: site.author.affiliation },
     },
     datePublished: paper.date ?? undefined,
     version: paper.version ?? undefined,
     sameAs: [paper.doiUrl, paper.zenodoUrl].filter(Boolean),
     identifier: paper.doi ?? undefined,
     url: `${site.url}/papers/${paper.slug}`,
+    encoding: paper.pdfUrl ? [
+      { "@type": "MediaObject", encodingFormat: "application/pdf", contentUrl: `${site.url}${paper.pdfUrl}` },
+      { "@type": "MediaObject", encodingFormat: "text/html", contentUrl: `${site.url}${paper.webUrl}` },
+      { "@type": "MediaObject", encodingFormat: "text/markdown", contentUrl: `${site.url}${paper.markdownUrl}` },
+    ] : undefined,
     isPartOf:
       paper.category === "canonical"
         ? { "@type": "CreativeWorkSeries", name: `${site.name} canonical stack` }
-        : undefined,
+        : paper.researchProgramme === "quantum-measurement"
+          ? { "@type": "CreativeWorkSeries", name: "Shadow Theory Quantum Measurement programme", url: `${site.url}/quantum-measurement` }
+          : undefined,
     description: paper.summary?.trim() || paper.role || undefined,
   };
 
@@ -150,6 +165,11 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
         {/* Links */}
         <div className="mt-6 flex flex-wrap gap-3">
+          {paper.webUrl ? (
+            <Link href={paper.webUrl} className="rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-[hsl(var(--accent-strong))]">
+              Read the complete web edition →
+            </Link>
+          ) : null}
           {paper.doiUrl ? (
             <a
               href={paper.doiUrl}
@@ -175,7 +195,22 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
             </p>
           ) : null}
         </div>
+        {paper.pdfUrl ? (
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm text-glow">
+            <a href={paper.pdfUrl} download className="hover:text-glow-strong">Download PDF ↓</a>
+            <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a>
+            <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a>
+          </div>
+        ) : null}
       </header>
+
+      {paper.researchProgramme === "quantum-measurement" ? (
+        <aside className="mt-8 rounded-xl border border-[hsl(var(--violet)/0.3)] bg-[hsl(var(--violet)/0.04)] p-5 text-sm leading-relaxed text-mute">
+          <p className="font-medium text-fg">Version 2 · Quantum Measurement programme</p>
+          <p className="mt-2">This publication has its own fixed text and DOI. Its conclusions are internal to the physical constitution and preparation premises it declares. Publication does not establish independent verification or empirical confirmation.</p>
+          <Link href="/quantum-measurement" className="mt-3 inline-block font-medium text-glow hover:text-glow-strong">Overview, reading paths and the two completions →</Link>
+        </aside>
+      ) : null}
 
       {/* Role */}
       {paper.role ? (
@@ -217,7 +252,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       {/* Supported problems */}
       {supported.length > 0 ? (
         <section className="mt-10">
-          <h2 className="text-xl font-semibold">Related open problems</h2>
+          <h2 className="text-xl font-semibold">Related research programmes</h2>
           <ul className="mt-3 space-y-2">
             {supported.map((p) => (
               <li key={p.slug}>

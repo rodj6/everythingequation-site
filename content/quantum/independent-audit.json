@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "status": "PASS",
+  "checker": "scripts/audit-quantum-content.mjs",
+  "originalComparison": "separately supplied originals",
+  "limits": "Independent structural and reference audit plus contiguous plain proof-prose samples. Mathematics is excluded from prose sampling; KaTeX errors and embedded TeX annotations are counted. This does not verify theorem correctness, semantic equivalence of all equations, external links, publication claims, or visual layout. Paragraphs without prose include math-only and anchor-only paragraphs.",
+  "documents": [
+    {
+      "id": "monograph",
+      "pages": 53,
+      "originalsMatch": {
+        "tex": true,
+        "pdf": true
+      },
+      "sourceProofs": 158,
+      "renderedProofs": 158,
+      "sourceStatements": 181,
+      "renderedStatements": 181,
+      "sourceLabels": 748,
+      "missingLabels": [],
+      "bibliographyEntries": 57,
+      "missingBibliography": [],
+      "duplicateIds": [],
+      "missingLinks": [],
+      "mathErrors": 0,
+      "mathAnnotations": 5741,
+      "paragraphCount": 2047,
+      "paragraphsWithoutProse": 61,
+      "longestParagraphWords": 164,
+      "prosePassagesChecked": 525,
+      "missingProofPassages": []
+    },
+    {
+      "id": "pilot-medium",
+      "pages": 1,
+      "originalsMatch": {
+        "tex": true,
+        "pdf": true
+      },
+      "sourceProofs": 20,
+      "renderedProofs": 20,
+      "sourceStatements": 21,
+      "renderedStatements": 21,
+      "sourceLabels": 93,
+      "missingLabels": [],
+      "bibliographyEntries": 5,
+      "missingBibliography": [],
+      "duplicateIds": [],
+      "missingLinks": [],
+      "mathErrors": 0,
+      "mathAnnotations": 845,
+      "paragraphCount": 266,
+      "paragraphsWithoutProse": 4,
+      "longestParagraphWords": 157,
+      "prosePassagesChecked": 78,
+      "missingProofPassages": []
+    },
+    {
+      "id": "massive-configuration",
+      "pages": 1,
+      "originalsMatch": {
+        "tex": true,
+        "pdf": true
+      },
+      "sourceProofs": 11,
+      "renderedProofs": 11,
+      "sourceStatements": 14,
+      "renderedStatements": 14,
+      "sourceLabels": 75,
+      "missingLabels": [],
+      "bibliographyEntries": 10,
+      "missingBibliography": [],
+      "duplicateIds": [],
+      "missingLinks": [],
+      "mathErrors": 0,
+      "mathAnnotations": 492,
+      "paragraphCount": 227,
+      "paragraphsWithoutProse": 2,
+      "longestParagraphWords": 164,
+      "prosePassagesChecked": 48,
+      "missingProofPassages": []
+    }
+  ]
+}

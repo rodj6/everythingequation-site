@@ -83,7 +83,7 @@ export function ProblemCard({ problem }: { problem: LoadedProblem }) {
     <article className="card-surface card-surface-hover problem-index-card relative flex h-full flex-col overflow-hidden p-5">
       <div className="flex flex-wrap items-center gap-2">
         <span className="inline-block rounded-full border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.07)] px-2.5 py-0.5 font-mono text-[0.68rem] font-medium uppercase tracking-wider text-amberc">
-          Open problem
+          {problem.maturity === "constitutive-results" ? "Constitutive results" : "Open problem"}
         </span>
         {problem.domain ? (
           <span className="font-mono text-[0.68rem] uppercase tracking-wider text-faint">
@@ -98,7 +98,7 @@ export function ProblemCard({ problem }: { problem: LoadedProblem }) {
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-mute">{problem.target}</p>
       <span className="mt-auto pt-4 text-xs font-semibold uppercase tracking-[0.14em] text-amberc">
-        Investigate target →
+        {problem.maturity === "constitutive-results" ? "Results & research status →" : "Investigate target →"}
       </span>
     </article>
   );

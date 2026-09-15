@@ -24,7 +24,7 @@ type InspectorTab = "overview" | "equations" | "interfaces";
 
 const AtlasScene = dynamic(() => import("@/components/atlas/atlas-scene"), { ssr: false });
 const INSPECTOR_TABS: InspectorTab[] = ["overview", "equations", "interfaces"];
-const SUGGESTED_NODE_IDS = ["omega", "aperture", "canonical-field", "quantum-records", "gravity", "matter", "parameter-selection", "cosmology"];
+const SUGGESTED_NODE_IDS = ["measurement-programme", "pilot-medium", "massive-configuration", "born-statistics", "omega", "aperture", "canonical-field", "quantum-records", "gravity", "matter"];
 const EMPTY_TRACE_IDS: string[] = [];
 const FOCUSABLE_SELECTOR = "button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex='-1'])";
 
@@ -84,6 +84,7 @@ function ConnectionButton({
   const contract = edge
     ? [
         `${edge.label}: ${edge.map}`,
+        `Relationship: ${edge.relationship}`,
         `Linearization: ${edge.linearization}`,
         `Adjoint: ${edge.adjoint}`,
         `Validity: ${edge.validityDomain}`,
@@ -92,21 +93,26 @@ function ConnectionButton({
       ].join("\n")
     : undefined;
   return (
+    <div className="atlas-connection-wrap">
     <button
       type="button"
       className="atlas-connection"
+      data-relationship={edge?.relationship ?? "conceptual"}
       onClick={() => onSelect(id)}
       style={{ "--connection-color": node.color } as CSSProperties}
       title={contract}
-      aria-label={`${direction === "upstream" ? "Arrives from" : "Continues to"} ${node.label}${edge ? ` through ${edge.map}` : ""}`}
+      aria-label={`${node.label}: ${edge?.relationship === "mathematical" ? "mathematical dependence" : "conceptual relationship"}${edge ? `; ${edge.label}` : ""}`}
     >
       {direction === "upstream" ? <Icon name="arrow" /> : null}
       <span>
-        <small>{tierMeta[node.tier].label}{edge ? ` · ${edge.map}` : ""}</small>
+        <small>{edge?.relationship === "mathematical" ? "Mathematical dependence" : "Conceptual relationship"}</small>
         {node.shortLabel}
+        {edge ? <em>{edge.label}</em> : null}
       </span>
       {direction === "downstream" ? <Icon name="arrow" /> : null}
     </button>
+    {edge ? <p className="atlas-connection-condition">{edge.validityDomain}</p> : null}
+    </div>
   );
 }
 
@@ -207,6 +213,13 @@ function Inspector({
               <TypeRow label="Units" value={node.units} />
             </dl>
             {node.atlasNote ? <p className="atlas-note">{node.atlasNote}</p> : null}
+            {node.provenance ? <p className="atlas-provenance">{node.provenance}</p> : null}
+            {node.readingLinks?.length ? (
+              <nav className="atlas-reading-links" aria-label={`Read the sources for ${node.label}`}>
+                <h3>Read the work</h3>
+                {node.readingLinks.map((link) => <Link key={link.href} href={link.href}>{link.label}<Icon name="arrow" /></Link>)}
+              </nav>
+            ) : null}
           </>
         ) : null}
 
@@ -227,6 +240,7 @@ function Inspector({
 
         {tab === "interfaces" ? (
           <>
+            <p className="atlas-relationship-note">Solid connections carry mathematical dependence under the stated conditions. Dashed connections show conceptual relationships and transfer no theorem.</p>
             <dl className="atlas-type-list">
               <TypeRow label="Domain" value={node.domain} />
               <TypeRow label="Codomain" value={node.codomain} />
@@ -240,7 +254,7 @@ function Inspector({
             </dl>
             {node.upstream.length ? (
               <section className="atlas-connections">
-                <h3>Arrives from</h3>
+                <h3>Incoming connections</h3>
                 <div>
                   {node.upstream.map((id) => (
                     <ConnectionButton key={id} id={id} currentId={node.id} direction="upstream" onSelect={onSelect} />
@@ -250,7 +264,7 @@ function Inspector({
             ) : null}
             {node.downstream.length ? (
               <section className="atlas-connections">
-                <h3>Continues to</h3>
+                <h3>Outgoing connections</h3>
                 <div>
                   {node.downstream.map((id) => (
                     <ConnectionButton key={id} id={id} currentId={node.id} direction="downstream" onSelect={onSelect} />
@@ -733,7 +747,7 @@ export default function AtlasExperience() {
           <span className="atlas-live-dot" aria-hidden="true" />
           <div>
             <p>The Reality Atlas</p>
-            <small>{atlasStats.representedNodes} structures · {atlasStats.representedEdges} typed maps</small>
+            <small>{atlasStats.representedNodes} structures · {atlasStats.representedEdges} typed connections</small>
           </div>
         </div>
 
@@ -789,6 +803,12 @@ export default function AtlasExperience() {
           );
         })}
       </nav>
+
+      <div className="atlas-edge-legend" aria-label="Connection legend">
+        <span><i aria-hidden="true" />Mathematical dependence</span>
+        <span><i className="is-conceptual" aria-hidden="true" />Conceptual relationship</span>
+        <Link href="/atlas/quantum-measurement">Measurement guide ↗</Link>
+      </div>
 
       <div className="atlas-breadcrumb" aria-live="polite">
         <span style={{ color: selectedNode.color }}>{tierMeta[selectedNode.tier].label}</span>
@@ -887,7 +907,7 @@ export default function AtlasExperience() {
         <div className="atlas-active-trace" style={{ "--trace-color": activeTrace.color } as CSSProperties}>
           <i aria-hidden="true" />
           <div>
-            <small>Active source-to-observable path</small>
+            <small>Reading path · solid / dashed meanings retained</small>
             <strong>{activeTrace.label}</strong>
           </div>
           <button
@@ -932,6 +952,7 @@ export default function AtlasExperience() {
             <button type="button" onClick={startGuided}>Begin the guided descent <Icon name="arrow" /></button>
             <button type="button" onClick={() => { setIntroOpen(false); setMode("explore"); selectNode("global-closure"); }}>Explore freely</button>
           </div>
+          <button className="atlas-measurement-entry" type="button" onClick={() => { setIntroOpen(false); setMode("explore"); selectNode("measurement-programme"); }}>New · Quantum Measurement: two constitutive completions <Icon name="arrow" /></button>
           <dl>
             <div><dt>{atlasStats.chapters}</dt><dd>canonical chapters</dd></div>
             <div><dt>{atlasStats.equationTags.toLocaleString()}</dt><dd>equation tags</dd></div>

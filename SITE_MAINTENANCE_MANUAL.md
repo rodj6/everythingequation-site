@@ -12,6 +12,7 @@ A statically generated Next.js 16 (App Router) site presenting **Shadow
 Theory** as the public framework, with:
 
 - the seven canonical papers (Papers 1–7, published 2026-07-15) as the controlling public authority: Papers 1–6 are the source–readout mathematics, Paper 7 the Randall–Sundrum physical witness;
+- the Version 2 Quantum Measurement programme (2026-09-15): a complete integrated monograph and two separate companion publications, each controlling its own constitutive claims;
 - the superseded June 2026 six-paper canonical stack, preserved as publication history (category: superseded);
 - the historical Everything Equation / Tier-0 era papers as an archive;
 - an open-problem research programme with explicit research targets and publication routes;
@@ -172,9 +173,88 @@ complete web edition:
   and version in `src/config/site.ts`, and reconvert the chapters from the new
   LaTeX source rather than editing the MDX in place.
 
+## 5c. Quantum Measurement programme and complete web editions
+
+The September 2026 Version 2 publications are a separate programme from the
+fixed TOE Version 1.0 monograph:
+
+| Work | Web edition | DOI |
+| --- | --- | --- |
+| Integrated quantum monograph | `/quantum-measurement/monograph` | `10.5281/zenodo.22774584` |
+| Deterministic pilot medium | `/quantum-measurement/pilot-medium` | `10.5281/zenodo.22774634` |
+| Massive configuration completion | `/quantum-measurement/massive-configuration` | `10.5281/zenodo.22774739` |
+
+- **Identity:** `src/config/quantum.ts` owns title, subtitle, author, version,
+  source date, DOI, record URL, paper slug and download paths. `content/papers.yaml`
+  holds the three branch-record IDs, summaries, roles and problem associations.
+  `src/lib/registry.ts` resolves their identity from the config, ahead of YAML and
+  remote cache data. This also makes builds independent of Zenodo availability.
+- **Original downloads:** `public/publications/quantum-measurement/{id}.pdf` and
+  `{id}.tex` are the supplied original files; preserve their bytes. `{id}.md` is
+  the complete derived Markdown edition. Never silently revise a frozen publication.
+- **Conversion:** `scripts/convert-quantum.mjs` owns conversion and the generated
+  reading inventory. `src/lib/quantum.ts` supplies `listQuantumDocuments()` and
+  `listQuantumChapters()` to the reader and machine endpoints. Regenerate when
+  correcting conversion, then inspect the source audit and changed pages. A new
+  scientific publication version must retain its own date, DOI and provenance.
+  `npm run convert:quantum` uses the committed original TeX files by default;
+  `npm run convert:quantum -- --source-dir ..` explicitly imports supplied originals
+  from another directory. Normal builds read the committed pre-rendered HTML and
+  do not reconvert. Details live in [content/quantum/README.md](content/quantum/README.md).
+- **Reading routes:** the quantum hub has full chapter navigation; companion
+  routes retain independent proof and citation sequences. Source-label anchors
+  must survive conversion. The source comparison inventory and reading metadata
+  are exposed at `/quantum-measurement/manifest.json`.
+- **Discovery:** navigation, the homepage reading feature, paper catalogue,
+  research map, framework summary, About and research-status pages link the
+  programme. Sitemap, Atom feed, `llms.txt` and `graph.json` are generated from
+  the same publication config and reading inventory.
+- **Research graph:** the Atlas `relationship` field distinguishes mathematical
+  connections inside a declared constitution from conceptual context. The
+  values are `mathematical` and `conceptual`, shown as solid and dashed lines.
+  Nodes may declare `provenance` and `readingLinks: [{label, href}]`; the machine
+  graph exposes both. The crawlable field guide at
+  `/atlas/quantum-measurement` complements the interactive programme nodes.
+- **Historical route:** `/problems/quantum-measurement` leads with current results
+  and then explicitly labels the original Tier-0 notes. The old body remains
+  intact; explicit anchors preserve every link in its original contents list.
+  Keep those links and the `#historical-notes` provenance entry point stable.
+
+**Scientific copy contract:** explain the pilot's controlled Bell-path limit
+separately from the massive theory's guidance/equilibrium premises. Do not treat
+source/readout incompleteness as a derivation of either constitution. Distinguish
+event histories, outcome distributions and physical archives. State the finite
+graph, horizon, resource and storage qualifications alongside the relevant
+claims. Keep mathematical internal resolution, independent assessment and
+empirical verification separate. Companion treatments must retain their own
+source statements and must never be merged into an invented theorem.
+
+**Verification after conversion or metadata edits:** run the production build;
+compare source structures and counts with converted content; inspect equations,
+proofs, citations, references and tables in the browser; check original downloads
+and all three DOI links; inspect desktop and mobile menus, full-text navigation,
+the Atlas and preserved history anchors. Check `llms.txt`, sitemap, feed and
+graph for all three publications. Keep the existing TOE edition functional.
+
+**Independent content check:** run `npm run audit:quantum`, or
+`npm run audit:quantum -- --source-dir ..` to compare separately supplied originals.
+The checker uses its own DOM traversal and source-pattern checks; it does not
+import the converter's TeX parser. It verifies original-file hashes, proof and
+statement counts, all source labels and bibliography keys, duplicate IDs,
+internal quantum reference targets, KaTeX errors and embedded TeX annotations.
+The committed Version 2 run additionally checks 651 contiguous plain proof-prose
+passages (at least 60 characters and nine words), excluding math and TeX commands.
+All were retained in their corresponding proof blocks. The full result is
+`content/quantum/independent-audit.json`. The script exits unsuccessfully on a
+failed check. This sampling is not a verification of theorem correctness or
+semantic equivalence of every equation, and it does not replace browser inspection
+or the converter's full source-word and structure checks. `parse5` is declared as
+a direct development dependency for both conversion and independent auditing.
+
 ## 6. How to update a Zenodo DOI or record ID
 
-When you upload a paper (or a new version) to Zenodo:
+When you upload a paper (or a new version) to Zenodo (for the Quantum Measurement
+publications, update `src/config/quantum.ts` instead; see §5c):
 
 1. In `content/papers.yaml`, set the paper's `zenodo:` field to the numeric
    record ID (from the record URL, e.g. `18081205`), and/or set `doi:` to the
@@ -242,6 +322,12 @@ Edit the MDX file. Optionally add `updated: "2026-09-01"` to the frontmatter
 result enters the public framework through its own paper or record, with
 declared assumptions, a reproducible method, support appropriate to the
 result, and an exact conclusion.
+
+Once a dedicated publication supplies internal constitutive results, use
+`maturity: constitutive-results` and make `target` a current status summary with
+the named scope and remaining research stages. This controls the card badge and
+machine-readable status. The quantum measurement page demonstrates reconciliation
+of published results with retained historical notes.
 
 ## 10. How to add a top navigation tab
 
@@ -454,3 +540,17 @@ Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
 - Reusable card styles: `.card-surface`, `.card-surface-hover`,
   `.section-label`, `.text-luminous` (defined in globals.css).
 - All animation respects `prefers-reduced-motion`.
+
+### Production verification and historical typesetting
+
+After building, start the local production server and run `npm run verify:quantum-site`.
+This checks all 55 quantum reading pages, source anchors, local links, downloadable
+publication bytes, chapter Markdown and machine endpoints. The optional base URL
+is passed after `--`. Results go to `tmp/quantum-site-verification.json`.
+See `QUANTUM_INTEGRATION_REVIEW.md` for the completed visual and interaction review.
+
+The preserved historical quantum notes retain their claims and stable links.
+Seven HTML-escaped inequality symbols inside mathematics were changed to equivalent
+LaTeX relation commands for correct KaTeX rendering. Their comparison table has a
+keyboard-accessible horizontal-scroll wrapper for narrow screens. These are
+presentation repairs, not revisions of the historical scientific claims.

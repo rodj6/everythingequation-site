@@ -209,6 +209,14 @@ export default async function FrameworkPage() {
         </div>
       </section>
 
+      <section aria-labelledby="measurement-framework-heading" className="mx-auto max-w-3xl">
+        <p className="section-label">From foundation to physical constitution</p>
+        <h2 id="measurement-framework-heading" className="mt-3 text-2xl font-bold tracking-tight">Quantum measurement: what the foundation supplies</h2>
+        <p className="mt-4 leading-relaxed text-mute">An observable state, a rule for actual events and an apparatus record answer different questions. Source–readout mathematics makes that distinction precise. To close a measurement theory, the new programme supplies interaction and preparation laws in addition to that mathematics.</p>
+        <p className="mt-4 leading-relaxed text-mute">The pilot-medium completion derives a controlled Bell-path limit from its bond, packet and prepared-gas mechanisms. The massive-configuration completion takes guidance and complete initial equilibrium as physical premises and builds a semibounded material apparatus with retained outputs and archives. These are separate constitutions with their own proofs and finite-domain conclusions.</p>
+        <div className="mt-5 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/quantum-measurement">Explore the measurement programme →</Link><Link href="/research-map#measurement-map-heading">See the dependency map →</Link></div>
+      </section>
+
       {/* Onward */}
       <section className="mx-auto max-w-3xl text-center">
         <div className="flex flex-wrap justify-center gap-3">

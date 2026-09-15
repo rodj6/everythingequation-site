@@ -56,6 +56,8 @@ export interface AtlasNode {
   recovery: string[];
   gate?: string;
   atlasNote?: string;
+  provenance?: string;
+  readingLinks?: { label: string; href: string }[];
 }
 
 export interface AtlasEdge {
@@ -64,6 +66,7 @@ export interface AtlasEdge {
   to: string;
   label: string;
   kind: "descent" | "interface" | "trace" | "recovery" | "feedback";
+  relationship: "mathematical" | "conceptual";
   map: string;
   domain: string;
   codomain: string;
@@ -115,7 +118,193 @@ const eq = (
   interpretation: string,
 ): AtlasEquation => ({ tag, title, tex, interpretation });
 
+const measurementNode = (
+  node: Pick<AtlasNodeDefinition, "id" | "label" | "shortLabel" | "position" | "summary" | "description" | "mathematicalType" | "domain" | "codomain" | "equations" | "upstream" | "downstream"> & Partial<AtlasNodeDefinition>,
+): AtlasNodeDefinition => ({
+  eyebrow: "Quantum Measurement · Version 2",
+  tier: "tier1",
+  kind: "sector",
+  lod: 1,
+  cameraDistance: 6,
+  color: "#78e4d2",
+  chapter: "Quantum Measurement · Two constitutive completions",
+  section: "Integrated monograph and companion papers · 15 September 2026",
+  regularity: "Fixed finite programme and physical horizon; the two constitutions have distinct regularity hypotheses",
+  covariance: "Only the relabelling, gauge and coordinate conventions declared in the cited construction",
+  units: "Physical time; ℏ retained; each apparatus fixes its own length, mass and energy scales",
+  stateVariables: "All systems that can return: source, apparatus, records, fuel, loss products, reset receivers and inaccessible reference",
+  boundaryClass: "The complete retained experiment and initial preparation are fixed before resource limits",
+  branchDomain: "An internal resolution within the cited physical constitution; no empirical confirmation is claimed",
+  approximationOrder: "Use the finite-resource comparison in the cited theorem; no unstated common asymptotic limit",
+  errorNorm: "Complete path, retained output and historical corruption errors are distinct quantities",
+  provenance: "Jeremy Rodgers · Independent Researcher · Integrated monograph, version 2 · 15 September 2026",
+  readingLinks: [{ label: "Programme overview and reading paths", href: "/quantum-measurement" }],
+  ...node,
+});
+
+export const measurementNodeIds = ["measurement-programme", "measurement-source", "pilot-medium", "bell-event-law", "massive-configuration", "born-statistics", "material-records"] as const;
+
+const measurementNodes: AtlasNodeDefinition[] = [
+  measurementNode({
+    id: "measurement-programme",
+    label: "Quantum Measurement · Two completions",
+    shortLabel: "Measurement",
+    position: [-12, 4.5, 7.7],
+    color: "#bca5ff",
+    summary: "Two explicit constitutions connect a complete source to actual histories, outcome statistics and physical records.",
+    description: "The pilot medium yields a controlled discrete Bell-path limit. The massive configuration theory postulates continuous guidance and complete initial equilibrium, then constructs material measurement chains. Their hypotheses are separate. Source/readout incompleteness identifies a missing description; it does not supply either interaction laws or preparation statistics.",
+    mathematicalType: "Programme map of two distinct assumption-to-prediction chains",
+    domain: "Declared source dynamics, physical constitution and complete preparation",
+    codomain: "Actual paths, Born-compatible outputs and retained material histories within each constitution",
+    equations: [],
+    upstream: ["quantum"],
+    downstream: ["measurement-source", "pilot-medium", "massive-configuration"],
+    gate: "Internal resolution means closure under named physical assumptions. External verification and broader domains remain research tasks.",
+    readingLinks: [
+      { label: "Explore the programme", href: "/quantum-measurement" },
+      { label: "Read the complete monograph", href: "/quantum-measurement/monograph" },
+      { label: "Atlas guide to the two constructions", href: "/atlas/quantum-measurement" },
+    ],
+  }),
+  measurementNode({
+    id: "measurement-source",
+    label: "Source dynamics and individual currents",
+    shortLabel: "Source currents",
+    position: [-14.8, 3.7, 9.9],
+    summary: "A coherent source supplies individual currents. A population continuity equation still leaves the actual event law undetermined.",
+    description: "In the pilot construction a primitive canonical bond action and its binary interaction premises fix edge torques. Conservative exporters turn the individual currents into signed packets. Net population change alone allows balanced surplus traffic and different waiting laws; those are resolved only by the additional physical mechanisms and initial ensemble.",
+    mathematicalType: "Finite Hermitian source dynamics and antisymmetric individual edge currents",
+    domain: "Fixed ordinary configuration graph, coherent amplitudes and an admitted Hermitian programme",
+    codomain: "Weights w and individual currents J with a continuity equation",
+    equations: [eq("Pilot · eq:target", "Individual current", String.raw`J_{nm}=\frac{2}{\hbar}\operatorname{Im}(\Psi_n^*H_{nm}\Psi_m),\qquad w_m=|\Psi_m|^2`, "J is current into n from m. A current is not a sample event count and does not, by itself, determine a conditional jump law.")],
+    upstream: ["canonical-field", "measurement-programme"],
+    downstream: ["pilot-medium", "bell-event-law"],
+    gate: "The bond-action and interaction assumptions belong to the pilot constitution; they are not consequences of source/readout incompleteness.",
+    readingLinks: [
+      { label: "Canonical edge ownership and export", href: "/quantum-measurement/pilot-medium#sec:source" },
+      { label: "Source, readout and the statistical target", href: "/quantum-measurement/monograph/source-readout-and-the-statistical-target" },
+    ],
+  }),
+  measurementNode({
+    id: "pilot-medium",
+    label: "Pilot medium · Declared interactions",
+    shortLabel: "Pilot medium",
+    position: [-16.8, 1.3, 10.4],
+    color: "#74e3cc",
+    summary: "Signed export, independently prepared spatial contacts, finite recombination and residence tracking supply the Bell limit.",
+    description: "Under P1–P4, deterministic contacts are drawn from the initial spatial gas rather than resampled during the run. Recombination suppresses opposite-packet surplus. Calibrated carrier populations supply the residence denominator. Finite members retain memory and controlled deviations; the theorem compares complete tagged paths in unchanged physical time on a fixed graph and horizon.",
+    mathematicalType: "Deterministic hybrid material constitution with an independently prepared ensemble",
+    domain: "P1–P4; fixed graph and programme; bounded-variation currents; calibrated census; independent finite gas; retained resource budgets",
+    codomain: "A finite material process whose tagged-path law approaches the minimal Bell process",
+    equations: [eq("Pilot · eq:mainerror", "Three comparisons, one complete path space", String.raw`d_{\rm TV}\!\left(\operatorname{Law}(Q^N_{[0,T]}),\mathbb P^{\rm B}_{H,\nu,[0,T]}\right)\le\Delta_N=\frac{(R_NT)^2}{M_N}+\sum_e\frac{\kappa_e\mu_NB_e}{2a_e}+\epsilon_{\rm kin}(N,T)`, "The terms bound finite-gas history error, finite recombination error and signed-queue kinetic error. The cited theorem states all budgets and scales.")],
+    upstream: ["measurement-programme", "measurement-source"],
+    downstream: ["bell-event-law", "material-records"],
+    approximationOrder: "μN→∞, μN/N→0, (RNT)²/MN→0 and Σe κeμNBe/(2ae)→0, with calibrated initial census",
+    errorNorm: "Total variation on D([0,T],V); ΔN→0 at fixed graph, retained programme and physical horizon",
+    gate: "The finite device does not have an exact Bell law. Exact finite-resource Bell dynamics and a smooth realization of the entire hybrid source remain extensions.",
+    readingLinks: [
+      { label: "Pilot companion · complete Bell-path theorem", href: "/quantum-measurement/pilot-medium#thm:main" },
+      { label: "Integrated monograph · pilot limit", href: "/quantum-measurement/monograph/a-deterministic-pilot-medium-and-its-bell-limit#p:main" },
+    ],
+  }),
+  measurementNode({
+    id: "bell-event-law",
+    label: "The controlled Bell event law",
+    shortLabel: "Bell path law",
+    position: [-16.3, -1.5, 11.7],
+    color: "#7be6a5",
+    kind: "limit",
+    summary: "The positive current determines event direction; residence weight determines the rate; the theorem also fixes the complete conditional timing law.",
+    description: "Complete path convergence controls every measurable common stopped output, including reversals and null intervals. For an ideal history event of probability p>0, ΔN<p ensures a finite-model conditioning event and an error at most min(1,2ΔN/p). This is stronger than matching endpoints and does not claim uniform convergence on arbitrarily rare histories.",
+    mathematicalType: "Nonexplosive minimal Bell process on the common physical-time path space",
+    domain: "Pilot-medium hypotheses and tag law ν dominated by the initial coherent weight",
+    codomain: "Complete tagged jumps and natural conditional holding/transition laws",
+    equations: [
+      eq("Pilot · eq:target", "Minimal Bell rate", String.raw`\lambda^{\rm B}_{n\leftarrow m}(t)=\frac{[J_{nm}(t)]_+}{w_m(t)}`, "Defined on the positive-weight component. The existence and localization argument in the publication supplies continuation through nodes."),
+      eq("Pilot · eq:survival", "Conditional survival at X", String.raw`\Pr(\text{hold at }X\text{ to }t+h\mid\mathcal F_t)=\exp\!\left[-\int_t^{t+h}\sum_{Y\ne X}\frac{[J_{YX}(s)]_+}{w_X(s)}\,ds\right]`, "This is the limiting conditional law in the full ordinary-history filtration, conditional on the declared coherent preparation and programme."),
+    ],
+    upstream: ["measurement-source", "pilot-medium"],
+    downstream: ["born-statistics", "material-records"],
+    errorNorm: "Complete-path total variation ΔN; conditional bound min(1,2ΔN/p) only when p>0 and ΔN<p",
+    readingLinks: [{ label: "Full Bell limit, nodes and conditional histories", href: "/quantum-measurement/pilot-medium#sec:mainlimit" }],
+  }),
+  measurementNode({
+    id: "massive-configuration",
+    label: "Massive configuration · Guidance and equilibrium",
+    shortLabel: "Massive configuration",
+    position: [-11.9, 3.1, 13.7],
+    color: "#c2a4ff",
+    summary: "A separate continuum constitution uses Schrödinger dynamics, kinetic-momentum guidance and complete initial equilibrium.",
+    description: "All source contacts, recorders, fuel, reset receivers and the retained controller use one massive, semibounded material inventory. Actual coordinates move continuously; internal spin labels remain in the wave. Smooth traps write and protect records. A finite autonomous controller has stated output and archive-flux errors. The construction derives neither discrete Bell jumps nor a Bell waiting law.",
+    mathematicalType: "Continuous configuration flow in a smooth finite nonrelativistic material theory",
+    domain: "Universal spinor Schrödinger inventory; the stated guidance law; complete initial |Ψ|² equilibrium and finite independent ready stock",
+    codomain: "Conservative actual motion, pointer outputs and retained material histories",
+    equations: [
+      eq("Massive · eq:guidance", "Postulated kinetic-momentum guidance", String.raw`\dot Q_k=\frac{j_k}{\rho}(Q,t),\qquad j_k=\frac{\hbar}{m_k}\operatorname{Im}(\Psi^\dagger\partial_k\Psi),\quad\rho=\Psi^\dagger\Psi`, "This is an independent physical law. Equivariance is a consequence within its regularity domain, not a uniqueness argument for the velocity."),
+      eq("Massive · eq:equilibrium", "Postulated complete initial equilibrium", String.raw`\Pr(dQ_0\mid c)=\|\Psi_0^c(Q_0)\|_{I,R}^{2}\,dQ_0`, "The complete configuration, including retained systems and reference, is prepared in equilibrium. No later reset is assumed to create a fresh microscopic seed."),
+    ],
+    upstream: ["measurement-programme"],
+    downstream: ["born-statistics", "material-records"],
+    regularity: "Smooth finite nonsingular potentials; self-adjoint semibounded realizations; current-integrability estimates for almost-sure flow through the nodal problem",
+    errorNorm: "Retained-wave/output comparison plus a separate absolute archive-flux bound for historical corruption",
+    gate: "The guidance and equilibrium premises are not derived from incompleteness. Equivariant rivals can keep reliable records while having mutually singular microscopic paths.",
+    readingLinks: [
+      { label: "Massive companion · physical constitution", href: "/quantum-measurement/massive-configuration#sec:constitution" },
+      { label: "Massive companion · exact pointer writer", href: "/quantum-measurement/massive-configuration#prop:writer" },
+      { label: "Integrated monograph · massive event law", href: "/quantum-measurement/monograph/a-massive-configuration-constitution-and-its-event-law" },
+    ],
+  }),
+  measurementNode({
+    id: "born-statistics",
+    label: "Born statistics and preparation",
+    shortLabel: "Born statistics",
+    position: [-13.1, -0.4, 15.6],
+    color: "#ffd081",
+    kind: "observable",
+    tier: "observable",
+    summary: "Both constitutions reproduce their stated quantum output statistics through explicit ensemble assumptions and complete retained experiments.",
+    description: "The pilot Bell law preserves the coherent weights when the tagged initial law is w(0); the path theorem also allows dominated nonequilibrium tag laws, which are not automatically Born statistics. The massive flow transports its postulated complete |Ψ|² initial density. Null outcomes, loss products, retained receivers and inaccessible references remain in the output comparison.",
+    mathematicalType: "Output probabilities under the stated initial ensemble and material readout",
+    domain: "Pilot equilibrium tag law or massive complete initial equilibrium, plus the apparatus and programme hypotheses",
+    codomain: "Complete output distributions and positive-probability conditional laws",
+    equations: [eq("Born · ensemble distinction", "Two equilibrium statements", String.raw`\Pr(Q_t=m)=w_m(t)\quad\text{(Bell, if }\nu=w(0)\text{)},\qquad\rho_t=\Psi_t^\dagger\Psi_t\quad\text{(massive equilibrium)}`, "The two expressions refer to distinct discrete and continuous ontologies. Their preparation assumptions cannot be exchanged or inferred from a reduced readout.")],
+    upstream: ["bell-event-law", "massive-configuration"],
+    downstream: ["quantum"],
+    gate: "Matching Born outputs does not uniquely determine microscopic dynamics; endpoint probabilities, complete paths and faithful records are different conclusions.",
+    readingLinks: [
+      { label: "Pilot preparation and complete path theorem", href: "/quantum-measurement/pilot-medium#thm:main" },
+      { label: "Massive equilibrium premise", href: "/quantum-measurement/massive-configuration#ax:eq" },
+      { label: "Massive rival processes and limits of uniqueness", href: "/quantum-measurement/massive-configuration#sec:rivals" },
+    ],
+  }),
+  measurementNode({
+    id: "material-records",
+    label: "Physical records and retained histories",
+    shortLabel: "Material histories",
+    position: [-12.8, -3.7, 12.9],
+    color: "#f0bf8a",
+    kind: "observable",
+    tier: "observable",
+    summary: "A reliable endpoint must also be a faithful copy of a specified actual past. Each construction proves that extra requirement separately.",
+    description: "For the limiting Bell process on the pilot programme’s finite clock graph in initial equilibrium, monomial copy cuts are crossed once on the first pass. Finite pilots inherit controlled record/history error through path comparison; clock recurrence limits storage. In the massive programme, stationary conditional traps protect archives and absolute surface-current bounds control historical corruption. Both retain finite fuel, pending and loss states, reset receivers, an inaccessible reference and noncommuting continuation.",
+    mathematicalType: "Actual sampled-history faithfulness and finite complete measurement-chain closure",
+    domain: "The specified pilot first-pass clock programme or smooth massive writer/controller programme, with all receiving systems retained",
+    codomain: "Copied past labels and complete continued outputs with separate accuracy and history guarantees",
+    equations: [],
+    upstream: ["pilot-medium", "bell-event-law", "massive-configuration"],
+    downstream: ["quantum-records"],
+    gate: "The programme's apparatus records connect conceptually to the Atlas objective archive. Broader redundancy, persistence and geometric reconstruction require the existing archive criteria as well.",
+    readingLinks: [
+      { label: "Pilot · faithful monomial copy cut", href: "/quantum-measurement/pilot-medium#mat:copy" },
+      { label: "Pilot · finite material-path transfer", href: "/quantum-measurement/pilot-medium#mat:transfer" },
+      { label: "Massive · complete chain closure", href: "/quantum-measurement/massive-configuration#thm:closure" },
+      { label: "Monograph · autonomous pilot records", href: "/quantum-measurement/monograph/autonomous-material-records-in-the-pilot-theory#p:chapter-records" },
+    ],
+  }),
+];
+
 const atlasNodeDefinitions: AtlasNodeDefinition[] = [
+  ...measurementNodes,
   {
     id: "omega",
     label: "Ω · Source substrate",
@@ -697,7 +886,7 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
       ),
     ],
     upstream: ["spectral-spine", "route-effective"],
-    downstream: ["coherent-face", "dissipative-face", "field-fingerprint", "quantum", "qft", "matter-finite-geometry"],
+    downstream: ["coherent-face", "dissipative-face", "field-fingerprint", "quantum", "qft", "matter-finite-geometry", "measurement-source"],
   },
   {
     id: "coherent-face",
@@ -894,7 +1083,7 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     section: "§1–§10",
     summary: "Normal states, effects, instruments and statistically compatible source-prepared outcome selection.",
     description:
-      "The weighted spine defines a normal quantum state. Effects generate Born probabilities; instruments generate conditional states; a source-prepared selector realizes outcomes without changing those statistics or permitting future-setting dependence.",
+      "In the existing framework account, the weighted spine defines a normal quantum state, effects generate Born probabilities and instruments generate conditional states. Its source-prepared selector assumes a transport matching those statistics. The September 2026 measurement programme separately constructs a pilot-medium Bell limit and a massive guidance theory, each with named interaction and preparation premises.",
     mathematicalType: "Normal operator-algebraic probability and instrument theory",
     domain: "Quantum-capable field face or detector-local QFT algebra",
     codomain: "Alternatives, probabilities, instruments and selected outcome preforms",
@@ -921,8 +1110,13 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
         "The selector realizes the conditional quantum law while remaining independent of future settings.",
       ),
     ],
-    upstream: ["canonical-field", "coherent-face", "dissipative-face", "qft"],
-    downstream: ["quantum-records", "global-closure", "recovery-classical"],
+    upstream: ["canonical-field", "coherent-face", "dissipative-face", "qft", "born-statistics"],
+    downstream: ["quantum-records", "global-closure", "recovery-classical", "measurement-programme"],
+    provenance: "The Q5 equations retain the earlier Atlas framework construction. The 15 September 2026 publications supply distinct constitutive measurement theories.",
+    readingLinks: [
+      { label: "Current Quantum Measurement programme", href: "/quantum-measurement" },
+      { label: "The separate TOE web edition", href: "/monograph/quantum-theory-and-relativistic-qft" },
+    ],
   },
   {
     id: "quantum-records",
@@ -939,7 +1133,7 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     section: "§11–§21",
     summary: "Actual deposition, distinguishability, redundant encoding, persistence and objective archives.",
     description:
-      "A quantum alternative becomes an objective record only after physical deposition into a stable pointer sector, distinguishable support, redundant independently accessible fragments and persistence. The predecessor-closed archive then supplies the events from which pregeometry is reconstructed.",
+      "The existing Atlas archive requires physical deposition, distinguishable support, redundant independently accessible fragments and persistence. The new measurement programme supplies concrete finite material histories in two constitutions. Its faithful-copy theorems do not automatically establish every objective-archive or geometric reconstruction criterion; that connection is marked conceptual.",
     mathematicalType: "Semicausal deposition instruments and predecessor-closed record archive",
     domain: "Selected quantum outcomes and record-support channels",
     codomain: "Objective records and archive order",
@@ -960,8 +1154,12 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
         "Independent readers agree without disturbing the pointer algebra.",
       ),
     ],
-    upstream: ["quantum", "dissipative-face"],
+    upstream: ["quantum", "dissipative-face", "material-records"],
     downstream: ["pregeometry", "thermodynamics", "time", "observers", "global-closure", "recovery-classical", "observable-record"],
+    readingLinks: [
+      { label: "New material histories in the Atlas", href: "/atlas/quantum-measurement#material-records" },
+      { label: "TOE quantum–record–geometry bridge", href: "/monograph/the-quantum-record-geometry-bridge" },
+    ],
   },
   {
     id: "pregeometry",
@@ -2091,12 +2289,14 @@ const edge = (
   kind: AtlasEdge["kind"],
   map: string,
   verifier: string,
+  relationship: AtlasEdge["relationship"] = "mathematical",
 ): AtlasEdge => ({
   id: `${from}--${to}`,
   from,
   to,
   label,
   kind,
+  relationship,
   map,
   domain: atlasNodeMap.get(from)?.label ?? from,
   codomain: atlasNodeMap.get(to)?.label ?? to,
@@ -2112,7 +2312,37 @@ const edge = (
   partial: kind === "descent" || kind === "interface" || kind === "recovery",
 });
 
+const measurementEdge = (
+  from: string,
+  to: string,
+  label: string,
+  relationship: AtlasEdge["relationship"],
+  map: string,
+  validityDomain: string,
+): AtlasEdge => ({
+  ...edge(from, to, label, "interface", map, validityDomain, relationship),
+  linearization: relationship === "conceptual" ? "Not applicable: this link asserts no mathematical map or implication" : "The cited statement is a path-law, current or output comparison; no additional differentiable map is asserted",
+  adjoint: "No adjoint is asserted for this research relationship",
+  errorModel: relationship === "conceptual" ? "No transferred estimate: the linked constructions retain their own assumptions" : "Only the norm, output space, finite horizon and positive-probability conditions in the cited publication apply",
+  partial: true,
+});
+
 export const atlasEdges: AtlasEdge[] = [
+  measurementEdge("quantum", "measurement-programme", "operational context", "conceptual", "Framework alternatives ↔ constitutive measurement programme", "Source/readout distinctions motivate the programme; they do not derive its physical laws"),
+  measurementEdge("canonical-field", "measurement-source", "source-dynamics context", "conceptual", "Canonical field ↔ declared finite coherent source", "The finite source realization and interaction catalogue must be supplied; this is not a derivation from the canonical field alone"),
+  measurementEdge("measurement-programme", "measurement-source", "identify the source question", "conceptual", "Programme → individual currents", "A reading connection distinguishing source evolution from event selection"),
+  measurementEdge("measurement-programme", "pilot-medium", "pilot constitution", "conceptual", "Programme → P1–P4 and preparation", "This arrow selects one physical constitution; it does not derive its axioms"),
+  measurementEdge("measurement-programme", "massive-configuration", "massive constitution", "conceptual", "Programme → guidance and complete equilibrium", "Independent material, motion and initial-ensemble postulates"),
+  measurementEdge("measurement-source", "pilot-medium", "conservative signed export", "mathematical", "Bond currents → signed packets", "Pilot P1–P4, canonical bond action and conservative exporter discrepancy/budget hypotheses"),
+  measurementEdge("measurement-source", "bell-event-law", "target current relation", "conceptual", "J and w specify the proposed Bell target", "The formula alone does not select balanced traffic or a conditional waiting law"),
+  measurementEdge("pilot-medium", "bell-event-law", "complete-path limit", "mathematical", "TV(Law(QN), PB) ≤ ΔN → 0", "Pilot thm:main; fixed finite graph/programme/horizon, independent gas, calibrated census, dominated tag and declared resource scales"),
+  measurementEdge("pilot-medium", "material-records", "autonomous material programme", "mathematical", "Finite clock + monomial copy cuts + path comparison", "Pilot mat:copy and mat:transfer; first-pass sampling, retained resources and recurrence-limited storage"),
+  measurementEdge("bell-event-law", "born-statistics", "equilibrium transport", "mathematical", "ν = w(0) ⇒ Law(Qt) = w(t)", "Born-weight conclusion requires the equilibrium tagged initial law, beyond domination alone"),
+  measurementEdge("bell-event-law", "material-records", "transfer stopped outputs", "mathematical", "Complete-path TV bounds measurable material outputs", "The specific retained material programme and faithful-copy proof are required; conditioning requires positive probabilities"),
+  measurementEdge("massive-configuration", "born-statistics", "complete equivariance", "mathematical", "ρ0 = |Ψ0|² ⇒ ρt = |Ψt|²", "Massive ax:motion, ax:eq and lem:exist in the smooth finite nonsingular inventory"),
+  measurementEdge("massive-configuration", "material-records", "writer and archive protection", "mathematical", "Massive writer + controller + absolute archive-flux bound", "Massive prop:writer and thm:closure; retained null/loss resources, pre-reset error, fixed historical archive and finite horizon"),
+  measurementEdge("born-statistics", "quantum", "operational probability comparison", "conceptual", "Concrete output laws ↔ framework instrument probabilities", "Matching output statistics is not uniqueness of the physical event law"),
+  measurementEdge("material-records", "quantum-records", "from faithful copies to archive criteria", "conceptual", "Material histories ↔ objective archive requirements", "Redundancy, independent accessibility, persistence and geometric reconstruction still require their own stated criteria"),
   edge("omega", "tier0-law", "lawful closure", "descent", "μLΩ", "least-fixed-point and no-free-extension gate"),
   edge("tier0-law", "realization-seed", "prepare realization", "descent", "Jreal", "source lineage and aperture-preparation certificate"),
   edge("realization-seed", "aperture", "enter aperture", "descent", "A₁/₂ᵃ", "face domain and regularity record"),
@@ -2209,6 +2439,24 @@ export const atlasEdges: AtlasEdge[] = [
 
 export const observableRoutes: ObservableRoute[] = [
   {
+    id: "pilot-measurement",
+    label: "Follow the pilot-medium construction",
+    shortLabel: "Pilot medium",
+    color: "#74e3cc",
+    description: "Read from source context into the independently specified pilot constitution, its complete Bell-path limit and retained material histories. Dashed links are conceptual; solid links carry the stated mathematical dependence.",
+    nodeIds: ["omega", "tier0-law", "realization-seed", "aperture", "spectral-spine", "canonical-field", "measurement-source", "pilot-medium", "bell-event-law", "material-records"],
+    output: "Controlled Bell paths and faithful finite records",
+  },
+  {
+    id: "massive-measurement",
+    label: "Follow the massive-configuration construction",
+    shortLabel: "Massive configuration",
+    color: "#c2a4ff",
+    description: "Enter the separate material, guidance and equilibrium constitution, then follow the massive writer to protected retained histories. Initial equilibrium and the guidance law are physical premises.",
+    nodeIds: ["omega", "tier0-law", "realization-seed", "aperture", "spectral-spine", "canonical-field", "quantum", "measurement-programme", "massive-configuration", "material-records"],
+    output: "Continuous actual motion and protected archives",
+  },
+  {
     id: "alpha",
     label: "Trace the fine-structure observable",
     shortLabel: "Fine structure",
@@ -2231,7 +2479,7 @@ export const observableRoutes: ObservableRoute[] = [
     label: "Trace an objective record",
     shortLabel: "Measurement",
     color: "#7ee6d8",
-    description: "Follow one quantum alternative through Born weighting, source-prepared selection, physical deposition, spectrum broadcasting and objective archive formation.",
+    description: "Follow the earlier Atlas framework account through its assumed Born-compatible selector, deposition and objective archive criteria. The separate Pilot medium and Massive configuration traces expose the September 2026 constitutive mechanisms.",
     nodeIds: ["omega", "tier0-law", "realization-seed", "aperture", "spectral-spine", "canonical-field", "dissipative-face", "quantum", "quantum-records", "observers", "global-closure", "observable-record"],
     output: "Objective archive event",
   },
@@ -2311,6 +2559,12 @@ export const guidedTour = [
   "coherent-face",
   "dissipative-face",
   "quantum",
+  "measurement-programme",
+  "pilot-medium",
+  "bell-event-law",
+  "massive-configuration",
+  "born-statistics",
+  "material-records",
   "quantum-records",
   "pregeometry",
   "gravity",

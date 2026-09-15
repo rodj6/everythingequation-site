@@ -1,0 +1,982 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,bm}
+\usepackage[a4paper,margin=25mm,headheight=14pt]{geometry}
+\usepackage{graphicx,booktabs,longtable,tabularx,array,enumitem,xcolor}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=blue!40!black,citecolor=blue!40!black,urlcolor=blue!40!black]{hyperref}
+\usepackage{bookmark,fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Event laws and complete material records}\fancyhead[R]{\small Version 2}\fancyfoot[C]{\thepage}
+\setlength{\emergencystretch}{3em}
+\setlist{itemsep=3pt,topsep=5pt}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}\newtheorem{assumption}[theorem]{Constitutive assumption}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ket}[1]{|#1\rangle}\newcommand{\bra}[1]{\langle#1|}
+\newcommand{\tr}{\operatorname{tr}}\newcommand{\E}{\mathbb E}
+\newcommand{\Prb}{\mathbb P}\newcommand{\TV}{d_{\rm TV}}
+\newcommand{\id}{\operatorname{id}}\newcommand{\dd}{\,\mathrm d}
+\newcommand{\cH}{\mathcal H}\newcommand{\cS}{\mathcal S}
+\newcommand{\norm}[1]{\left\|#1\right\|}\newcommand{\pos}[1]{[#1]_+}
+\newcommand{\Ncdf}{\mathsf F}\newcommand{\Ntail}{\overline{\mathsf F}}
+\hypersetup{pdftitle={A Massive Configuration Completion of the Quantum Measurement Programme},pdfauthor={Research programme of Jeremy Rodgers},pdfsubject={Version 2; complete retained-output and archive-history bounds in a separate massive constitution}}
+\title{%
+  \bfseries A Massive Configuration Completion\\
+  of the Quantum Measurement Programme\\[6mm]
+  {\large Event timing, semibounded material records, retained resources,\\
+  and an autonomous finite-horizon realization}
+}
+
+\author{%
+  Jeremy Rodgers\thanks{Website:
+  \href{https://everythingequation.com}{everythingequation.com}}\\
+  \small Independent Researcher
+}
+
+\date{%
+  15 September 2026\\[2mm]
+  \small Version 2
+}
+
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct a semibounded material realization of a complete finite quantum measurement chain within a massive-configuration theory. Its physical premises are the universal spinor Schr\"odinger inventory, the Bohmian kinetic-momentum guidance law and complete initial equilibrium with a finite independent ready stock. Smooth forced harmonic traps give exact physical-time pointer paths and null laws. Finite coherent reaction resources retain pending excitation, loss products, fuel and reset receivers. Stationary conditional traps protect actual earlier records through copying, reset and noncommuting continuation with an inaccessible reference.
+
+A retained massive clock realizes the programme autonomously. Weighted derivative estimates control complete retained-wave error and, separately, the absolute archive flux needed for historical faithfulness. The closure theorem includes pre-reset transfer error and applies Gaussian truncation only to the final retained-output comparator. We give complete proofs, a nontrivial finite example and explicit rival processes. An equivariant diffusion has mutually singular microscopic paths while retaining reliable macroscopic records, so successful records alone do not select the guidance law uniquely.
+
+The result is a constitutive completion with controlled finite-resource output and history errors on a finite nonrelativistic domain. It is separate from the pilot-medium completion's discrete Bell-path limit: no actual internal spin jumps or Bell waiting law are assumed or derived here. The calculated crossing-time law concerns the specified pointer; an additional timestamp instrument requires its own dynamics.
+
+\end{abstract}
+\tableofcontents
+\newpage
+
+\section{The massive constitution and its relation to event selection}
+\label{sec:frontier}
+The integrated monograph, version 2 \cite{Monograph}, develops two constitutive completions of the measurement programme. The present paper gives the massive-configuration construction as a self-contained argument. The companion pilot paper \cite{Pilot} derives a controlled discrete Bell-path limit under a different interaction catalogue and preparation assumptions. Each completion uses one compatible material constitution throughout its source, records, resources and continuation.
+
+For the original finite complete configurations, its target is
+\begin{equation}\label{eq:Bell}
+ J_{YX}=\frac{2}{\hbar}\operatorname{Im}(\Psi_Y^*H_{YX}\Psi_X),
+ \qquad \lambda^{\rm B}_{Y\leftarrow X}=\frac{\pos{J_{YX}}}{|\Psi_X|^2}.
+\end{equation}
+Selecting this discrete law requires individual edge-current realization, elimination of symmetric surplus traffic, and the complete conditional timing law. Earlier routes in the monograph establish the following conditional implications:
+\begin{enumerate}
+\item \textbf{Canonical kinetics.} Primitive binary additivity, endpoint gauge covariance and a common action unit fix bond torques. Conservative packet export then feeds a \emph{supplied complete additive Markov pair-reaction generator}. Scalar participation, absence of other reactions, calibrated populations, and the two-scale limit yield full tagged-path convergence. Gauge invariance alone allows the explicitly displayed loop-force bypass.
+\item \textbf{Relative entropy.} Expected individual edge matching, a neutral positive Markov reference, path-relative-entropy minimization, and a zero-background prescription already select the whole law, even from history-dependent candidates. The reference and the prescription are statistical physics, not consequences of ignorance.
+\item \textbf{Chambers.} Norm-squared volumes, rectified normalized portals, no other transfer, and fresh Poisson stirring already give the complete path limit, including nodes. Coherent daughters and adaptive readiness have their own premises. Finite stirring is itself an equivariant non-Bell theory.
+\item \textbf{MPBT.} The minimal positive-trace statement concerns the Jordan decomposition of \emph{expected} signed incidence. It neither equates a smooth current measure to a sample counting measure nor determines the conditional waiting law.
+\end{enumerate}
+The version 2 pilot completion replaces its comparison clocks and instantaneous cancellation by an independently prepared spatial gas and finite-speed packet recombination, with a controlled path limit \cite{Pilot}. That result retains its own physical premises. The massive construction below has a different ontology and does not use its event mechanism. The monograph also contains continuous guidance and a first-order translation detector; the latter is self-adjoint but unbounded below. Guidance, equivariance and effective branching have established provenance; the material construction here uses positive kinetic energy, confining traps and a retained controller.
+
+The advance here is a \emph{common massive, semibounded material construction}, including a retained autonomous controller and a history-protection estimate. It supplies the physical contacts through the very Hamiltonian that supplies motion. The source may have spin or other internal amplitudes, but an internal basis label is not an additional definite position or an independently jumping actual sector. Equation~\eqref{eq:Bell} therefore ceases to be a law required of that label. An experiment that can coherently read such a label must have a material pointer, which is included in the dynamics.
+
+\paragraph{Scope of the main result.}
+For a finite input system, arbitrary inaccessible reference, a finite resource bank, and a finite programme of coherent gates and material position records, we construct an exact autonomous dynamics. At any prescribed positive tolerance its record instrument and retained quantum output approximate the specified ideal finite instrument, and its physical records remain faithful to their earlier declarations with a stated error. No source-state copies, primitive Poisson clocks, irreversible collapse, or free mathematical path recorder are supplied. The needed initial equilibrium and velocity law are named physical axioms. These additional physical premises define the scope of the completion.
+
+\section{The complete constitution and its statistical provenance}
+\label{sec:constitution}
+Use finitely many massive coordinates $q\in\mathbb R^n$, a finite internal material space $\cH_I$ containing source, actuators, fuel, memories and spent products, and an inaccessible $R$. The complete state is
+\begin{equation}\label{eq:state}
+ (\Psi,Q),\qquad \Psi\in L^2(\mathbb R^n;\cH_I\otimes\cH_R),\quad
+ \norm{\Psi}=1,\quad Q\in\mathbb R^n.
+\end{equation}
+A quantum clock coordinate is appended in Section~\ref{sec:clock}. Coordinates of otherwise passive source particles can be included in confining ground states. Internal spin is part of $\Psi$; there is no extra actual spin assignment.
+
+\begin{assumption}[Universal material inventory]\label{ax:material}
+Every source contact, recorder, controller, protection device and reset receiver belongs to the same spinor Schr\"odinger inventory. Its admitted Hamiltonians are
+\begin{equation}\label{eq:H}
+ H(t)=-\sum_{k=1}^n\frac{\hbar^2}{2m_k}\partial_k^2+V(q,t),
+ \qquad V=V^\dagger,
+\end{equation}
+with self-adjoint semibounded realizations specified below. Every operation is identity on $R$. There is no additional classical device that reads a nonlinear function of a source ray without participating in this wave dynamics.
+\end{assumption}
+This last inventory statement is a physical restriction, not a theorem about every imaginable substance. It makes access and reaction compatible in this model: adding a contact changes $V$ and hence the wave controlling the actual motion. In particular a neutral ray meter from a different hybrid constitution cannot be appended without changing the theory.
+
+\begin{assumption}[Kinetic-momentum motion]\label{ax:motion}
+Physical material positions have velocity given by the local real kinetic momentum per unit mass:
+\begin{equation}\label{eq:guidance}
+ \dot Q_k(t)=v_k^\Psi(Q(t),t),\quad
+ v_k^\Psi=\frac{j_k}{\rho},\quad
+ \rho=\Psi^\dagger\Psi,\quad
+ j_k=\frac{\hbar}{m_k}\operatorname{Im}\Psi^\dagger\partial_k\Psi.
+\end{equation}
+The formula is used only where $\rho>0$. There are no further random displacements or circulation terms.
+\end{assumption}
+This is the standard Bohmian law, with established provenance \cite{BohmI,BohmII,DGZoperators}. Its independent physical content is differentiable material motion governed by wave kinetic momentum. For a scalar wave $\Psi=Re^{iS/\hbar}$ it says $m_kv_k=\partial_kS$. Separating the real Schr\"odinger equation gives
+\[
+ \partial_tS+\sum_k\frac{(\partial_kS)^2}{2m_k}+V
+ -\sum_k\frac{\hbar^2}{2m_k}\frac{\partial_k^2R}{R}=0.
+\]
+Its gradient determines acceleration along the flow. This is a concrete mechanical postulate; it does not minimize a graph traffic functional. Symmetry or continuity alone does not force it, as Section~\ref{sec:rivals} demonstrates.
+
+\begin{assumption}[Initial complete equilibrium]\label{ax:eq}
+Conditional on each supplied classical preparation description $c$, the full initial configuration law is
+\begin{equation}\label{eq:equilibrium}
+ \Prb(dQ_0\mid c)=\norm{\Psi_0^c(Q_0)}_{I,R}^2\,dQ_0.
+\end{equation}
+Fresh ready cells and the clock are supplied in specified product waves, independent of the unknown input. There is a finite stock. No subsequent reset is assumed to generate a fresh seed conditional on an arbitrarily exposed microscopic past.
+\end{assumption}
+This is the only stochastic/ensemble input in the adopted dynamics. Initial $Q$ and the deterministic flow generate every later probability. It is not derived from source/readout incompleteness, from equilibration, or from a typicality slogan. The equilibrium and conditional-wave literature distinguishes these issues \cite{DGZeq}. For example a real stationary wave has $v=0$, so an initially nonequilibrium distribution is stationary too. Universal dynamical equilibration is false in this class without additional hypotheses.
+
+\subsection{Self-adjointness, domains and nodes}
+The driven library uses scalar confining quadratics, affine coordinate terms with finite Hermitian coefficients, bounded smooth matrix potentials, and finitely many smooth time windows. On each fixed finite programme, all coefficients and their required derivatives are bounded. Completing the square bounds affine forces below. Finite internal gates are bounded. The resulting oscillator operator plus infinitesimally oscillator-bounded affine terms and bounded potentials is self-adjoint on the oscillator domain. Smooth vectors are preserved on finite intervals. One can verify the last assertion by commuting $q^\alpha\partial^\beta$ through the equation: scalar quadratics keep total order fixed, affine terms lower derivative order, and bounded smooth terms contribute only lower derivatives. Finite sums of Gaussian packets used below are such vectors.
+
+\begin{lemma}[Conservative motion through the nodal problem]\label{lem:exist}
+Suppose the wave is $C^2$ on each programme interval and
+\begin{equation}\label{eq:regularity}
+ \int_0^T\left(\norm{\partial_t\Psi_t}_2+
+       \sum_k\norm{\partial_k\Psi_t}_2^2\right)dt<\infty.
+\end{equation}
+For the smooth nonsingular inventory above, the guidance flow exists throughout $[0,T]$ for $\rho_0$-almost every initial position and pushes $\rho_0$ to $\rho_t$. It neither loses mass at a node nor reaches infinity in finite time with positive equilibrium probability.
+\end{lemma}
+\begin{proof}
+Direct differentiation using the Hermitian potential gives $\partial_t\rho+\sum_k\partial_kj_k=0$. On compact subsets of $\rho>0$, the locally smooth velocity has a unique flow and the continuity equation gives partial equivariance up to its exit. Under this killed flow, the position distribution is dominated by $\rho_t$.
+
+Expected distance travelled before exit is bounded by
+\[
+ \int_0^T\!\int |j|\,dq\,dt
+ \le C\int_0^T\sum_k\norm{\partial_k\Psi_t}_2dt<\infty.
+\]
+Escape to infinity would require infinite distance. To control nodes, along a surviving path differentiate $\log\rho$. Its expected total variation is bounded by
+\begin{align*}
+ \int_0^T\!\int\left(|\partial_t\rho|
+       +\frac{|j|\,|\nabla\rho|}{\rho}\right)dq\,dt
+ &\le\int_0^T\left(2\norm{\partial_t\Psi_t}_2
+                  +C\norm{\nabla\Psi_t}_2^2\right)dt<\infty.
+\end{align*}
+Here $|\nabla\rho|\le2|\Psi||\nabla\Psi|$ and $|j|\le C|\Psi||\nabla\Psi|$. Reaching a node while remaining in a bounded region would send $\log\rho$ to $-\infty$, which has probability zero by the preceding bound. Initial nodes have zero probability. Exhaust the local domains; there is no remaining loss of mass. Domination by the normalized density then becomes equality. Finitely many switches concatenate without a new random draw. This is the current-integrability argument underlying the general existence theorem of Teufel and Tumulka \cite{TT}; no theorem for arbitrary singular potentials is imported.
+\end{proof}
+The autonomous Hamiltonian below has an additional scalar free kinetic term and smooth bounded functions of the clock multiplying affine pointer operators. The same commutator estimates, now also including clock weights and derivatives, give smooth finite-moment evolution and \eqref{eq:regularity}. Its initial clock packet has finite momentum moments at each finite mass. Thus the lemma covers the \emph{complete} state, not just a reduced pointer.
+
+\subsection{The law on complete histories}
+Let $\Phi_{t,0}^\Psi$ be the almost-sure flow. The complete path measure is explicitly
+\begin{equation}\label{eq:pathlaw}
+ \Prb(A)=\int 1_{\{(\Phi_{t,0}^\Psi(q))_{0\le t\le T}\in A\}}
+                   \rho_0(q)\,dq .
+\end{equation}
+Continuous path space is standard Borel, so regular conditional laws for a finite or countably generated record history exist. For any past event $B$ of positive probability, the conditional future is the normalized restriction of the initial integral to its preimage under the flow. Given the complete initial state the future is deterministic. Given only coarse past records it is usually history dependent. Predictable crossing times need not have a compensator absolutely continuous in $dt$. No Bell intensity, Markov hazard or exponential threshold is asserted in this filtration.
+
+Where the \emph{pointwise} current vanishes for an interval, positions are fixed. Current reversal reverses the corresponding instantaneous velocity, with its accumulated initial-position information retained. Nodes are handled by Lemma~\ref{lem:exist}; conditioning on a zero-probability event is not assigned a normalized daughter.
+
+\section{An exact massive detector in physical time}
+\label{sec:detector}
+Let $A=\ket{1}\bra{1}$ act on a retained internal control label. First a finite internal unitary correlates this label with projectors $P_0,P_1$ of the unknown source, giving $\sum_a P_a\psi\ket a$. No actual internal jump is introduced by this operation. Prepare one oscillator in its ground packet
+\[
+ \phi_0(y)=(2\pi\sigma^2)^{-1/4}e^{-y^2/(4\sigma^2)},\qquad
+ \sigma^2=\frac{\hbar}{2M\omega}.
+\]
+Choose a smooth centre trajectory $b(0)=0$, $b(T_w)=L$, with $\dot b=\ddot b=0$ at both ends, and set
+\begin{equation}\label{eq:force}
+ c(t)=b(t)+\frac{\ddot b(t)}{\omega^2},\qquad
+ H_w(t)=\frac{p_y^2}{2M}+\frac{M\omega^2}{2}\bigl(y-c(t)A\bigr)^2.
+\end{equation}
+This operator is nonnegative. No first-order unbounded-below translation is used. A convenient explicit choice is
+\begin{equation}\label{eq:quintic}
+ b(t)=L(10s^3-15s^4+6s^5),\quad s=t/T_w,\quad
+ \dot b=\frac{30L}{T_w}s^2(1-s)^2\ge0.
+\end{equation}
+Smooth higher-order endpoint interpolation can be used when all clock-window derivatives are required; the $C^2$ quintic suffices for the exact writer and the finite-order estimates here. The trap may overshoot the packet centre during acceleration; its finite displacement and force are resources.
+
+\begin{proposition}[Exact wave and selected actual motion]\label{prop:writer}
+For this primitive, $\psi$ is an internal/reference vector, with no unresolved older spatial coordinates. Writing $p_a=\norm{P_a\psi}^2$, the wave is
+\begin{align}\label{eq:packet}
+ \Psi_t(y)&=P_0\psi\ket0\,e^{-i\omega t/2}\phi_0(y)
+ +P_1\psi\ket1\,e^{i\theta(t)}e^{iM\dot b(t)(y-b(t))/\hbar}\phi_0(y-b(t)),\\
+ \dot\theta&=\frac{M\dot b^2}{2\hbar}-\frac{M\omega^2(b-c)^2}{2\hbar}-\frac\omega2.\nonumber
+\end{align}
+For $g_\sigma=|\phi_0|^2$,
+\begin{equation}\label{eq:mixture}
+ \rho_t(y)=p_0g_\sigma(y)+p_1g_\sigma(y-b(t)),\qquad
+ j_t(y)=p_1\dot b(t)g_\sigma(y-b(t)).
+\end{equation}
+Let $F_t(y)=p_0\Ncdf(y/\sigma)+p_1\Ncdf((y-b(t))/\sigma)$, where $\Ncdf$ is the standard normal CDF. The complete actual pointer path is
+\begin{equation}\label{eq:quantile}
+ Y_t=F_t^{-1}(U),\qquad U=\Ncdf(Y_0/\sigma)\sim\operatorname{Unif}(0,1).
+\end{equation}
+In particular $0\le\dot Y_t\le\dot b(t)$ during the monotone write.
+\end{proposition}
+\begin{proof}
+Substitute the Gaussian ansatz into the Schr\"odinger equation. The coefficient of $y-b$ is $M\ddot b=-M\omega^2(b-c)$ and its scalar coefficient is precisely the displayed $\dot\theta$; the Gaussian width stays at its ground value. Internal labels are orthogonal, so there are no cross terms in $\rho$ or $j$. Now $\partial_tF_t=-j_t$ and $\partial_yF_t=\rho_t>0$. Differentiating $F_t(Y_t)=U$ gives \eqref{eq:guidance}. The initial inverse transform supplies the uniform rank, without a second randomness postulate.
+\end{proof}
+
+\subsection{Actual timing, false-ready tails and null continuation}
+Put a threshold $h=L/2$. Let $\tau=0$ for the initially right-hand tail $Y_0\ge h$, and otherwise let $\tau$ be its first subsequent threshold crossing, with $\tau=\infty$ if none occurs before $T_w$. This convention retains the finite false-ready tail
+\[
+ \delta=\Ntail\left(\frac{L}{2\sigma}\right),\qquad \Prb(\tau=0)=\delta.
+\]
+It is not an assertion that a preliminary check of readiness is noninvasive.
+Monotonicity in Proposition~\ref{prop:writer} gives the complete law
+\begin{align}\label{eq:timing}
+ \Prb(\tau>t)&=F_t(h),\qquad
+ \Prb(\tau\in dt)=p_1\dot b(t)g_\sigma(h-b(t))\,dt\quad(0<t<T_w),\\
+ \Prb(\tau=\infty)&=p_0(1-\delta)+p_1\delta.\nonumber
+\end{align}
+The positive-time density integrates to $p_1(1-2\delta)$; together with the initial atom and final null it normalizes to one. Conditional on no pre-trigger event the survival is $F_t(h)/F_0(h)$; conditional on no crossing by $t$, its instantaneous hazard, where defined, is
+\begin{equation}\label{eq:hazard}
+ \frac{p_1\dot b(t)g_\sigma(h-b(t))}{F_t(h)}.
+\end{equation}
+This is a derived physical-time formula, not a memoryless source-sector clock. Continuing a return pulse uses the same rank $U$, not a newly sampled waiting time. A dark hold with $\dot b=0$ has zero pointer current.
+
+If an input is entangled with older spatial memories, the full velocity is evaluated before integrating those coordinates out. When they are held fixed, the quantile argument applies separately to their conditional spinor fibres, with the corresponding conditional $p_a$. The integrated $p_a$ still determines marginal density but generally does not determine an individual joint trajectory. For moving old coordinates, use the complete guidance equation rather than this one-dimensional primitive formula.
+
+The conditional position law after a null at $t$ is
+\[
+ \Prb(Y_t\in dy\mid\tau>t)=\frac{1_{y<h}\rho_t(y)}{F_t(h)}\,dy.
+\]
+The global wave remains \eqref{eq:packet}, including both packets. For an arbitrary past record event $B$, equation~\eqref{eq:pathlaw} rather than a present-sector projection supplies the conditional continuation. A timestamp reader would be an additional interaction and would change this wave; equation~\eqref{eq:timing} describes this specified pointer without an extra timestamp apparatus. A finite timestamp claim requires those contacts and their complete dynamics; the first-crossing formula alone does not construct that reader. Unmeasured arrivals and recorded detection times need not coincide \cite{Arrival}.
+
+\begin{figure}[tb]
+\centering\includegraphics[width=\textwidth]{event_mechanism_figure.pdf}
+\caption{The massive writer with $L/\sigma=8$, $p_1=0.65$ and $T_w=1$. A controlled trap drives a Gaussian packet; actual mixture-quantile paths produce the threshold-time distribution. This figure evaluates the derived equations, not a fitted stochastic model.}
+\label{fig:mechanism}\end{figure}
+
+\subsection{Energy and force resources}
+In branch 1,
+\begin{equation}\label{eq:energy}
+ \langle H_w(t)\rangle=\frac{\hbar\omega}{2}
+       +\frac M2\dot b^2+\frac{M\omega^2}{2}(b-c)^2.
+\end{equation}
+It is finite for the explicit trajectory. The work in the driven description is $\int\langle\partial_tH_w\rangle dt$. It vanishes between the initial ground state and the final ground state of the shifted holding trap, but nonzero energy is borrowed and returned during the pulse. The autonomous clock below carries this exchange. Zero net work is not zero transient work or an unlimited source of reset readiness.
+
+\section{A full finite source--actuator--resource module}
+\label{sec:resource}
+Here is a nontrivial receptor that is physically in the same inventory. On a finite factor $D$ use orthogonal states
+\[
+ \ket r,\quad\ket{p_a},\quad\ket{c_a},\quad\ket{l_a}\quad(a=0,1).
+\]
+They include the following actual material degrees in their internal wave description:
+\begin{center}\small
+\begin{tabular}{@{}lcccccc@{}}\toprule
+State & Production & Fuel & Site & Excitation & Memory & Remnant\\\midrule
+$r$ & 1 & 1 & ready & 0 & blank & vacuum\\
+$p_a$ & 0 & 1 & ready & mode $a$ & blank & vacuum\\
+$c_a$ & 0 & 0 & spent & 0 & $a$ & capture $a$\\
+$l_a$ & 0 & 1 & ready & 0 & blank & loss $a$\\\bottomrule
+\end{tabular}
+\end{center}
+Assign energy $E>0$ to a production cofactor, fuel unit, excitation and loss remnant, and $2E$ to a capture remnant; the displayed labels are degenerate. Every row has total resource energy $2E$. Hence the conversion gates conserve this resource energy exactly while spending readiness and retaining energy in products. Their full tensor-factor implementation is defined to be zero outside the indicated equal-energy active subspace. Other exhausted sectors stay present.
+
+For source projectors $P_a$, set
+\begin{align}\label{eq:reactionG}
+ G_w&=i\sum_aP_a\otimes(\ket{p_a}\bra r-\ket r\bra{p_a}),\\
+ \ket{b_a}&=\sqrt\eta\ket{c_a}+\sqrt{1-\eta}\ket{l_a},\qquad 0<\eta<1,\nonumber\\
+ G_r&=i\sum_a(\ket{b_a}\bra{p_a}-\ket{p_a}\bra{b_a}).\nonumber
+\end{align}
+These Hermitian generators have norm one on their active subspaces. Nonoverlapping pulses $\hbar g_w(t)G_w$ and $\hbar g_r(t)G_r$ with areas $\theta,\varphi$ give exactly
+\begin{equation}\label{eq:resourcewave}
+ \begin{split}
+ \Psi_D={}&\cos\theta\,\psi\ket r+\sin\theta\sum_aP_a\psi
+ \left(\cos\varphi\ket{p_a}+\sin\varphi\sqrt\eta\ket{c_a}
+                    +\sin\varphi\sqrt{1-\eta}\ket{l_a}\right).
+ \end{split}
+\end{equation}
+Indeed each generator is a two-dimensional $\sigma_y$ rotation, and the active $a$ sectors are orthogonal. There was no sampled reaction time in this calculation. Reduced excitation populations are not actual level trajectories in the adopted ontology. The actual event is a subsequent spatial registration governed by Sections~\ref{sec:constitution}--\ref{sec:detector}.
+
+The finite response has four exact orthogonal status weights (and ideal resolved-pointer probabilities):
+\begin{equation}\label{eq:statuses}
+ (P_r,P_p,P_c,P_l)=
+ (\cos^2\theta,\ \sin^2\theta\cos^2\varphi,\
+ \eta\sin^2\theta\sin^2\varphi,\ (1-\eta)\sin^2\theta\sin^2\varphi).
+\end{equation}
+The pending excitation remains a vector in the actual model at a finite cutoff. Continuing $G_r$ processes it coherently; a finite closed receptor can recur. A zero response window does not erase it. Neither an absorbing boundary nor a restart clock is imposed when a coefficient begins to populate $p_a$.
+
+\subsection{Physical null, capture and loss}
+Use three spatial readout centres $-L,0,L$ for captured $a=0$, null, and captured $a=1$. The same forced oscillator construction applies to each orthogonal control projector, using signed trajectories. Noncaptured $r,p,l$ components share the null packet. Nearest-centre cells have worst tail at most $2\delta$, with $\delta=\Ntail(L/(2\sigma))$. The ideal orthogonal-label comparator has capture coefficient
+\[
+ \sqrt q\,P_a\psi\ket{c_a},\qquad q=\eta\sin^2\theta\sin^2\varphi,
+\]
+and complete null vector
+\begin{equation}\label{eq:nullvector}
+ \Psi_N=\cos\theta\,\psi\ket r+
+ \sin\theta\sum_aP_a\psi\left(\cos\varphi\ket{p_a}
+                 +\sin\varphi\sqrt{1-\eta}\ket{l_a}\right).
+\end{equation}
+Only for a declared reduced comparison, tracing $D$ gives
+\begin{equation}\label{eq:nullmap}
+ \mathcal N(\rho)=\cos^2\theta\,\rho+
+ \sin^2\theta\bigl(\cos^2\varphi+(1-\eta)\sin^2\varphi\bigr)
+                  \sum_aP_a\rho P_a.
+\end{equation}
+Equation~\eqref{eq:nullvector}, along with pointer and all receiving systems, is the retained continuation. Equation~\eqref{eq:nullmap} is not a global collapse rule. Finite spatial classifiers approximate these ideal labels; Section~\ref{sec:complete} bounds the complete output error.
+
+\subsection{Finite stock and exhaustion}
+For a promised $m$-epoch experiment allocate $m$ ready cells, their blank archives, and receivers. Gate the active conversion only on sectors containing the required cofactor, fuel, site and blank capacity. Extend the unitary by identity on explicitly exhausted sectors, which can be spatially flagged by the same writer. A failed or null attempt does not receive a new $\ket r$ for free. The consumed-ready-cell count is bounded by the allocated finite schedule; no infinite Poisson bath is hidden in this implementation.
+
+\section{Physical records that remain true about their past}
+\label{sec:archive}
+After a write, retain its internal orthogonal key $K$ and hold the pointer in
+\begin{equation}\label{eq:store}
+ H_{\rm store}=\frac{p_y^2}{2M}+\frac{M\omega^2}{2}(y-LK)^2.
+\end{equation}
+Known branch phases can be corrected by bounded internal potentials. A single stationary packet need not have compact support; its classification error was already accounted for.
+
+\begin{theorem}[Exact historical storage]\label{thm:store}
+Suppose the wave after the write has form
+\begin{equation}\label{eq:storedwave}
+ \Psi(y,z,t)=\sum_k\phi_0(y-Lk)\ket k_K\,\Xi_k(z,t)e^{-i\omega t/2},
+\end{equation}
+where $z$ denotes all other coordinates and internal factors. Future gates preserve $K$, hold $y$ as in \eqref{eq:store}, and may be noncommuting on the source or act on $z$. Then $j_y=0$ \emph{pointwise} on the complete configuration space. The actual coordinate $Y$ and its finite readout label remain exactly fixed throughout that interval.
+\end{theorem}
+\begin{proof}
+Orthogonality of the key eliminates cross terms. Each remaining contribution to $\Psi^\dagger\partial_y\Psi$ is $\phi_0(y-Lk)\phi_0'(y-Lk)\norm{\Xi_k(z,t)}^2$, which is real. Equation~\eqref{eq:guidance} gives the conclusion away from the almost-sure excluded nodes.
+\end{proof}
+This is a path statement, not an inference from equal endpoint weights. It controls actual old declarations even when later source measurements do not commute with the first. Unknown interactions that violate its Hamiltonian conditions require their own bound.
+
+\subsection{A genuine copy and its classification error}
+Copy the key by a finite reversible unitary into a blank internal factor, amplify that factor into a fresh massive pointer, and retain both. Throughout this operation the old key is preserved, so Theorem~\ref{thm:store} holds for the old actual position. If the two classifiers have worst errors $\epsilon_1,\epsilon_2$, their disagreement probability is at most $\epsilon_1+\epsilon_2$. To prove it, expand their joint squared-norm density over the orthogonal key and apply a union bound to the two conditional Gaussian tails. The key in this proof is an orthogonal expansion index, not an additional secretly actual spin variable. The copy is faithful to the first \emph{actual} declaration because the old pointer stayed fixed during the write; its finite misclassification remains in the bound.
+
+\subsection{Reset with the receiving system retained}
+Supply an identical ready factor $D'$ and let $W_{DD'}$ be SWAP. With
+\begin{equation}\label{eq:swap}
+ H_{\rm sw}=\frac{\pi\hbar}{2\tau_s}W_{DD'},\quad
+ S(t)=e^{-itH_{\rm sw}/\hbar},\quad S(\tau_s)=-iW_{DD'},
+\end{equation}
+an old entangled state is transferred as
+\[
+ \sum_j\psi_j\ket{d_j}_D\ket r_{D'}\longmapsto
+ -i\ket r_D\sum_j\psi_j\ket{d_j}_{D'}.
+\]
+The old pending excitation, remnant, lost product and reference correlation remain in $D'$. Identical free resource Hamiltonians have $[W,H_D+H_{D'}]=0$.
+
+There is a subtle control issue: if a stationary trap followed the old $D$ label, a bare SWAP would change its centre. The exact physical repair is
+\begin{equation}\label{eq:covariantreset}
+ H(t)=H_{\rm sw}+S(t)H_{\rm store}S(t)^\dagger.
+\end{equation}
+Its propagator is $S(t)e^{-itH_{\rm store}/\hbar}$ by differentiation. Because $S$ is coordinate independent, it preserves the position density and current pointwise. The old spatial record remains held while the trap's controlling key is transferred to $D'$. The potential is a unitary conjugate of a nonnegative matrix potential plus a bounded matrix, so it stays semibounded. Expanding its square gives a scalar quadratic term and affine matrix coefficients, within the common inventory. Simply declaring a rewired trap after SWAP would omit this interaction.
+
+If the original pointer itself is to be restored, a reverse smooth forced trap can take its branch centre back to zero while a copied key/record or receiving cell is retained. The receiving systems carry the old correlations. Future use proceeds from this full state and its conditional law; it is not assigned an independent fresh initial rank merely because a local packet now looks ready. The finite measurement theorem below uses a finite stock of fresh pointers; reset is included as a real operation and as a return test.
+
+\subsection{Feedback from a literal spatial record}
+An internal key-controlled source gate is an exact coherent operation, but it follows a finite position display only up to the display's error. Literal position feedback also belongs to \eqref{eq:H}. Let $g(y)$ be smooth, $0\le g\le1$, equal to zero for $y\le h-r$ and one for $y\ge h+r$, with $0<r<L/2$. Let $B$ be a bounded Hermitian source generator and compare
+\[
+ H_{\rm pos}=H_{\rm store}+g(y)B,\qquad
+ H_{\rm key}=H_{\rm store}+KB.
+\]
+The second gives the intended branch gate. Define
+\begin{equation}\label{eq:feedbacktail}
+ \epsilon_g=\max_{k=0,1}\int |g(y)-k|^2|\phi_0(y-Lk)|^2dy
+ \le\Ntail\left(\frac{L/2-r}{\sigma}\right).
+\end{equation}
+Duhamel, evaluated on the exactly stationary ideal packet, gives
+\begin{equation}\label{eq:feedbackbound}
+ \norm{\Psi_{\rm pos}(t)-\Psi_{\rm key}(t)}
+ \le\frac{t\norm B}{\hbar}\sqrt{\epsilon_g}.
+\end{equation}
+This bound is uniform in an inaccessible reference. The physical position contact has reciprocal backaction; it is not claimed to leave the actual pointer fixed. The derivative and crossing estimate in Section~\ref{sec:clock} supplies a history bound as well. Thus literal spatial feedback, rather than an idealized outside observer, has a complete implementation.
+
+Here $g(y)$ is a multiplication operator on the wave, not a coefficient obtained by inserting the actual $Y_t$ into an externally controlled Hamiltonian.
+
+\section{Protected coherent transport in the same inventory}
+\label{sec:protection}
+Actual archive storage and protection of unknown logical amplitudes are different tasks. The monograph's bounded internal gap construction can be implemented here without a stochastic interface. To display its nonempty domain, encode two qubits into four by
+\[
+ C\ket{a,b}=\frac{\ket{0,a,b,a\oplus b}+\ket{1,1\oplus a,1\oplus b,1\oplus a\oplus b}}{\sqrt2}.
+\]
+Let $S_X=X_1X_2X_3X_4$, $S_Z=Z_1Z_2Z_3Z_4$,
+$P=(I+S_X)(I+S_Z)/4$ and $Q=I-P$, with identities on the
+retained internal nuisance systems and inaccessible reference understood.
+Set
+\[
+ H_{\rm pen}=\tfrac\Delta2(I-S_X)+\tfrac\Delta2(I-S_Z),\quad
+ H_\Delta=H_{\rm pen}+H_0+V.
+\]
+The penalty satisfies $H_{\rm pen}P=0$ and
+$H_{\rm pen}\ge\Delta Q$. Assume the bounded self-adjoint
+operators are stationary on the protected exposure, with
+$[H_0,P]=0$, $\norm{H_0}\le b$, and
+\[
+ V=\sum_{i=1}^4\sum_{\alpha=x,y,z}\sigma_i^\alpha\otimes B_{i\alpha},
+ \quad B_{i\alpha}=B_{i\alpha}^\dagger,\quad\norm V\le v.
+\]
+The $B$'s act on retained finite internal nuisance systems. During the protected exposure, the spatial holding Hamiltonian is a commuting spectator; it is factored out. We do not assert a bounded-norm theorem for arbitrary unbounded coordinate couplings. One-site Paulis anticommute with a stabilizer, so $PVP=0$. All encoding and decoding gates are finite internal unitaries.
+
+\begin{proposition}[Retained-bank gap bound]\label{prop:gap}
+For $\Delta-2b-v=\gamma>0$,
+\begin{equation}\label{eq:gap}
+ \norm{\bigl(e^{-itH_\Delta/\hbar}-e^{-itH_0/\hbar}\bigr)P}
+ \le\min\left\{2,\frac{2v+tv^2/\hbar}{\gamma}\right\}.
+\end{equation}
+The same bound holds with every inaccessible reference and retained internal nuisance system included.
+\end{proposition}
+\begin{proof}
+Decompose the complete internal bank as
+$\operatorname{ran}P\oplus\operatorname{ran}Q$ and define its
+compressed blocks
+\[
+ A=PH_0P,\qquad B=QVP,\qquad D=QH_\Delta Q,
+\]
+where $A$ and $D$ act on their respective subspaces and
+$B:\operatorname{ran}P\to\operatorname{ran}Q$. Then
+\[
+ H_\Delta=H_d+W,\qquad
+ H_d=\begin{pmatrix}A&0\\0&D\end{pmatrix},\qquad
+ W=\begin{pmatrix}0&B^\dagger\\B&0\end{pmatrix}.
+\]
+The stated bounds imply
+\[
+ D\ge(\Delta-b-v)Q=(b+\gamma)Q,
+ \qquad A\le bP,\qquad \norm B\le v.
+\]
+Thus the norm-convergent integral
+\[
+ X=\int_0^\infty e^{-rD}Be^{rA}\dd r
+\]
+satisfies $DX-XA=B$ and $\norm X\le v/\gamma$.
+Indeed the integrand has norm at most $v e^{-r\gamma}$;
+differentiating it and integrating its vanishing boundary term gives
+the identity. Here $r$ has inverse-energy units; it is not physical
+time. The skew-adjoint block operator
+\[
+ S=\begin{pmatrix}0&-X^\dagger\\X&0\end{pmatrix}
+ \quad\text{satisfies}\quad
+ [S,H_d]=-W,\qquad \norm S=\norm X.
+\]
+Put $f(u)=e^{uS}We^{-uS}$. Differentiation and integration yield
+\begin{align*}
+ e^SH_\Delta e^{-S}
+ &=H_d+f(1)-\int_0^1f(u)\dd u=H_d+R,\\
+ R&=\int_0^1u e^{uS}[S,W]e^{-uS}\dd u.
+\end{align*}
+These conjugations are unitary, so
+\[
+ \norm R\le\tfrac12\norm{[S,W]}\le v^2/\gamma,
+ \qquad \norm{e^{\pm S}-I}\le\norm S\le v/\gamma.
+\]
+Two changes of frame and Duhamel in physical time therefore give
+\[
+ \norm{e^{-S}e^{-it(H_d+R)/\hbar}e^S-e^{-itH_d/\hbar}}
+ \le\frac{2v}{\gamma}+\frac{tv^2}{\hbar\gamma}.
+\]
+On $\operatorname{ran}P$, the last unperturbed propagator agrees
+with $e^{-itH_0/\hbar}$. The trivial norm bound two completes
+\eqref{eq:gap}. Tensoring an identity preserves each operator norm,
+so the same estimate retains the inaccessible reference and nuisance
+bank.
+\end{proof}
+This is the monograph's coherent protection estimate, with its assumptions preserved; Hamiltonian error suppression has independent primary precedent \cite{MarvianLidar}. Its role here is compatibility with actual material writes and records, not selection of a noise generator.
+
+\section{An autonomous massive controller, including archive-history error}
+\label{sec:clock}
+External pulse timing is a physical resource. We now include its provider and its recoil in the same Hamiltonian. This step also avoids an invalid inference from small wave error to small path error.
+
+\subsection{The complete autonomous Hamiltonian}
+Resolve a finite smooth driven programme as
+\begin{equation}\label{eq:program}
+ H_{\rm id}(t)=H_{\rm osc}+H_{\rm const}+\sum_{i=1}^N f_i(x_0+vt)B_i(q),
+ \qquad H_{\rm osc}=\sum_k\left(\frac{p_k^2}{2m_k}
+                         +\frac{m_k\omega_k^2q_k^2}{2}\right).
+\end{equation}
+The coordinate-independent Hermitian matrix $H_{\rm const}$ is bounded. All $m_k,\omega_k$ are strictly positive. The $f_i$ are real bounded smooth profiles with bounded derivatives. The $B_i$ are affine Hermitian matrix functions of $q$, possibly plus bounded smooth matrix functions with bounded derivatives. This covers the forced trap (expand its square), finite internal rotations, transported trap controls \eqref{eq:covariantreset}, and smooth position feedback. Any finite coordinate-independent internal unitary $S(t)$ while stored oscillators are present can be implemented exactly by
+\[
+ i\hbar\dot S(t)S(t)^\dagger+S(t)H_{\rm store}S(t)^\dagger.
+\]
+Its kinetic term is unchanged and its scalar quadratic term is unchanged; only finitely many bounded or affine matrix coefficients vary. This provides a direct finite gate compiler within \eqref{eq:program}.
+
+For an exactly $C^\infty$ trap programme use a flat positive bump $u(s)$ on $(0,1)$ and
+\[
+ b(t)=L\frac{\int_0^{t/T_w}u(s)ds}{\int_0^1u(s)ds},\qquad
+ c=b+\ddot b/\omega^2.
+\]
+It is monotone and flat at both endpoints, so the exact writer proof is unchanged. The quintic in the figure instead gives a continuous piecewise-smooth trap profile; smoothing it has a directly bounded integrated residual. No globally smooth extension of its nonzero endpoint third derivative is presumed.
+
+Add a massive clock coordinate $x$, prepared in a Gaussian $\chi_0$ with mean $x_0$, position deviation $s_c$, and mean momentum $M_cv$. Define
+\begin{equation}\label{eq:auto}
+ H_{\rm aut}=\frac{P_x^2}{2M_c}+H_{\rm osc}+H_{\rm const}+
+                              \sum_i f_i(x)B_i(q).
+\end{equation}
+This is autonomous and semibounded: bounded profile coefficients and oscillator confinement absorb each affine force by Young's inequality. It is self-adjoint on the free-clock-plus-oscillator domain, with the relative bound of the affine perturbation arbitrarily small. There is no read of the \emph{actual} clock position followed by an external switch. The quantum potential $f_i(x)B_i(q)$ is the interaction itself, and the actual clock follows \eqref{eq:guidance} on the full wave.
+
+The initial wave is $\chi_0\otimes\psi_0$, including all prepared apparatus and retained resources. Let $F_t$ be its exact evolution under \eqref{eq:auto}. Compare it to
+\[
+ G_t=\chi_t\otimes\psi_t,\qquad
+ \chi_t=e^{-itP_x^2/(2M_c\hbar)}\chi_0,\qquad
+ i\hbar\dot\psi_t=H_{\rm id}(t)\psi_t.
+\]
+The free clock has mean $x_0+vt$ and width
+\begin{equation}\label{eq:clockwidth}
+ s_t=\sqrt{s_c^2+\left(\frac{\hbar t}{2M_cs_c}\right)^2}.
+\end{equation}
+The comparator includes the clock; it is not a reduced apparatus state.
+
+\subsection{Derivative control uniform in clock resources}
+Choose fixed reference length units for the pointer coordinates. For $r\ge0$, write
+\[
+ W_r(F)=\sum_{|\alpha|+|\beta|\le r}\norm{q^\alpha\partial_q^\beta F}_2.
+\]
+Dimensional powers of those fixed length units are understood; they can equivalently be inserted term by term. The norm integrates over $x,q$ and all internal/reference indices, but differentiates only $q$.
+
+\begin{lemma}[Uniform pointer graph norm]\label{lem:graph}
+For the fixed finite inventory in \eqref{eq:auto},
+\begin{equation}\label{eq:graph}
+ W_r(e^{-itH_{\rm aut}/\hbar}F)\le e^{\kappa_rt/\hbar}W_r(F)
+ \quad(0\le t\le T).
+\end{equation}
+The constant depends on the pointer inventory and the profile bounds, but not on $M_c,s_c$, the mean clock momentum, or the reference dimension. The same estimate holds for the time-dependent ideal propagator.
+\end{lemma}
+\begin{proof}
+For each scalar differential monomial $O=q^\alpha\partial_q^\beta$, $[O,P_x^2]=0$ and $[O,H_{\rm const}]=0$. Its commutator with the scalar oscillator is a finite sum of monomials of total order at most $r$. An affine potential removes a derivative in each nonzero commutator; multiplication by bounded smooth functions contributes bounded coefficient terms of no higher order. Thus
+\[
+ \sum_{|\alpha|+|\beta|\le r}\norm{[q^\alpha\partial_q^\beta,H_{\rm aut}]F}
+ \le \kappa_rW_r(F).
+\]
+Matrices need not commute with each other: only their commutators with scalar coordinate operators have been used. Commute $O$ through the propagator, apply Duhamel and unitarity, sum, and use Gronwall. These identities hold first on the smooth core; oscillator graph-norm regularization and the same uniform estimate extend them to the displayed domain. The time-dependent case uses uniform coefficient bounds. Tensoring an identity does not change any estimate.
+\end{proof}
+
+\begin{theorem}[Complete autonomous approximation]\label{thm:clock}
+Assume $W_3(\psi_0)<\infty$. For $r=0,2$ define
+\begin{equation}\label{eq:epsclock}
+ \varepsilon_r(T)=\frac1\hbar\int_0^T e^{\kappa_r(T-t)/\hbar}s_t
+                         \sum_i\operatorname{Lip}(f_i)W_r(B_i\psi_t)dt.
+\end{equation}
+Take $\kappa_0=0$ for the $L^2$ propagation estimate, by unitarity. Then
+\begin{equation}\label{eq:clockbound}
+ \sup_{t\le T}W_r(F_t-G_t)\le\varepsilon_r(T)
+ \le A_{r,T}\left(s_c+\frac{\hbar T}{2M_cs_c}\right),
+\end{equation}
+where $A_{r,T}$ is finite and independent of the clock resources. All clock, fuel, receiver, record and reference factors remain in this comparison.
+\end{theorem}
+\begin{proof}
+The defect of $G_t$ under the exact Hamiltonian is
+\[
+ R_t=\sum_i[f_i(x)-f_i(x_0+vt)]\chi_t(x)\otimes B_i\psi_t.
+\]
+The coordinate factor separates under every $q$ derivative and multiplier, so
+\[
+ W_r(R_t)\le s_t\sum_i\operatorname{Lip}(f_i)W_r(B_i\psi_t).
+\]
+Affine multiplication needs at most $W_{r+1}$ of the ideal wave; bounded smooth terms need $W_r$. Lemma~\ref{lem:graph} bounds these on a fixed horizon. Apply Duhamel in the invariant $W_r$ domain and \eqref{eq:graph}; $s_t\le s_c+\hbar T/(2M_cs_c)$ proves the last inequality. The exact product initial state makes the initial defect zero.
+\end{proof}
+For example $s_c=\sqrt{\hbar T/(2M_c)}$ gives error $O(M_c^{-1/2})$ for fixed apparatus. Its mean initial free clock energy is
+\begin{equation}\label{eq:clockenergy}
+ E_C=\frac{M_cv^2}{2}+\frac{\hbar^2}{8M_cs_c^2}
+     =\frac{M_cv^2}{2}+\frac{\hbar}{4T}.
+\end{equation}
+Every finite member has finite energy and normalizable resources. The ideal limit requires increasing mass/energy; Gaussian packets have unbounded support and are not claimed to have a strict energy cutoff. Total $H_{\rm aut}$ energy is conserved. The clock can recoil and entangle: \eqref{eq:clockbound} bounds its complete discrepancy instead of deleting it. These are finite-horizon claims, not a perfect autonomous clock for all time.
+
+\subsection{Why the same estimate controls actual archive history}
+A small $L^2$ wave error alone does not control guidance paths. The $W_2$ estimate provides the extra information needed for a \emph{specified retained record surface}. Let $\Sigma=\{q_k=h\}$ be one such decision surface. The one-coordinate, Hilbert-valued trace estimates imply
+\[
+ \norm{F|_\Sigma}_2\le C_{\rm tr}W_1(F),\qquad
+ \norm{\partial_kF|_\Sigma}_2\le C_{\rm tr}W_2(F).
+\]
+For completeness, $\norm{u(h)}^2\le2\norm u\norm{u'}$ follows by integrating the derivative of $\norm{u(s)}^2$ on a half-line; apply it also to $u'$. All other coordinates and the reference are Hilbert-valued parameters.
+
+\begin{theorem}[Autonomous historical archive protection]\label{thm:history}
+During a hold interval $I\subset[0,T]$, suppose the ideal wave has $j_k[G_t]=0$ pointwise on $\Sigma$ and $W_2(G_t)\le B$. Let $W_2(F_t-G_t)\le\varepsilon_2$. In equilibrium for the exact autonomous dynamics,
+\begin{equation}\label{eq:archiveerror}
+ \Prb(\text{the record side of }\Sigma\text{ changes during }I)
+ \le\frac{\hbar}{m_k}C_{\rm tr}^2|I|\,
+                     \varepsilon_2(2B+\varepsilon_2).
+\end{equation}
+Sum this bound for finitely many retained record surfaces. Add their write/readout errors separately.
+\end{theorem}
+\begin{proof}
+Write $E=F-G$. Expanding $F^\dagger\partial_kF-G^\dagger\partial_kG$ and applying the two trace estimates and Cauchy--Schwarz gives
+\[
+ \int_\Sigma|j_k[F]-j_k[G]|\le
+ \frac\hbar{m_k}C_{\rm tr}^2\varepsilon_2(2B+\varepsilon_2).
+\]
+This bounds \emph{absolute} flux; cancellation of signed currents is not enough.
+To avoid a hidden transversality assumption, let $s_\delta(q_k)$ smoothly approximate the indicator of one side of $\Sigma$, with $s_\delta'\ge0$ and $\int s_\delta'=1$. Along almost every complete trajectory,
+\[
+ \operatorname{Var}_{I}s_\delta(Q_k)\le
+ \int_I |s_\delta'(Q_k)|\,|v_k(Q,t)|dt.
+\]
+Equivariance makes its expected right side $\int_I\int |s_\delta'(q_k)||j_k[F]|dq\,dt$. A genuine change of side contributes at least one to the limiting variation. Hilbert-valued traces make the current continuous in the normal coordinate as an $L^1$ function of the other coordinates. Fatou and the approximate-identity limit bound its probability by $\int_I\int_\Sigma|j_k[F]|$. Insert the preceding inequality and the pointwise-zero ideal current. Lemma~\ref{lem:exist} already handles nodes; no positive lower density is assumed.
+\end{proof}
+The ideal stored wave \eqref{eq:storedwave} supplies the required pointwise zero, including during noncommuting continuation on the other factors. The transported reset \eqref{eq:covariantreset} also preserves that current. Finite clock tails therefore produce a quantified finite-horizon historical error, rather than being incorrectly declared harmless from endpoint equivariance.
+
+For position feedback, keep a separate completed archive $z$ with its own immutable key. The working pointer $y$ may recoil under $g(y)B$, while $z$ still has zero ideal current by Theorem~\ref{thm:store}. If preservation of $y$ is desired as well, repeat the graph-norm proof with residual $(g(y)-K)B\psi_t$. Its $W_2$ norm is computed by differentiating the known Gaussian and $g$ twice. Since $g-k$ and its derivatives are supported in the wrong half-line or central buffer, this norm is bounded by a finite polynomial in $L,\sigma^{-1},\norm{g'}_\infty,\norm{g''}_\infty$ times
+\[
+ \exp\left[-\frac{(L/2-r)^2}{4\sigma^2}\right].
+\]
+The graph propagation constant grows at most exponentially in $L$ for a fixed duration and other fixed parameters, because the affine trap coefficient is linear in $L$. Thus this derivative error, and its surface-flux budget, tend to zero as $L/\sigma\to\infty$ at fixed $\sigma,r$. This is an actual controlled limit, not a raw-path TV assertion.
+
+\section{Complete instruments, references and finite histories}
+\label{sec:complete}
+Let $\{K_a\}$ be a finite family on the unknown input satisfying $\sum_aK_a^\dagger K_a=I$. The map
+\[
+ \psi\ket{\mathrm{blank}}\longmapsto\sum_aK_a\psi\ket a
+\]
+is an isometry because it preserves inner products. Extend an orthonormal basis of its range to a full basis to obtain a finite unitary. A finite Hermitian logarithm supplies a bounded pulse. Alternatively the explicit resource rotations above give a fixed nontrivial family directly. The gate compiler in Section~\ref{sec:clock} implements these gates while retaining all spatial storage. This argument concerns preparation-independent linear finite instruments; it does not admit arbitrary nonlinear ray maps.
+
+\subsection{The exact finite pointer output and a strong comparator}
+For one stage the physical isometry has form
+\begin{equation}\label{eq:W}
+ W\psi=\sum_a K_a\psi\ket a_K\phi_a(q),
+ \qquad\phi_a(q)=\phi_0(q-La)
+\end{equation}
+(or its finite multicoordinate version). Let $\Gamma_a$ be the disjoint physical readout regions and
+\[
+ \delta_a=\int_{\Gamma_a^c}|\phi_a|^2dq,\qquad
+ \widetilde\phi_a=\frac{1_{\Gamma_a}\phi_a}{\sqrt{1-\delta_a}}.
+\]
+The cut packets define a \emph{comparison} isometry $\widetilde W$ with ideal disjoint records on the same retained space. They are not claimed to be physical Gaussian preparations. If a smooth comparison packet is wanted, smooth the cut in an arbitrarily narrow boundary strip and add its norm error.
+
+\begin{lemma}[Complete retained-state record error]\label{lem:instrument}
+If $\delta_* =\max_a\delta_a<1$, then
+\begin{equation}\label{eq:isometryerror}
+ \norm{W-\widetilde W}\le\sqrt{2\delta_*}.
+\end{equation}
+The same bound holds after tensoring any reference; it bounds the trace distance between the full pure outputs and hence the half-diamond distance of the resulting physical output channels. Any subsequent \emph{common} coherent return acting on all retained factors preserves the full-state bound.
+\end{lemma}
+\begin{proof}
+The packet squared difference is $2(1-\sqrt{1-\delta_a})\le2\delta_a$. Orthogonality of the retained key gives
+\[
+ \norm{(W-\widetilde W)\psi}^2
+ =\sum_a\norm{K_a\psi}^2\norm{\phi_a-\widetilde\phi_a}^2\le2\delta_*.
+\]
+For normalized vectors their pure-state trace distance is no greater than their norm difference. The proof is unchanged with an identity on $R$. Unitary invariance and channel contractivity prove the last claims. No continuity assertion for raw guidance paths is being used.
+\end{proof}
+
+For a source-only reduced instrument, tracing pointer and key would give weights and daughter mixtures. Our comparison instead retains $K$, pointer packets, resources and $R$. The classical label channel is a representation of final physical regions: for a final wave $\Xi$, its unnormalized output is $P_{\Gamma_a}\ket\Xi\bra\Xi P_{\Gamma_a}$, optionally with a classical index. It is not a law that the global wave is physically projected at that time. When previously separated waves are to be recombined, use their complete coherent vector, not a dephased classical record representation.
+
+\subsection{Noncommuting continuation without a fresh probability postulate}
+After a first projective write $P_a$, a stored key and a copy, let $V_a$ be a source unitary and $R_b$ a noncommuting second projector family. With a fresh second pointer, the ideal complete vector is
+\begin{equation}\label{eq:jointwave}
+ \sum_{a,b}(R_bV_aP_a\otimes I_R)\psi\,
+         \ket a_K\ket b_B\phi_a(y)\chi_b(z)
+         \ket{\mathrm{resources}(a,b)},
+\end{equation}
+with further coherent indices included if resource vectors are not single basis states. They are never discarded merely because the display says null. For exact key-controlled gates, the actual finite displayed probabilities are
+\begin{equation}\label{eq:noisymarks}
+ \Prb(\widehat A=r,\widehat B=s)
+ =\sum_{a,b}G^A_{r|a}G^B_{s|b}
+                      \norm{(R_bV_aP_a\otimes I_R)\psi}^2,
+\end{equation}
+where $G^A_{r|a}=\int_{\Gamma_r}|\phi_a|^2$ and similarly for $B$. Since the first actual pointer is held, this is also the law of its \emph{earlier} declaration and the later declaration. Its classical history error from the ideal finite instrument is at most $\delta_A+\delta_B$. For literal position feedback add \eqref{eq:feedbackbound} and keep its separate immutable archive. Conditional normalization costs the ordinary probability denominator; it is not an unqualified exact branch rule.
+
+\begin{theorem}[Finite complete measurement-chain closure]\label{thm:closure}
+Fix a finite programme of the stated resource gates, massive writes, copies, retained resets, bounded protected internal exposures, and coherent or smooth spatial feedback. Let its horizon be $T$ and let at most $m$ physical record registers be declared. Supply the complete equilibrium initial law and the finite ready stock. Then:
+\begin{enumerate}
+\item The autonomous model \eqref{eq:auto} has a conservative complete actual path law given by \eqref{eq:pathlaw}, including its clock and all returning systems.
+\item For worst Gaussian classification tails $\delta_j$, total full-wave protection/gate error $\epsilon_{\rm gate}$, and the $L^2$ clock error $\varepsilon_0$, its complete final retained-state error against the ideal disjoint-record instrument on the same retained output space---including the clock, keys, resource products, reset receivers and reference---is at most
+\begin{equation}\label{eq:totalwave}
+ E_{\rm out}=\min\left\{1,\varepsilon_0+\epsilon_{\rm gate}
+                                  +\sum_{j=1}^m\sqrt{2\delta_j}\right\}.
+\end{equation}
+The convention is trace distance for the complete retained quantum output (or half-diamond distance for its linear output channel), together with probabilities of physical records. It is not TV distance on the ontic pair $(\Psi,Q)$: different exact global waves need not be close in that much stronger sense.
+\item During specified holds, let $E_{\rm arch}$ be the sum of the surface budgets \eqref{eq:archiveerror}. If a declared working register is copied and then intentionally reset, also include a transfer budget $E_{\rm transfer}$: sum the pair-classification errors $\delta_{\rm old}+\delta_{\rm copy}$ and the complete endpoint comparison error at each such copy cut. The law of actual historical declarations and their retained final displays differs from the ideal record law by at most
+\begin{equation}\label{eq:totalhist}
+ E_{\rm hist}\le\min\{1,E_{\rm out}+E_{\rm arch}+E_{\rm transfer}\}.
+\end{equation}
+For registers declared directly in their permanent archive and never transferred, $E_{\rm transfer}=0$. In the exact driven key-preserving library, $E_{\rm arch}=0$ and the sharper purely classical classification bound is $\sum_j\delta_j$ when every displayed occurrence is included and no other perturbation is present.
+\item For every fixed finite ideal programme and tolerance $\epsilon>0$, finite pointer separations, protection gaps where used, feedback profiles and clock resources can be chosen so that these displayed bounds are below $\epsilon$. The exact physical theory remains \eqref{eq:H}--\eqref{eq:equilibrium}; only finite resources are adjusted.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Conservative existence was established for the complete smooth domain in Lemma~\ref{lem:exist}. Every stage is a finite unitary in that domain. Multiply the stages retaining every old key and resource, including reset receivers. First compare perturbed gates to the nominal driven key-controlled programme, using Proposition~\ref{prop:gap} and feedback Duhamel on the nominal stage inputs. In particular, each protection-stage comparison is evaluated on its encoded ideal prefix in the promised subspace $P$; earlier leakage is carried by the common actual suffix, not assumed absent. Each suffix is a common unitary, so prefix discrepancies are preserved; the estimates are uniform over the unknown input and $R$ with the specified prepared material bank. Add the clock's full retained-wave error.
+
+At the \emph{final comparison cut}, the nominal wave is an orthogonal history-key expansion with real Gaussian factors for each retained display and the complete source/resource coefficients. These displays include all replacement archive receivers; an intentionally reset original pointer is a ready factor, not a carrier of its former record. Truncate these display packets into their assigned cells only at this cut. On a branch, the norm-squared mass removed from its product of packets is at most $\sum_j\delta_j$. Orthogonality of the retained history keys then gives a full vector error at most $\sqrt{2\sum_j\delta_j}\le\sum_j\sqrt{2\delta_j}$ by the proof of Lemma~\ref{lem:instrument}. This yields a disjoint-record comparator with precisely the ideal history coefficients, on the same full retained space. Pure-state trace distance and position readout contractivity prove \eqref{eq:totalwave}. Cut packets are not propagated as if they were stationary oscillator ground states; the support truncation is a final comparison construction only. Subsequent common coherent returns preserve its full-state error but need not preserve its initial record separation.
+
+For history, couple a path's earlier declared labels to its actual final archived labels on the same probability space. A held label can change only by a specified surface crossing. A transfer to a fresh copy can additionally mismatch at the copy cut: its joint endpoint probability is bounded by $\delta_{\rm old}+\delta_{\rm copy}$ in the nominal wave, plus the complete comparison error at that cut. Stop protecting the old register when its deliberate reset begins, and protect the receiving archive from then on. Theorem~\ref{thm:history} and a union bound therefore give mismatch probability at most $E_{\rm arch}+E_{\rm transfer}$. Comparing final records to the ideal law costs $E_{\rm out}$. This proves \eqref{eq:totalhist} without a path-TV inference from wave closeness.
+
+For feasibility first choose pointer separations to make Gaussian tails small. Any literal feedback derivative residual can simultaneously be made small by the Gaussian-tail estimate after Theorem~\ref{thm:history}, with a separate archive if used. Choose bounded internal protection gaps large enough for the finite sum of \eqref{eq:gap}; no unbounded nuisance operators have been included. The finite apparatus inventory is then fixed. Its constants $A_{r,T},B,C_{\rm tr}$ are finite. Increase $M_c$ and choose $s_c=\sqrt{\hbar T/(2M_c)}$ so both clock-wave and archive-history bounds become arbitrarily small. All choices are finite at positive $\epsilon$. The limits are taken in this order, not uniformly over an unbounded growing graph or an infinite observation horizon.
+\end{proof}
+
+\paragraph{Conditioning and returning branches.}
+Let $P,Q$ be laws on the same retained output or declared-history space, with $\TV(P,Q)\le\epsilon$. For a common event $E$, write $p=P(E)$ and $q=Q(E)$. If both $p>0$ and $q>0$, Lemma~\ref{lem:conditional-bound} gives conditional classical error at most $\min\{1,2\epsilon/p\}$; the sufficient condition $\epsilon<p$ guarantees $q>0$. The same lemma gives the quantum normalization bound for positive unnormalized outputs on the same retained space, again requiring both traces to be positive. A zero-probability event has no normalized conditional branch, and capping an error estimate at one does not create that branch. Arbitrarily rare branches have no uniform guarantee.
+
+Equation~\eqref{eq:jointwave} and its general resource version, rather than a single sampled daughter, specify a complete return experiment. The reference is never accessed; all source maps tensor $I_R$. A common subsequent unitary acts on the complete retained state, including every returning controller and receiver. It preserves the full-state error but need not preserve record separation or historical readability after an intentional echo. Those claims retain the separate holding and transfer hypotheses of Theorem~\ref{thm:closure}.
+
+\paragraph{Preparation information is retained.}
+In the autonomous theory the clock's actual position is part of the initial configuration. Exposing it, or any other microscopic coordinate, changes the conditioning in \eqref{eq:pathlaw}. A physically acquired coordinate record must be an extra material coupling and retain its receiver. A factorized ready packet at a fixed time does not prove independence conditional on every hypothetical unrecorded previous passage time. The theorem uses complete initial equilibrium and a finite independent stock; it does not invoke the monograph's conditional nodal extraction as a nonexistent global preparation theorem.
+
+\section{A complete finite example and reproducible calculations}
+\label{sec:example}
+Use $P_a$ as $Z$ projectors and set
+\[
+ \theta=\pi/3,\qquad\varphi=\pi/4,\qquad\eta=2/3.
+\]
+The receptor weights are exactly
+\begin{equation}\label{eq:exampleweights}
+ (P_r,P_p,P_c,P_l)=(1/4,3/8,1/4,1/8).
+\end{equation}
+Take one unknown source with an inaccessible two-dimensional reference:
+\begin{equation}\label{eq:inputexample}
+ \psi=\sqrt{2/3}\ket0\ket0_R+
+                       \sqrt{1/3}\ket1\ket+_R,\qquad
+ \ket+_R=(\ket0_R+\ket1_R)/\sqrt2.
+\end{equation}
+The reduced source coherence is $\rho_{01}=1/3$. Neither independent copies nor reference control are used.
+
+\subsection{Null followed by an incompatible measurement}
+The ideal orthogonal-record null map is $\mathcal N(\rho)=\rho/4+\mathcal D_Z(\rho)/2$, with trace $3/4$; its retained coherent null is the vector \eqref{eq:nullvector}. A later $X$ probe in this ideal comparator gives
+\begin{equation}\label{eq:nullnumbers}
+ \Prb(N,X+)=\frac{11}{24},\qquad
+ \Prb(X+\mid N)=\frac{11}{18},\qquad
+ \sigma_R^{N,+}=\frac1{48}
+               \begin{pmatrix}19&5\\5&3\end{pmatrix}.
+\end{equation}
+To verify, write $\bra{+_x}\psi=\sqrt{1/3}\ket0_R+\sqrt{1/6}\ket+_R$ and apply \eqref{eq:nullmap} term by term, or expand \eqref{eq:nullvector} and trace only the named $D$ factor. The trace of the displayed matrix is $11/24$; its normalized reference state is the matrix with entries $19,5,5,3$ divided by $22$. For $X-$ the unnormalized reference state is
+\[
+ \sigma_R^{N,-}=\frac1{48}\begin{pmatrix}11&1\\1&3\end{pmatrix},
+ \quad\Prb(N,X-)=7/24.
+\]
+Their sum is $(3/4)\rho_R$, an explicit reference consistency check. A frozen original input would instead give $\Prb(X+\mid N)=5/6$; a fully $Z$-dephased daughter would give $1/2$. Both fail this finite experiment.
+
+\subsection{Captured copy, reset, spatial feedback and a second record}
+Copy the captured label, retain its spatial archive, reset $D$ by \eqref{eq:covariantreset}, keeping $D'$, and use
+\[
+ V_0=I,\qquad V_1=e^{-i\pi\sigma_y/6}.
+\]
+Apply an $X$ write to a fresh pointer. The ideal branch coefficients, with all resource factors attached, are
+\[
+ \tfrac12(R_bV_aP_a\otimes I_R)\psi.
+\]
+Their probabilities are
+\begin{center}
+\begin{tabular}{@{}lcc@{}}\toprule
+Retained first record & Second $+$ & Second $-$\\\midrule
+$a=0$ & $1/12$ & $1/12$\\
+$a=1$ & $(2-\sqrt3)/48$ & $(2+\sqrt3)/48$\\\bottomrule
+\end{tabular}
+\end{center}
+They sum to capture probability $1/4$. Reference daughters are $\ket0_R$ and $\ket+_R$, respectively. Literal spatial feedback uses the smooth $g(y)B$ contact, with $B=(\pi\hbar/(6t_f))\sigma_y$, and the bound \eqref{eq:feedbackbound}. The copied archive remains held while the working pointer can recoil. Thus the exact table is the ideal target with explicit finite classifier, feedback and clock errors, not an assertion that finite Gaussian records are orthogonal.
+
+\subsection{A complete reversal remains a different experiment}
+In the driven bank, if every response, source gate, copy and spatial write is coherently undone with all receiving systems, that full bank wave returns to its input, up to a known common phase. Resetting only $D$ while a copy or $D'$ survives does not achieve that return. A later incompatible probe distinguishes the two retained states. No global projection has been inserted at a declaration. In the finite autonomous realization the controller also remains in the complete state: its recoil and entanglement are bounded by the clock comparison, not claimed to be exactly undone by these apparatus inverse pulses.
+
+An inverse need not negate a massive kinetic energy. For the piecewise constant half-period alternative to \eqref{eq:quintic}, a trap centred at $aL/2$ sends a ground packet centred at zero to one centred at $aL$ in time $\pi/\omega$. Each conditional oscillator has common equally spaced spectrum, so evolution for $2\pi/\omega$ is $-I$. Evolving for a complementary positive duration realizes the inverse, up to a common phase. Finite internal gate inverses reverse a bounded matrix term. Smooth forced displacements can likewise be undone on the specified coherent packets by a reversed centre trajectory and known phase correction. A claim of inversion on an arbitrary oscillator state would require its full propagator rather than this restricted packet identity.
+
+\subsection{Reproducible symbolic and numerical calculations}
+The accompanying \path{reproducibility/integration_verification.py} checks the full $S\otimes R\otimes D$ vector, resource unitarity, status weights, null reference matrices, feedback probabilities, complete SWAP export and the noncommuting transported-trap identity. Its exact symbolic checks support the displayed algebra. The writer calculations below can be reproduced with \path{reproducibility/numerical_checks.py}; execution instructions and result files are included with the source.
+
+For the exact quintic writer with $\hbar=\sigma=T_w=1$, $\omega T_w=\pi$, $M=1/(2\pi)$, $L=8$, and $p_1=0.65$, direct quadrature and inverse-CDF calculations give
+\begin{center}
+\begin{tabular}{@{}lr@{}}\toprule
+Quantity & Value\\\midrule
+Initial right-tail atom & $0.0000316712418$\\
+Later threshold crossing & $0.649958827386$\\
+Final no-crossing null & $0.350009501373$\\
+Sum & $1.000000000000$\\\bottomrule
+\end{tabular}
+\end{center}
+The symbolic Schr\"odinger residual is exactly zero. An independent finite-difference evaluation had relative residual below $2.0\times10^{-7}$; the quantile ODE residual was below $1.8\times10^{-9}$ and the first-passage quadrature discrepancy below $3.4\times10^{-16}$. Figure~\ref{fig:mechanism} uses these parameters. No simulation evidence is used to assert a universal event-law selection.
+
+\section{Adversarial comparison and the fate of the three obligations}
+\label{sec:rivals}
+The strongest candidate must survive a rival that preserves more than endpoint Born weights. We give such a rival and state precisely what it defeats.
+
+\subsection{Same local net current, mutually singular paths}
+For a smooth positive density of the same complete wave, define an equivariant diffusion by
+\begin{equation}\label{eq:diffusion}
+ dQ_t=\left(\frac j\rho+D\nabla\log\rho\right)(Q_t,t)dt
+                                   +\sqrt{2D}\,dW_t,
+ \qquad D>0.
+\end{equation}
+Its Brownian innovations are an explicit additional stochastic premise. The Fokker--Planck current is $\rho b-D\nabla\rho=j$, so it matches even the local current, not just its divergence. We only assert its global existence where checked below; this is an equivariant diffusion rival, not a claim that every axiom of Nelson's stochastic mechanics has been derived.
+
+For a stationary harmonic ground-state pointer centred at zero, the adopted theory has $\dot Q=0$. The rival is the globally well-posed Ornstein--Uhlenbeck process
+\[
+ dQ=-D Q\,dt/\sigma^2+\sqrt{2D}\,dW.
+\]
+It has the identical invariant Gaussian density but moves at positive times. More strongly, on any $T>0$ its path law and the adopted guidance path law have TV distance one: Brownian diffusion paths have quadratic variation $2DT$, whereas the absolutely continuous guidance paths have zero. These are disjoint measurable path events. The comparison does not require an experimentally admitted passive quadratic-variation meter.
+
+\begin{proposition}[Reliable macroscopic records do not remove the rival]\label{prop:rivalarchive}
+Use the same semibounded Hamiltonian
+\[
+ H=\frac{p^2}{2M}+\frac{M\omega^2}{2}(x-a\sigma_z)^2
+\]
+and the equal superposition of its two spin-labelled ground packets. Its stationary density is
+\[
+ \rho(x)=\tfrac12g_\sigma(x-a)+\tfrac12g_\sigma(x+a),\qquad j=0.
+\]
+The adopted configuration is fixed. The diffusion \eqref{eq:diffusion} has smooth globally Lipschitz drift
+\[
+ b_D(x)=\frac D{\sigma^2}\left[-x+a\tanh\left(\frac{ax}{\sigma^2}\right)\right]
+\]
+and invariant law $\rho$. For $a\ge2\sigma$, the probability it changes the sign record during $[0,T]$ is no greater than
+\begin{equation}\label{eq:rivalbound}
+ \min\left\{1,\frac{a+4DT/a}{\sqrt{2\pi}\sigma}
+                         e^{-a^2/(8\sigma^2)}\right\}.
+\end{equation}
+\end{proposition}
+\begin{proof}
+Set $b=a/2$ and $f(x)=(1-|x|/b)_+$. On $(0,b)$, $\rho'\ge0$: the sign is that of $a\tanh(ax/\sigma^2)-x$, a concave function vanishing at zero and positive at $b$ for $a\ge2\sigma$. Thus $f'b_D\le0$ on both sides of the central interval. Stop at the first hit $\tau$ of zero. The It\^o--Tanaka formula gives only nonpositive interior drift and a nonpositive local-time contribution at zero; its positive contributions are $(L_{T\wedge\tau}^{-b}+L_{T\wedge\tau}^{b})/(2b)$. Since $f(Q_{T\wedge\tau})\ge1_{\{\tau\le T\}}$ and stationarity gives $\E L_T^x=2DT\rho(x)$,
+\[
+ \Prb(\tau\le T)\le\E f(Q_0)+\frac{DT}{b}[\rho(-b)+\rho(b)]
+ \le(2b+2DT/b)\rho(b).
+\]
+Finally $\rho(b)\le e^{-a^2/(8\sigma^2)}/(\sqrt{2\pi}\sigma)$. Sign change requires a hit of zero, so the same bound applies. Existence and invariance follow directly from the displayed Lipschitz drift and the stationary Fokker--Planck equation.
+\end{proof}
+Thus arbitrarily reliable finite-horizon records can coexist with mutually singular microscopic paths. The velocity postulate selects the adopted law \emph{within the new theory}; record success does not independently force that postulate. Deterministic divergence-free changes provide further rivals: in an isotropic real two-dimensional Gaussian, $v_\Omega=\Omega(-y,x)$ preserves the same density while changing a sign record with probability $\Omega T/\pi$ for $0\le\Omega T\le\pi$. This particular rotor is a counterexample to inference from continuity, not a proposed fully symmetry-constrained replacement. More general quantum-equivalent deterministic alternatives are established in primary work \cite{Deotto}.
+
+\subsection{A finite discrete rival with a sharp complete-path discriminator}
+On the monograph's finite graph, let
+\begin{equation}\label{eq:etarates}
+ \lambda^{(\eta)}_{Y\leftarrow X}=
+ \frac{\pos{J_{YX}}+\eta|J_{YX}|}{w_X},\qquad\eta\ge0.
+\end{equation}
+It preserves individual net currents, support and equilibrium and remains Markov. On a binary monotone write with $u=\sin^2(gt)$, the rates per $du$ are $(1+\eta)/(1-u)$ forward and $\eta/u$ backward. The wave weights are $1-u,u$, its final state is 1, and expected total jump count is $1+2\eta$; integrability of this count and vanishing nodal holding survival give a nonexplosive path law.
+
+A path with exactly one jump at $u$ has density
+\[
+ (1-u)^{1+\eta}\frac{1+\eta}{1-u}
+       \exp\left[-\int_u^1\frac\eta s ds\right]
+ =(1+\eta)[u(1-u)]^\eta.
+\]
+The Bell law has exactly one jump, uniform in $u$. Since $(1+\eta)4^{-\eta}\le1$, the common mass of the two path measures is precisely the integral of this rival one-jump density. Therefore
+\begin{equation}\label{eq:exactTV}
+ \TV(P_\eta,P_{\rm B})=1-(1+\eta)\mathrm B(1+\eta,1+\eta),
+ \qquad\TV(P_1,P_{\rm B})=\frac23.
+\end{equation}
+This is a concrete surviving balanced-traffic countermodel with exact Born endpoints. It is not an independently selected new event mechanism. It confirms why endpoint agreement, even with correct individual net currents, would be insufficient to claim Bell closure.
+
+\subsection{The three selection obligations in the adopted continuum}
+\begin{enumerate}
+\item \textbf{Individual current realization.} The kinetic-momentum postulate specifies the pointwise material current $j$. Equivariance and the flow derive expected net flux through each physical interface. There is no freely reassigned cycle current within that postulate. This does \emph{not} identify those interfaces with arbitrary finite internal Hamiltonian matrix edges in \eqref{eq:Bell}.
+\item \textbf{Surplus traffic.} At a regular point of an interface the velocity has one sign and actual crossings realize its local direction. If an entire interface is integrated or microscopic coordinates are omitted, opposite directions on different patches give
+\[
+ F_+=\int_\Sigma\pos{j\cdot n},\quad F_-=\int_\Sigma\pos{-j\cdot n},\quad
+ F_+-F_-=\int_\Sigma j\cdot n.
+\]
+In general $F_+\ne[\int_\Sigma j\cdot n]_+$. Coarse countertraffic and recrossing can survive. Neither their absence nor graph Bell minimality is falsely claimed. No extra Brownian traffic is allowed by the stated mechanical law.
+\item \textbf{Conditional timing.} Equations~\eqref{eq:guidance} and \eqref{eq:pathlaw} give the whole path and every conditional history, including current reversals and nulls. The explicit physical-time first-passage example has a derived nonexponential law. Other waiting laws are different constitutions, not unresolved free choices inside this one. Coarse histories generally fail Markov closure and are not assigned Bell rates by projection.
+\end{enumerate}
+The alternative therefore closes the operational programme with a selected physical motion law and its material contacts. It gives up the original finite-sector microscopic claim rather than pretending to derive it.
+
+\section{Integration with the monograph and scope of the completion}
+\label{sec:integration}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{.25\textwidth}>{\raggedright\arraybackslash}p{.69\textwidth}@{}}\toprule
+Dependency & Status in this completion\\\midrule\endhead
+Source/readout descent and predictive representations & Retained as mathematical statements about declared maps and controls; they do not generate probability.\\
+Hamiltonian current identities & Retained for whatever finite internal decomposition is mathematically specified. They are not automatically actual spin-jump currents.\\
+Canonical packets, kinetic chemistry, entropy selection, MPBT and stirred chambers & Their conditional results stay intact. They are not premises of this alternative source constitution. The separate pilot completion supplies its own controlled Bell-path limit under its stated premises.\\
+Actual finite-sector $X$ and Bell generator & Replaced by complete massive positions $Q$ and the kinetic-momentum flow. No microscopic Bell-path equivalence is asserted.\\
+Continuous configuration records & The existing guidance/record logic is retained. The material realization is strengthened to positive kinetic energy, confining traps, finite resource gates and a retained autonomous controller.\\
+Finite receptors, loss and pending excitation & Implemented as full coherent resource vectors and subsequent spatial recording. Intrinsic absorbing jumps and frozen-null rules from other constitutions are not imported.\\
+Archive truth & Proved by pointwise stationary storage and, for the finite autonomous controller, a derivative-controlled absolute-flux bound. Endpoint equivariance alone is not used as history truth.\\
+Protection & The bounded complete-internal-bank gap theorem is retained on its commuting spatial-spectator domain. Arbitrary unbounded material disturbances are outside it.\\
+Preparation & Complete initial equilibrium and a finite independent ready stock are physical assumptions. Conditional subsystem preparation does not become universal equilibrium.\\
+Reset and returning keys & The receiver, spent products, copied records and transported trap control are kept explicitly, including in the clock comparison.\\
+Continuation and reference & Full coherent vectors and common unitary return bounds retain $R$. Effective daughter instruments have only their declared separated-record domain.\\\bottomrule
+\end{longtable}
+
+\paragraph{Provenance and physical assumptions.}
+Bohmian motion, equilibrium-conditioned measurement analysis, and the general existence mechanism have established provenance. The present paper does not claim historical priority for those ingredients. Its directly proved contribution is their explicit use in a \emph{single finite semibounded resource model}, the transported-trap reset, smooth massive writer and full null example, and the controller graph-norm-to-archive-history estimate needed to make autonomous integration defensible. The numerical work checks explicit formulas. Universal material admission, kinetic-momentum motion, and the complete initial equilibrium law are proposed constitutive premises relative to the earlier source/readout programme.
+
+\paragraph{Constitutive and effective conclusions.}
+The result is an internal completion of the stated finite nonrelativistic measurement constitution, with controlled autonomous retained-output and historical-faithfulness estimates. Guidance and complete initial equilibrium remain postulates. The discrete Bell process in \eqref{eq:Bell} belongs to a separate ontology; the pilot paper \cite{Pilot} establishes its controlled effective realization under different premises. Neither completion supplies an unstated premise of the other.
+
+\paragraph{Limits that remain real.}
+We have not proved universal physical necessity of guidance, derived equilibrium from arbitrary initial data, built a relativistic theory or an unlimited autonomous memory, or established TV continuity of unrecorded trajectories under small Hamiltonian perturbations. The finite material inventory and its ideal engineered interactions are a theoretical realization, not a claim of laboratory fabrication. The autonomous clock, memory separations and protection gaps have stated resource costs. The surviving rival diffusion refutes uniqueness from operational record success; it does not leave a stochastic rule unspecified inside the adopted constitution. This paper establishes the massive alternative and its declared measurement-chain estimates; its continuous paths do not constitute a derivation of discrete Bell jumps.
+
+\appendix
+\section{A compact proof of complete output and conditioning bounds}
+\label{app:conditioning}
+For normalized $u,v$, the pure-state trace distance satisfies
+\[
+ D(\ket u\bra u,\ket v\bra v)
+ =\sqrt{1-|\langle u,v\rangle|^2}\le\norm{u-v}.
+\]
+Any common quantum channel, including a final position classification and an identity on a retained reference, contracts trace distance. These comparisons use the same complete retained output space. Restricting to a common event gives positive unnormalized outputs; normalization requires that the event have positive probability in both compared models.
+
+\begin{lemma}[Conditioning on a common retained event]
+\label{lem:conditional-bound}
+Let $P,Q$ be two probability laws on the same retained output or history space, with $\TV(P,Q)\le\epsilon$. For a common event $E$, put $p=P(E)$ and $q=Q(E)$. If \emph{both} $p>0$ and $q>0$, then
+\[
+ \TV\bigl(P(\,\cdot\mid E),Q(\,\cdot\mid E)\bigr)
+ \le\min\{1,2\epsilon/p\}.
+\]
+The sufficient condition $\epsilon<p$ ensures $q>0$. For positive unnormalized quantum outputs $\sigma,\tau$ on the same retained space, if $\norm{\sigma-\tau}_1\le d$, $p=\tr\sigma>0$ and $q=\tr\tau>0$, then
+\[
+ \norm{\sigma/p-\tau/q}_1\le\min\{2,2d/p\}.
+\]
+Here $d<p$ is sufficient for positivity of the second trace.
+\end{lemma}
+\begin{proof}
+For a measurable set $A$, add and subtract $Q(A\cap E)/p$. The first difference is at most $\epsilon/p$, and the second is at most $|p-q|/p\le\epsilon/p$, since $Q(A\cap E)\le q$. Taking the supremum proves the classical estimate. For the quantum estimate add and subtract $\tau/p$, use positivity to obtain $\norm{\tau}_1=q$, and use $|p-q|\le\norm{\sigma-\tau}_1$:
+\[
+ \norm{\sigma/p-\tau/q}_1
+ \le d/p+|p-q|/p\le2d/p.
+\]
+The upper bounds one and two are the maximal respective distances. Finally $q\ge p-\epsilon$ or $q\ge p-d$ proves the positivity claims.
+\end{proof}
+
+The lemma applies to complete path laws only when a joint path-law bound on that common space has actually been established. In Theorem~\ref{thm:closure}, $E_{\rm out}$ controls complete retained quantum outputs and their physical readout probabilities, while $E_{\rm hist}$ controls the stated classical declaration-and-display histories. Neither bound asserts closeness of raw guidance trajectories or TV closeness of the ontic pair $(\Psi,Q)$. A discarded reservoir, a missing key, or an abstract sampled path cannot be identified with an existing physical record by conditioning. A zero-probability event has no normalized conditional branch, and arbitrarily rare events have no uniform conditional guarantee.
+
+\section{Reproducibility and interpretation of the checks}
+The source package includes the figure asset, exact symbolic checks and deterministic numerical evaluations with execution instructions. The symbolic checks evaluate the finite resource and continuation algebra. The numerical checks evaluate the exact writer, quantile trajectories, threshold law and displayed error diagnostics at the stated parameters. They support these explicit examples; the complete construction and its hypotheses are established by the proofs in the paper.
+
+The source also retains the distinction between a mathematical path law and a physical record. Historical faithfulness uses stationary holding, copy-cut transfer and absolute archive flux. Small retained-wave error is not promoted to total-variation closeness of arbitrary unrecorded microscopic trajectories. Likewise, output agreement does not establish universal physical necessity of the chosen guidance and preparation postulates.
+
+\begin{thebibliography}{99}
+\raggedright
+
+\bibitem{Monograph}
+Jeremy Rodgers,
+\emph{Shadow Theory and Quantum Measurement: Source Dynamics, Event Laws, and Physical Records --- Two Constitutive Completions},
+integrated monograph, version 2, 15 September 2026. Zenodo preprint.
+\href{https://doi.org/10.5281/zenodo.22774584}{doi:10.5281/zenodo.22774584}.
+Chapters 28--31 contain the massive construction, corrected conditioning lemma and retained-output/history scope; Chapter 35 consolidates its relation to the separate pilot completion. The arguments needed here are included in the present paper.
+
+\bibitem{Pilot}
+Jeremy Rodgers,
+\emph{A Deterministic Pilot Medium: Bell Path Selection and Autonomous Material Records},
+version 2, 15 September 2026. Zenodo preprint.
+\href{https://doi.org/10.5281/zenodo.22774634}{doi:10.5281/zenodo.22774634}.
+A separate constitutive completion with a controlled physical-time Bell-path limit, cited for comparison.
+
+\bibitem{BohmI}
+D. Bohm,
+A suggested interpretation of the quantum theory in terms of ``hidden'' variables. I,
+\emph{Physical Review} \textbf{85}, 166--179 (1952).
+\href{https://doi.org/10.1103/PhysRev.85.166}{doi:10.1103/PhysRev.85.166}.
+
+\bibitem{BohmII}
+D. Bohm,
+A suggested interpretation of the quantum theory in terms of ``hidden'' variables. II,
+\emph{Physical Review} \textbf{85}, 180--193 (1952).
+\href{https://doi.org/10.1103/PhysRev.85.180}{doi:10.1103/PhysRev.85.180}.
+
+\bibitem{DGZeq}
+D. D\"urr, S. Goldstein and N. Zangh\`i,
+Quantum equilibrium and the origin of absolute uncertainty,
+\emph{Journal of Statistical Physics} \textbf{67}, 843--907 (1992).
+\href{https://arxiv.org/abs/quant-ph/0308039}{arXiv:quant-ph/0308039}.
+In particular, the complete initial equilibrium measure and conditional-probability analysis; no claim of global relaxation is imported.
+
+\bibitem{DGZoperators}
+D. D\"urr, S. Goldstein and N. Zangh\`i,
+Quantum equilibrium and the role of operators as observables in quantum theory,
+\emph{Journal of Statistical Physics} \textbf{116}, 959--1055 (2004).
+\href{https://doi.org/10.1023/B:JOSS.0000037234.80916.d0}{doi:10.1023/B:JOSS.0000037234.80916.d0};
+\href{https://arxiv.org/abs/quant-ph/0308038}{arXiv:quant-ph/0308038}.
+
+\bibitem{TT}
+S. Teufel and R. Tumulka,
+Simple proof for global existence of Bohmian trajectories,
+\emph{Communications in Mathematical Physics} \textbf{258}, 349--365 (2005).
+\href{https://doi.org/10.1007/s00220-005-1302-0}{doi:10.1007/s00220-005-1302-0};
+\href{https://arxiv.org/abs/math-ph/0406030}{arXiv:math-ph/0406030}.
+The current-integrability assumptions and the spinor theorem are checked in Section~\ref{sec:constitution}.
+
+\bibitem{Deotto}
+E. Deotto and G. C. Ghirardi,
+Bohmian mechanics revisited,
+\emph{Foundations of Physics} \textbf{28}, 1--30 (1998).
+\href{https://doi.org/10.1023/A:1018752202576}{doi:10.1023/A:1018752202576};
+\href{https://arxiv.org/abs/quant-ph/9704021}{arXiv:quant-ph/9704021}.
+
+\bibitem{Arrival}
+S. Goldstein, R. Tumulka and N. Zangh\`i,
+Arrival times versus detection times,
+\emph{Foundations of Physics} \textbf{54}, 63 (2024).
+\href{https://doi.org/10.1007/s10701-024-00798-y}{doi:10.1007/s10701-024-00798-y};
+\href{https://arxiv.org/abs/2405.04607}{arXiv:2405.04607}.
+
+\bibitem{MarvianLidar}
+M. Marvian and D. A. Lidar,
+Error suppression for Hamiltonian-based quantum computation using subsystem codes,
+\emph{Physical Review Letters} \textbf{118}, 030504 (2017).
+\href{https://doi.org/10.1103/PhysRevLett.118.030504}{doi:10.1103/PhysRevLett.118.030504};
+\href{https://arxiv.org/abs/1606.03795}{arXiv:1606.03795}.
+
+\end{thebibliography}
+\end{document}

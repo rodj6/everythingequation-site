@@ -140,6 +140,13 @@ export default async function MonographItemPage({
         </div>
       </header>
 
+      {["quantum-theory-and-relativistic-qft", "records-measurement-and-objectivity", "the-quantum-record-geometry-bridge", "the-companion-theorem-programme", "scientific-scope-tests-and-open-problems"].includes(item.slug) ? (
+        <aside className="mt-6 rounded-xl border border-[hsl(var(--violet)/0.3)] bg-[hsl(var(--violet)/0.04)] px-5 py-4 text-sm leading-relaxed text-mute">
+          <p className="font-medium text-fg">Later programme publication</p>
+          <p className="mt-2">The <Link href="/quantum-measurement" className="text-glow hover:text-glow-strong">September 2026 Quantum Measurement programme</Link> supplies two constitutive completions and their full technical texts. This chapter remains the original TOE Version 1.0 publication; the later work has its own premises and provenance.</p>
+        </aside>
+      ) : null}
+
       {/* In-chapter contents */}
       {item.sections.length > 1 ? (
         <nav

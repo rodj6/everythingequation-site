@@ -2,6 +2,51 @@
 
 ## Quantum alternatives, selection, deposition and objective records
 
+### Publication context — September 2026 measurement programme
+
+The Q5 framework below retains its earlier operator-algebraic account of alternatives,
+an assumed Born-compatible selector, deposition and objective archive criteria. It is
+not a derivation of a physical event law from source/readout incompleteness.
+
+The **15 September 2026 Quantum Measurement programme**, by Jeremy Rodgers,
+Independent Researcher, supplies two separate constitutive completions. The
+[programme overview](/quantum-measurement), [complete monograph](/quantum-measurement/monograph)
+and [Atlas field guide](/atlas/quantum-measurement) connect this framework context
+to the exact new constructions without changing the frozen publications.
+
+- **Pilot medium.** Under P1–P4 and the stated initial ensemble, canonical individual
+  currents, conservative signed export, an independently prepared spatial gas,
+  finite recombination and calibrated carrier residence produce a controlled Bell
+  limit in total variation on complete tagged paths. Graph, programme, retained
+  systems and physical horizon are fixed; physical time is unchanged. Finite
+  devices retain controlled deviations. The autonomous material clock gives
+  exact Bell-limit sampled-history faithfulness at monomial copy cuts on the first pass, with controlled finite-pilot history error,
+  with storage limited by recurrence. See the [path theorem](/quantum-measurement/pilot-medium#thm:main)
+  and [material transfer](/quantum-measurement/pilot-medium#mat:transfer).
+- **Massive configuration.** A different, smooth finite nonrelativistic constitution
+  postulates a universal massive Schrödinger inventory, kinetic-momentum guidance
+  and complete initial equilibrium with finite independent ready stock. Its exact
+  pointer writer, retained resources, protected historical archives and finite
+  autonomous controller have separate output and historical-corruption estimates.
+  It does not derive discrete Bell jumps or their waiting law. See the
+  [constitution](/quantum-measurement/massive-configuration#sec:constitution)
+  and [complete chain closure](/quantum-measurement/massive-configuration#thm:closure).
+
+Both constructions retain null and loss branches, reset receivers, inaccessible
+references and noncommuting continuation. Born statistics require the named
+initial preparation premises; source/readout incompleteness alone supplies
+neither those premises nor the interaction or guidance laws. These are internal
+resolutions within their declared constitutions, without a claim of external
+experimental verification. Matching endpoint probabilities does not establish
+complete-path equivalence or faithful copies of the actual past.
+
+The Atlas marks theorem-dependent connections with solid lines and conceptual
+relationships with dashed lines. In particular, the passage from the programme's
+finite faithful material records to the broader objective archive below is
+conceptual: independent accessibility, redundancy, persistence and geometric
+reconstruction still require their own stated criteria. The inherited Q5
+equations and proofs remain below with that provenance intact.
+
 ### 1. Quantum representation of the aperture field
 
 Let

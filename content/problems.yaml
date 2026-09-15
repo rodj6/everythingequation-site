@@ -13,7 +13,7 @@ version: 2
 #                   additional -> listed under further targets
 #                   legacy     -> archived; shown only in the archive section
 #   status        - public | draft  (draft entries are hidden)
-#   maturity      - open | active | legacy-notes
+#   maturity      - open | active | constitutive-results | legacy-notes
 #   legacy_notes  - true when an older manual MDX note exists for this slug.
 #                   Those notes are historical drafts from the earlier
 #                   Everything Equation era and are displayed behind a
@@ -103,16 +103,19 @@ problems:
 
   - id: quantum-measurement
     slug: quantum-measurement
-    title: Quantum Measurement
+    title: Quantum Measurement and the Born Rule
     domain: Quantum Foundations
     programme: featured
     status: public
-    maturity: legacy-notes
+    maturity: constitutive-results
     legacy_notes: true
     target: >
-      The quantum measurement problem reframed through the distinction between
-      bounded readouts and realization structure established in Paper 1, and
-      the obstruction criterion of Paper 2.
+      Version 2 publishes two constitutive completions: a controlled pilot-medium
+      Bell-path limit with material records, and a separate massive-configuration
+      construction with guidance and initial-equilibrium premises. The monograph
+      and companion papers state the proofs, finite-resource domains and remaining
+      extensions. Independent assessment and experimental verification remain
+      separate from the internal results.
 
   # ----------------------------------------------------------------
   # ADDITIONAL TARGETS

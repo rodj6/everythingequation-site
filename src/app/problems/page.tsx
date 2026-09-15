@@ -6,9 +6,9 @@ import { ProblemCard } from "@/components/cards";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "Open Problems",
+  title: "Research Status and Open Problems",
   description:
-    "The Shadow Theory research programme: open problems organized as downstream branch targets of the seven-paper foundation, with explicit research questions and publication routes.",
+    "Research status across Shadow Theory: published quantum measurement constitutions, open branch targets, explicit assumptions, publication routes and historical notes.",
   alternates: { canonical: "/problems" },
 };
 
@@ -22,14 +22,15 @@ export default async function ProblemsPage() {
     <div className="space-y-16">
       <header className="max-w-3xl">
         <p className="section-label">Research programme</p>
-        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Open problems</h1>
+        <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Research status &amp; open problems</h1>
         <p className="mt-4 text-lg leading-relaxed text-mute">
-          These research <em>targets</em> extend the seven-paper foundation into
+          These research programmes extend the seven-paper foundation into
           downstream branches. Each target identifies the question to resolve and the
           evidence a dedicated public paper must supply: declared assumptions and
           domain, a reproducible method, mathematical or empirical support, and a
           precise result.
         </p>
+        <p className="mt-4 text-base leading-relaxed text-mute">The <Link href="/quantum-measurement" className="text-glow hover:text-glow-strong">Quantum Measurement programme</Link> now has published Version 2 constitutive results. Its internal conclusions, declared physical premises and remaining extensions are tracked separately.</p>
         <p className="mt-3 text-sm leading-relaxed text-faint">
           Pages may include earlier notes from the Everything Equation era; those are
           marked as historical drafts and retained as development context.

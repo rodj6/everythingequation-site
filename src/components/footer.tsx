@@ -46,8 +46,8 @@ export default function Footer() {
         <div className="mt-10 border-t border-edge pt-6">
           <p className="text-xs leading-relaxed text-faint">
             © {new Date().getFullYear()} {site.author.name}. {site.name} publishes a
-            seven-paper mathematical foundation, an RS2 physical witness, the complete
-            monograph, and an open research programme with explicit result domains.
+            seven-paper mathematical foundation, an RS2 physical witness, complete
+            TOE and quantum measurement web editions, and research results with explicit domains.
           </p>
         </div>
       </div>

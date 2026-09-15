@@ -3,7 +3,7 @@ import AtlasExperience from "@/components/atlas/atlas-experience";
 import { site } from "@/config/site";
 
 const description =
-  "An interactive, multiscale atlas of the Ω-to-Tier-1 construction: source substrate, recursive aperture, canonical field, quantum records, spacetime, gravity, matter, constants, cosmology, time and observers.";
+  "Explore the source-to-readout architecture and its Quantum Measurement programme: pilot-medium Bell paths, massive guidance and equilibrium, Born statistics and physical records, with mathematical and conceptual connections distinguished.";
 const atlasUrl = new URL("/atlas", site.url).toString();
 
 export const metadata: Metadata = {
@@ -16,6 +16,10 @@ export const metadata: Metadata = {
     "emergent spacetime",
     "quantum gravity",
     "mathematical physics",
+    "Quantum Measurement",
+    "Born rule",
+    "pilot medium",
+    "massive configuration",
   ],
   alternates: { canonical: "/atlas" },
   openGraph: {

@@ -11,6 +11,7 @@ import fs from 'fs/promises';
 import { existsSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
+import { quantumPublications } from '@/config/quantum';
 
 export type Visibility = 'draft' | 'public';
 export type PaperCategory = 'canonical' | 'branch' | 'superseded' | 'historical';
@@ -50,6 +51,12 @@ export interface LoadedPaper {
   date?: string;
   zenodoId?: string;
   doi?: string;
+  /** Complete local edition and original source downloads, when supplied. */
+  webUrl?: string;
+  pdfUrl?: string;
+  texUrl?: string;
+  markdownUrl?: string;
+  researchProgramme?: 'quantum-measurement';
   /** Problem slugs this paper supports. */
   supports: string[];
   /** For superseded records: slug of the current canonical paper that replaced it. */
@@ -162,11 +169,22 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
   for (const raw of items) {
     const rawId: string = raw.id || '';
     let slug: string = raw.slug || rawId.replace(/^paper:/, '').replace(/:/g, '-');
-    const zenodoId: string | undefined = raw.zenodo != null ? String(raw.zenodo) : undefined;
+    const quantum = quantumPublications.find((publication) => publication.paperSlug === slug);
+    const zenodoId: string | undefined = quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (zenodoId) {
+    if (quantum && zenodoId) {
+      metadata = {
+        id: zenodoId, doi: quantum.doi, title: quantum.title,
+        url: quantum.zenodoUrl, creators: [quantum.author], published: quantum.published,
+        files: [
+          { filename: `${quantum.id}.pdf`, url: quantum.pdfUrl },
+          { filename: `${quantum.id}.tex`, url: quantum.texUrl },
+          { filename: `${quantum.id}.md`, url: quantum.markdownUrl },
+        ],
+      };
+    } else if (zenodoId) {
       if (cache[slug]) {
         metadata = cache[slug];
       } else {
@@ -178,8 +196,8 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       }
     }
 
-    const doi: string | undefined = raw.doi ?? metadata?.doi ?? undefined;
-    const title: string | undefined = raw.title ?? metadata?.title ?? undefined;
+    const doi: string | undefined = quantum?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
+    const title: string | undefined = quantum?.title ?? raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
       raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'superseded'
         ? raw.category
@@ -193,11 +211,16 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       status: raw.visibility === 'public' ? 'public' : 'draft',
       featured: Boolean(raw.featured),
       title,
-      subtitle: raw.subtitle,
+      subtitle: quantum?.subtitle ?? raw.subtitle,
       role: raw.role,
       summary: raw.summary,
-      version: raw.version,
-      date: raw.date ?? metadata?.published,
+      version: quantum ? `Version ${quantum.version}` : raw.version,
+      date: quantum?.published ?? raw.date ?? metadata?.published,
+      webUrl: quantum?.webUrl,
+      pdfUrl: quantum?.pdfUrl,
+      texUrl: quantum?.texUrl,
+      markdownUrl: quantum?.markdownUrl,
+      researchProgramme: quantum ? 'quantum-measurement' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

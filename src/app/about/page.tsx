@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Shadow Theory: the project, its seven canonical results, the author, publication record, and research programme.",
+    "About Shadow Theory and Jeremy Rodgers, Independent Researcher: the source–readout foundation, TOE monograph, Quantum Measurement programme and publication status.",
   alternates: { canonical: "/about" },
 };
 
@@ -45,7 +45,8 @@ export default function AboutPage() {
           </p>
           <p>
             This site is the framework's public home. It hosts the canonical papers, the
-            open-problem programme, research articles, and the machine-readable research
+            complete TOE monograph, the Quantum Measurement programme, open problems,
+            research articles, and the machine-readable research
             graph.
           </p>
         </div>
@@ -65,6 +66,13 @@ export default function AboutPage() {
             .
           </p>
         </div>
+      </section>
+
+      <section aria-labelledby="measurement-publications-heading">
+        <h2 id="measurement-publications-heading" className="text-2xl font-bold tracking-tight">The Quantum Measurement publications</h2>
+        <p className="mt-4 leading-relaxed text-fg/90">Published on 15 September 2026, the Version 2 integrated monograph and two companion papers develop the programme from source dynamics to event laws, Born statistics and physical records. Their full text, proofs, counterexamples, original PDFs and LaTeX sources are available here.</p>
+        <p className="mt-4 leading-relaxed text-mute">The pilot-medium and massive-configuration constructions each establish an internal resolution under their own physical premises. Source/readout incompleteness supplies a structural question; it does not derive their interactions, guidance or preparation statistics. The publications state finite-resource limits and broader extensions. Independent assessment and experimental verification are distinct from these internal results.</p>
+        <Link href="/quantum-measurement" className="mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong">Read the programme and its publications →</Link>
       </section>
 
       <section aria-labelledby="status-heading">

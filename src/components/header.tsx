@@ -76,7 +76,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-edge bg-[hsl(var(--background)/0.82)] backdrop-blur-md">
-      <div className="mx-auto flex h-16 w-full max-w-content items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 w-full max-w-[96rem] items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
           aria-label={`${site.name} homepage`}
@@ -95,7 +95,7 @@ export default function Header() {
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
                   className={
-                    "rounded-md px-3 py-2 text-sm transition-colors " +
+                    "whitespace-nowrap rounded-md px-2 py-2 text-xs transition-colors 2xl:px-2.5 2xl:text-sm " +
                     (isActive(item.href)
                       ? "text-glow-strong bg-[hsl(var(--accent)/0.08)]"
                       : "text-mute hover:text-fg hover:bg-[hsl(var(--surface-raised))]")

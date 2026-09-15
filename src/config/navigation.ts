@@ -17,9 +17,10 @@ export const navigation: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/framework", label: "Framework" },
   { href: "/atlas", label: "Atlas" },
-  { href: "/monograph", label: "Monograph" },
+  { href: "/quantum-measurement", label: "Quantum Measurement" },
+  { href: "/monograph", label: "TOE Monograph" },
   { href: "/papers", label: "Papers" },
-  { href: "/problems", label: "Open Problems" },
+  { href: "/problems", label: "Research Status" },
   { href: "/articles", label: "Articles" },
   { href: "/research-map", label: "Research Map" },
   { href: "/about", label: "About" },
@@ -31,4 +32,5 @@ export const footerLinks: NavItem[] = [
   { href: "/feed.xml", label: "Feed" },
   { href: "/llms.txt", label: "llms.txt" },
   { href: "/graph.json", label: "Research graph" },
+  { href: "/quantum-measurement/manifest.json", label: "Quantum text inventory" },
 ];
