@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { site } from "@/config/site";
+import { consciousnessPublication } from "@/config/consciousness";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.author.name }],
-  keywords: ["Shadow Theory", "quantum measurement", "Born rule", "pilot medium", "Bell process", "massive configuration", "source readout", "mathematical physics"],
+  keywords: ["Shadow Theory", "consciousness", "SPC-2", "subject continuity", "quantum measurement", "Born rule", "pilot medium", "Bell process", "massive configuration", "source readout", "mathematical physics"],
   alternates: {
     canonical: "/",
     types: { "application/atom+xml": "/feed.xml" },
@@ -41,6 +42,8 @@ const websiteJsonLd = {
   description: site.description,
   hasPart: [
     { "@type": "CollectionPage", name: "Quantum Measurement and the Born Rule", url: `${site.url}/quantum-measurement` },
+    { "@type": "CollectionPage", name: "Shadow Theory and Consciousness", url: `${site.url}/consciousness` },
+    { "@type": "Book", name: consciousnessPublication.title, version: consciousnessPublication.version, url: `${site.url}${consciousnessPublication.webUrl}`, sameAs: consciousnessPublication.doiUrl },
     { "@type": "Book", name: site.monograph.title, url: `${site.url}/monograph` },
   ],
   author: {

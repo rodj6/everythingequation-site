@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Papers",
   description:
-    "The seven-paper Shadow Theory foundation, the complete Quantum Measurement programme and its two companion constructions, TOE monograph, and historical publications with full text, PDFs and DOIs.",
+    "The Shadow Theory foundation, Quantum Measurement programme, SPC-2 consciousness monograph, TOE monograph and historical publications with full text, PDFs and DOIs.",
   alternates: { canonical: "/papers" },
 };
 
@@ -18,6 +18,7 @@ export default async function PapersPage() {
     .filter((p) => p.category === "canonical")
     .sort((a, b) => (a.number ?? 99) - (b.number ?? 99));
   const quantum = papers.filter((p) => p.researchProgramme === "quantum-measurement");
+  const consciousness = papers.filter((p) => p.researchProgramme === "consciousness");
   const branch = papers.filter((p) => p.category === "branch" && !p.researchProgramme);
   const superseded = papers.filter((p) => p.category === "superseded");
   const historical = papers.filter((p) => p.category === "historical");
@@ -30,7 +31,9 @@ export default async function PapersPage() {
         <p className="mt-4 text-lg leading-relaxed text-mute">
           The seven canonical papers establish the source–readout foundation. The
           Quantum Measurement programme develops its own explicit physical constitutions,
-          with a complete monograph and two companion papers. Superseded canonical versions are the June 2026 six-paper stack the
+          with a complete monograph and two companion papers. The consciousness monograph
+          develops SPC-2, the current Version 2 successor of the Consciousness Field account.
+          Superseded canonical versions are the June 2026 six-paper stack the
           current sequence replaced. Historical papers are the earlier Everything
           Equation / Tier-0 era archive, retained for the record and superseded as
           authority.
@@ -60,6 +63,14 @@ export default async function PapersPage() {
             record on Zenodo (doi:10.5281/zenodo.21366204).
           </p>
         </Link>
+      </section>
+
+      <section aria-labelledby="consciousness-heading">
+        <p className="section-label">20 September 2026 · Version 2 · SPC-2</p>
+        <h2 id="consciousness-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Shadow Theory and Consciousness</h2>
+        <p className="mt-3 max-w-3xl leading-relaxed text-mute">A complete constitution for perspective admission, lived content and subject continuation under declared assumptions. All 25 chapters, six appendices, front matter and bibliography, together with eight explanatory guides.</p>
+        <Link href="/consciousness" className="mt-4 inline-block text-sm font-medium text-glow hover:text-glow-strong">Programme overview and reading paths →</Link>
+        <div className="mt-6 max-w-3xl">{consciousness.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div>
       </section>
 
       <section aria-labelledby="canonical-heading">

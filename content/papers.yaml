@@ -22,6 +22,25 @@ version: 2
 #     in src/config/quantum.ts; the registry here owns their editorial summaries.
 # ============================================================================
 papers:
+  # Current successor edition. Identity/formats live in src/config/consciousness.ts.
+  - id: paper:consciousness:spc-2
+    slug: shadow-theory-and-consciousness
+    category: branch
+    visibility: public
+    featured: true
+    role: "SPC-2: a candidate internal constitutive resolution of the source-to-experience problem under declared assumptions."
+    summary: >
+      Distinguishes awareness as an aspect of U from localized subjects, lived
+      scenes, persons, memory and report. Certified realization and a declared
+      selection doctrine precede A0–A3: the awareness commitment, perspective
+      admission, full endogenous predictive content and nonbranching process
+      continuation. A conditional finite completion theorem and worked models
+      develop the constitution, with biological and artificial applications.
+      Realization selection and empirical assessment remain open obligations.
+      Version 2 supersedes the earlier Consciousness Field account; it reports
+      no new neural-data validation.
+    supports: [consciousness]
+
   # Quantum Measurement programme: publication identity and download paths are
   # resolved from src/config/quantum.ts. These are independent branch records.
   - id: paper:quantum:monograph
@@ -963,12 +982,17 @@ papers:
   - id: paper:zenodo:19324253
     zenodo: 19324253
     visibility: public
-    featured: true
+    category: historical
+    featured: false
+    supersededBy: shadow-theory-and-consciousness
+    title: "The Consciousness Field Theorem: Minimal Closure, Non-J-Blind SRC Necessity, and Structural Realization Conditions for Observer-Dependent Systems"
     role: "The Consciousness Field Theorem: Minimal Closure, Non-J-Blind SRC Necessity, and Structural Realization Conditions for Observer-Dependent Systems"
-    supports:
-      - problem:quantum-measurement
-      - problem:observer-theory
-      - problem:consciousness
+    summary: >
+      Historical predecessor of Shadow Theory and Consciousness. The author
+      identifies SPC-2, Version 2, as the replacement current formulation.
+      Earlier fixed-point and EEG claims are preserved as publication history,
+      not carried forward as results or empirical validation of SPC-2.
+    supports: []
 
 
   # =========================

@@ -101,3 +101,7 @@ RS2 physical witness: it proves distinct futures from identical instantaneous
 brane readouts, derives the exact projected Einstein equation, and links
 cosmological and weak-field residues. The shared research-position language is
 defined in `src/config/site.ts`.
+
+## Consciousness publication update
+
+The complete SPC-2 Version 2 section is documented in [CONSCIOUSNESS_DELIVERY.md](CONSCIOUSNESS_DELIVERY.md), including local run instructions, source conversion, historical migration, checks and known source limitations. Begin at `/consciousness` or `/consciousness/monograph`.

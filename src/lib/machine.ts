@@ -13,6 +13,8 @@ import { listArticles } from '@/lib/articles';
 import { listMonographItems, monographTotals } from '@/lib/monograph';
 import { quantumPublications, quantumMonograph } from '@/config/quantum';
 import { listQuantumDocuments } from '@/lib/quantum';
+import { consciousnessPublication } from '@/config/consciousness';
+import { listConsciousnessDocuments, listConsciousnessGuides } from '@/lib/consciousness';
 import {
   atlasEdges,
   atlasNodes,
@@ -57,7 +59,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
       priority:
         n.href === '/'
           ? '1.0'
-          : n.href === '/monograph' || n.href === '/atlas' || n.href === '/quantum-measurement'
+          : n.href === '/monograph' || n.href === '/atlas' || n.href === '/quantum-measurement' || n.href === '/consciousness'
             ? '0.9'
             : '0.8',
     })),
@@ -68,6 +70,9 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     })),
     ...quantumPublications.map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
     ...listQuantumDocuments().map((document) => ({ loc: document.url, lastmod: quantumMonograph.published, priority: '0.8' })),
+    ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: consciousnessPublication.published, priority: '0.8' })),
+    ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
+    ...listConsciousnessGuides().map(guide => ({ loc: `/consciousness/guides/${guide.slug}`, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...papers.map((p) => ({
       loc: `/papers/${p.slug}`,
       lastmod: p.date,
@@ -104,6 +109,12 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {
+      title: `${consciousnessPublication.title} (Version ${consciousnessPublication.version})`,
+      url: `${canonicalBase}${consciousnessPublication.webUrl}`,
+      date: consciousnessPublication.published,
+      summary: `${consciousnessPublication.description} Complete monograph, eight explanatory guides, PDF, source and Markdown. DOI ${consciousnessPublication.doi}. ${consciousnessPublication.versionNote}`,
+    },
     ...quantumPublications.map((publication) => ({
       title: `${publication.title} (Version ${publication.version})`,
       url: `${canonicalBase}${publication.webUrl}`,
@@ -197,6 +208,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '- Within Randall-Sundrum (RS2) gravity, Paper 7 proves that identical instantaneous brane readouts can evolve into different futures, derives the exact projected Einstein equation, links cosmological and weak-field residues through a parameter-free relation, and proves exact brane-level operational equivalence with a four-dimensional pushforward theory.',
     '- The Everything Equation is the compact closure schema of the broader programme and monograph. The canonical seven-paper sequence supplies the source-to-readout mathematics summarized above.',
     '- Experimental tests, peer review, engineering realization, and subsequent expert assessment are tracked as distinct research records.',
+    '- Shadow Theory and Consciousness (20 September 2026, Version 2) supplies the current SPC-2 consciousness constitution. It supersedes the earlier Consciousness Field account, whose fixed-point/EEG claim inventory is historical and must not be merged with SPC-2.',
     '',
     '## Canonical papers',
     '',
@@ -234,12 +246,35 @@ export async function generateLlmsTxt(): Promise<string> {
     '### Complete quantum web-edition reading inventory',
     ...listQuantumDocuments().map((document) => `- [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url})`),
     '',
+    '## Consciousness: SPC-2 (current Version 2 publication)',
+    '',
+    `${consciousnessPublication.title}. Version ${consciousnessPublication.version}, ${consciousnessPublication.published}. ${consciousnessPublication.author}, ${consciousnessPublication.authorRole}. DOI: ${consciousnessPublication.doiUrl}. ${consciousnessPublication.status}`,
+    consciousnessPublication.versionNote,
+    'A0 is an awareness-aspect commitment; A1 assigns qualifying perspectives; A2 assigns the full endogenous predictive structure across all admitted finite native continuations; A3 specifies nonbranching process continuation. These laws require certified realization and a declared selection doctrine. The finite completion theorem is conditional on these inputs, not a derivation of them.',
+    'Awareness, localized subject, scene, person, memory and report are distinct. A1 retains permissive certified minimal cases; intelligent dialogue or a graph cycle alone does not certify an artificial subject. Failed recall and nonresponse do not establish a scene-less gap. Quantum antecedents retain their own assumptions and do not use consciousness to cause events. The monograph reports no new neural-data validation.',
+    `- [Accessible account from beginning to end](${baseUrl}/consciousness)`,
+    `- [Complete scholarly edition](${baseUrl}${consciousnessPublication.webUrl})`,
+    `- [PDF](${baseUrl}${consciousnessPublication.pdfUrl}) · [Matching LaTeX source](${baseUrl}${consciousnessPublication.texUrl}) · [Full-book Markdown](${baseUrl}${consciousnessPublication.markdownUrl})`,
+    `- [Inventory, source locators and format links](${baseUrl}${consciousnessPublication.manifestUrl})`,
+    `- [Section search](${baseUrl}/consciousness/search.json): one mathematical representation per search snippet`,
+    '',
+    '### Complete consciousness reading order',
+    ...listConsciousnessDocuments().map(document => `- [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url}) · [Markdown](${baseUrl}${document.markdownUrl})${document.source ? ` · supplied PDF pages ${document.source.pdfPage}–${document.source.pdfEndPage}` : ''}`),
+    '',
+    '### Consciousness explanatory guides',
+    ...listConsciousnessGuides().map(guide => `- [${guide.title}](${baseUrl}/consciousness/guides/${guide.slug}): ${guide.description}`),
+    `- [Glossary](${baseUrl}/consciousness/glossary): stable term anchors and source links`,
+    `- [FAQ](${baseUrl}/consciousness/faq): current account, AI, minimal systems, quantum observation and continuity`,
+    `- [Research status](${baseUrl}/problems/consciousness): conditional results and open realization/validation obligations`,
+    `- [Subordinate historical notes](${baseUrl}${consciousnessPublication.historyUrl}): superseded predecessor, not SPC-2 evidence`,
+    '',
     '## Key pages',
     '',
     `- [Framework](${baseUrl}/framework): the seven-paper sequence and core vocabulary`,
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Quantum Measurement](${baseUrl}/quantum-measurement): two constitutive completions, physical records, Born statistics, accessible explanations and full technical reading paths`,
+    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete book and explanatory guides`,
     `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -276,6 +311,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     `- ${baseUrl}/quantum-measurement/manifest.json (all three quantum publications, reading inventory, stable anchors, content counts and source downloads)`,
+    `- ${baseUrl}/consciousness/manifest.json (current SPC-2 publication, ordered chapters, appendices, guides, stable anchors and source formats)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
   ];
@@ -301,6 +337,8 @@ export async function generateGraph() {
       id: `paper:${p.slug}`,
       type: 'paper',
       category: p.category,
+      status: p.supersededBy ? 'superseded' : p.category === 'historical' || p.category === 'superseded' ? 'historical' : 'current',
+      supersededBy: p.supersededBy ? `paper:${p.supersededBy}` : null,
       number: p.number ?? null,
       title: p.displayTitle,
       role: p.role ?? null,
@@ -310,7 +348,7 @@ export async function generateGraph() {
       zenodo: p.zenodoId ?? null,
       url: `${baseUrl}/papers/${p.slug}`,
       webEdition: p.webUrl ? `${baseUrl}${p.webUrl}` : null,
-      downloads: p.pdfUrl ? { pdf: `${baseUrl}${p.pdfUrl}`, latex: `${baseUrl}${p.texUrl}`, markdown: `${baseUrl}${p.markdownUrl}` } : null,
+      downloads: p.pdfUrl ? { pdf: `${baseUrl}${p.pdfUrl}`, ...(p.texUrl ? { latex: `${baseUrl}${p.texUrl}` } : {}), ...(p.markdownUrl ? { markdown: `${baseUrl}${p.markdownUrl}` } : {}) } : null,
     })),
     ...problems.map((p) => ({
       id: `problem:${p.slug}`,
@@ -371,6 +409,36 @@ export async function generateGraph() {
       markdown: `${baseUrl}${document.markdownUrl}`,
     })),
     {
+      id: 'consciousness', type: 'research-programme', title: consciousnessPublication.shortTitle,
+      date: consciousnessPublication.published, version: consciousnessPublication.version,
+      status: 'current; candidate internal constitutive resolution under declared assumptions',
+      constitution: consciousnessPublication.constitution,
+      url: `${baseUrl}/consciousness`, manifest: `${baseUrl}${consciousnessPublication.manifestUrl}`,
+      scope: 'Certified realization and its selection doctrine are inputs. Conditional finite completion is distinct from realization selection and empirical assessment.',
+    },
+    ...listConsciousnessDocuments().map(document => ({
+      id: `consciousness:${document.slug}`, type: 'consciousness-web-edition-part',
+      title: document.title, label: document.label, kind: document.kind, order: document.order,
+      url: `${baseUrl}${document.url}`, sections: document.sections, stats: document.stats,
+      source: document.source ?? null, markdown: `${baseUrl}${document.markdownUrl}`,
+    })),
+    ...listConsciousnessGuides().map(guide => ({
+      id: `consciousness-guide:${guide.slug}`, type: 'explanatory-article', title: guide.title,
+      description: guide.description, url: `${baseUrl}/consciousness/guides/${guide.slug}`,
+      sections: guide.sections.map(section => ({ anchor: section.id, title: section.title })),
+    })),
+    ...[
+      { id: 'A0', title: 'Awareness-aspect commitment', status: 'constitutive premise', section: '17-1' },
+      { id: 'A1', title: 'Perspective admission', status: 'constitutive premise', section: '17-2' },
+      { id: 'A2', title: 'Full endogenous predictive content', status: 'constitutive premise', section: '17-3' },
+      { id: 'A3', title: 'Nonbranching process continuation', status: 'constitutive premise', section: '17-4' },
+    ].map(law => ({ id: `spc-2:${law.id}`, type: 'constitutive-law', title: law.title, status: law.status,
+      url: `${baseUrl}/consciousness/monograph/the-shadow-psychophysical-constitution#section-${law.section}` })),
+    { id: 'spc-2:realization', type: 'required-input', title: 'Certified realization and selection doctrine', status: 'realization obligation', url: `${baseUrl}/consciousness/monograph/the-realized-domain-and-its-boundaries` },
+    { id: 'spc-2:completion', type: 'conditional-theorem', title: 'Finite constitutive completion', status: 'conditional result', url: `${baseUrl}/consciousness/monograph/completion-invariance-and-empirical-conservativity#section-18-1` },
+    { id: 'spc-2:validation', type: 'research-obligation', title: 'Identification and empirical assessment', status: 'open validation question', url: `${baseUrl}/consciousness/monograph/evidence-identification-and-discriminating-tests` },
+    { id: 'consciousness:historical-notes', type: 'historical-notes', title: 'Earlier Consciousness Field notes', status: 'superseded', url: `${baseUrl}${consciousnessPublication.historyUrl}` },
+    {
       id: 'quantum-atlas-guide', type: 'atlas-field-guide',
       title: 'Quantum Measurement Atlas field guide',
       url: `${baseUrl}/atlas/quantum-measurement`,
@@ -430,6 +498,23 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({ from: 'consciousness', to: `paper:${consciousnessPublication.paperSlug}`, relation: 'published-as' });
+  edges.push({ from: `paper:${consciousnessPublication.predecessorPaperSlug}`, to: `paper:${consciousnessPublication.paperSlug}`, relation: 'superseded-by', note: 'Author-confirmed version lineage; historical claim inventory is not merged into SPC-2.' });
+  edges.push({ from: `paper:${consciousnessPublication.predecessorPaperSlug}`, to: 'consciousness:historical-notes', relation: 'historical-exposition' });
+  edges.push({ from: 'consciousness', to: 'problem:consciousness', relation: 'current-results-and-open-obligations' });
+  for (const law of ['A0', 'A1', 'A2', 'A3']) {
+    edges.push({ from: 'consciousness', to: `spc-2:${law}`, relation: 'declares-constitutive-premise' });
+    edges.push({ from: `spc-2:${law}`, to: 'spc-2:completion', relation: 'premise-of', note: 'The completion result is conditional on the constitution; it does not derive the law.' });
+  }
+  edges.push({ from: 'spc-2:realization', to: 'spc-2:completion', relation: 'required-input-to' });
+  edges.push({ from: 'consciousness', to: 'spc-2:validation', relation: 'retains-open-obligation' });
+  for (const publication of quantumPublications) edges.push({ from: `paper:${publication.paperSlug}`, to: 'consciousness', relation: 'physical-antecedent', note: 'Related physical reading with its own assumptions; not a consciousness companion or a consciousness-triggered event law.' });
+  const consciousnessDocuments = listConsciousnessDocuments();
+  consciousnessDocuments.forEach((document, index) => {
+    edges.push({ from: `paper:${consciousnessPublication.paperSlug}`, to: `consciousness:${document.slug}`, relation: 'contains-web-edition-part' });
+    if (index < consciousnessDocuments.length - 1) edges.push({ from: `consciousness:${document.slug}`, to: `consciousness:${consciousnessDocuments[index + 1].slug}`, relation: 'reading-order' });
+  });
+  for (const guide of listConsciousnessGuides()) edges.push({ from: 'consciousness', to: `consciousness-guide:${guide.slug}`, relation: 'explained-by' });
   for (const publication of quantumPublications) {
     const publicationId = `paper:${publication.paperSlug}`;
     edges.push({ from: 'quantum-measurement', to: publicationId, relation: 'published-as' });
@@ -486,7 +571,7 @@ export async function generateGraph() {
   // (edges anchored at the final paper, the physical-witness layer).
   const capstone = canonical[canonical.length - 1];
   if (capstone) {
-    for (const prob of problems.filter((p) => p.programme !== 'legacy' && p.slug !== 'quantum-measurement')) {
+    for (const prob of problems.filter((p) => p.programme !== 'legacy' && p.slug !== 'quantum-measurement' && p.slug !== 'consciousness')) {
       edges.push({
         from: `paper:${capstone.slug}`,
         to: `problem:${prob.slug}`,
@@ -543,7 +628,7 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Superseded June 2026 papers and historical quantum notes remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

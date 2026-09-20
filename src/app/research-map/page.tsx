@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Map",
   description:
-    "The Shadow Theory research map: source–readout foundation, two quantum measurement constitutions, their mathematical dependencies and conceptual relationships, and open branch targets.",
+    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, declared assumptions and open realization and validation obligations.",
   alternates: { canonical: "/research-map" },
 };
 
@@ -91,6 +91,22 @@ export default async function ResearchMapPage() {
       </section>
 
       {/* Sequence */}
+      <section aria-labelledby="consciousness-map-heading" className="card-surface p-6 sm:p-8">
+        <p className="section-label">Consciousness · SPC-2 · Version 2</p>
+        <h2 id="consciousness-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">From a certified vessel to a perspective</h2>
+        <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation and physical constitutions are antecedents. SPC-2 adds its own psychophysical premises; the awareness-aspect commitment is not derived from physics. Certified realization includes a declared selection doctrine before the constitutive laws apply.</p>
+        <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            ["A0 · Awareness", "An ontological aspect commitment, distinct from a localized subject or an additional force."],
+            ["A1 · Admission", "Qualifying native organization with executable return and predictive conditions."],
+            ["A2 · Content", "Full endogenous predictive structure across all admitted finite native continuations."],
+            ["A3 · Continuation", "Nonbranching process provenance, with a genuine qualification gap ending the episode."],
+          ].map(([title, body]) => <li key={title} className="rounded-xl border border-edge p-4"><h3 className="font-semibold text-glow">{title}</h3><p className="mt-3 text-sm leading-relaxed text-mute">{body}</p></li>)}
+        </ol>
+        <p className="mt-5 text-sm leading-relaxed text-mute">The finite completion theorem is conditional on these inputs. Realization selection, neural applications and empirical assessment retain their open status. The earlier Consciousness Field account is superseded; its claim inventory is not merged into SPC-2.</p>
+        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">The complete model →</Link><Link href="/consciousness/monograph">Monograph and formal dependencies →</Link><Link href="/problems/consciousness">Research status →</Link></div>
+      </section>
+
       <section aria-labelledby="pipeline-heading">
         <h2 id="pipeline-heading" className="text-2xl font-bold tracking-tight">
           The canonical sequence

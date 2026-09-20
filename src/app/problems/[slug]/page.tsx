@@ -40,6 +40,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
   );
   const loader = (manualProblems as Record<string, (() => Promise<any>) | undefined>)[problem.slug];
   const isQuantum = problem.slug === "quantum-measurement";
+  const isConsciousness = problem.slug === "consciousness";
   const currentPapers = supporting.filter((paper) => paper.category === "canonical" || paper.category === "branch");
   const historicalPapers = supporting.filter((paper) => paper.category === "historical" || paper.category === "superseded");
 
@@ -63,7 +64,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
 
       <section className="card-surface mt-6 border-l-4 border-l-[hsl(var(--amber))] px-5 py-4">
         <p className="m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-          {isQuantum ? "Current research status · Version 2 · 15 September 2026" : "Research target"}
+          {isQuantum ? "Current research status · Version 2 · 15 September 2026" : isConsciousness ? "Current research status · SPC-2 · 20 September 2026" : "Research target"}
         </p>
         <p className="mt-2 text-[0.97rem] leading-relaxed text-fg/90">
           {problem.target.trim()}
@@ -97,6 +98,19 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Current publications</h2>
           <ul className="mt-3 space-y-3">{currentPapers.map((paper) => <li key={paper.slug}><Link href={`/papers/${paper.slug}`} className="text-glow hover:text-glow-strong">{paper.displayTitle} →</Link></li>)}</ul>
+        </section>
+      ) : null}
+
+      {isConsciousness ? (
+        <section className="mt-8" aria-labelledby="current-consciousness-results">
+          <h2 id="current-consciousness-results" className="text-2xl font-semibold">The current consciousness account</h2>
+          <p className="mt-3 leading-relaxed text-mute">SPC-2 separates awareness, a localized subject, a lived scene and a person. Its admission law requires executable return and native predictive conditions. Its content law uses all admitted finite native continuations and checked predictive-fibre congruence. Its continuation law follows nonbranching process provenance.</p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <div className="card-surface p-5"><h3 className="font-semibold text-glow">Conditional finite result</h3><p className="mt-2 text-sm leading-relaxed text-mute">Given certified realization, its selection doctrine and the stated A0–A3 premises, the finite construction assigns qualifying perspectives, their full endogenous predictive content and episode continuation. The result does not derive those inputs.</p></div>
+            <div className="card-surface p-5"><h3 className="font-semibold text-vio">Realization and validation</h3><p className="mt-2 text-sm leading-relaxed text-mute">Physical realization selection, robust biological interpretation and comparison with experience remain obligations. The monograph supplies no universal consciousness detector and does not certify current LLM sessions.</p></div>
+          </div>
+          <p className="mt-5 text-sm leading-relaxed text-mute">Version 2 supersedes the earlier Consciousness Field account. Its older fixed-point and EEG claims remain identifiable history; they are not empirical validation of SPC-2. Quantum publications supply physical antecedents and related reading, with their own assumptions.</p>
+          <div className="mt-5 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">Explore the full account →</Link><Link href="/consciousness/monograph">Complete monograph →</Link><Link href="/consciousness/guides/testing-spc-2">What would test SPC-2? →</Link><Link href="/legacy/consciousness-field-theorem">Historical predecessor →</Link></div>
         </section>
       ) : null}
 

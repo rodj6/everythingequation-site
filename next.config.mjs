@@ -28,6 +28,9 @@ const nextConfig = {
   // but land on the current Shadow Theory pages.
   async redirects() {
     return [
+      // The predecessor contains distinct historical claims; preserve its anchors
+      // in an explicitly subordinate archive rather than remapping them to SPC-2.
+      { source: "/problems/consciousness-field-theorem", destination: "/legacy/consciousness-field-theorem", permanent: true },
       { source: "/research", destination: "/research-map", permanent: true },
       { source: "/research-intelligence", destination: "/research-map", permanent: true },
       { source: "/tier-1", destination: "/legacy/tier-1", permanent: false },

@@ -47,7 +47,7 @@ export default function Footer() {
           <p className="text-xs leading-relaxed text-faint">
             © {new Date().getFullYear()} {site.author.name}. {site.name} publishes a
             seven-paper mathematical foundation, an RS2 physical witness, complete
-            TOE and quantum measurement web editions, and research results with explicit domains.
+            TOE, quantum measurement and SPC-2 consciousness web editions, and research results with explicit domains.
           </p>
         </div>
       </div>

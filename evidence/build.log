@@ -1,0 +1,100 @@
+
+> shadow-theory-site@1.0.0 prebuild
+> node scripts/generate-content-maps.mjs
+
+Content maps generated.
+
+> shadow-theory-site@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.2.10 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 44s
+  Running TypeScript ...
+  Finished TypeScript in 21.0s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/279) ...
+  Generating static pages using 7 workers (69/279) 
+  Generating static pages using 7 workers (139/279) 
+  Generating static pages using 7 workers (209/279) 
+✓ Generating static pages using 7 workers (279/279) in 51s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /articles
+├ ● /articles/[slug]
+│ ├ /articles/from-everything-equation-to-shadow-theory
+│ ├ /articles/how-to-read-the-stack
+│ └ /articles/introducing-shadow-theory
+├ ○ /atlas
+├ ○ /atlas/quantum-measurement
+├ ○ /consciousness
+├ ○ /consciousness/faq
+├ ○ /consciousness/glossary
+├ ○ /consciousness/guides
+├ ● /consciousness/guides/[slug]
+│ ├ /consciousness/guides/what-is-consciousness
+│ ├ /consciousness/guides/can-ai-be-conscious
+│ ├ /consciousness/guides/brain-organization-and-experience
+│ └ [+5 more paths]
+├ ○ /consciousness/manifest.json
+├ ○ /consciousness/monograph
+├ ● /consciousness/monograph/[slug]
+│ ├ /consciousness/monograph/title-and-publication-identity
+│ ├ /consciousness/monograph/preface-and-scope
+│ ├ /consciousness/monograph/abstract
+│ └ [+34 more paths]
+├ ○ /consciousness/monograph/manifest.json
+├ ○ /consciousness/search.json
+├ ○ /feed.xml
+├ ○ /framework
+├ ○ /graph.json
+├ ● /legacy/[slug]
+│ ├ /legacy/monograph
+│ ├ /legacy/tier-1
+│ └ /legacy/what-is-the-everything-equation
+├ ○ /legacy/consciousness-field-theorem
+├ ○ /llms.txt
+├ ○ /monograph
+├ ● /monograph/[slug]
+│ ├ /monograph/the-architecture-and-central-thesis
+│ ├ /monograph/the-source-closure-substrate
+│ ├ /monograph/source-to-tier-1-realization
+│ └ [+18 more paths]
+├ ○ /monograph/manifest.json
+├ ○ /papers
+├ ● /papers/[slug]
+│ ├ /papers/shadow-theory-and-consciousness
+│ ├ /papers/quantum-measurement-monograph
+│ ├ /papers/deterministic-pilot-medium
+│ └ [+100 more paths]
+├ ○ /problems
+├ ● /problems/[slug]
+│ ├ /problems/consciousness
+│ ├ /problems/standard-model
+│ ├ /problems/fine-structure-constant
+│ └ [+15 more paths]
+├ ○ /quantum-measurement
+├ ○ /quantum-measurement/manifest.json
+├ ○ /quantum-measurement/massive-configuration
+├ ○ /quantum-measurement/monograph
+├ ● /quantum-measurement/monograph/[slug]
+│ ├ /quantum-measurement/monograph/abstract
+│ ├ /quantum-measurement/monograph/conventions-provenance-and-scope
+│ ├ /quantum-measurement/monograph/roadmap-and-principal-conclusions
+│ └ [+50 more paths]
+├ ○ /quantum-measurement/monograph/manifest.json
+├ ○ /quantum-measurement/pilot-medium
+├ ○ /research-map
+├ ○ /robots.txt
+└ ○ /sitemap.xml
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

@@ -188,6 +188,10 @@ ${imports.join(',\n')}
 }
 
 async function main() {
+  // Consciousness is maintained by its source converter and editorial inventory,
+  // imported directly by src/lib/consciousness.ts. Never reconstruct its current
+  // programme from historical manual notes or overwrite this inventory here.
+  await validateConsciousnessInventory();
   await fs.mkdir(outDir, { recursive: true });
   await Promise.all([
     generateManualMap('problems', 'manualProblems', 'manualProblems.ts'),
@@ -197,6 +201,26 @@ async function main() {
     generateMonograph(),
   ]);
   console.log('Content maps generated.');
+}
+
+async function validateConsciousnessInventory() {
+  const sourceDir = path.join(baseDir, 'content', 'consciousness');
+  const documents = JSON.parse(await fs.readFile(path.join(sourceDir, 'index.json'), 'utf8'));
+  const editorial = JSON.parse(await fs.readFile(path.join(sourceDir, 'editorial.json'), 'utf8'));
+  const slugs = new Set();
+  for (const document of documents) {
+    if (slugs.has(document.slug)) throw new Error(`Duplicate consciousness document: ${document.slug}`);
+    slugs.add(document.slug);
+    if (document.url !== `/consciousness/monograph/${document.slug}`) throw new Error(`Invalid consciousness route: ${document.url}`);
+    await fs.access(path.join(sourceDir, 'monograph', `${document.slug}.html`));
+    await fs.access(path.join(baseDir, 'public', document.markdownUrl));
+  }
+  if (documents.filter(document => document.kind === 'chapter').length !== 25 || documents.filter(document => document.kind === 'appendix').length !== 6) {
+    throw new Error('Consciousness inventory must contain the complete 25 chapters and six appendices. Run the maintained converter.');
+  }
+  if (editorial.guides?.length !== 8 || !editorial.overview?.sections?.length || !editorial.glossary?.length || !editorial.faq?.length) {
+    throw new Error('Consciousness editorial inventory is incomplete.');
+  }
 }
 
 main().catch((err) => {

@@ -7,6 +7,7 @@ import PaperChain from "@/components/paper-chain";
 import { ProblemCard, ArticleCard } from "@/components/cards";
 import ProjectionField from "@/components/projection-field";
 import QuantumProgrammeFeature from "@/components/quantum-programme-feature";
+import ConsciousnessProgrammeFeature from "@/components/consciousness-programme-feature";
 
 export const dynamic = "force-static";
 
@@ -146,6 +147,7 @@ export default async function HomePage() {
       </section>
 
       <QuantumProgrammeFeature />
+      <ConsciousnessProgrammeFeature />
 
       {/* ================= THE MONOGRAPH ================= */}
       <section aria-labelledby="monograph-heading">

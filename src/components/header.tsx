@@ -116,7 +116,7 @@ export default function Header() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label={open ? "Close menu" : "Open menu"}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-edge text-fg transition-colors hover:bg-[hsl(var(--surface-raised))] xl:hidden"
+          className="site-menu-toggle flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-edge text-fg transition-colors hover:bg-[hsl(var(--surface-raised))] xl:hidden"
         >
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
             {open ? (
@@ -127,6 +127,18 @@ export default function Header() {
           </svg>
         </button>
       </div>
+
+      <noscript>
+        <style>{".site-menu-toggle { display: none !important; }"}</style>
+        <details className="border-t border-edge bg-surface px-4 py-3 xl:hidden">
+          <summary className="cursor-pointer text-sm font-medium text-fg">Browse the site</summary>
+          <nav aria-label="Primary without JavaScript" className="mt-3">
+            <ul className="grid grid-cols-2 gap-1">
+              {navigation.map((item) => <li key={item.href}><Link href={item.href} className="block rounded-md px-2 py-3 text-sm text-fg hover:bg-raised">{item.label}</Link></li>)}
+            </ul>
+          </nav>
+        </details>
+      </noscript>
 
       {/* Mobile menu panel */}
       {open && (

@@ -12,6 +12,7 @@ import { existsSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
 import { quantumPublications } from '@/config/quantum';
+import { consciousnessPublication } from '@/config/consciousness';
 
 export type Visibility = 'draft' | 'public';
 export type PaperCategory = 'canonical' | 'branch' | 'superseded' | 'historical';
@@ -56,7 +57,7 @@ export interface LoadedPaper {
   pdfUrl?: string;
   texUrl?: string;
   markdownUrl?: string;
-  researchProgramme?: 'quantum-measurement';
+  researchProgramme?: 'quantum-measurement' | 'consciousness';
   /** Problem slugs this paper supports. */
   supports: string[];
   /** For superseded records: slug of the current canonical paper that replaced it. */
@@ -170,6 +171,8 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const rawId: string = raw.id || '';
     let slug: string = raw.slug || rawId.replace(/^paper:/, '').replace(/:/g, '-');
     const quantum = quantumPublications.find((publication) => publication.paperSlug === slug);
+    const consciousness = slug === consciousnessPublication.paperSlug ? consciousnessPublication : undefined;
+    const publication = quantum ?? consciousness;
     const zenodoId: string | undefined = quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
@@ -184,6 +187,13 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
           { filename: `${quantum.id}.md`, url: quantum.markdownUrl },
         ],
       };
+    } else if (consciousness) {
+      // Supplied publication identity is authoritative. Do not fetch or invent
+      // additional live-record metadata when independent verification failed.
+      metadata = {
+        id: consciousness.doi, doi: consciousness.doi, title: consciousness.title,
+        creators: [consciousness.author], published: consciousness.published,
+      };
     } else if (zenodoId) {
       if (cache[slug]) {
         metadata = cache[slug];
@@ -196,8 +206,8 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       }
     }
 
-    const doi: string | undefined = quantum?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
-    const title: string | undefined = quantum?.title ?? raw.title ?? metadata?.title ?? undefined;
+    const doi: string | undefined = publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
+    const title: string | undefined = publication?.title ?? raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
       raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'superseded'
         ? raw.category
@@ -211,16 +221,16 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       status: raw.visibility === 'public' ? 'public' : 'draft',
       featured: Boolean(raw.featured),
       title,
-      subtitle: quantum?.subtitle ?? raw.subtitle,
+      subtitle: publication?.subtitle ?? raw.subtitle,
       role: raw.role,
       summary: raw.summary,
-      version: quantum ? `Version ${quantum.version}` : raw.version,
-      date: quantum?.published ?? raw.date ?? metadata?.published,
-      webUrl: quantum?.webUrl,
-      pdfUrl: quantum?.pdfUrl,
-      texUrl: quantum?.texUrl,
-      markdownUrl: quantum?.markdownUrl,
-      researchProgramme: quantum ? 'quantum-measurement' : undefined,
+      version: publication ? `Version ${publication.version}` : raw.version,
+      date: publication?.published ?? raw.date ?? metadata?.published,
+      webUrl: publication?.webUrl,
+      pdfUrl: publication?.pdfUrl,
+      texUrl: publication?.texUrl,
+      markdownUrl: publication?.markdownUrl,
+      researchProgramme: quantum ? 'quantum-measurement' : consciousness ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

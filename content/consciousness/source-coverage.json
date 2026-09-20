@@ -1,0 +1,4479 @@
+{
+  "schemaVersion": 1,
+  "publication": {
+    "title": "Shadow Theory and Consciousness: Awareness, Perspectival Realization, and the Source-to-Experience Problem",
+    "author": "Jeremy Rodgers",
+    "affiliation": "Independent Researcher",
+    "edition": "Version 2 — publication edition",
+    "datePublished": "2026-09-20",
+    "constitution": "SPC-2",
+    "doi": "10.5281/zenodo.22853774"
+  },
+  "provenance": {
+    "method": "Genuine separately supplied final LaTeX, matched to the archival PDF; bibliography extracted from its embedded filecontents block.",
+    "sourceFile": "/publications/consciousness/monograph.tex",
+    "sourceSha256": "72d09b83f262958f87a0f1ea063b20cdb693fbe857b25925f7c0fe58eb22fe67",
+    "pdfFile": "/publications/consciousness/monograph.pdf",
+    "pdfSha256": "416cd39cb1aabd3712e9e315acfb36189023ecd4c2114ee92da07713859bd688",
+    "pdfPages": 133,
+    "publicationPdfBytesUnmodified": true,
+    "externallyReferencedFigureAssets": []
+  },
+  "corrections": [
+    {
+      "location": "Section 18.1",
+      "pdfPage": 81,
+      "printedPage": 69,
+      "originalTypography": "?? 16.4",
+      "webTypography": "Assumption 16.4",
+      "target": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#ass:spc2-congruence",
+      "reason": "The source uses cleveref for an assumption environment whose display name was unresolved in the supplied PDF. The web renderer resolves its source label and theorem number. Scientific wording, equations and archival PDF are unchanged."
+    }
+  ],
+  "adaptations": [
+    "Five part dividers are retained as contents groups and source-label anchors on their opening chapters; the unnumbered technical appendices divider introduces the appendix group.",
+    "The printed contents is replaced by linked web navigation. Repeated long-table headings remain preserved.",
+    "Bibliography numbers and entry identities follow the archival PDF; field typography and name presentation derive deterministically from the embedded source bibliography.",
+    "KaTeX supplies visual HTML and accessible MathML. Original mathematical macros expand in Markdown; displayed equation numbering is retained.",
+    "Bibliography backlinks are explicitly navigational web additions."
+  ],
+  "limitations": [
+    {
+      "type": "unsupplied-verification-materials",
+      "locations": [
+        {
+          "section": "D.4",
+          "pdfPages": [
+            123,
+            124
+          ]
+        },
+        {
+          "section": "F.4",
+          "pdfPages": [
+            129
+          ]
+        }
+      ],
+      "observation": "Appendix D.4 describes a companion executable verification package; Appendix F.4 refers to accompanying coverage/verification materials, executable scripts and results. These research supplements were not supplied, and the manuscript does not give their filenames. The complete descriptions are preserved; no unavailable supplement or claimed research result has been fabricated. This is not a missing-text or mathematics blocker."
+    }
+  ],
+  "summary": {
+    "chapters": 25,
+    "appendices": 6,
+    "frontmatterPages": 5,
+    "bibliographyEntries": 54,
+    "parts": 5,
+    "sections": 165,
+    "mathematicalExpressions": 1323,
+    "displayMathematicalExpressions": 181,
+    "formalStatements": 40,
+    "proofs": 30,
+    "tables": 8,
+    "sourceLabels": 281
+  },
+  "documents": [
+    {
+      "publicationId": "monograph",
+      "slug": "title-and-publication-identity",
+      "title": "Title and publication identity",
+      "label": "",
+      "kind": "frontmatter",
+      "order": 1,
+      "url": "/consciousness/monograph/title-and-publication-identity",
+      "part": "",
+      "sections": [],
+      "stats": {
+        "equations": 0,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 1,
+        "pdfEndPage": 1,
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 451,
+        "texEndLine": 468
+      },
+      "markdownUrl": "/publications/consciousness/chapters/title-and-publication-identity.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "preface-and-scope",
+      "title": "Preface and scope",
+      "label": "",
+      "kind": "frontmatter",
+      "order": 2,
+      "url": "/consciousness/monograph/preface-and-scope",
+      "part": "",
+      "sections": [],
+      "stats": {
+        "equations": 6,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 2,
+        "pdfEndPage": 2,
+        "title": "Preface and scope",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 469,
+        "texEndLine": 480
+      },
+      "markdownUrl": "/publications/consciousness/chapters/preface-and-scope.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "abstract",
+      "title": "Abstract",
+      "label": "",
+      "kind": "frontmatter",
+      "order": 3,
+      "url": "/consciousness/monograph/abstract",
+      "part": "",
+      "sections": [],
+      "stats": {
+        "equations": 3,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 3,
+        "pdfEndPage": 3,
+        "title": "Abstract",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 481,
+        "texEndLine": 490
+      },
+      "markdownUrl": "/publications/consciousness/chapters/abstract.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "conventions-and-principal-distinctions",
+      "title": "Conventions and principal distinctions",
+      "label": "",
+      "kind": "frontmatter",
+      "order": 4,
+      "url": "/consciousness/monograph/conventions-and-principal-distinctions",
+      "part": "",
+      "sections": [
+        {
+          "anchor": "paragraph-1",
+          "title": "Terminology",
+          "number": "",
+          "level": 2,
+          "sourceLine": 509,
+          "pdfPage": 5
+        }
+      ],
+      "stats": {
+        "equations": 24,
+        "displayEquations": 1,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 4,
+        "pdfEndPage": 5,
+        "title": "Conventions and principal distinctions",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 491,
+        "texEndLine": 527
+      },
+      "markdownUrl": "/publications/consciousness/chapters/conventions-and-principal-distinctions.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "the-argument-and-how-to-read-it",
+      "title": "The argument and how to read it",
+      "label": "",
+      "kind": "frontmatter",
+      "order": 5,
+      "url": "/consciousness/monograph/the-argument-and-how-to-read-it",
+      "part": "",
+      "sections": [],
+      "stats": {
+        "equations": 3,
+        "displayEquations": 1,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 6,
+        "pdfEndPage": 13,
+        "title": "The argument and how to read it",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 528,
+        "texEndLine": 559
+      },
+      "markdownUrl": "/publications/consciousness/chapters/the-argument-and-how-to-read-it.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "the-source-to-experience-problem",
+      "title": "The source-to-experience problem",
+      "label": "Chapter 1",
+      "kind": "chapter",
+      "order": 6,
+      "url": "/consciousness/monograph/the-source-to-experience-problem",
+      "part": "I",
+      "sections": [
+        {
+          "anchor": "section-1-1",
+          "title": "A question about presence, not merely performance",
+          "number": "1.1",
+          "level": 2,
+          "pdfPage": 14,
+          "sourceLine": 562
+        },
+        {
+          "anchor": "section-1-2",
+          "title": "The unsplit and its operational descriptions",
+          "number": "1.2",
+          "level": 2,
+          "pdfPage": 14,
+          "sourceLine": 571
+        },
+        {
+          "anchor": "section-1-3",
+          "title": "Awareness as a primitive and manifestation as organization",
+          "number": "1.3",
+          "level": 2,
+          "pdfPage": 15,
+          "sourceLine": 582
+        },
+        {
+          "anchor": "section-1-4",
+          "title": "Nonduality and the reality of the readout",
+          "number": "1.4",
+          "level": 2,
+          "pdfPage": 16,
+          "sourceLine": 593
+        },
+        {
+          "anchor": "section-1-5",
+          "title": "Four explanatory obligations",
+          "number": "1.5",
+          "level": 2,
+          "pdfPage": 16,
+          "sourceLine": 602
+        },
+        {
+          "anchor": "section-1-6",
+          "title": "What is distinctive about the proposed account",
+          "number": "1.6",
+          "level": 2,
+          "pdfPage": 17,
+          "sourceLine": 613
+        }
+      ],
+      "stats": {
+        "equations": 15,
+        "displayEquations": 2,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 14,
+        "pdfEndPage": 17,
+        "title": "1 The source-to-experience problem",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 560,
+        "texEndLine": 617
+      },
+      "markdownUrl": "/publications/consciousness/chapters/the-source-to-experience-problem.md",
+      "partTitle": "Awareness, Experience, and Perspective"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "awareness-contents-and-the-personal-model",
+      "title": "Awareness, contents, and the personal model",
+      "label": "Chapter 2",
+      "kind": "chapter",
+      "order": 7,
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model",
+      "part": "I",
+      "sections": [
+        {
+          "anchor": "section-2-1",
+          "title": "A vocabulary that does not settle the question in advance",
+          "number": "2.1",
+          "level": 2,
+          "pdfPage": 18,
+          "sourceLine": 619
+        },
+        {
+          "anchor": "section-2-2",
+          "title": "The red object and the interpretation of seeing",
+          "number": "2.2",
+          "level": 2,
+          "pdfPage": 18,
+          "sourceLine": 626
+        },
+        {
+          "anchor": "section-2-3",
+          "title": "Memory, scaffolding, and continuity",
+          "number": "2.3",
+          "level": 2,
+          "pdfPage": 19,
+          "sourceLine": 640
+        },
+        {
+          "anchor": "section-2-4",
+          "title": "Conscious access, generative processing, and the lived scene",
+          "number": "2.4",
+          "level": 2,
+          "pdfPage": 19,
+          "sourceLine": 647
+        },
+        {
+          "anchor": "section-2-5",
+          "title": "Vessel, scene, and memory",
+          "number": "2.5",
+          "level": 2,
+          "pdfPage": 20,
+          "sourceLine": 656
+        },
+        {
+          "anchor": "section-2-6",
+          "title": "Minimal presence and higher-order reflection",
+          "number": "2.6",
+          "level": 2,
+          "pdfPage": 21,
+          "sourceLine": 673
+        }
+      ],
+      "stats": {
+        "equations": 13,
+        "displayEquations": 3,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 18,
+        "pdfEndPage": 21,
+        "title": "2 Awareness, contents, and the personal model",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 618,
+        "texEndLine": 679
+      },
+      "markdownUrl": "/publications/consciousness/chapters/awareness-contents-and-the-personal-model.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "contemplative-inquiry-and-its-evidential-role",
+      "title": "Contemplative inquiry and its evidential role",
+      "label": "Chapter 3",
+      "kind": "chapter",
+      "order": 8,
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role",
+      "part": "I",
+      "sections": [
+        {
+          "anchor": "section-3-1",
+          "title": "Reading I Am That as a philosophical source",
+          "number": "3.1",
+          "level": 2,
+          "pdfPage": 22,
+          "sourceLine": 681
+        },
+        {
+          "anchor": "section-3-2",
+          "title": "Identification is not the deletion of cognition",
+          "number": "3.2",
+          "level": 2,
+          "pdfPage": 22,
+          "sourceLine": 690
+        },
+        {
+          "anchor": "section-3-3",
+          "title": "Witnessing, nonduality, and the limits of the translation",
+          "number": "3.3",
+          "level": 2,
+          "pdfPage": 23,
+          "sourceLine": 701
+        },
+        {
+          "anchor": "section-3-4",
+          "title": "First-person investigation and public evidence",
+          "number": "3.4",
+          "level": 2,
+          "pdfPage": 24,
+          "sourceLine": 710
+        }
+      ],
+      "stats": {
+        "equations": 7,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 22,
+        "pdfEndPage": 24,
+        "title": "3 Contemplative inquiry and its evidential role",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 680,
+        "texEndLine": 718
+      },
+      "markdownUrl": "/publications/consciousness/chapters/contemplative-inquiry-and-its-evidential-role.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "altered-identity-and-unfamiliar-experience",
+      "title": "Altered identity and unfamiliar experience",
+      "label": "Chapter 4",
+      "kind": "chapter",
+      "order": 9,
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience",
+      "part": "I",
+      "sections": [
+        {
+          "anchor": "section-4-1",
+          "title": "An autobiographical example",
+          "number": "4.1",
+          "level": 2,
+          "pdfPage": 25,
+          "sourceLine": 720
+        },
+        {
+          "anchor": "section-4-2",
+          "title": "Reality, veridicality, and experiential occurrence",
+          "number": "4.2",
+          "level": 2,
+          "pdfPage": 25,
+          "sourceLine": 727
+        },
+        {
+          "anchor": "section-4-3",
+          "title": "Altered weighting of self and world",
+          "number": "4.3",
+          "level": 2,
+          "pdfPage": 26,
+          "sourceLine": 734
+        },
+        {
+          "anchor": "section-4-4",
+          "title": "What remains constant?",
+          "number": "4.4",
+          "level": 2,
+          "pdfPage": 26,
+          "sourceLine": 741
+        }
+      ],
+      "stats": {
+        "equations": 1,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 25,
+        "pdfEndPage": 27,
+        "title": "4 Altered identity and unfamiliar experience",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 719,
+        "texEndLine": 748
+      },
+      "markdownUrl": "/publications/consciousness/chapters/altered-identity-and-unfamiliar-experience.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "source-readout-foundations",
+      "title": "Source/readout foundations",
+      "label": "Chapter 5",
+      "kind": "chapter",
+      "order": 10,
+      "url": "/consciousness/monograph/source-readout-foundations",
+      "part": "II",
+      "sections": [
+        {
+          "anchor": "section-5-1",
+          "title": "Nominated sources and restricted descriptions",
+          "number": "5.1",
+          "level": 2,
+          "pdfPage": 28,
+          "sourceLine": 751
+        },
+        {
+          "anchor": "section-5-2",
+          "title": "Predictive closure",
+          "number": "5.2",
+          "level": 2,
+          "pdfPage": 29,
+          "sourceLine": 769
+        },
+        {
+          "anchor": "section-5-3",
+          "title": "Multiple apertures and non-reconstructibility",
+          "number": "5.3",
+          "level": 2,
+          "pdfPage": 29,
+          "sourceLine": 787
+        },
+        {
+          "anchor": "section-5-4",
+          "title": "The Everything Equation and constitutive selection",
+          "number": "5.4",
+          "level": 2,
+          "pdfPage": 29,
+          "sourceLine": 792
+        }
+      ],
+      "stats": {
+        "equations": 56,
+        "displayEquations": 3,
+        "theorems": 2,
+        "proofs": 2,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 28,
+        "pdfEndPage": 29,
+        "title": "5 Source/readout foundations",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 749,
+        "texEndLine": 800
+      },
+      "markdownUrl": "/publications/consciousness/chapters/source-readout-foundations.md",
+      "partTitle": "Source, Physical Events, and Material Records"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "quantum-currents-and-observer-independent-events",
+      "title": "Quantum currents and observer-independent events",
+      "label": "Chapter 6",
+      "kind": "chapter",
+      "order": 11,
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events",
+      "part": "II",
+      "sections": [
+        {
+          "anchor": "section-6-1",
+          "title": "The coherent source",
+          "number": "6.1",
+          "level": 2,
+          "pdfPage": 30,
+          "sourceLine": 804
+        },
+        {
+          "anchor": "section-6-2",
+          "title": "Predictive current coordinates",
+          "number": "6.2",
+          "level": 2,
+          "pdfPage": 31,
+          "sourceLine": 838
+        },
+        {
+          "anchor": "section-6-3",
+          "title": "The independence of physical events from conscious observation",
+          "number": "6.3",
+          "level": 2,
+          "pdfPage": 31,
+          "sourceLine": 855
+        },
+        {
+          "anchor": "section-6-4",
+          "title": "Complete experiments and comparison spaces",
+          "number": "6.4",
+          "level": 2,
+          "pdfPage": 32,
+          "sourceLine": 860
+        }
+      ],
+      "stats": {
+        "equations": 45,
+        "displayEquations": 9,
+        "theorems": 2,
+        "proofs": 2,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 30,
+        "pdfEndPage": 32,
+        "title": "6 Quantum currents and observer-independent events",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 801,
+        "texEndLine": 880
+      },
+      "markdownUrl": "/publications/consciousness/chapters/quantum-currents-and-observer-independent-events.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "a-massive-configuration-and-record-constitution",
+      "title": "A massive configuration and record constitution",
+      "label": "Chapter 7",
+      "kind": "chapter",
+      "order": 12,
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution",
+      "part": "II",
+      "sections": [
+        {
+          "anchor": "section-7-1",
+          "title": "Guidance, equilibrium, and actual histories",
+          "number": "7.1",
+          "level": 2,
+          "pdfPage": 33,
+          "sourceLine": 882
+        },
+        {
+          "anchor": "section-7-2",
+          "title": "An exact moving Gaussian pointer",
+          "number": "7.2",
+          "level": 2,
+          "pdfPage": 33,
+          "sourceLine": 901
+        },
+        {
+          "anchor": "section-7-3",
+          "title": "Capture, pending states, and null instruments",
+          "number": "7.3",
+          "level": 2,
+          "pdfPage": 34,
+          "sourceLine": 945
+        },
+        {
+          "anchor": "section-7-4",
+          "title": "Historical archives and reset receivers",
+          "number": "7.4",
+          "level": 2,
+          "pdfPage": 36,
+          "sourceLine": 994
+        },
+        {
+          "anchor": "section-7-5",
+          "title": "Autonomous realization and historical error",
+          "number": "7.5",
+          "level": 2,
+          "pdfPage": 36,
+          "sourceLine": 1017
+        },
+        {
+          "anchor": "section-7-6",
+          "title": "What the constitution establishes",
+          "number": "7.6",
+          "level": 2,
+          "pdfPage": 37,
+          "sourceLine": 1057
+        }
+      ],
+      "stats": {
+        "equations": 121,
+        "displayEquations": 25,
+        "theorems": 2,
+        "proofs": 2,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 33,
+        "pdfEndPage": 37,
+        "title": "7 A massive configuration and record constitution",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 881,
+        "texEndLine": 1065
+      },
+      "markdownUrl": "/publications/consciousness/chapters/a-massive-configuration-and-record-constitution.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "title": "A deterministic pilot medium and a complete path limit",
+      "label": "Chapter 8",
+      "kind": "chapter",
+      "order": 13,
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "part": "II",
+      "sections": [
+        {
+          "anchor": "section-8-1",
+          "title": "The declared microscopic inventory",
+          "number": "8.1",
+          "level": 2,
+          "pdfPage": 38,
+          "sourceLine": 1067
+        },
+        {
+          "anchor": "section-8-2",
+          "title": "Bond ownership and conservative export",
+          "number": "8.2",
+          "level": 2,
+          "pdfPage": 38,
+          "sourceLine": 1074
+        },
+        {
+          "anchor": "section-8-3",
+          "title": "Spatial preparation produces timing",
+          "number": "8.3",
+          "level": 2,
+          "pdfPage": 39,
+          "sourceLine": 1102
+        },
+        {
+          "anchor": "section-8-4",
+          "title": "From signed queues to the Bell path",
+          "number": "8.4",
+          "level": 2,
+          "pdfPage": 40,
+          "sourceLine": 1116
+        },
+        {
+          "anchor": "section-8-5",
+          "title": "A static finite Hamiltonian for the whole programme",
+          "number": "8.5",
+          "level": 2,
+          "pdfPage": 40,
+          "sourceLine": 1154
+        },
+        {
+          "anchor": "section-8-6",
+          "title": "The observer-independent conclusion",
+          "number": "8.6",
+          "level": 2,
+          "pdfPage": 41,
+          "sourceLine": 1189
+        }
+      ],
+      "stats": {
+        "equations": 79,
+        "displayEquations": 13,
+        "theorems": 2,
+        "proofs": 2,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 38,
+        "pdfEndPage": 41,
+        "title": "8 A deterministic pilot medium and a complete path limit",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1066,
+        "texEndLine": 1193
+      },
+      "markdownUrl": "/publications/consciousness/chapters/a-deterministic-pilot-medium-and-a-complete-path-limit.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "resources-continued-operation-and-agency",
+      "title": "Resources, continued operation, and agency",
+      "label": "Chapter 9",
+      "kind": "chapter",
+      "order": 14,
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency",
+      "part": "II",
+      "sections": [
+        {
+          "anchor": "section-9-1",
+          "title": "Finite records are physical resources",
+          "number": "9.1",
+          "level": 2,
+          "pdfPage": 42,
+          "sourceLine": 1195
+        },
+        {
+          "anchor": "section-9-2",
+          "title": "Operational capacity",
+          "number": "9.2",
+          "level": 2,
+          "pdfPage": 42,
+          "sourceLine": 1202
+        },
+        {
+          "anchor": "section-9-3",
+          "title": "Viability and the orientation of repair",
+          "number": "9.3",
+          "level": 2,
+          "pdfPage": 43,
+          "sourceLine": 1220
+        },
+        {
+          "anchor": "section-9-4",
+          "title": "Agency and stable decisions",
+          "number": "9.4",
+          "level": 2,
+          "pdfPage": 43,
+          "sourceLine": 1232
+        },
+        {
+          "anchor": "section-9-5",
+          "title": "Physical stability and philosophical relevance",
+          "number": "9.5",
+          "level": 2,
+          "pdfPage": 44,
+          "sourceLine": 1239
+        }
+      ],
+      "stats": {
+        "equations": 24,
+        "displayEquations": 3,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 42,
+        "pdfEndPage": 45,
+        "title": "9 Resources, continued operation, and agency",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1194,
+        "texEndLine": 1244
+      },
+      "markdownUrl": "/publications/consciousness/chapters/resources-continued-operation-and-agency.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "internal-representation-and-self-referential-records",
+      "title": "Internal representation and self-referential records",
+      "label": "Chapter 10",
+      "kind": "chapter",
+      "order": 15,
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records",
+      "part": "III",
+      "sections": [
+        {
+          "anchor": "section-10-1",
+          "title": "Representing a specified target",
+          "number": "10.1",
+          "level": 2,
+          "pdfPage": 46,
+          "sourceLine": 1249
+        },
+        {
+          "anchor": "section-10-2",
+          "title": "Centralizers and their scope",
+          "number": "10.2",
+          "level": 2,
+          "pdfPage": 47,
+          "sourceLine": 1268
+        },
+        {
+          "anchor": "section-10-3",
+          "title": "Positive witnesses and finite calibration",
+          "number": "10.3",
+          "level": 2,
+          "pdfPage": 47,
+          "sourceLine": 1280
+        },
+        {
+          "anchor": "section-10-4",
+          "title": "Local jets: finite existence without a universal order bound",
+          "number": "10.4",
+          "level": 2,
+          "pdfPage": 48,
+          "sourceLine": 1310
+        },
+        {
+          "anchor": "section-10-5",
+          "title": "Self-reference without phenomenal promotion",
+          "number": "10.5",
+          "level": 2,
+          "pdfPage": 48,
+          "sourceLine": 1325
+        }
+      ],
+      "stats": {
+        "equations": 68,
+        "displayEquations": 6,
+        "theorems": 3,
+        "proofs": 2,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 46,
+        "pdfEndPage": 48,
+        "title": "10 Internal representation and self-referential records",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1245,
+        "texEndLine": 1329
+      },
+      "markdownUrl": "/publications/consciousness/chapters/internal-representation-and-self-referential-records.md",
+      "partTitle": "The Mathematics of Realized Vessels"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "regulation-unity-and-the-functional-self",
+      "title": "Regulation, unity, and the functional self",
+      "label": "Chapter 11",
+      "kind": "chapter",
+      "order": 16,
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self",
+      "part": "III",
+      "sections": [
+        {
+          "anchor": "section-11-1",
+          "title": "A typed regulation architecture",
+          "number": "11.1",
+          "level": 2,
+          "pdfPage": 49,
+          "sourceLine": 1331
+        },
+        {
+          "anchor": "section-11-2",
+          "title": "Access and valuation are different",
+          "number": "11.2",
+          "level": 2,
+          "pdfPage": 49,
+          "sourceLine": 1344
+        },
+        {
+          "anchor": "section-11-3",
+          "title": "Weak unity, strong unity, and assembly",
+          "number": "11.3",
+          "level": 2,
+          "pdfPage": 50,
+          "sourceLine": 1351
+        },
+        {
+          "anchor": "section-11-4",
+          "title": "Functional selfhood and episode identity",
+          "number": "11.4",
+          "level": 2,
+          "pdfPage": 50,
+          "sourceLine": 1358
+        }
+      ],
+      "stats": {
+        "equations": 21,
+        "displayEquations": 2,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 49,
+        "pdfEndPage": 50,
+        "title": "11 Regulation, unity, and the functional self",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1330,
+        "texEndLine": 1364
+      },
+      "markdownUrl": "/publications/consciousness/chapters/regulation-unity-and-the-functional-self.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "finite-incidence-recurrent-response-and-physical-access",
+      "title": "Finite incidence, recurrent response, and physical access",
+      "label": "Chapter 12",
+      "kind": "chapter",
+      "order": 17,
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access",
+      "part": "III",
+      "sections": [
+        {
+          "anchor": "section-12-1",
+          "title": "Source-sensitive response carriers",
+          "number": "12.1",
+          "level": 2,
+          "pdfPage": 51,
+          "sourceLine": 1368
+        },
+        {
+          "anchor": "section-12-2",
+          "title": "Five exact profiles",
+          "number": "12.2",
+          "level": 2,
+          "pdfPage": 52,
+          "sourceLine": 1397
+        },
+        {
+          "anchor": "section-12-3",
+          "title": "Interaction-relative sector invariance",
+          "number": "12.3",
+          "level": 2,
+          "pdfPage": 52,
+          "sourceLine": 1422
+        },
+        {
+          "anchor": "section-12-4",
+          "title": "Actuation, source drift, and seed-specific mobility",
+          "number": "12.4",
+          "level": 2,
+          "pdfPage": 53,
+          "sourceLine": 1439
+        },
+        {
+          "anchor": "section-12-5",
+          "title": "Robust spectral access",
+          "number": "12.5",
+          "level": 2,
+          "pdfPage": 54,
+          "sourceLine": 1462
+        }
+      ],
+      "stats": {
+        "equations": 100,
+        "displayEquations": 11,
+        "theorems": 1,
+        "proofs": 1,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 51,
+        "pdfEndPage": 54,
+        "title": "12 Finite incidence, recurrent response, and physical access",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1365,
+        "texEndLine": 1474
+      },
+      "markdownUrl": "/publications/consciousness/chapters/finite-incidence-recurrent-response-and-physical-access.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "title": "Fixed points, canonicalization, and coherent–dissipative structure",
+      "label": "Chapter 13",
+      "kind": "chapter",
+      "order": 18,
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "part": "III",
+      "sections": [
+        {
+          "anchor": "section-13-1",
+          "title": "A local contraction theorem",
+          "number": "13.1",
+          "level": 2,
+          "pdfPage": 55,
+          "sourceLine": 1478
+        },
+        {
+          "anchor": "section-13-2",
+          "title": "Observable certification",
+          "number": "13.2",
+          "level": 2,
+          "pdfPage": 56,
+          "sourceLine": 1498
+        },
+        {
+          "anchor": "section-13-3",
+          "title": "One operator, two analytic regimes",
+          "number": "13.3",
+          "level": 2,
+          "pdfPage": 56,
+          "sourceLine": 1514
+        },
+        {
+          "anchor": "section-13-4",
+          "title": "A shared spectral carrier with a general coherent symbol",
+          "number": "13.4",
+          "level": 2,
+          "pdfPage": 57,
+          "sourceLine": 1529
+        },
+        {
+          "anchor": "section-13-5",
+          "title": "What a common generator does not determine",
+          "number": "13.5",
+          "level": 2,
+          "pdfPage": 57,
+          "sourceLine": 1564
+        },
+        {
+          "anchor": "section-13-6",
+          "title": "The correct role of vessel mathematics",
+          "number": "13.6",
+          "level": 2,
+          "pdfPage": 58,
+          "sourceLine": 1569
+        }
+      ],
+      "stats": {
+        "equations": 59,
+        "displayEquations": 11,
+        "theorems": 1,
+        "proofs": 1,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 55,
+        "pdfEndPage": 59,
+        "title": "13 Fixed points, canonicalization, and coherent–dissipative structure",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1475,
+        "texEndLine": 1574
+      },
+      "markdownUrl": "/publications/consciousness/chapters/fixed-points-canonicalization-and-coherent-dissipative-structure.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "why-a-manifestation-law-is-additional",
+      "title": "Why a manifestation law is additional",
+      "label": "Chapter 14",
+      "kind": "chapter",
+      "order": 19,
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-14-1",
+          "title": "Common source does not determine a bridge",
+          "number": "14.1",
+          "level": 2,
+          "pdfPage": 60,
+          "sourceLine": 1579
+        },
+        {
+          "anchor": "section-14-2",
+          "title": "Regularity and symmetry leave genuine freedom",
+          "number": "14.2",
+          "level": 2,
+          "pdfPage": 60,
+          "sourceLine": 1584
+        },
+        {
+          "anchor": "section-14-3",
+          "title": "Report laws and latent descriptions",
+          "number": "14.3",
+          "level": 2,
+          "pdfPage": 61,
+          "sourceLine": 1599
+        },
+        {
+          "anchor": "section-14-4",
+          "title": "Quantitative aperture adequacy",
+          "number": "14.4",
+          "level": 2,
+          "pdfPage": 61,
+          "sourceLine": 1608
+        }
+      ],
+      "stats": {
+        "equations": 35,
+        "displayEquations": 5,
+        "theorems": 1,
+        "proofs": 1,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 60,
+        "pdfEndPage": 61,
+        "title": "14 Why a manifestation law is additional",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1575,
+        "texEndLine": 1627
+      },
+      "markdownUrl": "/publications/consciousness/chapters/why-a-manifestation-law-is-additional.md",
+      "partTitle": "A Finite Psychophysical Constitution"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "the-realized-domain-and-its-boundaries",
+      "title": "The realized domain and its boundaries",
+      "label": "Chapter 15",
+      "kind": "chapter",
+      "order": 20,
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-15-1",
+          "title": "Physical data, constitutive selection, and analysis",
+          "number": "15.1",
+          "level": 2,
+          "pdfPage": 62,
+          "sourceLine": 1629
+        },
+        {
+          "anchor": "section-15-2",
+          "title": "A physical interface doctrine before candidate selection",
+          "number": "15.2",
+          "level": 2,
+          "pdfPage": 62,
+          "sourceLine": 1643
+        },
+        {
+          "anchor": "section-15-3",
+          "title": "Joint causal dependence",
+          "number": "15.3",
+          "level": 2,
+          "pdfPage": 63,
+          "sourceLine": 1700
+        },
+        {
+          "anchor": "section-15-4",
+          "title": "Native recurrence and admission",
+          "number": "15.4",
+          "level": 2,
+          "pdfPage": 64,
+          "sourceLine": 1762
+        },
+        {
+          "anchor": "section-15-5",
+          "title": "Limits of canonical selection",
+          "number": "15.5",
+          "level": 2,
+          "pdfPage": 65,
+          "sourceLine": 1841
+        }
+      ],
+      "stats": {
+        "equations": 64,
+        "displayEquations": 4,
+        "theorems": 8,
+        "proofs": 5,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 62,
+        "pdfEndPage": 67,
+        "title": "15 The realized domain and its boundaries",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1628,
+        "texEndLine": 1934
+      },
+      "markdownUrl": "/publications/consciousness/chapters/the-realized-domain-and-its-boundaries.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "endogenous-predictive-structure-across-horizons",
+      "title": "Endogenous predictive structure across horizons",
+      "label": "Chapter 16",
+      "kind": "chapter",
+      "order": 21,
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-16-1",
+          "title": "An intrinsic carrier and a native operational contract",
+          "number": "16.1",
+          "level": 2,
+          "pdfPage": 68,
+          "sourceLine": 1937
+        },
+        {
+          "anchor": "section-16-2",
+          "title": "All finite futures, with no privileged truncation",
+          "number": "16.2",
+          "level": 2,
+          "pdfPage": 69,
+          "sourceLine": 1994
+        },
+        {
+          "anchor": "section-16-3",
+          "title": "The transition closure that prediction alone does not prove",
+          "number": "16.3",
+          "level": 2,
+          "pdfPage": 70,
+          "sourceLine": 2057
+        },
+        {
+          "anchor": "section-16-4",
+          "title": "An evaluable all-future object",
+          "number": "16.4",
+          "level": 2,
+          "pdfPage": 71,
+          "sourceLine": 2129
+        },
+        {
+          "anchor": "section-16-5",
+          "title": "External reports and exact descent",
+          "number": "16.5",
+          "level": 2,
+          "pdfPage": 72,
+          "sourceLine": 2189
+        },
+        {
+          "anchor": "section-16-6",
+          "title": "The exact one-step specialization",
+          "number": "16.6",
+          "level": 2,
+          "pdfPage": 72,
+          "sourceLine": 2238
+        },
+        {
+          "anchor": "section-16-7",
+          "title": "Why successor-state geometry is a specialization",
+          "number": "16.7",
+          "level": 2,
+          "pdfPage": 73,
+          "sourceLine": 2257
+        },
+        {
+          "anchor": "section-16-8",
+          "title": "Stability of finite predictive contrasts",
+          "number": "16.8",
+          "level": 2,
+          "pdfPage": 73,
+          "sourceLine": 2264
+        }
+      ],
+      "stats": {
+        "equations": 105,
+        "displayEquations": 15,
+        "theorems": 8,
+        "proofs": 6,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 68,
+        "pdfEndPage": 74,
+        "title": "16 Endogenous predictive structure across horizons",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 1935,
+        "texEndLine": 2282
+      },
+      "markdownUrl": "/publications/consciousness/chapters/endogenous-predictive-structure-across-horizons.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "the-shadow-psychophysical-constitution",
+      "title": "The Shadow Psychophysical Constitution",
+      "label": "Chapter 17",
+      "kind": "chapter",
+      "order": 22,
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-17-1",
+          "title": "Awareness and explicit laws of manifestation",
+          "number": "17.1",
+          "level": 2,
+          "pdfPage": 75,
+          "sourceLine": 2284
+        },
+        {
+          "anchor": "section-17-2",
+          "title": "A1: where perspectives are assigned",
+          "number": "17.2",
+          "level": 2,
+          "pdfPage": 75,
+          "sourceLine": 2294
+        },
+        {
+          "anchor": "paragraph-2",
+          "title": "Formal admission and its empirical lower bound.",
+          "number": "",
+          "level": 4,
+          "sourceLine": 2306,
+          "pdfPage": 76
+        },
+        {
+          "anchor": "section-17-3",
+          "title": "A2: phenomenal organization",
+          "number": "17.3",
+          "level": 2,
+          "pdfPage": 77,
+          "sourceLine": 2321
+        },
+        {
+          "anchor": "section-17-4",
+          "title": "Process provenance and temporal identity",
+          "number": "17.4",
+          "level": 2,
+          "pdfPage": 78,
+          "sourceLine": 2337
+        },
+        {
+          "anchor": "section-17-5",
+          "title": "Reports, phenomenal identification, and access",
+          "number": "17.5",
+          "level": 2,
+          "pdfPage": 80,
+          "sourceLine": 2401
+        },
+        {
+          "anchor": "section-17-6",
+          "title": "The constitutive choice",
+          "number": "17.6",
+          "level": 2,
+          "pdfPage": 80,
+          "sourceLine": 2408
+        }
+      ],
+      "stats": {
+        "equations": 28,
+        "displayEquations": 3,
+        "theorems": 5,
+        "proofs": 1,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 75,
+        "pdfEndPage": 80,
+        "title": "17 The Shadow Psychophysical Constitution",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2283,
+        "texEndLine": 2410
+      },
+      "markdownUrl": "/publications/consciousness/chapters/the-shadow-psychophysical-constitution.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "completion-invariance-and-empirical-conservativity",
+      "title": "Completion, invariance, and empirical conservativity",
+      "label": "Chapter 18",
+      "kind": "chapter",
+      "order": 23,
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-18-1",
+          "title": "The certified finite domain",
+          "number": "18.1",
+          "level": 2,
+          "pdfPage": 81,
+          "sourceLine": 2412
+        },
+        {
+          "anchor": "section-18-2",
+          "title": "Redescription and operational presentation",
+          "number": "18.2",
+          "level": 2,
+          "pdfPage": 82,
+          "sourceLine": 2441
+        },
+        {
+          "anchor": "section-18-3",
+          "title": "Independent composition",
+          "number": "18.3",
+          "level": 2,
+          "pdfPage": 83,
+          "sourceLine": 2467
+        },
+        {
+          "anchor": "section-18-4",
+          "title": "Physical conservativity",
+          "number": "18.4",
+          "level": 2,
+          "pdfPage": 84,
+          "sourceLine": 2472
+        },
+        {
+          "anchor": "section-18-5",
+          "title": "An aspect and an independently variable force",
+          "number": "18.5",
+          "level": 2,
+          "pdfPage": 84,
+          "sourceLine": 2484
+        }
+      ],
+      "stats": {
+        "equations": 10,
+        "displayEquations": 1,
+        "theorems": 3,
+        "proofs": 3,
+        "tables": 1,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 81,
+        "pdfEndPage": 84,
+        "title": "18 Completion, invariance, and empirical conservativity",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2411,
+        "texEndLine": 2492
+      },
+      "markdownUrl": "/publications/consciousness/chapters/completion-invariance-and-empirical-conservativity.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "a-fully-worked-finite-vessel",
+      "title": "A fully worked finite vessel",
+      "label": "Chapter 19",
+      "kind": "chapter",
+      "order": 24,
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-19-1",
+          "title": "Physical dynamics and realization",
+          "number": "19.1",
+          "level": 2,
+          "pdfPage": 85,
+          "sourceLine": 2494
+        },
+        {
+          "anchor": "section-19-2",
+          "title": "The exact transition matrix",
+          "number": "19.2",
+          "level": 2,
+          "pdfPage": 86,
+          "sourceLine": 2510
+        },
+        {
+          "anchor": "section-19-3",
+          "title": "Delayed observations and the native contrast geometry",
+          "number": "19.3",
+          "level": 2,
+          "pdfPage": 86,
+          "sourceLine": 2525
+        },
+        {
+          "anchor": "section-19-4",
+          "title": "External present-state reports have a different metric",
+          "number": "19.4",
+          "level": 2,
+          "pdfPage": 86,
+          "sourceLine": 2542
+        },
+        {
+          "anchor": "section-19-5",
+          "title": "Reports, symmetry, and gauge",
+          "number": "19.5",
+          "level": 2,
+          "pdfPage": 87,
+          "sourceLine": 2551
+        }
+      ],
+      "stats": {
+        "equations": 41,
+        "displayEquations": 5,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 85,
+        "pdfEndPage": 87,
+        "title": "19 A fully worked finite vessel",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2493,
+        "texEndLine": 2557
+      },
+      "markdownUrl": "/publications/consciousness/chapters/a-fully-worked-finite-vessel.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "title": "Splitting, merging, and the stability of subject boundaries",
+      "label": "Chapter 20",
+      "kind": "chapter",
+      "order": 25,
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries",
+      "part": "IV",
+      "sections": [
+        {
+          "anchor": "section-20-1",
+          "title": "Two cores and a controlled merger",
+          "number": "20.1",
+          "level": 2,
+          "pdfPage": 88,
+          "sourceLine": 2559
+        },
+        {
+          "anchor": "section-20-2",
+          "title": "Arbitrarily weak coupling gives a discontinuity",
+          "number": "20.2",
+          "level": 2,
+          "pdfPage": 89,
+          "sourceLine": 2577
+        },
+        {
+          "anchor": "section-20-3",
+          "title": "Copying, reset, and continuation",
+          "number": "20.3",
+          "level": 2,
+          "pdfPage": 89,
+          "sourceLine": 2593
+        },
+        {
+          "anchor": "section-20-4",
+          "title": "Finite partitions and universal unity",
+          "number": "20.4",
+          "level": 2,
+          "pdfPage": 89,
+          "sourceLine": 2600
+        }
+      ],
+      "stats": {
+        "equations": 20,
+        "displayEquations": 4,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 88,
+        "pdfEndPage": 91,
+        "title": "20 Splitting, merging, and the stability of subject boundaries",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2558,
+        "texEndLine": 2609
+      },
+      "markdownUrl": "/publications/consciousness/chapters/splitting-merging-and-the-stability-of-subject-boundaries.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "biological-and-comparative-applications",
+      "title": "Biological and comparative applications",
+      "label": "Chapter 21",
+      "kind": "chapter",
+      "order": 26,
+      "url": "/consciousness/monograph/biological-and-comparative-applications",
+      "part": "V",
+      "sections": [
+        {
+          "anchor": "section-21-1",
+          "title": "What an application must establish",
+          "number": "21.1",
+          "level": 2,
+          "pdfPage": 92,
+          "sourceLine": 2612
+        },
+        {
+          "anchor": "section-21-2",
+          "title": "Development and the absence of adult prerequisites",
+          "number": "21.2",
+          "level": 2,
+          "pdfPage": 92,
+          "sourceLine": 2619
+        },
+        {
+          "anchor": "section-21-3",
+          "title": "Sleep, anesthesia, and the lived scene",
+          "number": "21.3",
+          "level": 2,
+          "pdfPage": 93,
+          "sourceLine": 2626
+        },
+        {
+          "anchor": "section-21-3-1",
+          "title": "Dream formation and reduced external constraint",
+          "number": "21.3.1",
+          "level": 3,
+          "sourceLine": 2629,
+          "pdfPage": 93
+        },
+        {
+          "anchor": "section-21-3-2",
+          "title": "Dreamless and unremembered intervals",
+          "number": "21.3.2",
+          "level": 3,
+          "sourceLine": 2634,
+          "pdfPage": 93
+        },
+        {
+          "anchor": "section-21-3-3",
+          "title": "General anesthesia",
+          "number": "21.3.3",
+          "level": 3,
+          "sourceLine": 2639,
+          "pdfPage": 93
+        },
+        {
+          "anchor": "section-21-3-4",
+          "title": "Local anesthesia and partial sensory loss",
+          "number": "21.3.4",
+          "level": 3,
+          "sourceLine": 2652,
+          "pdfPage": 94
+        },
+        {
+          "anchor": "section-21-4",
+          "title": "Candidate cortical correlates of scene-forming coupling",
+          "number": "21.4",
+          "level": 2,
+          "pdfPage": 94,
+          "sourceLine": 2658
+        },
+        {
+          "anchor": "section-21-5",
+          "title": "Disorders of consciousness and incomplete access",
+          "number": "21.5",
+          "level": 2,
+          "pdfPage": 95,
+          "sourceLine": 2671
+        },
+        {
+          "anchor": "section-21-6",
+          "title": "Blindsight and divided processing",
+          "number": "21.6",
+          "level": 2,
+          "pdfPage": 96,
+          "sourceLine": 2678
+        },
+        {
+          "anchor": "section-21-7",
+          "title": "Animals and nonhuman presentation",
+          "number": "21.7",
+          "level": 2,
+          "pdfPage": 96,
+          "sourceLine": 2687
+        },
+        {
+          "anchor": "section-21-8",
+          "title": "Plants, fungi, and minimal systems",
+          "number": "21.8",
+          "level": 2,
+          "pdfPage": 97,
+          "sourceLine": 2694
+        }
+      ],
+      "stats": {
+        "equations": 8,
+        "displayEquations": 1,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 92,
+        "pdfEndPage": 97,
+        "title": "21 Biological and comparative applications",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2610,
+        "texEndLine": 2700
+      },
+      "markdownUrl": "/publications/consciousness/chapters/biological-and-comparative-applications.md",
+      "partTitle": "Interpretation, Comparison, and Empirical Responsibility"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "artificial-systems-embodiment-and-recursive-cognition",
+      "title": "Artificial systems, embodiment, and recursive cognition",
+      "label": "Chapter 22",
+      "kind": "chapter",
+      "order": 27,
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition",
+      "part": "V",
+      "sections": [
+        {
+          "anchor": "section-22-1",
+          "title": "The relevant implementation is active",
+          "number": "22.1",
+          "level": 2,
+          "pdfPage": 98,
+          "sourceLine": 2702
+        },
+        {
+          "anchor": "section-22-2",
+          "title": "Embodiment changes the available world",
+          "number": "22.2",
+          "level": 2,
+          "pdfPage": 98,
+          "sourceLine": 2711
+        },
+        {
+          "anchor": "section-22-3",
+          "title": "Memory transfer and the apparent continuity of a model",
+          "number": "22.3",
+          "level": 2,
+          "pdfPage": 99,
+          "sourceLine": 2718
+        },
+        {
+          "anchor": "section-22-4",
+          "title": "Implicit candidates and explicit certificates",
+          "number": "22.4",
+          "level": 2,
+          "pdfPage": 99,
+          "sourceLine": 2725
+        },
+        {
+          "anchor": "section-22-5",
+          "title": "Moral caution without premature attribution",
+          "number": "22.5",
+          "level": 2,
+          "pdfPage": 100,
+          "sourceLine": 2734
+        }
+      ],
+      "stats": {
+        "equations": 11,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 98,
+        "pdfEndPage": 100,
+        "title": "22 Artificial systems, embodiment, and recursive cognition",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2701,
+        "texEndLine": 2738
+      },
+      "markdownUrl": "/publications/consciousness/chapters/artificial-systems-embodiment-and-recursive-cognition.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "evidence-identification-and-discriminating-tests",
+      "title": "Evidence, identification, and discriminating tests",
+      "label": "Chapter 23",
+      "kind": "chapter",
+      "order": 28,
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests",
+      "part": "V",
+      "sections": [
+        {
+          "anchor": "section-23-1",
+          "title": "One joint experiment, several kinds of claim",
+          "number": "23.1",
+          "level": 2,
+          "pdfPage": 101,
+          "sourceLine": 2740
+        },
+        {
+          "anchor": "section-23-2",
+          "title": "Descriptor adequacy before ontological inference",
+          "number": "23.2",
+          "level": 2,
+          "pdfPage": 101,
+          "sourceLine": 2752
+        },
+        {
+          "anchor": "section-23-3",
+          "title": "Finite witness calibration",
+          "number": "23.3",
+          "level": 2,
+          "pdfPage": 102,
+          "sourceLine": 2763
+        },
+        {
+          "anchor": "section-23-4",
+          "title": "What A2 would have to match",
+          "number": "23.4",
+          "level": 2,
+          "pdfPage": 102,
+          "sourceLine": 2770
+        },
+        {
+          "anchor": "section-23-5",
+          "title": "Conservativity and the limits of a report test",
+          "number": "23.5",
+          "level": 2,
+          "pdfPage": 103,
+          "sourceLine": 2777
+        },
+        {
+          "anchor": "section-23-6",
+          "title": "A concrete research sequence",
+          "number": "23.6",
+          "level": 2,
+          "pdfPage": 103,
+          "sourceLine": 2784
+        }
+      ],
+      "stats": {
+        "equations": 19,
+        "displayEquations": 2,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 101,
+        "pdfEndPage": 103,
+        "title": "23 Evidence, identification, and discriminating tests",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2739,
+        "texEndLine": 2792
+      },
+      "markdownUrl": "/publications/consciousness/chapters/evidence-identification-and-discriminating-tests.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "the-scope-of-the-proposed-resolution",
+      "title": "The scope of the proposed resolution",
+      "label": "Chapter 24",
+      "kind": "chapter",
+      "order": 29,
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution",
+      "part": "V",
+      "sections": [
+        {
+          "anchor": "section-24-1",
+          "title": "A conditional law, not an unexplained transition",
+          "number": "24.1",
+          "level": 2,
+          "pdfPage": 104,
+          "sourceLine": 2794
+        },
+        {
+          "anchor": "section-24-2",
+          "title": "The philosophical price of structural completeness",
+          "number": "24.2",
+          "level": 2,
+          "pdfPage": 104,
+          "sourceLine": 2801
+        },
+        {
+          "anchor": "section-24-3",
+          "title": "What the contemplative interpretation contributes",
+          "number": "24.3",
+          "level": 2,
+          "pdfPage": 105,
+          "sourceLine": 2808
+        },
+        {
+          "anchor": "section-24-4",
+          "title": "Relation to Shadow Theory",
+          "number": "24.4",
+          "level": 2,
+          "pdfPage": 105,
+          "sourceLine": 2815
+        },
+        {
+          "anchor": "section-24-5",
+          "title": "Relation to existing consciousness programmes",
+          "number": "24.5",
+          "level": 2,
+          "pdfPage": 106,
+          "sourceLine": 2822
+        },
+        {
+          "anchor": "section-24-6",
+          "title": "Remaining realization obligations",
+          "number": "24.6",
+          "level": 2,
+          "pdfPage": 106,
+          "sourceLine": 2831
+        }
+      ],
+      "stats": {
+        "equations": 4,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 104,
+        "pdfEndPage": 106,
+        "title": "24 The scope of the proposed resolution",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2793,
+        "texEndLine": 2835
+      },
+      "markdownUrl": "/publications/consciousness/chapters/the-scope-of-the-proposed-resolution.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "conclusion",
+      "title": "Conclusion",
+      "label": "Chapter 25",
+      "kind": "chapter",
+      "order": 30,
+      "url": "/consciousness/monograph/conclusion",
+      "part": "V",
+      "sections": [],
+      "stats": {
+        "equations": 5,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 107,
+        "pdfEndPage": 108,
+        "title": "25 Conclusion",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2836,
+        "texEndLine": 2852
+      },
+      "markdownUrl": "/publications/consciousness/chapters/conclusion.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "title": "Contact, kinetic, and complete-path estimates",
+      "label": "Appendix A",
+      "kind": "appendix",
+      "order": 31,
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-A-1",
+          "title": "Finite contact gas and its Poisson comparison",
+          "number": "A.1",
+          "level": 2,
+          "pdfPage": 109,
+          "sourceLine": 2854
+        },
+        {
+          "anchor": "section-A-2",
+          "title": "Balanced packet removal",
+          "number": "A.2",
+          "level": 2,
+          "pdfPage": 110,
+          "sourceLine": 2872
+        },
+        {
+          "anchor": "section-A-3",
+          "title": "Signed queues and the exact inventory",
+          "number": "A.3",
+          "level": 2,
+          "pdfPage": 110,
+          "sourceLine": 2883
+        },
+        {
+          "anchor": "section-A-4",
+          "title": "A companion queue bounded away from empty origins",
+          "number": "A.4",
+          "level": 2,
+          "pdfPage": 111,
+          "sourceLine": 2910
+        },
+        {
+          "anchor": "section-A-5",
+          "title": "Removing the empty-origin cutoff",
+          "number": "A.5",
+          "level": 2,
+          "pdfPage": 112,
+          "sourceLine": 2963
+        },
+        {
+          "anchor": "section-A-6",
+          "title": "Existence and nonexplosion of the Bell comparison",
+          "number": "A.6",
+          "level": 2,
+          "pdfPage": 112,
+          "sourceLine": 2995
+        },
+        {
+          "anchor": "section-A-7",
+          "title": "From bulk flux to complete tagged paths",
+          "number": "A.7",
+          "level": 2,
+          "pdfPage": 113,
+          "sourceLine": 3008
+        }
+      ],
+      "stats": {
+        "equations": 140,
+        "displayEquations": 29,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 109,
+        "pdfEndPage": 114,
+        "title": "A Contact, kinetic, and complete-path estimates",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 2853,
+        "texEndLine": 3044
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-a-contact-kinetic-and-complete-path-estimates.md",
+      "partTitle": "Technical Appendices"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "title": "Predictive equivalence: algorithms and infinite-horizon limits",
+      "label": "Appendix B",
+      "kind": "appendix",
+      "order": 32,
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-B-1",
+          "title": "Finite linear representation of transcript probabilities",
+          "number": "B.1",
+          "level": 2,
+          "pdfPage": 115,
+          "sourceLine": 3047
+        },
+        {
+          "anchor": "section-B-2",
+          "title": "Why a finite hidden system can have infinitely many predictive states",
+          "number": "B.2",
+          "level": 2,
+          "pdfPage": 116,
+          "sourceLine": 3072
+        },
+        {
+          "anchor": "section-B-3",
+          "title": "Conditioning and continuation",
+          "number": "B.3",
+          "level": 2,
+          "pdfPage": 116,
+          "sourceLine": 3085
+        },
+        {
+          "anchor": "section-B-4",
+          "title": "A controlled measurable extension",
+          "number": "B.4",
+          "level": 2,
+          "pdfPage": 117,
+          "sourceLine": 3095
+        }
+      ],
+      "stats": {
+        "equations": 35,
+        "displayEquations": 5,
+        "theorems": 1,
+        "proofs": 1,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 115,
+        "pdfEndPage": 117,
+        "title": "B Predictive equivalence: algorithms and infinite-horizon limits",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 3045,
+        "texEndLine": 3101
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "title": "Record witnesses and quantitative limitations",
+      "label": "Appendix C",
+      "kind": "appendix",
+      "order": 33,
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-C-1",
+          "title": "Finite jet determination without an order bound",
+          "number": "C.1",
+          "level": 2,
+          "pdfPage": 118,
+          "sourceLine": 3103
+        },
+        {
+          "anchor": "section-C-2",
+          "title": "Positive witnesses and physical implementation",
+          "number": "C.2",
+          "level": 2,
+          "pdfPage": 118,
+          "sourceLine": 3114
+        },
+        {
+          "anchor": "section-C-3",
+          "title": "Approximate capacity of a finite record",
+          "number": "C.3",
+          "level": 2,
+          "pdfPage": 119,
+          "sourceLine": 3123
+        },
+        {
+          "anchor": "section-C-4",
+          "title": "An exact probability countermodel and its repair condition",
+          "number": "C.4",
+          "level": 2,
+          "pdfPage": 119,
+          "sourceLine": 3135
+        },
+        {
+          "anchor": "section-C-5",
+          "title": "Physical archive corruption and wave error",
+          "number": "C.5",
+          "level": 2,
+          "pdfPage": 119,
+          "sourceLine": 3152
+        }
+      ],
+      "stats": {
+        "equations": 63,
+        "displayEquations": 9,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 118,
+        "pdfEndPage": 120,
+        "title": "C Record witnesses and quantitative limitations",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 3102,
+        "texEndLine": 3172
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-c-record-witnesses-and-quantitative-limitations.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "title": "Exact finite matrices and reproducibility",
+      "label": "Appendix D",
+      "kind": "appendix",
+      "order": 34,
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-D-1",
+          "title": "Boundary data for the five O1 profiles",
+          "number": "D.1",
+          "level": 2,
+          "pdfPage": 121,
+          "sourceLine": 3174
+        },
+        {
+          "anchor": "paragraph-3",
+          "title": "V2_02",
+          "number": "",
+          "level": 3,
+          "sourceLine": 3185,
+          "pdfPage": 121
+        },
+        {
+          "anchor": "paragraph-4",
+          "title": "V2_34",
+          "number": "",
+          "level": 3,
+          "sourceLine": 3191,
+          "pdfPage": 121
+        },
+        {
+          "anchor": "paragraph-5",
+          "title": "V2_04",
+          "number": "",
+          "level": 3,
+          "sourceLine": 3197,
+          "pdfPage": 122
+        },
+        {
+          "anchor": "paragraph-6",
+          "title": "V2_11",
+          "number": "",
+          "level": 3,
+          "sourceLine": 3204,
+          "pdfPage": 122
+        },
+        {
+          "anchor": "paragraph-7",
+          "title": "V2_29",
+          "number": "",
+          "level": 3,
+          "sourceLine": 3211,
+          "pdfPage": 122
+        },
+        {
+          "anchor": "section-D-2",
+          "title": "Signed relabelling",
+          "number": "D.2",
+          "level": 2,
+          "pdfPage": 122,
+          "sourceLine": 3225
+        },
+        {
+          "anchor": "section-D-3",
+          "title": "The recurrent two-bit calculation",
+          "number": "D.3",
+          "level": 2,
+          "pdfPage": 123,
+          "sourceLine": 3230
+        },
+        {
+          "anchor": "section-D-4",
+          "title": "What the executable package checks",
+          "number": "D.4",
+          "level": 2,
+          "pdfPage": 123,
+          "sourceLine": 3242
+        }
+      ],
+      "stats": {
+        "equations": 33,
+        "displayEquations": 8,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 121,
+        "pdfEndPage": 124,
+        "title": "D Exact finite matrices and reproducibility",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 3173,
+        "texEndLine": 3252
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-d-exact-finite-matrices-and-reproducibility.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "title": "Reconstruction, symmetry, and the meaning of a source",
+      "label": "Appendix E",
+      "kind": "appendix",
+      "order": 35,
+      "url": "/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-E-1",
+          "title": "A selected representative is not an inverse",
+          "number": "E.1",
+          "level": 2,
+          "pdfPage": 125,
+          "sourceLine": 3254
+        },
+        {
+          "anchor": "section-E-2",
+          "title": "Equivariant sections",
+          "number": "E.2",
+          "level": 2,
+          "pdfPage": 125,
+          "sourceLine": 3259
+        },
+        {
+          "anchor": "section-E-3",
+          "title": "Topological and physical qualifications",
+          "number": "E.3",
+          "level": 2,
+          "pdfPage": 125,
+          "sourceLine": 3269
+        }
+      ],
+      "stats": {
+        "equations": 30,
+        "displayEquations": 0,
+        "theorems": 1,
+        "proofs": 1,
+        "tables": 0,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 125,
+        "pdfEndPage": 126,
+        "title": "E Reconstruction, symmetry, and the meaning of a source",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 3253,
+        "texEndLine": 3275
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "title": "Notation, claim status, and construction dependencies",
+      "label": "Appendix F",
+      "kind": "appendix",
+      "order": 36,
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies",
+      "part": "Appendices",
+      "sections": [
+        {
+          "anchor": "section-F-1",
+          "title": "Principal notation",
+          "number": "F.1",
+          "level": 2,
+          "pdfPage": 127,
+          "sourceLine": 3277
+        },
+        {
+          "anchor": "section-F-2",
+          "title": "Claim-status register",
+          "number": "F.2",
+          "level": 2,
+          "pdfPage": 128,
+          "sourceLine": 3301
+        },
+        {
+          "anchor": "section-F-3",
+          "title": "Dependencies that cannot be omitted",
+          "number": "F.3",
+          "level": 2,
+          "pdfPage": 129,
+          "sourceLine": 3331
+        },
+        {
+          "anchor": "section-F-4",
+          "title": "Reproducibility and provenance",
+          "number": "F.4",
+          "level": 2,
+          "pdfPage": 129,
+          "sourceLine": 3336
+        }
+      ],
+      "stats": {
+        "equations": 27,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 2,
+        "bibliographyEntries": 0,
+        "figures": 0
+      },
+      "source": {
+        "pdfPage": 127,
+        "pdfEndPage": 129,
+        "title": "F Notation, claim status, and construction dependencies",
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 3276,
+        "texEndLine": 3340
+      },
+      "markdownUrl": "/publications/consciousness/chapters/appendix-f-notation-claim-status-and-construction-dependencies.md"
+    },
+    {
+      "publicationId": "monograph",
+      "slug": "bibliography",
+      "title": "Bibliography",
+      "label": "",
+      "kind": "bibliography",
+      "order": 37,
+      "url": "/consciousness/monograph/bibliography",
+      "part": "",
+      "sections": [],
+      "stats": {
+        "equations": 0,
+        "displayEquations": 0,
+        "theorems": 0,
+        "proofs": 0,
+        "tables": 0,
+        "bibliographyEntries": 54,
+        "figures": 0
+      },
+      "markdownUrl": "/publications/consciousness/chapters/bibliography.md",
+      "source": {
+        "pdfPage": 130,
+        "pdfEndPage": 133,
+        "texFile": "/publications/consciousness/monograph.tex",
+        "texStartLine": 5,
+        "texEndLine": 367
+      }
+    }
+  ],
+  "sourceLabels": {
+    "chapter:preface-and-scope": {
+      "number": "",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/preface-and-scope#chapter:preface-and-scope",
+      "document": "preface-and-scope",
+      "sourceLine": 469
+    },
+    "chapter:abstract": {
+      "number": "",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/abstract#chapter:abstract",
+      "document": "abstract",
+      "sourceLine": 481
+    },
+    "chapter:conventions-and-principal-distinctions": {
+      "number": "",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/conventions-and-principal-distinctions#chapter:conventions-and-principal-distinctions",
+      "document": "conventions-and-principal-distinctions",
+      "sourceLine": 491
+    },
+    "sec:reader-terminology": {
+      "number": "",
+      "kind": "section",
+      "url": "/consciousness/monograph/conventions-and-principal-distinctions#sec:reader-terminology",
+      "document": "conventions-and-principal-distinctions",
+      "sourceLine": 509
+    },
+    "chapter:the-argument-and-how-to-read-it": {
+      "number": "",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/the-argument-and-how-to-read-it#chapter:the-argument-and-how-to-read-it",
+      "document": "the-argument-and-how-to-read-it",
+      "sourceLine": 528
+    },
+    "part:philosophy": {
+      "number": "I",
+      "kind": "part",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#part:philosophy",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 560
+    },
+    "ch:problem": {
+      "number": "1",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#ch:problem",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 561
+    },
+    "section:problem:a-question-about-presence-not-merely-performance": {
+      "number": "1.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#section:problem:a-question-about-presence-not-merely-performance",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 562
+    },
+    "section:problem:one-reality-multiple-descriptions": {
+      "number": "1.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#section:problem:one-reality-multiple-descriptions",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 571
+    },
+    "sec:primitive-motivation": {
+      "number": "1.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#sec:primitive-motivation",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 582
+    },
+    "sec:nondual": {
+      "number": "1.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#sec:nondual",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 593
+    },
+    "section:problem:four-explanatory-obligations": {
+      "number": "1.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#section:problem:four-explanatory-obligations",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 602
+    },
+    "section:problem:what-is-distinctive-about-the-proposed-account": {
+      "number": "1.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-source-to-experience-problem#section:problem:what-is-distinctive-about-the-proposed-account",
+      "document": "the-source-to-experience-problem",
+      "sourceLine": 613
+    },
+    "ch:distinctions": {
+      "number": "2",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#ch:distinctions",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 618
+    },
+    "section:distinctions:a-vocabulary-that-does-not-settle-the-question-in-advance": {
+      "number": "2.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#section:distinctions:a-vocabulary-that-does-not-settle-the-question-in-advance",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 619
+    },
+    "section:distinctions:the-red-object-and-the-interpretation-of-seeing": {
+      "number": "2.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#section:distinctions:the-red-object-and-the-interpretation-of-seeing",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 626
+    },
+    "section:distinctions:memory-scaffolding-and-continuity": {
+      "number": "2.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#section:distinctions:memory-scaffolding-and-continuity",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 640
+    },
+    "sec:scene-modes": {
+      "number": "2.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#sec:scene-modes",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 647
+    },
+    "sec:vessel-scene-memory": {
+      "number": "2.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#sec:vessel-scene-memory",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 656
+    },
+    "section:distinctions:minimal-presence-and-higher-order-reflection": {
+      "number": "2.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/awareness-contents-and-the-personal-model#section:distinctions:minimal-presence-and-higher-order-reflection",
+      "document": "awareness-contents-and-the-personal-model",
+      "sourceLine": 673
+    },
+    "ch:book": {
+      "number": "3",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#ch:book",
+      "document": "contemplative-inquiry-and-its-evidential-role",
+      "sourceLine": 680
+    },
+    "section:book:reading-i-am-that-as-a-philosophical-source": {
+      "number": "3.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#section:book:reading-i-am-that-as-a-philosophical-source",
+      "document": "contemplative-inquiry-and-its-evidential-role",
+      "sourceLine": 681
+    },
+    "section:book:identification-is-not-the-deletion-of-cognition": {
+      "number": "3.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#section:book:identification-is-not-the-deletion-of-cognition",
+      "document": "contemplative-inquiry-and-its-evidential-role",
+      "sourceLine": 690
+    },
+    "section:book:witnessing-nonduality-and-the-limits-of-the-translation": {
+      "number": "3.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#section:book:witnessing-nonduality-and-the-limits-of-the-translation",
+      "document": "contemplative-inquiry-and-its-evidential-role",
+      "sourceLine": 701
+    },
+    "section:book:first-person-investigation-and-public-evidence": {
+      "number": "3.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#section:book:first-person-investigation-and-public-evidence",
+      "document": "contemplative-inquiry-and-its-evidential-role",
+      "sourceLine": 710
+    },
+    "ch:altered": {
+      "number": "4",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience#ch:altered",
+      "document": "altered-identity-and-unfamiliar-experience",
+      "sourceLine": 719
+    },
+    "section:altered:an-autobiographical-example": {
+      "number": "4.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience#section:altered:an-autobiographical-example",
+      "document": "altered-identity-and-unfamiliar-experience",
+      "sourceLine": 720
+    },
+    "section:altered:reality-veridicality-and-experiential-occurrence": {
+      "number": "4.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience#section:altered:reality-veridicality-and-experiential-occurrence",
+      "document": "altered-identity-and-unfamiliar-experience",
+      "sourceLine": 727
+    },
+    "sec:altered-weighting": {
+      "number": "4.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience#sec:altered-weighting",
+      "document": "altered-identity-and-unfamiliar-experience",
+      "sourceLine": 734
+    },
+    "section:altered:what-remains-constant": {
+      "number": "4.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/altered-identity-and-unfamiliar-experience#section:altered:what-remains-constant",
+      "document": "altered-identity-and-unfamiliar-experience",
+      "sourceLine": 741
+    },
+    "part:physics": {
+      "number": "II",
+      "kind": "part",
+      "url": "/consciousness/monograph/source-readout-foundations#part:physics",
+      "document": "source-readout-foundations",
+      "sourceLine": 749
+    },
+    "ch:source": {
+      "number": "5",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/source-readout-foundations#ch:source",
+      "document": "source-readout-foundations",
+      "sourceLine": 750
+    },
+    "section:source:nominated-sources-and-restricted-descriptions": {
+      "number": "5.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/source-readout-foundations#section:source:nominated-sources-and-restricted-descriptions",
+      "document": "source-readout-foundations",
+      "sourceLine": 751
+    },
+    "thm:descent": {
+      "number": "5.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/source-readout-foundations#thm:descent",
+      "document": "source-readout-foundations",
+      "sourceLine": 754
+    },
+    "section:source:predictive-closure": {
+      "number": "5.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/source-readout-foundations#section:source:predictive-closure",
+      "document": "source-readout-foundations",
+      "sourceLine": 769
+    },
+    "prop:dyn-descent": {
+      "number": "5.2",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/source-readout-foundations#prop:dyn-descent",
+      "document": "source-readout-foundations",
+      "sourceLine": 770
+    },
+    "eq:lump": {
+      "number": "5.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/source-readout-foundations#eq:lump",
+      "document": "source-readout-foundations",
+      "sourceLine": 779
+    },
+    "section:source:multiple-apertures-and-non-reconstructibility": {
+      "number": "5.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/source-readout-foundations#section:source:multiple-apertures-and-non-reconstructibility",
+      "document": "source-readout-foundations",
+      "sourceLine": 787
+    },
+    "section:source:the-everything-equation-and-constitutive-selection": {
+      "number": "5.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/source-readout-foundations#section:source:the-everything-equation-and-constitutive-selection",
+      "document": "source-readout-foundations",
+      "sourceLine": 792
+    },
+    "eq:everything": {
+      "number": "5.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/source-readout-foundations#eq:everything",
+      "document": "source-readout-foundations",
+      "sourceLine": 794
+    },
+    "ch:quantum": {
+      "number": "6",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#ch:quantum",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 801
+    },
+    "section:quantum:the-coherent-source": {
+      "number": "6.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#section:quantum:the-coherent-source",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 804
+    },
+    "eq:current": {
+      "number": "6.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#eq:current",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 810
+    },
+    "eq:continuity": {
+      "number": "6.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#eq:continuity",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 814
+    },
+    "eq:bell": {
+      "number": "6.3",
+      "kind": "equation",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#eq:bell",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 828
+    },
+    "section:quantum:predictive-current-coordinates": {
+      "number": "6.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#section:quantum:predictive-current-coordinates",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 838
+    },
+    "thm:current-rep": {
+      "number": "6.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#thm:current-rep",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 846
+    },
+    "section:quantum:the-independence-of-physical-events-from-conscious-observation": {
+      "number": "6.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#section:quantum:the-independence-of-physical-events-from-conscious-observation",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 855
+    },
+    "section:quantum:complete-experiments-and-comparison-spaces": {
+      "number": "6.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#section:quantum:complete-experiments-and-comparison-spaces",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 860
+    },
+    "lem:errors": {
+      "number": "6.2",
+      "kind": "lemma",
+      "url": "/consciousness/monograph/quantum-currents-and-observer-independent-events#lem:errors",
+      "document": "quantum-currents-and-observer-independent-events",
+      "sourceLine": 863
+    },
+    "ch:massive": {
+      "number": "7",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#ch:massive",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 881
+    },
+    "section:massive:guidance-equilibrium-and-actual-histories": {
+      "number": "7.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:guidance-equilibrium-and-actual-histories",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 882
+    },
+    "section:massive:an-exact-moving-gaussian-pointer": {
+      "number": "7.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:an-exact-moving-gaussian-pointer",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 901
+    },
+    "eq:pointerH": {
+      "number": "7.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#eq:pointerH",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 908
+    },
+    "eq:pointerrho": {
+      "number": "7.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#eq:pointerrho",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 914
+    },
+    "thm:pointer": {
+      "number": "7.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#thm:pointer",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 922
+    },
+    "section:massive:capture-pending-states-and-null-instruments": {
+      "number": "7.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:capture-pending-states-and-null-instruments",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 945
+    },
+    "eq:resource-wave": {
+      "number": "7.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#eq:resource-wave",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 947
+    },
+    "eq:nullinstrument": {
+      "number": "7.4",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#eq:nullinstrument",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 961
+    },
+    "section:massive:historical-archives-and-reset-receivers": {
+      "number": "7.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:historical-archives-and-reset-receivers",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 994
+    },
+    "section:massive:autonomous-realization-and-historical-error": {
+      "number": "7.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:autonomous-realization-and-historical-error",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 1017
+    },
+    "prop:clock-regularity": {
+      "number": "7.2",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#prop:clock-regularity",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 1027
+    },
+    "section:massive:what-the-constitution-establishes": {
+      "number": "7.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-massive-configuration-and-record-constitution#section:massive:what-the-constitution-establishes",
+      "document": "a-massive-configuration-and-record-constitution",
+      "sourceLine": 1057
+    },
+    "ch:pilot": {
+      "number": "8",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#ch:pilot",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1066
+    },
+    "section:pilot:the-declared-microscopic-inventory": {
+      "number": "8.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:the-declared-microscopic-inventory",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1067
+    },
+    "section:pilot:bond-ownership-and-conservative-export": {
+      "number": "8.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:bond-ownership-and-conservative-export",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1074
+    },
+    "eq:pilotaction": {
+      "number": "8.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:pilotaction",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1076
+    },
+    "eq:exportbound": {
+      "number": "8.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:exportbound",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1090
+    },
+    "section:pilot:spatial-preparation-produces-timing": {
+      "number": "8.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:spatial-preparation-produces-timing",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1102
+    },
+    "eq:gasbound": {
+      "number": "8.3",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:gasbound",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1106
+    },
+    "section:pilot:from-signed-queues-to-the-bell-path": {
+      "number": "8.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:from-signed-queues-to-the-bell-path",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1116
+    },
+    "eq:queuebalance": {
+      "number": "8.4",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:queuebalance",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1125
+    },
+    "eq:tagbound": {
+      "number": "8.5",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:tagbound",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1141
+    },
+    "section:pilot:a-static-finite-hamiltonian-for-the-whole-programme": {
+      "number": "8.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:a-static-finite-hamiltonian-for-the-whole-programme",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1154
+    },
+    "eq:clockH": {
+      "number": "8.6",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#eq:clockH",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1156
+    },
+    "thm:clock": {
+      "number": "8.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#thm:clock",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1162
+    },
+    "thm:archivecut": {
+      "number": "8.2",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#thm:archivecut",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1175
+    },
+    "section:pilot:the-observer-independent-conclusion": {
+      "number": "8.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#section:pilot:the-observer-independent-conclusion",
+      "document": "a-deterministic-pilot-medium-and-a-complete-path-limit",
+      "sourceLine": 1189
+    },
+    "ch:resources": {
+      "number": "9",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#ch:resources",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1194
+    },
+    "section:resources:finite-records-are-physical-resources": {
+      "number": "9.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#section:resources:finite-records-are-physical-resources",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1195
+    },
+    "section:resources:operational-capacity": {
+      "number": "9.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#section:resources:operational-capacity",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1202
+    },
+    "section:resources:viability-and-the-orientation-of-repair": {
+      "number": "9.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#section:resources:viability-and-the-orientation-of-repair",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1220
+    },
+    "section:resources:agency-and-stable-decisions": {
+      "number": "9.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#section:resources:agency-and-stable-decisions",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1232
+    },
+    "section:resources:physical-stability-and-philosophical-relevance": {
+      "number": "9.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/resources-continued-operation-and-agency#section:resources:physical-stability-and-philosophical-relevance",
+      "document": "resources-continued-operation-and-agency",
+      "sourceLine": 1239
+    },
+    "part:vessels": {
+      "number": "III",
+      "kind": "part",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#part:vessels",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1245
+    },
+    "ch:src": {
+      "number": "10",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#ch:src",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1246
+    },
+    "section:src:representing-a-specified-target": {
+      "number": "10.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#section:src:representing-a-specified-target",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1249
+    },
+    "thm:witness": {
+      "number": "10.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#thm:witness",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1257
+    },
+    "section:src:centralizers-and-their-scope": {
+      "number": "10.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#section:src:centralizers-and-their-scope",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1268
+    },
+    "section:src:positive-witnesses-and-finite-calibration": {
+      "number": "10.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#section:src:positive-witnesses-and-finite-calibration",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1280
+    },
+    "thm:robust-witness": {
+      "number": "10.2",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#thm:robust-witness",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1290
+    },
+    "eq:witness-error": {
+      "number": "10.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#eq:witness-error",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1292
+    },
+    "section:src:local-jets-finite-existence-without-a-universal-order-bound": {
+      "number": "10.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#section:src:local-jets-finite-existence-without-a-universal-order-bound",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1310
+    },
+    "ex:jets": {
+      "number": "10.3",
+      "kind": "example",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#ex:jets",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1315
+    },
+    "section:src:self-reference-without-phenomenal-promotion": {
+      "number": "10.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/internal-representation-and-self-referential-records#section:src:self-reference-without-phenomenal-promotion",
+      "document": "internal-representation-and-self-referential-records",
+      "sourceLine": 1325
+    },
+    "ch:crr": {
+      "number": "11",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#ch:crr",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1330
+    },
+    "section:crr:a-typed-regulation-architecture": {
+      "number": "11.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#section:crr:a-typed-regulation-architecture",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1331
+    },
+    "eq:crrloop": {
+      "number": "11.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#eq:crrloop",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1337
+    },
+    "section:crr:access-and-valuation-are-different": {
+      "number": "11.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#section:crr:access-and-valuation-are-different",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1344
+    },
+    "section:crr:weak-unity-strong-unity-and-assembly": {
+      "number": "11.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#section:crr:weak-unity-strong-unity-and-assembly",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1351
+    },
+    "section:crr:functional-selfhood-and-episode-identity": {
+      "number": "11.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/regulation-unity-and-the-functional-self#section:crr:functional-selfhood-and-episode-identity",
+      "document": "regulation-unity-and-the-functional-self",
+      "sourceLine": 1358
+    },
+    "ch:o1": {
+      "number": "12",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#ch:o1",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1365
+    },
+    "section:o1:source-sensitive-response-carriers": {
+      "number": "12.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#section:o1:source-sensitive-response-carriers",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1368
+    },
+    "thm:rsm": {
+      "number": "12.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#thm:rsm",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1383
+    },
+    "section:o1:five-exact-profiles": {
+      "number": "12.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#section:o1:five-exact-profiles",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1397
+    },
+    "tab:o1": {
+      "number": "12.1",
+      "kind": "table",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#tab:o1",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1408
+    },
+    "eq:polyproj": {
+      "number": "12.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#eq:polyproj",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1414
+    },
+    "section:o1:interaction-relative-sector-invariance": {
+      "number": "12.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#section:o1:interaction-relative-sector-invariance",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1422
+    },
+    "section:o1:actuation-source-drift-and-seed-specific-mobility": {
+      "number": "12.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#section:o1:actuation-source-drift-and-seed-specific-mobility",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1439
+    },
+    "section:o1:robust-spectral-access": {
+      "number": "12.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#section:o1:robust-spectral-access",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1462
+    },
+    "eq:resolventbound": {
+      "number": "12.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#eq:resolventbound",
+      "document": "finite-incidence-recurrent-response-and-physical-access",
+      "sourceLine": 1464
+    },
+    "ch:cscf": {
+      "number": "13",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#ch:cscf",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1475
+    },
+    "section:cscf:a-local-contraction-theorem": {
+      "number": "13.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:a-local-contraction-theorem",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1478
+    },
+    "eq:fixedres": {
+      "number": "13.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#eq:fixedres",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1491
+    },
+    "section:cscf:observable-certification": {
+      "number": "13.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:observable-certification",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1498
+    },
+    "section:cscf:one-operator-two-analytic-regimes": {
+      "number": "13.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:one-operator-two-analytic-regimes",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1514
+    },
+    "eq:cscf": {
+      "number": "13.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#eq:cscf",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1516
+    },
+    "section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol": {
+      "number": "13.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1529
+    },
+    "prop:cscf-general": {
+      "number": "13.1",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#prop:cscf-general",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1532
+    },
+    "section:cscf:what-a-common-generator-does-not-determine": {
+      "number": "13.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:what-a-common-generator-does-not-determine",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1564
+    },
+    "section:cscf:the-correct-role-of-vessel-mathematics": {
+      "number": "13.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#section:cscf:the-correct-role-of-vessel-mathematics",
+      "document": "fixed-points-canonicalization-and-coherent-dissipative-structure",
+      "sourceLine": 1569
+    },
+    "part:constitution": {
+      "number": "IV",
+      "kind": "part",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#part:constitution",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1575
+    },
+    "ch:underdetermination": {
+      "number": "14",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#ch:underdetermination",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1576
+    },
+    "section:underdetermination:common-source-does-not-determine-a-bridge": {
+      "number": "14.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#section:underdetermination:common-source-does-not-determine-a-bridge",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1579
+    },
+    "section:underdetermination:regularity-and-symmetry-leave-genuine-freedom": {
+      "number": "14.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#section:underdetermination:regularity-and-symmetry-leave-genuine-freedom",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1584
+    },
+    "eq:Meps": {
+      "number": "14.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#eq:Meps",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1586
+    },
+    "section:underdetermination:report-laws-and-latent-descriptions": {
+      "number": "14.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#section:underdetermination:report-laws-and-latent-descriptions",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1599
+    },
+    "eq:latentreport": {
+      "number": "14.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#eq:latentreport",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1601
+    },
+    "section:underdetermination:quantitative-aperture-adequacy": {
+      "number": "14.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#section:underdetermination:quantitative-aperture-adequacy",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1608
+    },
+    "thm:aperture": {
+      "number": "14.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#thm:aperture",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1613
+    },
+    "eq:aperture": {
+      "number": "14.3",
+      "kind": "equation",
+      "url": "/consciousness/monograph/why-a-manifestation-law-is-additional#eq:aperture",
+      "document": "why-a-manifestation-law-is-additional",
+      "sourceLine": 1615
+    },
+    "ch:realization": {
+      "number": "15",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#ch:realization",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1628
+    },
+    "sec:realization-three-layers": {
+      "number": "15.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#sec:realization-three-layers",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1629
+    },
+    "sec:spc2-realization": {
+      "number": "15.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#sec:spc2-realization",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1644
+    },
+    "prop:spc2-candidates-first": {
+      "number": "15.1",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#prop:spc2-candidates-first",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1664
+    },
+    "sec:spc2-joint-dependence": {
+      "number": "15.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#sec:spc2-joint-dependence",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1701
+    },
+    "prop:spc2-parent-factorization": {
+      "number": "15.3",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#prop:spc2-parent-factorization",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1733
+    },
+    "sec:spc2-recurrence": {
+      "number": "15.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#sec:spc2-recurrence",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1763
+    },
+    "def:core": {
+      "number": "15.5",
+      "kind": "definition",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#def:core",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1826
+    },
+    "sec:spc2-canonicality": {
+      "number": "15.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#sec:spc2-canonicality",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1842
+    },
+    "thm:spc2-no-factor-selector": {
+      "number": "15.6",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#thm:spc2-no-factor-selector",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1844
+    },
+    "prop:spc2-canonicality-obstruction": {
+      "number": "15.7",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#prop:spc2-canonicality-obstruction",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1881
+    },
+    "prop:spc2-individuation-covariance": {
+      "number": "15.8",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/the-realized-domain-and-its-boundaries#prop:spc2-individuation-covariance",
+      "document": "the-realized-domain-and-its-boundaries",
+      "sourceLine": 1913
+    },
+    "ch:predictive": {
+      "number": "16",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#ch:predictive",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 1935
+    },
+    "sec:spc2-native-contract": {
+      "number": "16.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-native-contract",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 1938
+    },
+    "def:spc2-native-instrument": {
+      "number": "16.1",
+      "kind": "definition",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#def:spc2-native-instrument",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 1949
+    },
+    "sec:spc2-projective-profile": {
+      "number": "16.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-projective-profile",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 1995
+    },
+    "prop:spc2-projective": {
+      "number": "16.2",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#prop:spc2-projective",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2025
+    },
+    "thm:pred-min": {
+      "number": "16.3",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#thm:pred-min",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2050
+    },
+    "sec:spc2-fibre-congruence": {
+      "number": "16.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-fibre-congruence",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2058
+    },
+    "ass:spc2-congruence": {
+      "number": "16.4",
+      "kind": "assumption",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#ass:spc2-congruence",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2064
+    },
+    "thm:spc2-quotient-instrument": {
+      "number": "16.5",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#thm:spc2-quotient-instrument",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2083
+    },
+    "sec:spc2-finite-evaluation": {
+      "number": "16.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-finite-evaluation",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2130
+    },
+    "prop:spc2-span-test": {
+      "number": "16.6",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#prop:spc2-span-test",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2142
+    },
+    "sec:spc2-grounded-reports": {
+      "number": "16.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-grounded-reports",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2190
+    },
+    "prop:apparatus-invariance": {
+      "number": "16.7",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#prop:apparatus-invariance",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2218
+    },
+    "sec:spc2-full-state-specialization": {
+      "number": "16.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:spc2-full-state-specialization",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2239
+    },
+    "sec:successor-choice": {
+      "number": "16.7",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:successor-choice",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2257
+    },
+    "sec:predictive-stability": {
+      "number": "16.8",
+      "kind": "section",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#sec:predictive-stability",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2264
+    },
+    "prop:predictive-stability": {
+      "number": "16.8",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/endogenous-predictive-structure-across-horizons#prop:predictive-stability",
+      "document": "endogenous-predictive-structure-across-horizons",
+      "sourceLine": 2266
+    },
+    "ch:spc": {
+      "number": "17",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#ch:spc",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2283
+    },
+    "section:spc:the-primitive-and-the-realization-input": {
+      "number": "17.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#section:spc:the-primitive-and-the-realization-input",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2284
+    },
+    "ax:A0": {
+      "number": "17.1",
+      "kind": "constitution",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#ax:A0",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2287
+    },
+    "section:spc:perspectival-cores": {
+      "number": "17.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#section:spc:perspectival-cores",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2294
+    },
+    "ax:A1": {
+      "number": "17.2",
+      "kind": "constitution",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#ax:A1",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2295
+    },
+    "section:spc:phenomenal-organization-and-structural-completeness": {
+      "number": "17.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#section:spc:phenomenal-organization-and-structural-completeness",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2321
+    },
+    "ax:A2": {
+      "number": "17.3",
+      "kind": "constitution",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#ax:A2",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2322
+    },
+    "sec:lineage-process": {
+      "number": "17.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#sec:lineage-process",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2337
+    },
+    "eq:core-provenance": {
+      "number": "17.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#eq:core-provenance",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2358
+    },
+    "ax:A3": {
+      "number": "17.4",
+      "kind": "constitution",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#ax:A3",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2366
+    },
+    "prop:lineage": {
+      "number": "17.5",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#prop:lineage",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2372
+    },
+    "section:spc:reports-are-physical-instruments": {
+      "number": "17.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#section:spc:reports-are-physical-instruments",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2401
+    },
+    "sec:spc2-difference": {
+      "number": "17.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-shadow-psychophysical-constitution#sec:spc2-difference",
+      "document": "the-shadow-psychophysical-constitution",
+      "sourceLine": 2408
+    },
+    "ch:completion": {
+      "number": "18",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#ch:completion",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2411
+    },
+    "section:completion:a-total-finite-construction": {
+      "number": "18.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#section:completion:a-total-finite-construction",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2412
+    },
+    "thm:completion": {
+      "number": "18.1",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#thm:completion",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2417
+    },
+    "section:completion:redescription-covariance": {
+      "number": "18.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#section:completion:redescription-covariance",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2441
+    },
+    "thm:covariance": {
+      "number": "18.2",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#thm:covariance",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2444
+    },
+    "section:completion:independent-composition": {
+      "number": "18.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#section:completion:independent-composition",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2467
+    },
+    "section:completion:physical-conservativity": {
+      "number": "18.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#section:completion:physical-conservativity",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2472
+    },
+    "thm:conservative": {
+      "number": "18.3",
+      "kind": "theorem",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#thm:conservative",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2473
+    },
+    "section:completion:an-extra-awareness-variable-versus-an-aspect": {
+      "number": "18.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/completion-invariance-and-empirical-conservativity#section:completion:an-extra-awareness-variable-versus-an-aspect",
+      "document": "completion-invariance-and-empirical-conservativity",
+      "sourceLine": 2484
+    },
+    "ch:worked": {
+      "number": "19",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#ch:worked",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2493
+    },
+    "section:worked:physical-dynamics-and-realization": {
+      "number": "19.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#section:worked:physical-dynamics-and-realization",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2494
+    },
+    "eq:twobit": {
+      "number": "19.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#eq:twobit",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2496
+    },
+    "section:worked:the-exact-transition-matrix": {
+      "number": "19.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#section:worked:the-exact-transition-matrix",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2510
+    },
+    "eq:twobitT": {
+      "number": "19.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#eq:twobitT",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2512
+    },
+    "section:worked:delayed-observations-and-the-printed-contrast-geometry": {
+      "number": "19.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#section:worked:delayed-observations-and-the-printed-contrast-geometry",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2525
+    },
+    "eq:twobitmetric": {
+      "number": "19.3",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#eq:twobitmetric",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2527
+    },
+    "section:worked:present-state-reports-change-the-full-metric": {
+      "number": "19.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#section:worked:present-state-reports-change-the-full-metric",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2542
+    },
+    "eq:fullmetric": {
+      "number": "19.4",
+      "kind": "equation",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#eq:fullmetric",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2544
+    },
+    "section:worked:reports-symmetry-and-gauge": {
+      "number": "19.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/a-fully-worked-finite-vessel#section:worked:reports-symmetry-and-gauge",
+      "document": "a-fully-worked-finite-vessel",
+      "sourceLine": 2551
+    },
+    "ch:split": {
+      "number": "20",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#ch:split",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2558
+    },
+    "section:split:two-cores-and-a-controlled-merger": {
+      "number": "20.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#section:split:two-cores-and-a-controlled-merger",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2559
+    },
+    "section:split:arbitrarily-weak-coupling-gives-a-discontinuity": {
+      "number": "20.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#section:split:arbitrarily-weak-coupling-gives-a-discontinuity",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2577
+    },
+    "eq:weakcoupling": {
+      "number": "20.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#eq:weakcoupling",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2583
+    },
+    "section:split:copying-reset-and-continuation": {
+      "number": "20.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#section:split:copying-reset-and-continuation",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2593
+    },
+    "section:split:finite-partitions-and-universal-unity": {
+      "number": "20.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#section:split:finite-partitions-and-universal-unity",
+      "document": "splitting-merging-and-the-stability-of-subject-boundaries",
+      "sourceLine": 2600
+    },
+    "part:implications": {
+      "number": "V",
+      "kind": "part",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#part:implications",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2610
+    },
+    "ch:comparative": {
+      "number": "21",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#ch:comparative",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2611
+    },
+    "section:comparative:what-an-application-must-establish": {
+      "number": "21.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:what-an-application-must-establish",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2612
+    },
+    "section:comparative:development-and-the-absence-of-adult-prerequisites": {
+      "number": "21.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:development-and-the-absence-of-adult-prerequisites",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2619
+    },
+    "section:comparative:sleep-anesthesia-and-the-report-boundary": {
+      "number": "21.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:sleep-anesthesia-and-the-report-boundary",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2626
+    },
+    "sec:dream-formation": {
+      "number": "21.3.1",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#sec:dream-formation",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2629
+    },
+    "sec:dreamless": {
+      "number": "21.3.2",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#sec:dreamless",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2634
+    },
+    "sec:general-anesthesia": {
+      "number": "21.3.3",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#sec:general-anesthesia",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2639
+    },
+    "sec:local-anesthesia": {
+      "number": "21.3.4",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#sec:local-anesthesia",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2652
+    },
+    "sec:cortical-correlates": {
+      "number": "21.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#sec:cortical-correlates",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2658
+    },
+    "section:comparative:disorders-of-consciousness-and-incomplete-access": {
+      "number": "21.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:disorders-of-consciousness-and-incomplete-access",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2671
+    },
+    "section:comparative:blindsight-and-divided-processing": {
+      "number": "21.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:blindsight-and-divided-processing",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2678
+    },
+    "section:comparative:animals-and-nonhuman-presentation": {
+      "number": "21.7",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:animals-and-nonhuman-presentation",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2687
+    },
+    "section:comparative:plants-fungi-and-minimal-systems": {
+      "number": "21.8",
+      "kind": "section",
+      "url": "/consciousness/monograph/biological-and-comparative-applications#section:comparative:plants-fungi-and-minimal-systems",
+      "document": "biological-and-comparative-applications",
+      "sourceLine": 2694
+    },
+    "ch:ai": {
+      "number": "22",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#ch:ai",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2701
+    },
+    "section:ai:the-relevant-implementation-is-active": {
+      "number": "22.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#section:ai:the-relevant-implementation-is-active",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2702
+    },
+    "section:ai:embodiment-changes-the-available-world": {
+      "number": "22.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#section:ai:embodiment-changes-the-available-world",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2711
+    },
+    "section:ai:memory-transfer-and-the-apparent-continuity-of-a-model": {
+      "number": "22.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#section:ai:memory-transfer-and-the-apparent-continuity-of-a-model",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2718
+    },
+    "section:ai:implicit-candidates-and-explicit-certificates": {
+      "number": "22.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#section:ai:implicit-candidates-and-explicit-certificates",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2725
+    },
+    "section:ai:moral-caution-without-premature-attribution": {
+      "number": "22.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#section:ai:moral-caution-without-premature-attribution",
+      "document": "artificial-systems-embodiment-and-recursive-cognition",
+      "sourceLine": 2734
+    },
+    "ch:evidence": {
+      "number": "23",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#ch:evidence",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2739
+    },
+    "section:evidence:one-joint-experiment-several-kinds-of-claim": {
+      "number": "23.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:one-joint-experiment-several-kinds-of-claim",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2740
+    },
+    "eq:jointdata": {
+      "number": "23.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#eq:jointdata",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2744
+    },
+    "section:evidence:descriptor-adequacy-before-ontological-inference": {
+      "number": "23.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:descriptor-adequacy-before-ontological-inference",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2752
+    },
+    "section:evidence:finite-witness-calibration": {
+      "number": "23.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:finite-witness-calibration",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2763
+    },
+    "section:evidence:what-a2-would-have-to-match": {
+      "number": "23.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:what-a2-would-have-to-match",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2770
+    },
+    "section:evidence:conservativity-and-the-limits-of-a-report-test": {
+      "number": "23.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:conservativity-and-the-limits-of-a-report-test",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2777
+    },
+    "section:evidence:a-concrete-research-sequence": {
+      "number": "23.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/evidence-identification-and-discriminating-tests#section:evidence:a-concrete-research-sequence",
+      "document": "evidence-identification-and-discriminating-tests",
+      "sourceLine": 2784
+    },
+    "ch:resolution": {
+      "number": "24",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#ch:resolution",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2793
+    },
+    "section:resolution:a-conditional-law-not-an-unexplained-transition": {
+      "number": "24.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#section:resolution:a-conditional-law-not-an-unexplained-transition",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2794
+    },
+    "section:resolution:the-philosophical-price-of-structural-completeness": {
+      "number": "24.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#section:resolution:the-philosophical-price-of-structural-completeness",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2801
+    },
+    "section:resolution:what-the-contemplative-interpretation-contributes": {
+      "number": "24.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#section:resolution:what-the-contemplative-interpretation-contributes",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2808
+    },
+    "section:resolution:relation-to-shadow-theory": {
+      "number": "24.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#section:resolution:relation-to-shadow-theory",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2815
+    },
+    "sec:theory-comparison": {
+      "number": "24.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#sec:theory-comparison",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2822
+    },
+    "section:resolution:internal-completeness-and-remaining-realization-obligations": {
+      "number": "24.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/the-scope-of-the-proposed-resolution#section:resolution:internal-completeness-and-remaining-realization-obligations",
+      "document": "the-scope-of-the-proposed-resolution",
+      "sourceLine": 2831
+    },
+    "ch:conclusion": {
+      "number": "25",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/conclusion#ch:conclusion",
+      "document": "conclusion",
+      "sourceLine": 2836
+    },
+    "app:kinetic": {
+      "number": "A",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#app:kinetic",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2853
+    },
+    "section:kinetic:finite-contact-gas-and-its-poisson-comparison": {
+      "number": "A.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:finite-contact-gas-and-its-poisson-comparison",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2854
+    },
+    "eq:appgas": {
+      "number": "A.1",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appgas",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2865
+    },
+    "section:kinetic:balanced-packet-removal": {
+      "number": "A.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:balanced-packet-removal",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2872
+    },
+    "eq:appann": {
+      "number": "A.2",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appann",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2878
+    },
+    "section:kinetic:signed-queues-and-the-exact-inventory": {
+      "number": "A.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:signed-queues-and-the-exact-inventory",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2883
+    },
+    "eq:appinventory": {
+      "number": "A.3",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appinventory",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2898
+    },
+    "eq:appfluxerr": {
+      "number": "A.4",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appfluxerr",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2905
+    },
+    "eq:apppoperr": {
+      "number": "A.5",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:apppoperr",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2906
+    },
+    "section:kinetic:a-companion-queue-bounded-away-from-empty-origins": {
+      "number": "A.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:a-companion-queue-bounded-away-from-empty-origins",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2910
+    },
+    "eq:appR": {
+      "number": "A.6",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appR",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2956
+    },
+    "section:kinetic:removing-the-empty-origin-cutoff": {
+      "number": "A.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:removing-the-empty-origin-cutoff",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2963
+    },
+    "eq:appsmall": {
+      "number": "A.7",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appsmall",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2979
+    },
+    "section:kinetic:existence-and-nonexplosion-of-the-bell-comparison": {
+      "number": "A.6",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:existence-and-nonexplosion-of-the-bell-comparison",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 2995
+    },
+    "section:kinetic:from-bulk-flux-to-complete-tagged-paths": {
+      "number": "A.7",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#section:kinetic:from-bulk-flux-to-complete-tagged-paths",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 3008
+    },
+    "eq:appfullpath": {
+      "number": "A.8",
+      "kind": "equation",
+      "url": "/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#eq:appfullpath",
+      "document": "appendix-a-contact-kinetic-and-complete-path-estimates",
+      "sourceLine": 3029
+    },
+    "app:predictive": {
+      "number": "B",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#app:predictive",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3045
+    },
+    "section:predictive:finite-linear-representation-of-transcript-probabilities": {
+      "number": "B.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#section:predictive:finite-linear-representation-of-transcript-probabilities",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3047
+    },
+    "prop:word-equivalence": {
+      "number": "B.1",
+      "kind": "proposition",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#prop:word-equivalence",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3061
+    },
+    "section:predictive:why-a-finite-hidden-system-can-have-infinitely-many-predictive-states": {
+      "number": "B.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#section:predictive:why-a-finite-hidden-system-can-have-infinitely-many-predictive-states",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3072
+    },
+    "section:predictive:conditioning-and-continuation": {
+      "number": "B.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#section:predictive:conditioning-and-continuation",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3085
+    },
+    "section:predictive:a-controlled-measurable-extension": {
+      "number": "B.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#section:predictive:a-controlled-measurable-extension",
+      "document": "appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits",
+      "sourceLine": 3095
+    },
+    "app:witness": {
+      "number": "C",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#app:witness",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3102
+    },
+    "section:witness:finite-jet-determination-without-an-order-bound": {
+      "number": "C.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#section:witness:finite-jet-determination-without-an-order-bound",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3103
+    },
+    "section:witness:positive-witnesses-and-physical-implementation": {
+      "number": "C.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#section:witness:positive-witnesses-and-physical-implementation",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3114
+    },
+    "section:witness:approximate-capacity-of-a-finite-record": {
+      "number": "C.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#section:witness:approximate-capacity-of-a-finite-record",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3123
+    },
+    "section:witness:an-exact-probability-countermodel-and-its-repair-condition": {
+      "number": "C.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#section:witness:an-exact-probability-countermodel-and-its-repair-condition",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3135
+    },
+    "section:witness:physical-archive-corruption-and-wave-error": {
+      "number": "C.5",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-c-record-witnesses-and-quantitative-limitations#section:witness:physical-archive-corruption-and-wave-error",
+      "document": "appendix-c-record-witnesses-and-quantitative-limitations",
+      "sourceLine": 3152
+    },
+    "app:matrices": {
+      "number": "D",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#app:matrices",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3173
+    },
+    "section:matrices:boundary-data-for-the-five-o1-profiles": {
+      "number": "D.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:boundary-data-for-the-five-o1-profiles",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3174
+    },
+    "section:matrices:v2-02": {
+      "number": "",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:v2-02",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3185
+    },
+    "section:matrices:v2-34": {
+      "number": "",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:v2-34",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3191
+    },
+    "section:matrices:v2-04": {
+      "number": "",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:v2-04",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3197
+    },
+    "section:matrices:v2-11": {
+      "number": "",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:v2-11",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3204
+    },
+    "section:matrices:v2-29": {
+      "number": "",
+      "kind": "subsection",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:v2-29",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3211
+    },
+    "section:matrices:signed-relabelling": {
+      "number": "D.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:signed-relabelling",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3225
+    },
+    "section:matrices:the-recurrent-two-bit-calculation": {
+      "number": "D.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:the-recurrent-two-bit-calculation",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3230
+    },
+    "section:matrices:what-the-executable-package-checks": {
+      "number": "D.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#section:matrices:what-the-executable-package-checks",
+      "document": "appendix-d-exact-finite-matrices-and-reproducibility",
+      "sourceLine": 3242
+    },
+    "app:reconstruction": {
+      "number": "E",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#app:reconstruction",
+      "document": "appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "sourceLine": 3253
+    },
+    "section:reconstruction:a-selected-representative-is-not-an-inverse": {
+      "number": "E.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#section:reconstruction:a-selected-representative-is-not-an-inverse",
+      "document": "appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "sourceLine": 3254
+    },
+    "section:reconstruction:equivariant-sections": {
+      "number": "E.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#section:reconstruction:equivariant-sections",
+      "document": "appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "sourceLine": 3259
+    },
+    "section:reconstruction:topological-and-physical-qualifications": {
+      "number": "E.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#section:reconstruction:topological-and-physical-qualifications",
+      "document": "appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source",
+      "sourceLine": 3269
+    },
+    "app:ledger": {
+      "number": "F",
+      "kind": "chapter",
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies#app:ledger",
+      "document": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "sourceLine": 3276
+    },
+    "section:ledger:principal-notation": {
+      "number": "F.1",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies#section:ledger:principal-notation",
+      "document": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "sourceLine": 3277
+    },
+    "section:ledger:claim-status-register": {
+      "number": "F.2",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies#section:ledger:claim-status-register",
+      "document": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "sourceLine": 3301
+    },
+    "section:ledger:dependencies-that-cannot-be-omitted": {
+      "number": "F.3",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies#section:ledger:dependencies-that-cannot-be-omitted",
+      "document": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "sourceLine": 3331
+    },
+    "section:ledger:reproducibility-and-provenance": {
+      "number": "F.4",
+      "kind": "section",
+      "url": "/consciousness/monograph/appendix-f-notation-claim-status-and-construction-dependencies#section:ledger:reproducibility-and-provenance",
+      "document": "appendix-f-notation-claim-status-and-construction-dependencies",
+      "sourceLine": 3336
+    }
+  },
+  "checks": {
+    "conversion": "/publications/consciousness/conversion-audit.json",
+    "independentVerification": "/publications/consciousness/source-verification.json",
+    "pdfMatchingEvidence": "docs/consciousness/source-pdf-comparison.json"
+  }
+}

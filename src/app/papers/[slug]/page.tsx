@@ -6,6 +6,7 @@ import { site } from "@/config/site";
 import { Badge } from "@/components/cards";
 import MdxContent from "@/components/mdx-content";
 import { manualPapers } from "@/generated/manualPapers";
+import { consciousnessPublication } from "@/config/consciousness";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -34,6 +35,7 @@ export async function generateMetadata({
       title: paper.displayTitle,
       description,
       url: `${site.url}/papers/${paper.slug}`,
+      ...(paper.researchProgramme === "consciousness" ? { images: [{ url: consciousnessPublication.socialImage, width: 1200, height: 630, alt: "Different vessels. What makes a perspective?" }] } : {}),
     },
     other: {
       citation_title: paper.displayTitle,
@@ -56,16 +58,19 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": paper.slug === "quantum-measurement-monograph" ? "Book" : "ScholarlyArticle",
+    "@type": paper.slug === "quantum-measurement-monograph" || paper.researchProgramme === "consciousness" ? "Book" : "ScholarlyArticle",
     headline: paper.displayTitle,
     name: paper.displayTitle,
     author: {
       "@type": "Person",
       name: paper.metadata?.creators?.[0] ?? site.author.name,
-      affiliation: { "@type": "Organization", name: site.author.affiliation },
+      ...(paper.researchProgramme === "consciousness"
+        ? { jobTitle: consciousnessPublication.authorRole }
+        : { affiliation: { "@type": "Organization", name: site.author.affiliation } }),
     },
     datePublished: paper.date ?? undefined,
     version: paper.version ?? undefined,
+    ...(paper.researchProgramme === "consciousness" ? { bookEdition: "Version 2 — publication edition", inLanguage: "en" } : {}),
     sameAs: [paper.doiUrl, paper.zenodoUrl].filter(Boolean),
     identifier: paper.doi ?? undefined,
     url: `${site.url}/papers/${paper.slug}`,
@@ -79,6 +84,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         ? { "@type": "CreativeWorkSeries", name: `${site.name} canonical stack` }
         : paper.researchProgramme === "quantum-measurement"
           ? { "@type": "CreativeWorkSeries", name: "Shadow Theory Quantum Measurement programme", url: `${site.url}/quantum-measurement` }
+          : paper.researchProgramme === "consciousness"
+            ? { "@type": "CreativeWorkSeries", name: "Shadow Theory and Consciousness", url: `${site.url}/consciousness` }
           : undefined,
     description: paper.summary?.trim() || paper.role || undefined,
   };
@@ -156,10 +163,14 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
             <p className="m-0 mb-1 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
               Historical record
             </p>
-            This paper belongs to the earlier Everything Equation / Tier-0 era of the
+            {paper.supersededBy === consciousnessPublication.paperSlug ? <>
+              {consciousnessPublication.versionNote} Historical fixed-point and EEG claims are not results or empirical validation of SPC-2.{" "}
+              <Link href="/consciousness" className="font-medium text-glow">Read the current account →</Link>{" "}
+              <Link href={consciousnessPublication.historyUrl} className="font-medium text-glow">Preserved historical notes →</Link>
+            </> : <>This paper belongs to the earlier Everything Equation / Tier-0 era of the
             programme. It is retained as historical background and development trace. It
             is superseded as controlling public authority by the canonical Shadow Theory
-            sequence (Papers 1–7).
+            sequence (Papers 1–7).</>}
           </aside>
         ) : null}
 
@@ -198,8 +209,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         {paper.pdfUrl ? (
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm text-glow">
             <a href={paper.pdfUrl} download className="hover:text-glow-strong">Download PDF ↓</a>
-            <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a>
-            <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a>
+            {paper.texUrl ? <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a> : null}
+            {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a> : null}
           </div>
         ) : null}
       </header>
@@ -213,6 +224,15 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       ) : null}
 
       {/* Role */}
+      {paper.researchProgramme === "consciousness" ? (
+        <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
+          <p className="font-medium text-fg">Version 2 · Shadow Psychophysical Constitution (SPC-2)</p>
+          <p className="mt-2">{consciousnessPublication.status} Certified realization and its selection doctrine are inputs to the conditional completion theorem. The publication does not establish universal empirical certification or new neural-data validation.</p>
+          <p className="mt-3">{consciousnessPublication.versionNote}</p>
+          <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow"><Link href="/consciousness">Explore the model →</Link><Link href="/consciousness/guides">Explanatory guides →</Link><Link href={consciousnessPublication.historyUrl}>Publication history →</Link></div>
+        </aside>
+      ) : null}
+
       {paper.role ? (
         <section className="card-surface mt-8 border-l-4 border-l-[hsl(var(--accent))] px-5 py-4">
           <p className="m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-glow">

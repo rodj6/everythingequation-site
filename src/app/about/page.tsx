@@ -7,7 +7,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "About Shadow Theory and Jeremy Rodgers, Independent Researcher: the source–readout foundation, TOE monograph, Quantum Measurement programme and publication status.",
+    "About Shadow Theory and Jeremy Rodgers, Independent Researcher: the source–readout foundation, Quantum Measurement, SPC-2 consciousness, TOE monograph and publication status.",
   alternates: { canonical: "/about" },
 };
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
           </p>
           <p>
             This site is the framework's public home. It hosts the canonical papers, the
-            complete TOE monograph, the Quantum Measurement programme, open problems,
+            complete TOE monograph, the Quantum Measurement programme, the SPC-2 consciousness account, open problems,
             research articles, and the machine-readable research
             graph.
           </p>
@@ -73,6 +73,13 @@ export default function AboutPage() {
         <p className="mt-4 leading-relaxed text-fg/90">Published on 15 September 2026, the Version 2 integrated monograph and two companion papers develop the programme from source dynamics to event laws, Born statistics and physical records. Their full text, proofs, counterexamples, original PDFs and LaTeX sources are available here.</p>
         <p className="mt-4 leading-relaxed text-mute">The pilot-medium and massive-configuration constructions each establish an internal resolution under their own physical premises. Source/readout incompleteness supplies a structural question; it does not derive their interactions, guidance or preparation statistics. The publications state finite-resource limits and broader extensions. Independent assessment and experimental verification are distinct from these internal results.</p>
         <Link href="/quantum-measurement" className="mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong">Read the programme and its publications →</Link>
+      </section>
+
+      <section aria-labelledby="consciousness-publication-heading">
+        <h2 id="consciousness-publication-heading" className="text-2xl font-bold tracking-tight">The consciousness publication</h2>
+        <p className="mt-4 leading-relaxed text-fg/90">Shadow Theory and Consciousness, Version 2, dated 20 September 2026, develops the Shadow Psychophysical Constitution (SPC-2). It proposes explicit laws for perspective admission, lived content and process continuation, and a finite completion theorem conditional on certified realization, a declared selection doctrine and the stated constitutive premises.</p>
+        <p className="mt-4 leading-relaxed text-mute">The current edition supersedes the earlier Consciousness Field account. Historical fixed-point and EEG claims remain provenance, not validation of SPC-2. Biological interpretation and empirical assessment remain open obligations; current AI systems are not certified by the monograph.</p>
+        <Link href="/consciousness" className="mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong">Explore consciousness and the complete publication →</Link>
       </section>
 
       <section aria-labelledby="status-heading">

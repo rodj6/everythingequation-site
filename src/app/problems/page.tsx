@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Status and Open Problems",
   description:
-    "Research status across Shadow Theory: published quantum measurement constitutions, open branch targets, explicit assumptions, publication routes and historical notes.",
+    "Research status across Shadow Theory: quantum measurement constitutions, the SPC-2 consciousness account, open realization and validation obligations, and historical provenance.",
   alternates: { canonical: "/problems" },
 };
 
@@ -31,6 +31,7 @@ export default async function ProblemsPage() {
           precise result.
         </p>
         <p className="mt-4 text-base leading-relaxed text-mute">The <Link href="/quantum-measurement" className="text-glow hover:text-glow-strong">Quantum Measurement programme</Link> now has published Version 2 constitutive results. Its internal conclusions, declared physical premises and remaining extensions are tracked separately.</p>
+        <p className="mt-4 text-base leading-relaxed text-mute">The <Link href="/consciousness" className="text-glow hover:text-glow-strong">SPC-2 consciousness account</Link> supplies a candidate internal constitutive resolution under declared assumptions. Its finite completion result, realization-selection obligations and empirical assessment have distinct status.</p>
         <p className="mt-3 text-sm leading-relaxed text-faint">
           Pages may include earlier notes from the Everything Equation era; those are
           marked as historical drafts and retained as development context.
