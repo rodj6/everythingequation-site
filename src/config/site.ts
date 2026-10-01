@@ -18,7 +18,7 @@ export const site = {
   /** Current framework account; the formal publication texts retain their own wording. */
   heroStatement: `Shadow Theory is a mathematical and physical framework built on a simple idea: the reality we observe is a structured readout of deeper source reality.
 
-Source and readout are complementary aspects of one whole. We—including our bodies, instruments, memories and experienced scenes—belong within the readout. Their relationship sits within a wider architecture: unconditioned ground, unsplit unity, and recursive differentiation into a physical world.
+Source and readout are complementary aspects of one whole. We, including our bodies, instruments, memories and experienced scenes, belong within the readout. Their relationship sits within a wider architecture: unconditioned ground, unsplit unity, and recursive differentiation into a physical world.
 
 The seven-paper foundation develops exact mathematics for what readouts preserve, what they lose, and what reconstruction requires. Sealed or Leaky advances that programme with quantitative information bounds and explicit conditions for hidden distinctions to become accessible.`,
 
