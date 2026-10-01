@@ -23,6 +23,19 @@ export const articleMetas: ArticleMeta[] = [
     "status": "published"
   },
   {
+    "slug": "full-shadow-model",
+    "title": "The Full Shadow Model: From the Unsplit to a Lived World",
+    "description": "Unconditioned ground, unsplit unity, complementary source and readout, and recursive differentiation: the complete architecture behind Shadow Theory’s mathematics and physics.",
+    "date": "2026-10-01",
+    "tags": [
+      "framework",
+      "ontology",
+      "physics",
+      "consciousness"
+    ],
+    "status": "published"
+  },
+  {
     "slug": "how-to-read-the-stack",
     "title": "How to Read the Seven-Paper Sequence",
     "description": "A reading guide: what each paper assumes, what it proves, and the handoffs between them.",
@@ -45,11 +58,27 @@ export const articleMetas: ArticleMeta[] = [
       "framework"
     ],
     "status": "published"
+  },
+  {
+    "slug": "sealed-or-leaky",
+    "title": "Sealed or Leaky: When the Readout Cannot Contain the Source",
+    "description": "Sharp Bell-information bounds, reversible sealing, and finite retained-record witnesses turn source–readout incompleteness into quantitative mathematics. Read the full article and complete technical edition.",
+    "date": "2026-10-01",
+    "tags": [
+      "physics",
+      "foundations",
+      "information",
+      "source-readout",
+      "quantum-measurement"
+    ],
+    "status": "published"
   }
 ];
 
 export const articleImports = {
   "from-everything-equation-to-shadow-theory": () => import("../../content/articles/from-everything-equation-to-shadow-theory.mdx"),
+  "full-shadow-model": () => import("../../content/articles/full-shadow-model.mdx"),
   "how-to-read-the-stack": () => import("../../content/articles/how-to-read-the-stack.mdx"),
-  "introducing-shadow-theory": () => import("../../content/articles/introducing-shadow-theory.mdx")
+  "introducing-shadow-theory": () => import("../../content/articles/introducing-shadow-theory.mdx"),
+  "sealed-or-leaky": () => import("../../content/articles/sealed-or-leaky.mdx")
 } as const;

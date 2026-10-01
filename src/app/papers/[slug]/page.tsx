@@ -58,7 +58,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": paper.slug === "quantum-measurement-monograph" || paper.researchProgramme === "consciousness" ? "Book" : "ScholarlyArticle",
+    "@type": paper.slug === "quantum-measurement-monograph" || paper.slug === consciousnessPublication.paperSlug ? "Book" : "ScholarlyArticle",
     headline: paper.displayTitle,
     name: paper.displayTitle,
     author: {
@@ -70,7 +70,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
     },
     datePublished: paper.date ?? undefined,
     version: paper.version ?? undefined,
-    ...(paper.researchProgramme === "consciousness" ? { bookEdition: "Version 2 — publication edition", inLanguage: "en" } : {}),
+    ...(paper.slug === consciousnessPublication.paperSlug ? { bookEdition: "Version 2 — publication edition" } : {}),
+    ...(paper.researchProgramme === "consciousness" ? { inLanguage: "en" } : {}),
     sameAs: [paper.doiUrl, paper.zenodoUrl].filter(Boolean),
     identifier: paper.doi ?? undefined,
     url: `${site.url}/papers/${paper.slug}`,
@@ -224,12 +225,24 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       ) : null}
 
       {/* Role */}
-      {paper.researchProgramme === "consciousness" ? (
+      {paper.slug === consciousnessPublication.paperSlug ? (
         <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
           <p className="font-medium text-fg">Version 2 · Shadow Psychophysical Constitution (SPC-2)</p>
           <p className="mt-2">{consciousnessPublication.status} Certified realization and its selection doctrine are inputs to the conditional completion theorem. The publication does not establish universal empirical certification or new neural-data validation.</p>
           <p className="mt-3">{consciousnessPublication.versionNote}</p>
           <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow"><Link href="/consciousness">Explore the model →</Link><Link href="/consciousness/guides">Explanatory guides →</Link><Link href={consciousnessPublication.historyUrl}>Publication history →</Link></div>
+        </aside>
+      ) : null}
+
+      {paper.researchProgramme === "consciousness" && paper.slug !== consciousnessPublication.paperSlug ? (
+        <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
+          <p className="font-medium text-fg">Consciousness research · Paper {paper.number}</p>
+          <p className="mt-2">This paper develops the programme through its own mathematical argument and evidence. Its complete web treatment connects the article account to every technical section, including the proofs, results, appendices and references.</p>
+          <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow">
+            {paper.webUrl ? <Link href={paper.webUrl}>Read the complete treatment →</Link> : null}
+            <Link href="/consciousness/research">The research sequence →</Link>
+            <Link href="/consciousness/monograph">Foundational monograph →</Link>
+          </div>
         </aside>
       ) : null}
 

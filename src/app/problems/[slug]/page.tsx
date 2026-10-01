@@ -64,7 +64,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
 
       <section className="card-surface mt-6 border-l-4 border-l-[hsl(var(--amber))] px-5 py-4">
         <p className="m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-          {isQuantum ? "Current research status · Version 2 · 15 September 2026" : isConsciousness ? "Current research status · SPC-2 · 20 September 2026" : "Research target"}
+          {isQuantum ? "Current research status · Version 2 · 15 September 2026" : isConsciousness ? "Current research status · SPC-2 · Monograph and Papers 2–4" : "Research target"}
         </p>
         <p className="mt-2 text-[0.97rem] leading-relaxed text-fg/90">
           {problem.target.trim()}
@@ -109,8 +109,14 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
             <div className="card-surface p-5"><h3 className="font-semibold text-glow">Conditional finite result</h3><p className="mt-2 text-sm leading-relaxed text-mute">Given certified realization, its selection doctrine and the stated A0–A3 premises, the finite construction assigns qualifying perspectives, their full endogenous predictive content and episode continuation. The result does not derive those inputs.</p></div>
             <div className="card-surface p-5"><h3 className="font-semibold text-vio">Realization and validation</h3><p className="mt-2 text-sm leading-relaxed text-mute">Physical realization selection, robust biological interpretation and comparison with experience remain obligations. The monograph supplies no universal consciousness detector and does not certify current LLM sessions.</p></div>
           </div>
+          <h3 className="mt-8 text-xl font-semibold">Three advances in the research programme</h3>
+          <div className="mt-4 grid gap-4">
+            <div className="card-surface p-5"><h4 className="font-semibold text-glow"><Link href="/consciousness/research/paper-2">Paper 2 · Relational boundaries →</Link></h4><p className="mt-2 text-sm leading-relaxed text-mute">The masking construction exposes a robustness vulnerability in exact boundary rules. Statistical deficiency, resource-sensitive comparison and composition theorems specify what a successor account must preserve. Operational equivalence also limits what observed laws can identify.</p></div>
+            <div className="card-surface p-5"><h4 className="font-semibold text-glow"><Link href="/consciousness/research/paper-3">Paper 3 · Learning interfaces →</Link></h4><p className="mt-2 text-sm leading-relaxed text-mute">Finite software experiments separate representational capacity from producing and selecting an adequate model. The 48-system comparison preserves its registered results, mechanism-specific regressions and the distinct post-hoc fitting analysis.</p></div>
+            <div className="card-surface p-5"><h4 className="font-semibold text-glow"><Link href="/consciousness/research/paper-4">Paper 4 · Identifying realizations →</Link></h4><p className="mt-2 text-sm leading-relaxed text-mute">Intervention-response laws recover an unknown binary coordinate chart under product-response and rank assumptions. A spectral certificate, recoding obstructions and a bounded PyPhi comparison sharpen the realization problem while retaining the distinction between an identified chart and an intrinsic grain.</p></div>
+          </div>
           <p className="mt-5 text-sm leading-relaxed text-mute">Version 2 supersedes the earlier Consciousness Field account. Its older fixed-point and EEG claims remain identifiable history; they are not empirical validation of SPC-2. Quantum publications supply physical antecedents and related reading, with their own assumptions.</p>
-          <div className="mt-5 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">Explore the full account →</Link><Link href="/consciousness/monograph">Complete monograph →</Link><Link href="/consciousness/guides/testing-spc-2">What would test SPC-2? →</Link><Link href="/legacy/consciousness-field-theorem">Historical predecessor →</Link></div>
+          <div className="mt-5 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">Explore the full account →</Link><Link href="/consciousness/monograph">Complete monograph →</Link><Link href="/consciousness/research">Papers 2–4 in full →</Link><Link href="/consciousness/guides/testing-spc-2">What would test SPC-2? →</Link><Link href="/legacy/consciousness-field-theorem">Historical predecessor →</Link></div>
         </section>
       ) : null}
 

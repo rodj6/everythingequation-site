@@ -9,6 +9,7 @@ export const manualPapers = {
   "non-source-projection-and-internal-identifiability": () => import("../../content/manual/papers/non-source-projection-and-internal-identifiability.mdx"),
   "observable-quotients-and-exact-projected-dynamics": () => import("../../content/manual/papers/observable-quotients-and-exact-projected-dynamics.mdx"),
   "readout-non-equivalence": () => import("../../content/manual/papers/readout-non-equivalence.mdx"),
+  "sealed-or-leaky": () => import("../../content/manual/papers/sealed-or-leaky.mdx"),
   "shadow-theory-synthesis": () => import("../../content/manual/papers/shadow-theory-synthesis.mdx"),
   "source-readout-non-equivalence": () => import("../../content/manual/papers/source-readout-non-equivalence.mdx"),
   "target-relative-necessity-of-completion": () => import("../../content/manual/papers/target-relative-necessity-of-completion.mdx"),

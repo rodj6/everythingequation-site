@@ -1,0 +1,111 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> shadow-theory-site@1.0.0 prebuild
+> node scripts/generate-content-maps.mjs
+
+Content maps generated.
+
+> shadow-theory-site@1.0.0 build
+> next build --webpack
+
+▲ Next.js 16.2.10 (webpack)
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.8s
+  Running TypeScript ...
+  Finished TypeScript in 2.9s ...
+  Collecting page data using 8 workers ...
+  Generating static pages using 8 workers (0/335) ...
+  Generating static pages using 8 workers (83/335) 
+  Generating static pages using 8 workers (167/335) 
+  Generating static pages using 8 workers (251/335) 
+✓ Generating static pages using 8 workers (335/335) in 5.3s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /articles
+├ ● /articles/[slug]
+│ ├ /articles/from-everything-equation-to-shadow-theory
+│ ├ /articles/how-to-read-the-stack
+│ └ /articles/introducing-shadow-theory
+├ ○ /atlas
+├ ○ /atlas/quantum-measurement
+├ ○ /consciousness
+├ ○ /consciousness/faq
+├ ○ /consciousness/glossary
+├ ○ /consciousness/guides
+├ ● /consciousness/guides/[slug]
+│ ├ /consciousness/guides/what-is-consciousness
+│ ├ /consciousness/guides/can-ai-be-conscious
+│ ├ /consciousness/guides/brain-organization-and-experience
+│ └ [+5 more paths]
+├ ○ /consciousness/manifest.json
+├ ○ /consciousness/monograph
+├ ● /consciousness/monograph/[slug]
+│ ├ /consciousness/monograph/title-and-publication-identity
+│ ├ /consciousness/monograph/preface-and-scope
+│ ├ /consciousness/monograph/abstract
+│ └ [+34 more paths]
+├ ○ /consciousness/monograph/manifest.json
+├ ○ /consciousness/research
+├ ● /consciousness/research/[paper]
+│ ├ /consciousness/research/paper-2
+│ ├ /consciousness/research/paper-3
+│ └ /consciousness/research/paper-4
+├ ● /consciousness/research/[paper]/[slug]
+│ ├ /consciousness/research/paper-2/overview-and-publication-identity
+│ ├ /consciousness/research/paper-2/introduction
+│ ├ /consciousness/research/paper-2/the-inherited-realization-and-finite-operational-setting
+│ └ [+46 more paths]
+├ ○ /consciousness/search.json
+├ ○ /feed.xml
+├ ○ /framework
+├ ○ /graph.json
+├ ● /legacy/[slug]
+│ ├ /legacy/monograph
+│ ├ /legacy/tier-1
+│ └ /legacy/what-is-the-everything-equation
+├ ○ /legacy/consciousness-field-theorem
+├ ○ /llms.txt
+├ ○ /monograph
+├ ● /monograph/[slug]
+│ ├ /monograph/the-architecture-and-central-thesis
+│ ├ /monograph/the-source-closure-substrate
+│ ├ /monograph/source-to-tier-1-realization
+│ └ [+18 more paths]
+├ ○ /monograph/manifest.json
+├ ○ /papers
+├ ● /papers/[slug]
+│ ├ /papers/shadow-theory-and-consciousness
+│ ├ /papers/consciousness-relational-boundaries
+│ ├ /papers/consciousness-effective-interfaces
+│ └ [+103 more paths]
+├ ○ /problems
+├ ● /problems/[slug]
+│ ├ /problems/consciousness
+│ ├ /problems/standard-model
+│ ├ /problems/fine-structure-constant
+│ └ [+15 more paths]
+├ ○ /quantum-measurement
+├ ○ /quantum-measurement/manifest.json
+├ ○ /quantum-measurement/massive-configuration
+├ ○ /quantum-measurement/monograph
+├ ● /quantum-measurement/monograph/[slug]
+│ ├ /quantum-measurement/monograph/abstract
+│ ├ /quantum-measurement/monograph/conventions-provenance-and-scope
+│ ├ /quantum-measurement/monograph/roadmap-and-principal-conclusions
+│ └ [+50 more paths]
+├ ○ /quantum-measurement/monograph/manifest.json
+├ ○ /quantum-measurement/pilot-medium
+├ ○ /research-map
+├ ○ /robots.txt
+└ ○ /sitemap.xml
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+

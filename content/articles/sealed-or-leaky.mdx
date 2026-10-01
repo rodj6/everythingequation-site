@@ -1,0 +1,279 @@
+---
+title: "Sealed or Leaky: When the Readout Cannot Contain the Source"
+description: "Sharp Bell-information bounds, reversible sealing, and finite retained-record witnesses turn source–readout incompleteness into quantitative mathematics. Read the full article and complete technical edition."
+date: "2026-10-01"
+tags: [physics, foundations, information, source-readout, quantum-measurement]
+status: published
+---
+
+**A readout can describe everything an experiment reveals and still leave source distinctions unresolved.** The next questions are physical and quantitative: how much information is missing, whether the dynamics preserve it, and which permitted interactions can bring it into a record.
+
+*Sealed or Leaky* develops those questions into a connected set of results. Bell correlations impose sharp information bounds under a precise deterministic-source and access model. Reversible dynamics preserve complete distinguishability while allowing observable distinctions to disappear. Finite measurement constitutions supply explicit retained records that reveal departures from a nominated density-matrix description, with preparation, contact, drainage, and memory errors included.
+
+The paper is a follow-on to Shadow Theory’s seven-paper foundation. The article below explains its central mathematical and physical mechanisms. The [complete technical web edition](/sealed-or-leaky) contains every definition, formal statement, proof, derivation, table, and reference from the manuscript. The original publication is identified by [DOI 10.5281/zenodo.23077474](https://doi.org/10.5281/zenodo.23077474).
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="the-question-becomes-exact-when-the-readout-is-specified">The question becomes exact when the readout is specified</h2>
+
+Let the source state be $\lambda$, and nominate an initial classical readout
+
+$$
+T=\tau(\lambda).
+$$
+
+This readout is source-complete when some measurable reconstruction $G$ satisfies $\lambda=G(T)$ almost surely. Source distinctions already identified as redundant are removed before the reconstruction question is posed. A description can therefore be exact for its observable purposes while failing to reconstruct its source.
+
+The distinction applies to particular objects. An individual state, a distribution of prepared states, its density matrix, an instantaneous detector configuration, and a complete retained history carry different information. A theorem about one of these maps must follow that map throughout its argument.
+
+The seven-paper foundation establishes when source relations descend through a readout, when an extension is necessary, and what the least sufficient extension retains. Its later papers develop geometry, projected dynamics, and internal identifiability. *Sealed or Leaky* adds information budgets and explicit access mechanisms. It asks how much a deterministic completion must retain and when a surviving distinction can actually reach an instrument.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="bell-violations-put-a-lower-bound-on-missing-information">Bell violations put a lower bound on missing information</h2>
+
+For a two-party Bell experiment, settings $x,y$ take values zero and one, and outcomes $A,B$ take values minus one and one. The source includes everything relevant to the run except the setting-generation devices. The four named premises are:
+
+| Premise | Exact commitment |
+| --- | --- |
+| SO: single outcomes | Each run has one outcome per party, jointly distributed with the source. |
+| D: outcome determinism | $A=F_A(\lambda,x,y)$ and $B=F_B(\lambda,x,y)$. Dependence on the distant setting is allowed. |
+| MI: measurement independence | The settings are independent of $\lambda$, and hence of $T$. |
+| NS: readout-conditional no-signalling | For almost every $t$, Alice’s marginal conditioned on $T=t$ is independent of $y$, and Bob’s is independent of $x$. |
+
+The access condition is decisive. No-signalling of ordinary laboratory marginals does not establish no-signalling after conditioning on arbitrary additional information. The theorem applies to the particular $T$ for which conditional NS is stipulated.
+
+Collect the deterministic responses to all four setting pairs in the finite table
+
+$$
+Z=\bigl(F_A(\lambda,x,y),F_B(\lambda,x,y)\bigr)_{x,y\in\{0,1\}}.
+$$
+
+Write $S=E_{00}+E_{01}+E_{10}-E_{11}$ for the CHSH value. Under the displayed premises, a violation $2\lt S\le4$ gives
+
+$$
+H_{\min}(Z\mid T)\ge-\log_2\left(\frac32-\frac S4\right),
+\qquad
+H(Z\mid T)\ge\frac{S-2}{2}.
+$$
+
+Both quantities are positive. The nominated readout therefore fails to determine the response table and cannot reconstruct the complete source. Here min-entropy measures optimal average guessing probability; Shannon entropy measures average unresolved information. These are finite response entropies, with no appeal to a differential entropy of the full source.
+
+The mechanism is direct. Positivity and no-signalling bound every marginal guessing probability by $3/2-S/4$. Correctly guessing the whole deterministic table is at least as demanding as guessing one of its coordinates. Measurement independence permits averaging the conditional boxes with the same readout law. The sharper Shannon result follows from the binary-entropy bound $h_2(p)\ge2\min(p,1-p)$.
+
+The two bounds are simultaneously sharp in this no-signalling class. With probability $r=(S-2)/2$, choose a PR response branch carrying one hidden fair bit; otherwise choose an all-plus deterministic branch. Let the readout reveal which branch was chosen. The construction has Shannon entropy $r$ and guessing probability $1-r/2$, attaining both inequalities. It establishes the mathematical optimum in the declared class; PR resources are not assumed physically available.
+
+If every readout-conditioned box is additionally quantum-realizable, the imported quantum guessing bound gives
+
+$$
+H_{\min}(Z\mid T)\ge f_Q(S)
+=1-\log_2\left(1+\sqrt{2-S^2/4}\right),
+\qquad 2\lt S\le2\sqrt2.
+$$
+
+Shannon entropy then obeys the larger of $f_Q(S)$ and $(S-2)/2$. This extra premise concerns quantum-realizable boxes with classical $T$; it does not replace $T$ by unrestricted quantum side information.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="the-tetralemma-identifies-the-actual-alternatives">The tetralemma identifies the actual alternatives</h2>
+
+The paper supplies four explicit source-complete alternatives reproducing the relevant Bell table: branching, fundamental chance, measurement dependence, and readable nonlocal responses. Their logical status matters.
+
+Outcome determinism D already supplies single outcomes SO. Consequently these are not four independent axioms. Within the single-outcome class, the paper constructs separate countermodels showing that D, MI, and conditional NS are each indispensable. A chance model can have a complete initial state with genuinely stochastic later outcomes. A measurement-dependent model correlates the source and settings. A model with readable nonlocal responses can have no-signalling averaged marginals while its source-conditioned responses signal.
+
+Branching takes a different route. Deterministic evolution of a complete final vector with multiple pointer branches does not supply the single-valued outcome functions in D. It lies outside that formalism. The tetralemma makes the routes explicit without asserting that they are mutually exclusive or exhaust every physical theory.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="a-published-data-translation-with-the-entropy-accounts-kept-separate">A published-data translation with the entropy accounts kept separate</h2>
+
+The experimental calculation uses the aggregate certificate for Data Set 5 of [Bierhorst and colleagues](https://doi.org/10.1038/s41586-018-0019-0). It imports their entropy-production and soundness theorems and translates them into source-response information under runwise outcome determinism.
+
+The classical initial readout must be fixed before the protocol, isolated from its later data, and satisfy the stated sequential uniform-setting and conditional no-signalling laws. Let $W$ be the full setting word, $J$ the pass indicator, and $Z_{\rm run}$ the source’s finite response function over possible setting words. The entropy claims also require a passing probability $\pi=\Pr(J=1)\ge\kappa$, with $\kappa=9.5\times10^{-13}$.
+
+The printed Bell coefficients yield a conservative excess parameter $m_+=0.01004250785$. Exact enumeration of the sixteen local and eight PR vertices checks the relevant extrema; rational series bounds control the numerical rounding. After postselection normalization, the results are:
+
+| Route through the published certificate | Conditional Shannon information | Conditional unsmoothed min-entropy |
+| --- | --- | --- |
+| Extracted 1024-bit string | More than $1024-1.1\times10^{-9}$ bits | More than $39.86$ bits |
+| Entropy-production certificate directly | More than $1304.97$ bits | More than $39.93$ bits |
+
+The direct route also gives more than $1304.97$ bits of **deletion-smoothed** conditional min-entropy at deleted mass $9.5\times10^{-13}$. The smooth and ordinary quantities answer different questions. A very small exceptional probability can dominate the best guess of a long string, even while its Shannon entropy remains near its full length.
+
+The general transfer explains the normalization. Suppose $C=f(Z,E)$ and
+
+$$
+\Pr\{J=1,\ P(C\mid E)\gt\delta\}\le p,
+\qquad 0\lt p\lt\pi.
+$$
+
+Then
+
+$$
+p_{\rm guess}(Z\mid E,J=1)\le\min\{1,(\delta+p)/\pi\},
+$$
+
+$$
+H(Z\mid E,J=1)\ge
+(1-p/\pi)\left[\log_2\frac{\pi-p}{\delta}\right]_+.
+$$
+
+For the direct certificate, take $E=(T,W)$. This posterior-response transfer needs no further source–setting independence assumption and no extractor. Its sequential certificate assumptions still apply.
+
+These are passing-ensemble statements. One observed pass does not establish the required lower bound on $\pi$. The paper also identifies the implementation issue: exact sequential uniformity requires at least $2n$ bits of conditional settings-resource entropy, while a pseudorandom output length alone does not certify that entropy. The published implementation’s trust assumptions therefore remain part of the interpretation.
+
+A separate threshold test works without a lower bound on pass probability. A complete deterministic B-admissible readout has
+
+$$
+\Pr(J=1)\le v^{-1}
+=\frac{2}{3\times10^{32}}
+$$
+
+at the predetermined threshold $v=1.5\times10^{32}$. This is a frequentist rejection bound for the joint model premises. The full web edition preserves the protocol’s causal padding, the exact parameter calculation, and the distinction between this test and the entropy statements.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="a-leak-imposes-a-minimum-simulation-error">A leak imposes a minimum simulation error</h2>
+
+For a specified experiment, suppose two source states share a readout but produce complete record laws $P_0,P_1$ separated by total variation $\delta$. Every predictive law using only that readout incurs
+
+$$
+\max\{\operatorname{TV}(P_0,M),\operatorname{TV}(P_1,M)\}
+\ge\delta/2.
+$$
+
+The midpoint law attains the bound for the pair. Thus a verified leak gives a quantitative obstruction to every description using the nominated information. A deterministic completion must also carry enough unresolved information to generate its future record:
+
+$$
+R=f(T_0,Z)\quad\Longrightarrow\quad
+H(Z\mid T_0)\ge H(R\mid T_0).
+$$
+
+A conditionally uniform $n$-bit record needs at least $n$ bits of completion entropy. A deterministic simulator within $\varepsilon$ of that uniform law needs at least $(1-\varepsilon)2^n$ possible completion values. Apparatus information and random seeds used by a deterministic simulator belong in that account.
+
+There is also an exact identification ceiling. Quotient the source by equality of **every admissible complete experiment law**. The resulting statistical model reproduces those laws with an identity readout. If the alternative class admits all such surrogates, no internal test distinguishes them. If a source law is within $\varepsilon$ of the alternative class, a level-$\alpha$ test has power at most $\alpha+\varepsilon$.
+
+Complete laws include histories, interventions, adaptive choices, and retained records. Matching single-time marginals is insufficient. This ceiling specifies why useful tests constrain a declared model class rather than uniquely selecting an ontology from every conceivable equivalent description.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="preserved-information-can-become-inaccessible">Preserved information can become inaccessible</h2>
+
+Let $\mathcal F$ be the available tests and define accessible distinguishability by
+
+$$
+d_{\mathcal F}(P,Q)=
+\sup_{f\in\mathcal F}\left|\int f\,d(P-Q)\right|.
+$$
+
+Under evolution $\Phi$, the exact transport law is
+
+$$
+d_{\mathcal F_1}(\Phi_*P,\Phi_*Q)
+=d_{\Phi^*\mathcal F_1}(P,Q),
+\qquad
+\Phi^*\mathcal F_1=\{f\circ\Phi:f\in\mathcal F_1\}.
+$$
+
+A bimeasurable reversible evolution conserves total variation under complete measurable access. Restricted apparatus need not conserve its accessible share.
+
+The simplest example is two bits with only the first readable. Initially the first bit holds a preparation label and the second is fair. Swap the bits. The whole retains the distinction exactly, while the visible bit becomes fair under either preparation. A reversible shift on an infinite bit sequence extends this to all permitted future observations: the distinction travels into coordinates the observer cannot read or bring back.
+
+This is operational sealing. It depends on the available tests and operations. Access to the inverse can reopen a seal; mathematical existence of an inverse does not supply that access. A retained earlier record also remains evidence: later cumulative records contain it as a marginal. Reversibility can hide an unarchived distinction without erasing a record that has actually been kept.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="equal-density-matrices-can-conceal-different-preparation-laws">Equal density matrices can conceal different preparation laws</h2>
+
+The trine construction asks a separate question about distributions of prepared source states. Assume common ontic measurement responses and convex-linear randomization of preparations. Three antipodal qubit mixtures all prepare $I/2$, yet their ontic preparation laws $\nu_i$ obey the sharp finite-table bound
+
+$$
+\operatorname{TV}(\nu_i,\nu_j)\ge\frac14\quad(i\ne j).
+$$
+
+The equal mixture $\nu_4$ of the three positive trine preparations gives
+
+$$
+\sum_{i=1}^{3}\operatorname{TV}(\nu_i,\nu_4)\ge\frac12.
+$$
+
+An explicit six-state model saturates both results. With entrywise probability error at most $\epsilon$, the respective robust lower bounds are $[1/4-4\epsilon]_+$ and $[1/2-13\epsilon/2]_+$. The complete reader provides the witness inequalities and every step of the construction.
+
+These are distinctions between preparation distributions. Their existence does not by itself provide a readable detector event, and it does not establish incompleteness of each pure ray as an individual state. Under imperfect preparations, placing the mixtures in one exact density-matrix fiber also requires an equality certificate beyond approximate tomography.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="an-observable-leak-is-a-failure-of-the-nominated-probability-form">An observable leak is a failure of the nominated probability form</h2>
+
+For one fixed finite-dimensional experiment defined on all pure inputs and finite proper ensembles, with the ordinary mixture rule, exact sealing by the density matrix is equivalent to POVM form:
+
+$$
+\mu_\psi(A)=\langle\psi,E(A)\psi\rangle,
+\qquad
+\mu_{\mathfrak E}(A)=\operatorname{tr}(E(A)\rho_{\mathfrak E}).
+$$
+
+The paper also quantifies failure. For an actual recorded event with pure-input probability $h(\psi)$, let $\Gamma(h)$ be its largest probability difference between equal-density ensembles, and let $d(h)$ be its uniform distance from a Hermitian quadratic form. Then
+
+$$
+\Gamma(h)=2d(h).
+$$
+
+Any gap below the supremum has a witness using at most $d^2+1$ pure-state occurrences in dimension $d$. The bound translates nonquadratic response into a finite preparation comparison. It remains eventwise: constructing a jointly normalized approximate POVM is an additional question.
+
+If preparations can be reset independently and a decision rule is implementable, an accessible gap $\delta$ amplifies:
+
+$$
+\operatorname{TV}(P^{\otimes n},Q^{\otimes n})
+\ge1-e^{-n\delta^2/2}.
+$$
+
+Repeated displays of one shared random draw do not meet the independence premise. Repetition amplifies a physically available record distinction; it cannot manufacture access to an otherwise hidden one.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="finite-resources-produce-a-retained-ordinary-witness">Finite resources produce a retained ordinary witness</h2>
+
+The pilot constitution supplies a concrete mechanism: coherent weights and currents, integer packet export, finite carrier contacts, and an ordinary bit written by an allowed coherent Hamiltonian. With zero initial exporter residues, monotone integrated weight $W$ produces a drained count $\lfloor NW\rfloor$. A subsequent coherent copy preserves that count in a bit retained through idle continuation.
+
+For the stated driven programme, its error budget is
+
+$$
+\epsilon_N=
+B_e e^{-\kappa_e\mu_Nh_P/4}
++B_f e^{-\kappa_f\mu_Nh_C/N}
++(R_NT)^2/M_N.
+$$
+
+The terms bound production drainage, copy drainage, and the finite spatial-gas comparison. The copied bit obeys
+
+$$
+\left|\Pr_p(m=1)-\frac{\lfloor Nw_p(t)\rfloor}{N}\right|
+\le\epsilon_N.
+$$
+
+Equal $Z$- and $X$-basis proper mixtures both prepare $I/2$. For each $N\ge2$, an open interval of production times yields
+
+$$
+P_Z-P_X\ge\frac1{2N}-2\epsilon_N.
+$$
+
+Every density-matrix-only simulator then has worst-case error at least $1/(4N)-\epsilon_N$ on the two preparations. A two-party construction with Bob’s fixed writer gives a retained setting gap at least $1/N-2\epsilon_N^{AB}$ for $N\ge3$. These are predictions of the specified finite, driven, nonrelativistic constitution. Its microscopic preparation, sector choice, timing windows, and contact rules determine the result.
+
+The proof matters because it includes a reader. The paper separately derives a larger undrained instantaneous-position correction,
+
+$$
+\mu_N(P_X-P_Z)\longrightarrow\frac{5\sqrt3\,g}{6\kappa},
+$$
+
+in the specified monotone-edge limit. A later copying process can alter that lag, so its retained-reader extension remains a different task. Randomizing only the exporter’s initial residue also fails to restore Born endpoints for both monotone and forward-return programmes. These results keep inventory, instantaneous position, and retained record distinct.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="the-access-requirement-survives-in-every-constitution">The access requirement survives in every constitution</h2>
+
+The massive constitution provides its own finite semibounded Gaussian writers, guidance law, and complete initial equilibrium. Their retained signs attain
+
+$$
+S=2\sqrt2\,v_Av_B,
+\qquad v_i=1-2\delta_i,
+\qquad\delta_i=\overline\Phi\left(\frac{L_i}{2\sigma_i}\right).
+$$
+
+Finite parameters with $v_Av_B\gt1/\sqrt2$ give a Bell violation. This construction establishes noisy records within that constitution; it does not import the pilot exporter or its finite-resource law.
+
+A further deterministic-response theorem locates the source states on which Bob’s outcome depends on Alice’s setting. If their union is $D_0\cup D_1$, then its probability is at least $(S-2)/2$. For one setting with dependent fraction $\kappa_y\gt0$, the exact possible signal under absolutely continuous reweightings within total variation $d$ is
+
+$$
+\sup|\Sigma_y|=\min\{2d,\ d+\kappa_y/2,\ 1\}.
+$$
+
+Physically preparing those reweightings is a separate resource. In the massive constitution they depart from imposed complete equilibrium. Likewise, the paper’s hypothetical action wires explicitly enlarge the pilot access catalogue. Slice-sensitive couplings cannot be declared local simply because their pointer is placed near Bob. The complete edition retains these access calculations and the additional premise needed to turn a proper-mixture leak into a remote-preparation channel.
+
+<h2 className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg scroll-mt-24" id="from-the-sourcereadout-distinction-to-a-research-programme">From the source–readout distinction to a research programme</h2>
+
+The combined result is a quantitative account of **missing information, surviving information, and readable information**. They need not coincide. A source distinction can be necessary for deterministic completion, preserved exactly by reversible dynamics, and sealed from every permitted future experiment. Another distinction can become an ordinary retained bit once a specified interaction and resource budget are supplied.
+
+Within [Shadow Theory’s full framework](/framework), this research develops the formal source–readout relationship between complementary aspects of one whole. The unconditioned ground and unsplit belong to the framework’s deeper account of how that distinction is understood. The results here operate after a source, readout, preparation, and access class have been specified. This gives the broader programme exact mathematical points of contact without making the Bell theorems a derivation of its entire ontology.
+
+Read the [complete technical edition](/sealed-or-leaky) for the full proofs, numerical tables, countermodels, physical constructions, assumptions register, references, and reproducibility materials. Its unchanged Python verification script uses exact rational arithmetic and explicit series bounds for the stated finite and numerical checks. Those checks accompany the mathematical work and its AI-assistance disclosure; independent mathematical review, replication, physical implementation, and empirical testing remain welcome.

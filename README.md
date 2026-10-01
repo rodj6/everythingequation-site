@@ -61,6 +61,33 @@ for source provenance and conversion details.
 The existing `/monograph` TOE edition and the original historical measurement
 notes at `/problems/quantum-measurement#historical-notes` remain distinct records.
 
+## Consciousness research programme
+
+`/consciousness` connects the preserved Version 2 monograph with the complete
+Papers 2–4. Start at `/consciousness/research`: three substantial articles lead
+into 49 complete technical reading sections. The source manuscripts, PDFs,
+full Markdown, vector figures and bibliography assets live in
+`public/publications/consciousness/paper-{2,3,4}/`.
+
+Publication identity is in `src/lib/consciousness-research.ts`; editorial articles
+and source-derived HTML are in `content/consciousness/research/`. The articles,
+readers, search, sitemap, feed, graph, glossary and FAQ form one connected programme.
+
+```bash
+node scripts/convert-consciousness-research.mjs
+node scripts/verify-consciousness-research.mjs
+node scripts/verify-consciousness-discovery.cjs
+SKIP_ZENODO=1 npm run build  # reproducible build using supplied publication metadata
+```
+
+The optional `SKIP_ZENODO` setting uses the existing cache-only build path; ordinary
+`npm run build` retains the site's existing Zenodo metadata refresh behaviour.
+No source-content regeneration is needed to build the supplied project.
+See `CONSCIOUSNESS_RESEARCH_DELIVERY.md` for the verification record and precise
+external research dependencies, and `docs/consciousness/RESEARCH_SOURCE_COVERAGE.md`
+for the section map. The adjacent CSV and JSON audits map individual source
+results, proofs, displayed equations, tables, figures and references to web anchors.
+
 ## Updating the site
 
 **Read `SITE_MAINTENANCE_MANUAL.md`**. It covers everything: adding papers,
@@ -105,3 +132,9 @@ defined in `src/config/site.ts`.
 ## Consciousness publication update
 
 The complete SPC-2 Version 2 section is documented in [CONSCIOUSNESS_DELIVERY.md](CONSCIOUSNESS_DELIVERY.md), including local run instructions, source conversion, historical migration, checks and known source limitations. Begin at `/consciousness` or `/consciousness/monograph`.
+
+## Full model and Sealed or Leaky update — 1 October 2026
+
+The current website now presents the complete explanatory architecture from unconditioned ground and unsplit unity to complementary source/readout and recursive differentiation. The substantial articles are `/articles/full-shadow-model` and `/articles/sealed-or-leaky`. The complete Sealed or Leaky technical edition is `/sealed-or-leaky`, with all 17 sections, source numbering, equations, full proofs, bibliography, original PDF/TeX, Markdown and the supplied verification script.
+
+Read `SHADOW_MODEL_SEALED_LEAKY_DELIVERY.md` for the delivery record and `docs/sealed-or-leaky/MAINTENANCE.md` for reproducible conversion and checks. Existing consciousness and quantum publications retain their original files. The source project uses the same installation/build/deployment workflow as before; it is not a prebuilt static export.

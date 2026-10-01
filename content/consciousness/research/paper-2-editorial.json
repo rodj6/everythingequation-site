@@ -1,0 +1,140 @@
+{
+  "paperId": "paper-2",
+  "eyebrow": "Relational boundaries · Paper 2",
+  "title": "The Boundary of a Perspective",
+  "deck": "How joint information, executable return and causal composition give awareness localization a sharper mathematical foundation.",
+  "sections": [
+    {
+      "id": "the-boundary-question",
+      "title": "Where does one perspective begin?",
+      "html": "<p>A theory of consciousness has to account for a particular perspective: this organized field of experience, with its own distinctions and continuity. Shadow Theory approaches that problem from an awareness-first position. Awareness is fundamental; a physically realized organization shapes its local manifestation. The mathematical task is to say which organization constitutes a perspective and why its boundary deserves that role.</p>\n<p>The <a href=\"/consciousness/monograph\">original monograph</a> makes that commitment explicit through the Shadow Psychophysical Constitution, SPC-2. A0 states the source-awareness interpretation. A1 assigns localized perspectives to qualifying recurrent cores. A2 specifies their phenomenal relational organization. A3 follows their continuation through physical process provenance. Paper 2 examines the boundary beneath those assignments: how it responds to perturbation, how it behaves when systems compose, and what experiment can establish about it.</p>\n<p>This is the point where a philosophical programme acquires sharper mathematical obligations. A candidate boundary must represent the information an organization actually carries. A return route must be executable with its installed resources. An effective description must survive the interactions for which it is used. The paper puts each obligation into a form that can be calculated, challenged and carried into the next stage of the programme.</p>"
+    },
+    {
+      "id": "masking",
+      "title": "A tiny signal exposes a structural fault",
+      "html": "<p>Start with two registers and a prepared source bit \\(b\\). An encoder writes \\((\\xi,\\xi\\oplus b)\\), where \\(\\xi\\) is a fresh fair bit. Each register looks individually random. Together they reveal the source exactly, because their parity is \\(b\\). A decoder computes that parity and returns it to the first register. The information lives in a relation that the physical schedule can use.</p>\n<p>Now modify the encoder. With probability \\(\\varepsilon\\), it writes \\((b,\\zeta)\\), where \\(\\zeta\\) is another fresh fair bit. Otherwise it uses the original joint code:</p>\n\\[ E_\\varepsilon(b,c)=\\begin{cases}(\\xi,\\xi\\oplus b),&\\text{with probability }1-\\varepsilon,\\\\(b,\\zeta),&\\text{with probability }\\varepsilon.\\end{cases} \\]\n<p>The inherited rule retains a joint target only when no proper subset distinguishes the nominated source contrast. At zero perturbation, the pair is such a target. At every positive perturbation, the first register now carries a singleton signal. The pair loses its minimal status, and the projected edge from register 1 to register 2 disappears. The two-register strongly connected component changes immediately.</p>\n<p>Yet the underlying process has barely changed. For \\(0\\le\\varepsilon\\le1/2\\), its maximum row perturbation is \\(\\varepsilon/2\\), while both the joint source contrast and the fixed scheduled return contrast equal \\(1-\\varepsilon\\). At \\(\\varepsilon=0.001\\), the perturbation is only \\(0.0005\\) in total variation and the return contrast remains \\(0.999\\). The graph loses its edge while almost the entire distinguishing power survives.</p>\n<p>The obstruction is exact. A continuous nonnegative weight cannot be positive precisely at zero and vanish at every positive perturbation. Finite experiments inherit a related limit: after at most \\(N\\) encoder uses, the complete-record discrepancy is bounded by \\(1-(1-\\varepsilon/2)^N\\le N\\varepsilon/2\\). Fixed resources cannot uniformly resolve the original zero-versus-positive boundary against every arbitrarily small perturbation.</p>"
+    },
+    {
+      "id": "reconstruction",
+      "title": "Measure what disappears when a view is removed",
+      "html": "<p>The productive question is how much of the joint experiment survives deletion. Retain an observation \\(L\\) from a fuller observation \\(J\\). Can one stochastic decoder reconstruct every source-conditioned law of \\(J\\) from \\(L\\)? The decoder must work across all unknown preparations; giving it the hidden answer would empty the question of meaning.</p>\n\\[ \\delta_P(J\\mid L)=\\min_G\\max_{\\theta\\in\\Theta}\\operatorname{TV}\\!\\left(P_{J,\\theta},P_{L,\\theta}G\\right). \\]\n<p>This is directed statistical deficiency, an established tool from comparison of experiments. Its role here is to replace an unstable exact-support diagnostic with a quantitative reconstruction problem. For finite rational data it is a rational linear-program optimum. If the full prepared laws change by at most \\(\\eta\\), the deficiency changes by at most \\(2\\eta\\).</p>\n<p>The masked encoder admits an exact solution across the full interval \\(0\\le\\varepsilon\\le1\\):</p>\n\\[ \\delta_P(12\\mid1)=\\max\\!\\left\\{\\frac12-\\varepsilon,\\frac{1-\\varepsilon}{4}\\right\\},\\qquad \\delta_P(12\\mid2)=\\frac12\\max\\{\\varepsilon,1-\\varepsilon\\}. \\]\n<p>The first expression changes branch at \\(\\varepsilon=1/3\\). Near zero, both deletion losses remain close to one half. The analysis retains the substantial joint information precisely where the old graph changes abruptly.</p>\n<p>The distinction has practical decision content. At \\(\\varepsilon=1/2\\), the pair and the best singleton have the same source-discrimination total variation. Nevertheless, with prior probability \\(3/4\\) for source zero, the optimal classification error is \\(1/8\\) using the pair and \\(1/4\\) using the first register alone. Preserving one discrimination score leaves a genuine loss of experimental information.</p>\n<p>Deficiency also gives a precise account of padding. An appended record is informationally redundant when its conditional law, given the retained record, is common to every source preparation. Independent noise and a retained record's copy satisfy that criterion. A source-independent marginal alone does not: the original parity code has two individually uninformative marginals and a fully informative pair. Later use remains a separate physical matter; a copied bit can become essential after the original is overwritten.</p>"
+    },
+    {
+      "id": "three-contracts",
+      "title": "Information, return and resistance to a cut",
+      "html": "<p>The next step brings implementation into focus. Joint information describes what an experiment carries. A native return witness describes an actual compatible schedule through installed internal routes. A cut comparison asks how well a permitted separated alternative can reproduce the complete recorded behavior. The paper retains all three objects in the candidate profile.</p>\n<p>For a declared resource contract \\(\\mathcal R\\), coherent simulator family \\(\\mathcal N_{\\mathcal R}\\), and experiment distance \\(d_{\\mathcal E}\\), the cut radius is</p>\n\\[ \\mathfrak I_{\\mathcal R}(P)=\\inf_{Q\\in\\mathcal N_{\\mathcal R}}d_{\\mathcal E}(P,Q). \\]\n<p>A simulator must supply one consistent process across the admitted experiments. Its memory, communication, shared randomness and deadlines belong to the definition. Those permissions have measurable consequences. For complete SWAP of two bits, the exact worst-case simulation errors are:</p>\n<table><thead><tr><th>Permitted separated resources</th><th>Optimal error</th></tr></thead><tbody><tr><td>Private independent randomness; no communication</td><td>3/4</td></tr><tr><td>Shared input-independent randomness; no communication</td><td>1/2</td></tr><tr><td>One timely bit in one direction</td><td>1/2</td></tr><tr><td>One timely bit in each direction</td><td>0</td></tr></tbody></table>\n<p>For weak SWAP, \\(P_g=(1-g)\\mathrm{id}+g\\operatorname{SWAP}\\), the shared-randomness, no-communication optimum is exactly \\(g/2\\). A message arriving after the output deadline cannot improve the earlier law.</p>\n<p>The original encoder–decoder sequence provides a sharper separation. Its intermediate joint deletion loss is \\(1/2\\), and its actual root-return contrast is one. Under an experiment contract testing only that sequence, shared randomness and retention of local initial inputs let a disconnected simulator reproduce the entire timed trace exactly. Its cut radius is zero. The physical interaction still occurred; the nominated records and permissions do not force that interaction as their unique explanation.</p>\n<p>Candidate families therefore retain supports, schedules, reconstruction tables and resource-specific cut profiles. One schedule must supply both the return and all required cut comparisons. Alternative executable supports can overlap when a shared component is used in mutually exclusive modes. Such a family records the available organizations without silently duplicating their physical resources.</p>"
+    },
+    {
+      "id": "encapsulation",
+      "title": "When a relation becomes a component",
+      "html": "<p>Shadow Theory repeatedly asks how a relational organization can participate in a larger one. Paper 2 gives that question an exact finite formulation. A lower process becomes an effective component through an interface that retains everything the admitted exterior can subsequently use.</p>\n<p>A module's instrument \\(K_{u,o}(x,y)\\) records the joint probability of output \\(o\\) and next state \\(y\\) under action \\(u\\). A proposed coarse state \\(q(x)\\) is valid when protected timing, ownership and resource marks descend to it, and when</p>\n\\[ \\sum_{y:q(y)=z'}K_{u,o}(x,y)=\\overline K_{u,o}(q(x),z') \\]\n<p>is independent of the fine representative inside each coarse class. The criterion preserves the joint record and successor class. Finite partition refinement constructs the coarsest strong quotient satisfying those requirements.</p>\n<p>Such interfaces compose in matching causal contexts. The context retains its controller, clocks, delayed messages and shared resources, accesses declared ports, and respects joint initial correlations. Replacing each module by its strong quotient then preserves every admitted finite adaptive transcript law. Local minimization followed by network composition and final minimization agrees with minimization of the original network.</p>\n<p>A concrete parity module shows the construction at work. Its fine update is \\(p'=q\\), \\(q'=p\\oplus u\\). The relational variable \\(z=p\\oplus q\\) obeys the closed equation \\(z'=z\\oplus u\\). That two-state interface exactly represents the four-state carrier for the stipulated parity access. The discarded fine degree remains dynamically active.</p>\n<p>Connect these interfaces in a ring using latched old parities, and the effective update becomes a shift. For 2, 4 and 8 modules, the live configuration reductions are respectively \\(16\\to4\\), \\(256\\to16\\) and \\(65{,}536\\to256\\). Relational states become usable higher-level relata through a demonstrated law-preserving construction. The effective memory grows with the organization.</p>"
+    },
+    {
+      "id": "composition-budgets",
+      "title": "Carry the history and the alternatives with the model",
+      "html": "<p>Approximate interfaces need a guarantee that survives use. A model can agree closely with every fixed-input experiment and fail completely under feedback: let a process announce a random challenge \\(j\\), then answer whether the next input \\(u\\) equals it. A rival always answers zero. Each fixed input gives discrepancy \\(1/n\\); choosing \\(u=j\\) adaptively gives discrepancy one.</p>\n<p>The composition theorem therefore controls full joint rows uniformly across the admitted states, actions and retained contexts. If module \\(i\\) has row error at most \\(\\epsilon_i\\), is called at most \\(n_i\\) times, and the joint initial-law error is \\(\\delta_0\\), the complete-history error satisfies</p>\n\\[ \\beta=1-(1-\\delta_0)\\prod_i(1-\\epsilon_i)^{n_i}\\le\\min\\!\\left\\{1,\\delta_0+\\sum_i n_i\\epsilon_i\\right\\}. \\]\n<p>The bound includes adaptive selection and finite stopping. Its product form comes from conditional coupling guarantees, without assuming independent failures. A consumed resource remains consumed; a returning memory remains part of the process; an early retained record survives a later reset.</p>\n<p>Transporting a cut radius adds another obligation. A faithful target model can still change the result if it makes a forbidden shared seed or communication channel freely available to the alternative. If target laws differ by at most \\(\\beta\\), and the simulator-law families match in both directions within Hausdorff distance \\(\\nu\\), their cut radii differ by at most \\(\\beta+\\nu\\). The comparison's meaning travels with its resource contract.</p>"
+    },
+    {
+      "id": "identification",
+      "title": "What the records can establish",
+      "html": "<p>The source/readout principle becomes especially sharp when applied to complete experiments. Two model-and-preparation pairs are operationally equivalent when every admitted complete experiment has the same law. An attribute is exactly identified by those laws precisely when it is constant throughout each equivalence class. In symbols, it factors through the operational quotient:</p>\n\\[ \\alpha=\\overline\\alpha\\circ q_{\\mathrm{op}}. \\]\n<p>This criterion is target-specific. An experiment can determine a particular structural attribute while leaving much of the source undetermined. When compatible realizations disagree about the attribute, the evidence determines their set of possible values. Enlarging physical access can refine that set.</p>\n<p>Exact-law identification also has a finite-resource frontier. A Bernoulli law identifies whether its success probability is zero or positive. With a fixed sample size, arbitrarily small positive probabilities remain arbitrarily close to zero. Mathematical determinacy and a reliable finite certificate are different achievements.</p>\n<p>For consciousness, an additional commitment gives the identified organization its phenomenal meaning. SPC-2 states that commitment openly in A1–A3. The paper's logical result concerns functional premises that leave a local phenomenal predicate unconstrained: such premises permit different assignments of that predicate while preserving the same functional laws. The full constitution already supplies its connecting premise.</p>\n<p>The awareness-first position remains substantive. Fundamental awareness, a localized subject, present content and personal continuity perform distinct explanatory roles. Biology, language, emotion and autobiographical memory are not universal hypotheses of these finite operational theorems. A framework that reaches beyond familiar human vessels needs explicit organization and interpretation at each step.</p>"
+    },
+    {
+      "id": "programme",
+      "title": "A stronger account of the boundary",
+      "html": "<p>Paper 2 strengthens the programme by exposing a precise vulnerability and replacing its information diagnostic with an exact, stable alternative. It preserves the historical SPC-2 constitution while setting demanding conditions for any successor admission law. A selected threshold, support or scale requires its own justification; a positive score alone does not choose a unique perspective.</p>\n<p>The subsequent studies take up the resulting practical questions. <a href=\"/consciousness/research/paper-3\">Paper 3</a> investigates whether effective interfaces can actually be learned from opaque stochastic systems, distinguishing representational capacity, finite-budget candidate production, calibration selection and validation coverage. <a href=\"/consciousness/research/paper-4\">Paper 4</a> asks when intervention-response laws identify a binary realization and follows that result into recoding obstructions and a bounded SPC-2/IIT comparison.</p>\n<p>Together they develop a connected route from the <a href=\"/consciousness/monograph\">monograph's constitutive framework</a> to the mathematical structure of a boundary, the learning of an interface and the identification of a realization. The chapters below carry the complete arguments, proofs, calculations, figures, references and provenance. The publication record is <a href=\"https://doi.org/10.5281/zenodo.23075822\">Paper 2 on Zenodo</a>.</p>"
+    }
+  ],
+  "chapterIntros": [
+    {
+      "sourceTitle": "Introduction",
+      "title": "The problem a boundary must solve",
+      "standfirst": "The constitutive framework leads to a concrete mathematical question: how should a localized organization respond to small changes in its physical laws? The argument begins with the inherited rule and follows its consequences."
+    },
+    {
+      "sourceTitle": "The inherited realization and finite operational setting",
+      "title": "Specify the realization before assigning a perspective",
+      "standfirst": "Primitive operations, records, timing, resources and provenance determine the physical object to which SPC-2 applies. Complete experiment laws and joint instruments make those commitments explicit."
+    },
+    {
+      "sourceTitle": "Minimal-target masking",
+      "title": "How a tiny signal removes a joint edge",
+      "standfirst": "A two-register encoder–decoder exposes a discontinuity in the original minimal-target projection. The calculation tracks the exact graph change alongside the surviving information and returned contrast."
+    },
+    {
+      "sourceTitle": "Robust reconstruction of joint experiments",
+      "title": "Recover the full experiment from a partial view",
+      "standfirst": "Directed statistical deficiency measures the information lost when an observation is deleted. Exact formulas, optimal decoders and a decision witness resolve the masked family across its full parameter interval."
+    },
+    {
+      "sourceTitle": "Native execution and resource-relative severability",
+      "title": "The resources behind an indivisible process",
+      "standfirst": "A joint code, an executable return and resistance to a separated simulator answer distinct questions. Exact SWAP optima and a complete-trace counterexample show why every resource contract matters."
+    },
+    {
+      "sourceTitle": "Relational encapsulation through a causal interface",
+      "title": "Turn a process into a dependable component",
+      "standfirst": "A strong marked quotient preserves joint records and successor classes through the admitted interface. The composition theorems establish when those effective components can be substituted inside a larger causal network."
+    },
+    {
+      "sourceTitle": "Approximation and preservation of comparison meaning",
+      "title": "Make approximate descriptions survive their use",
+      "standfirst": "Uniform joint-row bounds control complete adaptive histories. Transferring a cut radius also requires a two-sided match between the permitted simulator families."
+    },
+    {
+      "sourceTitle": "Operational identification and its ceiling",
+      "title": "Identify what every compatible realization shares",
+      "standfirst": "Complete experiment laws determine exactly those attributes that remain constant across operationally equivalent model-and-preparation pairs. Finite-resource testing and exact-law identification have different limits."
+    },
+    {
+      "sourceTitle": "What a phenomenal bridge adds",
+      "title": "Give physical organization its experiential meaning",
+      "standfirst": "The functional mathematics and the psychophysical identification have distinct premises. This chapter locates SPC-2 within structural, functional and double-aspect approaches while stating the scope of the logical argument."
+    },
+    {
+      "sourceTitle": "Consequences for the SPC-2 boundary",
+      "title": "The requirements for a successor admission law",
+      "standfirst": "The boundary audit constrains changes to SPC-2 without selecting a unique new threshold or partition. A revised support must carry its own predictive organization, physical provenance and experiential interpretation."
+    },
+    {
+      "sourceTitle": "Limitations and verification status",
+      "title": "The domain and evidence of the result",
+      "standfirst": "The finite classical assumptions, verification record, related computational studies, funding and research-assistance disclosure are recorded together."
+    },
+    {
+      "sourceTitle": "Conclusion",
+      "title": "From a brittle edge to a quantitative boundary analysis",
+      "standfirst": "The results connect stable reconstruction diagnostics, executable organization, causal encapsulation and operational identification. They provide explicit tests for the next stage of the localization programme."
+    },
+    {
+      "sourceTitle": "Exact masking and boundary calculations",
+      "title": "Appendix A · The complete masking calculation",
+      "standfirst": "Prepared laws, optimal reconstruction kernels and the unequal-prior decision witness are derived explicitly. Further finite examples distinguish joint recurrence, singleton influence and local persistence."
+    },
+    {
+      "sourceTitle": "Statistical comparison and finite resource optima",
+      "title": "Appendix B · Optimization and the cost of resources",
+      "standfirst": "The deficiency linear program and the SWAP resource optima are developed in full. The calculations keep decoder permissions, communication deadlines and retained histories explicit."
+    },
+    {
+      "sourceTitle": "Strong quotient and composition proofs",
+      "title": "Appendix C · Why the effective network preserves the laws",
+      "standfirst": "Partition refinement, the global composed-row calculation and minimization compatibility receive their full proofs. A separate behavioral-substitution argument explains the role of exact word-law equality."
+    },
+    {
+      "sourceTitle": "Resource, overlap and approximation details",
+      "title": "Appendix D · Shared carriers, ledgers and error budgets",
+      "standfirst": "The proofs track adaptive coupling, consumable resources, overlapping supports and transport of candidate families. Physical consistency supplies information that marginal descriptions alone can leave undetermined."
+    },
+    {
+      "sourceTitle": "Auxiliary relational-state and realization results",
+      "title": "Appendix E · Relations that become higher-level relata",
+      "standfirst": "Residual predictive memory, two-port structure and reset-selected coordinates lead to an exact parity hierarchy. The examples establish operational reductions with their access assumptions intact."
+    },
+    {
+      "sourceTitle": "Proof status, provenance and reproducibility",
+      "title": "Appendix F · The verification and provenance record",
+      "standfirst": "Canonical claim identifiers, analytic proofs, finite checks and source history are distinguished explicitly. This record states what the accompanying research artifacts support and which review obligations remain."
+    }
+  ]
+}

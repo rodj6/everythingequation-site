@@ -1,3 +1,4 @@
+import { sealedLeaky, listSealedDocuments } from '@/lib/sealed-leaky';
 /**
  * MACHINE-READABLE ENDPOINT GENERATORS
  *
@@ -15,6 +16,7 @@ import { quantumPublications, quantumMonograph } from '@/config/quantum';
 import { listQuantumDocuments } from '@/lib/quantum';
 import { consciousnessPublication } from '@/config/consciousness';
 import { listConsciousnessDocuments, listConsciousnessGuides } from '@/lib/consciousness';
+import { listResearchDocuments, researchPapers } from '@/lib/consciousness-research';
 import {
   atlasEdges,
   atlasNodes,
@@ -53,6 +55,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    { loc: sealedLeaky.url, lastmod: sealedLeaky.webDate, priority: '0.9' },
+    ...listSealedDocuments().map(d => ({loc:d.url,lastmod:sealedLeaky.webDate,priority:'0.8'})),
     { loc: '/atlas/quantum-measurement', lastmod: quantumMonograph.published, priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
@@ -73,6 +77,9 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessGuides().map(guide => ({ loc: `/consciousness/guides/${guide.slug}`, lastmod: consciousnessPublication.published, priority: '0.8' })),
+    { loc: '/consciousness/research', lastmod: '2026-10-01', priority: '0.9' },
+    ...researchPapers.map(paper => ({ loc: paper.url, lastmod: '2026-10-01', priority: '0.9' })),
+    ...listResearchDocuments().map(document => ({ loc: document.url, lastmod: '2026-10-01', priority: '0.8' })),
     ...papers.map((p) => ({
       loc: `/papers/${p.slug}`,
       lastmod: p.date,
@@ -109,6 +116,13 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:sealedLeaky.title,url:`${canonicalBase}${sealedLeaky.url}`,date:sealedLeaky.webDate,summary:`${sealedLeaky.description} Complete technical web edition, original PDF/TeX and verification script. DOI ${sealedLeaky.doi}. Web-edition date; manuscript revision ${sealedLeaky.manuscriptDate}.`},
+    ...researchPapers.map(paper => ({
+      title: `Consciousness Paper ${paper.number}: ${paper.title}`,
+      url: `${canonicalBase}${paper.url}`,
+      date: '2026-10-01',
+      summary: `${paper.deck} Complete web treatment, technical chapters, PDF, LaTeX source and Markdown. Paper date ${paper.date}; version ${paper.version}; DOI ${paper.doi}.`,
+    })),
     {
       title: `${consciousnessPublication.title} (Version ${consciousnessPublication.version})`,
       url: `${canonicalBase}${consciousnessPublication.webUrl}`,
@@ -194,6 +208,17 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     site.description,
     '',
+    '## Full model and information access',
+    '',
+    'Shadow Theory places source and readout within an ontological account of unconditioned ground, unsplit unity, complementary structure and record aspects of one whole, and recursive differentiation. Observers belong within the readout. U keeps its manuscript meaning as the unsplit; the earlier unspecified ground is not assigned a mathematical state space. Reciprocal partial coupling does not imply complete mutual reconstruction.',
+    `- [The complete model](${baseUrl}/articles/full-shadow-model): beginning-to-end account and its relation to the formal mathematics.`,
+    `- [Sealed or Leaky: explanatory article](${baseUrl}${sealedLeaky.articleUrl})`,
+    `- [Complete technical edition](${baseUrl}${sealedLeaky.url}): all statements, proofs, equations, calculations, tables and references. Version ${sealedLeaky.version}; author-supplied DOI ${sealedLeaky.doiUrl}.`,
+    `- [PDF](${baseUrl}${sealedLeaky.pdfUrl}) · [LaTeX](${baseUrl}${sealedLeaky.texUrl}) · [Complete Markdown](${baseUrl}${sealedLeaky.markdownUrl}) · [Verification script](${baseUrl}${sealedLeaky.verificationUrl})`,
+    `- [Reading manifest](${baseUrl}/sealed-or-leaky/manifest.json) · [Search](${baseUrl}/sealed-or-leaky/search.json) · [Source coverage](${baseUrl}/publications/sealed-or-leaky/source-coverage.json)`,
+    'Bell-based source-incompleteness conclusions retain definite source outcomes, measurement independence and no-signalling conditional on nominated classical initial information. Preserved information and operational accessibility are distinct. These results do not derive the unconditioned ground or unsplit ontology.',
+    ...listSealedDocuments().map(d => `- [${d.label ? d.label + ': ' : ''}${d.title}](${baseUrl}${d.url}) · [Markdown](${baseUrl}${d.markdownUrl})`),
+    '',
     '## Canonical authority and result map',
     '',
     '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions and are the current authority for their own measurement results.',
@@ -250,6 +275,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     `${consciousnessPublication.title}. Version ${consciousnessPublication.version}, ${consciousnessPublication.published}. ${consciousnessPublication.author}, ${consciousnessPublication.authorRole}. DOI: ${consciousnessPublication.doiUrl}. ${consciousnessPublication.status}`,
     consciousnessPublication.versionNote,
+    'The monograph is joined by consciousness Papers 2–4: relational boundaries and composition, finite-data interface learning, and identification of binary realizations. These companion papers have their own assumptions, results and DOIs. Their numbering belongs to the consciousness programme and is distinct from the seven-paper source-readout foundation.',
     'A0 is an awareness-aspect commitment; A1 assigns qualifying perspectives; A2 assigns the full endogenous predictive structure across all admitted finite native continuations; A3 specifies nonbranching process continuation. These laws require certified realization and a declared selection doctrine. The finite completion theorem is conditional on these inputs, not a derivation of them.',
     'Awareness, localized subject, scene, person, memory and report are distinct. A1 retains permissive certified minimal cases; intelligent dialogue or a graph cycle alone does not certify an artificial subject. Failed recall and nonresponse do not establish a scene-less gap. Quantum antecedents retain their own assumptions and do not use consciousness to cause events. The monograph reports no new neural-data validation.',
     `- [Accessible account from beginning to end](${baseUrl}/consciousness)`,
@@ -260,6 +286,16 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '### Complete consciousness reading order',
     ...listConsciousnessDocuments().map(document => `- [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url}) · [Markdown](${baseUrl}${document.markdownUrl})${document.source ? ` · supplied PDF pages ${document.source.pdfPage}–${document.source.pdfEndPage}` : ''}`),
+    '',
+    '### Consciousness research sequence: complete Papers 2–4',
+    `- [Boundaries, interfaces and realizations: the integrated research route](${baseUrl}/consciousness/research)`,
+    'Each article introduces the argument and links directly into the complete technical treatment: definitions, equations, proofs, methods, results, tables, figures, appendices and references. The material is readable as server-rendered HTML, with mathematical TeX annotations and complete Markdown exports.',
+    ...researchPapers.flatMap(paper => [
+      `- [Consciousness Paper ${paper.number}: ${paper.title}](${baseUrl}${paper.url}): ${paper.deck} Version ${paper.version}; manuscript date ${paper.date}; DOI https://doi.org/${paper.doi}.`,
+      `  - [PDF](${baseUrl}${paper.pdfUrl}) · [LaTeX](${baseUrl}${paper.texUrl}) · [Complete Markdown](${baseUrl}${paper.markdownUrl})`,
+      ...listResearchDocuments(paper.id).map(document => `  - [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url}) · [Markdown](${baseUrl}${document.markdownUrl})`),
+    ]),
+    'Paper 2 identifies a robustness vulnerability in the original boundary construction and constrains successors; it does not supply a unique replacement admission law. Paper 3 studies synthetic systems and distinguishes the registered comparison from its post-hoc sensitivity analysis. Paper 4 reconstructs a binary chart under declared response and rank assumptions, while its PyPhi comparison retains a bounded grain domain. Operational identification and phenomenal interpretation remain distinct.',
     '',
     '### Consciousness explanatory guides',
     ...listConsciousnessGuides().map(guide => `- [${guide.title}](${baseUrl}/consciousness/guides/${guide.slug}): ${guide.description}`),
@@ -274,7 +310,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Quantum Measurement](${baseUrl}/quantum-measurement): two constitutive completions, physical records, Born statistics, accessible explanations and full technical reading paths`,
-    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete book and explanatory guides`,
+    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4 and explanatory guides`,
     `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -311,7 +347,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     `- ${baseUrl}/quantum-measurement/manifest.json (all three quantum publications, reading inventory, stable anchors, content counts and source downloads)`,
-    `- ${baseUrl}/consciousness/manifest.json (current SPC-2 publication, ordered chapters, appendices, guides, stable anchors and source formats)`,
+    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph and Papers 2–4, ordered technical chapters, appendices, guides, stable anchors and source formats)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
   ];
@@ -368,6 +404,8 @@ export async function generateGraph() {
       tags: a.tags ?? [],
       url: `${baseUrl}/articles/${a.slug}`,
     })),
+    {id:'sealed-or-leaky',type:'complete-technical-edition',title:sealedLeaky.title,url:`${baseUrl}${sealedLeaky.url}`,doi:sealedLeaky.doi,version:sealedLeaky.version,manifest:`${baseUrl}/sealed-or-leaky/manifest.json`,verificationScript:`${baseUrl}${sealedLeaky.verificationUrl}`},
+    ...listSealedDocuments().map(d=>({id:`sealed-or-leaky:${d.slug}`,type:'technical-section',title:d.title,label:d.label,order:d.order,url:`${baseUrl}${d.url}`,sections:d.sections,stats:d.stats,markdown:`${baseUrl}${d.markdownUrl}`})),
     {
       id: 'monograph',
       type: 'monograph',
@@ -421,6 +459,21 @@ export async function generateGraph() {
       title: document.title, label: document.label, kind: document.kind, order: document.order,
       url: `${baseUrl}${document.url}`, sections: document.sections, stats: document.stats,
       source: document.source ?? null, markdown: `${baseUrl}${document.markdownUrl}`,
+    })),
+    { id: 'consciousness:research', type: 'research-sequence', title: 'Boundaries, interfaces and realizations',
+      url: `${baseUrl}/consciousness/research`, date: '2026-10-01',
+      scope: 'Papers 2–4 extend and test the consciousness programme while preserving the fixed Version 2 monograph.' },
+    ...researchPapers.map(paper => ({
+      id: `consciousness:research:${paper.id}`, type: 'research-article',
+      title: paper.title, description: paper.deck, number: paper.number,
+      date: paper.date, version: paper.version, doi: paper.doi,
+      url: `${baseUrl}${paper.url}`, markdown: `${baseUrl}${paper.markdownUrl}`,
+    })),
+    ...listResearchDocuments().map(document => ({
+      id: `consciousness:research:${document.paperId}:${document.slug}`, type: 'consciousness-research-part',
+      paperId: document.paperId, title: document.title, label: document.label,
+      kind: document.kind, order: document.order, url: `${baseUrl}${document.url}`,
+      sections: document.sections, stats: document.stats, markdown: `${baseUrl}${document.markdownUrl}`,
     })),
     ...listConsciousnessGuides().map(guide => ({
       id: `consciousness-guide:${guide.slug}`, type: 'explanatory-article', title: guide.title,
@@ -499,6 +552,23 @@ export async function generateGraph() {
     [key: string]: unknown;
   }> = [];
   edges.push({ from: 'consciousness', to: `paper:${consciousnessPublication.paperSlug}`, relation: 'published-as' });
+  edges.push({ from: 'consciousness', to: 'consciousness:research', relation: 'developed-through' });
+  for (const paper of researchPapers) {
+    const articleId = `consciousness:research:${paper.id}`;
+    const registryPaper = papers.find(record => record.doi === paper.doi);
+    edges.push({ from: 'consciousness:research', to: articleId, relation: 'contains-research-article' });
+    if (registryPaper) edges.push({ from: articleId, to: `paper:${registryPaper.slug}`, relation: 'published-as' });
+    edges.push({ from: articleId, to: `paper:${consciousnessPublication.paperSlug}`, relation: 'develops-and-examines', note: 'The original monograph retains its fixed text; later results have their own scopes and premises.' });
+    const documents = listResearchDocuments(paper.id);
+    documents.forEach((document, index) => {
+      const partId = `consciousness:research:${paper.id}:${document.slug}`;
+      edges.push({ from: articleId, to: partId, relation: 'contains-technical-treatment' });
+      if (index < documents.length - 1) edges.push({ from: partId, to: `consciousness:research:${paper.id}:${documents[index + 1].slug}`, relation: 'reading-order' });
+    });
+  }
+  researchPapers.forEach((paper, index) => {
+    if (index < researchPapers.length - 1) edges.push({ from: `consciousness:research:${paper.id}`, to: `consciousness:research:${researchPapers[index + 1].id}`, relation: 'reading-order' });
+  });
   edges.push({ from: `paper:${consciousnessPublication.predecessorPaperSlug}`, to: `paper:${consciousnessPublication.paperSlug}`, relation: 'superseded-by', note: 'Author-confirmed version lineage; historical claim inventory is not merged into SPC-2.' });
   edges.push({ from: `paper:${consciousnessPublication.predecessorPaperSlug}`, to: 'consciousness:historical-notes', relation: 'historical-exposition' });
   edges.push({ from: 'consciousness', to: 'problem:consciousness', relation: 'current-results-and-open-obligations' });
@@ -530,6 +600,12 @@ export async function generateGraph() {
   edges.push({ from: 'quantum-measurement', to: 'problem:quantum-measurement', relation: 'current-results-and-historical-provenance' });
   edges.push({ from: 'quantum-measurement', to: 'atlas:measurement-programme', relation: 'visualized-in' });
   edges.push({ from: 'quantum-measurement', to: 'quantum-atlas-guide', relation: 'explained-by' });
+  edges.push({from:'paper:sealed-or-leaky',to:'sealed-or-leaky',relation:'complete-web-edition'});
+  edges.push({from:'article:sealed-or-leaky',to:'sealed-or-leaky',relation:'explains'});
+  edges.push({from:'article:full-shadow-model',to:'sealed-or-leaky',relation:'programme-context-for'});
+  for(const slug of ['non-source-projection-and-internal-identifiability','bulk-to-brane-projection']) edges.push({from:`paper:${slug}`,to:'paper:sealed-or-leaky',relation:'foundation-for-follow-on-results'});
+  const sealedDocuments=listSealedDocuments();
+  sealedDocuments.forEach((d,i)=>{edges.push({from:'sealed-or-leaky',to:`sealed-or-leaky:${d.slug}`,relation:'contains-web-edition-part'});if(i+1<sealedDocuments.length)edges.push({from:`sealed-or-leaky:${d.slug}`,to:`sealed-or-leaky:${sealedDocuments[i+1].slug}`,relation:'reading-order'});});
   // Monograph containment + reading order
   const monoItems = listMonographItems();
   for (let i = 0; i < monoItems.length; i++) {
@@ -628,7 +704,7 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

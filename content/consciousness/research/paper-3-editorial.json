@@ -1,0 +1,140 @@
+{
+  "paperId": "paper-3",
+  "eyebrow": "Learning effective interfaces · Paper 3",
+  "title": "Learning what an opaque system can do",
+  "deck": "A complete interface has to survive the interactions that expose it. Forty-eight synthetic systems reveal the distance between a model that can exist, a model that gets fitted, and a model that a finite learner can confidently choose.",
+  "sections": [
+    {
+      "id": "from-interface-to-inference",
+      "title": "A specification must survive the encounter with data",
+      "html": "<p>A queue can appear empty while a message is still on its way. A device can answer correctly once and fail the next time because its only resource has been spent. Two output channels can each have the right statistics while their joint behavior is wrong. An effective model has to preserve the distinctions that a later interaction can expose.</p>\n<p>That demand connects the mathematics of relational organization to the practical work of learning. <a href=\"/consciousness/research/paper-2\">Paper 2 establishes the operational conditions under which an effective interface can replace a source process</a>. Paper 3 asks how far finite observations, explicit learning algorithms and public selection rules can carry us toward such an interface when the source is hidden.</p>\n<p>The central result is a separation with practical force: <strong>a suitable model can exist, yet remain absent from the fitted candidates; a suitable fitted candidate can exist, yet lose the selection contest; a selected model can pass its measured tests, yet fail a different legal interaction.</strong> The study makes these gaps visible in finite systems whose complete response laws can be examined after the learners have committed their answers.</p>"
+    },
+    {
+      "id": "complete-interaction-laws",
+      "title": "The object of prediction is the whole interaction",
+      "html": "<p>Each source has a hidden state, four public preparation codes, four possible actions and four joint output symbols encoding two bits. An episode permits at most eight calls. Preparations set an initial distribution without revealing the resulting hidden state. Resource consumption, delayed return, blocked service and mode changes live inside the source dynamics.</p>\n<p>An experiment specifies a preparation, a horizon and a causal policy: the next action can depend on the observations already received. The complete record includes every action and output in their timed order. With joint output-and-transition matrices \\(K_{a,o}\\), its probability is</p>\n<p>\\[P^e(h_H)=\\left[\\prod_{t=1}^{H}\\pi_t(a_t\\mid h_{t-1})\\right]\\mu_p K_{a_1,o_1}\\cdots K_{a_H,o_H}\\mathbf 1.\\]</p>\n<p>This equation keeps together what an isolated next-output score can pull apart: preparation, feedback, output correlations and continuing state. Source and candidate face the same policy. Their discrepancy is measured by total variation between their complete record laws. The benchmark allowance is 0.15, a declared engineering tolerance.</p>\n<p>Passing every registered test for one system establishes adequacy on that finite panel. The stronger target is accuracy throughout an admitted family of experiments. Paper 2 supplies a substitution theorem when protected marks, conditional joint rows, preparation and resource contracts meet its premises. An opaque learner must earn evidence for those premises; a compact model alone cannot supply them.</p>"
+    },
+    {
+      "id": "common-evidence",
+      "title": "Forty-eight hidden systems, one shared body of evidence",
+      "html": "<p>The principal comparison, OII-4, puts eight methods against the same 48 synthetic systems. Every method receives the same fitting and calibration records for a given system. Each supplies 960 fitting episodes and 192 calibration episodes; across the cohort, acquisition totals 442,368 calls and 55,296 resets. These costs are paid once and shared across the methods.</p>\n<p>The candidates span ordinary probabilistic automata, two group-aware automata, controlled hidden-state models with 2, 4, 8 or 16 latent states, streaming trees and an unmerged history tree. The full state portfolio, R, selects among ordinary, group-aware and hidden-state candidates. The standard portfolio, S, removes only the group-aware branch. P selects a passive tree; O fits an episode-level mixture of four trees. Public calibration determines selection before the source-law evaluation.</p>\n<p>R belongs to the original primary method set. S is a prespecified secondary method whose comparison with R isolates the contribution of the bespoke group-aware candidates. The same evidence makes this a direct comparison of implemented procedures; each procedure retains its own fitting cost, regularization and candidate choices.</p>\n<p>The learners are restricted software programs. They receive observations, not hidden generator matrices, private seeds or oracle rankings. The source becomes available to the scorer for postcommit law evaluation and diagnosis. This division makes it possible to ask both whether a prediction works and why a particular fitted bank cannot meet a test.</p>"
+    },
+    {
+      "id": "matched-results",
+      "title": "A substantial gain, with a sharply defined pattern",
+      "html": "<p>On the original 1,152 registered complete-law slots, both R and S pass 1,063. Each passes every core test on 37 of the 48 systems. The passive tree passes 970 slots and all core tests on 24 systems; the minimax tree mixture passes 869 slots and all core tests on 23.</p>\n<table><thead><tr><th>Method</th><th>Passing tests / 1,152</th><th>Mean TV</th><th>All-core systems / 48</th></tr></thead><tbody><tr><td>Full state portfolio R</td><td>1,063</td><td>0.054913</td><td>37</td></tr><tr><td>Standard state portfolio S</td><td>1,063</td><td>0.054918</td><td>37</td></tr><tr><td>Hidden-state branch B</td><td>1,053</td><td>0.064684</td><td>36</td></tr><tr><td>Passive tree P</td><td>970</td><td>0.099072</td><td>24</td></tr><tr><td>Minimax tree mixture O</td><td>869</td><td>0.152015</td><td>23</td></tr></tbody></table>\n<p>Removing the group-aware candidates reproduces the broad gain. R and S select the identical component on 47 systems, with no change in any core pass/fail outcome on the remaining one. The useful improvement is therefore already available from the ordinary automata and controlled hidden-state portfolio on this cohort.</p>\n<p>The pattern is more informative than a single ranking. The state portfolios pass all 48 slots in each of the hidden-belief, mode-register, modular-counter, gated-queue, probe and refractory families. The passive tree has striking strengths elsewhere: it passes all 48 adaptive-challenge slots while R and S pass only two. It also wins on delayed receivers and finite budgets. Features that expose preparation, phase or a retained resource directly can beat a more general architecture whose parameters are harder to fit.</p>\n<p>Across paired systems, R and S have lower mean error than P on 37, higher error on ten and a tie on one. The complete technical account retains every family, method and metric, including the regressions that the aggregate improvement would otherwise conceal.</p>"
+    },
+    {
+      "id": "three-different-successes",
+      "title": "Capacity, production and selection are different achievements",
+      "html": "<p>All 48 targets have at most 16 hidden states. Once their generators are revealed, each can be embedded exactly in the general 16-state joint-instrument family: copy its transition rows and prepared distributions, then give unused states zero initial and incoming probability. The resulting model reproduces every admitted finite record law. This is an exact check of architectural capacity for the model family actually used.</p>\n<p>Under the original fitting budget, however, the R and S banks contain an individually passing candidate on only 39 systems. Calibration selects a passing candidate on 37. The sequence <strong>48 representable, 39 produced, 37 selected</strong> locates three distinct questions that an undifferentiated success rate cannot answer.</p>\n<p>Two failures are selection misses: an adequate candidate was already available, but another had the better observed calibration likelihood. Eight further failures admit an event certificate against every mixture of the produced bank. For an event \\(A\\),</p>\n<p>\\[\\operatorname{TV}(P^e,Q_w^e)\\geq P^e(A)-\\max_j Q_j^e(A).\\]</p>\n<p>If that gap exceeds 0.15, no weighting of those candidates can repair the test. One remaining failure lacks an adequate individual candidate but remains unresolved at mixture level. A certificate against a finite bank is powerful precisely because its scope is explicit: a different parameter search can produce candidates outside it.</p>"
+    },
+    {
+      "id": "fitting-effort",
+      "title": "More fitting effort repairs part of the gap",
+      "html": "<p>The original hidden-state fits use one initialization per size and at most 60 updates. Every original 16-state fit reaches that cap. A separate post-hoc analysis therefore targets the 11 failed systems, alongside four passing controls chosen by a fixed hash order. It reuses the same public observations and increases the search to six starts per size and at most 600 updates.</p>\n<p>The expanded portfolio, S+, retains the original S bank and adds the extended fits. Calibration still selects the model. Among the 11 targeted failures, it now selects a passing model for five and contains one for seven. Passing slots increase from 175 to 212 of 264; mean system-worst TV falls from 0.652077 to 0.318750. All four passing controls retain their original selections.</p>\n<p>The five selected repairs cover checksum protocol, alternating channel, shared budget, delayed receiver and finite budget. Two selection misses persist. On leaky occupancy, calibration even chooses a worse core performer despite the presence of a substantially improved candidate. More search enlarges opportunity; it also makes the choice among candidates more consequential.</p>\n<p>These are outcome-selected, retrospective results on the 11-system subset. The original 48-system comparison keeps its original scores. The sensitivity establishes a concrete finding of its own: the production gap is materially affected by fitting effort, while residual fitting and selection failures remain.</p>"
+    },
+    {
+      "id": "challenge-diagnosis",
+      "title": "Remembering a challenge is only part of responding correctly",
+      "html": "<p>The adaptive challenge gives the diagnosis unusual precision. The source emits a random challenge, then responds on the next call according to that challenge and a bit established during preparation. One distinction lasts a single call; the other must persist through the episode. The tree’s preparation, phase and previous-output features expose both directly.</p>\n<p>The failed original hidden-state models do distinguish different observed challenges: their posterior vectors are far apart. Their error lies in mixing responses that depend on the prepared bit. On the matching next action, the probability assigned to the correct response averages about 0.50, while the tree assigns above 0.9997. Every relevant first-response combination appears in the fitting records.</p>\n<p>Extended fitting raises those averages to 0.8667 and 0.9895 for the two challenge variants. Their worst complete-law errors nevertheless remain 0.490052 and 0.315852. Better conditional responses coexist with errors elsewhere in the episode. A full interaction law exposes that remaining defect; a single favorable prediction would miss it.</p>"
+    },
+    {
+      "id": "repair-history",
+      "title": "A research sequence that tests its own proposed repairs",
+      "html": "<p>The final comparison follows a sequence of increasingly demanding investigations. A known-model runtime first tests owned registers, queues, deadlines, shared randomness and consumable resources. OII-1 then learns shallow histories from opaque systems. OII-2 adds a rich streaming representation and confirmed counterexamples. OII-3 examines likelihood, minimax, uncertainty-aware and safe replacement rules. Each stage has its own cohort and denominator.</p>\n<p>The earlier studies explain why plausible repairs require direct tests. In OII-2, richer active learning passes 633 of 720 slots, compared with 442 for the old active learner. Yet refitting on the same active observations without the explicit counterexample constraints passes 639. Confirmed distinctions were real; enforcing them did not automatically select the best global repair.</p>\n<p>OII-3 sharpens the point. Four replacements certified to improve a measured panel all improve that panel, while all worsen core mean error and one worsens core maximum error. The certificate does exactly what its premises promise. Extending that promise to another interaction family requires a coverage argument.</p>\n<p>These findings give the programme a productive discipline: expose the failure, change the proposed remedy, and preserve the comparison that shows what the remedy actually achieved.</p>"
+    },
+    {
+      "id": "validation-and-composition",
+      "title": "Validation has a domain, and composition has premises",
+      "html": "<p>The 1,152 core slots are related tests, not independent trials. A retrospective audit finds 1,140 distinct literal specifications and 1,135 distinct finite policy behaviors. Eighty-four slots match calibration at the behavior level. Deduplicating those behaviors gives R and S 1,048 passes out of 1,135, with the same 37 all-core systems. This additional analysis preserves the original weights and clarifies exactly what “new context” means.</p>\n<p>Eight separately specified module pairs also undergo composed interaction tests. R, S and the hidden-state branch pass all eight. These results demonstrate successful substitutions in those wirings; Paper 2 supplies the stronger conditional theory for transferring guarantees across matching causal contexts.</p>\n<p>Four exact public-law twin pairs mark another boundary. Different hidden implementations can have identical complete behavior under the permitted interface. Prediction can succeed without recovering a unique microscopic anatomy. <a href=\"/consciousness/research/paper-4\">Paper 4 takes up the next structural question</a>: which additional intervention laws can identify a binary realization, and which recodings still obstruct that identification?</p>"
+    },
+    {
+      "id": "place-in-programme",
+      "title": "From formal organization to an executable research programme",
+      "html": "<p>Within the consciousness programme, these computations address the operational work required to study a proposed vessel: representing its interactions, preserving the distinctions that matter, and checking whether an inferred interface can support the next inference. Their findings concern finite synthetic systems and executable learning procedures. Phenomenal interpretation belongs to the constitution developed in <a href=\"/consciousness/monograph\">the monograph</a>; predictive success does not itself establish consciousness.</p>\n<p>The evidence also has a traceable structure. Saved observations, committed models, source-revealed laws, analytical controls and later sensitivity fits occupy distinct stages. A separately written evaluator reconstructed all 1,152 original OII-4 core laws and checked the saved models, while the appendices specify fitting rules, complete historical tables, costs and chronology. The generator and learner designs come from the same author-directed programme; an independently authored benchmark is the next external test.</p>\n<p>Paper 3 turns the interface question into a set of concrete research obligations. Expressiveness must be checked. Search must be measured. Selection must be examined against the candidates it had. Validation must name the interactions it covers. Together with relational robustness and intervention-based identification, that makes the route from a proposed organization to a defensible operational model explicit.</p>"
+    }
+  ],
+  "chapterIntros": [
+    {
+      "sourceTitle": "Question and contributions",
+      "title": "From an adequate interface to a learned one",
+      "standfirst": "The practical question starts where the composition theorem ends: can a finite learner recover a replacement that preserves the interactions a source can actually support?"
+    },
+    {
+      "sourceTitle": "Operational contract and measures",
+      "title": "What an interface must preserve",
+      "standfirst": "Preparations, joint outputs, adaptive actions and retained resources belong to one complete interaction law. This chapter defines the contract and the measurements used throughout the study."
+    },
+    {
+      "sourceTitle": "Study design and preserved evidence",
+      "title": "The evidence boundary",
+      "standfirst": "Five distinct study stages lead to one matched comparison on 48 opaque systems. The acquisition records, learner access, calibration overlaps and chronology fix the meaning of every reported score."
+    },
+    {
+      "sourceTitle": "Final matched state-learning comparison",
+      "title": "The common-evidence comparison",
+      "standfirst": "Automata and controlled hidden-state models deliver the principal aggregate improvement. The complete comparison also exposes the mechanisms on which simple streaming features win."
+    },
+    {
+      "sourceTitle": "Capacity, produced candidates and selection",
+      "title": "Three different achievements",
+      "standfirst": "All 48 targets fit the chosen general architecture; only 39 receive a passing produced candidate and 37 receive a passing selected one. Exact embeddings and event witnesses explain what those gaps establish."
+    },
+    {
+      "sourceTitle": "Post-hoc optimization-budget sensitivity",
+      "title": "What changes when fitting effort increases",
+      "standfirst": "Six starts and a longer update budget repair five of the 11 original selected failures on unchanged observations. The retrospective analysis preserves the original results and locates the remaining selection and prediction defects."
+    },
+    {
+      "sourceTitle": "Why the earlier repair stages did not close discovery",
+      "title": "Learning from the failed repairs",
+      "standfirst": "Known-model conformance, shallow histories, richer representations, counterexamples and minimax selectors each answer a different part of the problem. Their separate results show why no single repair closes interface discovery."
+    },
+    {
+      "sourceTitle": "Adversarial contexts, composition and uncertainty",
+      "title": "Testing beyond a convenient prediction",
+      "standfirst": "Legal event witnesses challenge committed models, composed tests exercise module replacements, and exact public-law twins separate successful prediction from microscopic identification."
+    },
+    {
+      "sourceTitle": "Related work, reproducibility and external validity",
+      "title": "Methods, provenance and the reach of the result",
+      "standfirst": "The implemented learners sit within established probabilistic learning and abstraction traditions. Their exact implementation, reproducibility record and finite scope determine which comparisons the evidence supports."
+    },
+    {
+      "sourceTitle": "Conclusion",
+      "title": "A concrete map of the learning problem",
+      "standfirst": "The findings separate architectural capacity, finite-budget production, calibration selection and interaction-law validation, with direct evidence that fitting effort repairs a material part of the original gap."
+    },
+    {
+      "sourceTitle": "Implementation details and the exact role of each learner",
+      "title": "Inside the implemented learners",
+      "standfirst": "The full preparation rules, automaton compatibility tests, group heuristics, hidden-state updates and tree-mixture selector make the executed procedures inspectable."
+    },
+    {
+      "sourceTitle": "Stage-specific numerical results",
+      "title": "Every stage, with its own denominator",
+      "standfirst": "Complete OII-1 through OII-4 tables retain every method, mechanism family and registered weight. The deduplication sensitivities are reported alongside the original comparisons."
+    },
+    {
+      "sourceTitle": "Analytical controls on interpretation",
+      "title": "Exact examples that discipline the inference",
+      "standfirst": "A genuine refinement can worsen a different prediction objective; a valid safe replacement can be limited to its measured panel; an event can refute a whole candidate bank. The proofs show precisely why."
+    },
+    {
+      "sourceTitle": "Complexity and recorded computation",
+      "title": "What the models store and what fitting costs",
+      "standfirst": "Automaton nodes, posterior vectors, streaming registers and mixture states have different meanings. The recorded sizes and fitting times keep those units and shared costs explicit."
+    },
+    {
+      "sourceTitle": "Chronology, artifact provenance and reproduction",
+      "title": "The record behind the results",
+      "standfirst": "Local commitments, documented repairs, source hashes, saved models and separately written evaluator code form the source-to-manuscript chain. Each verification stage retains its actual scope."
+    },
+    {
+      "sourceTitle": "Retrospective fitting protocol and diagnostics",
+      "title": "The extended fitting experiment in full",
+      "standfirst": "The locked sensitivity protocol, 360 fits, stopping records, bank checks and explicit challenge traces expose both the repairs and the failures of the enlarged search."
+    }
+  ]
+}

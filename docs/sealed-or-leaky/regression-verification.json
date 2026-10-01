@@ -1,0 +1,63 @@
+{
+  "consciousnessResearchHTTP": {
+    "passed": true,
+    "baseUrl": "http://127.0.0.1:3010",
+    "checks": 3254,
+    "newRoutes": 53,
+    "technicalDocuments": 49,
+    "articleSections": 25,
+    "formulaCount": 1032,
+    "sourceTargets": 544,
+    "downloads": 58,
+    "internalLinks": 862,
+    "glossaryEntries": 6,
+    "faqEntries": 4,
+    "failures": [],
+    "scope": "Initial HTTP HTML, maintained full text, source labels and elements, prose and math, byte-exact downloads, local links/fragments, canonicals, metadata, FAQ/glossary and search. External DOI resolution and visual review are separate."
+  },
+  "consciousnessRegression": {
+    "timestamp": "2026-10-01T08:24:01.965Z",
+    "base": "http://127.0.0.1:3010",
+    "checks": 3965,
+    "passed": 3965,
+    "newHtmlRoutes": 50,
+    "sourceAnchors": 281,
+    "formulaCount": 1323,
+    "localLinks": 765,
+    "downloads": 40,
+    "failures": [],
+    "scope": "HTTP/initial HTML, complete maintained text, accessible math counts, links and anchors, formats/source hashes, metadata, machine inventories, provenance and migration. Independent source fidelity audit and browser review remain separate evidence."
+  },
+  "quantumRegression": {
+    "base": "http://127.0.0.1:3010",
+    "checkedAt": "2026-10-01T08:23:03.023Z",
+    "readingPages": 55,
+    "routes": 91,
+    "mathPages": 42,
+    "sourceAnchors": 916,
+    "localLinks": 1099,
+    "downloads": 62,
+    "machineEndpoints": 5,
+    "failures": []
+  },
+  "discovery": {
+    "passed": true,
+    "checks": 2305,
+    "publications": 3,
+    "technicalDocuments": 49,
+    "searchRecords": 384,
+    "graphNodes": 406,
+    "graphEdges": 874,
+    "sitemapUrls": 339,
+    "feedEntries": 21,
+    "failures": [],
+    "scope": "Offline generation and integrity of publication registry, sitemap, Atom feed, llms.txt, graph, programme manifest and combined search. HTTP and visual checks are separate."
+  },
+  "productionBuild": {
+    "command": "SKIP_ZENODO=1 npm run build",
+    "passed": true,
+    "typeScriptPassed": true,
+    "generatedRoutes": 358,
+    "packageAndLockfileChanged": false
+  }
+}

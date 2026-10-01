@@ -1,3 +1,5 @@
+import ShadowModelOverview from '@/components/shadow-model-overview';
+import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import Link from "next/link";
 import katex from "katex";
 import { site } from "@/config/site";
@@ -94,7 +96,7 @@ export default async function HomePage() {
           </div>
           <div className="atlas-home-portal-copy">
             <p className="section-label">Interactive model · 12 canonical chapters</p>
-            <h2>Explore the complete architecture of reality</h2>
+            <h2>Explore the mathematical realization architecture</h2>
             <p>
               Orbit the full Ω-to-Tier-1 construction, zoom into the recursive aperture,
               inspect the coherent–dissipative field, and trace gravity, matter, constants,
@@ -115,11 +117,11 @@ export default async function HomePage() {
             <ol className="relative mt-4 space-y-2.5 text-left text-[0.95rem] leading-relaxed text-fg/90">
               <li>
                 <span className="font-mono text-glow">1 · </span>
-                The reality we observe is not source reality itself.
+                The observed world and its complementary source belong to one whole. We observe from within the readout.
               </li>
               <li>
                 <span className="font-mono text-glow">2 · </span>
-                What we call physics is the structured shadow that source reality presents to us.
+                The broader model begins with unconditioned ground and unsplit unity; reciprocal differentiation introduces structure and records.
               </li>
               <li>
                 <span className="font-mono text-glow">3 · </span>
@@ -139,12 +141,15 @@ export default async function HomePage() {
               </li>
               <li>
                 <span className="font-mono text-glow">7 · </span>
-                Together, the seven papers establish a rigorous source-to-observable programme: they identify when deeper structure is mathematically necessary, determine what information must be restored, and derive concrete physical residues that can be investigated.
+                The seven papers establish the foundation. Sealed or Leaky adds quantitative information bounds and finite-resource witnesses, with every proof available on this site.
               </li>
             </ol>
           </div>
         </div>
       </section>
+      <ShadowModelOverview />
+      <SealedLeakyFeature />
+
 
       <QuantumProgrammeFeature />
       <ConsciousnessProgrammeFeature />

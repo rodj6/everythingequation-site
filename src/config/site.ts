@@ -15,21 +15,19 @@ export const site = {
   tagline:
     "Source structure, physical measurement, and conscious perspectives.",
 
-  /** Restored homepage wording. Keep this text unchanged. */
-  heroStatement: `Shadow Theory is a new mathematical and physical framework built on a simple idea: the reality we observe is not the underlying source reality itself, but a shadow of a deeper structure.
+  /** Current framework account; the formal publication texts retain their own wording. */
+  heroStatement: `Shadow Theory is a mathematical and physical framework built on a simple idea: the reality we observe is a structured readout of deeper source reality.
 
-This is not a simulation hypothesis. The world we experience is real. Shadow Theory proposes that it is a mathematically structured shadow of a deeper reality.
+Source and readout are complementary aspects of one whole. We—including our bodies, instruments, memories and experienced scenes—belong within the readout. Their relationship sits within a wider architecture: unconditioned ground, unsplit unity, and recursive differentiation into a physical world.
 
-Rather than treating physics as the direct study of ultimate reality, Shadow Theory treats it as the study of the shadow we can observe, what it faithfully represents, what information it loses, and what can and cannot be reconstructed from it.
-
-The seven-paper foundation develops the mathematics needed to distinguish observation from source structure, determine when missing information can be recovered, and formally establish what can and cannot be claimed about the underlying reality — and realizes that architecture in a concrete physical model as its witness.`,
+The seven-paper foundation develops exact mathematics for what readouts preserve, what they lose, and what reconstruction requires. Sealed or Leaky advances that programme with quantitative information bounds and explicit conditions for hidden distinctions to become accessible.`,
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,
    * feeds, and llms.txt.
    */
   description:
-    "Shadow Theory develops source-to-readout mathematics, physical measurement and SPC-2 consciousness: awareness, lived scenes and subject continuity. Read the complete monographs, proofs and explanatory guides.",
+    "Shadow Theory: unconditioned ground, unsplit unity, complementary source and readout, and recursive differentiation. Explore the full model, Bell-certified information bounds, physical measurement and consciousness.",
 
   /**
    * Canonical base URL. Set NEXT_PUBLIC_SITE_URL in Vercel project settings

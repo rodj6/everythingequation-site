@@ -22,6 +22,27 @@ version: 2
 #     in src/config/quantum.ts; the registry here owns their editorial summaries.
 # ============================================================================
 papers:
+  - id: paper:sealed-or-leaky
+    slug: sealed-or-leaky
+    category: branch
+    visibility: public
+    featured: true
+    title: "Sealed or Leaky: The Source Tetralemma, Bell-Certified Hidden Information, and Finite-Resource Witnesses"
+    doi: "10.5281/zenodo.23077474"
+    version: "Version 3.1"
+    role: "Bell-certified hidden information, reversible seals, and finite-resource retained-record witnesses."
+    summary: >
+      Quantifies information absent from an initial classical readout under
+      definite source outcomes, measurement independence and conditional
+      no-signalling. Separates complete-information conservation from physical
+      access, proves full-law surrogate limits and develops exact and robust
+      finite-resource witnesses in specified measurement constitutions.
+    webUrl: /sealed-or-leaky
+    pdfUrl: /publications/sealed-or-leaky/Sealed_or_Leaky_v3.1.pdf
+    texUrl: /publications/sealed-or-leaky/Sealed_or_Leaky_v3.1.tex
+    markdownUrl: /publications/sealed-or-leaky/sealed-or-leaky.md
+    supports: [quantum-measurement]
+
   # Current successor edition. Identity/formats live in src/config/consciousness.ts.
   - id: paper:consciousness:spc-2
     slug: shadow-theory-and-consciousness
@@ -39,6 +60,56 @@ papers:
       Realization selection and empirical assessment remain open obligations.
       Version 2 supersedes the earlier Consciousness Field account; it reports
       no new neural-data validation.
+    supports: [consciousness]
+
+  # Consciousness companion papers. Full article treatments and technical
+  # reading editions are integrated into the consciousness research sequence.
+  - id: paper:consciousness:paper-2
+    slug: consciousness-relational-boundaries
+    researchPaperId: paper-2
+    category: branch
+    visibility: public
+    featured: true
+    role: "Relational boundaries: robustness, composition and the limits of awareness localization."
+    summary: >
+      An arbitrarily small perturbation can change a boundary defined by exact
+      information dependence. A finite masking construction and an exact
+      statistical-deficiency calculation separate joint information, executable
+      return and resistance to resource-constrained simulation. Composition
+      theorems specify when an effective interface can replace a lower-level
+      system; identification results delimit what observable laws determine.
+    supports: [consciousness]
+
+  - id: paper:consciousness:paper-3
+    slug: consciousness-effective-interfaces
+    researchPaperId: paper-3
+    category: branch
+    visibility: public
+    featured: true
+    role: "Learning effective interfaces: the gap between capacity, candidate production, selection and validation."
+    summary: >
+      A shared-data comparison on 48 opaque synthetic systems evaluates complete
+      interaction laws, including joint outputs, delayed effects and resource
+      sensitivity. The primary model portfolio passes 1,063 of 1,152 registered
+      tests. Capacity checks and a separately reported post-hoc fitting analysis
+      show why representability, finite-budget learning, calibration selection
+      and validation coverage require distinct evidence.
+    supports: [consciousness]
+
+  - id: paper:consciousness:paper-4
+    slug: consciousness-binary-realizations
+    researchPaperId: paper-4
+    category: branch
+    visibility: public
+    featured: true
+    role: "Identifying binary realizations: intervention laws, reconstruction certificates and a bounded SPC-2/IIT comparison."
+    summary: >
+      Positive product-response laws identify an unknown binary coordinate chart
+      up to coordinate permutation and independent complementation under a full
+      component-rank condition. A spectral certificate controls reconstruction
+      error. Finite recoding obstructions, a five-register synthetic demonstration
+      and a frozen PyPhi comparison connect operational identification to the
+      realization and grain questions in the consciousness programme.
     supports: [consciousness]
 
   # Quantum Measurement programme: publication identity and download paths are

@@ -1,0 +1,471 @@
+{
+  "source": "Sealed_or_Leaky_v3.1.tex",
+  "sections": [
+    {
+      "title": "Question, main result, and scope",
+      "starred": false,
+      "line": 76
+    },
+    {
+      "title": "The source tetralemma",
+      "starred": false,
+      "line": 124
+    },
+    {
+      "title": "Experimental anchoring",
+      "starred": false,
+      "line": 286
+    },
+    {
+      "title": "The escape routes and their boundaries",
+      "starred": false,
+      "line": 662
+    },
+    {
+      "title": "Operational equivalence and its restricted alternatives",
+      "starred": false,
+      "line": 688
+    },
+    {
+      "title": "Deterministic completions require unresolved information",
+      "starred": false,
+      "line": 813
+    },
+    {
+      "title": "Conservation of complete information and operational sealing",
+      "starred": false,
+      "line": 880
+    },
+    {
+      "title": "What a quantum preparation description necessarily omits",
+      "starred": false,
+      "line": 978
+    },
+    {
+      "title": "Operational sealing and quantitative failures of POVM form",
+      "starred": false,
+      "line": 1194
+    },
+    {
+      "title": "The measurement constitutions and the scope of their sealing",
+      "starred": false,
+      "line": 1346
+    },
+    {
+      "title": "Finite pilot resources: exact inventories and retained records",
+      "starred": false,
+      "line": 1393
+    },
+    {
+      "title": "Setting dependence, controlled nonequilibrium, and access",
+      "starred": false,
+      "line": 1742
+    },
+    {
+      "title": "Assumptions and result status",
+      "starred": false,
+      "line": 2171
+    },
+    {
+      "title": "What the results establish about source reality",
+      "starred": false,
+      "line": 2225
+    },
+    {
+      "title": "Research transparency and reproducibility",
+      "starred": true,
+      "line": 2246
+    }
+  ],
+  "environment_counts": {
+    "document": 1,
+    "titlepage": 1,
+    "abstract": 1,
+    "center": 2,
+    "tabularx": 2,
+    "description": 1,
+    "remark": 4,
+    "lemma": 15,
+    "proof": 45,
+    "theorem": 14,
+    "align": 8,
+    "equation": 53,
+    "proposition": 11,
+    "table": 1,
+    "tabular": 1,
+    "definition": 1,
+    "gathered": 1,
+    "array": 2,
+    "corollary": 5,
+    "enumerate": 2,
+    "align*": 2,
+    "cases": 1,
+    "longtable": 2,
+    "thebibliography": 1
+  },
+  "formal": [
+    {
+      "kind": "lemma",
+      "title": "Outcome determinism already supplies single outcomes",
+      "label": "tet:SOredundant",
+      "status": "Proved",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "lemma",
+      "title": "No-signalling guessing bound",
+      "label": "tet:guess",
+      "status": "Proved",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "theorem",
+      "title": "Hidden-information theorem",
+      "label": "tet:hidden",
+      "status": "Proved conditional on (SO), (D), (MI), (NS)",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "lemma",
+      "title": "Sharp Shannon refinement and simultaneous sharpness",
+      "label": "tet:sharpShannon",
+      "status": "Proved conditional on (SO), (D), (MI), (NS)",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "theorem",
+      "title": "Source tetralemma: exclusion and corrected necessity",
+      "label": "tet:tetralemma",
+      "status": "Proved",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "proposition",
+      "title": "The three-branch form fails",
+      "label": "tet:trilemmafails",
+      "status": "Proved",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "proposition",
+      "title": "Where convex-linearity bites: the chance branch",
+      "label": "tet:chance",
+      "status": "Proved conditional on a convex-linear ontological model reproducing the trine table and tomographically complete qubit statistics",
+      "section": "The source tetralemma"
+    },
+    {
+      "kind": "lemma",
+      "title": "Conditional-range CHSH concentration",
+      "label": "exp:range",
+      "status": "Proved conditional on the sequential setting law above",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "proposition",
+      "title": "Finite-sample outcome-likelihood certificate",
+      "label": "exp:finite",
+      "status": "Proved conditional on \\eqref{exp:causalfactor",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Finite-seed obstruction to exact sequential setting independence",
+      "label": "exp:seednecessity",
+      "status": "Proved",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Rounding-controlled entropy-production parameter",
+      "label": "exp:rounding",
+      "status": "Proved from the printed Bell table and its stated downward-rounding rule in \\cite{Bierhorst18",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Uniformity-to-entropy continuity with the correct dimension",
+      "label": "exp:Audenaert",
+      "status": "Proved; imports the entropy-continuity inequality of \\cite{Audenaert07",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Translation of the certified extracted string",
+      "label": "exp:translation",
+      "status": "Proved conditional on B-admissibility, the published protocol and seed hypotheses, $\\pi\\ge\\kappa$, single outcomes and runwise outcome determinism",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "corollary",
+      "title": "The correctly scoped 1024-bit Shannon consequence",
+      "label": "exp:bierhorst",
+      "status": "Proved conditional on all hypotheses of Lemma~\\ref{exp:translation",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Atom-tail transfer through determinism and postselection",
+      "label": "exp:tailtransfer",
+      "status": "Proved",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "corollary",
+      "title": "Published-parameter finite-sample source-response certificate",
+      "label": "exp:rawcor",
+      "status": "Proved conditional on B-admissibility, the published entropy-production certificate, single outcomes, runwise outcome determinism and $\\pi\\ge\\kappa$",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "The fragment's prior-response tail and its additional premise",
+      "label": "exp:prioratom",
+      "status": "Proved conditional on B-admissibility, the entropy-production certificate, runwise outcome determinism and $Z_{\\rm run",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "lemma",
+      "title": "Threshold test of a complete deterministic admissible readout",
+      "label": "exp:thresholdtest",
+      "status": "Proved conditional on B-admissibility and the published entropy-production theorem; reported threshold crossing imported",
+      "section": "Experimental anchoring"
+    },
+    {
+      "kind": "theorem",
+      "title": "Operational surrogate and testing ceiling",
+      "label": "op:surrogate",
+      "status": "Proved",
+      "section": "Operational equivalence and its restricted alternatives"
+    },
+    {
+      "kind": "theorem",
+      "title": "Quantitative failure of readout-only prediction",
+      "label": "op:radius",
+      "status": "Proved",
+      "section": "Operational equivalence and its restricted alternatives"
+    },
+    {
+      "kind": "theorem",
+      "title": "Conditional randomness and completion size",
+      "label": "op:information",
+      "status": "Proved",
+      "section": "Deterministic completions require unresolved information"
+    },
+    {
+      "kind": "theorem",
+      "title": "Transport of accessible distinguishability",
+      "label": "op:transport",
+      "status": "Proved",
+      "section": "Conservation of complete information and operational sealing"
+    },
+    {
+      "kind": "theorem",
+      "title": "Robust pairwise preparation separation",
+      "label": "ctx:robust",
+      "status": "Proved",
+      "section": "What a quantum preparation description necessarily omits"
+    },
+    {
+      "kind": "proposition",
+      "title": "A saturating model of the finite table",
+      "label": "ctx:saturation",
+      "status": "Proved",
+      "section": "What a quantum preparation description necessarily omits"
+    },
+    {
+      "kind": "theorem",
+      "title": "Separation from the trine mixture",
+      "label": "ctx:sum",
+      "status": "Proved",
+      "section": "What a quantum preparation description necessarily omits"
+    },
+    {
+      "kind": "corollary",
+      "title": "Conditional noninjectivity of the preparation readout",
+      "label": "ctx:noninjectivity",
+      "status": "Proved conditional on a convex-linear ontological model reproducing the trine table and tomographically complete qubit statistics",
+      "section": "What a quantum preparation description necessarily omits"
+    },
+    {
+      "kind": "theorem",
+      "title": "Exact sealing and POVM form",
+      "label": "ctx:povm",
+      "status": "Proved",
+      "section": "Operational sealing and quantitative failures of POVM form"
+    },
+    {
+      "kind": "theorem",
+      "title": "Quantitative ensemble witness for a nonquadratic event",
+      "label": "ctx:quantitativepovm",
+      "status": "Proved",
+      "section": "Operational sealing and quantitative failures of POVM form"
+    },
+    {
+      "kind": "proposition",
+      "title": "Detectable leaks and independent repetition",
+      "label": "ctx:amplification",
+      "status": "Proved conditional on independently resettable preparations and an implementable test",
+      "section": "Operational sealing and quantitative failures of POVM form"
+    },
+    {
+      "kind": "proposition",
+      "title": "Finite-ensemble asymptotic sealing",
+      "label": "con:ensemblesealing",
+      "status": "Proved conditional on the pilot constitution and the Bell-limit record form of \\cite{RM",
+      "section": "The measurement constitutions and the scope of their sealing"
+    },
+    {
+      "kind": "lemma",
+      "title": "Exchangeability of carrier histories",
+      "label": "pil:exchange",
+      "status": "Proved conditional on the pilot constitution P1--P4 with the ready preparation",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "lemma",
+      "title": "Census and monotone exports",
+      "label": "pil:census",
+      "status": "Proved conditional on the pilot constitution P1--P4",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "lemma",
+      "title": "Drainage with an explicit hazard",
+      "label": "pil:drain",
+      "status": "Proved conditional on the pilot constitution P1--P4 and its Poisson comparison",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "lemma",
+      "title": "Retained copy of a drained endpoint",
+      "label": "pil:writer",
+      "status": "Proved conditional on the pilot constitution P1--P4 and the stated driven programme",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "theorem",
+      "title": "Finite retained-record non-affinity",
+      "label": "pil:retained",
+      "status": "Proved conditional on the pilot constitution P1--P4 with zero initial residues, the driven programme and the finite-gas comparison",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "corollary",
+      "title": "Irreducible density-matrix simulation error",
+      "label": "pil:simulator",
+      "status": "Proved conditional on the premises of Theorem~\\ref{pil:retained",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "theorem",
+      "title": "Finite retained setting dependence",
+      "label": "pil:signal",
+      "status": "Proved conditional on the pilot constitution P1--P4 with zero initial residues, the driven programme and the finite-gas comparison",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "corollary",
+      "title": "Irreducible no-signalling simulation error",
+      "label": "pil:nosignalsimulator",
+      "status": "Proved conditional on the premises of Theorem~\\ref{pil:signal",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "proposition",
+      "title": "An initial-residue obstruction",
+      "label": "pil:residueobstruction",
+      "status": "Proved conditional on the stated modified exporter",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "theorem",
+      "title": "Single-edge undrained asymptotic",
+      "label": "pil:undrained",
+      "status": "Proved conditional on the pilot constitution P1--P4 and the stated asymptotic regime",
+      "section": "Finite pilot resources: exact inventories and retained records"
+    },
+    {
+      "kind": "theorem",
+      "title": "CHSH dependence and the exact total-variation budget",
+      "label": "sig:budget",
+      "status": "Proved",
+      "section": "Setting dependence, controlled nonequilibrium, and access"
+    },
+    {
+      "kind": "proposition",
+      "title": "Semibounded two-party Gaussian writers",
+      "label": "sig:massive",
+      "status": "Proved conditional on the massive constitution and its forced writer",
+      "section": "Setting dependence, controlled nonequilibrium, and access"
+    },
+    {
+      "kind": "proposition",
+      "title": "A proper-mixture leak",
+      "label": "sig:properwire",
+      "status": "Proved conditional on the hypothetical wire, which violates P3",
+      "section": "Setting dependence, controlled nonequilibrium, and access"
+    },
+    {
+      "kind": "proposition",
+      "title": "Slice-sensitive and marginal action reads",
+      "label": "sig:slices",
+      "status": "Proved conditional on the hypothetical wire, which violates P3",
+      "section": "Setting dependence, controlled nonequilibrium, and access"
+    },
+    {
+      "kind": "proposition",
+      "title": "The additional premise needed for steering a leak",
+      "label": "sig:steering",
+      "status": "Proved",
+      "section": "Setting dependence, controlled nonequilibrium, and access"
+    }
+  ],
+  "labels_count": 135,
+  "refs_count": 145,
+  "bibliography_keys": [
+    "Marvian20",
+    "BB95",
+    "Bell64",
+    "CHSH69",
+    "CR11",
+    "G90",
+    "MPKRS16",
+    "P91",
+    "PBR12",
+    "R6",
+    "RM",
+    "S05",
+    "V02",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R7",
+    "Pilot",
+    "Massive",
+    "Pironio10",
+    "Hensen15",
+    "Giustina15",
+    "Shalm15",
+    "Rosenfeld17",
+    "Storz23",
+    "Bierhorst18",
+    "Audenaert07",
+    "Everett57",
+    "Deutsch99",
+    "Wallace12",
+    "GRW86",
+    "Donadi21",
+    "Brans88",
+    "HossenfelderPalmer20",
+    "Handsteiner17",
+    "Rauch18",
+    "BigBell18",
+    "Bohm52"
+  ],
+  "display_delimiters": 73,
+  "inline_dollars": 2446,
+  "display_environment_count": 136,
+  "display_count_note": "Earlier naive count75 included two title-page line-spacing commands. Actual bracket displays73."
+}

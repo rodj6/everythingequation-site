@@ -1,3 +1,5 @@
+import ShadowModelOverview from '@/components/shadow-model-overview';
+import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getCanonicalPapers, loadProblems } from "@/lib/registry";
@@ -71,6 +73,8 @@ export default async function ResearchMapPage() {
           calls for.
         </p>
       </header>
+      <ShadowModelOverview compact />
+      <SealedLeakyFeature />
 
       <section aria-labelledby="measurement-map-heading" className="card-surface p-6 sm:p-8">
         <p className="section-label">Published programme · September 2026</p>
@@ -92,7 +96,7 @@ export default async function ResearchMapPage() {
 
       {/* Sequence */}
       <section aria-labelledby="consciousness-map-heading" className="card-surface p-6 sm:p-8">
-        <p className="section-label">Consciousness · SPC-2 · Version 2</p>
+        <p className="section-label">Consciousness · SPC-2 · Monograph and Papers 2–4</p>
         <h2 id="consciousness-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">From a certified vessel to a perspective</h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation and physical constitutions are antecedents. SPC-2 adds its own psychophysical premises; the awareness-aspect commitment is not derived from physics. Certified realization includes a declared selection doctrine before the constitutive laws apply.</p>
         <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -104,7 +108,14 @@ export default async function ResearchMapPage() {
           ].map(([title, body]) => <li key={title} className="rounded-xl border border-edge p-4"><h3 className="font-semibold text-glow">{title}</h3><p className="mt-3 text-sm leading-relaxed text-mute">{body}</p></li>)}
         </ol>
         <p className="mt-5 text-sm leading-relaxed text-mute">The finite completion theorem is conditional on these inputs. Realization selection, neural applications and empirical assessment retain their open status. The earlier Consciousness Field account is superseded; its claim inventory is not merged into SPC-2.</p>
-        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">The complete model →</Link><Link href="/consciousness/monograph">Monograph and formal dependencies →</Link><Link href="/problems/consciousness">Research status →</Link></div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {[
+            ["paper-2", "2 · Boundaries", "Determine what survives perturbation, which information is joint, and when effective interfaces compose."],
+            ["paper-3", "3 · Interfaces", "Measure the distinct demands of model capacity, candidate production, calibration selection and validation."],
+            ["paper-4", "4 · Realizations", "Recover binary coordinates under a declared response model and examine recoding and grain in a bounded SPC-2/IIT comparison."],
+          ].map(([id, title, body]) => <Link key={id} href={`/consciousness/research/${id}`} className="rounded-xl border border-edge p-4 hover:border-edge-strong"><h3 className="font-semibold text-glow">{title}</h3><p className="mt-3 text-sm leading-relaxed text-mute">{body}</p></Link>)}
+        </div>
+        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">The complete model →</Link><Link href="/consciousness/monograph">Monograph and formal dependencies →</Link><Link href="/consciousness/research">The research sequence →</Link><Link href="/problems/consciousness">Research status →</Link></div>
       </section>
 
       <section aria-labelledby="pipeline-heading">

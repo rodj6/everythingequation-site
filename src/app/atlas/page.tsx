@@ -1,3 +1,5 @@
+import ShadowModelOverview from '@/components/shadow-model-overview';
+import Link from 'next/link';
 import type { Metadata } from "next";
 import AtlasExperience from "@/components/atlas/atlas-experience";
 import { site } from "@/config/site";
@@ -67,6 +69,7 @@ export default function AtlasPage() {
           __html: JSON.stringify(atlasJsonLd).replace(/</g, "\\u003c"),
         }}
       />
+      <div className="mb-10 space-y-5"><ShadowModelOverview compact /><p className="mx-auto max-w-5xl text-sm leading-relaxed text-mute">The atlas below starts with a mathematically defined formation package, Ω. Its typed nodes describe a realization programme within the broader account; Ω does not name the unspecified ground. <Link href="/sealed-or-leaky" className="text-glow">Sealed or Leaky</Link> develops information-access results alongside these physical constructions.</p></div>
       <div className="atlas-page-shell">
         <AtlasExperience />
       </div>

@@ -1,0 +1,113 @@
+{
+  "check": "independent source-to-HTML conversion verification",
+  "limitations": "Checks conversion fidelity, including actual rendered proof prose and mathematics. Does not reprove theorems or validate physical premises.",
+  "math": {
+    "source": {
+      "inline": 1223,
+      "display": 136
+    },
+    "rendered": 1359,
+    "missing": 0,
+    "extra": 0
+  },
+  "formal": {
+    "theorem": {
+      "source": 14,
+      "rendered": 14,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "proposition": {
+      "source": 11,
+      "rendered": 11,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "lemma": {
+      "source": 15,
+      "rendered": 15,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "corollary": {
+      "source": 5,
+      "rendered": 5,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "proof": {
+      "source": 45,
+      "rendered": 45,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "remark": {
+      "source": 4,
+      "rendered": 4,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    },
+    "definition": {
+      "source": 1,
+      "rendered": 1,
+      "coverage_bodies_identical": true,
+      "actual_html_prose_failures": []
+    }
+  },
+  "labels": {
+    "source": 135,
+    "recorded": 135,
+    "missing_html_anchors": [],
+    "compiled_number_mismatches": []
+  },
+  "tables": [
+    {
+      "document": "question-main-result-and-scope",
+      "rows": 6,
+      "column_counts": {
+        "2": 6
+      }
+    },
+    {
+      "document": "experimental-anchoring",
+      "rows": 4,
+      "column_counts": {
+        "5": 4
+      }
+    },
+    {
+      "document": "the-escape-routes-and-their-boundaries",
+      "rows": 5,
+      "column_counts": {
+        "3": 5
+      }
+    },
+    {
+      "document": "assumptions-and-result-status",
+      "rows": 13,
+      "column_counts": {
+        "3": 13
+      }
+    },
+    {
+      "document": "assumptions-and-result-status",
+      "rows": 17,
+      "column_counts": {
+        "3": 17
+      }
+    }
+  ],
+  "source_asset_sha256": {
+    "Sealed_or_Leaky_v3.1.tex": "f4ae5932e4a7cb9c8c969154facbb68b9333d595548b67e6f4dd0dd544816647",
+    "Sealed_or_Leaky_v3.1.pdf": "75c4863a357076eefc1e9d14f0e8458a9efa1885b602f24b5b8a392df1a10fb6",
+    "Sealed_or_Leaky_v3.1_Verification.py": "8bb090cb2cd2351291d9c44286ccff6ed201ed80a92667cc9e7cae23afd9a5e9"
+  },
+  "original_asset_hashes_match": true,
+  "display_count_explanation": "136 = 73 bracket displays + 53 equation + 8 align + 2 align*. The two title-page line-spacing commands \\\\[3mm] are not math displays.",
+  "display_equation_numbering": {
+    "displays": 136,
+    "last_number": 69,
+    "actual_html_numbers_match": true
+  },
+  "status": "PASS"
+}

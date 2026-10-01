@@ -164,7 +164,13 @@ check((await read('/robots.txt')).text.includes('Allow: /'), 'Existing crawl pol
 const baseline = JSON.parse(fs.readFileSync('docs/consciousness-integration-baseline.json', 'utf8'));
 const siteAfter = fs.readFileSync('src/config/site.ts', 'utf8');
 const hero = source => source.match(/heroStatement: `([\s\S]*?)`,/)[1];
-check(sha256(hero(siteAfter)) === baseline.heroStatementSha256, 'Original homepage hero statement changed');
+// The 1 October full-model update explicitly authorizes a new homepage account.
+// Preserve the historical baseline record; check the requested current content instead.
+const currentHero = hero(siteAfter);
+const homeHtml = (await read('/')).text;
+for (const phrase of ['unconditioned ground', 'unsplit unity', 'complementary aspects', 'Sealed or Leaky']) {
+  check(currentHero.includes(phrase) && homeHtml.includes(phrase), `Current homepage model missing: ${phrase}`);
+}
 check(sha256(fs.readFileSync('content/manual/problems/consciousness-field-theorem.mdx')) === baseline.historicalNotesSha256, 'Original historical note source changed');
 const report = { timestamp: new Date().toISOString(), base, checks, passed: checks - failures.length, newHtmlRoutes: publicRoutes.length, sourceAnchors, formulaCount, localLinks: localLinks.size, downloads, failures, scope: 'HTTP/initial HTML, complete maintained text, accessible math counts, links and anchors, formats/source hashes, metadata, machine inventories, provenance and migration. Independent source fidelity audit and browser review remain separate evidence.' };
 fs.mkdirSync('docs', { recursive: true });

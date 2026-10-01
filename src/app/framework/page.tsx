@@ -1,3 +1,5 @@
+import ShadowModelOverview from '@/components/shadow-model-overview';
+import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
 import katex from "katex";
@@ -9,7 +11,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Framework",
   description:
-    "The seven-paper Shadow Theory sequence explained: source–readout non-equivalence, target-relative obstruction, canonical minimal completion, geometric realization, projected dynamics, internal identifiability, and the Randall–Sundrum physical witness.",
+    "The full Shadow model and its seven-paper foundation: source–readout non-equivalence, target-relative obstruction, canonical minimal completion, geometric realization, projected dynamics, internal identifiability, and the Randall–Sundrum physical witness.",
   alternates: { canonical: "/framework" },
 };
 
@@ -18,6 +20,9 @@ const tex = (src: string, displayMode = true) => ({
 });
 
 const vocabulary: Array<{ term: string; def: string }> = [
+  {term: "Unconditioned ground", def: "The unspecified ground prior to the distinctions used in the broader model. No mathematical state space, probability law or potential-energy function is assigned to it."},
+  {term: "The unsplit", def: "Unity before the operational source–readout distinction. U retains this meaning in the consciousness manuscript. In the awareness interpretation there is no separate subject reflecting on itself."},
+  {term: "Complementarity and reciprocity", def: "Source and readout are structure and record aspects of one whole; observers belong within the readout. Reciprocal partial coupling permits mutual influence without requiring complete mutual reconstruction."},
   {
     term: "Readout / shadow",
     def: "An exact bounded presentation of a richer realization structure, such as a quotient, measurement, macrostate, or public summary. A shadow presents the source exactly as a quotient, can support valid internal laws, and remains distinct from the source-level structure.",
@@ -73,7 +78,7 @@ export default async function FrameworkPage() {
       <section className="mx-auto max-w-3xl">
         <p className="section-label">Framework</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">
-          One sequence, seven papers
+          From the whole to the observable
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-mute">
           Shadow Theory treats experienced reality as a structured readout of deeper
@@ -92,6 +97,9 @@ export default async function FrameworkPage() {
           architecture in Randall–Sundrum gravity as the sequence's physical witness.
         </p>
       </section>
+
+      <ShadowModelOverview />
+      <SealedLeakyFeature />
 
       {/* Chain */}
       <section aria-labelledby="chain-heading">
@@ -188,6 +196,7 @@ export default async function FrameworkPage() {
         <h2 id="ee-heading" className="text-2xl font-bold tracking-tight">
           The role of the Everything Equation
         </h2>
+        <p className="mt-4 leading-relaxed text-mute">The full model places this formal closure programme within a broader account of ground, unsplit unity and complementary source/readout aspects. The schema keeps its declared operator meanings; the unspecified ground is not an extra variable in it. <Link href="/articles/full-shadow-model" className="text-glow">Read how the levels connect →</Link></p>
         <div className="card-surface mt-6 p-6 sm:p-8">
           <div className="text-center" dangerouslySetInnerHTML={tex(String.raw`L \;=\; \Omega_{T1}\,\Delta\,\partial\,[\,L\,]`)} />
           <p className="mt-4 leading-relaxed text-mute">

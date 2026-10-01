@@ -1,0 +1,3247 @@
+{
+  "checkedAt": "2026-10-01T08:27:22.438Z",
+  "base": "http://127.0.0.1:3010",
+  "checks": [
+    {
+      "name": "desktop /: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop /articles/full-shadow-model: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/full-shadow-model: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/full-shadow-model: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/full-shadow-model: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop /articles/full-shadow-model: section headings visibly styled",
+      "pass": true,
+      "detail": [
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        }
+      ]
+    },
+    {
+      "name": "desktop /articles/sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /articles/sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6922.88525390625
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop /articles/sealed-or-leaky: section headings visibly styled",
+      "pass": true,
+      "detail": [
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        }
+      ]
+    },
+    {
+      "name": "desktop /sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop /papers/sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /papers/sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /papers/sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /papers/sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop /framework: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /framework: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /framework: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /framework: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop /atlas: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /atlas: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /atlas: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /atlas: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 92
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 92
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "width": 67
+          },
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 79
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 79
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "width": 54
+          },
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 78
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 78
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop /consciousness: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop /consciousness: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "desktop /consciousness: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop /consciousness: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop overview-and-publication-identity: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop overview-and-publication-identity: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop overview-and-publication-identity: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop overview-and-publication-identity: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop overview-and-publication-identity: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop overview-and-publication-identity: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop question-main-result-and-scope: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "desktop question-main-result-and-scope: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop the-source-tetralemma: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop the-source-tetralemma: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop the-source-tetralemma: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop the-source-tetralemma: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6587.734375
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop the-source-tetralemma: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop the-source-tetralemma: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop experimental-anchoring: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "desktop experimental-anchoring: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "desktop the-escape-routes-and-their-boundaries: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-equivalence-and-its-restricted-alternatives: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop deterministic-completions-require-unresolved-information: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop conservation-of-complete-information-and-operational-sealing: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop what-a-quantum-preparation-description-necessarily-omits: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6587.734375
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop operational-sealing-and-quantitative-failures-of-povm-form: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6587.734375
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6587.734375
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop the-measurement-constitutions-and-the-scope-of-their-sealing: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop finite-pilot-resources-exact-inventories-and-retained-records: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 243.375
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 243.375
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 243.375
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 10
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 6667.7705078125
+          }
+        ]
+      }
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop setting-dependence-controlled-nonequilibrium-and-access: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop assumptions-and-result-status: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "desktop assumptions-and-result-status: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop what-the-results-establish-about-source-reality: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop research-transparency-and-reproducibility: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop references: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "desktop references: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "desktop references: no math errors",
+      "pass": true
+    },
+    {
+      "name": "desktop references: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "viewport": 1440,
+        "offenders": []
+      }
+    },
+    {
+      "name": "desktop references: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "desktop references: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "desktop: search returns full-paper match",
+      "pass": true
+    },
+    {
+      "name": "desktop: search result keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "desktop: keyboard search opens technical reader",
+      "pass": true
+    },
+    {
+      "name": "mobile /: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "DIV",
+            "class": "glow-cyan pointer-events-none absolute -right-16 -top-32 h-80 w-80",
+            "width": 320
+          },
+          {
+            "tag": "DIV",
+            "class": "glow-cyan pointer-events-none absolute -bottom-32 -left-16 h-72 w-80",
+            "width": 320
+          },
+          {
+            "tag": "DIV",
+            "class": "glow-violet pointer-events-none absolute -top-24 right-[-10%] h-56 w-1/2",
+            "width": 178
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile /articles/full-shadow-model: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/full-shadow-model: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/full-shadow-model: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/full-shadow-model: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 55.53125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 55.53125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 55.53125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 10
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile /articles/full-shadow-model: section headings visibly styled",
+      "pass": true,
+      "detail": [
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        }
+      ]
+    },
+    {
+      "name": "mobile /articles/sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /articles/sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 84.40625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 84.40625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 84.40625
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 156.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 156.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 156.625
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 29
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile /articles/sealed-or-leaky: section headings visibly styled",
+      "pass": true,
+      "detail": [
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        },
+        {
+          "font": 24,
+          "margin": 40
+        }
+      ]
+    },
+    {
+      "name": "mobile /sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile /papers/sealed-or-leaky: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /papers/sealed-or-leaky: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /papers/sealed-or-leaky: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /papers/sealed-or-leaky: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile /framework: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /framework: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /framework: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /framework: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile /atlas: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /atlas: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /atlas: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /atlas: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 84
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 84
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "width": 59
+          },
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 92
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 92
+          },
+          {
+            "tag": "SPAN",
+            "class": "",
+            "width": 67
+          },
+          {
+            "tag": "DIV",
+            "class": "",
+            "width": 79
+          },
+          {
+            "tag": "BUTTON",
+            "class": "atlas-node-label  ",
+            "width": 79
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile /consciousness: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile /consciousness: main heading visible",
+      "pass": true
+    },
+    {
+      "name": "mobile /consciousness: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile /consciousness: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile overview-and-publication-identity: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile overview-and-publication-identity: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile overview-and-publication-identity: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile overview-and-publication-identity: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile overview-and-publication-identity: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile overview-and-publication-identity: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 5
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile question-main-result-and-scope: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "mobile question-main-result-and-scope: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile the-source-tetralemma: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile the-source-tetralemma: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile the-source-tetralemma: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile the-source-tetralemma: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 50.8125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 50.8125
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile the-source-tetralemma: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile the-source-tetralemma: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile experimental-anchoring: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: arrow key scrolls wide table",
+      "pass": true
+    },
+    {
+      "name": "mobile experimental-anchoring: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "mobile the-escape-routes-and-their-boundaries: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "mtext",
+            "class": "",
+            "width": 2
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-equivalence-and-its-restricted-alternatives: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile deterministic-completions-require-unresolved-information: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 19
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 7
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile conservation-of-complete-information-and-operational-sealing: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile what-a-quantum-preparation-description-necessarily-omits: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile operational-sealing-and-quantitative-failures-of-povm-form: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 5935.244140625
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 5935.244140625
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile the-measurement-constitutions-and-the-scope-of-their-sealing: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 21
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 11
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 7
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 21
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile finite-pilot-resources-exact-inventories-and-retained-records: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 240.4375
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 240.4375
+          }
+        ]
+      }
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile setting-dependence-controlled-nonequilibrium-and-access: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile assumptions-and-result-status: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: table scroll keyboard-accessible",
+      "pass": true
+    },
+    {
+      "name": "mobile assumptions-and-result-status: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile what-the-results-establish-about-source-reality: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile research-transparency-and-reproducibility: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile references: HTTP200",
+      "pass": true
+    },
+    {
+      "name": "mobile references: all MathML renders",
+      "pass": true
+    },
+    {
+      "name": "mobile references: no math errors",
+      "pass": true
+    },
+    {
+      "name": "mobile references: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "mobile references: all proofs remain",
+      "pass": true
+    },
+    {
+      "name": "mobile references: section navigation present",
+      "pass": true
+    },
+    {
+      "name": "mobile: search returns full-paper match",
+      "pass": true
+    },
+    {
+      "name": "mobile: search result keyboard focus",
+      "pass": true
+    },
+    {
+      "name": "mobile: keyboard search opens technical reader",
+      "pass": true
+    },
+    {
+      "name": "No JS overview-and-publication-identity: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS overview-and-publication-identity: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS overview-and-publication-identity: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS overview-and-publication-identity: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 126.28125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS question-main-result-and-scope: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS question-main-result-and-scope: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS question-main-result-and-scope: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS question-main-result-and-scope: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 5
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 127.46875
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS the-source-tetralemma: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS the-source-tetralemma: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS the-source-tetralemma: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS the-source-tetralemma: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 67.8125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 50.8125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 50.8125
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS experimental-anchoring: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS experimental-anchoring: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS experimental-anchoring: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS experimental-anchoring: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 198.375
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS the-escape-routes-and-their-boundaries: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS the-escape-routes-and-their-boundaries: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS the-escape-routes-and-their-boundaries: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS the-escape-routes-and-their-boundaries: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "No JS operational-equivalence-and-its-restricted-alternatives: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-equivalence-and-its-restricted-alternatives: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-equivalence-and-its-restricted-alternatives: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-equivalence-and-its-restricted-alternatives: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 162.46875
+          },
+          {
+            "tag": "mtext",
+            "class": "",
+            "width": 2
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 17
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS deterministic-completions-require-unresolved-information: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS deterministic-completions-require-unresolved-information: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS deterministic-completions-require-unresolved-information: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS deterministic-completions-require-unresolved-information: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 61.3125
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS conservation-of-complete-information-and-operational-sealing: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS conservation-of-complete-information-and-operational-sealing: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS conservation-of-complete-information-and-operational-sealing: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS conservation-of-complete-information-and-operational-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 87.5
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 19
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 7
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS what-a-quantum-preparation-description-necessarily-omits: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS what-a-quantum-preparation-description-necessarily-omits: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS what-a-quantum-preparation-description-necessarily-omits: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS what-a-quantum-preparation-description-necessarily-omits: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 111.625
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 18
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS operational-sealing-and-quantitative-failures-of-povm-form: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-sealing-and-quantitative-failures-of-povm-form: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-sealing-and-quantitative-failures-of-povm-form: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS operational-sealing-and-quantitative-failures-of-povm-form: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 102.3125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS the-measurement-constitutions-and-the-scope-of-their-sealing: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS the-measurement-constitutions-and-the-scope-of-their-sealing: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS the-measurement-constitutions-and-the-scope-of-their-sealing: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS the-measurement-constitutions-and-the-scope-of-their-sealing: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 95.625
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 5935.244140625
+          },
+          {
+            "tag": "path",
+            "class": {},
+            "width": 5935.244140625
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS finite-pilot-resources-exact-inventories-and-retained-records: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS finite-pilot-resources-exact-inventories-and-retained-records: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS finite-pilot-resources-exact-inventories-and-retained-records: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS finite-pilot-resources-exact-inventories-and-retained-records: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 162.625
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 21
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 11
+          },
+          {
+            "tag": "mi",
+            "class": "",
+            "width": 7
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "msub",
+            "class": "",
+            "width": 21
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS setting-dependence-controlled-nonequilibrium-and-access: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS setting-dependence-controlled-nonequilibrium-and-access: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS setting-dependence-controlled-nonequilibrium-and-access: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS setting-dependence-controlled-nonequilibrium-and-access: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": [
+          {
+            "tag": "math",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "mrow",
+            "class": "",
+            "width": 78.3125
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 4
+          },
+          {
+            "tag": "mn",
+            "class": "",
+            "width": 9
+          },
+          {
+            "tag": "mo",
+            "class": "",
+            "width": 6
+          },
+          {
+            "tag": "math",
+            "class": "",
+            "width": 240.4375
+          },
+          {
+            "tag": "semantics",
+            "class": "",
+            "width": 240.4375
+          }
+        ]
+      }
+    },
+    {
+      "name": "No JS assumptions-and-result-status: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS assumptions-and-result-status: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS assumptions-and-result-status: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS assumptions-and-result-status: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "No JS what-the-results-establish-about-source-reality: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS what-the-results-establish-about-source-reality: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS what-the-results-establish-about-source-reality: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS what-the-results-establish-about-source-reality: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "No JS research-transparency-and-reproducibility: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS research-transparency-and-reproducibility: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS research-transparency-and-reproducibility: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS research-transparency-and-reproducibility: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "No JS references: complete scientific text",
+      "pass": true
+    },
+    {
+      "name": "No JS references: full MathML",
+      "pass": true
+    },
+    {
+      "name": "No JS references: section navigation",
+      "pass": true
+    },
+    {
+      "name": "No JS references: no document overflow",
+      "pass": true,
+      "detail": {
+        "width": 390,
+        "viewport": 390,
+        "offenders": []
+      }
+    },
+    {
+      "name": "No JS complete contents available",
+      "pass": true
+    },
+    {
+      "name": "No JS /articles/full-shadow-model: substantial article",
+      "pass": true
+    },
+    {
+      "name": "No JS /articles/sealed-or-leaky: substantial article",
+      "pass": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "No browser console or hydration errors",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "failures": [],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "screenshots": [
+    "evidence/sealed-or-leaky/home-desktop.png",
+    "evidence/sealed-or-leaky/full-model-desktop.png",
+    "evidence/sealed-or-leaky/article-desktop.png",
+    "evidence/sealed-or-leaky/reader-desktop.png",
+    "evidence/sealed-or-leaky/paper-desktop.png",
+    "evidence/sealed-or-leaky/framework-desktop.png",
+    "evidence/sealed-or-leaky/atlas-desktop.png",
+    "evidence/sealed-or-leaky/consciousness-desktop.png",
+    "evidence/sealed-or-leaky/the-source-tetralemma-desktop.png",
+    "evidence/sealed-or-leaky/tetralemma-proof-desktop.png",
+    "evidence/sealed-or-leaky/experimental-anchoring-desktop.png",
+    "evidence/sealed-or-leaky/finite-pilot-resources-exact-inventories-and-retained-records-desktop.png",
+    "evidence/sealed-or-leaky/search-desktop.png",
+    "evidence/sealed-or-leaky/home-mobile.png",
+    "evidence/sealed-or-leaky/full-model-mobile.png",
+    "evidence/sealed-or-leaky/article-mobile.png",
+    "evidence/sealed-or-leaky/reader-mobile.png",
+    "evidence/sealed-or-leaky/paper-mobile.png",
+    "evidence/sealed-or-leaky/framework-mobile.png",
+    "evidence/sealed-or-leaky/atlas-mobile.png",
+    "evidence/sealed-or-leaky/consciousness-mobile.png",
+    "evidence/sealed-or-leaky/the-source-tetralemma-mobile.png",
+    "evidence/sealed-or-leaky/tetralemma-proof-mobile.png",
+    "evidence/sealed-or-leaky/experimental-anchoring-mobile.png",
+    "evidence/sealed-or-leaky/finite-pilot-resources-exact-inventories-and-retained-records-mobile.png",
+    "evidence/sealed-or-leaky/search-mobile.png",
+    "evidence/sealed-or-leaky/reader-no-javascript.png"
+  ],
+  "passed": true
+}

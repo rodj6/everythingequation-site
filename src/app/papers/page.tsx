@@ -1,3 +1,4 @@
+import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
 import { loadPapers } from "@/lib/registry";
@@ -8,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Papers",
   description:
-    "The Shadow Theory foundation, Quantum Measurement programme, SPC-2 consciousness monograph, TOE monograph and historical publications with full text, PDFs and DOIs.",
+    "The Shadow Theory foundation, Sealed or Leaky, Quantum Measurement programme, SPC-2 consciousness monograph and research papers, TOE monograph and historical publications with full text, PDFs and DOIs.",
   alternates: { canonical: "/papers" },
 };
 
@@ -30,15 +31,19 @@ export default async function PapersPage() {
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">Paper index</h1>
         <p className="mt-4 text-lg leading-relaxed text-mute">
           The seven canonical papers establish the source–readout foundation. The
+          follow-on Sealed or Leaky paper quantifies missing information and operational access. The
           Quantum Measurement programme develops its own explicit physical constitutions,
           with a complete monograph and two companion papers. The consciousness monograph
           develops SPC-2, the current Version 2 successor of the Consciousness Field account.
+          Three companion papers examine relational boundaries, effective interface learning and
+          the identification of binary realizations.
           Superseded canonical versions are the June 2026 six-paper stack the
           current sequence replaced. Historical papers are the earlier Everything
           Equation / Tier-0 era archive, retained for the record and superseded as
           authority.
         </p>
       </header>
+      <SealedLeakyFeature />
 
       <section aria-labelledby="quantum-heading">
         <p className="section-label">15 September 2026 · Version 2</p>
@@ -66,11 +71,11 @@ export default async function PapersPage() {
       </section>
 
       <section aria-labelledby="consciousness-heading">
-        <p className="section-label">20 September 2026 · Version 2 · SPC-2</p>
+        <p className="section-label">September 2026 · Monograph and Papers 2–4 · SPC-2</p>
         <h2 id="consciousness-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Shadow Theory and Consciousness</h2>
-        <p className="mt-3 max-w-3xl leading-relaxed text-mute">A complete constitution for perspective admission, lived content and subject continuation under declared assumptions. All 25 chapters, six appendices, front matter and bibliography, together with eight explanatory guides.</p>
+        <p className="mt-3 max-w-3xl leading-relaxed text-mute">The complete monograph and three connected research papers: relational boundaries, learned interfaces and binary realizations. Read the philosophical foundation, mathematical arguments, proofs and computational results directly on the site.</p>
         <Link href="/consciousness" className="mt-4 inline-block text-sm font-medium text-glow hover:text-glow-strong">Programme overview and reading paths →</Link>
-        <div className="mt-6 max-w-3xl">{consciousness.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">{consciousness.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div>
       </section>
 
       <section aria-labelledby="canonical-heading">
