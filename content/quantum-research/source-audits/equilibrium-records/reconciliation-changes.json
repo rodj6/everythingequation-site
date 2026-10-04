@@ -1,0 +1,107 @@
+[
+  {
+    "reason": "Authoritative running header",
+    "original": "\\fancyhead[R]{\\small Consolidated revision}",
+    "authoritative": "\\fancyhead[R]{\\small Jeremy Rodgers}"
+  },
+  {
+    "reason": "Keywords added in PDF",
+    "original": "\\end{abstract}",
+    "authoritative": "\\end{abstract}\n\n\\noindent\\textbf{Keywords:} quantum measurement; Bohmian mechanics; autonomous control; quantum equilibrium; physical records."
+  },
+  {
+    "reason": "Introduction authoritative wording",
+    "original": "with framework-neutral organization, an explicit symbolic-history observable, renewed equation-level checks and a reconstructed figure.",
+    "authoritative": "with an explicit symbolic-history observable and its complete error estimates."
+  },
+  {
+    "reason": "State inventory introductory wording",
+    "original": "a finite internal material space $\\cH_I$ containing source, actuators, fuel, memories and spent products, and an inaccessible $R$.",
+    "authoritative": "a finite internal space $\\cH_I$ containing source and apparatus, and an inaccessible reference $R$."
+  },
+  {
+    "reason": "Exact figure extracted from authoritative PDF",
+    "original": "\\includegraphics[width=\\textwidth]{Equilibrium_Measurement_Figure.pdf}",
+    "authoritative": "\\includegraphics[width=0.79\\textwidth]{figure-authoritative.pdf}"
+  },
+  {
+    "reason": "Updated figure caption and rank list",
+    "original": "The massive writer with $L/\\sigma=8$, $p_1=0.65$ and $T_w=1$. A controlled trap drives a Gaussian packet; actual mixture-quantile paths produce the threshold-time distribution. This figure was reconstructed for the present revision from the displayed equations. It is a deterministic evaluation, not a simulation certificate for the complete autonomous apparatus.",
+    "authoritative": "The massive writer with $L/\\sigma=8$, $p_1=0.65$, $T_w=1$ and $\\omega=\\pi$. A controlled trap drives a Gaussian packet; mixture-quantile paths at ranks $0.04, 0.20, 0.40, 0.60, 0.75, 0.85, 0.96$ produce the threshold-time distribution. The dashed line in the middle panel is $h/\\sigma=4$. These are deterministic evaluations of the displayed equations, not a trajectory-stability estimate for the complete autonomous apparatus."
+  },
+  {
+    "reason": "Smooth internal ramp error and derivative propagation added",
+    "original": "For an exactly $C^\\infty$ trap programme",
+    "authoritative": "The stationary protection estimate applies on each constant exposure. A finite programme with sharp bounded internal switches can be replaced by smooth, archive-preserving ramps. If $\\delta H(t)$ is the difference from that piecewise constant internal programme, its additional full-wave error is at most\n\\[\n \\epsilon_{\\rm ramp}\\le\\hbar^{-1}\\int_0^T\\norm{\\delta H(t)}\\,dt,\n\\]\nand is included in $\\epsilon_{\\rm gate}$. Once the finite gap and exposure are fixed, sufficiently narrow finite ramps make this cost arbitrarily small. For derivative comparisons, the internal perturbation satisfies $W_2(\\delta H(t)\\psi_t)\\le\\norm{\\delta H(t)}W_2(\\psi_t)$; propagation of this residual uses Lemma~\\ref{lem:graph}. The ramps preserve the archive keys, or commute with their storage Hamiltonians, so the held archive current remains zero.\n\nFor an exactly $C^\\infty$ trap programme"
+  },
+  {
+    "reason": "Explicit unchirped clock preparation added",
+    "original": "Add a massive clock coordinate $x$, prepared in a Gaussian $\\chi_0$ with mean $x_0$, position deviation $s_c$, and mean momentum $M_cv$. Define",
+    "authoritative": "Add a massive clock coordinate $x$, prepared in the unchirped minimum-uncertainty Gaussian\n\\[\n \\chi_0(x)=(2\\pi s_c^2)^{-1/4}\\exp\\left[-\\frac{(x-x_0)^2}{4s_c^2}+\\frac{iM_cv(x-x_0)}{\\hbar}\\right].\n\\]\nIt has mean position $x_0$, position deviation $s_c$ and mean momentum $M_cv$. Define"
+  },
+  {
+    "reason": "Clock comparator distinguished from nominal instrument wave",
+    "original": "The comparator includes the clock; it is not a reduced apparatus state.",
+    "authoritative": "The comparator includes the clock; it is not a reduced apparatus state. Here the driven Hamiltonian $H_{\\rm id}$ contains the chosen protection and spatial-feedback terms: only its external timing is idealized. This driven wave is distinct from the nominal, unperturbed key-controlled wave used to define the target instrument. Their $L^2$ gate comparison does not by itself give an archive-current estimate."
+  },
+  {
+    "reason": "Archive comparator and W2 driven discrepancy conditions restored",
+    "original": "For position feedback, keep a separate completed archive",
+    "authoritative": "\\paragraph{Choosing the archive comparator.}\nFor each promised archive segment, the clock-only choice of $\\varepsilon_2$ is valid when the actual driven comparator $G_t$ has zero archive current. Its gates must preserve that archive's key, implement the exact covariant key transport, or commute with its storage Hamiltonian. The protected logical bank is subject to the commuting-storage hypothesis of Section~\\ref{sec:protection}; an arbitrary disturbance of an archive key is not covered. Alternatively, if a zero-current comparator $\\widehat G_t$ obeys\n\\[\n \\eta_{2,\\rm drv}(I)=\\sup_{t\\in I}W_2(G_t-\\widehat G_t)<\\infty,\n\\]\nthen use $\\varepsilon_{2,\\rm clock}+\\eta_{2,\\rm drv}(I)$ in \\eqref{eq:archiveerror}, with $B$ bounding $W_2(\\widehat G_t)$. This derivative discrepancy includes propagation through all intervening stages. The $L^2$ quantity $\\epsilon_{\\rm gate}$ cannot replace it.\n\nFor position feedback, keep a separate completed archive"
+  },
+  {
+    "reason": "Feedback propagation through all subsequent stages",
+    "original": "repeat the graph-norm proof with residual $(g(y)-K)B\\psi_t$. Its $W_2$ norm",
+    "authoritative": "repeat the graph-norm proof with residual $(g(y)-K)B\\psi_t$, propagating it through every subsequent stage up to the end of the promised hold. This supplies the additional $\\eta_{2,\\rm drv}$ just defined. Its $W_2$ norm"
+  },
+  {
+    "reason": "Archive routes explicitly protected through final common cut",
+    "original": "The ideal symbolic history is obtained by drawing",
+    "authoritative": "For a joint comparison at the common final time $T$, extend every archive route beyond $T_j$ when necessary: its terminal register remains protected under the stated holding hypotheses until $T$. These extra holding segments enter the archive-error budget even though $\\mathcal Y$ reports only $I_j$. The ideal symbolic history is obtained by drawing"
+  },
+  {
+    "reason": "Closure archive budget clarified",
+    "original": "\\item During specified holds, let $E_{\\rm arch}$ be the sum of the surface budgets \\eqref{eq:archiveerror}.",
+    "authoritative": "\\item Along all routed holding segments through the final comparison time $T$, let $E_{\\rm arch}$ be the sum of the surface budgets \\eqref{eq:archiveerror}, using the zero-current comparators and derivative errors specified in Section~\\ref{sec:clock}."
+  },
+  {
+    "reason": "Closure output statement wording",
+    "original": "The law of the joint symbolic history $\\mathcal Y$ in Definition~\\ref{def:history}, and therefore also its earlier declarations and retained final displays, differs from the corresponding ideal constant-hold record law by at most",
+    "authoritative": "The law of the joint symbolic history $\\mathcal Y$ in Definition~\\ref{def:history} differs from the corresponding ideal constant-hold record law by at most the bound below. The same bound applies to the joint law of its earlier declarations and retained final displays:"
+  },
+  {
+    "reason": "Closure proof strengthened comparator and final-hold conditions",
+    "original": "Theorem~\\ref{thm:history} and a union bound therefore give mismatch probability",
+    "authoritative": "The zero-current driven comparators, or the separately controlled $W_2$ driven discrepancies, permit Theorem~\\ref{thm:history} on each segment. Terminal archive protection continues to $T$, even for a shorter reported interval $I_j$. A union bound therefore gives mismatch probability"
+  },
+  {
+    "reason": "Resource ordering includes ramp smoothing",
+    "original": "The finite apparatus inventory is then fixed.",
+    "authoritative": "Smooth any bounded internal switching as above, including its finite error in $\\epsilon_{\\rm gate}$. The finite apparatus inventory is then fixed."
+  },
+  {
+    "reason": "Replaced source-only script assertions by self-contained PDF account",
+    "original": "\\subsection{Reproducible equation-level calculations}\nThe accompanying \\texttt{verify\\_equilibrium.py} reconstructs the finite resource generators and their pulse unitaries, the two null-reference matrices, the captured-feedback probabilities, all twelve one-site Pauli detection identities for the four-qubit code, and the noncommuting transported-trap identity. It also simplifies the moving-Gaussian Schr\\\"odinger residual to zero and evaluates the displayed first-crossing density. These are fresh checks of the formulas used here; they do not rely on the earlier release's supplementary scripts or saved numerical results.\n\n",
+    "authoritative": "\\subsection{Finite numerical values}\nThe finite example is determined by the displayed resource rotations, reference matrices and classifier integrals. The twelve one-site Pauli detection identities follow from anticommutation with the stabilizers; the moving-Gaussian residual and transported-trap identity were proved above. No supplementary computation is needed for these proof steps.\n\n"
+  },
+  {
+    "reason": "Numerical provenance matches supplied PDF; figure itself preserved via PDF extraction",
+    "original": "Ordinary double-precision quadrature agrees with the analytic positive-time mass to better than $10^{-12}$ in the supplied check. This numerical tolerance is a diagnostic, not a directed enclosure. Figure~\\ref{fig:mechanism} is generated from these equations.",
+    "authoritative": "The table gives rounded evaluations of these exact formulas. Figure~\\ref{fig:mechanism} evaluates the same equations; its plotting data are embedded in the LaTeX source."
+  },
+  {
+    "reason": "Removed old declarations superseded by PDF declarations",
+    "original": "\\paragraph{Collaboration and support.}\nCollaboration on independent mathematical review, quantitative resource analysis and physically grounded implementations is invited. Funding or institutional support for this independent research programme would be welcome.\n\n\\paragraph{AI assistance.}\nAI tools were used in mathematical development, literature research, drafting, restructuring and internal checking of this revision. Earlier research in the programme also involved substantial GPT-assisted development. This disclosure is not a claim of independent verification, final human validation of every argument, or journal peer review.\n\n",
+    "authoritative": ""
+  },
+  {
+    "reason": "Replaced source-only reproduction appendix by final PDF declarations",
+    "original": "\\section{Reproduction and revision record}\nRun \\texttt{python verify\\_equilibrium.py} in the source directory using the stated NumPy, SciPy, SymPy and Matplotlib environment. The script writes \\texttt{verification\\_results.json} and the equation-derived figure. Compile \\texttt{equilibrium\\_measurement.tex} with pdfLaTeX and BibTeX, or with \\texttt{latexmk -pdf}. The accompanying review and source map record the exact earlier-source hash, claim locators, checks performed and outstanding review boundaries.\n\nThe principal bounded changes from version 2 are explicit preparation/reference uniformity, the joint symbolic history definition and its constant-hold coupling, literature positioning, and replacement of unverified inherited supplementary-file claims by the supplied reproducible checks. The exact writer, storage, transported reset, internal-gap, massive-clock, archive-current and closure proof structures remain those of the cited predecessor. No source-only numerical bound has been silently transferred from a different Hamiltonian or statistical preparation.\n\n",
+    "authoritative": "\\section*{Declarations}\n\\paragraph{Funding.} This work was conducted independently without external research funding.\n\n\\paragraph{AI assistance and responsibility.} The author developed this research programme, including the mathematical arguments. AI tools were used as an aid in that work and in preparing this publication version, including source organization, literature checking, mathematical checks, adversarial review, and editorial revision. Those reviews are not independent peer review, specialist certification, or formal proof verification. The author retains responsibility for the manuscript.\n\n\\paragraph{Independent review and collaboration.} Independent mathematical review and computational replication are invited. Collaboration on physical implementation and empirical testing is also welcome where specialist expertise, equipment, or institutional resources are required. No institutional affiliation or collaboration is claimed.\n\n"
+  },
+  {
+    "reason": "Bibliography inlined with authoritative DOI labels",
+    "original": "\\bibliographystyle{unsrt}\n\\bibliography{Equilibrium_Measurement}",
+    "authoritative": "\\begin{thebibliography}{10}\n\n\\bibitem{BohmI}\nDavid Bohm.\n\\newblock A suggested interpretation of the quantum theory in terms of\n  ``hidden'' variables. {I}.\n\\newblock {\\em Physical Review}, 85:166--179, 1952.\n\\newblock \\href{https://doi.org/10.1103/PhysRev.85.166}{10.1103/PhysRev.85.166}.\n\n\\bibitem{BohmII}\nDavid Bohm.\n\\newblock A suggested interpretation of the quantum theory in terms of\n  ``hidden'' variables. {II}.\n\\newblock {\\em Physical Review}, 85:180--193, 1952.\n\\newblock \\href{https://doi.org/10.1103/PhysRev.85.180}{10.1103/PhysRev.85.180}.\n\n\\bibitem{DGZeq}\nDetlef D{\\\"u}rr, Sheldon Goldstein, and Nino Zangh{\\`i}.\n\\newblock Quantum equilibrium and the origin of absolute uncertainty.\n\\newblock {\\em Journal of Statistical Physics}, 67:843--907, 1992.\n\\newblock \\url{https://arxiv.org/abs/quant-ph/0308039}. DOI:\n  \\href{https://doi.org/10.1007/BF01049004}{10.1007/BF01049004}.\n\n\\bibitem{DGZoperators}\nDetlef D{\\\"u}rr, Sheldon Goldstein, and Nino Zangh{\\`i}.\n\\newblock Quantum equilibrium and the role of operators as observables in\n  quantum theory.\n\\newblock {\\em Journal of Statistical Physics}, 116:959--1055, 2004.\n\\newblock \\url{https://arxiv.org/abs/quant-ph/0308038}. DOI:\n  \\href{https://doi.org/10.1023/B:JOSS.0000037234.80916.d0}{10.1023/B:JOSS.0000037234.80916.d0}.\n\n\\bibitem{BeckLazarovici}\nChristian Beck and Dustin Lazarovici.\n\\newblock The {POVM} theorem in {Bohmian} mechanics.\n\\newblock {\\em Entropy}, 27(4):391, 2025.\n\\newblock \\href{https://doi.org/10.3390/e27040391}{10.3390/e27040391}.\n\n\\bibitem{WoodsClock}\nMischa~P. Woods, Ralph Silva, and Jonathan Oppenheim.\n\\newblock Autonomous quantum machines and finite-sized clocks.\n\\newblock {\\em Annales Henri Poincar{\\'e}}, 20:125--218, 2019.\n\\newblock \\url{https://arxiv.org/abs/1607.04591}. DOI:\n  \\href{https://doi.org/10.1007/s00023-018-0736-9}{10.1007/s00023-018-0736-9}.\n\n\\bibitem{PriorMassive}\nJeremy Rodgers.\n\\newblock A massive configuration completion of the quantum measurement\n  programme.\n\\newblock\n  \\url{https://www.everythingequation.com/quantum-measurement/massive-configuration},\n  2026.\n\\newblock Version 2, 15 September 2026. Author preprint. The exact source is\n  the mathematical predecessor of the present consolidated revision. DOI:\n  \\href{https://doi.org/10.5281/zenodo.22774739}{10.5281/zenodo.22774739}.\n\n\\bibitem{Monograph}\nJeremy Rodgers.\n\\newblock Shadow theory and quantum measurement: Source dynamics, event laws,\n  and physical records. two constitutive completions.\n\\newblock\n  \\url{https://www.everythingequation.com/quantum-measurement/monograph}, 2026.\n\\newblock Integrated monograph, version 2, 15 September 2026. Chapters 28--31.\n  DOI: \\href{https://doi.org/10.5281/zenodo.22774584}{10.5281/zenodo.22774584}.\n\n\\bibitem{TT}\nStefan Teufel and Roderich Tumulka.\n\\newblock Simple proof for global existence of {Bohmian} trajectories.\n\\newblock {\\em Communications in Mathematical Physics}, 258:349--365, 2005.\n\\newblock \\url{https://arxiv.org/abs/math-ph/0406030}. DOI:\n  \\href{https://doi.org/10.1007/s00220-005-1302-0}{10.1007/s00220-005-1302-0}.\n\n\\bibitem{Arrival}\nSheldon Goldstein, Roderich Tumulka, and Nino Zangh{\\`i}.\n\\newblock Arrival times versus detection times.\n\\newblock {\\em Foundations of Physics}, 54:63, 2024.\n\\newblock \\url{https://arxiv.org/abs/2405.04607}. DOI:\n  \\href{https://doi.org/10.1007/s10701-024-00798-y}{10.1007/s10701-024-00798-y}.\n\n\\bibitem{MarvianLidar}\nMilad Marvian and Daniel~A. Lidar.\n\\newblock Error suppression for {Hamiltonian}-based quantum computation using\n  subsystem codes.\n\\newblock {\\em Physical Review Letters}, 118:030504, 2017.\n\\newblock \\url{https://arxiv.org/abs/1606.03795}. DOI:\n  \\href{https://doi.org/10.1103/PhysRevLett.118.030504}{10.1103/PhysRevLett.118.030504}.\n\n\\bibitem{Deotto}\nE.~Deotto and G.~C. Ghirardi.\n\\newblock Bohmian mechanics revisited.\n\\newblock {\\em Foundations of Physics}, 28:1--30, 1998.\n\\newblock \\url{https://arxiv.org/abs/quant-ph/9704021}. DOI:\n  \\href{https://doi.org/10.1023/A:1018752202576}{10.1023/A:1018752202576}.\n\n\\bibitem{PortfolioControl}\nJeremy Rodgers.\n\\newblock Control consistency and {Born} equilibrium: Uniqueness from local\n  potentials and fixed interactions, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.23131058}{10.5281/zenodo.23131058}.\n\n\\bibitem{PortfolioReturn}\nJeremy Rodgers.\n\\newblock Preparation-return holonomy and equilibrium uniqueness in engineered\n  interacting networks, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.23131064}{10.5281/zenodo.23131064}.\n\n\\bibitem{PortfolioEquilibrium}\nJeremy Rodgers.\n\\newblock Autonomous quantum measurement chains with faithful equilibrium\n  records, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.23131069}{10.5281/zenodo.23131069}.\n\n\\bibitem{PortfolioPilot}\nJeremy Rodgers.\n\\newblock A deterministic hybrid medium for {Bell} jump paths and autonomous\n  records, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.23131075}{10.5281/zenodo.23131075}.\n\n\\bibitem{PortfolioRecords}\nJeremy Rodgers.\n\\newblock Nonequilibrium calibration and faithful records in autonomous\n  effective measurement models, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.23131081}{10.5281/zenodo.23131081}.\n\n\\bibitem{OriginalPilot}\nJeremy Rodgers.\n\\newblock A deterministic pilot medium: Bell path selection and autonomous\n  material records, 2026.\n\\newblock Author preprint. DOI: \\href{https://doi.org/10.5281/zenodo.22774634}{10.5281/zenodo.22774634}.\n\n\\end{thebibliography}\n"
+  }
+]

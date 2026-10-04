@@ -1,0 +1,90 @@
+{
+  "slug": "hybrid-bell-paths",
+  "title": "A Deterministic Hybrid Medium for Bell Jump Paths and Autonomous Records",
+  "author": "Jeremy Rodgers",
+  "date": "2026-10-04",
+  "doi": "10.5281/zenodo.23131075",
+  "authoritative_pdf_sha256": "20cfe3e4fe912f3995db4b398dba7516f6f79849724140f5d4ae95f6749a255e",
+  "starting_source": "source-material/latex/04_Pilot_Path_Limit/Pilot_Path_Limit.tex",
+  "standalone_source": "/workspace/scratch/dd5e84456947/prepared-papers/hybrid-bell-paths/main.tex",
+  "standalone_source_sha256": "9622df2152513e31e7c3c7b53363b5066f01072855273811966e3a5c7e9af9ac",
+  "source_match": "Recovered source was older than the authoritative PDF. Reconciled all detected substantive textual and mathematical revisions directly against the authoritative PDF, then inlined its bibliography. Compiled and authoritative PDFs both have 33 pages, with matching section and numbered equation placement in checked pages. Not byte-identical because TeX versions and font encodings differ.",
+  "reconciliation_log": "reconciliation_changes.json",
+  "revision_groups": [
+    "Updated PDF subject and replaced stale public-source hash/provenance paragraph with authoritative Section 1.2 text.",
+    "Specified admissible nonzero exporter residues |u_e(0)|<1, corrected u_e(t) definition, inventory constant, and matching theorem assumptions.",
+    "Moved and specified exporter error e_e^N(t), defined incidence norm C_B and c_0 constants, and corrected eta_N to include c_0 C_B/N.",
+    "Expanded the physical/companion baseline coupling with b_+/b_- and h_+/h_- rates and full transition-kernel preservation.",
+    "Expanded tagged path coupling, adapted stopping time tau_x, and Markov bound while preserving Eq. 29.",
+    "Corrected dark-traffic example scope to the joint N-carrier Poisson-reaction path, with separate finite spatial-gas error.",
+    "Replaced transparency text with authoritative text including funding and collaboration paragraphs.",
+    "Specified initial carrier/field conditioning leaves comparison Poisson clocks random.",
+    "Bibliography removes stale access-date sentence and preserves Born and Bell capitalization."
+  ],
+  "verification": {
+    "compiled_successfully": true,
+    "compile_log_warnings": [],
+    "pdf_pages": 33,
+    "all_source_content_read": true,
+    "bibliography_inlined": true,
+    "bibliography_entries": 16,
+    "numbered_equations": 67,
+    "statement_environments": {
+      "theorem": 8,
+      "lemma": 2,
+      "proposition": 7,
+      "corollary": 2,
+      "definition": 0,
+      "remark": 2,
+      "proof": 20,
+      "equation": 53,
+      "align": 10,
+      "align*": 1,
+      "tabular": 1
+    },
+    "body_sections": 12,
+    "appendices": 2,
+    "substantive_prose_differences_remaining": 0,
+    "residual_text_diff_explanation": "Nine remaining alphabetical-token differences in pdftotext output are font-extraction artifacts for integral, sum, radical, accent, and binomial glyphs and their text ordering; reviewed mathematical source and rendered PDF instead.",
+    "visual_pages_authoritative": [
+      6,
+      10,
+      12,
+      14
+    ],
+    "visual_pages_compiled": [
+      12,
+      14,
+      29
+    ],
+    "visual_result": "Math, revised coupling equations, stopping-time formula, appendix Hamiltonian and statement formatting were legible, with no clipping or overflow. Paired pages 12 and 14 match substantive content and layout.",
+    "scope": "Source fidelity and conversion preparation. This work does not establish independent mathematical verification of the paper."
+  },
+  "scientific_brief": {
+    "core_result": "A deterministic hybrid model converges in total variation to the full minimal Bell jump path law in unchanged physical time on a fixed finite graph and horizon.",
+    "main_theorem": "Theorem 8.1",
+    "main_error": "Delta_N = (R_N T)^2 / M_N + sum_e kappa_e mu_N B_e / (2 a_e) + epsilon_kin(N,T).",
+    "resource_example": "B_e=O(N), mu_N=N^(1/2), a_e=N^2, M_N=N^10 yield R_N=O(N^4), gas error O(N^-2), recombination error O(N^-1/2). Fixed compiled clock circuits additionally have input-uniform O(N^-1/70) total path error under O(N^-1/2) initial calibration.",
+    "historical_record_result": "Theorem 9.3: monomial copying cuts have nonnegative fine currents, are crossed exactly once on the first pass, and archive their own actual earlier working key. Reset receivers retain old keys. Corollary 10.3 transfers all joint ordinary records/history events under one full-path error without multiplying by record count.",
+    "explicit_example": "Nine-gate autonomous programme with source, reference, ready/pending/capture/loss, fuel, display, archive, reset receivers and feedback has 105840 complete configurations for a reference qubit. The basis-ready eleven-gate variant has 127008 configurations and randomness only in the initial gas. Null probability 3/4; null plus X+ joint probability 11/24; conditional probability 11/18.",
+    "premises": [
+      "P1-P4 interaction catalogue",
+      "Fixed finite configuration graph, programme, horizon and finite reference convention",
+      "Calibrated initial carrier census; tag law nu <= C w(0)",
+      "Independent product initial gas law",
+      "Scalar carrier response and complete binary reaction catalogue",
+      "Exclusion of direct ordinary readout force from the pilot ledger"
+    ],
+    "important_boundaries": [
+      "Not a universal derivation of equilibrium preparation for arbitrary unknown inputs",
+      "Full hybrid dynamics not embedded in one smooth material Hamiltonian",
+      "Smooth positive kinetic Hamiltonian covers isolated contact module only, not asynchronous exporters",
+      "Actual historical records protected only on declared first pass; reversal can undo them",
+      "Fine and coarse paths are distinct; coarse current positivity does not establish fine-current direction",
+      "Whole-path TV does not alone imply trace-norm control of an unobserved reference matrix",
+      "Known basis-ready gas-only example does not replace general calibration premise"
+    ],
+    "programme_relation": "Framework-neutral revision and consolidation of existing pilot-medium construction and its monograph treatment. Preserve old pages and link to this fuller treatment; do not market the core construction as newly discovered in this revision or identify its assumptions with the continuous-configuration papers.",
+    "suggested_lead": "Deterministic dynamics reproduce complete Bell histories, including event times and faithful autonomous records."
+  }
+}

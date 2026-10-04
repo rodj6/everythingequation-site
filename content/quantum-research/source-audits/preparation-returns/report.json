@@ -1,0 +1,72 @@
+{
+  "title": "Preparation-Return Holonomy and Equilibrium Uniqueness in Engineered Interacting Networks",
+  "doi": "10.5281/zenodo.23131064",
+  "source_original": "source-material/latex/02_Preparation_Return_Holonomy/Preparation_Return_Holonomy_and_Equilibrium_Uniqueness.tex",
+  "prepared_source": "prepared-papers/preparation-returns/main.tex",
+  "status": "Authoritative PDF content reconciled; original LaTeX source required later-revision changes. Content match verified by complete normalized text diff and representative-page visual comparison. Not a byte-identical PDF.",
+  "original_pdf_pages": 24,
+  "recompiled_pdf_pages": 24,
+  "statement_counts": {
+    "theorem": 5,
+    "definition": 1,
+    "lemma": 9,
+    "proposition": 5,
+    "example": 1,
+    "corollary": 1
+  },
+  "total_numbered_statements": 22,
+  "numbered_equations": 39,
+  "proof_environments": 20,
+  "bibliography_entries": 20,
+  "sections": 11,
+  "subsections": 17,
+  "technical_verification": {
+    "compile_success": true,
+    "undefined_references": false,
+    "overfull_boxes": false,
+    "representative_math_pages_inspected": [
+      9,
+      18
+    ],
+    "equation_labels_preserved": true,
+    "bibliography_inlined": true,
+    "scientific_content_review": "Full paper read; preparation-invariance premise remains separate from dynamical construction; Gaussian extension has broader scope than nonlinear uniqueness.",
+    "references_page_inspected": 24
+  },
+  "remaining_differences": [
+    "pdfTeX version and font Unicode mappings differ, affecting text extraction of integrals, large delimiters, hats, tildes and matrices; rendered glyphs agree.",
+    "Bibliography spacing reduced to 2pt to reproduce 24-page footprint; no content removed.",
+    "Creation metadata reflects local recompilation."
+  ],
+  "sha256_main_tex": "c2f90776795e0576fdad1f4f2eda3343707c6c255223bbb023700b4b347e8f81",
+  "scientific_brief": {
+    "flagship_statement": "Exact quantum returns select the Born law: a constructed library of state-returning controls has quantum equilibrium as its only invariant Borel probability.",
+    "what_is_proved": [
+      "For every prescribed connected graph of distinguishable three-dimensional particles, there exist fixed nonzero rank-one pair springs and one-body traps/control potentials whose globally defined configuration return maps have exactly one common invariant Borel probability: the Born measure at the selected preparation.",
+      "Nonlinear exact density rectangles in a reserved two-dimensional holding plane determine its marginal among all Borel laws, including atoms and singular continuous measures.",
+      "Corrected Gaussian return loops realize the full SO(3N) configuration group in whitened coordinates. One Gaussian plane marginal plus rotation invariance fixes the whole law by characteristic functions.",
+      "Physical one-body scalar controls implement exact quantum returns. A finite-dimensional endpoint correction preserves the relevant guidance curvature. No finite oscillator truncation supplies exactness.",
+      "An explicit finite damped nonlinear loop distinguishes a wider radial Gaussian: for R=16 and c=3/2, the mean shift is epsilon squared times C16 plus O(epsilon cubed), with C16 greater than 1/12.",
+      "Invariant-law uniqueness transports along admitted reversible globally defined preparation paths. Every positive-determinant linear configuration transport is reachable on the engineered network. Under ideal final-coordinate readout, no hysteresis under all library returns is equivalent to Born equilibrium.",
+      "For the specified lazy inverse-balanced independent randomized controller, all absolutely continuous laws converge to equilibrium in total variation. A law with singular mass s has limiting TV distance s. No uniform rate or spectral gap is asserted.",
+      "Every finite n obeys TV(mu_n,gamma) at least 2 to the power minus n times TV(mu_0,gamma), excluding exact finite reset unless the input was equilibrium. Independent almost-surely-finite stopping leaves a strictly positive smooth countermodel bias.",
+      "A countable finite-word common kernel cannot universally reset every smooth strictly positive bounded relative density to one nonatomic law. This covers suitable adaptive command choices without claiming impossibility for all preparation architectures.",
+      "Retained command history obeys D(mu_0||gamma)=D(mu_n||gamma)+I(Z_n;W_n) and implements a physical inverse echo recovering the initial pointwise configuration.",
+      "Appendix A extends Gaussian SO(A) holonomy to general positive connected fixed quadratic networks with unrestricted finite block-local traps, without weak-coupling or commensurate-frequency assumptions on the original device. It does not extend the nonlinear uniqueness theorem to arbitrary isotropic coupling."
+    ],
+    "scope_to_keep_explicit": [
+      "Invariance of an actual preparation law under the full return library is a separate statistical premise; the construction plus unique invariant law does not derive that premise.",
+      "Nonlinear all-Borel uniqueness uses engineered directional interactions and a reserved plane. The broader Gaussian-only result is not all-Borel uniqueness for generic interacting networks.",
+      "All chosen protocols have finite resources, but the complete library has no common amplitude or description-complexity ceiling.",
+      "The randomized controller is externally controlled and uses a fresh independent classical command tape. It is not an autonomous microscopic source/clock/register construction.",
+      "Ideal final-position readout is a stated operational assumption; additional detector/apparatus coordinates require their own joint preparation law.",
+      "No physical Born-law initialization, universal arbitrary-law finite reset, independent repeated trials, thermal heat estimate, or cross-state statistical assignment is supplied."
+    ],
+    "portfolio_connections": "Complements the common-control differentiable density characterization by treating one arbitrary Borel probability at a single preparation. Supplies equilibrium-selection and preparation-history structure, while the measurement-chain and records papers carry separate apparatus and record-fidelity hypotheses.",
+    "equations_to_feature": [
+      "F_* mu = mu for every return F iff mu=|psi_0|^2 dq",
+      "TV(mu_n,gamma) >= 2^{-n} TV(mu_0,gamma)",
+      "D(mu_0||gamma)=D(mu_n||gamma)+I(Z_n;W_n)"
+    ]
+  }
+}

@@ -1,0 +1,888 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,mathrsfs}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xurl}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\usepackage{aliascnt}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\crefname{appendix}{section}{sections}
+\Crefname{appendix}{Section}{Sections}
+\hypersetup{pdftitle={Control Consistency and Born Equilibrium},pdfauthor={Jeremy Rodgers}}
+\setlist[enumerate]{topsep=5pt,itemsep=3pt}
+\setlength{\emergencystretch}{3em}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newaliascnt{lemma}{theorem}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+\newaliascnt{proposition}{theorem}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+\newaliascnt{corollary}{theorem}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+\theoremstyle{definition}
+\newaliascnt{definition}{theorem}
+\newtheorem{definition}[definition]{Definition}
+\aliascntresetthe{definition}
+\newaliascnt{example}{theorem}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+\newaliascnt{remark}{theorem}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Sch}{\mathcal S}
+\newcommand{\Cc}{C_c^\infty}
+\newcommand{\Pcal}{\mathcal P}
+\newcommand{\Acal}{\mathcal A}
+\newcommand{\dd}{\,dq}
+\newcommand{\diver}{\operatorname{div}}
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Id}{I}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\Born}{\frac{\Psi^\dagger\Psi}{\norm{\Psi}_2^2}}
+\newcommand{\CU}{\mathrm{CC}}
+\title{Control Consistency and Born Equilibrium:\\
+Uniqueness from Local Potentials and Fixed Interactions}
+\author{Jeremy Rodgers\thanks{Website: \href{https://everythingequation.com}{everythingequation.com}. Manuscript DOI: \url{https://doi.org/10.5281/zenodo.23131058}}\\\small Independent Researcher}
+\date{4 October 2026\\\small Revised preprint candidate}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Which configuration probabilities can be assigned to a wavefunction consistently across different physical controls? We consider a single projective density assignment in nonrelativistic Bohmian mechanics, with twice continuously differentiable dependence on the wavefunction in a specified Schwartz-space sense. We prove that consistency with Schr\"odinger evolution and the guidance current for local one-body scalar potentials forces this assignment to be the Born density when the fixed pair interactions connect the particles and have nonzero mixed spatial derivatives. The argument extracts statistical identities from coordinate conjugations of the fixed interaction; it does not require implementing additional many-body potentials. All translates of one real Schwartz profile with nonzero integral suffice for each particle. We also give an effective-spin extension, a sector-preserving identical-particle refinement, and a separate characterization from binary-flag heredity. Weak continuity under specified state approximations extends the results across nodes. The theorem makes precise a previously proposed universal-equivariance characterization and reduces its control requirements. Its statistical consistency premise is explicit. Consequences for apparatus records are obtained under the usual joint-preparation and implemented-coupling assumptions.
+\end{abstract}
+
+\noindent\textbf{Keywords:} quantum equilibrium; Bohmian mechanics; control consistency; probability assignments; interacting systems; conditional probabilities.
+
+\section{Introduction}
+\paragraph{Publication relationship.}
+This article develops the author's control-consistency manuscript into a self-contained account of its characterization theorems. The companion exact-return paper \cite{PortfolioReturn} studies arbitrary Borel laws at one engineered preparation; the present theorem concerns a regular family of densities across states. Neither result establishes that actual preparations meet its statistical premise. The related measurement and event-law papers \cite{OriginalMassive,OriginalMonograph,OriginalPilot,PortfolioEquilibrium,PortfolioPilot,PortfolioRecords} provide programme context; their model-specific assumptions and numerical bounds are not used in any proof here. The contribution claimed in this revision is the theorem package stated and proved below, without a historical-priority claim or an assertion that its previously circulated results originate in this revision.
+
+
+Schr\"odinger evolution transports a wavefunction, and Bohmian guidance transports a configuration. Neither equation, by itself, selects a probability distribution for that configuration. Quantum equilibrium supplies the familiar distribution proportional to the squared wavefunction norm. The question addressed here is whether a different distribution can be assigned to each wavefunction while using the \emph{same assignment} under a specified range of physical controls.
+
+The requirement is stronger than transporting an arbitrary initial distribution along one experiment. A distribution transported in that way can retain information about its initial preparation and the intervening control history. We instead consider an assignment whose argument is the current wavefunction alone and require it to obey the guidance continuity equation for every admitted control. We call this requirement \emph{control consistency}. The controls in the principal result are one-body scalar potentials. The interactions between particles remain fixed.
+
+Our main result is that a regular control-consistent assignment is necessarily
+\begin{equation}\label{eq:born}
+ p^\Psi(q)=\frac{\Psi^\dagger(q)\Psi(q)}{\norm{\Psi}_2^2}.
+\end{equation}
+The regularity assumptions concern the whole wavefunction. They do not require the value of the density at a point to depend on only finitely many derivatives of the wavefunction there. The conclusion first holds on the nowhere-zero state class. Its extension to nodal states uses an explicit weak-continuity assumption.
+
+The proof has two parts. Scalar phase changes constrain the assignment under gradient transport. A gradient-bracket identity then gives covariance under general compactly supported coordinate transport. Fixed interactions propagate these identities between particle coordinates: a mixed difference of independently conjugated Hamiltonians isolates the mixed spatial dependence of an interaction. Connectedness of the interaction graph spreads the resulting identities to the full configuration space. Finally, local circulations preserving the wavefunction norm density force the ratio of the assigned density to that norm density to be constant.
+
+The uniqueness problem has important antecedents. Goldstein and Struyve proved uniqueness for equivariant densities that are local functionals of the wavefunction, up to normalization \cite[Section 4]{GS2007}. Their Section 8 explicitly proposes universal equivariance and heredity as alternative characterizations and identifies the single-particle line exception. We prove a precise smooth version of the former proposal and a reduction from arbitrary configuration-space potentials to local controls with fixed interactions. The functional regularity, control quantification, and state-domain hypotheses here differ from finite-jet locality; no implication making either theorem strictly stronger is asserted. \Cref{app:heredity} gives a separate binary-flag version of the heredity proposal.
+
+We use the gradient-bracket identity of Abdelgalil and Georgiou \cite[Proposition 1, equation (10), version 2]{AG2026}. We reproduce its Euclidean specialization and the functional argument it supports. Only the local algebraic identity is needed, not their compact-manifold transport-group theorem. The Bohmian account of effective wavefunctions and definite apparatus configurations, and the extraction of operator statistics from experiments, are established background \cite{DGZ1992,DGZ2004,DGTZ2005}. Our measurement section applies that framework after the equilibrium characterization. It does not supply a new ontology of outcomes.
+
+The main dependency chain is short: \cref{lem:phase,lem:transport} turn phase identities into coordinate covariance; \cref{lem:mixed,lem:edge} and \cref{prop:graph} use the fixed interactions to obtain full scalar identities; and \cref{prop:saturation} gives uniqueness by local circulation. \Cref{thm:profiles} reduces the physical control list, while theorems~\ref{thm:identical} and~\ref{thm:spin} state the additional hypotheses for spin and symmetry. \Cref{thm:heredity} is a separate characterization with a different statistical premise. The node approximation arguments are included in the appendices. None of these steps depends on a private research archive.
+
+\section{Physical model and statistical assumptions}\label{sec:model}
+
+\subsection{Hamiltonians and a common smooth domain}
+
+Let \(q=(q_1,\ldots,q_N)\in(\R^3)^N\), with distinguishable particles of fixed masses \(m_i>0\), and set \(\hbar=1\). Initially the wavefunction is scalar. The Hamiltonians are
+\begin{equation}\label{eq:ham}
+ H_v=-\frac12\sum_{i=1}^N m_i^{-1}\Delta_i+
+ \sum_i U_i(q_i)+\sum_{\{i,j\}\in E}W_{ij}(q_i,q_j)+\sum_i v_i(q_i).
+\end{equation}
+All potentials are real. The graph \((\{1,\ldots,N\},E)\) is connected, and every edge satisfies
+\begin{equation}\label{eq:interaction}
+ D_{q_i}D_{q_j}W_{ij}\not\equiv0.
+\end{equation}
+This condition excludes an interaction that is only a sum of one-body terms. It requires neither full rank nor nonvanishing of the mixed derivative everywhere.
+
+For definiteness we use the following common-domain class throughout. The uncontrolled potential is a positive definite confining quadratic form plus a real smooth bounded perturbation with bounded derivatives of every positive order. Each \(U_i,W_{ij}\) is correspondingly quadratic plus such a bounded smooth function. The initial control class is \(v_i\in\Cc(\R^3;\R)\). Finite smooth time-dependent schedules and, subsequently, finite sums of translates of Schwartz profiles are also allowed. On every finite time interval their coefficients and all required spatial derivatives are bounded. There are no singular configuration sets or vector potentials in this model.
+
+The Hamiltonians are self-adjoint on the domain of the confining quadratic oscillator, with common invariant core \(\Sch(\R^{3N})\). These statements also hold for the finite-dimensional matrix-valued bounded perturbations used below. Here is a direct justification. A bounded symmetric perturbation preserves the oscillator's self-adjoint domain, and its interaction-picture Dyson series converges in operator norm on finite intervals. Write \(H(t)=A+B(t)\), with \(A\) the positive confining oscillator. Leibniz' rule and oscillator estimates give
+\[
+ \norm{[A^m,B(t)]\phi}_2\le C_{m,T}\norm{(A+1)^m\phi}_2
+ \quad(0\le t\le T,\ \phi\in\Sch).
+\]
+Indeed, the commutator is a finite sum of position--derivative monomials of degree at most \(2m\), multiplied by bounded derivatives of \(B\). The graph seminorms \(\norm{(A+1)^m\phi}_2\) are equivalent to the Schwartz topology: oscillator raising and lowering operators bound the monomials in one direction, and expansion of \(A^m\), followed by Sobolev embedding, gives the reverse seminorm comparisons. Spectral projections of \(A\) commute with \(A^m\). For the projected equation the symmetric \(B A^m\) term cancels in the energy derivative, so the displayed bound and Gronwall give estimates independent of the projection. Strong unitary convergence and weak compactness in each graph domain identify the limit; lower semicontinuity preserves the uniform graph bounds. Applying a higher graph bound and interpolation gives continuity in every lower graph norm. The equation then gives differentiability in those norms, proving preservation of \(\Sch\) and smooth time dependence there. Thus the tangent vectors and differentiations used below are defined on the stated core.
+
+Virtual coordinate conjugations in the proof are evaluated on this common smooth core. We do not require all conjugated unbounded operators to have the original oscillator's full operator domain.
+
+For every fixed admitted control, the lower bound is \(H(t)\ge (\inf\sigma(A)-\norm{B(t)})I\). It is uniform on a specified finite smooth schedule, but is not asserted to be uniform over all unrestricted control amplitudes. The Schwartz assertion means \(\Sch=\bigcap_{m\ge0}D((A+1)^m)\), with the equivalent family of graph seminorms just described; it does not identify any single finite graph domain with \(\Sch\).
+
+\subsection{Assignments, regularity, and consistency}
+
+Write \(\mathscr S_s=\Sch(\R^d;\C^s)\setminus\{0\}\), where \(d=3N\) and initially \(s=1\). Let
+\[
+ r^\Psi=\Psi^\dagger\Psi,\qquad
+ J_i^\Psi=m_i^{-1}\operatorname{Im}(\Psi^\dagger\nabla_i\Psi),
+ \qquad v_i^\Psi=J_i^\Psi/r^\Psi.
+\]
+The velocity is defined on \(\Omega_\Psi=\{r^\Psi>0\}\). A probability assignment is a map
+\(\Pcal:\Psi\mapsto \mu^\Psi=p^\Psi(q)\,dq\). The unsuperscripted \(v_i(q_i)\) in \eqref{eq:ham} is a control potential; \(v_i^\Psi\) is a guidance velocity. Derivatives of \(\Pcal\) below denote derivatives of its local density representatives, or the resulting distributions on a nonzero patch.
+We impose the following standing assumptions.
+
+\begin{enumerate}[label=(A\arabic*),ref=A\arabic*]
+\item\label{ass:prob}
+The density is nonnegative, integrable, and normalized; \(\Pcal(c\Psi)=\Pcal(\Psi)\) for \(c\in\C\setminus\{0\}\). The assignment has no control-potential or preparation-history argument.
+\item\label{ass:smooth}
+It has compatible \(C^1\) density representatives on compact nonzero patches. More precisely, for each closed ball \(K\), the set
+\[
+ \mathscr U_K=\{\Psi\in\mathscr S_s:\min_K r^\Psi>0\}
+\]
+is open in the underlying real Schwartz space, and
+\(\Psi\mapsto p^\Psi|_K\) is Bastiani \(C^2\) into \(C^1(K)\). This means that its first and second real directional derivatives exist and are jointly continuous in the base point and directions; the second derivative is symmetric \cite{Bastiani1964}. Representatives and derivatives agree on overlaps.
+\item\label{ass:cc}
+For every state and every admitted Hamiltonian, the same assignment satisfies the infinitesimal consistency identity
+\begin{equation}\label{eq:cc}
+ D\Pcal_\Psi[-iH_v\Psi]=-\diver(p^\Psi v^\Psi)
+ \quad\hbox{on }\Omega_\Psi.
+\end{equation}
+The identity is local, and may equivalently be read against compactly supported test functions there.
+\item\label{ass:nodes}
+For extension to all states we assume the following approximation continuity: whenever normalized nowhere-zero states in \(\mathscr S_s\) converge in \(L^2\) to a normalized state \(\Psi\), their assigned measures converge weakly to \(\mu^\Psi\).
+\end{enumerate}
+
+The domain is the full indicated Schwartz state space; in particular it includes all the scalar phases, compact coordinate transports, and internal variations used in the proofs. One may instead use a smaller domain closed under those operations and containing the approximation classes, with the same local calculus. The full-space formulation avoids an implicit richness hypothesis.
+
+If a density assignment is equivariant under each admitted Schr\"odinger history, differentiation gives \eqref{eq:cc}. We use this necessary infinitesimal condition as the definition needed for the theorem. It is a statistical assumption, not a consequence of the equation for the wavefunction. Spatial locality of \(v_i(q_i)\), finite-jet locality of \(p^\Psi(q)\) as a functional of \(\Psi\), and the absence of a history argument in \(\Pcal\) are three different notions. Only the first and third occur here.
+
+Born equilibrium satisfies all four assumptions. The map in \eqref{eq:born} is smooth on \(\mathscr S_s\), is projective, and obeys \eqref{eq:cc} by the Schr\"odinger continuity equation and conservation of \(\norm{\Psi}_2\). For normalized states,
+\begin{equation}\label{eq:L2TV}
+ \norm{|\Psi|^2-|\Phi|^2}_1\le 2\norm{\Psi-\Phi}_2,
+\end{equation}
+which proves the stronger continuity in total variation.
+
+\begin{theorem}[Local-control characterization]\label{thm:main}
+For the scalar model \eqref{eq:ham} in the common-domain class above, suppose the interaction graph is connected and \eqref{eq:interaction} holds on every edge. Under \ref{ass:prob}--\ref{ass:cc}, with all real compactly supported smooth one-body controls, the only assigned density on a nowhere-zero state is \eqref{eq:born}. Under \ref{ass:nodes} the same conclusion holds, almost everywhere, for every nonzero Schwartz state. For \(N=1\), the interaction hypotheses are unnecessary.
+\end{theorem}
+
+The proof occupies the next two sections. A profile-control version is given in \cref{thm:profiles}, and the precise internal-state extension in \cref{thm:spin}. All of these are characterizations of density-valued assignments. No assertion about arbitrary singular configuration measures is part of the theorem.
+
+\section{From phases to transport and uniqueness}\label{sec:mechanism}
+
+The unitary change of variables \(x_i=\sqrt{m_i}q_i\), including its constant half-density factor, makes the kinetic energy \(-\Delta_x/2\). It preserves particle blocks, compact support, the Schwartz topology, and condition \eqref{eq:interaction}. We use these mass-scaled coordinates in the proofs.
+
+\subsection{Statistical annihilators}
+
+Call a real smooth Schwartz multiplier \(f\) a scalar annihilator if
+\begin{equation}\label{eq:ann}
+ D\Pcal_\Psi[-if\Psi]=0\quad\hbox{for every }\Psi.
+\end{equation}
+A Schwartz multiplier is a smooth function whose multiplication operator preserves \(\Sch\) continuously; all bounded smooth functions with bounded derivatives, and the polynomial functions used below, qualify. The identities are always local off nodes. Denote their real vector space by \(\Acal\).
+
+Subtracting \eqref{eq:cc} for two controls shows that every admitted control difference belongs to \(\Acal\), because a scalar potential does not change the current at a fixed state. This is the initial source of annihilators. There is also a useful closure rule:
+\begin{equation}\label{eq:closure}
+ f_n\in\Acal,\quad f_n\Psi\longrightarrow f\Psi\ \hbox{in }\Sch
+ \ \hbox{for each fixed }\Psi
+ \quad\Longrightarrow\quad f\in\Acal.
+\end{equation}
+It follows from continuity of the first derivative in \ref{ass:smooth}. All limits below have exactly this meaning; no uniform operator-norm closure is assumed.
+
+For a smooth vector field \(u\), put
+\begin{equation}\label{eq:transportoperators}
+ T_u\Psi=-u\cdot\nabla\Psi-\tfrac12(\diver u)\Psi,
+ \qquad A_u p=-\diver(up).
+\end{equation}
+The first is the infinitesimal action on half-densities, and the second is the action on densities.
+
+\begin{lemma}[Phase and gradient identities]\label{lem:phase}
+If \(f\in\Acal\) and its phase multipliers preserve \(\Sch\), then
+\begin{equation}\label{eq:grad}
+ D\Pcal_\Psi[T_{\nabla f}\Psi]=A_{\nabla f}p^\Psi,
+ \qquad |\nabla f|^2\in\Acal.
+\end{equation}
+Consequently \(f,g\in\Acal\) imply
+\begin{equation}\label{eq:gamma}
+ \Gamma(f,g):=\nabla f\cdot\nabla g\in\Acal
+\end{equation}
+whenever the displayed multipliers are admissible on \(\Sch\).
+\end{lemma}
+
+\begin{proof}
+Integrating \eqref{eq:ann} along \(e^{itf}\Psi\) gives
+\(p^{e^{itf}\Psi}=p^\Psi\), since the nonzero set does not change. Differentiating this identity in the state also intertwines the corresponding first derivatives. For the scalar Hamiltonian \(H\),
+\[
+ -i(e^{-itf}He^{itf}-H)\Psi
+ =tT_{\nabla f}\Psi-\frac{it^2}{2}|\nabla f|^2\Psi.
+\]
+The velocity of \(e^{itf}\Psi\) is \(v^\Psi+t\nabla f\). Comparing \eqref{eq:cc} at these two states therefore gives a polynomial identity in \(t\). Its linear and quadratic coefficients give \eqref{eq:grad}. Polarizing the second identity proves \eqref{eq:gamma}.
+\end{proof}
+
+\begin{lemma}[Transport generation]\label{lem:transport}
+If every compactly supported smooth scalar function on \(\R^d\) is in \(\Acal\), then
+\begin{equation}\label{eq:cov-inf}
+ D\Pcal_\Psi[T_u\Psi]=A_up^\Psi
+\end{equation}
+for every \(u\in\Cc(\R^d;\R^d)\). It follows that
+\begin{equation}\label{eq:cov-fin}
+ \Pcal(U_F\Psi)=F_*\Pcal(\Psi),\qquad
+ (U_F\Psi)(q)=|\det DF^{-1}(q)|^{1/2}\Psi(F^{-1}(q)),
+\end{equation}
+on corresponding nonzero patches, for every finite product \(F\) of flows of such vector fields.
+The same assertion holds within one particle block if only that block's compact multipliers are known.
+\end{lemma}
+
+\begin{proof}
+If \eqref{eq:cov-inf} holds for \(u,v\), differentiating the two identities in the directions \(T_v\Psi,T_u\Psi\) and subtracting cancels the symmetric second derivative. To make the regularity requirement explicit, choose a real smooth test function \(\zeta\) supported in a compact nonzero patch. Differentiation of the \(u\)-identity and use of the \(v\)-identity gives
+\[
+ \left\langle D^2\Pcal_\Psi[T_v\Psi,T_u\Psi]+D\Pcal_\Psi[T_uT_v\Psi],\zeta\right\rangle
+ =\left\langle p^\Psi,v\cdot\nabla(u\cdot\nabla\zeta)\right\rangle.
+\]
+The reversed identity has \(u,v\) interchanged. Thus every spatial differentiation can be placed on the test function. With
+\([u,v]=u\cdot\nabla v-v\cdot\nabla u\), one has
+\([T_u,T_v]=-T_{[u,v]}\) and \([A_u,A_v]=-A_{[u,v]}\).
+Hence the identity also holds for \([u,v]\). The density commutators are interpreted distributionally: this calculation needs functional \(C^2\), but not spatial \(C^2\), regularity of \(p^\Psi\).
+
+For smooth real \(\phi,\gamma\), the Euclidean gradient-bracket identity is
+\begin{align}
+ \phi|\nabla\gamma|^2\nabla\gamma
+ ={}&-\tfrac14[\nabla(\phi\gamma^2),\nabla\gamma]
+     -\tfrac1{12}[\nabla\phi,\nabla(\gamma^3)] \notag\\
+ &-\tfrac14[\nabla(\gamma^2),\nabla(\phi\gamma)].
+ \label{eq:AG}
+\end{align}
+This is the specialization of \cite[Proposition 1, equation (10)]{AG2026}; expansion by the product rule also verifies it directly. For each component \(u_j\) of a compact vector field, choose \(\gamma_j\in\Cc\) equal to \(q_j\) on a neighborhood of its support and take \(\phi=u_j\). The left side is \(u_j e_j\). Every function on the right is compactly supported. \Cref{lem:phase}, bracket closure, and summation prove \eqref{eq:cov-inf}.
+
+For completeness, writing \(a=\nabla\phi\), \(b=\nabla\gamma\), \(P=D^2\phi\), and \(G=D^2\gamma\), the three brackets on the right of \eqref{eq:AG}, in their displayed order, are
+\begin{align*}
+ &\gamma^2(Ga-Pb)-2\gamma(a\cdot b)b-2\gamma|b|^2a-2\phi|b|^2b,\\
+ &3\gamma^2(Ga-Pb)+6\gamma(a\cdot b)b,\\
+ &-2\gamma^2(Ga-Pb)+2\gamma|b|^2a-2\phi|b|^2b.
+\end{align*}
+Multiplication by \(-1/4,-1/12,-1/4\) cancels every term except \(\phi|b|^2b\). This verifies the precise local identity used here independently of a transport-group theorem.
+
+Along the half-density flow, \eqref{eq:cov-inf} is the linear transport equation for the assigned density. Its unique local distributional solution is the pushforward: testing against the inverse-transported test function makes its derivative zero. Compact support gives a complete smooth coordinate flow. This proves \eqref{eq:cov-fin}; the one-block proof is identical with other coordinates as parameters.
+\end{proof}
+
+These transports are auxiliary actions on states and probability assignments. We have not claimed that \(U_F\) is a Schr\"odinger propagator produced by the physical controls.
+
+\begin{proposition}[Full scalar-control criterion]\label{prop:saturation}
+For scalar states on \(\R^d\), \(d\ge2\), assumptions \ref{ass:prob}--\ref{ass:cc} and
+\(\Cc(\R^d;\R)\subset\Acal\) imply \eqref{eq:born} on every nowhere-zero state.
+\end{proposition}
+
+\begin{proof}
+Fix such a state, put \(r=|\Psi|^2\), and let \(u\) be compactly supported with \(\diver(ru)=0\). Then
+\(2\operatorname{Re}(\overline\Psi T_u\Psi)=-\diver(ru)=0\).
+Since the state is scalar and nonzero, \(T_u\Psi=-if\Psi\) for a real compactly supported smooth \(f\). The annihilator identity and \cref{lem:transport} give
+\[
+ 0=\diver(p^\Psi u)=r\,u\cdot\nabla(p^\Psi/r).
+\]
+Such weighted divergence-free fields span every tangent space. Indeed, in a ball around \(q_0\), choose \(j\ne k\), a compact \(\chi\) equal to \(r(q_0)(q_k-q_{0k})\) near \(q_0\), and set
+\[
+ u=r^{-1}\big((\partial_k\chi)e_j-(\partial_j\chi)e_k\big).
+\]
+This field has \(\diver(ru)=0\) and \(u(q_0)=e_j\). Therefore \(\nabla(p^\Psi/r)=0\). Connectedness of \(\R^d\) and normalization prove the assertion.
+\end{proof}
+
+\begin{remark}[The line exception]\label{rem:line}
+For one scalar coordinate let \(r=|\Psi|^2/\norm{\Psi}_2^2\) and
+\(F^\Psi(x)=\int_{-\infty}^x r(s)\,ds\). For any positive smooth \(g\) on \([0,1]\) with integral one,
+\[
+ p^\Psi(x)=r(x)g(F^\Psi(x))
+\]
+is normalized, projective, and has the stated functional regularity. The continuity equation with vanishing flux at infinity gives
+\((\partial_t+v\partial_x)F^\Psi=0\), proving equivariance for every scalar potential and positive mass. The assignment also has the approximation continuity above. A nonconstant \(g\), for example \(1+\alpha\cos(2\pi s)\) with \(0<|\alpha|<1\), gives a non-Born law. This is the exception discussed in \cite[Section 8]{GS2007}. Local circulation in dimension at least two is essential to \cref{prop:saturation}.
+\end{remark}
+
+\section{Local controls and fixed interactions}\label{sec:local}
+
+Local scalar controls initially give \(\Cc(\R^3)\) annihilators in each particle block. By \cref{lem:transport}, the assignment is covariant under independent compactly supported coordinate flows on the particles. We now use that covariance to expose the interaction.
+
+\begin{lemma}[Mixed conjugation]\label{lem:mixed}
+For an edge \(\{i,j\}\), and compactly supported one-body diffeomorphisms \(F,G\) generated by flows on particles \(i,j\), respectively, the function
+\begin{align}
+ M_{F,G}(q_i,q_j)={}&W_{ij}(F(q_i),G(q_j))
+ -W_{ij}(F(q_i),q_j)\notag\\
+ &-W_{ij}(q_i,G(q_j))+W_{ij}(q_i,q_j)
+ \label{eq:mixed}
+\end{align}
+belongs to \(\Acal\).
+In particular, for \(u,v\in\Cc(\R^3;\R^3)\),
+\begin{equation}\label{eq:edge-source}
+ \sum_{a,b}u^a(q_i)v^b(q_j)
+ \partial_{i,a}\partial_{j,b}W_{ij}(q_i,q_j)\in\Acal.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Set \(H^F=U_F^{-1}HU_F\), using the block half-density action, and similarly for \(G,FG\). Covariance \eqref{eq:cov-fin} transfers the statistical evolution identity for \(H\) to \(H^F\). To see precisely which current is transferred, a real half-density coordinate conjugation of \(-\Delta/2\) has the form
+\[
+ -\tfrac12\partial_\alpha(a^{\alpha\beta}\partial_\beta)+V_{\mathrm{real}},
+ \qquad a=(DF)^{-1}(DF)^{-T}.
+\]
+Its current is \(a^{\alpha\beta}\operatorname{Im}(\overline\Psi\partial_\beta\Psi)\). Explicitly, if \(v_F^\Psi\) denotes the conjugated velocity, then
+\[
+ v_F^\Psi(q)=DF(q)^{-1}v^{U_F\Psi}(F(q))
+ =\frac{a(q)\operatorname{Im}(\overline\Psi(q)\nabla\Psi(q))}{|\Psi(q)|^2}.
+\]
+The Jacobian half-density factor is real and hence contributes no imaginary phase gradient. Changing variables in the continuity equation transfers the assigned-density identity with this same velocity. Only the metric in the transformed particle block changes.
+
+The operator difference
+\[
+ H^{FG}-H^F-H^G+H
+\]
+therefore has zero kinetic part. All one-body terms cancel. All pair terms except \(W_{ij}\) cancel as well, leaving exactly multiplication by \eqref{eq:mixed}. The same mixed difference of the four currents is zero, block by block. Subtracting the four transferred statistical identities gives \(D\Pcal_\Psi[-iM_{F,G}\Psi]=0\).
+
+Take \(F=F_s^u\), \(G=F_t^v\), divide by \(st\), and let \(s,t\to0\). The limit is \eqref{eq:edge-source}. The mixed differences and their derivatives have common compact support in the two active blocks; the other coordinates are spectators only in this multiplier estimate. Taylor's formula gives convergence on every Schwartz tangent vector. Thus \eqref{eq:closure} applies.
+\end{proof}
+
+\begin{lemma}[Edge saturation]\label{lem:edge}
+If \eqref{eq:interaction} holds, every real function in
+\(\Cc(\R^3\times\R^3)\), viewed as a multiplier in the edge variables, belongs to \(\Acal\).
+\end{lemma}
+
+\begin{proof}
+Some component \(c=\partial_{i,a}\partial_{j,b}W_{ij}\) is nonzero on a product of sufficiently small balls \(B_i\times B_j\). Taking \(u=f e_a,v=g e_b\) in \eqref{eq:edge-source} gives \(f(q_i)g(q_j)c(q_i,q_j)\in\Acal\). For \(h\) compactly supported inside that product, \(h/c\) is smooth there. Finite sums of separated compact functions approximate it in \(C^\infty\), with common compact support. For example, extend it to a box, approximate its smooth periodic extension by Fourier partial sums, and multiply by fixed cutoffs in the two variables. Multiplication by \(c\) and \eqref{eq:closure} give \(h\in\Acal\).
+
+Annihilator identities are invariant under pullback by the one-body coordinate transports: differentiate \eqref{eq:cov-fin} along a phase variation. Independent compact diffeomorphisms can move any sufficiently small pair of balls to this nonvanishing product. Pullback therefore gives all compact multipliers in every such product cell. A finite partition of unity on the support of a target function proves the result globally.
+\end{proof}
+
+The remaining step combines overlapping edge variables. We include the elementary local factorization that makes this step exact.
+
+\begin{lemma}[Gradient-product factorization]\label{lem:factor}
+On a Euclidean open set, every real compact smooth function is a finite sum of terms \(\nabla a\cdot\nabla b\), with \(a,b\) compactly supported in that open set.
+\end{lemma}
+
+\begin{proof}
+A finite partition reduces the question to a small box with room to spare in a larger box. Write its coordinates as \((x_1,x')\), let
+\(H(x')=\int f(t,x')\,dt\), and choose a unit-integral bump \(\alpha(x_1)\) in a spare interval disjoint from the \(x_1\)-projection of \(\supp f\). Then
+\[
+ a(x_1,x')=\int_{-\infty}^{x_1}
+       \big(f(t,x')-\alpha(t)H(x')\big)\,dt
+\]
+is compactly supported. Choose a compact function \(\beta(x_1)\) whose derivative is one on the projection of \(\supp f\), zero on \(\supp\alpha\), and has its compensating integral in another spare interval. Let \(\chi(x')\) be one near the transverse support of \(a\) and put \(b=\beta\chi\). Transverse derivative products vanish, whereas
+\(\partial_1a\,\partial_1b=(f-\alpha H)\beta'=f\). All supports fit in the larger box. Summation proves the lemma.
+\end{proof}
+
+\begin{proposition}[Connected-graph saturation]\label{prop:graph}
+Under the hypotheses of \cref{thm:main},
+\[
+ \Cc(\R^{3N};\R)\subset\Acal.
+\]
+\end{proposition}
+
+\begin{proof}
+Induct along a spanning tree. One-body and edge multipliers are available. Suppose all compact multipliers on a connected collection \(S\) of particle blocks are available, and attach a new particle \(j\) by an edge at \(i\in S\). For compact one-body factors \(f_k\), apply \cref{lem:factor} to the desired factor on block \(i\), writing \(f_i=\sum_\ell\nabla a_\ell\cdot\nabla b_\ell\). Then
+\[
+ \Gamma\left(a_\ell(q_i)\!\!\prod_{k\in S\setminus\{i\}}\!\!f_k(q_k),
+                 b_\ell(q_i)f_j(q_j)\right)
+ =(\nabla a_\ell\cdot\nabla b_\ell)(q_i)
+                  \prod_{k\in(S\cup\{j\})\setminus\{i\}}f_k(q_k).
+\]
+Only the shared block contributes. The two inputs are available by induction and edge saturation, so \cref{lem:phase} gives the desired separated product after summation. Separated compact functions are \(C^\infty\)-dense, with common blockwise compact supports, in compact functions on these blocks, by the Fourier-cutoff argument in \cref{lem:edge}. This is convergence after multiplication by each fixed Schwartz state, including spectator variables. Thus \eqref{eq:closure} completes the induction.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Use \cref{prop:graph,prop:saturation} in dimension \(3N\ge2\). For \(N=1\), one-body controls already give full scalar saturation. \Cref{lem:nodal-density} below supplies normalized nowhere-zero approximations; \ref{ass:nodes} and \eqref{eq:L2TV} then extend the equality of measures to every state. Undoing mass scaling gives \eqref{eq:born}.
+\end{proof}
+
+The proof has generated identities for a statistical functional, including identities associated with joint multipliers. None of the mixed conjugations, brackets, or density limits is a claim that an additional joint potential has been physically implemented. Only the controls quantified in \eqref{eq:cc} are physical inputs.
+
+\section{Translated profiles and an interacting example}\label{sec:profiles}
+
+The control hypothesis can be stated using a single spatial shape on each particle. Amplitudes and centers remain freely variable.
+
+\begin{theorem}[Translated-profile controls]\label{thm:profiles}
+In \cref{thm:main}, replace arbitrary compact one-body controls on particle \(i\) by
+\[
+ v_i(q_i)=\lambda g_i(q_i-a),\qquad
+ \lambda\in\R,\quad a\in\R^3,
+\]
+where \(g_i\in\Sch(\R^3;\R)\) and \(\int g_i\ne0\). It suffices to assume consistency for these controls and zero control, independently on each particle. The same uniqueness conclusion holds.
+\end{theorem}
+
+\begin{proof}
+We show that translates of \(g=g_i\) generate every compact one-body annihilator. We work in one block and use \eqref{eq:closure} against full Schwartz states. Since \(\widehat g(0)\ne0\), there is a ball \(B\) around zero on which \(\widehat g\) is nonzero. For a real \(f\) whose Fourier transform is smooth and compactly supported in \(B\), division gives a Schwartz function \(h\) with \(f=g*h\). Real-valuedness follows from Hermitian symmetry of the Fourier transforms. Truncation of this convolution and Riemann summation converge in Schwartz space. Thus \(f\in\Acal\).
+
+Choose a real band-limited Schwartz function \(\chi\) with \(\chi(0)=1\). For each sufficiently small frequency \(k\), the functions
+\(\chi(x/R)\cos(k\cdot x)\) and \(\chi(x/R)\sin(k\cdot x)\) have Fourier support in \(B\) for large \(R\). They are annihilators. Their multiplication on every fixed Schwartz state converges in Schwartz space to multiplication by \(\cos(k\cdot x)\) and \(\sin(k\cdot x)\), respectively. Indeed, derivatives are uniformly bounded, and the Schwartz decay of the state controls the expanding exterior region.
+
+For bookkeeping, complexify the real vector space of identities and the bilinear operation \(\Gamma\). This is a formal combination of real sine and cosine identities; it does not assume that the real derivative \(D\Pcal\) is complex-linear or that a complex potential is an admitted control. Formula \eqref{eq:gamma} reads
+\[
+ \Gamma(e^{ik\cdot x},e^{i\ell\cdot x})
+       =-(k\cdot\ell)e^{i(k+\ell)\cdot x}.
+\]
+Every frequency \(k\ne0\) is a positive integer multiple of a sufficiently small one. Repeated collinear additions have nonzero dot products, and therefore generate \(e^{ik\cdot x}\). Real and imaginary parts give real identities; the constant is already an annihilator by projectivity.
+
+Finally, for \(f\in\Cc(\R^3)\), truncate its Fourier integral. On each compact frequency set the map \(k\mapsto e^{ik\cdot x}\Psi\) is continuous into Schwartz space for every fixed \(\Psi\). Its Riemann sums therefore converge in that topology; taking Hermitian-symmetric sums preserves reality of the multipliers. Derivatives of the omitted Fourier tail are bounded by tails of
+\(\int(1+|k|)^j|\widehat f(k)|\,dk\), which tend to zero for every \(j\). These bounds imply convergence after multiplication by each fixed Schwartz state. Equation \eqref{eq:closure} supplies every compact multiplier. The proof of \cref{thm:main} now applies.
+\end{proof}
+
+This theorem concerns exact identities satisfied by one assignment for all centers and amplitudes. It is not a finite-resource synthesis theorem for arbitrary target potentials. In particular, its Fourier and multiplier limits impose no experimental approximation principle on an individual preparation. They are justified by the stated continuity of the statistical functional.
+
+\begin{example}[Two harmonically interacting particles]\label{ex:harmonic}
+For equal unit masses let
+\[
+ H_0=-\tfrac12(\Delta_x+\Delta_y)
+       +\tfrac{\omega^2}{2}(|x|^2+|y|^2)
+       +\tfrac{k}{2}|x-y|^2,\qquad \omega,k>0.
+\]
+The mixed interaction derivative is \(-kI_3\), so the edge condition holds everywhere. The positive quadratic form supplies the common oscillator domain. Taking
+\(g(x)=e^{-|x|^2/\sigma^2}\), \(\sigma>0\), gives
+\(\int g=\pi^{3/2}\sigma^3>0\). Thus consistency for independent real amplitudes and translates of this one-body profile already characterizes the Born assignment.
+
+The holding ground state is an explicit entangled preparation. With
+\(u=(x+y)/\sqrt2\), \(v=(x-y)/\sqrt2\), and
+\(\Omega=\sqrt{\omega^2+2k}\), it is
+\[
+ \Psi_0(x,y)=\frac{(\omega\Omega)^{3/4}}{\pi^{3/2}}
+       \exp\!\left[-\frac{\omega}{2}|u|^2-\frac{\Omega}{2}|v|^2\right].
+\]
+In the particle coordinates its exponent contains
+\((\Omega-\omega)x\cdot y/2\); it does not factor between particles. The theorem applies to the full state assignment, not just to this Gaussian or to Gaussian dynamics. The interaction strength \(k\) is fixed throughout the allowed controls.
+\end{example}
+
+\section{Internal degrees of freedom}\label{sec:spin}
+
+We now use
+\(\mathscr S_s=\Sch(\R^{3N};\bigotimes_i\C^{2j_i+1})\setminus\{0\}\).
+For each nonzero spin \(j_i\), let \(J_i^x,J_i^y,J_i^z\) be its irreducible spin matrices, acting on that factor. Add to \eqref{eq:ham} the one-body effective Zeeman terms
+\begin{equation}\label{eq:spinH}
+ \sum_i \mathbf B_i(q_i)\cdot\mathbf J_i .
+\end{equation}
+This is a neutral or effective spin Hamiltonian with the current specified in \cref{sec:model}. There is no charged minimal-coupling kinetic term. The additional controls needed are independent real amplitudes of smooth bounded spatial profiles which, on a ball in each particle's physical space, agree with
+\begin{equation}\label{eq:spinprofile}
+ \mathbf B(x,y,z)=(z,0,x).
+\end{equation}
+A compact divergence-free continuation exists: take the curl of
+\((0,(x^2-z^2)/2,0)\) multiplied by a cutoff equal to one near the ball. No assumption of arbitrary physical matrix-valued configuration-space controls is made.
+
+\begin{theorem}[Effective-spin characterization]\label{thm:spin}
+For \eqref{eq:ham} and \eqref{eq:spinH}, with the scalar controls of \cref{thm:main} or \cref{thm:profiles}, the fixed-interaction hypotheses and the spatial spin controls just specified, assumptions \ref{ass:prob}--\ref{ass:cc} imply \eqref{eq:born} on every nowhere-zero spinor. Under \ref{ass:nodes} the conclusion extends to every nonzero Schwartz spinor.
+\end{theorem}
+
+\begin{proof}
+We give the matrix-generation step explicitly. A Hermitian matrix multiplier \(M(q)\) is a matrix annihilator if \(D\Pcal_\Psi[-iM\Psi]=0\) for every spinor. Scalar phases and scalar coordinate transport have exactly the previous current transformations. Working first with zero Zeeman control, \cref{sec:mechanism,sec:local} therefore supplies all compact scalar annihilators and full compact coordinate covariance, without using scalar uniqueness.
+
+Subtracting a Zeeman control from zero gives its matrix annihilator. Commuting its phase identity with coordinate covariance yields
+\begin{equation}\label{eq:matrixderivative}
+ M\ \hbox{annihilating}\quad\Longrightarrow\quad
+ u\cdot\nabla M\ \hbox{annihilating}
+\end{equation}
+for compact smooth \(u\); this follows by the same symmetric-second-derivative cancellation as in \cref{lem:transport}, since the commutator with a first-order transport differentiates the multiplier. On the control cell \eqref{eq:spinprofile}, the choices \(u=h(q)e_z\) and \(u=h(q)e_x\) give \(h(q)J_i^x\) and \(h(q)J_i^z\), respectively, for arbitrary compact full-configuration \(h\) supported over that cell. Coordinate covariance relocates small supports; a partition of unity gives these multipliers for every compact \(h\).
+
+The matrix identities have both Lie and Jordan closure. Commuting two phase identities gives \(i[M,N]\). To prove the needed Jordan operation, suppose all compact coefficients of a constant Hermitian matrix \(A\) are annihilators. The assignment is invariant under \(e^{itfA}\). For the scalar Hamiltonian,
+\[
+ -i(e^{-itfA}He^{itfA}-H)\Psi
+ =t\left(-A\nabla f\cdot\nabla-\tfrac12A\Delta f\right)\Psi
+       -\frac{it^2}{2}|\nabla f|^2 A^2\Psi.
+\]
+The norm density is unchanged and the current changes only linearly in \(t\), by
+\(t(\Psi^\dagger A\Psi)\nabla f\). Comparison of consistency identities gives
+\(|\nabla f|^2A^2\) as an annihilator. Choose \(f\) so that a derivative of \(|\nabla f|^2\) is nonzero on a prescribed small ball. Equation \eqref{eq:matrixderivative}, with a vector field dividing by that derivative, then gives \(hA^2\) for every \(h\) supported in the ball. Partitioning gives arbitrary compact coefficients. Polarization of \((A+B)^2\) yields \(AB+BA\); compact cutoffs equal to one on the required supports justify products and commutators throughout.
+
+These operations generate all Hermitian matrices on each irreducible spin factor. Indeed, powers of \(J^z\) give its spectral projections by polynomial interpolation. The nonzero adjacent entries of \(J^x\) link consecutive eigenvalues. If \(P_m,P_n\) are distinct spectral projections, their Jordan products with \(J^x\) isolate
+\[
+ P_mJ^xP_n+P_nJ^xP_m,
+\]
+and a commutator with \(P_m\) gives the corresponding imaginary Hermitian matrix. Adjacent links generate all off-diagonal matrix units by further products and commutators. Diagonal projections supply the rest. Matrices on different factors commute, so their Jordan product is twice their tensor product. We have therefore obtained every compact Hermitian multiplier on the full internal space. This is the point at which irreducibility and spatial variation of the physical controls are used.
+
+Fix a nowhere-zero spinor and a compact field \(u\) with \(\diver(ru)=0\), where \(r=\Psi^\dagger\Psi\). Put \(z=\Psi\), \(\eta=T_u\Psi\). Then \(\operatorname{Re}(z^\dagger\eta)=0\). The compactly supported matrix
+\begin{equation}\label{eq:normtangent}
+ M=\frac{i\eta z^\dagger-iz\eta^\dagger}{r}
+       -\frac{i(z^\dagger\eta)}{r^2}zz^\dagger
+\end{equation}
+is smooth and Hermitian and satisfies \(-iMz=\eta\). Indeed, \(c=z^\dagger\eta\) is purely imaginary, so \(\eta^\dagger z=-c\). The first numerator in \eqref{eq:normtangent} is Hermitian, its second coefficient \(-ic\) is real, and direct multiplication gives \(Mz=i\eta\). Division by \(r\) is harmless on the compact support of \(\eta\). Matrix annihilation and transport covariance imply \(\diver(p^\Psi u)=0\). The weighted circulations in \cref{prop:saturation} now give \(p^\Psi/r\) constant. Normalization, and then the approximation in \cref{app:nodes}, finish the proof.
+\end{proof}
+
+The same proof applies to a finite-level effective model when its spatial controls yield localized constant matrices whose Jordan and Lie operations generate the full Hermitian algebra. This is an algebraic condition on the controls, not a consequence of having a finite-dimensional internal space. Constant spin rotations alone do not give the spatial matrix identities used above. If the controls preserve proper internal sectors, the theorem must be applied within each accessible sector; no conclusion is claimed for superpositions spanning inaccessible internal sectors. Independent probability masses can remain free for genuinely disjoint invariant configuration sectors, a different situation from overlapping internal components.
+
+For identical particles, independently labeled one-body controls are unavailable. \Cref{app:identical} states the separate permutation-preserving result, including its nodal hypothesis.
+
+\section{Consequences for physical records}\label{sec:measurement}
+
+\subsection{Joint preparation and existence of trajectories}
+
+Let the actual configuration be guided by \(v^\Psi\). This is the usual Bohmian specification of definite positions; an apparatus record is a function of its actual configuration. To use the characterization for an experiment, its initial \emph{joint} system--apparatus law must be governed by an assignment satisfying the theorem, or joint equilibrium must be supplied as a preparation assumption. Applying a theorem only to an isolated system does not establish equilibrium of an independently introduced apparatus.
+
+Once joint equilibrium holds, the Schr\"odinger continuity equation transports it under any subsequent well-defined Hamiltonian with the stated current, including a specified measurement coupling. We record a sufficient finite-time trajectory condition rather than presuming a global all-point flow at nodes.
+
+\begin{lemma}[Time-dependent equilibrium transport]\label{lem:flow}
+On nonsingular \(\R^d\), let a normalized scalar or finite spinor Schr\"odinger solution be \(C^2\) in space and time on \([0,T]\), with the current above, and suppose
+\begin{equation}\label{eq:flowbound}
+ \int_0^T\left(\norm{\partial_t\Psi_t}_2+
+                    \norm{\nabla\Psi_t}_2^2\right)\,dt<\infty.
+\end{equation}
+Then the guidance trajectories exist throughout \([0,T]\) for
+\(|\Psi_0|^2dq\)-almost every initial configuration and transport equilibrium.
+\end{lemma}
+
+\begin{proof}
+Apply the current criterion in Theorem 1 of Teufel and Tumulka \cite{TT2005}, which allows time-dependent currents. With \(r=|\Psi|^2\) and \(m_{\min}=\min_i m_i\), Cauchy--Schwarz gives
+\begin{align*}
+ \int_{\{r>0\}}|\partial_t r+v\cdot\nabla r|\,dq
+ &\le 2\norm{\partial_t\Psi}_2+
+             2m_{\min}^{-1}\norm{\nabla\Psi}_2^2,\\
+ \int |J|\,dq&\le m_{\min}^{-1}\norm{\nabla\Psi}_2 .
+\end{align*}
+The first bound is the required expected variation of the logarithm of the positive current density along trajectories; the second controls escape to spatial infinity. Their time integrals are finite by \eqref{eq:flowbound}. There are no removed singular sets requiring an additional boundary estimate. The cited theorem gives almost-sure avoidance of nodes and escape, and equivariance. It is its general current theorem, not an autonomous-Hamiltonian specialization, that is used.
+\end{proof}
+
+The smooth controlled evolutions in \cref{sec:model} satisfy these hypotheses on finite intervals by their Schwartz estimates. Equilibrium-almost-sure existence suffices for the following statistical conclusions. It is not being used to claim existence for every singular candidate law.
+
+\subsection{Implemented effects and instruments}
+
+Let \(\chi_0\) be a normalized apparatus preparation, \(U\) the unitary of an actually specified coupling, and \(\Delta_C\) the apparatus configuration region recording \(C\). Define \(V_0\psi=\psi\otimes\chi_0\). The equilibrium record probability is
+\begin{equation}\label{eq:effect}
+ \Pr(C\mid\psi)=\norm{(I\otimes1_{\Delta_C})UV_0\psi}^2
+       =\ip{\psi}{E_C\psi},\qquad
+ E_C=V_0^\dagger U^\dagger(I\otimes1_{\Delta_C})UV_0.
+\end{equation}
+For a measurable record partition, positivity, normalization, and countable additivity of these effects follow from those of the pointer projections. This is the usual apparatus derivation of a POVM \cite{DGZ2004}.
+
+For a finite resolved apparatus model, suppose its actual endpoint is
+\begin{equation}\label{eq:instrument}
+ UV_0\psi=\sum_{i,\alpha}K_{i\alpha}\psi\otimes\chi_{i\alpha},
+\end{equation}
+where the normalized apparatus packets have disjoint configuration supports, and \(i\) is the coarse record. Then \eqref{eq:effect} gives
+\[
+ \Pr(i\mid\psi)=\sum_\alpha\norm{K_{i\alpha}\psi}^2,\qquad
+ \mathcal I_i(\rho)=\sum_\alpha K_{i\alpha}\rho K_{i\alpha}^\dagger.
+\]
+At a fine record the conditional system wavefunction is proportional to \(K_{i\alpha}\psi\); coarse conditioning gives the normalized instrument output. The mixed-state expression follows by linearity for a specified preparation mixture or by a supplied purification. This derivation assumes \eqref{eq:instrument} is the endpoint of the physical apparatus. An abstract dilation representation alone does not establish implementability by the control resources in \cref{sec:model}.
+
+With internal indices \(a,b\) for system and environment, conditioning a joint equilibrium state at environment position \(y\) gives the kernel
+\[
+ G_y^{aa'}(x,x')=\sum_b\Psi_{ab}(x,y)\overline{\Psi_{a'b}(x',y)}.
+\]
+Its normalized diagonal trace is the conditional configuration density. The corresponding current is obtained by the same partial trace before taking the diagonal. This is the conditional density-matrix construction of \cite[Section 4]{DGTZ2005}; it does not assert autonomous evolution for an arbitrary reduced state.
+
+Exact support separation is an ideal mathematical case. Here \(\operatorname{TV}(\mu,\nu)=\sup_A|\mu(A)-\nu(A)|\), equal to one half of the \(L^1\) distance for densities, and quantum trace distance is \(\tfrac12\norm{\rho-\sigma}_1\). Let \(V=UV_0\) be the actual complete endpoint isometry and \(\widetilde V\) an ideal isometry into the same output space, compared using the same record partition. If \(\norm{V-\widetilde V}\le\varepsilon\), then for every normalized input the trace distance of the two output pure states is at most \(\varepsilon\). Measurement contracts trace distance, so their entire endpoint record distributions differ in total variation by at most \(\varepsilon\). For an initial law on which the actual trajectory and readout map is defined, a discrepancy \(\delta\) in total variation from joint equilibrium adds at most \(\delta\): pushforward cannot increase total variation. Thus \(\min\{1,\varepsilon+\delta\}\) bounds the combined endpoint record error. \Cref{app:pointer} gives an explicitly time-dependent Gaussian pointer example with a direct overlap bound.
+
+An endpoint record distribution does not establish that the pointer copied a specified earlier actual label or remained in a record region throughout a holding interval. Those claims require a defined history observable and a separate dynamical estimate. Initial-law total variation contracts under a common measurable history map when such a map is defined, but small endpoint wave or isometry error alone gives no comparison between two trajectory histories. No copy-and-hold error or whole-path Born comparison is asserted here.
+
+For repeated or adaptive experiments, retain all apparatus memory in the joint configuration and use the cumulative implemented evolution. Products of branch operators follow when each stage has the stated conditional ready-state or reset preparation. If memory is discarded without that property, a product of reduced instruments is not justified. Repeated-trial frequency statements require the relevant independent or conditional preparation assumptions; they do not follow from a one-time marginal law alone. These qualifications belong to the preparation and apparatus model, not to the algebraic uniqueness proof.
+
+\section{Discussion}
+
+The principal theorem identifies the Born density from an alternative statistical premise: one regular probability assignment must be compatible with a family of local controls in a fixed interacting system. The interaction supplies the connection between particle blocks through mixed coordinate conjugation. The functional consequences of this connection are much larger than the physical control list, which explains why a translated one-body profile can suffice for a uniqueness theorem without being a universal experimental actuator.
+
+The result answers a precise version of the universal-equivariance question posed in \cite{GS2007}. Its conditional content is substantial: under the stated regularity and state-domain assumptions there is no competing density assignment. It does not derive those statistical assumptions from deterministic dynamics. In particular, allowing an extra preparation-history argument changes the question. The theorem is independent of exact nonlinear preparation-return constructions and requires no assumptions about their existence.
+
+Spin, symmetry, and nodes require the hypotheses stated for them. Within those domains, the characterized equilibrium law has the familiar consequences for physical records. The mathematical contribution is the characterization and local-control reduction; the established Bohmian measurement analysis explains how that law appears in an experiment.
+
+\appendix
+\section{Nonzero approximation and nodes}\label{app:nodes}
+
+\begin{lemma}\label{lem:nodal-density}
+Normalized nowhere-zero Schwartz functions \(\R^d\to\C^s\) are \(L^2\)-dense in the unit sphere of \(L^2(\R^d;\C^s)\).
+\end{lemma}
+
+\begin{proof}
+Approximate a target by a bounded step function of compact support on finitely many disjoint boxes. Ignore boxes with zero value. Fix a positive Schwartz Gaussian \(g\). On slightly smaller boxes prescribe a smooth positive amplitude equal to the norm of the corresponding constant value, and a smooth unit vector equal to its direction. These prescriptions can be realized in the form
+\[
+ \Phi(q)=g(q)e^{a(q)}U(q)e_1,
+\]
+where \(a\) is real smooth and compactly supported and \(U\) is a smooth unitary matrix field equal to \(I\) outside a compact set. For each box, a constant Hermitian logarithm of a unitary sending \(e_1\) to its desired direction, multiplied by a cutoff, gives the required rotation. Disjoint box neighborhoods keep the constructions independent. Prescribe \(a=\log(c/g)\) on a box of desired norm \(c>0\), and join it smoothly to a large negative value on the rest of a large ball.
+
+Choose the large ball so the exterior Gaussian tail is small, then the negative value so the undesired interior amplitude is small. Transition strips can be made arbitrarily thin; the finitely many interpolating amplitudes are bounded, so their \(L^2\) contribution tends to zero with strip volume. The resulting \(\Phi\) is Schwartz and nowhere zero. This proves arbitrary \(L^2\) approximation of the step function and hence of the target. Normalization preserves nonvanishing and convergence.
+\end{proof}
+
+For scalar states with full scalar annihilators, and for spinors with the matrix annihilators established in \cref{thm:spin}, the proof of uniqueness before approximation is local: on any connected nonzero region it makes \(p^\Psi/r^\Psi\) constant. Distinct components need not initially have the same constant. Nor does local regularity rule out a density supported on a zero set of positive Lebesgue measure. Assumption \ref{ass:nodes}, applied to \cref{lem:nodal-density}, fixes both issues without a pointwise limit argument at nodes. The nowhere-zero set itself need not be open in the Schwartz topology; the open sets used for differentiation are the \(\mathscr U_K\) of \ref{ass:smooth}.
+
+\section{A permutation-preserving refinement}\label{app:identical}
+
+This appendix changes the control and state domains explicitly. Let
+\[
+ \widetilde Q=(\R^3)^N\setminus\Delta,\qquad
+ Q=\widetilde Q/S_N,
+\]
+where \(\Delta\) is the union of coincidence diagonals. Work in a fixed bosonic or fermionic Schwartz sector, with the usual permutation action on any spin factors. On the quotient this is a scalar complex line bundle or a finite-rank complex vector bundle. Densities will be represented by \emph{normalized} permutation-invariant densities on the ordered cover and then pushed forward to \(Q\). In this convention no additional factor of \(N!\) is inserted.
+
+Take equal masses, a common one-body potential, and a common symmetric smooth pair interaction \(W(x,y)=W(y,x)\) on all pairs, in the common-domain class of \cref{sec:model}. Suppose \(D_xD_yW\) is nonzero on some product of disjoint physical-space balls. The controls are the collective scalar potentials
+\begin{equation}\label{eq:collective}
+ V_f(q)=\sum_i f(q_i),\qquad f\in\Cc(\R^3;\R).
+\end{equation}
+In the spin case, use identical irreducible spin factors and collective Zeeman controls with localized profiles as in \cref{eq:spinprofile}. The assignment is a density in the fixed sector, projective and permutation-invariant, with the local Bastiani regularity of \ref{ass:smooth} restricted to that sector. Require consistency for these sector-preserving Hamiltonians.
+
+The appropriate approximation hypothesis is now weak continuity under normalized \(L^2\) approximation by sector states whose associated section on \(Q\) is transverse to the zero section. This replaces \ref{ass:nodes}; distinguishable nowhere-zero approximation is not being used in a fermionic sector.
+
+\begin{theorem}[Identical-particle sector]\label{thm:identical}
+Under these assumptions, the only sector assignment is the pushforward to \(Q\) of \(|\Psi|^2dq/\norm{\Psi}_2^2\). The conclusion before the approximation step holds for every transverse state. It also holds with \eqref{eq:collective} restricted to all translates and real amplitudes of one real Schwartz profile of nonzero integral.
+\end{theorem}
+
+\begin{proof}
+We establish the local generation on \(Q\), where the scalar norm and current are well defined. Collective annihilators and the phase argument yield covariance under the collective flow \(F^{\otimes N}\). For vector fields supported in disjoint physical cells \(U,V\), the mixed-conjugation calculation remains valid. One-body kinetic contributions have disjoint spatial supports and their mixed difference is zero. Differentiating the pair terms gives
+\[
+ \sum_{i\ne j}\sum_{a,b}
+ u^a(q_i)v^b(q_j)\partial_{x_a}\partial_{y_b}W(q_i,q_j)\in\Acal.
+\]
+The terms are unambiguously selected by \(q_i\in U,q_j\in V\). Division by a nonzero mixed derivative and separated approximation, as in \cref{lem:edge}, give
+\[
+ n_U(f)n_V(g)\in\Acal,\qquad
+ n_U(f)=\sum_i f(q_i),\quad \supp f\subset U,\quad \supp g\subset V.
+\]
+A single compact physical-space diffeomorphism can carry any ordered pair of sufficiently small disjoint balls to the given control cells in \(\R^3\). Collective covariance consequently gives the same identity for every pair of disjoint cells.
+
+For mutually disjoint cells \(U_1,\ldots,U_r\), gradient products of these identities build
+\(\prod_{\ell=1}^r n_{U_\ell}(f_\ell)\), by the same induction and local factorization as in \cref{prop:graph}. Disjoint cells cannot contribute a cross derivative in the same particle coordinate. At the shared cell, the contraction is exactly
+\(n_{U_\ell}(\nabla a\cdot\nabla b)\), which supplies the induction step.
+
+For \(r=N\), a nonzero term has exactly one particle in each cell. Such products are the symmetrized separated functions on a collision-free product chart. They approximate every compact smooth function on that quotient chart. A partition of unity over the support gives all compact scalar annihilators on \(Q\). The gradient-bracket and circulation arguments are local in its flat charts and patch by equivariant lifts. Thus \(p/r\) is constant on each connected nonzero region in the scalar case.
+
+In the spin case, localizing a collective Zeeman derivative to one occupied cell supplies the spin matrix on that slot of the quotient chart. The scalar transports just obtained allow arbitrary compact coefficient functions on the chart. All such coefficients are chosen with support strictly inside that chart. On the ordered cover, extend a chart matrix to the disjoint permutation lifts by conjugating with the permutation action on spin factors, and set it to zero outside their union. This produces a smooth equivariant multiplier preserving the chosen symmetry sector; the scalar fermionic sign cancels in the conjugation. The Lie and Jordan argument of \cref{thm:spin} therefore operates within the sector and supplies every compactly supported Hermitian endomorphism in the local spin frame. The norm-tangent matrix \eqref{eq:normtangent} and weighted circulations give the same conclusion.
+
+It remains to justify the transverse approximation class and connectedness. Smooth compact perturbations of a section, supported in a collision-free chart and spanning its fiber, extend equivariantly to its disjoint permutation lifts. They preserve the Schwartz sector. On any compact chart exhaustion, these finite-dimensional perturbations make the evaluation map transverse to the zero section. The parametric transversality theorem \cite[Chapter 3]{Hirsch1976} therefore gives a dense set of perturbations transverse near that compact set. Transversality on a compact set is open in the \(C^1\) topology. The sector's Schwartz space is a Baire space, so intersection over the exhaustion yields a dense set of globally transverse sector states.
+
+For complex fiber rank \(s\), the zero set of a transverse section is a closed submanifold of real codimension \(2s\), or is empty. The quotient \(Q\) is connected, and removing such a submanifold leaves it path-connected: perturb a path with fixed endpoints transversely to the zero set; its one-dimensional image then has empty intersection with a submanifold of codimension at least two. Both this zero set and the excluded collision diagonals are Lebesgue null. Since the candidate law has a density, normalization now fixes the single constant \(p/r=1/\norm{\Psi}_2^2\). Sector approximation continuity extends the result to all states.
+
+Finally, the proof of \cref{thm:profiles} applies to the collective multipliers. Their gradient contraction is
+\(\Gamma(V_f,V_g)=V_{\nabla f\cdot\nabla g}\).
+Thus it recovers every collective compact scalar identity and all subsequent steps.
+\end{proof}
+
+The transversality argument is an approximation result for the stated smooth complex sector, not a claim that an arbitrary physical nodal set is transverse. The weak-continuity premise is still required to pass from this dense class to all sector states. The result concerns a fixed accessible symmetry sector and does not fix weights between superselection sectors.
+
+\section{An alternative characterization from binary-flag heredity}\label{app:heredity}
+
+This argument is independent of the local-control theorem. It uses a stronger compositional statistical assumption in place of the functional \(C^2\) and control-family assumptions.
+
+For each admitted scalar configuration dimension \(d\), suppose a projective assignment \(\psi\mapsto p_d^\psi\) gives a normalized density, positive and \(C^1\) on \(\{\psi\ne0\}\), and zero almost everywhere on \(\{\psi=0\}\). The state classes contain positive Schwartz reference amplitudes, their smooth compactly supported amplitude and phase modifications, and all flag superpositions used below. Fix two nonzero smooth packets \(\chi_0,\chi_1\) in an auxiliary dimension \(k\), with disjoint support regions \(D_0,D_1\).
+
+For every
+\[
+ \Psi(x,y)=\psi(x)\chi_0(y)+\phi(x)\chi_1(y),
+\]
+assume both conditional laws use the same standalone assignments:
+\begin{align}
+ \Pr_\Psi(X\in dx\mid Y=y)&=p_d^{\Psi(\cdot,y)}(x)\,dx,\label{eq:heredityX}\\
+ \Pr_\Psi(Y\in dy\mid X=x)&=p_k^{\Psi(x,\cdot)}(y)\,dy.\label{eq:heredityY}
+\end{align}
+These are ordinary conditional probabilities for the assigned joint density. Define its unknown flag odds
+\[
+ O(z)=\frac{\mu_k^{z\chi_0+\chi_1}(D_0)}
+                {\mu_k^{z\chi_0+\chi_1}(D_1)},\qquad z\in\C^*,
+\]
+and assume \(O\) is continuous. Faithfulness makes it finite and positive. No quadratic distribution for the flag is assumed.
+
+\begin{theorem}[Binary-flag heredity and current compatibility]\label{thm:heredity}
+The preceding assumptions imply
+\begin{equation}\label{eq:powers}
+ p_d^\psi(q)=\frac{a_d(q)|\psi(q)|^\alpha}
+                   {\int a_d(x)|\psi(x)|^\alpha\,dx}
+\end{equation}
+on nonzero amplitudes, with a fixed positive \(C^1\) weight \(a_d\) and a real exponent \(\alpha\) common to dimensions using the same auxiliary law. The integrand is taken as zero at nodes. Only choices with finite normalizers on the admitted class qualify.
+
+If these assignments also obey the scalar guidance continuity equation on the admitted Schr\"odinger histories, including arbitrary compact phase variations of a positive amplitude, with the differentiability used in that equation, then \(\alpha=2\), each \(a_d\) is constant, and the assignment is Born equilibrium.
+\end{theorem}
+
+\begin{proof}
+Let \(A,B>0\) be the two flag probabilities in the joint law. Equation \eqref{eq:heredityX} gives the two subdensities \(A p_d^\psi\) and \(B p_d^\phi\) for \(X\). Equation \eqref{eq:heredityY} gives their odds at \(x\). Consequently, on the common nonzero region,
+\begin{equation}\label{eq:odds}
+ \frac{p_d^\psi(x)}{p_d^\phi(x)}
+       =\frac BA O\!\left(\frac{\psi(x)}{\phi(x)}\right).
+\end{equation}
+The conditional identities hold initially almost everywhere; positivity and continuity extend \eqref{eq:odds} throughout that region.
+
+Put \(w(z)=O(z)/O(1)\), fix a positive reference \(\xi\), and choose smooth nowhere-zero \(u,v\) equal to one outside a compact set. Apply \eqref{eq:odds} to the pairs among \(uv\xi,v\xi,\xi\). Multiplication of density ratios, evaluated outside the compact set, fixes their constant factors. Inside, it then gives \(w(uv)=w(u)w(v)\). At a chosen point \(u,v\) may take any prescribed values in \(\C^*\), using exponentials of compactly supported smooth logarithms. Thus \(w\) is a continuous positive character of \(\C^*\).
+
+Its restriction to the phase circle is trivial: its logarithm would be a continuous homomorphism from a compact group to \((\R,+)\). On positive real numbers, the continuous additive equation for \(\log w(e^t)\) gives \(w(z)=|z|^\alpha\). Apply \eqref{eq:odds} to any admitted \(\psi\) and a positive reference \(\xi_d\). This yields \eqref{eq:powers} with
+\(a_d=p_d^{\xi_d}/|\xi_d|^\alpha\). The reference is independent of \(\psi\); normalization fixes the proportionality constant. Faithful support extends the formula by zero on nodes. The same odds function fixes the same exponent for every system using this flag.
+
+For the dynamical step write \(r=|\psi|^2\), \(\beta=\alpha/2\), and
+\(p=ar^\beta/Z_\psi\). The quantum and assigned continuity equations give
+\begin{equation}\label{eq:powertransport}
+ v\cdot\nabla\log a+(1-\beta)\diver v=\dot Z_\psi/Z_\psi .
+\end{equation}
+At the initial instant choose \(\psi=\sqrt r\,e^{iS}\) with positive amplitude and compact smooth phase \(S\). Outside the phase support \(v\) and \(\diver v\) vanish, while \(p>0\). Hence the spatially constant right side of \eqref{eq:powertransport} is zero. If needed its derivative can be defined from the differentiable transported density at such an exterior point.
+
+At an arbitrary point choose \(\nabla S=0\) and prescribe the mass-weighted trace of its Hessian. This makes \(\diver v\) arbitrary and gives \(\beta=1\). Next prescribe \(\nabla S\) arbitrarily. Equation \eqref{eq:powertransport} gives \(\nabla\log a=0\). Connectedness and normalization complete the proof.
+\end{proof}
+
+The dynamical step uses one ordinary scalar Hamiltonian on a domain rich in initial phase variations; it does not require control-universal equivariance. Heredity alone permits the weighted powers in \eqref{eq:powers} and is insufficient to select the square. Conversely, Born equilibrium obeys the stipulated conditionals by direct integration. The principle says that the conditional wavefunction is statistically sufficient under the two indicated subsystem descriptions. That is an additional premise, stronger than the existence of conditional probabilities. This is a precise version of the heredity proposal in \cite[Section 8]{GS2007}, related to the equilibrium conditional-wavefunction formula in \cite{DGZ1992}.
+
+\section{A finite-time Gaussian pointer}\label{app:pointer}
+
+A simple effective measurement model illustrates exact propagation and controlled record overlap. Let a two-level label \(Z\) have eigenvalues \(\pm1\), and let a scalar pointer \(y\) of mass \(M\) have
+\[
+ H(t)=-\frac{1}{2M}\partial_y^2-F(t)yZ,\qquad
+ \chi_0(y)=(2\pi\sigma^2)^{-1/4}e^{-y^2/(4\sigma^2)},
+\]
+with real smooth \(F\) on a finite interval. This is a specified effective apparatus coupling; its unbounded linear profile is not being identified with the compact preparation controls in \cref{thm:spin}.
+
+Define
+\[
+ d(t)=\frac1M\int_0^t(t-s)F(s)\,ds,\qquad
+ s(t)=\sigma\sqrt{1+\left(\frac{t}{2M\sigma^2}\right)^2}.
+\]
+If \(\chi_{\rm free}\) is the free evolution of \(\chi_0\), direct substitution gives the two exact packets
+\[
+ \chi_\pm(y,t)=
+ \exp\!\left[i\left(\pm M\dot d(t)y
+            -\frac M2\int_0^t\dot d(s)^2\,ds\right)\right]
+       \chi_{\rm free}(y\mp d(t),t).
+\]
+Their position densities are Gaussians of variance \(s(t)^2\), centered at \(\pm d(t)\). This formula supplies a unitary finite-time propagator by translations, phases, and free evolution, preserving Schwartz states.
+
+For the initial spinor \(c_+|+\rangle+c_-|-\rangle\), put \(w_\pm=|c_\pm|^2\), with \(w_++w_-=1\). The joint norm density is
+\(r=w_+|\chi_+|^2+w_-|\chi_-|^2>0\).
+The branch velocities are
+\[
+ v_\pm=\pm\dot d+\frac{\dot s}{s}(y\mp d).
+\]
+The actual velocity is their local density-weighted mean. With \(a=\dot s/s\),
+\[
+ |v(y,t)|\le |a(t)|\,|y|+|\dot d(t)-a(t)d(t)|.
+\]
+For an explicit derivative bound, put \(\lambda=w_+|\chi_+|^2/r\). Then
+\[
+ \partial_y\lambda=\frac{2d}{s^2}\lambda(1-\lambda),\qquad
+ |\partial_yv|\le |a|+\frac{|d(\dot d-ad)|}{s^2}.
+\]
+The formulas also hold at \(w_+=0\) or \(w_-=0\) by the constant-weight limits. Since \(s\ge\sigma>0\), this derivative and the linear-growth coefficients are bounded on every fixed finite interval. The guidance equation therefore has a complete all-point flow on that interval. To avoid a collision with the force notation, write its cumulative density as \(\mathcal F_t\); the continuity equation and zero flux at infinity give \(\mathcal F_t(Y_t)=\mathcal F_0(Y_0)\).
+
+At a readout time with \(d(T)>0\), take \(y>0\) to record \(+\). If \(\Phi_{\rm G}\) denotes the standard normal distribution function, set
+\[
+ e_T=\Phi_{\rm G}(-d(T)/s(T)).
+\]
+Joint equilibrium gives
+\[
+ \Pr(+)=w_+(1-e_T)+w_-e_T,\qquad
+ |\Pr(+)-w_+|\le e_T.
+\]
+The packets need not have disjoint support. The error is explicitly controlled, while both the wavefunction evolution and the guidance calculation are exact.
+
+\section*{Declarations}
+\paragraph{Funding.} This work was conducted independently without external research funding.
+
+\paragraph{AI assistance and responsibility.} The author developed this research programme, including the mathematical arguments. AI tools were used as an aid in that work and in preparing this publication version, including source organization, literature checking, mathematical checks, adversarial review, and editorial revision. Those reviews are not independent peer review, specialist certification, or formal proof verification. The author retains responsibility for the manuscript.
+
+\paragraph{Independent review and collaboration.} Independent mathematical review and computational replication are invited. Collaboration on physical implementation and empirical testing is also welcome where specialist expertise, equipment, or institutional resources are required. No institutional affiliation or collaboration is claimed.
+
+\paragraph{Proof and verification materials.} The central characterization arguments are contained in this article. Public sources supply the explicitly cited background results. The accompanying source package includes the review record and reproducible algebra checks; these checks supplement the proofs and do not replace them.
+\nocite{PortfolioControl,PortfolioReturn,PortfolioEquilibrium,PortfolioPilot,PortfolioRecords,OriginalMonograph,OriginalPilot,OriginalMassive}
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abdelgalil and Georgiou(2026)]{AG2026}
+Mahmoud Abdelgalil and Tryphon~T. Georgiou.
+\newblock The holonomy of optimal mass transport: The smooth case, 2026.
+\newblock URL \url{https://arxiv.org/abs/2608.15585v2}.
+\newblock Version 2, 26 August 2026; Proposition 1 and equation (10).
+
+\bibitem[Bastiani(1964)]{Bastiani1964}
+Andr{\'e}e Bastiani.
+\newblock Applications diff{\'e}rentiables et vari{\'e}t{\'e}s
+  diff{\'e}rentiables de dimension infinie.
+\newblock \emph{Journal d'Analyse Math{\'e}matique}, 13:\penalty0 1--114, 1964.
+\newblock \doi{10.1007/BF02786619}.
+
+\bibitem[D{\"u}rr et~al.(1992)D{\"u}rr, Goldstein, and Zangh{\`i}]{DGZ1992}
+Detlef D{\"u}rr, Sheldon Goldstein, and Nino Zangh{\`i}.
+\newblock Quantum equilibrium and the origin of absolute uncertainty.
+\newblock \emph{Journal of Statistical Physics}, 67:\penalty0 843--907, 1992.
+\newblock \doi{10.1007/BF01049004}.
+\newblock URL \url{https://arxiv.org/abs/quant-ph/0308039}.
+
+\bibitem[D{\"u}rr et~al.(2004)D{\"u}rr, Goldstein, and Zangh{\`i}]{DGZ2004}
+Detlef D{\"u}rr, Sheldon Goldstein, and Nino Zangh{\`i}.
+\newblock Quantum equilibrium and the role of operators as observables in
+  quantum theory.
+\newblock \emph{Journal of Statistical Physics}, 116:\penalty0 959--1055, 2004.
+\newblock \doi{10.1023/B:JOSS.0000037234.80916.d0}.
+\newblock URL \url{https://sites.math.rutgers.edu/~oldstein/papers/op.pdf}.
+
+\bibitem[D{\"u}rr et~al.(2005)D{\"u}rr, Goldstein, Tumulka, and
+  Zangh{\`i}]{DGTZ2005}
+Detlef D{\"u}rr, Sheldon Goldstein, Roderich Tumulka, and Nino Zangh{\`i}.
+\newblock On the role of density matrices in {Bohmian} mechanics.
+\newblock \emph{Foundations of Physics}, 35\penalty0 (3):\penalty0 449--467,
+  2005.
+\newblock \doi{10.1007/s10701-004-1983-9}.
+\newblock URL \url{https://arxiv.org/abs/quant-ph/0311127}.
+
+\bibitem[Goldstein and Struyve(2007)]{GS2007}
+Sheldon Goldstein and Ward Struyve.
+\newblock On the uniqueness of quantum equilibrium in {Bohmian} mechanics.
+\newblock \emph{Journal of Statistical Physics}, 128:\penalty0 1197--1209,
+  2007.
+\newblock \doi{10.1007/s10955-007-9354-5}.
+\newblock URL \url{https://arxiv.org/abs/0704.3070}.
+
+\bibitem[Hirsch(1976)]{Hirsch1976}
+Morris~W. Hirsch.
+\newblock \emph{Differential Topology}, volume~33 of \emph{Graduate Texts in
+  Mathematics}.
+\newblock Springer, New York, 1976.
+\newblock \doi{10.1007/978-1-4684-9449-5}.
+
+\bibitem[Rodgers(2026{\natexlab{a}})]{OriginalMassive}
+Jeremy Rodgers.
+\newblock A massive configuration completion of the quantum measurement
+  programme, 2026{\natexlab{a}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.22774739}{10.5281/zenodo.22774739}.
+
+\bibitem[Rodgers(2026{\natexlab{b}})]{OriginalMonograph}
+Jeremy Rodgers.
+\newblock Shadow theory and quantum measurement: Source dynamics, event laws,
+  and physical records. two constitutive completions, 2026{\natexlab{b}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.22774584}{10.5281/zenodo.22774584}.
+
+\bibitem[Rodgers(2026{\natexlab{c}})]{OriginalPilot}
+Jeremy Rodgers.
+\newblock A deterministic pilot medium: Bell path selection and autonomous
+  material records, 2026{\natexlab{c}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.22774634}{10.5281/zenodo.22774634}.
+
+\bibitem[Rodgers(2026{\natexlab{d}})]{PortfolioControl}
+Jeremy Rodgers.
+\newblock Control consistency and {Born} equilibrium: Uniqueness from local
+  potentials and fixed interactions, 2026{\natexlab{d}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.23131058}{10.5281/zenodo.23131058}.
+
+\bibitem[Rodgers(2026{\natexlab{e}})]{PortfolioEquilibrium}
+Jeremy Rodgers.
+\newblock Autonomous quantum measurement chains with faithful equilibrium
+  records, 2026{\natexlab{e}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.23131069}{10.5281/zenodo.23131069}.
+
+\bibitem[Rodgers(2026{\natexlab{f}})]{PortfolioPilot}
+Jeremy Rodgers.
+\newblock A deterministic hybrid medium for {Bell} jump paths and autonomous
+  records, 2026{\natexlab{f}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.23131075}{10.5281/zenodo.23131075}.
+
+\bibitem[Rodgers(2026{\natexlab{g}})]{PortfolioRecords}
+Jeremy Rodgers.
+\newblock Nonequilibrium calibration and faithful records in autonomous
+  effective measurement models, 2026{\natexlab{g}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.23131081}{10.5281/zenodo.23131081}.
+
+\bibitem[Rodgers(2026{\natexlab{h}})]{PortfolioReturn}
+Jeremy Rodgers.
+\newblock Preparation-return holonomy and equilibrium uniqueness in engineered
+  interacting networks, 2026{\natexlab{h}}.
+\newblock Author preprint. DOI:
+  \href{https://doi.org/10.5281/zenodo.23131064}{10.5281/zenodo.23131064}.
+
+\bibitem[Teufel and Tumulka(2005)]{TT2005}
+Stefan Teufel and Roderich Tumulka.
+\newblock Simple proof for global existence of {Bohmian} trajectories.
+\newblock \emph{Communications in Mathematical Physics}, 258:\penalty0
+  349--365, 2005.
+\newblock \doi{10.1007/s00220-005-1302-0}.
+\newblock URL \url{https://arxiv.org/abs/math-ph/0406030}.
+
+\end{thebibliography}
+
+\end{document}

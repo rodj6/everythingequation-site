@@ -1,0 +1,82 @@
+{
+  "title": "Nonequilibrium Calibration and Faithful Records in Autonomous Effective Measurement Models",
+  "doi": "10.5281/zenodo.23131081",
+  "date": "2026-10-04",
+  "author": "Jeremy Rodgers",
+  "original_source_package": "source-material/latex/05_Nonequilibrium_Records (superseded, lacked appendices)",
+  "changes_to_selected_source": [
+    {
+      "type": "authoritative_pdf_reconciliation",
+      "location": "AI assistance and verification paragraph, page 24",
+      "change": "Replaced older review/disclosure wording with exact authoritative PDF author-accountability wording.",
+      "exact_new_text": "The author developed this research programme, including the mathematical arguments. AI tools were used as an aid in that work and in preparing this publication version, including manuscript consolidation, literature checking, mathematical checks, and internal computational checks. The author retains responsibility for the manuscript."
+    },
+    {
+      "type": "standalone_flattening",
+      "change": "Replaced bibliography commands with compiled plain-style .bbl containing the same 13 references. No body inputs remain."
+    }
+  ],
+  "match": {
+    "pdf_byte_identical": false,
+    "substantive_content": "matched after one disclosure patch",
+    "compiled_pages": 63,
+    "authoritative_pages": 63,
+    "body_text_review": "Read all 63 authoritative pages and compared current-source compile. No scientific/prose content differences found after disclosure patch; text extraction differs in mathematics due to PDF font mappings.",
+    "render_comparison": "All 63 pages compared at scale 1.5 using grayscale rendering. Representative theorem and derivative pages 17 and 55 inspected visually in both versions.",
+    "max_changed_pixel_pct": 0.4134382,
+    "max_unmatched_ink_pixels_1px_tolerance": 4,
+    "decimal_digit_counts": "Identical on each page apart from source font extraction of the mapsto symbol as 7 on page 11."
+  },
+  "counts": {
+    "parts": 2,
+    "main_sections": 28,
+    "appendix_sections": 5,
+    "subsections": 38,
+    "theorems": 4,
+    "lemmas": 7,
+    "propositions": 1,
+    "corollaries": 1,
+    "explicit_proof_environments": 11,
+    "references": 13,
+    "last_numbered_equation": 126,
+    "labels": 137,
+    "display_delimiter_blocks": 200,
+    "equation_environments": 49,
+    "align_environments": 35,
+    "align_star_environments": 51,
+    "gather_star_environments": 1,
+    "tables": 6
+  },
+  "compilation": {
+    "status": "success",
+    "unresolved_references": false,
+    "overfull_or_underfull_warnings": false,
+    "engine": "pdfTeX 1.40.25 (authoritative PDF 1.40.29)",
+    "inputs_remaining": []
+  },
+  "arithmetic_check": {
+    "method": "Independent Python Fraction exact rational sums of manuscript table ceilings and periodic formula",
+    "radial_label": "0.003331233000157099",
+    "radial_copy_hold": "0.000552421955492019",
+    "radial_union": "0.003879184823337625",
+    "radial_joint": "0.006086770112337625",
+    "periodic_copy": "0.00222725479707774720002304",
+    "periodic_joint": "0.00443484008607784720002304",
+    "passed": true
+  },
+  "verification_limits": "This is source/PDF fidelity, display, reference and arithmetic verification. It is not a fresh independent proof audit of all specialized analytic estimates.",
+  "files": {
+    "main.tex": {
+      "path": "/workspace/scratch/dd5e84456947/prepared-papers/nonequilibrium-records/main.tex",
+      "sha256": "3f42128116c88e66db43d134e3b30357c72f2d5a6f3727faaad1b41f107c59c3"
+    },
+    "main.aux": {
+      "path": "/workspace/scratch/dd5e84456947/prepared-papers/nonequilibrium-records/main.aux",
+      "sha256": "0349ee429fea11178f447bd8a0e45c99b59e90c469da97e8294b4143289c401d"
+    },
+    "main.pdf": {
+      "path": "/workspace/scratch/dd5e84456947/prepared-papers/nonequilibrium-records/main.pdf",
+      "sha256": "5d6f1bea7b5426b20cb669e596af1b372d6b4e4fc1d2809d30e0e279fc45e5bd"
+    }
+  }
+}

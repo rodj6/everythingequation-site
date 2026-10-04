@@ -1,0 +1,69 @@
+{
+  "paper": "nonequilibrium-records",
+  "status": "PASS after root fixed Markdown macro argument tokenization",
+  "source": "prepared-papers/nonequilibrium-records/main.tex",
+  "html_pages": 37,
+  "math_fidelity": {
+    "source_expressions": 2053,
+    "html_tex_annotations": 2053,
+    "comparison": "Independent source scanner compared complete multiset of math bodies to generated HTML TeX annotations. Only whitespace, labels, nonumber/notag, numeric tags and semantically equivalent align/aligned/split wrapper names normalized.",
+    "missing": 0,
+    "extra": 0
+  },
+  "equation_numbering": {
+    "count": 126,
+    "unique": 126,
+    "expected": "1 through 126, each exactly once",
+    "missing": [],
+    "duplicate": []
+  },
+  "formal_statements": {
+    "count": 13,
+    "headings": "Compared all theorem, lemma, corollary and proposition numbers/titles to main.tex and authoritative PDF. Correct."
+  },
+  "tables": {
+    "count": 6,
+    "verification": "Compared table headers and all mathematical entries. All source math, including table entries, is covered by exact body inventory."
+  },
+  "prose": "Independent lexical coverage check found no missing substantive prose. Normalization differences were accent and en-dash handling, plus a typesetting-only dottedtocline command.",
+  "cross_references": {
+    "count": 94,
+    "missing_page": 0,
+    "missing_anchor": 0
+  },
+  "em_dashes": 0,
+  "markdown_math": {
+    "count": 2053,
+    "macros_supplied": false,
+    "katex_errors": 0
+  },
+  "all_papers_markdown_math": [
+    {
+      "file": "control-consistency.md",
+      "mathCount": 463,
+      "errors": []
+    },
+    {
+      "file": "equilibrium-records.md",
+      "mathCount": 528,
+      "errors": []
+    },
+    {
+      "file": "hybrid-bell-paths.md",
+      "mathCount": 882,
+      "errors": []
+    },
+    {
+      "file": "nonequilibrium-records.md",
+      "mathCount": 2053,
+      "errors": []
+    },
+    {
+      "file": "preparation-returns.md",
+      "mathCount": 647,
+      "errors": []
+    }
+  ],
+  "bug_found_and_resolved": "Initial Markdown expansion concatenated control-word norm delimiters and the argument, e.g. lVertP. Root fixed macro substitutions to brace arguments. All five expanded Markdown files then render every formula with no supplied macros and no errors.",
+  "scope": "Source/content/math/numbering/link audit. Root performs browser and build verification."
+}

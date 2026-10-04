@@ -64,7 +64,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
 
       <section className="card-surface mt-6 border-l-4 border-l-[hsl(var(--amber))] px-5 py-4">
         <p className="m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] text-amberc">
-          {isQuantum ? "Current research status · Version 2 · 15 September 2026" : isConsciousness ? "Current research status · SPC-2 · Monograph and Papers 2–4" : "Research target"}
+          {isQuantum ? "Current research status · Updated 4 October 2026" : isConsciousness ? "Current research status · SPC-2 · Monograph and Papers 2–4" : "Research target"}
         </p>
         <p className="mt-2 text-[0.97rem] leading-relaxed text-fg/90">
           {problem.target.trim()}
@@ -74,18 +74,25 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
       {isQuantum ? (
         <section className="mt-8" aria-labelledby="current-quantum-results">
           <h2 id="current-quantum-results" className="text-2xl font-semibold">The current measurement programme</h2>
-          <p className="mt-3 leading-relaxed text-mute">Source dynamics, a law for actual histories, outcome statistics and durable apparatus records are different parts of a measurement theory. The new publications supply two complete chains under their own constitutive premises.</p>
+          <p className="mt-3 leading-relaxed text-mute">Source dynamics, a law for actual histories, outcome statistics and durable apparatus records are different parts of a measurement theory. The October papers join the September constructions with equilibrium uniqueness and quantitative nonequilibrium record results.</p>
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <Link href="/quantum-measurement/pilot-medium" className="card-surface card-surface-hover p-5">
+            <Link href="/quantum-measurement/research/hybrid-bell-paths" className="card-surface card-surface-hover p-5">
               <h3 className="font-semibold text-glow">Pilot-medium completion →</h3>
               <p className="mt-2 text-sm leading-relaxed text-mute">Declared bond interactions, prepared spatial gas and finite packet recombination give a controlled Bell-path limit. A finite autonomous material programme retains sampled records on the proved horizon.</p>
             </Link>
-            <Link href="/quantum-measurement/massive-configuration" className="card-surface card-surface-hover p-5">
+            <Link href="/quantum-measurement/research/equilibrium-records" className="card-surface card-surface-hover p-5">
               <h3 className="font-semibold text-vio">Massive-configuration completion →</h3>
               <p className="mt-2 text-sm leading-relaxed text-mute">A continuous guidance law and complete initial equilibrium are premises. Semibounded apparatus dynamics give physical pointers and separate bounds on retained output and historical archive corruption.</p>
             </Link>
           </div>
-          <p className="mt-5 text-sm leading-relaxed text-mute">Source/readout incompleteness does not by itself derive these interaction laws, guidance laws or preparation statistics. Exact finite-resource Bell dynamics, a smooth realization of the full hybrid source, and broader preparation and storage domains remain identified extensions. The supplied publications do not establish external verification or experimental confirmation.</p>
+          <div className="mt-5 grid gap-4">
+            <div className="card-surface p-5"><h3 className="font-semibold text-glow"><Link href="/quantum-measurement/research/control-consistency">Control-consistent Born uniqueness →</Link></h3><p className="mt-2 text-sm leading-relaxed text-mute">A1–A3 characterize the Born density on the nowhere-zero class using local scalar controls and connected fixed interactions. A4 supplies the nodal extension. Spin, symmetry and binary-flag refinements have distinct hypotheses. The theorem characterizes an assignment; actual preparation laws must satisfy its statistical premise.</p></div>
+            <div className="card-surface p-5"><h3 className="font-semibold text-glow"><Link href="/quantum-measurement/research/preparation-returns">All-Borel uniqueness at an engineered preparation →</Link></h3><p className="mt-2 text-sm leading-relaxed text-mute">The exact-return library has a unique invariant probability, the Born measure. The all-Borel theorem uses a reserved nonlinear plane and Gaussian mixing. Its broader Gaussian-network appendix does not extend nonlinear uniqueness to every network. The randomized controller has convergence conditions, finite-round reverse bounds and a retained-command inverse echo.</p></div>
+            <div className="card-surface p-5"><h3 className="font-semibold text-vio"><Link href="/quantum-measurement/research/nonequilibrium-records">Calibrated and faithful nonequilibrium records →</Link></h3><p className="mt-2 text-sm leading-relaxed text-mute">The periodic joint-record bound is at most 0.00443484008607784720002304, with actual copy-and-hold failure at most 0.00232725479707784720002304. The radial joint bound is below 0.006086770113, with actual copy-and-hold failure below 0.000552421956. The radial earlier-label comparison is separately below 0.003331233001 under its compatible reference coupling.</p><p className="mt-3 text-sm leading-relaxed text-mute">The periodic model admits its stated inaccessible reference; the radial theorem has a two-component qubit domain and its own narrower law contract. Coarse calibration does not imply fine-grained equilibration or erasure of retained information.</p></div>
+          </div>
+          <h3 className="mt-7 text-xl font-semibold">The remaining physical work</h3>
+          <p className="mt-3 text-sm leading-relaxed text-mute">The papers establish mathematical results under named model and statistical premises. Independent specialist verification and laboratory realization remain open. The hybrid model still needs a common smooth material realization beyond its isolated contact module. The nonequilibrium models still need compatible sources, actual loading and whole-interval retention for one enlarged material Hamiltonian. Unused error margin does not establish a hardware-source error.</p>
+          <p className="mt-3 text-sm leading-relaxed text-mute">The equilibrium chain retains complete initial equilibrium and independent ready resources; its finite Gaussian resources have finite moments, not hard cutoffs. Symbolic history bounds do not imply microscopic path total-variation stability. Neither uniqueness theorem selects actual preparation laws without its statistical consistency or invariance premise.</p>
           <div className="mt-5 flex flex-wrap gap-5 text-sm font-medium text-glow">
             <Link href="/quantum-measurement">Explore the full programme →</Link>
             <Link href="/quantum-measurement/monograph">Read the complete monograph →</Link>
@@ -136,7 +143,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
             Historical draft below
           </p>
           {isQuantum ? (
-            <>The original Everything Equation / Tier-0 notes below are preserved as a historical development trace, including their original claims and section links. Their claims of collapse from capacity saturation and Born-exponent rigidity are not the assumptions or conclusions of the September 2026 Version 2 constructions. The current measurement results are the monograph and companion papers linked above; Papers 1–7 remain the source–readout foundation. Read the two publication layers with their own provenance.</>
+            <>The original Everything Equation / Tier-0 notes below are preserved as a historical development trace, including their original claims and section links. Their claims of collapse from capacity saturation and Born-exponent rigidity are not the assumptions or conclusions of the September constructions or October research papers. The current measurement results are the five October papers and the preserved monograph and companion editions linked above; Papers 1–7 remain the source–readout foundation. Read the two publication layers with their own provenance.</>
           ) : (
             <>The notes that follow were written during the earlier Everything Equation / Tier-0 era of this programme. They are retained as a development trace. Papers 1–7 supply the current source–readout foundation.</>
           )}

@@ -1,0 +1,129 @@
+[
+  {
+    "description": "Restore authoritative PDF keywords.",
+    "old": "\\end{abstract}",
+    "new": "\\end{abstract}\n\n\\noindent\\textbf{Keywords:} quantum equilibrium; Bohmian mechanics; holonomy; interacting networks; exact control.",
+    "occurrences": 1
+  },
+  {
+    "description": "Match updated final sentence of main theorem proof (PDF p. 12).",
+    "old": "The conclusion therefore holds on the entire class of Borel\nprobabilities without excluding a null set.",
+    "new": "The conclusion holds for every Borel probability, including singular measures.",
+    "occurrences": 1
+  },
+  {
+    "description": "Match revised linear transport proof wording (PDF p. 14).",
+    "old": "The subsequent wavefunction history is\nunchanged, and its configuration map becomes",
+    "new": "This leaves the subsequent wavefunction history unchanged and makes\nits configuration map",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore explicit total-variation convention (PDF p. 17).",
+    "old": "The actual law after $n$ rounds is $(P^nf_0)\\gamma$ when $\\mu_0=f_0\\gamma$.",
+    "new": "The actual law after $n$ rounds is $(P^nf_0)\\gamma$ when $\\mu_0=f_0\\gamma$. We use the convention\n\\[\n \\operatorname{TV}(\\mu,\\nu)=\\sup_B|\\mu(B)-\\nu(B)|=\\tfrac12\\|\\mu-\\nu\\|_{\\rm var},\n\\]\nwhere the supremum is over Borel sets.",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore exact distinction between Schwartz Lebesgue density and bounded relative density (PDF p. 18).",
+    "old": "This density is normalized, strictly positive, Schwartz in physical coordinates, and bounded above and below relative to $\\gamma$.",
+    "new": "The probability $\\mu_0$ has a normalized, strictly positive Schwartz density with respect to Lebesgue measure in physical coordinates. Its relative density $f_0$ is bounded above and below by positive constants.",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore definitions of relative entropy and mutual information (PDF p. 19).",
+    "old": "Measure preservation gives an exact information identity.",
+    "new": "All logarithms are natural. We write $D(\\mu\\Vert\\nu)$ for relative entropy and $I(Z;W)$ for the relative entropy of the joint law with respect to the product of its marginals. Measure preservation gives an exact information identity.",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore binary entropy definition and H(C) assignment (PDF p. 20).",
+    "old": "Each command has entropy $h_{\\rm bin}(1/4)+(3/4)\\log2$",
+    "new": "With $h_{\\rm bin}(p)=-p\\log p-(1-p)\\log(1-p)$, each command has entropy $H(C)=h_{\\rm bin}(1/4)+(3/4)\\log2$",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore standard-normal CDF definition (PDF p. 20).",
+    "old": "The bound is independent of the preceding cycle count.",
+    "new": "Here $\\Phi$ is the standard normal cumulative distribution function. The bound is independent of the preceding cycle count.",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore mathematical spacing instead of literal comma in Eq. (8.5).",
+    "old": "\\tfrac14,2^{-n}V",
+    "new": "\\tfrac14\\,2^{-n}V",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "f,d\\gamma",
+    "new": "f\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "f_B,d\\gamma",
+    "new": "f_B\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "(1-\\lambda),d\\rho_h",
+    "new": "(1-\\lambda)\\,d\\rho_h",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "(K\\varphi-\\nu\\varphi),d\\gamma",
+    "new": "(K\\varphi-\\nu\\varphi)\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "\\chi,d\\gamma",
+    "new": "\\chi\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "f_w\\log f_w,d\\gamma",
+    "new": "f_w\\log f_w\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "f_0\\log f_0,d\\gamma",
+    "new": "f_0\\log f_0\\,d\\gamma",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore integration spacing instead of literal comma in randomized-return formulas, matching PDF.",
+    "old": "\\sqrt{2\\pi}},dy",
+    "new": "\\sqrt{2\\pi}}\\,dy",
+    "occurrences": 1
+  },
+  {
+    "description": "Restore complete authoritative declarations (PDF p. 23).",
+    "old": "The author is an independent researcher. No funding award or institutional collaboration is claimed in this manuscript. AI tools assisted the development of this research programme, including mathematical work, and the preparation of this publication version through source organization, literature checking, mathematical checks, and editorial revision. These checks are not independent specialist certification or formal proof verification. The author retains responsibility for the manuscript.",
+    "new": "\\paragraph{Funding.} This work was conducted independently without external research funding.\n\n\\paragraph{AI assistance and responsibility.} The author developed this research programme, including the mathematical arguments. AI tools were used as an aid in that work and in preparing this publication version, including source organization, literature checking, mathematical checks, adversarial review, and editorial revision. Those reviews are not independent peer review, specialist certification, or formal proof verification. The author retains responsibility for the manuscript.\n\n\\paragraph{Independent review and collaboration.} Independent mathematical review and computational replication are invited. Collaboration on physical implementation and empirical testing is also welcome where specialist expertise, equipment, or institutional resources are required. No institutional affiliation or collaboration is claimed.",
+    "occurrences": 1
+  },
+  {
+    "description": "Match bibliography DOI display while retaining DOI hyperlinks.",
+    "occurrences": 8
+  },
+  {
+    "description": "Match corrected Bell capitalization and full Teschl book title in bibliography."
+  },
+  {
+    "description": "Match authoritative PDF section naming for appendix references."
+  },
+  {
+    "description": "Match PDF metadata subject and keywords."
+  },
+  {
+    "description": "Use explicit section references for appendix A/B to match PDF wording."
+  },
+  {
+    "description": "Set bibliography item spacing to 2pt for 24-page recompiled footprint; content unchanged."
+  }
+]

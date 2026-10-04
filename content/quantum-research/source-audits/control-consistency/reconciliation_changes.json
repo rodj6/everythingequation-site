@@ -1,0 +1,107 @@
+[
+  {
+    "location": "title revision designation",
+    "old": "Publication revision of the 7 September 2026 manuscript",
+    "new": "Revised preprint candidate"
+  },
+  {
+    "location": "keywords",
+    "old": "\\end{abstract}",
+    "new": "\\end{abstract}\n\n\\noindent\\textbf{Keywords:} quantum equilibrium; Bohmian mechanics; control consistency; probability assignments; interacting systems; conditional probabilities."
+  },
+  {
+    "location": "publication relationship",
+    "old": "This article revises the author's manuscript of 7 September 2026, retaining its theorem statements, detailed proofs, effective-spin and identical-particle extensions, binary-flag alternative, and pointer example. It is independently readable from the companion exact-return paper: the latter studies arbitrary Borel laws at one engineered preparation, while the present theorem concerns a regular family of densities across states. Neither result establishes that actual preparations meet its statistical premise.",
+    "new": "This article develops the author's control-consistency manuscript into a self-contained account of its characterization theorems. The companion exact-return paper \\cite{PortfolioReturn} studies arbitrary Borel laws at one engineered preparation; the present theorem concerns a regular family of densities across states. Neither result establishes that actual preparations meet its statistical premise. The related measurement and event-law papers \\cite{OriginalMassive,OriginalMonograph,OriginalPilot,PortfolioEquilibrium,PortfolioPilot,PortfolioRecords} provide programme context; their model-specific assumptions and numerical bounds are not used in any proof here. The contribution claimed in this revision is the theorem package stated and proved below, without a historical-priority claim or an assertion that its previously circulated results originate in this revision."
+  },
+  {
+    "location": "dependency chain",
+    "old": "It does not supply a new ontology of outcomes.",
+    "new": "It does not supply a new ontology of outcomes.\n\nThe main dependency chain is short: \\cref{lem:phase,lem:transport} turn phase identities into coordinate covariance; \\cref{lem:mixed,lem:edge} and \\cref{prop:graph} use the fixed interactions to obtain full scalar identities; and \\cref{prop:saturation} gives uniqueness by local circulation. \\Cref{thm:profiles} reduces the physical control list, while \\cref{thm:identical,thm:spin} state the additional hypotheses for spin and symmetry. \\Cref{thm:heredity} is a separate characterization with a different statistical premise. The node approximation arguments are included in the appendices. None of these steps depends on a private research archive."
+  },
+  {
+    "location": "Schwartz domain proof detail",
+    "old": "Passing to the unitary limit proves preservation of every graph domain and hence of \\(\\Sch\\). Smooth time dependence gives differentiability there.",
+    "new": "Strong unitary convergence and weak compactness in each graph domain identify the limit; lower semicontinuity preserves the uniform graph bounds. Applying a higher graph bound and interpolation gives continuity in every lower graph norm. The equation then gives differentiability in those norms, proving preservation of \\(\\Sch\\) and smooth time dependence there."
+  },
+  {
+    "location": "control lower bound and graph-domain intersection",
+    "old": "We do not require all conjugated unbounded operators to have the original oscillator's full operator domain.",
+    "new": "We do not require all conjugated unbounded operators to have the original oscillator's full operator domain.\n\nFor every fixed admitted control, the lower bound is \\(H(t)\\ge (\\inf\\sigma(A)-\\norm{B(t)})I\\). It is uniform on a specified finite smooth schedule, but is not asserted to be uniform over all unrestricted control amplitudes. The Schwartz assertion means \\(\\Sch=\\bigcap_{m\\ge0}D((A+1)^m)\\), with the equivalent family of graph seminorms just described; it does not identify any single finite graph domain with \\(\\Sch\\)."
+  },
+  {
+    "location": "velocity notation and local derivative clarification",
+    "old": "\\(\\Pcal:\\Psi\\mapsto \\mu^\\Psi=p^\\Psi(q)\\,dq\\).",
+    "new": "\\(\\Pcal:\\Psi\\mapsto \\mu^\\Psi=p^\\Psi(q)\\,dq\\). The unsuperscripted \\(v_i(q_i)\\) in \\eqref{eq:ham} is a control potential; \\(v_i^\\Psi\\) is a guidance velocity. Derivatives of \\(\\Pcal\\) below denote derivatives of its local density representatives, or the resulting distributions on a nonzero patch."
+  },
+  {
+    "location": "distributional transport bracket proof",
+    "old": "and subtracting cancels the symmetric second derivative. With",
+    "new": "and subtracting cancels the symmetric second derivative. To make the regularity requirement explicit, choose a real smooth test function \\(\\zeta\\) supported in a compact nonzero patch. Differentiation of the \\(u\\)-identity and use of the \\(v\\)-identity gives\n\\[\n \\left\\langle D^2\\Pcal_\\Psi[T_v\\Psi,T_u\\Psi]+D\\Pcal_\\Psi[T_uT_v\\Psi],\\zeta\\right\\rangle\n =\\left\\langle p^\\Psi,v\\cdot\\nabla(u\\cdot\\nabla\\zeta)\\right\\rangle.\n\\]\nThe reversed identity has \\(u,v\\) interchanged. Thus every spatial differentiation can be placed on the test function. With"
+  },
+  {
+    "location": "expanded gradient-bracket verification",
+    "old": "\\Cref{lem:phase}, bracket closure, and summation prove \\eqref{eq:cov-inf}.",
+    "new": "\\Cref{lem:phase}, bracket closure, and summation prove \\eqref{eq:cov-inf}.\n\nFor completeness, writing \\(a=\\nabla\\phi\\), \\(b=\\nabla\\gamma\\), \\(P=D^2\\phi\\), and \\(G=D^2\\gamma\\), the three brackets on the right of \\eqref{eq:AG}, in their displayed order, are\n\\begin{align*}\n &\\gamma^2(Ga-Pb)-2\\gamma(a\\cdot b)b-2\\gamma|b|^2a-2\\phi|b|^2b,\\\\\n &3\\gamma^2(Ga-Pb)+6\\gamma(a\\cdot b)b,\\\\\n &-2\\gamma^2(Ga-Pb)+2\\gamma|b|^2a-2\\phi|b|^2b.\n\\end{align*}\nMultiplication by \\(-1/4,-1/12,-1/4\\) cancels every term except \\(\\phi|b|^2b\\). This verifies the precise local identity used here independently of a transport-group theorem."
+  },
+  {
+    "location": "conjugated guidance current formula",
+    "old": "This follows either by subtracting the equation and its conjugate, or by changing variables in the original continuity equation.",
+    "new": "Explicitly, if \\(v_F^\\Psi\\) denotes the conjugated velocity, then\n\\[\n v_F^\\Psi(q)=DF(q)^{-1}v^{U_F\\Psi}(F(q))\n =\\frac{a(q)\\operatorname{Im}(\\overline\\Psi(q)\\nabla\\Psi(q))}{|\\Psi(q)|^2}.\n\\]\nThe Jacobian half-density factor is real and hence contributes no imaginary phase gradient. Changing variables in the continuity equation transfers the assigned-density identity with this same velocity."
+  },
+  {
+    "location": "complexification qualification",
+    "old": "For bookkeeping, complexify the real vector space of identities.",
+    "new": "For bookkeeping, complexify the real vector space of identities and the bilinear operation \\(\\Gamma\\). This is a formal combination of real sine and cosine identities; it does not assume that the real derivative \\(D\\Pcal\\) is complex-linear or that a complex potential is an admitted control."
+  },
+  {
+    "location": "norm-tangent matrix algebra check",
+    "old": "is smooth and Hermitian and satisfies \\(-iMz=\\eta\\).",
+    "new": "is smooth and Hermitian and satisfies \\(-iMz=\\eta\\). Indeed, \\(c=z^\\dagger\\eta\\) is purely imaginary, so \\(\\eta^\\dagger z=-c\\). The first numerator in \\eqref{eq:normtangent} is Hermitian, its second coefficient \\(-ic\\) is real, and direct multiplication gives \\(Mz=i\\eta\\). Division by \\(r\\) is harmless on the compact support of \\(\\eta\\)."
+  },
+  {
+    "location": "POVM wording",
+    "old": "This is the standard apparatus derivation of a POVM",
+    "new": "This is the usual apparatus derivation of a POVM"
+  },
+  {
+    "location": "endpoint TV error definition and bound",
+    "old": "Exact support separation is an ideal mathematical case. If the actual preparation isometry \\(V\\) differs from an ideal one \\(\\widetilde V\\) by at most \\(\\varepsilon\\) in operator norm, then for every normalized input the trace distance of the two output pure states is at most \\(\\varepsilon\\). Every record probability differs by at most that amount.",
+    "new": "Exact support separation is an ideal mathematical case. Here \\(\\operatorname{TV}(\\mu,\\nu)=\\sup_A|\\mu(A)-\\nu(A)|\\), equal to one half of the \\(L^1\\) distance for densities, and quantum trace distance is \\(\\tfrac12\\norm{\\rho-\\sigma}_1\\). Let \\(V=UV_0\\) be the actual complete endpoint isometry and \\(\\widetilde V\\) an ideal isometry into the same output space, compared using the same record partition. If \\(\\norm{V-\\widetilde V}\\le\\varepsilon\\), then for every normalized input the trace distance of the two output pure states is at most \\(\\varepsilon\\). Measurement contracts trace distance, so their entire endpoint record distributions differ in total variation by at most \\(\\varepsilon\\)."
+  },
+  {
+    "location": "capped endpoint bound",
+    "old": "Thus \\(\\varepsilon+\\delta\\) bounds the combined probability error.",
+    "new": "Thus \\(\\min\\{1,\\varepsilon+\\delta\\}\\) bounds the combined endpoint record error."
+  },
+  {
+    "location": "endpoint versus trajectory-history scope",
+    "old": "\\Cref{app:pointer} gives an explicitly time-dependent Gaussian pointer example with a direct overlap bound.",
+    "new": "\\Cref{app:pointer} gives an explicitly time-dependent Gaussian pointer example with a direct overlap bound.\n\nAn endpoint record distribution does not establish that the pointer copied a specified earlier actual label or remained in a record region throughout a holding interval. Those claims require a defined history observable and a separate dynamical estimate. Initial-law total variation contracts under a common measurable history map when such a map is defined, but small endpoint wave or isometry error alone gives no comparison between two trajectory histories. No copy-and-hold error or whole-path Born comparison is asserted here."
+  },
+  {
+    "location": "nodal uniqueness hypotheses",
+    "old": "The proof of uniqueness before approximation is local:",
+    "new": "For scalar states with full scalar annihilators, and for spinors with the matrix annihilators established in \\cref{thm:spin}, the proof of uniqueness before approximation is local:"
+  },
+  {
+    "location": "identical-particle spin chart extension",
+    "old": "The Lie and Jordan argument of \\cref{thm:spin} supplies all Hermitian endomorphisms of the local spin fiber.",
+    "new": "All such coefficients are chosen with support strictly inside that chart. On the ordered cover, extend a chart matrix to the disjoint permutation lifts by conjugating with the permutation action on spin factors, and set it to zero outside their union. This produces a smooth equivariant multiplier preserving the chosen symmetry sector; the scalar fermionic sign cancels in the conjugation. The Lie and Jordan argument of \\cref{thm:spin} therefore operates within the sector and supplies every compactly supported Hermitian endomorphism in the local spin frame."
+  },
+  {
+    "location": "explicit pointer velocity derivative",
+    "old": "Its spatial derivative is bounded on each finite time interval: the derivative of the two Gaussian mixing weights is bounded by a constant times \\(|d|/s^2\\). Thus the actual guidance equation has a complete all-point flow on that interval. Equivalently, its strictly increasing cumulative density satisfies \\(F_t(Y_t)=F_0(Y_0)\\) by the continuity equation and zero flux at infinity.",
+    "new": "For an explicit derivative bound, put \\(\\lambda=w_+|\\chi_+|^2/r\\). Then\n\\[\n \\partial_y\\lambda=\\frac{2d}{s^2}\\lambda(1-\\lambda),\\qquad\n |\\partial_yv|\\le |a|+\\frac{|d(\\dot d-ad)|}{s^2}.\n\\]\nThe formulas also hold at \\(w_+=0\\) or \\(w_-=0\\) by the constant-weight limits. Since \\(s\\ge\\sigma>0\\), this derivative and the linear-growth coefficients are bounded on every fixed finite interval. The guidance equation therefore has a complete all-point flow on that interval. To avoid a collision with the force notation, write its cumulative density as \\(\\mathsf F_t\\); the continuity equation and zero flux at infinity give \\(\\mathsf F_t(Y_t)=\\mathsf F_0(Y_0)\\)."
+  },
+  {
+    "location": "expanded declarations",
+    "old": "\\begin{samepage}\n\\section*{Declarations}\nThe author is an independent researcher. No funding award or institutional collaboration is claimed in this manuscript. AI tools assisted the development of this research programme, including mathematical work, and the preparation of this publication version through source organization, literature checking, mathematical checks, and editorial revision. These checks are not independent specialist certification or formal proof verification. The author retains responsibility for the manuscript.\n\n\\end{samepage}",
+    "new": "\\section*{Declarations}\n\\paragraph{Funding.} This work was conducted independently without external research funding.\n\n\\paragraph{AI assistance and responsibility.} The author developed this research programme, including the mathematical arguments. AI tools were used as an aid in that work and in preparing this publication version, including source organization, literature checking, mathematical checks, adversarial review, and editorial revision. Those reviews are not independent peer review, specialist certification, or formal proof verification. The author retains responsibility for the manuscript.\n\n\\paragraph{Independent review and collaboration.} Independent mathematical review and computational replication are invited. Collaboration on physical implementation and empirical testing is also welcome where specialist expertise, equipment, or institutional resources are required. No institutional affiliation or collaboration is claimed.\n\n\\paragraph{Proof and verification materials.} The central characterization arguments are contained in this article. Public sources supply the explicitly cited background results. The accompanying source package includes the review record and reproducible algebra checks; these checks supplement the proofs and do not replace them."
+  },
+  {
+    "location": "appendix reference wording",
+    "old": "\\usepackage[nameinlink,noabbrev]{cleveref}",
+    "new": "\\usepackage[nameinlink,noabbrev]{cleveref}\n\\crefname{appendix}{section}{sections}\n\\Crefname{appendix}{Section}{Sections}"
+  }
+]

@@ -14,6 +14,8 @@ import { listArticles } from '@/lib/articles';
 import { listMonographItems, monographTotals } from '@/lib/monograph';
 import { quantumPublications, quantumMonograph } from '@/config/quantum';
 import { listQuantumDocuments } from '@/lib/quantum';
+import { quantumResearchPublications } from '@/config/quantum-research';
+import { listQuantumResearchDocuments } from '@/lib/quantum-research';
 import { consciousnessPublication } from '@/config/consciousness';
 import { listConsciousnessDocuments, listConsciousnessGuides } from '@/lib/consciousness';
 import { listResearchDocuments, researchPapers } from '@/lib/consciousness-research';
@@ -57,7 +59,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
     { loc: sealedLeaky.url, lastmod: sealedLeaky.webDate, priority: '0.9' },
     ...listSealedDocuments().map(d => ({loc:d.url,lastmod:sealedLeaky.webDate,priority:'0.8'})),
-    { loc: '/atlas/quantum-measurement', lastmod: quantumMonograph.published, priority: '0.8' },
+    { loc: '/atlas/quantum-measurement', lastmod: '2026-10-04', priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
       priority:
@@ -72,7 +74,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
       lastmod: site.monograph.webDate,
       priority: '0.8',
     })),
-    ...quantumPublications.map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
+    ...[...quantumPublications, ...quantumResearchPublications].map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
+    ...listQuantumResearchDocuments().map(document => ({ loc: document.url, lastmod: '2026-10-04', priority: '0.8' })),
     ...listQuantumDocuments().map((document) => ({ loc: document.url, lastmod: quantumMonograph.published, priority: '0.8' })),
     ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
@@ -129,6 +132,12 @@ export async function generateFeed(baseUrl: string): Promise<string> {
       date: consciousnessPublication.published,
       summary: `${consciousnessPublication.description} Complete monograph, eight explanatory guides, PDF, source and Markdown. DOI ${consciousnessPublication.doi}. ${consciousnessPublication.versionNote}`,
     },
+    ...quantumResearchPublications.map(publication => ({
+      title: publication.title,
+      url: `${canonicalBase}${publication.webUrl}`,
+      date: publication.published,
+      summary: `${publication.description} Complete web edition, original PDF and full Markdown. DOI ${publication.doi}.`,
+    })),
     ...quantumPublications.map((publication) => ({
       title: `${publication.title} (Version ${publication.version})`,
       url: `${canonicalBase}${publication.webUrl}`,
@@ -221,7 +230,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Canonical authority and result map',
     '',
-    '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions and are the current authority for their own measurement results.',
+    '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions. Five October 2026 papers extend and consolidate the programme with equilibrium uniqueness, autonomous chains, hybrid Bell paths and restricted-nonequilibrium records, each under its own hypotheses.',
     '- A previous six-paper canonical stack (June 2026) was replaced by the seven-paper sequence; its records remain published on Zenodo and are listed below as superseded canonical versions. They are not current authority and their architecture (down-compilation, runtime calculus, synthesis) is not carried forward.',
     '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if any superseded or historical material conflicts with Papers 1-7, the current sequence controls.',
     '- Paper 1 establishes exact quotient presentation together with independent descent and equivariant-reconstruction obstructions.',
@@ -254,9 +263,9 @@ export async function generateLlmsTxt(): Promise<string> {
         `- [${i.label ? `${i.label}: ` : ''}${i.title}](${baseUrl}/monograph/${i.slug})`
     ),
     '',
-    '## Quantum Measurement and Born Rule (complete Version 2 publications)',
+    '## Quantum Measurement and Born Rule (September editions and five October research papers)',
     '',
-    `Published ${quantumMonograph.published} by ${quantumMonograph.author}, ${quantumMonograph.authorRole}. Programme overview: ${baseUrl}/quantum-measurement. Full inventory with stable anchors and source-comparison counts: ${baseUrl}/quantum-measurement/manifest.json.`,
+    `Original editions published ${quantumMonograph.published}; five research papers dated 2026-10-04. Author: ${quantumMonograph.author}, ${quantumMonograph.authorRole}. Programme overview: ${baseUrl}/quantum-measurement. Full inventory with stable anchors and source-comparison counts: ${baseUrl}/quantum-measurement/manifest.json.`,
     '',
     'The pilot-medium completion uses a declared P1-P4 interaction catalogue, independent spatial-gas preparation, conservative packet export, finite recombination and carrier population tracking. It yields controlled total-variation convergence on complete tagged paths to the minimal Bell process in unchanged physical time on a finite graph and horizon. Its finite autonomous apparatus retains material records; finite deviations and recurrence bound the claim.',
     'The massive-configuration completion separately postulates the universal spinor inventory, kinetic-momentum guidance and complete initial equilibrium with a finite independent ready stock. It gives continuous physical configuration paths, semibounded apparatus dynamics, retained resources, a massive autonomous controller, and separate retained-output and archive-history error bounds. It does not assume or derive discrete Bell jumps for internal spin labels.',
@@ -268,7 +277,17 @@ export async function generateLlmsTxt(): Promise<string> {
       `  - [PDF](${baseUrl}${publication.pdfUrl}) · [LaTeX source](${baseUrl}${publication.texUrl}) · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
     ]),
     '',
-    '### Complete quantum web-edition reading inventory',
+    '### Five October 2026 research papers',
+    'Control consistency characterizes a regular projective density assignment under local scalar controls and fixed connected interactions. Its A1-A3 theorem, A4 nodal extension, spin, symmetry and binary-flag variants retain distinct hypotheses. Preparation-return holonomy instead proves all-Borel uniqueness at an engineered reference preparation under its exact-return library. The regular-family and single-preparation results are logically independent; neither derives its statistical premise for actual preparations.',
+    'The equilibrium-chain revision realizes fixed finite programmes under Bohmian guidance, complete equilibrium and finite ready resources, separating quantum-output error from absolute-flux historical error. The hybrid revision proves complete ordinary-configuration Bell-path convergence using P1-P4, calibrated carriers and independent spatial gas. Its smooth contact-module appendix does not realize the entire hybrid model with interleaved exports.',
+    'The nonequilibrium paper contains separate periodic and radial Hamiltonians and initial-law classes. Periodic joint calibrated record-law distance is at most 0.00443484008607784720002304; actual copy-and-hold failure is at most 0.00232725479707784720002304. Radial joint earlier-label and entire symbolic record-law distance is below 0.006086770113; actual copy-and-hold failure is below 0.000552421956. Its separate compatible-coupling earlier-label comparison is below 0.003331233001. The periodic model admits its stated inaccessible reference; the radial theorem has its stated two-component qubit domain. Coarse calibration does not imply fine-grained equilibrium, and unspent margin does not establish hardware-source error.',
+    ...quantumResearchPublications.flatMap(publication => [
+      `- [${publication.title}](${baseUrl}${publication.webUrl}): ${publication.dateLabel}; DOI ${publication.doiUrl}; publication record ${baseUrl}/papers/${publication.paperSlug}.`,
+      `  - [Original PDF](${baseUrl}${publication.pdfUrl}) · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
+      ...listQuantumResearchDocuments().filter(document => document.publicationId === publication.id).map(document => `  - [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url}) · [Markdown](${baseUrl}${document.markdownUrl})`),
+    ]),
+    '',
+    '### Complete September quantum web-edition reading inventory',
     ...listQuantumDocuments().map((document) => `- [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url})`),
     '',
     '## Consciousness: SPC-2 (current Version 2 publication)',
@@ -309,7 +328,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Framework](${baseUrl}/framework): the seven-paper sequence and core vocabulary`,
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
-    `- [Quantum Measurement](${baseUrl}/quantum-measurement): two constitutive completions, physical records, Born statistics, accessible explanations and full technical reading paths`,
+    `- [Quantum Measurement](${baseUrl}/quantum-measurement): equilibrium uniqueness, two measurement constructions, nonequilibrium records and complete technical reading paths`,
     `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4 and explanatory guides`,
     `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
@@ -346,7 +365,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/sitemap.xml`,
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
-    `- ${baseUrl}/quantum-measurement/manifest.json (all three quantum publications, reading inventory, stable anchors, content counts and source downloads)`,
+    `- ${baseUrl}/quantum-measurement/manifest.json (September editions and October research inventory, stable anchors, coverage and source downloads)`,
     `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph and Papers 2–4, ordered technical chapters, appendices, guides, stable anchors and source formats)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
@@ -433,13 +452,13 @@ export async function generateGraph() {
     {
       id: 'quantum-measurement', type: 'research-programme',
       title: 'Quantum Measurement and the Born Rule',
-      date: quantumMonograph.published, version: quantumMonograph.version,
-      status: 'published constitutive results; external verification not established by these publications',
+      date: '2026-10-04',
+      status: 'mathematical results under declared model and statistical premises; independent review and material realization remain open',
       url: `${baseUrl}/quantum-measurement`,
       manifest: `${baseUrl}/quantum-measurement/manifest.json`,
-      scope: 'Two distinct constitutions. Source/readout incompleteness does not derive their interactions, guidance or preparation statistics.',
+      scope: 'Independent control-consistency and preparation-return equilibrium characterizations; equilibrium chains; hybrid Bell paths; two separate nonequilibrium record models. Each result retains its own hypotheses and observable.',
     },
-    ...listQuantumDocuments().map((document) => ({
+    ...[...listQuantumDocuments(), ...listQuantumResearchDocuments()].map((document) => ({
       id: `quantum:${document.publicationId}:${document.slug}`,
       type: 'quantum-web-edition-part', publicationId: document.publicationId,
       title: document.title, label: document.label, kind: document.kind, order: document.order,
@@ -596,6 +615,20 @@ export async function generateGraph() {
     });
     if (publication.id !== 'monograph') edges.push({ from: `paper:${quantumMonograph.paperSlug}`, to: publicationId, relation: 'companion-treatment', note: 'Independent publication provenance; statements and proofs retain their own hypotheses.' });
   }
+  for (const publication of quantumResearchPublications) {
+    const publicationId = `paper:${publication.paperSlug}`;
+    edges.push({ from: 'quantum-measurement', to: publicationId, relation: 'published-as' });
+    const documents = listQuantumResearchDocuments().filter(document => document.publicationId === publication.id);
+    documents.forEach((document, index) => {
+      const documentId = `quantum:${document.publicationId}:${document.slug}`;
+      edges.push({ from: publicationId, to: documentId, relation: 'contains-web-edition-part' });
+      if (index < documents.length - 1) edges.push({ from: documentId, to: `quantum:${documents[index + 1].publicationId}:${documents[index + 1].slug}`, relation: 'reading-order' });
+    });
+  }
+  edges.push({ from: 'paper:quantum-control-consistency', to: 'paper:quantum-preparation-returns', relation: 'complementary-characterization', note: 'Logically independent: a regular family across states versus arbitrary Borel laws at an engineered preparation.' });
+  edges.push({ from: `paper:${quantumPublications.find(publication => publication.id === 'pilot-medium')!.paperSlug}`, to: 'paper:quantum-hybrid-bell-paths', relation: 'consolidated-by', note: 'The original fixed edition remains available; the October revision controls its own statements.' });
+  edges.push({ from: `paper:${quantumPublications.find(publication => publication.id === 'massive-configuration')!.paperSlug}`, to: 'paper:quantum-equilibrium-records', relation: 'consolidated-by', note: 'The October revision states the joint symbolic-record observable and preserves separate output/history estimates.' });
+  edges.push({ from: 'paper:quantum-nonequilibrium-records', to: 'atlas:material-records', relation: 'quantitative-effective-constructions', note: 'Two separate Hamiltonians, law classes and bounds. Coarse calibrated records do not imply fine-grained equilibrium.' });
   edges.push({ from: 'paper:source-readout-non-equivalence', to: 'quantum-measurement', relation: 'conceptual-context', note: 'The source/readout distinction motivates the programme; it does not derive the added physical premises.' });
   edges.push({ from: 'quantum-measurement', to: 'problem:quantum-measurement', relation: 'current-results-and-historical-provenance' });
   edges.push({ from: 'quantum-measurement', to: 'atlas:measurement-programme', relation: 'visualized-in' });
@@ -704,7 +737,7 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications control their own constitutive results and are not deductions of their physical premises from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

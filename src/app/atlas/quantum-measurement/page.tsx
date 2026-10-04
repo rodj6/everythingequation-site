@@ -3,7 +3,7 @@ import Link from "next/link";
 import { atlasEdges, atlasNodeMap, getAtlasNode, measurementNodeIds } from "@/data/reality-atlas";
 import { site } from "@/config/site";
 
-const description = "Locate the two Quantum Measurement constitutions in the Reality Atlas: source currents, pilot-medium Bell paths, massive guidance, Born statistics and retained material records, with explicit mathematical and conceptual connections.";
+const description = "Explore equilibrium uniqueness, deterministic Bell paths and faithful quantum records in the Reality Atlas, with five complete October research papers and their distinct mathematical relationships.";
 
 export const metadata: Metadata = {
   title: "Quantum Measurement in the Atlas",
@@ -32,14 +32,14 @@ export default function MeasurementAtlasGuide() {
     <article className="atlas-field-guide">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Article", headline: "Quantum Measurement in the Reality Atlas",
-        description, url: new URL("/atlas/quantum-measurement", site.url).toString(), datePublished: "2026-09-15",
+        description, url: new URL("/atlas/quantum-measurement", site.url).toString(), datePublished: "2026-09-15", dateModified: "2026-10-04",
         author: { "@type": "Person", name: "Jeremy Rodgers" },
         about: measurementNodeIds.map((id) => ({ "@type": "Thing", name: getAtlasNode(id).label })),
       }).replace(/</g, "\\u003c") }} />
       <header className="atlas-guide-head">
         <p className="section-label">Reality Atlas / Quantum Measurement</p>
         <h1>Where a source becomes<br />a recorded history.</h1>
-        <p>The Atlas connects the new measurement programme to the wider source-to-readout architecture. Follow two distinct physical constructions, and keep their assumptions attached to every result.</p>
+        <p>The Atlas connects equilibrium, event histories and physical records to the wider source-to-readout architecture. The two construction routes below now sit alongside equilibrium uniqueness and quantitative nonequilibrium records.</p>
         <div className="atlas-guide-actions">
           <Link href="/atlas?focus=measurement-programme">Enter this region of the Atlas ↗</Link>
           <Link href="/quantum-measurement">Programme and complete publications →</Link>
@@ -65,6 +65,10 @@ export default function MeasurementAtlasGuide() {
         <div><h2>Dashed · Conceptual relationship</h2><p>A connection identifies context or a related question. It transfers no theorem. In particular, material records still need the Atlas’s wider objectivity and reconstruction criteria before they serve as geometric input.</p></div>
       </section>
 
+      <section className="atlas-guide-relations" aria-label="October research connections">
+        <div><h2>Why the Born measure?</h2><p><Link href="/quantum-measurement/research/control-consistency">Control consistency</Link> singles out a regular density assignment using local scalar controls and fixed interactions. <Link href="/quantum-measurement/research/preparation-returns">Preparation returns</Link> single out an arbitrary Borel law at an engineered reference preparation. They answer different statistical questions.</p></div>
+        <div><h2>What survives beyond equilibrium?</h2><p><Link href="/quantum-measurement/research/nonequilibrium-records">Two finite record models</Link> bound both the joint calibrated symbolic history and failure to retain an actual earlier label. Their Hamiltonians, input domains and numerical constants stay separate.</p></div>
+      </section>
       <p className="section-label">Seven connected locations</p>
       <nav className="atlas-guide-index" aria-label="Measurement Atlas contents">
         {measurementNodeIds.map((id) => <a href={`#${id}`} key={id}>{getAtlasNode(id).shortLabel}</a>)}

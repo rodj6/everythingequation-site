@@ -1,0 +1,3678 @@
+{
+  "schemaVersion": 1,
+  "converter": "scripts/convert-quantum-research.mjs",
+  "documents": [
+    {
+      "id": "control-consistency",
+      "sourceFile": "control-consistency.tex",
+      "sourceSha256": "ac4db6976cc1e55c0ffe5771711d2f60badbd3aa02164f81fe6f362ad725461b",
+      "sourceBytes": 77177,
+      "pdfSha256": "c376fde2e169e5802ce3bbcbdc6da17d5add2217fc928680b88e0ac9aaef7a03",
+      "pages": 15,
+      "sourceStats": {
+        "chapters": 6,
+        "parts": 0,
+        "sections": 23,
+        "theorems": 16,
+        "proofs": 14,
+        "tables": 0,
+        "figures": 0,
+        "labels": 58,
+        "bibliographyEntries": 16
+      },
+      "convertedStats": {
+        "chapters": 6,
+        "parts": 0,
+        "sections": 23,
+        "theorems": 16,
+        "proofs": 14,
+        "tables": 0,
+        "figures": 0,
+        "labels": 58,
+        "bibliographyEntries": 16
+      },
+      "proseChecks": [
+        {
+          "document": "abstract-and-publication-identity",
+          "sourceProseWords": 194,
+          "renderedProseWords": 195,
+          "sourceProseSha256": "4c3a1bb5b410b4e91062a9951c089c50272fe63843e0c198b7406fa27b467367",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "introduction",
+          "sourceProseWords": 647,
+          "renderedProseWords": 698,
+          "sourceProseSha256": "afd7d46ba4c5c9389274c862159c5f86f60439d323957925e1290e688445ee1e",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "physical-model-and-statistical-assumptions",
+          "sourceProseWords": 916,
+          "renderedProseWords": 952,
+          "sourceProseSha256": "ff4089fe522806c1b84bdaeadb0b5ed46833864c8e8c6231df9328dd84521118",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "from-phases-to-transport-and-uniqueness",
+          "sourceProseWords": 715,
+          "renderedProseWords": 777,
+          "sourceProseSha256": "1b881ea89ad5f8a71c059f12b1f5e0c73448bdbf9bdff2dcafdf7fd9200d81e5",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "local-controls-and-fixed-interactions",
+          "sourceProseWords": 706,
+          "renderedProseWords": 775,
+          "sourceProseSha256": "e08e57b65997450553d376f1e9a003be1df4201f0ddf8015401291930a602e33",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "translated-profiles-and-an-interacting-example",
+          "sourceProseWords": 505,
+          "renderedProseWords": 525,
+          "sourceProseSha256": "20028fb060ac37ee9ff2f1bd7ef0ae5c4eefff064e82865d281e30ca0b9f0b6c",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "internal-degrees-of-freedom",
+          "sourceProseWords": 695,
+          "renderedProseWords": 739,
+          "sourceProseSha256": "f4a09831bc4435a0d46f1dc508af0f9c4c3f4bafa00a92c293ebcbafb692af54",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "consequences-for-physical-records",
+          "sourceProseWords": 803,
+          "renderedProseWords": 829,
+          "sourceProseSha256": "2c7c359c212710d0f0f84acd7a42bc70b61023b2ec71e99a48bc4edf98a6a5a9",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "discussion",
+          "sourceProseWords": 194,
+          "renderedProseWords": 196,
+          "sourceProseSha256": "9957818913483facf2704f9a549c4c3fca0bb9946708836e4f491139c089a3f7",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-a-nonzero-approximation-and-nodes",
+          "sourceProseWords": 313,
+          "renderedProseWords": 326,
+          "sourceProseSha256": "10eb25f7a4f1e6e88d1860bec6b14165aaa25fe55934eccf12487a0856afb0e1",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-b-a-permutation-preserving-refinement",
+          "sourceProseWords": 902,
+          "renderedProseWords": 933,
+          "sourceProseSha256": "8b22649b1eb252e44760fa8a3148751b33bcc43e876b389be81d28fb235fe745",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity",
+          "sourceProseWords": 582,
+          "renderedProseWords": 609,
+          "sourceProseSha256": "860d2fbdaa82c431e75ba12bbc785feee601f417e7e1d8313a55c3903103ecd7",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-d-a-finite-time-gaussian-pointer",
+          "sourceProseWords": 235,
+          "renderedProseWords": 239,
+          "sourceProseSha256": "c9ccca19f370ead9aad4141a15f9ba464b26b527332f165e1420384ee3c70783",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "declarations",
+          "sourceProseWords": 154,
+          "renderedProseWords": 154,
+          "sourceProseSha256": "ea9f77eed55f4c2f5c240fc65ec7c7384ea799b70b0216dbd937776df0c5c3db",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "bibliography",
+          "sourceProseWords": 393,
+          "renderedProseWords": 439,
+          "sourceProseSha256": "4efdbaadc37dd7c27e714a905cb5d2e64affd19994ac5345f0921c6bbea9203d",
+          "missingWords": [],
+          "duplicateIds": []
+        }
+      ],
+      "macros": {
+        "\\R": "\\mathbb R",
+        "\\C": "\\mathbb C",
+        "\\Sch": "\\mathcal S",
+        "\\Cc": "C_c^\\infty",
+        "\\Pcal": "\\mathcal P",
+        "\\Acal": "\\mathcal A",
+        "\\dd": "\\,dq",
+        "\\diver": "\\operatorname{div}",
+        "\\supp": "\\operatorname{supp}",
+        "\\tr": "\\operatorname{tr}",
+        "\\Id": "I",
+        "\\norm": "\\left\\|#1\\right\\|",
+        "\\ip": "\\left\\langle #1,#2\\right\\rangle",
+        "\\Born": "\\frac{\\Psi^\\dagger\\Psi}{\\norm{\\Psi}_2^2}",
+        "\\CU": "\\mathrm{CC}"
+      },
+      "labels": {
+        "eq:born": {
+          "number": "1.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/introduction#eq:born",
+          "document": "introduction"
+        },
+        "sec:model": {
+          "number": "2",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#sec:model",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "eq:ham": {
+          "number": "2.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#eq:ham",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "eq:interaction": {
+          "number": "2.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#eq:interaction",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "ass:prob": {
+          "number": "A1",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#ass:prob",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "ass:smooth": {
+          "number": "A2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#ass:smooth",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "ass:cc": {
+          "number": "A3",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#ass:cc",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "eq:cc": {
+          "number": "2.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#eq:cc",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "ass:nodes": {
+          "number": "A4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#ass:nodes",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "eq:L2TV": {
+          "number": "2.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#eq:L2TV",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "thm:main": {
+          "number": "2.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions#thm:main",
+          "document": "physical-model-and-statistical-assumptions"
+        },
+        "sec:mechanism": {
+          "number": "3",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#sec:mechanism",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:ann": {
+          "number": "3.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:ann",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:closure": {
+          "number": "3.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:closure",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:transportoperators": {
+          "number": "3.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:transportoperators",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "lem:phase": {
+          "number": "3.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#lem:phase",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:grad": {
+          "number": "3.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:grad",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:gamma": {
+          "number": "3.5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:gamma",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "lem:transport": {
+          "number": "3.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#lem:transport",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:cov-inf": {
+          "number": "3.6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:cov-inf",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:cov-fin": {
+          "number": "3.7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:cov-fin",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "eq:AG": {
+          "number": "3.8",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#eq:AG",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "prop:saturation": {
+          "number": "3.3",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#prop:saturation",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "rem:line": {
+          "number": "3.4",
+          "kind": "remark",
+          "url": "/quantum-measurement/research/control-consistency/from-phases-to-transport-and-uniqueness#rem:line",
+          "document": "from-phases-to-transport-and-uniqueness"
+        },
+        "sec:local": {
+          "number": "4",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#sec:local",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "lem:mixed": {
+          "number": "4.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#lem:mixed",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "eq:mixed": {
+          "number": "4.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#eq:mixed",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "eq:edge-source": {
+          "number": "4.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#eq:edge-source",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "lem:edge": {
+          "number": "4.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#lem:edge",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "lem:factor": {
+          "number": "4.3",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#lem:factor",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "prop:graph": {
+          "number": "4.4",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/control-consistency/local-controls-and-fixed-interactions#prop:graph",
+          "document": "local-controls-and-fixed-interactions"
+        },
+        "sec:profiles": {
+          "number": "5",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/translated-profiles-and-an-interacting-example#sec:profiles",
+          "document": "translated-profiles-and-an-interacting-example"
+        },
+        "thm:profiles": {
+          "number": "5.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/control-consistency/translated-profiles-and-an-interacting-example#thm:profiles",
+          "document": "translated-profiles-and-an-interacting-example"
+        },
+        "ex:harmonic": {
+          "number": "5.2",
+          "kind": "example",
+          "url": "/quantum-measurement/research/control-consistency/translated-profiles-and-an-interacting-example#ex:harmonic",
+          "document": "translated-profiles-and-an-interacting-example"
+        },
+        "sec:spin": {
+          "number": "6",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#sec:spin",
+          "document": "internal-degrees-of-freedom"
+        },
+        "eq:spinH": {
+          "number": "6.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#eq:spinH",
+          "document": "internal-degrees-of-freedom"
+        },
+        "eq:spinprofile": {
+          "number": "6.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#eq:spinprofile",
+          "document": "internal-degrees-of-freedom"
+        },
+        "thm:spin": {
+          "number": "6.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#thm:spin",
+          "document": "internal-degrees-of-freedom"
+        },
+        "eq:matrixderivative": {
+          "number": "6.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#eq:matrixderivative",
+          "document": "internal-degrees-of-freedom"
+        },
+        "eq:normtangent": {
+          "number": "6.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/internal-degrees-of-freedom#eq:normtangent",
+          "document": "internal-degrees-of-freedom"
+        },
+        "sec:measurement": {
+          "number": "7",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/consequences-for-physical-records#sec:measurement",
+          "document": "consequences-for-physical-records"
+        },
+        "lem:flow": {
+          "number": "7.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/consequences-for-physical-records#lem:flow",
+          "document": "consequences-for-physical-records"
+        },
+        "eq:flowbound": {
+          "number": "7.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/consequences-for-physical-records#eq:flowbound",
+          "document": "consequences-for-physical-records"
+        },
+        "eq:effect": {
+          "number": "7.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/consequences-for-physical-records#eq:effect",
+          "document": "consequences-for-physical-records"
+        },
+        "eq:instrument": {
+          "number": "7.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/consequences-for-physical-records#eq:instrument",
+          "document": "consequences-for-physical-records"
+        },
+        "app:nodes": {
+          "number": "A",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/appendix-a-nonzero-approximation-and-nodes#app:nodes",
+          "document": "appendix-a-nonzero-approximation-and-nodes"
+        },
+        "lem:nodal-density": {
+          "number": "A.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/control-consistency/appendix-a-nonzero-approximation-and-nodes#lem:nodal-density",
+          "document": "appendix-a-nonzero-approximation-and-nodes"
+        },
+        "app:identical": {
+          "number": "B",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/appendix-b-a-permutation-preserving-refinement#app:identical",
+          "document": "appendix-b-a-permutation-preserving-refinement"
+        },
+        "eq:collective": {
+          "number": "B.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-b-a-permutation-preserving-refinement#eq:collective",
+          "document": "appendix-b-a-permutation-preserving-refinement"
+        },
+        "thm:identical": {
+          "number": "B.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/control-consistency/appendix-b-a-permutation-preserving-refinement#thm:identical",
+          "document": "appendix-b-a-permutation-preserving-refinement"
+        },
+        "app:heredity": {
+          "number": "C",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#app:heredity",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "eq:heredityX": {
+          "number": "C.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#eq:heredityX",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "eq:heredityY": {
+          "number": "C.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#eq:heredityY",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "thm:heredity": {
+          "number": "C.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#thm:heredity",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "eq:powers": {
+          "number": "C.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#eq:powers",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "eq:odds": {
+          "number": "C.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#eq:odds",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "eq:powertransport": {
+          "number": "C.5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/control-consistency/appendix-c-an-alternative-characterization-from-binary-flag-heredity#eq:powertransport",
+          "document": "appendix-c-an-alternative-characterization-from-binary-flag-heredity"
+        },
+        "app:pointer": {
+          "number": "D",
+          "kind": "section",
+          "url": "/quantum-measurement/research/control-consistency/appendix-d-a-finite-time-gaussian-pointer#app:pointer",
+          "document": "appendix-d-a-finite-time-gaussian-pointer"
+        }
+      },
+      "unresolvedReferences": [],
+      "unsupportedCommands": [],
+      "mathErrors": [],
+      "structuralMismatches": [],
+      "sourceLimitations": [],
+      "status": "PASS"
+    },
+    {
+      "id": "preparation-returns",
+      "sourceFile": "preparation-returns.tex",
+      "sourceSha256": "c2f90776795e0576fdad1f4f2eda3343707c6c255223bbb023700b4b347e8f81",
+      "sourceBytes": 89127,
+      "pdfSha256": "edaf0c8b2c107a89c9d09340bd9e250ffd98f5d5a90e471fad47273fbff2a58c",
+      "pages": 14,
+      "sourceStats": {
+        "chapters": 4,
+        "parts": 0,
+        "sections": 33,
+        "theorems": 22,
+        "proofs": 20,
+        "tables": 0,
+        "figures": 0,
+        "labels": 70,
+        "bibliographyEntries": 20
+      },
+      "convertedStats": {
+        "chapters": 4,
+        "parts": 0,
+        "sections": 33,
+        "theorems": 22,
+        "proofs": 20,
+        "tables": 0,
+        "figures": 0,
+        "labels": 70,
+        "bibliographyEntries": 20
+      },
+      "proseChecks": [
+        {
+          "document": "abstract-and-publication-identity",
+          "sourceProseWords": 246,
+          "renderedProseWords": 247,
+          "sourceProseSha256": "5a0d18150fc35c4e93d16d636ace312abdc3797850720602b5945e36ff367068",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "introduction",
+          "sourceProseWords": 815,
+          "renderedProseWords": 853,
+          "sourceProseSha256": "06c97989c4792ff27fbe41be5bae7f89e5b24366db8c97cc89aafca28124e25b",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "hamiltonians-and-exact-return-maps",
+          "sourceProseWords": 357,
+          "renderedProseWords": 374,
+          "sourceProseSha256": "c38e1bb1f4e66ea3adeb0fe127d5040f09eb50dc5ba375ff68c4d403c1d49975",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "exact-nonlinear-returns-on-a-plane",
+          "sourceProseWords": 1134,
+          "renderedProseWords": 1203,
+          "sourceProseSha256": "0b9cda391e7c321ac55487264c935b8760698230ffbcbd21ea817948f014b82a",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "exact-gaussian-returns-with-fixed-interactions",
+          "sourceProseWords": 730,
+          "renderedProseWords": 772,
+          "sourceProseSha256": "29e97f67b9106948e68baaa681b4bc79d3207e8e1d43b2023c9d71bdd34e3642",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "engineering-the-holding-network",
+          "sourceProseWords": 882,
+          "renderedProseWords": 925,
+          "sourceProseSha256": "eb442bf6773fa0788aa8347223d139947c0ee9c88647f38cd4109be093c717d7",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "equilibrium-uniqueness-and-an-explicit-witness",
+          "sourceProseWords": 482,
+          "renderedProseWords": 502,
+          "sourceProseSha256": "929ebead5de7b80585ba1bd362ca86c6626c0bcb6d8151f7bbd9726fdcf0ef3c",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "preparation-transport-and-operational-consequences",
+          "sourceProseWords": 681,
+          "renderedProseWords": 728,
+          "sourceProseSha256": "07db2383a8db19531afaf2d16fcfae68230def5e18729a0b68e5f4e58d14af1f",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "randomized-returns-and-finite-preparation",
+          "sourceProseWords": 1663,
+          "renderedProseWords": 1739,
+          "sourceProseSha256": "dc2257aeaa7e025161eec2bb9765e7f8aa70a5d04da8b79efeefbe4911e60c88",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "discussion",
+          "sourceProseWords": 235,
+          "renderedProseWords": 237,
+          "sourceProseSha256": "6a035a8a75b6ac8f2e273a40040f5233a42286ef22a37a5b2164641f6469110a",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings",
+          "sourceProseWords": 843,
+          "renderedProseWords": 888,
+          "sourceProseSha256": "4e75fa2e7727baaf3b0f650a767bfc72b31fa8dec692cc5170b4c0a7f96e42db",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-b-exact-moment-bound-for-the-nonlinear-witness",
+          "sourceProseWords": 59,
+          "renderedProseWords": 64,
+          "sourceProseSha256": "00baeb1f1226094c61ed7e8d902ee87b6cca47228eedba3803b1852cb8414768",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "declarations",
+          "sourceProseWords": 111,
+          "renderedProseWords": 111,
+          "sourceProseSha256": "4f4b5a82698732a18d47762b0bd3e393af0f169d6ea0acde27102e2842b8c763",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "bibliography",
+          "sourceProseWords": 535,
+          "renderedProseWords": 576,
+          "sourceProseSha256": "84dde91653e4cdd251e754bfed49806c11d705ad5292264e1f8a0cb2fd335932",
+          "missingWords": [],
+          "duplicateIds": []
+        }
+      ],
+      "macros": {
+        "\\R": "\\mathbb R",
+        "\\C": "\\mathbb C",
+        "\\Cc": "C_c^\\infty",
+        "\\Cb": "C_b^\\infty",
+        "\\diver": "\\operatorname{div}",
+        "\\tr": "\\operatorname{tr}",
+        "\\diag": "\\operatorname{diag}",
+        "\\Sym": "\\operatorname{Sym}",
+        "\\skw": "\\operatorname{skew}",
+        "\\Sp": "\\operatorname{Sp}",
+        "\\supp": "\\operatorname{supp}",
+        "\\norm": "\\left\\|#1\\right\\|",
+        "\\ip": "\\left\\langle #1,#2\\right\\rangle",
+        "\\calH": "\\mathcal H",
+        "\\calD": "\\mathcal D",
+        "\\bibfont": "\\small"
+      },
+      "labels": {
+        "thm:main": {
+          "number": "1.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/preparation-returns/introduction#thm:main",
+          "document": "introduction"
+        },
+        "eq:reference": {
+          "number": "1.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/introduction#eq:reference",
+          "document": "introduction"
+        },
+        "eq:main": {
+          "number": "1.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/introduction#eq:main",
+          "document": "introduction"
+        },
+        "sec:model": {
+          "number": "2",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#sec:model",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "eq:H": {
+          "number": "2.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#eq:H",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "eq:domain": {
+          "number": "2.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#eq:domain",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "eq:guidance": {
+          "number": "2.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#eq:guidance",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "eq:Jac": {
+          "number": "2.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#eq:Jac",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "def:return": {
+          "number": "2.1",
+          "kind": "definition",
+          "url": "/quantum-measurement/research/preparation-returns/hamiltonians-and-exact-return-maps#def:return",
+          "document": "hamiltonians-and-exact-return-maps"
+        },
+        "sec:plane": {
+          "number": "3",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#sec:plane",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:densityclass": {
+          "number": "3.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:densityclass",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "lem:poisson": {
+          "number": "3.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#lem:poisson",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:poisson": {
+          "number": "3.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:poisson",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:connection": {
+          "number": "3.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:connection",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:inversepotential": {
+          "number": "3.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:inversepotential",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:exactpath": {
+          "number": "3.5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:exactpath",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:projection": {
+          "number": "3.6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:projection",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "lem:rectangle": {
+          "number": "3.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#lem:rectangle",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:rectangle": {
+          "number": "3.7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:rectangle",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "lem:brackets": {
+          "number": "3.3",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#lem:brackets",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:gradientidentity": {
+          "number": "3.8",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:gradientidentity",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "thm:plane": {
+          "number": "3.4",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#thm:plane",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "eq:distribution": {
+          "number": "3.9",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-nonlinear-returns-on-a-plane#eq:distribution",
+          "document": "exact-nonlinear-returns-on-a-plane"
+        },
+        "sec:gaussian": {
+          "number": "4",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#sec:gaussian",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:symplectic": {
+          "number": "4.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:symplectic",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "lem:submersion": {
+          "number": "4.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#lem:submersion",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:endpointdiff": {
+          "number": "4.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:endpointdiff",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:trial": {
+          "number": "4.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:trial",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:corrected": {
+          "number": "4.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:corrected",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:riccati": {
+          "number": "4.5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:riccati",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:covariance": {
+          "number": "4.6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:covariance",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "prop:curvature": {
+          "number": "4.2",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#prop:curvature",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:skew": {
+          "number": "4.7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:skew",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:whitencurve": {
+          "number": "4.8",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:whitencurve",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "eq:area": {
+          "number": "4.9",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#eq:area",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "lem:exactgroup": {
+          "number": "4.3",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/exact-gaussian-returns-with-fixed-interactions#lem:exactgroup",
+          "document": "exact-gaussian-returns-with-fixed-interactions"
+        },
+        "sec:engineering": {
+          "number": "5",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#sec:engineering",
+          "document": "engineering-the-holding-network"
+        },
+        "lem:engineer": {
+          "number": "5.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#lem:engineer",
+          "document": "engineering-the-holding-network"
+        },
+        "eq:edgecurvature": {
+          "number": "5.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#eq:edgecurvature",
+          "document": "engineering-the-holding-network"
+        },
+        "thm:gaussian": {
+          "number": "5.2",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#thm:gaussian",
+          "document": "engineering-the-holding-network"
+        },
+        "ex:two": {
+          "number": "5.3",
+          "kind": "example",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#ex:two",
+          "document": "engineering-the-holding-network"
+        },
+        "eq:examplematrix": {
+          "number": "5.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/engineering-the-holding-network#eq:examplematrix",
+          "document": "engineering-the-holding-network"
+        },
+        "sec:uniqueness": {
+          "number": "6",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/equilibrium-uniqueness-and-an-explicit-witness#sec:uniqueness",
+          "document": "equilibrium-uniqueness-and-an-explicit-witness"
+        },
+        "eq:witnessfg": {
+          "number": "6.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/equilibrium-uniqueness-and-an-explicit-witness#eq:witnessfg",
+          "document": "equilibrium-uniqueness-and-an-explicit-witness"
+        },
+        "eq:polynomialprojection": {
+          "number": "6.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/equilibrium-uniqueness-and-an-explicit-witness#eq:polynomialprojection",
+          "document": "equilibrium-uniqueness-and-an-explicit-witness"
+        },
+        "eq:witnessbound": {
+          "number": "6.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/equilibrium-uniqueness-and-an-explicit-witness#eq:witnessbound",
+          "document": "equilibrium-uniqueness-and-an-explicit-witness"
+        },
+        "eq:witness": {
+          "number": "6.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/equilibrium-uniqueness-and-an-explicit-witness#eq:witness",
+          "document": "equilibrium-uniqueness-and-an-explicit-witness"
+        },
+        "sec:operational": {
+          "number": "7",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/preparation-transport-and-operational-consequences#sec:operational",
+          "document": "preparation-transport-and-operational-consequences"
+        },
+        "prop:orbit": {
+          "number": "7.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/preparation-returns/preparation-transport-and-operational-consequences#prop:orbit",
+          "document": "preparation-transport-and-operational-consequences"
+        },
+        "prop:readout": {
+          "number": "7.2",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/preparation-returns/preparation-transport-and-operational-consequences#prop:readout",
+          "document": "preparation-transport-and-operational-consequences"
+        },
+        "cor:nohysteresis": {
+          "number": "7.3",
+          "kind": "corollary",
+          "url": "/quantum-measurement/research/preparation-returns/preparation-transport-and-operational-consequences#cor:nohysteresis",
+          "document": "preparation-transport-and-operational-consequences"
+        },
+        "sec:random": {
+          "number": "8",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#sec:random",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "lem:countablelibrary": {
+          "number": "8.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#lem:countablelibrary",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:commandlaw": {
+          "number": "8.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:commandlaw",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:randomkernel": {
+          "number": "8.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:randomkernel",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:randomspectral": {
+          "number": "8.3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:randomspectral",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "prop:mixing": {
+          "number": "8.2",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#prop:mixing",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "thm:finiteobstruction": {
+          "number": "8.3",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#thm:finiteobstruction",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:reverseTV": {
+          "number": "8.4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:reverseTV",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:cosbias": {
+          "number": "8.5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:cosbias",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:randomstopbias": {
+          "number": "8.6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:randomstopbias",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "lem:countablereset": {
+          "number": "8.4",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#lem:countablereset",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "prop:memory": {
+          "number": "8.5",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#prop:memory",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "eq:memory": {
+          "number": "8.7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/randomized-returns-and-finite-preparation#eq:memory",
+          "document": "randomized-returns-and-finite-preparation"
+        },
+        "app:general": {
+          "number": "A",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings#app:general",
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings"
+        },
+        "thm:general": {
+          "number": "A.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings#thm:general",
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings"
+        },
+        "lem:paths": {
+          "number": "A.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings#lem:paths",
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings"
+        },
+        "eq:pathsum": {
+          "number": "A.1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings#eq:pathsum",
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings"
+        },
+        "eq:stiffseed": {
+          "number": "A.2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings#eq:stiffseed",
+          "document": "appendix-a-gaussian-holonomy-beyond-engineered-weak-couplings"
+        },
+        "app:witness": {
+          "number": "B",
+          "kind": "section",
+          "url": "/quantum-measurement/research/preparation-returns/appendix-b-exact-moment-bound-for-the-nonlinear-witness#app:witness",
+          "document": "appendix-b-exact-moment-bound-for-the-nonlinear-witness"
+        }
+      },
+      "unresolvedReferences": [],
+      "unsupportedCommands": [],
+      "mathErrors": [],
+      "structuralMismatches": [],
+      "sourceLimitations": [],
+      "status": "PASS"
+    },
+    {
+      "id": "equilibrium-records",
+      "sourceFile": "equilibrium-records.tex",
+      "sourceSha256": "b5ee094b3dad9916b9e2409c552aa4c12ee430d8997d3101cb992d0ff9d4ff1f",
+      "sourceBytes": 89540,
+      "pdfSha256": "16f2cbdd1e2ce7bd7d81ead42601d66473ad10066ff31ef31631603747311e96",
+      "pages": 15,
+      "sourceStats": {
+        "chapters": 3,
+        "parts": 0,
+        "sections": 40,
+        "theorems": 15,
+        "proofs": 11,
+        "tables": 3,
+        "figures": 1,
+        "labels": 73,
+        "bibliographyEntries": 18
+      },
+      "convertedStats": {
+        "chapters": 3,
+        "parts": 0,
+        "sections": 40,
+        "theorems": 15,
+        "proofs": 11,
+        "tables": 3,
+        "figures": 1,
+        "labels": 73,
+        "bibliographyEntries": 18
+      },
+      "proseChecks": [
+        {
+          "document": "abstract-and-publication-identity",
+          "sourceProseWords": 202,
+          "renderedProseWords": 203,
+          "sourceProseSha256": "93d67dbf1c0e9a23d11874f508c030cab45cb22be0770d8ab554f0d86416835f",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "introduction-and-scope",
+          "sourceProseWords": 633,
+          "renderedProseWords": 648,
+          "sourceProseSha256": "6f5c6a3511cbd5227746ea9fec2d9f9b47192d4b843f5ff34d90557f7a379d6e",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-model-and-its-statistical-assumptions",
+          "sourceProseWords": 1007,
+          "renderedProseWords": 1038,
+          "sourceProseSha256": "1171c3c719c5dc3f47a1e86dd1d614eb759b3aee8d7daaf721df4811bc97a111",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "an-exact-massive-detector-in-physical-time",
+          "sourceProseWords": 625,
+          "renderedProseWords": 643,
+          "sourceProseSha256": "4e907e1eb623c48fb6620021f33828fe95d28861d91dfe967b6f38a99d3735c8",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-finite-coherent-source-and-resource-module",
+          "sourceProseWords": 444,
+          "renderedProseWords": 454,
+          "sourceProseSha256": "7019abf028bfeff790620f929fed4cec87cdb46c06b5ec9abf91fd3d16d519f9",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "physical-records-that-remain-true-about-their-past",
+          "sourceProseWords": 676,
+          "renderedProseWords": 693,
+          "sourceProseSha256": "ade63111cf740dbcce6fd98bf5459974b0a06cb579df21de6e395574391aff8b",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "protected-coherent-transport-in-the-same-inventory",
+          "sourceProseWords": 304,
+          "renderedProseWords": 311,
+          "sourceProseSha256": "8955eb6a8095e0770745a63e1e85d5b8e4a1bd751d473cceaedb53ebda0f17d6",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds",
+          "sourceProseWords": 1368,
+          "renderedProseWords": 1406,
+          "sourceProseSha256": "8dc7ad7d5f736ec12587f1e7499edd4bfb0234dfbae4c1d4a42365c133704a05",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "complete-instruments-references-and-finite-histories",
+          "sourceProseWords": 1991,
+          "renderedProseWords": 2038,
+          "sourceProseSha256": "1977d1aab598d9e6ddd6634981477bef2a424835dc7f96215f753b63ac61f2ce",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-complete-finite-example-and-reproducible-calculations",
+          "sourceProseWords": 569,
+          "renderedProseWords": 585,
+          "sourceProseSha256": "043a8138a1c3de03c3709d34233ac086090f4775eed44c73b00b9d0d2a3126fe",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "why-reliable-records-do-not-uniquely-select-guidance",
+          "sourceProseWords": 438,
+          "renderedProseWords": 447,
+          "sourceProseSha256": "b243f8bcd6e174b67cead218b5ec0a5703adf8ae350ea73bf36b7f778ddc3a3d",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "scope-and-remaining-physical-questions",
+          "sourceProseWords": 340,
+          "renderedProseWords": 341,
+          "sourceProseSha256": "20742a714ddd150747a39481b8e3f37bdfa6675f15a6a3800b402f6055ff754f",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-a-a-compact-proof-of-complete-output-and-conditioning-bounds",
+          "sourceProseWords": 276,
+          "renderedProseWords": 283,
+          "sourceProseSha256": "ee208778f5238d7a1d16fb1c934c93d1951378b582ff01f40321b1ec5f007436",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "declarations",
+          "sourceProseWords": 111,
+          "renderedProseWords": 111,
+          "sourceProseSha256": "4f4b5a82698732a18d47762b0bd3e393af0f169d6ea0acde27102e2842b8c763",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "bibliography",
+          "sourceProseWords": 516,
+          "renderedProseWords": 517,
+          "sourceProseSha256": "b6ef69b137fa0302a71d14e0a12079cc00978e35706016d6349b7caf34ed8d11",
+          "missingWords": [],
+          "duplicateIds": []
+        }
+      ],
+      "macros": {
+        "\\ket": "|#1\\rangle",
+        "\\bra": "\\langle#1|",
+        "\\tr": "\\operatorname{tr}",
+        "\\E": "\\mathbb E",
+        "\\Prb": "\\mathbb P",
+        "\\TV": "d_{\\rm TV}",
+        "\\id": "\\operatorname{id}",
+        "\\dd": "\\,\\mathrm d",
+        "\\cH": "\\mathcal H",
+        "\\cS": "\\mathcal S",
+        "\\norm": "\\left\\|#1\\right\\|",
+        "\\pos": "[#1]_+",
+        "\\Ncdf": "\\mathsf F",
+        "\\Ntail": "\\overline{\\mathsf F}"
+      },
+      "labels": {
+        "sec:frontier": {
+          "number": "1",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/introduction-and-scope#sec:frontier",
+          "document": "introduction-and-scope"
+        },
+        "sec:constitution": {
+          "number": "2",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#sec:constitution",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:state": {
+          "number": "1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:state",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "ax:material": {
+          "number": "2.1",
+          "kind": "assumption",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#ax:material",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:H": {
+          "number": "2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:H",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "ax:motion": {
+          "number": "2.2",
+          "kind": "assumption",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#ax:motion",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:guidance": {
+          "number": "3",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:guidance",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "ax:eq": {
+          "number": "2.3",
+          "kind": "assumption",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#ax:eq",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:equilibrium": {
+          "number": "4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:equilibrium",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "lem:exist": {
+          "number": "2.4",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#lem:exist",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:regularity": {
+          "number": "5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:regularity",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "eq:pathlaw": {
+          "number": "6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/the-model-and-its-statistical-assumptions#eq:pathlaw",
+          "document": "the-model-and-its-statistical-assumptions"
+        },
+        "sec:detector": {
+          "number": "3",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#sec:detector",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:force": {
+          "number": "7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:force",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:quintic": {
+          "number": "8",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:quintic",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "prop:writer": {
+          "number": "3.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#prop:writer",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:packet": {
+          "number": "9",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:packet",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:mixture": {
+          "number": "10",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:mixture",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:quantile": {
+          "number": "11",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:quantile",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:timing": {
+          "number": "12",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:timing",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:hazard": {
+          "number": "13",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:hazard",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "fig:mechanism": {
+          "number": "1",
+          "kind": "figure",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#fig:mechanism",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "eq:energy": {
+          "number": "14",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-exact-massive-detector-in-physical-time#eq:energy",
+          "document": "an-exact-massive-detector-in-physical-time"
+        },
+        "sec:resource": {
+          "number": "4",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#sec:resource",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "eq:reactionG": {
+          "number": "15",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#eq:reactionG",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "eq:resourcewave": {
+          "number": "16",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#eq:resourcewave",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "eq:statuses": {
+          "number": "17",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#eq:statuses",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "eq:nullvector": {
+          "number": "18",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#eq:nullvector",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "eq:nullmap": {
+          "number": "19",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-finite-coherent-source-and-resource-module#eq:nullmap",
+          "document": "a-finite-coherent-source-and-resource-module"
+        },
+        "sec:archive": {
+          "number": "5",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#sec:archive",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:store": {
+          "number": "20",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:store",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "thm:store": {
+          "number": "5.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#thm:store",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:storedwave": {
+          "number": "21",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:storedwave",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:swap": {
+          "number": "22",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:swap",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:covariantreset": {
+          "number": "23",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:covariantreset",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:feedbacktail": {
+          "number": "24",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:feedbacktail",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "eq:feedbackbound": {
+          "number": "25",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/physical-records-that-remain-true-about-their-past#eq:feedbackbound",
+          "document": "physical-records-that-remain-true-about-their-past"
+        },
+        "sec:protection": {
+          "number": "6",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/protected-coherent-transport-in-the-same-inventory#sec:protection",
+          "document": "protected-coherent-transport-in-the-same-inventory"
+        },
+        "prop:gap": {
+          "number": "6.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/equilibrium-records/protected-coherent-transport-in-the-same-inventory#prop:gap",
+          "document": "protected-coherent-transport-in-the-same-inventory"
+        },
+        "eq:gap": {
+          "number": "26",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/protected-coherent-transport-in-the-same-inventory#eq:gap",
+          "document": "protected-coherent-transport-in-the-same-inventory"
+        },
+        "sec:clock": {
+          "number": "7",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#sec:clock",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:program": {
+          "number": "27",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:program",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:auto": {
+          "number": "28",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:auto",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:clockwidth": {
+          "number": "29",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:clockwidth",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "lem:graph": {
+          "number": "7.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#lem:graph",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:graph": {
+          "number": "30",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:graph",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "thm:clock": {
+          "number": "7.2",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#thm:clock",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:epsclock": {
+          "number": "31",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:epsclock",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:clockbound": {
+          "number": "32",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:clockbound",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:clockenergy": {
+          "number": "33",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:clockenergy",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "thm:history": {
+          "number": "7.3",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#thm:history",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "eq:archiveerror": {
+          "number": "34",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/an-autonomous-massive-clock-and-archive-current-bounds#eq:archiveerror",
+          "document": "an-autonomous-massive-clock-and-archive-current-bounds"
+        },
+        "sec:complete": {
+          "number": "8",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#sec:complete",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:W": {
+          "number": "35",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:W",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "lem:instrument": {
+          "number": "8.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#lem:instrument",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:isometryerror": {
+          "number": "36",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:isometryerror",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:jointwave": {
+          "number": "37",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:jointwave",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:noisymarks": {
+          "number": "38",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:noisymarks",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "def:history": {
+          "number": "8.2",
+          "kind": "definition",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#def:history",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "thm:closure": {
+          "number": "8.3",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#thm:closure",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:totalwave": {
+          "number": "39",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:totalwave",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "eq:totalhist": {
+          "number": "40",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/complete-instruments-references-and-finite-histories#eq:totalhist",
+          "document": "complete-instruments-references-and-finite-histories"
+        },
+        "sec:example": {
+          "number": "9",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/a-complete-finite-example-and-reproducible-calculations#sec:example",
+          "document": "a-complete-finite-example-and-reproducible-calculations"
+        },
+        "eq:exampleweights": {
+          "number": "41",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-complete-finite-example-and-reproducible-calculations#eq:exampleweights",
+          "document": "a-complete-finite-example-and-reproducible-calculations"
+        },
+        "eq:inputexample": {
+          "number": "42",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-complete-finite-example-and-reproducible-calculations#eq:inputexample",
+          "document": "a-complete-finite-example-and-reproducible-calculations"
+        },
+        "eq:nullnumbers": {
+          "number": "43",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/a-complete-finite-example-and-reproducible-calculations#eq:nullnumbers",
+          "document": "a-complete-finite-example-and-reproducible-calculations"
+        },
+        "sec:rivals": {
+          "number": "10",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/why-reliable-records-do-not-uniquely-select-guidance#sec:rivals",
+          "document": "why-reliable-records-do-not-uniquely-select-guidance"
+        },
+        "eq:diffusion": {
+          "number": "44",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/why-reliable-records-do-not-uniquely-select-guidance#eq:diffusion",
+          "document": "why-reliable-records-do-not-uniquely-select-guidance"
+        },
+        "prop:rivalarchive": {
+          "number": "10.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/equilibrium-records/why-reliable-records-do-not-uniquely-select-guidance#prop:rivalarchive",
+          "document": "why-reliable-records-do-not-uniquely-select-guidance"
+        },
+        "eq:rivalbound": {
+          "number": "45",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/equilibrium-records/why-reliable-records-do-not-uniquely-select-guidance#eq:rivalbound",
+          "document": "why-reliable-records-do-not-uniquely-select-guidance"
+        },
+        "sec:integration": {
+          "number": "11",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/scope-and-remaining-physical-questions#sec:integration",
+          "document": "scope-and-remaining-physical-questions"
+        },
+        "app:conditioning": {
+          "number": "A",
+          "kind": "section",
+          "url": "/quantum-measurement/research/equilibrium-records/appendix-a-a-compact-proof-of-complete-output-and-conditioning-bounds#app:conditioning",
+          "document": "appendix-a-a-compact-proof-of-complete-output-and-conditioning-bounds"
+        },
+        "lem:conditional-bound": {
+          "number": "A.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/equilibrium-records/appendix-a-a-compact-proof-of-complete-output-and-conditioning-bounds#lem:conditional-bound",
+          "document": "appendix-a-a-compact-proof-of-complete-output-and-conditioning-bounds"
+        }
+      },
+      "unresolvedReferences": [],
+      "unsupportedCommands": [],
+      "mathErrors": [],
+      "structuralMismatches": [],
+      "sourceLimitations": [],
+      "status": "PASS"
+    },
+    {
+      "id": "hybrid-bell-paths",
+      "sourceFile": "hybrid-bell-paths.tex",
+      "sourceSha256": "9622df2152513e31e7c3c7b53363b5066f01072855273811966e3a5c7e9af9ac",
+      "sourceBytes": 119888,
+      "pdfSha256": "20cfe3e4fe912f3995db4b398dba7516f6f79849724140f5d4ae95f6749a255e",
+      "pages": 17,
+      "sourceStats": {
+        "chapters": 3,
+        "parts": 0,
+        "sections": 45,
+        "theorems": 21,
+        "proofs": 20,
+        "tables": 1,
+        "figures": 0,
+        "labels": 97,
+        "bibliographyEntries": 16
+      },
+      "convertedStats": {
+        "chapters": 3,
+        "parts": 0,
+        "sections": 45,
+        "theorems": 21,
+        "proofs": 20,
+        "tables": 1,
+        "figures": 0,
+        "labels": 97,
+        "bibliographyEntries": 16
+      },
+      "proseChecks": [
+        {
+          "document": "abstract-and-publication-identity",
+          "sourceProseWords": 267,
+          "renderedProseWords": 268,
+          "sourceProseSha256": "9dd3b9f06caef4db97ccb62681bccf913a20ed2dc71ae75d5c7e7681d1f774a5",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "introduction-and-statement-of-scope",
+          "sourceProseWords": 724,
+          "renderedProseWords": 740,
+          "sourceProseSha256": "e023abfbcd4c9bd016a27fd0037622f735416052fc418eb1e17b67a3bd5e02b8",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "microscopic-state-and-model-assumptions",
+          "sourceProseWords": 849,
+          "renderedProseWords": 861,
+          "sourceProseSha256": "073cbbbcc9f91cbcc46c3c7f70e17ab8e4491897f81139eca62b48bc986bb017",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "canonical-edge-ownership-and-conservative-export",
+          "sourceProseWords": 277,
+          "renderedProseWords": 282,
+          "sourceProseSha256": "9f894eeaebfd9f6575973456a95226a7d4bba7bff21e954d86e7d7758ab5fd50",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "binary-species-and-contact-geometry",
+          "sourceProseWords": 358,
+          "renderedProseWords": 364,
+          "sourceProseSha256": "2bb4674267bff0b3895fab304323cf5f51f654d5644d6656d3f9f0d5f32113fc",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-finite-spatial-ensemble-and-its-poisson-comparison",
+          "sourceProseWords": 700,
+          "renderedProseWords": 707,
+          "sourceProseSha256": "aa3dd77bedfc0cf72f084de833b9dd289335fb40d0d83bf738cafb063f630929",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "recombination-and-the-removal-of-surplus",
+          "sourceProseWords": 436,
+          "renderedProseWords": 441,
+          "sourceProseSha256": "00826c71b55cc3ed526266d66f5acd4722904731382b6e40386e0441a8b3ae14",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "mass-action-tracking-and-convergence-through-nodes",
+          "sourceProseWords": 1469,
+          "renderedProseWords": 1499,
+          "sourceProseSha256": "2a9058f862cc73e19a6558dfaf4e73dd02958a70085d09116b0096710b51fc01",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-complete-physical-time-bell-path-limit",
+          "sourceProseWords": 917,
+          "renderedProseWords": 956,
+          "sourceProseSha256": "eaca1c8cffc3ab30e3bce34b59b5c9b28de89695341909545e6f1cf365702c54",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "an-autonomous-clock-and-faithful-copying-cuts",
+          "sourceProseWords": 777,
+          "renderedProseWords": 810,
+          "sourceProseSha256": "14979906b574039d1045a2d1b52e2778cbd3d8d120b09a626fdd898a4617db14",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "an-explicit-retained-resource-measurement-and-continuation",
+          "sourceProseWords": 1627,
+          "renderedProseWords": 1671,
+          "sourceProseSha256": "18507cf4b1546b201a9cf336e024becc73c6eabea57a2dc69f17234695b3028e",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "countermodels-and-limits-of-inference",
+          "sourceProseWords": 935,
+          "renderedProseWords": 960,
+          "sourceProseSha256": "3ef18f75a5310127e27cca4fb20a642b934dbdc99a362f41a96b1dfd1a9409b9",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "conclusions-and-remaining-obligations",
+          "sourceProseWords": 347,
+          "renderedProseWords": 352,
+          "sourceProseSha256": "4e44a820daa5912fe5a2ba8ca785182ee0687a12c24fd1cba57966a1870f5ae6",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "research-transparency",
+          "sourceProseWords": 156,
+          "renderedProseWords": 156,
+          "sourceProseSha256": "fe906c95a89fae0da318a1f0783e2fe4640d9eb02dab09876ce7d64ff5e555bb",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates",
+          "sourceProseWords": 883,
+          "renderedProseWords": 913,
+          "sourceProseSha256": "0245a197e4aff17dbbc791b7210b31a3448bd4c0bc04831cb6421d91a97a1783",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module",
+          "sourceProseWords": 1716,
+          "renderedProseWords": 1761,
+          "sourceProseSha256": "9314b5f1d2066c76818971b0d94e0f91fbfae253994d87d34fafd9e79f89e15d",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "bibliography",
+          "sourceProseWords": 459,
+          "renderedProseWords": 504,
+          "sourceProseSha256": "cc06deba55fb82027320943c33cd2b6d54965d73ae57de747068d94885cfb858",
+          "missingWords": [],
+          "duplicateIds": []
+        }
+      ],
+      "macros": {
+        "\\E": "\\mathbb E",
+        "\\Prb": "\\mathbb P",
+        "\\Law": "\\operatorname{Law}",
+        "\\TV": "d_{\\mathrm{TV}}",
+        "\\dd": "\\,\\mathrm d",
+        "\\Var": "\\operatorname{Var}",
+        "\\ket": "|#1\\rangle",
+        "\\bra": "\\langle#1|",
+        "\\tr": "\\operatorname{tr}",
+        "\\supp": "\\operatorname{supp}"
+      },
+      "labels": {
+        "eq:target": {
+          "number": "1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/introduction-and-statement-of-scope#eq:target",
+          "document": "introduction-and-statement-of-scope"
+        },
+        "sec:model": {
+          "number": "2",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/microscopic-state-and-model-assumptions#sec:model",
+          "document": "microscopic-state-and-model-assumptions"
+        },
+        "eq:microstate": {
+          "number": "2",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/microscopic-state-and-model-assumptions#eq:microstate",
+          "document": "microscopic-state-and-model-assumptions"
+        },
+        "sec:source": {
+          "number": "3",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/canonical-edge-ownership-and-conservative-export#sec:source",
+          "document": "canonical-edge-ownership-and-conservative-export"
+        },
+        "eq:action": {
+          "number": "4",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/canonical-edge-ownership-and-conservative-export#eq:action",
+          "document": "canonical-edge-ownership-and-conservative-export"
+        },
+        "eq:ownership": {
+          "number": "5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/canonical-edge-ownership-and-conservative-export#eq:ownership",
+          "document": "canonical-edge-ownership-and-conservative-export"
+        },
+        "eq:export": {
+          "number": "6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/canonical-edge-ownership-and-conservative-export#eq:export",
+          "document": "canonical-edge-ownership-and-conservative-export"
+        },
+        "sec:contacts": {
+          "number": "4",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/binary-species-and-contact-geometry#sec:contacts",
+          "document": "binary-species-and-contact-geometry"
+        },
+        "eq:service": {
+          "number": "7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/binary-species-and-contact-geometry#eq:service",
+          "document": "binary-species-and-contact-geometry"
+        },
+        "eq:charge": {
+          "number": "8",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/binary-species-and-contact-geometry#eq:charge",
+          "document": "binary-species-and-contact-geometry"
+        },
+        "eq:candidate": {
+          "number": "9",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/binary-species-and-contact-geometry#eq:candidate",
+          "document": "binary-species-and-contact-geometry"
+        },
+        "sec:gas": {
+          "number": "5",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/a-finite-spatial-ensemble-and-its-poisson-comparison#sec:gas",
+          "document": "a-finite-spatial-ensemble-and-its-poisson-comparison"
+        },
+        "thm:gas": {
+          "number": "5.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/a-finite-spatial-ensemble-and-its-poisson-comparison#thm:gas",
+          "document": "a-finite-spatial-ensemble-and-its-poisson-comparison"
+        },
+        "eq:gaserror": {
+          "number": "10",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/a-finite-spatial-ensemble-and-its-poisson-comparison#eq:gaserror",
+          "document": "a-finite-spatial-ensemble-and-its-poisson-comparison"
+        },
+        "eq:generator": {
+          "number": "11",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/a-finite-spatial-ensemble-and-its-poisson-comparison#eq:generator",
+          "document": "a-finite-spatial-ensemble-and-its-poisson-comparison"
+        },
+        "eq:stock": {
+          "number": "12",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/recombination-and-the-removal-of-surplus#eq:stock",
+          "document": "recombination-and-the-removal-of-surplus"
+        },
+        "thm:annihilation": {
+          "number": "6.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/recombination-and-the-removal-of-surplus#thm:annihilation",
+          "document": "recombination-and-the-removal-of-surplus"
+        },
+        "eq:annerror": {
+          "number": "13",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/recombination-and-the-removal-of-surplus#eq:annerror",
+          "document": "recombination-and-the-removal-of-surplus"
+        },
+        "app:kinetic": {
+          "number": "7",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#app:kinetic",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:flux": {
+          "number": "15",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:flux",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:nodal": {
+          "number": "16",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:nodal",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:balance": {
+          "number": "17",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:balance",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:epsF": {
+          "number": "18",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:epsF",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:epsx": {
+          "number": "19",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:epsx",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:tracking": {
+          "number": "7.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:tracking",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:hierarchy": {
+          "number": "20",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:hierarchy",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:companion": {
+          "number": "21",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:companion",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:dettracking": {
+          "number": "22",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:dettracking",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:R": {
+          "number": "23",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:R",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:smallmass": {
+          "number": "24",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:smallmass",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:smallflux": {
+          "number": "25",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:smallflux",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:fluxbridge": {
+          "number": "26",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:fluxbridge",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:existence": {
+          "number": "7.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:existence",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:path": {
+          "number": "7.3",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:path",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:Belllimit": {
+          "number": "27",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:Belllimit",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:nodebudget": {
+          "number": "28",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:nodebudget",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "kin:pathbound": {
+          "number": "29",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/mass-action-tracking-and-convergence-through-nodes#kin:pathbound",
+          "document": "mass-action-tracking-and-convergence-through-nodes"
+        },
+        "sec:mainlimit": {
+          "number": "8",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/the-complete-physical-time-bell-path-limit#sec:mainlimit",
+          "document": "the-complete-physical-time-bell-path-limit"
+        },
+        "eq:kineticscale": {
+          "number": "30",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/the-complete-physical-time-bell-path-limit#eq:kineticscale",
+          "document": "the-complete-physical-time-bell-path-limit"
+        },
+        "thm:main": {
+          "number": "8.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/the-complete-physical-time-bell-path-limit#thm:main",
+          "document": "the-complete-physical-time-bell-path-limit"
+        },
+        "eq:mainerror": {
+          "number": "31",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/the-complete-physical-time-bell-path-limit#eq:mainerror",
+          "document": "the-complete-physical-time-bell-path-limit"
+        },
+        "eq:survival": {
+          "number": "32",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/the-complete-physical-time-bell-path-limit#eq:survival",
+          "document": "the-complete-physical-time-bell-path-limit"
+        },
+        "mat:section": {
+          "number": "9",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:section",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:prefix": {
+          "number": "33",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:prefix",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:feynman": {
+          "number": "34",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:feynman",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:clock": {
+          "number": "9.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:clock",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:wave": {
+          "number": "35",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:wave",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:time": {
+          "number": "36",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:time",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:levels": {
+          "number": "9.2",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:levels",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:weights": {
+          "number": "37",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:weights",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:monomial": {
+          "number": "38",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:monomial",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:copy": {
+          "number": "9.3",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:copy",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:finecurrent": {
+          "number": "39",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:finecurrent",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:finewarning": {
+          "number": "9.4",
+          "kind": "remark",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-autonomous-clock-and-faithful-copying-cuts#mat:finewarning",
+          "document": "an-autonomous-clock-and-faithful-copying-cuts"
+        },
+        "mat:resources": {
+          "number": "10",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:resources",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:generators": {
+          "number": "40",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:generators",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:rotations": {
+          "number": "41",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:rotations",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:resourcevector": {
+          "number": "42",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:resourcevector",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:ready": {
+          "number": "43",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:ready",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:status": {
+          "number": "44",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:status",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:circuit": {
+          "number": "45",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:circuit",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:resourcehistory": {
+          "number": "10.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:resourcehistory",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:input": {
+          "number": "46",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:input",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:nullmap": {
+          "number": "47",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:nullmap",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:nullnumbers": {
+          "number": "48",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:nullnumbers",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:reference": {
+          "number": "49",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:reference",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:capturednumbers": {
+          "number": "50",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:capturednumbers",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:basisprep": {
+          "number": "10.2",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:basisprep",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:prepgates": {
+          "number": "51",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:prepgates",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "mat:transfer": {
+          "number": "10.3",
+          "kind": "corollary",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/an-explicit-retained-resource-measurement-and-continuation#mat:transfer",
+          "document": "an-explicit-retained-resource-measurement-and-continuation"
+        },
+        "sec:rivals": {
+          "number": "11",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/countermodels-and-limits-of-inference#sec:rivals",
+          "document": "countermodels-and-limits-of-inference"
+        },
+        "eq:darkrival": {
+          "number": "52",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/countermodels-and-limits-of-inference#eq:darkrival",
+          "document": "countermodels-and-limits-of-inference"
+        },
+        "eq:ledger": {
+          "number": "53",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/countermodels-and-limits-of-inference#eq:ledger",
+          "document": "countermodels-and-limits-of-inference"
+        },
+        "eq:effect": {
+          "number": "54",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/countermodels-and-limits-of-inference#eq:effect",
+          "document": "countermodels-and-limits-of-inference"
+        },
+        "eq:nativegap": {
+          "number": "55",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/countermodels-and-limits-of-inference#eq:nativegap",
+          "document": "countermodels-and-limits-of-inference"
+        },
+        "app:rates": {
+          "number": "A",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-a-initial-calibration-and-fixed-circuit-resource-rates#app:rates",
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates"
+        },
+        "kin:uniformity-rate": {
+          "number": "A.2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-a-initial-calibration-and-fixed-circuit-resource-rates#kin:uniformity-rate",
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates"
+        },
+        "kin:rate": {
+          "number": "A.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-a-initial-calibration-and-fixed-circuit-resource-rates#kin:rate",
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates"
+        },
+        "kin:explicit-rate": {
+          "number": "56",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-a-initial-calibration-and-fixed-circuit-resource-rates#kin:explicit-rate",
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates"
+        },
+        "kin:cutoff-rates": {
+          "number": "57",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-a-initial-calibration-and-fixed-circuit-resource-rates#kin:cutoff-rates",
+          "document": "appendix-a-initial-calibration-and-fixed-circuit-resource-rates"
+        },
+        "mech:section": {
+          "number": "B",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:section",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "app:mechanical": {
+          "number": "B",
+          "kind": "section",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#app:mechanical",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:cells": {
+          "number": "58",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:cells",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:tracks": {
+          "number": "59",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:tracks",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:field": {
+          "number": "60",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:field",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:H": {
+          "number": "61",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:H",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:hamiltonian": {
+          "number": "B.1",
+          "kind": "proposition",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:hamiltonian",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:exactgate": {
+          "number": "B.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:exactgate",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:time": {
+          "number": "62",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:time",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:transport": {
+          "number": "63",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:transport",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:robust": {
+          "number": "B.3",
+          "kind": "corollary",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:robust",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:margin": {
+          "number": "64",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:margin",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:energy": {
+          "number": "65",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:energy",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:J1": {
+          "number": "66",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:J1",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:history": {
+          "number": "B.4",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:history",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:TV": {
+          "number": "67",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:TV",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        },
+        "mech:scope": {
+          "number": "B.5",
+          "kind": "remark",
+          "url": "/quantum-measurement/research/hybrid-bell-paths/appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module#mech:scope",
+          "document": "appendix-b-a-smooth-autonomous-realization-of-the-finite-contact-module"
+        }
+      },
+      "unresolvedReferences": [],
+      "unsupportedCommands": [],
+      "mathErrors": [],
+      "structuralMismatches": [],
+      "sourceLimitations": [],
+      "status": "PASS"
+    },
+    {
+      "id": "nonequilibrium-records",
+      "sourceFile": "nonequilibrium-records.tex",
+      "sourceSha256": "3f42128116c88e66db43d134e3b30357c72f2d5a6f3727faaad1b41f107c59c3",
+      "sourceBytes": 200898,
+      "pdfSha256": "049f8685489bdff1c9f5a3f4229a2ad88b9201581952b1d6fbdefbe1de3fd8c5",
+      "pages": 37,
+      "sourceStats": {
+        "chapters": 6,
+        "parts": 2,
+        "sections": 74,
+        "theorems": 13,
+        "proofs": 11,
+        "tables": 6,
+        "figures": 0,
+        "labels": 137,
+        "bibliographyEntries": 13
+      },
+      "convertedStats": {
+        "chapters": 6,
+        "parts": 2,
+        "sections": 74,
+        "theorems": 13,
+        "proofs": 11,
+        "tables": 6,
+        "figures": 0,
+        "labels": 137,
+        "bibliographyEntries": 13
+      },
+      "proseChecks": [
+        {
+          "document": "abstract-and-publication-identity",
+          "sourceProseWords": 203,
+          "renderedProseWords": 204,
+          "sourceProseSha256": "a5a85a1366235c8e74f22904ac658c7681303abae9cf0569cb356e5f359a1cc9",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-problem-and-the-contribution",
+          "sourceProseWords": 403,
+          "renderedProseWords": 414,
+          "sourceProseSha256": "aafca29ae535125fac0d6adc3163cb30143e2b20537e00da8978eb92a777f7f3",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "probability-and-complete-record-observables",
+          "sourceProseWords": 347,
+          "renderedProseWords": 354,
+          "sourceProseSha256": "6102b866633442fb74f9b50add5dea9e326e210a1e158f801f66f7cedc1f6752",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-periodic-detector-with-finite-recoil",
+          "sourceProseWords": 33,
+          "renderedProseWords": 33,
+          "sourceProseSha256": "fd48cc4203df53a02b58f9ba4f7ed943f6c2193be767aa0587bd039526e8c5a4",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "all-moving-coordinates-and-finite-parameters",
+          "sourceProseWords": 204,
+          "renderedProseWords": 205,
+          "sourceProseSha256": "e6fd25f0c5638b3950719de92bc6201135fc724653c0c40040397199f57bf281",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-ordinary-autonomous-hamiltonian",
+          "sourceProseWords": 151,
+          "renderedProseWords": 157,
+          "sourceProseSha256": "7387d0a01f6677fe20251b94ecb2d86daf3ca9d04852c4379f9bd0497795647f",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "simple-initial-waves-independent-actual-law-data",
+          "sourceProseWords": 260,
+          "renderedProseWords": 261,
+          "sourceProseSha256": "c44c53b17baf290581bcc2b9e28c31788f6b72aad77d0f610b383a971ce03575",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "exact-relative-coordinate-reduction-with-finite-recoil",
+          "sourceProseWords": 222,
+          "renderedProseWords": 227,
+          "sourceProseSha256": "fad7e7486d4d3f9ef4a5d6a7f76945a6b2ecbb37d991d8e533b946399e94a17c",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-writer-s-exact-driven-comparison",
+          "sourceProseWords": 105,
+          "renderedProseWords": 109,
+          "sourceProseSha256": "e8e855cdc58832e0af1eacd5c04f0b7221025136fdedaffedcfa95d17030ac74",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "finite-interacting-clock-not-an-infinite-mass-limit",
+          "sourceProseWords": 83,
+          "renderedProseWords": 88,
+          "sourceProseSha256": "cfbe7f4c7d61b187914039d0fef1918d625ee4b00d0927510000e40303531b2a",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "an-earlier-actual-label-is-protected-separately",
+          "sourceProseWords": 155,
+          "renderedProseWords": 156,
+          "sourceProseSha256": "3cd7304c085b2cfbe0cb1f237774b27f12f52cacf3348cffa90f0e19d8b3656e",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "every-admitted-preparation-clock-position-is-harmless-for-a-reason",
+          "sourceProseWords": 119,
+          "renderedProseWords": 122,
+          "sourceProseSha256": "58a694fc64d489295f84033d0874389bb6b8c7ff192b7c30ab07a1c68e860f0a",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "reduced-active-law-and-periodic-averaging",
+          "sourceProseWords": 142,
+          "renderedProseWords": 147,
+          "sourceProseSha256": "d73b656848ff61a231711379b67782b6e3dfe74babc1fa7e82e76e9bd2b3a34b",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "rotor-wave-and-velocity-weighted-error",
+          "sourceProseWords": 211,
+          "renderedProseWords": 219,
+          "sourceProseSha256": "952e391f58be2bb1d2a478431412828918acc84c06fd6646deaddb02bd953f20",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "pretrigger-disturbance-belongs-to-the-same-ordinary-model",
+          "sourceProseWords": 112,
+          "renderedProseWords": 113,
+          "sourceProseSha256": "08c374e25224b09ecf4476aaead9df8803c3ae9856ba2151631f7d0e70d10bec",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "copying-the-actual-earlier-label",
+          "sourceProseWords": 157,
+          "renderedProseWords": 161,
+          "sourceProseSha256": "41a5b99558a20d4e827d6dfe261138a0370e54a2146e03ed4df60c934a61685e",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "whole-interval-retention-including-later-rotor-evolution",
+          "sourceProseWords": 125,
+          "renderedProseWords": 127,
+          "sourceProseSha256": "5c35b43335ffd62b1d6b1412929c511320e39513641ab591cb8e67368e130e77",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "finite-complete-theorem",
+          "sourceProseWords": 548,
+          "renderedProseWords": 561,
+          "sourceProseSha256": "3591a4259c4960e40db63dc6639bc0a4ed0a336d7bcd2b672dbb5efe6e8be6fe",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-radial-apparatus-with-preparation-and-a-writer-from-entrance",
+          "sourceProseWords": 0,
+          "renderedProseWords": 0,
+          "sourceProseSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "the-fixed-radial-preparation-operator",
+          "sourceProseWords": 767,
+          "renderedProseWords": 774,
+          "sourceProseSha256": "d0b14a3e7421ce5dc7766f9ab5929c8a2207b2df9f2aa68e93d597616dee28cd",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "model-stock-and-scope",
+          "sourceProseWords": 329,
+          "renderedProseWords": 334,
+          "sourceProseSha256": "4623c5868e17b607b38bc4a36b0b0f0c4892eac76df494fbeca29bcdbbf41901",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "observable-and-theorem",
+          "sourceProseWords": 162,
+          "renderedProseWords": 169,
+          "sourceProseSha256": "55d3fb527261c39aff24d13d187ffcc244a19a545b5a433174b72a411df5f2ed",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "a-conservative-flow-for-the-effective-model",
+          "sourceProseWords": 213,
+          "renderedProseWords": 216,
+          "sourceProseSha256": "916a307eddd101d0ea26c3e6f9a3848432e210d272ded3c4947c822059473073",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "preparation-and-prewitness-comparison",
+          "sourceProseWords": 294,
+          "renderedProseWords": 296,
+          "sourceProseSha256": "8c066561fc5eb979abddeeb79e0824ea473832940cbb7a2d185f39943c34dbff",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "rank-current-and-actual-earlier-label",
+          "sourceProseWords": 216,
+          "renderedProseWords": 220,
+          "sourceProseSha256": "588cbb329f2a41d5f51156358776c9cd4d301e369034e2ab1a64ab1c4d5512b3",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "copy-whole-hold-and-the-direct-path-bound",
+          "sourceProseWords": 275,
+          "renderedProseWords": 281,
+          "sourceProseSha256": "efd5a41f75720f9e0243ff6c44729561f553f80ce1d24bc2fbe151df89fab697",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "conditional-rank-stability-with-zero-fibres-included",
+          "sourceProseWords": 445,
+          "renderedProseWords": 460,
+          "sourceProseSha256": "ddd73a777f55c36e10af74f7a20de424550f92f37d27ec53fb737fd9664d32f2",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "how-the-exact-writer-controls-the-new-rank-terms",
+          "sourceProseWords": 309,
+          "renderedProseWords": 315,
+          "sourceProseSha256": "374d9b881755d36456cc5507cca8a944fa48d3fddaa3c3f74364f423d206b386",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "outward-arithmetic-and-the-complete-event-sum",
+          "sourceProseWords": 311,
+          "renderedProseWords": 314,
+          "sourceProseSha256": "9383ef7637e2e7472d3a490f5cdb82df940d1c64fb7a7865869dfca47e000866",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "comparison-and-physical-boundary",
+          "sourceProseWords": 162,
+          "renderedProseWords": 163,
+          "sourceProseSha256": "4e6aa1f9c4f071163dab320ae99a08bc2b584595147b8f0871ac8f0ba4b49d93",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "conclusion",
+          "sourceProseWords": 183,
+          "renderedProseWords": 184,
+          "sourceProseSha256": "bd6bf8c4fd5e656d23ea110dcf80dd1f72c635ca2a07b6daa9c91d045ff74b48",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-a-explicit-estimates-for-the-periodic-apparatus",
+          "sourceProseWords": 618,
+          "renderedProseWords": 631,
+          "sourceProseSha256": "46f80829c6ab589c84ebab37042bbb66153ba8a5ef91d51494edba93725f408d",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian",
+          "sourceProseWords": 2518,
+          "renderedProseWords": 2538,
+          "sourceProseSha256": "ffd0b54fe3aefc1a7d3c21f68ecd874a6271b5deddcfb261668220295b19c997",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current",
+          "sourceProseWords": 2673,
+          "renderedProseWords": 2710,
+          "sourceProseSha256": "2b935a4908b59094644b2684b0492ba9e78e5484fc1d1e66d4897525f940f11c",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer",
+          "sourceProseWords": 1487,
+          "renderedProseWords": 1530,
+          "sourceProseSha256": "afe074dcb50e1770e9f755c587afa228a223e03152a414dea68ec3eca98806c9",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave",
+          "sourceProseWords": 1549,
+          "renderedProseWords": 1578,
+          "sourceProseSha256": "a633cee5e2b022c8d6e986c935fbada9518bbc421133c881ee3d877117133a0a",
+          "missingWords": [],
+          "duplicateIds": []
+        },
+        {
+          "document": "bibliography",
+          "sourceProseWords": 373,
+          "renderedProseWords": 374,
+          "sourceProseSha256": "a402aad4c00f90d329c89daa0459b72091f20ec73d76806f804c9737c221df92",
+          "missingWords": [],
+          "duplicateIds": []
+        }
+      ],
+      "macros": {
+        "\\pr": "",
+        "\\cert": "",
+        "\\norm": "\\left\\lVert#1\\right\\rVert",
+        "\\Prob": "\\mathbb P",
+        "\\E": "\\mathbb E",
+        "\\TV": "\\operatorname{TV}",
+        "\\Var": "\\operatorname{Var}",
+        "\\one": "\\mathbf1",
+        "\\R": "\\mathbb R",
+        "\\T": "\\mathbb T",
+        "\\dd": "\\,\\mathrm d",
+        "\\Imv": "\\operatorname{Im}",
+        "\\ii": "\\mathrm i"
+      },
+      "labels": {
+        "lem:joint": {
+          "number": "2.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/probability-and-complete-record-observables#lem:joint",
+          "document": "probability-and-complete-record-observables"
+        },
+        "pm:eq:H": {
+          "number": "1",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/the-ordinary-autonomous-hamiltonian#pm:eq:H",
+          "document": "the-ordinary-autonomous-hamiltonian"
+        },
+        "pa:thm:recoil": {
+          "number": "6.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/nonequilibrium-records/exact-relative-coordinate-reduction-with-finite-recoil#pa:thm:recoil",
+          "document": "exact-relative-coordinate-reduction-with-finite-recoil"
+        },
+        "pa:lem:aux": {
+          "number": "8.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/finite-interacting-clock-not-an-infinite-mass-limit#pa:lem:aux",
+          "document": "finite-interacting-clock-not-an-infinite-mass-limit"
+        },
+        "ph:lem:avg": {
+          "number": "11.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/reduced-active-law-and-periodic-averaging#ph:lem:avg",
+          "document": "reduced-active-law-and-periodic-averaging"
+        },
+        "ph:lem:rotor": {
+          "number": "12.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/rotor-wave-and-velocity-weighted-error#ph:lem:rotor",
+          "document": "rotor-wave-and-velocity-weighted-error"
+        },
+        "ph:thm:copy": {
+          "number": "14.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/nonequilibrium-records/copying-the-actual-earlier-label#ph:thm:copy",
+          "document": "copying-the-actual-earlier-label"
+        },
+        "pr:thm:final": {
+          "number": "16.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/nonequilibrium-records/finite-complete-theorem#pr:thm:final",
+          "document": "finite-complete-theorem"
+        },
+        "cor:periodicjoint": {
+          "number": "16.2",
+          "kind": "corollary",
+          "url": "/quantum-measurement/research/nonequilibrium-records/finite-complete-theorem#cor:periodicjoint",
+          "document": "finite-complete-theorem"
+        },
+        "sec:radial_definition": {
+          "number": "17",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/the-fixed-radial-preparation-operator#sec:radial_definition",
+          "document": "the-fixed-radial-preparation-operator"
+        },
+        "eq:Vc": {
+          "number": "5",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/the-fixed-radial-preparation-operator#eq:Vc",
+          "document": "the-fixed-radial-preparation-operator"
+        },
+        "eq:Hrad": {
+          "number": "6",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/the-fixed-radial-preparation-operator#eq:Hrad",
+          "document": "the-fixed-radial-preparation-operator"
+        },
+        "sec:radial_law": {
+          "number": "17.1",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/the-fixed-radial-preparation-operator#sec:radial_law",
+          "document": "the-fixed-radial-preparation-operator"
+        },
+        "rad:eq:H": {
+          "number": "7",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/model-stock-and-scope#rad:eq:H",
+          "document": "model-stock-and-scope"
+        },
+        "rad:eq:cap": {
+          "number": "8",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/model-stock-and-scope#rad:eq:cap",
+          "document": "model-stock-and-scope"
+        },
+        "rad:thm:main": {
+          "number": "19.1",
+          "kind": "theorem",
+          "url": "/quantum-measurement/research/nonequilibrium-records/observable-and-theorem#rad:thm:main",
+          "document": "observable-and-theorem"
+        },
+        "rad:eq:label": {
+          "number": "9",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/observable-and-theorem#rad:eq:label",
+          "document": "observable-and-theorem"
+        },
+        "rad:eq:copy": {
+          "number": "10",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/observable-and-theorem#rad:eq:copy",
+          "document": "observable-and-theorem"
+        },
+        "rad:eq:TV": {
+          "number": "11",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/observable-and-theorem#rad:eq:TV",
+          "document": "observable-and-theorem"
+        },
+        "sec:rankproof": {
+          "number": "24",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#sec:rankproof",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "lem:rankcurrent": {
+          "number": "24.1",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#lem:rankcurrent",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "eq:rankF": {
+          "number": "12",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#eq:rankF",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "lem:rankstable": {
+          "number": "24.2",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#lem:rankstable",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "eq:rankstable": {
+          "number": "13",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#eq:rankstable",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "lem:cdf": {
+          "number": "24.3",
+          "kind": "lemma",
+          "url": "/quantum-measurement/research/nonequilibrium-records/conditional-rank-stability-with-zero-fibres-included#lem:cdf",
+          "document": "conditional-rank-stability-with-zero-fibres-included"
+        },
+        "sec:events": {
+          "number": "26",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/outward-arithmetic-and-the-complete-event-sum#sec:events",
+          "document": "outward-arithmetic-and-the-complete-event-sum"
+        },
+        "app:periodic": {
+          "number": "A",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-a-explicit-estimates-for-the-periodic-apparatus#app:periodic",
+          "document": "appendix-a-explicit-estimates-for-the-periodic-apparatus"
+        },
+        "prep:main": {
+          "number": "B",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:main",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:bjets": {
+          "number": "15",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:bjets",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:ajets": {
+          "number": "19",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:ajets",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:residual": {
+          "number": "20",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:residual",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:source-rates": {
+          "number": "23",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:source-rates",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:first": {
+          "number": "B.2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:first",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:first-system": {
+          "number": "28",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:first-system",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:anisotropic": {
+          "number": "31",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:anisotropic",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:old-handoff": {
+          "number": "32",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:old-handoff",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:old-current": {
+          "number": "34",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:old-current",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:hessian": {
+          "number": "B.3",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:hessian",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:hessian-construction": {
+          "number": "35",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:hessian-construction",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:second-collar": {
+          "number": "37",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:second-collar",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:fourth": {
+          "number": "B.4",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:fourth",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:bump-recurrence": {
+          "number": "38",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:bump-recurrence",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:fourth-core": {
+          "number": "40",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:fourth-core",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:velocity-jets": {
+          "number": "41",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:velocity-jets",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:tail-coefficient": {
+          "number": "44",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:tail-coefficient",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:quiet-high": {
+          "number": "45",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:quiet-high",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:local-high": {
+          "number": "48",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:local-high",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:fourth-system": {
+          "number": "53",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:fourth-system",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:fourth-solution": {
+          "number": "54",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:fourth-solution",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:far-hessian": {
+          "number": "55",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:far-hessian",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:transfer": {
+          "number": "B.5",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:transfer",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:transfer-source": {
+          "number": "58",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:transfer-source",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:transfer-bounds": {
+          "number": "63",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:transfer-bounds",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:annihilator-handoff": {
+          "number": "67",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:annihilator-handoff",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:new-handoff": {
+          "number": "72",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:new-handoff",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:transfer-hessian": {
+          "number": "B.6",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:transfer-hessian",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:delta-collars": {
+          "number": "73",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:delta-collars",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:improved-hessian": {
+          "number": "74",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:improved-hessian",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:handoff-table": {
+          "number": "B.7",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:handoff-table",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:history": {
+          "number": "B.8",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:history",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:extra-current": {
+          "number": "75",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:extra-current",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:event": {
+          "number": "76",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:event",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "prep:cdf": {
+          "number": "77",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian#prep:cdf",
+          "document": "appendix-b-preparation-estimates-and-transfer-to-the-enlarged-hamiltonian"
+        },
+        "old:activation": {
+          "number": "C",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:activation",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:main": {
+          "number": "C",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:main",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:lens": {
+          "number": "C.1",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:lens",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:D": {
+          "number": "78",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:D",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:q": {
+          "number": "79",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:q",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:endpoint": {
+          "number": "C.2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:endpoint",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:sorting": {
+          "number": "80",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:sorting",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:outerbeta": {
+          "number": "81",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:outerbeta",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:endpointexpression": {
+          "number": "82",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:endpointexpression",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:ageunion": {
+          "number": "83",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:ageunion",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:outer": {
+          "number": "84",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:outer",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:rankbridge": {
+          "number": "85",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:rankbridge",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:graphs": {
+          "number": "C.3",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:graphs",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:DQ9": {
+          "number": "86",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:DQ9",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:referencecurrent": {
+          "number": "87",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:referencecurrent",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:quiet": {
+          "number": "C.4",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:quiet",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:quietjets": {
+          "number": "88",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:quietjets",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:clockcoeff": {
+          "number": "C.5",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:clockcoeff",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:Rfunctional": {
+          "number": "89",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:Rfunctional",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:homogeneous": {
+          "number": "C.6",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:homogeneous",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:rampstatic": {
+          "number": "C.7",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:rampstatic",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:tails": {
+          "number": "C.8",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:tails",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:current": {
+          "number": "C.9",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:current",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:Ifinal": {
+          "number": "90",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:Ifinal",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "old:terminalD": {
+          "number": "91",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-c-radial-conditional-comparison-and-the-old-clock-current#old:terminalD",
+          "document": "appendix-c-radial-conditional-comparison-and-the-old-clock-current"
+        },
+        "prefix:appendix": {
+          "number": "D",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:appendix",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:main": {
+          "number": "D",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:main",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:gaussian": {
+          "number": "D.1",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:gaussian",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:jets": {
+          "number": "92",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:jets",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:oscform": {
+          "number": "93",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:oscform",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:forces": {
+          "number": "94",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:forces",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:intertwiner": {
+          "number": "D.2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:intertwiner",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:pulse": {
+          "number": "95",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:pulse",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:D": {
+          "number": "96",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:D",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:hierarchy": {
+          "number": "D.3",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:hierarchy",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:Aeq": {
+          "number": "97",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:Aeq",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:fourrows": {
+          "number": "98",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:fourrows",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:oldthird": {
+          "number": "D.4",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:oldthird",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:oldinitial": {
+          "number": "99",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:oldinitial",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:Fc3": {
+          "number": "100",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:Fc3",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:J3": {
+          "number": "101",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:J3",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:localized": {
+          "number": "D.5",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:localized",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:left": {
+          "number": "102",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:left",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:localfirst": {
+          "number": "103",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:localfirst",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:refinedQ": {
+          "number": "104",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:refinedQ",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:currents": {
+          "number": "D.6",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:currents",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:Hh": {
+          "number": "105",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:Hh",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:Hrest": {
+          "number": "106",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:Hrest",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:H": {
+          "number": "107",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:H",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:IZ": {
+          "number": "108",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:IZ",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "prefix:IS": {
+          "number": "109",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-d-complete-prefix-estimates-for-the-compensated-writer#prefix:IS",
+          "document": "appendix-d-complete-prefix-estimates-for-the-compensated-writer"
+        },
+        "hold:appendix": {
+          "number": "E",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:appendix",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:main": {
+          "number": "E",
+          "kind": "section",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:main",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:bjets": {
+          "number": "110",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:bjets",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:gjets": {
+          "number": "111",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:gjets",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:comparison": {
+          "number": "112",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:comparison",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:residualjets": {
+          "number": "113",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:residualjets",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:radialerror": {
+          "number": "114",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:radialerror",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:clock": {
+          "number": "E.2",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:clock",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:annihilator": {
+          "number": "115",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:annihilator",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:closedmoments": {
+          "number": "116",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:closedmoments",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:closedvalues": {
+          "number": "117",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:closedvalues",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:core": {
+          "number": "118",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:core",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:copy": {
+          "number": "E.3",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:copy",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:pathineq": {
+          "number": "119",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:pathineq",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:lensvalues": {
+          "number": "120",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:lensvalues",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:bandcurrent": {
+          "number": "121",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:bandcurrent",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:gap": {
+          "number": "122",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:gap",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:copycost": {
+          "number": "123",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:copycost",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:retention": {
+          "number": "E.4",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:retention",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:exactcurrent": {
+          "number": "124",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:exactcurrent",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:wholehold": {
+          "number": "125",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:wholehold",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:exit": {
+          "number": "E.5",
+          "kind": "subsection",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:exit",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        },
+        "hold:radialexit": {
+          "number": "126",
+          "kind": "equation",
+          "url": "/quantum-measurement/research/nonequilibrium-records/appendix-e-copying-and-retention-for-the-exact-loaded-wave#hold:radialexit",
+          "document": "appendix-e-copying-and-retention-for-the-exact-loaded-wave"
+        }
+      },
+      "unresolvedReferences": [],
+      "unsupportedCommands": [],
+      "mathErrors": [],
+      "structuralMismatches": [],
+      "sourceLimitations": [],
+      "status": "PASS"
+    }
+  ]
+}
