@@ -179,7 +179,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         <div className="mt-6 flex flex-wrap gap-3">
           {paper.webUrl ? (
             <Link href={paper.webUrl} className="rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-[hsl(var(--accent-strong))]">
-              Read the complete web edition →
+              {paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text web edition →' : 'Read the complete web edition →'}
             </Link>
           ) : null}
           {paper.doiUrl ? (
@@ -236,10 +236,10 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
       {paper.researchProgramme === "consciousness" && paper.slug !== consciousnessPublication.paperSlug ? (
         <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
-          <p className="font-medium text-fg">Consciousness research · Paper {paper.number}</p>
-          <p className="mt-2">This paper develops the programme through its own mathematical argument and evidence. Its complete web treatment connects the article account to every technical section, including the proofs, results, appendices and references.</p>
+          <p className="font-medium text-fg">Consciousness research{paper.number ? ` · Paper ${paper.number}` : ' · Relational development'}</p>
+          <p className="mt-2">This paper develops the programme through its own mathematical argument and evidence. Its web treatment connects the article account to the technical sections, including proofs, results and references.</p>
           <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow">
-            {paper.webUrl ? <Link href={paper.webUrl}>Read the complete treatment →</Link> : null}
+            {paper.webUrl ? <Link href={paper.webUrl}>{paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text treatment →' : 'Read the complete treatment →'}</Link> : null}
             <Link href="/consciousness/research">The research sequence →</Link>
             <Link href="/consciousness/monograph">Foundational monograph →</Link>
           </div>

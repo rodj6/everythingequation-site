@@ -1,0 +1,75 @@
+{
+  "status": "resolved_by_author_supplied_original_assets",
+  "checked_utc": "2026-10-06T16:38:18.515303+00:00",
+  "source_tex": "relational_development.tex",
+  "source_tex_sha256": "ccf1b2bf0a3c4db9d336ab44591433d0b91a37ec06195859a8234cb132ca2c7d",
+  "figure_number": 1,
+  "figure_page": 25,
+  "figure_source_dependency": "figures/transfer_and_horizon.pdf",
+  "exact_figure_asset_recovered": true,
+  "reconstruction_performed": false,
+  "resolution": "The author supplied the original figure PDF, matching PNG and corrected complete manuscript PDF. The supplied assets were integrated byte-for-byte; Figure 1 and its original caption are present.",
+  "replacement_verification": "figure-replacement-verification.json",
+  "supplied_files": [
+    {
+      "supplied_filename": "relational_development(4).pdf",
+      "site_path": "public/publications/consciousness/development/relational_development.pdf",
+      "bytes": 503541,
+      "sha256": "391a8e498da27c4101d0cbfa3e6851ca19d2d4c1867502fee1652a74f64d1b9b",
+      "site_copy_byte_identical": true
+    },
+    {
+      "supplied_filename": "transfer_and_horizon.pdf",
+      "site_path": "public/publications/consciousness/development/figures/transfer_and_horizon.pdf",
+      "bytes": 22153,
+      "sha256": "f5a0d0806e67fc5eb8ef4261875fe15297df7dfc7899e1d0ed589658fcf8bc31",
+      "site_copy_byte_identical": true
+    },
+    {
+      "supplied_filename": "transfer_and_horizon.png",
+      "site_path": "public/publications/consciousness/development/figures/transfer_and_horizon.png",
+      "bytes": 312298,
+      "sha256": "a56c02ebd380e87f3941cbd338f5a1fd24945748755ac2c0b8fd4b2e89a2e13d",
+      "site_copy_byte_identical": true
+    }
+  ],
+  "publication_status_note": "The corrected manuscript is author supplied. This integration does not assert that the previously inspected Zenodo record has since changed.",
+  "historical_investigation_note": "The nested investigation records the earlier missing-source state before the author supplied the files. Its unresolved status and required_resolution are historical, not the current website status.",
+  "historical_investigation": {
+    "status": "unresolved_source_figure_dependency",
+    "checked_utc": "2026-10-06T16:12:42.789642+00:00",
+    "source_tex": "relational_development.tex",
+    "source_tex_sha256": "ccf1b2bf0a3c4db9d336ab44591433d0b91a37ec06195859a8234cb132ca2c7d",
+    "authoritative_record": "https://zenodo.org/records/23190711",
+    "authoritative_pdf": "https://zenodo.org/api/records/23190711/files/relational_development.pdf/content",
+    "record_title": "Relational Development and Conscious Scaffolding",
+    "record_files": [
+      "relational_development.pdf"
+    ],
+    "pdf_filename": "relational_development.pdf",
+    "pdf_page_count": 36,
+    "pdf_bytes": 506799,
+    "pdf_sha256": "1b951d237d12ee7663844fb8935990deb31a73b34a03700cf32bf518f0a295ce",
+    "pdf_md5": "e6c1bb828e1f34be87b8719e0ed88d76",
+    "published_md5": "md5:e6c1bb828e1f34be87b8719e0ed88d76",
+    "source_checks": {
+      "title_and_subtitle_match": true,
+      "author_match": true,
+      "date_and_status_match": true,
+      "doi_match": true,
+      "abstract_opening_match": true,
+      "caption_content_match": true,
+      "figure_graphics_absent": true,
+      "filename_placeholder_present": true
+    },
+    "figure_number": 1,
+    "figure_page": 25,
+    "figure_source_dependency": "figures/transfer_and_horizon.pdf",
+    "finding": "The supplied TeX references this missing asset. The authoritative published PDF also has only a blank outlined placeholder containing its filename, followed by the caption. No figure image or vector Form XObject exists on that page; its drawings are the header line and four placeholder box borders. The published record contains only the full PDF, with no separate figure or source archive.",
+    "page_evidence": "figure-source-page.png",
+    "exact_figure_asset_recovered": false,
+    "reconstruction_performed": false,
+    "required_resolution": "Supply the original figures/transfer_and_horizon.pdf asset, or an authoritative corrected publication containing the actual figure. Preserve Figure 1 caption and an explicit missing-source notice in the web edition meanwhile.",
+    "library_attempt": "The three named Library PDFs resolved with size 506799 bytes but downloads failed HTTP 502. No byte identity with the published PDF is claimed."
+  }
+}

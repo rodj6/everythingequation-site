@@ -1,0 +1,30 @@
+<span id="orientation-and-contribution" class="quantum-anchor"></span>
+
+## 1 Orientation and contribution
+
+The central proposal is that relations acquired through experience can become part of the organisation through which later experience is interpreted, valued and acted upon. An encounter can leave more than a proposition in memory. It can change which differences are noticed, which consequences can be inferred, which discrepancies matter, and which responses are available. Once incorporated, the resulting organisation conditions further encounters. Development is therefore recursive: the organisation that interprets experience is itself changed by experience.
+
+This proposal has a specifically philosophical ambition. The evolving relational scaffold may constitute a form or component of conscious organisation, distinct from primitive awareness. Within Shadow Theory, the strongest disciplined formulation connects development to the native predictive organisation and its realised point under A2, after A1 and the physical realisation requirements have been met. A better task score alone does not establish this connection. The same developmental mathematics can also be studied independently of the awareness-first interpretation.
+
+The contribution is a connected account of thought, will, incorporation and transmission, supported by explicit continuation requirements and several strengthened results. The mathematical additions identify when a finite diagnostic panel preserves every native predictive distinction between preparations, give a conditioning-dependent bound on every finite adaptive continuation, prove an obstruction to dimension-only approximate certification, and establish exact message-alphabet tradeoffs for a jointly revealing transfer problem with and without shared randomness. A small recurrent register model gives a positive conditional incorporation witness. The results use established automata, observability and coding methods. Their contribution here is the explicit combination of resource accounting, developmental continuation and conditional phenomenal attribution; historical priority for the underlying methods is not claimed.
+
+Several corrections sharpen the positive proposal. Immediate competence need not determine future learning. Joint-only information is different from information beyond a complete realising pair. Repeated temporal influence does not certify native physical recurrence. Complete sufficient-state transfer defeats an absolute privilege of having personally undergone the original interaction. Finally, an ordinary learning update can change the actual predictive class within one fixed complete object, without changing that object’s laws. These restrictions identify what a serious developmental theory must explain.
+
+<span id="contribution-comparison" class="quantum-anchor"></span>
+
+### 1.1 Contribution comparison
+
+The theoretical baseline consists of the consciousness monograph [\[M\]](/consciousness/development/references-and-access-record#ref-m) and its companion papers [\[P2–P4\]](/consciousness/development/references-and-access-record#programme-publications). Its constitutive assumptions and mathematical results are distinguished from the present developmental interpretation and deductions.
+
+| Status                         | Material                                                                                                                           | Role in this document                                                                |
+|:-------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------|
+| Inherited constitution         | M: A0–A3, native core qualification, complete predictive object, episode provenance                                                | Governs phenomenal attribution; preserved without adding cognition to A1             |
+| Inherited mathematics          | M: finite word-span equivalence; P2: strong marked quotients, causal composition, residual memory, hierarchy, error budgets        | Supplies the reliable continuation and substitution baseline                         |
+| Inherited empirical discipline | P3: representability, fitting and selection distinctions; P4: trace behaviour versus intervention-sensitive realisation            | Prevents model success from being mistaken for physical or phenomenal identification |
+| New philosophical synthesis    | Relevance, directed reconciliation, constructed relational result, incorporation, reinterpretation, propagation                    | Develops the positive conscious-scaffolding hypothesis                               |
+| New specialization             | Costed developmental continuation and retained local-summary fibres                                                                | Gives established machinery a precise developmental target                           |
+| Deductions developed here      | T1–T2 transfer tradeoffs; D1–D3 diagnostic results; native point-separation witness                                                | Provides complete proofs, assumptions and finite checks                              |
+| Explicit possible revision     | Rich cognitive admission criteria, nested subjects, a different A2 identification                                                  | Requires a separate constitutional argument; not adopted here                        |
+| Rejected or restricted claims  | Snapshot sufficiency, universal improvement, extra information beyond a complete pair, automatic native return, historical essence | Replaced by countermodels and conditional surviving claims                           |
+
+This paper combines a positive philosophical account, proved model-level results and a discriminating research programme. It does not report new human experiments, hardware certification, or a mathematical derivation of phenomenal existence from nonphenomenal premises.

@@ -22,8 +22,8 @@ export default function ConsciousnessSearch() {
   function snippet(text: string) { const index = text.toLocaleLowerCase().indexOf(query.trim().split(/\s+/)[0].toLocaleLowerCase()); const start = Math.max(0, index - 80); return `${start ? "…" : ""}${text.slice(start,start + 230)}${text.length > start + 230 ? "…" : ""}`; }
   return <div className="c-search">
     <label htmlFor={id}>Search the complete section</label>
-    <div className="c-search-field"><span aria-hidden="true">⌕</span><input id={id} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try relational boundaries, learning, or realization" autoComplete="off" aria-describedby={`${id}-status`} /></div>
-    <p id={`${id}-status`} aria-live="polite">{query.trim() ? failed ? "Search could not load. Use the complete contents below." : !records ? "Loading the section index…" : `${results.length}${results.length === 16 ? "+" : ""} matching sections` : "Find passages in the monograph, Papers 2–4, guides, glossary and FAQ."}</p>
+    <div className="c-search-field"><span aria-hidden="true">⌕</span><input id={id} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try scaffolding, agency, learning, or realization" autoComplete="off" aria-describedby={`${id}-status`} /></div>
+    <p id={`${id}-status`} aria-live="polite">{query.trim() ? failed ? "Search could not load. Use the complete contents below." : !records ? "Loading the section index…" : `${results.length}${results.length === 16 ? "+" : ""} matching sections` : "Find passages in the monograph, Papers 2–4, relational development, the agency article, guides, glossary and FAQ."}</p>
     {query.trim() && results.length > 0 ? <ol className="c-search-results">{results.map(({record}) => <li key={record.url}><a href={record.url}><small>{record.context}</small><strong>{record.title}</strong><span>{snippet(record.text)}</span></a></li>)}</ol> : null}
     <noscript><p>Search is optional. All chapters and sections are linked in the contents.</p></noscript>
   </div>;

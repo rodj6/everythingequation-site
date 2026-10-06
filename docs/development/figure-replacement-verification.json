@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-06T16:38:18.515303+00:00",
+  "scope": "Supplied replacement-source comparison and site asset byte fidelity; current build and browser verification are recorded separately.",
+  "source_origin": "Author-supplied attachments in this conversation, 6 October 2026; no new Zenodo retrieval or publication update is asserted.",
+  "files": [
+    {
+      "supplied_filename": "relational_development(4).pdf",
+      "site_path": "public/publications/consciousness/development/relational_development.pdf",
+      "bytes": 503541,
+      "sha256": "391a8e498da27c4101d0cbfa3e6851ca19d2d4c1867502fee1652a74f64d1b9b",
+      "site_copy_byte_identical": true
+    },
+    {
+      "supplied_filename": "transfer_and_horizon.pdf",
+      "site_path": "public/publications/consciousness/development/figures/transfer_and_horizon.pdf",
+      "bytes": 22153,
+      "sha256": "f5a0d0806e67fc5eb8ef4261875fe15297df7dfc7899e1d0ed589658fcf8bc31",
+      "site_copy_byte_identical": true
+    },
+    {
+      "supplied_filename": "transfer_and_horizon.png",
+      "site_path": "public/publications/consciousness/development/figures/transfer_and_horizon.png",
+      "bytes": 312298,
+      "sha256": "a56c02ebd380e87f3941cbd338f5a1fd24945748755ac2c0b8fd4b2e89a2e13d",
+      "site_copy_byte_identical": true
+    }
+  ],
+  "old_manuscript_pdf": {
+    "pages": 36,
+    "bytes": 506799,
+    "sha256": "1b951d237d12ee7663844fb8935990deb31a73b34a03700cf32bf518f0a295ce"
+  },
+  "corrected_manuscript_pdf": {
+    "pages": 35,
+    "figure_page": 25,
+    "figure_number": 1,
+    "figure_visible": true
+  },
+  "publication_identity": {
+    "title": "Relational Development and Conscious Scaffolding: Conceptual Foundations, Strengthened Results, and Research Commitments",
+    "author": "Jeremy Rodgers, Independent Researcher",
+    "date_and_status": "6 October 2026 | Revised preprint",
+    "doi": "10.5281/zenodo.23190711",
+    "matches_previous_pdf_and_tex": true
+  },
+  "body_comparison": {
+    "normalized_body_equal": true,
+    "old_normalized_words": 15975,
+    "new_normalized_words": 15975,
+    "normalization": [
+      "skip table of contents pages 2 and 3",
+      "remove repeated running title and each page footer",
+      "remove old missing-figure filename placeholder",
+      "remove supplied figure labels from new PDF",
+      "remove duplicate old split-table header on page 33"
+    ]
+  },
+  "figure_checks": {
+    "supplied_pdf_pages": 1,
+    "supplied_pdf_page_points": [
+      504,
+      230.4
+    ],
+    "supplied_png_pixels": [
+      2048,
+      936
+    ],
+    "pdf_text_exactly_matches_embedded_figure_text": true,
+    "png_visually_matches_pdf_and_corrected_manuscript": true,
+    "caption_matches_supplied_tex": true,
+    "curves_visually_agree_with_source_formulas": true,
+    "reconstruction_performed": false
+  },
+  "finding": "The missing-figure dependency is resolved by author-supplied original assets. The corrected manuscript has the same substantive text as the prior PDF; observed changes are insertion of the figure and resulting pagination/table-header reflow."
+}

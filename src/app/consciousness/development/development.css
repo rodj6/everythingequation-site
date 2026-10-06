@@ -1,0 +1,21 @@
+.development-contents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 2rem;margin-top:1.5rem;list-style:none;padding:0}
+.development-contents>li{min-width:0;border-bottom:1px solid #aab4d030;padding:1.3rem 0}
+.development-contents>li>a{display:flex;gap:1rem;align-items:baseline;color:var(--c-text,#e6e7f3)}
+.development-contents small{flex:0 0 5rem;color:var(--c-violet);font-size:.8rem}
+.development-contents strong{font-weight:500;font-size:1rem;line-height:1.6}
+.development-contents details{margin-top:.6rem;font-size:.875rem;line-height:1.7;color:var(--c-muted)}
+.development-contents summary{cursor:pointer}
+.development-contents details ul{list-style:none;padding-left:1rem}
+.development-contents details li{margin:.5rem 0}
+.development-contents a:hover{color:var(--c-cyan)}
+.development-reader .quantum-publication-text{overflow-wrap:anywhere}
+.development-reader .quantum-publication-text table{font-size:.9rem;min-width:42rem}
+.development-reader .quantum-publication-text :is(td,th){overflow-wrap:normal;word-break:normal}
+.development-reader .quantum-table-wrap{max-width:100%;overflow:auto}
+.development-reader .quantum-publication-text figure{margin:2rem 0}
+.development-reader .quantum-publication-text figure img{max-width:100%;height:auto;background:#fff}
+.development-reader .quantum-publication-text figcaption{font-size:.9rem;line-height:1.7;margin-top:.8rem}
+.development-reader .c-all-contents nav{max-height:24rem;overflow:auto}
+.development-reader .quantum-publication-text h2{scroll-margin-top:6rem}
+@media(max-width:680px){.development-contents{grid-template-columns:1fr}.development-contents small{flex-basis:4.5rem}}
+@media print{.development-contents{display:block}.development-reader .quantum-publication-text figure{break-inside:avoid}}

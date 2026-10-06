@@ -14,6 +14,7 @@ import yaml from 'js-yaml';
 import { quantumPublications } from '@/config/quantum';
 import { quantumResearchPublications } from '@/config/quantum-research';
 import { consciousnessPublication } from '@/config/consciousness';
+import { development } from '@/lib/development';
 import { researchPapers } from '@/lib/consciousness-research';
 
 export type Visibility = 'draft' | 'public';
@@ -176,12 +177,15 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const quantum = quantumPublications.find((publication) => publication.paperSlug === slug);
     const consciousness = slug === consciousnessPublication.paperSlug ? consciousnessPublication : undefined;
     const research = researchPapers.find((paper) => paper.id === raw.researchPaperId);
+    const developmental = slug === development.paperSlug ? development : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
     const zenodoId: string | undefined = quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (quantumResearch && zenodoId) {
+    if (developmental) {
+      metadata = {id: developmental.doi, doi: developmental.doi, title: developmental.fullTitle, creators: [developmental.author], published: developmental.date};
+    } else if (quantumResearch && zenodoId) {
       metadata = { id: zenodoId, doi: quantumResearch.doi, title: quantumResearch.title, url: quantumResearch.zenodoUrl, creators: [quantumResearch.author], published: quantumResearch.published, files: [{filename: `${quantumResearch.id}.pdf`, url: quantumResearch.pdfUrl}, {filename: `${quantumResearch.id}.md`, url: quantumResearch.markdownUrl}] };
     } else if (quantum && zenodoId) {
       metadata = {
@@ -241,7 +245,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       pdfUrl: research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research ? 'consciousness' : undefined,
+      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

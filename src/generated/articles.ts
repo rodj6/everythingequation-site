@@ -11,6 +11,19 @@ export interface ArticleMeta {
 
 export const articleMetas: ArticleMeta[] = [
   {
+    "slug": "agency-and-the-constructed-self",
+    "title": "Agency and the constructed self",
+    "description": "Choice, conditioning and the RCO hypothesis",
+    "date": "2026-10-06",
+    "tags": [
+      "consciousness",
+      "agency",
+      "RCO",
+      "relational-development"
+    ],
+    "status": "published"
+  },
+  {
     "slug": "from-everything-equation-to-shadow-theory",
     "title": "From the Everything Equation to Shadow Theory",
     "description": "What changed, what was kept, and why the older material is now a historical archive.",
@@ -76,6 +89,7 @@ export const articleMetas: ArticleMeta[] = [
 ];
 
 export const articleImports = {
+  "agency-and-the-constructed-self": () => import("../../content/articles/agency-and-the-constructed-self.mdx"),
   "from-everything-equation-to-shadow-theory": () => import("../../content/articles/from-everything-equation-to-shadow-theory.mdx"),
   "full-shadow-model": () => import("../../content/articles/full-shadow-model.mdx"),
   "how-to-read-the-stack": () => import("../../content/articles/how-to-read-the-stack.mdx"),

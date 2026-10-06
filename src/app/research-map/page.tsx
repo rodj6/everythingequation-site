@@ -99,7 +99,7 @@ export default async function ResearchMapPage() {
 
       {/* Sequence */}
       <section aria-labelledby="consciousness-map-heading" className="card-surface p-6 sm:p-8">
-        <p className="section-label">Consciousness · SPC-2 · Monograph and Papers 2–4</p>
+        <p className="section-label">Consciousness · SPC-2 · Monograph, Papers 2–4 and development</p>
         <h2 id="consciousness-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">From a certified vessel to a perspective</h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation and physical constitutions are antecedents. SPC-2 adds its own psychophysical premises; the awareness-aspect commitment is not derived from physics. Certified realization includes a declared selection doctrine before the constitutive laws apply.</p>
         <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -110,6 +110,7 @@ export default async function ResearchMapPage() {
             ["A3 · Continuation", "Nonbranching process provenance, with a genuine qualification gap ending the episode."],
           ].map(([title, body]) => <li key={title} className="rounded-xl border border-edge p-4"><h3 className="font-semibold text-glow">{title}</h3><p className="mt-3 text-sm leading-relaxed text-mute">{body}</p></li>)}
         </ol>
+        <div className="mt-6 rounded-xl border border-edge p-5"><h3 className="font-semibold text-glow"><Link href="/consciousness/development">Relational development and conscious scaffolding</Link></h3><p className="mt-3 leading-relaxed text-mute">Retained organisation, will and thought connect to exact transfer tradeoffs, complete diagnostic panels and a rare-event obstruction. The native incorporation witness separates phenomenal points conditionally on qualification and A2.</p><Link className="mt-3 inline-block text-sm text-glow" href="/articles/agency-and-the-constructed-self">Related article: Agency and the constructed self</Link></div>
         <p className="mt-5 text-sm leading-relaxed text-mute">The finite completion theorem is conditional on these inputs. Realization selection, neural applications and empirical assessment retain their open status. The earlier Consciousness Field account is superseded; its claim inventory is not merged into SPC-2.</p>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           {[

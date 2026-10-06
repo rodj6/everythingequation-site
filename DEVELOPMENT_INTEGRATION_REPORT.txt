@@ -1,0 +1,122 @@
+SHADOW THEORY WEBSITE — CONSCIOUSNESS UPDATE
+6 October 2026
+
+DELIVERY STATUS
+The supplied paper and article are integrated and the production build passes.
+All supplied substantive text, mathematics, proofs, tables, Figure 1 and
+references are available on the site. The original author-supplied Figure 1
+assets and corrected paper PDF now resolve the earlier figure dependency.
+Only article citation [11] remains unresolved, with a separate editorial note.
+
+MAIN ROUTES
+/consciousness/development
+  Relational Development and Conscious Scaffolding — programme introduction,
+  full contents, source formats and 15 consecutive reading sections.
+/articles/agency-and-the-constructed-self
+  Agency and the constructed self — full Word article converted to MDX.
+/papers/relational-development-and-conscious-scaffolding
+  Publication record, DOI and source downloads.
+/consciousness/development/manifest.json
+  Ordered section inventory, metadata, downloads and source status.
+
+INTEGRATION
+The consciousness overview and research hub now connect the developmental paper
+and article to the monograph and Papers 2–4. The programme has five publications;
+the new paper has no invented sequence number and supersedes no existing paper.
+The Papers and Articles indices, Research Map, programme search, programme
+manifest, sitemap, Atom feed, research graph and llms.txt include the additions.
+Existing technical publications, source downloads and existing articles retain
+their original bytes. Existing routes remain available.
+
+The paper has 14 numbered sections and 52 subsections plus its abstract and
+publication identity. Conversion retains 331 inline mathematical expressions,
+29 displays, 9 labelled formal results, 10 proof passages, 5 tables with 126
+independently checked cells, and 15 bibliography entries. It preserves source
+result identifiers, definitions, assumptions, full arguments, philosophical
+exposition, citations, funding, attribution and AI disclosure. All 360 mathematical expressions
+have KaTeX HTML and MathML with source TeX annotations. Both complete-paper and
+section Markdown downloads are provided.
+
+The article preserves all 81 original paragraphs (title and subtitle are rendered
+from metadata), its 15 headings, byline and all ten original source hyperlink
+destinations. Related-reading links and navigable citation numbers were added.
+No substantive article wording or scientific claims were rewritten.
+
+SOURCE RESOLUTION AND REMAINING ISSUE
+Figure 1 is resolved. The author supplied transfer_and_horizon.png,
+transfer_and_horizon.pdf and relational_development(4).pdf. The website uses
+these original image and vector assets unchanged, with the original caption
+and full-resolution/PDF links. The downloadable paper PDF is the corrected
+35-page author-supplied PDF; its figure appears on page 25. Normalized substantive
+text matches the prior PDF exactly (15,975 words); differences are the actual
+figure, pagination and repeated layout elements. No figure was reconstructed.
+The prior Zenodo missing-figure investigation is retained as historical evidence.
+No claim is made that the corrected PDF has also replaced the live Zenodo file.
+
+Article reference [11]: the Word article cites [10, 11], but its list and DOCX
+relationships supply only references 1–10. Programme context does not uniquely
+identify the intended source. The exact marker remains, linked to a separate
+editorial source note. Resolution requires the intended reference from the
+author. No bibliography entry was inferred or fabricated.
+
+CHECKS
+- Production build and TypeScript checks passed again after the figure update;
+  486 routes were generated.
+- Original Figure 1 displays at desktop and mobile widths without page overflow;
+  full-resolution navigation works and all three new/replaced asset downloads
+  match the supplied files byte for byte. The caption is preserved exactly.
+- Eight programme/discovery endpoints were checked for stale figure-gap notices;
+  none remain. Figure status is resolved in both programme manifests.
+- Independent source checks verified all mathematical expressions, every table
+  cell, section partitioning, HTML prose and Markdown prose/math round-trips.
+- Publication title, subtitle, author, date and revision status were checked.
+- Production reader bodies exactly contain their converted source fragments.
+- The article's actual rendered text and links match the DOCX.
+- 42 HTTP routes and 183 internal link/download targets passed after the figure update.
+- Search results, previous/next reading, source citation navigation, byte-exact
+  source downloads and graph endpoints passed.
+- Desktop (1440 px) and mobile (390 px) checks passed with no page errors,
+  math errors or horizontal page overflow. Narrow tables scroll inside their
+  reading column and support keyboard scrolling.
+- Full paper text, MathML and article text remain available without JavaScript.
+- 1,033 baseline files remain byte-identical (excluding generated caches); no
+  baseline project file was
+  removed from the working source tree. The 12 modified baseline files implement
+  publication registration, links, search, discovery and generated article maps.
+- Existing consciousness, quantum, monograph and Sealed or Leaky source content
+  and publication assets remain unchanged. No dependencies were changed.
+
+These checks establish conversion fidelity and website behaviour. They do not
+constitute a new mathematical peer review or empirical validation of the paper.
+
+FILES AND EVIDENCE
+The archive contains the full website source under everythingequation-site/.
+Original LaTeX, original Word document, author-supplied corrected paper PDF,
+complete Markdown and section Markdown are under
+public/publications/consciousness/development/. Original PNG and vector PDF
+assets are in its figures/ subdirectory, matching the TeX source dependency.
+Coverage is in docs/development/SOURCE_TO_WEB_COVERAGE.md and
+source-to-web-coverage.json; a public copy is source-coverage.json in the
+publication directory. The same docs directory contains article audits,
+figure provenance, independent review, preservation results, build log,
+browser screenshots and route/flow verification results. Current figure-specific
+evidence is in figure-replacement-verification.json and
+figure-browser-verification.json; the older missing-figure evidence is explicitly
+marked historical.
+
+USE
+Extract the archive and copy its project files into your website working folder,
+keeping your existing .git directory and any local deployment settings. The
+archive intentionally excludes Git history, node_modules, .next build output
+and temporary runtime tools. It retains package.json and package-lock.json.
+From the project root, run npm ci and npm run build using the existing workflow.
+For a cache-only metadata build, use SKIP_ZENODO=1 npm run build (on PowerShell,
+set $env:SKIP_ZENODO="1" before npm run build). The supplied source does not need
+reconversion to build. No remote push or deployment was performed.
+
+OPTIONAL REGENERATION
+Paper conversion requires Python 3, Pandoc and installed project dependencies:
+  python scripts/convert-development.py --source public/publications/consciousness/development/relational_development.tex --output . --katex-root .
+Article conversion helper: scripts/convert-agency-article.py. It accepts the
+original DOCX path and an output directory; review and copy its named article
+asset if regenerating. Treat the Word source as authoritative.

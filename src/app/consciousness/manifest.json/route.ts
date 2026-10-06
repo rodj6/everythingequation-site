@@ -1,3 +1,4 @@
+import { developmentManifest } from '@/lib/development';
 import { consciousnessManifest } from "@/lib/consciousness";
 import { listResearchDocuments, researchPapers } from "@/lib/consciousness-research";
 
@@ -7,8 +8,9 @@ export function GET() {
   const monograph = consciousnessManifest();
   return Response.json({
     ...monograph,
-    schemaVersion: 2,
-    updated: "2026-10-01",
+    schemaVersion: 3,
+    updated: "2026-10-06",
+    development: developmentManifest(),
     research: {
       title: "Boundaries, interfaces and realizations",
       url: "/consciousness/research",
