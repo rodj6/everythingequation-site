@@ -15,6 +15,7 @@ import { quantumPublications } from '@/config/quantum';
 import { quantumResearchPublications } from '@/config/quantum-research';
 import { consciousnessPublication } from '@/config/consciousness';
 import { development } from '@/lib/development';
+import { agency } from '@/lib/agency';
 import { researchPapers } from '@/lib/consciousness-research';
 
 export type Visibility = 'draft' | 'public';
@@ -178,12 +179,15 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const consciousness = slug === consciousnessPublication.paperSlug ? consciousnessPublication : undefined;
     const research = researchPapers.find((paper) => paper.id === raw.researchPaperId);
     const developmental = slug === development.paperSlug ? development : undefined;
+    const agential = slug === agency.paperSlug ? agency : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
     const zenodoId: string | undefined = quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (developmental) {
+    if (agential) {
+      metadata = {id: agential.doi, doi: agential.doi, title: agential.fullTitle, creators: [agential.author], published: agential.date};
+    } else if (developmental) {
       metadata = {id: developmental.doi, doi: developmental.doi, title: developmental.fullTitle, creators: [developmental.author], published: developmental.date};
     } else if (quantumResearch && zenodoId) {
       metadata = { id: zenodoId, doi: quantumResearch.doi, title: quantumResearch.title, url: quantumResearch.zenodoUrl, creators: [quantumResearch.author], published: quantumResearch.published, files: [{filename: `${quantumResearch.id}.pdf`, url: quantumResearch.pdfUrl}, {filename: `${quantumResearch.id}.md`, url: quantumResearch.markdownUrl}] };
@@ -245,7 +249,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       pdfUrl: research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental ? 'consciousness' : undefined,
+      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

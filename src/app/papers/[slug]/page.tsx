@@ -236,7 +236,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
       {paper.researchProgramme === "consciousness" && paper.slug !== consciousnessPublication.paperSlug ? (
         <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
-          <p className="font-medium text-fg">Consciousness research{paper.number ? ` · Paper ${paper.number}` : ' · Relational development'}</p>
+          <p className="font-medium text-fg">Consciousness research{paper.number ? ` · Paper ${paper.number}` : paper.slug === 'bounded-agency-and-reflective-freedom' ? ' · Agency and free will' : ' · Relational development'}</p>
           <p className="mt-2">This paper develops the programme through its own mathematical argument and evidence. Its web treatment connects the article account to the technical sections, including proofs, results and references.</p>
           <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow">
             {paper.webUrl ? <Link href={paper.webUrl}>{paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text treatment →' : 'Read the complete treatment →'}</Link> : null}

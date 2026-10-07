@@ -2,6 +2,9 @@
 """Faithful DOCX-to-MDX asset conversion for Agency and the constructed self.
 
 Run: python scripts/convert-agency-article.py SOURCE.docx OUTPUT_DIRECTORY
+Historical import utility for the original Word draft.
+The current article is maintained directly in content/articles/agency-and-the-constructed-self.mdx.
+Do not use this importer to regenerate the revised article.
 Only named paragraphs and hyperlink relationship targets are transformed.
 """
 from pathlib import Path
@@ -31,6 +34,8 @@ def run_text(run):
     return out
 
 def convert(source,outdir):
+    if (outdir / "agency-and-the-constructed-self.mdx").exists():
+        raise SystemExit("Refusing to overwrite the revised article. This historical importer may write to a new directory only.")
     outdir.mkdir(parents=True, exist_ok=True)
     with ZipFile(source) as z:
         doc=ET.fromstring(z.read('word/document.xml'))

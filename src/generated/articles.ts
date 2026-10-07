@@ -13,11 +13,12 @@ export const articleMetas: ArticleMeta[] = [
   {
     "slug": "agency-and-the-constructed-self",
     "title": "Agency and the constructed self",
-    "description": "Choice, conditioning and the RCO hypothesis",
+    "description": "How we revise the rules we live by: bounded agency, reflective freedom and the constructed self",
     "date": "2026-10-06",
     "tags": [
       "consciousness",
       "agency",
+      "free-will",
       "RCO",
       "relational-development"
     ],

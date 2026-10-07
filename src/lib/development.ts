@@ -34,7 +34,8 @@ export function getDevelopmentSearchRecords(): SearchRecord[] {
     title: document.title, context: `Relational development · ${document.label}`,
     url: document.url, text: consciousnessPlainText(readDevelopmentHtml(document)),
   }));
-  const articleText = fs.readFileSync(path.join(contentRoot, 'agency-article-search.txt'), 'utf8');
+  const articleSource = fs.readFileSync(path.join(process.cwd(), 'content/articles/agency-and-the-constructed-self.mdx'), 'utf8');
+  const articleText = consciousnessPlainText(articleSource.replace(/^---[\s\S]*?---\s*/, ''));
   records.push({title: 'Agency and the constructed self', context: 'Article · Choice, conditioning and the RCO hypothesis', url: development.articleUrl, text: articleText});
   return records;
 }
@@ -45,6 +46,6 @@ export function developmentManifest() {
     coverageUrl: '/publications/consciousness/development/source-coverage.json',
     sourceNote: 'The supplied 6 October 2026 revised preprint controls this edition. The foundational monograph and Papers 2–4 retain their own publication identities and claims.',
     article: {title: 'Agency and the constructed self', url: development.articleUrl,
-      sourceNote: 'Citation [11] is unresolved in the supplied Word document; the web edition preserves the marker and documents the omission.'},
+      sourceNote: 'The accessible article is revised with the published Bounded Agency and Reflective Freedom. The unpublished companion citation and unresolved-source note have been removed; references are consistently renumbered.'},
   };
 }

@@ -1,4 +1,5 @@
 import { development, listDevelopmentDocuments } from '@/lib/development';
+import { agency, listAgencyDocuments } from '@/lib/agency';
 import { sealedLeaky, listSealedDocuments } from '@/lib/sealed-leaky';
 /**
  * MACHINE-READABLE ENDPOINT GENERATORS
@@ -58,6 +59,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    { loc: agency.url, lastmod: agency.date, priority: '0.9' },
+    ...listAgencyDocuments().map(d => ({loc:d.url,lastmod:agency.date,priority:'0.8'})),
     { loc: development.url, lastmod: development.date, priority: '0.9' },
     ...listDevelopmentDocuments().map(d => ({loc:d.url,lastmod:development.date,priority:'0.8'})),
     { loc: sealedLeaky.url, lastmod: sealedLeaky.webDate, priority: '0.9' },
@@ -122,6 +125,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:agency.fullTitle,url:`${canonicalBase}${agency.url}`,date:agency.date,summary:`${agency.description} Published paper DOI ${agency.doi}. The website also includes separately identified philosophical and technical extensions.`},
     {title:development.fullTitle,url:`${canonicalBase}${development.url}`,date:development.date,summary:`${development.description} Complete text and mathematical web edition, including the original Figure 1. DOI ${development.doi}.`},
     {title:sealedLeaky.title,url:`${canonicalBase}${sealedLeaky.url}`,date:sealedLeaky.webDate,summary:`${sealedLeaky.description} Complete technical web edition, original PDF/TeX and verification script. DOI ${sealedLeaky.doi}. Web-edition date; manuscript revision ${sealedLeaky.manuscriptDate}.`},
     ...researchPapers.map(paper => ({
@@ -325,7 +329,14 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Paper PDF](${baseUrl}${development.pdfUrl}) · [Original LaTeX](${baseUrl}${development.texUrl}) · [Complete Markdown](${baseUrl}${development.markdownUrl}) · [Reading inventory](${baseUrl}${development.manifestUrl})`,
     'The complete text, statements, proofs, equations, tables, original Figure 1 and references are present. The author-supplied corrected paper PDF includes the figure; original figure PNG and vector PDF are available locally.',
     ...listDevelopmentDocuments().map(d=>`- [${d.label}: ${d.title}](${baseUrl}${d.url}) · [Markdown](${baseUrl}${d.markdownUrl})`),
-    `- [Agency and the constructed self: Choice, conditioning and the RCO hypothesis](${baseUrl}${development.articleUrl}): full article; original unresolved citation [11] is preserved with an editorial note.`,
+    `- [Agency and the constructed self: Choice, conditioning and the RCO hypothesis](${baseUrl}${development.articleUrl}): accessible introduction updated with the bounded-agency results, with corrected published references. The recursively closed observer hypothesis remains distinct from the finite constructions.`,
+    '',
+    '### Agency and free will',
+    `- [${agency.fullTitle}](${baseUrl}${agency.url}): ${agency.date}; DOI ${agency.doiUrl}. Full scientific content in website form, including assumptions, proofs, counterexamples, figures, tables and appendices.`,
+    'Finite evaluative rule revision is tested on fresh cases. A sharp information, mediation and endorsement inequality separates causal sensitivity from faithful evaluation. In the specified finite sensor and endorsement model, the first strict adaptive advantage is B = L + 2, where L is the first useful calibration count. Faithful native realization preserves declared operations and information restrictions. Recurrence alone does not establish agency; conditional SPC-2 coexistence does not empirically prove consciousness or the full RCO hypothesis.',
+    'The extended inquiry develops philosophy and additional control results from the unpublished Bounded Agency and Reversible Control manuscript. These supplementary chapters retain their own assumptions and are not results attributed to the DOI paper. The private manuscript itself is not released.',
+    `- [Published paper PDF](${baseUrl}${agency.pdfUrl}) · [Complete website Markdown](${baseUrl}${agency.markdownUrl}) · [Reading inventory](${baseUrl}${agency.manifestUrl})`,
+    ...listAgencyDocuments().map(d=>`- [${d.label}: ${d.title}](${baseUrl}${d.url}) · ${d.kind === 'supplement' ? 'Extended inquiry' : 'Published paper treatment'} · [Markdown](${baseUrl}${d.markdownUrl})`),
     '',
     '### Consciousness explanatory guides',
     ...listConsciousnessGuides().map(guide => `- [${guide.title}](${baseUrl}/consciousness/guides/${guide.slug}): ${guide.description}`),
@@ -340,7 +351,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Quantum Measurement](${baseUrl}/quantum-measurement): equilibrium uniqueness, two measurement constructions, nonequilibrium records and complete technical reading paths`,
-    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4, relational development and explanatory guides`,
+    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4, relational development, agency and free will, and explanatory guides`,
     `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -377,7 +388,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     `- ${baseUrl}/quantum-measurement/manifest.json (September editions and October research inventory, stable anchors, coverage and source downloads)`,
-    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4 and relational development; ordered technical sections, source formats, guides and the agency article)`,
+    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development and bounded agency; ordered technical sections, source formats, guides and the agency article)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
   ];
@@ -434,6 +445,8 @@ export async function generateGraph() {
       tags: a.tags ?? [],
       url: `${baseUrl}/articles/${a.slug}`,
     })),
+    {id:'consciousness:agency',type:'extended-web-treatment',title:agency.fullTitle,url:`${baseUrl}${agency.url}`,doi:agency.doi,date:agency.date,manifest:`${baseUrl}${agency.manifestUrl}`},
+    ...listAgencyDocuments().map(d=>({id:`consciousness:agency:${d.slug}`,type:d.kind === 'supplement' ? 'supplementary-inquiry' : 'published-paper-treatment',title:d.title,label:d.label,order:d.order,url:`${baseUrl}${d.url}`,sections:d.sections,markdown:`${baseUrl}${d.markdownUrl}`})),
     {id:'consciousness:development',type:'technical-web-edition',title:development.fullTitle,url:`${baseUrl}${development.url}`,doi:development.doi,date:development.date,manifest:`${baseUrl}${development.manifestUrl}`,figureStatus:'original-figure-included'},
     ...listDevelopmentDocuments().map(d=>({id:`consciousness:development:${d.slug}`,type:'technical-section',title:d.title,label:d.label,order:d.order,url:`${baseUrl}${d.url}`,sections:d.sections,stats:d.stats,markdown:`${baseUrl}${d.markdownUrl}`})),
     {id:'sealed-or-leaky',type:'complete-technical-edition',title:sealedLeaky.title,url:`${baseUrl}${sealedLeaky.url}`,doi:sealedLeaky.doi,version:sealedLeaky.version,manifest:`${baseUrl}/sealed-or-leaky/manifest.json`,verificationScript:`${baseUrl}${sealedLeaky.verificationUrl}`},
@@ -492,9 +505,9 @@ export async function generateGraph() {
       url: `${baseUrl}${document.url}`, sections: document.sections, stats: document.stats,
       source: document.source ?? null, markdown: `${baseUrl}${document.markdownUrl}`,
     })),
-    { id: 'consciousness:research', type: 'research-sequence', title: 'Boundaries, interfaces and realizations',
+    { id: 'consciousness:research', type: 'research-sequence', title: 'Boundaries, interfaces, realizations, development and agency',
       url: `${baseUrl}/consciousness/research`, date: '2026-10-01',
-      scope: 'Papers 2–4 extend and test the consciousness programme while preserving the fixed Version 2 monograph.' },
+      scope: 'Papers 2–4, relational development and bounded agency extend and test the consciousness programme while preserving the fixed Version 2 monograph. The agency website includes separately identified supplementary inquiry.' },
     ...researchPapers.map(paper => ({
       id: `consciousness:research:${paper.id}`, type: 'research-article',
       title: paper.title, description: paper.deck, number: paper.number,
@@ -583,6 +596,16 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({from:'consciousness',to:'consciousness:agency',relation:'developed-through'});
+  edges.push({from:'consciousness:research',to:'consciousness:agency',relation:'contains-investigation'});
+  edges.push({from:'consciousness:agency',to:`paper:${agency.paperSlug}`,relation:'contains-complete-treatment'});
+  edges.push({from:'consciousness:agency',to:'article:agency-and-the-constructed-self',relation:'introduced-by'});
+  edges.push({from:'article:agency-and-the-constructed-self',to:'consciousness:agency',relation:'developed-in'});
+  edges.push({from:'consciousness:agency',to:'consciousness:development',relation:'related-investigation'});
+  listAgencyDocuments().forEach((d,i,documents)=>{
+    edges.push({from:'consciousness:agency',to:`consciousness:agency:${d.slug}`,relation:d.kind === 'supplement' ? 'contains-extended-inquiry' : 'contains-published-treatment'});
+    if(i<documents.length-1) edges.push({from:`consciousness:agency:${d.slug}`,to:`consciousness:agency:${documents[i+1].slug}`,relation:'reading-order'});
+  });
   edges.push({from:'consciousness',to:'consciousness:development',relation:'developed-through'});
   edges.push({from:'consciousness:research',to:'consciousness:development',relation:'contains-investigation'});
   edges.push({from:'consciousness:development',to:`paper:${development.paperSlug}`,relation:'published-as'});
@@ -761,7 +784,7 @@ export async function generateGraph() {
     generated: 'build-time',
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',
