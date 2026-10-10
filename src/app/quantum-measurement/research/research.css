@@ -3,3 +3,14 @@
 .qr-reader .quantum-equation>.katex-display{width:max-content;min-width:100%}
 .qr-reader .katex-display>.katex>.katex-html>.tag{position:static;display:inline-block;margin-left:2em}
 .qr-reader .quantum-equation:focus-visible{outline:1px solid #79e2ec;outline-offset:4px}
+
+/* A short article guide introduces the complete technical edition. */
+.qr-guide h2{font-size:clamp(1.7rem,3.4vw,2.8rem);letter-spacing:-.025em;line-height:1.2;margin:14px 0 24px;max-width:850px}
+.qr-guide-introduction{max-width:850px;line-height:1.85;color:#bdcdd8}.qr-guide-introduction p+p{margin-top:18px}
+.qr-guide-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:32px 0}
+.qr-guide-grid article{padding:24px;border:1px solid #30434a;border-radius:8px;background:rgba(16,36,43,.45)}
+.qr-guide-grid h3{font-size:1.12rem;color:#edf5f8;margin-bottom:12px}.qr-guide-grid p,.qr-guide-connection{line-height:1.8;color:#aebfcf}
+.qr-guide-grid a{display:inline-block;margin-top:14px;color:#7de1cc}.qr-guide-connection{max-width:850px}
+.qr-section-intro{padding:18px 24px;margin-bottom:32px;border-left:3px solid #73d7be;background:rgba(30,64,63,.22);color:#c5d6de;line-height:1.8}
+.qr-next-question{border-top:1px solid #30434a;padding:32px 0;max-width:950px}.qr-next-question h2{font-size:1.3rem;margin-bottom:14px}.qr-next-question p{line-height:1.8;color:#b8cbd4}.qr-next-question nav{display:flex;flex-wrap:wrap;gap:14px 28px;margin-top:20px;color:#7de1cc}
+@media(max-width:700px){.qr-guide-grid{grid-template-columns:1fr}.qr-guide-grid article{padding:20px}.qr-section-intro{padding:16px 18px}}

@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "scope": "Structural conversion, internal links, anchors, downloadable editions and source identity. Separate mathematical and PDF comparison reports accompany this audit.",
+  "scope": "Structural conversion, internal links, anchors, downloads and source identity. For the four October 9 papers, an independent raw-source scan additionally compares every mathematical expression with rendered MathML and checks all proof, statement, label and bibliography counts. Scientific claims are preserved, not re-audited here.",
   "results": [
     {
       "id": "control-consistency",
@@ -81,6 +81,106 @@
       "bibliographyEntries": 13,
       "mathDisplays": 330,
       "markdownBytes": 218849
+    },
+    {
+      "id": "conditional-gaussian-preparation",
+      "scientificCoverage": {
+        "sourceSha256": "7fe425ce31b053fa1beb597fa1abf1026fbc85670916c180a9d44d9bcd3f586d",
+        "sourceMathExpressions": 985,
+        "renderedMathExpressions": 985,
+        "missingMathExpressions": 0,
+        "sourceLabels": 112,
+        "sourceBibliographyEntries": 17,
+        "sourceProofs": 25
+      },
+      "readingPages": 14,
+      "pdfSha256": "b480ebbecdce81fed3041ffdeb4d2acfe7501415bf9eaa8f1c6ca7d8369c1b93",
+      "chapters": 5,
+      "parts": 0,
+      "sections": 26,
+      "theorems": 26,
+      "proofs": 25,
+      "tables": 0,
+      "figures": 0,
+      "labels": 112,
+      "bibliographyEntries": 17,
+      "mathDisplays": 131,
+      "markdownBytes": 118913
+    },
+    {
+      "id": "repeated-position-records",
+      "scientificCoverage": {
+        "sourceSha256": "7aac87ab1310ba4188e92a2b5b4da84afe3f07152a7632497bffe2b3b9680024",
+        "sourceMathExpressions": 1106,
+        "renderedMathExpressions": 1106,
+        "missingMathExpressions": 0,
+        "sourceLabels": 112,
+        "sourceBibliographyEntries": 12,
+        "sourceProofs": 30
+      },
+      "readingPages": 16,
+      "pdfSha256": "7d00ac36f6470a98bc2ebccaee09d1882544acca2428759880e48d3d63b5c82e",
+      "chapters": 2,
+      "parts": 0,
+      "sections": 32,
+      "theorems": 31,
+      "proofs": 30,
+      "tables": 0,
+      "figures": 0,
+      "labels": 112,
+      "bibliographyEntries": 12,
+      "mathDisplays": 139,
+      "markdownBytes": 135903
+    },
+    {
+      "id": "reference-weighted-flows",
+      "scientificCoverage": {
+        "sourceSha256": "2a0014122a6b464cad3bb52fa2ed779dfeff2a4c2177f9213efc32d0227c53ab",
+        "sourceMathExpressions": 997,
+        "renderedMathExpressions": 997,
+        "missingMathExpressions": 0,
+        "sourceLabels": 108,
+        "sourceBibliographyEntries": 14,
+        "sourceProofs": 23
+      },
+      "readingPages": 16,
+      "pdfSha256": "031d6609a1d4af6e5ceeefec71ac281542b75b4c1dc8d301de5e0357aaf3dc0d",
+      "chapters": 2,
+      "parts": 0,
+      "sections": 29,
+      "theorems": 28,
+      "proofs": 23,
+      "tables": 0,
+      "figures": 0,
+      "labels": 108,
+      "bibliographyEntries": 14,
+      "mathDisplays": 118,
+      "markdownBytes": 142141
+    },
+    {
+      "id": "complete-current-estimates",
+      "scientificCoverage": {
+        "sourceSha256": "3c312ba4d3367336acac42b00964837b9b6703ee6ea390ce0d34462c34782222",
+        "sourceMathExpressions": 1116,
+        "renderedMathExpressions": 1116,
+        "missingMathExpressions": 0,
+        "sourceLabels": 133,
+        "sourceBibliographyEntries": 13,
+        "sourceProofs": 28
+      },
+      "readingPages": 16,
+      "pdfSha256": "4450a46010e7d8cd2ffd7c626291a872343e42faefe3891827297026c285207c",
+      "chapters": 3,
+      "parts": 0,
+      "sections": 31,
+      "theorems": 31,
+      "proofs": 28,
+      "tables": 0,
+      "figures": 0,
+      "labels": 133,
+      "bibliographyEntries": 13,
+      "mathDisplays": 164,
+      "markdownBytes": 138322
     }
   ],
   "errors": []

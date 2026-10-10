@@ -10,5 +10,5 @@ export function readQuantumResearchHtml(d: QuantumDocument) {
  return fs.readFileSync(path.join(process.cwd(), 'content', 'quantum-research', d.publicationId, `${d.slug}.html`), 'utf8');
 }
 export function quantumResearchManifest() {
- return { schemaVersion: 1, programme: 'Quantum Measurement and Born Rule', date: '2026-10-04', publications: quantumResearchPublications.map(p => ({...p, documents: getQuantumResearchDocuments(p.id)})), auditUrl: '/publications/quantum-measurement/research/conversion-audit.json' };
+ return { schemaVersion: 1, programme: 'Quantum Measurement and Born Rule', date: quantumResearchPublications.reduce((date, publication) => publication.published > date ? publication.published : date, ''), publications: quantumResearchPublications.map(p => ({...p, documents: getQuantumResearchDocuments(p.id)})), auditUrl: '/publications/quantum-measurement/research/conversion-audit.json' };
 }

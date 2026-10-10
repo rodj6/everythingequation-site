@@ -65,12 +65,20 @@ export default function AboutPage() {
             </a>
             .
           </p>
+          <p>{site.author.researchStatement}</p>
+          <p>
+            The complete arguments are open to inspection: explore the{' '}
+            <Link href="/quantum-measurement" className="text-glow hover:text-glow-strong">quantum measurement results</Link>,{' '}
+            <Link href="/papers" className="text-glow hover:text-glow-strong">publication catalogue</Link>, and{' '}
+            <Link href="/research-map" className="text-glow hover:text-glow-strong">research map</Link>.
+          </p>
         </div>
       </section>
 
       <section aria-labelledby="measurement-publications-heading">
         <h2 id="measurement-publications-heading" className="text-2xl font-bold tracking-tight">The Quantum Measurement publications</h2>
         <p className="mt-4 leading-relaxed text-fg/90">Published on 15 September 2026, the Version 2 integrated monograph and two companion papers develop the programme from source dynamics to event laws, Born statistics and physical records. Their full text, proofs, counterexamples, original PDFs and LaTeX sources are available here.</p>
+        <p className="mt-4 leading-relaxed text-fg/90">The October research papers develop equilibrium characterization, complete measurement chains and nonequilibrium records. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, deterministic flows through singular interactions, and complete-current estimates for retained quantum sources. Each paper is available in full as a web article with its equations, proofs, appendices and publication links.</p>
         <p className="mt-4 leading-relaxed text-mute">The pilot-medium and massive-configuration constructions each establish an internal resolution under their own physical premises. Source/readout incompleteness supplies a structural question; it does not derive their interactions, guidance or preparation statistics. The publications state finite-resource limits and broader extensions. Independent assessment and experimental verification are distinct from these internal results.</p>
         <Link href="/quantum-measurement" className="mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong">Read the programme and its publications →</Link>
       </section>

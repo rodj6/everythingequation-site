@@ -1,0 +1,2290 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype}
+\usepackage[colorlinks=true,allcolors=blue,bookmarksnumbered=true]{hyperref}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\TV}{\operatorname{TV}}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\dd}{\,\mathrm d}
+\setlength{\emergencystretch}{2em}
+\title{Reference-Weighted Deterministic Quantum Flows\protect\\with Singular Interactions and Retained Sources}
+\author{Jeremy Rodgers\thanks{Website: \href{https://everythingequation.com}{everythingequation.com}}\\Independent Researcher}
+\date{9 October 2026\\[0.4em]\small
+\href{https://doi.org/10.5281/zenodo.23259569}{doi:10.5281/zenodo.23259569}}
+\hypersetup{pdftitle={Reference-Weighted Deterministic Quantum Flows with Singular Interactions and Retained Sources},pdfauthor={Jeremy Rodgers}}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give a complete-current theorem chain from weak quantum continuity to deterministic reference-compatible histories. A continuous spacetime wave, finite action and logarithmic variation, local positive-tube Sobolev regularity, and separate physical-boundary control imply all-times node avoidance and deterministic disintegration. Uniqueness holds among path laws with one finite marginal-domination constant, rather than among all ordinary differential equation solutions at exceptional points. Every original absolutely continuous configuration law is transported by reweighting the same reference paths once. We prove weak whole-path approximation from strong density and current convergence, and a quantitative logarithmic stability estimate that retains the probability of leaving the common positive tube. Singular-domain applications include radial jumps with finite spin and quantum sources, bare Coulomb interactions, and a Coulomb electron with a retained oscillator source. Their common-form and tangent-domain hypotheses are explicit; the high-dimensional product embedding retains its weak error exponent. A separate signed-source theorem bounds endpoint and crossing errors when a comparison current is not exactly conservative. Exact examples demonstrate failures caused by contracted hidden currents, singular entrances, and a nonlocal current with divergent nodal action. These conditional mathematical results provide flow and history interfaces without selecting an original Born ensemble or establishing a complete physical record apparatus.
+\end{abstract}
+\clearpage
+\tableofcontents
+\newpage
+\section{From a quantum current to a complete history}\label{p3r:introduction}
+A quantum density and a continuity equation do not by themselves specify a deterministic history through nodes, collision sets and retained source coordinates. The question is sharper when the original configuration law need not equal the wave density: one needs a flow for that original law, without inserting a new distribution at a later preparation or observation time. The same issue appears in approximation. A small wave error does not directly control an entire configuration path, and a small contracted current can hide large opposing currents at different source configurations.
+
+This paper develops a precise route from complete quantum currents to deterministic reference-compatible histories. A superposition theorem first supplies integral-curve path laws with the wave-density marginals. Finite action, logarithmic variation, local positive-tube Sobolev regularity and separate boundary control then make the conditional path law at almost every entrance a point mass. The uniqueness class consists of integral-curve path laws dominated at every time by one finite multiple of the reference density. It is not a claim about every ordinary differential equation solution from every exceptional point. Every original law absolutely continuous with respect to the entrance density is transported by reweighting the same reference paths once; a finite density cap is required only for the stated quantitative transfers.
+
+We next prove two complementary approximation results. Strong convergence of both density and complete current, together with uniform action and a fixed entrance, identifies weak limits of entire path laws without asserting convergence of a velocity quotient near nodes. A logarithmic comparison on a common positive tube then bounds the probability that two genuine flows separate anywhere during the full interval. The price includes the probability of leaving that tube. Discarding the bad-tube term, or replacing the complete current by a positional marginal, changes the theorem.
+
+The applications retain features that simple smooth-potential presentations often remove: discontinuous radial interactions with finite internal spin, a bare Coulomb collision with an uncut entrance, and a Coulomb electron coupled to a dynamical oscillator source. The regularity arguments distinguish common first domains, tangent commutators and product radial--tangent norms from unavailable high powers of the full Hamiltonian. A separate compact-entrance construction supplies classical flow charts where a fixed-surface crossing argument requires them. Finally, Appendix~\ref{p3r:signed-source} gives a signed-source comparison theorem for a nonconservative reference, with explicit endpoint and whole-path allowances.
+
+\subsection{Established theory and the contribution here}\label{p3r:literature}
+Global existence for Bohmian trajectories, including control of nodes and singular boundaries, has an established literature. Berndl and collaborators~\cite{BerndlEtAl1995} and Teufel--Tumulka~\cite{TTflow} are direct predecessors. In particular, finite trajectory length and logarithmic-density variation are established mechanisms, and Teufel--Tumulka already treat general current conditions, spin, magnetic fields and Dirac examples. We use those mechanisms with the explicitly declared complete current; they are not claimed as new principles.
+
+The distinction between a weak continuity equation and a well-defined flow is central to DiPerna--Lions~\cite{DiPernaLions1989} and Ambrosio~\cite{Ambrosio2004}. The logarithmic estimate below uses the Sobolev maximal-function inequality of Crippa--De Lellis~\cite{CDLflow}. Our superposition step imports the finite-dimensional case of Stepanov--Trevisan~\cite{STsuperposition} with its hypotheses checked explicitly. Ambrosio--Colombo--Figalli~\cite{ACFmaximal} provide related local maximal-flow theory; its additional hypotheses are not silently substituted for the reference-density assumptions used here. Common-domain nonautonomous evolution likewise has established antecedents, including the account of Schmid--Griesemer~\cite{SchmidGriesemer2014}. Yajima~\cite{Yajima2016} treats related multiparticle propagator regularity. The common-form and tangent-propagation argument in Section~\ref{p3d:sec:graph} is proved here; these evolution references provide context rather than replacing its domain checks.
+
+The specific assembly proved here combines reference-weighted deterministic selection, all-times node exclusion, whole-path approximation and stability, and the stated singular/source applications. Restricting a coupled path law to an event concerning both \emph{whole} paths preserves marginal domination; using already-stopped paths as though they had the same compression would instead introduce boundary atoms. This distinction is explicit in the proof. The canonical first-domain energy calculations supply finite path and logarithmic costs, while the applications separately address continuity, local Sobolev regularity, form approximation and physical boundaries.
+
+The author's earlier pilot-path manuscript~\cite{RodgersPilot2026} concerns a finite-graph hybrid Bell-path setting and conditional continuum limiting interfaces. That inherited work is not a prior proof of the continuous Sobolev-current theorem presented here. Other earlier statistical and record arguments require admitted flows but address different questions. The present results do not choose a quantum equilibrium ensemble, and their substantive mathematical value does not depend on completing a physical measurement apparatus. The contribution is the stated combination of sufficient hypotheses, proofs and applications; no claim of exhaustive priority is made.
+
+
+\section{Complete currents and reference-compatible path laws}
+\label{p3f:sec:setup}
+
+Fix $T<\infty$ and an open physical configuration domain
+$D\subset\mathbb R^d$. Each positional coordinate, including every retained
+source, clock and record coordinate, is expressed in a fixed unit. All
+distances and vector norms below refer to that fixed Euclidean chart.
+Internal spin, finite reference and purifier fibres are retained in the
+wave; they are not separately sampled positions. Let $\Psi_t$ denote the
+complete normalized wave and put
+\[
+ \rho_t(x)=\|\Psi_t(x)\|^2,\qquad
+ b(t,x)=
+ \begin{cases}j(t,x)/\rho_t(x),&\rho_t(x)>0,\\
+ 0,&\rho_t(x)=0.\end{cases}
+\]
+The Borel field $j$ is the \emph{complete stipulated physical current}.
+Its constitution is part of the model. A continuity equation determines
+its divergence, not its divergence-free part.
+Time is physical time: computational clock or unitary-frame changes
+must be restored before the physical current and time derivative used
+in these hypotheses are evaluated.
+
+If $D\ne\mathbb R^d$, extend $\rho,j$ by zero only when the physical
+boundary form proves the distributional continuity equation
+\begin{equation}\label{p3f:eq:CE}
+ \partial_t\rho+\operatorname{div}j=0
+ \quad\hbox{on }(0,T)\times\mathbb R^d
+\end{equation}
+without a boundary source. Throughout, $\int\rho_t=1$ and
+$t\mapsto\rho_t$ is narrowly continuous. Strong $L^2$ continuity of a
+normalized wave supplies the stronger estimate
+$\|\rho_t-\rho_s\|_1\leq2\|\Psi_t-\Psi_s\|_2$.
+We require $j=0$ almost everywhere on $\{\rho=0\}$; only with this
+condition does $\rho b=j$ hold. A different current, for example a
+nonlocal kinetic current that can be nonzero at a wave node, needs a
+separate analysis.
+
+Write $\mathcal C=C([0,T];\mathbb R^d)$ with the uniform topology and
+$e_t(\gamma)=\gamma(t)$. All path measures in this paper are Borel measures
+on this Polish space. For probabilities on a common measurable space,
+$\TV(\mu,\nu)=\sup_A|\mu(A)-\nu(A)|$ denotes half the full variation
+norm. The inner product on each internal fibre is conjugate-linear in
+its first argument.
+
+\begin{definition}[Reference compatibility and domination]
+\label{p3f:def:pathlaws}
+A reference-compatible path law is a probability $\Pi$ concentrated on
+absolutely continuous solutions of
+$\dot\gamma(t)=b(t,\gamma(t))$ for almost every $t$, and satisfying
+$(e_t)_\#\Pi=\rho_t\,dx$ for every $t\in[0,T]$.
+A path law $P$ is $C$-marginal-dominated if it solves the same integral
+equation and $(e_t)_\#P\leq C\rho_t\,dx$ for every time, with one finite
+constant $C$ for the complete horizon. Marginal domination is distinct
+from the stronger assertion $P\leq C\Pi$ on path space.
+\end{definition}
+
+\begin{proposition}[Weak reference paths and original-law weighting]
+\label{p3f:prop:superposition}
+Suppose \eqref{p3f:eq:CE} holds and
+\begin{equation}\label{p3f:eq:lengthaction}
+ \ell=\int_0^T\!\int |j|\,dx\,dt<\infty.
+\end{equation}
+Then at least one reference-compatible $\Pi$ exists on the ambient space.
+If additionally
+\[
+ \mathcal A=\int_0^T\!\int \frac{|j|^2}{\rho}\,dx\,dt<\infty,
+\]
+its expected squared-speed action is $\mathcal A$. Ratios are assigned
+zero on $\{\rho=0\}$.
+
+For every original complete law
+$\mu_0=f_0\rho_0\,dx$, $f_0\geq0$, $\int f_0\rho_0=1$, the formula
+\begin{equation}\label{p3f:eq:once}
+ d\Pi_{\mu}(\gamma)=f_0(e_0(\gamma))\,d\Pi(\gamma)
+\end{equation}
+defines a probability on the same integral curves with entrance $\mu_0$.
+If $f_0\leq C$, then $\Pi_\mu\leq C\Pi$ on the entire path space and
+$(e_t)_\#\Pi_\mu\leq C\rho_t\,dx$ for every $t$.
+\end{proposition}
+
+\begin{proof}
+Apply the Euclidean superposition principle, in the finite-dimensional
+specialization of \cite[arXiv v1, Remark 3.2 and Theorem 3.4]{STsuperposition}. Here the measures
+$\rho_t\,dx$ are narrowly continuous probabilities, the Borel velocity
+is integrable against their spacetime measure because
+$\int|b|\rho=\ell$, and their continuity equation is exactly
+\eqref{p3f:eq:CE}. On smooth compactly supported tests and constants the
+derivation $f\mapsto b\cdot\nabla f$ obeys the Leibniz rule and the
+gradient bound $|b\cdot\nabla f|\leq|b||\nabla f|$. The smooth Euclidean
+test algebra has the required approximation property. A linear time
+rescaling covers $[0,T]$. These are the hypotheses of the imported
+superposition theorem; it yields all time marginals, not just almost
+every time. Applying its observable equation to coordinate functions
+multiplied by smooth cutoffs from a countable exhaustion gives the
+ordinary vector integral equation: every continuous path has bounded
+image, so a sufficiently large cutoff is identically one along it.
+
+For the resulting law, Fubini and the integral-curve equation give
+$\mathbb E_\Pi\int|\dot\gamma|^2
+=\int\rho|b|^2=\mathcal A$ when the latter is finite. Formula
+\eqref{p3f:eq:once} has mass $\int f_0\rho_0=1$ and the claimed entrance.
+Absolute continuity preserves the almost-sure integral-curve property.
+If $f_0\leq C$, integration of any nonnegative history functional proves
+path-space domination, and applying this to functions of $e_t$ proves
+marginal domination. In general the later relative density is
+\[
+ f_t(x)=\mathbb E_\Pi[f_0(e_0)\mid e_t=x];
+\]
+it need not be one or require a unique inverse flow. No later
+reweighting or source renewal has been performed.
+\end{proof}
+
+This proposition supplies reference paths before deterministic selection
+is known. It does not infer an actual Born ensemble. For unbounded
+integrable $f_0$, null events still transfer, but a uniform finite
+expectation bound for history errors does not follow.
+
+\subsection{Smooth tests, boundaries and infinity}
+
+\begin{proposition}[Complete-current history tests and guards]
+\label{p3f:prop:guards}
+Let $P$ be $C$-marginal-dominated. For a $C^1$ spacetime function $h$ with
+integrable complete material derivative,
+\begin{equation}\label{p3f:eq:smoothhistory}
+ \mathbb E_P\operatorname{Var}_{[0,T]}h(t,\gamma(t))
+ \leq C\int_0^T\!\int
+           |\rho\,\partial_t h+j\cdot\nabla h|\,dx\,dt.
+\end{equation}
+For $P=\Pi$ reference-compatible, equality holds. For $R>R_0$,
+\begin{equation}\label{p3f:eq:exterior}
+ P\{\sup_t|\gamma(t)|\geq R\}
+ \leq P\{|\gamma(0)|\geq R_0\}
+                         +\frac{C\ell}{R-R_0}.
+\end{equation}
+
+Suppose the ambient paths stay in $\overline D$, their entrance is in
+$D$ almost surely, and a nonnegative locally Lipschitz boundary-distance
+function $d_\partial$, defined on a neighborhood of $\overline D$,
+is positive in $D$ and zero on its excluded boundary. Assume
+\begin{equation}\label{p3f:eq:boundarycost}
+ H_\partial=\int_0^T\!\int_D
+              \frac{|j\cdot\nabla d_\partial|}{d_\partial}\,dx\,dt
+ <\infty.
+\end{equation}
+Then $P$-almost every path avoids that boundary at all times. More
+quantitatively, for $d_0>d_*>0$,
+\begin{equation}\label{p3f:eq:boundaryguard}
+ P\{\inf_t d_\partial(\gamma(t))\leq d_*\}
+ \leq P\{d_\partial(\gamma(0))\leq d_0\}
+                 +\frac{C H_\partial}{\log(d_0/d_*)}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The ordinary chain rule on an absolutely continuous path gives
+$\operatorname{Var}h=\int|\partial_t h+b\cdot\nabla h|$.
+Integrate against $P$ and use its marginal domination. For a reference
+law the marginal identity gives equality. The exterior event, outside
+the displayed entrance exception, entails total travelled length at
+least $R-R_0$; its expectation is at most $C\ell$, proving
+\eqref{p3f:eq:exterior}.
+
+Apply the same chain argument to
+$h_\epsilon(x)=\log(d_\partial(x)+\epsilon)$ on compact spatial
+regions. Local Lipschitz composition with an absolutely continuous
+path is absolutely continuous; the spatial derivative formula holds
+at differentiability points. The exceptional spatial set has Lebesgue
+measure zero and is visited for zero time by almost every path, by
+marginal absolute continuity and Fubini. At times spent on
+$d_\partial=0$, its absolutely continuous composition has derivative
+zero almost everywhere. Exhausting spatial compacts gives
+\[
+ \mathbb E_P\operatorname{Var}h_\epsilon(\gamma)
+ \leq C\int_D\frac{|j\cdot\nabla d_\partial|}
+                         {d_\partial+\epsilon}\,dx\,dt
+ \leq C H_\partial .
+\]
+A path with positive initial distance that reaches zero has variation
+at least
+$\log(d_\partial(\gamma(0))+\epsilon)-\log\epsilon$,
+which diverges as $\epsilon\downarrow0$. Fatou excludes a positive
+probability of such paths. On boundary-avoiding paths one may let
+$\epsilon\downarrow0$; a crossing from above $d_0$ to $d_*$ entails
+variation at least $\log(d_0/d_*)$, proving
+\eqref{p3f:eq:boundaryguard}.
+\end{proof}
+
+When the marginals are supported in $\overline D$, continuity and
+countably many rational times already keep almost every ambient path
+out of the open exterior of $\overline D$. Touching the boundary is the
+additional issue addressed by \eqref{p3f:eq:boundarycost}. A collision
+set of codimension greater than one is handled by its own positive
+distance function and complete-current estimate. A true Dirichlet
+Hardy bound can supply such a cost; a finite repulsive potential does
+not become an excluded core by definition. For the full ambient space,
+global continuous paths already cannot escape to infinity at a finite
+time, while \eqref{p3f:eq:exterior} remains useful quantitatively.
+
+\section{The logarithmic chain rule and deterministic selection}
+\label{p3f:sec:selection}
+
+\begin{assumption}[Continuous first-domain wave and complete current]
+\label{p3f:ass:central}
+The wave has a specified representative
+\[
+ \Psi\in C([0,T]\times D)
+          \cap L^\infty(0,T;H^2_{\mathrm{loc}}(D)),
+ \qquad \partial_t\Psi\in L^1(0,T;L^2(D)).
+\]
+It is globally continuous in $L^2$ and normalized. Continuity in
+spacetime is an additional assumption; $H^2$ alone does not imply it
+in arbitrary dimension. The current satisfies the preceding
+conservative continuity and zero-on-nodes hypotheses, with finite
+$\ell,\mathcal A$, and
+\begin{equation}\label{p3f:eq:logcost}
+ \mathcal N=\int_0^T\!\int_D
+ \left(|\partial_t\rho|
+        +\frac{|j\cdot\nabla\rho|}{\rho}\right)\,dx\,dt<\infty.
+\end{equation}
+For each compact spacetime set
+$K\subset U=\{(t,x)\in[0,T]\times D:\rho_t(x)>0\}$ there is a smooth
+spacetime cutoff equal to one near $K$, supported inside $U$ relative
+to $[0,T]\times D$, for which the zero-extended field
+$B=\chi b$ belongs to
+$L^1(0,T;W^{1,p}(\mathbb R^d))$ for some $p>1$.
+The exponent and norm may depend on $K$.
+
+A reference-compatible path law exists, and its paths stay in $D$
+throughout the interval. For any other path law to which the
+uniqueness conclusion is applied, the same boundary avoidance is
+assumed or established by Proposition~\ref{p3f:prop:guards}.
+\end{assumption}
+
+The cutoff formulation makes precise what local Sobolev regularity on
+positive spacetime tubes means. It does not impose a global lower
+bound on $\rho$ or on $\operatorname{div}b$.
+
+\begin{lemma}[Sobolev logarithmic chain rule]\label{p3f:lem:chain}
+Under Assumption~\ref{p3f:ass:central}, every
+$C$-marginal-dominated path law $P$ staying in $D$ satisfies, for each
+$\epsilon>0$,
+\begin{equation}\label{p3f:eq:logchain}
+ \frac{d}{dt}\log(\rho_t(\gamma(t))+\epsilon)
+ =\frac{\partial_t\rho+
+                b\cdot\nabla\rho}{\rho+\epsilon}(t,\gamma(t))
+\end{equation}
+for almost every time on almost every path. The left side is the
+derivative of an absolutely continuous function. Moreover
+\begin{equation}\label{p3f:eq:logvariation}
+ \mathbb E_P\operatorname{Var}_{[0,T]}
+                 \log(\rho_t(\gamma(t))+\epsilon)
+ \leq C\mathcal N.
+\end{equation}
+Consequently $P$-almost every path avoids every density node at every
+time, and for $a_0>a>0$,
+\begin{equation}\label{p3f:eq:nodeguard}
+ P\{\inf_t\rho_t(\gamma(t))\leq a\}
+ \leq P\{\rho_0(\gamma(0))\leq a_0\}
+                           +\frac{C\mathcal N}{\log(a_0/a)}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+First restrict $P$ to paths whose complete graphs lie in a fixed
+compact subset $K$ of $[0,T]\times D$; no positive-density restriction
+is used at this step. Denote this subprobability by $P_K$. Its time
+marginals only decrease, so are still at most $C\rho_t\,dx$ and are
+bounded on the compact spatial region by continuity of $\Psi$.
+Choose a slightly larger compact region inside the physical domain
+and locally extend the wave. At the time endpoints a constant
+extension suffices. Spacetime mollification produces smooth waves
+$\Psi_n$ converging uniformly on $K$, with strong convergence of
+spatial first derivatives in $L^2(dt\,dx)$ and of time derivatives in
+$L^1_tL^2_x$ locally. These follow from the stipulated continuity,
+local $H^2$ and time-derivative hypotheses.
+
+For fixed $\epsilon>0$, the map
+$z\mapsto\log(\|z\|^2+\epsilon)$ has bounded first derivative.
+Uniform convergence of $\Psi_n$ on the compact region, together
+with its uniformly bounded values, therefore gives uniform convergence
+of $h_n=\log(\|\Psi_n\|^2+\epsilon)$ to
+$h=\log(\rho+\epsilon)$. The chain formulas and the strong derivative
+convergences give
+\[
+ \nabla h_n\longrightarrow\nabla h\quad\hbox{in }L^2(dt\,dx),
+ \qquad
+ \partial_t h_n\longrightarrow\partial_t h
+                  \quad\hbox{in }L^1_tL^2_x.
+\]
+For example, subtract the two bounded coefficient factors multiplying
+$\partial_t\Psi_n$ and $\partial_t\Psi$; their uniform difference
+tends to zero and the latter derivative is integrable. The spatial
+argument is identical in $L^2$.
+
+The smooth chain rule holds for $h_n$ along every admitted
+absolutely continuous curve. The expected time-derivative error tends
+to zero by the bounded local marginals and Cauchy on the finite
+spatial volume. If $\theta_t\,dx=(e_t)_\#P_K$, the spatial error is
+bounded by
+\begin{align*}
+ \int\theta\,|b|\,|\nabla(h_n-h)|
+ &\leq
+ \left(\int\theta|b|^2\right)^{1/2}
+ \left(\int\theta|\nabla(h_n-h)|^2\right)^{1/2}\\
+ &\leq C\mathcal A^{1/2}
+       \left(\int\rho|\nabla(h_n-h)|^2\right)^{1/2}
+ \longrightarrow0 .
+\end{align*}
+Uniform convergence passes the endpoint values. A subsequence with
+summable expected derivative error, followed by a countable set of
+rational endpoints, gives the integral chain identity almost surely.
+The integral representative and continuity of $h(t,\gamma(t))$
+extend it to every endpoint. This proves absolute continuity and
+\eqref{p3f:eq:logchain} on the restricted paths.
+
+Every continuous path staying in $D$ has a compact graph in
+$[0,T]\times D$. Exhaust these graphs by nested compact regions and
+take the countable intersection of their full-measure chain-rule
+sets. By marginal domination,
+\[
+ \mathbb E_P\operatorname{Var}h
+ \leq C\int
+       \frac{|\rho\,\partial_t\rho+j\cdot\nabla\rho|}
+                         {\rho+\epsilon}\,dx\,dt
+ \leq C\mathcal N .
+\]
+This establishes \eqref{p3f:eq:logvariation}. There is no substitution
+of a weak density into an unproved classical path chain rule.
+
+The entrance has $\rho_0>0$ almost surely by domination.
+For the countable sequence $\epsilon=1/n$, a path starting there and
+ever reaching a node has variation at least
+$\log(\rho_0(\gamma(0))+\epsilon)-\log\epsilon$, which diverges.
+Fatou and the uniform expectation bound exclude a positive mass of
+such paths. Since the density is continuous along a node-avoiding
+path on a compact time interval, it has a positive minimum there.
+Letting $\epsilon\downarrow0$ now bounds the variation of
+$\log\rho_t(\gamma(t))$ by $C\mathcal N$ in expectation. A drop from
+above $a_0$ to $a$ costs at least $\log(a_0/a)$, proving
+\eqref{p3f:eq:nodeguard}.
+\end{proof}
+
+The use of all time marginals in the proof is essential. A family of
+sets can have zero mass at each fixed time while almost every path
+hits one of those sets at some time. The logarithmic variation, rather
+than fixed-time nullity alone, supplies the all-times conclusion.
+
+\begin{theorem}[Deterministic reference-compatible selection]
+\label{p3f:thm:deterministic}
+Under Assumption~\ref{p3f:ass:central}, the reference-compatible path law
+is unique. There is a Borel map
+$x\mapsto X(\cdot,x)\in\mathcal C$, defined up to a $\rho_0\,dx$ null
+set, such that
+\begin{equation}\label{p3f:eq:detflow}
+ \Pi=\int_D\delta_{X(\cdot,x)}\,\rho_0(x)\,dx,
+ \qquad (X_t)_\#(\rho_0\,dx)=\rho_t\,dx .
+\end{equation}
+For almost every such entrance, the path is absolutely continuous,
+stays in $D$, solves the complete guidance equation almost everywhere
+in time and avoids all nodes.
+
+More generally, two $C$-marginal-dominated path laws staying in $D$
+with the same entrance coincide, and their entrance disintegrations
+are Dirac masses. For every original $\mu_0=f_0\rho_0\,dx$ the
+deterministic transported law is $(X_t)_\#\mu_0$, with its whole
+history obtained by \eqref{p3f:eq:once}. A finite cap is unnecessary
+for this absolute-continuity and null-set assertion.
+\end{theorem}
+
+\begin{proof}
+Let $P_1,P_2$ have the same entrance $\mu_0$ and respective finite
+marginal caps; enlarge $C$ to cover both. Disintegrate over entrance
+and form the conditional product
+\begin{equation}\label{p3f:eq:pairlaw}
+ \Theta(d\gamma,d\eta)
+ =\int P_{1,x}(d\gamma)P_{2,x}(d\eta)\,\mu_0(dx).
+\end{equation}
+Its coordinate marginals are $P_1,P_2$ and
+$\gamma(0)=\eta(0)$ almost surely. By Lemma~\ref{p3f:lem:chain} and
+boundary avoidance, almost every pair of complete graphs lies in
+some compact $K_n\subset U$. For example choose nested compacts
+with $|x|\leq n$, distance to $D^c$ at least $1/n$ when relevant,
+and $\rho\geq1/n$. Restrict $\Theta$ to pairs whose \emph{whole}
+graphs lie in $K_n$; call the restriction $\Theta_n$.
+It retains marginal bounds $C\rho_t\,dx$. Paths are not stopped
+and their mass is not placed on a boundary.
+
+Let $B=\chi b$ be the positive-tube Sobolev extension supplied by
+Assumption~\ref{p3f:ass:central}. The Sobolev maximal-function
+inequality \cite[Lemmas A.2--A.3]{CDLflow} gives, outside an
+appropriate Lebesgue-null set for almost every $t$,
+\begin{equation}\label{p3f:eq:maximal}
+ |B(t,x)-B(t,y)|
+ \leq c_d|x-y|
+       \{\mathcal M|\nabla B|(t,x)+\mathcal M|\nabla B|(t,y)\}.
+\end{equation}
+Here $\mathcal M$ is the Hardy--Littlewood maximal operator.
+Marginal absolute continuity makes its exceptional set negligible
+along the paired paths for almost every time. Their AC equations and
+$B=b$ on $K_n$ imply, for every $\delta>0$,
+\begin{equation}\label{p3f:eq:pairlog}
+ \log\!\left(1+\frac{\sup_{t\leq T}|\gamma(t)-\eta(t)|}{\delta}\right)
+ \leq c_d\int_0^T
+       \{\mathcal M|\nabla B|(t,\gamma(t))
+          +\mathcal M|\nabla B|(t,\eta(t))\}\,dt .
+\end{equation}
+Indeed differentiate $\log(1+|\gamma-\eta|/\delta)$ almost
+everywhere, use \eqref{p3f:eq:maximal}, and integrate the nonnegative
+upper bound; equality at entrance removes the initial term.
+
+The expectation of the right side under $\Theta_n$ is finite and
+independent of $\delta$. The marginals are supported in a spatial
+set $V_n$ of finite volume and are bounded there by
+$C\sup_{K_n}\rho$. H\"older's inequality and the $L^p$ boundedness
+of $\mathcal M$ bound the expectation by a finite multiple of
+$\int_0^T\|\nabla B(t)\|_pdt$. If $\Theta_n$ gave positive mass
+to $\sup_t|\gamma-\eta|\geq h$ for any $h>0$, the expected
+left side of \eqref{p3f:eq:pairlog} would diverge as
+$\delta\downarrow0$. Thus $\Theta_n$ is supported on the diagonal.
+Exhaustion gives the same conclusion for $\Theta$.
+
+Apply this first with $P_1=P_2=P$. For almost every $x$, the product
+$P_x\otimes P_x$ is diagonal. A probability on a Polish space whose
+independent pair is almost surely equal is Dirac: otherwise some
+member of a countable separating family has probability strictly
+between zero and one, giving positive product mass off the diagonal.
+The location of that Dirac mass is a measurable function of $x$,
+because the Dirac embedding of a Polish space into its probability
+measures is Borel and has a Borel inverse on its image. Defining an
+arbitrary path on the entrance null set gives a Borel map.
+Using two different candidate laws in \eqref{p3f:eq:pairlaw} makes
+their selected curves equal almost everywhere, proving uniqueness.
+
+Take $P=\Pi$ to obtain \eqref{p3f:eq:detflow}. Finally
+$f_0(e_0)\Pi$ is exactly
+$\int\delta_{X(\cdot,x)}\,\mu_0(dx)$. Its absolute continuity with
+respect to $\Pi$ transfers all preceding almost-sure path properties,
+even if $f_0$ is unbounded.
+\end{proof}
+
+This theorem selects the deterministic flow within the specified
+reference-compatible or uniformly marginal-dominated classes.
+It does not assert uniqueness of every classical ODE curve from
+every point. Additional singular or concentrating solutions outside
+those classes are not excluded. This distinction is consistent with
+the regular-flow framework of \cite{ACFmaximal}; no divergence
+lower bound has been silently introduced.
+All almost-sure assertions refer to the fixed parent wave and complete
+current. Uniform estimates over a family require uniform bounds for
+the displayed hypotheses; they do not assert a common exceptional
+entrance set for an uncountable family of waves.
+
+\subsection{Checking the wave-to-velocity hypotheses}
+
+\begin{proposition}[Continuous first-domain canonical and local spin currents]
+\label{p3f:prop:canonical}
+Suppose the first line of Assumption~\ref{p3f:ass:central} holds.
+For
+\[
+ j_i=2\lambda_i\operatorname{Im}\langle\Psi,D_i\Psi\rangle,
+ \qquad D_i=\partial_i-iA_i,
+\]
+with smooth locally bounded coefficients, locally bounded derivatives,
+Hermitian $A_i$ and positive scalar $\lambda_i$, the positive-tube
+Sobolev premise holds. For $d>2$ one can use
+$p=\min\{2,d/(d-2)\}>1$; for $d=1,2$ one can use $p=2$.
+The same local conclusion holds after adding smooth Hermitian
+first-order drift densities and finite-component Pauli curl currents.
+Their global budgets must still be checked with their actual
+coefficients.
+
+For the canonical tensor with $\alpha\leq\lambda_i\leq\Lambda$,
+put $K(t)=\sum_i\int\lambda_i\|D_i\Psi\|^2dx$. Then the following
+sufficient bounds hold:
+\begin{align}
+ \int|j|\,dx&\leq2\Lambda\sqrt{K/\alpha},&
+ \int\frac{|j|^2}{\rho}\,dx&\leq4\Lambda^2K/\alpha,\notag\\
+ \int\frac{|j\cdot\nabla\rho|}{\rho}\,dx
+ &\leq4\Lambda K/\alpha,&
+ \int|\partial_t\rho|\,dx&\leq2\|\partial_t\Psi\|_2.
+ \label{p3f:eq:canonicalbudgets}
+\end{align}
+Thus their time integrals supply the length, action and logarithmic
+costs whenever the displayed kinetic and time-derivative quantities
+are integrable.
+\end{proposition}
+
+\begin{proof}
+Hermiticity gives
+$\partial_i\rho=2\operatorname{Re}\langle\Psi,D_i\Psi\rangle$.
+On a compact positive tube, $\Psi$ is bounded and $\rho$ has a
+positive floor. Differentiating the current weakly produces only
+terms of the types $\Psi D^2\Psi$, $(D\Psi)^2$,
+$\Psi D\Psi$ and $\Psi^2$, with bounded local coefficients.
+For $d>2$, local $H^2$ gives $D\Psi\in L^{2d/(d-2)}$;
+the products therefore belong to $L^p$ with the stated $p$.
+For $d=2$, $H^1$ gradients have every finite local $L^q$ exponent;
+choose $q=4$. The one-dimensional case is stronger.
+In the quotient rule for $b=j/\rho$, the remaining product
+$j\nabla\rho/\rho^2$ has the same squared-first-derivative form.
+A cutoff supported inside the positive region gives the required
+global $W^{1,p}$ extension with integrable time norm.
+
+A Hermitian drift adds $\langle\Psi,a_i\Psi\rangle$, whose first
+derivative has these same product types. A Pauli curl differentiates
+a spin density once in $j$ and twice in $\nabla j$, again producing
+the listed products. This proves the local assertion without
+differentiating a singular or discontinuous scalar potential.
+
+Finally
+$|j|\leq2\Lambda\sqrt\rho\,|D\Psi|$ and
+$|\nabla\rho|\leq2\sqrt\rho\,|D\Psi|$ pointwise.
+Use $\|\Psi\|_2=1$ and $\int|D\Psi|^2\leq K/\alpha$ to obtain
+the first three bounds. The identity
+$\partial_t\rho=2\operatorname{Re}\langle\Psi,\partial_t\Psi\rangle$
+and Cauchy give the last. Variable unbounded coefficients instead
+require their corresponding weighted kinetic estimates.
+\end{proof}
+
+\section{Conforming approximation and the original history law}
+\label{p3f:sec:approximation}
+
+The following limit result needs neither pointwise convergence of
+velocities near nodes nor a uniform high derivative bound on the
+approximating waves. It does need their complete local currents and
+their unchanged entrance.
+
+\begin{theorem}[Strong-density/current path limit]
+\label{p3f:thm:approximation}
+Let $\Pi_n$ be reference-compatible path laws for conservative pairs
+$(\rho_n,j_n)$ on the common ambient configuration space. They may,
+in particular, be the deterministic flows of smooth conforming
+regularizations. Suppose
+\begin{align}
+ \rho_n(0)&=\rho_0,\notag\\
+ \sup_{t\in[0,T]}\|\rho_n(t)-\rho(t)\|_1&\longrightarrow0,\qquad
+ \|j_n-j\|_{L^1(dt\,dx)}\longrightarrow0,\label{p3f:eq:approxinputs}\\
+ \sup_n\int_0^T\!\int\frac{|j_n|^2}{\rho_n}\,dx\,dt
+ &\leq A_*<\infty.\notag
+\end{align}
+Assume $\rho,j$ have the conservative continuity, node-zero and
+normalization properties above. Then $\{\Pi_n\}$ is tight in
+$\mathcal C$ and every weak limit is a reference-compatible path law
+for $b=j/\rho$, concentrated on finite-action curves.
+
+For any single original $f_0\in L^1(\rho_0\,dx)$ as in
+\eqref{p3f:eq:once}, the measures $f_0(e_0)\Pi_n$ converge along the
+same subsequence to $f_0(e_0)\Pi$. If the limiting parent satisfies
+Assumption~\ref{p3f:ass:central} and the boundary avoidance conditions,
+then the whole sequence converges to the unique deterministic
+reference law of Theorem~\ref{p3f:thm:deterministic}; the same holds
+for its original-law reweighting. Different approximation sequences
+satisfying these hypotheses select the same limiting path law.
+\end{theorem}
+
+\begin{proof}
+For a continuous path define
+\[
+ I(\gamma)=\sup_{\mathcal P}
+       \sum_{k=1}^{m}
+       \frac{|\gamma(t_k)-\gamma(t_{k-1})|^2}{t_k-t_{k-1}},
+\]
+where the supremum runs over finite partitions of $[0,T]$.
+It is lower semicontinuous in the uniform topology, being a supremum
+of continuous functions. It equals $\int|\dot\gamma|^2$ for
+absolutely continuous paths with square-integrable derivative and
+is infinite otherwise. To see the nontrivial implication, a finite
+bound on the displayed sums bounds the functional formed by
+pairing increments with arbitrary step functions in the $L^2$
+norm. Riesz representation gives an $L^2$ vector field $v$ with
+$\gamma(t)-\gamma(s)=\int_s^t v$; approximation by step functions
+then identifies the supremum with $\int|v|^2$.
+
+By \eqref{p3f:eq:approxinputs},
+$\mathbb E_{\Pi_n}I\leq A_*$. Given a small probability tolerance,
+choose a compact entrance set and a large action threshold.
+Outside their exceptional sets the paths obey
+\[
+ |\gamma(t)-\gamma(s)|\leq
+                 |t-s|^{1/2}I(\gamma)^{1/2},
+ \qquad
+ \sup_t|\gamma(t)|\leq|\gamma(0)|+\sqrt{TI(\gamma)} .
+\]
+Arzel\`a--Ascoli makes the resulting closed family compact.
+The entrance is fixed and hence tight; Markov controls the action
+exception. This proves tightness. If $\Pi_{n_k}\Rightarrow\Pi$,
+continuity of each evaluation map and the uniform density
+convergence give $(e_t)_\#\Pi=\rho_t\,dx$ at every time.
+Lower semicontinuity gives $\mathbb E_\Pi I\leq A_*$.
+
+It remains to identify the true integral equation. For a bounded
+continuous spacetime vector field $g$, the exact identity and
+triangle inequality give
+\begin{align}
+ \int|b_n-g|\rho_n
+ &=\int|j_n-g\rho_n|\notag\\
+ &\leq\|j_n-j\|_1+\|g\|_\infty\|\rho_n-\rho\|_1
+                       +\int|b-g|\rho .
+ \label{p3f:eq:weightedvelocity}
+\end{align}
+All these integrals are over spacetime. For any fixed rational time
+$t$, the bounded functional
+\[
+ F^g_t(\gamma)=
+ 1\wedge\left|\gamma(t)-\gamma(0)
+                   -\int_0^t g(s,\gamma(s))\,ds\right|
+\]
+is continuous in uniform path topology. Uniformly convergent paths
+have images in one compact set, where $g$ is uniformly continuous.
+The integral equation under $\Pi_n$ bounds
+$\mathbb E_{\Pi_n}F^g_t$ by the left side of
+\eqref{p3f:eq:weightedvelocity}. Passing to the weak limit yields
+$\mathbb E_\Pi F^g_t\leq\int|b-g|\rho$.
+The finite measure $\rho_t\,dx\,dt$ admits bounded continuous
+approximation of its integrable field $b$ in $L^1$.
+By the limiting marginals, replacing $g$ by $b$ in the path
+functional changes its expectation by at most
+$\int|b-g|\rho$. Therefore $\mathbb E_\Pi F^b_t=0$.
+Fubini also gives $\int_0^T|b(t,\gamma(t))|dt<\infty$ for almost
+every path. A countable intersection over rational times, path
+continuity and continuity of its indefinite integral establish
+the true integral equation at every endpoint.
+
+For the last assertion choose bounded continuous $f_m$ with
+$\|f_0-f_m\|_{L^1(\rho_0)}\to0$, using truncation first if
+necessary. For every bounded continuous path observable $F$,
+\[
+ \left|\int F(f_0-f_m)(e_0)\,d\Pi_n\right|
+ \leq\|F\|_\infty\|f_0-f_m\|_{L^1(\rho_0)} ,
+\]
+uniformly in $n$, and the same estimate holds for $\Pi$.
+For fixed $m$, $Ff_m(e_0)$ is bounded continuous and passes to
+the limit. Letting $m\to\infty$ proves convergence of the original
+reweightings. If the limiting reference law is unique, tightness
+and uniqueness of every subsequential limit give convergence of
+the entire sequence. Applying the same approximation argument
+to that sequence gives the original-law conclusion.
+\end{proof}
+
+The equality of entrance densities is load-bearing for measurable
+$f_0$. If a regularization changes that entrance, an additional
+initial-law transfer estimate is required. Likewise a particle
+Galerkin approximation with a nonlocal projected generator cannot
+declare its projected wave to have the unprojected local current.
+It must first earn a conservative complete-current approximation
+of the form \eqref{p3f:eq:approxinputs}.
+
+\begin{lemma}[From a common physical form to density/current convergence]
+\label{p3f:lem:formcurrent}
+Consider the same canonical coefficients and covariant derivatives
+for normalized waves $\Psi,\widetilde\Psi$, and put
+$u=\Psi-\widetilde\Psi$,
+$e=\|u\|_2$,
+$K_\Psi=\sum_i\int\lambda_i\|D_i\Psi\|^2$ and
+$K_u=\sum_i\int\lambda_i\|D_i u\|^2$.
+If $0<\lambda_i\leq\Lambda$, then
+\begin{equation}\label{p3f:eq:currentdifference}
+ \|\rho-\widetilde\rho\|_1\leq2e,\qquad
+ \|j-\widetilde j\|_1
+ \leq2\sqrt\Lambda\{e\sqrt{K_\Psi}+\sqrt{K_u}\}.
+\end{equation}
+Hence strong convergence in the common physical kinetic form,
+with a time-integrable uniform form bound, supplies the current
+convergence and action bound in
+Theorem~\ref{p3f:thm:approximation}.
+\end{lemma}
+
+\begin{proof}
+Subtract the density as a bilinear expression and use the two unit
+$L^2$ norms. For the current write, componentwise,
+\[
+ j_i-\widetilde j_i
+ =2\lambda_i\operatorname{Im}
+       \{\langle u,D_i\Psi\rangle
+          +\langle\widetilde\Psi,D_i u\rangle\}.
+\]
+Cauchy in the complete vector of coordinates, the inequality
+$\lambda_i^2\leq\Lambda\lambda_i$, and then spatial Cauchy
+give \eqref{p3f:eq:currentdifference}. Integrate this estimate in
+time. The canonical action estimate follows from
+Proposition~\ref{p3f:prop:canonical}, or directly from
+$|j|^2/\rho\leq4\Lambda\sum_i\lambda_i|D_i\Psi|^2$.
+\end{proof}
+
+A common-form approximation theorem for an actual Hamiltonian must
+establish the strong form convergence in this lemma; Hilbert norm
+convergence of waves alone does not establish it. Bounded
+multiplication regularizations of value jumps can be handled by
+their same-entrance Duhamel and work identities, provided their
+physical common form and uniform kinetic floor are proved.
+High graph regularity, when used to produce a classical flow for
+each approximation, is a separate fixed-approximation domain
+obligation; it need not be uniform in the limit.
+
+\begin{example}[Small wave and density errors with a nonvanishing current error]
+\label{p3f:ex:highfrequency}
+On the one-dimensional torus with normalized Haar measure, take the
+free Hamiltonian $-\frac12\partial_x^2$ and exact waves
+\[
+ \Psi_n(t,x)=\frac{1+n^{-1}e^{i(nx-n^2t/2)}}{\sqrt{1+n^{-2}}},
+ \qquad\Psi(t,x)=1,\qquad n\geq4 .
+\]
+They satisfy
+$\|\Psi_n-\Psi\|_2^2=2-2/\sqrt{1+n^{-2}}\leq n^{-2}$
+and $\|\rho_n-1\|_\infty\leq2/n$, uniformly in time. Their currents are
+\[
+ j_n(t,x)=\frac{\cos(nx-n^2t/2)+n^{-1}}{1+n^{-2}},
+ \qquad j=0.
+\]
+The action density estimate
+$j_n^2/\rho_n\leq|\partial_x\Psi_n|^2$ yields total action at most $T$.
+Nevertheless
+\[
+ \|j_n(t)\|_1
+ \geq\frac{2/\pi-1/n}{1+n^{-2}}
+ \geq\frac{4}{11}>\frac13 ,
+\]
+using $\pi<22/7$ and $n\geq4$.
+Thus even uniform wave and density convergence together with a uniform
+action bound does not imply strong complete-current convergence.
+These waves have different entrance waves, and the example is not a
+counterexample to Theorem~\ref{p3f:thm:approximation}; it isolates the
+independent current hypothesis in that theorem.
+\end{example}
+
+\section{Whole-history stability in a positive-density tube}
+\label{p3f:sec:stability}
+
+Use the same physical chart, complete positional coordinates, time
+interval and current convention for two parents. Let their pairs be
+$(\rho,j)$ and $(\widetilde\rho,\widetilde j)$ and their deterministic
+flows be $X$ and $Y$ from Theorem~\ref{p3f:thm:deterministic}.
+Suppose one original entrance law satisfies
+\begin{equation}\label{p3f:eq:twocaps}
+ \mu_0\leq C\rho_0\,dx,\qquad
+ \mu_0\leq C\widetilde\rho_0\,dx.
+\end{equation}
+Each actual flow is weighted only once at that entrance.
+Their time marginals are correspondingly bounded by $C\rho_t$
+and $C\widetilde\rho_t$.
+
+\begin{theorem}[Reference-weighted whole-path comparison]
+\label{p3f:thm:stability}
+Let $K$ be a compact spacetime set lying in an open tube on which
+$\rho\geq a>0$. Let $G$ be the original-entrance event that
+\emph{both complete path graphs} lie in $K$. Choose a smooth cutoff
+equal to one near $K$ such that $B=\chi b$ belongs to
+$L^1_tW^{1,p}_x$ for some $p>1$. Suppose the spatial projection
+of $K$ is contained in a finite-volume set $V$, and the two
+densities are bounded on $K$ by $R,\widetilde R$.
+Define
+\begin{align}
+ E_K&=\int_K\widetilde\rho\,|b-\widetilde b|\,dx\,dt,\notag\\
+ L_K&=c_{d,p}C(R+\widetilde R)|V|^{1-1/p}
+                \int_0^T\|\nabla B(t)\|_p\,dt .
+ \label{p3f:eq:comparisonconstants}
+\end{align}
+Here $c_{d,p}$ includes the Sobolev pointwise and maximal-operator
+norm constants, with any fixed-chart equivalence constants.
+For every $\delta,h>0$,
+\begin{align}
+ \mu_0\{G,\ \sup_{t\leq T}|X_t-Y_t|\geq h\}
+ &\leq\frac{L_K+CE_K/\delta}{\log(1+h/\delta)},\notag\\
+ \mu_0\{\sup_{t\leq T}|X_t-Y_t|\geq h\}
+ &\leq\mu_0(G^c)+
+                \frac{L_K+CE_K/\delta}{\log(1+h/\delta)}.
+ \label{p3f:eq:stability}
+\end{align}
+Both bounds may be truncated at one.
+\end{theorem}
+
+\begin{proof}
+Couple the flows by their common entrance $x$ and restrict this pair
+law to $G$. Restriction decreases every time marginal. In particular,
+the restricted first and second marginals are bounded by
+$C\rho_t\,dx$ and $C\widetilde\rho_t\,dx$, supported in $K_t$.
+For almost every retained pair, the Sobolev representative
+inequality \eqref{p3f:eq:maximal} and the AC equations imply
+\begin{align*}
+ \frac{d}{dt}\log(1+|X_t-Y_t|/\delta)
+ &\leq c_d\{
+       \mathcal M|\nabla B|(t,X_t)
+       +\mathcal M|\nabla B|(t,Y_t)\}\\
+ &\quad+\frac{|b-\widetilde b|(t,Y_t)}{\delta}
+\end{align*}
+almost everywhere. Indeed split the velocity difference into
+$B(X_t)-B(Y_t)$ and $b(Y_t)-\widetilde b(Y_t)$.
+The initial distance is zero. Integrating the nonnegative upper
+bound controls the logarithm of the supremum distance. The two
+maximal-function terms, averaged against the restricted marginals,
+are at most $L_K$ by H\"older and the $L^p$ maximal bound. The last
+term has expectation at most $CE_K/\delta$. On paths reaching
+distance $h$, the logarithm is at least $\log(1+h/\delta)$;
+Markov proves the first inequality. Adding the explicitly charged
+complement $G^c$ proves the second.
+\end{proof}
+
+The restriction in this proof is not the law of stopped paths.
+Stopping and keeping every path at its first exit point can create
+boundary atoms, destroying the density bounds used for the
+maximal-function estimate. Whole-path restriction retains those
+bounds and leaves the discarded paths as a visible error term.
+No Lipschitz velocity or divergence lower bound is required.
+
+\subsection{The velocity defect uses both density and current}
+
+\begin{proposition}[Earned density/current interface]
+\label{p3f:prop:velocitydefect}
+On $K$ from Theorem~\ref{p3f:thm:stability},
+\begin{equation}\label{p3f:eq:velocityidentity}
+ \widetilde\rho(b-\widetilde b)
+ =j-\widetilde j+(\widetilde\rho-\rho)\frac{j}{\rho}.
+\end{equation}
+Consequently, if the displayed norms are finite,
+\begin{equation}\label{p3f:eq:velocitydefect}
+ E_K\leq
+ \|j-\widetilde j\|_{L^1(K)}
+  +a^{-1}\|j\|_{L^2(K)}
+               \|\rho-\widetilde\rho\|_{L^2(K)}.
+\end{equation}
+For the continuous first-domain current class,
+$j\in L^2(K)$ locally. If both wave norms are pointwise at most
+$M$ there, then
+\[
+ \|\rho-\widetilde\rho\|_{L^2(K)}
+ \leq 2M\|\Psi-\widetilde\Psi\|_{L^2(K)}.
+\]
+For identical canonical coefficients,
+\eqref{p3f:eq:currentdifference} supplies the other term.
+\end{proposition}
+
+\begin{proof}
+Expand $\widetilde\rho\,j/\rho-\widetilde j$. The identity also
+holds where $\widetilde\rho=0$, because
+$\widetilde j=0$ there. Triangle and Cauchy give
+\eqref{p3f:eq:velocitydefect}. Local boundedness of $\Psi$ and
+local square-integrability of its first derivatives make the
+canonical, drift and spin-curl currents locally $L^2$.
+Finally $|\rho-\widetilde\rho|\leq
+(\|\Psi\|+\|\widetilde\Psi\|)\|\Psi-\widetilde\Psi\|$
+proves the last estimate.
+\end{proof}
+
+Identical bounded Hermitian drift coefficients add at most
+$2\|a\|_\infty\|\Psi-\widetilde\Psi\|_2$ to the spatial $L^1$
+current difference, with the complete vector/operator norm used
+for $a$. A Pauli curl adds its corresponding first-derivative
+spin-density subtraction and actual coefficient. Different
+connections, control coefficients or source currents require
+their additional subtraction terms. Equality of densities or of
+continuity equations does not make those terms disappear.
+In particular, a small wave Hilbert norm does not replace the
+derivative error $K_u$ in \eqref{p3f:eq:currentdifference}.
+
+\subsection{Paying the bad-tube event}
+
+For either reference family, denote its complete length,
+logarithmic and boundary costs by $\ell,\mathcal N,H_\partial$,
+with tildes for the second. Choose entrance thresholds
+$R_0,a_0,d_0$ and target thresholds $R,a,d_*$ with
+$R>R_0$, $a_0>a>0$, $d_0>d_*>0$.
+Equations \eqref{p3f:eq:exterior},
+\eqref{p3f:eq:nodeguard} and \eqref{p3f:eq:boundaryguard} bound the
+bad events for each entire actual path by
+\begin{align}
+ \beta_X={}&\mu_0\{|x|\geq R_0\}+\frac{C\ell}{R-R_0}
+   +\mu_0\{\rho_0\leq a_0\}
+                       +\frac{C\mathcal N}{\log(a_0/a)}
+   \notag\\
+ &+\mu_0\{d_\partial(x)\leq d_0\}
+                       +\frac{CH_\partial}{\log(d_0/d_*)}.
+ \label{p3f:eq:badcharge}
+\end{align}
+Terms for absent boundaries are omitted, and several excluded
+sets are handled by a finite union bound. The analogous
+$\beta_Y$ uses the tilded costs and entrance density. These
+may be coarse estimates, but every term concerns the original
+law and complete current.
+
+Suppose, on the compact spatial/core region in question,
+$\|\rho-\widetilde\rho\|_\infty\leq a/2$ in spacetime.
+On paths outside the charged events, $X$ has $\rho\geq a$,
+and $Y$ has $\widetilde\rho\geq a$, hence $\rho\geq a/2$ on
+its graph. Both therefore lie in a common compact positive set
+$K$ with floor $a/2$, and
+\begin{equation}\label{p3f:eq:Gcharge}
+ \mu_0(G^c)\leq\beta_X+\beta_Y.
+\end{equation}
+An enlarged neighborhood with floor $a/4$ supplies a cutoff.
+Its attained Sobolev and chart norms, rather than a universal
+small constant, enter $L_K$; the floor used in
+\eqref{p3f:eq:velocitydefect} is $a/2$.
+This construction keeps low entrance density, source excursions
+and collision/core tails visible. A wave-to-uniform-density
+estimate for a high-dimensional application is a separate
+regularity task, addressed by the product estimates below.
+
+\begin{corollary}[Convergence of complete paths and robust histories]
+\label{p3f:cor:histories}
+Consider a sequence of comparisons obeying
+Theorem~\ref{p3f:thm:stability}. Suppose that for every
+$\varepsilon>0$ there is one compact comparison tube on which,
+eventually, $\mu_0(G_n^c)\leq\varepsilon$, the constants
+$C,L_K$ are uniformly bounded, and $E_{K,n}\to0$.
+Then $\sup_t|X_t-Y_{n,t}|\to0$ in $\mu_0$ probability.
+The same conclusion follows from a separately justified
+quantitative diagonal choice of tubes and constants.
+
+Suppose a common record decoder is locally constant on each
+radius-$h$ configuration ball around an ideal path at all
+relevant read, copy and hold times, except on an original-law
+event of probability $\beta$. Then
+\begin{equation}\label{p3f:eq:historymismatch}
+ \Pr(\text{any decoded-history mismatch})
+ \leq\beta+\mu_0(G^c)+
+             \frac{L_K+CE_K/\delta}{\log(1+h/\delta)}.
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+On a fixed tube choose $\delta_n\downarrow0$ so that
+$E_{K,n}/\delta_n\to0$, with lengths expressed in the fixed
+chart. For example, if $E_{K,n}>0$, one may take
+$\delta_n=\sqrt{\ell_*E_{K,n}}$ for a fixed positive length
+$\ell_*$; zero defects permit any decreasing positive sequence.
+The numerator in \eqref{p3f:eq:stability} is bounded while its
+denominator diverges for fixed $h>0$. The limit superior of the
+probability is at most $\varepsilon$; then let
+$\varepsilon\downarrow0$. The reference to a diagonal choice
+requires that its displayed bound actually tends to zero:
+individually finite but uncontrolled growing constants do not
+suffice.
+
+On the decoder-margin event, a uniform path displacement less
+than $h$ preserves every declared record value. Its complement
+is therefore contained in the union of the margin failure and
+the path-displacement event in \eqref{p3f:eq:stability}.
+This proves \eqref{p3f:eq:historymismatch}.
+\end{proof}
+
+A final-time margin is not the whole-history premise in this
+corollary. To infer faithful copying of an earlier actual outcome,
+the ideal model must itself provide that relation and its entire
+promised hold; its failures must be added to $\beta$. The theorem
+transfers a specified robust history. It does not construct a
+detector, a source law, a fresh receiver or a reset operation.
+Likewise convergence of complete paths in probability does not
+by itself imply total-variation convergence of arbitrary
+configuration laws. Such a conclusion additionally requires
+an appropriate regularity and inverse-map transfer estimate.
+
+\section{A first-domain route to full-wave continuity}
+\label{p3d:sec:graph}
+
+The deterministic flow theorem requires a continuous representative of
+the complete wave. In configuration dimension eight, an ordinary
+$H^2$ estimate does not give this. Conversely, asking for sufficiently
+many powers of the Hamiltonian can exclude the intended entrance:
+a bounded radial step need not preserve $H^3$, and an uncut Gaussian
+need not lie in the second domain of a Coulomb Hamiltonian. We use one
+genuine Hamiltonian graph together with higher \emph{tangential}
+regularity. Throughout these application sections $\hbar=1$ after
+the stated choice of units; finite internal reference fibres are
+included in all norms.
+
+\subsection{Common forms and tangent graphs}
+
+Here is the propagation statement used below. Its hypotheses concern
+operators and their common form, not an already selected trajectory.
+Let $\mathcal H$ be the full spatial/internal Hilbert space,
+$H_{\rm c}$ a semibounded self-adjoint central operator, and
+$\mathcal A\geq1$ a positive self-adjoint estimate operator strongly
+commuting with $H_{\rm c}$. Write
+$H(t)=H_{\rm c}+B(t)$ on a specified common first domain or as the
+corresponding common closed form. Assume the following on $[0,T]$.
+
+\begin{enumerate}
+\item The physical Hermitian forms $h_t$ have a common domain
+$\mathcal V\subset\mathcal H\subset\mathcal V^*$,
+uniform finite-horizon coercivity after a scalar shift, and an
+absolutely continuous $\mathcal V\to\mathcal V^*$ dependence with
+integrable derivative.
+\item A form-dense joint test core for $H_{\rm c}$ and the tangent
+graphs respects the physical boundary condition. On this core the
+closed extensions of
+\begin{align}
+ \|[\mathcal A^m,H(t)]u\|&\leq C_m(t)\|\mathcal A^m u\|,
+                 &&m=1,2,3,\label{p3d:eq:comm}\\
+ \|\mathcal A^2\dot H(t)u\|&\leq D(t)\|\mathcal A^3u\|
+                 \label{p3d:eq:timeder}
+\end{align}
+hold, with $C_m,D\in L^1(0,T)$. Moreover
+$B(t)\mathcal A^{-1}$ and
+$\mathcal A^2 B(t)\mathcal A^{-3}$ are bounded uniformly on the
+finite interval.
+\item For $P_N=1_{[1,N]}(\mathcal A)$, restriction of the physical
+form to $P_N\mathcal H$ is
+$H_N=H_{\rm c}|_{P_N\mathcal H}+P_NB(t)P_N$.
+The second term is a bounded absolutely continuous perturbation
+on that range. For joint-core test vectors,
+$H_NP_N\chi\to H\chi$ in $\mathcal H$ and
+$P_N\chi\to\chi$ in $\mathcal V$, locally uniformly in time.
+\end{enumerate}
+The core and convergence assertions will be checked for the concrete
+parents; an interior-compact form core is not automatically an
+operator graph core at a boundary.
+
+\begin{theorem}[One physical graph and finite tangent propagation]
+\label{p3d:thm:graph}
+If
+\begin{equation}\label{p3d:eq:entrance}
+ f\in D(\mathcal A^3)\cap D(H(0)),\qquad
+ H(0)f\in D(\mathcal A^2),
+\end{equation}
+then the common-form evolution with entrance $f$ satisfies
+\begin{equation}\label{p3d:eq:graphs}
+ \psi\in L^\infty(0,T;D(\mathcal A^3)),\qquad
+ H(t)\psi\in L^\infty(0,T;D(\mathcal A^2)),\qquad
+ \partial_t\psi=-iH(t)\psi.
+\end{equation}
+The first-graph equation is used in its mild sense; no
+$f\in D(H(0)^2)$ assumption is made. In addition,
+\begin{equation}\label{p3d:eq:closedcentral}
+ \mathcal A^2\psi\in D(H_{\rm c}),\qquad
+ H_{\rm c}\mathcal A^2\psi
+ =\mathcal A^2H(t)\psi-\mathcal A^2B(t)\psi
+\end{equation}
+for almost every time, with finite uniform bounds on a finite horizon.
+\end{theorem}
+\begin{proof}
+On $P_N\mathcal H$, solve the central operator plus bounded
+time-dependent perturbation with entrance $f_N=P_Nf$. Existence follows,
+for example, by the interaction-picture integral equation and successive
+iteration. Difference quotients for the absolutely continuous bounded
+perturbation give strong evolution on the common central domain.
+For $g_N=H_N\psi_N$ they give the mild identity
+\begin{equation}\label{p3d:eq:mildgraph}
+ g_N(t)=U_N(t,0)H_N(0)f_N+
+              \int_0^tU_N(t,s)\dot H_N(s)\psi_N(s)\,ds.
+\end{equation}
+One can first verify this identity for stronger central-domain data and
+smooth time coefficients, and pass by first-domain and $L^1$ forcing
+approximation. It does not require differentiating $H_Ng_N$ in $\mathcal H$.
+
+The bounded tangent operator on each compressed range permits the
+ordinary energy calculation. Symmetry of $H_N$ removes its undifferentiated
+term, and \eqref{p3d:eq:comm} gives
+\[
+ \|\mathcal A^3\psi_N(t)\|
+ \leq e^{\int_0^t C_3}\|\mathcal A^3f_N\|=:X_N(t).
+\]
+Obtain the homogeneous $\mathcal A^2$ propagator bound in the same way
+on strong-domain data and extend by density. Apply it to
+\eqref{p3d:eq:mildgraph}, using \eqref{p3d:eq:timeder}, to obtain
+\begin{equation}\label{p3d:eq:graphbound}
+ \|\mathcal A^2g_N(t)\|
+ \leq e^{\int_0^t C_2}
+ \left(\|\mathcal A^2H_N(0)f_N\|
+ +\int_0^t e^{-\int_0^s C_2}D(s)X_N(s)\,ds\right).
+\end{equation}
+These constants are independent of $N$.
+The initial graph converges: the central term commutes with $P_N$, and
+$\mathcal A^2B\mathcal A^{-3}$ is bounded, so
+$\mathcal A^2H_N(0)P_Nf\to\mathcal A^2H(0)f$.
+
+Physical coercivity and
+$h_t(\psi_N,\psi_N)=\langle\psi_N,g_N\rangle$ give a uniform
+$\mathcal V$ bound. Weak compactness, the uniform $g_N$ bound,
+and the integrated equation against joint-core tests therefore give a
+limit solving the true $\mathcal V/\mathcal V^*$ equation. The
+test-core convergence in the hypotheses identifies its operator with
+the original physical form, rather than an artificial tangent energy.
+
+Uniqueness of that variational equation precedes any use of norm
+conservation in taking the limit. Indeed for the difference $u$ of two
+solutions, the Gelfand-triple norm identity gives
+\[
+ \frac{d}{dt}\|u\|^2
+ =2\operatorname{Re}\langle-iH(t)u,u\rangle_{\mathcal V^*,\mathcal V}=0.
+\]
+This identity follows by Steklov averaging in time for
+$u\in L^2_t\mathcal V$, $\dot u\in L^2_t\mathcal V^*$;
+no $H^2$ operator domain is used. Equal entrance data imply $u=0$.
+The same identity conserves the norm of the identified limit.
+Consequently weak convergence and
+$\|\psi_N(t)\|=\|P_Nf\|\to\|f\|=\|\psi(t)\|$
+give strong $\mathcal H$ convergence. The uniform derivative bound
+$\|\dot\psi_N\|=\|g_N\|$ and a finite time grid make it uniform in time.
+
+Testing the weak limit of $g_N$ against the form-dense core identifies
+it with the form action $H(t)\psi$. Since this action is in
+$\mathcal H$, the definition of the operator associated with the
+closed form puts $\psi$ in the genuine first domain. Lower
+semicontinuity transfers the tangent estimates and proves
+\eqref{p3d:eq:graphs}.
+Finally set $u_N=\mathcal A^2\psi_N$. Strong commutation gives
+\[
+ H_{\rm c}u_N=\mathcal A^2g_N-P_N\mathcal A^2B\psi_N.
+\]
+Both sides have uniform $\mathcal H$ bounds. A self-adjoint operator
+has a weakly closed graph: testing a weak limit against every
+$\chi\in D(H_{\rm c})$ identifies its central image. The bounded map
+$\mathcal A^2B\mathcal A^{-3}$ identifies the last term and proves
+\eqref{p3d:eq:closedcentral}.
+\end{proof}
+
+\subsection{The product regularity, and what it does not say}
+
+Suppose that on a compact radial chart the central operator is genuinely
+second-order elliptic in one normal coordinate $r$, while
+$\mathcal A$ is independent of $r$ and elliptic in $m$ tangent coordinates.
+The other central terms are of tangent order at most two, with bounded
+coefficients on the enlarged chart. Bounded radial multiplication jumps
+are allowed. Then \eqref{p3d:eq:closedcentral}, applied to
+$\mathcal A^2\psi$, gives
+\begin{equation}\label{p3d:eq:product}
+ \|\psi(t)\|_{H^2_rH^4_{\rm tan}(K)}
+ \leq C_K\{\|\mathcal A^2H(t)\psi(t)\|
+                         +\|\mathcal A^3\psi(t)\|\}.
+\end{equation}
+Here and below the notation means a \emph{product} norm with Fourier
+weight $(1+\xi_r^2)^2(1+|\xi_{\rm tan}|^2)^4$, not the intersection of
+two separately controlled spaces.
+
+To justify the product, first use local tangent ellipticity to obtain
+four tangent derivatives from $\mathcal A^2$. The radial equation for
+$\mathcal A^2\psi$ then has an $L^2$ right side: the additional two
+tangent derivatives are paid by $\mathcal A^3\psi$, and
+$\mathcal A^2B\psi$ is already bounded. Radial first derivatives and
+cutoff commutators are absorbed in the one-dimensional elliptic estimate.
+Lower tangent powers have the same central graph because
+$\mathcal A\geq1$ strongly commutes with $H_{\rm c}$; they control the
+lower-order chart cutoff terms. Radial cutoffs commute with
+$\mathcal A$. Thus the two radial derivatives act on the tangent-order
+four quantity. In physical three-dimensional polar measure one can
+equivalently use $r\psi$ on an annulus, absorbing the $2r^{-1}\partial_r$
+term. No radial derivative of a potential jump or of $1/r$ is taken.
+
+Local $L^2$ time continuity and the uniform product bound imply joint
+spacetime continuity by interpolation whenever
+\begin{equation}\label{p3d:eq:theta}
+ 2\theta>\tfrac12,\qquad 4\theta>m/2,\qquad \theta<1.
+\end{equation}
+Indeed Fourier H\"older gives convergence in
+$H^{2\theta}_rH^{4\theta}_{\rm tan}$, and the evaluation integral is
+absolutely convergent under \eqref{p3d:eq:theta}. These bounds also
+imply local full $H^2$. The resulting continuous representative and
+local $H^2$ regularity are distinct outputs; high-dimensional $H^2$
+alone was not used to assert continuity.
+
+For example, a scalar step at zero admits the exact local stationary
+solution at energy $4$
+\[
+ u_L=e^{2ix}+\tfrac13e^{-2ix},\quad V_L=0;\qquad
+ u_R=\tfrac43e^{ix},\quad V_R=3.
+\]
+The value and first derivative match. The right-minus-left jump of
+$u''$ is $4$, so the wave is locally $H^2$ but not $H^3$ across the
+interface. Multiplying by smooth tangent factors retains exactly the
+structure allowed in \eqref{p3d:eq:product}.
+
+\section{A radial-interface parent with two retained flux sources}
+\label{p3d:sec:OLD}
+
+Consider $Q\in\mathbb R^3$, relative position $rn$ with $r>r_c>0$,
+$n\in S^2$, and two canonical flux coordinates $y_b,y_g$.
+The finite spin fibre retains both electronic and both nuclear spins
+(a $96$-dimensional fibre is one finite choice), together with passive
+finite internal references. Let
+\begin{equation}\label{p3d:eq:OLD}
+ H(t)=H_{\rm cen}+T_y+U_b(y_b)+U_g(y_g)+W(t).
+\end{equation}
+$H_{\rm cen}$ contains the constant-coefficient physical COM/relative
+kinetics, a true Dirichlet core, and specified bounded central molecular
+matrix multipliers with finitely many radial value jumps. It is
+semibounded and invariant under COM translations and simultaneous
+spatial-and-all-spin rotations. An additional rotational scalar
+first-order angular term is admissible only on its explicitly specified
+self-adjoint/form domain, with the local ellipticity and complete-current
+envelope used below. Its first-order current coefficients must also be
+locally $W^{1,\infty}$ across the retained interfaces; it is not
+implicit in a multiplication model with bounded radial steps.
+In this molecular parent, the dipolar and second-order
+spin--orbit interaction is a matrix multiplication tensor
+$v_{\rm ss}(r)T(\widehat R)$, included in $H_{\rm cen}$.
+Its radial jumps are therefore covered by the multiplication
+argument. This second-order spin--orbit tensor is not a
+first-order orbital drift; the latter is a separate optional
+extension of the model.
+
+The exact source constitutive relation and its energy are
+\begin{equation}\label{p3d:eq:flux}
+ y=LI+aI^3,\quad L>0,\ a\geq0,\qquad
+ U(y)=\tfrac12 LI(y)^2+\tfrac34aI(y)^4.
+\end{equation}
+Fixed affine shifts, scales and finite paired-arm sums are allowed.
+External controls are finite Hermitian sums
+\begin{equation}\label{p3d:eq:OLDW}
+ W(t)=\sum_\nu I_\nu(y_{s(\nu)})F_\nu(t,Q,rn)+G(t,Q,rn),
+\end{equation}
+with bounded mixed COM and simultaneous-rotation profile derivatives
+through total order six; their time derivatives have bounded order-four
+jets integrable over the finite interval. Spin commutators are part of
+the rotation derivative. The coupling is scalar/matrix multiplication
+in the source coordinate; an unbounded source multiplying an uncontrolled
+highest particle derivative is not included.
+
+\begin{lemma}[The source well and finite word bounds]\label{p3d:lem:source}
+The inverse in \eqref{p3d:eq:flux} is smooth and, through every fixed
+finite order,
+\[
+ |I^{(k)}(y)|\leq C_k\langle y\rangle^{1-k},\qquad
+ |U^{(k)}(y)|\leq D_k\langle y\rangle^{2-k}.
+\]
+For $a>0$, its actual asymptotic growth is $I(y)=O(|y|^{1/3})$ and
+$U(y)=O(|y|^{4/3})$. The harmonic estimate operator below does not
+replace this physical well by a quadratic or quartic one.
+\end{lemma}
+\begin{proof}
+The derivative $L+3aI^2$ is everywhere positive. Writing $d=L+3aI^2$,
+induction gives
+\[
+ I^{(k)}(y)=\frac{P_k(I)}{d^{\,2k-1}},\quad
+ P_1=1,\quad P_{k+1}=dP_k'-(2k-1)d'P_k,\quad
+ \deg P_k\leq k-1.
+\]
+For $a>0$ this is $O(|y|^{1/3-k})$; compact intervals are controlled by
+$d\geq L$. Moreover $U'(y)=I(y)$ by direct differentiation.
+These sharper bounds imply the displayed loose integer symbol bounds.
+For $a=0$ the current is affine and the energy quadratic.
+Fixed affine changes and finite sums preserve the estimates.
+\end{proof}
+
+Set $p=-i\nabla$ and
+\begin{equation}\label{p3d:eq:OLDledger}
+ \mathcal A=1+p_Q^2+J^2+\sum_{s=b,g}(p_{y_s}^2+y_s^2+1),\qquad
+ J=Q\times p_Q+rn\times p_{rn}+S_{\rm all}.
+\end{equation}
+$S_{\rm all}=S_w+I_w+S_r+I_r$. Omitting a nuclear spin would destroy
+the commutation of its hyperfine scalar $I_a\cdot S_a$ with total
+rotations. The components in \eqref{p3d:eq:OLDledger} strongly commute.
+For words $X_1\cdots X_\ell$ in $p_Q,J,p_y,y$,
+\begin{equation}\label{p3d:eq:words}
+ \|X_1\cdots X_\ell u\|\leq C_\ell\|\mathcal A^{\ell/2}u\|.
+\end{equation}
+To prove this, reorder COM momenta past rotations using
+$[J_i,p_{Q_j}]=i\epsilon_{ijk}p_{Q_k}$; only lower-degree words are created.
+Momentum words are controlled by $p_Q^2$, rotation words on each
+irreducible angular representation by powers of $J^2$, and source
+words by oscillator raising/lowering operators. The commuting positive
+components then control their products by the corresponding power of
+$\mathcal A$. Polynomially growing source coefficients are placed to
+the left and bounded by adding source-position letters, not commuted
+through without a charge.
+
+The central physical form is invariant under these groups and source
+operations; functional calculus therefore gives strong commutation of
+$H_{\rm cen}$ with $\mathcal A$. For the noncentral part use
+\[
+ [p_y^2,c]=-c''-2c'\partial_y,\qquad
+ [y^2,\partial_y^k]=-2ky\partial_y^{k-1}
+                              -k(k-1)\partial_y^{k-2}.
+\]
+A repeated source commutator of the well has word degree at most
+$\max(2,\ell)$, and one of the current has degree at most
+$\max(1,\ell)$. A tangent commutator raises word degree by at most one
+and uses at most two more profile derivatives. Consequently
+$\operatorname{ad}_{\mathcal A}^{\ell}H$ has degree at most $2\ell$
+for $\ell=1,2,3$. The ordered identity
+\[
+ [\mathcal A^m,H]=
+ \sum_{\ell=1}^m \binom{m}{\ell}
+       (\operatorname{ad}_{\mathcal A}^{\ell}H)\mathcal A^{m-\ell}
+\]
+proves \eqref{p3d:eq:comm}. Applying the same word count to
+$\mathcal A^2\dot H$ proves \eqref{p3d:eq:timeder} with six total
+tangent/source orders available and four differentiated profile jets.
+The estimates for $B\mathcal A^{-1}$ and
+$\mathcal A^2B\mathcal A^{-3}$ follow from the same count.
+
+The physical common form is Dirichlet $H^1$ with the actual source-well
+weight. The linear-current couplings are infinitesimally form bounded:
+$U(y)\geq LI(y)^2/2$ bounds each $I(y)$ by the positive well using
+Young's inequality. Complete squares for every retained shifted arm
+and add a finite scalar shift to obtain coercivity. Bounded radial
+matrix steps do not change the form domain. Source/spatial cutoffs and
+mollification give a form-dense joint core. Smooth vectors up to the
+Dirichlet boundary with zero value and arbitrary normal derivative are
+needed for its first graph; closing interior compact functions in an
+$H^2$ graph would impose an extra zero normal trace.
+On smooth joint-core vectors the spectral projections of $\mathcal A$
+converge in all needed tangent graphs and in the central first graph.
+The displayed word estimates then give the test convergence required
+in Theorem~\ref{p3d:thm:graph}. Compressed physical energies, not the
+artificial oscillator norm, provide its uniform form bound.
+
+\begin{corollary}[Continuous full wave across radial value jumps]
+\label{p3d:cor:OLD}
+For \eqref{p3d:eq:OLD}--\eqref{p3d:eq:OLDW} with the specified core,
+forms, profiles and full spins, an entrance satisfying
+\eqref{p3d:eq:entrance} has the graph propagation
+\eqref{p3d:eq:graphs} and the product bound
+$H^2_{\rm rad}H^4_{\rm tan}$ on compact charts, including radial
+value interfaces and up to the smooth Dirichlet core.
+The full wave is jointly continuous in spacetime and locally full
+$H^2$ in the interior. No second physical Hamiltonian power is required.
+\end{corollary}
+\begin{proof}
+The preceding word and form arguments verify
+Theorem~\ref{p3d:thm:graph}. There are seven tangent coordinates:
+COM three, relative angles two and source positions two.
+On a compact chart the tangent principal symbol is
+\[
+ |\xi_Q|^2+|Q\times\xi_Q+\ell_n(\xi_n)|^2+|\xi_y|^2.
+\]
+Since
+$|\ell_n|^2\leq2|Q\times\xi_Q+\ell_n|^2+2|Q|^2|\xi_Q|^2$,
+it dominates the ordinary tangent symbol with a finite constant,
+for instance $[2(1+Q_{\max}^2)]^{-1}$.
+Finite spin matrices are lower order. The closed central graph
+therefore gives \eqref{p3d:eq:product}. At a bounded radial jump its
+weak second-order equation has an $L^2$ right side; the wave and first
+conormal derivative match and only the second derivative may jump.
+At the Dirichlet core the boundary elliptic estimate uses the true zero
+value trace. Finally $m=7$ in \eqref{p3d:eq:theta} permits every
+$7/8<\theta<1$, proving joint continuity.
+\end{proof}
+
+\subsection{Finite source profiles really provide the required jets}
+\label{p3d:sec:profiles}
+
+\begin{proposition}[Finite-volume Biot--Savart profile bounds]
+\label{p3d:prop:profiles}
+Let a prescribed current density $J\in C_c^6(\mathbb R^3;\mathbb R^3)$
+have support in $|z|\leq R_s$ and define
+\[
+ B(x)=\frac{\mu_0}{4\pi}\int J(z)\times
+                     \frac{x-z}{|x-z|^3}\,dz .
+\]
+All mixed translation/rotation words of total order at most six applied
+to $B$ are globally bounded. For $|\alpha|=k\leq6$ and any split
+length $a>0$,
+\begin{equation}\label{p3d:eq:Biotinside}
+ \|\partial^\alpha B\|_\infty\leq
+ \frac{\mu_0}{4\pi}
+ \{4\pi a\|\partial^\alpha J\|_\infty
+                         +a^{-2}\|\partial^\alpha J\|_1\}.
+\end{equation}
+For $|x|\geq2R_s$ and $0\leq j\leq k$,
+\begin{equation}\label{p3d:eq:Biotoutside}
+ |x|^j|\partial^\alpha B(x)|
+ \leq\frac{\mu_0}{4\pi}\sqrt3\,4^kk!\,2^{2+k}
+                  |x|^{j-2-k}\|J\|_1 .
+\end{equation}
+\end{proposition}
+\begin{proof}
+Distributional integration by parts moves the derivatives to $J$,
+leaving the locally integrable kernel of magnitude $|x-z|^{-2}$.
+The zero-extended $C_c^6$ profile supplies no boundary term. Integrating
+that kernel over a ball of radius $a$ gives $4\pi a$, while outside
+the ball it is at most $a^{-2}$, proving \eqref{p3d:eq:Biotinside}.
+Thus no nonintegrable derivative of the kernel is used inside a source.
+
+Outside the support one may differentiate the kernel itself.
+After $k$ derivatives a component is a sum of
+$c_\beta x^\beta|x|^{-q}$ with $|\beta|-q=-2-k$.
+Its degree is at most $k+1$, so one more derivative multiplies the
+absolute coefficient sum by at most $3k+4\leq4(k+1)$.
+Induction gives
+$|\partial^\alpha(x/|x|^3)|\leq\sqrt3\,4^kk!|x|^{-2-k}$.
+Using $|x-z|\geq|x|/2$ proves \eqref{p3d:eq:Biotoutside}.
+A rotation word is a finite sum of
+$c_{\alpha\beta}x^\beta\partial^\alpha$ with
+$|\beta|\leq|\alpha|$ and derivative order bounded by the word length.
+Combine the exterior estimate with the interior estimate multiplied by
+$(2R_s)^j$. This bounds every stated word.
+\end{proof}
+
+For particle positions $x_a=Q+c_a rn$, simultaneous rotation of $Q,rn$
+acts on a profile as $x_a\times\nabla_{x_a}$, with the finite spin
+commutator added. Relative-only rotation would produce
+$c_a rn\times\nabla B(x_a)$; keeping $x_a$ near a coil while sending
+$Q$ to infinity shows why that coefficient need not be bounded.
+The proposition therefore supplies the actual jets in
+Corollary~\ref{p3d:cor:OLD} for finite smooth shell currents, including
+their returns. For example, on a shell of positive inner radius, the normalized
+radial bump $c\,u^{31}(1-u)^{31}$, $0<u<1$, extended by zero
+at both ends and affinely rescaled to the shell, has more than the
+six vanishing boundary derivatives required here. Smooth bounded
+angular factors preserve this regularity.
+Multiplication by finite $C^1$ time envelopes gives the required four
+spatial derivatives of the time derivative;
+a translated profile also needs one additional spatial derivative times
+its integrable centre velocity. An ideal filament or untapered source
+boundary has not met these hypotheses.
+
+\subsection{Full continuity, the true core, and radial regularization}
+
+\begin{corollary}[Reference-compatible flow for the radial-interface parent]
+\label{p3d:cor:OLDflow}
+Use the complete canonical current of \eqref{p3d:eq:OLD}, with every
+source coordinate retained. A separately specified spin-curl or symmetric first-order contribution
+is allowed if it supplies its full continuity equation and the following
+coefficient regularity across the interfaces. First-order drift matrices
+are locally $W^{1,\infty}$. For a magnetization current
+$\nabla\times(\psi^\dagger M\psi)$, the Hermitian coefficient matrices
+$M$ are locally $W^{2,\infty}$; constant Pauli coefficients are included.
+These local bounds are uniform on compact spacetime charts, or have the
+time integrability required for the positive-tube Sobolev estimate.
+In addition the complete current must satisfy, with bounded constants,
+\begin{equation}\label{p3d:eq:envelope}
+ |j|\leq c_0|\psi|^2+c_1|\psi|\,|\nabla\psi|.
+\end{equation}
+Then the wave in Corollary~\ref{p3d:cor:OLD} supplies the continuity,
+local Sobolev, action and logarithmic hypotheses of
+Theorem~\ref{p3f:thm:deterministic}. The reference paths avoid the
+Dirichlet core at every time. Consequently the complete flow is
+deterministic and unique in the reference-compatible class, and one
+original entrance law $\mu_0\ll|\psi(0)|^2dq$ is transported by
+reweighting that reference law once.
+\end{corollary}
+\begin{proof}
+The full distributional continuity equation follows from the physical
+form, not from a local $H^2$ assertion. For a real compactly supported
+test multiplier $\varphi$, $\varphi\psi$ lies in the same Dirichlet form
+domain. Test $i\dot\psi=H(t)\psi$ against it and its conjugate.
+All Hermitian multiplication terms cancel; each constant-mass kinetic
+form gives its complete canonical current paired with $\nabla\varphi$.
+The identity remains valid for tests crossing the core after zero
+extension, because multiplication preserves the zero trace. There is
+no boundary source. A specified symmetric first-order term contributes
+its literal current; a complete spin-magnetization curl is divergence
+free distributionally, including after the same zero extension.
+
+The physical kinetic floor and \eqref{p3d:eq:graphs} give bounded full
+$\|\nabla\psi\|$ and $\|\dot\psi\|$ on the finite horizon. Equation
+\eqref{p3d:eq:envelope} and
+$|\nabla\rho|\leq2|\psi||\nabla\psi|$ imply finite current length,
+action and spatial logarithmic cost:
+\[
+ \int\frac{|j|^2}{\rho}
+ \leq2c_0^2\|\psi\|^2+2c_1^2\|\nabla\psi\|^2,\qquad
+ \int\frac{|j\cdot\nabla\rho|}{\rho}
+ \leq2c_0\|\psi\|\|\nabla\psi\|+2c_1\|\nabla\psi\|^2.
+\]
+Also $\|\partial_t\rho\|_1\leq2\|\psi\|\|\dot\psi\|$.
+These are complete configuration-space estimates before integrating
+out a source. On compact positive-density tubes, joint continuity and
+local full $H^2$ give the local $W^{1,p}$ velocity estimate of
+Proposition~\ref{p3f:prop:canonical}; in dimension eight one may take
+$p=4/3>1$.
+
+For distance $d=r-r_c$ in a core collar, the Dirichlet Hardy inequality
+gives
+\[
+ \|\psi/d\|_{\rm collar}
+ \leq C(\|\nabla\psi\|+\|\psi\|).
+\]
+It follows by applying the one-dimensional zero-trace Hardy inequality
+on each normal line; the smooth collar Jacobian and a cutoff contribute
+only the displayed lower-order term. Therefore
+\begin{equation}\label{p3d:eq:corecost}
+ \int_0^T\!\int_{\rm collar}\frac{|j\cdot\nabla d|}{d}
+ \leq\int_0^T
+ \left[c_0\|\psi/d\|\|\psi\|
+       +c_1\|\psi/d\|\|\nabla\psi\|\right]dt<\infty.
+\end{equation}
+Away from the collar the corresponding bounded-weight term follows
+from current length. The reference superposition has its marginals
+in the closed exterior, so continuity and countably many rational
+times exclude entry into the open core. Proposition~\ref{p3f:prop:guards},
+using the truncated logarithmic distance and
+\eqref{p3d:eq:corecost}, also excludes touching the boundary at any time.
+The node argument is separately provided by the continuous-wave chain
+rule in Lemma~\ref{p3f:lem:chain}. All hypotheses of
+Theorem~\ref{p3f:thm:deterministic} are now supplied. Absolute continuity
+of $\mu_0$ transfers its reference-null path exceptions; a finite cap
+is additionally needed for corresponding uniform quantitative charges.
+\end{proof}
+
+The extra coefficient condition matters for a first-order current.
+A radial step multiplying a tangential drift can retain a bounded
+current and a conservative continuity equation while its normal weak
+derivative contains a surface measure. Such a velocity need not be
+in $W^{1,p}$ across the interface. The bounded multiplication jumps
+in Corollary~\ref{p3d:cor:OLDflow} do not create this problem for the
+canonical kinetic current. A discontinuous first-order drift would
+need a separate interface-flow argument. The extra derivative required
+for a variable magnetization coefficient is also essential to this proof:
+$\nabla j$ contains $(D^2M)\psi^\dagger\psi$ as well as the wave
+product terms. For example, take $M_z(x)=|x_1|$ near the origin,
+smoothly cut off at large distances, with the other components zero.
+A smooth wave positive near $x_1=0$ gives
+$j_2=-\partial_1(|x_1|\rho)$, which jumps at that plane.
+This divergence-free curl has bounded coefficients and the displayed
+current envelope, but its derivative has a surface measure.
+Local $W^{1,\infty}$ regularity of $M$ alone therefore does not supply
+the positive-tube $W^{1,p}$ estimate. The stated $W^{2,\infty}$
+condition does, without affecting the constant-coefficient Pauli case.
+Thus the radial multiplication-tensor application is covered,
+whereas the optional first-order extension is conditional on the
+stated coefficient regularity. A self-adjoint/form realization alone
+does not discharge that extra flow obligation.
+
+\begin{proposition}[Bounded radial-jump smoothing in the same evaluating form]
+\label{p3d:prop:smoothing}
+In the preceding parent, replace only its bounded central radial
+molecular multiplier $M$ by smooth Hermitian central multipliers $M_\epsilon$,
+uniformly bounded and strongly convergent to $M$ on $\mathcal H$.
+Retain the same physical core, source wells, full time-dependent
+$W(t)$, current convention and exact entrance $f$.
+Assume the source/profile bounds above uniformly, and that $M_\epsilon$
+preserves the central simultaneous-rotation symmetry. Then the resulting
+waves converge uniformly in time in the original physical form norm.
+Their complete canonical densities and currents converge in the strong
+norms required by Theorem~\ref{p3f:thm:approximation}, with uniform action.
+This is one specified regularization, not a statement about arbitrary
+Hamiltonian or current replacements.
+\end{proposition}
+\begin{proof}
+Let $\Delta M_\epsilon=M_\epsilon-M$. Bounded perturbation Duhamel gives
+\[
+ \sup_{t\leq T}\|\psi_\epsilon(t)-\psi(t)\|
+ \leq\int_0^T\|\Delta M_\epsilon\psi(s)\|\,ds\longrightarrow0.
+\]
+Strong bounded convergence is uniform on the compact true $L^2$ orbit.
+The tangent commutators of $M_\epsilon$ vanish by central symmetry;
+no radial derivative of $M_\epsilon$ occurs. The proof of
+Theorem~\ref{p3d:thm:graph} consequently gives uniform
+$\mathcal A^3\psi_\epsilon$ and first-graph bounds. The initial graph
+condition is uniform because $M_\epsilon$ is bounded and commutes
+with $\mathcal A$. Spectral interpolation now implies
+\[
+ \sup_{t\leq T}
+ \|\mathcal A^s(\psi_\epsilon(t)-\psi(t))\|\to0
+ \qquad(0\leq s<3).
+\]
+In particular the source-position weights needed for
+$I(y)F_t$ converge strongly. This step is important: the retained
+source coupling need not be a bounded operator.
+
+Choose a common coercive shift $b$ and use the true work identities
+\[
+ h_{\epsilon,t}(\psi_\epsilon,\psi_\epsilon)+b\|f\|^2
+ =h_{\epsilon,0}(f,f)+b\|f\|^2+
+   \int_0^t\dot h_s(\psi_\epsilon(s),\psi_\epsilon(s))\,ds .
+\]
+Here $\dot h_s$ is the same physical derivative for every $\epsilon$,
+because only the static bounded multiplier was replaced.
+The identity follows from form/first-domain time approximation, or
+first for the compressed common-domain solutions and then by their
+uniform graph bounds. The derivative is a finite source-word
+multiplier of degree at most one with integrable coefficients.
+The strong weighted convergence just proved and dominated convergence
+therefore pass its expectation and the integral, uniformly in $t$.
+Initial energies converge. Subtracting
+$\langle\psi_\epsilon,\Delta M_\epsilon\psi_\epsilon\rangle$
+then proves convergence of energies evaluated in the \emph{original}
+$h_t+b$, uniformly in time.
+
+Uniform coercivity supplies weak compactness in the fixed common form
+space. At each time the weak form limit is the already identified
+$L^2$ limit. Convergence of its original form norm gives strong form
+convergence. It is uniform in time: otherwise choose
+$\epsilon_k\to0$, $t_k\to t_*$ violating it. Absolute continuity of the
+common forms gives norm-continuity of $h_t:\mathcal V\to\mathcal V^*$,
+and the same work identity and weak-plus-norm argument give a
+form-continuous true orbit. Apply the argument at $t_*$ to that
+subsequence to obtain a contradiction.
+Complete current convergence follows from the bilinear
+common-kinetic-form inequality in Lemma~\ref{p3f:lem:formcurrent};
+the physical kinetic floor gives uniform action.
+Each smoothed parent meets the same domain and continuity theorem,
+so its reference-compatible flow is supplied by
+Corollary~\ref{p3d:cor:OLDflow}. No high radial-graph preservation or
+classical flow of an arbitrary numerical projection has been assumed.
+\end{proof}
+
+\section{Bare Coulomb with an unchanged Gaussian and prescribed fields}
+\label{p3d:sec:CRG}
+
+Consider two equal masses $M$ and equal charges $e$, positions
+$q_1,q_2$, COM $Q=(q_1+q_2)/2$, and relative position $R=q_1-q_2$.
+The physical collision is $R=0$. Retain all electronic and nuclear
+spins and an arbitrary passive finite internal reference.
+The prescribed vector, scalar and spin profiles have a common finite
+support enclosure on the finite time interval. A sufficient mixed
+spatial/time reserve is
+\begin{equation}\label{p3d:eq:gaugejets}
+ A_{\rm em}:C_x^8,\qquad
+ \partial_tA_{\rm em}:C_x^6,\qquad
+ \partial_t^2A_{\rm em}:C_x^4,\qquad
+ V:C_x^6,\quad \partial_tV:C_x^4.
+\end{equation}
+The relevant bounds and time derivatives are uniform or integrable
+as needed above. These are spatial reserves of the time-differentiated
+profiles, not eight time derivatives.
+
+In frequency units the dimensionless connections and positive kinetic
+coefficients are
+\[
+ a_Q=\frac e\hbar[A_{\rm em}(Q+R/2)+A_{\rm em}(Q-R/2)],\qquad
+ a_R=\frac e{2\hbar}[A_{\rm em}(Q+R/2)-A_{\rm em}(Q-R/2)],
+\]
+$\lambda_Q=\hbar/(4M)$ and $\lambda_R=\hbar/M$.
+The parent contains the full kinetic terms
+$\lambda_Q(p_Q-a_Q)^2+\lambda_R(p_R-a_R)^2$,
+bare repulsive Coulomb $g/(\hbar|R|)$ with $g>0$, a fixed bounded
+Hermitian hyperfine operator on the finite internal fibre that commutes
+with simultaneous rotations, and all specified scalar/spin controls.
+The hyperfine operator is independent of $Q,R,t$; no additional singular
+hyperfine coefficient is implicit in this parent. A normal first-order
+$a_R\cdot p_R$ is not a tangent word. The next exact gauge removes
+that obstruction while preserving physical positions and currents.
+
+\begin{lemma}[Relative radial gauge with global ray bounds]
+\label{p3d:lem:gauge}
+Set
+\[
+ \chi(Q,R,t)=\int_0^1R\cdot a_R(Q,sR,t)\,ds,\qquad
+ \psi_g=e^{-i\chi}\psi,
+\]
+$a_R'=a_R-\nabla_R\chi$, $a_Q'=a_Q-\nabla_Q\chi$.
+The scalar frequency potential gains $+\partial_t\chi$. Then
+\begin{equation}\label{p3d:eq:curvature}
+ R\cdot a_R'=0,\qquad
+ (a_R')_j=\int_0^1sR_k
+        [\partial_k(a_R)_j-\partial_j(a_R)_k](Q,sR,t)\,ds.
+\end{equation}
+The gauge and its needed derivatives are bounded globally.
+Writing $a_R'=R\times B_{\rm eff}$ with the appropriate curvature sign,
+both $B_{\rm eff}$ and $|Q|B_{\rm eff}$ have the bounded mixed
+COM/simultaneous-rotation jets needed by the tangent graph proof.
+\end{lemma}
+\begin{proof}
+Differentiate the radial integral and integrate the derivative of
+$s\,a_R(Q,sR)$ to obtain \eqref{p3d:eq:curvature}. Conjugating the
+Schr\"odinger equation gives the stated connections and scalar phase.
+Covariant currents are invariant under this scalar gauge, as are spin
+densities and their curls.
+
+Enclose the finite supports in $|x|\leq R_s$. Each ray
+$x=Q\pm sR/2$ spends $s$-length at most $4R_s/|R|$ in that ball.
+Thus terms with one explicit $R$ in any differentiated gauge integral
+are uniformly controlled by the ray length; terms without $R$ are
+bounded directly on $0\leq s\leq1$.
+At $R=0$, the difference defining $a_R$ is $O(R)$, so $\chi=O(|R|^2)$
+and the gauge is smooth through the collision.
+
+Up to a harmless sign,
+\[
+ B_{\rm eff}=\frac e{4\hbar}\int_0^1s
+ [B_{\rm em}(Q+sR/2)+B_{\rm em}(Q-sR/2)]\,ds .
+\]
+Hence
+$\|B_{\rm eff}\|_\infty\leq|e|\|B_{\rm em}\|_\infty/(4\hbar)$.
+On a support intersection,
+$|Q|\leq R_s+s|R|/2$.
+For $|R|\leq2R_s$ use $|Q|\leq2R_s$; for larger $|R|$ use
+$|Q|<|R|$ and the summed ray length at most $8R_s/|R|$.
+This gives the conservative bound
+\[
+ \||Q|B_{\rm eff}\|_\infty
+ \leq(2|e|R_s/\hbar)\|B_{\rm em}\|_\infty.
+ \]
+COM derivatives replace profiles by their derivatives.
+Simultaneous rotation acts on the actual supported field argument
+$x=Q\pm sR/2$ and its vector index; these weighted derivatives remain
+supported and bounded. Differentiating the explicit $Q$ gives lower
+terms already controlled. The same reasoning applies to the stated
+time-differentiated profiles with their common support enclosure.
+\end{proof}
+
+\begin{theorem}[Uncut Gaussian Coulomb flow]\label{p3d:thm:CRG}
+For the complete prescribed-field parent just specified, the unchanged
+normalized Gaussian entrance, with any fixed finite internal input,
+has a continuous evolved full wave off $R=0$, local full $H^2$ there,
+finite action and logarithmic costs, and all-times collision avoidance.
+Its complete reference-compatible flow is deterministic and unique
+in the class of Theorem~\ref{p3f:thm:deterministic}. Every one original
+law absolutely continuous with respect to its entrance density is
+transported by that flow without a collision cutoff or a stock change.
+\end{theorem}
+\begin{proof}
+Use
+$J=Q\times p_Q+R\times p_R+S_1+I_1+S_2+I_2$
+and $\mathcal A=1+p_Q^2+J^2$. The radial gauge gives the exact identity
+\[
+ (R\times B_{\rm eff})\cdot p_R
+ =-B_{\rm eff}\cdot J+B_{\rm eff}\cdot(Q\times p_Q)
+                                      +B_{\rm eff}\cdot S_{\rm all}.
+\]
+All coefficients are bounded by Lemma~\ref{p3d:lem:gauge}.
+Symmetrize these first-order terms, retaining their scalar divergence.
+The COM contraction already uses $p_Q$; the remaining squares,
+divergences and scalar/spin controls are bounded multiplication.
+Thus the gauged parent is its translation/rotation-invariant
+central Coulomb operator plus bounded-coefficient tangent words of
+degree at most one. The central operator strongly commutes with
+$\mathcal A$. The finite-word proof of \eqref{p3d:eq:comm} applies:
+$\ell$ commutators have degree at most $\ell+1\leq2\ell$.
+The expanded gauge divergence uses two original spatial derivatives,
+and three tangent-operator commutators can use six more. Its differentiated
+version uses six spatial derivatives of $A_{{\rm em},t}$, while the
+differentiated scalar $\chi_t$ requires four spatial derivatives of
+$A_{{\rm em},tt}$. This explains the reserve
+\eqref{p3d:eq:gaugejets}.
+
+Three-dimensional relative Hardy and interpolation give
+$\||R|^{-1}u\|\leq2\|\nabla_Ru\|$ and infinitesimal relative
+Laplacian boundedness of Coulomb. Bounded smooth connections are
+first-order infinitesimally Laplacian bounded. The common first
+domain is consequently $H^2(\mathbb R^6)$ and the form is
+$H^1(\mathbb R^6)$, with a positive physical kinetic floor after
+a bounded shift. The operator core crosses the collision.
+Functions vanishing near a relative codimension-three collision are
+form dense (cut off a smooth vector at radius $\epsilon$, whose
+added gradient norm is $O(\epsilon^{1/2})$), but need not be an
+$H^2$ graph core. In fact the relative trace at zero is continuous
+in relative $H^2$, so deleting that trace would exclude the Gaussian.
+
+The gauged Gaussian lies in $D(\mathcal A^3)\cap D(H_g(0))$ and
+$H_g(0)f_g\in D(\mathcal A^2)$. Tangent words leave $|R|^{-1}$
+undifferentiated and its product with a smooth Gaussian word is locally
+$L^2$ in three relative dimensions. The gauge jets are bounded.
+No $D(H_g^2)$ claim follows: a second radial action on
+$|R|^{-1}f_g$ generally has a collision-supported distribution.
+Theorem~\ref{p3d:thm:graph} therefore applies on the true common form.
+On compact collision-free charts there are five tangent coordinates,
+and \eqref{p3d:eq:product}--\eqref{p3d:eq:theta}, with
+$\theta>5/8$, give joint spacetime continuity and local full $H^2$.
+
+The full distributional continuity equation is on all Cartesian
+$\mathbb R^6$; no zero-density wall is placed at the collision.
+Physical coercivity and the first-graph bound supply the canonical
+length/action/log estimates of Proposition~\ref{p3f:prop:canonical}.
+For collision avoidance, the gauged normal connection is exactly zero,
+and Hardy gives
+\begin{equation}\label{p3d:eq:Coulombguard}
+ \int_0^T\!\int\frac{|j_R\cdot\widehat R|}{|R|}
+ \leq2\lambda_R\int_0^T
+          \|\psi_g/|R|\|\|\nabla_R\psi_g\|\,dt<\infty.
+\end{equation}
+If a complete bounded spin-curl contribution is specified, retain
+its additional bound
+\[
+ C\|\psi_g/|R|\|(\|\nabla_R\psi_g\|+\|\nabla_Q\psi_g\|).
+\]
+Use the smooth Cartesian tests
+$h_\epsilon(R)=\frac12\log(|R|^2+\epsilon^2)$, whose gradient magnitude
+is at most $1/|R|$. The expected variation is uniformly bounded by
+\eqref{p3d:eq:Coulombguard}; a path starting off the collision and
+reaching it would have divergent limiting variation. Fatou excludes
+such paths at every time. A fixed-time collision null set would not
+prove this. The central deterministic-flow theorem now applies, and
+the gauge preserves its physical positions and currents.
+\end{proof}
+
+\section{An electron with a retained quantum oscillator source}
+\label{p3d:sec:HQA}
+
+In reduced-mass atomic units let
+\begin{equation}\label{p3d:eq:HQA}
+ h=-\tfrac12\Delta_r-|r|^{-1},\qquad
+ H_s=\Omega(N_Y+\tfrac12)=\tfrac\Omega2(-\partial_Y^2+Y^2),\qquad
+ H(t)=h+H_s+g(t)Yd_R(r),\quad \Omega>0.
+\end{equation}
+Here $d_R(r)=z\chi_R(|r|)$ is real, compactly supported $C^6$, equal
+to $z$ on a prescribed inner ball, with its complete smooth collar
+retained. The real $g$ is bounded and absolutely continuous on the
+finite horizon, with $g'\in L^1$. The source amplitude is the
+configuration coordinate $Y$, not its expectation.
+Use the complete currents
+\begin{equation}\label{p3d:eq:HQAcurrents}
+ j_r=\operatorname{Im}\psi^\dagger\nabla_r\psi,\qquad
+ j_Y=\Omega\operatorname{Im}\psi^\dagger\partial_Y\psi.
+\end{equation}
+The entrance is
+$f(r,Y)=\pi^{-1/2}e^{-|r|}\psi_1(Y)\otimes\zeta$,
+where $\psi_1$ is the normalized first excited oscillator wave and
+$\zeta$ is any normalized vector in the passive finite internal
+reference. Both the Coulomb cusp and the source node at $Y=0$ remain.
+
+\begin{theorem}[Full Coulomb--source flow]\label{p3d:thm:HQA}
+The parent \eqref{p3d:eq:HQA} with this entrance has a common physical
+form and first domain, finite-horizon graph bounds, and a jointly
+continuous evolved full wave on $r\neq0$. Its complete current
+\eqref{p3d:eq:HQAcurrents} supplies the hypotheses of
+Theorem~\ref{p3f:thm:deterministic}, with all-times collision and
+node avoidance for the reference law. It therefore defines a unique
+deterministic reference-compatible electron/source flow and transports
+one arbitrary entrance law $\mu_0\ll|f|^2\,dr\,dY$ by once-only
+reweighting. No source occupation or source position is drawn from a
+postulated equilibrium distribution.
+\end{theorem}
+\begin{proof}
+For a smooth test in the electron coordinate,
+\[
+ 0\leq\tfrac14\|\nabla u+2\widehat r\,u\|^2
+ =\tfrac14\|\nabla u\|^2+\|u\|^2-\int |u|^2/|r|.
+\]
+The integration by parts uses
+$\operatorname{div}\widehat r=2/|r|$ and extends by Hardy to $H^1$.
+Thus $h+1\geq p_r^2/4$. Young's inequality gives
+$gYd_R\geq-\Omega Y^2/4-g^2\|d_R\|_\infty^2/\Omega$,
+and $H_s-\Omega Y^2/4\geq H_s/2$. In particular
+\begin{equation}\label{p3d:eq:HQAcoercivity}
+ H(t)+2+\frac{g(t)^2\|d_R\|_\infty^2}{\Omega}
+ \geq1+\tfrac14p_r^2+\tfrac12H_s .
+\end{equation}
+The true common form domain is
+$\mathcal V=H^1(\mathbb R^3_r\times\mathbb R_Y)
+\cap\{Yu\in L^2\}$.
+Coulomb is infinitesimally Laplacian bounded by Hardy and
+interpolation. The independent source oscillator satisfies
+$\|Yu\|\leq\sqrt{2/\Omega}\|H_s^{1/2}u\|$; hence the bounded-profile
+coupling is infinitesimally operator bounded against
+$H_{\rm c}=h+H_s$. After a shift the two central operators are positive
+and strongly commute, so
+$D(H_{\rm c})=D(h)\cap D(H_s)$.
+This is the common first domain of every $H(t)$.
+
+Use the tangent/source estimate operator
+$\mathcal A=1+J_e^2+N_Y$, $J_e=r\times(-i\nabla_r)$.
+It strongly commutes with $H_{\rm c}$.
+Angular commutation with multiplication by $d_R$ produces a bounded
+angular derivative and at most one angular generator; source
+commutation gives $[N_Y,Y]=-\partial_Y$ and
+$[N_Y,\partial_Y]=-Y$. Thus each
+$\operatorname{ad}_{\mathcal A}^{\ell}(Yd_R)$, $\ell\leq3$,
+has tangent/source degree at most $\ell+1\leq2\ell$ and uses at most
+six profile jets. Angular representation and oscillator ladder bounds
+give \eqref{p3d:eq:comm}, while four differentiated jets and integrable
+$g'$ give \eqref{p3d:eq:timeder}. The source $Y$ is unbounded but its
+degree has been paid explicitly.
+
+The entrance lies in every $\mathcal A$ graph and in the true first
+$H$ domain. Its central part is an eigenvector, and $Yd_R f$
+has only electron angular degree one and source occupations zero
+and two. These have square-integrable radial factors, so
+$H(0)f\in D(\mathcal A^2)$. The test core crosses $r=0$ in the
+operator domain; a collision-deleted core is used only for form
+density. The spectral projections of $\mathcal A$ commute with the shifted central
+form and converge on its joint core. All hypotheses of
+Theorem~\ref{p3d:thm:graph} are thereby verified.
+In particular the weakly closed identity is
+\[
+ (h+H_s)\mathcal A^2\psi
+       =\mathcal A^2[H(t)\psi-g(t)Yd_R\psi]\in L^2 .
+\]
+On compact electron annuli and bounded source charts, subtract the
+angular/source terms, controlled by $\mathcal A^3\psi$, to obtain the
+genuine radial second-order equation for $\mathcal A^2\psi$.
+There are three tangent coordinates, the two electron angles and $Y$.
+Equations \eqref{p3d:eq:product}--\eqref{p3d:eq:theta} with
+$\theta>3/8$ give joint spacetime continuity and local full $H^2$
+away from the collision. The argument has not required a high power
+of the full Coulomb Hamiltonian.
+
+Testing the physical form against real multipliers yields the full
+Cartesian conservation law
+$\partial_t\rho+\operatorname{div}_rj_r+\partial_Yj_Y=0$
+on all four coordinates, with no deleted-collision boundary source.
+The coercive floor and first graph give finite current length/action
+and logarithmic costs by Proposition~\ref{p3f:prop:canonical}.
+Hardy in the electron coordinate gives
+\[
+ \int_0^T\!\int\frac{|j_r\cdot\widehat r|}{|r|}
+ \leq\int_0^T\|\psi/|r|\|\|\nabla_r\psi\|\,dt
+ \leq2\int_0^T\|\nabla_r\psi\|^2dt<\infty.
+\]
+The smooth logarithmic collision test used in
+\eqref{p3d:eq:Coulombguard} excludes every-time collision encounters
+for the reference paths. The initial source node is a different
+issue; Lemma~\ref{p3f:lem:chain} applies to the proved continuous
+full wave and finite log/action costs, without deleting that node.
+The deterministic theorem now gives the conclusion. Since the
+entrance density is positive almost everywhere except the
+measure-zero source nodal plane, any original joint Lebesgue-AC
+law is also AC relative to it. Singular entrance mass on that
+plane is outside this assertion.
+\end{proof}
+
+\begin{proposition}[Reciprocal current at the true source entrance]
+\label{p3d:prop:backreaction}
+If $g$ is constant near the entrance, the complete first-time currents
+for the entrance above, whose spatial factor is real, satisfy in $L^1$,
+\begin{equation}\label{p3d:eq:backreaction}
+ \left.\partial_tj_r\right|_0=-gY\rho_0\nabla_rd_R,\qquad
+ \left.\partial_tj_Y\right|_0=-\Omega g\,d_R\rho_0.
+\end{equation}
+The spatially integrated first source current is zero, although
+for nonzero $g$ and a nonzero dipole profile the full conditional
+source-current derivative is not.
+\end{proposition}
+\begin{proof}
+$Hf=(E_0+gYd_R)f$, where $f$ is a real spatial factor times a fixed
+internal vector.
+Both $f$ and $Hf$ belong to the physical form domain: the cusp is
+$H^1$, the profile is smooth, and all oscillator polynomial factors
+have finite first form. Spectral calculus for the constant parent
+therefore gives differentiability at zero in the form norm with
+$\dot\psi(0)=-iHf$. Differentiating the current bilinear, whose
+form-to-$L^1$ continuity follows by Cauchy, cancels the two terms
+containing $(E_0+gYd_R)f\nabla f$. The remaining term is
+$-\rho_0\nabla(gYd_R)$, with the appropriate kinetic coefficient,
+which gives \eqref{p3d:eq:backreaction}.
+The profile $d_R$ is odd under $z\mapsto-z$ and the entrance electron
+density is even, so its electron integral vanishes. At a generic
+configuration $d_R\rho_0\neq0$. Replacing $Y$ by its mean would
+erase this complete-coordinate response. The result is a first
+derivative for constant entrance coupling, not an asserted
+$O(t^2)$ remainder for an arbitrary merely AC control.
+\end{proof}
+
+\section{A distinct compact-entrance Coulomb alternative}
+\label{p3d:sec:FR}
+
+The preceding Coulomb theorem keeps the original Gaussian.
+A different sufficient route is useful when classical smooth-flow
+charts are wanted. It changes the entrance, and the two conclusions
+must not be identified.
+
+\begin{corollary}[Smooth collision-separated entrance]\label{p3d:cor:FR}
+Let a time-independent scalar Friedrichs parent on $\mathbb R^6$
+contain positive kinetic energy, repulsive Coulomb
+$g/|De_1+q_d-q_r|$, and smooth confining scalar or finite Hermitian
+spin-diagonal potentials, with a physical kinetic floor
+$H+c\geq T$. If $\theta\in C_c^\infty$ is supported strictly away
+from the collision and $G$ is a smooth Gaussian, then
+$f=\theta G/\|\theta G\|$ belongs to $D(H^k)$ for every finite $k$.
+Its evolution is smooth in spacetime away from collision.
+The complete scalar-current flow is almost surely global and
+equivariant for the reference entrance and any one
+$\mu_0\ll|f|^2dq$. Off nodes and collision its local flow maps
+have ordinary smooth inverses.
+\end{corollary}
+\begin{proof}
+The new $f$ is in $C_c^\infty$ of the collision-free domain.
+On its compact support every coefficient of $H$ is smooth, and
+local differentiation does not enlarge support. Thus
+$H^kf\in C_c^\infty$ of that same domain for every $k$, proving
+the domain assertion by induction. Unitary evolution preserves
+each graph norm. Local elliptic estimates on nested compact
+subsets give arbitrarily high spatial Sobolev regularity, while
+time derivatives are powers of $H$. Strong continuity in each
+graph norm and Sobolev embedding give the jointly smooth
+representative away from collision. Support need not remain compact.
+The conserved kinetic floor gives finite kinetic energy on each
+finite interval, and the complete first graph supplies the
+logarithmic time cost. Relative Hardy excludes all-times collisions.
+One may apply the smooth-current global-existence criterion
+of Teufel--Tumulka \cite{TTflow}, or the already established
+Theorem~\ref{p3f:thm:deterministic} with these stronger hypotheses.
+Ordinary local ODE theory applies where the smooth density is
+positive and gives the stated local inverses.
+\end{proof}
+
+For instance choose $\theta=1$ on $|q|\leq D/16$ and $\theta=0$
+on $|q|\geq D/8$, with a flat smooth transition. Then
+$|q_d-q_r|\leq\sqrt2D/8<D/4$ on its support, so the collision
+distance is at least $3D/4$. This explicit stock change is sufficient
+for the graph-power proof. An unchanged Gaussian is nonzero at the
+collision; applying the kinetic operator again to its $gG/r$
+first image generally produces a nonzero collision delta and
+non-$L^2$ terms. An exponentially small Gaussian value there
+does not repair that domain failure. Corollary~\ref{p3d:cor:FR}
+therefore provides no uncharged replacement of the entrance
+in Theorem~\ref{p3d:thm:CRG}.
+
+\section{The quantitative cost of the anisotropic continuity route}
+\label{p3d:sec:quantitative}
+
+\begin{proposition}[A flat embedding bound with the physical factors retained]
+\label{p3d:prop:quantitative}
+Let a localized extension $u$ on one radial and seven tangent Euclidean
+coordinates satisfy $\|u\|_2\leq e$ and
+$\|u\|_{H^2_rH^4_{\rm tan}}\leq M$.
+With unitary Fourier convention and $\theta=15/16$,
+\begin{equation}\label{p3d:eq:quantitative}
+ \|u\|_\infty\leq C_\theta e^{1/16}M^{15/16},\qquad
+ C_\theta^2\leq\frac{15}{616\pi^5}<10^{-4}.
+\end{equation}
+On physical charts the localization, extension, coordinate Jacobian
+and any half-density constants must multiply this flat bound.
+\end{proposition}
+\begin{proof}
+Fourier H\"older bounds the
+$H^{2\theta}_rH^{4\theta}_{\rm tan}$ norm by
+$e^{1-\theta}M^\theta$. Cauchy in the evaluation integral gives
+\[
+ C_\theta^2=(2\pi)^{-8}I_1(2\theta)I_7(4\theta),\qquad
+ I_m(s)=\int_{\mathbb R^m}(1+|\xi|^2)^{-s}d\xi .
+\]
+The strict thresholds are $2\theta>1/2$ and $4\theta>7/2$.
+For the displayed rational upper bound no special-function
+evaluation is needed. Splitting each integral at radius one,
+\[
+ I_1(15/8)\leq2(1+4/11)=30/11,\qquad
+ I_7(15/4)\leq |S^6|(1/7+2)=16\pi^3/7.
+\]
+Here $|S^6|=16\pi^3/15$.
+Multiplying and dividing by $(2\pi)^8$ gives
+$15/(616\pi^5)$; the elementary lower bound $\pi>3.14$
+proves it is below $10^{-4}$.
+\end{proof}
+
+For two waves, the density difference obeys
+$\|\rho-\widetilde\rho\|_\infty
+\leq(\|\psi\|_\infty+\|\widetilde\psi\|_\infty)
+       \|\psi-\widetilde\psi\|_\infty$.
+Thus the genuine product graphs can supply a common positive-density
+tube for Theorem~\ref{p3f:thm:stability}.
+They supply only the slow error exponent $1/16$ in the eight-coordinate
+case. The compact COM radius enters the tangent ellipticity constant;
+physical source widths enter the profile derivatives; chart and
+extension factors remain; and the propagated graph constants can be
+large. The flat number below $0.01$ is consequently not a numerical
+record-error certificate or a small physical stability coefficient.
+It is the explicit analytic link between an attained common-form/graph
+comparison and the positive-tube hypothesis of the whole-history
+theorem.
+
+\section{Why the complete current and original law matter}\label{p3r:scope}
+The flow theorem concerns one declared configuration space, wave and current. Its conclusions cannot be transferred by retaining only a marginal density or by changing the kinetic constitution. The following examples make these distinctions quantitative.
+
+\subsection{A hidden current that cancels after contraction}\label{p3r:hidden}
+Use normalized Haar measure $dx\,dy/(16\pi^2)$ on the torus of side $4\pi$. For the free Hamiltonian $-\tfrac12(\partial_x^2+\partial_y^2)$ take the two-component wave
+\begin{equation}\label{p3r:torus-wave}
+ \psi_1=\cos(y/2)e^{i(3x/2-5t/4)},\qquad
+ \psi_2=\sin(y/2)e^{i(x/2-t/4)}.
+\end{equation}
+Both components solve the same Schr\"odinger equation: their energies are respectively $(9/4+1/4)/2=5/4$ and $(1/4+1/4)/2=1/4$. The complete density is $\rho=1$, and the canonical current and velocity are
+\[
+ j=b=(1+\tfrac12\cos y,0).
+\]
+Thus $y$ stays fixed and $x$ advances at a rate depending on the retained coordinate $y$. The initial actual relative density $f_0=1+\tfrac12\cos(2y)$ has mass one, lies between $1/2$ and $3/2$, and is transported unchanged.
+
+For the moving test $h(t,x,y)=\sin(x-t)$,
+\[
+ \partial_t h+b\cdot\nabla h=\tfrac12\cos y\cos(x-t).
+\]
+The expected total variation of this test, per unit time, equals
+\begin{equation}\label{p3r:hidden-exact}
+ \int|\rho\partial_t h+j\cdot\nabla h|
+   =\frac{2}{\pi^2},\qquad
+ \int f_0|\rho\partial_t h+j\cdot\nabla h|
+   =\frac{7}{3\pi^2}<\frac{3}{\pi^2}.
+\end{equation}
+Indeed the averages of $|\cos x|$, $|\cos y|$ and $|\cos y|\cos(2y)$ are $2/\pi$, $2/\pi$ and $2/(3\pi)$. Time integration gives these constants times the interval length. Integrating the signed expression over $y$ \emph{before} taking its absolute value instead gives zero. All waves and flows here are smooth and deterministic. The lost positive term is solely a consequence of discarding a retained current coordinate. This also checks the once-only actual-law multiplier: the actual expectation is bounded by $3/2$ times its reference value, without replacing $f_0$ by one.
+
+\subsection[Singular full laws despite regular marginals]{An absolutely continuous marginal does not admit a singular full law}\label{p3r:singular}
+On the unit circle let $H=-b\partial_c^2$, $b>0$, and
+\[
+ \psi(c,t)=\frac{1+2i e^{-i4\pi^2bt}\cos(2\pi c)}{\sqrt3},
+ \qquad T=\frac{1}{8\pi b}.
+\]
+The initial density is $1+\tfrac23\cos(4\pi c)\ge1/3$. For $0\le t<T$ the wave has no zero; at $T$ it is $(1+2\cos(2\pi c))/\sqrt3$ and vanishes at $c=1/3$. Let $F_t(c)=\int_0^c|\psi(u,t)|^2\,du$. The current vanishes at $c=0$, so continuity gives $\partial_tF_t=-j(c,t)$ and hence $F_t(c(t))$ is constant along guidance paths before $T$. Direct integration yields
+\[
+ F_0(c)=c+\frac{\sin(4\pi c)}{6\pi},\qquad
+ F_T(1/3)=\frac13+\frac{\sqrt3}{4\pi}=:p_*.
+\]
+There is a unique $c_0$ with $F_0(c_0)=p_*$, since $F'_0\ge1/3$. The guidance trajectory from $c_0$ converges to $1/3$ at $T$: all $F_t$ converge uniformly to the strictly increasing $F_T$, so their inverse at $p_*$ converges as well. An actual atom at $c_0$ therefore reaches a wave node with probability one. Tensoring independent smooth writer and source densities changes neither statement. This does not contradict almost-sure admission for a full law absolutely continuous with respect to $\rho_0$; the atom violates exactly that premise. A smooth partial marginal alone does not supply the complete entrance hypothesis.
+
+\subsection{A nonlocal current need not vanish at wave nodes}\label{p3r:nonlocal}
+For the free positive square-root dispersion $E(p)=\sqrt{1+p^2}$, choose the continuity-current kernel
+\[
+ \mathcal J(p,q)=\frac{p+q}{E(p)+E(q)}.
+\]
+This is the free kinetic current discussed by Kowalski--Rembieli\'nski~\cite[Section III]{KowalskiRembielinski2011}; its specification, including any divergence-free freedom in higher dimensions, is part of the parent model. On a circle of length $2\pi/\sqrt3$ set $k=\sqrt3$ and $\Psi(x,t)=e^{-it}-e^{i(kx-2t)}$. An overall normalization multiplies density and current by the same positive constant and is immaterial below. With $\alpha=kx-t$,
+\begin{equation}\label{p3r:nonlocal-formula}
+ \rho=2-2\cos\alpha,\qquad
+ j=\frac{k}{2}-\frac{2k}{3}\cos\alpha.
+\end{equation}
+The diagonal terms are $\mathcal J(0,0)=0$ and $\mathcal J(k,k)=k/2$; the two cross terms sum to $-2k\cos\alpha/3$. Also $\partial_t\rho=-2\sin\alpha$ and $\partial_xj=2\sin\alpha$, verifying continuity directly. At every moving node, $j=-\sqrt3/6\ne0$. Near a node $\rho\sim\alpha^2$ whereas $j$ has a nonzero limit, so the spatial action $\int j^2/\rho$ is infinite at every time.
+
+The nodal set has zero spacetime volume, so pointwise nonzero current there alone does not violate the theorem's almost-everywhere zero-set condition. The decisive failures are the divergent action and logarithmic cost: near a node $|j\partial_x\rho|/\rho$ is proportional to $1/|\alpha|$. Thus the canonical finite-action and logarithmic proof cannot be imported from a formal continuity equation alone. The example does not rule out other flow constructions for this nonlocal model; in one dimension a suitable cumulative-density construction gives a different route. It identifies the failed hypotheses of the present theorem precisely.
+
+\subsection{What a later record theorem must supply}\label{p3r:interface}
+The deterministic flow and stability results establish a path-level foundation. To use them in a measurement model, one must still identify the physical configuration, the complete current, the original joint entrance law, a common decoder, the relevant time interval and every exceptional guard. In particular, a current length has units of configuration distance after time integration. Dividing by a proved traversal width can yield a probability estimate; merely renaming the length as a probability cannot.
+
+Proposition~\ref{p3f:prop:guards}, specifically \eqref{p3f:eq:smoothhistory}, supplies the complete-current variation bound for a differentiable test $h(t,q)$ under an original cap. A traversal that changes $h$ by at least $a>0$ costs at least $a$ variation, so its probability is bounded by that expectation divided by $a$, with any original entrance exception added. A fixed sharp surface requires an appropriate area formula; an almost-every-level coarea statement does not by itself establish the bound at a prescribed level. Neither a small endpoint wave error nor a weak-path existence theorem supplies these extra ingredients.
+
+\subsection{Interfaces with preparation, records and coherent sources}
+The companion preparation manuscript~\cite{RodgersP1} proves explicit
+positive Gaussian flows and a one-use conditional preparation/instrument
+result. Its revised argument does not depend on the singular-flow
+applications here. The repeated-record manuscript~\cite{RodgersP2}
+provides its own current and flow admission for a finite effective
+scalar schedule; additional positional spectators must satisfy its
+stated regularity conditions. The present flow theorem supplies
+neither that manuscript's full-bank entrance bound nor its numerical
+whole-record estimate. Conversely, preparation of an actual law or
+reset of a wave factor does not establish the analytic hypotheses of
+Theorem~\ref{p3f:thm:deterministic} for a different parent.
+
+The compact-profile electron--oscillator parent in the coherent-source
+manuscript~\cite{RodgersP4} is the constant-$g$ specialization of
+\eqref{p3d:eq:HQA} when the profile, entrance, units, complete canonical
+currents and horizon agree. Its coherent comparison wave need not be
+normalized or conservative. It therefore does not automatically define
+a second equivariant flow for Section~\ref{p3f:sec:stability}.
+Use of Appendix~\ref{p3r:signed-source} instead requires its own
+normalized reference, classical local regularity and finite source
+costs. Neither a current-error bound nor weak wave convergence supplies
+those premises by itself.
+
+These three companion manuscripts belong to the new portfolio. They
+are distinct from the current October website research editions and
+the preserved September editions. No completed integration is asserted,
+and no assumption is transferred between the pilot-medium and
+massive-configuration constitutions without a separate argument.
+
+\section{Conclusion}\label{p3r:conclusion}
+A complete conservative quantum current can define deterministic reference-compatible histories under explicit density, action, logarithmic, Sobolev and boundary hypotheses. The reference density serves both as a compression measure and as the measure identifying exceptional entrances. It does not replace the original actual law. Once deterministic disintegration is established, every original absolutely continuous law is carried by the same measurable flow, while quantitative history estimates retain their original cap or truncation cost.
+
+The stability result controls a supremum over the full history and separates two distinct tasks: approximating the complete density/current within a positive tube and paying for paths that leave it. Singular interactions and retained sources make those tasks substantive. The domain applications show how tangent regularity and first-domain control can contribute without assuming arbitrary powers of a Hamiltonian across a radial jump or Coulomb collision. Their quantitative constants, including the weak interpolation power in high dimension, remain part of the result's practical limitations.
+
+A future physical application must independently justify one Hamiltonian and current constitution, its source and preparation law, the required estimates on the same parent, and a faithful record with a specified decoder and retention interval. These are distinct obligations; the flow theorem neither solves them by implication nor loses its mathematical content because they remain. The signed-source appendix provides a separate controlled comparison when an approximate reference is not exactly conservative.
+
+\subsection*{Funding, assistance and review}
+This research was conducted independently without external funding. AI systems assisted with drafting, mathematical checks, literature verification and manuscript preparation. The author remains responsible for the arguments and presentation; AI assistance does not constitute independent scientific validation. Collaboration on independent mathematical verification, computational replication or physical implementation is welcome.
+
+\appendix
+\section{Approximate continuity and a whole-path source allowance}\label{p3r:signed-source}
+An approximate reference may retain the canonical kinetic current while its nonlocal comparison term creates a signed continuity defect. Such a reference is not an exactly equivariant second flow to which conservative two-flow stability can simply be applied. The following complementary result prices the defect directly. It is stated under classical local regularity, independently of the weak regularity theorem in the main text.
+
+\begin{theorem}[Signed-source comparison]\label{p3r:source-theorem}
+Let $\rho\ge0$ and $j$ be $C^1$ on $[0,T]\times\mathbb R^d$, with $\int\rho_t=1$, and let $b=j/\rho$ be locally $C^1$ on $\mathcal O=\{\rho>0\}$. Suppose
+\[
+ \partial_t\rho+\operatorname{div}j=s,\qquad
+ s\in L^1(dt\,dq),\qquad \int s(t,q)\,dq=0
+\]
+in distributions, with the displayed equation pointwise in $\mathcal O$, and $s^-=0$ almost everywhere on $\{\rho=0\}$. Assume
+\begin{equation}\label{p3r:source-costs}
+ \int_0^T\!\int |j|<\infty,\qquad
+ \int_0^T\!\int\bigl(|s|+\rho|\operatorname{div}b|\bigr)<\infty,
+\end{equation}
+where terms involving $b$ are integrated on $\mathcal O$. Follow the maximal classical $b$-characteristic from an entrance with law $\rho_0dq$, and put it in a cemetery state if it terminates at a node or at infinity. Write $\mu_t^{\rm raw}$ for its endpoint law, including the cemetery state, and
+\[
+ K(t)=\int_0^t\!\int s^-\,dq\,dr
+     =\frac12\int_0^t\|s(r)\|_1\,dr.
+\]
+The probability of termination by $t$ is at most $K(t)$, and
+\begin{equation}\label{p3r:source-TV}
+ \operatorname{TV}(\mu_t^{\rm raw},\rho_tdq)\le K(t).
+\end{equation}
+Moreover, for a regular moving surface $\Sigma_t$ for which the transverse-crossing area formula holds on the local flow charts,
+\begin{equation}\label{p3r:source-crossing}
+ \mathbb P_{\rm raw}(\text{a transverse crossing before }T)
+ \le K(T)+\int_0^T\!\int_{\Sigma_t}
+             |j\cdot n-\rho w_n|\,dS\,dt.
+\end{equation}
+Tangential contacts require their own area-formula or guard treatment. The same result holds on a complete flat torus; physical boundaries require a separate no-loss argument.
+\end{theorem}
+
+\begin{proof}
+On a maximal positive-density characteristic define the nonnegative rate $\kappa=s^-/\rho$. Attach an auxiliary exponential variable of mean one solely to construct a comparison measure, and end this weighted path when its accumulated rate reaches that variable. Equivalently the survival weight to $t$ is
+\[
+ a_t(q_0)=\exp\left[-\int_0^t\kappa(r,q_r)\,dr\right]
+\]
+before the maximal lifetime. This auxiliary killing does not change the physical raw characteristic.
+
+First exhaust $\mathcal O$ by compact positive-density flow charts and remove a path when it exits a chart. The density $k$ of characteristics still present solves the absorptive transport equation with zero incoming chart data,
+\[
+ \partial_tk+\operatorname{div}(bk)=-\kappa k,
+ \qquad k(0)=\rho_0
+\]
+on portions reached from time zero. The comparison density solves the same equation with the additional nonnegative source $s^+$:
+\[
+ \partial_t\rho+\operatorname{div}(b\rho)=-\kappa\rho+s^+.
+\]
+Along a regular characteristic, multiplying by its positive Jacobian reduces these equations to scalar linear equations. Variation of constants gives $0\le k\le\rho$, including at chart inflow where the killed density is zero and $\rho\ge0$. Exhaustion and monotone convergence preserve this domination until the maximal lifetime. The total mass killed by the rate is consequently bounded by
+\begin{equation}\label{p3r:hazard-cost}
+ \int_0^t\!\int\kappa k\le\int_0^t\!\int s^-=K(t).
+\end{equation}
+
+It remains to exclude uncharged disappearance of paths that survive this rate. Under the killed comparison measure their expected length before killing or chart exit is bounded by $\int|b|\rho=\int|j|$. Since
+\[
+ (\partial_t+b\cdot\nabla)\log\rho
+       =s/\rho-\operatorname{div}b,
+\]
+their expected total logarithmic-density variation is bounded by the second integral in \eqref{p3r:source-costs}. Tonelli and chart exhaustion therefore give finite length and finite logarithmic variation almost surely up to their maximal lifetime or killing time. An un-killed path terminating at a finite time has a finite spatial limit by finite length. Its logarithmic density has a finite limit as well, so continuity gives a strictly positive density at that limiting spacetime point. Local classical continuation there extends the path, a contradiction. This argument also excludes a nodal arrival at the terminal time $T$ by taking the one-sided limit.
+
+For a bad raw path whose accumulated rate up to termination is finite, the auxiliary survival probability is strictly positive. A positive raw measure of such paths would therefore give positive probability to an un-killed bad path, which was just excluded. Hence almost every bad raw path has infinite accumulated rate and is killed with probability one before termination. Equation~\eqref{p3r:hazard-cost} bounds the raw bad-path probability by $K(t)$.
+
+At time $t$, $k_tdq$ is a common submeasure of $\rho_tdq$ and $\mu_t^{\rm raw}$, and has mass at least $1-K(t)$: its only possible loss is now the paid killing loss. Both endpoint measures have total mass one. Removing their common submeasure leaves positive measures of equal mass at most $K(t)$, proving \eqref{p3r:source-TV}. In particular their full variation norm is at most $2K(t)$.
+
+Finally divide a raw crossing event into paths killed before $T$ and those surviving to $T$. The first class has probability at most $K(T)$. The probability of a crossing in the second class is no larger than the expected number of transverse crossings before killing. The stipulated local area formula represents this expectation by the complete absolute relative flux with density $k$:
+\[
+ \int_0^T\!\int_{\Sigma_t}k|b\cdot n-w_n|\,dS\,dt
+ \le\int_0^T\!\int_{\Sigma_t}|j\cdot n-\rho w_n|\,dS\,dt.
+\]
+All hidden coordinates remain in the surface integral. This proves \eqref{p3r:source-crossing}.
+\end{proof}
+
+\begin{example}[The half-variation convention is sharp]\label{p3r:source-factor}
+On the unit circle let $j=0$ and $\rho(t,x)=1+\epsilon t\cos(2\pi x)$, with $\epsilon T<1$. The raw flow is stationary and retains density one. Since $s=\epsilon\cos(2\pi x)$, one has $K(t)=\epsilon t/\pi$. Direct integration gives $\operatorname{TV}(1,\rho_t)=\epsilon t/\pi$ and full variation norm $2\epsilon t/\pi$. The theorem's factor of two between these two conventions cannot be removed.
+\end{example}
+
+\begin{example}[A small source does not give exact node avoidance]\label{p3r:source-node}
+Let $f$ be the real normalized wave with $|f|^2$ the standard Gaussian on $\mathbb R$, and put $g(x)=xf(x)$. These are orthonormal. The bounded self-adjoint nonlocal operator
+\[
+ H=i\epsilon\bigl(|g\rangle\langle f|-|f\rangle\langle g|\bigr)
+\]
+has norm $\epsilon$, and evolves $f$ to $\Phi_t=f\cos(\epsilon t)+g\sin(\epsilon t)$. Its canonical kinetic current is zero because $\Phi_t$ is real. The signed source is $s=\partial_t|\Phi_t|^2$, with $\|s\|_1\le2\|\Phi_t\|\|\partial_t\Phi_t\|=2\epsilon$. Both regularity costs in \eqref{p3r:source-costs} are finite. If $0<\epsilon T<\pi/2$, the moving wave node $x=-\cot(\epsilon t)$ reaches a positive Gaussian measure of stationary raw initial points before $T$. Thus an arbitrarily small source gives a small \emph{allowance} for nodal failure, not exact conservative equivariance. This is a mathematical comparison example, not an identified material Hamiltonian.
+\end{example}
+
+The entrance used in Theorem~\ref{p3r:source-theorem} is explicitly $\rho_0$. For an original law $\mu_0=f_0\rho_0$ with $f_0\le C$, its bad-path and crossing-event estimates transfer with a factor $C$, by reweighting the raw entrance once. The endpoint comparison \eqref{p3r:source-TV} remains a statement about the reference entrance; an arbitrary non-Born endpoint need not be close to $\rho_t$. For general unbounded integrable $f_0$, a truncation gives, for any event with reference probability at most $a$,
+\[
+ \mathbb P_{\mu_0}(A)\le M a+\int_{\{f_0>M\}}f_0\rho_0\,dq
+ \quad(M>0).
+\]
+This follows by splitting the same original entrance integral. It preserves the admitted law and exposes the additional quantitative resource needed when a finite cap is unavailable.
+
+\clearpage
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{BerndlEtAl1995} K. Berndl, D. D\"urr, S. Goldstein, G. Peruzzi and N. Zangh\`i, On the Global Existence of Bohmian Mechanics, \emph{Commun. Math. Phys.} \textbf{173} (1995), 647--674. \href{https://doi.org/10.1007/BF02101660}{doi:10.1007/BF02101660}; \href{https://arxiv.org/abs/quant-ph/9503013}{arXiv:quant-ph/9503013}.
+\bibitem{TTflow} S. Teufel and R. Tumulka, Simple Proof for Global Existence of Bohmian Trajectories, \emph{Commun. Math. Phys.} \textbf{258} (2005), 349--365. \href{https://doi.org/10.1007/s00220-005-1302-0}{doi:10.1007/s00220-005-1302-0}; \href{https://arxiv.org/abs/math-ph/0406030}{arXiv:math-ph/0406030}.
+\bibitem{DiPernaLions1989} R. J. DiPerna and P.-L. Lions, Ordinary differential equations, transport theory and Sobolev spaces, \emph{Invent. Math.} \textbf{98} (1989), 511--547. \href{https://doi.org/10.1007/BF01393835}{doi:10.1007/BF01393835}.
+\bibitem{Ambrosio2004} L. Ambrosio, Transport equation and Cauchy problem for BV vector fields, \emph{Invent. Math.} \textbf{158} (2004), 227--260. \href{https://doi.org/10.1007/s00222-004-0367-2}{doi:10.1007/s00222-004-0367-2}.
+\bibitem{CDLflow} G. Crippa and C. De Lellis, Estimates and regularity results for the DiPerna--Lions flow, \emph{J. Reine Angew. Math.} \textbf{616} (2008), 15--46. \href{https://doi.org/10.1515/CRELLE.2008.016}{doi:10.1515/CRELLE.2008.016}. Author preprint: \href{https://www.math.ias.edu/delellis/sites/math.ias.edu.delellis/files/Estimates_ODEs.pdf}{Estimates\_ODEs.pdf}.
+\bibitem{STsuperposition} E. Stepanov and D. Trevisan, Three superposition principles: currents, continuity equations and curves of measures, \emph{J. Funct. Anal.} \textbf{272} (2017), 1044--1103. \href{https://doi.org/10.1016/j.jfa.2016.10.025}{doi:10.1016/j.jfa.2016.10.025}; \href{https://arxiv.org/abs/1512.05109}{arXiv:1512.05109}.
+\bibitem{ACFmaximal} L. Ambrosio, M. Colombo and A. Figalli, Existence and Uniqueness of Maximal Regular Flows for Non-smooth Vector Fields, \emph{Arch. Ration. Mech. Anal.} \textbf{218} (2015), 1043--1081. \href{https://doi.org/10.1007/s00205-015-0875-9}{doi:10.1007/s00205-015-0875-9}; \href{https://arxiv.org/abs/1406.3701}{arXiv:1406.3701}.
+\bibitem{SchmidGriesemer2014} J. Schmid and M. Griesemer, Kato's Theorem on the Integration of Non-Autonomous Linear Evolution Equations, \emph{Math. Phys. Anal. Geom.} \textbf{17} (2014), 265--271. \href{https://doi.org/10.1007/s11040-014-9154-5}{doi:10.1007/s11040-014-9154-5}; \href{https://arxiv.org/abs/1203.4700}{arXiv:1203.4700}.
+\bibitem{Yajima2016} K. Yajima, Existence and Regularity of Propagators for Multi-Particle Schr\"odinger Equations in External Fields, \emph{Commun. Math. Phys.} \textbf{347} (2016), 103--126. \href{https://doi.org/10.1007/s00220-016-2582-2}{doi:10.1007/s00220-016-2582-2}; \href{https://arxiv.org/abs/1508.05724}{arXiv:1508.05724}.
+\bibitem{RodgersPilot2026} J. Rodgers, \emph{A Deterministic Hybrid Medium for Bell Jump Paths and Autonomous Records}, version 2, research manuscript revising the September pilot-medium paper, 4 October 2026. \href{https://doi.org/10.5281/zenodo.23131075}{doi:10.5281/zenodo.23131075}.
+\bibitem{RodgersP1} J. Rodgers, \emph{Conditional Gaussian Preparation with Retained Archives}, revised companion manuscript, 2026. \href{https://doi.org/10.5281/zenodo.23259560}{doi:10.5281/zenodo.23259560}.
+\bibitem{RodgersP2} J. Rodgers, \emph{Effective Repeated Position Records with Retained Entropy and Calibrated Reset}, revised companion manuscript, 2026. \href{https://doi.org/10.5281/zenodo.23259558}{doi:10.5281/zenodo.23259558}.
+\bibitem{RodgersP4} J. Rodgers, \emph{Complete-Current Estimates for Coherent Quantum Sources and Continua}, companion manuscript, 2026. \href{https://doi.org/10.5281/zenodo.23259571}{doi:10.5281/zenodo.23259571}.
+\bibitem{KowalskiRembielinski2011} K. Kowalski and J. Rembieli\'nski, The Salpeter equation and probability current in the relativistic Hamiltonian quantum mechanics, \emph{Phys. Rev. A} \textbf{84} (2011), 012108. \href{https://doi.org/10.1103/PhysRevA.84.012108}{doi:10.1103/PhysRevA.84.012108}; \href{https://arxiv.org/abs/1110.5146}{arXiv:1110.5146}.
+\end{thebibliography}
+
+\end{document}

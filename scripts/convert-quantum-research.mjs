@@ -17,7 +17,11 @@ const assetDir = path.join(root, "public/publications/quantum-measurement/resear
 const contentDir = path.join(root, "content/quantum-research");
 const sourceArg = process.argv.indexOf("--source-dir");
 const sourceDir = sourceArg < 0 ? path.join(root, "content/quantum-research/sources") : path.resolve(process.argv[sourceArg + 1]);
-const sources = JSON.parse(fs.readFileSync(path.join(contentDir, "publications.json"), "utf8")).map(p => ({ ...p, book: false, source: `${p.id}.tex`, pdf: `${p.id}.pdf` }));
+const onlyArg = process.argv.indexOf("--only");
+const onlyIds = onlyArg < 0 ? null : new Set(process.argv[onlyArg + 1].split(","));
+const allSources = JSON.parse(fs.readFileSync(path.join(contentDir, "publications.json"), "utf8")).map(p => ({ ...p, book: false, source: `${p.id}.tex`, pdf: `${p.id}.pdf` }));
+const sources = onlyIds ? allSources.filter(p => onlyIds.has(p.id)) : allSources;
+if (onlyIds && sources.length !== onlyIds.size) throw new Error("Unknown publication id in --only");
 
 fs.mkdirSync(assetDir, { recursive: true });
 fs.mkdirSync(contentDir, { recursive: true });
@@ -148,7 +152,10 @@ function splitTop(s, delimiter) {
   parts.push(s.slice(start)); return parts;
 }
 
-const inventory = []; const audit = { schemaVersion: 1, converter: "scripts/convert-quantum-research.mjs", documents: [] };
+const previousInventory = onlyIds && fs.existsSync(path.join(contentDir, "index.json")) ? JSON.parse(fs.readFileSync(path.join(contentDir, "index.json"), "utf8")) : [];
+const previousAudit = onlyIds && fs.existsSync(path.join(contentDir, "audit.json")) ? JSON.parse(fs.readFileSync(path.join(contentDir, "audit.json"), "utf8")) : { documents: [] };
+const inventory = previousInventory.filter(doc => !onlyIds?.has(doc.publicationId));
+const audit = { schemaVersion: 1, converter: "scripts/convert-quantum-research.mjs", documents: previousAudit.documents.filter(doc => !onlyIds?.has(doc.id)) };
 for (const source of sources) {
   const sourcePath = path.join(sourceDir, `${source.id}.tex`);
   fs.rmSync(path.join(contentDir, source.id), {recursive:true, force:true});
@@ -293,7 +300,14 @@ for (const source of sources) {
       });
       renderTex = `\\begin{${node.env}}${rows.join("\\\\")}\\end{${node.env}}`;
     }
-    try { html = katex.renderToString(renderTex, { displayMode: node.display, throwOnError: true, output: "htmlAndMathml", macros: { ...macros }, strict: "ignore", trust: false }); }
+    try {
+      // KaTeX does not accept TeX's array intercolumn spacing specifier. This
+      // changes spacing only; the source expression remains exact in its
+      // accessible annotation and the downloadable Markdown.
+      const layoutTex = renderTex.replace(/@\{\\qquad\}/g, "");
+      html = katex.renderToString(layoutTex, { displayMode: node.display, throwOnError: true, output: "htmlAndMathml", macros: { ...macros }, strict: "ignore", trust: false });
+      if (layoutTex !== renderTex) html = html.replace(/(<annotation encoding="application\/x-tex">)[\s\S]*?(<\/annotation>)/, (_, open, close) => open + escape(renderTex) + close);
+    }
     catch (error) { mathErrors.push({ document: doc.slug, latex: tex, error: error.message }); html = `<code class="quantum-math-error">${escape(tex)}</code>`; }
     const anchors = (node.labels || []).map(key => `<span id="${escape(key)}" class="quantum-anchor"></span>`).join("");
     const md = `${(node.labels || []).map(key => `<a id="${key}"></a>\n`).join("")}${node.display ? "\n\n$$\n" : "$"}${expandMacros(tex, macros)}${node.display ? `\n$$\n${node.number ? `\nEquation (${node.number}).\n` : ""}\n` : "$"}`;
@@ -429,7 +443,7 @@ for (const source of sources) {
   }
   function words(text) { return text.normalize("NFC").toLowerCase().match(/[\p{L}\p{N}]+/gu) || []; }
   function counts(tokens) { const result = new Map(); for (const token of tokens) result.set(token, (result.get(token) || 0) + 1); return result; }
-  const macroHeader = `<!-- 4 October 2026 publication, PDF-reconciled conversion source. Mathematical macros used below:\n${Object.entries(macros).map(([name, body]) => `${name} = ${body}`).join("\n")}\n-->\n\n`;
+  const macroHeader = `<!-- ${source.dateLabel || "4 October 2026"} publication, PDF-reconciled conversion source. Mathematical macros used below:\n${Object.entries(macros).map(([name, body]) => `${name} = ${body}`).join("\n")}\n-->\n\n`;
   for (const doc of documents) {
     const value = render(doc.nodes, doc); const title = doc.label ? `${doc.label}: ${doc.title}` : doc.title;
     const expectedWords = words(sourceProse(doc.nodes)); const actualWords = words(htmlProse(value.html));
@@ -446,7 +460,7 @@ for (const source of sources) {
     markdownParts.push(`# ${title}\n\n${value.md.trim()}`);
     const { nodes, rawTitle, ...meta } = doc; inventory.push(meta);
   }
-  fs.writeFileSync(path.join(assetDir, `${source.id}.md`), `# ${source.title}\n\nJeremy Rodgers · Independent Researcher · 4 October 2026\n\n[Manuscript DOI](https://doi.org/${source.doi}) · [Original PDF](/publications/quantum-measurement/research/${source.id}.pdf)\n\n` + macroHeader + markdownParts.join("\n\n---\n\n") + "\n");
+  fs.writeFileSync(path.join(assetDir, `${source.id}.md`), `# ${source.title}\n\nJeremy Rodgers · Independent Researcher · ${source.dateLabel || "4 October 2026"}\n\n[Manuscript DOI](https://doi.org/${source.doi}) · [Original PDF](/publications/quantum-measurement/research/${source.id}.pdf)\n\n` + macroHeader + markdownParts.join("\n\n---\n\n") + "\n");
   const sourceCount = name => [...body.matchAll(new RegExp(`\\\\begin\\{${name}\\}`, "g"))].length;
   const sourceStats = {
     chapters: documents.filter(d => ["chapter", "appendix", "frontmatter"].includes(d.kind)).length,

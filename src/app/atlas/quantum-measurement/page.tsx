@@ -3,7 +3,7 @@ import Link from "next/link";
 import { atlasEdges, atlasNodeMap, getAtlasNode, measurementNodeIds } from "@/data/reality-atlas";
 import { site } from "@/config/site";
 
-const description = "Explore equilibrium uniqueness, deterministic Bell paths and faithful quantum records in the Reality Atlas, with five complete October research papers and their distinct mathematical relationships.";
+const description = "Explore equilibrium, conditional preparation, deterministic histories, retained quantum sources and faithful records in the Reality Atlas, with complete research articles and their mathematical relationships.";
 
 export const metadata: Metadata = {
   title: "Quantum Measurement in the Atlas",
@@ -32,14 +32,14 @@ export default function MeasurementAtlasGuide() {
     <article className="atlas-field-guide">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org", "@type": "Article", headline: "Quantum Measurement in the Reality Atlas",
-        description, url: new URL("/atlas/quantum-measurement", site.url).toString(), datePublished: "2026-09-15", dateModified: "2026-10-04",
+        description, url: new URL("/atlas/quantum-measurement", site.url).toString(), datePublished: "2026-09-15", dateModified: "2026-10-09",
         author: { "@type": "Person", name: "Jeremy Rodgers" },
         about: measurementNodeIds.map((id) => ({ "@type": "Thing", name: getAtlasNode(id).label })),
       }).replace(/</g, "\\u003c") }} />
       <header className="atlas-guide-head">
         <p className="section-label">Reality Atlas / Quantum Measurement</p>
         <h1>Where a source becomes<br />a recorded history.</h1>
-        <p>The Atlas connects equilibrium, event histories and physical records to the wider source-to-readout architecture. The two construction routes below now sit alongside equilibrium uniqueness and quantitative nonequilibrium records.</p>
+        <p>The Atlas connects equilibrium, event histories and physical records to the wider source-to-readout architecture. The two construction routes below sit alongside equilibrium uniqueness, conditional preparation, quantitative nonequilibrium records and the analytic tools for retained sources.</p>
         <div className="atlas-guide-actions">
           <Link href="/atlas?focus=measurement-programme">Enter this region of the Atlas ↗</Link>
           <Link href="/quantum-measurement">Programme and complete publications →</Link>
@@ -68,6 +68,20 @@ export default function MeasurementAtlasGuide() {
       <section className="atlas-guide-relations" aria-label="October research connections">
         <div><h2>Why the Born measure?</h2><p><Link href="/quantum-measurement/research/control-consistency">Control consistency</Link> singles out a regular density assignment using local scalar controls and fixed interactions. <Link href="/quantum-measurement/research/preparation-returns">Preparation returns</Link> single out an arbitrary Borel law at an engineered reference preparation. They answer different statistical questions.</p></div>
         <div><h2>What survives beyond equilibrium?</h2><p><Link href="/quantum-measurement/research/nonequilibrium-records">Two finite record models</Link> bound both the joint calibrated symbolic history and failure to retain an actual earlier label. Their Hamiltonians, input domains and numerical constants stay separate.</p></div>
+      </section>
+      <section id="retained-systems" className="space-y-5 scroll-mt-24" aria-labelledby="retained-systems-heading">
+        <div>
+          <p className="section-label">9 October portfolio · Four complete articles</p>
+          <h2 id="retained-systems-heading" className="text-2xl font-bold tracking-tight">Prepare, record, transport and estimate</h2>
+          <p className="mt-3 leading-relaxed text-mute">These papers examine the complete retained experiment from four directions. Preparation keeps the archive, resetting keeps the correlations, transport keeps the original law, and current estimates keep the quantum source and its feedback.</p>
+        </div>
+        <div className="atlas-guide-relations">
+          <div><h3 className="font-semibold text-lg"><Link href="/quantum-measurement/research/conditional-gaussian-preparation">Conditional Gaussian preparation →</Link></h3><p>A smooth reversible construction prepares a writer conditionally on its retained archive under physical score and moment assumptions. Its instrument result uses a separate receiver and covers one admitted unknown input.</p></div>
+          <div><h3 className="font-semibold text-lg"><Link href="/quantum-measurement/research/repeated-position-records">Repeated position records →</Link></h3><p>A finite protocol writes and preserves distinct receiver records through copying, calibrated wave reset and later operations. The whole-bank law and retained correlations remain part of the theorem.</p></div>
+          <div><h3 className="font-semibold text-lg"><Link href="/quantum-measurement/research/reference-weighted-flows">Deterministic flows →</Link></h3><p>Complete currents select reference-compatible histories under explicit regularity and boundary assumptions. Reweighting those paths transports admitted original laws, including applications with singular interactions and retained sources.</p></div>
+          <div><h3 className="font-semibold text-lg"><Link href="/quantum-measurement/research/complete-current-estimates">Complete-current estimates →</Link></h3><p>Coherent response estimates retain source motion, interference, reciprocal feedback and continua. The coupled Coulomb electron and oscillator example gives quantitative current bounds for its declared parent.</p></div>
+        </div>
+        <p className="text-sm leading-relaxed text-mute">The links describe conditional interfaces. A prepared writer does not establish the repeated-record bank premises; wave reset does not renew actual independence; current comparison needs the stated geometry and flow before it controls a history probability. Portfolio paper labels P1 to P4 are distinct from the pilot interaction axioms with those names.</p>
       </section>
       <p className="section-label">Seven connected locations</p>
       <nav className="atlas-guide-index" aria-label="Measurement Atlas contents">

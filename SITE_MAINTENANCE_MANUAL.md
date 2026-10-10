@@ -554,3 +554,22 @@ Seven HTML-escaped inequality symbols inside mathematics were changed to equival
 LaTeX relation commands for correct KaTeX rendering. Their comparison table has a
 keyboard-accessible horizontal-scroll wrapper for narrow screens. These are
 presentation repairs, not revisions of the historical scientific claims.
+
+
+## 9 October 2026 quantum portfolio
+
+The four retained-archive, repeated-record, deterministic-flow and complete-current papers extend the existing research registry. Original PDFs and website-bearing TeX downloads are preserved in `public/publications/quantum-measurement/research/`; conversion inputs and matching PDF equation numbers are in `content/quantum-research/sources/`. Each publication owns its date in `publications.json`.
+
+To regenerate only these editions, run:
+
+```sh
+node scripts/convert-quantum-research.mjs --only conditional-gaussian-preparation,repeated-position-records,reference-weighted-flows,complete-current-estimates
+npm run audit:quantum-research
+npm run build
+```
+
+Article introductions and reading guides are in `src/config/quantum-portfolio-guides.ts`. They accompany the complete source-preserving technical sections. Preserve every argument when editing the presentation. The existing audit checks source prose, formal structures, references and original mathematical expressions against rendered MathML annotations.
+
+Dense research and monograph contents lists disable automatic route prefetch to avoid downloading unopened chapters. Next/previous navigation retains the standard behavior. The research routes remain statically generated, and complete HTML, MathML and Markdown remain accessible. This reduces speculative browser requests; production ISR cost depends on actual cache behavior and traffic and has not been measured here.
+
+Deploy using the existing project and hosting workflow. No changes to billing, domain configuration or hosting settings are required by this update.

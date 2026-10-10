@@ -28,6 +28,8 @@ import {
   observableRoutes,
 } from '@/data/reality-atlas';
 
+const quantumResearchDate = quantumResearchPublications.reduce((latest, publication) => publication.published > latest ? publication.published : latest, quantumMonograph.published);
+
 function esc(s: string): string {
   return s
     .replace(/&/g, '&amp;')
@@ -65,7 +67,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     ...listDevelopmentDocuments().map(d => ({loc:d.url,lastmod:development.date,priority:'0.8'})),
     { loc: sealedLeaky.url, lastmod: sealedLeaky.webDate, priority: '0.9' },
     ...listSealedDocuments().map(d => ({loc:d.url,lastmod:sealedLeaky.webDate,priority:'0.8'})),
-    { loc: '/atlas/quantum-measurement', lastmod: '2026-10-04', priority: '0.8' },
+    { loc: '/atlas/quantum-measurement', lastmod: quantumResearchDate, priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
       priority:
@@ -81,7 +83,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
       priority: '0.8',
     })),
     ...[...quantumPublications, ...quantumResearchPublications].map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
-    ...listQuantumResearchDocuments().map(document => ({ loc: document.url, lastmod: '2026-10-04', priority: '0.8' })),
+    ...listQuantumResearchDocuments().map(document => ({ loc: document.url, lastmod: quantumResearchPublications.find(publication => publication.id === document.publicationId)?.published, priority: '0.8' })),
     ...listQuantumDocuments().map((document) => ({ loc: document.url, lastmod: quantumMonograph.published, priority: '0.8' })),
     ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
@@ -238,7 +240,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Canonical authority and result map',
     '',
-    '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions. Five October 2026 papers extend and consolidate the programme with equilibrium uniqueness, autonomous chains, hybrid Bell paths and restricted-nonequilibrium records, each under its own hypotheses.',
+    '- The canonical source-readout foundation is the seven-paper Shadow Theory sequence (Papers 1-7, published 2026-07-15). The September 2026 Quantum Measurement publications supply separate physical constitutions. The October 2026 research papers extend the programme with equilibrium uniqueness, autonomous chains, hybrid Bell paths, restricted-nonequilibrium records, conditional Gaussian preparation, repeated position records, deterministic flows with singular interactions and complete-current estimates. Each keeps its own hypotheses.',
     '- A previous six-paper canonical stack (June 2026) was replaced by the seven-paper sequence; its records remain published on Zenodo and are listed below as superseded canonical versions. They are not current authority and their architecture (down-compilation, runtime calculus, synthesis) is not carried forward.',
     '- Older Everything Equation / Tier-0 / Tier-1 era materials on this site are historical background only; if any superseded or historical material conflicts with Papers 1-7, the current sequence controls.',
     '- Paper 1 establishes exact quotient presentation together with independent descent and equivariant-reconstruction obstructions.',
@@ -271,9 +273,9 @@ export async function generateLlmsTxt(): Promise<string> {
         `- [${i.label ? `${i.label}: ` : ''}${i.title}](${baseUrl}/monograph/${i.slug})`
     ),
     '',
-    '## Quantum Measurement and Born Rule (September editions and five October research papers)',
+    `## Quantum Measurement and Born Rule (September editions and ${quantumResearchPublications.length} October research papers)`,
     '',
-    `Original editions published ${quantumMonograph.published}; five research papers dated 2026-10-04. Author: ${quantumMonograph.author}, ${quantumMonograph.authorRole}. Programme overview: ${baseUrl}/quantum-measurement. Full inventory with stable anchors and source-comparison counts: ${baseUrl}/quantum-measurement/manifest.json.`,
+    `Original editions published ${quantumMonograph.published}; ${quantumResearchPublications.length} research papers with dates recorded individually below, latest ${quantumResearchDate}. Author: ${quantumMonograph.author}, ${quantumMonograph.authorRole}. Programme overview: ${baseUrl}/quantum-measurement. Full inventory with stable anchors and source-comparison counts: ${baseUrl}/quantum-measurement/manifest.json.`,
     '',
     'The pilot-medium completion uses a declared P1-P4 interaction catalogue, independent spatial-gas preparation, conservative packet export, finite recombination and carrier population tracking. It yields controlled total-variation convergence on complete tagged paths to the minimal Bell process in unchanged physical time on a finite graph and horizon. Its finite autonomous apparatus retains material records; finite deviations and recurrence bound the claim.',
     'The massive-configuration completion separately postulates the universal spinor inventory, kinetic-momentum guidance and complete initial equilibrium with a finite independent ready stock. It gives continuous physical configuration paths, semibounded apparatus dynamics, retained resources, a massive autonomous controller, and separate retained-output and archive-history error bounds. It does not assume or derive discrete Bell jumps for internal spin labels.',
@@ -285,13 +287,15 @@ export async function generateLlmsTxt(): Promise<string> {
       `  - [PDF](${baseUrl}${publication.pdfUrl}) · [LaTeX source](${baseUrl}${publication.texUrl}) · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
     ]),
     '',
-    '### Five October 2026 research papers',
+    '### October 2026 research papers',
     'Control consistency characterizes a regular projective density assignment under local scalar controls and fixed connected interactions. Its A1-A3 theorem, A4 nodal extension, spin, symmetry and binary-flag variants retain distinct hypotheses. Preparation-return holonomy instead proves all-Borel uniqueness at an engineered reference preparation under its exact-return library. The regular-family and single-preparation results are logically independent; neither derives its statistical premise for actual preparations.',
     'The equilibrium-chain revision realizes fixed finite programmes under Bohmian guidance, complete equilibrium and finite ready resources, separating quantum-output error from absolute-flux historical error. The hybrid revision proves complete ordinary-configuration Bell-path convergence using P1-P4, calibrated carriers and independent spatial gas. Its smooth contact-module appendix does not realize the entire hybrid model with interleaved exports.',
     'The nonequilibrium paper contains separate periodic and radial Hamiltonians and initial-law classes. Periodic joint calibrated record-law distance is at most 0.00443484008607784720002304; actual copy-and-hold failure is at most 0.00232725479707784720002304. Radial joint earlier-label and entire symbolic record-law distance is below 0.006086770113; actual copy-and-hold failure is below 0.000552421956. Its separate compatible-coupling earlier-label comparison is below 0.003331233001. The periodic model admits its stated inaccessible reference; the radial theorem has its stated two-component qubit domain. Coarse calibration does not imply fine-grained equilibrium, and unspent margin does not establish hardware-source error.',
+    'The 9 October portfolio adds four complete research articles. P1, Conditional Gaussian Preparation with Retained Archives, proves conditional subsystem preparation under full original-law score and moment hypotheses and a compatible one-use instrument result. P2, Effective Repeated Position Records with Retained Entropy and Calibrated Reset, constructs finite joint position records under its own bank premises while retaining correlations through wave reset. P3, Reference-Weighted Deterministic Quantum Flows with Singular Interactions and Retained Sources, establishes reference-compatible flows, original-law reweighting and stability within specified analytic domains. P4, Complete-Current Estimates for Coherent Quantum Sources and Continua, bounds coherent response and complete currents while retaining quantum sources and feedback.',
+    'These portfolio labels P1-P4 identify papers; they are distinct from the pilot-medium P1-P4 interaction axioms. One-use preparation is not repeated unknown-input readiness; resetting a wave does not create fresh actual independence. Flow existence and current comparison supply separate analytic inputs, with application-specific hypotheses still required for apparatus and history conclusions.',
     ...quantumResearchPublications.flatMap(publication => [
       `- [${publication.title}](${baseUrl}${publication.webUrl}): ${publication.dateLabel}; DOI ${publication.doiUrl}; publication record ${baseUrl}/papers/${publication.paperSlug}.`,
-      `  - [Original PDF](${baseUrl}${publication.pdfUrl}) · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
+      `  - [Original PDF](${baseUrl}${publication.pdfUrl})${publication.texUrl ? ` · [LaTeX source](${baseUrl}${publication.texUrl})` : ''} · [Complete Markdown](${baseUrl}${publication.markdownUrl})`,
       ...listQuantumResearchDocuments().filter(document => document.publicationId === publication.id).map(document => `  - [${document.label ? `${document.label}: ` : ''}${document.title}](${baseUrl}${document.url}) · [Markdown](${baseUrl}${document.markdownUrl})`),
     ]),
     '',
@@ -391,6 +395,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development and bounded agency; ordered technical sections, source formats, guides and the agency article)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
+    site.author.researchStatement,
   ];
   return lines.join('\n') + '\n';
 }
@@ -478,11 +483,11 @@ export async function generateGraph() {
     {
       id: 'quantum-measurement', type: 'research-programme',
       title: 'Quantum Measurement and the Born Rule',
-      date: '2026-10-04',
+      date: quantumResearchDate,
       status: 'mathematical results under declared model and statistical premises; independent review and material realization remain open',
       url: `${baseUrl}/quantum-measurement`,
       manifest: `${baseUrl}/quantum-measurement/manifest.json`,
-      scope: 'Independent control-consistency and preparation-return equilibrium characterizations; equilibrium chains; hybrid Bell paths; two separate nonequilibrium record models. Each result retains its own hypotheses and observable.',
+      scope: 'Independent control-consistency and preparation-return equilibrium characterizations; equilibrium chains; hybrid Bell paths; two separate nonequilibrium record models; conditional Gaussian preparation; repeated position records with calibrated reset; deterministic flows with singular interactions; complete-current estimates with retained coherent sources. Each result retains its own hypotheses and observable.',
     },
     ...[...listQuantumDocuments(), ...listQuantumResearchDocuments()].map((document) => ({
       id: `quantum:${document.publicationId}:${document.slug}`,
@@ -672,6 +677,18 @@ export async function generateGraph() {
       if (index < documents.length - 1) edges.push({ from: documentId, to: `quantum:${documents[index + 1].publicationId}:${documents[index + 1].slug}`, relation: 'reading-order' });
     });
   }
+  const portfolioInterfaces = [
+    { from: 'conditional-gaussian-preparation', to: 'repeated-position-records', note: 'Preparation and readiness interface: the repeated-record theorem still requires its complete-bank premises; the one-use preparation theorem does not establish repeated unknown-input measurement.' },
+    { from: 'reference-weighted-flows', to: 'conditional-gaussian-preparation', note: 'Flow theory can support preparation arguments only after the concrete parent, current, regularity and original-law hypotheses are verified.' },
+    { from: 'reference-weighted-flows', to: 'repeated-position-records', note: 'Flow and original-law transfer require the stated parent and analytic assumptions; they do not supply record or reset estimates.' },
+    { from: 'reference-weighted-flows', to: 'complete-current-estimates', note: 'The retained electron-oscillator parent is compared on matching profiles, units and horizon. Conservative two-flow stability and signed-source comparison have separate hypotheses.' },
+    { from: 'complete-current-estimates', to: 'repeated-position-records', note: 'Complete-current estimates are related analytic inputs. Current bounds become history probabilities only with the specified flow, geometry, decoder and original-law transfer.' },
+  ];
+  for (const connection of portfolioInterfaces) edges.push({ from: `paper:quantum-${connection.from}`, to: `paper:quantum-${connection.to}`, relation: 'conditional-interface', note: connection.note });
+  edges.push({ from: 'paper:quantum-conditional-gaussian-preparation', to: 'atlas:born-statistics', relation: 'conditional-preparation-result', note: 'Full conditional scores and actual moments permit a subsystem preparation theorem with retained archives; fine-grained global equilibration is not inferred.' });
+  edges.push({ from: 'paper:quantum-repeated-position-records', to: 'atlas:material-records', relation: 'finite-repeated-record-construction', note: 'Distinct receivers, retained correlations and calibrated wave reset under the stated complete-bank law and control assumptions.' });
+  edges.push({ from: 'paper:quantum-reference-weighted-flows', to: 'atlas:massive-configuration', relation: 'related-analytic-foundation', note: 'Extends available flow analysis to stated singular models. Application to a separate constitution requires matching its current and analytic hypotheses.' });
+  edges.push({ from: 'paper:quantum-complete-current-estimates', to: 'atlas:measurement-source', relation: 'related-current-analysis', note: 'Coherent source motion and reciprocal feedback are retained. The continuum estimates do not transfer the pilot interaction axioms.' });
   edges.push({ from: 'paper:quantum-control-consistency', to: 'paper:quantum-preparation-returns', relation: 'complementary-characterization', note: 'Logically independent: a regular family across states versus arbitrary Borel laws at an engineered preparation.' });
   edges.push({ from: `paper:${quantumPublications.find(publication => publication.id === 'pilot-medium')!.paperSlug}`, to: 'paper:quantum-hybrid-bell-paths', relation: 'consolidated-by', note: 'The original fixed edition remains available; the October revision controls its own statements.' });
   edges.push({ from: `paper:${quantumPublications.find(publication => publication.id === 'massive-configuration')!.paperSlug}`, to: 'paper:quantum-equilibrium-records', relation: 'consolidated-by', note: 'The October revision states the joint symbolic-record observable and preserves separate output/history estimates.' });
@@ -782,9 +799,10 @@ export async function generateGraph() {
     description: site.description,
     url: baseUrl,
     generated: 'build-time',
+    author: { ...site.author, url: `${baseUrl}/about` },
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, reference-weighted deterministic flows with singular interactions, and complete-current estimates with retained coherent sources. These papers supply separate results and conditional interfaces, without an automatic complete-apparatus theorem. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

@@ -151,8 +151,8 @@ const measurementNodes: AtlasNodeDefinition[] = [
     shortLabel: "Measurement",
     position: [-12, 4.5, 7.7],
     color: "#bca5ff",
-    summary: "Equilibrium uniqueness, complete event histories and faithful physical records define the expanded measurement programme.",
-    description: "Five October papers join the September monograph and companions. Control consistency and engineered exact returns characterize equilibrium under distinct statistical premises. The hybrid and equilibrium constructions control complete Bell paths and retained records. Two further effective models prove quantitative faithful records for restricted nonequilibrium laws. These are separate theorems with explicit preparation and interaction requirements.",
+    summary: "Equilibrium, conditional preparation, deterministic histories and faithful physical records define the expanded measurement programme.",
+    description: "The October papers extend the September monograph and companions. Control consistency and engineered exact returns characterize equilibrium under distinct statistical premises. Hybrid and equilibrium constructions control complete Bell paths and retained records, while two effective models cover restricted nonequilibrium laws. The 9 October portfolio adds conditional Gaussian preparation with archives, repeated position records and calibrated reset, deterministic flows with singular interactions, and complete-current estimates for coherent sources. Each result keeps its own preparation, analytic and control requirements.",
     mathematicalType: "Programme map of independent uniqueness results and model-specific path/record constructions",
     domain: "Declared source dynamics, physical constitution and complete preparation",
     codomain: "Actual paths, Born-compatible outputs and retained material histories within each constitution",
@@ -162,7 +162,8 @@ const measurementNodes: AtlasNodeDefinition[] = [
     gate: "Each result retains its own model, statistical premises, horizon and observable. Independent assessment and material realization are separate research steps.",
     readingLinks: [
       { label: "Explore the programme", href: "/quantum-measurement" },
-      { label: "Five October research advances", href: "/quantum-measurement#new-results" },
+      { label: "October research advances", href: "/quantum-measurement#new-results" },
+      { label: "Preparation, records, flows and complete currents", href: "/atlas/quantum-measurement#retained-systems" },
       { label: "Read the complete monograph", href: "/quantum-measurement/monograph" },
       { label: "Atlas guide to the two constructions", href: "/atlas/quantum-measurement" },
     ],
@@ -182,6 +183,7 @@ const measurementNodes: AtlasNodeDefinition[] = [
     downstream: ["pilot-medium", "bell-event-law"],
     gate: "The bond-action and interaction assumptions belong to the pilot constitution; they are not consequences of source/readout incompleteness.",
     readingLinks: [
+      { label: "Complete currents with coherent sources and continua", href: "/quantum-measurement/research/complete-current-estimates" },
       { label: "Canonical edge ownership and export", href: "/quantum-measurement/pilot-medium#sec:source" },
       { label: "Source, readout and the statistical target", href: "/quantum-measurement/monograph/source-readout-and-the-statistical-target" },
     ],
@@ -251,6 +253,7 @@ const measurementNodes: AtlasNodeDefinition[] = [
     errorNorm: "Retained-wave/output comparison plus a separate absolute archive-flux bound for historical corruption",
     gate: "The guidance and equilibrium premises are not derived from incompleteness. Equivariant rivals can keep reliable records while having mutually singular microscopic paths.",
     readingLinks: [
+      { label: "Deterministic flows with singular interactions and retained sources", href: "/quantum-measurement/research/reference-weighted-flows" },
       { label: "October revision · autonomous equilibrium records", href: "/quantum-measurement/research/equilibrium-records" },
       { label: "Massive companion · physical constitution", href: "/quantum-measurement/massive-configuration#sec:constitution" },
       { label: "Massive companion · exact pointer writer", href: "/quantum-measurement/massive-configuration#prop:writer" },
@@ -275,6 +278,7 @@ const measurementNodes: AtlasNodeDefinition[] = [
     downstream: ["quantum"],
     gate: "Matching Born outputs does not uniquely determine microscopic dynamics; endpoint probabilities, complete paths and faithful records are different conclusions.",
     readingLinks: [
+      { label: "Conditional Gaussian preparation with retained archives", href: "/quantum-measurement/research/conditional-gaussian-preparation" },
       { label: "Control consistency · regular density uniqueness", href: "/quantum-measurement/research/control-consistency" },
       { label: "Preparation returns · all-Borel uniqueness", href: "/quantum-measurement/research/preparation-returns" },
       { label: "Nonequilibrium · calibrated complete records", href: "/quantum-measurement/research/nonequilibrium-records" },
@@ -301,6 +305,8 @@ const measurementNodes: AtlasNodeDefinition[] = [
     downstream: ["quantum-records"],
     gate: "The programme's apparatus records connect conceptually to the Atlas objective archive. Broader redundancy, persistence and geometric reconstruction require the existing archive criteria as well.",
     readingLinks: [
+      { label: "Repeated position records with calibrated reset", href: "/quantum-measurement/research/repeated-position-records" },
+      { label: "Coherent-source current estimates for record analysis", href: "/quantum-measurement/research/complete-current-estimates" },
       { label: "October · autonomous equilibrium archives", href: "/quantum-measurement/research/equilibrium-records" },
       { label: "October · quantitative nonequilibrium records", href: "/quantum-measurement/research/nonequilibrium-records" },
       { label: "Pilot · faithful monomial copy cut", href: "/quantum-measurement/pilot-medium#mat:copy" },

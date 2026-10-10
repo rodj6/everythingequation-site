@@ -39,6 +39,7 @@ The seven-paper foundation develops exact mathematics for what readouts preserve
     name: "Jeremy Rodgers",
     affiliation: "Independent Researcher",
     email: "jeremysemails@gmail.com",
+    researchStatement: "This research is conducted independently without external funding. Jeremy welcomes independent mathematical review, research collaboration, institutional and industrial partnerships, research support, and relevant professional opportunities.",
   },
 
   /**
@@ -94,6 +95,7 @@ The seven-paper foundation develops exact mathematics for what readouts preserve
       "A canonical minimal-completion construction that determines the least additional structure required by a nominated family of source relations.",
       "An RS2 physical witness in which identical instantaneous brane readouts evolve into different futures, together with the exact projected Einstein equation and a parameter-free cross-regime relation.",
       "Two published constitutive completions of quantum measurement: a controlled pilot-medium Bell-path limit with material records, and a separate massive-configuration construction with retained-output and archive-history bounds.",
+      "Conditional Gaussian preparation, repeated position records with calibrated reset, deterministic flows with singular interactions, and complete-current estimates for coherent sources, each with explicit retained-system and statistical hypotheses.",
       "SPC-2 specifies perspective admission, lived content and process continuation, with a finite completion theorem conditional on certified realization and its constitutive premises.",
     ],
     programme: [
