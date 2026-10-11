@@ -1,6 +1,6 @@
 {
   "source": "Full matching v2.1 LaTeX and compiled bibliography read independently; output inspected as generated HTML.",
-  "articleSha256": "db8c38a8a49c63adc1959edb05cad00b8c2bce5f3697196dc416a19fbc290f44",
+  "articleSha256": "e5a8456b2a33283e51c594e52fe85c6a9342ac82c987ae3d0d8c5102b72ef62b",
   "sourceParagraphs": 226,
   "orderedSourceParagraphsMatched": 226,
   "missingParagraphs": [],
@@ -131,5 +131,77 @@
   "semanticReview": "Independently read all sections; matched paragraph order and original mathematical expressions. Scope, hypotheses, preparation/premise qualifications, all comparisons and source-access notes retained. Editorial copy is assessed separately.",
   "sourceCitationOccurrences": 90,
   "individualCitationLinks": 110,
-  "citationNumbersAndOrderMatchIndependentSourceParse": true
+  "citationNumbersAndOrderMatchIndependentSourceParse": true,
+  "priorIndependentReview": {
+    "articleSha256": "db8c38a8a49c63adc1959edb05cad00b8c2bce5f3697196dc416a19fbc290f44",
+    "recordSha256": "0ee10b818834a805c85b1cb246cdd8dc857d508e4961a8a071cfb51e29d2dddb",
+    "source": "Full matching v2.1 LaTeX and compiled bibliography read independently; output inspected as generated HTML.",
+    "semanticReview": "Independently read all sections; matched paragraph order and original mathematical expressions. Scope, hypotheses, preparation/premise qualifications, all comparisons and source-access notes retained. Editorial copy is assessed separately.",
+    "provenance": "Independent source/content review from the completed integration baseline at commit 0182ef316f2a0f1a78a7c6c79c878fc0ca7394e4. Its source, proof, citation and semantic-review findings are retained above. They were not represented as a newly performed philosophical review during this repair."
+  },
+  "presentationRepairVerification": {
+    "baselineCommit": "0182ef316f2a0f1a78a7c6c79c878fc0ca7394e4",
+    "baselineArticleSha256": "db8c38a8a49c63adc1959edb05cad00b8c2bce5f3697196dc416a19fbc290f44",
+    "regeneratedArticleSha256": "e5a8456b2a33283e51c594e52fe85c6a9342ac82c987ae3d0d8c5102b72ef62b",
+    "genericHeadingOverridesRemoved": 75,
+    "allHeadingLevelsVisibleTextIdsAndHrefTargetsUnchanged": true,
+    "allHeadingLinksNamedByTheirDescriptiveVisibleText": true,
+    "articleByteIdenticalAfterRemovingOnlyGenericHeadingOverrides": true,
+    "mathematicalAnnotationsUnchanged": 295,
+    "allAnchorIdsUnchanged": 260,
+    "allLinkHrefsUnchanged": 340,
+    "internalFragmentLinksChecked": 254,
+    "numberedEquationAnchorsUnchanged": 25,
+    "referenceAnchorsUnchanged": 54,
+    "proofAnchorsUnchanged": 7,
+    "duplicateAnchors": 0,
+    "brokenFragmentLinks": 0,
+    "otherCoreGeneratedOutputsUnchanged": [
+      "sections.json",
+      "alignment.md",
+      "alignment.pdf",
+      "main.tex",
+      "SOURCE_COVERAGE.md"
+    ],
+    "coverageOnlyDifference": "outputs.htmlSha256",
+    "converterCommand": "python3 scripts/convert-alignment.py --source /workspace/scratch/8a19f5f37e2b/manuscript/Reflective_Alignment_AI_Consciousness_v2_1 --pdf public/publications/consciousness/alignment/alignment.pdf --output /workspace/scratch/8a19f5f37e2b/alignment-repair-regeneration",
+    "converterExitCode": 0,
+    "converterCounts": {
+      "sections": 15,
+      "subsections": 36,
+      "paragraphHeadings": 22,
+      "propositions": 7,
+      "proofs": 7,
+      "definitions": 1,
+      "numberedEquations": 25,
+      "displayMath": 23,
+      "unnumberedDisplayMath": 1,
+      "inlineMath": 272,
+      "tables": 1,
+      "references": 54,
+      "citationOccurrences": 90
+    },
+    "converterSemanticChecksRerun": {
+      "everySourceMathematicalExpressionPreserved": true,
+      "allSourceProsePreserved": true,
+      "allOriginalHeadingsRetained": true,
+      "editorialLayerRemovalRestoresSource": true,
+      "editorialChapters": 15,
+      "sourceTableCellsIndependentlyMatched": true,
+      "allOriginalMathAnnotationsPreserved": true,
+      "markdownMathRoundTrip": true,
+      "allRenderedProseAndMathPreserved": true,
+      "allMarkdownProseAndMathPreserved": true,
+      "visibleContentSha256": "60e6f10aa91c8e4d62e37bc3761c0c8f6b7e0b1c7dd6bdea1971fe1c0456ef29",
+      "internalLinksChecked": 254,
+      "brokenInternalLinks": 0,
+      "duplicateAnchors": 0,
+      "unparsedSourceCommands": 0,
+      "katexErrors": 0
+    },
+    "limitations": [
+      "Accessible heading names verified structurally from the HTML; no browser accessibility tree or screen reader test performed.",
+      "This is a presentation-preservation check and full converter rerun, not a new independent philosophical content review."
+    ]
+  }
 }

@@ -16,5 +16,147 @@
   "internalLinks": 441,
   "limitations": [
     "No browser, desktop/mobile visual rendering, interaction, HTTP serving or remote DOI-resolution tests were performed. Responsive CSS and generated semantics are checked statically."
-  ]
+  ],
+  "presentationRepairVerification": {
+    "baseline": {
+      "repository": "rodj6/everythingequation-site",
+      "commit": "0182ef316f2a0f1a78a7c6c79c878fc0ca7394e4",
+      "trackedFilesVerified": 1388,
+      "initialExactBlobMatches": 1280,
+      "lineEndingOnlyDifferencesResolvedBeforeEditing": 108,
+      "otherBaselineDifferences": 0,
+      "method": "Compared every file against the untruncated GitHub commit tree using Git blob SHA-1; reconstructed exact committed LF bytes before editing."
+    },
+    "productionBuild": {
+      "command": "SKIP_ZENODO=1 npm run build",
+      "exitCode": 0,
+      "typescriptPassed": true,
+      "generatedPages": 580,
+      "metadataMode": "Existing cache-only build mode; no remote metadata refresh."
+    },
+    "existingVerificationScriptsUnchanged": true,
+    "existingVerificationCommands": [
+      {
+        "command": "node scripts/verify-alignment-output.mjs",
+        "exitCode": 0,
+        "checks": 767,
+        "internalLinks": 441
+      },
+      {
+        "command": "node scripts/verify-alignment-discovery.mjs --static",
+        "exitCode": 0,
+        "mode": "production-generated-output",
+        "checks": 149,
+        "passed": 149,
+        "failures": []
+      }
+    ],
+    "staticRepairChecks": {
+      "mode": "static-repair-regression",
+      "checks": [
+        {
+          "name": "CSS changes consist solely of the scoped tag gutter",
+          "passed": true
+        },
+        {
+          "name": "Gutter changes spacing only, with no font or tag suppression",
+          "passed": true
+        },
+        {
+          "name": "Exactly one article-scoped tag spacing rule",
+          "passed": true
+        },
+        {
+          "name": "Existing intrinsic width and local equation scrolling remain",
+          "passed": true
+        },
+        {
+          "name": "Consciousness page changes only the requested comma",
+          "passed": true
+        },
+        {
+          "name": "Baseline contains exactly 75 generic heading overrides",
+          "passed": true
+        },
+        {
+          "name": "Generated article is byte-identical after only heading-label removal",
+          "passed": true
+        },
+        {
+          "name": "All 75 heading links inherit their descriptive visible names and retain matching anchors",
+          "passed": true
+        },
+        {
+          "name": "Scoped selector covers all 20 directly positioned equation tags",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (7) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (9) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (14) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (18) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (19) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (21) has a tag covered by the repair",
+          "passed": true
+        },
+        {
+          "name": "Reported equation (23) has a tag covered by the repair",
+          "passed": true
+        }
+      ],
+      "passed": 16,
+      "failures": [],
+      "accessibleHeadings": 75,
+      "positionedTags": 20,
+      "reportedEquations": [
+        7,
+        9,
+        14,
+        18,
+        19,
+        21,
+        23
+      ],
+      "layoutMechanism": "The 3.25em inline-end gutter participates in intrinsic width, reserving space for KaTeX\u2019s absolutely positioned one- and two-digit tags inside the existing horizontal scroll area. No mathematical glyphs, sizes or tags are altered.",
+      "browserVerification": {
+        "performed": false,
+        "requestedWidths": [
+          360,
+          390,
+          400,
+          430
+        ],
+        "desktopPerformed": false,
+        "reason": "Managed browser control is unavailable. No browser was installed or alternative preview path used. Static CSS/markup checks are not visual, geometry or screen-reader validation."
+      }
+    },
+    "contentPreservation": "Full converter source/PDF/prose/math/table/Markdown checks rerun. Repaired HTML is byte-identical to the reviewed baseline after removal of exactly 75 generic heading aria-label attributes. See independent-content-review.json for retained prior review provenance and this repair\u2019s evidence.",
+    "changedPaths": [
+      "content/consciousness/alignment/article.html",
+      "docs/alignment/independent-content-review.json",
+      "docs/alignment/production-output-verification.json",
+      "docs/alignment/source-coverage.json",
+      "public/publications/consciousness/alignment/source-coverage.json",
+      "scripts/convert-alignment.py",
+      "src/app/consciousness/ai-alignment/alignment.css",
+      "src/app/consciousness/page.tsx"
+    ],
+    "unchangedTrackedFilesVerified": 1380,
+    "replacementPackage": "Complete files at their original relative paths. No unchanged files, dependencies, caches, patch-only diffs or deployment changes."
+  }
 }

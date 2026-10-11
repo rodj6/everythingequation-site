@@ -200,7 +200,7 @@ for m,entry,fragment in zip(nodes(render_blocks,'Math'),allmath,rendered_math):
 article=pandoc(json.dumps(doc(render_blocks)),'json','html5')
 article=re.sub(r'(<table\b[^>]*>.*?</table>)',r'<div class="quantum-table-wrap" tabindex="0" role="region" aria-label="Scrollable comparison of controller gains">\1</div>',article,flags=re.S)
 article=re.sub(r'<p><span class="alignment-section-intro">(.*?)</span></p>',r'<p class="alignment-section-intro">\1</p>',article,flags=re.S)
-article=re.sub(r'<h([234]) id="([^"]+)">(.*?)</h\1>',lambda m:f'<h{m[1]} id="{m[2]}"><a class="quantum-heading-link" href="#{m[2]}" aria-label="Link to this section">{m[3]}</a></h{m[1]}>',article,flags=re.S)
+article=re.sub(r'<h([234]) id="([^"]+)">(.*?)</h\1>',lambda m:f'<h{m[1]} id="{m[2]}"><a class="quantum-heading-link" href="#{m[2]}">{m[3]}</a></h{m[1]}>',article,flags=re.S)
 assert [html.unescape(x) for x in re.findall(r'<annotation encoding="application/x-tex">(.*?)</annotation>',article,re.S)]==[x['original'] for x in allmath]
 class Links(HTMLParser):
  def __init__(self):super().__init__();self.ids=[];self.hrefs=[]
