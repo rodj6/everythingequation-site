@@ -4,7 +4,7 @@
  */
 import Link from "next/link";
 import type { LoadedPaper, LoadedProblem } from "@/lib/registry";
-import type { ArticleMeta } from "@/generated/articles";
+import { articleUrl, type ArticleMeta } from "@/lib/articles";
 
 const categoryBadge: Record<string, { label: string; cls: string }> = {
   canonical: {
@@ -123,7 +123,7 @@ export function ArticleCard({ article }: { article: ArticleMeta }) {
         ))}
       </div>
       <h3 className="mt-3 text-[1.02rem] font-semibold leading-snug text-fg">
-        <Link href={`/articles/${article.slug}`} className="after:absolute after:inset-0">
+        <Link href={articleUrl(article)} className="after:absolute after:inset-0">
           {article.title}
         </Link>
       </h3>

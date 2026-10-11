@@ -5,17 +5,37 @@
  * The prebuild script (scripts/generate-content-maps.mjs) parses frontmatter
  * into src/generated/articles.ts; this module exposes typed accessors.
  */
-import { articleMetas, type ArticleMeta } from '@/generated/articles';
+import { articleMetas, type ArticleMeta as GeneratedArticleMeta } from '@/generated/articles';
+import { alignment } from '@/lib/alignment';
 
-export type { ArticleMeta };
+export interface ArticleMeta extends GeneratedArticleMeta {
+  /** A complete edition can live in its programme instead of a duplicate article route. */
+  href?: string;
+}
+
+export function articleUrl(article: ArticleMeta): string {
+  return article.href || `/articles/${article.slug}`;
+}
+
+function programmeArticles(): ArticleMeta[] {
+  return [{
+    slug: alignment.paperSlug,
+    title: alignment.title,
+    description: alignment.description,
+    date: alignment.date,
+    tags: ['AI alignment', 'AI consciousness', 'Reflective alignment'],
+    status: 'published',
+    href: alignment.url,
+  }];
+}
 
 /** Published articles, newest first. */
 export function listArticles(): ArticleMeta[] {
-  return articleMetas
+  return [...programmeArticles(), ...articleMetas]
     .filter((a) => a.status !== 'draft')
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
 
 export function getArticleMeta(slug: string): ArticleMeta | undefined {
-  return articleMetas.find((a) => a.slug === slug);
+  return [...programmeArticles(), ...articleMetas].find((a) => a.slug === slug);
 }

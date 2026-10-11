@@ -1,4 +1,5 @@
 import { agencyManifest } from '@/lib/agency';
+import { alignmentManifest } from '@/lib/alignment-discovery';
 import { developmentManifest } from '@/lib/development';
 import { consciousnessManifest } from "@/lib/consciousness";
 import { listResearchDocuments, researchPapers } from "@/lib/consciousness-research";
@@ -9,17 +10,18 @@ export function GET() {
   const monograph = consciousnessManifest();
   return Response.json({
     ...monograph,
-    schemaVersion: 4,
-    updated: "2026-10-06",
+    schemaVersion: 5,
+    updated: "2026-10-11",
+    alignment: alignmentManifest(),
     development: developmentManifest(),
     agency: agencyManifest(),
     research: {
-      title: "Boundaries, interfaces and realizations",
+      title: "Consciousness, agency and reflective alignment",
       url: "/consciousness/research",
       papers: researchPapers,
       documents: listResearchDocuments(),
       readingOrder: researchPapers.map(paper => paper.id),
-      editionNote: "Papers 2–4 extend and examine the consciousness programme. The Version 2 monograph remains the fixed foundational text. Each paper retains its own assumptions, result scope, date and DOI.",
+      editionNote: "Papers 2–4 extend and examine the consciousness programme, joined by relational development, bounded agency and reflective alignment. The Version 2 monograph remains the fixed foundational text. Each paper retains its own assumptions, result scope, date and DOI.",
     },
   });
 }

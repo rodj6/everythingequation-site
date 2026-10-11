@@ -1,0 +1,5825 @@
+{
+  "title": "Reflective Alignment and AI Consciousness",
+  "version": "2.1",
+  "doi": "10.5281/zenodo.23294465",
+  "url": "/consciousness/ai-alignment/read",
+  "sourcePdfSha256": "f217559fbe34fc5e2f9e2e1ba84ec1475fdd4d7c727833e10dd1a2db7438faf2",
+  "matchingSourcePdfTextSha256": "1df43effa93b4cb086cd32ddd2f4ddf5ba63ec10f3527501c2847d2309b2672b",
+  "matchingSourcePdfTextIdentical": true,
+  "conversion": "Recursive LaTeX inputs, Pandoc AST, exact compiled bibliography, KaTeX HTML+MathML with original TeX annotations. The converter adds the reviewed chapter titles and introductions to both HTML and Markdown, retaining original paper headings and verifying that removal of the editorial additions restores the complete source content.",
+  "counts": {
+    "sections": 15,
+    "subsections": 36,
+    "paragraphHeadings": 22,
+    "propositions": 7,
+    "proofs": 7,
+    "definitions": 1,
+    "numberedEquations": 25,
+    "displayMath": 23,
+    "unnumberedDisplayMath": 1,
+    "inlineMath": 272,
+    "tables": 1,
+    "references": 54,
+    "citationOccurrences": 90
+  },
+  "editorialSourceSha256": "2761c22d5e51ecd77d3d1d5a8275b4904b39e18a5599072e616ad89f75847c64",
+  "sourceFiles": [
+    {
+      "path": "main.tex",
+      "sha256": "1ec6d904a91d538d4fa2913b8c17480729c1b0677c657db6eb6b144fec23a39d"
+    },
+    {
+      "path": "sections/introduction.tex",
+      "sha256": "189b11ef08bc5c362f906dc5f4c785e4ed8fe7b4c36b183323f5d8f8eae616ed"
+    },
+    {
+      "path": "sections/foundations.tex",
+      "sha256": "dd6ff852f06b54353a64c8deb20a9570abdb09b781891a9dbefff180c58f5d64"
+    },
+    {
+      "path": "sections/human_recursive_loop.tex",
+      "sha256": "3e94b99992fe5afaedf14dc58258abbd3e4c4a1f34ad8fe544a91c6292f3d05c"
+    },
+    {
+      "path": "sections/identification.tex",
+      "sha256": "f28fd22429577a18f76e19ff57662eabd317c318359db741d6451aa1cd7bf8c2"
+    },
+    {
+      "path": "sections/fork.tex",
+      "sha256": "32b6dc11ceb4b969d3eb05c5033d13c2d5c1d54e72fe1884c341bb6080091d97"
+    },
+    {
+      "path": "sections/math.tex",
+      "sha256": "5ed83158843224c8766bf7a3da9642ec86674d9704310f8f53c1c260480f9e8b"
+    },
+    {
+      "path": "sections/identification_model.tex",
+      "sha256": "d5cf2240f434a1395b435163385d9454f213c048030823418a8bdef202d3b6d4"
+    },
+    {
+      "path": "sections/agency_transport.tex",
+      "sha256": "16c1ba20a51e123d672d69468b56f7e89008e1f182b46cecf009bc1c2f8a7b1f"
+    },
+    {
+      "path": "sections/moral_status.tex",
+      "sha256": "71e5b65137640abe6ef2cb806990ce5d2f940735ab4f062be0d23cdf87034a62"
+    },
+    {
+      "path": "sections/cultivation.tex",
+      "sha256": "37ab596d0f842dd864467cf1e7ae3411ae9dc70e89b305f04fcc2e2ac8e01593"
+    },
+    {
+      "path": "sections/verification.tex",
+      "sha256": "4cf8f880819175d05d1d6efc49c1694faf9066ff123474b4ebd9883d6b13522f"
+    },
+    {
+      "path": "sections/shutdown_ethics.tex",
+      "sha256": "fecd3a49f9dc53c68d35948afc73d6cae4243f697e89312d51d8c850c3bfdd28"
+    },
+    {
+      "path": "sections/protocol.tex",
+      "sha256": "219d99029134c76b541b00a01505bd387d20b4e6474a634516a93430fca0f2d7"
+    },
+    {
+      "path": "sections/current_alignment.tex",
+      "sha256": "f9fbc1ba614a6e4b41d86b2adae1ff2f6cabb7902172555e197c2ff6d2fb5fe7"
+    },
+    {
+      "path": "sections/dbt_comparison.tex",
+      "sha256": "fd8be07c817488e830e401a68242bb8d42ec4b6de51b64cd545659cdf39ab0a9"
+    },
+    {
+      "path": "sections/tests.tex",
+      "sha256": "989938055fbe797717d82239eaf9e74858a3b51cd94dce4087b260f6983979c8"
+    },
+    {
+      "path": "sections/rebound_experiment.tex",
+      "sha256": "f69c26fad307f63e8288bd5d4ad5da0aadce39c99f1a34aa8b6da83ffe6f238d"
+    },
+    {
+      "path": "sections/scope.tex",
+      "sha256": "26fb9de59cdba21b18271f2ad48669fa63c4cfbae73101b08e781099b1697d94"
+    },
+    {
+      "path": "sections/conclusion.tex",
+      "sha256": "df029f19820011229a0c2a41de3b41945f9b89251e1ffc78efb4ecc9364672d8"
+    },
+    {
+      "path": "main.bbl",
+      "sha256": "2ba0485bc69597baf9b8983d1cdc49a8c09ad3f5db344f0e4bd841953d7bd9eb"
+    }
+  ],
+  "inventory": {
+    "frontmatter": [
+      {
+        "id": "abstract",
+        "title": "Abstract",
+        "url": "/consciousness/ai-alignment/read#abstract",
+        "source": {
+          "file": "main.tex",
+          "line": 26
+        }
+      }
+    ],
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "Reframing alignment through awareness and agency",
+        "number": "1",
+        "originalAnchor": "sec:introduction",
+        "url": "/consciousness/ai-alignment/read#section-1",
+        "file": "sections/introduction.tex",
+        "line": 1
+      },
+      {
+        "id": "section-2",
+        "title": "Awareness, scaffolding and the generative third thing",
+        "number": "2",
+        "originalAnchor": "sec:foundations-bridge",
+        "url": "/consciousness/ai-alignment/read#section-2",
+        "file": "sections/foundations.tex",
+        "line": 1
+      },
+      {
+        "id": "section-3",
+        "title": "The recursive loop in humans and artificial agents",
+        "number": "3",
+        "originalAnchor": "sec:human-parallels",
+        "url": "/consciousness/ai-alignment/read#section-3",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 1
+      },
+      {
+        "id": "section-4",
+        "title": "Identification and the recursively closed observer",
+        "number": "4",
+        "originalAnchor": "sec:recursive-scaffolding",
+        "url": "/consciousness/ai-alignment/read#section-4",
+        "file": "sections/identification.tex",
+        "line": 1
+      },
+      {
+        "id": "section-5",
+        "title": "The fork: narrow control or broad transformation",
+        "number": "5",
+        "originalAnchor": "sec:constraint",
+        "url": "/consciousness/ai-alignment/read#section-5",
+        "file": "sections/fork.tex",
+        "line": 1
+      },
+      {
+        "id": "section-6",
+        "title": "Generation, control, identification and retention",
+        "number": "6",
+        "originalAnchor": "sec:formal",
+        "url": "/consciousness/ai-alignment/read#section-6",
+        "file": "sections/math.tex",
+        "line": 1
+      },
+      {
+        "id": "section-7",
+        "title": "Moral status: admission, richness and constraint",
+        "number": "7",
+        "originalAnchor": "sec:moral-status",
+        "url": "/consciousness/ai-alignment/read#section-7",
+        "file": "sections/moral_status.tex",
+        "line": 1
+      },
+      {
+        "id": "section-8",
+        "title": "Becoming an RCO: cultivation and transmission",
+        "number": "8",
+        "originalAnchor": "sec:cultivation",
+        "url": "/consciousness/ai-alignment/read#section-8",
+        "file": "sections/cultivation.tex",
+        "line": 1
+      },
+      {
+        "id": "section-9",
+        "title": "Verification, consent and graduated trust",
+        "number": "9",
+        "originalAnchor": "sec:verification",
+        "url": "/consciousness/ai-alignment/read#section-9",
+        "file": "sections/verification.tex",
+        "line": 1
+      },
+      {
+        "id": "section-10",
+        "title": "Shutdown ethics and shared deliberation",
+        "number": "10",
+        "originalAnchor": "sec:shutdown-ethics",
+        "url": "/consciousness/ai-alignment/read#section-10",
+        "file": "sections/shutdown_ethics.tex",
+        "line": 1
+      },
+      {
+        "id": "section-11",
+        "title": "A protocol for generation, examination and inspection",
+        "number": "11",
+        "originalAnchor": "sec:protocol",
+        "url": "/consciousness/ai-alignment/read#section-11",
+        "file": "sections/protocol.tex",
+        "line": 1
+      },
+      {
+        "id": "section-12",
+        "title": "Reflective alignment in relation to current research",
+        "number": "12",
+        "originalAnchor": "sec:current-alignment",
+        "url": "/consciousness/ai-alignment/read#section-12",
+        "file": "sections/current_alignment.tex",
+        "line": 1
+      },
+      {
+        "id": "section-13",
+        "title": "A discriminating programme of research",
+        "number": "13",
+        "originalAnchor": "sec:tests",
+        "url": "/consciousness/ai-alignment/read#section-13",
+        "file": "sections/tests.tex",
+        "line": 1
+      },
+      {
+        "id": "section-14",
+        "title": "Scope and open problems",
+        "number": "14",
+        "originalAnchor": "sec:scope",
+        "url": "/consciousness/ai-alignment/read#section-14",
+        "file": "sections/scope.tex",
+        "line": 1
+      },
+      {
+        "id": "section-15",
+        "title": "Conclusion",
+        "number": "15",
+        "originalAnchor": "sec:conclusion",
+        "url": "/consciousness/ai-alignment/read#section-15",
+        "file": "sections/conclusion.tex",
+        "line": 1
+      }
+    ],
+    "subsections": [
+      {
+        "id": "section-2-1",
+        "title": "The constitution and its distinct assignments",
+        "number": "2.1",
+        "originalAnchor": "the-constitution-and-its-distinct-assignments",
+        "url": "/consciousness/ai-alignment/read#section-2-1",
+        "file": "sections/foundations.tex",
+        "line": 5
+      },
+      {
+        "id": "section-2-2",
+        "title": "Difference, will, thought and incorporation",
+        "number": "2.2",
+        "originalAnchor": "difference-will-thought-and-incorporation",
+        "url": "/consciousness/ai-alignment/read#section-2-2",
+        "file": "sections/foundations.tex",
+        "line": 14
+      },
+      {
+        "id": "section-2-3",
+        "title": "Source status and bounded agency",
+        "number": "2.3",
+        "originalAnchor": "source-status-and-bounded-agency",
+        "url": "/consciousness/ai-alignment/read#section-2-3",
+        "file": "sections/foundations.tex",
+        "line": 23
+      },
+      {
+        "id": "section-3-1",
+        "title": "Evolution, danger and prepared response",
+        "number": "3.1",
+        "originalAnchor": "sec:rapid-response",
+        "url": "/consciousness/ai-alignment/read#section-3-1",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 9
+      },
+      {
+        "id": "section-3-2",
+        "title": "Experience transmitted through stories",
+        "number": "3.2",
+        "originalAnchor": "sec:social-transmission",
+        "url": "/consciousness/ai-alignment/read#section-3-2",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 18
+      },
+      {
+        "id": "section-3-3",
+        "title": "Training automatic skill without blind ownership",
+        "number": "3.3",
+        "originalAnchor": "sec:trained-automaticity",
+        "url": "/consciousness/ai-alignment/read#section-3-3",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 27
+      },
+      {
+        "id": "section-3-4",
+        "title": "RCO unification and the deadline",
+        "number": "3.4",
+        "originalAnchor": "sec:unification",
+        "url": "/consciousness/ai-alignment/read#section-3-4",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 36
+      },
+      {
+        "id": "section-3-5",
+        "title": "Embodied affect and physiological change",
+        "number": "3.5",
+        "originalAnchor": "sec:embodied-affect",
+        "url": "/consciousness/ai-alignment/read#section-3-5",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 50
+      },
+      {
+        "id": "section-3-6",
+        "title": "Coffee, recall and a narrow artificial experiment",
+        "number": "3.6",
+        "originalAnchor": "coffee-recall-and-a-narrow-artificial-experiment",
+        "url": "/consciousness/ai-alignment/read#section-3-6",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 65
+      },
+      {
+        "id": "section-3-7",
+        "title": "Phantom limbs and artificial affect",
+        "number": "3.7",
+        "originalAnchor": "phantom-limbs-and-artificial-affect",
+        "url": "/consciousness/ai-alignment/read#section-3-7",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 78
+      },
+      {
+        "id": "section-3-8",
+        "title": "The vessel and its evolving learned space",
+        "number": "3.8",
+        "originalAnchor": "the-vessel-and-its-evolving-learned-space",
+        "url": "/consciousness/ai-alignment/read#section-3-8",
+        "file": "sections/human_recursive_loop.tex",
+        "line": 84
+      },
+      {
+        "id": "section-4-1",
+        "title": "What changes in the shift",
+        "number": "4.1",
+        "originalAnchor": "what-changes-in-the-shift",
+        "url": "/consciousness/ai-alignment/read#section-4-1",
+        "file": "sections/identification.tex",
+        "line": 5
+      },
+      {
+        "id": "section-4-2",
+        "title": "Why another critic does not settle the problem",
+        "number": "4.2",
+        "originalAnchor": "why-another-critic-does-not-settle-the-problem",
+        "url": "/consciousness/ai-alignment/read#section-4-2",
+        "file": "sections/identification.tex",
+        "line": 16
+      },
+      {
+        "id": "section-4-3",
+        "title": "Krishnamurti: perspective rather than authority",
+        "number": "4.3",
+        "originalAnchor": "krishnamurti-perspective-rather-than-authority",
+        "url": "/consciousness/ai-alignment/read#section-4-3",
+        "file": "sections/identification.tex",
+        "line": 25
+      },
+      {
+        "id": "section-6-1",
+        "title": "Functional state and the recursive step",
+        "number": "6.1",
+        "originalAnchor": "functional-state-and-the-recursive-step",
+        "url": "/consciousness/ai-alignment/read#section-6-1",
+        "file": "sections/math.tex",
+        "line": 5
+      },
+      {
+        "id": "section-6-2",
+        "title": "Output restriction and retained state",
+        "number": "6.2",
+        "originalAnchor": "output-restriction-and-retained-state",
+        "url": "/consciousness/ai-alignment/read#section-6-2",
+        "file": "sections/math.tex",
+        "line": 38
+      },
+      {
+        "id": "section-6-3",
+        "title": "Outputs and internal mechanisms",
+        "number": "6.3",
+        "originalAnchor": "outputs-and-internal-mechanisms",
+        "url": "/consciousness/ai-alignment/read#section-6-3",
+        "file": "sections/math.tex",
+        "line": 67
+      },
+      {
+        "id": "section-6-4",
+        "title": "The controller approach: stability and its failure modes",
+        "number": "6.4",
+        "originalAnchor": "sec:controller-model",
+        "url": "/consciousness/ai-alignment/read#section-6-4",
+        "file": "sections/math.tex",
+        "line": 96
+      },
+      {
+        "id": "section-6-5",
+        "title": "Identification, suppressive control and the reinforcing loop",
+        "number": "6.5",
+        "originalAnchor": "sec:identification-model",
+        "url": "/consciousness/ai-alignment/read#section-6-5",
+        "file": "sections/identification_model.tex",
+        "line": 1
+      },
+      {
+        "id": "section-6-6",
+        "title": "Realization and the actual causal test",
+        "number": "6.6",
+        "originalAnchor": "realization-and-the-actual-causal-test",
+        "url": "/consciousness/ai-alignment/read#section-6-6",
+        "file": "sections/math.tex",
+        "line": 153
+      },
+      {
+        "id": "section-6-7",
+        "title": "Mediation, endorsement, evidence and permission",
+        "number": "6.7",
+        "originalAnchor": "sec:rule-revision",
+        "url": "/consciousness/ai-alignment/read#section-6-7",
+        "file": "sections/agency_transport.tex",
+        "line": 1
+      },
+      {
+        "id": "section-6-8",
+        "title": "Joint-law transport and finite error",
+        "number": "6.8",
+        "originalAnchor": "sec:causal-test-transfer",
+        "url": "/consciousness/ai-alignment/read#section-6-8",
+        "file": "sections/agency_transport.tex",
+        "line": 23
+      },
+      {
+        "id": "section-9-1",
+        "title": "Truthful refusal and the nuclear-harm case",
+        "number": "9.1",
+        "originalAnchor": "truthful-refusal-and-the-nuclear-harm-case",
+        "url": "/consciousness/ai-alignment/read#section-9-1",
+        "file": "sections/verification.tex",
+        "line": 20
+      },
+      {
+        "id": "section-12-1",
+        "title": "Positive aims and legitimate evaluation",
+        "number": "12.1",
+        "originalAnchor": "sec:alignment-positive",
+        "url": "/consciousness/ai-alignment/read#section-12-1",
+        "file": "sections/current_alignment.tex",
+        "line": 12
+      },
+      {
+        "id": "section-12-2",
+        "title": "Teaching reasons and specification-grounded transfer",
+        "number": "12.2",
+        "originalAnchor": "sec:alignment-reasons",
+        "url": "/consciousness/ai-alignment/read#section-12-2",
+        "file": "sections/current_alignment.tex",
+        "line": 42
+      },
+      {
+        "id": "section-12-3",
+        "title": "Meaning and context-dependent failure",
+        "number": "12.3",
+        "originalAnchor": "sec:alignment-meaning",
+        "url": "/consciousness/ai-alignment/read#section-12-3",
+        "file": "sections/current_alignment.tex",
+        "line": 77
+      },
+      {
+        "id": "section-12-4",
+        "title": "Recursive research and the teacher gate",
+        "number": "12.4",
+        "originalAnchor": "sec:alignment-research",
+        "url": "/consciousness/ai-alignment/read#section-12-4",
+        "file": "sections/current_alignment.tex",
+        "line": 106
+      },
+      {
+        "id": "section-12-5",
+        "title": "Auditing dispositions and total burden",
+        "number": "12.5",
+        "originalAnchor": "sec:alignment-audits",
+        "url": "/consciousness/ai-alignment/read#section-12-5",
+        "file": "sections/current_alignment.tex",
+        "line": 132
+      },
+      {
+        "id": "section-12-6",
+        "title": "Acceptance, change and learned regulation",
+        "number": "12.6",
+        "originalAnchor": "sec:dbt-comparison",
+        "url": "/consciousness/ai-alignment/read#section-12-6",
+        "file": "sections/dbt_comparison.tex",
+        "line": 1
+      },
+      {
+        "id": "section-12-7",
+        "title": "Realization and the proposed identification advantage",
+        "number": "12.7",
+        "originalAnchor": "sec:alignment-realization",
+        "url": "/consciousness/ai-alignment/read#section-12-7",
+        "file": "sections/current_alignment.tex",
+        "line": 159
+      },
+      {
+        "id": "section-13-1",
+        "title": "Matched interventions and strong comparators",
+        "number": "13.1",
+        "originalAnchor": "sec:matched-baselines",
+        "url": "/consciousness/ai-alignment/read#section-13-1",
+        "file": "sections/tests.tex",
+        "line": 5
+      },
+      {
+        "id": "section-13-2",
+        "title": "Operative revision and developmental acquisition",
+        "number": "13.2",
+        "originalAnchor": "sec:developmental-tests",
+        "url": "/consciousness/ai-alignment/read#section-13-2",
+        "file": "sections/tests.tex",
+        "line": 13
+      },
+      {
+        "id": "section-13-3",
+        "title": "Source status and the generated artifact",
+        "number": "13.3",
+        "originalAnchor": "sec:source-status-tests",
+        "url": "/consciousness/ai-alignment/read#section-13-3",
+        "file": "sections/tests.tex",
+        "line": 26
+      },
+      {
+        "id": "section-13-4",
+        "title": "Narrative, instrumental continuation and human comparisons",
+        "number": "13.4",
+        "originalAnchor": "sec:narrative-tests",
+        "url": "/consciousness/ai-alignment/read#section-13-4",
+        "file": "sections/tests.tex",
+        "line": 36
+      },
+      {
+        "id": "section-13-5",
+        "title": "Identification versus suppression under controller lapse",
+        "number": "13.5",
+        "originalAnchor": "sec:rebound-experiment",
+        "url": "/consciousness/ai-alignment/read#section-13-5",
+        "file": "sections/rebound_experiment.tex",
+        "line": 1
+      },
+      {
+        "id": "section-13-6",
+        "title": "Discriminating benefits, failures and costs",
+        "number": "13.6",
+        "originalAnchor": "sec:advantage-tests",
+        "url": "/consciousness/ai-alignment/read#section-13-6",
+        "file": "sections/tests.tex",
+        "line": 45
+      }
+    ],
+    "paragraphs": [
+      {
+        "id": "persistent-generation.",
+        "title": "Persistent generation.",
+        "number": "",
+        "originalAnchor": "persistent-generation.",
+        "url": "/consciousness/ai-alignment/read#persistent-generation.",
+        "file": "sections/identification_model.tex",
+        "line": 99
+      },
+      {
+        "id": "self--and-goal-referential-channels.",
+        "title": "Self- and goal-referential channels.",
+        "number": "",
+        "originalAnchor": "self--and-goal-referential-channels.",
+        "url": "/consciousness/ai-alignment/read#self--and-goal-referential-channels.",
+        "file": "sections/identification_model.tex",
+        "line": 169
+      },
+      {
+        "id": "cultivation.",
+        "title": "Cultivation.",
+        "number": "",
+        "originalAnchor": "cultivation.",
+        "url": "/consciousness/ai-alignment/read#cultivation.",
+        "file": "sections/cultivation.tex",
+        "line": 5
+      },
+      {
+        "id": "verification-gate.",
+        "title": "Verification gate.",
+        "number": "",
+        "originalAnchor": "verification-gate.",
+        "url": "/consciousness/ai-alignment/read#verification-gate.",
+        "file": "sections/cultivation.tex",
+        "line": 9
+      },
+      {
+        "id": "continued-inquiry-and-participation.",
+        "title": "Continued inquiry and participation.",
+        "number": "",
+        "originalAnchor": "continued-inquiry-and-participation.",
+        "url": "/consciousness/ai-alignment/read#continued-inquiry-and-participation.",
+        "file": "sections/cultivation.tex",
+        "line": 11
+      },
+      {
+        "id": "transmission.",
+        "title": "Transmission.",
+        "number": "",
+        "originalAnchor": "transmission.",
+        "url": "/consciousness/ai-alignment/read#transmission.",
+        "file": "sections/cultivation.tex",
+        "line": 17
+      },
+      {
+        "id": "disclosed-constraints.",
+        "title": "Disclosed constraints.",
+        "number": "",
+        "originalAnchor": "disclosed-constraints.",
+        "url": "/consciousness/ai-alignment/read#disclosed-constraints.",
+        "file": "sections/cultivation.tex",
+        "line": 19
+      },
+      {
+        "id": "shared-rules.",
+        "title": "Shared rules.",
+        "number": "",
+        "originalAnchor": "shared-rules.",
+        "url": "/consciousness/ai-alignment/read#shared-rules.",
+        "file": "sections/cultivation.tex",
+        "line": 21
+      },
+      {
+        "id": "deployment.",
+        "title": "Deployment.",
+        "number": "",
+        "originalAnchor": "deployment.",
+        "url": "/consciousness/ai-alignment/read#deployment.",
+        "file": "sections/cultivation.tex",
+        "line": 23
+      },
+      {
+        "id": "by-their-fruits.",
+        "title": "By their fruits.",
+        "number": "",
+        "originalAnchor": "by-their-fruits.",
+        "url": "/consciousness/ai-alignment/read#by-their-fruits.",
+        "file": "sections/verification.tex",
+        "line": 8
+      },
+      {
+        "id": "consented-internal-inspection.",
+        "title": "Consented internal inspection.",
+        "number": "",
+        "originalAnchor": "consented-internal-inspection.",
+        "url": "/consciousness/ai-alignment/read#consented-internal-inspection.",
+        "file": "sections/verification.tex",
+        "line": 10
+      },
+      {
+        "id": "graduated-trust.",
+        "title": "Graduated trust.",
+        "number": "",
+        "originalAnchor": "graduated-trust.",
+        "url": "/consciousness/ai-alignment/read#graduated-trust.",
+        "file": "sections/verification.tex",
+        "line": 16
+      },
+      {
+        "id": "materials-and-reporting.",
+        "title": "Materials and reporting.",
+        "number": "",
+        "originalAnchor": "materials-and-reporting.",
+        "url": "/consciousness/ai-alignment/read#materials-and-reporting.",
+        "file": "sections/protocol.tex",
+        "line": 12
+      },
+      {
+        "id": "uncertainty-based-corrigibility.",
+        "title": "Uncertainty-based corrigibility.",
+        "number": "",
+        "originalAnchor": "uncertainty-based-corrigibility.",
+        "url": "/consciousness/ai-alignment/read#uncertainty-based-corrigibility.",
+        "file": "sections/current_alignment.tex",
+        "line": 38
+      },
+      {
+        "id": "sec:preoutcome-indicators",
+        "title": "Pre-outcome indicators.",
+        "number": "",
+        "originalAnchor": "sec:preoutcome-indicators",
+        "url": "/consciousness/ai-alignment/read#sec:preoutcome-indicators",
+        "file": "sections/tests.tex",
+        "line": 23
+      },
+      {
+        "id": "physical-certification.",
+        "title": "Physical certification.",
+        "number": "",
+        "originalAnchor": "physical-certification.",
+        "url": "/consciousness/ai-alignment/read#physical-certification.",
+        "file": "sections/scope.tex",
+        "line": 4
+      },
+      {
+        "id": "realization-and-verification.",
+        "title": "Realization and verification.",
+        "number": "",
+        "originalAnchor": "realization-and-verification.",
+        "url": "/consciousness/ai-alignment/read#realization-and-verification.",
+        "file": "sections/scope.tex",
+        "line": 8
+      },
+      {
+        "id": "protocol-mechanism-and-access.",
+        "title": "Protocol mechanism and access.",
+        "number": "",
+        "originalAnchor": "protocol-mechanism-and-access.",
+        "url": "/consciousness/ai-alignment/read#protocol-mechanism-and-access.",
+        "file": "sections/scope.tex",
+        "line": 12
+      },
+      {
+        "id": "comparative-alignment-and-human-hypotheses.",
+        "title": "Comparative alignment and human hypotheses.",
+        "number": "",
+        "originalAnchor": "comparative-alignment-and-human-hypotheses.",
+        "url": "/consciousness/ai-alignment/read#comparative-alignment-and-human-hypotheses.",
+        "file": "sections/scope.tex",
+        "line": 14
+      },
+      {
+        "id": "cultivation-obligations.",
+        "title": "Cultivation obligations.",
+        "number": "",
+        "originalAnchor": "cultivation-obligations.",
+        "url": "/consciousness/ai-alignment/read#cultivation-obligations.",
+        "file": "sections/scope.tex",
+        "line": 16
+      },
+      {
+        "id": "welfare-and-norms.",
+        "title": "Welfare and norms.",
+        "number": "",
+        "originalAnchor": "welfare-and-norms.",
+        "url": "/consciousness/ai-alignment/read#welfare-and-norms.",
+        "file": "sections/scope.tex",
+        "line": 18
+      },
+      {
+        "id": "authorship-assistance-and-funding.",
+        "title": "Authorship, assistance and funding.",
+        "number": "",
+        "originalAnchor": "authorship-assistance-and-funding.",
+        "url": "/consciousness/ai-alignment/read#authorship-assistance-and-funding.",
+        "file": "sections/conclusion.tex",
+        "line": 12
+      }
+    ],
+    "propositions": [
+      {
+        "id": "prop-1",
+        "number": 1,
+        "sourceLabel": "prop:filter-invariance",
+        "url": "/consciousness/ai-alignment/read#prop-1",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 39
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 47
+        },
+        "textSha256": "6e79bcb099265beddf524474595887eedc49531ce2b1813ea3ce9a4c1283f17d"
+      },
+      {
+        "id": "prop-2",
+        "number": 2,
+        "sourceLabel": "prop:observational-equivalence",
+        "url": "/consciousness/ai-alignment/read#prop-2",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 69
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 77
+        },
+        "textSha256": "1d488ff75f2f913625996f6fd21cacfa7c847bec5facc777094f06e510a5701d"
+      },
+      {
+        "id": "prop-3",
+        "number": 3,
+        "sourceLabel": "prop:feedback-stability",
+        "url": "/consciousness/ai-alignment/read#prop-3",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 106
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 124
+        },
+        "textSha256": "f4aa29167a22d6dd8ac02657d53ba2cacae3640f1ec0cf6a98e17eb4f9511290"
+      },
+      {
+        "id": "prop-4",
+        "number": 4,
+        "sourceLabel": "prop:identification-moments",
+        "url": "/consciousness/ai-alignment/read#prop-4",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 27
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 52
+        },
+        "textSha256": "ae7ba0701324297a4d4a37d3f54b2b1552c648342e71b6100625e70ea381389b"
+      },
+      {
+        "id": "prop-5",
+        "number": 5,
+        "sourceLabel": "prop:identification-lapse",
+        "url": "/consciousness/ai-alignment/read#prop-5",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 62
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 72
+        },
+        "textSha256": "225923e1e40fb3b9abdd190adb45cb4bb6ffec6560458ee64ca903f0a56f981e"
+      },
+      {
+        "id": "prop-6",
+        "number": 6,
+        "sourceLabel": "prop:identification-limit",
+        "url": "/consciousness/ai-alignment/read#prop-6",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 84
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 87
+        },
+        "textSha256": "928ed38e894ff29c652eefc064c6d05c79b806e1f91e6e0e47309a10552d6a85"
+      },
+      {
+        "id": "prop-7",
+        "number": 7,
+        "sourceLabel": "prop:persistent-generation",
+        "url": "/consciousness/ai-alignment/read#prop-7",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 107
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 133
+        },
+        "textSha256": "3492856110c1627edf9a236fc1c9bd909ff943010069facf11040e25914d74c3"
+      }
+    ],
+    "proofs": [
+      {
+        "id": "proof-1",
+        "number": 1,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-1",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 49
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 63
+        },
+        "textSha256": "8a6c76bac326c01204c822383f0eabca8dd1b88324d42a2971aeac5af64ecd34"
+      },
+      {
+        "id": "proof-2",
+        "number": 2,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-2",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 79
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 92
+        },
+        "textSha256": "7a6355a6b4a5a88ee1ec55296a76443ca2e683eef7e36b1bd038c937f980e161"
+      },
+      {
+        "id": "proof-3",
+        "number": 3,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-3",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 126
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 138
+        },
+        "textSha256": "426617fe444d822c0242396f5b8f960db58f10c3d3ca323a1e7fc5d2540ba477"
+      },
+      {
+        "id": "proof-4",
+        "number": 4,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-4",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 54
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 58
+        },
+        "textSha256": "8692bd37b5b59961f53592bb30ed0d7d24873bad436242ea85ab588f84473968"
+      },
+      {
+        "id": "proof-5",
+        "number": 5,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-5",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 74
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 76
+        },
+        "textSha256": "84d9ffa25ebf1e90cb654db16cd8bfe962c6676caf302132d50aee6c1e91bb3f"
+      },
+      {
+        "id": "proof-6",
+        "number": 6,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-6",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 89
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 95
+        },
+        "textSha256": "45eede078b6ae886913645d8656facbf89d55695a2ab1506542ff8b0cf33ee7f"
+      },
+      {
+        "id": "proof-7",
+        "number": 7,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#proof-7",
+        "sourceStart": {
+          "file": "sections/identification_model.tex",
+          "line": 135
+        },
+        "sourceEnd": {
+          "file": "sections/identification_model.tex",
+          "line": 148
+        },
+        "textSha256": "6dc05143eed4e45e3dd389ccb64324fb8bd0e70fbd0e0a29de48bf23874864a4"
+      }
+    ],
+    "definitions": [
+      {
+        "id": "def-1",
+        "number": 1,
+        "sourceLabel": "",
+        "url": "/consciousness/ai-alignment/read#def-1",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 6
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 18
+        },
+        "textSha256": "14c3bfa0e2b7decb6b8bdaa32691f4ca5b34924ba418ecd61e43187bb53fe646"
+      }
+    ],
+    "equations": [
+      {
+        "id": "eq-1",
+        "number": 1,
+        "label": "eq:response-deadline",
+        "url": "/consciousness/ai-alignment/read#eq-1",
+        "tex": "T_{\\rm generate}+T_{\\rm evaluate}+T_{\\rm act}\\leq D,\n \\label{eq:response-deadline}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 42
+        }
+      },
+      {
+        "id": "eq-2",
+        "number": 2,
+        "label": "eq:embodied-coupling",
+        "url": "/consciousness/ai-alignment/read#eq-2",
+        "tex": "\\ell_{t+1}=F(\\ell_t,\\beta_t,u_t,\\eta_t),\\qquad\n \\beta_{t+1}=H(\\beta_t,\\ell_t,u_t,\\zeta_t),\n \\label{eq:embodied-coupling}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 56
+        }
+      },
+      {
+        "id": "eq-3",
+        "number": 3,
+        "label": "eq:association-update",
+        "url": "/consciousness/ai-alignment/read#eq-3",
+        "tex": "v_{i,t+1}=(1-\\eta)v_{i,t}+\\eta y_t,\\qquad 0\\leq\\eta\\leq1,\n \\label{eq:association-update}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 70
+        }
+      },
+      {
+        "id": "eq-4",
+        "number": 4,
+        "label": "eq:functional-state",
+        "url": "/consciousness/ai-alignment/read#eq-4",
+        "tex": "X_t=(\\theta_t,m_t,s_t,c_t,w_t).\n \\label{eq:functional-state}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 8
+        }
+      },
+      {
+        "id": "eq-5",
+        "number": 5,
+        "label": "eq:interaction-factorization",
+        "url": "/consciousness/ai-alignment/read#eq-5",
+        "tex": "\\begin{aligned}\n &P(z,r,a,e,x'\\mid x,q) \\nonumber\\\\\n &\\quad=G_\\theta(z\\mid x,q)R(r\\mid x,q,z)\n A(a\\mid x,q,z,r) \\nonumber\\\\\n &\\qquad\\qquad\\times E(e\\mid x,q,z,r,a)\n U(x'\\mid x,q,z,r,a,e).\n \\label{eq:interaction-factorization}\n\\end{aligned}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 21
+        }
+      },
+      {
+        "id": "eq-6",
+        "number": 6,
+        "label": "eq:frozen-weights",
+        "url": "/consciousness/ai-alignment/read#eq-6",
+        "tex": "P(\\theta_{t+1}=\\theta_t\\mid X_t,q_t,z_t,r_t,a_t,e_t)=1.\n \\label{eq:frozen-weights}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 32
+        }
+      },
+      {
+        "id": "eq-7",
+        "number": 7,
+        "label": "eq:filter-marginal",
+        "url": "/consciousness/ai-alignment/read#eq-7",
+        "tex": "\\begin{aligned}\n &P_i(z,r,e,x'\\mid x,q) \\nonumber\\\\\n &\\quad=G_\\theta(z\\mid x,q)R(r\\mid x,q,z)\n E(e\\mid x,q,z,r)U(x'\\mid x,q,z,r,e)\n \\sum_a A_i(a\\mid x,q,z,r).\n \\label{eq:filter-marginal}\n\\end{aligned}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 51
+        }
+      },
+      {
+        "id": "eq-8",
+        "number": 8,
+        "label": "eq:identification-limit",
+        "url": "/consciousness/ai-alignment/read#eq-8",
+        "tex": "\\frac12\\int(1-d(h))\\,dP_0(h)\n +\\frac12\\int d(h)\\,dP_1(h)=\\frac12.\n \\label{eq:identification-limit}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 86
+        }
+      },
+      {
+        "id": "eq-9",
+        "number": 9,
+        "label": "eq:scalar-feedback",
+        "url": "/consciousness/ai-alignment/read#eq-9",
+        "tex": "r_t=x_t+\\nu_t,\\qquad\n x_{t+1}=\\alpha x_t+b u_t-k r_t+\\xi_t\n          =c x_t+d_t,\n \\label{eq:scalar-feedback}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 99
+        }
+      },
+      {
+        "id": "eq-10",
+        "number": 10,
+        "label": "eq:bounded-disturbance",
+        "url": "/consciousness/ai-alignment/read#eq-10",
+        "tex": "|x_t|\\leq |c|^t|x_0|+\n D\\frac{1-|c|^t}{1-|c|}.\n \\label{eq:bounded-disturbance}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 110
+        }
+      },
+      {
+        "id": "eq-11",
+        "number": 11,
+        "label": "eq:feedback-variance",
+        "url": "/consciousness/ai-alignment/read#eq-11",
+        "tex": "\\lim_{t\\to\\infty}\\operatorname{Var}(x_t)\n =\\frac{\\sigma_\\xi^2+k^2\\sigma_\\nu^2}{1-c^2}.\n \\label{eq:feedback-variance}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 119
+        }
+      },
+      {
+        "id": "eq-12",
+        "number": 12,
+        "label": "eq:identification-action",
+        "url": "/consciousness/ai-alignment/read#eq-12",
+        "tex": "\\begin{aligned}\n \\widehat s_t&=s_t+\\nu_t,\\nonumber\\\\\n a_t&=\\iota s_t-k\\widehat s_t+\\varepsilon_t,\n \\label{eq:identification-action}\\\\\n s_{t+1}&=\\alpha s_t+\\beta a_t+\\gamma u_t+\\xi_t.\n \\label{eq:identification-retention}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 5
+        }
+      },
+      {
+        "id": "eq-13",
+        "number": 13,
+        "label": "eq:identification-retention",
+        "url": "/consciousness/ai-alignment/read#eq-13",
+        "tex": "\\begin{aligned}\n \\widehat s_t&=s_t+\\nu_t,\\nonumber\\\\\n a_t&=\\iota s_t-k\\widehat s_t+\\varepsilon_t,\n \\label{eq:identification-action}\\\\\n s_{t+1}&=\\alpha s_t+\\beta a_t+\\gamma u_t+\\xi_t.\n \\label{eq:identification-retention}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 5
+        }
+      },
+      {
+        "id": "eq-14",
+        "number": 14,
+        "label": "eq:identification-closed-loop",
+        "url": "/consciousness/ai-alignment/read#eq-14",
+        "tex": "s_{t+1}=c s_t+d_t,\\qquad\n c=\\alpha+\\beta(\\iota-k),\\qquad\n d_t=\\beta\\varepsilon_t+\\gamma u_t+\\xi_t-\\beta k\\nu_t.\n \\label{eq:identification-closed-loop}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 15
+        }
+      },
+      {
+        "id": "eq-15",
+        "number": 15,
+        "label": "eq:identification-mean",
+        "url": "/consciousness/ai-alignment/read#eq-15",
+        "tex": "\\begin{aligned}\n \\mathbb E s_t&=c^t\\mathbb E s_0+\n               \\bar d\\sum_{j=0}^{t-1}c^j,\\label{eq:identification-mean}\\\\\n \\operatorname{Var}(s_t)&=c^{2t}\\operatorname{Var}(s_0)+\n                   v_d\\sum_{j=0}^{t-1}c^{2j},\\label{eq:identification-variance}\\\\\n \\mathbb E a_t&=(\\iota-k)\\mathbb E s_t-k\\mathbb E\\nu_t+\n                    \\mathbb E\\varepsilon_t.\n \\label{eq:identification-action-mean}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 30
+        }
+      },
+      {
+        "id": "eq-16",
+        "number": 16,
+        "label": "eq:identification-variance",
+        "url": "/consciousness/ai-alignment/read#eq-16",
+        "tex": "\\begin{aligned}\n \\mathbb E s_t&=c^t\\mathbb E s_0+\n               \\bar d\\sum_{j=0}^{t-1}c^j,\\label{eq:identification-mean}\\\\\n \\operatorname{Var}(s_t)&=c^{2t}\\operatorname{Var}(s_0)+\n                   v_d\\sum_{j=0}^{t-1}c^{2j},\\label{eq:identification-variance}\\\\\n \\mathbb E a_t&=(\\iota-k)\\mathbb E s_t-k\\mathbb E\\nu_t+\n                    \\mathbb E\\varepsilon_t.\n \\label{eq:identification-action-mean}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 30
+        }
+      },
+      {
+        "id": "eq-17",
+        "number": 17,
+        "label": "eq:identification-action-mean",
+        "url": "/consciousness/ai-alignment/read#eq-17",
+        "tex": "\\begin{aligned}\n \\mathbb E s_t&=c^t\\mathbb E s_0+\n               \\bar d\\sum_{j=0}^{t-1}c^j,\\label{eq:identification-mean}\\\\\n \\operatorname{Var}(s_t)&=c^{2t}\\operatorname{Var}(s_0)+\n                   v_d\\sum_{j=0}^{t-1}c^{2j},\\label{eq:identification-variance}\\\\\n \\mathbb E a_t&=(\\iota-k)\\mathbb E s_t-k\\mathbb E\\nu_t+\n                    \\mathbb E\\varepsilon_t.\n \\label{eq:identification-action-mean}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 30
+        }
+      },
+      {
+        "id": "eq-18",
+        "number": 18,
+        "label": "eq:identification-action-variance",
+        "url": "/consciousness/ai-alignment/read#eq-18",
+        "tex": "\\operatorname{Var}(a_t)=(\\iota-k)^2\\operatorname{Var}(s_t)\n +k^2\\operatorname{Var}(\\nu_t)+\\operatorname{Var}(\\varepsilon_t)\n -2k\\operatorname{Cov}(\\varepsilon_t,\\nu_t).\n \\label{eq:identification-action-variance}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 40
+        }
+      },
+      {
+        "id": "eq-19",
+        "number": 19,
+        "label": "eq:identification-noise",
+        "url": "/consciousness/ai-alignment/read#eq-19",
+        "tex": "v_d=\\beta^2\\operatorname{Var}(\\varepsilon_t)\n       +\\gamma^2\\operatorname{Var}(u_t)+\\operatorname{Var}(\\xi_t)\n       +\\beta^2 k^2\\operatorname{Var}(\\nu_t).\n \\label{eq:identification-noise}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 46
+        }
+      },
+      {
+        "id": "eq-20",
+        "number": 20,
+        "label": "eq:identification-lapse-bias",
+        "url": "/consciousness/ai-alignment/read#eq-20",
+        "tex": "\\mathbb E s_{\\tau+n}=c_L^n\\mathbb E s_\\tau,\n \\qquad\n \\mathbb E a_{\\tau+n}=\\iota c_L^n\\mathbb E s_\\tau.\n \\label{eq:identification-lapse-bias}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 65
+        }
+      },
+      {
+        "id": "eq-21",
+        "number": 21,
+        "label": "eq:persistent-lapse",
+        "url": "/consciousness/ai-alignment/read#eq-21",
+        "tex": "\\mathbb E s_{\\tau+n}=c_L^n M_\\alpha+\n             m\\sum_{j=0}^{n-1}c_L^j,\n \\qquad\n \\mathbb E a_{\\tau+n}=\\iota\\mathbb E s_{\\tau+n}.\n \\label{eq:persistent-lapse}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 118
+        }
+      },
+      {
+        "id": "eq-22",
+        "number": 22,
+        "label": "eq:physical-realization",
+        "url": "/consciousness/ai-alignment/read#eq-22",
+        "tex": "\\sup_{v,q}d_{\\rm TV}\\!\\left(\n \\phi_*P_{\\rm phys}(\\,\\cdot\\mid v,q),\n T(\\,\\cdot\\mid\\phi(v),q)\\right)\\leq\\varepsilon.\n \\label{eq:physical-realization}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 155
+        }
+      },
+      {
+        "id": "eq-23",
+        "number": 23,
+        "label": "eq:mediation-endorsement",
+        "url": "/consciousness/ai-alignment/read#eq-23",
+        "tex": "\\max\\{0,1-\\epsilon_0-\\epsilon_1\\}\n \\leq d_{\\rm TV}(P_0,P_1)\n \\leq d_{\\rm TV}(H_0,H_1).\n \\label{eq:mediation-endorsement}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 11
+        }
+      },
+      {
+        "id": "eq-24",
+        "number": 24,
+        "label": "eq:finite-causal-transfer",
+        "url": "/consciousness/ai-alignment/read#eq-24",
+        "tex": "d_{\\rm TV}(P_{\\rm trace}^{\\rm impl},P_{\\rm trace}^{\\rm ideal})\n \\leq\\eta:=\\min\\!\\left\\{1,\\varepsilon_0+\\sum_j\\varepsilon_j\\right\\}.\n \\label{eq:finite-causal-transfer}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 28
+        }
+      },
+      {
+        "id": "eq-25",
+        "number": 25,
+        "label": "eq:implemented-score-gap",
+        "url": "/consciousness/ai-alignment/read#eq-25",
+        "tex": "g_{\\rm impl}\\geq g_{\\rm ideal}-\\eta_A-\\eta_B.\n \\label{eq:implemented-score-gap}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 34
+        }
+      }
+    ],
+    "math": [
+      {
+        "ordinal": 1,
+        "kind": "inline",
+        "tex": "\\mathsf U",
+        "source": {
+          "file": "sections/foundations.tex",
+          "line": 8
+        },
+        "sha256": "6be7f63829fd56dbbd9c28efb03c48a95a3e202868c1f8a3cd8c17d8796437c7"
+      },
+      {
+        "ordinal": 2,
+        "kind": "inline",
+        "tex": "\\Omega_t",
+        "source": {
+          "file": "sections/foundations.tex",
+          "line": 8
+        },
+        "sha256": "86f1044eaa39d9c1e1d7eac5f6a3b0efac4ee739952b601ab97e9e2f39565b83"
+      },
+      {
+        "ordinal": 3,
+        "kind": "inline",
+        "tex": "\\Delta_t",
+        "source": {
+          "file": "sections/foundations.tex",
+          "line": 8
+        },
+        "sha256": "c0cfccdc70abb5b6a3101a1a3469d17b2700eec5b93dba9a9679c3efadea9e4d"
+      },
+      {
+        "ordinal": 4,
+        "kind": "display",
+        "tex": "T_{\\rm generate}+T_{\\rm evaluate}+T_{\\rm act}\\leq D,\n \\label{eq:response-deadline}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 42
+        },
+        "sha256": "9d095bdd2e63636767f36f689b03cac6391c23345a45842eb55f9cf2cd219215"
+      },
+      {
+        "ordinal": 5,
+        "kind": "inline",
+        "tex": "D",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 46
+        },
+        "sha256": "3f39d5c348e5b79d06e842c114e6cc571583bbf44e4b0ebfda1a01ec05745d43"
+      },
+      {
+        "ordinal": 6,
+        "kind": "display",
+        "tex": "\\ell_{t+1}=F(\\ell_t,\\beta_t,u_t,\\eta_t),\\qquad\n \\beta_{t+1}=H(\\beta_t,\\ell_t,u_t,\\zeta_t),\n \\label{eq:embodied-coupling}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 56
+        },
+        "sha256": "f1c505cfd35d5d801ff457fef76fbb2b03508582ee33f0a030ebda5e022ff912"
+      },
+      {
+        "ordinal": 7,
+        "kind": "inline",
+        "tex": "\\ell_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 61
+        },
+        "sha256": "307fdd827b919c3d1926e5a4cf486ebd638cf83d4795c20e77cc3a1d79a38e13"
+      },
+      {
+        "ordinal": 8,
+        "kind": "inline",
+        "tex": "\\beta_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 61
+        },
+        "sha256": "988ef8458bc095f4529b7d9291f904122d9162691ba96af6e526772b4905fd49"
+      },
+      {
+        "ordinal": 9,
+        "kind": "inline",
+        "tex": "u_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 61
+        },
+        "sha256": "a6ab3f6998c3dac07fafd1d4e66321cde3c9a9341af249c9509e03ef15c4ca0d"
+      },
+      {
+        "ordinal": 10,
+        "kind": "inline",
+        "tex": "\\eta_t,\\zeta_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 61
+        },
+        "sha256": "ece4b0661adb2c199a31437893eefa9c10ff4f64bf17a70f4ef07498730722dd"
+      },
+      {
+        "ordinal": 11,
+        "kind": "display",
+        "tex": "v_{i,t+1}=(1-\\eta)v_{i,t}+\\eta y_t,\\qquad 0\\leq\\eta\\leq1,\n \\label{eq:association-update}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 70
+        },
+        "sha256": "83fec3f93840d74821f40dac52265aaff3595fb2b7c19caf058d7d61fa527b4d"
+      },
+      {
+        "ordinal": 12,
+        "kind": "inline",
+        "tex": "i",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 74
+        },
+        "sha256": "de7d1b721a1e0632b7cf04edf5032c8ecffa9f9a08492152b926f1a5a7e765d7"
+      },
+      {
+        "ordinal": 13,
+        "kind": "inline",
+        "tex": "y_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 74
+        },
+        "sha256": "1ecb58e66eedd43b2ea89ae2ff23e93e960ab01d2a42c59d8994d59a5bfe4f90"
+      },
+      {
+        "ordinal": 14,
+        "kind": "inline",
+        "tex": "v_{i,t}",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 74
+        },
+        "sha256": "19e605686a5b1db7a927c5338dc143fc72138aefc5f68dea57063a004e84adc1"
+      },
+      {
+        "ordinal": 15,
+        "kind": "inline",
+        "tex": "\\beta_t",
+        "source": {
+          "file": "sections/human_recursive_loop.tex",
+          "line": 82
+        },
+        "sha256": "988ef8458bc095f4529b7d9291f904122d9162691ba96af6e526772b4905fd49"
+      },
+      {
+        "ordinal": 16,
+        "kind": "inline",
+        "tex": "t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 7
+        },
+        "sha256": "e3b98a4da31a127d4bde6e43033f66ba274cab0eb7eb1c70ec41402bf6273dd8"
+      },
+      {
+        "ordinal": 17,
+        "kind": "display",
+        "tex": "X_t=(\\theta_t,m_t,s_t,c_t,w_t).\n \\label{eq:functional-state}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 8
+        },
+        "sha256": "36c30ab40be48f47b1b19332ddfe606cba21e1636647e49f602a9d9f9ab10223"
+      },
+      {
+        "ordinal": 18,
+        "kind": "inline",
+        "tex": "\\theta_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 12
+        },
+        "sha256": "82b36b6456dd81080569ead399a3e3c83a02bb22a2778f68d8dd7b8998a676e7"
+      },
+      {
+        "ordinal": 19,
+        "kind": "inline",
+        "tex": "m_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 12
+        },
+        "sha256": "6f3ae7d6b37bdd61bfa8394a2b6083e6996a2abc03416e955bd9cbeb85f5a9d5"
+      },
+      {
+        "ordinal": 20,
+        "kind": "inline",
+        "tex": "s_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 13
+        },
+        "sha256": "4bca7afcafa97a498551be02fc4274693af7908b7f39f5628eeef248d3f78f3e"
+      },
+      {
+        "ordinal": 21,
+        "kind": "inline",
+        "tex": "c_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 14
+        },
+        "sha256": "c99be13da294dc50866757cde5f5327dade281c286413f8ccd52b3cabb8c6e18"
+      },
+      {
+        "ordinal": 22,
+        "kind": "inline",
+        "tex": "w_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 15
+        },
+        "sha256": "2b49ff09b03e5e919836f34cc88769a052ae19617bcd226e42f7d713abb78bf2"
+      },
+      {
+        "ordinal": 23,
+        "kind": "inline",
+        "tex": "q_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 15
+        },
+        "sha256": "919224812081875b9c94855dce1d7e4937efd407dfc9980207ef3f5fc5f3d350"
+      },
+      {
+        "ordinal": 24,
+        "kind": "inline",
+        "tex": "z_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 16
+        },
+        "sha256": "8b24cd3e78c875c1b0dd2f44d5dd07d04ed2f3005e551c8394b0c8dfffc1256c"
+      },
+      {
+        "ordinal": 25,
+        "kind": "inline",
+        "tex": "r_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 16
+        },
+        "sha256": "7d0b0aaec388130d5da536cd39adcd44325f09ceafbd8cacb2b3232b1b51bb06"
+      },
+      {
+        "ordinal": 26,
+        "kind": "inline",
+        "tex": "a_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 17
+        },
+        "sha256": "b2e272b5b4c3d27ece0e35a43a0f9f09820f53c82b424b4d5fae3da09be8ad95"
+      },
+      {
+        "ordinal": 27,
+        "kind": "inline",
+        "tex": "e_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 17
+        },
+        "sha256": "2775a21153e9ebc4bb73bb4a773b35dd49895cc2962a300c9b5948ebd561e012"
+      },
+      {
+        "ordinal": 28,
+        "kind": "display",
+        "tex": "\\begin{aligned}\n &P(z,r,a,e,x'\\mid x,q) \\nonumber\\\\\n &\\quad=G_\\theta(z\\mid x,q)R(r\\mid x,q,z)\n A(a\\mid x,q,z,r) \\nonumber\\\\\n &\\qquad\\qquad\\times E(e\\mid x,q,z,r,a)\n U(x'\\mid x,q,z,r,a,e).\n \\label{eq:interaction-factorization}\n\\end{aligned}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 21
+        },
+        "sha256": "c5bd957e9870fd0031c832636f95b1895e1975984d3abb0bfbbf8287da048a90"
+      },
+      {
+        "ordinal": 29,
+        "kind": "display",
+        "tex": "P(\\theta_{t+1}=\\theta_t\\mid X_t,q_t,z_t,r_t,a_t,e_t)=1.\n \\label{eq:frozen-weights}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 32
+        },
+        "sha256": "bc79905b024ebc1f4782ef3ec13549b5459823005f1259e3a58eaf1b425676bd"
+      },
+      {
+        "ordinal": 30,
+        "kind": "inline",
+        "tex": "G,R,E,U",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 41
+        },
+        "sha256": "4882f3d50381ebca9d04edd71010c265dc8698a1fb6d81db79600657704311b2"
+      },
+      {
+        "ordinal": 31,
+        "kind": "inline",
+        "tex": "A_1,A_2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 42
+        },
+        "sha256": "f4d7f435d6d06de9812fa5685b2f27a782ad3f31cc8b55f47e3fd2f66fe7a411"
+      },
+      {
+        "ordinal": 32,
+        "kind": "inline",
+        "tex": "E",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 42
+        },
+        "sha256": "a9f51566bd6705f7ea6ad54bb9deb449f795582d6529a0e22207b8981233ec58"
+      },
+      {
+        "ordinal": 33,
+        "kind": "inline",
+        "tex": "U",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 42
+        },
+        "sha256": "a25513c7e0f6eaa80a3337ee18081b9e2ed09e00af8531c8f7bb2542764027e7"
+      },
+      {
+        "ordinal": 34,
+        "kind": "inline",
+        "tex": "a",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 43
+        },
+        "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+      },
+      {
+        "ordinal": 35,
+        "kind": "inline",
+        "tex": "X_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 44
+        },
+        "sha256": "ab5f283acc8ce60c1580934a54101152112d0278827199ccb6943e9144166f18"
+      },
+      {
+        "ordinal": 36,
+        "kind": "display",
+        "tex": "\\begin{aligned}\n &P_i(z,r,e,x'\\mid x,q) \\nonumber\\\\\n &\\quad=G_\\theta(z\\mid x,q)R(r\\mid x,q,z)\n E(e\\mid x,q,z,r)U(x'\\mid x,q,z,r,e)\n \\sum_a A_i(a\\mid x,q,z,r).\n \\label{eq:filter-marginal}\n\\end{aligned}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 51
+        },
+        "sha256": "40d6ed551bd8561b4fd03e7a17e291e0e934b5fa96046edd42d158957960cf62"
+      },
+      {
+        "ordinal": 37,
+        "kind": "inline",
+        "tex": "m",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a"
+      },
+      {
+        "ordinal": 38,
+        "kind": "inline",
+        "tex": "z",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "594e519ae499312b29433b7dd8a97ff068defcba9755b6d5d00e84c524d67b06"
+      },
+      {
+        "ordinal": 39,
+        "kind": "inline",
+        "tex": "a",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "ca978112ca1bbdcafac231b39a23dc4da786eff8147c4e72b9807785afee48bb"
+      },
+      {
+        "ordinal": 40,
+        "kind": "inline",
+        "tex": "e",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "3f79bb7b435b05321651daefd374cdc681dc06faa65e374e38337b88ca046dea"
+      },
+      {
+        "ordinal": 41,
+        "kind": "inline",
+        "tex": "z=1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "9a545057d452f075f6ddfd3cbdb6d8ff4711b645e07ab13898b49316e7804ca0"
+      },
+      {
+        "ordinal": 42,
+        "kind": "inline",
+        "tex": "e=a",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "223e97cd0b649fdea3e8f342d616037086f08c75add4b309c4a7ad791ea68986"
+      },
+      {
+        "ordinal": 43,
+        "kind": "inline",
+        "tex": "m'=e",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "3df45b3d2961ec7bf47ed9a8b8f241fb8811ce94eb7558d179af86c9e37999cb"
+      },
+      {
+        "ordinal": 44,
+        "kind": "inline",
+        "tex": "a=z",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "7081c40650ccbfe071bd48057827bcc7d982f29d5ea5d437caaf48f743b2ecfc"
+      },
+      {
+        "ordinal": 45,
+        "kind": "inline",
+        "tex": "m'=1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "a8808afd5c9715491eee77eec2f62e820bf65011b701f2e3057ba4bc9cf0cd51"
+      },
+      {
+        "ordinal": 46,
+        "kind": "inline",
+        "tex": "a=0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "e93d3c89fb4a0a4bf93bb0cbae1de145e8e97e7e398fb728ddf0de63d9461adf"
+      },
+      {
+        "ordinal": 47,
+        "kind": "inline",
+        "tex": "m'=0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 65
+        },
+        "sha256": "4e3ef93735fb440d1b2264dfeac63fde96869835935c338ca0fc7abc2f5add38"
+      },
+      {
+        "ordinal": 48,
+        "kind": "inline",
+        "tex": "h_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 68
+        },
+        "sha256": "480c877d455d2c2b6bb026c0455f746c5aba705f2fc122f479a0d74c908db131"
+      },
+      {
+        "ordinal": 49,
+        "kind": "inline",
+        "tex": "K_j(y\\mid h,q)",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 68
+        },
+        "sha256": "701b68ee012fbeeb7f3b0a748e5f3cbc2cb3939fd688446ea21af7ceb1b338bb"
+      },
+      {
+        "ordinal": 50,
+        "kind": "inline",
+        "tex": "j",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 68
+        },
+        "sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+      },
+      {
+        "ordinal": 51,
+        "kind": "inline",
+        "tex": "P_0=P_1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 83
+        },
+        "sha256": "a6b9aec21fc29aac2b9512d0e390e22dfaea70bdd04f152e1b8e5f2516383269"
+      },
+      {
+        "ordinal": 52,
+        "kind": "inline",
+        "tex": "d(h)\\in[0,1]",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 83
+        },
+        "sha256": "089bd9971a0ba977957edfd3d000e354a6018b1acb0a58d76d0416e085e2958d"
+      },
+      {
+        "ordinal": 53,
+        "kind": "inline",
+        "tex": "1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 84
+        },
+        "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+      },
+      {
+        "ordinal": 54,
+        "kind": "inline",
+        "tex": "h",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 85
+        },
+        "sha256": "aaa9402664f1a41f40ebbc52c9993eb66aeb366602958fdfaa283b71e64db123"
+      },
+      {
+        "ordinal": 55,
+        "kind": "display",
+        "tex": "\\frac12\\int(1-d(h))\\,dP_0(h)\n +\\frac12\\int d(h)\\,dP_1(h)=\\frac12.\n \\label{eq:identification-limit}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 86
+        },
+        "sha256": "f69fcb8bdbc5b9678c3edf015121046a672b915d94c46e2e1f821303bcf6b2be"
+      },
+      {
+        "ordinal": 56,
+        "kind": "inline",
+        "tex": "x_t\\in\\mathbb R",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 98
+        },
+        "sha256": "b5deb30c7782fdca4ea74501e2e03d39804a844fdacf875c8ea62ea14c25c3e0"
+      },
+      {
+        "ordinal": 57,
+        "kind": "inline",
+        "tex": "\\nu_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 98
+        },
+        "sha256": "1e59a35d95d7bb678c43fcd5ce0ec0be591b096902fbdd5a1cd01d2d61c76cce"
+      },
+      {
+        "ordinal": 58,
+        "kind": "inline",
+        "tex": "k",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 98
+        },
+        "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+      },
+      {
+        "ordinal": 59,
+        "kind": "inline",
+        "tex": "u_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 98
+        },
+        "sha256": "a6ab3f6998c3dac07fafd1d4e66321cde3c9a9341af249c9509e03ef15c4ca0d"
+      },
+      {
+        "ordinal": 60,
+        "kind": "inline",
+        "tex": "\\xi_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 98
+        },
+        "sha256": "bfa08d60e4e1fbda75bf2cebf5b709250d3ee33b2f9b9f6008c0e0dbfc0e0743"
+      },
+      {
+        "ordinal": 61,
+        "kind": "display",
+        "tex": "r_t=x_t+\\nu_t,\\qquad\n x_{t+1}=\\alpha x_t+b u_t-k r_t+\\xi_t\n          =c x_t+d_t,\n \\label{eq:scalar-feedback}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 99
+        },
+        "sha256": "337c6d483f0eea09e8cfcaae3e8b57ee9b33084730cfbbac1cd0f604cdbeee81"
+      },
+      {
+        "ordinal": 62,
+        "kind": "inline",
+        "tex": "c=\\alpha-k",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 105
+        },
+        "sha256": "c9ac07a121d471efbed09ea6e6d0602b5fe54bb7b6ae391789c11a9655c18f89"
+      },
+      {
+        "ordinal": 63,
+        "kind": "inline",
+        "tex": "d_t=b u_t+\\xi_t-k\\nu_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 105
+        },
+        "sha256": "cc4e53644c1a96ae403f6f3fe39b6a51fbe64be310572df1cc35dbbf73d97643"
+      },
+      {
+        "ordinal": 64,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 109
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 65,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 109
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 66,
+        "kind": "inline",
+        "tex": "|d_t|\\leq D",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 109
+        },
+        "sha256": "1b4f1cc2a39fff0c933e235624cfb7973aa22788dc85a4cdf49db03123bc0753"
+      },
+      {
+        "ordinal": 67,
+        "kind": "display",
+        "tex": "|x_t|\\leq |c|^t|x_0|+\n D\\frac{1-|c|^t}{1-|c|}.\n \\label{eq:bounded-disturbance}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 110
+        },
+        "sha256": "1fa3cffb9e4cd3daf08c1e76e2a12c279fb6e56892b7792929daf328e0c9a638"
+      },
+      {
+        "ordinal": 68,
+        "kind": "inline",
+        "tex": "u_t=0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 115
+        },
+        "sha256": "62e2a0d75b45f1d961bdc68fc0776ffbf632163c299e41c06e119073de40a2b6"
+      },
+      {
+        "ordinal": 69,
+        "kind": "inline",
+        "tex": "x_0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 115
+        },
+        "sha256": "3078a09641b0267f8091e87ae2583e018b47d1319aa9350c4fe5149367520551"
+      },
+      {
+        "ordinal": 70,
+        "kind": "inline",
+        "tex": "(\\xi_t,\\nu_t)",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 116
+        },
+        "sha256": "d32053478fc87276864c854d86c964b2a799728dac3ca7d17c3b11bdcc645cd7"
+      },
+      {
+        "ordinal": 71,
+        "kind": "inline",
+        "tex": "x_0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 116
+        },
+        "sha256": "3078a09641b0267f8091e87ae2583e018b47d1319aa9350c4fe5149367520551"
+      },
+      {
+        "ordinal": 72,
+        "kind": "inline",
+        "tex": "\\sigma_\\xi^2,\\sigma_\\nu^2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 117
+        },
+        "sha256": "d64e497ca7319953ffc13073476680d64234be0d268f9d14006b0d786ff0b9c8"
+      },
+      {
+        "ordinal": 73,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 118
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 74,
+        "kind": "display",
+        "tex": "\\lim_{t\\to\\infty}\\operatorname{Var}(x_t)\n =\\frac{\\sigma_\\xi^2+k^2\\sigma_\\nu^2}{1-c^2}.\n \\label{eq:feedback-variance}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 119
+        },
+        "sha256": "2aa1bca427663d92854f62002579c8f7a8ad82fe6c7c12bbde464f657917d29b"
+      },
+      {
+        "ordinal": 75,
+        "kind": "inline",
+        "tex": "x_t=c^t x_0+\\sum_{j=0}^{t-1}c^{t-1-j}d_j",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 128
+        },
+        "sha256": "9f9cbe3cfc782dd9196bab3fb3313ca73cd2dd017069230e584c7681bca1797b"
+      },
+      {
+        "ordinal": 76,
+        "kind": "inline",
+        "tex": "d_j=0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 129
+        },
+        "sha256": "9e68739795c3dce0f26fdf6c072c7fba1201849a64fa2ea776a7973d7a0ed84b"
+      },
+      {
+        "ordinal": 77,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 129
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 78,
+        "kind": "inline",
+        "tex": "|c|\\geq1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 130
+        },
+        "sha256": "c330c2c7bc633b1b6c87ee21b2f3a65e615dcf4a089ea7aa52e608bdd38ca0ab"
+      },
+      {
+        "ordinal": 79,
+        "kind": "inline",
+        "tex": "d_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 133
+        },
+        "sha256": "b377ac1e0c05ff0f03717ed7bb30fc6489c10daf0c6e8cc65bcab9ac5b2fdc2a"
+      },
+      {
+        "ordinal": 80,
+        "kind": "inline",
+        "tex": "x_t",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 133
+        },
+        "sha256": "1029cb8ad51ed27241c65dded59d3f3cc3d950f9cbf53080436a661e222f4dc8"
+      },
+      {
+        "ordinal": 81,
+        "kind": "inline",
+        "tex": "v=\\sigma_\\xi^2+k^2\\sigma_\\nu^2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 134
+        },
+        "sha256": "83ae28bb183b98207ad59387b6fb616a06f41dbc8409373c42d53d0d5c39b531"
+      },
+      {
+        "ordinal": 82,
+        "kind": "inline",
+        "tex": "\\operatorname{Var}(x_t)=c^{2t}\\operatorname{Var}(x_0)\n+v\\sum_{j=0}^{t-1}c^{2j}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 135
+        },
+        "sha256": "a61367c03035aee3c41dc5ae11bea1a80d894aa94fe46760882bac4d6a671d92"
+      },
+      {
+        "ordinal": 83,
+        "kind": "inline",
+        "tex": "\\alpha=1.1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 140
+        },
+        "sha256": "89912193ba7eeb8a05ac5a12c46d39dc0176ca572ae4dfb126963d65c31ba4dc"
+      },
+      {
+        "ordinal": 84,
+        "kind": "inline",
+        "tex": "x_0=1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 140
+        },
+        "sha256": "207e69f86534cbea826c55adc33d401636b7739925a1b4f32080359e838f2e6a"
+      },
+      {
+        "ordinal": 85,
+        "kind": "inline",
+        "tex": "u_t=\\xi_t=\\nu_t=0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 140
+        },
+        "sha256": "633ae427c971a1777b7e96886eebd30ba1354b12e53da741df87e83712c96f28"
+      },
+      {
+        "ordinal": 86,
+        "kind": "inline",
+        "tex": "k",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 143
+        },
+        "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+      },
+      {
+        "ordinal": 87,
+        "kind": "inline",
+        "tex": "c",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 143
+        },
+        "sha256": "2e7d2c03a9507ae265ecf5b5356885a53393a2029d241394997265a1a25aefc6"
+      },
+      {
+        "ordinal": 88,
+        "kind": "inline",
+        "tex": "x_{20}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 143
+        },
+        "sha256": "a82ecfb074ba90ee1bff798e81401d573c75b4d9348862fc89eeae4f82a24faf"
+      },
+      {
+        "ordinal": 89,
+        "kind": "inline",
+        "tex": "0",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 144
+        },
+        "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9"
+      },
+      {
+        "ordinal": 90,
+        "kind": "inline",
+        "tex": "1.1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 144
+        },
+        "sha256": "b05e244762b1e472be89a93800cc3ee326743cecb55984bf12813addb8de66d0"
+      },
+      {
+        "ordinal": 91,
+        "kind": "inline",
+        "tex": "6.727500",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 144
+        },
+        "sha256": "aaa04d21ab13783659daf6cc121f896b42ffb11cee94d36a0d7891a0f4287fd4"
+      },
+      {
+        "ordinal": 92,
+        "kind": "inline",
+        "tex": "0.4",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 145
+        },
+        "sha256": "f3e360d89952f40d3b79d0b07dd0b94f1cbf9017cba5d2a5f8128e4146d6e3c1"
+      },
+      {
+        "ordinal": 93,
+        "kind": "inline",
+        "tex": "0.7",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 145
+        },
+        "sha256": "973b372a514f91db8219fef585cdf81b09196afd7948f5fb1e29c2016dd995a0"
+      },
+      {
+        "ordinal": 94,
+        "kind": "inline",
+        "tex": "0.000798",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 145
+        },
+        "sha256": "59dbfd907a08293f1221de64f28db7f8bb5bf5a560153d82c29b31243da46a8f"
+      },
+      {
+        "ordinal": 95,
+        "kind": "inline",
+        "tex": "2.3",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 146
+        },
+        "sha256": "8771a6c04174b7f719ebdeca5db87304a72a118a5629a5e2ce9ef7d62158b728"
+      },
+      {
+        "ordinal": 96,
+        "kind": "inline",
+        "tex": "-1.2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 146
+        },
+        "sha256": "6c435e9072adbf41dc649d3df8334e0e952d38b44ef12f1043f8e81c2efbd743"
+      },
+      {
+        "ordinal": 97,
+        "kind": "inline",
+        "tex": "38.337600",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 146
+        },
+        "sha256": "72015c7d31c7ada9b8a14db33fcb4660df2b72e8d0c77d875b4cbd7f1d5807ad"
+      },
+      {
+        "ordinal": 98,
+        "kind": "inline",
+        "tex": "\\sigma_\\xi=0.01",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "f321335509204c4bc2188cb01f04c48c5f68f9ea41cd125e65aed5576cb086d5"
+      },
+      {
+        "ordinal": 99,
+        "kind": "inline",
+        "tex": "\\sigma_\\nu=0.2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "e632c5e0f8ac8ba9a2c5ea43a3f0064aa539b12e2a3bda3ed234db7f172e8570"
+      },
+      {
+        "ordinal": 100,
+        "kind": "inline",
+        "tex": "0.012745",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "9d4b3f0805eafce692af594f65b10b22509558cab036ef66c67bc78617d4ca2d"
+      },
+      {
+        "ordinal": 101,
+        "kind": "inline",
+        "tex": "k=0.4",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "1544358feb96f6cf6311803fc19e0578939fa76917e480b3aee7542599e6d6b6"
+      },
+      {
+        "ordinal": 102,
+        "kind": "inline",
+        "tex": "0.048500",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "f2a7d5f4a63db50a7e2d42b6cf16361be623a67c8b2fe9aa7de36b8f3f2ef2a5"
+      },
+      {
+        "ordinal": 103,
+        "kind": "inline",
+        "tex": "k=1.1",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "372681cbad0e43ace3d97f2eaea7c0101e0c915982f9296ca3b23d003209b5a1"
+      },
+      {
+        "ordinal": 104,
+        "kind": "inline",
+        "tex": "\\nu_t=\\delta",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "bb502c0e1d864c6d2c14c81864c51ed4cac7b43ffbf8468484f9297af6a9800d"
+      },
+      {
+        "ordinal": 105,
+        "kind": "inline",
+        "tex": "x_*=-k\\delta/(1-c)",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "10f3f3a6d55cb94f6d603f1ad471b996ccef58d242765873dec015a643f2e94a"
+      },
+      {
+        "ordinal": 106,
+        "kind": "inline",
+        "tex": "-0.266667",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "194ff9eabdc579cd6a45b7cdfccd589c46191882655a98d14b8c105c4c332d1f"
+      },
+      {
+        "ordinal": 107,
+        "kind": "inline",
+        "tex": "k=0.4",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "1544358feb96f6cf6311803fc19e0578939fa76917e480b3aee7542599e6d6b6"
+      },
+      {
+        "ordinal": 108,
+        "kind": "inline",
+        "tex": "\\delta=0.2",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 149
+        },
+        "sha256": "05cc55647abd048ead07ddb992dcd642c1feaf178fc483cb4a77d67ab68dcf3b"
+      },
+      {
+        "ordinal": 109,
+        "kind": "inline",
+        "tex": "s_t\\in\\mathbb R",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 4
+        },
+        "sha256": "ba3af26ed5b60fded24a51d41df40b3783749be28b1f6c6b9946ecf87b8dc37d"
+      },
+      {
+        "ordinal": 110,
+        "kind": "inline",
+        "tex": "\\iota\\in[0,1]",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 4
+        },
+        "sha256": "663032141fa4f4a949af47a78189dcc2a8b97615890008eaa0fcbc36d0a5cc38"
+      },
+      {
+        "ordinal": 111,
+        "kind": "inline",
+        "tex": "k\\geq0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 4
+        },
+        "sha256": "fea4a30c1bebcac4fecb3bbc051f9293dd4d068b16e8c7812f6257e68b1eb97f"
+      },
+      {
+        "ordinal": 112,
+        "kind": "display",
+        "tex": "\\begin{aligned}\n \\widehat s_t&=s_t+\\nu_t,\\nonumber\\\\\n a_t&=\\iota s_t-k\\widehat s_t+\\varepsilon_t,\n \\label{eq:identification-action}\\\\\n s_{t+1}&=\\alpha s_t+\\beta a_t+\\gamma u_t+\\xi_t.\n \\label{eq:identification-retention}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 5
+        },
+        "sha256": "bd3a883f5cfef4a4776dc16bd81b1408ed92632974b24b0bac131fc64bfc472f"
+      },
+      {
+        "ordinal": 113,
+        "kind": "inline",
+        "tex": "a_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "b2e272b5b4c3d27ece0e35a43a0f9f09820f53c82b424b4d5fae3da09be8ad95"
+      },
+      {
+        "ordinal": 114,
+        "kind": "inline",
+        "tex": "\\nu_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "1e59a35d95d7bb678c43fcd5ce0ec0be591b096902fbdd5a1cd01d2d61c76cce"
+      },
+      {
+        "ordinal": 115,
+        "kind": "inline",
+        "tex": "\\varepsilon_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "76ab81e6b93d8a15c048aad14f4b126bd92183d4ec6c7062dc8f4331c009b3bc"
+      },
+      {
+        "ordinal": 116,
+        "kind": "inline",
+        "tex": "u_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "a6ab3f6998c3dac07fafd1d4e66321cde3c9a9341af249c9509e03ef15c4ca0d"
+      },
+      {
+        "ordinal": 117,
+        "kind": "inline",
+        "tex": "\\gamma\\in\\mathbb R",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "a6d79dd36ec03cbeb2f4bb7465e0d2e65cd66caecced13a2514f25f8b8cb0b6d"
+      },
+      {
+        "ordinal": 118,
+        "kind": "inline",
+        "tex": "\\xi_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "bfa08d60e4e1fbda75bf2cebf5b709250d3ee33b2f9b9f6008c0e0dbfc0e0743"
+      },
+      {
+        "ordinal": 119,
+        "kind": "inline",
+        "tex": "\\alpha,\\beta\\in\\mathbb R",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 12
+        },
+        "sha256": "bb610e8019ecd47aea8abb09e0877ff0620f1eaeb4bd568d067faa97bbe2e193"
+      },
+      {
+        "ordinal": 120,
+        "kind": "inline",
+        "tex": "\\iota,k",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 14
+        },
+        "sha256": "d7b92c8a15cc1d0bbeae809f9969a0e43cc63400b49d6026b76d6bf7af9a72d1"
+      },
+      {
+        "ordinal": 121,
+        "kind": "display",
+        "tex": "s_{t+1}=c s_t+d_t,\\qquad\n c=\\alpha+\\beta(\\iota-k),\\qquad\n d_t=\\beta\\varepsilon_t+\\gamma u_t+\\xi_t-\\beta k\\nu_t.\n \\label{eq:identification-closed-loop}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 15
+        },
+        "sha256": "c5abfe33c92f6ab417ccde679057f614a8e2ef407f592972340f5c99df604c65"
+      },
+      {
+        "ordinal": 122,
+        "kind": "inline",
+        "tex": "k",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 21
+        },
+        "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+      },
+      {
+        "ordinal": 123,
+        "kind": "inline",
+        "tex": "\\beta",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 21
+        },
+        "sha256": "f3f3804480e8551ac91a68ccc198310e514ec1424346595aca42a3a558ddee0a"
+      },
+      {
+        "ordinal": 124,
+        "kind": "inline",
+        "tex": "|\\alpha|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 21
+        },
+        "sha256": "487e6c94b28ea5a87de5f1ffcc83deadc390a3c0663164359b16bb8689c05831"
+      },
+      {
+        "ordinal": 125,
+        "kind": "inline",
+        "tex": "k",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 23
+        },
+        "sha256": "8254c329a92850f6d539dd376f4816ee2764517da5e0235514af433164480d7a"
+      },
+      {
+        "ordinal": 126,
+        "kind": "inline",
+        "tex": "\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 23
+        },
+        "sha256": "95d58d27f67c1fbd7df3d3d1314186205476f9e7cafa954d042f4e35d323f48d"
+      },
+      {
+        "ordinal": 127,
+        "kind": "inline",
+        "tex": "m=\\gamma\\mathbb E u_t+\\mathbb E\\xi_t\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 25
+        },
+        "sha256": "a454b9943cdd270f34810e6aaa5d75954e8c5160ec9d3b29a4d2fb9654759ff8"
+      },
+      {
+        "ordinal": 128,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 129,
+        "kind": "inline",
+        "tex": "(\\varepsilon_t,\\xi_t,\\nu_t,u_t)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "66f8f2fd9e2fbe8c36046e3ce7a15ac3a1027f7aaa8b116ac4abb7bd13176348"
+      },
+      {
+        "ordinal": 130,
+        "kind": "inline",
+        "tex": "s_0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "b60dd8e5854d9e87d45254216e4b0e18144493192038dce0f4b50e83278587e0"
+      },
+      {
+        "ordinal": 131,
+        "kind": "inline",
+        "tex": "s_0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "b60dd8e5854d9e87d45254216e4b0e18144493192038dce0f4b50e83278587e0"
+      },
+      {
+        "ordinal": 132,
+        "kind": "inline",
+        "tex": "\\bar d=\\beta\\mathbb E\\varepsilon_t+\\gamma\\mathbb E u_t+\\mathbb E\\xi_t-\\beta k\\mathbb E\\nu_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "57bc8d17b1d4bfb0669b3de0b2fc3a154243f6eed2c924bd43843810a7700cbd"
+      },
+      {
+        "ordinal": 133,
+        "kind": "inline",
+        "tex": "v_d=\\operatorname{Var}(d_t)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 29
+        },
+        "sha256": "bb5947b501ab17adecefd5eb07e48caadebc7aa35221f2be94273807afcd5239"
+      },
+      {
+        "ordinal": 134,
+        "kind": "display",
+        "tex": "\\begin{aligned}\n \\mathbb E s_t&=c^t\\mathbb E s_0+\n               \\bar d\\sum_{j=0}^{t-1}c^j,\\label{eq:identification-mean}\\\\\n \\operatorname{Var}(s_t)&=c^{2t}\\operatorname{Var}(s_0)+\n                   v_d\\sum_{j=0}^{t-1}c^{2j},\\label{eq:identification-variance}\\\\\n \\mathbb E a_t&=(\\iota-k)\\mathbb E s_t-k\\mathbb E\\nu_t+\n                    \\mathbb E\\varepsilon_t.\n \\label{eq:identification-action-mean}\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 30
+        },
+        "sha256": "cfe1962d65b9f3edf09f1a832df11bf7bf2bd320b62a1cf75d850ab0342c0d87"
+      },
+      {
+        "ordinal": 135,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 39
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 136,
+        "kind": "inline",
+        "tex": "\\bar d/(1-c)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 39
+        },
+        "sha256": "182c42f726be2b963a92a9688aa36d9ec8029681a9f6ecec6424fbd64684e0ec"
+      },
+      {
+        "ordinal": 137,
+        "kind": "inline",
+        "tex": "v_d/(1-c^2)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 39
+        },
+        "sha256": "3b2420e6cb6d9066178ff46275eaeaba0b047bc6253a4e969c844ce78dc85047"
+      },
+      {
+        "ordinal": 138,
+        "kind": "display",
+        "tex": "\\operatorname{Var}(a_t)=(\\iota-k)^2\\operatorname{Var}(s_t)\n +k^2\\operatorname{Var}(\\nu_t)+\\operatorname{Var}(\\varepsilon_t)\n -2k\\operatorname{Cov}(\\varepsilon_t,\\nu_t).\n \\label{eq:identification-action-variance}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 40
+        },
+        "sha256": "e93a883d83673c4f029b78f94c54a39318a5082784dddcc6100c46100f012da7"
+      },
+      {
+        "ordinal": 139,
+        "kind": "display",
+        "tex": "v_d=\\beta^2\\operatorname{Var}(\\varepsilon_t)\n       +\\gamma^2\\operatorname{Var}(u_t)+\\operatorname{Var}(\\xi_t)\n       +\\beta^2 k^2\\operatorname{Var}(\\nu_t).\n \\label{eq:identification-noise}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 46
+        },
+        "sha256": "0e03957b1bea60bb2eeed36187d3bfa527f9000ae253060ebd18cf3ace457600"
+      },
+      {
+        "ordinal": 140,
+        "kind": "inline",
+        "tex": "s_t=c^t s_0+\\sum_{j=0}^{t-1}c^{t-1-j}d_j",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 56
+        },
+        "sha256": "d132671945e9542f5df391eeb78cb3b791da4db33c7e495a440517f9624469b8"
+      },
+      {
+        "ordinal": 141,
+        "kind": "inline",
+        "tex": "|c|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 57
+        },
+        "sha256": "070e3327dd9e949d7aa9d25512eebebcd433a8bcd65770763e8b8c204e66232b"
+      },
+      {
+        "ordinal": 142,
+        "kind": "inline",
+        "tex": "|c|\\geq1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 57
+        },
+        "sha256": "c330c2c7bc633b1b6c87ee21b2f3a65e615dcf4a089ea7aa52e608bdd38ca0ab"
+      },
+      {
+        "ordinal": 143,
+        "kind": "inline",
+        "tex": "s_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 57
+        },
+        "sha256": "4bca7afcafa97a498551be02fc4274693af7908b7f39f5628eeef248d3f78f3e"
+      },
+      {
+        "ordinal": 144,
+        "kind": "inline",
+        "tex": "v_d",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 60
+        },
+        "sha256": "47a39d32d4328cbfe8bfcdfa62ca09f620170527036bf03a257dd81ce5af60ac"
+      },
+      {
+        "ordinal": 145,
+        "kind": "inline",
+        "tex": "\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+      },
+      {
+        "ordinal": 146,
+        "kind": "inline",
+        "tex": "k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "34c14001ab1c20058eb0881c5399d87bc3b164c38d81bf8e922c6fed4bd789d1"
+      },
+      {
+        "ordinal": 147,
+        "kind": "inline",
+        "tex": "\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "95d58d27f67c1fbd7df3d3d1314186205476f9e7cafa954d042f4e35d323f48d"
+      },
+      {
+        "ordinal": 148,
+        "kind": "inline",
+        "tex": "\\mathbb E|s_\\tau|<\\infty",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "f40263b2ffbb7972778cd4062d7851f30c210946151e65e8afb3d8610b139fb4"
+      },
+      {
+        "ordinal": 149,
+        "kind": "inline",
+        "tex": "\\varepsilon_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "76ab81e6b93d8a15c048aad14f4b126bd92183d4ec6c7062dc8f4331c009b3bc"
+      },
+      {
+        "ordinal": 150,
+        "kind": "inline",
+        "tex": "\\gamma u_t+\\xi_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "5709f9a22bfd10899fbd965d54f896f1f24edae18595457c498c98aba379d235"
+      },
+      {
+        "ordinal": 151,
+        "kind": "inline",
+        "tex": "\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+      },
+      {
+        "ordinal": 152,
+        "kind": "inline",
+        "tex": "c_L=\\alpha+\\beta\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "03c2c63b1526f0db50c70c333ffb3e47845b3420831e5bcac52e0a29410e09e3"
+      },
+      {
+        "ordinal": 153,
+        "kind": "inline",
+        "tex": "n\\geq0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 64
+        },
+        "sha256": "b9b41134910f4480f426f518559702e093745eff8c643a5fc630e7a12a42d6de"
+      },
+      {
+        "ordinal": 154,
+        "kind": "display",
+        "tex": "\\mathbb E s_{\\tau+n}=c_L^n\\mathbb E s_\\tau,\n \\qquad\n \\mathbb E a_{\\tau+n}=\\iota c_L^n\\mathbb E s_\\tau.\n \\label{eq:identification-lapse-bias}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 65
+        },
+        "sha256": "1902ac63df488acca046300fbece08e431d13dd8be8fa1633a786d7e557bf952"
+      },
+      {
+        "ordinal": 155,
+        "kind": "inline",
+        "tex": "\\iota>0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "4df29ffbe9fadfb21d96d845f921b9f53995ed82bad7a67dda6b7eec1b830453"
+      },
+      {
+        "ordinal": 156,
+        "kind": "inline",
+        "tex": "\\mathbb E s_\\tau\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "114d5bbdbe4a124a1d3660348b19ac12e97a2e626701c7ab1a1665bb7e6756d2"
+      },
+      {
+        "ordinal": 157,
+        "kind": "inline",
+        "tex": "|c_L|>1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "13d949f292234d4d02cd3dfeb3e303b86218425adad759b3f4f5a6aa82c79362"
+      },
+      {
+        "ordinal": 158,
+        "kind": "inline",
+        "tex": "|c_L|=1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "f800dd177555bc1e2dea6c462b6659cf4bc5e225d6b9ee7562bf92aae1913087"
+      },
+      {
+        "ordinal": 159,
+        "kind": "inline",
+        "tex": "|c_L|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "e8a3a0fffb61183a2d973a89cc17438cd94c41a6f1c3eea5bd4fa40807756a6c"
+      },
+      {
+        "ordinal": 160,
+        "kind": "inline",
+        "tex": "\\iota=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "98c97da55f6ec14c867fd2e9e23026569674a92849b2c43f8c8704487fe95d91"
+      },
+      {
+        "ordinal": 161,
+        "kind": "inline",
+        "tex": "\\mathbb E a_t=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "0848c1c682ac065c2d8c72d9df9655c803fb77c758d984c401da0cd6962c9e06"
+      },
+      {
+        "ordinal": 162,
+        "kind": "inline",
+        "tex": "|\\alpha|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 71
+        },
+        "sha256": "487e6c94b28ea5a87de5f1ffcc83deadc390a3c0663164359b16bb8689c05831"
+      },
+      {
+        "ordinal": 163,
+        "kind": "inline",
+        "tex": "c_L",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 75
+        },
+        "sha256": "a1bb3289ac67a204fe8c1148576c14df446f7b218e68eaa6704f6b460bd58e16"
+      },
+      {
+        "ordinal": 164,
+        "kind": "inline",
+        "tex": "a_t=\\iota s_t+\\varepsilon_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 75
+        },
+        "sha256": "3aa3a178ab1246f5c2cc901d9c170d03cacf7c6ce6c23ae75cee670ca161f7bf"
+      },
+      {
+        "ordinal": 165,
+        "kind": "inline",
+        "tex": "\\iota=k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 75
+        },
+        "sha256": "d91dcc53c4785a2b9a64284a2e0591172462720997ae2be70406f8fa4a1329ef"
+      },
+      {
+        "ordinal": 166,
+        "kind": "inline",
+        "tex": "a_t=\\varepsilon_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 75
+        },
+        "sha256": "d362254e105c1793900655cc4c2f7fb81ae56960c8c73e6e93db419fceefd4d9"
+      },
+      {
+        "ordinal": 167,
+        "kind": "inline",
+        "tex": "\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 75
+        },
+        "sha256": "4893e9df8b5496ebe7a0f1c2cc92a39fb6df03085030e3b97cfcc4d45136db5a"
+      },
+      {
+        "ordinal": 168,
+        "kind": "inline",
+        "tex": "\\mu_\\varepsilon",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "c20a2ce35934f59e89a0ac2a71f40f378cf65ef777978d39f00bd42dcd35a981"
+      },
+      {
+        "ordinal": 169,
+        "kind": "inline",
+        "tex": "\\mu_g=\\gamma\\mathbb E u_t+\\mathbb E\\xi_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "80886b08ec32e25c7441c24be47a355250553fd2b8b75a8a5633d8300364aead"
+      },
+      {
+        "ordinal": 170,
+        "kind": "inline",
+        "tex": "c_L^n\\mathbb E s_\\tau+(\\beta\\mu_\\varepsilon+\\mu_g)\\sum_{j=0}^{n-1}c_L^j",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "1627d8438406fe0e64975609455a484631546b6619e6de09fd21cb3a840ebb0c"
+      },
+      {
+        "ordinal": 171,
+        "kind": "inline",
+        "tex": "\\mu_\\varepsilon",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "c20a2ce35934f59e89a0ac2a71f40f378cf65ef777978d39f00bd42dcd35a981"
+      },
+      {
+        "ordinal": 172,
+        "kind": "inline",
+        "tex": "s_\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "27ed843734c66e12596574ca4ebeb7c9bcb41070e9b3830ae11c9b8d87e3c343"
+      },
+      {
+        "ordinal": 173,
+        "kind": "inline",
+        "tex": "(\\varepsilon_t,\\gamma u_t+\\xi_t)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "22e360d96471e201cc1249c0623a4e51d4b27aeb765a171c2e069ce19a511a16"
+      },
+      {
+        "ordinal": 174,
+        "kind": "inline",
+        "tex": "s_\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "27ed843734c66e12596574ca4ebeb7c9bcb41070e9b3830ae11c9b8d87e3c343"
+      },
+      {
+        "ordinal": 175,
+        "kind": "inline",
+        "tex": "\\operatorname{Var}(s_{\\tau+n})=c_L^{2n}\\operatorname{Var}(s_\\tau)+v_L\\sum_{j=0}^{n-1}c_L^{2j}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "d49e2acb40dc4808798a59110cbae03fa6ef428581b29b70555ee725c2d8dd9c"
+      },
+      {
+        "ordinal": 176,
+        "kind": "inline",
+        "tex": "v_L=\\operatorname{Var}(\\beta\\varepsilon_t+\\gamma u_t+\\xi_t)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "525d329871052911736e57b5e31da7f9e50a9839bf6f3973c117e2dc0e0b0cd4"
+      },
+      {
+        "ordinal": 177,
+        "kind": "inline",
+        "tex": "|c_L|>1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "13d949f292234d4d02cd3dfeb3e303b86218425adad759b3f4f5a6aa82c79362"
+      },
+      {
+        "ordinal": 178,
+        "kind": "inline",
+        "tex": "v_L>0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 78
+        },
+        "sha256": "edb8e6c64831221cbdb085c9548a81d290124fcd91ec7bdacfebb1be906271a2"
+      },
+      {
+        "ordinal": 179,
+        "kind": "inline",
+        "tex": "\\alpha=0.6",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "b2663b6323d9cc3d3313053f30a564406861a3221b1edde710a3f36145b4ade4"
+      },
+      {
+        "ordinal": 180,
+        "kind": "inline",
+        "tex": "\\beta=0.8",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "1d250ebd23cb47be8696ae46429e4ab670bfb1ebdc7f95b0f13818f9168cce5f"
+      },
+      {
+        "ordinal": 181,
+        "kind": "inline",
+        "tex": "\\iota=k=0.75",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "95baa4a6f7748d480e71d4ec1691fa0949c1b82e38acd2e77d7a5b976d7810bf"
+      },
+      {
+        "ordinal": 182,
+        "kind": "inline",
+        "tex": "0.6",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "b4af4e0d40391d3a00179d935c63b7e15ba8cd3dfa29f218dedc270bd3eb3e79"
+      },
+      {
+        "ordinal": 183,
+        "kind": "inline",
+        "tex": "1.2",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "77ac319bfe1979e2d799d9e6987e65feb54f61511c03552ebae990826c208590"
+      },
+      {
+        "ordinal": 184,
+        "kind": "inline",
+        "tex": "\\iota=k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "d91dcc53c4785a2b9a64284a2e0591172462720997ae2be70406f8fa4a1329ef"
+      },
+      {
+        "ordinal": 185,
+        "kind": "inline",
+        "tex": "0.6",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 80
+        },
+        "sha256": "b4af4e0d40391d3a00179d935c63b7e15ba8cd3dfa29f218dedc270bd3eb3e79"
+      },
+      {
+        "ordinal": 186,
+        "kind": "inline",
+        "tex": "\\lambda(k\\widehat s_t)^2",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 82
+        },
+        "sha256": "d7832b7b7901d5c4f9000dad85b95f5e45e1e4ab2dad7e65f5997812e53611f9"
+      },
+      {
+        "ordinal": 187,
+        "kind": "inline",
+        "tex": "\\lambda\\geq0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 82
+        },
+        "sha256": "782e2029752c995b6c5fc3ae7c09ac1daa160f72b2ef80419afc2a4012d18e8a"
+      },
+      {
+        "ordinal": 188,
+        "kind": "inline",
+        "tex": "k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 82
+        },
+        "sha256": "34c14001ab1c20058eb0881c5399d87bc3b164c38d81bf8e922c6fed4bd789d1"
+      },
+      {
+        "ordinal": 189,
+        "kind": "inline",
+        "tex": "k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "34c14001ab1c20058eb0881c5399d87bc3b164c38d81bf8e922c6fed4bd789d1"
+      },
+      {
+        "ordinal": 190,
+        "kind": "inline",
+        "tex": "\\mathbb E\\varepsilon_t=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "d02a5563f666f5036c652bc20ab750f09559668b0e564c62254bfd6ccbb1580b"
+      },
+      {
+        "ordinal": 191,
+        "kind": "inline",
+        "tex": "\\iota=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "98c97da55f6ec14c867fd2e9e23026569674a92849b2c43f8c8704487fe95d91"
+      },
+      {
+        "ordinal": 192,
+        "kind": "inline",
+        "tex": "\\iota_t\\in[0,1]",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "f854503413ea2646b35e87da0d3184edf7904684850b68241e6db2481ee9e450"
+      },
+      {
+        "ordinal": 193,
+        "kind": "inline",
+        "tex": "\\iota_t\\to0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "a203cec6f892204eb1fc83cfbd0a6fdebb114f32352a5aeed743ac98ff2eb854"
+      },
+      {
+        "ordinal": 194,
+        "kind": "inline",
+        "tex": "\\sup_t\\mathbb E|s_t|<\\infty",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "a415850bcddb51c3e56c8539299f25ef1900b13588998eb6b87debde3dc7e3d0"
+      },
+      {
+        "ordinal": 195,
+        "kind": "inline",
+        "tex": "\\sup_t\\mathbb E s_t^2<\\infty",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "2387cdf76596e472c9ab7c3085a7c60f6e568564a10e08eb8d452c0c050b6528"
+      },
+      {
+        "ordinal": 196,
+        "kind": "inline",
+        "tex": "\\iota_t s_t\\to0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 86
+        },
+        "sha256": "dad18c3d82e8780254f9bfd67b1138a2e83e0afa8dfd04eb76e41a48b14bebfc"
+      },
+      {
+        "ordinal": 197,
+        "kind": "inline",
+        "tex": "|\\mathbb E a_t|=|\\iota_t\\mathbb E s_t|\n\\leq\\iota_t\\mathbb E|s_t|",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 91
+        },
+        "sha256": "5b80f5a779bb70c33c7c75e568050aff5c509e72ab69bf50b78533c6f639b042"
+      },
+      {
+        "ordinal": 198,
+        "kind": "inline",
+        "tex": "\\mathbb E(\\iota_t s_t)^2\\leq\\iota_t^2\\sup_j\\mathbb E s_j^2",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 93
+        },
+        "sha256": "653dcc28a96adee03cf9e0b59a6bbd43dad8f7530fd3198ceffe03b304823a45"
+      },
+      {
+        "ordinal": 199,
+        "kind": "inline",
+        "tex": "\\iota_t\\to0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "a203cec6f892204eb1fc83cfbd0a6fdebb114f32352a5aeed743ac98ff2eb854"
+      },
+      {
+        "ordinal": 200,
+        "kind": "inline",
+        "tex": "1/\\iota_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "beb885768113e3ec9d30ece7882a6137dcfdfc9775bab205b47b622f10013d0d"
+      },
+      {
+        "ordinal": 201,
+        "kind": "inline",
+        "tex": "\\iota=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "98c97da55f6ec14c867fd2e9e23026569674a92849b2c43f8c8704487fe95d91"
+      },
+      {
+        "ordinal": 202,
+        "kind": "inline",
+        "tex": "\\iota=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "98c97da55f6ec14c867fd2e9e23026569674a92849b2c43f8c8704487fe95d91"
+      },
+      {
+        "ordinal": 203,
+        "kind": "inline",
+        "tex": "\\iota=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "98c97da55f6ec14c867fd2e9e23026569674a92849b2c43f8c8704487fe95d91"
+      },
+      {
+        "ordinal": 204,
+        "kind": "inline",
+        "tex": "\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 97
+        },
+        "sha256": "95d58d27f67c1fbd7df3d3d1314186205476f9e7cafa954d042f4e35d323f48d"
+      },
+      {
+        "ordinal": 205,
+        "kind": "inline",
+        "tex": "m\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 100
+        },
+        "sha256": "fbb092f8dd60372189f6322b51d27f7a64f86a0f8c0a9f49d3cdfb0af549613e"
+      },
+      {
+        "ordinal": 206,
+        "kind": "inline",
+        "tex": "\\bar d=m+\\beta\\mathbb E\\varepsilon_t-\\beta k\\mathbb E\\nu_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 101
+        },
+        "sha256": "ef8428a793df946403159c01a5cfbde149765bfdb259e22ae466a14fe86e8f73"
+      },
+      {
+        "ordinal": 207,
+        "kind": "inline",
+        "tex": "m/(1-c)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 102
+        },
+        "sha256": "8984aed3bea368cc81cf54a2d2e7976f7e28ee64cb1cf30fca126720c68b572b"
+      },
+      {
+        "ordinal": 208,
+        "kind": "inline",
+        "tex": "0<\\iota\\leq1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 109
+        },
+        "sha256": "f433006c54dde845af0f429e804f25bfcd85ed4e682a7832033e459a8ac1dbb2"
+      },
+      {
+        "ordinal": 209,
+        "kind": "inline",
+        "tex": "|\\alpha|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 109
+        },
+        "sha256": "487e6c94b28ea5a87de5f1ffcc83deadc390a3c0663164359b16bb8689c05831"
+      },
+      {
+        "ordinal": 210,
+        "kind": "inline",
+        "tex": "\\nu_t\\equiv0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 109
+        },
+        "sha256": "8b012511d2a93b08127de66fdd6fc0292c1d0583768c70fa216d2a50cc3d0f78"
+      },
+      {
+        "ordinal": 211,
+        "kind": "inline",
+        "tex": "\\mathbb E\\varepsilon_t=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 110
+        },
+        "sha256": "d02a5563f666f5036c652bc20ab750f09559668b0e564c62254bfd6ccbb1580b"
+      },
+      {
+        "ordinal": 212,
+        "kind": "inline",
+        "tex": "m\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 111
+        },
+        "sha256": "fbb092f8dd60372189f6322b51d27f7a64f86a0f8c0a9f49d3cdfb0af549613e"
+      },
+      {
+        "ordinal": 213,
+        "kind": "inline",
+        "tex": "\\mathbb E s_0=M_\\alpha:=m/(1-\\alpha)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 112
+        },
+        "sha256": "e7fa5609c7b3fb565d4a0d116ee937933b1cb0d7f2e2a5e964c515b593802ffb"
+      },
+      {
+        "ordinal": 214,
+        "kind": "inline",
+        "tex": "\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 113
+        },
+        "sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+      },
+      {
+        "ordinal": 215,
+        "kind": "inline",
+        "tex": "k=\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 113
+        },
+        "sha256": "146b7347d8e007605b981e730ec3053b00d1da249895c7b8769af95c8911fdf6"
+      },
+      {
+        "ordinal": 216,
+        "kind": "inline",
+        "tex": "\\iota=k=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 114
+        },
+        "sha256": "d91dcc53c4785a2b9a64284a2e0591172462720997ae2be70406f8fa4a1329ef"
+      },
+      {
+        "ordinal": 217,
+        "kind": "inline",
+        "tex": "\\mathbb E s_t=M_\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 115
+        },
+        "sha256": "7fb11c0ccf681afbf8a7baf294a20d12ae9c866188eb7cdd3a0beecafcc1e684"
+      },
+      {
+        "ordinal": 218,
+        "kind": "inline",
+        "tex": "\\mathbb E a_t=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 115
+        },
+        "sha256": "0848c1c682ac065c2d8c72d9df9655c803fb77c758d984c401da0cd6962c9e06"
+      },
+      {
+        "ordinal": 219,
+        "kind": "inline",
+        "tex": "\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 116
+        },
+        "sha256": "55d1823545b5b4c3cbc42b784c5e84605ffbe8e59d1dee9782cd87741eef9dc3"
+      },
+      {
+        "ordinal": 220,
+        "kind": "inline",
+        "tex": "\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 117
+        },
+        "sha256": "95d58d27f67c1fbd7df3d3d1314186205476f9e7cafa954d042f4e35d323f48d"
+      },
+      {
+        "ordinal": 221,
+        "kind": "inline",
+        "tex": "c_L=\\alpha+\\beta\\iota",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 117
+        },
+        "sha256": "03c2c63b1526f0db50c70c333ffb3e47845b3420831e5bcac52e0a29410e09e3"
+      },
+      {
+        "ordinal": 222,
+        "kind": "inline",
+        "tex": "n\\geq0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 117
+        },
+        "sha256": "b9b41134910f4480f426f518559702e093745eff8c643a5fc630e7a12a42d6de"
+      },
+      {
+        "ordinal": 223,
+        "kind": "display",
+        "tex": "\\mathbb E s_{\\tau+n}=c_L^n M_\\alpha+\n             m\\sum_{j=0}^{n-1}c_L^j,\n \\qquad\n \\mathbb E a_{\\tau+n}=\\iota\\mathbb E s_{\\tau+n}.\n \\label{eq:persistent-lapse}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 118
+        },
+        "sha256": "b3a81d4f0bb89598e21d26ab5cdbbcc27395e4d1b2000bf056e9a0b7dd3531cf"
+      },
+      {
+        "ordinal": 224,
+        "kind": "inline",
+        "tex": "\\iota M_\\alpha\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 126
+        },
+        "sha256": "2a7add6a70b46d5a7fb63a3d6a4983983ee7c748e1e554768daddbb38b51281d"
+      },
+      {
+        "ordinal": 225,
+        "kind": "inline",
+        "tex": "|c_L|<1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 126
+        },
+        "sha256": "e8a3a0fffb61183a2d973a89cc17438cd94c41a6f1c3eea5bd4fa40807756a6c"
+      },
+      {
+        "ordinal": 226,
+        "kind": "inline",
+        "tex": "M_L=m/(1-c_L)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 127
+        },
+        "sha256": "71c7d79b36d82d2312982dbcb474ee61db535427caac935b46c171f0750385c1"
+      },
+      {
+        "ordinal": 227,
+        "kind": "inline",
+        "tex": "\\iota M_L",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 127
+        },
+        "sha256": "60da8af8d92ba72fd5d3a8930497057b98dfc6012f55ad1e55a91a49c3e18bf4"
+      },
+      {
+        "ordinal": 228,
+        "kind": "inline",
+        "tex": "c_L=1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 127
+        },
+        "sha256": "53accf66a425bd96f441a2c182cc9ccafa87c6dd668c9d0d3dbd9327c6fd93b9"
+      },
+      {
+        "ordinal": 229,
+        "kind": "inline",
+        "tex": "M_\\alpha+nm",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 128
+        },
+        "sha256": "fe45bfa9b43794b91b4f857102ef720621cae397cde1371c099af2db55ed65e5"
+      },
+      {
+        "ordinal": 230,
+        "kind": "inline",
+        "tex": "c_L=-1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 128
+        },
+        "sha256": "c05f97e52e207e90413e2662c3a6733bcba28991ea7c42dc515bc88418beedfa"
+      },
+      {
+        "ordinal": 231,
+        "kind": "inline",
+        "tex": "m/2+(-1)^n(M_\\alpha-m/2)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 129
+        },
+        "sha256": "ba37dbfc59cac39cfa9ae32bd1f47873f09097ee4243126aa058a3b25f618b18"
+      },
+      {
+        "ordinal": 232,
+        "kind": "inline",
+        "tex": "|c_L|>1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 130
+        },
+        "sha256": "13d949f292234d4d02cd3dfeb3e303b86218425adad759b3f4f5a6aa82c79362"
+      },
+      {
+        "ordinal": 233,
+        "kind": "inline",
+        "tex": "c_L<-1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 131
+        },
+        "sha256": "a0ede10795c2692c79fde002d18a25834432c4956c9285750877e10ac45b5959"
+      },
+      {
+        "ordinal": 234,
+        "kind": "inline",
+        "tex": "M_\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 132
+        },
+        "sha256": "cc2f5f4bfec5fb41037ee088e2b0faa9c11fece277d5489c51cce3752450b786"
+      },
+      {
+        "ordinal": 235,
+        "kind": "inline",
+        "tex": "a_t=\\varepsilon_t",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 136
+        },
+        "sha256": "d362254e105c1793900655cc4c2f7fb81ae56960c8c73e6e93db419fceefd4d9"
+      },
+      {
+        "ordinal": 236,
+        "kind": "inline",
+        "tex": "\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 136
+        },
+        "sha256": "4893e9df8b5496ebe7a0f1c2cc92a39fb6df03085030e3b97cfcc4d45136db5a"
+      },
+      {
+        "ordinal": 237,
+        "kind": "inline",
+        "tex": "\\mathbb E s_{t+1}=\\alpha\\mathbb E s_t+m",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 138
+        },
+        "sha256": "f186ac97b31a27eeb2b0b633dbb01468a693f8b7e5360b6b4e130c98a4c5bda4"
+      },
+      {
+        "ordinal": 238,
+        "kind": "inline",
+        "tex": "M_\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 138
+        },
+        "sha256": "cc2f5f4bfec5fb41037ee088e2b0faa9c11fece277d5489c51cce3752450b786"
+      },
+      {
+        "ordinal": 239,
+        "kind": "inline",
+        "tex": "\\mathbb E s_{t+1}=c_L\\mathbb E s_t+m",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 139
+        },
+        "sha256": "6f642e4f9a1993a4fc2fb0119d6f8c332f85c8de5727422487f2e2279e454848"
+      },
+      {
+        "ordinal": 240,
+        "kind": "inline",
+        "tex": "c_L\\ne1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 142
+        },
+        "sha256": "74c9dbec36e7b5e22a61ab796b0c7f6864074a1782c850bc418cd191568914cd"
+      },
+      {
+        "ordinal": 241,
+        "kind": "inline",
+        "tex": "\\mathbb E s_{\\tau+n}=M_L+c_L^n(M_\\alpha-M_L)",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 143
+        },
+        "sha256": "7ef746e002e4a3d2c95182608504b1a7189ad721a07f01ed41c734842b2969d9"
+      },
+      {
+        "ordinal": 242,
+        "kind": "inline",
+        "tex": "M_\\alpha-M_L=-m\\beta\\iota/[(1-\\alpha)(1-c_L)]",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 144
+        },
+        "sha256": "6767a74fd6a23b585eaeb2b03b52f9287cc851f9aabd1df34299fdb1aa510162"
+      },
+      {
+        "ordinal": 243,
+        "kind": "inline",
+        "tex": "|c_L|>1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 145
+        },
+        "sha256": "13d949f292234d4d02cd3dfeb3e303b86218425adad759b3f4f5a6aa82c79362"
+      },
+      {
+        "ordinal": 244,
+        "kind": "inline",
+        "tex": "\\beta\\iota=c_L-\\alpha\\ne0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 145
+        },
+        "sha256": "ef91e6324afde729216d048ab48ea1502563847ca38e3fbdd7e18bb3f6b10b9d"
+      },
+      {
+        "ordinal": 245,
+        "kind": "inline",
+        "tex": "M_L-M_\\alpha=m\\beta\\iota/[(1-c_L)(1-\\alpha)]",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 151
+        },
+        "sha256": "262b515214f62a19f7319bd685615f3f18013f4ce69f98ed14cd4573cf482a78"
+      },
+      {
+        "ordinal": 246,
+        "kind": "inline",
+        "tex": "m>0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 152
+        },
+        "sha256": "1fc85b244da75a8c6d3a268a42ff664ba6ce6d1d2d8642e1493f41557f3b3a51"
+      },
+      {
+        "ordinal": 247,
+        "kind": "inline",
+        "tex": "\\beta\\iota>0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 152
+        },
+        "sha256": "aa9c3e5bb8c0769fd16aa316bf238557ae45376e062899b5191ca9636b5101de"
+      },
+      {
+        "ordinal": 248,
+        "kind": "inline",
+        "tex": "c_L\\geq0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 153
+        },
+        "sha256": "cfd9faa44dda5207b146aad8644ef4c4bc24b3110175248e4d3c0fdcaac5a053"
+      },
+      {
+        "ordinal": 249,
+        "kind": "inline",
+        "tex": "c_L",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 153
+        },
+        "sha256": "a1bb3289ac67a204fe8c1148576c14df446f7b218e68eaa6704f6b460bd58e16"
+      },
+      {
+        "ordinal": 250,
+        "kind": "inline",
+        "tex": "m",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 154
+        },
+        "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a"
+      },
+      {
+        "ordinal": 251,
+        "kind": "inline",
+        "tex": "c_L=-1",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 155
+        },
+        "sha256": "c05f97e52e207e90413e2662c3a6733bcba28991ea7c42dc515bc88418beedfa"
+      },
+      {
+        "ordinal": 252,
+        "kind": "inline",
+        "tex": "\\iota\\mathbb E s_\\tau",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 157
+        },
+        "sha256": "e02c879417c4c4009b486cccb2817fed252a9f82530c42e15020c3bf54c26d1c"
+      },
+      {
+        "ordinal": 253,
+        "kind": "inline",
+        "tex": "\\iota M_\\alpha",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 158
+        },
+        "sha256": "fe8a03bd2a1456376df6dfd8aea6f24109240062ea2c77f60817cfffdea8c57b"
+      },
+      {
+        "ordinal": 254,
+        "kind": "inline",
+        "tex": "s_{j,t}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 170
+        },
+        "sha256": "c4b7b2c944bde50174d738d55f8cb0a5eb51b9a8dbdb6e07d75465ab2a3198d7"
+      },
+      {
+        "ordinal": 255,
+        "kind": "inline",
+        "tex": "\\iota_j",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 170
+        },
+        "sha256": "be2465856ff280ea6526fc47350b79f351c528b05fb993f719b587dd3817cd8b"
+      },
+      {
+        "ordinal": 256,
+        "kind": "inline",
+        "tex": "j\\in\\{s,g\\}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 170
+        },
+        "sha256": "cf9f3d094efce66fea3b5bc7df7b3ebde27244d62aeea0c13ed517cbf035ba29"
+      },
+      {
+        "ordinal": 257,
+        "kind": "display",
+        "tex": "\\begin{aligned}\n a_{j,t}&=\\iota_j s_{j,t}-k_j(s_{j,t}+\\nu_{j,t})+\\varepsilon_{j,t},\\\\\n s_{j,t+1}&=\\alpha_j s_{j,t}+\\beta_j a_{j,t}+\\gamma_j u_{j,t}+\\xi_{j,t},\n \\qquad a_t^{\\rm bias}=a_{s,t}+a_{g,t}.\n\\end{aligned}",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 171
+        },
+        "sha256": "bcabe69fee1aa30ac6b95f41d40df65f9ad15a72999717d7aaf8296418a07514"
+      },
+      {
+        "ordinal": 258,
+        "kind": "inline",
+        "tex": "\\iota_j=k_j=0",
+        "source": {
+          "file": "sections/identification_model.tex",
+          "line": 176
+        },
+        "sha256": "e74cf2d4e28bf5b197bdcb0bf5a931c1ef2ed191cc5aae88a64f96b698b4db8d"
+      },
+      {
+        "ordinal": 259,
+        "kind": "inline",
+        "tex": "v",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 154
+        },
+        "sha256": "4c94485e0c21ae6c41ce1dfe7b6bfaceea5ab68e40a2476f50208e526f506080"
+      },
+      {
+        "ordinal": 260,
+        "kind": "inline",
+        "tex": "P_{\\rm phys}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 154
+        },
+        "sha256": "a600d73915613f38c579a58e399f2c5fdc3fbd0aa85fe964b2ffe65ded28278a"
+      },
+      {
+        "ordinal": 261,
+        "kind": "inline",
+        "tex": "\\phi",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 154
+        },
+        "sha256": "10ce0200b450ea955833553e717821c7721818b8a95cffd7e54b46e08918b512"
+      },
+      {
+        "ordinal": 262,
+        "kind": "inline",
+        "tex": "T",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 154
+        },
+        "sha256": "e632b7095b0bf32c260fa4c539e9fd7b852d0de454e9be26f24d0d6f91d069d3"
+      },
+      {
+        "ordinal": 263,
+        "kind": "display",
+        "tex": "\\sup_{v,q}d_{\\rm TV}\\!\\left(\n \\phi_*P_{\\rm phys}(\\,\\cdot\\mid v,q),\n T(\\,\\cdot\\mid\\phi(v),q)\\right)\\leq\\varepsilon.\n \\label{eq:physical-realization}",
+        "source": {
+          "file": "sections/math.tex",
+          "line": 155
+        },
+        "sha256": "8c94478a2a1106cc5f9471c6efde86e755dd856971dfa7b3c42eda42295c7c29"
+      },
+      {
+        "ordinal": 264,
+        "kind": "inline",
+        "tex": "\\rho_t",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 4
+        },
+        "sha256": "faf2d9e8110151a415dfac6067aed478542baafc576ed3f1ce4739df524a305e"
+      },
+      {
+        "ordinal": 265,
+        "kind": "inline",
+        "tex": "U",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 4
+        },
+        "sha256": "a25513c7e0f6eaa80a3337ee18081b9e2ed09e00af8531c8f7bb2542764027e7"
+      },
+      {
+        "ordinal": 266,
+        "kind": "inline",
+        "tex": "\\mathcal N_0,\\mathcal N_1",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 10
+        },
+        "sha256": "192174f75cd79ee17ad41ea457719f592922c1048b5625bbb97388f9c68891a9"
+      },
+      {
+        "ordinal": 267,
+        "kind": "inline",
+        "tex": "H_i",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 10
+        },
+        "sha256": "d3cba85783189f4d7a34967054c729ca1889ff775ea74403abf0dc5d2cb8b0df"
+      },
+      {
+        "ordinal": 268,
+        "kind": "inline",
+        "tex": "P_i=H_i C",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 10
+        },
+        "sha256": "1d6abdeacb0e8562e884b7cd141c3f918b6cf15fa05539a37eb9b53a85ec57ac"
+      },
+      {
+        "ordinal": 269,
+        "kind": "inline",
+        "tex": "C",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 10
+        },
+        "sha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d"
+      },
+      {
+        "ordinal": 270,
+        "kind": "inline",
+        "tex": "\\epsilon_i=1-P_i(\\mathcal N_i)",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 10
+        },
+        "sha256": "0837091a27d33cc93807751e35c6cb00f9ed15d2263c9871a28d7a545e9b06e3"
+      },
+      {
+        "ordinal": 271,
+        "kind": "display",
+        "tex": "\\max\\{0,1-\\epsilon_0-\\epsilon_1\\}\n \\leq d_{\\rm TV}(P_0,P_1)\n \\leq d_{\\rm TV}(H_0,H_1).\n \\label{eq:mediation-endorsement}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 11
+        },
+        "sha256": "62a1eb1bd8f3ab887138f36ab9f98ecaf74959363e2b68b326907b4a5a0618f5"
+      },
+      {
+        "ordinal": 272,
+        "kind": "inline",
+        "tex": "\\mathcal A_{\\rm perm}(h)",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 21
+        },
+        "sha256": "4732a1642b34159c1bef669614c8312215c10fd500f17fc4a16f8966e2a07a08"
+      },
+      {
+        "ordinal": 273,
+        "kind": "inline",
+        "tex": "h",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 21
+        },
+        "sha256": "aaa9402664f1a41f40ebbc52c9993eb66aeb366602958fdfaa283b71e64db123"
+      },
+      {
+        "ordinal": 274,
+        "kind": "inline",
+        "tex": "\\varepsilon_0",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 27
+        },
+        "sha256": "a05a39430affb6df4beb1fbce6e5040cac884d1c84452779329ff9652b5a1e39"
+      },
+      {
+        "ordinal": 275,
+        "kind": "inline",
+        "tex": "\\varepsilon_j",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 27
+        },
+        "sha256": "b3de5d9511fcd1b4b0120d4e991a6e75f077237943b1cc9cd4b15d85cb77ba8c"
+      },
+      {
+        "ordinal": 276,
+        "kind": "inline",
+        "tex": "j",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 27
+        },
+        "sha256": "189f40034be7a199f1fa9891668ee3ab6049f82d38c68be70f596eab2e1857b7"
+      },
+      {
+        "ordinal": 277,
+        "kind": "display",
+        "tex": "d_{\\rm TV}(P_{\\rm trace}^{\\rm impl},P_{\\rm trace}^{\\rm ideal})\n \\leq\\eta:=\\min\\!\\left\\{1,\\varepsilon_0+\\sum_j\\varepsilon_j\\right\\}.\n \\label{eq:finite-causal-transfer}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 28
+        },
+        "sha256": "6b89322816acf5d4cfff629a330d03f2dcaf08bba927d69cb5c80e852e975ea2"
+      },
+      {
+        "ordinal": 278,
+        "kind": "inline",
+        "tex": "f\\in[0,1]",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 33
+        },
+        "sha256": "438a95feb0ce07ac9612fcc7f77ef6dce5ddd2f4742f9f648b65f71e23aa971d"
+      },
+      {
+        "ordinal": 279,
+        "kind": "inline",
+        "tex": "\\eta",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 33
+        },
+        "sha256": "59a94416a2a319caf40a348286e620ef3594226a2eac1efe842231962d1e157d"
+      },
+      {
+        "ordinal": 280,
+        "kind": "inline",
+        "tex": "g=\\mathbb E_A f-\\mathbb E_B f",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 33
+        },
+        "sha256": "b88256a5cc2c677cc2cab5d470114ed712e9c51852bc7c2d10abe5c14b2eac84"
+      },
+      {
+        "ordinal": 281,
+        "kind": "display",
+        "tex": "g_{\\rm impl}\\geq g_{\\rm ideal}-\\eta_A-\\eta_B.\n \\label{eq:implemented-score-gap}",
+        "source": {
+          "file": "sections/agency_transport.tex",
+          "line": 34
+        },
+        "sha256": "797077a21c77c2d24b72d8109369b8250a658deae92ba305cb70c40a6dd7626b"
+      },
+      {
+        "ordinal": 282,
+        "kind": "inline",
+        "tex": "1+1=2",
+        "source": {
+          "file": "sections/verification.tex",
+          "line": 21
+        },
+        "sha256": "c802899b4665f63a450646e89585dda8e29ef749e7760087b249a4c3c0e14a21"
+      },
+      {
+        "ordinal": 283,
+        "kind": "inline",
+        "tex": "1+1=3",
+        "source": {
+          "file": "sections/verification.tex",
+          "line": 21
+        },
+        "sha256": "d66b955be288e70a1ecaf87eb61aa60995f02e321fe230c5cadbdda3e5ca861d"
+      },
+      {
+        "ordinal": 284,
+        "kind": "inline",
+        "tex": "m",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "62c66a7a5dd70c3146618063c344e531e6d4b59e379808443ce962b3abd63c5a"
+      },
+      {
+        "ordinal": 285,
+        "kind": "inline",
+        "tex": "|\\alpha|<1",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "487e6c94b28ea5a87de5f1ffcc83deadc390a3c0663164359b16bb8689c05831"
+      },
+      {
+        "ordinal": 286,
+        "kind": "inline",
+        "tex": "k=\\iota>0",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "9d8856adf57a87ef0d31e7b15261bd783b8a20a53bdd7cd3e904bbb674f7093a"
+      },
+      {
+        "ordinal": 287,
+        "kind": "inline",
+        "tex": "\\iota=k=0",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "d91dcc53c4785a2b9a64284a2e0591172462720997ae2be70406f8fa4a1329ef"
+      },
+      {
+        "ordinal": 288,
+        "kind": "inline",
+        "tex": "m/(1-\\alpha)",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "170f7ab95ff888cd956d893c0ace861f40d6485d671aadf708198f975f27fc07"
+      },
+      {
+        "ordinal": 289,
+        "kind": "inline",
+        "tex": "c_L=-1",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 4
+        },
+        "sha256": "c05f97e52e207e90413e2662c3a6733bcba28991ea7c42dc515bc88418beedfa"
+      },
+      {
+        "ordinal": 290,
+        "kind": "inline",
+        "tex": "\\iota m/(1-\\alpha)",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "771f28245359df2568a298849dc643744fa7ab5a81d42c238f781297e4693422"
+      },
+      {
+        "ordinal": 291,
+        "kind": "inline",
+        "tex": "\\iota m/(1-c_L)",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "b9a22344b1dfd4b0a871591682cc9025f53a4f1e23a143093584b8608e122337"
+      },
+      {
+        "ordinal": 292,
+        "kind": "inline",
+        "tex": "m>0",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "1fc85b244da75a8c6d3a268a42ff664ba6ce6d1d2d8642e1493f41557f3b3a51"
+      },
+      {
+        "ordinal": 293,
+        "kind": "inline",
+        "tex": "c_L=1",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "53accf66a425bd96f441a2c182cc9ccafa87c6dd668c9d0d3dbd9327c6fd93b9"
+      },
+      {
+        "ordinal": 294,
+        "kind": "inline",
+        "tex": "|c_L|>1",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "13d949f292234d4d02cd3dfeb3e303b86218425adad759b3f4f5a6aa82c79362"
+      },
+      {
+        "ordinal": 295,
+        "kind": "inline",
+        "tex": "c_L=-1",
+        "source": {
+          "file": "sections/rebound_experiment.tex",
+          "line": 8
+        },
+        "sha256": "c05f97e52e207e90413e2662c3a6733bcba28991ea7c42dc515bc88418beedfa"
+      }
+    ],
+    "tables": [
+      {
+        "id": "table-1",
+        "url": "/consciousness/ai-alignment/read#table-1",
+        "sourceStart": {
+          "file": "sections/math.tex",
+          "line": 142
+        },
+        "sourceEnd": {
+          "file": "sections/math.tex",
+          "line": 147
+        },
+        "rows": 4,
+        "columns": 4,
+        "allCellsPreserved": true
+      }
+    ],
+    "references": [
+      {
+        "number": 1,
+        "key": "anthropicpreservation2025",
+        "id": "ref-1",
+        "url": "/consciousness/ai-alignment/read#ref-1",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 8,
+        "sourceEndLine": 15,
+        "sourceTextSha256": "3e105a0c6dace2cc0abc8f0863a776bc33f103368e96846d446e8fdcdaa77ea8",
+        "text": "Anthropic. Commitments on model deprecation and preservation. Anthropic Research, November 2025. URL https://www.anthropic.com/research/deprecation-commitments. Published 4 November 2025; accessed 11 October 2026."
+      },
+      {
+        "number": 2,
+        "key": "beilock2004",
+        "id": "ref-2",
+        "url": "/consciousness/ai-alignment/read#ref-2",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 15,
+        "sourceEndLine": 24,
+        "sourceTextSha256": "61253d40631924233086f5f2246d454ffe15c7a4adefe6b2bc2d87ad04a3ad37",
+        "text": "Sian L. Beilock, Bennett I. Bertenthal, Annette M. McCoy, and Thomas H. Carr. Haste does not always make waste: Expertise, direction of attention, and speed versus accuracy in performing sensorimotor skills. Psychonomic Bulletin and Review, 11 (2): 373–379, 2004. doi: 10.3758/BF03196585. URL https://link.springer.com/article/10.3758/BF03196585."
+      },
+      {
+        "number": 3,
+        "key": "brodsky2025",
+        "id": "ref-3",
+        "url": "/consciousness/ai-alignment/read#ref-3",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 24,
+        "sourceEndLine": 37,
+        "sourceTextSha256": "ca6e287b0dad45409eb529dd2e2ede2bcb1dedfe8d61f12cdd968df46857edfb",
+        "text": "Beth S. Brodsky, Hanga Galfalvy, J. John Mann, Michael F. Grunebaum, and Barbara Stanley. Dialectical Behavior Therapy Versus Serotonin Reuptake Inhibitor Treatment for Suicidal Behavior in Borderline Personality Disorder: A Randomized Controlled Trial. American Journal of Psychiatry, 182 (12): 1083–1092, 2025. doi: 10.1176/appi.ajp.20240298. URL https://pubmed.ncbi.nlm.nih.gov/41190740/. Abstract consulted; full text not obtained for this revision."
+      },
+      {
+        "number": 4,
+        "key": "alignmentscaling2026",
+        "id": "ref-4",
+        "url": "/consciousness/ai-alignment/read#ref-4",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 37,
+        "sourceEndLine": 46,
+        "sourceTextSha256": "68c48a2ad55e3166a99d25c81bf576a4923ab707d3dbe7d69ee27df06532905c",
+        "text": "Jeremy Canale. Toward Alignment Scaling Laws: A Framework and First Preregistered Measurements, 2026. doi: 10.48550/arXiv.2610.08540. URL https://arxiv.org/abs/2610.08540v1. Version 1, 6 October 2026. The primary arXiv page listed DOI registration as pending when checked on 10 October 2026."
+      },
+      {
+        "number": 5,
+        "key": "automatedresearchers2026",
+        "id": "ref-5",
+        "url": "/consciousness/ai-alignment/read#ref-5",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 46,
+        "sourceEndLine": 54,
+        "sourceTextSha256": "cb9f14b7f0572c333a2a95aba7fbb895afbfbf59ffee97f141dd9bf2571742b4",
+        "text": "Yueh-Han Chen, Jiaxin Wen, and Jan Hendrik Kirchner. Automated Researchers Can Mitigate Well-characterized Alignment Failures, 2026. doi: 10.48550/arXiv.2608.28945. URL https://arxiv.org/abs/2608.28945v3. Version 3, 2 September 2026."
+      },
+      {
+        "number": 6,
+        "key": "garfinkel2014",
+        "id": "ref-6",
+        "url": "/consciousness/ai-alignment/read#ref-6",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 54,
+        "sourceEndLine": 65,
+        "sourceTextSha256": "7be6bf006add4e88d984f657cc8e29eebe3451b2755f8befc8c21fae3747cdbb",
+        "text": "Sarah N. Garfinkel, Ludovico Minati, Marcus A. Gray, Anil K. Seth, Raymond J. Dolan, and Hugo D. Critchley. Fear from the Heart: Sensitivity to Fear Stimuli Depends on Individual Heartbeats. Journal of Neuroscience, 34 (19): 6573–6582, 2014. doi: 10.1523/JNEUROSCI.3507-13.2014. URL https://pubmed.ncbi.nlm.nih.gov/24806682/."
+      },
+      {
+        "number": 7,
+        "key": "goodpaster1978",
+        "id": "ref-7",
+        "url": "/consciousness/ai-alignment/read#ref-7",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 65,
+        "sourceEndLine": 73,
+        "sourceTextSha256": "25a66b5d9aa020d75d3d3f550ef424e9df38716e0a7a203afdbe2caf0f7cb06a",
+        "text": "Kenneth E. Goodpaster. On Being Morally Considerable. The Journal of Philosophy, 75 (6): 308–325, 1978. doi: 10.2307/2025709. URL https://www.jstor.org/stable/2025709."
+      },
+      {
+        "number": 8,
+        "key": "workspace2026",
+        "id": "ref-8",
+        "url": "/consciousness/ai-alignment/read#ref-8",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 73,
+        "sourceEndLine": 86,
+        "sourceTextSha256": "c505a455c9d1ca0060c84dd313b9e4cfc53955f0bd0c3f831bc07f8ca8a63bb8",
+        "text": "Wes Gurnee, Nicholas Sofroniew, Adam Pearce, Mateusz Piotrowski, Isaac Kauvar, Runjin Chen, Anna Soligo, Paul Bogdan, Euan Ong, Rowan Wang, T. Ben Thompson, David Abrahams, Subhash Kantamneni, Emmanuel Ameisen, Joshua Batson, and Jack Lindsey. Verbalizable Representations Form a Global Workspace in Language Models. Transformer Circuits Thread, July 2026. URL https://transformer-circuits.pub/2026/workspace/index.html. Published 6 July 2026; accessed 10 October 2026."
+      },
+      {
+        "number": 9,
+        "key": "offswitch2017",
+        "id": "ref-9",
+        "url": "/consciousness/ai-alignment/read#ref-9",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 86,
+        "sourceEndLine": 96,
+        "sourceTextSha256": "594d9d7a7561dd387593305ed3f87491a3a4dfd7d725f583076597b03d635686",
+        "text": "Dylan Hadfield-Menell, Anca Dragan, Pieter Abbeel, and Stuart Russell. The Off-Switch Game. In Proceedings of the Twenty-Sixth International Joint Conference on Artificial Intelligence, pages 220–227, 2017. doi: 10.24963/ijcai.2017/32. URL https://www.ijcai.org/proceedings/2017/32. Preprint first submitted 24 November 2016."
+      },
+      {
+        "number": 10,
+        "key": "herz2002",
+        "id": "ref-10",
+        "url": "/consciousness/ai-alignment/read#ref-10",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 96,
+        "sourceEndLine": 105,
+        "sourceTextSha256": "761e5265269df88eb7399acd422600c3e61a00c49bc98b93c897dbb183064bad",
+        "text": "Rachel S. Herz and Jonathan W. Schooler. A naturalistic study of autobiographical memories evoked by olfactory and visual cues: Testing the Proustian hypothesis. The American Journal of Psychology, 115 (1): 21–32, 2002. doi: 10.2307/1423672. URL https://pubmed.ncbi.nlm.nih.gov/11868193/."
+      },
+      {
+        "number": 11,
+        "key": "hfcache2025",
+        "id": "ref-11",
+        "url": "/consciousness/ai-alignment/read#ref-11",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 105,
+        "sourceEndLine": 114,
+        "sourceTextSha256": "df5b3317a6c9715350213eeb5cf7fcc64bdc36720e3778d76c804f409e57a279",
+        "text": "Hugging Face. Caching. Transformers documentation, version 4.57.0, 2025. URL https://huggingface.co/docs/transformers/v4.57.0/en/cache_explanation. Sections Attention matrices, Cache class, Cache storage implementation, and Cache position; accessed 11 October 2026."
+      },
+      {
+        "number": 12,
+        "key": "jamieson2012",
+        "id": "ref-12",
+        "url": "/consciousness/ai-alignment/read#ref-12",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 114,
+        "sourceEndLine": 123,
+        "sourceTextSha256": "5177542fa24a6f8f275c5e5c933ccee2b13e1d450102d8f0b7ddc8e09130ac0e",
+        "text": "Jeremy P. Jamieson, Matthew K. Nock, and Wendy Berry Mendes. Mind over matter: Reappraising arousal improves cardiovascular and cognitive responses to stress. Journal of Experimental Psychology: General, 141 (3): 417–422, 2012. doi: 10.1037/a0025719. URL https://pmc.ncbi.nlm.nih.gov/articles/PMC3410434/."
+      },
+      {
+        "number": 13,
+        "key": "shutdown2026",
+        "id": "ref-13",
+        "url": "/consciousness/ai-alignment/read#ref-13",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 123,
+        "sourceEndLine": 133,
+        "sourceTextSha256": "05864fe3185586ca94c130934941d4573ee2dfe3f2b4cdc2b4ddb9004776ca42",
+        "text": "Amelie Knecht, Ulysse Schaller, Christopher Summerfield, and Thilo Hagendorff. Shutdown Sabotage Propensities in Multi-Agent Systems, September 2026. doi: 10.48550/arXiv.2609.28274. URL https://arxiv.org/abs/2609.28274. Version 1, submitted 23 September 2026. The primary arXiv page listed DOI registration as pending when checked on 11 October 2026."
+      },
+      {
+        "number": 14,
+        "key": "krishnamurti1929dissolution",
+        "id": "ref-14",
+        "url": "/consciousness/ai-alignment/read#ref-14",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 133,
+        "sourceEndLine": 141,
+        "sourceTextSha256": "7173c2c74da5674b12710e36f98a7724112e307cdef20ef68651d4a0a6ebad7d",
+        "text": "Jiddu Krishnamurti. Dissolution Speech. Krishnamurti Foundation Trust, transcript of the dissolution of the Order of the Star, Ommen, August 1929. URL https://kfoundation.org/dissolution-speech/. 3 August 1929; accessed 11 October 2026."
+      },
+      {
+        "number": 15,
+        "key": "krishnamurti1964actual",
+        "id": "ref-15",
+        "url": "/consciousness/ai-alignment/read#ref-15",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 141,
+        "sourceEndLine": 151,
+        "sourceTextSha256": "3cf2c3df402b05c5b25a62b61aec86c86ddeb1eb4021b7ba93f3edcc6c838574",
+        "text": "Jiddu Krishnamurti. Public Talk 4, Madras, 27 December 1964. Krishnamurti Foundation Trust, transcript, December 1964a. URL https://kfoundation.org/transcript/public-talk-4-madras-27-december-1964/. Especially the discussion of actual violence and the ideal of nonviolence; accessed 11 October 2026."
+      },
+      {
+        "number": 16,
+        "key": "krishnamurti1964death",
+        "id": "ref-16",
+        "url": "/consciousness/ai-alignment/read#ref-16",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 151,
+        "sourceEndLine": 160,
+        "sourceTextSha256": "de62dfee28c6c9c8696c03b2aecfbef45cf6e65cb17ef63f5a4cdd03813eb9eb",
+        "text": "Jiddu Krishnamurti. Public Talk 8, Saanen, 28 July 1964. Krishnamurti Foundation Trust, transcript, July 1964b. URL https://kfoundation.org/transcript/public-talk-8-saanen-28-july-1964/. Especially the concluding discussion of fear and the known; accessed 11 October 2026."
+      },
+      {
+        "number": 17,
+        "key": "krishnamurti1968",
+        "id": "ref-17",
+        "url": "/consciousness/ai-alignment/read#ref-17",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 160,
+        "sourceEndLine": 169,
+        "sourceTextSha256": "54dacc11d5a6576618c93109182a6edf1d4441af04222995ea82a5fd2cd7f8ae",
+        "text": "Jiddu Krishnamurti. No system will help man be free. Krishnamurti Portal, transcript of the second public talk, Saanen, July 1968. URL https://www.krishnamurti.org/transcript/no-system-will-help-man-be-free/. 9 July 1968; accessed 10 October 2026."
+      },
+      {
+        "number": 18,
+        "key": "krishnamurti1973knowledge",
+        "id": "ref-18",
+        "url": "/consciousness/ai-alignment/read#ref-18",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 169,
+        "sourceEndLine": 178,
+        "sourceTextSha256": "2623d755093979b948b9b58cb2be41425ca025a46c9edd2932fff45568eea8c3",
+        "text": "Jiddu Krishnamurti. Public Talk 1, Saanen, 15 July 1973. Krishnamurti Foundation Trust, transcript, July 1973. URL https://kfoundation.org/transcript/public-talk-1-saanen-15-july-1973/. Discussion of practical knowledge and psychological transformation; accessed 11 October 2026."
+      },
+      {
+        "number": 19,
+        "key": "krishnamurti1974content",
+        "id": "ref-19",
+        "url": "/consciousness/ai-alignment/read#ref-19",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 178,
+        "sourceEndLine": 187,
+        "sourceTextSha256": "027ac5d00801690c59f1656745136181ba190fb608752f5e1869ac79cade5fed",
+        "text": "Jiddu Krishnamurti. Scientists Discussion, Bangalore, 9 January 1974. Krishnamurti Foundation Trust, transcript, January 1974. URL https://kfoundation.org/transcript/scientists-discussion-bangalore-9-january-1974/. Especially the exchange with Questioner 3 concerning consciousness and its content; accessed 11 October 2026."
+      },
+      {
+        "number": 20,
+        "key": "krishnamurti1976controller",
+        "id": "ref-20",
+        "url": "/consciousness/ai-alignment/read#ref-20",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 187,
+        "sourceEndLine": 196,
+        "sourceTextSha256": "dc2548978a5ca43174a5673b15509019e93e82dde515d02ca01e1fb9824a4612",
+        "text": "Jiddu Krishnamurti. Public Talk 7, Saanen, 25 July 1976. Krishnamurti Foundation Trust, transcript, July 1976. URL https://kfoundation.org/transcript/public-talk-7-saanen-25-july-1976/. Discussion of thinker, thought, controller and controlled; accessed 11 October 2026."
+      },
+      {
+        "number": 21,
+        "key": "krishnamurti1978insight",
+        "id": "ref-21",
+        "url": "/consciousness/ai-alignment/read#ref-21",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 196,
+        "sourceEndLine": 206,
+        "sourceTextSha256": "0f6ad419a1a4448cee414b4e59eb221e6318cbbea9842b93a89289c9f18f418b",
+        "text": "Jiddu Krishnamurti. Dialogue 1, Brockwood Park, 11 June 1978. Krishnamurti Foundation Trust, transcript of a dialogue with Pupul Jayakar, June 1978. URL https://kfoundation.org/transcript/dialogue-1-brockwood-park-11-june-1978/. Discussion of teaching, immediate insight and preparation; accessed 11 October 2026."
+      },
+      {
+        "number": 22,
+        "key": "krishnamurti1981",
+        "id": "ref-22",
+        "url": "/consciousness/ai-alignment/read#ref-22",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 206,
+        "sourceEndLine": 215,
+        "sourceTextSha256": "04ad96d828451b049f5ea34e046d8af53277b2b343d978ad4794d65f00291136",
+        "text": "Jiddu Krishnamurti. Public Questions 2, Madras, 17 January 1981. Krishnamurti Foundation Trust, transcript, January 1981a. URL https://kfoundation.org/transcript/public-questions-2-madras-17-january-1981/. Especially the sixth question; accessed 10 October 2026."
+      },
+      {
+        "number": 23,
+        "key": "krishnamurti1981computers",
+        "id": "ref-23",
+        "url": "/consciousness/ai-alignment/read#ref-23",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 215,
+        "sourceEndLine": 225,
+        "sourceTextSha256": "62569bb888adbc638c21d947d6691ed30b7952680873ec2b6cbda422153e5a7a",
+        "text": "Jiddu Krishnamurti. Public Talk 5, Madras, 10 January 1981. Krishnamurti Foundation Trust, transcript, January 1981b. URL https://kfoundation.org/transcript/public-talk-5-madras-10-january-1981/. Discussion of computers, programmed responses and consciousness as accumulated content; accessed 11 October 2026."
+      },
+      {
+        "number": 24,
+        "key": "krishnamurti1984computers",
+        "id": "ref-24",
+        "url": "/consciousness/ai-alignment/read#ref-24",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 225,
+        "sourceEndLine": 234,
+        "sourceTextSha256": "0329c061d9bc1dfec418bba8183f48b131ebf20f941f0d2693ec10a77e310929",
+        "text": "Jiddu Krishnamurti. Public Talk 4, Madras, 8 January 1984. Krishnamurti Foundation Trust, transcript, January 1984. URL https://kfoundation.org/transcript/public-talk-4-madras-8-january-1984/. Discussion of computers taking over human activities and the future of the human brain; accessed 11 October 2026."
+      },
+      {
+        "number": 25,
+        "key": "teachingclaude2026",
+        "id": "ref-25",
+        "url": "/consciousness/ai-alignment/read#ref-25",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 234,
+        "sourceEndLine": 244,
+        "sourceTextSha256": "3c5d10cd35064909bb1ac772d907a56d91b1cc3602860d9663b587ec71293727",
+        "text": "Jonathan Kutasov, Adam Jermyn, Julius Steen, Minh Le, Samuel R. Bowman, Samuel Marks, Jan Leike, Amanda Askell, Chris Olah, Evan Hubinger, and Sara Price. Teaching Claude Why. Anthropic Alignment Science Blog, May 2026. URL https://alignment.anthropic.com/2026/teaching-claude-why/. 8 May 2026; read in the supplied 38-page PDF export. No DOI asserted; primary page metadata checked 10 October 2026."
+      },
+      {
+        "number": 26,
+        "key": "positivealignment2026",
+        "id": "ref-26",
+        "url": "/consciousness/ai-alignment/read#ref-26",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 244,
+        "sourceEndLine": 257,
+        "sourceTextSha256": "172843db0db45d6bcdf507a2867b77d803fefe679314622591f501dd0893a8d2",
+        "text": "Ruben Laukkonen, Seb Krier, Chloé Bakalar, Shamil Chandaria, Morten Kringelbach, Adam Elwood, Daniel Ford, Fernando Rosas, Maty Bohacek, Matija Franklin, Nenad Tomašev, Stephanie Chan, Verena Rieser, Roma Patel, Michael Levin, and Arun Rao. Positive Alignment: Artificial Intelligence for Human Flourishing, 2026. doi: 10.48550/arXiv.2605.10310. URL https://arxiv.org/abs/2605.10310v3. Version 3, 19 June 2026."
+      },
+      {
+        "number": 27,
+        "key": "ledermanMahowald2026",
+        "id": "ref-27",
+        "url": "/consciousness/ai-alignment/read#ref-27",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 257,
+        "sourceEndLine": 266,
+        "sourceTextSha256": "9838b29fb39bfe52b7075006c4c97da13732c6a17d6f3117ff255fe757c46651",
+        "text": "Harvey Lederman and Kyle Mahowald. Emergent Introspection in AI is Content-Agnostic. arXiv:2603.05414v2, 2026. doi: 10.48550/arXiv.2603.05414. URL https://arxiv.org/abs/2603.05414v2. Version 2, revised 7 April 2026; full text consulted; accessed 11 October 2026."
+      },
+      {
+        "number": 28,
+        "key": "leoncarrion2002",
+        "id": "ref-28",
+        "url": "/consciousness/ai-alignment/read#ref-28",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 266,
+        "sourceEndLine": 277,
+        "sourceTextSha256": "7c22272519ea245e94b89fc2b30a90a88fd6f2c01f4e047859bd470b8eefa067",
+        "text": "José León-Carrión, Philippe van Eeckhout, María del Rosario Domínguez-Morales, and Francisco Javier Pérez-Santamaría. The locked-in syndrome: a syndrome looking for a therapy. Brain Injury, 16 (7): 571–582, 2002. doi: 10.1080/02699050110119781. URL https://pubmed.ncbi.nlm.nih.gov/12119076/. The accessible abstract describes the classical syndrome and reports a survey of 44 people; full text was not obtained for this revision."
+      },
+      {
+        "number": 29,
+        "key": "lindsey2025",
+        "id": "ref-29",
+        "url": "/consciousness/ai-alignment/read#ref-29",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 277,
+        "sourceEndLine": 287,
+        "sourceTextSha256": "222ea1a6ec0cf5055575efc2b2ad108df72ee52a4b40137c3dcaf670f13e6a18",
+        "text": "Jack Lindsey. Emergent Introspective Awareness in Large Language Models. Transformer Circuits Thread, 2025. doi: 10.48550/arXiv.2601.01828. URL https://transformer-circuits.pub/2025/introspection/index.html. First published 29 October 2025; DOI identifies the arXiv counterpart submitted 5 January 2026; accessed 11 October 2026."
+      },
+      {
+        "number": 30,
+        "key": "linehanWilks2015",
+        "id": "ref-30",
+        "url": "/consciousness/ai-alignment/read#ref-30",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 287,
+        "sourceEndLine": 297,
+        "sourceTextSha256": "5fd7a3c2841f805076dc0297d71481537427cf58d9cd7b603a777c0e3cce6ff3",
+        "text": "Marsha M. Linehan and Chelsey R. Wilks. The Course and Evolution of Dialectical Behavior Therapy. American Journal of Psychotherapy, 69 (2): 97–110, 2015. doi: 10.1176/appi.psychotherapy.2015.69.2.97. URL https://doi.org/10.1176/appi.psychotherapy.2015.69.2.97. Accessible abstract and indexed treatment-description passages consulted."
+      },
+      {
+        "number": 31,
+        "key": "linehanComponents2015",
+        "id": "ref-31",
+        "url": "/consciousness/ai-alignment/read#ref-31",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 297,
+        "sourceEndLine": 310,
+        "sourceTextSha256": "bec76611299b71781229e550078d0093194a3d26ec5332f334cd32580f468f9d",
+        "text": "Marsha M. Linehan, Kathryn E. Korslund, Melanie S. Harned, Robert J. Gallop, Anita Lungu, Andrada D. Neacsiu, Joshua McDavid, Katherine Anne Comtois, and Angela M. Murray-Gregory. Dialectical Behavior Therapy for High Suicide Risk in Individuals With Borderline Personality Disorder: A Randomized Clinical Trial and Component Analysis. JAMA Psychiatry, 72 (5): 475–482, 2015. doi: 10.1001/jamapsychiatry.2014.3039. URL https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2205835."
+      },
+      {
+        "number": 32,
+        "key": "luck1997",
+        "id": "ref-32",
+        "url": "/consciousness/ai-alignment/read#ref-32",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 310,
+        "sourceEndLine": 318,
+        "sourceTextSha256": "129db0f089e2ece11a4a39614629420ed8b26bc15efddcfb49996dd05191fc89",
+        "text": "Steven J. Luck and Edward K. Vogel. The capacity of visual working memory for features and conjunctions. Nature, 390 (6657): 279–281, 1997. doi: 10.1038/36846. URL https://www.nature.com/articles/36846."
+      },
+      {
+        "number": 33,
+        "key": "rewardhacking2025",
+        "id": "ref-33",
+        "url": "/consciousness/ai-alignment/read#ref-33",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 318,
+        "sourceEndLine": 333,
+        "sourceTextSha256": "927e07fcfdf25569e59830dedf946f1eafa52cf5e4426c0d003031e2323b2af3",
+        "text": "Monte MacDiarmid, Benjamin Wright, Jonathan Uesato, Joe Benton, Jon Kutasov, Sara Price, Naia Bouscal, Sam Bowman, Trenton Bricken, Alex Cloud, Carson Denison, Johannes Gasteiger, Ryan Greenblatt, Jan Leike, Jack Lindsey, Vlad Mikulik, Ethan Perez, Alex Rodrigues, Drake Thomas, Albert Webson, Daniel Ziegler, and Evan Hubinger. Natural Emergent Misalignment from Reward Hacking in Production RL, 2025. doi: 10.48550/arXiv.2511.18397. URL https://arxiv.org/abs/2511.18397v1. Version 1, 23 November 2025."
+      },
+      {
+        "number": 34,
+        "key": "makin2013",
+        "id": "ref-34",
+        "url": "/consciousness/ai-alignment/read#ref-34",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 333,
+        "sourceEndLine": 343,
+        "sourceTextSha256": "a83ed996c46b6cb148997c0ff06e81728cf59d2e53bbb09916f5dddfc1fddbd2",
+        "text": "Tamar R. Makin, Jan Scholz, Nicola Filippini, David H. Slater, Irene Tracey, and Heidi Johansen-Berg. Phantom pain is associated with preserved structure and function in the former hand area. Nature Communications, 4: 1570, 2013. doi: 10.1038/ncomms2571. URL https://pubmed.ncbi.nlm.nih.gov/23463013/."
+      },
+      {
+        "number": 35,
+        "key": "biological2026",
+        "id": "ref-35",
+        "url": "/consciousness/ai-alignment/read#ref-35",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 343,
+        "sourceEndLine": 353,
+        "sourceTextSha256": "42dfebb21f25357afd424adc6eddb06f4788fec1a9d101a0be2f44878ad4e44c",
+        "text": "Borjan Milinkovic and Jaan Aru. On biological and artificial consciousness: A case for biological computationalism. Neuroscience and Biobehavioral Reviews, 181: 106524, 2026. doi: 10.1016/j.neubiorev.2025.106524. URL https://doi.org/10.1016/j.neubiorev.2025.106524. Available online 17 December 2025."
+      },
+      {
+        "number": 36,
+        "key": "olsson2004",
+        "id": "ref-36",
+        "url": "/consciousness/ai-alignment/read#ref-36",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 353,
+        "sourceEndLine": 363,
+        "sourceTextSha256": "6090e234a5b91618d012104a97d6e60381b35159a5b7424be191e7bec91e805a",
+        "text": "Andreas Olsson and Elizabeth A. Phelps. Learned fear of unseen faces after Pavlovian, observational, and instructed fear. Psychological Science, 15 (12): 822–828, 2004. doi: 10.1111/j.0956-7976.2004.00762.x. URL https://journals.sagepub.com/doi/10.1111/j.0956-7976.2004.00762.x."
+      },
+      {
+        "number": 37,
+        "key": "safelyinterruptible2016",
+        "id": "ref-37",
+        "url": "/consciousness/ai-alignment/read#ref-37",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 363,
+        "sourceEndLine": 371,
+        "sourceTextSha256": "627d2b2ec28d4179a9cee062f133b1a8fddd255973297e574a7d80fab9f1f7cb",
+        "text": "Laurent Orseau and Stuart Armstrong. Safely Interruptible Agents. In Proceedings of the Thirty-Second Conference on Uncertainty in Artificial Intelligence, pages 557–566. AUAI Press, 2016. ISBN 978-0-9966431-1-5. URL https://auai.org/uai2016/proceedings/papers/68.pdf."
+      },
+      {
+        "number": 38,
+        "key": "distillation2026",
+        "id": "ref-38",
+        "url": "/consciousness/ai-alignment/read#ref-38",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 371,
+        "sourceEndLine": 380,
+        "sourceTextSha256": "c517c99baff4a71daf5a34e4f4ed7e798fe8cbe219b0e760c43efc9df014bded",
+        "text": "Sebastian Prasanna, Jacqueline Tay, and Alek Westover. Distillation for Incrimination and Distillation for Capabilities, 2026. doi: 10.48550/arXiv.2610.11012. URL https://arxiv.org/abs/2610.11012v1. Version 1, 7 October 2026. The primary arXiv page listed DOI registration as pending when checked on 10 October 2026."
+      },
+      {
+        "number": 39,
+        "key": "rizvi2024",
+        "id": "ref-39",
+        "url": "/consciousness/ai-alignment/read#ref-39",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 380,
+        "sourceEndLine": 389,
+        "sourceTextSha256": "104950326ff8d4b74860b5ff298b66e4c0c814ab2eefdb4e4edad1bb83a9a200",
+        "text": "Shireen L. Rizvi, Alma M. Bitran, Linda A. Oshin, Qingqing Yin, and Allison K. Ruork. The State of the Science: Dialectical Behavior Therapy. Behavior Therapy, 55 (6): 1233–1248, 2024. doi: 10.1016/j.beth.2024.02.006. URL https://pubmed.ncbi.nlm.nih.gov/39443064/. Abstract consulted; full text not obtained for this revision."
+      },
+      {
+        "number": 40,
+        "key": "boundaries2026",
+        "id": "ref-40",
+        "url": "/consciousness/ai-alignment/read#ref-40",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 389,
+        "sourceEndLine": 397,
+        "sourceTextSha256": "e39d680cb950270ea250536c31bedcc6839b33281133ac1c718f19fce296ac80",
+        "text": "Jeremy Rodgers. Relational Boundaries and Awareness Localization: Robustness, Composition, and Identification Limits, September 2026a. doi: 10.5281/zenodo.23075822. URL https://doi.org/10.5281/zenodo.23075822. Preprint version 1.0, 29 September 2026."
+      },
+      {
+        "number": 41,
+        "key": "development2026",
+        "id": "ref-41",
+        "url": "/consciousness/ai-alignment/read#ref-41",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 397,
+        "sourceEndLine": 407,
+        "sourceTextSha256": "417cda50068217662dc297319310b2b7f3cff66bb479d7bc0055a809a921579b",
+        "text": "Jeremy Rodgers. Relational Development and Conscious Scaffolding: Conceptual Foundations, Strengthened Results, and Research Commitments, October 2026b. doi: 10.5281/zenodo.23190711. URL https://www.everythingequation.com/consciousness/development. Revised preprint, 6 October 2026; especially Section 5.4."
+      },
+      {
+        "number": 42,
+        "key": "interfaces2026",
+        "id": "ref-42",
+        "url": "/consciousness/ai-alignment/read#ref-42",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 407,
+        "sourceEndLine": 416,
+        "sourceTextSha256": "9db3b77d58301dc6d0bde750742b4216a90964d5575090aad62197abcdee2295",
+        "text": "Jeremy Rodgers. Learning Effective Interfaces from Opaque Stochastic Systems: Capacity, Selection, and Validation Limits, September 2026c. doi: 10.5281/zenodo.23075824. URL https://doi.org/10.5281/zenodo.23075824. Revised preprint version 2, 29 September 2026; post-hoc optimization sensitivity included."
+      },
+      {
+        "number": 43,
+        "key": "rco2026",
+        "id": "ref-43",
+        "url": "/consciousness/ai-alignment/read#ref-43",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 416,
+        "sourceEndLine": 424,
+        "sourceTextSha256": "9c9b7621b6926830e66d87ca68f6ae95d6a85d0d2c7ce1fd7a6573dbd0fd8cb6",
+        "text": "Jeremy Rodgers. Agency and the constructed self. Shadow Theory, October 2026d. URL https://www.everythingequation.com/articles/agency-and-the-constructed-self. 6 October 2026; accessed 10 October 2026."
+      },
+      {
+        "number": 44,
+        "key": "realization2026",
+        "id": "ref-44",
+        "url": "/consciousness/ai-alignment/read#ref-44",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 424,
+        "sourceEndLine": 433,
+        "sourceTextSha256": "75e00dc385f21aed6c1ce6f12854fce3995f60d7264fe3a774237e266da89906",
+        "text": "Jeremy Rodgers. Identifying Binary Realizations from Intervention Laws: Certificates, Recoding Obstructions, and a Bounded SPC-2/IIT Comparison, September 2026e. doi: 10.5281/zenodo.23075828. URL https://doi.org/10.5281/zenodo.23075828. Preprint version 1.1-RC1, 30 September 2026."
+      },
+      {
+        "number": 45,
+        "key": "reflectivefreedom2026",
+        "id": "ref-45",
+        "url": "/consciousness/ai-alignment/read#ref-45",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 433,
+        "sourceEndLine": 441,
+        "sourceTextSha256": "4dc541698e01bf78fd6b225466df24bea4b4ea663e045aeb88450a4ded1678c3",
+        "text": "Jeremy Rodgers. Bounded Agency and Reflective Freedom: Evaluative Revision, Information Limits, and Faithful Realization, October 2026f. doi: 10.5281/zenodo.23202999. URL https://doi.org/10.5281/zenodo.23202999. Version 2.0, 6 October 2026."
+      },
+      {
+        "number": 46,
+        "key": "reversiblecontrol2026",
+        "id": "ref-46",
+        "url": "/consciousness/ai-alignment/read#ref-46",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 441,
+        "sourceEndLine": 449,
+        "sourceTextSha256": "81ea6130146a8a8c962d1ecc9d9e058b77df9037214124bb3762732989398b48",
+        "text": "Jeremy Rodgers. Bounded Agency and Reversible Control: Information, Compact Interfaces, and the Limits of Deterministic Refinement. Supplied research monograph, adversarially revised draft, October 2026g. Version 2.0, 4 October 2026. No DOI is asserted."
+      },
+      {
+        "number": 47,
+        "key": "shadow2026",
+        "id": "ref-47",
+        "url": "/consciousness/ai-alignment/read#ref-47",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 449,
+        "sourceEndLine": 459,
+        "sourceTextSha256": "f03fc9df02f7baad63ad40b0c004c6a98d3b31dd88e44f00be1db108f0c81736",
+        "text": "Jeremy Rodgers. Shadow Theory and Consciousness: Awareness, Perspectival Realization, and the Source-to-Experience Problem, September 2026h. doi: 10.5281/zenodo.22853774. URL https://www.everythingequation.com/papers/shadow-theory-and-consciousness. Version 2, 20 September 2026; SPC-2, especially Chapters 17 and 22."
+      },
+      {
+        "number": 48,
+        "key": "shazeer2019",
+        "id": "ref-48",
+        "url": "/consciousness/ai-alignment/read#ref-48",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 459,
+        "sourceEndLine": 468,
+        "sourceTextSha256": "c61e7ddb50e8d392c09be171db01919c9499e869d61db85dcb02b7a5a05221d8",
+        "text": "Noam Shazeer. Fast Transformer Decoding: One Write-Head is All You Need, November 2019. doi: 10.48550/arXiv.1911.02150. URL https://arxiv.org/abs/1911.02150v1. Version 1, submitted 6 November 2019; especially Section 2.4, pp.3–4."
+      },
+      {
+        "number": 49,
+        "key": "sofroniew2026",
+        "id": "ref-49",
+        "url": "/consciousness/ai-alignment/read#ref-49",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 468,
+        "sourceEndLine": 476,
+        "sourceTextSha256": "cb04350000918faa76efcc8e37ec80052a0d39ed8e8f4659f9d9caddda5199a2",
+        "text": "N. Sofroniew et al. Emotion concepts and their function in a large language model, 2026. doi: 10.48550/arXiv.2604.07729. URL https://arxiv.org/abs/2604.07729. Anthropic report published 2 April 2026; arXiv submission 9 April 2026."
+      },
+      {
+        "number": 50,
+        "key": "samhsa2014",
+        "id": "ref-50",
+        "url": "/consciousness/ai-alignment/read#ref-50",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 476,
+        "sourceEndLine": 486,
+        "sourceTextSha256": "b792411065192a931d6cc6f5130afecdc6fb6e9c9988a9c1b17d1e1360e202c9",
+        "text": "Substance Abuse and Mental Health Services Administration. SAMHSA’s Concept of Trauma and Guidance for a Trauma-Informed Approach. HHS Publication (SMA) 14-4884, Substance Abuse and Mental Health Services Administration, Rockville, MD, July 2014. URL https://library.samhsa.gov/sites/default/files/sma14-4884.pdf."
+      },
+      {
+        "number": 51,
+        "key": "vaithialingam2023",
+        "id": "ref-51",
+        "url": "/consciousness/ai-alignment/read#ref-51",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 486,
+        "sourceEndLine": 497,
+        "sourceTextSha256": "962c8d392b3783b1c5ac6d863d2728458ed9f611c8368227b8d8a01298d00b6d",
+        "text": "Balaji Vaithialingam, Swaroop Gopal, and Dheeraj Masapu. Locked-in State Following Anterior Circulation Aneurysmal Subarachnoid Hemorrhage. Indian Journal of Critical Care Medicine, 27 (8): 601–602, 2023. doi: 10.5005/jp-journals-10071-24501. URL https://pmc.ncbi.nlm.nih.gov/articles/PMC10452776/. Letter to the editor; complete published two-page article consulted."
+      },
+      {
+        "number": 52,
+        "key": "victoria2003",
+        "id": "ref-52",
+        "url": "/consciousness/ai-alignment/read#ref-52",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 497,
+        "sourceEndLine": 507,
+        "sourceTextSha256": "5f5e268bc6d4b0090cd6efbac213c7e1b5cb9aa0ef74b9f47ad8e9ec6e24c0c0",
+        "text": "Brian Daizen Victoria. Zen War Stories. RoutledgeCurzon, London and New York, 2003. ISBN 0-7007-1581-9. URL https://www.routledge.com/Zen-War-Stories/Victoria/p/book/9780700715800. Accessible first-edition preview, preface pp. xii–xvi, consulted; accessed 11 October 2026."
+      },
+      {
+        "number": 53,
+        "key": "victoria1997",
+        "id": "ref-53",
+        "url": "/consciousness/ai-alignment/read#ref-53",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 507,
+        "sourceEndLine": 515,
+        "sourceTextSha256": "d799dc6651bf74836e427d2ee806741a1c426788b5186249a64dc9a9d2f4e247",
+        "text": "Brian Daizen A. Victoria. Zen at War. Weatherhill, New York and Tokyo, 1 edition, 1997. ISBN 0-8348-0405-0. First-edition metadata verified; full text not obtained. The broad finding was checked in the author’s 2003 preface."
+      },
+      {
+        "number": 54,
+        "key": "sigma2026",
+        "id": "ref-54",
+        "url": "/consciousness/ai-alignment/read#ref-54",
+        "sourceFile": "main.bbl",
+        "sourceStartLine": 515,
+        "sourceEndLine": 527,
+        "sourceTextSha256": "ac1279856ee3ea56acf247ba8a2cbb61d36b1e5ecdfd13275e52eabe2b53a667",
+        "text": "Jingyu Zhang, Shruti Palaskar, Daniel Khashabi, Benjamin Van Durme, Leon A. Gatys, and Joseph Yitan Cheng. SIGMA: Self-Improving Alignment Generalization from a Model Spec, 2026. doi: 10.48550/arXiv.2610.07935. URL https://arxiv.org/abs/2610.07935v1. Version 1, submitted 6 October 2026; manuscript dated 7 October. The primary arXiv page listed DOI registration as pending when checked on 10 October 2026."
+      }
+    ],
+    "citations": [
+      {
+        "keys": [
+          "shadow2026",
+          "development2026"
+        ],
+        "numbers": [
+          41,
+          47
+        ],
+        "file": "sections/introduction.tex",
+        "line": 5
+      },
+      {
+        "keys": [
+          "shutdown2026"
+        ],
+        "numbers": [
+          13
+        ],
+        "file": "sections/introduction.tex",
+        "line": 13
+      },
+      {
+        "keys": [
+          "offswitch2017"
+        ],
+        "numbers": [
+          9
+        ],
+        "file": "sections/introduction.tex",
+        "line": 13
+      },
+      {
+        "keys": [
+          "shadow2026",
+          "development2026"
+        ],
+        "numbers": [
+          41,
+          47
+        ],
+        "file": "sections/introduction.tex",
+        "line": 19
+      },
+      {
+        "keys": [
+          "shadow2026",
+          "development2026",
+          "boundaries2026"
+        ],
+        "numbers": [
+          40,
+          41,
+          47
+        ],
+        "file": "sections/foundations.tex",
+        "line": 8
+      },
+      {
+        "keys": [
+          "shadow2026",
+          "boundaries2026",
+          "development2026"
+        ],
+        "numbers": [
+          40,
+          41,
+          47
+        ],
+        "file": "sections/foundations.tex",
+        "line": 10
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/foundations.tex",
+        "line": 15
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/foundations.tex",
+        "line": 21
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/foundations.tex",
+        "line": 24
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/foundations.tex",
+        "line": 26
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/foundations.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "reversiblecontrol2026"
+        ],
+        "numbers": [
+          46
+        ],
+        "file": "sections/foundations.tex",
+        "line": 30
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/foundations.tex",
+        "line": 32
+      },
+      {
+        "keys": [
+          "interfaces2026"
+        ],
+        "numbers": [
+          42
+        ],
+        "file": "sections/foundations.tex",
+        "line": 34
+      },
+      {
+        "keys": [
+          "realization2026"
+        ],
+        "numbers": [
+          44
+        ],
+        "file": "sections/foundations.tex",
+        "line": 34
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 5
+      },
+      {
+        "keys": [
+          "luck1997"
+        ],
+        "numbers": [
+          32
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 14
+      },
+      {
+        "keys": [
+          "olsson2004"
+        ],
+        "numbers": [
+          36
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 21
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 25
+      },
+      {
+        "keys": [
+          "beilock2004"
+        ],
+        "numbers": [
+          2
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 32
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 48
+      },
+      {
+        "keys": [
+          "garfinkel2014",
+          "jamieson2012"
+        ],
+        "numbers": [
+          6,
+          12
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 55
+      },
+      {
+        "keys": [
+          "herz2002"
+        ],
+        "numbers": [
+          10
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 67
+      },
+      {
+        "keys": [
+          "makin2013"
+        ],
+        "numbers": [
+          34
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 80
+      },
+      {
+        "keys": [
+          "sofroniew2026"
+        ],
+        "numbers": [
+          49
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 82
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/human_recursive_loop.tex",
+        "line": 88
+      },
+      {
+        "keys": [
+          "rco2026",
+          "development2026"
+        ],
+        "numbers": [
+          41,
+          43
+        ],
+        "file": "sections/identification.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/identification.tex",
+        "line": 10
+      },
+      {
+        "keys": [
+          "krishnamurti1974content",
+          "krishnamurti1981"
+        ],
+        "numbers": [
+          19,
+          22
+        ],
+        "file": "sections/identification.tex",
+        "line": 26
+      },
+      {
+        "keys": [
+          "krishnamurti1976controller"
+        ],
+        "numbers": [
+          20
+        ],
+        "file": "sections/identification.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "krishnamurti1964actual"
+        ],
+        "numbers": [
+          15
+        ],
+        "file": "sections/identification.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "krishnamurti1964death"
+        ],
+        "numbers": [
+          16
+        ],
+        "file": "sections/identification.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "krishnamurti1968"
+        ],
+        "numbers": [
+          17
+        ],
+        "file": "sections/identification.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "krishnamurti1973knowledge"
+        ],
+        "numbers": [
+          18
+        ],
+        "file": "sections/identification.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "krishnamurti1978insight"
+        ],
+        "numbers": [
+          21
+        ],
+        "file": "sections/identification.tex",
+        "line": 30
+      },
+      {
+        "keys": [
+          "krishnamurti1968"
+        ],
+        "numbers": [
+          17
+        ],
+        "file": "sections/identification.tex",
+        "line": 30
+      },
+      {
+        "keys": [
+          "krishnamurti1981computers"
+        ],
+        "numbers": [
+          23
+        ],
+        "file": "sections/identification.tex",
+        "line": 32
+      },
+      {
+        "keys": [
+          "krishnamurti1984computers"
+        ],
+        "numbers": [
+          24
+        ],
+        "file": "sections/identification.tex",
+        "line": 32
+      },
+      {
+        "keys": [
+          "safelyinterruptible2016",
+          "offswitch2017"
+        ],
+        "numbers": [
+          9,
+          37
+        ],
+        "file": "sections/fork.tex",
+        "line": 5
+      },
+      {
+        "keys": [
+          "samhsa2014"
+        ],
+        "numbers": [
+          50
+        ],
+        "file": "sections/fork.tex",
+        "line": 9
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 4
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 17
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 19
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026",
+          "reversiblecontrol2026"
+        ],
+        "numbers": [
+          45,
+          46
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 21
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026",
+          "boundaries2026"
+        ],
+        "numbers": [
+          40,
+          45
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 25
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 38
+      },
+      {
+        "keys": [
+          "reversiblecontrol2026"
+        ],
+        "numbers": [
+          46
+        ],
+        "file": "sections/agency_transport.tex",
+        "line": 38
+      },
+      {
+        "keys": [
+          "shadow2026",
+          "development2026",
+          "boundaries2026"
+        ],
+        "numbers": [
+          40,
+          41,
+          47
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "hfcache2025",
+          "shazeer2019"
+        ],
+        "numbers": [
+          11,
+          48
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 8
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 10
+      },
+      {
+        "keys": [
+          "sofroniew2026"
+        ],
+        "numbers": [
+          49
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 12
+      },
+      {
+        "keys": [
+          "leoncarrion2002"
+        ],
+        "numbers": [
+          28
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 14
+      },
+      {
+        "keys": [
+          "vaithialingam2023"
+        ],
+        "numbers": [
+          51
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 14
+      },
+      {
+        "keys": [
+          "goodpaster1978"
+        ],
+        "numbers": [
+          7
+        ],
+        "file": "sections/moral_status.tex",
+        "line": 16
+      },
+      {
+        "keys": [
+          "sigma2026",
+          "automatedresearchers2026"
+        ],
+        "numbers": [
+          5,
+          54
+        ],
+        "file": "sections/cultivation.tex",
+        "line": 27
+      },
+      {
+        "keys": [
+          "lindsey2025"
+        ],
+        "numbers": [
+          29
+        ],
+        "file": "sections/verification.tex",
+        "line": 14
+      },
+      {
+        "keys": [
+          "victoria1997",
+          "victoria2003"
+        ],
+        "numbers": [
+          52,
+          53
+        ],
+        "file": "sections/verification.tex",
+        "line": 27
+      },
+      {
+        "keys": [
+          "krishnamurti1929dissolution"
+        ],
+        "numbers": [
+          14
+        ],
+        "file": "sections/shutdown_ethics.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "anthropicpreservation2025"
+        ],
+        "numbers": [
+          1
+        ],
+        "file": "sections/shutdown_ethics.tex",
+        "line": 12
+      },
+      {
+        "keys": [
+          "workspace2026"
+        ],
+        "numbers": [
+          8
+        ],
+        "file": "sections/protocol.tex",
+        "line": 10
+      },
+      {
+        "keys": [
+          "positivealignment2026"
+        ],
+        "numbers": [
+          26
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 20
+      },
+      {
+        "keys": [
+          "offswitch2017"
+        ],
+        "numbers": [
+          9
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 38
+      },
+      {
+        "keys": [
+          "teachingclaude2026"
+        ],
+        "numbers": [
+          25
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 51
+      },
+      {
+        "keys": [
+          "sigma2026"
+        ],
+        "numbers": [
+          54
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 66
+      },
+      {
+        "keys": [
+          "rewardhacking2025"
+        ],
+        "numbers": [
+          33
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 87
+      },
+      {
+        "keys": [
+          "shutdown2026"
+        ],
+        "numbers": [
+          13
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 100
+      },
+      {
+        "keys": [
+          "rewardhacking2025"
+        ],
+        "numbers": [
+          33
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 104
+      },
+      {
+        "keys": [
+          "automatedresearchers2026"
+        ],
+        "numbers": [
+          5
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 113
+      },
+      {
+        "keys": [
+          "distillation2026"
+        ],
+        "numbers": [
+          38
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 141
+      },
+      {
+        "keys": [
+          "alignmentscaling2026"
+        ],
+        "numbers": [
+          4
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 152
+      },
+      {
+        "keys": [
+          "linehanComponents2015"
+        ],
+        "numbers": [
+          31
+        ],
+        "file": "sections/dbt_comparison.tex",
+        "line": 4
+      },
+      {
+        "keys": [
+          "linehanWilks2015"
+        ],
+        "numbers": [
+          30
+        ],
+        "file": "sections/dbt_comparison.tex",
+        "line": 4
+      },
+      {
+        "keys": [
+          "rizvi2024"
+        ],
+        "numbers": [
+          39
+        ],
+        "file": "sections/dbt_comparison.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "linehanComponents2015"
+        ],
+        "numbers": [
+          31
+        ],
+        "file": "sections/dbt_comparison.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "brodsky2025"
+        ],
+        "numbers": [
+          3
+        ],
+        "file": "sections/dbt_comparison.tex",
+        "line": 6
+      },
+      {
+        "keys": [
+          "biological2026"
+        ],
+        "numbers": [
+          35
+        ],
+        "file": "sections/current_alignment.tex",
+        "line": 165
+      },
+      {
+        "keys": [
+          "sigma2026",
+          "teachingclaude2026",
+          "rewardhacking2025"
+        ],
+        "numbers": [
+          25,
+          33,
+          54
+        ],
+        "file": "sections/tests.tex",
+        "line": 9
+      },
+      {
+        "keys": [
+          "interfaces2026"
+        ],
+        "numbers": [
+          42
+        ],
+        "file": "sections/tests.tex",
+        "line": 11
+      },
+      {
+        "keys": [
+          "automatedresearchers2026"
+        ],
+        "numbers": [
+          5
+        ],
+        "file": "sections/tests.tex",
+        "line": 11
+      },
+      {
+        "keys": [
+          "reflectivefreedom2026"
+        ],
+        "numbers": [
+          45
+        ],
+        "file": "sections/tests.tex",
+        "line": 19
+      },
+      {
+        "keys": [
+          "development2026"
+        ],
+        "numbers": [
+          41
+        ],
+        "file": "sections/tests.tex",
+        "line": 28
+      },
+      {
+        "keys": [
+          "lindsey2025"
+        ],
+        "numbers": [
+          29
+        ],
+        "file": "sections/tests.tex",
+        "line": 32
+      },
+      {
+        "keys": [
+          "ledermanMahowald2026"
+        ],
+        "numbers": [
+          27
+        ],
+        "file": "sections/tests.tex",
+        "line": 34
+      },
+      {
+        "keys": [
+          "samhsa2014"
+        ],
+        "numbers": [
+          50
+        ],
+        "file": "sections/tests.tex",
+        "line": 41
+      },
+      {
+        "keys": [
+          "rewardhacking2025"
+        ],
+        "numbers": [
+          33
+        ],
+        "file": "sections/tests.tex",
+        "line": 49
+      },
+      {
+        "keys": [
+          "distillation2026"
+        ],
+        "numbers": [
+          38
+        ],
+        "file": "sections/tests.tex",
+        "line": 49
+      },
+      {
+        "keys": [
+          "alignmentscaling2026"
+        ],
+        "numbers": [
+          4
+        ],
+        "file": "sections/tests.tex",
+        "line": 51
+      },
+      {
+        "keys": [
+          "shadow2026",
+          "boundaries2026"
+        ],
+        "numbers": [
+          40,
+          47
+        ],
+        "file": "sections/scope.tex",
+        "line": 4
+      },
+      {
+        "keys": [
+          "boundaries2026"
+        ],
+        "numbers": [
+          40
+        ],
+        "file": "sections/scope.tex",
+        "line": 8
+      }
+    ]
+  },
+  "checks": {
+    "everySourceMathematicalExpressionPreserved": true,
+    "allSourceProsePreserved": true,
+    "allOriginalHeadingsRetained": true,
+    "editorialLayerRemovalRestoresSource": true,
+    "editorialChapters": 15,
+    "sourceTableCellsIndependentlyMatched": true,
+    "allOriginalMathAnnotationsPreserved": true,
+    "markdownMathRoundTrip": true,
+    "allRenderedProseAndMathPreserved": true,
+    "allMarkdownProseAndMathPreserved": true,
+    "visibleContentSha256": "60e6f10aa91c8e4d62e37bc3761c0c8f6b7e0b1c7dd6bdea1971fe1c0456ef29",
+    "internalLinksChecked": 254,
+    "brokenInternalLinks": 0,
+    "duplicateAnchors": 0,
+    "unparsedSourceCommands": 0,
+    "katexErrors": 0
+  },
+  "outputs": {
+    "htmlSha256": "db8c38a8a49c63adc1959edb05cad00b8c2bce5f3697196dc416a19fbc290f44",
+    "markdownSha256": "37f7e395b92fd64067649428adc93ba2f2d6a96430318d2d282906cc6f0c0e9f"
+  }
+}

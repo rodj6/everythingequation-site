@@ -1,3 +1,4 @@
+import AlignmentFeature from '@/components/alignment-feature';
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import Link from "next/link";
@@ -60,6 +61,7 @@ export default async function HomePage() {
             >
               Quantum Measurement &amp; Born Rule
             </Link>
+            <Link href="/consciousness/ai-alignment" className="rounded-lg border border-[hsl(var(--violet)/0.5)] px-5 py-2.5 text-sm font-semibold text-fg transition hover:text-vio">AI Alignment &amp; Consciousness</Link>
             <Link
               href="/monograph"
               className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
@@ -147,6 +149,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+      <AlignmentFeature home />
       <ShadowModelOverview />
       <SealedLeakyFeature />
 

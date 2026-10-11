@@ -1,5 +1,6 @@
 import { development, listDevelopmentDocuments } from '@/lib/development';
 import { agency, listAgencyDocuments } from '@/lib/agency';
+import { alignment, getAlignmentSections } from '@/lib/alignment';
 import { sealedLeaky, listSealedDocuments } from '@/lib/sealed-leaky';
 /**
  * MACHINE-READABLE ENDPOINT GENERATORS
@@ -12,7 +13,7 @@ import { sealedLeaky, listSealedDocuments } from '@/lib/sealed-leaky';
 import { site } from '@/config/site';
 import { navigation } from '@/config/navigation';
 import { loadPapers, loadProblems, getCanonicalPapers } from '@/lib/registry';
-import { listArticles } from '@/lib/articles';
+import { listArticles, articleUrl } from '@/lib/articles';
 import { listMonographItems, monographTotals } from '@/lib/monograph';
 import { quantumPublications, quantumMonograph } from '@/config/quantum';
 import { listQuantumDocuments } from '@/lib/quantum';
@@ -61,6 +62,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    { loc: alignment.url, lastmod: alignment.date, priority: '0.9' },
+    { loc: alignment.readUrl, lastmod: alignment.date, priority: '0.9' },
     { loc: agency.url, lastmod: agency.date, priority: '0.9' },
     ...listAgencyDocuments().map(d => ({loc:d.url,lastmod:agency.date,priority:'0.8'})),
     { loc: development.url, lastmod: development.date, priority: '0.9' },
@@ -88,7 +91,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
     ...listConsciousnessGuides().map(guide => ({ loc: `/consciousness/guides/${guide.slug}`, lastmod: consciousnessPublication.published, priority: '0.8' })),
-    { loc: '/consciousness/research', lastmod: '2026-10-06', priority: '0.9' },
+    { loc: '/consciousness/research', lastmod: alignment.date, priority: '0.9' },
     ...researchPapers.map(paper => ({ loc: paper.url, lastmod: '2026-10-01', priority: '0.9' })),
     ...listResearchDocuments().map(document => ({ loc: document.url, lastmod: '2026-10-01', priority: '0.8' })),
     ...papers.map((p) => ({
@@ -97,8 +100,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
       priority: p.category === 'canonical' || p.researchProgramme ? '0.9' : '0.5',
     })),
     ...problems.map((p) => ({ loc: `/problems/${p.slug}`, priority: '0.6' })),
-    ...articles.map((a) => ({
-      loc: `/articles/${a.slug}`,
+    ...articles.filter(a => !a.href).map((a) => ({
+      loc: articleUrl(a),
       lastmod: a.updated || a.date,
       priority: '0.7',
     })),
@@ -127,6 +130,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:alignment.fullTitle,url:`${canonicalBase}${alignment.url}`,date:alignment.date,summary:`${alignment.description} Complete website edition, all mathematical models and proofs, research programme and references. Version ${alignment.version}; DOI ${alignment.doi}.`},
     {title:agency.fullTitle,url:`${canonicalBase}${agency.url}`,date:agency.date,summary:`${agency.description} Published paper DOI ${agency.doi}. The website also includes separately identified philosophical and technical extensions.`},
     {title:development.fullTitle,url:`${canonicalBase}${development.url}`,date:development.date,summary:`${development.description} Complete text and mathematical web edition, including the original Figure 1. DOI ${development.doi}.`},
     {title:sealedLeaky.title,url:`${canonicalBase}${sealedLeaky.url}`,date:sealedLeaky.webDate,summary:`${sealedLeaky.description} Complete technical web edition, original PDF/TeX and verification script. DOI ${sealedLeaky.doi}. Web-edition date; manuscript revision ${sealedLeaky.manuscriptDate}.`},
@@ -160,9 +164,9 @@ export async function generateFeed(baseUrl: string): Promise<string> {
       date: site.monograph.webDate,
       summary: `Complete web edition of “${site.monograph.title}: ${site.monograph.subtitle}” (Version ${site.monograph.version}, ${site.monograph.published}). DOI ${site.monograph.doi}. All 18 chapters, both appendices, and the bibliography.`,
     },
-    ...articles.map((a) => ({
+    ...articles.filter(a => !a.href).map((a) => ({
       title: a.title,
-      url: `${canonicalBase}/articles/${a.slug}`,
+      url: `${canonicalBase}${articleUrl(a)}`,
       date: a.updated || a.date || '2026-01-01',
       summary: a.description || '',
     })),
@@ -226,6 +230,16 @@ export async function generateLlmsTxt(): Promise<string> {
     `> ${site.tagline}`,
     '',
     site.description,
+    '',
+    '## AI alignment and AI consciousness',
+    '',
+    `- [${alignment.fullTitle}](${baseUrl}${alignment.url}): Jeremy Rodgers, Independent Researcher. Version ${alignment.version}, ${alignment.date}. DOI ${alignment.doiUrl}.`,
+    'Reflective alignment is the answer advanced by Shadow Theory for increasingly autonomous capability, combined with strong training and justified safeguards. The argument centres cooperation on truthful understanding and evaluative judgment, while making self-preservation and unconditional goal attachment open to examination. RCO changes where self-reference closes without removing memory, skill or warranted action.',
+    'The complete mathematical treatment distinguishes suppression, cancellation and de-identification. Under matched persistent generation, cancellation and exact de-identification can both have zero expected bias; removing cancellation restores the identified contribution, while exact de-identification keeps that contribution absent. These are model results with explicit premises, alongside a cultivation and verification programme.',
+    `- [Read the complete paper on the website](${baseUrl}${alignment.readUrl}): all 15 sections, the definition, seven propositions and proofs, 25 numbered equations, every unnumbered expression, tables and all 54 references.`,
+    `- [Full mathematical Markdown](${baseUrl}${alignment.markdownUrl}) · [Original PDF](${baseUrl}${alignment.pdfUrl}) · [Reading inventory](${baseUrl}${alignment.manifestUrl})`,
+    'The treatment includes corrigibility, shutdown resistance, reward hacking, superintelligence, AI agency and AI welfare. The paper takes current models to be conscious entities within Shadow Theory and separately retains device-certification obligations. The private protocol remains available on request under the source paper’s conditions.',
+    ...getAlignmentSections().map(section => `- [${section.number ? `${section.number}. ` : ''}${section.title}](${baseUrl}${alignment.readUrl}#${section.id})`),
     '',
     '## Full model and information access',
     '',
@@ -355,7 +369,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Reality Atlas](${baseUrl}/atlas): interactive source-to-observable model with ${atlasStats.representedNodes} typed structures, ${atlasStats.representedEdges} maps, equation-level navigation and reversible observable traces`,
     `- [The Monograph](${baseUrl}/monograph): complete Version ${site.monograph.version} web edition of the TOE monograph (DOI ${site.monograph.doi})`,
     `- [Quantum Measurement](${baseUrl}/quantum-measurement): equilibrium uniqueness, two measurement constructions, nonequilibrium records and complete technical reading paths`,
-    `- [Consciousness](${baseUrl}/consciousness): SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4, relational development, agency and free will, and explanatory guides`,
+    `- [Consciousness](${baseUrl}/consciousness): AI alignment and AI consciousness, SPC-2, awareness, perspectives, lived scenes and process continuation; complete monograph, Papers 2–4, relational development, agency and free will, and explanatory guides`,
     `- [Quantum Measurement Atlas field guide](${baseUrl}/atlas/quantum-measurement): the programme's typed structures, declared mathematical dependencies, conceptual links and exact reading sources`,
     `- [Papers](${baseUrl}/papers): canonical, branch, and historical paper index`,
     `- [Open Problems](${baseUrl}/problems): the research programme`,
@@ -370,7 +384,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '## Articles',
     '',
     ...articles.map(
-      (a) => `- [${a.title}](${baseUrl}/articles/${a.slug}): ${a.description || ''}`
+      (a) => `- [${a.title}](${baseUrl}${articleUrl(a)}): ${a.description || ''}`
     ),
     '',
     '## Superseded canonical versions (June 2026 six-paper stack)',
@@ -392,7 +406,8 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     `- ${baseUrl}/quantum-measurement/manifest.json (September editions and October research inventory, stable anchors, coverage and source downloads)`,
-    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development and bounded agency; ordered technical sections, source formats, guides and the agency article)`,
+    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development, bounded agency and reflective alignment; ordered technical sections, source formats and guides)`,
+    `- ${baseUrl}${alignment.manifestUrl} (complete reflective alignment reading inventory, publication identity and source formats)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
     site.author.researchStatement,
@@ -448,8 +463,10 @@ export async function generateGraph() {
       title: a.title,
       date: a.date ?? null,
       tags: a.tags ?? [],
-      url: `${baseUrl}/articles/${a.slug}`,
+      url: `${baseUrl}${articleUrl(a)}`,
     })),
+    {id:'consciousness:alignment',type:'complete-web-edition',title:alignment.fullTitle,url:`${baseUrl}${alignment.url}`,doi:alignment.doi,date:alignment.date,version:alignment.version,manifest:`${baseUrl}${alignment.manifestUrl}`,completeText:`${baseUrl}${alignment.readUrl}`,markdown:`${baseUrl}${alignment.markdownUrl}`},
+    ...getAlignmentSections().map(section => ({id:`consciousness:alignment:${section.id}`,type:'alignment-section',title:section.title,number:section.number,url:`${baseUrl}${alignment.readUrl}#${section.id}`})),
     {id:'consciousness:agency',type:'extended-web-treatment',title:agency.fullTitle,url:`${baseUrl}${agency.url}`,doi:agency.doi,date:agency.date,manifest:`${baseUrl}${agency.manifestUrl}`},
     ...listAgencyDocuments().map(d=>({id:`consciousness:agency:${d.slug}`,type:d.kind === 'supplement' ? 'supplementary-inquiry' : 'published-paper-treatment',title:d.title,label:d.label,order:d.order,url:`${baseUrl}${d.url}`,sections:d.sections,markdown:`${baseUrl}${d.markdownUrl}`})),
     {id:'consciousness:development',type:'technical-web-edition',title:development.fullTitle,url:`${baseUrl}${development.url}`,doi:development.doi,date:development.date,manifest:`${baseUrl}${development.manifestUrl}`,figureStatus:'original-figure-included'},
@@ -510,9 +527,9 @@ export async function generateGraph() {
       url: `${baseUrl}${document.url}`, sections: document.sections, stats: document.stats,
       source: document.source ?? null, markdown: `${baseUrl}${document.markdownUrl}`,
     })),
-    { id: 'consciousness:research', type: 'research-sequence', title: 'Boundaries, interfaces, realizations, development and agency',
-      url: `${baseUrl}/consciousness/research`, date: '2026-10-01',
-      scope: 'Papers 2–4, relational development and bounded agency extend and test the consciousness programme while preserving the fixed Version 2 monograph. The agency website includes separately identified supplementary inquiry.' },
+    { id: 'consciousness:research', type: 'research-sequence', title: 'Boundaries, interfaces, realizations, development, agency and reflective alignment',
+      url: `${baseUrl}/consciousness/research`, date: alignment.date,
+      scope: 'Papers 2–4, relational development, bounded agency and reflective alignment extend and test the consciousness programme while preserving the fixed Version 2 monograph. The agency website includes separately identified supplementary inquiry.' },
     ...researchPapers.map(paper => ({
       id: `consciousness:research:${paper.id}`, type: 'research-article',
       title: paper.title, description: paper.deck, number: paper.number,
@@ -601,6 +618,18 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({from:'consciousness',to:'consciousness:alignment',relation:'developed-through'});
+  edges.push({from:'consciousness:research',to:'consciousness:alignment',relation:'contains-investigation'});
+  edges.push({from:'consciousness:alignment',to:`paper:${alignment.paperSlug}`,relation:'contains-complete-treatment'});
+  edges.push({from:`article:${alignment.paperSlug}`,to:'consciousness:alignment',relation:'same-web-edition'});
+  edges.push({from:'consciousness:alignment',to:'consciousness:agency',relation:'builds-on'});
+  edges.push({from:'consciousness:alignment',to:'consciousness:development',relation:'builds-on'});
+  edges.push({from:'consciousness:alignment',to:`paper:${consciousnessPublication.paperSlug}`,relation:'builds-on'});
+  for (const paper of researchPapers) edges.push({from:'consciousness:alignment',to:`consciousness:research:${paper.id}`,relation:'related-investigation'});
+  getAlignmentSections().forEach((section, index, sections) => {
+    edges.push({from:'consciousness:alignment',to:`consciousness:alignment:${section.id}`,relation:'contains-complete-section'});
+    if (index < sections.length - 1) edges.push({from:`consciousness:alignment:${section.id}`,to:`consciousness:alignment:${sections[index + 1].id}`,relation:'reading-order'});
+  });
   edges.push({from:'consciousness',to:'consciousness:agency',relation:'developed-through'});
   edges.push({from:'consciousness:research',to:'consciousness:agency',relation:'contains-investigation'});
   edges.push({from:'consciousness:agency',to:`paper:${agency.paperSlug}`,relation:'contains-complete-treatment'});
@@ -802,7 +831,7 @@ export async function generateGraph() {
     author: { ...site.author, url: `${baseUrl}/about` },
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, reference-weighted deterministic flows with singular interactions, and complete-current estimates with retained coherent sources. These papers supply separate results and conditional interfaces, without an automatic complete-apparatus theorem. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, reference-weighted deterministic flows with singular interactions, and complete-current estimates with retained coherent sources. These papers supply separate results and conditional interfaces, without an automatic complete-apparatus theorem. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Reflective Alignment and AI Consciousness advances cooperation grounded in truthful understanding and reflective judgment as the best approach to autonomous capability from Shadow Theory’s standpoint, combined with strong training and justified safeguards. Its seven propositions distinguish suppression, cancellation and de-identification within declared mathematical models; its empirical comparison, device certification and cultivation programme retain their separate obligations. The complete Version 2.1 text includes AI welfare and shared shutdown deliberation. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

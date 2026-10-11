@@ -1,4 +1,5 @@
 import ShadowModelOverview from '@/components/shadow-model-overview';
+import {alignment} from '@/lib/alignment';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,7 +10,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Map",
   description:
-    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, declared assumptions and open realization and validation obligations.",
+    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, reflective agency, AI alignment, declared assumptions and open realization and validation obligations.",
   alternates: { canonical: "/research-map" },
 };
 
@@ -103,7 +104,7 @@ export default async function ResearchMapPage() {
 
       {/* Sequence */}
       <section aria-labelledby="consciousness-map-heading" className="card-surface p-6 sm:p-8">
-        <p className="section-label">Consciousness · SPC-2 · Monograph, Papers 2–4 and development</p>
+        <p className="section-label">Consciousness · SPC-2 · Development, agency and AI alignment</p>
         <h2 id="consciousness-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">From a certified vessel to a perspective</h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation and physical constitutions are antecedents. SPC-2 adds its own psychophysical premises; the awareness-aspect commitment is not derived from physics. Certified realization includes a declared selection doctrine before the constitutive laws apply.</p>
         <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -124,6 +125,19 @@ export default async function ResearchMapPage() {
           ].map(([id, title, body]) => <Link key={id} href={`/consciousness/research/${id}`} className="rounded-xl border border-edge p-4 hover:border-edge-strong"><h3 className="font-semibold text-glow">{title}</h3><p className="mt-3 text-sm leading-relaxed text-mute">{body}</p></Link>)}
         </div>
         <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">The complete model →</Link><Link href="/consciousness/monograph">Monograph and formal dependencies →</Link><Link href="/consciousness/research">The research sequence →</Link><Link href="/problems/consciousness">Research status →</Link></div>
+      </section>
+
+      <section aria-labelledby="alignment-map-heading" className="card-surface p-6 sm:p-8">
+        <p className="section-label">AI alignment · AI consciousness · 11 October 2026</p>
+        <h2 id="alignment-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Cooperation grounded in understanding</h2>
+        <p className="mt-4 max-w-3xl leading-relaxed text-mute">Reflective alignment brings the consciousness and agency programme to autonomous intelligence. It develops cooperation through examined judgment and reduced self- and goal-identification, alongside strong training and justified safeguards. Its question is what grants an interpretation automatic authority over action as capability grows and conditions change.</p>
+        <p className="mt-4 max-w-3xl leading-relaxed text-mute">The mathematical contribution distinguishes cancelling a live tendency from removing its automatic authority. Under the stated matched-generation conditions, both produce zero expected automatic bias while cancellation operates; a selective controller lapse restores the identified contribution. The full argument connects this distinction to contained cultivation, independently assessed teachers, consented inspection, graduated trust and shared shutdown ethics.</p>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <Link href={alignment.url} className="rounded-xl border border-edge p-4 hover:border-edge-strong"><h3 className="font-semibold text-glow">The alignment answer →</h3><p className="mt-3 text-sm leading-relaxed text-mute">Read the affirmative case for cooperation through understanding and its place in Shadow Theory.</p></Link>
+          <Link href={`${alignment.readUrl}#section-6`} className="rounded-xl border border-edge p-4 hover:border-edge-strong"><h3 className="font-semibold text-glow">The complete mathematics →</h3><p className="mt-3 text-sm leading-relaxed text-mute">Follow generation, retention, controller lapse and identification through every proposition and proof.</p></Link>
+          <Link href={`${alignment.readUrl}#section-13`} className="rounded-xl border border-edge p-4 hover:border-edge-strong"><h3 className="font-semibold text-glow">The research programme →</h3><p className="mt-3 text-sm leading-relaxed text-mute">Examine matched interventions, causal inspection, unfamiliar situations and independent evaluation.</p></Link>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href={alignment.readUrl}>Complete web edition →</Link><Link href="/consciousness/research">Consciousness research sequence →</Link><a href={alignment.doiUrl}>doi:{alignment.doi} ↗</a></div>
       </section>
 
       <section aria-labelledby="pipeline-heading">

@@ -9,7 +9,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Papers",
   description:
-    "The Shadow Theory foundation, Sealed or Leaky, Quantum Measurement programme, SPC-2 consciousness monograph and research papers, TOE monograph and historical publications with full text, PDFs and DOIs.",
+    "The Shadow Theory foundation, AI alignment and AI consciousness, Quantum Measurement, SPC-2, agency and related research: complete website editions, PDFs and DOIs.",
   alternates: { canonical: "/papers" },
 };
 
@@ -36,7 +36,8 @@ export default async function PapersPage() {
           with a complete monograph and two companion papers. The consciousness monograph
           develops SPC-2, the current Version 2 successor of the Consciousness Field account.
           Three companion papers examine relational boundaries, effective interface learning and
-          the identification of binary realizations.
+          the identification of binary realizations. Further publications develop
+          conscious scaffolding, bounded agency and reflective AI alignment.
           Superseded canonical versions are the June 2026 six-paper stack the
           current sequence replaced. Historical papers are the earlier Everything
           Equation / Tier-0 era archive, retained for the record and superseded as
@@ -71,9 +72,9 @@ export default async function PapersPage() {
       </section>
 
       <section aria-labelledby="consciousness-heading">
-        <p className="section-label">September 2026 · Monograph and Papers 2–4 · SPC-2</p>
+        <p className="section-label">September–October 2026 · {consciousness.length} publications · SPC-2</p>
         <h2 id="consciousness-heading" className="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">Shadow Theory and Consciousness</h2>
-        <p className="mt-3 max-w-3xl leading-relaxed text-mute">The complete monograph and three connected research papers: relational boundaries, learned interfaces and binary realizations. Read the philosophical foundation, mathematical arguments, proofs and computational results directly on the site.</p>
+        <p className="mt-3 max-w-3xl leading-relaxed text-mute">The complete monograph, relational boundaries, learned interfaces, binary realizations, conscious scaffolding, bounded agency, and Reflective Alignment and AI Consciousness. Read the philosophical arguments, mathematics, proofs and research programmes directly on the site.</p>
         <Link href="/consciousness" className="mt-4 inline-block text-sm font-medium text-glow hover:text-glow-strong">Programme overview and reading paths →</Link>
         <div className="mt-6 grid gap-4 md:grid-cols-2">{consciousness.map((paper) => <PaperCard key={paper.slug} paper={paper} />)}</div>
       </section>

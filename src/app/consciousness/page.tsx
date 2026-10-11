@@ -1,3 +1,4 @@
+import AlignmentFeature from '@/components/alignment-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
 import DevelopmentFeature from '@/components/development-feature';
@@ -8,17 +9,18 @@ import { getConsciousnessEditorial, listConsciousnessGuides } from "@/lib/consci
 import { consciousnessPublication as publication } from "@/config/consciousness";
 import { site } from "@/config/site";
 export const dynamic = "force-static";
-export const metadata: Metadata = {title:"Consciousness: SPC-2 and the Source-to-Experience Problem",description:"From awareness to a lived world. Explore Shadow Theory’s laws of perspective, phenomenal structure and experiential continuity, and inspect the full programme of boundaries, learned interfaces, identified realizations and bounded reflective agency.",alternates:{canonical:"/consciousness"},openGraph:{title:"Consciousness. From awareness to a lived world.",url:"/consciousness",images:["/publications/consciousness/social.png"]}};
+export const metadata: Metadata = {title:"Consciousness: SPC-2 and the Source-to-Experience Problem",description:"From awareness to a lived world. Explore Shadow Theory’s laws of perspective, phenomenal structure and experiential continuity, and inspect the full programme of boundaries, learned interfaces, identified realizations, bounded reflective agency and AI alignment.",alternates:{canonical:"/consciousness"},openGraph:{title:"Consciousness. From awareness to a lived world.",url:"/consciousness",images:["/publications/consciousness/social.png"]}};
 export default function ConsciousnessOverview() {
   const overview = getConsciousnessEditorial().overview; const guides = listConsciousnessGuides();
   return <article className="c-overview">
     <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({"@context":"https://schema.org","@type":"Article",headline:overview.title,description:overview.description,url:`${site.url}/consciousness`,author:{"@type":"Person",name:"Jeremy Rodgers"},about:{"@type":"Book",name:publication.title,identifier:publication.doiUrl},isPartOf:{"@type":"WebSite",url:site.url}})}}/>
-    <header className="c-hero"><p className="c-eyebrow"><span className="c-status-dot"/> Shadow Theory / Consciousness / SPC-2</p><h1>Consciousness.</h1><p className="c-hero-line">From awareness<br className="c-mobile-break"/> to a <em>lived world.</em></p><div className="c-hero-bottom"><p className="c-hero-description">What makes a physical organization a perspective?<br className="c-desktop-break"/> Shadow Theory proposes that organization shapes the manifestation of awareness. SPC-2 gives that proposal explicit laws.</p><span className="c-edition">SIX PUBLICATIONS<br/>ONE RESEARCH PROGRAMME</span></div>
-      <div className="c-actions"><Link className="c-button c-button-primary" href="/consciousness/research">Explore the complete programme <span>↗</span></Link><a className="c-button" href="#explore">Explore the model <span>↓</span></a><a className="c-text-link" href={publication.doiUrl}>Publication / DOI ↗</a></div><p className="c-status">Philosophy, constitutive laws, boundary diagnostics, learning, realization and reflective agency.</p>
+    <header className="c-hero"><p className="c-eyebrow"><span className="c-status-dot"/> Shadow Theory / Consciousness / SPC-2</p><h1>Consciousness.</h1><p className="c-hero-line">From awareness<br className="c-mobile-break"/> to a <em>lived world.</em></p><div className="c-hero-bottom"><p className="c-hero-description">What makes a physical organization a perspective?<br className="c-desktop-break"/> Shadow Theory proposes that organization shapes the manifestation of awareness. SPC-2 gives that proposal explicit laws.</p><span className="c-edition">SEVEN PUBLICATIONS<br/>ONE RESEARCH PROGRAMME</span></div>
+      <div className="c-actions"><Link className="c-button c-button-primary" href="/consciousness/research">Explore the complete programme <span>↗</span></Link><a className="c-button" href="#explore">Explore the model <span>↓</span></a><a className="c-text-link" href={publication.doiUrl}>Publication / DOI ↗</a></div><p className="c-status">Philosophy, constitutive laws, boundary diagnostics, learning, realization reflective agency and AI alignment.</p>
     </header>
+    <AlignmentFeature/>
     <div className="c-development-note"><p className="c-eyebrow">The full model</p><h2>From the unsplit to a perspective within the readout.</h2><p>The consciousness account sits within the complete architecture: unconditioned ground, unsplit unity, complementary source and readout, and recursive differentiation. Unsplit awareness has no separate subject reflecting on itself; a localized perspective belongs to differentiated organization.</p><Link href="/articles/full-shadow-model">Read the complete architecture →</Link></div>
     <ConsciousnessNetwork/>
-    <div className="c-edition-strip"><span>One foundational monograph</span><span>Five connected investigations</span><span>Complete mathematics & arguments</span><Link href="/consciousness/monograph">The foundation ↗</Link></div>
+    <div className="c-edition-strip"><span>One foundational monograph</span><span>Six connected investigations</span><span>Complete mathematics & arguments</span><Link href="/consciousness/monograph">The foundation ↗</Link></div>
     <ConsciousnessProgramme/>
     <AgencyFeature/>
     <DevelopmentFeature/>

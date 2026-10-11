@@ -10,7 +10,7 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export async function generateStaticParams() {
-  return listArticles().map((a) => ({ slug: a.slug }));
+  return listArticles().filter((a) => !a.href).map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({
