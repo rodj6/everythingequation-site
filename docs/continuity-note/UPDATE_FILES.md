@@ -1,0 +1,55 @@
+# Copy-over update files
+
+Baseline: the exact previously delivered `shadow-theory-relational-awareness-v1_4-source.zip`. Merge the contents of the `shadow-theory-site` folder into the existing project. No deletions are required. This list includes source, generated content, assets, conversion/check scripts and audit documents.
+
+- `README.md`
+- `content/consciousness/continuity-note/article.html`
+- `content/consciousness/continuity-note/article.md`
+- `content/consciousness/continuity-note/sections.json`
+- `content/consciousness/editorial.json`
+- `content/papers.yaml`
+- `docs/alignment/production-output-verification.json`
+- `docs/continuity-note/IMPLEMENTATION_REPORT.md`
+- `docs/continuity-note/README.md`
+- `docs/continuity-note/SOURCE_TO_WEB_COVERAGE.md`
+- `docs/continuity-note/UPDATE_FILES.md`
+- `docs/continuity-note/doi-check.json`
+- `docs/continuity-note/independent-text-audit.json`
+- `docs/continuity-note/pdf-transcription.json`
+- `docs/continuity-note/react-review.md`
+- `docs/continuity-note/source-to-web-coverage.json`
+- `docs/continuity-note/verification.json`
+- `docs/relational-awareness/IMPLEMENTATION_REPORT.md`
+- `docs/relational-awareness/README.md`
+- `docs/relational-awareness/verification.json`
+- `package.json`
+- `public/publications/consciousness/continuity-note/continuity-note.md`
+- `public/publications/consciousness/continuity-note/continuity-note.pdf`
+- `public/publications/consciousness/continuity-note/social.png`
+- `scripts/convert-continuity-note.py`
+- `scripts/verify-continuity-note.mjs`
+- `scripts/verify-relational-awareness.mjs`
+- `src/app/articles/page.tsx`
+- `src/app/consciousness/ai-alignment/continuity/continuity.css`
+- `src/app/consciousness/ai-alignment/continuity/manifest.json/route.ts`
+- `src/app/consciousness/ai-alignment/continuity/page.tsx`
+- `src/app/consciousness/ai-alignment/page.tsx`
+- `src/app/consciousness/ai-alignment/read/page.tsx`
+- `src/app/consciousness/development/page.tsx`
+- `src/app/consciousness/manifest.json/route.ts`
+- `src/app/consciousness/page.tsx`
+- `src/app/consciousness/research/page.tsx`
+- `src/app/consciousness/search.json/route.ts`
+- `src/app/layout.tsx`
+- `src/app/papers/[slug]/page.tsx`
+- `src/app/research-map/page.tsx`
+- `src/components/alignment-feature.tsx`
+- `src/components/consciousness-programme.tsx`
+- `src/components/consciousness-search.tsx`
+- `src/components/continuity-note-feature.css`
+- `src/components/continuity-note-feature.tsx`
+- `src/lib/alignment-discovery.ts`
+- `src/lib/articles.ts`
+- `src/lib/continuity-note.ts`
+- `src/lib/machine.ts`
+- `src/lib/registry.ts`

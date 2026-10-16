@@ -1,3 +1,4 @@
+import {continuityNote} from '@/lib/continuity-note';
 import {relationalAwareness} from '@/lib/relational-awareness';
 /**
  * ARTICLE INDEX
@@ -19,7 +20,7 @@ export function articleUrl(article: ArticleMeta): string {
 }
 
 function programmeArticles(): ArticleMeta[] {
-  return [{slug:relationalAwareness.paperSlug,title:relationalAwareness.publicTitle,description:relationalAwareness.description,date:relationalAwareness.date,tags:['Consciousness','Relational awareness','Philosophy of mind'],status:'published',href:relationalAwareness.url},{
+  return [{slug:continuityNote.paperSlug,title:continuityNote.publicTitle,description:continuityNote.description,date:continuityNote.date,tags:['AI consciousness','Reflective alignment','AI welfare','Research note'],status:'published',href:continuityNote.url},{slug:relationalAwareness.paperSlug,title:relationalAwareness.publicTitle,description:relationalAwareness.description,date:relationalAwareness.date,tags:['Consciousness','Relational awareness','Philosophy of mind'],status:'published',href:relationalAwareness.url},{
     slug: alignment.paperSlug,
     title: alignment.title,
     description: alignment.description,

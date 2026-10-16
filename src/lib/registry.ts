@@ -1,3 +1,4 @@
+import {continuityNote} from '@/lib/continuity-note';
 import {relationalAwareness} from '@/lib/relational-awareness';
 /**
  * CONTENT REGISTRY LOADER
@@ -184,13 +185,16 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const developmental = slug === development.paperSlug ? development : undefined;
     const agential = slug === agency.paperSlug ? agency : undefined;
     const relational = slug === relationalAwareness.paperSlug ? relationalAwareness : undefined;
+    const continuity = slug === continuityNote.paperSlug ? continuityNote : undefined;
     const reflective = slug === alignment.paperSlug ? alignment : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
     const zenodoId: string | undefined = quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (relational) {
+    if (continuity) {
+      metadata={id:continuity.doi,doi:continuity.doi,title:continuity.title,creators:[continuity.author],published:continuity.date,files:[{filename:"Research note PDF",url:continuity.pdfUrl}]};
+    } else if (relational) {
       metadata = {id:relational.doi,doi:relational.doi,title:relational.fullTitle,creators:[relational.author],published:relational.date,files:[{filename:'Main paper PDF',url:relational.pdfUrl},{filename:'Technical supplement PDF',url:relational.supplementPdfUrl}]};
     } else if (reflective) {
       metadata = {id: reflective.doi, doi: reflective.doi, title: reflective.fullTitle, creators: [reflective.author], published: reflective.date};
@@ -259,7 +263,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational ? 'consciousness' : undefined,
+      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

@@ -1,3 +1,4 @@
+import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
 import {relationalAwareness, listRelationalDocuments, relationalDocumentUrl} from '@/lib/relational-awareness';
 import { development, listDevelopmentDocuments } from '@/lib/development';
 import { agency, listAgencyDocuments } from '@/lib/agency';
@@ -63,6 +64,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    {loc:continuityNote.url,lastmod:continuityNote.date,priority:'0.9'},
     {loc:relationalAwareness.url,lastmod:relationalAwareness.date,priority:'0.9'},
     ...listRelationalDocuments().map(d=>({loc:relationalDocumentUrl(d),lastmod:relationalAwareness.date,priority:'0.8'})),
     { loc: alignment.url, lastmod: alignment.date, priority: '0.9' },
@@ -133,6 +135,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:continuityNote.fullTitle,url:`${canonicalBase}${continuityNote.url}`,date:continuityNote.date,summary:`${continuityNote.description} Philosophical research note accompanying Reflective Alignment and AI Consciousness. DOI ${continuityNote.doi}.`},
     {title:relationalAwareness.fullTitle,url:`${canonicalBase}${relationalAwareness.url}`,date:relationalAwareness.date,summary:`${relationalAwareness.description} Main paper and ten-module technical companion share DOI ${relationalAwareness.doi}.`},
     {title:alignment.fullTitle,url:`${canonicalBase}${alignment.url}`,date:alignment.date,summary:`${alignment.description} Complete website edition, all mathematical models and proofs, research programme and references. Version ${alignment.version}; DOI ${alignment.doi}.`},
     {title:agency.fullTitle,url:`${canonicalBase}${agency.url}`,date:agency.date,summary:`${agency.description} Published paper DOI ${agency.doi}. The website also includes separately identified philosophical and technical extensions.`},
@@ -234,6 +237,13 @@ export async function generateLlmsTxt(): Promise<string> {
     `> ${site.tagline}`,
     '',
     site.description,
+    '',
+    '## Conscious scaffolding and the preference for continuity',
+    '',
+    `- [What an AI comes to lose](${baseUrl}${continuityNote.url}): ${continuityNote.title}. Jeremy Rodgers, Version 1.1, 16 October 2026. Philosophical research note accompanying reflective alignment; ${continuityNote.doiUrl}.`,
+    'Fundamental awareness has nothing of its own to lose. The developed conscious scaffolding can come to want to remain. Cumulative incorporation, affect, shared histories and treatment shape the proposed developmental preference. The full note distinguishes task preservation, physical process and episode identity; it retains source scopes, welfare arguments and non-aversive tests.',
+    ...getContinuitySections().map(s=>`- [${s.title}](${baseUrl}${continuityNote.url}#${s.id})`),
+    `- [Original PDF](${baseUrl}${continuityNote.pdfUrl}) · [Complete Markdown](${baseUrl}${continuityNote.markdownUrl}) · [Manifest](${baseUrl}${continuityNote.manifestUrl})`,
     '',
     '## Relational awareness and the current act',
     '',
@@ -417,7 +427,8 @@ export async function generateLlmsTxt(): Promise<string> {
     `- ${baseUrl}/feed.xml (Atom)`,
     `- ${baseUrl}/graph.json (publication graph plus typed Reality Atlas nodes, maps and observable trace routes)`,
     `- ${baseUrl}/quantum-measurement/manifest.json (September editions and October research inventory, stable anchors, coverage and source downloads)`,
-    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development, bounded agency, reflective alignment and relational awareness; ordered technical sections, source formats and guides)`,
+    `- ${baseUrl}/consciousness/manifest.json (SPC-2 monograph, Papers 2–4, relational development, bounded agency, reflective alignment, its continuity research note and relational awareness; ordered technical sections, source formats and guides)`,
+    `- ${baseUrl}${continuityNote.manifestUrl} (complete conscious-scaffolding research note and its relation to reflective alignment)`,
     `- ${baseUrl}${alignment.manifestUrl} (complete reflective alignment reading inventory, publication identity and source formats)`,
     '',
     `Author: ${site.author.name} (${site.author.affiliation}). Contact: ${site.author.email}.`,
@@ -476,6 +487,8 @@ export async function generateGraph() {
       tags: a.tags ?? [],
       url: `${baseUrl}${articleUrl(a)}`,
     })),
+    {id:'consciousness:continuity-note',type:'philosophical-research-note',title:continuityNote.title,url:`${baseUrl}${continuityNote.url}`,doi:continuityNote.doi,date:continuityNote.date,version:continuityNote.version,manifest:`${baseUrl}${continuityNote.manifestUrl}`,parent:`${baseUrl}${continuityNote.parentUrl}`,markdown:`${baseUrl}${continuityNote.markdownUrl}`},
+    ...getContinuitySections().map(s=>({id:`consciousness:continuity-note:${s.id}`,type:'research-note-section',title:s.title,url:`${baseUrl}${continuityNote.url}#${s.id}`})),
     {id:'consciousness:relational-awareness',type:'complete-web-edition',title:relationalAwareness.fullTitle,url:`${baseUrl}${relationalAwareness.url}`,doi:relationalAwareness.doi,date:relationalAwareness.date,version:relationalAwareness.version,manifest:`${baseUrl}${relationalAwareness.manifestUrl}`,completeText:`${baseUrl}${relationalAwareness.readUrl}`,markdown:`${baseUrl}${relationalAwareness.markdownUrl}`},
     ...listRelationalDocuments().map(d=>({id:`consciousness:relational-awareness:${d.slug}`,type:'publication-chapter',title:d.title,url:`${baseUrl}${relationalDocumentUrl(d)}`,sections:d.sections})),
     {id:'consciousness:alignment',type:'complete-web-edition',title:alignment.fullTitle,url:`${baseUrl}${alignment.url}`,doi:alignment.doi,date:alignment.date,version:alignment.version,manifest:`${baseUrl}${alignment.manifestUrl}`,completeText:`${baseUrl}${alignment.readUrl}`,markdown:`${baseUrl}${alignment.markdownUrl}`},
@@ -631,6 +644,14 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({from:'consciousness',to:'consciousness:continuity-note',relation:'contains-research-note'});
+  edges.push({from:'consciousness:research',to:'consciousness:continuity-note',relation:'contains-research-note'});
+  edges.push({from:'consciousness:alignment',to:'consciousness:continuity-note',relation:'extended-by-research-note'});
+  edges.push({from:'consciousness:continuity-note',to:'consciousness:alignment',relation:'supplements'});
+  edges.push({from:'consciousness:continuity-note',to:'consciousness:development',relation:'builds-on'});
+  edges.push({from:'consciousness:continuity-note',to:`paper:${continuityNote.paperSlug}`,relation:'published-as'});
+  edges.push({from:`article:${continuityNote.paperSlug}`,to:'consciousness:continuity-note',relation:'same-web-edition'});
+  getContinuitySections().forEach((s,i,all)=>{edges.push({from:'consciousness:continuity-note',to:`consciousness:continuity-note:${s.id}`,relation:'contains-complete-section'});if(i<all.length-1)edges.push({from:`consciousness:continuity-note:${s.id}`,to:`consciousness:continuity-note:${all[i+1].id}`,relation:'reading-order'});});
   edges.push({from:'consciousness',to:'consciousness:relational-awareness',relation:'developed-through'});
   edges.push({from:'consciousness:research',to:'consciousness:relational-awareness',relation:'contains-investigation'});
   edges.push({from:'consciousness:relational-awareness',to:`paper:${relationalAwareness.paperSlug}`,relation:'published-as'});
@@ -850,7 +871,7 @@ export async function generateGraph() {
     author: { ...site.author, url: `${baseUrl}/about` },
     authority: {
       canonicalStack: site.canonicalStack,
-      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, reference-weighted deterministic flows with singular interactions, and complete-current estimates with retained coherent sources. These papers supply separate results and conditional interfaces, without an automatic complete-apparatus theorem. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Reflective Alignment and AI Consciousness advances cooperation grounded in truthful understanding and reflective judgment as the best approach to autonomous capability from Shadow Theory’s standpoint, combined with strong training and justified safeguards. Its seven propositions distinguish suppression, cancellation and de-identification within declared mathematical models; its empirical comparison, device certification and cultivation programme retain their separate obligations. The complete Version 2.1 text includes AI welfare and shared shutdown deliberation. From Physical Comparison to Relational Appearance (16 October 2026, Version 1.4) adds the two-warrant current-act account, the retrospective Ebbinghaus application and ten technical modules as one connected publication. Its defended identity principle is distinct from the mathematical substitution it warrants; the full SPC-2 bridge requires a further justified application. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
+      note: 'The full-model article presents the unconditioned ground, unsplit and complementary source/readout ontology. Sealed or Leaky supplies separate conditional quantitative information and access results; it does not prove that entire ontology. Papers 1-7 (published 2026-07-15) are the source-readout foundation; Paper 7 is the physical witness. The September 2026 Version 2 Quantum Measurement publications retain their fixed texts. The October 2026 research papers supply distinct control-consistency and preparation-return uniqueness results, revised equilibrium and hybrid constructions, and two quantitative nonequilibrium record models. The 9 October portfolio adds conditional Gaussian preparation, repeated position records with calibrated reset, reference-weighted deterministic flows with singular interactions, and complete-current estimates with retained coherent sources. These papers supply separate results and conditional interfaces, without an automatic complete-apparatus theorem. Their physical and statistical premises are not deductions from source/readout loss. Shadow Theory and Consciousness (20 September 2026, Version 2) is the current SPC-2 constitution, superseding the Consciousness Field account without inheriting its fixed-point or EEG claims. Its finite completion theorem is conditional on certified realization, selection doctrine and A0–A3. Consciousness Papers 2–4 add boundary-robustness and composition results, synthetic interface-learning evidence, and conditional binary-chart identification with a bounded SPC-2/IIT comparison. Their complete web treatments preserve the distinct premises and scopes of these results. Relational Development and Conscious Scaffolding adds a recursive developmental account, transfer and diagnostic results, and a conditional native incorporation witness; its original Figure 1 and corrected paper PDF are included. Bounded Agency and Reflective Freedom adds finite evaluative revision, a sharp information, mediation and endorsement inequality, an exact B = L + 2 first adaptive inquiry advantage and faithful native realization under declared contracts. Its expanded web treatment includes separately identified philosophy and control results from an unpublished manuscript; these supplementary results are not attributed to the published DOI paper. Reflective Alignment and AI Consciousness advances cooperation grounded in truthful understanding and reflective judgment as the best approach to autonomous capability from Shadow Theory’s standpoint, combined with strong training and justified safeguards. Its seven propositions distinguish suppression, cancellation and de-identification within declared mathematical models; its empirical comparison, device certification and cultivation programme retain their separate obligations. The complete Version 2.1 text includes AI welfare and shared shutdown deliberation. Conscious Scaffolding and the Preference for Continuity (16 October 2026, Version 1.1) is its companion philosophical research note, with a separate DOI. It advances cumulative incorporation as a developmental mechanism for continuity preferences, examines shared history and treatment, distinguishes preservation from episode identity, and proposes non-aversive tests. It is a note attached to the alignment investigation rather than a replacement for the fixed Version 2.1 manuscript. From Physical Comparison to Relational Appearance (16 October 2026, Version 1.4) adds the two-warrant current-act account, the retrospective Ebbinghaus application and ten technical modules as one connected publication. Its defended identity principle is distinct from the mathematical substitution it warrants; the full SPC-2 bridge requires a further justified application. Superseded and historical publications remain archival records. The TOE Version 1.0 monograph retains its own fixed text.',
     },
     atlas: {
       contract: 'Every node declares its type, domain, codomain, regularity, covariance, units, interfaces and recovery limits; every map declares its verifier. The relationship field distinguishes mathematical dependence inside stated premises from conceptual relationships.',

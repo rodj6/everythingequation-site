@@ -1,10 +1,12 @@
+import {continuityManifest} from '@/lib/continuity-note';
 import { alignment, getAlignmentSections } from '@/lib/alignment';
 import { site } from '@/config/site';
 
 /** The reading inventory is derived from the same sections as the full reader. */
 export function alignmentManifest() {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
+    companionResearchNotes: [continuityManifest()],
     canonicalOrigin: site.url,
     publication: alignment,
     completeTextUrl: alignment.readUrl,

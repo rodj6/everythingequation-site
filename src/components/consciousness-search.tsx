@@ -23,7 +23,7 @@ export default function ConsciousnessSearch() {
   return <div className="c-search">
     <label htmlFor={id}>Search the complete section</label>
     <div className="c-search-field"><span aria-hidden="true">⌕</span><input id={id} type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Try relational appearance, sensory basing, SPC-2, or alignment" autoComplete="off" aria-describedby={`${id}-status`} /></div>
-    <p id={`${id}-status`} aria-live="polite">{query.trim() ? failed ? "Search could not load. Use the complete contents below." : !records ? "Loading the section index…" : `${results.length}${results.length === 16 ? "+" : ""} matching sections` : "Find passages in the monograph, Papers 2–4, relational development, agency, reflective alignment, relational awareness and its technical modules, guides, glossary and FAQ."}</p>
+    <p id={`${id}-status`} aria-live="polite">{query.trim() ? failed ? "Search could not load. Use the complete contents below." : !records ? "Loading the section index…" : `${results.length}${results.length === 16 ? "+" : ""} matching sections` : "Find passages in the monograph, Papers 2–4, relational development, agency, reflective alignment, relational awareness and its technical modules, the continuity research note, guides, glossary and FAQ."}</p>
     {query.trim() && results.length > 0 ? <ol className="c-search-results">{results.map(({record}) => <li key={record.url}><a href={record.url}><small>{record.context}</small><strong>{record.title}</strong><span>{snippet(record.text)}</span></a></li>)}</ol> : null}
     <noscript><p>Search is optional. All chapters and sections are linked in the contents.</p></noscript>
   </div>;

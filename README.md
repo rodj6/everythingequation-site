@@ -143,3 +143,8 @@ Read `SHADOW_MODEL_SEALED_LEAKY_DELIVERY.md` for the delivery record and `docs/s
 ## Relational awareness, Version 1.4
 
 The 16 October 2026 update adds the complete main argument and ten-module technical companion as one connected consciousness publication. See [the edition guide](docs/relational-awareness/README.md), [coverage record](docs/relational-awareness/SOURCE_TO_WEB_COVERAGE.md), and [implementation report](docs/relational-awareness/IMPLEMENTATION_REPORT.md) for structure, local run instructions and verification scope.
+
+
+## Conscious scaffolding and continuity, Version 1.1
+
+The complete philosophical research note now accompanies reflective alignment at `/consciousness/ai-alignment/continuity`, with a prominent feature, its own DOI and publication record, full references and unchanged PDF. See [the edition guide](docs/continuity-note/README.md), [coverage](docs/continuity-note/SOURCE_TO_WEB_COVERAGE.md), and [implementation report](docs/continuity-note/IMPLEMENTATION_REPORT.md).

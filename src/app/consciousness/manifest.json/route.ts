@@ -1,3 +1,4 @@
+import {continuityManifest} from '@/lib/continuity-note';
 import {relationalManifest} from '@/lib/relational-awareness';
 import { agencyManifest } from '@/lib/agency';
 import { alignmentManifest } from '@/lib/alignment-discovery';
@@ -11,9 +12,11 @@ export function GET() {
   const monograph = consciousnessManifest();
   return Response.json({
     ...monograph,
-    schemaVersion: 6,
+    schemaVersion: 7,
     updated: "2026-10-16",
-    publicationCount: 8,
+    publicationCount: 9,
+    researchNoteCount: 1,
+    researchNotes: [continuityManifest()],
     investigationCount: 7,
     relationalAwareness: relationalManifest(),
     alignment: alignmentManifest(),
@@ -25,7 +28,7 @@ export function GET() {
       papers: researchPapers,
       documents: listResearchDocuments(),
       readingOrder: researchPapers.map(paper => paper.id),
-      editionNote: "Papers 2–4 extend and examine the consciousness programme, joined by relational development, bounded agency, reflective alignment and relational awareness. The Version 2 monograph remains the fixed foundational text. Each paper retains its own assumptions, result scope, date and DOI.",
+      editionNote: "Papers 2–4 extend and examine the consciousness programme, joined by relational development, bounded agency, reflective alignment and relational awareness. The Version 2 monograph remains the fixed foundational text. Conscious Scaffolding and the Preference for Continuity is a distinct philosophical research note attached to reflective alignment, with its own DOI. One foundation, seven investigations and one companion research note make nine publication records. Each publication retains its own assumptions, result scope, date and DOI.",
     },
   });
 }

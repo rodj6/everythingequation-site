@@ -1,5 +1,6 @@
 # Relational awareness: implementation and verification
 
+Historical snapshot note: this document records the original relational-awareness integration. The later conscious-scaffolding research note adds one publication record while retaining seven investigations. Current totals and verification are documented in `docs/continuity-note/IMPLEMENTATION_REPORT.md`.
 Implemented in the supplied Shadow Theory website source. No live deployment was performed.
 
 **Publication:** Jeremy Rodgers, *From Physical Comparison to Relational Appearance: A Defeasible Current-Act Account*, Version 1.4, 16 October 2026. Main paper and technical supplement share DOI https://doi.org/10.5281/zenodo.23408737.

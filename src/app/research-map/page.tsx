@@ -1,3 +1,4 @@
+import ContinuityNoteFeature from '@/components/continuity-note-feature';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import {alignment} from '@/lib/alignment';
@@ -11,7 +12,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Map",
   description:
-    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, relational appearance, reflective agency, AI alignment, declared assumptions and open realization and validation obligations.",
+    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, relational appearance, reflective agency, AI alignment and its continuity research note, declared assumptions and open realization and validation obligations.",
   alternates: { canonical: "/research-map" },
 };
 
@@ -141,6 +142,7 @@ export default async function ResearchMapPage() {
         </div>
         <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href={alignment.readUrl}>Complete web edition →</Link><Link href="/consciousness/research">Consciousness research sequence →</Link><a href={alignment.doiUrl}>doi:{alignment.doi} ↗</a></div>
       </section>
+      <ContinuityNoteFeature/>
 
       <section aria-labelledby="pipeline-heading">
         <h2 id="pipeline-heading" className="text-2xl font-bold tracking-tight">

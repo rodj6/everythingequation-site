@@ -1,3 +1,5 @@
+import ContinuityNoteFeature from '@/components/continuity-note-feature';
+import {continuityNote} from '@/lib/continuity-note';
 import type {Metadata} from 'next';
 import Link from 'next/link';
 import katex from 'katex';
@@ -17,7 +19,7 @@ const full = (section:number) => `${paper.readUrl}#section-${section}`;
 export default function AlignmentArticle() {
   const sections = getAlignmentSections();
   return <article className="alignment-page" id="alignment-top">
-    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'ScholarlyArticle','@id':`${site.url}${paper.url}#article`,headline:paper.fullTitle,name:paper.title,description:paper.description,author:{'@type':'Person',name:paper.author,url:site.url+'/about'},datePublished:paper.date,version:paper.version,identifier:paper.doi,sameAs:paper.doiUrl,url:site.url+paper.url,isAccessibleForFree:true,inLanguage:'en',isPartOf:{'@type':'CollectionPage',name:'Consciousness',url:site.url+'/consciousness'},hasPart:sections.map(s=>({'@type':'WebPageElement',name:s.title,url:`${site.url}${paper.readUrl}#${s.id}`})),encoding:[{'@type':'MediaObject',encodingFormat:'text/markdown',contentUrl:site.url+paper.markdownUrl},{'@type':'MediaObject',encodingFormat:'application/pdf',contentUrl:site.url+paper.pdfUrl}]})}}/>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({'@context':'https://schema.org','@type':'ScholarlyArticle','@id':`${site.url}${paper.url}#article`,headline:paper.fullTitle,name:paper.title,description:paper.description,author:{'@type':'Person',name:paper.author,url:site.url+'/about'},datePublished:paper.date,version:paper.version,identifier:paper.doi,sameAs:paper.doiUrl,url:site.url+paper.url,isAccessibleForFree:true,inLanguage:'en',isPartOf:{'@type':'CollectionPage',name:'Consciousness',url:site.url+'/consciousness'},hasPart:sections.map(s=>({'@type':'WebPageElement',name:s.title,url:`${site.url}${paper.readUrl}#${s.id}`})),subjectOf:{'@type':'ScholarlyArticle',name:continuityNote.title,url:site.url+continuityNote.url,identifier:continuityNote.doiUrl},encoding:[{'@type':'MediaObject',encodingFormat:'text/markdown',contentUrl:site.url+paper.markdownUrl},{'@type':'MediaObject',encodingFormat:'application/pdf',contentUrl:site.url+paper.pdfUrl}]})}}/>
     <nav className="quantum-reader-breadcrumb" aria-label="Breadcrumb"><Link href="/consciousness">Consciousness</Link><span>/</span><span aria-current="page">AI alignment</span></nav>
     <header className="alignment-hero">
       <p className="alignment-kicker"><span/>AI alignment / AI consciousness</p>
@@ -26,6 +28,7 @@ export default function AlignmentArticle() {
       <div className="alignment-actions"><Link className="alignment-button" href={paper.readUrl}>Read the complete argument <span>↗</span></Link><a className="alignment-button alignment-button-outline" href="#the-answer">Start with the answer <span>↓</span></a><a className="alignment-doi" href={paper.doiUrl}>Publication / DOI ↗</a></div>
     </header>
     <div className="alignment-edition-line"><span>{paper.title}</span><span>{paper.subtitle}</span></div>
+    <ContinuityNoteFeature/>
     <section className="alignment-answer" id="the-answer">
       <p className="alignment-kicker">The answer advanced here</p>
       <h2>A durable basis<br/>for cooperation.</h2>

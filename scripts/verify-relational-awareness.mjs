@@ -80,7 +80,7 @@ for(const [section,subcount] of [[1,6],[2,16],[3,9],[4,7],[5,7],[6,7],[7,12],[8,
 }
 const json=route=>JSON.parse(load(route).text);
 const manifest=json(`${base}/manifest.json`);check(manifest.publicationCount===1&&manifest.documents.length===13,'Main and companion should form one publication with13 reading documents');
-const programme=json('/consciousness/manifest.json');check(programme.publicationCount===8&&programme.investigationCount===7,'Programme count must be8 publications /7 investigations');
+const programme=json('/consciousness/manifest.json');check(programme.publicationCount===9&&programme.investigationCount===7&&programme.researchNoteCount===1,'Programme count must be9 publications /7 investigations /1 research note');
 check(programme.relationalAwareness?.publication.doi==='10.5281/zenodo.23408737','Programme manifest omits relational publication');
 const search=json('/consciousness/search.json').filter(r=>r.url.startsWith(base));check(search.length>=200,'Incomplete relational search coverage');
 for(const d of docs)check(search.some(r=>r.url.startsWith(`${base}/${d.slug}`)),`Search lacks ${d.slug}`);
@@ -93,7 +93,7 @@ const sitemap=load('/sitemap.xml').text;for(const route of newRoutes)check(sitem
 check(load('/llms.txt').text.includes('ten-module')||load('/llms.txt').text.includes('ten technical'),'Machine text omits technical companion');
 const feed=load('/feed.xml').text;check((feed.match(/\/consciousness\/relational-awareness<\/id>/g)||[]).length===1,'Atom feed must have exactly one publication entry');
 for(const route of ['/consciousness/glossary','/consciousness/faq'])check(load(route).links.some(l=>l.startsWith(base)),`${route}: relational entries missing`);
-check(load('/consciousness').text.includes('EIGHT PUBLICATIONS'),'Hub publication count stale');
+check(load('/consciousness').text.includes('NINE PUBLICATIONS'),'Hub publication count stale');
 const inputs=JSON.parse(fs.readFileSync('docs/relational-awareness/publication-inputs.json','utf8'));
 for(const input of inputs){const bytes=fs.readFileSync(input.path);check(bytes.subarray(0,5).toString()==='%PDF-',`${input.path}: invalid PDF`);check(crypto.createHash('sha256').update(bytes).digest('hex')===input.sha256,`${input.path}: original PDF changed`);}
 const style=fs.readFileSync('src/app/consciousness/relational-awareness/relational-awareness.css','utf8');
