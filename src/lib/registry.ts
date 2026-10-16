@@ -1,3 +1,4 @@
+import {relationalAwareness} from '@/lib/relational-awareness';
 /**
  * CONTENT REGISTRY LOADER
  *
@@ -60,6 +61,7 @@ export interface LoadedPaper {
   /** Complete local edition and original source downloads, when supplied. */
   webUrl?: string;
   pdfUrl?: string;
+  supplementPdfUrl?: string;
   texUrl?: string;
   markdownUrl?: string;
   researchProgramme?: 'quantum-measurement' | 'consciousness';
@@ -181,13 +183,16 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const research = researchPapers.find((paper) => paper.id === raw.researchPaperId);
     const developmental = slug === development.paperSlug ? development : undefined;
     const agential = slug === agency.paperSlug ? agency : undefined;
+    const relational = slug === relationalAwareness.paperSlug ? relationalAwareness : undefined;
     const reflective = slug === alignment.paperSlug ? alignment : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
     const zenodoId: string | undefined = quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (reflective) {
+    if (relational) {
+      metadata = {id:relational.doi,doi:relational.doi,title:relational.fullTitle,creators:[relational.author],published:relational.date,files:[{filename:'Main paper PDF',url:relational.pdfUrl},{filename:'Technical supplement PDF',url:relational.supplementPdfUrl}]};
+    } else if (reflective) {
       metadata = {id: reflective.doi, doi: reflective.doi, title: reflective.fullTitle, creators: [reflective.author], published: reflective.date};
     } else if (agential) {
       metadata = {id: agential.doi, doi: agential.doi, title: agential.fullTitle, creators: [agential.author], published: agential.date};
@@ -251,9 +256,10 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       date: research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
       webUrl: research?.url ?? publication?.webUrl ?? raw.webUrl,
       pdfUrl: research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
+      supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective ? 'consciousness' : undefined,
+      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

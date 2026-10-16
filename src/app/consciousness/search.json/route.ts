@@ -1,3 +1,4 @@
+import {getRelationalSearchRecords} from '@/lib/relational-awareness';
 import { getAgencySearchRecords } from '@/lib/agency';
 import { getAlignmentSearchRecords } from '@/lib/alignment';
 import { getDevelopmentSearchRecords } from '@/lib/development';
@@ -7,5 +8,5 @@ import { getResearchSearchRecords } from "@/lib/consciousness-research";
 export const dynamic = "force-static";
 
 export function GET() {
-  return Response.json([...getAlignmentSearchRecords(), ...getConsciousnessSearchRecords(), ...getResearchSearchRecords(), ...getDevelopmentSearchRecords(), ...getAgencySearchRecords()]);
+  return Response.json([...getRelationalSearchRecords(), ...getAlignmentSearchRecords(), ...getConsciousnessSearchRecords(), ...getResearchSearchRecords(), ...getDevelopmentSearchRecords(), ...getAgencySearchRecords()]);
 }

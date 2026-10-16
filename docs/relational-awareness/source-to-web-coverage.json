@@ -1,0 +1,3906 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Internal source-to-web coverage and editorial-decision record; not public article text or publication metadata.",
+  "publication": {
+    "title": "From Physical Comparison to Relational Appearance: A Defeasible Current-Act Account",
+    "author": "Jeremy Rodgers",
+    "version": "1.4",
+    "date": "2026-10-16",
+    "doi": "https://doi.org/10.5281/zenodo.23408737",
+    "publicationCount": 1,
+    "relationship": "Main paper and substantial technical supplement are one connected publication."
+  },
+  "sources": [
+    {
+      "document": "main",
+      "originalFilename": "Relational_Awareness_Main_Paper_v1_4.pdf",
+      "sourcePages": 26,
+      "sha256": "2b71797d5f6a6875e8c74c98b3577595ff2a26feedc17f8871a64ddfbfd3c9bf",
+      "websitePath": "public/publications/consciousness/relational-awareness/main.pdf",
+      "websiteSha256": "2b71797d5f6a6875e8c74c98b3577595ff2a26feedc17f8871a64ddfbfd3c9bf",
+      "unchanged": true
+    },
+    {
+      "document": "supplement",
+      "originalFilename": "Relational_Awareness_Technical_Supplement_v1_4.pdf",
+      "sourcePages": 82,
+      "sha256": "4a2bf3aa1045ba7226d2505819b0f12bdad6802a1ee01bbee4592454515a96c3",
+      "websitePath": "public/publications/consciousness/relational-awareness/technical-supplement.pdf",
+      "websiteSha256": "4a2bf3aa1045ba7226d2505819b0f12bdad6802a1ee01bbee4592454515a96c3",
+      "unchanged": true
+    }
+  ],
+  "editorialDecisions": [
+    "The main paper’s AI-assistance declaration is deliberately omitted from website articles, introductions, descriptions and metadata at the site owner’s request. It is the only deliberate source-content omission recorded here. Original downloadable PDFs remain unchanged, including declarations; no claim of solely human authorship is added.",
+    "Editable LaTeX sources and cited reproducibility archives were not supplied for this update. Mathematics was reconstructed from the supplied PDFs and rendered semantically through the existing math stack. This is a web-native adaptation, not a claim of byte-for-byte transcription.",
+    "Scientific experiments and finite computational checks described in the publication remain source-reported. Website preparation and rendering checks do not constitute rerunning unavailable experiments.",
+    "The unpublished recollective-interpretation draft remains a cited interlocutor, not another supplied or published programme item.",
+    "Main and supplement section/result numbering remains available alongside public-facing headings. Full notes in individual coverage records retain the scope of content checks."
+  ],
+  "validation": {
+    "coverageRecordCount": 275,
+    "includedRecordCount": 274,
+    "deliberatelyOmittedRecordCount": 1,
+    "recordsBySource": {
+      "main": 59,
+      "supplement": 216
+    },
+    "uniqueDestinationCount": 214,
+    "destinationPageCount": 13,
+    "mainTopLevelSections": 7,
+    "mainNumberedSubsections": 31,
+    "mainAppendices": 2,
+    "supplementModules": 10,
+    "supplementNumberedSubsections": 87,
+    "numberedFormalResultsBySource": {
+      "main": 5,
+      "supplement": 28
+    },
+    "numberedEquationsBySource": {
+      "main": 7,
+      "supplement": 36
+    },
+    "missingDestinations": [],
+    "missingNumberedSubsections": [],
+    "missingFormalResults": [],
+    "missingTopLevelSectionsOrAppendices": [],
+    "pdfCopiesUnchanged": true,
+    "verificationScope": "Independent structural audit of source-PDF subsection/result numbering against current Markdown coverage records and anchors; exact SHA256 comparison of original and downloadable PDFs. This audit does not prove philosophical claims or establish semantic equivalence of arbitrary machine implementations."
+  },
+  "entries": [
+    {
+      "source": "Main abstract",
+      "title": "Abstract and publication identity",
+      "anchor": "overview",
+      "sourcePages": [
+        1
+      ],
+      "notes": "Complete intellectual abstract integrated into the opening, with publication identity and connected supplement/DOI provenance. Independent fresh pdftotext -raw word-sequence audit matched 12,376 of 12,874 source tokens directly. Every unmatched span was inspected: adaptations comprise the opening/section headings, semantic maths, relocated figure/table material, repaired extraction artefacts and the requested disclosure omission; no substantive prose omissions were found.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#overview"
+    },
+    {
+      "source": "Main §1",
+      "title": "Relational appearance and the connecting problem",
+      "anchor": "section-1",
+      "sourcePages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-1"
+    },
+    {
+      "source": "Main §1.1",
+      "title": "What must actually appear",
+      "anchor": "section-1-1",
+      "sourcePages": [
+        2
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-1-1"
+    },
+    {
+      "source": "Main §1.2",
+      "title": "Presented form already has relational aspects",
+      "anchor": "section-1-2",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-1-2"
+    },
+    {
+      "source": "Main §1.3",
+      "title": "Five questions that must not be collapsed",
+      "anchor": "section-1-3",
+      "sourcePages": [
+        3
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-1-3"
+    },
+    {
+      "source": "Main §1.4",
+      "title": "A serious delayed rival",
+      "anchor": "section-1-4",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-1-4"
+    },
+    {
+      "source": "Main §2",
+      "title": "Awareness, scaffolding and earlier connecting principles",
+      "anchor": "section-2",
+      "sourcePages": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2"
+    },
+    {
+      "source": "Main §2.1",
+      "title": "Fundamental awareness and differentiated presentation",
+      "anchor": "section-2-1",
+      "sourcePages": [
+        4
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-1"
+    },
+    {
+      "source": "Main §2.2",
+      "title": "Organisation, apparatus and acquired scaffolding",
+      "anchor": "section-2-2",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-2"
+    },
+    {
+      "source": "Main §2.3",
+      "title": "The constructed observer and personal experience",
+      "anchor": "section-2-3",
+      "sourcePages": [
+        5
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-3"
+    },
+    {
+      "source": "Main §2.4",
+      "title": "Occurrence, appearance and recollective interpretation",
+      "anchor": "section-2-4",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-4"
+    },
+    {
+      "source": "Main §2.5",
+      "title": "Why earlier articulation proposals were reasonable and insufficient",
+      "anchor": "section-2-5",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-5"
+    },
+    {
+      "source": "Main §2.6",
+      "title": "Continuity has more than one object",
+      "anchor": "section-2-6",
+      "sourcePages": [
+        7
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-6"
+    },
+    {
+      "source": "Main §2.7",
+      "title": "The existing scholarly baseline",
+      "anchor": "section-2-7",
+      "sourcePages": [
+        7,
+        8
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-2-7"
+    },
+    {
+      "source": "Main §3",
+      "title": "Constraints, sensory evidence and native capacity",
+      "anchor": "section-3",
+      "sourcePages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-3"
+    },
+    {
+      "source": "Main §3.1",
+      "title": "What the formal programme contributes",
+      "anchor": "section-3-1",
+      "sourcePages": [
+        8,
+        9
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-3-1"
+    },
+    {
+      "source": "Main §3.2",
+      "title": "Appearance-directed evidence and its interpretation",
+      "anchor": "section-3-2",
+      "sourcePages": [
+        9,
+        10
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-3-2"
+    },
+    {
+      "source": "Main §3.3",
+      "title": "A physically delimited recurring exercise",
+      "anchor": "section-3-3",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-3-3"
+    },
+    {
+      "source": "Main §4",
+      "title": "Concrete performance and literal mode",
+      "anchor": "section-4",
+      "sourcePages": [
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4"
+    },
+    {
+      "source": "Main §4.1",
+      "title": "The two references and the substantive inference",
+      "anchor": "section-4-1",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-1"
+    },
+    {
+      "source": "Main §4.2",
+      "title": "A concrete-performance/mode principle",
+      "anchor": "section-4-2",
+      "sourcePages": [
+        12
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-2"
+    },
+    {
+      "source": "Main §4.3",
+      "title": "Independent motivation: continuity of the tracked instance",
+      "anchor": "section-4-3",
+      "sourcePages": [
+        12,
+        13
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-3"
+    },
+    {
+      "source": "Main §4.4",
+      "title": "Physicalism, intrinsic nature and the exclusive-bearer challenge",
+      "anchor": "section-4-4",
+      "sourcePages": [
+        13
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-4"
+    },
+    {
+      "source": "Main §4.5",
+      "title": "Counterexamples that correct the principle",
+      "anchor": "section-4-5",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-5"
+    },
+    {
+      "source": "Main §4.6",
+      "title": "Application to native comparison",
+      "anchor": "section-4-6",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-4-6"
+    },
+    {
+      "source": "Main §5",
+      "title": "A worked retrospective illustration",
+      "anchor": "section-5",
+      "sourcePages": [
+        15,
+        16,
+        17,
+        18
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-5"
+    },
+    {
+      "source": "Main §5.1",
+      "title": "Physical arrangement and nomination",
+      "anchor": "section-5-1",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-5-1"
+    },
+    {
+      "source": "Main §5.2",
+      "title": "Sensory interpretation and the two warrants",
+      "anchor": "section-5-2",
+      "sourcePages": [
+        16
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-5-2"
+    },
+    {
+      "source": "Main §5.3",
+      "title": "Exactly what the application supports",
+      "anchor": "section-5-3",
+      "sourcePages": [
+        16,
+        17
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-5-3"
+    },
+    {
+      "source": "Main §5.4",
+      "title": "What could challenge the inference",
+      "anchor": "section-5-4",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-5-4"
+    },
+    {
+      "source": "Main §6",
+      "title": "Three serious alternatives and their different force",
+      "anchor": "section-6",
+      "sourcePages": [
+        18,
+        19
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-6"
+    },
+    {
+      "source": "Main §6.1",
+      "title": "Serial appearances without a joint scene",
+      "anchor": "section-6-1",
+      "sourcePages": [
+        18
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-6-1"
+    },
+    {
+      "source": "Main §6.2",
+      "title": "A field accompanying an automated answer",
+      "anchor": "section-6-2",
+      "sourcePages": [
+        18
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-6-2"
+    },
+    {
+      "source": "Main §6.3",
+      "title": "A genuinely exclusive experiential bearer",
+      "anchor": "section-6-3",
+      "sourcePages": [
+        18,
+        19
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-6-3"
+    },
+    {
+      "source": "Main §6.4",
+      "title": "Other correction cases",
+      "anchor": "section-6-4",
+      "sourcePages": [
+        19
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-6-4"
+    },
+    {
+      "source": "Main §7",
+      "title": "The achieved connection and its scope",
+      "anchor": "section-7",
+      "sourcePages": [
+        19,
+        20,
+        21
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-7"
+    },
+    {
+      "source": "Main §7.1",
+      "title": "What is added to the programme",
+      "anchor": "section-7-1",
+      "sourcePages": [
+        20
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-7-1"
+    },
+    {
+      "source": "Main §7.2",
+      "title": "Boundaries and future tests",
+      "anchor": "section-7-2",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-7-2"
+    },
+    {
+      "source": "Main §7.3",
+      "title": "Conclusion",
+      "anchor": "section-7-3",
+      "sourcePages": [
+        21
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#section-7-3"
+    },
+    {
+      "source": "Main Definition 1.1",
+      "title": "Relational appearance",
+      "anchor": "definition-1-1",
+      "sourcePages": [
+        2
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#definition-1-1"
+    },
+    {
+      "source": "Main Principle 4.1",
+      "title": "Conservative mode placement",
+      "anchor": "principle-4-1",
+      "sourcePages": [
+        12
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#principle-4-1"
+    },
+    {
+      "source": "Main Figure 1",
+      "title": "The two warrants and deductive mode substitution",
+      "anchor": "figure-1",
+      "sourcePages": [
+        15
+      ],
+      "notes": "All four inference stages and the full qualification/caption are rendered as an accessible ordered sequence, located after the closing paragraph of §4.6.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#figure-1"
+    },
+    {
+      "source": "Main Table 1",
+      "title": "Distinct warrants and limits in the retrospective illustration",
+      "anchor": "table-1",
+      "sourcePages": [
+        16
+      ],
+      "notes": "All five rows and three columns preserved as a semantic HTML table via Markdown; the interrupted §5.1 paragraph is rejoined before the table.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#table-1"
+    },
+    {
+      "source": "Main Table 2",
+      "title": "Alternatives, challenged premises and corrections",
+      "anchor": "table-2",
+      "sourcePages": [
+        20
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#table-2"
+    },
+    {
+      "source": "Main Appendix A",
+      "title": "Identity, mode and the scope of substitution",
+      "anchor": "appendix-a",
+      "sourcePages": [
+        21
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#appendix-a"
+    },
+    {
+      "source": "Main Proposition A.1 and proof",
+      "title": "Mode preservation under reidentification",
+      "anchor": "proposition-a-1",
+      "sourcePages": [
+        21
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#proposition-a-1"
+    },
+    {
+      "source": "Main Appendix B",
+      "title": "Common finalisation and passive fixed-apparatus marking",
+      "anchor": "appendix-b",
+      "sourcePages": [
+        22,
+        23
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#appendix-b"
+    },
+    {
+      "source": "Main Theorem B.1 and proof",
+      "title": "Abstract common-finalisation mass",
+      "anchor": "theorem-b-1",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#theorem-b-1"
+    },
+    {
+      "source": "Main Theorem B.2 and proof",
+      "title": "Passive zero-error maximum",
+      "anchor": "theorem-b-2",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#theorem-b-2"
+    },
+    {
+      "source": "Main declarations: funding, data/computation, independent assessment",
+      "title": "Publication provenance",
+      "anchor": "provenance",
+      "sourcePages": [
+        23
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#provenance"
+    },
+    {
+      "source": "Main references",
+      "title": "Complete reference list, including unpublished recollective-interpretation interlocutor",
+      "anchor": "references",
+      "sourcePages": [
+        23,
+        24,
+        25,
+        26
+      ],
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#references"
+    },
+    {
+      "source": "Main Equation (1)",
+      "title": "Maximal common mass",
+      "anchor": "equation-1",
+      "sourcePages": [
+        8
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-1"
+    },
+    {
+      "source": "Main Equation (2)",
+      "title": "Passive zero-error marked mass",
+      "anchor": "equation-2",
+      "sourcePages": [
+        8
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-2"
+    },
+    {
+      "source": "Main Equation (3)",
+      "title": "Random-access actual-error information bound",
+      "anchor": "equation-3",
+      "sourcePages": [
+        9
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-3"
+    },
+    {
+      "source": "Main Equation (4)",
+      "title": "Minimum equivariant content signature",
+      "anchor": "equation-4",
+      "sourcePages": [
+        9
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-4"
+    },
+    {
+      "source": "Main Equation (5)",
+      "title": "Literal-mode substitution under identity",
+      "anchor": "equation-5",
+      "sourcePages": [
+        11
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-5"
+    },
+    {
+      "source": "Main Equation (6)",
+      "title": "Passive marker conditional independence",
+      "anchor": "equation-6",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-6"
+    },
+    {
+      "source": "Main Equation (7)",
+      "title": "Aggregate branch-error linear programme",
+      "anchor": "equation-7",
+      "sourcePages": [
+        23
+      ],
+      "notes": "Mathematics checked against rendered PDF source pages; strict KaTeX parsing passed. Original hypotheses, equation numbering and proof content retained.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/read#equation-7"
+    },
+    {
+      "source": "Main declarations: AI assistance",
+      "title": "Deliberate editorial omission requested by the site owner",
+      "anchor": "provenance",
+      "sourcePages": [
+        23
+      ],
+      "notes": "The AI-assistance declaration is deliberately omitted from website articles and metadata, not treated as missing substantive content. The original downloadable PDF is preserved unchanged, including this declaration. No claim of solely human authorship is added.",
+      "route": "/consciousness/relational-awareness/read",
+      "sourceDocument": "main",
+      "recordOrigin": "main-coverage.json",
+      "disposition": "deliberately_omitted",
+      "destination": "/consciousness/relational-awareness/read#provenance"
+    },
+    {
+      "source": "Supplement front matter",
+      "title": "Publication identity and purpose",
+      "anchor": "purpose-and-conventions",
+      "route": "/consciousness/relational-awareness/technical-guide",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "notes": "Main paper and supplement remain one publication, v1.4, 16 October 2026, DOI 10.5281/zenodo.23408737.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/technical-guide#purpose-and-conventions"
+    },
+    {
+      "source": "Supplement dependency and reading guide",
+      "title": "Dependency and reading guide",
+      "anchor": "dependency-guide",
+      "route": "/consciousness/relational-awareness/technical-guide",
+      "sourcePages": [
+        1
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/technical-guide#dependency-guide"
+    },
+    {
+      "source": "Supplement conventions",
+      "title": "Notation, evidential conventions and source-reported reproducibility",
+      "anchor": "notation-and-evidence",
+      "route": "/consciousness/relational-awareness/technical-guide",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "notes": "Source-reported archive and checks are distinguished from website implementation; no experiments represented as rerun.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/technical-guide#notation-and-evidence"
+    },
+    {
+      "source": "Supplement contents",
+      "title": "Complete technical sequence",
+      "anchor": "technical-contents",
+      "route": "/consciousness/relational-awareness/technical-guide",
+      "sourcePages": [
+        2,
+        3,
+        4
+      ],
+      "notes": "Printed table of contents converted to linked web-native module navigation. Each module exposes its subsection anchors.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/technical-guide#technical-contents"
+    },
+    {
+      "source": "Supplement §1",
+      "title": "Adequate sources, quotients and calibrated identification",
+      "anchor": "section-1",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1"
+    },
+    {
+      "source": "Supplement §1.1",
+      "title": "1.1 Controlled lumpability and continuation",
+      "anchor": "section-1-1",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-1"
+    },
+    {
+      "source": "Supplement §1.2",
+      "title": "1.2 Common decoder comparison",
+      "anchor": "section-1-2",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-2"
+    },
+    {
+      "source": "Supplement §1.3",
+      "title": "1.3 Exact qualitative equality certificates",
+      "anchor": "section-1-3",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        6
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-3"
+    },
+    {
+      "source": "Supplement §1.4",
+      "title": "1.4 Native dependency and source fibres",
+      "anchor": "section-1-4",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-4"
+    },
+    {
+      "source": "Supplement §1.5",
+      "title": "1.5 Restricted adaptation and calibrated contrast",
+      "anchor": "section-1-5",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        7
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-5"
+    },
+    {
+      "source": "Supplement §1.6",
+      "title": "1.6 What relational contrasts leave unidentified",
+      "anchor": "section-1-6",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        8
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-6"
+    },
+    {
+      "source": "Supplement §2",
+      "title": "Occurrence, inclusion and ownership",
+      "anchor": "section-2",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2"
+    },
+    {
+      "source": "Supplement §2.1",
+      "title": "2.1 Faithful descent of occurrence identity",
+      "anchor": "section-2-1",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        9
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-1"
+    },
+    {
+      "source": "Supplement §2.2",
+      "title": "2.2 Pair witnesses, common witnesses and Fusion",
+      "anchor": "section-2-2",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        9,
+        10
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-2"
+    },
+    {
+      "source": "Supplement §2.3",
+      "title": "2.3 Exact partial identification under exclusive ownership",
+      "anchor": "section-2-3",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-3"
+    },
+    {
+      "source": "Supplement §2.4",
+      "title": "2.4 Reader validity, probe creation and context",
+      "anchor": "section-2-4",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-4"
+    },
+    {
+      "source": "Supplement §2.5",
+      "title": "2.5 Fixed content maps and support intersection",
+      "anchor": "section-2-5",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        12
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-5"
+    },
+    {
+      "source": "Supplement §2.6",
+      "title": "2.6 Regularity and correlated indicators",
+      "anchor": "section-2-6",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        13
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-6"
+    },
+    {
+      "source": "Supplement §2.7",
+      "title": "2.7 Native articulation, manifestation and categorical grounding",
+      "anchor": "section-2-7",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-7"
+    },
+    {
+      "source": "Supplement §2.8",
+      "title": "2.8 Continuous interaction and primitive support",
+      "anchor": "section-2-8",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-8"
+    },
+    {
+      "source": "Supplement §2.9",
+      "title": "2.9 Action, articulation rates and quantitative support",
+      "anchor": "section-2-9",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-9"
+    },
+    {
+      "source": "Supplement §2.10",
+      "title": "2.10 Collective capacity and a conditional content-grounding bound",
+      "anchor": "section-2-10",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        16,
+        17
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-10"
+    },
+    {
+      "source": "Supplement §2.11",
+      "title": "2.11 Descriptive gluing versus actual common occurrence",
+      "anchor": "section-2-11",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-11"
+    },
+    {
+      "source": "Supplement §2.12",
+      "title": "2.12 Native replacement and the corrected acquaintance condition",
+      "anchor": "section-2-12",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        18
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-12"
+    },
+    {
+      "source": "Supplement §2.13",
+      "title": "2.13 Awareness, access and the construction of a personal event",
+      "anchor": "section-2-13",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        18,
+        19
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-13"
+    },
+    {
+      "source": "Supplement §2.14",
+      "title": "2.14 A conditional connection to the full constitution",
+      "anchor": "section-2-14",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-14"
+    },
+    {
+      "source": "Supplement §2.15",
+      "title": "2.15 The October draft and the scope of the recollective thesis",
+      "anchor": "section-2-15",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-15"
+    },
+    {
+      "source": "Supplement §2.16",
+      "title": "2.16 Occurrence without recognition and the limiting memory question",
+      "anchor": "section-2-16",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "notes": "Complete source prose, arguments, examples, qualifications and mathematics retained; notation reconstructed from PDF and checked with KaTeX.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-16"
+    },
+    {
+      "source": "Supplement Proposition 2.1",
+      "title": "Occurrence descent",
+      "anchor": "proposition-2-1",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        9
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-1"
+    },
+    {
+      "source": "Supplement Proposition 2.2",
+      "title": "Fusion and exclusive maximal domains",
+      "anchor": "proposition-2-2",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        10
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-2"
+    },
+    {
+      "source": "Supplement Proposition 2.3",
+      "title": "Three-pair identification",
+      "anchor": "proposition-2-3",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-3"
+    },
+    {
+      "source": "Supplement Proposition 2.4",
+      "title": "Same-function support intersection",
+      "anchor": "proposition-2-4",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        12
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-4"
+    },
+    {
+      "source": "Supplement Proposition 2.5",
+      "title": "Finest interaction-germ decomposition",
+      "anchor": "proposition-2-5",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        14
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-5"
+    },
+    {
+      "source": "Supplement Proposition 2.6",
+      "title": "Zero action and product subintervals",
+      "anchor": "proposition-2-6",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        15
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-6"
+    },
+    {
+      "source": "Supplement Proposition 2.7",
+      "title": "No antecedent discrimination without a dependence route",
+      "anchor": "proposition-2-7",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Statement and complete proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#proposition-2-7"
+    },
+    {
+      "source": "Supplement Equation (1)",
+      "title": "Controlled lumpability",
+      "anchor": "section-1-1",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-1"
+    },
+    {
+      "source": "Supplement Equation (2)",
+      "title": "Restricted-gain uniform approximation bound",
+      "anchor": "section-1-5",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        7
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-5"
+    },
+    {
+      "source": "Supplement Equation (3)",
+      "title": "Relational-contrast orthogonal decomposition",
+      "anchor": "section-1-6",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        8
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-6"
+    },
+    {
+      "source": "Supplement Equation (4)",
+      "title": "Ownership bound with token-identity uncertainty",
+      "anchor": "section-2-2",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        10
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-2"
+    },
+    {
+      "source": "Supplement Equation (5)",
+      "title": "Exact three-pair interval with marginal boxes",
+      "anchor": "section-2-3",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        11
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-3"
+    },
+    {
+      "source": "Supplement Equation (6)",
+      "title": "Five-token partition inequality",
+      "anchor": "section-2-3",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        11
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-3"
+    },
+    {
+      "source": "Supplement Equation (7)",
+      "title": "Earlier-occurrence lower bound",
+      "anchor": "section-2-4",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        12
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-4"
+    },
+    {
+      "source": "Supplement Equation (8)",
+      "title": "Earlier-occurrence upper bound",
+      "anchor": "section-2-4",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        12
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-4"
+    },
+    {
+      "source": "Supplement Equation (9)",
+      "title": "Conditional quantum content-grounding contrast bound",
+      "anchor": "section-2-10",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        17
+      ],
+      "notes": "Original equation number, assumptions and derivation retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-10"
+    },
+    {
+      "source": "Supplement §1.1 results and examples",
+      "title": "Continuation equivalence and zero-error retained-state bound",
+      "anchor": "section-1-1",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-1"
+    },
+    {
+      "source": "Supplement §1.2 results and examples",
+      "title": "Common-decoder deficiency, symmetric-channel sharp bound and intermediate-record example",
+      "anchor": "section-1-2",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-2"
+    },
+    {
+      "source": "Supplement §1.3 results and examples",
+      "title": "Equality-certificate comparison count, noisy prototype thresholds and stochastic nonidentifiability",
+      "anchor": "section-1-3",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        6
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-3"
+    },
+    {
+      "source": "Supplement §1.4 results and examples",
+      "title": "Finest routed dependency factorization, parity rank and pair-dependence counterexample",
+      "anchor": "section-1-4",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-4"
+    },
+    {
+      "source": "Supplement §1.5 results and examples",
+      "title": "Positive two-mode transfer and scalar nonlinear counterexamples; calibrated source-contrast bound",
+      "anchor": "section-1-5",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        7
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-5"
+    },
+    {
+      "source": "Supplement §1.6 results and examples",
+      "title": "Gram lower bound; face/slack joint-law identification; product-experiment and positive-density transfer bounds",
+      "anchor": "section-1-6",
+      "route": "/consciousness/relational-awareness/module-a",
+      "sourcePages": [
+        8
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-a#section-1-6"
+    },
+    {
+      "source": "Supplement §2.1 results and examples",
+      "title": "Faithful coarsening, minimum tag alphabet and separate recurrent-core example",
+      "anchor": "section-2-1",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        9
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-1"
+    },
+    {
+      "source": "Supplement §2.2 results and examples",
+      "title": "Boundary-family pair/common-witness counterexample and Fusion ownership scope",
+      "anchor": "section-2-2",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        9,
+        10
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-2"
+    },
+    {
+      "source": "Supplement §2.3 results and examples",
+      "title": "Five-token inequality proof and triple-consistent incompatible ensemble",
+      "anchor": "section-2-3",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        11
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-3"
+    },
+    {
+      "source": "Supplement §2.4 results and examples",
+      "title": "Specificity, sensitivity, probe-creation and context bounds; Hoeffding calibration example",
+      "anchor": "section-2-4",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-4"
+    },
+    {
+      "source": "Supplement §2.5 results and examples",
+      "title": "Allowed-content fibre criterion and Cartesian-support counterexamples",
+      "anchor": "section-2-5",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        12
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-5"
+    },
+    {
+      "source": "Supplement §2.6 results and examples",
+      "title": "Sharp Lipschitz envelopes and correlated-indicator linear programme",
+      "anchor": "section-2-6",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        13
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-6"
+    },
+    {
+      "source": "Supplement §2.8 results and examples",
+      "title": "Germ time-direction examples; tensor-support decomposition; entanglement without triple generator",
+      "anchor": "section-2-8",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-8"
+    },
+    {
+      "source": "Supplement §2.9 results and examples",
+      "title": "Interaction action, frame/time invariance and inverse/SWAP examples",
+      "anchor": "section-2-9",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        15
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-9"
+    },
+    {
+      "source": "Supplement §2.10 results and examples",
+      "title": "Pairwise GHZ construction, POVM result and changing density-aperture example",
+      "anchor": "section-2-10",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        16,
+        17
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-10"
+    },
+    {
+      "source": "Supplement §2.11 results and examples",
+      "title": "Sheaf uniqueness and matching counterexamples; attention contexts and token witnesses",
+      "anchor": "section-2-11",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-11"
+    },
+    {
+      "source": "Supplement §2.12 results and examples",
+      "title": "Native isomorphism, swap/XOR clamp failure and no-silent-loss countermodel",
+      "anchor": "section-2-12",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        18
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-12"
+    },
+    {
+      "source": "Supplement §2.13 results and examples",
+      "title": "Fundamental awareness U, perceptual construction, scaffolding and personal observer",
+      "anchor": "section-2-13",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        18,
+        19
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-13"
+    },
+    {
+      "source": "Supplement §2.14 results and examples",
+      "title": "SPC-2 A1–A3 and the conditional current-scene bridge",
+      "anchor": "section-2-14",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-14"
+    },
+    {
+      "source": "Supplement §2.15 results and examples",
+      "title": "Unpublished October draft, terms, scope and artificial-system inference",
+      "anchor": "section-2-15",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-15"
+    },
+    {
+      "source": "Supplement §2.16 results and examples",
+      "title": "Recognition, retention, no-memory limit and antecedent-dependence distinction",
+      "anchor": "section-2-16",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#section-2-16"
+    },
+    {
+      "source": "Supplement constitutive proposal: Native Articulation Law",
+      "title": "Native Articulation Law",
+      "anchor": "native-articulation-law",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        13
+      ],
+      "notes": "Motivation, mathematical consequences, counterexamples and extra constitutive assumptions retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#native-articulation-law"
+    },
+    {
+      "source": "Supplement constitutive proposal: Relational Manifestation",
+      "title": "Relational Manifestation",
+      "anchor": "relational-manifestation",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "notes": "Motivation, mathematical consequences, counterexamples and extra constitutive assumptions retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#relational-manifestation"
+    },
+    {
+      "source": "Supplement constitutive proposal: Intrinsic Qualitative Grounding",
+      "title": "Intrinsic Qualitative Grounding",
+      "anchor": "intrinsic-qualitative-grounding",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        14
+      ],
+      "notes": "Motivation, mathematical consequences, counterexamples and extra constitutive assumptions retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#intrinsic-qualitative-grounding"
+    },
+    {
+      "source": "Supplement constitutive proposal: Finite-Rate Articulation",
+      "title": "Finite-Rate Articulation",
+      "anchor": "finite-rate-articulation",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "notes": "Motivation, mathematical consequences, counterexamples and extra constitutive assumptions retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#finite-rate-articulation"
+    },
+    {
+      "source": "Supplement constitutive proposal: Reciprocal Articulation Field",
+      "title": "Reciprocal Articulation Field",
+      "anchor": "reciprocal-articulation-field",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        16
+      ],
+      "notes": "Motivation, mathematical consequences, counterexamples and extra constitutive assumptions retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#reciprocal-articulation-field"
+    },
+    {
+      "source": "Supplement Table 1",
+      "title": "Terminology across the present argument and the unpublished October draft",
+      "anchor": "table-1",
+      "route": "/consciousness/relational-awareness/module-b",
+      "sourcePages": [
+        20
+      ],
+      "notes": "Complete six-row comparison and caption. The unpublished draft remains a cited interlocutor, not an additional supplied publication.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ab-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-b#table-1"
+    },
+    {
+      "source": "Supplement §3",
+      "title": "Finalization, selection and physical access",
+      "anchor": "section-3",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Full opening retained, with one public-facing orientation sentence.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3"
+    },
+    {
+      "source": "Supplement §3.1",
+      "title": "Common prefixes and immutable finalization",
+      "anchor": "section-3-1",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        22,
+        23
+      ],
+      "notes": "All history, kernel, content and immutable-finality assumptions; Eq. (10), LP dual, cyclic three-law counterexample, history/content overlap and failed common-prefix example.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-1"
+    },
+    {
+      "source": "Supplement Theorem 3.1",
+      "title": "Abstract common-mass maximum",
+      "anchor": "theorem-3-1",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        23
+      ],
+      "notes": "Statement, attainment construction, full proof and Makur–Singh attribution retained. Unrestricted future construction is explicit.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#theorem-3-1"
+    },
+    {
+      "source": "Supplement §3.2",
+      "title": "Fixed passive native apparatus",
+      "anchor": "section-3-2",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        23,
+        24
+      ],
+      "notes": "Complete passive-access contract, fresh-coin alpha=1/beta=0 separation, conditional-marker versus aggregate tolerance, Eq. (12) LP and opposite-branch example.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-2"
+    },
+    {
+      "source": "Supplement Proposition 3.2",
+      "title": "Passive zero-error flagged mass",
+      "anchor": "proposition-3-2",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        23,
+        24
+      ],
+      "notes": "Eq. (11), complete proof and no-randomization conclusion retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#proposition-3-2"
+    },
+    {
+      "source": "Supplement §3.3",
+      "title": "Approximation and calibration",
+      "anchor": "section-3-3",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        24,
+        25
+      ],
+      "notes": "Eqs. (13)–(14); robust LP, sharp cyclic-law certificate, approximate prefix/finality proof, report/content coupling, imperfect witness prevalence bounds, intervention bypass bound and sharp example, Hoeffding derivation and calibration obligations.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-3"
+    },
+    {
+      "source": "Supplement §3.4",
+      "title": "Sharp sampling of the same completed episode",
+      "anchor": "section-3-4",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        25,
+        26
+      ],
+      "notes": "Eq. (15) with sorting/duality proof and multiple anchors; numerical 13/140 and 3/20 examples, same-episode sampling contract and general-source quantile integral.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-4"
+    },
+    {
+      "source": "Supplement §3.5",
+      "title": "Completing an inadequate source",
+      "anchor": "section-3-5",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        26,
+        27
+      ],
+      "notes": "Eqs. (16)–(17) and all proofs. Actual error is distinguished from an upper error budget; m-ary clipping at 1−1/m and binary clipping at 1/2, including constant-decoder and always-wrong examples. Conditional rate distortion, erasure completion, labelled-position binding, independent after-storage queries, complete-source seeds, exact finite codebook formula and D3,2=1/4, D6,2=11/32 retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-5"
+    },
+    {
+      "source": "Supplement §3.6",
+      "title": "Persistent draws and adaptive threshold access",
+      "anchor": "section-3-6",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        27,
+        28
+      ],
+      "notes": "Eq. (18), threshold-tree proof, alternating K=2^m-bin sharp construction, Volterra/grid operator counterexample, noisy repeated-comparison lower bound and .932 example. Achievability is not reported as optimality.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-6"
+    },
+    {
+      "source": "Supplement §3.7",
+      "title": "Reconstruction, current knowledge and timing",
+      "anchor": "section-3-7",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        28
+      ],
+      "notes": "Full contour counting proof, K!/2 versus K! and four-site examples, resource assumptions, delayed reconstruction rival, fidelity and current-basis deadline.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-7"
+    },
+    {
+      "source": "Supplement §3.8",
+      "title": "Common descendants and duplicate readers",
+      "anchor": "section-3-8",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        28,
+        29
+      ],
+      "notes": "Finite factorization classes, XOR mixed difference/common-descendant reasoning, duplicate current readers, complete outside-basis condition, mutual-sensitivity counterexample and classifier/report-rescue counterexample.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-8"
+    },
+    {
+      "source": "Supplement §3.9",
+      "title": "Repeated fields and historical dependence",
+      "anchor": "section-3-9",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        29,
+        30
+      ],
+      "notes": "Five-value registers, early load/late probe match, conditional current-field transfer, delayed historical rival and padding, bi-infinite eight-step process, covariance and stochastic-innovation qualifications.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-9"
+    },
+    {
+      "source": "Supplement §4",
+      "title": "Retention, reset, recurrence and return",
+      "anchor": "section-4",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        30
+      ],
+      "notes": "Full source opening and programme attribution retained, with a public-facing orientation sentence.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4"
+    },
+    {
+      "source": "Supplement §4.1",
+      "title": "Reversible records and finite recurrence",
+      "anchor": "section-4-1",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        30,
+        31
+      ],
+      "notes": "XOR writing, copied archive versus latch, finite-clock padding, full quantum-clock Hamiltonian and transfer/scale argument, reducing-subspace proof, parity premeasurement and environment-overlap trace-distance result.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-1"
+    },
+    {
+      "source": "Supplement Proposition 4.1",
+      "title": "Finite recurrence and permanent merger",
+      "anchor": "proposition-4-1",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        30
+      ],
+      "notes": "Statement, complete proof via block counts and recurrence, invariant orbit join and scope qualifications retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#proposition-4-1"
+    },
+    {
+      "source": "Supplement §4.2",
+      "title": "Exact integration–retention access",
+      "anchor": "section-4-2",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        31,
+        32
+      ],
+      "notes": "Eqs. (19)–(20), channel assumptions, limiting/equal-rate cases, binary versus four-input accuracy, peak/windows/deadline, optimized-rate monotonicity proof, fixed-time endpoint minima and correlated-box qualification. Full robust example tR=log3, rR=(4/5)3^(−1/4), accuracy .80393427. Error certificate and proof retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-2"
+    },
+    {
+      "source": "Supplement Theorem 4.2",
+      "title": "A robust saddle",
+      "anchor": "theorem-4-2",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        31,
+        32
+      ],
+      "notes": "Full rectangular-rate-box hypotheses, minimax equality, integral-by-parts proof and endpoint/limit argument.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#theorem-4-2"
+    },
+    {
+      "source": "Supplement §4.3",
+      "title": "Marginals, fixed-time erasure and reset flags",
+      "anchor": "section-4-3",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        32,
+        33
+      ],
+      "notes": "Independent/common-flip joint-memory contrast; general first-write channel; Eq. (21) and inverse-norm proof; marked reset versus hidden flip path; archive conventions; common-mixing decoder bound and seed-independence counterexample.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-3"
+    },
+    {
+      "source": "Supplement §4.4",
+      "title": "Pair reliability and calibrated field proposals",
+      "anchor": "section-4-4",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        33
+      ],
+      "notes": "Fuzzy path closure and uncertainty partition proof; two-field potential, minima, backreaction, coercivity and ordered-core stability; affine history-kernel mixing/coupling bound; survival-semigroup derivation and three/four-dose assay inversion with all identification/calibration limits.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-4"
+    },
+    {
+      "source": "Supplement §4.5",
+      "title": "Alternating dwell constraints",
+      "anchor": "section-4-5",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        34
+      ],
+      "notes": "Renewal reward occupancy/switch formula, common and selective compression, hazard-versus-time-scaling distinction, Weibull example, aggregation and timing qualifications.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-5"
+    },
+    {
+      "source": "Supplement §4.6",
+      "title": "Return, padding and retained dependence",
+      "anchor": "section-4-6",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        34
+      ],
+      "notes": "Passive-mark invariant-law proof; Eq. (22) stabilizer criterion with necessity, sufficiency and uniqueness; S3 versus cyclic action; protected-tour step/resource count and 2^(m+k) predictive points; provenance union bound, copula joint-reset example and calibration/transport error budget.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-6"
+    },
+    {
+      "source": "Supplement §4.7",
+      "title": "Sealing and preparation equivalence",
+      "anchor": "section-4-7",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        35
+      ],
+      "notes": "Common-reader TV half-gap, test pullbacks and physical inverse limits, density-ensemble effect/POVM result; Eq. (23) with signed-measure duality and finite-frame proof; effects clipping bound, squared-concurrence counterexample and independent product-probe affinity bound.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "cd-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-7"
+    },
+    {
+      "source": "Supplement §5 / Module E",
+      "title": "A selected native parity structure and its limits",
+      "anchor": "section-5",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        35,
+        36
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5"
+    },
+    {
+      "source": "Supplement §5.1",
+      "title": "Native model and repertoire convention",
+      "anchor": "section-5-1",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        36
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-1"
+    },
+    {
+      "source": "Supplement §5.2",
+      "title": "Typed partitions and selected distinctions",
+      "anchor": "section-5-2",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        36,
+        37
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-2"
+    },
+    {
+      "source": "Supplement §5.3",
+      "title": "Native subsystem and complex selection",
+      "anchor": "section-5-3",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        37,
+        38,
+        39
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-3"
+    },
+    {
+      "source": "Supplement §5.4",
+      "title": "Spectators and normalization sensitivity",
+      "anchor": "section-5-4",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        39
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-4"
+    },
+    {
+      "source": "Supplement §5.5",
+      "title": "All relations and total structure",
+      "anchor": "section-5-5",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        39,
+        40
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-5"
+    },
+    {
+      "source": "Supplement §5.6",
+      "title": "Symmetry does not select a spatial layout",
+      "anchor": "section-5-6",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        40
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-6"
+    },
+    {
+      "source": "Supplement §5.7",
+      "title": "Failed motifs and a weak-link qualification",
+      "anchor": "section-5-7",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        40,
+        41
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-7"
+    },
+    {
+      "source": "Supplement Proposition 5.1",
+      "title": "Exactly five selected positive distinctions, full proof",
+      "anchor": "proposition-5-1",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        37
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#proposition-5-1"
+    },
+    {
+      "source": "Supplement Lemma 5.2",
+      "title": "Corrected proper-subsystem cause kernels, full proof",
+      "anchor": "lemma-5-2",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        38
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#lemma-5-2"
+    },
+    {
+      "source": "Supplement Lemma 5.3",
+      "title": "Selected subsystem states and official system partitions, full proof",
+      "anchor": "lemma-5-3",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        38
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#lemma-5-3"
+    },
+    {
+      "source": "Supplement Theorem 5.4",
+      "title": "Unique selected native complex, full proof",
+      "anchor": "theorem-5-4",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        39
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#theorem-5-4"
+    },
+    {
+      "source": "Supplement Proposition 5.5",
+      "title": "31 relations, 309 faces and total structure, full proof",
+      "anchor": "proposition-5-5",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        40
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#proposition-5-5"
+    },
+    {
+      "source": "Supplement §5.5 relation-degree table",
+      "title": "Relation and valid-face counts by degree",
+      "anchor": "proposition-5-5",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        40
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#proposition-5-5"
+    },
+    {
+      "source": "Supplement §5.7 exclusion table",
+      "title": "Failed five-unit motif: maximum cause/effect purviews",
+      "anchor": "section-5-7",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        41
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-7"
+    },
+    {
+      "source": "Supplement equation (24)",
+      "title": "Native noisy no-self parity model",
+      "anchor": "section-5-1",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        36
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-1"
+    },
+    {
+      "source": "Supplement equation (25)",
+      "title": "Typed-partition possible-slot denominator",
+      "anchor": "section-5-2",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        36
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-2"
+    },
+    {
+      "source": "Supplement equation (26)",
+      "title": "Whole-mechanism effect scores",
+      "anchor": "section-5-2",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        37
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-2"
+    },
+    {
+      "source": "Supplement equation (27)",
+      "title": "System irreducibility by subsystem size",
+      "anchor": "section-5-3",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        38
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-3"
+    },
+    {
+      "source": "Supplement equation (28)",
+      "title": "Relation irreducibility",
+      "anchor": "section-5-5",
+      "route": "/consciousness/relational-awareness/module-e",
+      "sourcePages": [
+        39
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-e#section-5-5"
+    },
+    {
+      "source": "Supplement §6 / Module F",
+      "title": "Spatial response, native equivalence and relational events",
+      "anchor": "section-6",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        42
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6"
+    },
+    {
+      "source": "Supplement §6.1",
+      "title": "One native edge and all-pair response",
+      "anchor": "section-6-1",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        42,
+        43
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-1"
+    },
+    {
+      "source": "Supplement §6.2",
+      "title": "An exact inverse native-edge criterion",
+      "anchor": "section-6-2",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        43
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-2"
+    },
+    {
+      "source": "Supplement §6.3",
+      "title": "Projected fluctuations and a retention tradeoff",
+      "anchor": "section-6-3",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        43
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-3"
+    },
+    {
+      "source": "Supplement §6.4",
+      "title": "Equal relative laws, unequal native organizations",
+      "anchor": "section-6-4",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        44
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-4"
+    },
+    {
+      "source": "Supplement §6.5",
+      "title": "Material event evaluation",
+      "anchor": "section-6-5",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        45
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-5"
+    },
+    {
+      "source": "Supplement §6.6",
+      "title": "Prediction and feasible planning",
+      "anchor": "section-6-6",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        45
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-6"
+    },
+    {
+      "source": "Supplement §6.7",
+      "title": "Optical geometry and worldly constituents",
+      "anchor": "section-6-7",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        45,
+        46
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-7"
+    },
+    {
+      "source": "Supplement Proposition 6.1",
+      "title": "Rank-one complete resistance response and proof",
+      "anchor": "proposition-6-1",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        42
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#proposition-6-1"
+    },
+    {
+      "source": "Supplement Theorem 6.2",
+      "title": "Exact inverse native-edge criterion and proof",
+      "anchor": "theorem-6-2",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        43
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#theorem-6-2"
+    },
+    {
+      "source": "Supplement Proposition 6.3",
+      "title": "Equal complete relative stochastic laws and proof",
+      "anchor": "proposition-6-3",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        44
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#proposition-6-3"
+    },
+    {
+      "source": "Supplement Proposition 6.4",
+      "title": "Native hold distinguishes the organizations and proof",
+      "anchor": "proposition-6-4",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        44
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#proposition-6-4"
+    },
+    {
+      "source": "Supplement equation (29)",
+      "title": "Rank-one resistance update",
+      "anchor": "section-6-1",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        42
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-1"
+    },
+    {
+      "source": "Supplement equation (30)",
+      "title": "Exact inverse native-edge signature",
+      "anchor": "section-6-2",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        43
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-2"
+    },
+    {
+      "source": "Supplement equation (31)",
+      "title": "Pinhole projection",
+      "anchor": "section-6-7",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        45
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-7"
+    },
+    {
+      "source": "Supplement equation (32)",
+      "title": "Independent token scaling preserves geometry",
+      "anchor": "section-6-7",
+      "route": "/consciousness/relational-awareness/module-f",
+      "sourcePages": [
+        46
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ef-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-f#section-6-7"
+    },
+    {
+      "source": "Supplement §7",
+      "title": "Evidence for the current relational scene",
+      "anchor": "section-7",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        46
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7"
+    },
+    {
+      "source": "Supplement §7.1",
+      "title": "7.1 Identifying a measurement model without identifying appearance",
+      "anchor": "section-7-1",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        46,
+        47,
+        48
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-1"
+    },
+    {
+      "source": "Supplement Proposition 7.1 and proof",
+      "title": "Proposition 7.1: Three-indicator inversion",
+      "anchor": "proposition-7-1",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        46,
+        47
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#proposition-7-1"
+    },
+    {
+      "source": "Supplement §7.1 common access gate countermodel",
+      "title": "The common access gate",
+      "anchor": "common-access-gate",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        47,
+        48
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#common-access-gate"
+    },
+    {
+      "source": "Supplement §7.2",
+      "title": "7.2 The archived Ebbinghaus experiment",
+      "anchor": "section-7-2",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        48,
+        49
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-2"
+    },
+    {
+      "source": "Supplement Table 2",
+      "title": "Table 2: The variables used, and what they measure",
+      "anchor": "table-2",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        49
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#table-2"
+    },
+    {
+      "source": "Supplement §7.3",
+      "title": "7.3 A physical-only nomination and its retrospective status",
+      "anchor": "section-7-3",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        49,
+        50
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-3"
+    },
+    {
+      "source": "Supplement §7.4",
+      "title": "7.4 From an answer to a current relational appearance",
+      "anchor": "section-7-4",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        50
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-4"
+    },
+    {
+      "source": "Supplement §7.5",
+      "title": "7.5 The deadline is by uptake, not at stimulus onset",
+      "anchor": "section-7-5",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        50,
+        51
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-5"
+    },
+    {
+      "source": "Supplement §7.6",
+      "title": "7.6 Exploratory transfer of local reader maps",
+      "anchor": "section-7-6",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        51,
+        52
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-6"
+    },
+    {
+      "source": "Supplement Table 3",
+      "title": "Table 3: Exploratory transfer to independently recorded pair judgments",
+      "anchor": "table-3",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        52
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#table-3"
+    },
+    {
+      "source": "Supplement §7.7",
+      "title": "7.7 A public feature-binding control and a restricted mixture test",
+      "anchor": "section-7-7",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        52,
+        53
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-7"
+    },
+    {
+      "source": "Supplement Table 4",
+      "title": "Table 4: A diagnostic of the exact equal-probability midpoint restriction",
+      "anchor": "table-4",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        53
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#table-4"
+    },
+    {
+      "source": "Supplement §7.8",
+      "title": "7.8 Perturbation and sensory construction",
+      "anchor": "section-7-8",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        53,
+        54
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-8"
+    },
+    {
+      "source": "Supplement §7.8 Vernier/TMS information bound",
+      "title": "Vernier integration and TMS",
+      "anchor": "vernier-integration",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        53
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#vernier-integration"
+    },
+    {
+      "source": "Supplement §7.8 sequential neural decoding",
+      "title": "Sequential neural decoding",
+      "anchor": "sequential-decoding",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        54
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#sequential-decoding"
+    },
+    {
+      "source": "Supplement §7.8 cortical construction",
+      "title": "Cortical construction",
+      "anchor": "cortical-construction",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        54
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#cortical-construction"
+    },
+    {
+      "source": "Supplement §7.9",
+      "title": "7.9 Reports during REM sleep",
+      "anchor": "section-7-9",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        54,
+        55
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-9"
+    },
+    {
+      "source": "Supplement §7.10",
+      "title": "7.10 Grouping, report-independent accumulation and motor correction",
+      "anchor": "section-7-10",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        55,
+        56
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-10"
+    },
+    {
+      "source": "Supplement §7.11",
+      "title": "7.11 Affective counterparts and the limits of modality extension",
+      "anchor": "section-7-11",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        56
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-11"
+    },
+    {
+      "source": "Supplement §7.12",
+      "title": "7.12 What the combined evidence licenses",
+      "anchor": "section-7-12",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        56
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-12"
+    },
+    {
+      "source": "Supplement Equation (33)",
+      "title": "Equation (33) and assumptions",
+      "anchor": "section-7-1",
+      "route": "/consciousness/relational-awareness/module-g",
+      "sourcePages": [
+        47
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-g#section-7-1"
+    },
+    {
+      "source": "Supplement §8",
+      "title": "The physical act and its qualitative mode",
+      "anchor": "section-8",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        56
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8"
+    },
+    {
+      "source": "Supplement §8.1",
+      "title": "8.1 Current grounding and evidential parity",
+      "anchor": "section-8-1",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        57
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-1"
+    },
+    {
+      "source": "Supplement §8.1 nonfloating epistemic grounding",
+      "title": "Nonfloating epistemic grounding",
+      "anchor": "nonfloating-grounding",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        57
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#nonfloating-grounding"
+    },
+    {
+      "source": "Supplement §8.2",
+      "title": "8.2 Anti-luck constraints and their physical antecedent",
+      "anchor": "section-8-2",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        57,
+        58
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-2"
+    },
+    {
+      "source": "Supplement Proposition 8.1 and proof",
+      "title": "Proposition 8.1: Scoped safety constraint",
+      "anchor": "proposition-8-1",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        57
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#proposition-8-1"
+    },
+    {
+      "source": "Supplement §8.2 sound positive reports countermodel",
+      "title": "Sound positive reports need not locate a bearer",
+      "anchor": "sound-positive-reports",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        58
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#sound-positive-reports"
+    },
+    {
+      "source": "Supplement §8.3",
+      "title": "8.3 A finite current scoped-carrier countermodel",
+      "anchor": "section-8-3",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        58,
+        59
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-3"
+    },
+    {
+      "source": "Supplement Proposition 8.2 and proof",
+      "title": "Proposition 8.2: Scoped agreement and off-anchor disagreement",
+      "anchor": "proposition-8-2",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        58
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#proposition-8-2"
+    },
+    {
+      "source": "Supplement Proposition 8.3 and proof",
+      "title": "Proposition 8.3: Robust container and shared parts",
+      "anchor": "proposition-8-3",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        59
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#proposition-8-3"
+    },
+    {
+      "source": "Supplement §8.4",
+      "title": "8.4 Causal exclusion does not fix the first stage",
+      "anchor": "section-8-4",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        59,
+        60
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-4"
+    },
+    {
+      "source": "Supplement §8.5",
+      "title": "8.5 A reader model and a typed realization failure",
+      "anchor": "section-8-5",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        60,
+        61
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-5"
+    },
+    {
+      "source": "Supplement §8.6",
+      "title": "8.6 Possessed reasons, operative expression, and a mixed act",
+      "anchor": "section-8-6",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        61,
+        62
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-6"
+    },
+    {
+      "source": "Supplement §8.6 practical source use",
+      "title": "Practical source use",
+      "anchor": "practical-source-use",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        61,
+        62
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#practical-source-use"
+    },
+    {
+      "source": "Supplement §8.7",
+      "title": "8.7 Categorical assembly and physical inherence",
+      "anchor": "section-8-7",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        62
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-7"
+    },
+    {
+      "source": "Supplement §8.8",
+      "title": "8.8 Harmony and qualitative powers",
+      "anchor": "section-8-8",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        62,
+        63,
+        64
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-8"
+    },
+    {
+      "source": "Supplement §8.8 qualitative powers and gap-target countermodel",
+      "title": "A more direct powers proposal",
+      "anchor": "qualitative-powers",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        63,
+        64
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#qualitative-powers"
+    },
+    {
+      "source": "Supplement §8.9",
+      "title": "8.9 Whole-act realization and literal mode preservation",
+      "anchor": "section-8-9",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        64
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-9"
+    },
+    {
+      "source": "Supplement §8.10",
+      "title": "8.10 The corrected concrete-performance/mode principle",
+      "anchor": "section-8-10",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        64,
+        65,
+        66
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-10"
+    },
+    {
+      "source": "Supplement §8.10 corrected CMP and six execution/phase corrections",
+      "title": "Conservative mode placement",
+      "anchor": "conservative-mode-placement",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        65
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#conservative-mode-placement"
+    },
+    {
+      "source": "Supplement §8.10 exclusive-bearer alternative",
+      "title": "A fair exclusive-bearer alternative",
+      "anchor": "exclusive-bearer",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        65,
+        66
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#exclusive-bearer"
+    },
+    {
+      "source": "Supplement §8.11",
+      "title": "8.11 Ownership, phase, and the broader programme",
+      "anchor": "section-8-11",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        66
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-11"
+    },
+    {
+      "source": "Supplement §8.12",
+      "title": "8.12 How the current connection differs from the conditional routes",
+      "anchor": "section-8-12",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        66,
+        67
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-12"
+    },
+    {
+      "source": "Supplement Equation (34)",
+      "title": "Equation (34) and assumptions",
+      "anchor": "section-8-3",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        59
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-3"
+    },
+    {
+      "source": "Supplement Equation (35)",
+      "title": "Equation (35) and assumptions",
+      "anchor": "section-8-6",
+      "route": "/consciousness/relational-awareness/module-h",
+      "sourcePages": [
+        61
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "gh-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-h#section-8-6"
+    },
+    {
+      "source": "Supplement §9",
+      "title": "Presented form, content signatures and current sensory basing",
+      "anchor": "section-9",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        67
+      ],
+      "notes": "Web opening adapted; all three warrant types and separation from the performance-identification argument retained.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9"
+    },
+    {
+      "source": "Supplement §9.1",
+      "title": "Relational aspects of one presented form",
+      "anchor": "section-9-1",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        67,
+        68
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-1"
+    },
+    {
+      "source": "Supplement §9.2",
+      "title": "The exact covariance contract for a content law",
+      "anchor": "section-9-2",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        68,
+        69
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-2"
+    },
+    {
+      "source": "Supplement §9.3",
+      "title": "An attained minimum content signature",
+      "anchor": "section-9-3",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        69,
+        70
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-3"
+    },
+    {
+      "source": "Supplement §9.4",
+      "title": "Stochastic content and limited observations",
+      "anchor": "section-9-4",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        70,
+        71
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-4"
+    },
+    {
+      "source": "Supplement §9.5",
+      "title": "Current basing without physical-port constitution",
+      "anchor": "section-9-5",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        71,
+        72
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-5"
+    },
+    {
+      "source": "Supplement §9.6",
+      "title": "What a selective physical route contrast establishes",
+      "anchor": "section-9-6",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        72,
+        73
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-6"
+    },
+    {
+      "source": "Supplement Principle 9.1",
+      "title": "Finite spatial aspects",
+      "anchor": "principle-9-1",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        67,
+        68
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#principle-9-1"
+    },
+    {
+      "source": "Supplement Theorem 9.2",
+      "title": "Anchored orbit law and proof",
+      "anchor": "theorem-9-2",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        69
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#theorem-9-2"
+    },
+    {
+      "source": "Supplement Theorem 9.3",
+      "title": "Target-specific signature, attained coset construction and proof",
+      "anchor": "theorem-9-3",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        69
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#theorem-9-3"
+    },
+    {
+      "source": "Supplement §9.3 table",
+      "title": "Four interchangeable labels: exact stabilizers and signature counts",
+      "anchor": "four-label-signatures",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        70
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#four-label-signatures"
+    },
+    {
+      "source": "Supplement §9.3 example",
+      "title": "Nontrivial S3 physical orbit",
+      "anchor": "nontrivial-physical-orbit",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        70
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#nontrivial-physical-orbit"
+    },
+    {
+      "source": "Supplement Proposition 9.4",
+      "title": "Limited observation of a uniform content orbit and proof",
+      "anchor": "proposition-9-4",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        70,
+        71
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#proposition-9-4"
+    },
+    {
+      "source": "Supplement §9.5 countermodels",
+      "title": "Cached answer and fresh-current-field substitutions",
+      "anchor": "basing-substitutions",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        72
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#basing-substitutions"
+    },
+    {
+      "source": "Supplement Equation (36)",
+      "title": "Selective physical route contrast and derivation",
+      "anchor": "section-9-6",
+      "route": "/consciousness/relational-awareness/module-i",
+      "sourcePages": [
+        72
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-i#section-9-6"
+    },
+    {
+      "source": "Supplement §10",
+      "title": "Presented form, empirical tests and the limits of transfer",
+      "anchor": "section-10",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        73
+      ],
+      "notes": "Web opening adapted without changing empirical warrant.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10"
+    },
+    {
+      "source": "Supplement §10.1",
+      "title": "From an extensive form to a modest native application",
+      "anchor": "section-10-1",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        73,
+        74
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-1"
+    },
+    {
+      "source": "Supplement §10.2",
+      "title": "What the basing repair changes in the original archive",
+      "anchor": "section-10-2",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        74,
+        75
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-2"
+    },
+    {
+      "source": "Supplement §10.3",
+      "title": "A fixed physical/report assay that failed its primary criterion",
+      "anchor": "section-10-3",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        75,
+        76
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-3"
+    },
+    {
+      "source": "Supplement §10.4",
+      "title": "A felt act and its bodily execution",
+      "anchor": "section-10-4",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        76
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-4"
+    },
+    {
+      "source": "Supplement §10.5",
+      "title": "What the additional evidence warrants",
+      "anchor": "section-10-5",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        76,
+        77
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-5"
+    },
+    {
+      "source": "Supplement §10.1 empirical application",
+      "title": "Cortically induced extent",
+      "anchor": "cortically-induced-extent",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        73
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#cortically-induced-extent"
+    },
+    {
+      "source": "Supplement §10.1 empirical application",
+      "title": "Afterimage surface with historical and current suppliers",
+      "anchor": "afterimage-surface",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        73,
+        74
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#afterimage-surface"
+    },
+    {
+      "source": "Supplement §10.1 empirical application",
+      "title": "Endogenous extensive form during REM sleep",
+      "anchor": "dream-form",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        74
+      ],
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#dream-form"
+    },
+    {
+      "source": "Supplement §10.3 methods and outcomes",
+      "title": "EEG sample, fixed operator, SVD partial regression, Brier failure, AUC and distinct isotonic baseline",
+      "anchor": "section-10-3",
+      "route": "/consciousness/relational-awareness/module-j",
+      "sourcePages": [
+        75,
+        76
+      ],
+      "notes": "Exact formulas checked visually against page75. Cohort and outcome tables are web presentations of the source numbers. No scientific rerun is claimed.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-j#section-10-3"
+    },
+    {
+      "source": "Supplement reproduction and verification limits",
+      "title": "Recorded checks, version history, archive inputs and verification scope",
+      "anchor": "reproducibility",
+      "route": "/consciousness/relational-awareness/references",
+      "sourcePages": [
+        77
+      ],
+      "notes": "Preserves all eleven-check provenance, separate external dependencies, editable-source report and limits. Explicitly distinguishes source-reported computations from website preparation.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/references#reproducibility"
+    },
+    {
+      "source": "Supplement references",
+      "title": "Entire supplement bibliography",
+      "anchor": "references",
+      "route": "/consciousness/relational-awareness/references",
+      "sourcePages": [
+        77,
+        78,
+        79,
+        80,
+        81,
+        82
+      ],
+      "notes": "All 52 entries retained with full author lists, publication details, DOI/URL and draft/release status. Unpublished recollective draft remains a cited interlocutor only.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "ij-coverage.json",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/references#references"
+    },
+    {
+      "source": "Supplement Equation (10)",
+      "title": "Abstract common-finalisation maximum",
+      "anchor": "theorem-3-1",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        22
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#theorem-3-1"
+    },
+    {
+      "source": "Supplement Equation (11)",
+      "title": "Passive zero-error optimum",
+      "anchor": "proposition-3-2",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        23
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#proposition-3-2"
+    },
+    {
+      "source": "Supplement Equation (12)",
+      "title": "Passive apparatus linear programme",
+      "anchor": "proposition-3-2",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        24
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#proposition-3-2"
+    },
+    {
+      "source": "Supplement Equation (13)",
+      "title": "Approximate common mass and error budget",
+      "anchor": "section-3-3",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        24
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-3"
+    },
+    {
+      "source": "Supplement Equation (14)",
+      "title": "Flagged-mass calibration bound",
+      "anchor": "section-3-3",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        25
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-3"
+    },
+    {
+      "source": "Supplement Equation (15)",
+      "title": "Sharp likelihood-ratio sampling bound",
+      "anchor": "section-3-4",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        25
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-4"
+    },
+    {
+      "source": "Supplement Equation (16)",
+      "title": "Information bound with clipped upper error budget",
+      "anchor": "section-3-5",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        26
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-5"
+    },
+    {
+      "source": "Supplement Equation (17)",
+      "title": "Random-access information bound",
+      "anchor": "section-3-5",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        27
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-5"
+    },
+    {
+      "source": "Supplement Equation (18)",
+      "title": "Adaptive and fixed threshold-access optima",
+      "anchor": "section-3-6",
+      "route": "/consciousness/relational-awareness/module-c",
+      "sourcePages": [
+        27
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-c#section-3-6"
+    },
+    {
+      "source": "Supplement Equation (19)",
+      "title": "Exact integration and retention probability",
+      "anchor": "section-4-2",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        31
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-2"
+    },
+    {
+      "source": "Supplement Equation (20)",
+      "title": "Peak access time and probability",
+      "anchor": "section-4-2",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        31
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-2"
+    },
+    {
+      "source": "Supplement Equation (21)",
+      "title": "Finite-time erasure total-variation bound",
+      "anchor": "section-4-3",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        32
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-3"
+    },
+    {
+      "source": "Supplement Equation (22)",
+      "title": "Equivariant return and stabilizer criterion",
+      "anchor": "section-4-6",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        34
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-6"
+    },
+    {
+      "source": "Supplement Equation (23)",
+      "title": "Density-ensemble preparation deficiency",
+      "anchor": "section-4-7",
+      "route": "/consciousness/relational-awareness/module-d",
+      "sourcePages": [
+        35
+      ],
+      "notes": "Explicit equation destination added during aggregation; its complete derivation, assumptions and qualifications are covered by the parent section record.",
+      "sourceDocument": "supplement",
+      "recordOrigin": "aggregate-equation-index",
+      "disposition": "included",
+      "destination": "/consciousness/relational-awareness/module-d#section-4-7"
+    }
+  ]
+}

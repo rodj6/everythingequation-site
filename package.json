@@ -21,7 +21,9 @@
     "audit:consciousness": "node scripts/audit-consciousness-content.mjs",
     "verify:consciousness-site": "node scripts/verify-consciousness-site.mjs",
     "convert:quantum-research": "node scripts/convert-quantum-research.mjs",
-    "audit:quantum-research": "node scripts/audit-quantum-research.mjs"
+    "audit:quantum-research": "node scripts/audit-quantum-research.mjs",
+    "convert:relational-awareness": "python3 scripts/convert-relational-awareness.py",
+    "verify:relational-awareness": "node scripts/verify-relational-awareness.mjs"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",

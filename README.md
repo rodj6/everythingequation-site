@@ -138,3 +138,8 @@ The complete SPC-2 Version 2 section is documented in [CONSCIOUSNESS_DELIVERY.md
 The current website now presents the complete explanatory architecture from unconditioned ground and unsplit unity to complementary source/readout and recursive differentiation. The substantial articles are `/articles/full-shadow-model` and `/articles/sealed-or-leaky`. The complete Sealed or Leaky technical edition is `/sealed-or-leaky`, with all 17 sections, source numbering, equations, full proofs, bibliography, original PDF/TeX, Markdown and the supplied verification script.
 
 Read `SHADOW_MODEL_SEALED_LEAKY_DELIVERY.md` for the delivery record and `docs/sealed-or-leaky/MAINTENANCE.md` for reproducible conversion and checks. Existing consciousness and quantum publications retain their original files. The source project uses the same installation/build/deployment workflow as before; it is not a prebuilt static export.
+
+
+## Relational awareness, Version 1.4
+
+The 16 October 2026 update adds the complete main argument and ten-module technical companion as one connected consciousness publication. See [the edition guide](docs/relational-awareness/README.md), [coverage record](docs/relational-awareness/SOURCE_TO_WEB_COVERAGE.md), and [implementation report](docs/relational-awareness/IMPLEMENTATION_REPORT.md) for structure, local run instructions and verification scope.

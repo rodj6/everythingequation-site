@@ -77,6 +77,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
     url: `${site.url}/papers/${paper.slug}`,
     encoding: paper.pdfUrl ? [
       { "@type": "MediaObject", encodingFormat: "application/pdf", contentUrl: `${site.url}${paper.pdfUrl}` },
+      ...(paper.supplementPdfUrl ? [{"@type":"MediaObject",encodingFormat:"application/pdf",contentUrl:`${site.url}${paper.supplementPdfUrl}`,name:"Technical supplement"}] : []),
       { "@type": "MediaObject", encodingFormat: "text/html", contentUrl: `${site.url}${paper.webUrl}` },
       { "@type": "MediaObject", encodingFormat: "text/markdown", contentUrl: `${site.url}${paper.markdownUrl}` },
     ] : undefined,
@@ -210,6 +211,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         {paper.pdfUrl ? (
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm text-glow">
             <a href={paper.pdfUrl} download className="hover:text-glow-strong">Download PDF ↓</a>
+            {paper.supplementPdfUrl ? <a href={paper.supplementPdfUrl} download className="hover:text-glow-strong">Technical supplement PDF ↓</a> : null}
             {paper.texUrl ? <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a> : null}
             {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a> : null}
           </div>
@@ -236,7 +238,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
       {paper.researchProgramme === "consciousness" && paper.slug !== consciousnessPublication.paperSlug ? (
         <aside className="mt-8 rounded-xl border border-[hsl(var(--accent)/0.3)] bg-[hsl(var(--accent)/0.04)] p-5 text-sm leading-relaxed text-mute">
-          <p className="font-medium text-fg">Consciousness research{paper.number ? ` · Paper ${paper.number}` : paper.slug === 'bounded-agency-and-reflective-freedom' ? ' · Agency and free will' : ' · Relational development'}</p>
+          <p className="font-medium text-fg">Consciousness research{paper.number ? ` · Paper ${paper.number}` : paper.slug === 'physical-comparison-relational-appearance' ? ' · Relational awareness' : paper.slug === 'reflective-alignment-ai-consciousness' ? ' · Reflective alignment' : paper.slug === 'bounded-agency-and-reflective-freedom' ? ' · Agency and free will' : ' · Relational development'}</p>
           <p className="mt-2">This paper develops the programme through its own mathematical argument and evidence. Its web treatment connects the article account to the technical sections, including proofs, results and references.</p>
           <div className="mt-4 flex flex-wrap gap-4 font-medium text-glow">
             {paper.webUrl ? <Link href={paper.webUrl}>{paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text treatment →' : 'Read the complete treatment →'}</Link> : null}

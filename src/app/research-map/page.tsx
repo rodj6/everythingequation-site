@@ -1,3 +1,4 @@
+import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import {alignment} from '@/lib/alignment';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
@@ -10,7 +11,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Research Map",
   description:
-    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, reflective agency, AI alignment, declared assumptions and open realization and validation obligations.",
+    "The Shadow Theory research map: source–readout mathematics, quantum measurement, SPC-2 consciousness, relational appearance, reflective agency, AI alignment, declared assumptions and open realization and validation obligations.",
   alternates: { canonical: "/research-map" },
 };
 
@@ -104,7 +105,7 @@ export default async function ResearchMapPage() {
 
       {/* Sequence */}
       <section aria-labelledby="consciousness-map-heading" className="card-surface p-6 sm:p-8">
-        <p className="section-label">Consciousness · SPC-2 · Development, agency and AI alignment</p>
+        <p className="section-label">Consciousness · SPC-2 · Relational awareness, development, agency and alignment</p>
         <h2 id="consciousness-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">From a certified vessel to a perspective</h2>
         <p className="mt-4 max-w-3xl leading-relaxed text-mute">The source–readout foundation and physical constitutions are antecedents. SPC-2 adds its own psychophysical premises; the awareness-aspect commitment is not derived from physics. Certified realization includes a declared selection doctrine before the constitutive laws apply.</p>
         <ol className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -127,6 +128,7 @@ export default async function ResearchMapPage() {
         <div className="mt-6 flex flex-wrap gap-5 text-sm font-medium text-glow"><Link href="/consciousness">The complete model →</Link><Link href="/consciousness/monograph">Monograph and formal dependencies →</Link><Link href="/consciousness/research">The research sequence →</Link><Link href="/problems/consciousness">Research status →</Link></div>
       </section>
 
+      <RelationalAwarenessFeature/>
       <section aria-labelledby="alignment-map-heading" className="card-surface p-6 sm:p-8">
         <p className="section-label">AI alignment · AI consciousness · 11 October 2026</p>
         <h2 id="alignment-map-heading" className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Cooperation grounded in understanding</h2>

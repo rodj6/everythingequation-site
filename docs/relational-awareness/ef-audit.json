@@ -1,0 +1,132 @@
+{
+  "scope": "Independent second-pass source-to-web audit of Supplement Modules E and F, Version 1.4.",
+  "authoritativeSource": "upload/Relational_Awareness_Technical_Supplement_v1_4.pdf",
+  "sourcePages": {
+    "E": [
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41
+    ],
+    "F": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "result": "PASS. All substantive source prose, hypotheses, definitions, arguments, proofs, numerical examples, qualifications and tables in the assigned modules are represented. Openings are adapted for web reading; no substantive premise or result was condensed away.",
+  "method": [
+    "Compared the full extracted source against all fourteen Markdown subsections and all nine named results.",
+    "Reinspected rendered PDF pages 38\u201341 and 43\u201345 for powers, tables, noise factors and optical notation.",
+    "Verified 36 coverage records against unique heading anchors.",
+    "Rendered 401 math expressions with KaTeX throwOnError: 260 in E, 141 in F, zero errors.",
+    "Checked 55 critical formula, numerical and table strings."
+  ],
+  "coverageChecks": [
+    {
+      "module": "E",
+      "uniqueAnchors": 13,
+      "coverageRecords": 20,
+      "allCoverageDestinationsExist": true,
+      "emDashCount": 0
+    },
+    {
+      "module": "F",
+      "uniqueAnchors": 12,
+      "coverageRecords": 16,
+      "allCoverageDestinationsExist": true,
+      "emDashCount": 0
+    }
+  ],
+  "subsectionAudit": [
+    {
+      "section": "5.1",
+      "result": "PASS",
+      "retained": "Four no-self native units; independent missing-parent preparations and conditional noise; 0000; q > 2/3; invertible T; product repertoires; exact state-selection argument."
+    },
+    {
+      "section": "5.2",
+      "result": "PASS",
+      "retained": "Typed partitions and possible slots; full Proposition 5.1 proof, purview scores, boundary and tie conditions."
+    },
+    {
+      "section": "5.3",
+      "result": "PASS",
+      "retained": "Correct past-background conditioning; c_k; both full lemma proofs; unique-complex theorem proof; official system tie rule; exact and approximate scores."
+    },
+    {
+      "section": "5.4",
+      "result": "PASS",
+      "retained": "Fair and constant spectators; cause-MIP switch, dilution and exclusion; alternate-grain limitation."
+    },
+    {
+      "section": "5.5",
+      "result": "PASS",
+      "retained": "Occurrence/face definitions, complete relation proof and degree table; 31 relations, 309 faces and all totals."
+    },
+    {
+      "section": "5.6",
+      "result": "PASS",
+      "retained": "All automorphisms; Gram determinant and tetrahedral dimension proof; pseudometric, asymmetry and stochastic-layout alternatives."
+    },
+    {
+      "section": "5.7",
+      "result": "PASS",
+      "retained": "Five-unit transitions and exclusion table; partition counts/ties; failed OR control; continuum obstruction proof; weak-link probability weights versus final IIT scores."
+    },
+    {
+      "section": "6.1",
+      "result": "PASS",
+      "retained": "Connected positive-network assumptions; resistance update and proof with attribution; grounded inverse; path warp; four-site and percentage examples with limits."
+    },
+    {
+      "section": "6.2",
+      "result": "PASS",
+      "retained": "Full inverse-edge equivalence theorem and proof; strict bound; rank-one four-site counterexample and required known baseline."
+    },
+    {
+      "section": "6.3",
+      "result": "PASS",
+      "retained": "Projected noise and common mode; Lyapunov equation; exact OU means/variances and initial contribution; retention scope."
+    },
+    {
+      "section": "6.4",
+      "result": "PASS",
+      "retained": "All drift matrices; complete relative-law and feedback hypotheses/proof; Gaussian caveat; resistance/common mode; native hold result/proof and Brownian-path qualification."
+    },
+    {
+      "section": "6.5",
+      "result": "PASS",
+      "retained": "Worldline, clock, register; passive full-package covariance; reparameterization/frames; multiple or absent roots; metric/time orientation; nonanticipation and inaccessible history."
+    },
+    {
+      "section": "6.6",
+      "result": "PASS",
+      "retained": "Predictor diagonal proof and policy scope; feasible planning example; recombination and foreknowledge distinctions."
+    },
+    {
+      "section": "6.7",
+      "result": "PASS",
+      "retained": "Pinhole derivation; both discs; independent positive scaling; optical/photometric hypotheses; new distal tokens and de re/qualitative distinction; retained descriptors and separate current-act bridge."
+    }
+  ],
+  "scientificReproduction": "These checks verify conversion and rendering. Source-reported IIT enumeration, experiments and archived scientific computations were not rerun.",
+  "unresolvedContentIssues": [],
+  "integrationObservations": {
+    "checked": [
+      "Existing related research URLs are valid.",
+      "New overview keeps the two warrants, five questions, identity distinction, current uptake and separate SPC-2 application coherent.",
+      "Programme counts now consistently read eight publications and seven investigations.",
+      "Search endpoint includes new section text; dedicated manifest keeps main and supplement as one publication.",
+      "Registry and catalogue expose both PDFs; graph chapter and relationship identifiers match existing nodes."
+    ],
+    "reportedIssue": "The generic publication graph-node downloads object in src/lib/machine.ts omitted supplementPdfUrl while the dedicated manifest and catalogue exposed it. Reported to root for correction.",
+    "rootFilesEdited": false,
+    "reviewStatus": "Code review during active integration. Final build, URL and browser checks are owned by root."
+  }
+}

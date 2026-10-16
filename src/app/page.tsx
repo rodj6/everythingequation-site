@@ -1,3 +1,4 @@
+import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
 import AlignmentFeature from '@/components/alignment-feature';
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
@@ -149,6 +150,7 @@ export default async function HomePage() {
           </div>
         </div>
       </section>
+      <RelationalAwarenessFeature/>
       <AlignmentFeature home />
       <ShadowModelOverview />
       <SealedLeakyFeature />

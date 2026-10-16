@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   authors: [{ name: site.author.name }],
-  keywords: ["AI alignment", "AI consciousness", "reflective alignment", "Shadow Theory", "consciousness", "SPC-2", "subject continuity", "quantum measurement", "Born rule", "pilot medium", "Bell process", "massive configuration", "source readout", "mathematical physics"],
+  keywords: ["relational awareness", "relational appearance", "AI alignment", "AI consciousness", "reflective alignment", "Shadow Theory", "consciousness", "SPC-2", "subject continuity", "quantum measurement", "Born rule", "pilot medium", "Bell process", "massive configuration", "source readout", "mathematical physics"],
   alternates: {
     canonical: "/",
     types: { "application/atom+xml": "/feed.xml" },
@@ -41,6 +41,7 @@ const websiteJsonLd = {
   url: site.url,
   description: site.description,
   hasPart: [
+    { "@type": "ScholarlyArticle", name: "From Physical Comparison to Relational Appearance: A Defeasible Current-Act Account", url: `${site.url}/consciousness/relational-awareness`, sameAs: "https://doi.org/10.5281/zenodo.23408737" },
     { "@type": "ScholarlyArticle", name: "Reflective Alignment and AI Consciousness", url: `${site.url}/consciousness/ai-alignment`, sameAs: "https://doi.org/10.5281/zenodo.23294465" },
     { "@type": "CollectionPage", name: "Quantum Measurement and the Born Rule", url: `${site.url}/quantum-measurement` },
     { "@type": "CollectionPage", name: "Shadow Theory and Consciousness", url: `${site.url}/consciousness` },
