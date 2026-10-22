@@ -105,6 +105,7 @@ The seven-paper foundation develops exact mathematics for what readouts preserve
       "Open problems remain active branch targets until a dedicated public result establishes them.",
       "The measurement results hold within their stated interaction, guidance and preparation premises. Independent assessment and experimental verification are separate from those internal mathematical results.",
       "The consciousness account requires a declared realization-selection doctrine and empirical assessment. Its candidate internal resolution does not establish universal certification or new neural-data validation.",
+      "In the author’s clarified philosophical account, the unknown ground is fundamental throughout reality. Awareness provisionally names a quality attributed to it, not knowing or a conscious subject in every physical thing. The published A0 and its later clarification remain separately identified.",
     ],
   },
 } as const;

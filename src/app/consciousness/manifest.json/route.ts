@@ -13,7 +13,7 @@ export function GET() {
   return Response.json({
     ...monograph,
     schemaVersion: 7,
-    updated: "2026-10-16",
+    updated: "2026-10-22",
     publicationCount: 9,
     researchNoteCount: 1,
     researchNotes: [continuityManifest()],

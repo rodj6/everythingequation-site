@@ -41,6 +41,7 @@ export const articleMetas: ArticleMeta[] = [
     "title": "The Full Shadow Model: From the Unsplit to a Lived World",
     "description": "Unconditioned ground, unsplit unity, complementary source and readout, and recursive differentiation: the complete architecture behind Shadow Theory’s mathematics and physics.",
     "date": "2026-10-01",
+    "updated": "2026-10-22",
     "tags": [
       "framework",
       "ontology",

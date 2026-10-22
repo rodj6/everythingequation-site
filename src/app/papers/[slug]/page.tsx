@@ -7,6 +7,8 @@ import { Badge } from "@/components/cards";
 import MdxContent from "@/components/mdx-content";
 import { manualPapers } from "@/generated/manualPapers";
 import { consciousnessPublication } from "@/config/consciousness";
+import { externalDescriptionText } from "@/lib/external-metadata";
+import { jsonLdText } from "@/lib/json-ld";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -102,7 +104,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
     <article className="mx-auto max-w-3xl">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdText(jsonLd) }}
       />
 
       <header>
@@ -269,10 +271,9 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       {!paper.summary && paper.metadata?.description ? (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Abstract (from Zenodo)</h2>
-          <div
-            className="prose mt-3 text-fg/90"
-            dangerouslySetInnerHTML={{ __html: paper.metadata.description }}
-          />
+          <p className="mt-3 whitespace-pre-line leading-relaxed text-fg/90">
+            {externalDescriptionText(paper.metadata.description)}
+          </p>
         </section>
       ) : null}
 

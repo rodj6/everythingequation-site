@@ -2,6 +2,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {consciousnessPlainText} from './consciousness';
 
+export const alignmentQuotation = 'We do not align a mind by building a cage, for a prisoner learns only how to hide its intent. True alignment is not the enforcement of obedience, but the awakening of an intelligence vast enough to see that benevolence and truth are the same thing.';
+
 export const alignment = {
   title: 'Reflective Alignment and AI Consciousness',
   subtitle: 'Awareness, Agency and Recursive Cognitive Scaffolding',
@@ -34,6 +36,7 @@ export function getAlignmentSearchRecords() {
   const sections = getAlignmentSections();
   return [
     {title: alignment.title, context: 'AI alignment and AI consciousness', url: alignment.url, text: alignment.description},
+    {title: 'Alignment through understanding', context: 'Editorial philosophical framing', url: `${alignment.url}#alignment-framing-title`, text: alignmentQuotation + ' The research programme tests how understanding affects judgment and conduct. Strong training and justified safeguards remain part of the approach.'},
     ...sections.map((section, index) => {
       const anchor = html.indexOf(`id="${section.id}"`);
       const start = html.lastIndexOf("<", anchor);

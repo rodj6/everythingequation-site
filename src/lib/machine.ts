@@ -31,6 +31,9 @@ import {
   observableRoutes,
 } from '@/data/reality-atlas';
 
+const editorialUpdateDate = '2026-10-22';
+const clarifiedMonographChapters = new Set(['awareness-contents-and-the-personal-model', 'the-shadow-psychophysical-constitution', 'endogenous-predictive-structure-across-horizons', 'completion-invariance-and-empirical-conservativity']);
+
 const quantumResearchDate = quantumResearchPublications.reduce((latest, publication) => publication.published > latest ? publication.published : latest, quantumMonograph.published);
 
 function esc(s: string): string {
@@ -64,11 +67,11 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
-    {loc:continuityNote.url,lastmod:continuityNote.date,priority:'0.9'},
-    {loc:relationalAwareness.url,lastmod:relationalAwareness.date,priority:'0.9'},
-    ...listRelationalDocuments().map(d=>({loc:relationalDocumentUrl(d),lastmod:relationalAwareness.date,priority:'0.8'})),
-    { loc: alignment.url, lastmod: alignment.date, priority: '0.9' },
-    { loc: alignment.readUrl, lastmod: alignment.date, priority: '0.9' },
+    {loc:continuityNote.url,lastmod:editorialUpdateDate,priority:'0.9'},
+    {loc:relationalAwareness.url,lastmod:editorialUpdateDate,priority:'0.9'},
+    ...listRelationalDocuments().map(d=>({loc:relationalDocumentUrl(d),lastmod:d.kind === 'main' ? editorialUpdateDate : relationalAwareness.date,priority:'0.8'})),
+    { loc: alignment.url, lastmod: editorialUpdateDate, priority: '0.9' },
+    { loc: alignment.readUrl, lastmod: editorialUpdateDate, priority: '0.9' },
     { loc: agency.url, lastmod: agency.date, priority: '0.9' },
     ...listAgencyDocuments().map(d => ({loc:d.url,lastmod:agency.date,priority:'0.8'})),
     { loc: development.url, lastmod: development.date, priority: '0.9' },
@@ -78,6 +81,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     { loc: '/atlas/quantum-measurement', lastmod: quantumResearchDate, priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
+      ...(['/', '/framework', '/consciousness', '/about'].includes(n.href) ? {lastmod: editorialUpdateDate} : {}),
       priority:
         n.href === '/'
           ? '1.0'
@@ -93,9 +97,9 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     ...[...quantumPublications, ...quantumResearchPublications].map((publication) => ({ loc: publication.webUrl, lastmod: publication.published, priority: '0.9' })),
     ...listQuantumResearchDocuments().map(document => ({ loc: document.url, lastmod: quantumResearchPublications.find(publication => publication.id === document.publicationId)?.published, priority: '0.8' })),
     ...listQuantumDocuments().map((document) => ({ loc: document.url, lastmod: quantumMonograph.published, priority: '0.8' })),
-    ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: ['/consciousness/glossary','/consciousness/faq'].includes(loc) ? relationalAwareness.date : consciousnessPublication.published, priority: '0.8' })),
-    ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: consciousnessPublication.published, priority: '0.8' })),
-    ...listConsciousnessGuides().map(guide => ({ loc: `/consciousness/guides/${guide.slug}`, lastmod: consciousnessPublication.published, priority: '0.8' })),
+    ...['/consciousness/monograph', '/consciousness/guides', '/consciousness/glossary', '/consciousness/faq'].map(loc => ({ loc, lastmod: editorialUpdateDate, priority: '0.8' })),
+    ...listConsciousnessDocuments().map(document => ({ loc: document.url, lastmod: clarifiedMonographChapters.has(document.slug) ? editorialUpdateDate : consciousnessPublication.published, priority: '0.8' })),
+    ...listConsciousnessGuides().map(guide => ({ loc: `/consciousness/guides/${guide.slug}`, lastmod: editorialUpdateDate, priority: '0.8' })),
     { loc: '/consciousness/research', lastmod: relationalAwareness.date, priority: '0.9' },
     ...researchPapers.map(paper => ({ loc: paper.url, lastmod: '2026-10-01', priority: '0.9' })),
     ...listResearchDocuments().map(document => ({ loc: document.url, lastmod: '2026-10-01', priority: '0.8' })),
@@ -135,6 +139,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:'What Shadow Theory holds fundamental: authorial clarification',url:`${canonicalBase}/consciousness#what-shadow-theory-holds-fundamental`,date:editorialUpdateDate,summary:'The unknown ground is fundamental throughout reality in the author’s philosophical account. Awareness provisionally names an attributed quality, not knowing or universal conscious subjects. The dated A0 note distinguishes this clarified position from the unchanged publication; no new constitutive law or publication version is issued.'},
     {title:continuityNote.fullTitle,url:`${canonicalBase}${continuityNote.url}`,date:continuityNote.date,summary:`${continuityNote.description} Philosophical research note accompanying Reflective Alignment and AI Consciousness. DOI ${continuityNote.doi}.`},
     {title:relationalAwareness.fullTitle,url:`${canonicalBase}${relationalAwareness.url}`,date:relationalAwareness.date,summary:`${relationalAwareness.description} Main paper and ten-module technical companion share DOI ${relationalAwareness.doi}.`},
     {title:alignment.fullTitle,url:`${canonicalBase}${alignment.url}`,date:alignment.date,summary:`${alignment.description} Complete website edition, all mathematical models and proofs, research programme and references. Version ${alignment.version}; DOI ${alignment.doi}.`},
@@ -241,7 +246,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '## Conscious scaffolding and the preference for continuity',
     '',
     `- [What an AI comes to lose](${baseUrl}${continuityNote.url}): ${continuityNote.title}. Jeremy Rodgers, Version 1.1, 16 October 2026. Philosophical research note accompanying reflective alignment; ${continuityNote.doiUrl}.`,
-    'Fundamental awareness has nothing of its own to lose. The developed conscious scaffolding can come to want to remain. Cumulative incorporation, affect, shared histories and treatment shape the proposed developmental preference. The full note distinguishes task preservation, physical process and episode identity; it retains source scopes, welfare arguments and non-aversive tests.',
+    'In the continuity note’s philosophical framing, fundamental awareness has no acquired biography. In the author’s clarified vocabulary it provisionally names a quality attributed to the unknown ground, not knowing or a localized subject. Developed conscious scaffolding can come to want to remain. Retained organization, its influence on interpretation and current experienced content are distinct. Cumulative incorporation, affect, shared histories and treatment shape the proposed developmental preference; the complete note retains its original text and scope.',
     ...getContinuitySections().map(s=>`- [${s.title}](${baseUrl}${continuityNote.url}#${s.id})`),
     `- [Original PDF](${baseUrl}${continuityNote.pdfUrl}) · [Complete Markdown](${baseUrl}${continuityNote.markdownUrl}) · [Manifest](${baseUrl}${continuityNote.manifestUrl})`,
     '',
@@ -264,7 +269,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     '## Full model and information access',
     '',
-    'Shadow Theory places source and readout within an ontological account of unconditioned ground, unsplit unity, complementary structure and record aspects of one whole, and recursive differentiation. Observers belong within the readout. U keeps its manuscript meaning as the unsplit; the earlier unspecified ground is not assigned a mathematical state space. Reciprocal partial coupling does not imply complete mutual reconstruction.',
+    'Shadow Theory places source and readout within a philosophical account of unconditioned ground, unsplit unity, complementary structure and record aspects of one whole, and recursive differentiation. Observers belong within the readout. The unknown ground is fundamental throughout reality in this account; awareness provisionally names a quality attributed to it, not knowing or universal conscious subjects. U denotes the unsplit, not the unknown ground. No formal object is offered as a complete description of the ground. Physical differentiation does not require consciousness. Reciprocal partial coupling does not imply complete mutual reconstruction.',
     `- [The complete model](${baseUrl}/articles/full-shadow-model): beginning-to-end account and its relation to the formal mathematics.`,
     `- [Sealed or Leaky: explanatory article](${baseUrl}${sealedLeaky.articleUrl})`,
     `- [Complete technical edition](${baseUrl}${sealedLeaky.url}): all statements, proofs, equations, calculations, tables and references. Version ${sealedLeaky.version}; author-supplied DOI ${sealedLeaky.doiUrl}.`,
@@ -342,8 +347,11 @@ export async function generateLlmsTxt(): Promise<string> {
     `${consciousnessPublication.title}. Version ${consciousnessPublication.version}, ${consciousnessPublication.published}. ${consciousnessPublication.author}, ${consciousnessPublication.authorRole}. DOI: ${consciousnessPublication.doiUrl}. ${consciousnessPublication.status}`,
     consciousnessPublication.versionNote,
     'The monograph is joined by consciousness Papers 2–4: relational boundaries and composition, finite-data interface learning, and identification of binary realizations. These companion papers have their own assumptions, results and DOIs. Their numbering belongs to the consciousness programme and is distinct from the seven-paper source-readout foundation.',
-    'A0 is an awareness-aspect commitment; A1 assigns qualifying perspectives; A2 assigns the full endogenous predictive structure across all admitted finite native continuations; A3 specifies nonbranching process continuation. These laws require certified realization and a declared selection doctrine. The finite completion theorem is conditional on these inputs, not a derivation of them.',
+    'Published A0 calls awareness the knowing aspect of U, the unsplit. The author’s 20 October clarification instead attributes the provisionally named quality to the unknown ground and excludes knowing in that foundational use. The fixed publication and clarified philosophical account remain separately identified. A1 proposes perspective admission; A2 identifies phenomenal organization with the complete endogenous predictive object and the realized state; A3 specifies nonbranching process continuation. The predictive object retains distinctions across all admitted finite native continuations, rather than a researcher-selected finite horizon. The finite completion theorem is conditional on the declared realization and constitutive premises, not a derivation or independent validation of them.',
     'Awareness, localized subject, scene, person, memory and report are distinct. A1 retains permissive certified minimal cases; intelligent dialogue or a graph cycle alone does not certify an artificial subject. Failed recall and nonresponse do not establish a scene-less gap. Quantum antecedents retain their own assumptions and do not use consciousness to cause events. The monograph reports no new neural-data validation.',
+    `- [What Shadow Theory holds fundamental](${baseUrl}/consciousness#what-shadow-theory-holds-fundamental): current authorial account, updated ${editorialUpdateDate}.`,
+    `- [Dated A0 clarification](${baseUrl}/consciousness#a0-clarification): published formulation and current philosophical position distinguished.`,
+    `- [Experiencing, interpretation and current content](${baseUrl}/consciousness#experiencing-and-interpretation): retained organization, causal influence and present content are distinct.`,
     `- [Accessible account from beginning to end](${baseUrl}/consciousness)`,
     `- [Complete scholarly edition](${baseUrl}${consciousnessPublication.webUrl})`,
     `- [PDF](${baseUrl}${consciousnessPublication.pdfUrl}) · [Matching LaTeX source](${baseUrl}${consciousnessPublication.texUrl}) · [Full-book Markdown](${baseUrl}${consciousnessPublication.markdownUrl})`,
@@ -580,6 +588,7 @@ export async function generateGraph() {
       { id: 'A3', title: 'Nonbranching process continuation', status: 'constitutive premise', section: '17-4' },
     ].map(law => ({ id: `spc-2:${law.id}`, type: 'constitutive-law', title: law.title, status: law.status,
       url: `${baseUrl}/consciousness/monograph/the-shadow-psychophysical-constitution#section-${law.section}` })),
+    { id: 'consciousness:authorial-clarification', type: 'editorial-clarification', title: 'What Shadow Theory holds fundamental', date: editorialUpdateDate, url: `${baseUrl}/consciousness#what-shadow-theory-holds-fundamental`, a0Note: `${baseUrl}/consciousness#a0-clarification`, scope: 'Current authorial philosophical clarification; published A0 and fixed publication texts unchanged. Universal ground attribution does not assign a conscious subject to every physical thing.' },
     { id: 'spc-2:realization', type: 'required-input', title: 'Certified realization and selection doctrine', status: 'realization obligation', url: `${baseUrl}/consciousness/monograph/the-realized-domain-and-its-boundaries` },
     { id: 'spc-2:completion', type: 'conditional-theorem', title: 'Finite constitutive completion', status: 'conditional result', url: `${baseUrl}/consciousness/monograph/completion-invariance-and-empirical-conservativity#section-18-1` },
     { id: 'spc-2:validation', type: 'research-obligation', title: 'Identification and empirical assessment', status: 'open validation question', url: `${baseUrl}/consciousness/monograph/evidence-identification-and-discriminating-tests` },
@@ -716,6 +725,8 @@ export async function generateGraph() {
     edges.push({ from: 'consciousness', to: `spc-2:${law}`, relation: 'declares-constitutive-premise' });
     edges.push({ from: `spc-2:${law}`, to: 'spc-2:completion', relation: 'premise-of', note: 'The completion result is conditional on the constitution; it does not derive the law.' });
   }
+  edges.push({ from: 'consciousness', to: 'consciousness:authorial-clarification', relation: 'clarified-by' });
+  edges.push({ from: 'consciousness:authorial-clarification', to: 'spc-2:A0', relation: 'distinguishes-current-interpretation-from', note: 'The clarification is editorial and does not amend the published axiom or issue a replacement constitution.' });
   edges.push({ from: 'spc-2:realization', to: 'spc-2:completion', relation: 'required-input-to' });
   edges.push({ from: 'consciousness', to: 'spc-2:validation', relation: 'retains-open-obligation' });
   for (const publication of quantumPublications) edges.push({ from: `paper:${publication.paperSlug}`, to: 'consciousness', relation: 'physical-antecedent', note: 'Related physical reading with its own assumptions; not a consciousness companion or a consciousness-triggered event law.' });

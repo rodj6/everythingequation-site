@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=24.0.0 <25"
   },
   "overrides": {
-    "postcss": "8.5.19"
+    "postcss": "8.5.31",
+    "katex": "$katex",
+    "postcss-selector-parser": "7.1.7"
   },
   "scripts": {
     "dev": "node scripts/generate-content-maps.mjs && next dev --webpack",
@@ -25,7 +27,12 @@
     "convert:relational-awareness": "python3 scripts/convert-relational-awareness.py",
     "verify:relational-awareness": "node scripts/verify-relational-awareness.mjs",
     "convert:continuity-note": "python3 scripts/convert-continuity-note.py",
-    "verify:continuity-note": "node scripts/verify-continuity-note.mjs"
+    "verify:continuity-note": "node scripts/verify-continuity-note.mjs",
+    "postbuild": "node scripts/security-headers.mjs",
+    "typecheck": "tsc --noEmit",
+    "verify:metadata": "node scripts/verify-external-metadata.mjs",
+    "verify:security": "node scripts/security-headers.mjs --verify",
+    "test:security-headers": "node --test scripts/security-headers.test.mjs"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.0",
@@ -33,27 +40,28 @@
     "@react-three/fiber": "9.6.1",
     "clsx": "1.2.1",
     "js-yaml": "^4.3.0",
-    "katex": "^0.16.8",
-    "next": "16.2.10",
+    "katex": "0.18.2",
+    "next": "16.4.2",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "rehype-katex": "^7.0.0",
     "remark-frontmatter": "^5.0.0",
     "remark-gfm": "^4.0.0",
     "remark-math": "^6.0.0",
-    "three": "0.185.1"
+    "sharp": "0.35.5",
+    "three": "0.185.1",
+    "parse5": "7.3.0"
   },
   "devDependencies": {
     "@mdx-js/loader": "^3.1.0",
-    "@next/mdx": "16.2.10",
+    "@next/mdx": "16.4.2",
     "@tailwindcss/typography": "0.5.9",
     "@types/js-yaml": "4.0.8",
     "@types/node": "20.10.5",
     "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "autoprefixer": "^10.4.20",
-    "parse5": "7.3.0",
-    "postcss": "8.5.19",
+    "postcss": "8.5.31",
     "tailwindcss": "3.3.5",
     "typescript": "5.3.3"
   }

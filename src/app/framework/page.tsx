@@ -1,3 +1,4 @@
+import PhilosophicalClarification from "@/components/philosophical-clarification";
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
@@ -99,6 +100,7 @@ export default async function FrameworkPage() {
       </section>
 
       <ShadowModelOverview />
+      <PhilosophicalClarification statement="companion"/>
       <SealedLeakyFeature />
 
       {/* Chain */}

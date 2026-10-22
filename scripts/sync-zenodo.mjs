@@ -22,7 +22,7 @@ const CACHE_PATH = path.join(ROOT, '.cache', 'zenodo.json');
 
 async function fetchZenodo(recordId) {
   try {
-    const res = await fetch(`https://zenodo.org/api/records/${recordId}`);
+    const res = await fetch(`https://zenodo.org/api/records/${recordId}`, { signal: AbortSignal.timeout(15_000) });
     if (!res.ok) {
       console.warn(`  ! Zenodo ${recordId}: HTTP ${res.status}`);
       return null;
@@ -62,8 +62,10 @@ async function main() {
   }
 
   let updated = 0;
+  let attempted = 0;
   for (const raw of papers) {
     if (raw.zenodo == null) continue;
+    attempted++;
     const slug = raw.slug || String(raw.id || '').replace(/^paper:/, '').replace(/:/g, '-');
     const meta = await fetchZenodo(String(raw.zenodo));
     if (meta) {
@@ -72,9 +74,12 @@ async function main() {
     }
   }
 
+  if (attempted > 0 && updated === 0) {
+    throw new Error('No Zenodo records could be refreshed; existing cache retained.');
+  }
   await fs.mkdir(path.dirname(CACHE_PATH), { recursive: true });
   await fs.writeFile(CACHE_PATH, JSON.stringify(cache, null, 2), 'utf8');
-  console.log(`Zenodo metadata refreshed: ${updated} records updated.`);
+  console.log(`Zenodo metadata refreshed: ${updated}/${attempted} records updated; earlier cached values retained for failed requests.`);
 }
 
 main().catch((err) => {

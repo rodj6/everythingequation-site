@@ -3,6 +3,7 @@ import path from "node:path";
 import { parseFragment } from "parse5";
 import inventory from "@content/consciousness/index.json";
 import editorial from "@content/consciousness/editorial.json";
+import clarifications from "@content/consciousness/clarifications.json";
 import { consciousnessPublication } from "@/config/consciousness";
 import { site } from "@/config/site";
 
@@ -68,6 +69,10 @@ export function getConsciousnessSearchRecords(): SearchRecord[] {
     }
   }
   for (const guide of listConsciousnessGuides()) for (const section of guide.sections) records.push({ title: section.title, context: guide.title, url: `/consciousness/guides/${guide.slug}#${section.id}`, text: consciousnessPlainText(section.html) });
+  for (const key of ["primary", "experience", "a0"] as const) {
+    const statement = clarifications[key];
+    records.push({title:statement.title,context:"Current philosophical clarification · 22 October 2026",url:`/consciousness#${statement.id}`,text:consciousnessPlainText(statement.html)});
+  }
   for (const section of editorial.overview.sections) records.push({ title: section.title, context: "Programme overview", url: `/consciousness#${section.id}`, text: consciousnessPlainText(section.html) });
   for (const term of editorial.glossary) records.push({ title: term.term, context: "Glossary", url: `/consciousness/glossary#${term.id}`, text: consciousnessPlainText(term.html) });
   for (const question of editorial.faq) records.push({ title: question.question, context: "FAQ", url: `/consciousness/faq#${question.id}`, text: consciousnessPlainText(question.html) });
@@ -77,6 +82,7 @@ export function consciousnessManifest() {
   return { schemaVersion: 1, programme: "Shadow Theory and Consciousness", constitution: "SPC-2", status: "Candidate internal constitutive resolution under declared assumptions", canonicalOrigin: site.url,
     publication: consciousnessPublication, documents: listConsciousnessDocuments(), statistics: getConsciousnessTotals(),
     guides: listConsciousnessGuides().map(({slug,title,description,sections}) => ({ title, description, url: `/consciousness/guides/${slug}`, sections: sections.map(({id,title}) => ({ anchor:id,title })) })),
+    editorialClarifications: {updated:clarifications.updated, statementUrl:`/consciousness#${clarifications.primary.id}`, experienceVocabularyUrl:`/consciousness#${clarifications.experience.id}`, a0NoteUrl:`/consciousness#${clarifications.a0.id}`, publicationTextPreserved:true},
     glossaryUrl: "/consciousness/glossary", faqUrl: "/consciousness/faq", searchUrl: "/consciousness/search.json",
     auditUrl: "/publications/consciousness/conversion-audit.json", editionNote: "Version 2 supersedes the earlier Consciousness Field account. The current formulation is SPC-2.",
     metadataVerification: "DOI supplied and confirmed by author; live DOI and Zenodo API retrieval unavailable during implementation. No licence or peer-review status inferred." };

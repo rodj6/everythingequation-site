@@ -5,6 +5,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import { browserHeaders } from "./scripts/security-policy.mjs";
 
 const projectRoot = dirname(fileURLToPath(import.meta.url));
 
@@ -23,6 +24,16 @@ const withMDX = createMDX({
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   outputFileTracingRoot: projectRoot,
+  poweredByHeader: false,
+  // The site uses original static image assets, not the image-optimization API.
+  images: { unoptimized: true },
+
+  async headers() {
+    return [{
+      source: "/:path*",
+      headers: browserHeaders({ development: process.env.NODE_ENV === "development" }),
+    }];
+  },
 
   // Legacy routes from the Everything Equation era. Old URLs keep working
   // but land on the current Shadow Theory pages.

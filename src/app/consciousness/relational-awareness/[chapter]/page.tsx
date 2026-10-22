@@ -3,6 +3,7 @@ import Link from 'next/link';
 import {notFound} from 'next/navigation';
 import {relationalAwareness as paper,listRelationalDocuments,readRelationalDocument,relationalDocumentUrl} from '@/lib/relational-awareness';
 import {site} from '@/config/site';
+import ConsciousnessEditionClarification from '@/components/consciousness-edition-clarification';
 
 export const dynamic='force-static';
 export const dynamicParams=false;
@@ -19,7 +20,7 @@ export default async function RelationalChapter({params}:{params:Promise<{chapte
     <nav className="quantum-reader-breadcrumb" aria-label="Breadcrumb"><Link href="/consciousness">Consciousness</Link><span>/</span><Link href={paper.url}>Relational awareness</Link><span>/</span><span aria-current="page">{d.kind==='main'?'Main argument':d.label}</span></nav>
     <header className="ra-reader-header"><p className="c-eyebrow">{d.label}</p><h1>{d.title}</h1><p className="ra-standfirst">{d.description}</p><p className="ra-byline">Jeremy Rodgers · Independent Researcher · Version 1.4 · 16 October 2026</p><div className="ra-links"><a href={paper.doiUrl}>doi:{paper.doi} ↗</a><a href={d.kind==='main'?paper.pdfUrl:paper.supplementPdfUrl}>{d.kind==='main'?'Main paper PDF':'Technical supplement PDF'} ↓</a><a href={`/publications/consciousness/relational-awareness/${d.slug}.md`}>Chapter Markdown ↓</a><Link href={`${paper.url}#complete-contents`}>All chapters →</Link></div></header>
     <div className="ra-reader-layout"><aside className="ra-toc"><details open><summary>In this chapter</summary><nav aria-label="Chapter contents"><ol>{d.sections.filter(s=>s.level<=3).map(s=><li key={s.id} className={s.level===3?'ra-subsection':''}><a href={`#${s.id}`}>{s.title}</a></li>)}</ol></nav></details><details className="ra-volume-toc"><summary>The complete investigation</summary><nav aria-label="Publication chapters"><ol>{documents.map(x=><li key={x.slug}><Link href={relationalDocumentUrl(x)} aria-current={x.slug===chapter?'page':undefined}>{x.label}</Link></li>)}</ol></nav></details><Link href={paper.url}>The central account ↗</Link><Link href="/consciousness/research">The consciousness programme ↗</Link><a href="#reader-top">Back to the top ↑</a></aside>
-      <div className="ra-reader-main"><div className="quantum-publication-text ra-publication-text" dangerouslySetInnerHTML={{__html:html}}/>
+      <div className="ra-reader-main">{d.kind === 'main' ? <ConsciousnessEditionClarification/> : null}<div className="quantum-publication-text ra-publication-text" dangerouslySetInnerHTML={{__html:html}}/>
         <nav className="ra-pagination" aria-label="Reading sequence">{prev?<Link href={relationalDocumentUrl(prev)}><span>Previous</span><strong>← {prev.title}</strong></Link>:<Link href={paper.url}><span>The overview</span><strong>← When a relation becomes experience</strong></Link>}{next?<Link href={relationalDocumentUrl(next)}><span>Continue</span><strong>{next.title} →</strong></Link>:<Link href={paper.url}><span>The full investigation</span><strong>Return to the argument →</strong></Link>}</nav>
       </div>
     </div>

@@ -1,0 +1,410 @@
+{
+  "baseline": "everythingequation-site(20261022-090430).zip",
+  "date": "2026-10-22",
+  "note": "Inventory excludes its own hash to avoid a circular checksum. Excluded entries are local artifacts, not publication removals.",
+  "sourceFilesBefore": 1484,
+  "exportFileCount": 1531,
+  "changedOrAdded": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "status": "added",
+      "sha256": "a7d569b5c40066ea2ac3c88a0c1d92090f6aa36ace9e33e8aa01e3e15188a7f0"
+    },
+    {
+      "path": ".github/workflows/sync-zenodo.yml",
+      "status": "changed",
+      "beforeSha256": "04a7c6889d1352178b69dc1c4ecb5c906328f42cc45b26bcc2930678ee0c63da",
+      "sha256": "db6c82bcd437c206ce56506924cab12681214203f9572dc1efcb8d0f1e14fec9"
+    },
+    {
+      "path": "CHANGE_LEDGER.md",
+      "status": "added",
+      "sha256": "cd4ff0cd36254be8e6581da6e75cac76fa5c2cd3079b4640979c4782bb86431b"
+    },
+    {
+      "path": "CHANGE_LEDGER_EDITORIAL.md",
+      "status": "added",
+      "sha256": "600b28ab2bc2570c6da4c373519f53cfc1aa2669a13a8428ff7cddd661b16b3a"
+    },
+    {
+      "path": "CHANGE_LEDGER_RELATED.md",
+      "status": "added",
+      "sha256": "2385460f5ab953e48588c35b13e173ed6439ca5cd77f60516d0dd4319fc5c470"
+    },
+    {
+      "path": "DEPENDENCY_AUDIT.md",
+      "status": "added",
+      "sha256": "b1c3cf272535fc9d4a4fc2d37dba078ddf41213494ad1ad490dbdd2d979a7544"
+    },
+    {
+      "path": "DEPENDENCY_SECURITY_RECOMMENDATIONS.md",
+      "status": "added",
+      "sha256": "0423c3cae44259682cbb187580dd6e27230c77553b2bfd8802a281c825814595"
+    },
+    {
+      "path": "GITHUB_WORKFLOW_SETUP.md",
+      "status": "added",
+      "sha256": "86f0a7cc0b8002b53fb4787631bae39548bba5fff895166fbe5d8e1cbba0af25"
+    },
+    {
+      "path": "PUBLICATION_CHECKSUMS.sha256.tsv",
+      "status": "added",
+      "sha256": "aa5795a03ab648143be1154ea345ca8b811014c9cf9b6a7c0795c0f7d8e3d00a"
+    },
+    {
+      "path": "REPLACEMENT_INSTRUCTIONS.md",
+      "status": "added",
+      "sha256": "81bfe2a5ffb6024301940448aa207b09f38f7c6e9cf272a7188d2f617350cd72"
+    },
+    {
+      "path": "SECURITY_HEADERS.md",
+      "status": "added",
+      "sha256": "a1b48880aeba2522cbc5985be7916e3f0abf132b8ddb06d380e675b1b2867fcf"
+    },
+    {
+      "path": "SECURITY_VERIFICATION.md",
+      "status": "added",
+      "sha256": "62e9c46ec1a055474490484bdf5b918223dc3864e8f6f8c826cc0ac7d3f7fa5e"
+    },
+    {
+      "path": "UPDATE_REPORT.md",
+      "status": "added",
+      "sha256": "09b22ad73b7202c2bec1767bd748c62a31c4c3eb2697097f8118fe8b5dbe3692"
+    },
+    {
+      "path": "WORKFLOW_VERIFICATION.md",
+      "status": "added",
+      "sha256": "77ced635e7f6d36a63de7abb2ae43858d11eb66304609e8e32d54efefdfd2a02"
+    },
+    {
+      "path": "content/articles/full-shadow-model.mdx",
+      "status": "changed",
+      "beforeSha256": "bfb290ac9884f08282cec31118d823a981e422cd0e02bb97b31e609990541e7f",
+      "sha256": "677af34b836c051f71505302ae269b5267e2ea80d7d2b54b3d0c820caf0f808c"
+    },
+    {
+      "path": "content/consciousness/clarifications.json",
+      "status": "added",
+      "sha256": "7850129b7f8fa69d55484e502f6244646b848f5f36ec85a8c2c439b96fb988f2"
+    },
+    {
+      "path": "content/consciousness/editorial.json",
+      "status": "changed",
+      "beforeSha256": "4fd1ca2e25a4f241606077a9138e4e73af413fdc038a0df773b4d3541d4ff6c8",
+      "sha256": "6bc283062ea216d5a064cfa5f5bfc239957cd39ff2b446213701d451170c36b5"
+    },
+    {
+      "path": "docs/update-20261022/browser-verification.json",
+      "status": "added",
+      "sha256": "1f4a3d739af3b04b4ed466b9962deff59a6d0db033530c2977ed3e50e62ef848"
+    },
+    {
+      "path": "docs/update-20261022/built-security-headers.json",
+      "status": "added",
+      "sha256": "22996b822dcb29ae9e90567381d839af391b2454cdd355ca0d315d320e20718e"
+    },
+    {
+      "path": "docs/update-20261022/clean-install.log",
+      "status": "added",
+      "sha256": "c825ef803c2d5015f9a7102eaaafcc968d1e74b4f5dbed3d4f39880ef28cbcb2"
+    },
+    {
+      "path": "docs/update-20261022/consciousness-http-verification.json",
+      "status": "added",
+      "sha256": "96a72058dad52d8bd539f2313d66f239591454ace6f421ddcda25332a141a8d5"
+    },
+    {
+      "path": "docs/update-20261022/consciousness-research-http-verification.json",
+      "status": "added",
+      "sha256": "7f54abd12ccdc15d7912e150bd9160edcfad9148177f21c9d8378e26f1fbe6ea"
+    },
+    {
+      "path": "docs/update-20261022/continuity-built-verification.json",
+      "status": "added",
+      "sha256": "fae494529e5185ff728758b69a0bd23210377cc67e2e7126ec3cef1c11de83a2"
+    },
+    {
+      "path": "docs/update-20261022/editorial-verification.json",
+      "status": "added",
+      "sha256": "3f8038cb2a995a10c1cd52a969f6eb9636c31d46b1f9ae5d109277d44dd70a41"
+    },
+    {
+      "path": "docs/update-20261022/live-home-headers-before.txt",
+      "status": "added",
+      "sha256": "a4b6d53c88c4174b06687bf4f0d9aa3a157594ab54065196f09efabb48e1c094"
+    },
+    {
+      "path": "docs/update-20261022/npm-audit-production.json",
+      "status": "added",
+      "sha256": "5188d59bebd67772f04ca6bb5a1665371ebe17dc56741c2aacc37f730c75b088"
+    },
+    {
+      "path": "docs/update-20261022/npm-audit.json",
+      "status": "added",
+      "sha256": "de90b4558afd4f7a33c58e7685794ca51379a284467b3654af46bd9547e987ee"
+    },
+    {
+      "path": "docs/update-20261022/production-build.log",
+      "status": "added",
+      "sha256": "5e441909910a06d48a61c102cd03b6a89e3ec9f92ff4bf19ac3af1956b081a20"
+    },
+    {
+      "path": "docs/update-20261022/qa-consciousness-research.log",
+      "status": "added",
+      "sha256": "7f54abd12ccdc15d7912e150bd9160edcfad9148177f21c9d8378e26f1fbe6ea"
+    },
+    {
+      "path": "docs/update-20261022/qa-consciousness.log",
+      "status": "added",
+      "sha256": "96a72058dad52d8bd539f2313d66f239591454ace6f421ddcda25332a141a8d5"
+    },
+    {
+      "path": "docs/update-20261022/qa-quantum-research.log",
+      "status": "added",
+      "sha256": "f805b157f094ecb9aaaa0031a1f68bd521b990bc95d5f47f131752b1bb5df138"
+    },
+    {
+      "path": "docs/update-20261022/qa-quantum.log",
+      "status": "added",
+      "sha256": "623e6fbb398cc0a323c0bdca62bbe834b2dfa704d0da665e463b814543999892"
+    },
+    {
+      "path": "docs/update-20261022/qa-security.log",
+      "status": "added",
+      "sha256": "0d892574b392cab89c31596d644b26f73497e876a6d5b17ffa80b543f967dbe2"
+    },
+    {
+      "path": "docs/update-20261022/quantum-http-verification.json",
+      "status": "added",
+      "sha256": "623e6fbb398cc0a323c0bdca62bbe834b2dfa704d0da665e463b814543999892"
+    },
+    {
+      "path": "docs/update-20261022/quantum-research-http-verification.json",
+      "status": "added",
+      "sha256": "bb5a072dd4031605d5ee8896d01948163a86f4c71f47c56f97fc260d5738b0ae"
+    },
+    {
+      "path": "docs/update-20261022/relational-built-verification.json",
+      "status": "added",
+      "sha256": "aace76bd681e74531ab0154113b99f9865807f210221c561c7ba1b892ec0b958"
+    },
+    {
+      "path": "docs/update-20261022/served-security-headers.json",
+      "status": "added",
+      "sha256": "1879658665b668f37744249fe170914ce9545a38077945ce0f26629fdeb5511b"
+    },
+    {
+      "path": "next-env.d.ts",
+      "status": "changed",
+      "beforeSha256": "7b550dda9686c16f36a17bf9051d5dbf31e98555b30d114ac49fc49a1e712651",
+      "sha256": "1862ac4bbbc5192d4bf562161df66ea547ed3e67173100656ab606ae9797db2b"
+    },
+    {
+      "path": "next.config.mjs",
+      "status": "changed",
+      "beforeSha256": "c6fbf6a24fd20bef5aac52d36d5013583d5b8b66cbd9f3c920a14e870620c410",
+      "sha256": "d64e99e8a955574c72b3a4de52a1542e25ca64bb076b56503d73f39408882b29"
+    },
+    {
+      "path": "package-lock.json",
+      "status": "changed",
+      "beforeSha256": "90b432abc7b5c9cdabb20132e0608990e562b48389461186a133b9da87b5b50b",
+      "sha256": "60016f33fa69ad44c2ac9115d70cc04e8e2e650bed6537c2f6b19421374cf97b"
+    },
+    {
+      "path": "package.json",
+      "status": "changed",
+      "beforeSha256": "59179383cab9ef65b36ce34293c3479ad618b64d15afc8a258a9f87ff881fc81",
+      "sha256": "7cc70fb08c9872b60e02786a4a708f92d0fd49c3fbe55061850ed9474af968f6"
+    },
+    {
+      "path": "scripts/propose-zenodo-cache.mjs",
+      "status": "added",
+      "sha256": "4097cd0473b95dba21ded9b1dce205c942de1b6dd63214e569d293fa5d1ccaae"
+    },
+    {
+      "path": "scripts/security-headers.mjs",
+      "status": "added",
+      "sha256": "b4974c67e8015131cf478b56f1eabf88d2edda9a9f82cb1110c9b66cad151f30"
+    },
+    {
+      "path": "scripts/security-headers.test.mjs",
+      "status": "added",
+      "sha256": "e10bffc7161bbe089469115bbf1e4647b27cc9449889c1533c82fcf648c64d67"
+    },
+    {
+      "path": "scripts/security-policy.mjs",
+      "status": "added",
+      "sha256": "2674e234396ef243cc747c34de81b56f753a3d04b44eebdd0d93993443cf05e2"
+    },
+    {
+      "path": "scripts/sync-zenodo.mjs",
+      "status": "changed",
+      "beforeSha256": "0b9ee4952cc701a5a166b2e5496371efee54641a04d0b4903fef8dd4e4b32fba",
+      "sha256": "82e8c15fe75c4dfb2c5274381941213dacd60b85c08800fd79d54d72da5fba93"
+    },
+    {
+      "path": "scripts/verify-external-metadata.mjs",
+      "status": "added",
+      "sha256": "e002ee56fabced6ee3047dc00940955099d05e80d80782c64321c94beb19d81a"
+    },
+    {
+      "path": "scripts/verify-security-headers.mjs",
+      "status": "added",
+      "sha256": "ed6596030b62ab7e9a66e89f24d33d2d727852b951789942b5371d24e32b09c1"
+    },
+    {
+      "path": "scripts/verify-website-update.mjs",
+      "status": "added",
+      "sha256": "23435d6f23910051e56788d23ffaed3eaec046046469dca86918d4710f6fbebf"
+    },
+    {
+      "path": "scripts/verify-zenodo-proposal.mjs",
+      "status": "added",
+      "sha256": "63e1e2590e38551a822feb7cc70bd95d9210c60579ab1968083b7a8710370afc"
+    },
+    {
+      "path": "src/app/consciousness/ai-alignment/alignment.css",
+      "status": "changed",
+      "beforeSha256": "fc352b0fd8ef3e09b1d3d9c66523225f510c958296a466e4c746deb58f7fc4a1",
+      "sha256": "9ce7699c6a973117093e831c1c644e637819cb3f5715383c84453c1084c4a0a3"
+    },
+    {
+      "path": "src/app/consciousness/ai-alignment/continuity/page.tsx",
+      "status": "changed",
+      "beforeSha256": "99c0b70e3634930cc6b125ea247db78b3478a0a86dbb5baa6a3acffe323511a2",
+      "sha256": "25dbcf0bce610dfc518cfbaf3dfacb257557cc5257f85367d98322b1d6c26bc5"
+    },
+    {
+      "path": "src/app/consciousness/ai-alignment/page.tsx",
+      "status": "changed",
+      "beforeSha256": "bcc42a5aac91962a2b4563ecf38fe086984813d1db09d51b60e26f29b1cb1dce",
+      "sha256": "43660101fffd4714ca9bf92373f5431eaaf88b239d448250fd8156aec7d3cfad"
+    },
+    {
+      "path": "src/app/consciousness/ai-alignment/read/page.tsx",
+      "status": "changed",
+      "beforeSha256": "99d2ee2ef189d1f1be9c440a7b0f6fc33ef1381f9d3c676f01e3c93653f5f5ec",
+      "sha256": "e850ee08f526b0146fcc1e90ec76133f8ded4befd491b14e2a09b22bb66d953b"
+    },
+    {
+      "path": "src/app/consciousness/manifest.json/route.ts",
+      "status": "changed",
+      "beforeSha256": "c85c7d3548b49f98ab28ed3c359b7ea84bfa38f52e263e879ec59fc328565ae1",
+      "sha256": "2d1ec7086f2982388c6e6cd1161ec67ba2d794fc909e843aa31c9db5093500d5"
+    },
+    {
+      "path": "src/app/consciousness/monograph/page.tsx",
+      "status": "changed",
+      "beforeSha256": "daff4f9da78d4b546573e3b5ff6e7eccd6c75bead8954f4d9138978b8af93a3f",
+      "sha256": "0454102910f3fc2cfd056ce156432640e1f0662fe5252577e9cfd0a7c459a19c"
+    },
+    {
+      "path": "src/app/consciousness/page.tsx",
+      "status": "changed",
+      "beforeSha256": "0f42fdadd8ac8e44944e8bdce29c4273599796a78573db14c3e1bfa1d848f032",
+      "sha256": "21c3a0122f3dfd42a63e6c8b60754231a20ff810bc21214246c79bec227150bd"
+    },
+    {
+      "path": "src/app/consciousness/relational-awareness/[chapter]/page.tsx",
+      "status": "changed",
+      "beforeSha256": "07feb1c492c31bf9982652eef062a3c5a0e6ab314119d989c6101dca2d5cbd60",
+      "sha256": "6ed4ff03388b72a20abaa87b0cd6a8abbfd4312527d8fdfef9ccb401c510c593"
+    },
+    {
+      "path": "src/app/consciousness/relational-awareness/page.tsx",
+      "status": "changed",
+      "beforeSha256": "052184f7221a4471b142cdd39c9b5a3c09296028aa1d9b5d3a4bfe223dd981e4",
+      "sha256": "3d3c84f6994eea2ab6f344156514765af9e882412667cb1795c4bec8896c4712"
+    },
+    {
+      "path": "src/app/framework/page.tsx",
+      "status": "changed",
+      "beforeSha256": "4c0e4752ed55ec11896ee0ba7892b4d285893a2c0aa54f2a3ca646bf51fea918",
+      "sha256": "9f7a3d53ce11fe76077ae2bfae5d9790e021dfe8938556f16c27ce31e986380d"
+    },
+    {
+      "path": "src/app/papers/[slug]/page.tsx",
+      "status": "changed",
+      "beforeSha256": "be9f1e18fb7720b4a3bfdf36ab92af873f3f2f2ab5ddc9da56f48540978f0ff2",
+      "sha256": "2deba15ad6641e66ef220d623503f5b6cb05bffbfbde5568b14d144ea053a178"
+    },
+    {
+      "path": "src/components/consciousness-edition-clarification.tsx",
+      "status": "added",
+      "sha256": "6b249a86cc830f6e9d19ee5a1e67b23c14e54908f3028d981cfabbbd19e6e042"
+    },
+    {
+      "path": "src/components/consciousness-programme-feature.tsx",
+      "status": "changed",
+      "beforeSha256": "7b6a30a781acbf93fb6115dc51571040a1e37a06b1d79c6a09de7260d37b9176",
+      "sha256": "d535af4dab5bed6d83d03f83f0b645643d19125ee888564013552587b6d4dcd4"
+    },
+    {
+      "path": "src/components/consciousness-reader.tsx",
+      "status": "changed",
+      "beforeSha256": "f6a4ff3f603e6ecb92094988290248b2877ec318298fd7219754338511940de1",
+      "sha256": "678f461e2efaf010bcd6b5769c3ef672f3eafe4f94905f634e0bf427584557cd"
+    },
+    {
+      "path": "src/components/philosophical-clarification.css",
+      "status": "added",
+      "sha256": "9f9e1fa143dd2f58735243ca9ae03ca8ac9fab6f441f8ba9aad496621742ef59"
+    },
+    {
+      "path": "src/components/philosophical-clarification.tsx",
+      "status": "added",
+      "sha256": "22d86157e5765a7c715c3a52be20353d82b1f015d5c61fc21068183b40e448b9"
+    },
+    {
+      "path": "src/config/site.ts",
+      "status": "changed",
+      "beforeSha256": "25d284810e3bbf308db23926943eee5aa8a5ae7029dd54ac5aa85a472d63d0d5",
+      "sha256": "31a3342e82fac521926a82da16ce5478a80549f17810be784cc7ecbe68b12b65"
+    },
+    {
+      "path": "src/generated/articles.ts",
+      "status": "changed",
+      "beforeSha256": "8eb162082eed588ad3763371d20000ef8660fbd3b29abbaf99f0e489253014ee",
+      "sha256": "12488fd1c8c4119ba279c4671ccbce5062246f586956159b42edb2091d616f9f"
+    },
+    {
+      "path": "src/lib/alignment.ts",
+      "status": "changed",
+      "beforeSha256": "d09072cbbaa0dab28c130d445c5a74a86d44172bf2c5ecde67d087e62f58c7bd",
+      "sha256": "2c8f21a75abc5f7bbc25223fa596b88bc4085523c93996b7497a7c695c616864"
+    },
+    {
+      "path": "src/lib/consciousness.ts",
+      "status": "changed",
+      "beforeSha256": "14784dae63ac7e95b52bd4a5beae0ee4aebd422b8ab638d86dc0fd533385da92",
+      "sha256": "335566acbd1288dd29e592e4e1bcf0075c105252e8f27d0d718c9b88fc6ef26e"
+    },
+    {
+      "path": "src/lib/external-metadata.ts",
+      "status": "added",
+      "sha256": "7c0a2867f890f5f0da62d1c825b32297791eda5d90c766c839cb66bf6b4c1ad5"
+    },
+    {
+      "path": "src/lib/json-ld.ts",
+      "status": "added",
+      "sha256": "b574abf2f1c174187325432a7e4d01b9ca228a9329745c18c33a3af8421b23e9"
+    },
+    {
+      "path": "src/lib/machine.ts",
+      "status": "changed",
+      "beforeSha256": "bbe030fe868506f7a5a7d8e4280b62dc1ec7c07d767b76e3181c7d1480f425ab",
+      "sha256": "f3a77b089f5d5701ee1cf89d606d6f6f407ebe827254b7c1db462e58ff71216b"
+    },
+    {
+      "path": "vercel.json",
+      "status": "added",
+      "sha256": "df3e6f6d2dd911b7bbe2497080f9efcaaae830a268b8a146c7aa621df0c7ca08"
+    }
+  ],
+  "deletedSourcePaths": [],
+  "excludedBaselineArtifacts": [
+    "tmp/quantum-site-verification.json",
+    "tsconfig.tsbuildinfo"
+  ]
+}

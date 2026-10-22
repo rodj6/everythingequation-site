@@ -2,36 +2,88 @@ name: Sync Zenodo metadata
 
 on:
   schedule:
-    - cron: '0 3 * * *' # Run daily at 03:00 UTC
+    - cron: '0 3 * * *' # Daily at 03:00 UTC; proposes a reviewed update.
   workflow_dispatch:
 
+permissions:
+  contents: read
+
+concurrency:
+  group: zenodo-metadata-proposal
+  cancel-in-progress: false
+
 jobs:
-  sync:
+  prepare:
+    # Never run a dispatched feature branch with metadata-publishing authority.
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
+    timeout-minutes: 35
+    outputs:
+      base-sha: ${{ steps.baseline.outputs.sha }}
+    env:
+      SKIP_ZENODO: '1'
+      NEXT_TELEMETRY_DISABLED: '1'
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - name: Checkout trusted default branch
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          node-version: 20
-
-      - name: Install dependencies
-        run: |
-          npm install
-
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - name: Record tested baseline
+        id: baseline
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install reviewed lockfile
+        run: npm ci
       - name: Refresh Zenodo cache
         run: npm run sync:zenodo
-
-      - name: Commit and push if cache changed
+      - name: Verify cache-only proposal boundary
+        run: node scripts/verify-zenodo-proposal.mjs
+      - name: Verify external metadata rendering boundary
+        run: npm run verify:metadata
+      - name: Build with refreshed metadata
+        run: npm run build
+      - name: Type check
+        run: npx tsc --noEmit
+      - name: Stage candidate data only
         run: |
-          git config --global user.name 'github-actions'
-          git config --global user.email 'github-actions@users.noreply.github.com'
-          if [[ `git status --porcelain` ]]; then
-            git add .cache/zenodo.json
-            git commit -m "chore: update Zenodo metadata"
-            git push
-          fi
+          mkdir -p "$RUNNER_TEMP/zenodo-proposal"
+          cp .cache/zenodo.json "$RUNNER_TEMP/zenodo-proposal/zenodo.json"
+      - name: Preserve tested candidate
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: zenodo-cache-candidate
+          path: ${{ runner.temp }}/zenodo-proposal/zenodo.json
+          if-no-files-found: error
+          retention-days: 3
+
+  propose:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    # This job runs no package install, build, fetched code or metadata scripts.
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout tested trusted baseline
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ needs.prepare.outputs.base-sha }}
+          persist-credentials: false
+      - name: Download this run's tested data
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: zenodo-cache-candidate
+          path: ${{ runner.temp }}/zenodo-proposal
+      - name: Propose cache-only pull request
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          CANDIDATE_FILE: ${{ runner.temp }}/zenodo-proposal/zenodo.json
+        run: node scripts/propose-zenodo-cache.mjs
