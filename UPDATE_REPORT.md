@@ -1,3 +1,7 @@
+# Subsequent CSP adapter fix, 22 October 2026
+
+The replacement source now starts at commit `b5a013ed9bc74090d7fbadcfc4f7fd5506c8ecca` and includes the tested Vercel CSP fix. See `CSP_FIX_REPORT.md`, `CSP_FIX_FILE_CHANGES.json` and `docs/csp-fix-20261022/`. Production deployment and current browser verification remain pending. The original update report below is retained as preparation history.
+
 # Everything Equation website update · 22 October 2026
 
 The requested philosophical clarifications, alignment quotation and repository-level security changes are implemented in this complete source package. The existing design, site routes and original publications remain intact. No push or deployment was performed.

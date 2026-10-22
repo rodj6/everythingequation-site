@@ -1,3 +1,7 @@
+# Subsequent CSP verification
+
+See `CSP_FIX_REPORT.md` for the adapter lifecycle correction, matching CLI64.7 adapter24 build, 21 regression tests and 586 local served checks. No corrected deployment or current browser check has been performed. The earlier security audit and its separately dated results follow unchanged.
+
 # Security verification · 22 October 2026
 
 ## Scope and baseline

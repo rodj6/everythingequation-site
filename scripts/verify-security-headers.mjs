@@ -11,17 +11,18 @@ const results = [];
 const queue = [...routes];
 
 async function verifyRoute(route) {
-  const response = await fetch(new URL(route, base), { redirect: 'manual' });
+  const response = await fetch(new URL(route, base), { redirect: 'manual', signal: AbortSignal.timeout(30_000) });
   const html = await response.text();
-  // /500 is a generated internal error document, not a public 500-status URL.
-  const expectedStatus = ['/__security_missing_route__', '/404', '/500'].includes(route) ? 404 : route === '/research' ? 308 : 200;
-  assert.equal(response.status, expectedStatus, `${route}: unexpected HTTP status`);
+  // Direct internal error-document URLs differ between next start and the
+  // adapter's static assets. The unknown route must still return a real 404.
+  const expectedStatuses = ['/404', '/500'].includes(route) ? [200, 404, 500] : route === '/__security_missing_route__' ? [404] : route === '/research' ? [308] : [200];
+  assert.ok(expectedStatuses.includes(response.status), `${route}: unexpected HTTP status ${response.status}`);
   const policy = response.headers.get('content-security-policy');
   if (route === '/research') {
-    // Next handles this fixed redirect before application header matching. It
-    // serves the literal local destination, with no executable document.
-    assert.equal(response.headers.get('location'), '/research-map');
-    assert.equal(html.trim(), '/research-map');
+    // Both platforms must keep the fixed same-origin destination. Their redirect
+    // body templates differ; neither should contain executable script markup.
+    assert.equal(new URL(response.headers.get('location') ?? '', base).href, new URL('/research-map', base).href);
+    assert.doesNotMatch(html, /<script[\s>]/i);
     assert.equal(inlineScriptHashes(html).length, 0);
     return { route, status: response.status, fixedLocalRedirect: '/research-map', documentPolicyApplicable: false, policyPresent: Boolean(policy), inlineScriptsCovered: 0 };
   }

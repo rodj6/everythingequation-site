@@ -1,3 +1,16 @@
+# Subsequent CSP fix ledger
+
+Baseline: `b5a013ed9bc74090d7fbadcfc4f7fd5506c8ecca`.
+
+- `scripts/security-headers.mjs`: replaces duplicated legacy-only HTML discovery with shared authoritative adapter/legacy discovery. Installs and verifies consumed Vercel routing policies and prerender `initialHeaders`; preserves the homepage assertion, strict script restrictions, route/error mapping and fail-closed constraints.
+- `scripts/security-headers.test.mjs`: expands six fixtures to 21 regressions, including absent legacy directories and real adapter static/prerender shapes.
+- `scripts/verify-security-headers.mjs`: verifies fixed redirect semantics across platform body templates, records internal error-document statuses and adds request timeouts, while retaining unknown-path404 and exact served-script checks.
+- `.github/workflows/ci.yml`: adds the isolated matching adapter build, regression tests and output verification; retains the existing check name.
+- `SECURITY_HEADERS.md`, `REPLACEMENT_INSTRUCTIONS.md`, this ledger and update/security reports: correct lifecycle and replacement baseline, record tested status and pending remote work.
+- `CSP_FIX_REPORT.md`, `CSP_FIX_FILE_CHANGES.json`, `CSP_FIX_PUBLICATION_CHECKSUMS.sha256.tsv`, `docs/csp-fix-20261022/`: new review evidence and inventory.
+
+No site routes, editorial passages, publications, dependency versions or lockfile changed in this fix. `CSP_FIX_REPORT.md` records the actual rendered layouts, source evidence, old assertion trigger, replacement behavior and verification. The original editorial ledger follows.
+
 # Change ledger · 22 October 2026
 
 Baseline: supplied website ZIP, main reference `c1e0d330690986ffeb321f58a7f58008ab77ab19`. Local implementation only; no deployment. User authorization is the implementation request in this conversation. Original DOI-backed text, sources and downloads remain unchanged.

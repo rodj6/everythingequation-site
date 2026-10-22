@@ -7,7 +7,7 @@ This package is the complete project source. It is not a prebuilt static export.
 1. Close any development server. In your existing checkout run `git status`. Preserve or commit your own uncommitted work before copying anything.
 2. Make a separate backup of the whole existing checkout, including `.git`. Keep this ZIP separately too.
 3. Extract this ZIP to a new folder. Its single top-level folder is `everythingequation-site`.
-4. Compare the new folder with your checkout and read `FILE_CHANGES.json`. The replacement was prepared from your supplied ZIP, whose main reference matched `c1e0d330690986ffeb321f58a7f58008ab77ab19` at review. Reconcile any newer work before overwriting it.
+4. Compare the new folder with your checkout. This corrected package starts from commit `b5a013ed9bc74090d7fbadcfc4f7fd5506c8ecca`. Read `CSP_FIX_REPORT.md` and `CSP_FIX_FILE_CHANGES.json` for the subsequent CSP fix. `FILE_CHANGES.json` preserves the earlier website update's inventory against the original supplied archive. Reconcile any work newer than `b5a013e` before overwriting it.
 5. Copy the **contents** of the extracted `everythingequation-site` folder into your existing checkout, allowing intended replacements. Include `.github`, `.gitignore`, `.cache` and all other supplied configuration. Do not place the new folder inside the existing site folder. Do not replace or delete `.git`, your `.env*.local` files, Vercel linkage, or other local settings.
 6. Review the deleted/excluded entries in `FILE_CHANGES.json`. Build outputs, dependencies, temporary reports and TypeScript caches are intentionally absent. There are no intended deletions of publication assets. Do not mirror-delete unrelated files merely because they are absent from the ZIP.
 
