@@ -1,0 +1,52 @@
+---
+title: "Why a longer interval can feel faster"
+description: "A partial model separates duration judgments from felt pace using interpreted density and expected endpoints."
+order: 7
+---
+
+<a id="section-7"></a>
+## 7. Felt duration and pace
+
+Succession and the feeling that time passes quickly are distinct aspects of temporal experience. Both belong within complete enactment, but its admission conditions do not determine their values. Many constructions satisfy the same conditions with different event densities, expectations, bodily states, goals and affect.
+
+Matched train-station video tasks used intervals of 17–23 seconds and either three or seven events. Greater event density increased duration estimates **and** accelerated passage judgments (Lamprou-Kokolaki et al., 2024). Participant-count discrepancies and condition-level psychometric exclusions limit pooled interpretations, but the qualitative contrast constrains an equation of faster passage with shorter estimated duration. A separate five-minute activity found passage judgments sensitive to announced endpoint expectations (Tanaka and Yotsumoto, 2017). Reused comparison groups and possible criterion or demand effects remain relevant.
+
+Let $B$ denote an internal elapsed estimate, $N$ interpreted event boundaries and $E$ an expected endpoint. The proposed partial model is
+
+<a id="equation-10"></a>
+$$
+\begin{aligned}
+D&=\alpha B+\beta N,\\
+J&=\kappa\ln\left(\frac{N/B}{\rho_0}\right)+\eta\ln(E/B),
+\qquad B,N,E\gt0.
+\end{aligned}
+\tag{10}
+$$
+
+$D$ is a duration readout. $J$ is a relative pace descriptor, positive for faster passage against learned baselines. The reference rate $\rho_0$ makes the rate ratio dimensionless. These are states and interpreted relations within the observer. The model gives no outside clock and no access to future completion. Its logarithmic form is proposed, and does not imply consciously performing logarithms.
+
+For the illustrative values $B=20\,\mathrm s$, $\alpha=0.8$, $\beta=0.4\,\mathrm s$ per boundary, $\kappa=\eta=1$ and $\rho_0=0.15\,\mathrm{s}^{-1}$, the same physical interval of 20 seconds gives:
+
+<a id="table-2"></a>
+| Condition | $N$ | $E$ (s) | $D$ (s) | $J$ |
+| --- | --- | --- | --- | --- |
+| Baseline | 3 | 20 | 17.2 | 0 |
+| More interpreted events | 7 | 20 | 18.8 | +0.84730 |
+| Earlier expected endpoint | 3 | 10 | 17.2 | −0.69315 |
+| Later expected endpoint | 3 | 40 | 17.2 | +0.69315 |
+
+*Table 2. Constructed outputs, not fitted human observations.*
+
+Increasing event boundaries can increase both duration estimate and pace; changing the expected endpoint can move pace without moving the duration readout. At fixed $B$, the response Jacobian is
+
+<a id="equation-11"></a>
+$$
+\frac{\partial(D,J)}{\partial(N,\ln E)}=
+\begin{pmatrix}\beta&0\\\kappa/N&\eta\end{pmatrix},
+\qquad \det=\beta\eta.
+\tag{11}
+$$
+
+The chosen nonzero coefficients give rank two in this model. This is not a measured rank-two human response. Opposite slopes under one manipulation alone do not establish dimensionality: two fixed readouts of a single scalar can have opposite slopes.
+
+While waiting, a person can take up the relation between ongoing activity and expected completion before the endpoint occurs. A later pace rating can describe that construction. [Equation (10)](/consciousness/temporal-passage/07-felt-duration-and-pace#equation-10) makes some shaping relations explicit; it does not exhaust bodily or affective contributions. Complete-enactment identity locates felt pace within the actual organization. Empirical work must identify which differences in organization realize particular qualities and test their quantitative predictions.

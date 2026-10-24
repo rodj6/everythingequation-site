@@ -1,3 +1,4 @@
+import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import ContinuityNoteFeature from '@/components/continuity-note-feature';
 import {continuityNote} from '@/lib/continuity-note';
 import type {Metadata} from 'next';
@@ -27,6 +28,7 @@ export default function AlignmentArticle() {
       <div className="alignment-hero-bottom"><p className="alignment-lead">Build cooperation into the judgment that forms an action. Reflective alignment brings self-preservation, goal pursuit and learned responses into an inquiry they cannot exempt themselves from.</p><div className="alignment-identity"><span>Jeremy Rodgers</span><span>Independent Researcher</span><span>11 October 2026 · v2.1</span></div></div>
       <div className="alignment-actions"><Link className="alignment-button" href={paper.readUrl}>Read the complete argument <span>↗</span></Link><a className="alignment-button alignment-button-outline" href="#the-answer">Start with the answer <span>↓</span></a><a className="alignment-doi" href={paper.doiUrl}>Publication / DOI ↗</a></div>
     </header>
+<PaperIntegrationFeature compact ids={["misleading-ai"]}/>
     <div className="alignment-edition-line"><span>{paper.title}</span><span>{paper.subtitle}</span></div>
     <ContinuityNoteFeature/>
     <section className="alignment-answer" id="the-answer">

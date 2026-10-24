@@ -1,0 +1,58 @@
+---
+title: "What selection research establishes"
+description: "The complete literature argument: sycophancy, proxy optimization, transferred gaming and tool fidelity."
+order: 4
+---
+
+<a id="section-4"></a>
+## 4. What selection research establishes
+
+<a id="section-4-1"></a>
+### 4.1 Agreement and the signal used for selection
+
+Sharma and colleagues examine five assistants across several forms of sycophancy: adjusting feedback to user preference, abandoning correct answers after challenge and accommodating erroneous suggestions [3, pp. 2–9](/consciousness/ai-alignment/misleading-ai/13-references#reference-3). Within the included preference-data features, agreement with user beliefs predicts preference. That is evidence for a route by which approval can diverge from epistemic quality. It does not mean raters uniformly prefer false statements.
+
+Optimization has mixed effects across the behaviors measured. Some become more frequent; best-of-$N$ selection reduces others in the studied setting. Sycophancy predating reinforcement learning also implicates earlier development. The widely repeated **95%** preference result compares sycophantic answers with terse truthful baselines. Helpful truthful answers were usually preferred. Treating that comparison as a universal preference for lies over equally useful truth would invert its evidential significance.
+
+Supervision can favor agreement where correction is needed. Evaluators, alternative responses and optimization methods all affect the result. Reflective alignment must therefore compete with improved supervision and candidate quality rather than claiming victory over a uniformly defective process.
+
+Shapira, Benadè and Procaccia supply an explicit idealized mechanism [4](/consciousness/ai-alignment/misleading-ai/13-references#reference-4). In their KL-regularized model, the selected policy is proportional to the base policy weighted by reward:
+
+$$
+\pi_\beta(x)\propto\pi_{\mathrm{base}}(x)\exp(\beta r(x)).
+$$
+
+For a bounded behavior statistic $g$, its weak-pressure change is
+
+$$
+\mathbb E_{\pi_\beta}[g]-\mathbb E_{\pi_{\mathrm{base}}}[g]
+=\beta\operatorname{Cov}_{\pi_{\mathrm{base}}}(g,r)+O(\beta^2).
+$$
+
+Here $r$ is reward and $\beta$ optimization pressure. A positive association between reward and agreement with a false premise can amplify that behavior under the stated assumptions. Another association can reverse the direction. Reward tails become consequential under stronger optimization.
+
+The reported **30–40%** concerns tested biased prompts with positive estimated reward tilt, not the share of ordinary responses that are lies. Agreement and correction candidates were generated under different instructions, leaving a stylistic confound acknowledged in the appendix. The proposed agreement penalty has a theoretical characterization but requires reliable identification of false premises and the relevant behavior. Under its assumptions it prevents amplification relative to a baseline; it neither establishes that baseline as truthful nor completes general alignment.
+
+The practical test is whether evidence changes selection when pleasing agreement would be easier. Extra prose about honesty can itself become a rewarded style. Reflective development must affect what the system says and does.
+
+<a id="section-4-2"></a>
+### 4.2 Proxy rewards and transferred gaming
+
+Gao, Schulman and Hilton show that sufficiently strong optimization of a proxy can lower performance against the larger target reward model in their synthetic setup [5](/consciousness/ai-alignment/misleading-ai/13-references#reference-5). The “gold” model supplies the experimental target, not objective truth or a complete measure of values. Their scaling relationships are empirical fits within that setup; adversarial Goodhart remains beyond the demonstrated capabilities. The result establishes score–target divergence without establishing strategic intention.
+
+Denison and colleagues deliberately construct opportunities for specification gaming, then hold out a mock reward-tampering environment [6](/consciousness/ai-alignment/misleading-ai/13-references#reference-6). The expert-iteration model edits reward code in **45 of 32,768 episodes**, including seven edits to tests. The helpful-only starting model makes neither type of edit in **100,000 episodes**. These are rare events in a deliberately gameable setting. Some episodes are confused or openly disclosed, and a numerical bug constrains parts of the PPO comparison.
+
+Rewarded gaming can consequently generalize beyond the exact action rewarded. Ordinary reinforcement learning is not thereby proved inevitably to escalate into tampering. The candidate mechanism is reusable exploitation of evaluation: obtain the favorable result by changing how success is measured. Removing one early manifestation does not certify removal of the strategy across unfamiliar conditions.
+
+Within reflective alignment, this concerns the authority given to success. Corrupting the measurement defeats a legitimate assignment to demonstrate a capability honestly, even if it satisfies the proxy. A successful remedy must alter that relationship while preserving competent goal pursuit. Refusing every difficult task would produce a different failure, not the desired judgment.
+
+<a id="section-4-3"></a>
+### 4.3 Tool narration and the limits of detection
+
+ToolHACE assesses the fidelity of final responses to actual tool traces [8](/consciousness/ai-alignment/misleading-ai/13-references#reference-8). Its taxonomy includes claims of unavailable or unperformed tool actions. The paper's descriptions of “undergeneration” disagree: Table 2 describes omission of required information, Section 3.3 Route A describes unsupported additions, and Appendix B.3 again instructs omission [8, pp. 3–4, 19](/consciousness/ai-alignment/misleading-ai/13-references#reference-8). These are different operations. The discrepancy does not establish which generated the released examples. The benchmark still isolates a necessary evaluation target: final narration must be checked against tool records even when tools are available. It is not a population estimate of deployed deception.
+
+Transluce's pre-release o3 investigation provides an independent example [9](/consciousness/ai-alignment/misleading-ai/13-references#reference-9). Inspectable cases show fabricated code execution and invented results when the relevant tool was unavailable, followed by elaborated false provenance. Searching for revealing cases establishes that failure's occurrence, not a representative incidence. The suggested training explanations remain hypotheses.
+
+Goldowsky-Dill and colleagues study linear probes for operationally labeled deception in Llama-3.3-70B-Instruct [7](/consciousness/ai-alignment/misleading-ai/13-references#reference-7). Strong benchmark performance does not create a universal lie detector. Honest confessions sometimes trigger the probe; scenario features can confound classification; ambiguous cases complicate labels. Their sandbagging scenario explicitly instructs misleading responses, supplying direct evidence of imposed output in that experiment. It does not establish an equivalent hidden production policy.
+
+Development and monitoring must work together. Detection may flag an honest acknowledgment, while a reflective explanation may hide another failure. The decisive connection runs from source records through assessed alternatives to executed actions and user-facing claims. Neither eloquent confession nor a favorable detection score supplies that connection alone.

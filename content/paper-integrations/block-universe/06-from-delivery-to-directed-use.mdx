@@ -1,0 +1,185 @@
+---
+title: "From delivery to directed use"
+description: "The exact joint-record accuracy frontier, its physical realization and the side-resource assumptions that make it valid."
+order: 6
+---
+<a id="section-6"></a>
+## The relation must reach the operation that uses it
+
+**Correctly stored ingredients do not determine their actual use.** This chapter follows source delivery, predecessor retention and a directed update through one resource-accounted programme. It obtains a necessary resource condition for a nominated functional interpretation and a conditional ideal-interface realization. A detached task device is not thereby an experiencer.
+
+<a id="section-6-1"></a>
+### A declared source-to-record programme
+
+Prepare independent uniform bits $a,b$ in calibrated source slots: $a$ is predecessor and $b$ the later contribution. Include repeated features. In a relativistic embedding choose timelike-ordered source events. The local slot schedule is apparatus structure, not a universal simultaneous slice. The directed target is $D=b-a\in\{-1,0,+1\}$ under fixed provenance. The full ordered pair, equivalently $G=2b-a$, is a stricter target. No unordered-pair label or preparation archive is free information. Learned context and timing standards are independent of the randomized features.
+
+Use two independent copies of the positive XX chain. Until collection cuts their Hamiltonians remain fixed. At far endpoint $i$,
+
+$$
+\rho_x(q_i)=(1-xq_i)|0\rangle\langle0|+xq_i|1\rangle\langle1|,\qquad q_i=\sin^{2N_i-2}(\Omega_it_i/2).
+$$
+
+This sine delivery profile differs from the original endpoint's cosine return profile, but both follow from the solved amplitudes. Choose source and collection times so the first record arrives first. Calibrated slots disclose provenance, not values.
+
+Ready memory $M$ collects the first endpoint by SWAP; ready live register $L$ collects the second. At each cut, decouple the endpoint from the chain and protect endpoint and collector during the finite pulse. Keep the remaining source isolated afterward. No old port, preparation controller or remote environment supplies a later uncounted carrier. Count schedules, switches, ready stock and timing references. For a Hermitian involution $U$, $H_U=\pi(I-U)/(2\tau_g)$ enacts it over $\tau_g\gt0$. Charge isolation, switching and pulse durations to the deadline and every active memory exposure to retention. Switching transients or residual coupling enter the joint calibration budget. This composite scheduled programme is not the entire observer evolving autonomously under the original static chain Hamiltonian.
+
+Retain $M$ through a ready inaccessible bath qubit $K$:
+
+$$
+H_{\mathrm{mem}}=\frac\kappa2(X_MX_K+Y_MY_K)+2\kappa(n_M+n_K),\qquad r=\cos^2(\kappa\Delta).
+$$
+
+For $\kappa\gt0$ the eigenvalues $0,\kappa,3\kappa,4\kappa$ give positivity and a unique ready ground. Tracing $K$ yields survival $r$ after active memory time $\Delta$. Coupling is off during collection and interpretive gates, on only for the declared retention interval; isolate it before the finite update. No bath return occurs before the target. The loss is reversible physical retention loss, not an assumed contraction law.
+
+At use, the complete admitted code is
+
+<a id="equation-13"></a>
+$$
+\rho_{ab}^{ML}=\rho_a(p)\otimes\rho_b(q),\qquad p=q_Ar,\quad q=q_B.\tag{13}
+$$
+
+Independence, source-isolating collection and absence of cross-route/controller leakage establish the factorization. Separate marginal fits do not. The decoder may use a common instrument and fresh ancillas with $\rho_{ab}^{MLC}=\rho_{ab}^{ML}\otimes\sigma_C$. An input-independent ancillary marginal alone is inadequate. Correlated archives, incoming carriers, reference feedback or predictive context change the resources.
+
+<a id="section-6-2"></a>
+### The exact joint-access frontier
+
+Assume the joint record is diagonal in the $M,L$ basis and has pointwise marginals
+
+$$
+\Pr(M=1\mid a,b)=ap,\qquad\Pr(L=1\mid a,b)=bq.
+$$
+
+Set $j=\Pr(M=L=1\mid a=b=1)$.
+
+<a id="theorem-6-1"></a>
+**Theorem 6.1: joint record frontier for directed interpretation.** For independent uniform features and the stated complete classical record,
+
+$$
+\max(0,p+q-1)\le j\le\min(p,q).
+$$
+
+Among all common quantum decoders with fresh fixed-factor ancillary resources, the exact optima are
+
+<a id="equation-14"></a>
+$$
+S_D^{\max}=\frac{1+j}{2},\qquad S_{\mathrm{pair}}^{\max}=\frac{1+p+q+j}{4}.\tag{14}
+$$
+
+Every feasible $j$ is attainable in this classical-record class. The independent prescribed source has
+
+<a id="equation-15"></a>
+$$
+j=pq=q_Arq_B,\qquad S_D^{\max}=\frac{1+q_Arq_B}{2},\qquad S_{\mathrm{pair}}^{\max}=\frac{(1+p)(1+q)}4.\tag{15}
+$$
+
+**Proof.** The premises force the complete conditional table:
+
+| $ab\backslash ML$ | $00$ | $01$ | $10$ | $11$ |
+| --- | --- | --- | --- | --- |
+| $00$ | $1$ | $0$ | $0$ | $0$ |
+| $01$ | $1-q$ | $q$ | $0$ | $0$ |
+| $10$ | $1-p$ | $0$ | $p$ | $0$ |
+| $11$ | $1-p-q+j$ | $q-j$ | $p-j$ | $j$ |
+
+Nonnegativity is exactly the stated interval. A POVM's success on diagonal states depends only on its diagonal entries, an ordinary stochastic decoder. Deterministic maximum-a-posteriori decoding is therefore optimal even among quantum procedures. For observation $00$, multiply unnormalized posterior masses by four. They are $2-p-q+j$ for $D=0$, $1-q$ for $D=+1$, and $1-p$ for $D=-1$; the zero mass is maximal. At $01$, $q\ge q-j$ favors $+1$; at $10$, $p\ge p-j$ favors $-1$; $11$ permits only zero. Thus $D_{\mathrm{out}}=L-M$ attains the directed optimum. Summing the maximal masses gives $(1+j)/2$. Guessing the observed pair maximizes full-pair success; the four correct masses sum to $1+p+q+j$.
+
+For sharpness choose input-independent joint survival flags $(E_A,E_B)$ with probabilities $j,p-j,q-j,1-p-q+j$, and set $(M,L)=(aE_A,bE_B)$. Every feasible table results. This establishes class sharpness, not arbitrary-source attainment. The prescribed independent programme selects $j=pq$.
+
+The governing decision formula is standard Bayesian decision theory:
+
+$$
+S_f(P)=\sum_y\max_d\sum_{x:f(x)=d}\pi(x)P(y\mid x).
+$$
+
+The theorem evaluates it for this commuting four-preparation family [1,3]. The flag interval is the established Bernoulli coupling bound, also used for packet erasures [9]. Those erasures are visibly flagged; here a lost one resets to zero, an unflagged Z-channel. Functional compression and distributed function computation supply the larger context [7,53]. The contribution is the closed task value and its physical delivery/retention interpretation.
+
+More co-retention improves these two targets, not every task. At $p=q=1/2$, $j=0$ perfectly distinguishes $00$ from $11$, whereas $j=1/2$ gives only $3/4$ on that binary task, reversing their directed-change ranking. Any common garbling must fix outcomes $00,01,10$ because their preparation rows agree, and then cannot transform either $11$ row to the other. The experiments are incomparable. No general Blackwell dominance follows.
+
+Directed error at most $\epsilon\lt1/2$ requires $j\ge1-2\epsilon$. For the prescribed source this gives
+
+<a id="equation-16"></a>
+$$
+q_Arq_B\ge1-2\epsilon,\qquad
+\Delta\le\kappa^{-1}\arccos\sqrt{\frac{1-2\epsilon}{q_Aq_B}}.\tag{16}
+$$
+
+This uses $0\le\kappa\Delta\le\pi/2$ and $q_Aq_B\ge1-2\epsilon$. Otherwise even perfect retention misses the target. Failure of delivery or retention now has an exact task consequence; it need not mean no experience. Uncertainty, fusion, an erroneous order or anticipation can still be taken up.
+
+<a id="section-6-3"></a>
+### Countermodels locate the assumptions
+
+At $p=q=1/2$, a shared input-independent coin retains both features with probability $1/2$ and resets both otherwise. It gives $j=1/2$ and $S_D=3/4$, whereas independent loss gives $j=1/4$ and $S_D=5/8$. Marginals alone allow the sharp upper envelope $[1+\min(p,q)]/2$.
+
+For preparation $a=b=1$ the two laws are
+
+$$
+(1/4,1/4,1/4,1/4),\qquad(1/2,0,0,1/2).
+$$
+
+Their TV distance is $1/2$, giving equal-prior one-shot identification error $1/4$. For $n$ independent trials with fresh flags the exact error is $2^{-n-1}$. The overlapping transcripts are the $2^n$ all-diagonal strings, with probabilities $4^{-n}$ and $2^{-n}$. Half their overlap sum yields the formula. Choose the product model after any off-diagonal outcome, otherwise shared loss. Conditional errors are $2^{-n}$ and zero. Finite trials never identify perfectly; all-diagonal data favor shared loss. Reused/correlated flags require a different law. Joint access or pooled records enlarge the experiment class. Separate one-port marginal experiments retain equivalence; no complete-law surrogate ceiling has been surpassed.
+
+<a id="figure-2"></a>
+![Directed-feature accuracy for independent versus marginal-only records and for varied co-retention at fixed half-survival.](/publications/consciousness/new-papers/block-universe/figure-2.png)
+
+**Figure 2.** Equal local survivals can conceal different joint access. At $p=q=1/2$, varying $j$ moves the optimum from $1/2$ to $3/4$. These are analytic model curves, not fitted observations.
+
+Joint diagonality matters too. Keep $p=q=1/2$, set $\rho_{00}=|00\rangle\langle00|$, $\rho_{01}=(|00\rangle\langle00|+|01\rangle\langle01|)/2$, $\rho_{10}=(|00\rangle\langle00|+|10\rangle\langle10|)/2$, and $\rho_{11}=|\Psi^+\rangle\langle\Psi^+|$. Then $j=0$, yet a POVM assigning zero to $\operatorname{span}\{00,11,\Psi^+\}$ and $+1$ to $\Psi^-$ attains $9/16\gt1/2$. Diagonal marginals do not imply a diagonal joint state. The prescribed product construction does supply it.
+
+A hidden preparation archive also defeats a local-code bound. Restricting to nonrepeated pairs lets a perfect predecessor identify the pair before live input arrives. Both alter premises rather than improve interpretation of the unchanged task.
+
+<a id="section-6-4"></a>
+### Count the entire decoder input
+
+A register $R$ may be marginally uniform under every preparation yet improve the task through correlations. Extend the product half-survival record as follows:
+
+| $ab$ | Complete $(ML,R)$ conditional law |
+| --- | --- |
+| $00$ | $(00,0):1/2;\ (00,1):1/2$ |
+| $01$ | $(01,0):1/2;\ (00,1):1/2$ |
+| $10$ | $(10,0):1/2;\ (00,1):1/2$ |
+| $11$ | $(00,0):1/4;\ (10,0):1/4;\ (01,1):1/4;\ (11,1):1/4$ |
+
+Tracing $R$ gives the same product table and $R$ remains unbiased for every $ab$. Yet decoding $MLR$ gives $S_D=11/16$ and $S_{\mathrm{pair}}=5/8$, exceeding $5/8$ and $9/16$ from $ML$. In outcome order $(00,0),(00,1),(01,0),(01,1),(10,0),(10,1),(11,0),(11,1)$, maximal unnormalized masses are $(3/4,1/2,1/2,1/4,1/2,0,0,1/4)$ for $D$ and $(1/2,1/2,1/2,1/4,1/2,0,0,1/4)$ for the pair. Summing and multiplying by $1/4$ proves the optima. Timing and control metadata need the same scrutiny.
+
+This is different from disclosing the independent survival flags in the attainment proof. Conditional on those flags, missing bits remain uniform; $L-M$ and zero guessing for absent bits remain MAP. Averaging gives the original optima. Those particular flags are harmless for these uniform targets, not a certificate for arbitrary auxiliaries.
+
+<a id="proposition-6-2"></a>
+**Proposition 6.2: harmless side-resource certificate.** If the entire available input is $\sigma_{ab}=\mathcal C(\rho_{ab}^{ML})$ for one common CPTP map, its task optimum cannot exceed Theorem 6.1. If one common recovery obtains $\rho_{ab}^{ML}$ from $\sigma_{ab}$, equality and the original attainer follow. Fresh fixed-factor ancillas meet both conditions.
+
+**Proof.** Compose any decoder with $\mathcal C$ for the upper bound. Compose the original attainer with recovery for the reverse inequality. Appending and tracing a fixed ancillary factor give those maps in the fresh-resource case.
+
+For extra classical records, the conditional law given $ML$ may simply be preparation-independent. This weaker data-processing certificate allows harmless correlation with $ML$. The counterexample fails it.
+
+The product calculation is conditional on actual preparation, isolation and control interfaces. A positive Hamiltonian does not certify those interfaces. A scoring archive must be inaccessible before decision. Random preparation, switches and timing must introduce no hidden completion. Joint calibration must cover every accessible controller/reference or establish its harmlessness. Postselection and later lookup are not free. Charge all active memory time to $\Delta$, protected gate storage separately, and collection, isolation, latency and readout to deadlines. The gate's norm $\pi/\tau_g$ is an additional control resource, not bounded by the chain couplings. The model is not an exact relativistic speed-limit theorem or a built apparatus.
+
+<a id="section-6-5"></a>
+### Robustness and the operation actually performed
+
+Let $\widetilde\rho_{ab}$ be actual complete conditional inputs and $\rho_{ab}^{\mathrm{ideal}}=\rho_{ab}^{ML}\otimes\sigma_C$. Bound their average joint trace distance, including all accessible side resources, by
+
+$$
+\bar\eta=\frac14\sum_{a,b}D(\widetilde\rho_{ab},\rho_{ab}^{\mathrm{ideal}}).
+$$
+
+Actual states may be coherent or correlated. Each correct-answer effect lies between zero and identity; its probability differs by at most trace distance. Taking suprema gives
+
+<a id="equation-17"></a>
+$$
+\widetilde S_D^{\max}\le(1+j)/2+\bar\eta.\tag{17}
+$$
+
+An independently justified confidence lower bound $L$ on success therefore requires $j\ge[2L-1-2\bar\eta]_+$. Contractivity and triangle inequalities combine compatible channel, preparation and finite-gate errors. Marginal bars do not establish this joint premise. The numerical examples are constructed, not human fits.
+
+A finite native update uses ready registers:
+
+$$
+(M,L,0_D,0_G,0_{\mathrm{valid}})\mapsto(M,L,\operatorname{code}(L-M),\operatorname{code}(2L-M),1).
+$$
+
+Input-controlled flips, with Toffoli gates where needed, implement this reversibly in finite time. CNOT alone is not claimed sufficient for arbitrary output encodings. The XOR-on-output map is an involution and admits the stated finite Hamiltonian. $G$ may drive a fixed comparison or anticipation rule; prediction is current organization, not receipt from the future.
+
+Closing the use gate preserves the archive but leaves the valid flag false and executes no directed update. Swapping actual predecessor/live bindings preserves records and total information but enacts $M-L$. In the product model its task success becomes $(2-p-q+2pq)/4$, rather than $(1+pq)/2$. Another decoder could repair the swap: the contrast is realized use, not a lower resource-class optimum. At ideal delivery, an unordered bag permits only $3/4$ for the directed target. Later addressed retrieval is separate; deletion after the update removes later access without undoing its occurrence.
+
+For human application, delivered relations must actually enter an independently qualifying person's grounded uptake. The finite device does not select that person's experiential boundary. Under complete-enactment identity, an integrated predecessor/live/anticipatory relation belongs to the experience itself. No later output or moving present converts it. A third source event can occur after the update, so the transition is already enacted before the sequence ends.
+
+The result is a source-to-functional-interpretation constraint with a conditional experiential application. Classical order success does not establish coherent completion. Reference-assisted tests use separate incompatible preparations and their own inert-reference and closed-cut conditions. Ordinary environmental memory survives both analyses; the exact joint-access, timing, intervention and calibration requirements make the nominated operation physically assessable.

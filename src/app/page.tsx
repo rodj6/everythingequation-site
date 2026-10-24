@@ -1,3 +1,4 @@
+import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
 import AlignmentFeature from '@/components/alignment-feature';
 import ShadowModelOverview from '@/components/shadow-model-overview';
@@ -152,6 +153,7 @@ export default async function HomePage() {
       </section>
       <RelationalAwarenessFeature/>
       <AlignmentFeature home />
+<PaperIntegrationFeature/>
       <ShadowModelOverview />
       <SealedLeakyFeature />
 

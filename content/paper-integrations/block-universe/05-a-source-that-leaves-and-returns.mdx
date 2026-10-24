@@ -1,0 +1,128 @@
+---
+title: "A source that leaves and returns"
+description: "A fixed spin-chain Hamiltonian makes the local endpoint exactly ready while preserving and later returning its input."
+order: 5
+---
+<a id="section-5"></a>
+## Local absence is not physical destruction
+
+**A source–readout claim becomes physical when the dynamics, preparation and ports are fixed before loss is assessed.** An engineered perfect-transfer chain [6] provides that discipline. Its first qubit becomes exactly ready while the environment carries the input; the same Hamiltonian later returns it. This separates preservation from local possession and counts the completion resources.
+
+<a id="section-5-1"></a>
+### The prescribed Hamiltonian
+
+Take odd $N\ge3$, $\Omega\gt0$ and $\hbar=1$. Site 1 is the nominated readout $S$; sites $2,\ldots,N$ form $E$. With $n_j=|1\rangle\langle1|_j$, let
+
+<a id="equation-6"></a>
+$$
+H=\sum_{j=1}^{N-1}\frac{J_j}{2}(X_jX_{j+1}+Y_jY_{j+1})+B\sum_{j=1}^N n_j,
+\quad J_j=\frac\Omega2\sqrt{j(N-j)},\quad B=\Omega N.\tag{6}
+$$
+
+Prepare $E$ in $|0\cdots0\rangle$. Site 1 receives an unknown qubit, possibly entangled with reference $R$. After preparation, $H$ remains fixed. There is no input-dependent controller, switching sequence or after-cut preparation-label access. Coupling calibration, ready stock, input-independent timing/phase reference, final measurement and retained output are counted. Incompatible tests use separate preparations.
+
+This is a finite nonrelativistic quantum model. Nearest-neighbor coupling is a communication route, not an exact relativistic cone. Fabrication and calibration remain experimental obligations. Bohmian or scalar-current record constructions have different hypotheses and are not used in this channel calculation.
+
+The vacuum is a stable ready state. For adjacent spins the exchange contribution satisfies $h_j\ge-J_j(n_j+n_{j+1})$: its one-excitation eigenvalues are $\pm J_j$, and other sectors contribute zero. Hence, with $J_0=J_N=0$,
+
+$$
+H\ge\sum_j(B-J_{j-1}-J_j)n_j.
+$$
+
+Since $J_j\le\Omega N/4$, each displayed coefficient is positive. The vacuum is the unique zero-energy ground state. Loading the input still requires preparation resources; no finite-temperature guarantee follows.
+
+<a id="proposition-5-1"></a>
+**Proposition 5.1: exact ready cut and return.** At $T=\pi/\Omega$, $S$ is exactly pure-ready for every input. The input is at site $N$ up to a known phase. At $2T$ it returns exactly to $S$, preserving entanglement with an untouched reference.
+
+**Proof.** Excitation number is conserved and the vacuum fixed. In the one-excitation basis $|j\rangle$, the Hamiltonian is $BI+\Omega J_x$ for spin $J=(N-1)/2$. Identify $|j\rangle$ with the normalized symmetric state of $N-1$ auxiliary spins having $j-1$ up spins. Then $J_x$ is half the sum of their $X$ operators. Independent rotations give
+
+<a id="equation-7"></a>
+$$
+c_j(t)=e^{-iBt}\sqrt{\binom{N-1}{j-1}}
+[-i\sin(\Omega t/2)]^{j-1}[\cos(\Omega t/2)]^{N-j}.\tag{7}
+$$
+
+Thus $\alpha|\mathrm{vac}\rangle+\beta|1\rangle$ becomes $\alpha|\mathrm{vac}\rangle+\beta\sum_jc_j(t)|j\rangle$. At $T$ only $c_N$ remains; at $2T$ only $c_1$ remains, with phase $e^{-i2\pi N}(-1)^{N-1}=1$. Linearity extends this to mixed and reference-entangled inputs. In particular the cut state factors as $|0\rangle\langle0|_S\otimes\rho_{RE}(T)$.
+
+The factorization exceeds equality of local statistics. It also identifies an ordinary quantum completion in the environment. No exotic substrate is required. Braunstein–Pati no-hiding [2] is more general about unitary information localization; the present work supplies its timed, resource-counted instance and exact comparison.
+
+<a id="section-5-2"></a>
+### An exact finite-horizon deficit
+
+For binary preparations set
+
+$$
+p(u)=|\cos(\Omega u/2)|^{2N-2},\quad
+\rho_0(u)=|0\rangle\langle0|,\quad
+\rho_1(u)=(1-p(u))|0\rangle\langle0|+p(u)|1\rangle\langle1|.
+$$
+
+Use trace distance $D(\rho,\sigma)=\|\rho-\sigma\|_1/2$. At $s\lt t$, a repair has only the current qubit, independent ready ancillas and one common CPTP map $\mathcal R$. It has no correlated archive or incoming carrier. With $p=p(s)$ and $q=p(t)$, define
+
+$$
+e(p,q)=\inf_{\mathcal R\,\mathrm{CPTP}}\max_{i=0,1}D\bigl(\rho_i(t),\mathcal R(\rho_i(s))\bigr).
+$$
+
+<a id="theorem-5-2"></a>
+**Theorem 5.2: prescribed-source finite-horizon deficit.** For $p,q\in[0,1]$,
+
+<a id="equation-8"></a>
+$$
+e(p,q)=\frac{[q-p]_+}{2-p}.\tag{8}
+$$
+
+**Proof.** Dephase the candidate output. This preserves the diagonal targets and contracts distance. The candidate becomes a stochastic map with excitation probabilities $r_0,r_1\in[0,1]$. Its errors are $r_0$ and $|(1-p)r_0+pr_1-q|$. When $q\le p$, $r_0=0,r_1=q/p$ achieves zero for $p\gt0$; the zero case is immediate. For $q\gt p$, an error bound $e$ implies $r_0\le e,r_1\le1$, hence $e\ge q-p-(1-p)e$. Rearrangement gives the bound. Set $r_0=e,r_1=1$ to attain it by a valid measure-and-prepare channel.
+
+At $p=1/2,q=1$ the error is $1/3$, sharper than the generic half-distance bound $1/4$. At $p=0,q=1$ it is $1/2$. This is an elementary experiment-deficiency problem related to randomization and quantum sufficiency [3].
+
+For $p\gt0$ the density-matrix coordinates are distinct, so an arbitrary numerical function on their image can invert them. Equation (8) excludes physical common CPTP postprocessing, not every mathematical forecast from exact ensemble coordinates. At $p=0\lt q$ the current states coincide, so a common single-valued forecast also fails uniformly across the two conditional future laws. One fixed-prior mixture can still have a correct marginal forecast. Resource insufficiency does not become universal coordinate nonclosure.
+
+<a id="section-5-3"></a>
+### Timing and robust margins
+
+Fix the largest coupling at $g$. For odd $N$,
+
+<a id="equation-9"></a>
+$$
+g=\frac\Omega4\sqrt{N^2-1},\qquad T=\frac{\pi\sqrt{N^2-1}}{4g}.\tag{9}
+$$
+
+The out-and-back time grows linearly in chain length at bounded coupling. Holding $\Omega$ fixed while increasing $N$ increases the strongest coupling; it does not make access arbitrarily fast.
+
+After the ready cut put $t=T+\delta$, $0\le\delta\le T$. The endpoint amplitude, population and binary deficit are
+
+<a id="equation-10"></a>
+$$
+c(\delta)=\sin^{N-1}(\Omega\delta/2),\qquad q(\delta)=c(\delta)^2,\qquad e(0,q(\delta))=q(\delta)/2.\tag{10}
+$$
+
+The phase-corrected entanglement fidelity from the original input, equivalently its encoded environment at $T$, is
+
+<a id="equation-11"></a>
+$$
+F_e(\delta)=\frac{(1+c(\delta))^2}{4}.\tag{11}
+$$
+
+The amplitude-damping Kraus operators are $|0\rangle\langle0|+c|1\rangle\langle1|$ and $\sqrt{1-c^2}|0\rangle\langle1|$; $F_e=\sum_a|\operatorname{Tr}K_a|^2/4$. The known phase enters the calibrated final measurement. This channel is not a channel from the ready endpoint alone.
+
+The classical-memory witness $F_e\gt1/2$ is crossed after
+
+$$
+\delta_{\mathrm{crit}}=\frac2\Omega\arcsin\bigl[(\sqrt2-1)^{1/(N-1)}\bigr].
+$$
+
+This is a witness threshold, not first arrival or first existence of quantum information. The spin model has finite-time tails. Appendix C supplies a separate exact-locality field example.
+
+If actual binary states at $s,t$ differ uniformly from ideal states by at most $\eta_s,\eta_t$, contractivity and two triangle inequalities yield
+
+<a id="equation-12"></a>
+$$
+e_{\mathrm{actual}}(s,t)\ge[e(p,q)-\eta_s-\eta_t]_+.\tag{12}
+$$
+
+For $H'=H+V$ with $\|V\|\le\nu$, Duhamel gives $\|U'(u)-U(u)\|\le u\nu$. Purification then bounds $\eta_u\le\eta_0+u\nu$, so $e_{\mathrm{actual}}\ge[e(p,q)-2\eta_0-(s+t)\nu]_+$. Timing and readout need additional calibrated margins. These conservative sufficient bounds require independent justification, not fitting every error to the same return data.
+
+<a id="figure-1"></a>
+![Five-spin source: endpoint and remote populations across transfer and return, plus the coherent fidelity and local deficit after the ready cut.](/publications/consciousness/new-papers/block-universe/figure-1.png)
+
+**Figure 1.** The prescribed five-spin source retains input globally while local population and coherent-return fidelity vary. The physical-postprocessing deficit follows from the populations. Classical-completion threshold and information location are distinct. These analytic curves were checked against matrix evolution; they are not laboratory observations.

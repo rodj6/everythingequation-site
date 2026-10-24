@@ -152,7 +152,7 @@ const search=json('/consciousness/search.json');
 for(const target of ['/consciousness#what-shadow-theory-holds-fundamental','/consciousness#a0-clarification','/consciousness#experiencing-and-interpretation'])check(search.some(r=>r.url===target&&r.text.length>250), `Search includes substantive statement ${target}`);
 check(search.some(r=>r.url==='/consciousness/ai-alignment#alignment-framing-title'&&r.text.startsWith(quote)), 'Search indexes exact alignment quotation with actual anchor');
 const manifest=json('/consciousness/manifest.json');
-check(manifest.updated==='2026-10-22', 'Programme manifest top-level update date reflects the editorial update without changing publication dates');
+check(/^\d{4}-\d{2}-\d{2}$/.test(manifest.updated ?? '') && Number.isFinite(Date.parse(manifest.updated)) && new Date(manifest.updated).toISOString().slice(0, 10) === manifest.updated && manifest.updated >= '2026-10-22', 'Programme manifest top-level update date retains or extends the editorial update without changing publication dates');
 check(manifest.editorialClarifications?.updated==='2026-10-22'&&manifest.editorialClarifications?.publicationTextPreserved===true, 'Programme manifest declares dated editorial clarification separately from preserved publication');
 for(const key of ['statementUrl','experienceVocabularyUrl','a0NoteUrl']){
   const url=new URL(manifest.editorialClarifications?.[key]||'/missing','https://everythingequation.com');

@@ -1,0 +1,98 @@
+---
+title: "Compatible histories and distributed choices"
+description: "Possible choices must fit together."
+order: 6
+---
+
+**Possible choices must fit together.** Individual alternatives, jointly compatible profiles and executable control are separate achievements. The history-space construction makes those demands explicit. Its finite counting bound and infinite compactness condition explain why a succession of nonempty bundles is insufficient by itself, and why a legal complete profile still needs a realized procedure if it is to support practical choice.
+
+<a id="section-6"></a>
+
+## 6 Compatible histories and distributed choices
+
+A complete deterministic history and a family of histories compatible with a partial description answer different questions. Thyssen’s final construction retains one actual deterministic microhistory while locating agential alternatives in a hypothetical bundle. His earlier pruning construction instead treats multiple microhistories as jointly present before selection; the general conclusion returns to assumptions from that construction ([Thyssen 2020, 156-61, 164](/consciousness/constituted-agency/21-references#ref-thyssen)). The following elementary representation clarifies what either use of a bundle establishes before attributing a power of selection. These are standard compatibility, counting and compactness facts; their application here is not a new theorem about free will.
+
+Let $H_L$ be a nonempty set of complete histories satisfying nominated laws $L$. Let $B\subseteq H_L$ impose any further shared boundary, resource and record constraints that the comparison holds fixed. Assume $B\ne\varnothing$. For each nominated decision region $i$ in an index set $I$, let $A_i:B\to\mathcal A_i$ read its action from a complete history. The action sets $\mathcal A_i$ are declared comparison sets, rather than inferred from which outcomes happen to be available. Define the joint profile map
+
+$$
+A:B\longrightarrow\prod_{i\in I}\mathcal A_i,
+ \qquad A(h)=(A_i(h))_{i\in I},
+$$
+
+and, for a proposed profile $a=(a_i)_{i\in I}$, the feasible history set
+
+$$
+B(a)=\{h\in B:A_i(h)=a_i\text{ for every }i\in I\}
+     =\bigcap_{i\in I}A_i^{-1}(\{a_i\}).
+$$
+
+The profile is legally realizable exactly when $B(a)\ne\varnothing$. This is an all-at-once consistency test. It does not privilege an initial, final or intermediate determining slice, and it does not install a selector outside the history.
+
+<a id="statement-6-1"></a>
+
+**Proposition 6.1** (Independent profile compatibility). Every profile in $\prod_{i\in I}\mathcal A_i$ is legally realizable if and only if $A$ is surjective. If $B$ is finite and $n$ nominated action sets are binary, realizability of every binary profile implies
+
+$$
+2^n\leq |B|.
+$$
+
+More generally, for finitely many finite action sets, $\prod_i|\mathcal A_i|\leq |B|$ whenever every profile is realizable.
+
+*Proof.* The image of $A$ is exactly the set of realizable profiles, proving the first claim. Distinct profiles have disjoint fibres. If all fibres are nonempty, there are at least as many histories as profiles. The finite product has $\prod_i|\mathcal A_i|$ elements, which is $2^n$ in the binary case. ◻
+
+Here independence means the demanding compatibility property that every combination of the nominated choices has a legal completion. It is not probabilistic independence, causal independence, or a general requirement for agency. Shared resources, communication and ordinary commitments can properly restrict joint profiles. Also, $B$ counts legal comparison histories, not the number of histories that are actual. Inserting only the actual history into $B$ would change the comparison rather than establish the absence of agency. For an infinite physical history class the finite bound may have no force. It is a cardinality bound, not a thermodynamic entropy or physical memory law.
+
+<a id="statement-6-2"></a>
+
+**Example 6.2** (Local alternatives need not combine). Take two binary action regions and $B=\{(0,0),(1,1)\}$, with $A_i$ the coordinate maps. Each region separately admits both alternatives, but neither $(0,1)$ nor $(1,0)$ is a legal profile. Even pairwise joint compatibility does not establish compatibility of all choices. For three regions take
+
+$$
+B=\{(0,0,0),(0,1,1),(1,0,1),(1,1,0)\}.
+$$
+
+Every assignment to any two coordinates has a legal completion, while the profiles of odd parity have none. Thus distinguish unary availability, pairwise compatibility and full profile compatibility.
+
+This distinction matters to a distributed “starry sky” of choices. Giving each proposed act a possible-world witness does not ensure that all of the witnessed acts can occur together. Conversely, a failed combination need not show that any individual act lacks control: the combination may violate a shared physical or practical constraint.
+
+<a id="section-6-1"></a>
+
+### 6.1 What pruning does and what infinity does not supply
+
+For decision regions $1,\ldots,k$ and a partial action profile define
+
+$$
+B_k=B\cap\bigcap_{i=1}^k A_i^{-1}(\{a_i\}).
+$$
+
+Then $B_{k+1}\subseteq B_k$. In a Hamiltonian example with microstate $x$ at a reference time and deterministic flow $\phi_t$, a macroaction condition $\sigma(\phi_{t_i}(x))=a_i$ is a constraint of exactly this kind. Thyssen’s typing example transports $\Gamma_{M_t}$ and retains $\phi_1(\Gamma_{M_t})\cap\Gamma_{M_s}$ when the selected outcome is $s$ ([Thyssen 2020, 156-57](/consciousness/constituted-agency/21-references#ref-thyssen)). Liouville’s theorem preserves the volume of the transported set before this restriction. It neither preserves the volume of the restricted set in general nor supplies a physical process that selects that restriction. On an epistemic interpretation the actual state is not physically removed: the represented alternatives are narrowed.
+
+An infinite starting bundle does not alone guarantee indefinite choice or a complete legal limit. Let
+
+$$
+H_{\rm fin}=\{h\in\{0,1\}^{\mathbb N}:h\text{ has finite support}\},
+ \qquad A_i(h)=h_i.
+$$
+
+Every finite collection of requirements $A_i(h)=1$ is feasible: choose a sequence equal to one at those finitely many positions and zero elsewhere. In particular, each $B_k=\{h\in H_{\rm fin}:h_1=\cdots=h_k=1\}$ is infinite and nonempty. Nevertheless,
+
+$$
+\bigcap_{k\geq1}B_k=\varnothing,
+$$
+
+because a sequence satisfying all these requirements would have infinite support. Thus continued feasibility of every finite prefix, even with infinitely many remaining histories at each stage, does not by itself produce one history realizing the whole sequence of constraints.
+
+<a id="statement-6-3"></a>
+
+**Proposition 6.3** (Compact compatibility). Suppose $B$ is a compact topological space and every constraint set $K_i=A_i^{-1}(\{a_i\})$ is closed in $B$. If every finite family of the $K_i$ has nonempty intersection, then $\bigcap_{i\in I}K_i$ is nonempty.
+
+*Proof.* If the intersection were empty, the open complements $B\setminus K_i$ would cover $B$. Compactness would give a finite subcover, whose corresponding closed sets have empty intersection, contrary to the hypothesis. ◻
+
+Continuous action maps into finite discrete action sets give closed constraint sets. This is a sufficient repair, not a claim that all law-history spaces are compact. In the product topology on binary sequences, $H_{\rm fin}$ fails to be closed: the sequences consisting of $k$ initial ones followed by zeros converge to the all-ones sequence, which it excludes. Closing an arbitrary history class can add illegal histories, so compactness must be justified for the nominated physical model. Nor does compactness by itself guarantee two available continuations at each later decision; it guarantees a completion of constraints already assumed finitely compatible. The finite realization bound and these infinite existence conditions therefore do not turn Thyssen’s one-hypersurface freedom heuristic into a count of independent free actions.
+
+<a id="section-6-2"></a>
+
+### 6.2 From a compatible profile to operative choice
+
+Legal profile compatibility, caller ability and ultimate authorship are separate claims. A nonempty fibre establishes a legal history carrying the action profile. Caller ability additionally requires a nominated organization, its admitted acquisition and action routes, sufficient resources and an actual procedure for realizing the relevant contrast. Ultimate authorship asks whether the person authored the enabling and authorizing basis of those capacities. None follows merely from the cardinality of a history bundle. None is refuted merely because the act occupies one complete actual history.
+
+The retained revision-preservation fixed point $W_\infty$ answers a different question: under its finite operational contract, it identifies configurations from which an admitted procedure can continue to install endorsed amendments while preserving a certificate. Its witnesses are executable continuation trees, and its proof uses a finite greatest fixed point. The history-set intersection here has no such operational witnesses. The useful connection is the need to state a continuation/viability condition; the two constructions are not interchangeable, and neither is a new discovery of the other. A constraint account can therefore complement a realized account of inquiry and self-revision, while leaving Thyssen’s additional modal and causal interpretations open to assessment.

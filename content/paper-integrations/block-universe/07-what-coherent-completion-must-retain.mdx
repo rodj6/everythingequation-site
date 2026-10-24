@@ -1,0 +1,113 @@
+---
+title: "What coherent completion must retain"
+description: "A sharp frontier separates classical archives from the coherent resource needed to recover entanglement across a nearly ready cut."
+order: 7
+---
+<a id="section-7"></a>
+## Classical return and coherent return are different demands
+
+**A bit can return through a classical archive. Entanglement asks more of the omitted completion.** At the ready cut prepare reference and subsystem in $|\Phi_d\rangle=d^{-1/2}\sum_{j=0}^{d-1}|j,j\rangle$ using parallel chains for $d=2^n$. In distance formulas $\Phi_d$ denotes the density operator. Keep $R$ inert and inaccessible before output formation; a joint final measurement supplies no earlier reference signal.
+
+An $S$-only update at the exact ready cut outputs $I_R/d\otimes\sigma_S$. Its Bell probability is $1/d^2$, independent of $\sigma$, giving
+
+<a id="equation-18"></a>
+$$
+\inf_\sigma D(\Phi_d,I_R/d\otimes\sigma)=1-\frac1{d^2}.\tag{18}
+$$
+
+The Bell event supplies the lower bound. Choosing $\sigma=I/d$ attains it by direct eigenvalues. For a qubit the distance is $3/4$, rather than the binary task's $1/2$. Different targets require different bounds.
+
+<a id="section-7-1"></a>
+### A sharp readiness/completion frontier
+
+Let $R,S$ each have dimension $d$. At a causal cut, count every later available carrier other than $S$ in $C,Q$. $C$ is genuinely classical: the whole joint state is block diagonal in one fixed $C$ basis. $Q$ has dimension $1\le k\le d$. Later processing is one common unconditional CPTP map on $S,C,Q$, with fresh ancillas initially a fixed tensor-product factor of the entire cut input. No access to $R$, other $R$-correlated input or uncounted coherent reference memory is allowed.
+
+Independently calibrate readiness and final Bell probability:
+
+$$
+\Pr(S=0)=\operatorname{Tr}(P_0\rho)\ge1-\epsilon,\quad P_0=|0\rangle\langle0|_S\otimes I,\quad f=\langle\Phi_d|\rho_{RS}^{\mathrm{out}}|\Phi_d\rangle.
+$$
+
+Readiness is a local probability, not merely a product reduced marginal.
+
+<a id="theorem-7-1"></a>
+**Theorem 7.1: quantum completion across a nearly ready cut.** The sharp resource-class maximum is
+
+<a id="equation-19"></a>
+$$
+B_{k,d}(\epsilon)=
+\begin{cases}
+\left(\sqrt{\frac{k}{d}(1-\epsilon)}+\sqrt{(1-\frac{k}{d})\epsilon}\right)^2,&0\le\epsilon\le1-k/d,\\
+1,&1-k/d\le\epsilon\le1.
+\end{cases}\tag{19}
+$$
+
+Sharpness includes maximally mixed reference marginal and ranges over freely chosen pre-cut instruments and post-cut decoders. It is a benchmark for the counted resources, not an attainment promise for an arbitrary source.
+
+**Proof, exact readiness.** The cut factors as $|0\rangle\langle0|_S\otimes\rho_{RCQ}$. In each classical branch, $RQ$ decomposes into pure states of Schmidt rank at most $k$. Local Kraus operators, fresh ready ancillas and forgetting flags cannot increase that rank bound. A normalized rank-$k$ vector with Schmidt weights $\lambda_j$ has
+
+$$
+|\langle\Phi_d|v\rangle|\le d^{-1/2}\sum_j\sqrt{\lambda_j},\qquad\left(\sum_j\sqrt{\lambda_j}\right)^2\le k.
+$$
+
+Its Bell overlap is at most $k/d$; convexity extends this to mixed outputs. This is the established Schmidt-number witness [18,48] applied across a counted causal cut.
+
+**Proof, approximate readiness.** Purify the cut state to $|\psi\rangle$ and set $p=\langle\psi|P_0|\psi\rangle$. If $p\gt0$, the normalized projection $|\phi\rangle=P_0|\psi\rangle/\sqrt p$ has overlap $\sqrt p$ with $\psi$ and Bell probability $f_0\le a=k/d$ after the same channel. Realize the channel isometrically and the Bell test as projector $M$. Cauchy–Schwarz on $M,I-M$ gives
+
+$$
+\sqrt p\le\sqrt{ff_0}+\sqrt{(1-f)(1-f_0)}.
+$$
+
+With $\theta=\arccos\sqrt f$ and $\theta_0=\arccos\sqrt{f_0}$, $|\theta-\theta_0|\le\arcsin\sqrt\epsilon$. Since $\theta_0\ge\arccos\sqrt a$, for $\epsilon\le1-a$,
+
+$$
+f\le\cos^2(\arccos\sqrt a-\arcsin\sqrt\epsilon)=B_{k,d}(\epsilon).
+$$
+
+For larger $\epsilon$ use $f\le1$. Zero-probability projection and $k=d$ are immediate cases.
+
+**Proof of sharpness.** For $k\lt d$ let $m=\binom dk$ and let classical $C$ label every $k$-subset $A$ of the computational basis. Choose isometry $V_A:\mathbb C^d\to S\otimes Q$ putting the basis in $A$ inside $|0\rangle_S\otimes Q$ and the rest in its orthogonal complement. Such an isometry exists because $\dim(S\otimes Q)=dk\ge d$. Let $D_A$ be diagonal with entries $\sqrt{(1-\epsilon)/k}$ on $A$ and $\sqrt{\epsilon/(d-k)}$ elsewhere, and define
+
+$$
+K_A=\sqrt{d/m}\,V_AD_A.
+$$
+
+Each basis vector belongs to fraction $k/d$ of subsets, so $\sum_AK_A^*K_A=I$. Applied to half of $\Phi_d$, each branch has probability $1/m$, readiness $1-\epsilon$ and Schmidt weights $(1-\epsilon)/k$ on $A$ and $\epsilon/(d-k)$ outside it. Decode by $V_A^*$ on its image, extending trace-preservingly elsewhere. Every branch gives
+
+$$
+f=\frac{[\sqrt{k(1-\epsilon)}+\sqrt{(d-k)\epsilon}]^2}{d}.
+$$
+
+Trace preservation keeps the reference maximally mixed. For larger $\epsilon$, choose $\epsilon'=1-k/d$ to attain one while satisfying the inequality. For $k=d$, store the input in $Q$ while $S$ is ready. This proves sharpness.
+
+For a qubit with classical completion only, $k=1,d=2$,
+
+<a id="equation-20"></a>
+$$
+f\le\frac12+\sqrt{\epsilon(1-\epsilon)},\qquad0\le\epsilon\le\frac12.\tag{20}
+$$
+
+At exact readiness this is the entanglement-breaking benchmark $1/2$ [11]. Readiness $0.99$ permits at most $0.59950$, not near-perfect Bell return. A simpler consequence is $f\le k/d+\sqrt\epsilon$, hence $k\ge\lceil d(f-\sqrt\epsilon)\rceil$ when positive. Use confidence bounds and independent calibration margins, not only point estimates. Postselected success must charge acceptance probability; the theorem concerns unconditional outputs.
+
+The frontier combines known Schmidt-number and purity constraints. In the qubit case its envelope also follows from singlet-fraction, negativity and marginal-purity inequalities [50,51]. The causal-cut formulation identifies their physical meaning: reliable return requires enough coherent completion, not just classical answers.
+
+<a id="figure-3"></a>
+![Sharp permitted Bell-return probability against non-ready probability for coherent dimension ratios one quarter, one half and three quarters; explicit qubit instruments attain the half-ratio curve.](/publications/consciousness/new-papers/block-universe/figure-3.png)
+
+**Figure 3.** $k/d$ counts coherent dimensions outside the nominated subsystem; arbitrary classical flags are allowed. Points check explicit attaining qubit instruments. The frontier describes a resource class, not measured apparatus performance.
+
+<a id="section-7-2"></a>
+### A reduced product state does not locate the coherent resource
+
+Apply a uniformly chosen Pauli $I,X,Y,Z$ to half a Bell pair and retain the classical key. Omitting that key gives $\rho_{RS}=I/4$, with $S=I/2$ having no marginal input dependence. Reading the key and undoing the Pauli recovers the Bell pair perfectly [16]. In this operational model no separate external quantum register is needed: coherent information remains in $S$ together with its classical-key correlations.
+
+This does not contradict no-hiding for a fully purified unitary environment. It shows why an $RS$ product marginal alone cannot locate the quantum resource outside $S$. Pure readiness, or the quantified replacement above, does essential work.
+
+<a id="section-7-3"></a>
+### The discriminating protocol
+
+Prepare an entangled reference input and calibrated chain. On separate identical preparations estimate midpoint readiness and test return without reference access before output. Preserve every outcome. Compare an independently bounded $f$ with (19). At ideal $T$, the chain returns $f=1$; an endpoint-only account gives Bell probability $1/4$, and a purely classical closed completion at most $1/2$. Under the declared quantum operational premises, this requires coherent completion outside the ready endpoint.
+
+Replacing the already ready endpoint at $T$ leaves the ideal global state unchanged. Replacing or decoupling the remote carrying spin can remove the return. These are different proposed interventions on the causal route, not part of the unperturbed Hamiltonian proof. Actual interventions and their calibration could locate the memory mechanism; no experimental result is claimed.
+
+Ordinary environmental quantum memory supplies the successful completion. A full process tensor supplies the multitime laws [19]. The test excludes the declared restricted repair, not every classical mathematical ontology or operational surrogate. Its source-specific content is the common calculation of loss, timing, recovery, approximate readiness and coherent resource requirements.

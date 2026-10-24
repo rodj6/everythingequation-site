@@ -1,0 +1,74 @@
+---
+title: "A finite mechanism for an ordered transition"
+description: "Retention, directed detectors, finite delays and calibration make the temporal construction physically consequential."
+order: 5
+---
+
+<a id="section-5"></a>
+## 5. A finite physical implementation scheme
+
+<a id="section-5-1"></a>
+### 5.1 Order-sensitive local operations
+
+An onset in channel $C$ can load a trace $r_C$. A later $E$ onset samples that trace through a $C$-then-$E$ detector; reversing the order recruits a converse route. Edge detection or refractory logic prevents an onset from counting as its own predecessor. Inputs within a finite coincidence band remain unresolved. Assigning arbitrary identifiers would not establish their temporal order.
+
+One retention component is an RC trace:
+
+<a id="equation-6"></a>
+$$
+\frac{dr}{d\tau}=-\frac{r}{RC},
+\qquad
+r(\Delta\tau)=V_0\exp\!\left(-\frac{\Delta\tau}{RC}\right).
+\tag{6}
+$$
+
+The clock variable $\tau$ is local proper time. Propagation paths are finite, switches take positive duration, and prepared states, power and noise margins are required. These are physical dynamical commitments, not an advancing present added to a table.
+
+For $R=250\,\mathrm{k\Omega}$, $C=1\,\mathrm{\mu F}$, $V_0=1\,\mathrm V$ and threshold $V_{\mathrm{th}}=0.4\,\mathrm V$, the time constant is $RC=0.25\,\mathrm s$. The maximum detectable gap is
+
+<a id="equation-7"></a>
+$$
+\Delta\tau_{\max}=RC\ln(V_0/V_{\mathrm{th}})=0.229073\,\mathrm s.
+\tag{7}
+$$
+
+At 100 ms, the trace is 0.670320 V; at 300 ms, it is 0.301194 V. Allowing each of $R$ and $C$ to vary by $\pm5\%$, and the threshold from 0.38 to 0.42 V, gives a minimum short-gap trace of 0.641970 V and a maximum long-gap trace of 0.336743 V. Both classifications retain a margin. Initial capacitor energy is $CV_0^2/2=0.5\,\mathrm{\mu J}$, which is not the energy requirement of the entire device.
+
+<a id="figure-2"></a>
+![Exponential RC voltage decay from one volt crosses the 0.4 volt threshold at 229.073 milliseconds; the 100 millisecond trace is above threshold and the 300 millisecond trace below.](/publications/consciousness/new-papers/temporal-passage/retention-window.svg)
+
+*Figure 2. The chosen finite trace and threshold establish component margins. They do not set a universal human integration window or constitute a completed order circuit.*
+
+Standard electronic components already implement leakage, integration and finite retention in leaky-integrate-and-fire circuits (Rozenberg et al., 2019). Building the full architecture and integrating its output into a person's interpretation are further claims. Trace survival through 100 ms does not itself establish perceived order: auditory fusion demonstrates the difference. The detector preserves one necessary type of information rather than supplying the entire experience.
+
+<a id="section-5-2"></a>
+### 5.2 Source order and calibrated order
+
+Source separation $\Delta_s$ and delivery delays $\delta_1,\delta_2$ produce arrival separation
+
+<a id="equation-8"></a>
+$$
+\Delta_a=\Delta_s+\delta_2-\delta_1.
+\tag{8}
+$$
+
+Let $C$ occur at 0 ms with 80 ms delay, and $E$ at 50 ms with 10 ms delay. Then $E$ arrives at 60 ms and $C$ at 80 ms. Arrival order is $E$-before-$C$. Learned estimates $\widehat\delta_i$ can instead assign received events the calibrated times $a_i-\widehat\delta_i$ and recover $C$-before-$E$ once both inputs have arrived. Correct calibration is stipulated in this computational example; a real calibration carries uncertainty.
+
+The operation uses received signals and retained estimates, not true source timestamps supplied as an oracle. It receives no future signal early and reverses no cause. Motor-sensory recalibration experiments show that judged order can change after learned delay while physical source order remains fixed (Stetson et al., 2006). A common strictly increasing rescaling cannot reverse the order of the same events. A rate-only account with a fixed order readout is therefore insufficient for that contrast.
+
+<a id="section-5-3"></a>
+### 5.3 Representation, realization and actual use
+
+Five explanatory levels remain distinct. A typed graph represents operations. A finite circuit scheme supports physical admissibility. Enactment requires the relevant operations actually to occur within the person. A report can follow from that activity. Under the constitutive identity, experience is the qualifying complete enactment itself.
+
+A computational record can expose directed order, source modes and optional retrieval without manufacturing a listener. Attaching an order detector does not automatically recruit its state into the person's uptake. That connection is an empirical integration obligation. It is not an unexplained experiential conversion left over after complete enactment.
+
+Nor must the historical representation run in a second time. Under a monotone reparameterization $\tau=\tau(\lambda)$,
+
+<a id="equation-9"></a>
+$$
+\frac{dr}{d\lambda}=\frac{d\tau}{d\lambda}\left(-\frac{r}{RC}\right).
+\tag{9}
+$$
+
+The physical process and dimensionless interval $\Delta\tau/(RC)$ remain the same. Derivatives, indices and intervals express physical relations; they do not independently add a flowing clock. The construction preserves physical dynamics and change.

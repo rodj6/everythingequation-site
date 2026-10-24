@@ -1,0 +1,65 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> shadow-theory-site@1.0.0 test:security-headers
+> node --test scripts/security-headers.test.mjs
+
+✔ script hashes cover exact bytes, deduplicate and exclude external script bodies (4.795969ms)
+✔ production policy prohibits arbitrary inline script and script attributes (0.542439ms)
+Static CSP installed for 3 HTML routes (legacy-next); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (legacy-next); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (local Next output); no files changed.
+✔ postbuild creates route policies, escapes route regex and is idempotent (38.777876ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+✔ postbuild also protects generated Vercel Build Output API routes (33.816774ms)
+✔ postbuild rejects ISR HTML instead of shipping stale allowlists (4.645898ms)
+Static CSP installed for 4 HTML routes (legacy-next); largest policy 409 bytes.
+Built security headers verified for 4 HTML routes (local Next output); no files changed.
+✔ internal error URL policy also permits the 404 template actually served there (17.715372ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+✔ adapter postbuild covers static and prerender fallbacks with legacy HTML directories absent (24.520863ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+✔ adapter static overrides map an empty public path to the homepage (10.127483ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+✔ renamed adapter 404 template supplies fallback hashes for unknown routes and error responses (14.675365ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+✔ adapter verification rejects fallback or exact-route CSP tampering and changed rendered HTML (34.23008ms)
+✔ adapter discovery refuses duplicate public routes and unsafe override or fallback paths (27.866916ms)
+✔ adapter discovery fails closed for mutable prerenders, absent fallbacks and absent homepage (55.92197ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+✔ adapter output remains authoritative over stale legacy HTML and error templates (13.629766ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+✔ adapter verification rejects a competing later CSP or reordered generated policy rules (29.369017ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+✔ adapter verification checks the CSP cached in each prerender response initialHeaders (11.617596ms)
+✔ adapter HTML prerender response headers must be a serializable header object (17.89286ms)
+✔ adapter rejects malformed per-file HTML overrides instead of guessing a public route (22.046086ms)
+✔ adapter routing budget failure leaves routing and cached-header inputs unchanged (8.096634ms)
+Static CSP installed for 3 HTML routes (legacy-next); largest policy 355 bytes.
+✔ local verification rejects an unmarked manifest CSP that could override generated hashes (5.903136ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Built security headers verified for 3 HTML routes (Vercel adapter output); no files changed.
+✔ adapter rebuild rehashes previously generated cached CSP when immutable fallback HTML changes (22.814141ms)
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+Static CSP installed for 3 HTML routes (vercel-build-output); largest policy 355 bytes.
+✔ adapter rebuild refuses a marked relaxed cached policy or an unmarked stale hash policy (16.824868ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 515.632726

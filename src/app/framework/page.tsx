@@ -1,3 +1,4 @@
+import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import PhilosophicalClarification from "@/components/philosophical-clarification";
 import ShadowModelOverview from '@/components/shadow-model-overview';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
@@ -98,6 +99,7 @@ export default async function FrameworkPage() {
           architecture in Randall–Sundrum gravity as the sequence's physical witness.
         </p>
       </section>
+<PaperIntegrationFeature compact ids={["block-universe", "whole-field", "temporal-passage"]}/>
 
       <ShadowModelOverview />
       <PhilosophicalClarification statement="companion"/>

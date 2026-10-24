@@ -25,6 +25,8 @@ const nextConfig = {
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   outputFileTracingRoot: projectRoot,
   poweredByHeader: false,
+  // Reduce peak compilation memory for the complete mathematical editions.
+  experimental: { webpackMemoryOptimizations: true, cpus: 2 },
   // The site uses original static image assets, not the image-optimization API.
   images: { unoptimized: true },
 

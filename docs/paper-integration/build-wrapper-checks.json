@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-24T03:57:07.517Z",
+  "scope": "Actual wrapper run against a temporary Next-CLI stub; no website compilation triggered",
+  "results": [
+    {
+      "name": "default4096",
+      "passed": true,
+      "exit": 0,
+      "observedOptions": "--max-old-space-size=4096",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    },
+    {
+      "name": "explicitabsolute",
+      "passed": true,
+      "exit": 0,
+      "observedOptions": "--max-old-space-size=3072",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    },
+    {
+      "name": "explicitunderscores",
+      "passed": true,
+      "exit": 0,
+      "observedOptions": "--max_old_space_size=3072",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    },
+    {
+      "name": "explicitpercentage",
+      "passed": true,
+      "exit": 0,
+      "observedOptions": "--max-old-space-size-percentage=55",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    },
+    {
+      "name": "unrelatedpreserved",
+      "passed": true,
+      "exit": 0,
+      "observedOptions": "--trace-warnings --max-old-space-size=4096",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    },
+    {
+      "name": "childfailure",
+      "passed": true,
+      "exit": 7,
+      "observedOptions": "--max-old-space-size=4096",
+      "arguments": [
+        "build",
+        "--webpack",
+        "--profile"
+      ]
+    }
+  ],
+  "passed": 6,
+  "failed": 0
+}

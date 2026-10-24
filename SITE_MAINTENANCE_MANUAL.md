@@ -573,3 +573,12 @@ Article introductions and reading guides are in `src/config/quantum-portfolio-gu
 Dense research and monograph contents lists disable automatic route prefetch to avoid downloading unopened chapters. Next/previous navigation retains the standard behavior. The research routes remain statically generated, and complete HTML, MathML and Markdown remain accessible. This reduces speculative browser requests; production ISR cost depends on actual cache behavior and traffic and has not been measured here.
 
 Deploy using the existing project and hosting workflow. No changes to billing, domain configuration or hosting settings are required by this update.
+
+
+## Five-paper reading editions (October 2026)
+
+The complete whole-field, temporal-passage, constituted-agency, block-universe and misleading-AI articles use the chaptered mechanism documented in `ARTICLE_AUTHORING_GUIDE.md`, section 8. The configuration feeds publication listings, search and machine discovery through the established prebuild generator. Each work retains its own DOI, immutable original PDF and full Markdown reading download.
+
+`npm run build` now supplies a default 4096 MiB Node heap when the caller has not supplied a heap limit, retains Webpack, and runs the original prebuild/postbuild lifecycle. Next compilation uses its documented memory optimization and two build workers. These settings accommodate the expanded corpus; they do not skip TypeScript, content generation or CSP installation. Allow sufficient host memory beyond the JavaScript heap.
+
+Use `PAPER_INTEGRATION_VERIFICATION.md` for this integration's actual results. Earlier security and conversion reports describe earlier runs and remain historical evidence. Vercel adapter verification still requires the compatible external adapter installation described in the earlier CSP fix records; the application lockfile has not gained a platform adapter dependency.

@@ -1,0 +1,97 @@
+---
+title: "Direct reciprocal-pair proofs"
+description: "The mutual-core argument in real 1+1 and 3+1 dimensions, its exact invariances and countermodels."
+order: 11
+---
+<a id="section-a"></a>
+## The mathematical implication in full
+
+The proof concerns one fixed relation on real Minkowski events. It neither defines that relation as actuality nor assumes that an observer's indexed access relation is invariant while its observer index is fixed.
+
+<a id="section-a-1"></a>
+### A.1 The mutual core is an additive subgroup
+
+A reciprocal witness and transitivity give $R(p_0,p_0)$. Translation by $p-p_0$ yields $R(p,p)$ for every event, so reflexivity follows. Define
+
+$$
+H=\{v:R(0,v)\land R(v,0)\}.
+$$
+
+Zero belongs to $H$. For $v\in H$, translating its two links by $-v$ gives $-v\in H$. For $v,w\in H$, translation yields $R(v,v+w)$ and $R(v+w,v)$. Compose these with the links between zero and $v$ to obtain both relations between zero and $v+w$. Hence $H$ is an additive subgroup.
+
+Every assumed linear symmetry preserves $H$. Translating the original witness supplies $q_0-p_0\in H\setminus\{0\}$. Closure under arbitrary real scalar multiplication has not been assumed. It must be generated from the actual symmetries.
+
+<a id="section-a-2"></a>
+### A.2 Generation of real 1+1 space
+
+For nonzero $v=(t,x)\in H$, reflection gives $Pv\in H$, and therefore
+
+$$
+v+Pv=(2t,0)\in H,\qquad v-Pv=(0,2x)\in H.
+$$
+
+At least one is a nonzero pure-axis vector. For every $s\in\mathbb R$, choose
+
+$$
+\ell=\frac{s+\sqrt{s^2+4}}2\gt0,\qquad\ell^{-1}=\frac{\sqrt{s^2+4}-s}2.
+$$
+
+Their product is one and $\ell-\ell^{-1}=s$. If $(a,0)\in H$ with $a\ne0$, opposite boosts give
+
+$$
+B_\ell(a,0)-B_{1/\ell}(a,0)=(0,a(\ell-\ell^{-1})).
+$$
+
+Since $s$ is arbitrary, this supplies the entire spatial axis. Fix $\ell=2$, whose boost coefficients are $c=5/4$ and $b=3/4$. Boost $(0,x)$ and subtract the available spatial vector $(0,cx)$; the result $(bx,0)$ spans the temporal axis. Starting instead with a nonzero pure spatial vector reverses the two steps. Add the axes to obtain $H=\mathbb R^2$.
+
+For arbitrary $p,q$, $q-p\in H$ implies $R(0,q-p)$. Translating by $p$ yields $R(p,q)$ and universality. The algebra also works over an ordered field with positive square roots, though the direct formal modules here specialize to the reals.
+
+A nonnull reciprocal displacement can be boosted to a pure axis, removing the need for reflection in that restricted witness class. A null-only witness cannot use that shortcut; the null-line countermodel below shows the role of reflection.
+
+<a id="section-a-3"></a>
+### A.3 Generation of real 3+1 space by proper half-turns
+
+Write $v=(t,x_0,x_1,x_2)$. Let $H_i$ be the spatial half-turn fixing axis $i$ and reversing the other two spatial coordinates. Its determinant is $+1$. Assume translations, transitivity, all positive-parameter boosts along each coordinate axis and these three half-turns preserve $R$. These are proper-orthochronous transformations; full Lorentz invariance is stronger than the package used here.
+
+The subgroup proof supplies nonzero $v\in H$. If $t\ne0$,
+
+$$
+(v+H_0v)+H_1(v+H_0v)=(4t,0,0,0)\in H.
+$$
+
+If $t=0$, choose $i$ with $x_i\ne0$. Opposite axis-$i$ boosts give
+
+$$
+B_{i,2}v-B_{i,1/2}v=(3x_i/2,0,0,0)\in H.
+$$
+
+Thus a nonzero pure temporal vector $ae_t$ is available in either case. Along each axis,
+
+$$
+B_{i,\ell}(ae_t)-B_{i,1/\ell}(ae_t)=a(\ell-\ell^{-1})e_i.
+$$
+
+This spans that whole spatial axis. Boosting one such vector with a fixed nonzero boost and subtracting its spatial component spans time. Finite addition gives $H=\mathbb R^4$, and translation completes universality. Proper half-turns require neither global parity nor dilation, continuity or an assumed real-linear subgroup.
+
+<a id="section-a-4"></a>
+### A.4 Countermodels identify the exact scope
+
+| Omitted premise | Nonuniversal reciprocal relation |
+| --- | --- |
+| Boost invariance | $R(p,q)\Longleftrightarrow p^0=q^0$. |
+| Translation invariance | Equality of Minkowski norm relative to a selected origin, a Lorentz-invariant equivalence. |
+| Transitivity | Equality or spacelike separation; $(1,2)$ and $(1,-2)$ are spacelike but sum to timelike $(2,0)$. |
+| Distinct reciprocal witness | Causal-past order remains transitive and invariant under the stated symmetries without being universal or symmetric. |
+| Reflection in 1+1 | $p^0-p^1=q^0-q^1$, an equivalence by parallel null lines, invariant under translations and boosts. |
+
+The direct implication is not a six-way classification without dilation. For fixed $L\gt0$ in null coordinates,
+
+$$
+R_L(p,q)\Longleftrightarrow p=q\ \text{or}\ u\lt0,\ w\lt0,\ uw\ge L^2,\qquad u=\Delta t+\Delta x,\quad w=\Delta t-\Delta x.
+$$
+
+It is translation/boost/reflection invariant and transitive. For two nonidentity links write positive past-coordinate magnitudes $(a,b),(c,d)$ with $ab,cd\ge L^2$. Their sum has $(a+c)(b+d)\ge ab+cd\ge2L^2$. A fixed active dilation may violate the threshold. The relation lies outside the dilation-based list but has no distinct reciprocal pair and leaves the direct theorem intact.
+
+The classification-based reciprocal module eliminates the five nonuniversal classified cases by their trivial mutual cores. Its stronger invariant structure includes dilation. The two direct real modules instead prove the weaker-premise implications. All three are consistent and have different dependencies. None establishes an actuality interpretation or its witness by kernel checking alone.
+
+The supplied standalone [Reciprocal source](/publications/consciousness/new-papers/block-universe/Reciprocal.lean) is the classification-based module. The matching publication's [complete verification supplement](/publications/consciousness/new-papers/block-universe/verification.zip) also contains `ReciprocalNoDilation.lean`, `ReciprocalThreePlusOne.lean`, their dependencies, exact toolchain pins and axiom audits. Its recorded Lean run is evidence of that archived execution. Independent formal reproduction requires the pinned toolchain and dependencies.

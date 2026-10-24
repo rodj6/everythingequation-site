@@ -1,0 +1,265 @@
+---
+title: "A local, finite realization of the recognition transaction"
+description: "Understanding requires a carrier and a schedule."
+order: 15
+---
+
+**Understanding requires a carrier and a schedule.** The complete recognition transaction is compiled into a 31-bit bank and 1,874 local windows, including paid late ingress. Acquisition, assessment, archived installation and fresh action remain one inspectable physical route. Gate decomposition, finite strength, retention, errors and causal order are developed in full; the construction specifies an implementation contract rather than announcing a manufactured apparatus.
+
+<a id="section-15"></a>
+
+## 15 A local, finite realization of the recognition transaction
+
+The recognition model can be followed through an explicit computation without treating recognition as a disembodied operation. Acquisition writes records, an assessment computes a candidate, an installation changes the active selector, and a fresh case recruits that selector through a physical action route. The construction below supplies a finite spatial and temporal realization of those functional relations. It does not identify a manufactured device that has already passed the required tests. Its contribution is to make those tests and their resource requirements concrete.
+
+<a id="section-15-1"></a>
+
+### 15.1 Bank, interfaces and chronology
+
+Let $Y$ be the task target and let the cue $C$ have the stipulated accuracy $q\gt 1/2$ in the admitted task family. The actual recommendation generator remains
+
+$$
+R=C\oplus bSD,
+$$
+
+where $S$ is the nominated ownership tag, $D$ the relevant context, and $b$ a retained generator coefficient. The coefficient is not directly available to the executive. The active assessment and compensator produce
+
+$$
+T=C\oplus\lambda(R\oplus C),\qquad
+ T'=T\oplus k(T\oplus C).
+$$
+
+The practical self-record $P$ describes an actual actuator coding $J$. In the calibrated domain $P=J$, so the appropriate command is $Y\oplus J$. Actual availability $K$ is protected separately: the output is
+
+$$
+(\mathrm{valid},a)=\bigl(K,\ K(T'\oplus P)\bigr).
+$$
+
+Thus abstention is distinguishable from a valid zero command. Removing the irrelevant ownership override does not remove the body’s action mapping or create an unavailable actuator.
+
+The specified bank has $M=31$ bits. Its fixed generator, task and control registers are
+
+$$
+B,C,D,S,P,K,\lambda,k,\mathrm{commit},\mathrm{read\_open}.
+$$
+
+Here $B$ stores the physical value $b$. Five probe registers hold $c_p,d_p,s_p,r_p,u_p$; three acquisition registers hold $R_0,R_1,\hat b$; three installation registers hold $\omega,n,d_i$; and ten remaining registers hold $R,u,\Delta,T,e,T',w,a,\mathrm{valid},v$. The last $v$ is a report, distinct from the installation. Helper registers start at zero, with $c_p=0,d_p=1,s_p=0$ as the prepared probe references. The full inventory is independently inspectable in the executable implementation.
+
+The executive has the nominated probe and assessment routes, rather than unrestricted inspection of this physical inventory. Two actual generator probes at common $C=0,D=1$ and $S=0,1$ give retained return records $R_0,R_1$ and $\hat b=R_0\oplus R_1$. The `read_open` control gates the physical copying of returns into those records. Its clamp can block acquisition while leaving the actual generator unchanged. In the stated task family, the candidate selector is $\lambda_{\mathrm{new}}=\lambda_{\mathrm{old}}(1-\hat b)$, retaining the current selector on the $\hat b=0$ tie. The circuit implements this nominated assessment. Its physical correctness does not independently establish the family assumptions or the evaluative justification for that assessment.
+
+Fresh $C,D,S,P,K$ arrive after acquisition and installation. Their bank destinations remain ready at zero beforehand. Each is then copied through a named local boundary port from an incoming classical source carrier, which is preserved. The five source bits, the actuator context $J$, the target $Y$ used in scoring, and the source law producing the cue are not included in the 31-bit bank count. Their preparation and availability belong to the declared apparatus and boundary contract.
+
+<a id="section-15-2"></a>
+
+### 15.2 Changing authority while retaining the previous selector
+
+An explicit reversible installation prevents loss of current authority from being confused with destruction of ancestry. Let $\omega,n,d_i$ initially be zero. First copy $\lambda_{\mathrm{old}}$ into $\omega$. Two reversible gates compute
+
+$$
+n=\omega\oplus\omega\hat b=\omega(1-\hat b),
+$$
+
+and two further CNOTs compute $d_i=\omega\oplus n$. A Toffoli controlled by `commit` and $d_i$ then updates $\lambda$. Finally uncompute $d_i$ and $n$ using the unchanged $\omega,\hat b$.
+
+<a id="statement-15-1"></a>
+
+**Proposition 15.1** (Archived installation). On the ready-helper domain, this subroutine returns its helpers to zero, retains $\omega=\lambda_{\mathrm{old}}$, and installs $\lambda=\lambda_{\mathrm{old}}(1-\hat b)$ when `commit`$=1$. When `commit`$=0$, it retains $\lambda=\lambda_{\mathrm{old}}$ while preserving the same acquired record and report.
+
+*Proof.* Before installation, $d_i=\lambda_{\mathrm{old}}\oplus n$. A committed controlled toggle therefore sends $\lambda_{\mathrm{old}}$ to $n$; a clamped toggle leaves it unchanged. Neither operation changes the inputs used to uncompute $d_i,n$. Every elementary gate is reversible on its complete raw register space, including states outside the ready-helper domain. ◻
+
+For $\hat b=1$ and an open commit route, both old selector values lead to $\lambda_{\mathrm{new}}=0$. A reversible implementation must retain their distinction somewhere if all other final records agree. One archive bit attains that conditional requirement. This is an application of the inherited receiver-capacity and archived-policy reasoning ([Rodgers 2026j](/consciousness/constituted-agency/21-references#ref-rodgerscontrol), Theorem 3.1 and Appendix C.4), not a new erasure theorem. Future action can cease to depend on $\omega$ under the declared action grammar while its value remains recoverable. Opening a later archive-read route would change that grammar.
+
+The complete transaction uses 55 logical gates: 23 Toffoli, 30 CNOT and two NOT gates. The fresh generator $R$ remains computed after the authority revision. Acquired description, report, active selector and compensating monitor remain separate physical variables. This permits read, commit and monitor-lapse controls to test different causal claims.
+
+<a id="section-15-3"></a>
+
+### 15.3 Local compilation and its exact count
+
+The compilation methods are inherited reversible-computation and routing methods applied to this transaction. For a finite protocol of $L$ source-disjoint single-target writes on $m$ bits, each using COPY, a constant, or NAND of two distinct sources, $L$ ready history bits suffice for a reversible history lift. Copy the old target to its fresh history bit, clear the target by CNOT from that bit, then compute the new value. COPY and constant writes need at most one additional gate. NAND of two distinct sources needs NOT followed by Toffoli. Thus at most $4L$ NOT/CNOT/Toffoli gates act on $m+L$ bits while retaining the overwritten distinctions. This bound states a finite memory cost, not efficient unlimited reuse of a ready archive.
+
+To make spatial locality explicit, consider a gate with support at $p_1\lt \cdots\lt p_s$ on a path of $M$ carriers, with $s\leq3$. Stable extraction into the first $s$ positions uses
+
+$$
+Q=\sum_{j=1}^{s}\bigl(p_j-(j-1)\bigr)\leq s(M-s)
+$$
+
+adjacent SWAPs. Execute the gate with the original control and target roles, then undo the extraction. This uses $2Q+1$ operations and restores every logical label to its site. The generic history lift consequently has the crude local-span-two bound $4L[1+6(M-1)]$. Neither this bound nor the following exact count is claimed optimal.
+
+Native three-body interactions are unnecessary. Write $X|z\rangle=|z\oplus1\rangle$ for the NOT unitary and $I$ for the identity. Let
+
+$$
+V=\frac{(1+i)I+(1-i)X}{2},\qquad V^2=X.
+$$
+
+A Toffoli with controls $a,b$ and target $t$ is implemented, in temporal order, by
+
+$$
+CV(b,t),\quad\mathrm{CNOT}(a,b),\quad
+ CV^\dagger(b,t),\quad\mathrm{CNOT}(a,b),\quad CV(a,t).
+$$
+
+For fixed basis control values, the target receives the power
+
+$$
+b-(b\oplus a)+a=2ab
+$$
+
+of $V$, while the controls are restored. The resulting target operation is $X^{ab}$. Linearity proves the full unitary, including arbitrary target superpositions. This is the standard controlled-square-root decomposition ([Barenco et al. 1995](/consciousness/constituted-agency/21-references#ref-barenco), Lemma 6.1, arXiv manuscript pp. 14-15); it is also checked here on all eight basis columns with exact Gaussian-rational arithmetic.
+
+The transaction becomes 147 one- or two-site operations: 46 $CV$, 23 $CV^\dagger$, 76 CNOT and two NOT gates. A pair gate at distance $d$ is made adjacent by $d-1$ SWAPs, executed, and restored, costing $2d-1$ windows. The actual compiled word uses 1,839 nearest-neighbor windows. Its simple worst-case bound is $2+145(2M-3)=8,557$ for $M=31$.
+
+Late input acquisition is included explicitly. The fresh destinations $C,D,S,P,K$ occupy sites $1,\ldots,5$. Bring each ready destination to site zero, copy its arriving bit from the neighboring external source carrier, then restore the route. This adds
+
+$$
+\sum_{j=1}^{5}(2j+1)=35
+$$
+
+windows. The complete timed bank protocol therefore has $G=1,874$ local windows, together with five paid source-availability events.
+
+The supplied executable checks all 1,024 combinations of the ten input/control bits, including closed read and commit routes. It checks the full 1,839-window quantum route, and independently the post-audit ingress version, using exact Gaussian-rational sparse amplitudes. Final states agree with the logical transaction, retain the old selector and clean the declared helpers. The separate generic routing check covers 8,466 gate/state cases through six carriers. These executions supplement the decomposition and routing proofs; they do not validate the source semantics.
+
+<a id="section-15-4"></a>
+
+### 15.4 Finite strength, scheduling and retention
+
+The local circuit admits a conditional apparatus realization in the standard unitary framework. Put $\Pi_-=|{-}\rangle\langle{-}|$. For a duration $\tau$, example pulse generators are
+
+$$
+\begin{aligned}
+ H_X&=(\pi\hbar/\tau)\Pi_-,&
+ H_{\mathrm{CNOT}}&=(\pi\hbar/\tau)|1\rangle\langle1|\otimes\Pi_-,\\
+ H_{CV}&=-(\pi\hbar/2\tau)|1\rangle\langle1|\otimes\Pi_-,&
+ H_{CV^\dagger}&=(\pi\hbar/2\tau)|1\rangle\langle1|\otimes\Pi_-,\\
+ H_{\mathrm{SWAP}}&=(\pi\hbar/\tau)\Pi_{\mathrm{antisymmetric}}.
+ 
+\end{aligned}
+$$
+
+Here $\Pi_{\mathrm{antisymmetric}}$ projects onto $(|01\rangle-|10\rangle)/\sqrt2$. Their exponentials give the nominated gates by the two relevant eigenspaces. Every interaction is one-site or adjacent-pair, with norm at most $\pi\hbar/\tau$. Choosing $\pi\hbar/\tau\leq J_{\max}$ gives a finite-strength schedule. This is a resource statement about this construction, not a general quantum speed limit or a heat/work identity.
+
+The pulse matrices alone are insufficient. An actual device must prepare the records, generate and distribute controls, hold archives, supply input carriers and execute the output before its deadline. A fixed calendar prevents data-dependent completion time from becoming an uncharged observation. A simple representation of its gate word uses at most four opcode bits and five site-address bits per window, hence at most $9G=16,866$ ROM bits and an eleven-bit instruction counter. The physical clock, driver state, source tape, readout, actuator and power apparatus remain additional resources. These are upper bounds for one specified control representation, not minimum hardware counts.
+
+Control distribution must also obey its actual delay and jitter limits. The calendar can be preloaded in local drivers or distributed through a paid bus with a sufficient fixed guard interval. With gate duration $\tau$, guard interval $\tau_g$, source waiting $T_{\mathrm{acq}}$, readout $T_{\mathrm{out}}$ and a nominated hold $T_{\mathrm{hold}}$, one conservative calendar is
+
+$$
+T=G(\tau+\tau_g)+T_{\mathrm{acq}}+T_{\mathrm{out}}+T_{\mathrm{hold}}.
+$$
+
+An ideal sequencer is part of an open driven apparatus contract. A closed description must include its loading and retained degrees of freedom. The inherited autonomous-clock endpoint construction does not establish permanent records or these deadline guarantees ([Rodgers 2026j, sec. 13](/consciousness/constituted-agency/21-references#ref-rodgerscontrol)).
+
+Computational-basis inputs permit classical copying by CNOT; a general unknown superposition would become entangled instead. Intermediate $CV$ gates are coherent, so their implementation errors must be controlled with correlated references. The earlier smooth Boolean-cell and finite Gaussian constructions ([Rodgers 2026f, sec. 7](/consciousness/constituted-agency/21-references#ref-rodgersagency) and Appendix B) provide different physical refinement contracts. Their classical well-error constants cannot be reused as bounds on these coherent gates.
+
+<a id="section-15-5"></a>
+
+### 15.5 A whole-transaction error certificate
+
+For states write $D_{\rm tr}(\rho,\sigma)=\tfrac12\|\rho-\sigma\|_1$. Treat an instrument as a channel that retains its classical outcome in the output. Its half-diamond distance from another instrument is
+
+$$
+d_\diamond(\mathcal E,\mathcal F)=\frac12\sup_{R,\rho_{AR}}\|[(\mathcal E-\mathcal F)\otimes\mathrm{id}_R](\rho_{AR})\|_1,
+$$
+
+where the supremum includes finite reference systems and joint density operators. This tests errors on correlated inputs, not only isolated basis preparations. Suppose initial preparation has half-trace error $\eta_{\mathrm{prep}}$. At window $j$, suppose the applicable actual history-conditioned instrument differs from its ideal by at most $\epsilon_j$ in half diamond norm on every history reached by the ideal/actual replacement construction, uniformly over the retained memory and reference inputs. A bound only on actually observed transcripts does not supply this uniform premise. Let additional budgets cover source/port discrepancies, clock/control error, the full finite holding interval and readout, without counting a physical event twice. The inherited hybrid argument gives
+
+<a id="equation-6"></a>
+$$
+\operatorname{TV}(P_{\mathrm{actual}},P_{\mathrm{ideal}})
+ \leq\min\!\left\{1,\eta_{\mathrm{prep}}+
+ \sum_{j=1}^{1874}\epsilon_j+
+ \eta_{\mathrm{port}}+\eta_{\mathrm{clock}}+
+ \eta_{\mathrm{hold}}+\eta_{\mathrm{out}}\right\}.\tag{6}
+$$
+
+Replace the initial state and one complete instrument at a time. Trace distance contracts under the remaining channels, and the uniform diamond bound applies despite retained correlations. Summing the replacement errors and finally reading the transcript proves the displayed bound ([Rodgers 2026j](/consciousness/constituted-agency/21-references#ref-rodgerscontrol), Theorem 13.1). This is an inherited theorem applied to the explicit schedule, not a new noise law. In particular, archive holding is a bound over the nominated interval, rather than an endpoint assertion or indefinite identity claim.
+
+At $q=3/4,b=1$, with independent fair $S,D$, independent of $(Y,C)$ within that fixed class, and $K=1$, the old uncompensated rule has accuracy $5/8$ and the revised rule $3/4$, an ideal gap $1/8$. Complete-arm transcript errors at most $1/32$ each preserve a realized gap of at least $1/16$. No such laboratory error rate is assumed achieved. At fixed fair actual mapping $J$, masking the practical record to $P=0$ instead gives accuracy $1/2$, while setting $P=1-J$ gives $1/4$. Those checks distinguish preserving useful self-information from deleting the self-model.
+
+Locality imposes a further limit. With gates of span at most $r$, a fresh input at distance $d$ cannot affect an output in fewer than $\lceil d/r\rceil$ layers, absent prior source-dependent advice or a bypass. Induction on the backward circuit cone proves this statement; for the adjacent-pair library $r=1$. Recognition changes which available route governs action. It does not make a missing actuator, a memory lifetime or a communication deadline disappear.
+
+The physically relevant achievement is the continuity of the explanation across its stages. A probe produces a retained difference; a specified comparison uses it; the commit operation changes an operative route; and a later input is transformed through that route while practical self-information remains available. Every stage has a finite carrier and a place in the calendar. The external source and controller are external to the nominated bank, not external to reality. Their contributions can be incorporated into a larger causal inventory without introducing another chooser behind the update.
+
+The correspondence remains conditional on the source family, stable generator coefficient, calibrated cue law and actual implementation contracts. The executed circuit therefore demonstrates the proposed functional distinction between representation, compensation and authority revision. It does not establish that a human undergoes the same computation, that this apparatus understands its constituting ground, or that it constitutes a complete experiencing occurrence. Those stronger interpretations require the independently defended semantic, psychological and constitutive premises rather than an additional label on the same gate word.
+
+<a id="section-15-6"></a>
+
+### 15.6 One causal history across different temporal orderings
+
+A physical account of retained understanding need not appoint a universal present at which the entire organization is updated. Its acquisition, assessment, installation and action can instead be located in one causal history. A finite consistency result makes this statement precise. It concerns the nominated physical organization; it assigns no mathematical state space to the unknown constituting ground.
+
+Let $(E,\prec)$ be a finite partially ordered set of operation events. Assume a placement in time-oriented Minkowski spacetime, with finite gate regions, future-directed register transport and actual control routes. The ordering includes the causal dependencies of these routes; genuinely spacelike operations cannot supply one another’s inputs. Existence of such a placement is a premise, rather than a claim that every abstract finite partially ordered set has this realization.
+
+Let the finite physical register space be
+
+$$
+\Sigma=\prod_{r\in\mathcal R}\Sigma_r.
+$$
+
+An event $e$ has support $S_e\subseteq\mathcal R$ and a map $F_e:\Sigma\to\Sigma$ that reads only $S_e$ and leaves every other register unchanged. Support includes controls, clocks or context variables on which the operation actually depends, as well as its targets. Shared register operations are ordered. In particular,
+
+<a id="equation-7"></a>
+$$
+e\parallel f\quad\Longrightarrow\quad S_e\cap S_f=\varnothing,\tag{7}
+$$
+
+where $e\parallel f$ means incomparable. Thus incomparable operations commute. Each event’s record is a fixed function of its label and its local before-and-after values. A physically retained record has a named carrier included in the support, with its subsequent holding and transport specified. A transcript annotation alone is not a retention mechanism.
+
+External values are fixed boundary preparations or enter through named ingress events. An adaptive protocol must first specify its finite conditional operations, or condition on a declared branch. Unlisted external timing or branch information cannot supply an extra dependency.
+
+<a id="statement-15-2"></a>
+
+**Proposition 15.2** (Consistency under causal reordering). Under these premises, any two linear extensions of $\prec$ give the same final register map and the same map from physical event labels to their local records, for every admitted initial state.
+
+*Proof.* Two adjacent incomparable events $e,f$ have disjoint supports. Executing $e$ does not change the values read or recorded by $f$, and conversely. Hence their local records and their joint output state agree in either order. The same prefix and suffix therefore produce the same records and final state after this adjacent swap.
+
+Any two linear extensions are connected by such swaps. To see this, take the first event $f$ of the target extension. Every event before $f$ in the other extension is incomparable with it: a predecessor would contradict the target order, and a successor would contradict the other order. Move $f$ left by adjacent swaps, remove this now-common first event, and apply induction to the remaining finite partially ordered set. Each swap preserves the asserted outputs. ◻
+
+This is the standard adjacent-incomparable-swap argument, applied to the recognition history. The records agree by event identity, not by their positions in a serialized list. Intermediate global register descriptions may differ. Nor does every abstract linear extension have to arise from one inertial frame. Every actual temporal slicing that respects the declared causal history is covered; additional extensions can remain algebraic bookkeeping orders. No slicing is selected as a cosmic now.
+
+<a id="section-15-7"></a>
+
+### 15.7 An exhaustive finite instance.
+
+Two independent CNOT probes copy $X_0=u$ and $X_1=u\oplus b$ into ready return registers $R_0,R_1$. A later local combination computes $h=R_0\oplus R_1=b$. These source values define the admitted return family; the calculation does not independently certify their interpretation. The authority event, with ready archive $\omega=0$, performs
+
+$$
+\omega\leftarrow\omega\oplus\lambda,\qquad
+ \lambda\leftarrow\lambda\oplus j\omega h,
+$$
+
+where $j$ is the commit control. Thus, on the ready domain,
+
+$$
+\omega=\lambda_{\rm old},\qquad
+ \lambda_{\rm new}=\lambda_{\rm old}(1-jb).
+$$
+
+Both raw updates are reversible; their inverse executes them in reverse order. Five preserved incoming source carriers are then copied into ready $C,D,S,P,K$ destinations at an explicit ingress event. The fresh action event reversibly computes
+
+$$
+R=C\oplus bSD,\qquad
+ (\mathrm{valid},a)=\bigl(K,\ K(C\oplus\lambda_{\rm new}bSD\oplus P)\bigr).
+$$
+
+These expressions describe the ready-output domain. The raw operations use XOR writes, so the old distinction is not erased outside that domain.
+
+The six-event order is
+
+$$
+\{p_0,p_1\}\prec x\prec i\prec q\prec a_f,
+$$
+
+with only $p_0,p_1$ incomparable: combination $x$, installation $i$, ingress $q$, and fresh action $a_f$ follow both probes. Event-local before-and-after records are XOR-copied into dedicated ready log bits and never subsequently overwritten. This simplified example uses 22 data bits and 62 explicit log bits; those additional logs are not part of the earlier 31-bit bank count. Its classical basis preparations permit these copies without postulating a copier of unknown quantum states.
+
+The executable enumerates both linear extensions and all $2^9=512$ preparations of $(u,b,\lambda_{\rm old},j,C,D,S,P,K)$, comparing every final data bit and retained event record in 1,024 executions. It also reconstructs each complete initial state by reversing the execution and checks 2,080 raw local gate-input cases. The two probe orders arise in two inertial frames of an explicit placement: in units $c=1$, the event centres are $(t,x)=(0,-3),(0,3),(4,0),(5,0),(6,0),(7,0)$, with $y=z=0$. Finite boxes of temporal and spatial half-width $1/20$ remain mutually spacelike for the probes and strictly timelike ordered for every other pair. This checks causal room for the history, conditional on actual mediators realizing the gates.
+
+The support premise matters. On one shared qutrit target $z$, let $A$ exchange $0,1$ and $B$ exchange $1,2$. From $z=0$, $A$ then $B$ gives $2$, whereas $B$ then $A$ gives $1$. These reversible operations cannot be treated as unordered spacelike gates of this model. The counterexample exposes a missing causal order; it supplies no legitimate superluminal implementation.
+
+<a id="section-15-8"></a>
+
+### 15.8 The earlier routed bank as one particular history.
+
+The 31-bit, 1,874-window apparatus has a specified serial gate word inside a bounded worldtube. It supplies a particular totally ordered case, not a universal foliation of reality. A clock’s proper time along an actual carrier can coordinate its local schedule; this is ordinary physical ordering, not another time in which the block is projected or advanced.
+
+For adjacent sites separated by $\ell$, a required newly available input cannot influence the other site in a duration $\tau\lt \ell/c$. Consequently $\tau\geq\ell/c$ is a necessary gate-signalling condition. It is not a hardware certificate: the nominated two-site Hamiltonian must be implemented through actual local fields or mediators, with controls, preparation, return paths and holding included. A serial causal chain also needs guards adequate for communication between successive gate regions, possibly across the bank; the adjacent-site bound alone does not supply those guards. The finite-strength pulse bound and finite-speed bound are separate requirements. Enlarging durations or guards leaves the compiled gate count unchanged but can increase the holding interval and accumulated implementation error. The earlier holding and conformance budgets must therefore be justified anew for the enlarged physical schedule; they are not certified merely by the unchanged count of 1,874 windows.
+
+Where the gate maps are bijective, a full state at a cut through the complete declared register inventory, including retained incoming source carriers, together with the fixed operation calendar determines earlier and later states. Equivalently, an open bank can be treated conditionally on all external ingress and control values. The cut follows a specified downward-closed set of events and intersects each retained carrier once. A bank-only state cannot determine fresh port values omitted from its inventory. Actual archives can preserve overwritten authority while later action uses its replacement. Reordering compatible spacelike operations does not change that history’s records. Physical retention still requires the declared holding contract over the finite interval. These results establish consistency within a nominated history without a global now or external projector; they prove neither eternalism nor a relativistic quantum-field realization, and they do not assign phenomenology or rule out an irreducible personal initiating power.

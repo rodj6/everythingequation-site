@@ -1,0 +1,85 @@
+---
+title: "Clock magnitudes, constrained algebra and internal time"
+description: "The full physical appendix separates orbital proper-time differences, perceptual judgments and stationary quantum timer constructions."
+order: 12
+---
+
+<a id="appendix-a"></a>
+## Appendix A. Physical clocks, timeless constructions and algebraic checks
+
+<a id="section-a-1"></a>
+### A.1 Proper-time and perceptual magnitudes
+
+For a spherical Earth, circular orbit at $h=400\,\mathrm{km}$ and a rotating equatorial ground clock, the leading weak-field rate comparison is
+
+<a id="equation-13"></a>
+$$
+\frac{d\tau_{\mathrm{orb}}}{dt}-\frac{d\tau_{\mathrm{gnd}}}{dt}
+\simeq
+\frac{GM}{c^2}\left(\frac1R-\frac1{R+h}\right)
++\frac{v_{\mathrm{gnd}}^2-v_{\mathrm{orb}}^2}{2c^2}.
+\tag{13}
+$$
+
+Both rates use the same nominated coordinate time. Take
+
+$$
+\begin{aligned}
+GM&=3.986004418\times10^{14}\,\mathrm{m^3\,s^{-2}},\\
+R&=6378137\,\mathrm m,\qquad c=299792458\,\mathrm{m\,s^{-1}},\\
+\omega&=7.292115\times10^{-5}\,\mathrm{s^{-1}},\\
+v_{\mathrm{gnd}}&=\omega R,\qquad v_{\mathrm{orb}}^2=GM/(R+h).
+\end{aligned}
+$$
+
+The gravitational contribution is $+3.5454\,\mathrm{\mu s/day}$ and the kinematic contribution $-28.1624\,\mathrm{\mu s/day}$. Their net is $-24.6170\,\mathrm{\mu s/day}$: approximately $-8.3698\,\mathrm{ms}$ over 340 days or $-17.095\,\mathrm{ns}$ over 60 seconds. This is an illustrative trajectory calculation, not an orbit reconstruction including tides, maneuvers or endpoint transport.
+
+A stable co-moving biological process with accumulation $N=\nu\tau$, compared with a local watch $T=\tau$, has ratio $N/T=\nu$. Common proper-time scaling alone therefore does not change that local ratio. Biological parameter changes, environmental changes and interpretation require separate explanatory variables.
+
+The requested-minute means of 74.5 and 59.6 seconds differ by 20%, with the flight mean closer to the target. In the hourly analysis, the reported means are $-14.2\%$ and $-19.2\%$; 24.2% and 36.1% are standard deviations despite being used as effects in that discussion (Navarro Morales et al., 2023). The related astronaut study with DOI [10.3389/fphys.2023.1141078](https://doi.org/10.3389/fphys.2023.1141078) has matching cohort and protocol features, so it must not be presumed an independent replication. The clock-scale comparison does not explain these percentage-scale judgments. Neither do telomere and other molecular changes in the NASA Twins Study measure the same quantity.
+
+<a id="section-a-2"></a>
+### A.2 The constraint that keeps a radicand positive
+
+Riggs (2026) develops a rate argument toward an imaginary value. Set $A=1-e_1\gt0$, $B=1-e_2\gt A$, $q=2\Phi/c^2\gt0$ and $\beta=v/c$. That work's equation 12 requires
+
+<a id="equation-14"></a>
+$$
+B^2=A^2(1+q),\qquad B^2-A^2=qA^2.
+\tag{14}
+$$
+
+Its equation 17 radicand consequently becomes
+
+<a id="equation-15"></a>
+$$
+B^2-\frac{\beta^2}{q}(B^2-A^2)
+=A^2(1+q-\beta^2)\gt0,
+\qquad 0\leq\beta\lt1.
+\tag{15}
+$$
+
+The earlier constraint prevents treating these factors as independent. The alleged negative value therefore does not follow, and that step cannot support a no-flow conclusion. The constructive temporal argument above is independent of it.
+
+<a id="section-a-3"></a>
+### A.3 A stationary global construction with an internal timer
+
+Kuypers and Rijavec (2025) develop a different, conditional result. Their stationary global construction contains an internal timer with interaction
+
+<a id="equation-16"></a>
+$$
+H'=H_R\otimes P_{[0,T]}+I\otimes H_C,
+\qquad H_C=-i\partial_t,
+\qquad H_R=\frac{\pi(I-\sigma_x)}{2T},
+\tag{16}
+$$
+
+in units $\hbar=1$. The conditional timer starts in $|0\rangle$, rotates during the nominated interval and ends in $|1\rangle$. During interaction,
+
+$$
+P_1(t)=\sin^2\!\left(\frac{\pi t}{2T}\right).
+$$
+
+The ideal clock and its assumptions remain part of the model. A synchronization endpoint has to match the selected initial timer state. A frozen $|0\rangle$ branch cannot be attached arbitrarily to $e^{-iH_Rt_0}|0\rangle$ without a matching condition.
+
+The construction represents internal clock relations and interaction under its assumptions. It neither establishes that physical time is merely perception nor assigns experience to the timer. Internal temporal structure and an additional fundamental flow remain different questions. Imaginary-coordinate notation, null proper intervals and a proposed Planck step likewise do not independently demonstrate nonphysical time (Šorli et al., 2026).

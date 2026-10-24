@@ -1,3 +1,4 @@
+import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import katex from 'katex';
@@ -39,6 +40,7 @@ export default function AgencyOverview() {
       <div className="c-actions"><Link className="c-button c-button-primary" href={published[0]?.url ?? '#complete-contents'}>Enter the argument ↗</Link><a className="c-button" href="#complete-contents">Every result and proof ↓</a><Link className="c-text-link" href={paper.articleUrl}>An accessible introduction ↗</Link></div>
       <p className="agency-publication">{paper.title}<br/><span>{paper.subtitle}</span><br/>{paper.author} · {paper.authorRole} · 6 October 2026<br/><a href={paper.doiUrl}>doi:{paper.doi} ↗</a></p>
     </header>
+<PaperIntegrationFeature compact ids={["constituted-agency"]}/>
     <section className="agency-contributions" aria-labelledby="agency-contributions-title">
       <div className="c-section-heading"><div><p className="c-eyebrow">The published contribution</p><h2 id="agency-contributions-title">A mechanism.<br/>A limit. An exact advantage.</h2></div></div>
       <div className="agency-result-grid">

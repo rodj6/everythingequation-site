@@ -136,3 +136,12 @@ Before publishing, make every sentence answer one of these questions:
   or expert assessment?
 - Does a `<ResultScope>` block make the theorem domain and exception classes easier
   to use correctly?
+
+
+## 8. Chaptered five-paper articles
+
+The five connected articles added in October 2026 use `src/config/paper-integrations.json` as publication metadata and `content/paper-integrations/<id>/*.mdx` as the authoritative reading text. Each chapter has title, description and order front matter plus explicit stable section and equation anchors. Preserve every substantive argument, proof, example, countermodel and appendix when editing. The published PDFs remain separate immutable downloads.
+
+Run `node scripts/generate-content-maps.mjs` to generate the import inventory, chapter metadata and complete Markdown downloads. Do not edit `src/generated/paper-integrations.ts` or the generated complete Markdown directly. The shared reader is `src/components/integrated-paper-reader.tsx`. Routes remain explicit wrappers for discoverability and static generation.
+
+After an edit, run `node scripts/verify-paper-integration.mjs --source-only --require-coverage`, `npm run typecheck`, `npm run build`, `node scripts/verify-paper-integration.mjs --require-coverage` and `npm run verify:security`. Update the review-only coverage records when the source mapping changes. Mathematical rendering and accessible figures require inspection in the production reader as well.

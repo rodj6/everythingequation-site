@@ -1,0 +1,142 @@
+{
+  "status": "PASS",
+  "executed_utc": "2026-10-24T03:45:15.896047+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8"
+  },
+  "check_count": 16,
+  "checks": [
+    {
+      "script": "numerics/verify_source_uptake_bridge.py",
+      "sha256": "86ba1a852e8c699589602da395afae1f7be549340985a4a9ae9c3f1ca86fbfc4",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.7973860430001878,
+      "result": "source_uptake_bridge_results.json"
+    },
+    {
+      "script": "numerics/verify_adversarial_joint_resources.py",
+      "sha256": "550d84e26b8ebe9f123da72ae479225356e5041b0afb6cebf1de69dca03d41dd",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.07677967000017816,
+      "result": "adversarial_joint_resources_results.json"
+    },
+    {
+      "script": "numerics/verify_scope_constraints.py",
+      "sha256": "838710ff10b67960ca6c6c8c7bb17f9bef09194c3b394b9644a236e67733f2ab",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.7800321510003414,
+      "result": "scope_constraints_results.json"
+    },
+    {
+      "script": "numerics/verify_joint_frontier.py",
+      "sha256": "7bf86964c609e1f971c5a96e9f6426f503c2733f85ee79fd40713b31a8e588a2",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.4094937090003441,
+      "result": "joint_frontier_results.json"
+    },
+    {
+      "script": "numerics/verify_formative_history.py",
+      "sha256": "3e7dab9a9b62cd30c2a48b1c89fe51cb8097d7eb0f2ef48be0f63c1a70319738",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 9.064650077999431,
+      "result": "formative_history_results.json"
+    },
+    {
+      "script": "numerics/verify_temporal_models.py",
+      "sha256": "3dc2e5f129a94482a83402db4bc9d3cfb1009edd575c010da2f52815c4b010f7",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.05755835899981321,
+      "result": "temporal_models_results.json"
+    },
+    {
+      "script": "numerics/verify_prescribed_spin_source.py",
+      "sha256": "764950eda1e0ae322824f351b6373138967a323f470fa0dd8e502f4a078553be",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 3.1558832439995967,
+      "result": "prescribed_spin_source_results.json"
+    },
+    {
+      "script": "numerics/verify_ready_cut_completion.py",
+      "sha256": "35ff7ee573e224c0d083d4eaa116366b2db319867b8419e549d405a776f30c5b",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.24163380899972253,
+      "result": "ready_cut_completion_results.json"
+    },
+    {
+      "script": "numerics/verify_completion_instruments.py",
+      "sha256": "357257a7137da80a8c8dc994120d9334d18c3f6d43982dc46f6c764afc3d6e07",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.15664302000004682,
+      "result": "completion_instruments_results.json"
+    },
+    {
+      "script": "numerics/verify_flagged_completion_bound.py",
+      "sha256": "ff703d200cfb552a776a63095ed290147fc1e1436b304272838d3107090f5d01",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.15967258399996354,
+      "result": "flagged_completion_results.json"
+    },
+    {
+      "script": "numerics/verify_reciprocal_geometry.py",
+      "sha256": "1e47f8000781e86616084f06ca9d1373df202c36014ec9dc1d500eb8c3de8767",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.03293227699941781,
+      "result": "reciprocal_geometry_results.json"
+    },
+    {
+      "script": "numerics/verify_controlled_history.py",
+      "sha256": "26a8d82dec8b2e8764bf4f97eedb31fb78028a7bc4847615950f232ddfb9c5ec",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.2256099770002038,
+      "result": "controlled_history_results.json"
+    },
+    {
+      "script": "numerics/verify_controlled_pulses.py",
+      "sha256": "4bfece97a684ff390e705bdf182aba681cb79ba0904dec1cc739a50f3f02d2c2",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.25109603100008826,
+      "result": "controlled_pulses_results.json"
+    },
+    {
+      "script": "numerics/verify_necessary_only_admission.py",
+      "sha256": "f1fc5f29d96c2fbff2e21711a61eb01fcfd2a916f8365f8a3f828f4f54c264b3",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.08005992600010359,
+      "result": "necessary_only_admission_results.json"
+    },
+    {
+      "script": "numerics/verify_quantum_retrieval.py",
+      "sha256": "f0fb29125631f1d9dfb34d635dc2fb6de1c84e557668ec6d1d3e76200482b3fc",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.2887910669996927,
+      "result": "quantum_retrieval_results.json"
+    },
+    {
+      "script": "numerics/verify_gaussian_discrimination.py",
+      "sha256": "e862735ac565a73b0823d643cb9bb376c2243398cb291e569e99f18e86db0a56",
+      "status": "PASS",
+      "exit_code": 0,
+      "seconds": 0.4537843630005227,
+      "result": "gaussian_discrimination_results.json"
+    }
+  ],
+  "scope": "Constructed numerical corroboration, not experimental or experiential certification"
+}

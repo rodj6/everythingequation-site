@@ -1,0 +1,88 @@
+{
+  "checkedAt": "2026-10-24T04:17:16.818Z",
+  "finalDeliveredContent": true,
+  "baselineCommit": "b01907c160c0b19d3b847cbb3f81ff43e19782e8",
+  "sourceChecks": {
+    "passed": 3120,
+    "total": 3120,
+    "failures": []
+  },
+  "builtChecks": {
+    "passed": 9873,
+    "total": 9873,
+    "failures": []
+  },
+  "readingPages": 69,
+  "mathematicalExpressions": 2019,
+  "sourceProseFragments": 1678,
+  "tables": 16,
+  "figures": 6,
+  "localTargets": 652,
+  "coverageRecords": 280,
+  "publications": [
+    {
+      "id": "whole-field",
+      "route": "/consciousness/whole-field",
+      "chapters": 6,
+      "doi": "10.5281/zenodo.23608069",
+      "mathExpressions": 110,
+      "sourceProseFragments": 131,
+      "coverageRecords": 19
+    },
+    {
+      "id": "temporal-passage",
+      "route": "/consciousness/temporal-passage",
+      "chapters": 15,
+      "doi": "10.5281/zenodo.23591626",
+      "mathExpressions": 187,
+      "sourceProseFragments": 238,
+      "coverageRecords": 39
+    },
+    {
+      "id": "constituted-agency",
+      "route": "/consciousness/constituted-agency",
+      "chapters": 21,
+      "doi": "10.5281/zenodo.23581587",
+      "mathExpressions": 1036,
+      "sourceProseFragments": 751,
+      "coverageRecords": 98
+    },
+    {
+      "id": "block-universe",
+      "route": "/consciousness/block-universe",
+      "chapters": 14,
+      "doi": "10.5281/zenodo.23604713",
+      "mathExpressions": 657,
+      "sourceProseFragments": 325,
+      "coverageRecords": 54
+    },
+    {
+      "id": "misleading-ai",
+      "route": "/consciousness/ai-alignment/misleading-ai",
+      "chapters": 13,
+      "doi": "10.5281/zenodo.23582387",
+      "mathExpressions": 29,
+      "sourceProseFragments": 233,
+      "coverageRecords": 70
+    }
+  ],
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exitCode": 0
+  },
+  "builtSecurity": {
+    "command": "npm run verify:security",
+    "exitCode": 0,
+    "htmlDocuments": 661,
+    "maximumPolicyBytes": 1813,
+    "layout": "legacy-next",
+    "readOnly": true
+  },
+  "priorSameTaskTests": {
+    "cspRegressions": 21,
+    "metadataFixtures": 7,
+    "editorialAcceptanceChecks": 100
+  },
+  "browserAndHttpChecks": "Outside this artifact check; consult separate lead reports for actual execution status.",
+  "productionDeploymentVerified": false
+}

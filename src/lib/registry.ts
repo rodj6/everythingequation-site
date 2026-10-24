@@ -1,3 +1,4 @@
+import {paperIntegrations} from '@/config/paper-integrations';
 import {continuityNote} from '@/lib/continuity-note';
 import {relationalAwareness} from '@/lib/relational-awareness';
 /**
@@ -185,6 +186,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const developmental = slug === development.paperSlug ? development : undefined;
     const agential = slug === agency.paperSlug ? agency : undefined;
     const relational = slug === relationalAwareness.paperSlug ? relationalAwareness : undefined;
+    const integrated = paperIntegrations.find(p=>p.paperSlug===slug);
     const continuity = slug === continuityNote.paperSlug ? continuityNote : undefined;
     const reflective = slug === alignment.paperSlug ? alignment : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
@@ -192,7 +194,9 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (continuity) {
+    if (integrated) {
+      metadata={id:integrated.doi,doi:integrated.doi,title:integrated.title,creators:[integrated.author],published:integrated.date,files:[{filename:'Original publication PDF',url:integrated.pdfUrl},{filename:'Complete Markdown',url:integrated.markdownUrl}]};
+    } else if (continuity) {
       metadata={id:continuity.doi,doi:continuity.doi,title:continuity.title,creators:[continuity.author],published:continuity.date,files:[{filename:"Research note PDF",url:continuity.pdfUrl}]};
     } else if (relational) {
       metadata = {id:relational.doi,doi:relational.doi,title:relational.fullTitle,creators:[relational.author],published:relational.date,files:[{filename:'Main paper PDF',url:relational.pdfUrl},{filename:'Technical supplement PDF',url:relational.supplementPdfUrl}]};
@@ -238,8 +242,8 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       }
     }
 
-    const doi: string | undefined = research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
-    const title: string | undefined = research?.title ?? publication?.title ?? raw.title ?? metadata?.title ?? undefined;
+    const doi: string | undefined = integrated?.doi ?? research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
+    const title: string | undefined = integrated?.title ?? research?.title ?? publication?.title ?? raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
       raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'superseded'
         ? raw.category
@@ -258,12 +262,12 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       summary: raw.summary,
       version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? `Version ${publication.version}` : raw.version,
       date: research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
-      webUrl: research?.url ?? publication?.webUrl ?? raw.webUrl,
-      pdfUrl: research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
+      webUrl: integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
+      pdfUrl: integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
-      markdownUrl: research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity ? 'consciousness' : undefined,
+      markdownUrl: integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
+      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

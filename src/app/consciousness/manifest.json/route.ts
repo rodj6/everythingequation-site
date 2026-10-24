@@ -1,3 +1,4 @@
+import {paperIntegrations,integratedManifest} from '@/lib/paper-integrations';
 import {continuityManifest} from '@/lib/continuity-note';
 import {relationalManifest} from '@/lib/relational-awareness';
 import { agencyManifest } from '@/lib/agency';
@@ -12,10 +13,11 @@ export function GET() {
   const monograph = consciousnessManifest();
   return Response.json({
     ...monograph,
-    schemaVersion: 7,
-    updated: "2026-10-22",
-    publicationCount: 9,
+    schemaVersion: 8,
+    updated: "2026-10-23",
+    publicationCount: 14,
     researchNoteCount: 1,
+    integratedPapers:paperIntegrations.map(p=>integratedManifest(p.id)),
     researchNotes: [continuityManifest()],
     investigationCount: 7,
     relationalAwareness: relationalManifest(),

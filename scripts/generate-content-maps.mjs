@@ -1,3 +1,4 @@
+import { generatePaperIntegrations } from './generate-paper-integrations.mjs';
 /**
  * PREBUILD CONTENT MAP GENERATOR
  *
@@ -188,6 +189,7 @@ ${imports.join(',\n')}
 }
 
 async function main() {
+  await generatePaperIntegrations();
   // Consciousness is maintained by its source converter and editorial inventory,
   // imported directly by src/lib/consciousness.ts. Never reconstruct its current
   // programme from historical manual notes or overwrite this inventory here.

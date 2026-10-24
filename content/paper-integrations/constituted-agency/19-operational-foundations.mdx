@@ -1,0 +1,178 @@
+---
+title: "Retained operational foundations"
+description: "The operational foundation remains available in full."
+order: 19
+---
+
+**The operational foundation remains available in full.** These results distinguish task-compatible action from source reconstruction, retained information from current authority, and executable inquiry from a bare family of alternatives. Their exact assumptions matter to the recognition argument, so the control, capacity, calibration, closure, noisy-inquiry and revisability results are developed here with their proofs.
+
+<a id="section-a"></a>
+
+## A Retained operational foundations
+
+The following results retain the first draft’s useful control and developmental machinery. They are inherited theorems, standard specializations or previously constructed examples, rather than discoveries of the present revision. Their purpose is to make the positive account independently inspectable: a constituted organization can acquire information, regulate a plant, assess a rule and retain an operative consequence. None of these results alone establishes phenomenal presence, ultimate self-authorship or moral authority.
+
+<a id="section-a-1"></a>
+
+### A.1 Observation, task compatibility and control
+
+Let $\Theta,H,A$ be nonempty finite source, record and action sets. An observation channel $Q(h\mid\theta)$ is fixed for the experiment. Let $\ell_\theta(a)\geq0$ be regret, with $\min_a\ell_\theta(a)=0$, and let a policy $\pi(a\mid h)$ have access only to the record. Define
+
+<a id="equation-8"></a>
+$$
+R(Q,\ell)=\min_\pi\max_\theta
+ \sum_{h,a}Q(h\mid\theta)\pi(a\mid h)\ell_\theta(a).\tag{8}
+$$
+
+If actions change the observation law, that active-sensing process must first be included in the policy tree. It cannot silently be treated as this fixed channel.
+
+<a id="statement-a-1"></a>
+
+**Proposition A.1** (Inherited task-compatibility criterion). $R(Q,\ell)=0$ exactly when every possible record $h$ has
+
+$$
+\bigcap_{\theta:Q(h\mid\theta)\gt 0}
+ \mathop{\rm argmin}_{a\in A}\ell_\theta(a)\ne\varnothing.
+$$
+
+Moreover
+
+$$
+R(Q,\ell)=\max_{\lambda\in\Delta(\Theta)}
+ \sum_h\min_a\sum_\theta\lambda_\theta Q(h\mid\theta)\ell_\theta(a).
+$$
+
+*Proof.* The finite-dimensional policy space is a compact product of simplexes. Finite minimax applied to its bilinear risk against $\lambda$ gives the displayed dual; for fixed $\lambda$, minimization separates over records. A common optimal action at each record makes every risk zero. Conversely, at a zero-risk optimum every nonnegative term $Q(h\mid\theta)\pi(a\mid h)\ell_\theta(a)$ vanishes. Every action with positive policy mass at $h$ is therefore optimal for every compatible source; at least one such action exists. ◻
+
+This is Theorem 2.2 of Rodgers ([2026j](/consciousness/constituted-agency/21-references#ref-rodgerscontrol)). Reconstructing the entire source, recovering a target and selecting a common optimal action are different demands. Pairwise compatibility is insufficient: with one record and loss matrix $I_3$, each pair of rows shares a zero-loss action but the three rows do not. The minimax risk is $1/3$, attained by uniform randomization. Garbling a record cannot improve the risk with actuators and resources held fixed, because every garbled policy can be simulated from the original record.
+
+A blind reversible SWAP, $(x,0)\mapsto(0,x)$, regulates an unknown plant while retaining its old value in a receiver. Conversely, exact knowledge of $x$ cannot reset a nonzero plant if identity is the only actuator. Lossy access consequently does not imply absent control, and complete knowledge does not supply a missing actuator.
+
+<a id="section-a-2"></a>
+
+### A.2 Reversible retention and learned regulation
+
+Let $x\in X$ have prior $\mu$, and let a nondisturbing retained record have law $Q(h\mid x)$. A receiver starts in one ready state and has $D$ available final states; all other scratch must be restored. The target plant set has size $g$. Admit all record-conditioned permutations, preserving $h$.
+
+<a id="statement-a-2"></a>
+
+**Proposition A.2** (Inherited receiver capacity). The exact maximum target probability is
+
+$$
+p^*=\sum_h\operatorname{Top}_{gD}
+       \bigl((\mu(x)Q(h\mid x))_{x\in X}\bigr),
+$$
+
+where $\operatorname{Top}_s$ sums the $s$ largest entries, or all entries if fewer are present.
+
+*Proof.* For fixed $h$, distinct ready inputs require distinct outputs, and only $gD$ outputs place the plant in the target. Their total input weight is at most the largest $gD$ weights. Map those inputs injectively to target outputs and extend the finite partial injection to a permutation of the full register space. Repeating for each unchanged record attains the sum. ◻
+
+This is the finite counting theorem in Rodgers ([2026j](/consciousness/constituted-agency/21-references#ref-rodgerscontrol), Theorem 3.1), not a thermodynamic or efficient-synthesis law. Its record premise is essential: an exact bit record $h=x$ allows $(x,h)\mapsto(x\oplus h,h)$ to reset with $D=1$. The displaced distinction remains in $h$; a blind-capacity bound cannot be applied as though it were absent.
+
+The first draft’s calibration example makes acquisition consequential. Let $y=Ax$ on $\mathbb F_2^2$, with independent uniform $x$ and uniform unknown $A\in\operatorname{GL}(2,2)$. Retain labeled calibration images, then one immutable live reading $y$. The actuator only translates $x\mapsto x\oplus u$, with $u$ computed from admitted records; no additional source-sensitive read, advice or live receiver SWAP is available.
+
+<a id="statement-a-3"></a>
+
+**Proposition A.3** (Preserved calibration example). The optimal average reset probabilities after zero, one and two labeled basis probes are respectively $1/2,3/4,1$.
+
+*Proof.* With no probe, $y=0$ identifies $x=0$ with probability $1/4$. Every nonzero reading leaves the three nonzero sources equally likely, giving optimum $1/4+(3/4)(1/3)=1/2$. After learning $Ae_1=v$, readings $0,v$ identify their sources and account for half the inputs. Each other reading leaves two equally likely sources, giving $1/2+(1/2)(1/2)=3/4$. Both basis images determine $A$; compute $u=A^{-1}y=x$ and translate. ◻
+
+Because $A,y$ remain retained, temporary control scratch can be uncomputed while the old source distinction survives in the reading. The example is an application of the private monograph’s orbit-calibration methods. It counts probe access and success, not globally optimal memory, gate count or physical acquisition time.
+
+<a id="section-a-3"></a>
+
+### A.3 When an organized description supports its own transitions
+
+For a finite instrument $K^u(x;r,y)$, normalized jointly over record $r$ and successor $y$, a surjection $\phi:X\to Z$ supports an exact projected joint record/macrostate instrument for all preparations if and only if
+
+<a id="equation-9"></a>
+$$
+\sum_{y:\phi(y)=z'}K^u(x;r,y)
+ \quad\text{is constant on every fibre of }\phi
+ \quad\text{for each }u,r,z'.\tag{9}
+$$
+
+Preparing point masses proves necessity; the common row defines the quotient and induction proves sufficiency. This marked controlled-lumpability condition is used in Rodgers ([2026i](/consciousness/constituted-agency/21-references#ref-rodgersboundary)). Agreement of output marginals alone need not preserve record/successor correlations required by later adaptive action.
+
+For deterministic $F_u$, statewise closure requires $\phi F_u$ constant on fibres; every resulting quotient row is a Dirac measure. This does not forbid stochastic predictions from incomplete preparations. With $F$ exchanging $x_2,x_3$ and fixing $x_1$, and $\phi(x_1)=\phi(x_2)=0$, $\phi(x_3)=1$, a uniform lift of $0$ gives next-macro probabilities $(1/2,1/2)$ but returns to $0$ certainly after two steps. Independently relifting after each step would instead predict two-step probability $3/4$. The one-step lift is not statewise autonomous closure.
+
+<a id="section-a-4"></a>
+
+### A.4 Evaluative revision and finite inquiry
+
+The inherited charter writes $\chi=(q_{01},q_{10},d)$, with $f_\chi(0,0)=0$, $f_\chi(1,1)=1$ and mixed-case outputs $q_{01},q_{10}$. The bit $d$ determines read order. Put $q=(q_{01},q_{10})$ and $h=(h_0,h_1)$. A retained record $z=(a,b,s,h_0,h_1)$ supplies
+
+$$
+L_z(q)=\mathbf1\{q_{01}\ne a\}+\mathbf1\{q_{10}\ne b\}
+       +2s\mathbf1\{q_{01}\ne q_{10}\}.
+$$
+
+For a case $e$, execution reads $e_d$ first and stops only when both completions of the unread consideration give the same output; otherwise it reads the second bit. Let $r(\chi,e)\in\{1,2\}$ count those reads. The eight-charter scan minimizes the lexicographic key
+
+$$
+\bigl(L_z(q),\mathbf1\{q\ne q^{\rm old}\},r(\chi,h),
+ \mathbf1\{d\ne d^{\rm old}\},q_{01},q_{10},d\bigr).
+$$
+
+It therefore retains an equally good current conditional rule before optimizing retained-case read cost. One past case supplies no generalization guarantee for an unknown future distribution. The invariant that the saved candidate has the smallest examined key proves optimality. Installation leaves the ordinary action register untouched; a changed mixed-case bit changes later behavior on a fresh separating case. These are comparative commitments, not a derivation of moral value ([Rodgers 2026f, sec. 3](/consciousness/constituted-agency/21-references#ref-rodgersagency)).
+
+<a id="statement-a-4"></a>
+
+**Proposition A.4** (Inherited information and endorsement bound). Suppose two contexts endorse disjoint amendment sets $A_0,A_1$. Inquiry laws $H_i$ produce installed laws $P_i=H_iK$ through one common downstream kernel. For $\epsilon_i=P_i(A_i^c)$,
+
+$$
+\max(0,1-\epsilon_0-\epsilon_1)
+ \leq\operatorname{TV}(P_0,P_1)
+ \leq\operatorname{TV}(H_0,H_1).
+$$
+
+*Proof.* $P_0(A_1)\leq\epsilon_0$ and $P_1(A_1)\geq1-\epsilon_1$ give the lower bound by testing $A_1$. A common stochastic channel contracts total variation, giving the upper bound. ◻
+
+The common-kernel premise excludes a free context bypass. Read and installation cuts test mediation, but not endorsement: installing the opposite of a read bit can have the same intact/cut contrast while systematically violating the declared commitment.
+
+For conditionally independent reads $Y_j=z\oplus N_j$, $N_j\sim\operatorname{Bernoulli}(\nu)$, $0\lt \nu\lt 1/2$, with no advice or bypass, the minimum worst-case error of a definite binary installation within $n\geq1$ reads is
+
+<a id="equation-10"></a>
+$$
+R_n(\nu)=\sum_{k\gt n/2}\binom nk\nu^k(1-\nu)^{n-k}
+ +\frac{\mathbf1\{n\text{ even}\}}2\binom n{n/2}
+ [\nu(1-\nu)]^{n/2}.\tag{10}
+$$
+
+Equal-prior likelihood testing gives majority’s Bayes lower bound; observing all $n$ reads can simulate any stopping policy. Odd majority has the same error in both contexts, attaining minimax. Binomial expansion gives $R_{2k}=R_{2k-1}$, so the preceding odd majority attains even caps. At $\nu=1/4,n=3$, error is $5/32$ and the fresh-probe contrast is $11/16$ ([Rodgers 2026f](/consciousness/constituted-agency/21-references#ref-rodgersagency), Theorem 5.2). Shared errors can remove the repetition gain; finite common positive-support reads cannot provide zero error for disjoint endorsements.
+
+<a id="section-a-5"></a>
+
+### A.5 Preserving revisability and retaining an earlier relation
+
+Let $G$ be a finite configuration set satisfying a fixed local audit certificate. Let $N(p,z)$ be the amendments endorsed in retained context $z$. After transcript $h$, let $Z_p(h)$ contain every compatible context. A zero-error definite installation into $X$ must have executable output support inside
+
+$$
+\bigcap_{z\in Z_p(h)}[N(p,z)\cap X].
+$$
+
+Positive output mass outside that intersection produces error in a compatible context; an executable supported kernel is sufficient. Let $C_B(p,X)$ mean that the installed dispatcher can execute a charged bounded query/installation tree satisfying this condition at every leaf. With stable contexts during audits, exact finite operational semantics, all relevant resources in state and a policy class closed under continuation composition, put
+
+<a id="equation-11"></a>
+$$
+W_0=G,\qquad W_{j+1}=\{p\in W_j:C_B(p,W_j)\},\qquad
+ W_\infty=\bigcap_jW_j.\tag{11}
+$$
+
+This is exactly the set from which some admitted procedure preserves the certificate for every compatible sequence of future audit contexts ([Rodgers 2026f](/consciousness/constituted-agency/21-references#ref-rodgersagency), Theorem 4.2). At the finite fixed point, attaining trees return into the set, proving sufficiency by induction. Any set $Y$ supporting the guarantee must have first-audit trees returning into $Y$, hence lies in every $W_j$ by induction. Stabilization takes at most $|G|$ strict removals. Finite lifetime fuel must be modeled; a replenished per-audit budget is a separate assumption. The guarantee does not require every possible amendment path to preserve capacity, or make preserved auditability necessary for every agentic commitment.
+
+Finally, the inherited two-register update $m'=z$, $z'=m\oplus u$ retains an earlier parity $\theta$ through installation $(m,z)=(0,\theta)$. Inputs $0,q$ give $(0,\theta\oplus q)$ after two ticks. The first two zero-input records distinguish all four states. Replacing $z$ initially by a fixed $\theta$-independent value destroys that route only if every other accessible state and future input is independent of $\theta$ and no displaced-value archive is available. Under those premises fair-$\theta$ recovery is bounded by $1/2$; restoring the register rescues exact performance ([Rodgers 2026k, sec. 10](/consciousness/constituted-agency/21-references#ref-rodgersdevelopment)). Static installation of the same parity also succeeds. The earlier parity-to-charter teaching convention is therefore an illustration of retention and rule use, not evidence that a learner recognized its own constitution or that live dialogue has an absolute advantage over sufficient-state transfer.
+
+<a id="section-a-6"></a>
+
+### A.6 Present causal authority and historical evidence
+
+<a id="statement-a-5"></a>
+
+**Lemma A.5** (Inherited boundary-law limit). If two histories induce the same complete present sufficient-state law, the same future boundary law conditional on that state, the same controlled joint record/successor instruments, and the same admitted operational/intervention grammar, every subsequent finite adaptive test has the same transcript law under those histories.
+
+*Proof.* The initial laws agree. Conditional on corresponding histories, a common testing policy chooses the same operation and the two models use the same joint record/successor kernel. Multiplication and summation preserve the joint history/state law. Induction reaches the finite stopping horizon. ◻
+
+This is the public agency paper’s Proposition 8.1. It is an identifiability limit, not a denial that acquisition history matters. Protected longitudinal records, an accessible archive or a changed boundary law change the premises. Different global reversible histories need not yield the same complete global state merely because their current executive boundaries agree. An old policy can instead be swapped out of the active register and archived while a new policy controls future action. Preserved ancestry, executive accessibility and current causal authority are distinct. The operation does not create the new policy or its author independently of their constitution. Recorded audit-mediated adoption also leaves evidence-supply questions open: a manipulator can preserve internal revisability while controlling the information presented to it.
+
+These preserved results are supported by their proofs and the portable first-draft verification baseline. The companion record distinguishes those earlier executions from the new recognition and implementation calculations performed for this revision.

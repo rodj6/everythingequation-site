@@ -1,0 +1,48 @@
+{
+  "verifiedAt": "2026-10-24T04:18:36.863Z",
+  "nextVersion": "16.4.2",
+  "adapterVersion": "24.0.0",
+  "nodeVersion": "v24.19.0",
+  "buildExitCode": 0,
+  "buildMemory": "4 GiB V8 maximum; two static workers",
+  "documents": 660,
+  "htmlLayout": "vercel-build-output",
+  "buildOutputPatched": true,
+  "kinds": {
+    "prerender": 658,
+    "static": 2
+  },
+  "maximumPolicyBytes": 1813,
+  "routingRules": 713,
+  "prerenderRoutes": 683,
+  "errorPages": [
+    "/404",
+    "/500"
+  ],
+  "errorHashUnionCount": 4,
+  "globalFallbackCoversErrorUnion": true,
+  "scriptPolicyUnsafeInline": false,
+  "scriptPolicyUnsafeEval": false,
+  "artifactIntegration": {
+    "checks": 9873,
+    "failures": [],
+    "readingPages": 69,
+    "mathematicalExpressions": 2019,
+    "sourcePublicationFiles": 480
+  },
+  "buildLogCapture": "Complete final adapter build output retained, including onBuildComplete and npm postbuild.",
+  "firstAttempt": "An earlier eight-worker attempt was terminated by SIGKILL during static generation; its separate log is retained. Final two-worker builds passed.",
+  "temporaryDevScript": "The final adapter source copy contained the normal dev script and matched final production source inputs. No preview launcher was part of this build.",
+  "newPaperReadingPages": 69,
+  "newPaperHubs": 5,
+  "newPaperReadingRoutesVerified": 74,
+  "sourceInputsCompared": 799,
+  "sourceDifferences": [],
+  "adapterOutputRoot": ".next/output",
+  "configurationSource": "Real @vercel/next onBuildComplete output; config.json routing policies and HTML prerender initialHeaders independently verified.",
+  "verifiedRoutePolicyCount": 660,
+  "cachedHtmlPrerenderPolicies": 658,
+  "sourceCoverageRows": 280,
+  "buildInvocation": "NEXT_ADAPTER_PATH=<isolated official @vercel/next@24.0.0 adapter/index.js> SKIP_ZENODO=1 NEXT_TELEMETRY_DISABLED=1 npm run build",
+  "deploymentObserved": false
+}

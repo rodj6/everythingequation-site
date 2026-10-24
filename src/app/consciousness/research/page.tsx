@@ -1,3 +1,4 @@
+import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
 import {relationalAwareness, listRelationalDocuments, relationalDocumentUrl} from '@/lib/relational-awareness';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
@@ -20,6 +21,7 @@ export default function ResearchProgramme(){const documents=listResearchDocument
   <header className="c-research-hero"><p className="c-eyebrow">Shadow Theory / the consciousness programme</p><h1>A perspective.<br/>A boundary.<br/><em>A physical realization.</em></h1><p>Consciousness demands more than a description of behaviour. It demands an account of why a physical organization constitutes a perspective, and a way to determine which organization is actually there.</p><div className="c-actions"><Link className="c-button c-button-primary" href="/consciousness/relational-awareness">Follow the new work ↗</Link><Link className="c-button" href="/consciousness/monograph">Start with the foundation ↗</Link></div></header>
   <RelationalAwarenessFeature/>
     <AlignmentFeature/>
+    <PaperIntegrationFeature/>
   <ConsciousnessProgramme hub/>
   <AgencyFeature/>
   <DevelopmentFeature/>

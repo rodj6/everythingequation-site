@@ -1,0 +1,78 @@
+---
+title: "Where the missing distinctions can live"
+description: "Relativistic field release, unitary retrieval and the RS2 witness provide distinct physical completions under explicit hypotheses."
+order: 13
+---
+<a id="section-c"></a>
+## Ordinary physical mechanisms can carry the omitted distinction
+
+These are specified-model witnesses and applications of established identification bounds. Their physical content is substantial without becoming a universal ontology theorem.
+
+<a id="section-c-1"></a>
+### C.1 Causal release in a relativistic field
+
+Take a free massive Klein–Gordon field on 3+1 Minkowski space, vacuum $\omega_0$, and real smooth compactly supported test functions $f,g$. Adopt
+
+$$
+[\Phi(f),\Phi(g)]=i\Delta(f,g)I,\qquad W(af)=\exp(ia\Phi(f)).
+$$
+
+Prepare $\omega_\pm(A)=\omega_0(W(\pm af)^*AW(\pm af))$. If $\operatorname{supp}f$ is spacelike to the whole bounded early observation region $O$, microcausality gives $[W(af),A]=0$ for every early local observable. Therefore $\omega_+(A)=\omega_-(A)=\omega_0(A)$.
+
+Admit finite adaptive early protocols with the same independent initial apparatus and random-seed laws, causal composition and a complete transcript effect in $\mathcal A(O)$ for every transcript. Every effect commutes with preparation, so all early transcript probabilities agree. Local probe couplings and induced instruments give a framework for checking these localization/composition obligations [8]. Merely calling an instrument local does not establish them. No tensor-product factorization of local QFT algebras is assumed.
+
+Choose later $g$ with $\Delta(f,g)\ne0$. The scalar commutator terminates Baker–Campbell–Hausdorff:
+
+$$
+W(af)^*\Phi(g)W(af)=\Phi(g)+a\Delta(f,g)I.
+$$
+
+Vacuum $\Phi(g)$ is centered Gaussian with variance $v=\omega_0(\Phi(g)^2)\gt0$. Thus the prepared laws are $N(\pm\mu,v)$, $\mu=a\Delta(f,g)$. Thresholding zero has equal-prior error and distance
+
+<a id="equation-24"></a>
+$$
+\delta=\Phi_N(-|\mu|/\sqrt v),\qquad\operatorname{TV}(N(\mu,v),N(-\mu,v))=1-2\delta.\tag{24}
+$$
+
+$\Phi_N$ is the standard normal CDF. Smooth coherent excitations have finite energy at finite amplitude. A material detector, resource bounds and retained threshold record are additional engineering assumptions. An ideal observable is not a completed experiment.
+
+The independently prescribed dynamics thus permit equal early local statistics and unequal later statistics. A common early-information forecast fitting both conditional later laws must have worst-case TV error at least $(1-2\delta)/2$. This applies the half-TV result in Sealed or Leaky, Theorem 5.2 [34], and Constituted Agency §7.1, printed p.26 [20]. It does not invalidate the correct marginal forecast for one fixed prior mixture. An ordinary field excitation outside the early tube supplies the extra structure; another dimension or external observer is not required.
+
+The time-slice axiom concerns a neighborhood of a Cauchy surface, with formal renormalized perturbation theory in the interacting result [4]. It does not grant a finite observer the entire surface's degrees of freedom. Conversely, complete Cauchy data in a well-posed classical model refute a universal assertion that every present description is dynamically incomplete.
+
+<a id="section-c-2"></a>
+### C.2 Unitary retrieval after local forgetting
+
+Prepare qubits $S,E,R$ in $|x,0,0\rangle$, $x\in\{0,1\}$. Apply $\operatorname{CNOT}_{S\to E}$ then $\operatorname{SWAP}_{S,R}$, obtaining $|0,x,x\rangle$. The reduced $S$ state is ready for either input. The same later $\operatorname{CNOT}_{E\to S}$ gives $|x,x,x\rangle$, restoring the distinction exactly.
+
+The whole unitary state preserved the input while the present local state failed to determine the later operation. Ready registers and the schedule are resources. Any Hermitian involution $U$ has a positive generator
+
+$$
+H=\frac{\pi\hbar}{2\tau}(I-U),\qquad e^{-iH\tau/\hbar}=U.
+$$
+
+This implements a gate over finite $\tau$ but does not build an autonomous clock or relativistic material apparatus. Autonomous quantum-record programmes have their own assumptions [22]; they do not turn this schedule autonomous retrospectively.
+
+The operational quantum Markov comparison is familiar: a causal break in the local system can leave future statistics dependent on earlier operations through the environment [19]. One reduced density matrix does not specify all multitime laws. The circuit instantiates that mechanism without a priority claim.
+
+<a id="section-c-3"></a>
+### C.3 The RS2 gravitational witness
+
+Take positive-tension, $\mathbb Z_2$-symmetric RS2 with pure five-dimensional Einstein gravity, negative bulk cosmological constant and no extra bulk matter. The readout is gauge-reduced instantaneous induced-brane Cauchy and brane matter data. The bulk initial-data class admits finite-energy transverse-traceless wave packets. Under precisely these premises,
+
+<a id="equation-25"></a>
+$$
+G_{\mu\nu}=-\Lambda_4g_{\mu\nu}+\kappa_4^2T_{\mu\nu}+\kappa_5^4\Pi_{\mu\nu}-E_{\mu\nu}.\tag{25}
+$$
+
+Projected bulk Weyl $E_{\mu\nu}$ need not be determined by instantaneous brane data [30,42]. Paper 7 already provides the bulk-wave nonclosure witness and adaptive protocol equivalence. Expressing it as a block history is an application, not a new hidden-dimensions proof. Unequal futures distinguish the complete histories. The field and qubit examples show that access/nonclosure is broader than RS2; this branch adds a specified gravitational realization and conditional residues.
+
+### Prepared record persistence needs its own condition
+
+For deposited $\rho_i$, holding requires $\Phi_t(\rho_i)=\rho_i$ throughout the interval. This is not generally conservation of its Heisenberg projection. Under amplitude damping $L=\sqrt\gamma|0\rangle\langle1|$, $P_0$ is stationary but $\mathcal L^*(P_0)=\gamma P_1\ne0$. An ideal zero record Hamiltonian/channel gives both stationarity and projection conservation. Specify the intended property rather than deriving either from the other without hypotheses.
+
+### Reproducible supporting calculations
+
+The matching publication [verification archive](/publications/consciousness/new-papers/block-universe/verification.zip) contains sixteen numerical scripts, pinned requirements and the Lean project. Its README maps checks to §§5–9 and Appendices A–C. Numerical checks corroborate constructed quantities, not a manufactured device, human uptake, the Ground or an actuality witness. The Gaussian script checks probability arithmetic rather than simulating QFT. The temporal scripts independently implement the displayed models; they are not the separate temporal paper's original unavailable code package.
+
+Use the archive's pinned environment and `python3 run_checks.py` to reproduce numerical checks. Formal reproduction uses its pinned Lean 4.36.0-rc1 project and mathlib commit, following the included instructions. Historical result logs are labeled by their own run; extracting the archive is not a new formal verification.

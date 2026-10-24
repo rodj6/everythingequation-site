@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-24T04:02:00.414513+00:00",
+  "results": [
+    {
+      "name": "consciousness-source-audit",
+      "command": [
+        "node",
+        "scripts/audit-consciousness-content.mjs"
+      ],
+      "exitCode": 0,
+      "historicalReportsRestored": true
+    },
+    {
+      "name": "quantum-source-audit",
+      "command": [
+        "node",
+        "scripts/audit-quantum-content.mjs"
+      ],
+      "exitCode": 1,
+      "historicalReportsRestored": true
+    },
+    {
+      "name": "quantum-research-source-audit",
+      "command": [
+        "node",
+        "scripts/audit-quantum-research.mjs"
+      ],
+      "exitCode": 0,
+      "historicalReportsRestored": true
+    }
+  ]
+}

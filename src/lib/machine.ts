@@ -1,3 +1,4 @@
+import {paperIntegrations,integrationChapters} from '@/lib/paper-integrations';
 import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
 import {relationalAwareness, listRelationalDocuments, relationalDocumentUrl} from '@/lib/relational-awareness';
 import { development, listDevelopmentDocuments } from '@/lib/development';
@@ -67,6 +68,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    ...paperIntegrations.map(p=>({loc:p.url,lastmod:'2026-10-23',priority:'0.9'})),
+    ...integrationChapters.map(c=>({loc:c.url,lastmod:'2026-10-23',priority:'0.8'})),
     {loc:continuityNote.url,lastmod:editorialUpdateDate,priority:'0.9'},
     {loc:relationalAwareness.url,lastmod:editorialUpdateDate,priority:'0.9'},
     ...listRelationalDocuments().map(d=>({loc:relationalDocumentUrl(d),lastmod:d.kind === 'main' ? editorialUpdateDate : relationalAwareness.date,priority:'0.8'})),
@@ -139,6 +142,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    ...integrationChapters.map(c=>({title:c.title,url:`${canonicalBase}${c.url}`,date:'2026-10-23',summary:c.description})),
     {title:'What Shadow Theory holds fundamental: authorial clarification',url:`${canonicalBase}/consciousness#what-shadow-theory-holds-fundamental`,date:editorialUpdateDate,summary:'The unknown ground is fundamental throughout reality in the author’s philosophical account. Awareness provisionally names an attributed quality, not knowing or universal conscious subjects. The dated A0 note distinguishes this clarified position from the unchanged publication; no new constitutive law or publication version is issued.'},
     {title:continuityNote.fullTitle,url:`${canonicalBase}${continuityNote.url}`,date:continuityNote.date,summary:`${continuityNote.description} Philosophical research note accompanying Reflective Alignment and AI Consciousness. DOI ${continuityNote.doi}.`},
     {title:relationalAwareness.fullTitle,url:`${canonicalBase}${relationalAwareness.url}`,date:relationalAwareness.date,summary:`${relationalAwareness.description} Main paper and ten-module technical companion share DOI ${relationalAwareness.doi}.`},
@@ -242,6 +246,9 @@ export async function generateLlmsTxt(): Promise<string> {
     `> ${site.tagline}`,
     '',
     site.description,
+    '',
+    '## Complete October paper articles',
+    ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
     '',
     '## Conscious scaffolding and the preference for continuity',
     '',
@@ -460,6 +467,8 @@ export async function generateGraph() {
   const publicProblemSlugs = new Set(problems.map((problem) => problem.slug));
 
   const nodes = [
+    ...paperIntegrations.map(p=>({id:`integrated:${p.id}`,type:'complete-paper-article',title:p.title,url:`${baseUrl}${p.url}`,doi:p.doi,manifest:`${baseUrl}${p.manifestUrl}`})),
+    ...integrationChapters.map(c=>({id:`integrated:${c.paperId}:${c.slug}`,type:'complete-article-chapter',title:c.title,url:`${baseUrl}${c.url}`,order:c.order,sections:c.sections})),
     ...papers.map((p) => ({
       id: `paper:${p.slug}`,
       type: 'paper',
@@ -653,6 +662,8 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  for(const p of paperIntegrations){edges.push({from:'consciousness',to:`integrated:${p.id}`,relation:'contains-complete-article'});edges.push({from:`integrated:${p.id}`,to:`paper:${p.paperSlug}`,relation:'published-as'});const chapters=integrationChapters.filter(c=>c.paperId===p.id);chapters.forEach((c,i)=>{edges.push({from:`integrated:${p.id}`,to:`integrated:${p.id}:${c.slug}`,relation:'contains-complete-chapter'});if(chapters[i+1])edges.push({from:`integrated:${p.id}:${c.slug}`,to:`integrated:${p.id}:${chapters[i+1].slug}`,relation:'reading-order'});});}
+  for(const [from,to,relation] of [['whole-field','temporal-passage','constitutive-foundation-for'],['whole-field','constituted-agency','related-within-unit-account'],['temporal-passage','block-universe','temporal-application-in'],['constituted-agency','misleading-ai','authority-revision-context-for']])edges.push({from:`integrated:${from}`,to:`integrated:${to}`,relation});
   edges.push({from:'consciousness',to:'consciousness:continuity-note',relation:'contains-research-note'});
   edges.push({from:'consciousness:research',to:'consciousness:continuity-note',relation:'contains-research-note'});
   edges.push({from:'consciousness:alignment',to:'consciousness:continuity-note',relation:'extended-by-research-note'});
