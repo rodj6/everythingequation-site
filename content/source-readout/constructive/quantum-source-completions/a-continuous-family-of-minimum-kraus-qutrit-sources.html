@@ -1,0 +1,505 @@
+<h2 id="section-a-continuous-family-of-minimum-kraus-qutrit-sources">A continuous family of minimum-Kraus qutrit sources</h2>
+<p data-source-page="9">A coordinate-plane Weyl encoding gives exact stationary qutrit sources with recorded one-step Choi rank nine throughout an explicit noise interval. Its two real seed weights and complex phase can be classified exactly within the minimum-Kraus subfamily. This class is not the class of all qutrit sources. In particular, its fixed full-history cost does not preclude the mixed-support improvement constructed below. The source laws and CP maps are defined explicitly below.</p>
+<h3 id="section-process-resources-and-the-exact-update-interface">Process, resources and the exact update interface</h3>
+<p data-source-page="9">For 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00136.svg" alt=" &lt; r &lt;" style="width:3.0147em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1 define the trit transition matrix</p>
+<figure class="sr-formula" id="equation-14" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00137.svg" alt="{︄
+(1 −r)/3
+a = j,
+(1 + r/2)/3
+a ̸= j,
+λ = 1 −r.
+(14)
+Taj(r) =" width="352.48" height="30.55" style="width:32.337em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9, equation (14).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>{︄
+(1 −r)/3
+a = j,
+(1 + r/2)/3
+a ̸= j,
+λ = 1 −r.
+(14)
+Taj(r) =</pre></details></figure>
+<p data-source-page="9">The stationary delayed-trine law is</p>
+<figure class="sr-formula" id="equation-15" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00138.svg" alt="n−2
+∏︂
+Pr(y1 · · · yn) = 1
+v=1
+Tyv,yv+2(r),
+n ≥2,
+Pr(y1) = 1/3.
+(15)
+9" width="385.05" height="34.41" style="width:35.326em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9, equation (15).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n−2
+∏︂
+Pr(y1 · · · yn) = 1
+v=1
+Tyv,yv+2(r),
+n ≥2,
+Pr(y1) = 1/3.
+(15)
+9</pre></details></figure>
+<p data-source-page="9">It is the interleaving of two independent stationary chains. A source is a stationary density matrix on a<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00139.svg" alt=" d" style="width:1.0013em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-dimensional memory with time-homogeneous completely positive maps Φ<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00140.svg" alt="j" style="width:0.4608em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/>, whose sum is trace preserving. The complete output at each step is the observed classical trit. The emitted-record channel is</p>
+<figure class="sr-formula" id="display-34" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00141.svg" alt="2
+∑︂
+j=0
+|j⟩⟨j| ⊗Φj(X),
+k = rank J(A) =
+∑︂
+A(X) =
+j
+rank J(Φj)." width="308.64" height="34.43" style="width:28.316em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2
+∑︂
+j=0
+|j⟩⟨j| ⊗Φj(X),
+k = rank J(A) =
+∑︂
+A(X) =
+j
+rank J(Φj).</pre></details></figure>
+<p data-source-page="9">Here<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00142.svg" alt=" k" style="width:1.0543em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> is the minimum pure-environment dimension for a Stinespring dilation of this<em> complete cq</em> <em>channel</em>. A coherent emitted record is a different channel. The retained archive is external to the reusable memory, independent fresh ports are admitted, and all reusable history-bearing controllers belong in the source cut. This is an information-theoretic resource comparison, not a claim about hardware dimensions, energy, preparation cost or mixed baths. The four-symbol cut<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00143.svg" alt=" Hab,cd = TacTbd/" style="width:7.6188em;height:1.3100em;vertical-align:-0.23em" loading="lazy"/>9 has rank nine, because<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00144.svg" alt=" T" style="width:1.0571em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has eigenvalues 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00145.svg" alt=", −r/2, −r/2. A" style="width:7.0086em;height:1.1601em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00146.svg" alt="d" style="width:0.6677em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-dimensional quantum instrument factors this cut through a space of dimension at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00147.svg" alt=" d2" style="width:1.3461em;height:1.2980em;vertical-align:-0.23em" loading="lazy"/>; a classical <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00148.svg" alt="m" style="width:1.0247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-state HMM factors it through dimension<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00149.svg" alt=" m" style="width:1.3018em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00150.svg" alt=" d ≥" style="width:2.0070em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>3 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00151.svg" alt=" m ≥" style="width:2.3646em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>9. The classical pair source attains nine. These are standard representation-rank methods [7, 11]; our contribution is explicit completely positive attainment with controlled environmental resources, not the rank inequality itself.</p>
+<h3 id="section-a-variable-seed-and-its-choi-blocks">A variable seed and its Choi blocks</h3>
+<p data-source-page="9">We use the established finite Weyl framework <a href="/source-readout/quantum-source-completions/references#reference-5">[5]</a> and the standard Choi criterion for complete positivity <a href="/source-readout/quantum-source-completions/references#reference-2">[2]</a>. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00152.svg" alt=" ω = e2πi/3, Z =" style="width:7.1688em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> diag<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00153.svg" alt="(1, ω, ω2" style="width:3.6112em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/>) and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00154.svg" alt=" X|p⟩= |p+1" style="width:6.0787em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> mod<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00155.svg" alt=" 3⟩" style="width:1.3030em;height:1.1587em;vertical-align:-0.23em" loading="lazy"/>. Choose 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p009-00156.svg" alt=" &lt; a &lt; 1, t &gt; 0, t2 &lt; a(1−a)" style="width:12.5804em;height:1.5096em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-35" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00157.svg" alt="and initially set ζ = −tω2 = teiπ/3. Define" width="203.22" height="16.47" style="width:18.644em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>and initially set ζ = −tω2 = teiπ/3. Define</pre></details></figure>
+<figure class="sr-formula" id="equation-16" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00158.svg" alt="⎛
+⎞
+⎜
+⎝
+0
+0
+0
+0
+a
+ζ
+0
+ ̄ζ
+1 −a
+⎟
+⎠,
+Suv = ZuXvχX−vZ−u.
+(16)
+χ =" width="361.05" height="41.53" style="width:33.124em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (16).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎛
+⎞
+⎜
+⎝
+0
+0
+0
+0
+a
+ζ
+0
+ ̄ζ
+1 −a
+⎟
+⎠,
+Suv = ZuXvχX−vZ−u.
+(16)
+χ =</pre></details></figure>
+<p data-source-page="10">Here<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00159.svg" alt=" u, v" style="width:1.9827em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are trit indices and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00160.svg" alt=" a" style="width:1.0087em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is the real seed weight. Write</p>
+<figure class="sr-formula" id="display-37" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00161.svg" alt="q = a(1 −a),
+D = 1 −3q &gt; 0,
+Db = Xb diag(0, a, 1 −a)X−b,
+Fb = |b + 1⟩⟨b + 2|." width="409.30" height="18.79" style="width:37.550em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>q = a(1 −a),
+D = 1 −3q &gt; 0,
+Db = Xb diag(0, a, 1 −a)X−b,
+Fb = |b + 1⟩⟨b + 2|.</pre></details></figure>
+<figure class="sr-formula" id="display-38" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00162.svg" alt="Then
+Suv = Dv + ζω−uFv +  ̄ζωuF †
+v ." width="314.35" height="28.74" style="width:28.839em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Then
+Suv = Dv + ζω−uFv +  ̄ζωuF †
+v .</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00163.svg" alt="The three Dv span the diagonal matrices: their coordinate determinant is a3 + (1 −a)3 = D. The
+nonconstant Fourier components in u span the six Fv, F †
+v . Therefore the nine states form a Hermitian
+basis. Each has rank two, with support on the plane missing |v⟩, and ∑︁
+uv Suv = 3I.
+Define the unique linear maps on this basis by" width="484.50" height="57.20" style="width:44.449em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The three Dv span the diagonal matrices: their coordinate determinant is a3 + (1 −a)3 = D. The
+nonconstant Fourier components in u span the six Fv, F †
+v . Therefore the nine states form a Hermitian
+basis. Each has rank two, with support on the plane missing |v⟩, and ∑︁
+uv Suv = 3I.
+Define the unique linear maps on this basis by</pre></details></figure>
+<figure class="sr-formula" id="equation-17" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00164.svg" alt="Φj(Suv) = Tuj(r)Svj.
+(17)" width="293.92" height="13.50" style="width:26.965em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (17).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Φj(Suv) = Tuj(r)Svj.
+(17)</pre></details></figure>
+<figure class="sr-formula" id="display-40" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00165.svg" alt="Equivalently," width="63.30" height="12.51" style="width:5.808em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Equivalently,</pre></details></figure>
+<figure class="sr-formula" id="equation-19" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00166.svg" alt="Φj(Dv) = Svj/3,
+(18)
+6ζ Svj,
+Φj(F †
+v ) = −rω−j
+Φj(Fv) = −rωj
+6 ̄ζ Svj.
+(19)" width="354.03" height="45.60" style="width:32.480em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (19).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Φj(Dv) = Svj/3,
+(18)
+6ζ Svj,
+Φj(F †
+v ) = −rω−j
+Φj(Fv) = −rωj
+6 ̄ζ Svj.
+(19)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00167.svg" alt="These identities specify the map on every qutrit operator, including coherences. They are not merely
+an update on a finite list of states. Covariance gives Φj = AdXj ◦Φ0 ◦AdZ−j.
+Use J(Φ) = ∑︁
+pq |p⟩⟨q| ⊗Φ(|p⟩⟨q|). In the input Fourier basis fk = 3−1/2 ∑︁
+p ωpk|p⟩, the nonzero
+part of J(Φ0) consists of three blocks on span{fk ⊗1, fk+1 ⊗2}:" width="485.09" height="54.78" style="width:44.504em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>These identities specify the map on every qutrit operator, including coherences. They are not merely
+an update on a finite list of states. Covariance gives Φj = AdXj ◦Φ0 ◦AdZ−j.
+Use J(Φ) = ∑︁
+pq |p⟩⟨q| ⊗Φ(|p⟩⟨q|). In the input Fourier basis fk = 3−1/2 ∑︁
+p ωpk|p⟩, the nonzero
+part of J(Φ0) consists of three blocks on span{fk ⊗1, fk+1 ⊗2}:</pre></details></figure>
+<figure class="sr-formula" id="equation-22" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00168.svg" alt="(︄
+ae−
+c0
+ ̄c0
+(1 −a)e−
+)︄
+(︄
+ae−
+c1
+ ̄c1
+(1 −a)e+
+)︄
+(︄
+ae+
+c1
+ ̄c1
+(1 −a)e−
+)︄
+B0 =
+,
+B1 =
+,
+B2 =
+,
+(20)
+e−= 1
+3 −r
+6t,
+e+ = 1
+3 + r
+3t,
+L = (a −1) + (2a −1)ω,
+(21)
+c0 = −ω2(Dr + tL)
+3D
+,
+c1 = −ω2(−Dr + 2tL)
+6D
+.
+(22)" width="460.22" height="87.77" style="width:42.222em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (22).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+ae−
+c0
+ ̄c0
+(1 −a)e−
+)︄
+(︄
+ae−
+c1
+ ̄c1
+(1 −a)e+
+)︄
+(︄
+ae+
+c1
+ ̄c1
+(1 −a)e−
+)︄
+B0 =
+,
+B1 =
+,
+B2 =
+,
+(20)
+e−= 1
+3 −r
+6t,
+e+ = 1
+3 + r
+3t,
+L = (a −1) + (2a −1)ω,
+(21)
+c0 = −ω2(Dr + tL)
+3D
+,
+c1 = −ω2(−Dr + 2tL)
+6D
+.
+(22)</pre></details></figure>
+<p data-source-page="10">All other output-<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00169.svg" alt="|0⟩" style="width:1.3137em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/>directions vanish. Since<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00170.svg" alt=" |L|2" style="width:2.0930em;height:1.2980em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00171.svg" alt="= D" style="width:2.0307em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> and Re<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00172.svg" alt=" L = −1/2," style="width:4.8837em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-43" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00173.svg" alt="|c0|2 = Dr2 −rt + t2
+9D
+,
+|c1|2 = Dr2 + 2rt + 4t2
+36D
+." width="244.16" height="31.49" style="width:22.400em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|c0|2 = Dr2 −rt + t2
+9D
+,
+|c1|2 = Dr2 + 2rt + 4t2
+36D
+.</pre></details></figure>
+<p data-source-page="10">Consequently the two distinct determinants are</p>
+<figure class="sr-formula" id="equation-24" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p010-00174.svg" alt="36t2
+−Dr2 −rt + t2
+d0 = q(2t −r)2
+9D
+,
+(23)
+18t2
+−Dr2 + 2rt + 4t2
+d1 = d2 = q(2t −r)(t + r)
+36D
+.
+(24)" width="353.31" height="59.43" style="width:32.413em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (24).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>36t2
+−Dr2 −rt + t2
+d0 = q(2t −r)2
+9D
+,
+(23)
+18t2
+−Dr2 + 2rt + 4t2
+d1 = d2 = q(2t −r)(t + r)
+36D
+.
+(24)</pre></details></figure>
+<p data-source-page="10">These are derived by exact change of basis from (19); the verification code independently reconstructs the entire Choi matrix.</p>
+<h3 id="section-all-three-blocks-have-rank-one-on-a-continuous-curve">All three blocks have rank one on a continuous curve</h3>
+<p data-source-page="11"><strong>Theorem 4.1</strong> (A continuous minimum-Kraus construction)<strong>.</strong><em> For</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00175.svg" alt=" 0 &lt; h &lt; 2" style="width:4.7477em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/><em>, set</em></p>
+<figure class="sr-formula" id="equation-25" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00176.svg" alt="⎛
+√︄
+⎞
+q =
+h
+3h + 2,
+a = 1
+2 −h
+3h + 2
+⎠,
+t2 =
+h(2 −h)
+2(h + 1)(3h + 2),
+r = ht.
+(25)
+⎝1 +
+2" width="418.22" height="32.36" style="width:38.369em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11, equation (25).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎛
+√︄
+⎞
+q =
+h
+3h + 2,
+a = 1
+2 −h
+3h + 2
+⎠,
+t2 =
+h(2 −h)
+2(h + 1)(3h + 2),
+r = ht.
+(25)
+⎝1 +
+2</pre></details></figure>
+<p data-source-page="11"><em>The states and maps above are a stationary qutrit instrument generating</em> every finite word<em> of</em> (15)<em>.</em> <em>Each branch has Choi rank three and the complete emitted-record channel has rank nine. The attained</em> <em>processes include every</em></p>
+<figure class="sr-formula" id="equation-26" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00177.svg" alt="71 −17
+√
+√︂
+17
+4
+= 0.2381181907818797 . . . ,
+0 &lt; r ≤rmax :=
+(26)
+λmin := 1 −rmax = 0.7618818092181203 . . . ≤λ &lt; 1." width="387.81" height="52.69" style="width:35.579em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11, equation (26).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>71 −17
+√
+√︂
+17
+4
+= 0.2381181907818797 . . . ,
+0 &lt; r ≤rmax :=
+(26)
+λmin := 1 −rmax = 0.7618818092181203 . . . ≤λ &lt; 1.</pre></details></figure>
+<p data-source-page="11"><em>The minimum internal memory dimension is exactly three throughout this interval. The iid endpoint</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00178.svg" alt="λ = 1" style="width:2.5637em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/><em> has minimum dimension one and is not included in that assertion.</em></p>
+<p data-source-page="11"><em>Proof.</em> For 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00179.svg" alt=" &lt; h &lt; 2, 0 &lt; q &lt; 1/" style="width:9.1243em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>4 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00180.svg" alt=" t2/q = (2 −h)/[2(h + 1)] &lt;" style="width:12.2841em;height:1.2980em;vertical-align:-0.23em" loading="lazy"/> 1. Thus all seed states are positive of rank two and their basis is nonsingular. Also<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00181.svg" alt=" D = 2/(3h+2), e−= (2−h)/6 &gt; 0, e+ = (1+h)/3 &gt; 0." style="width:24.4552em;height:1.3086em;vertical-align:-0.23em" loading="lazy"/> Multiplication of (24<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00182.svg" alt=") by 36Dt2" style="width:4.8583em;height:1.2994em;vertical-align:-0.23em" loading="lazy"/> and substitution<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00183.svg" alt=" r = ht" style="width:3.2287em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> reduce the determinant equations to</p>
+<figure class="sr-formula" id="display-47" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00184.svg" alt="qD(2 −h)2 = 4t2(Dh2 −h + 1),
+2qD(2 −h)(1 + h) = t2(Dh2 + 2h + 4)." width="187.72" height="34.86" style="width:17.222em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>qD(2 −h)2 = 4t2(Dh2 −h + 1),
+2qD(2 −h)(1 + h) = t2(Dh2 + 2h + 4).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00185.svg" alt="Both are identities under (25). Every block therefore has positive diagonal and zero determinant: it is
+positive of rank one. Covariance transfers this to every branch, proving complete positivity and the
+stated Choi ranks.
+Trace preservation follows on the basis Suv from ∑︁
+j Tuj = 1.
+With initial state I/3, direct
+application gives
+Φj(I/3) = Dj/3,
+Φk(Dj) = Sjk/3,
+∑︂
+j
+Dj = I." width="484.33" height="91.77" style="width:44.434em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Both are identities under (25). Every block therefore has positive diagonal and zero determinant: it is
+positive of rank one. Covariance transfers this to every branch, proving complete positivity and the
+stated Choi ranks.
+Trace preservation follows on the basis Suv from ∑︁
+j Tuj = 1.
+With initial state I/3, direct
+application gives
+Φj(I/3) = Dj/3,
+Φk(Dj) = Sjk/3,
+∑︂
+j
+Dj = I.</pre></details></figure>
+<p data-source-page="11">The initial state is stationary, and the first two symbols have probability 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00186.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>9 and normalized posterior state<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00187.svg" alt=" Sjk" style="width:1.8371em;height:1.2508em;vertical-align:-0.23em" loading="lazy"/>. Thereafter (17) supplies exactly the prescribed conditional probability and posterior state at every step. Induction proves the full word law, not only its first few marginals. Finally</p>
+<figure class="sr-formula" id="display-48" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00188.svg" alt="r(h)2 =
+h3(2 −h)
+2(h + 1)(3h + 2),
+d
+dhr(h)2 = −3h2(h + 2)(2h2 −h −2)
+2(h + 1)2(3h + 2)2
+." width="328.89" height="31.49" style="width:30.173em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>r(h)2 =
+h3(2 −h)
+2(h + 1)(3h + 2),
+d
+dhr(h)2 = −3h2(h + 2)(2h2 −h −2)
+2(h + 1)2(3h + 2)2
+.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00189.svg" alt="17)/16. On (0, h∗]
+the function is strictly increasing from zero, so every 0 &lt; r ≤rmax has a unique parameter in this
+subinterval. A bracketed root finder constructs it. The observed rank-nine cut proves that the admitted
+dimension-three realization is minimal.
+The unique maximum in (0, 2) is at h∗= (1 +
+√
+17)/4, where r2 = (71 −17
+√" width="484.68" height="62.23" style="width:44.466em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>17)/16. On (0, h∗]
+the function is strictly increasing from zero, so every 0 &lt; r ≤rmax has a unique parameter in this
+subinterval. A bracketed root finder constructs it. The observed rank-nine cut proves that the admitted
+dimension-three realization is minimal.
+The unique maximum in (0, 2) is at h∗= (1 +
+√
+17)/4, where r2 = (71 −17
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00190.svg" alt="There are exactly three Kraus operators per branch. Explicitly, for the positive rank-one kth block
+(︂αk ck
+ ̄ck βk
+)︂
+, its Choi vector is" width="484.31" height="30.56" style="width:44.432em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>There are exactly three Kraus operators per branch. Explicitly, for the positive rank-one kth block
+(︂αk ck
+ ̄ck βk
+)︂
+, its Choi vector is</pre></details></figure>
+<figure class="sr-formula" id="display-49" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00191.svg" alt="vk = √αk fk ⊗|1⟩+
+ ̄ck
+√αk
+fk+1 ⊗|2⟩." width="173.37" height="28.75" style="width:15.906em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>vk = √αk fk ⊗|1⟩+
+ ̄ck
+√αk
+fk+1 ⊗|2⟩.</pre></details></figure>
+<p data-source-page="11">Unvectorize<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p011-00192.svg" alt=" vk" style="width:1.3564em;height:1.2427em;vertical-align:-0.23em" loading="lazy"/> to obtain one Kraus operator; rotate by covariance for other emitted symbols. Their completeness follows from the trace-preserving proof. This is a defined admitted quantum interaction, preparation and readout law using standard Born-form instruments; it does not derive the Born rule or provide an autonomous collapse mechanism.</p>
+<h3 id="section-the-complete-arbitrary-phase-class-and-a-sharp-scoped-boundary">The complete arbitrary-phase class and a sharp scoped boundary</h3>
+<p data-source-page="12">The family is not merely a numerical choice among unspecified phases. Replace<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00193.svg" alt=" ζ" style="width:0.8446em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00194.svg" alt=" x+iy, t2" style="width:4.1645em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00195.svg" alt="= x2" style="width:2.1462em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00196.svg" alt="+y2," style="width:2.2538em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> while retaining 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00197.svg" alt=" &lt; a &lt;" style="width:3.0562em;height:1.1450em;vertical-align:-0.23em" loading="lazy"/> 1 and 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00198.svg" alt=" &lt; t2 &lt; q" style="width:4.0476em;height:1.5073em;vertical-align:-0.23em" loading="lazy"/>. The same exact-reset definition remains unique. The three blocks now have diagonals<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00199.svg" alt=" aek, (1 −a)ek+1" style="width:7.2917em;height:1.2647em;vertical-align:-0.23em" loading="lazy"/>, cyclically, where</p>
+<figure class="sr-formula" id="equation-27" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00200.svg" alt="3 + r(x −
+√
+3 + r(x +
+√
+e0 = 1
+3 −rx
+3t2 ,
+e1 = 1
+3y)
+6t2
+,
+e2 = 1
+3y)
+6t2
+.
+(27)" width="393.87" height="36.45" style="width:36.135em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (27).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>3 + r(x −
+√
+3 + r(x +
+√
+e0 = 1
+3 −rx
+3t2 ,
+e1 = 1
+3y)
+6t2
+,
+e2 = 1
+3y)
+6t2
+.
+(27)</pre></details></figure>
+<p data-source-page="12">Their upper off-diagonal entries are</p>
+<figure class="sr-formula" id="equation-28" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00201.svg" alt="6 ̄ζ
+,
+M = −1 + i
+√
+3(2a −1),
+(G0, G1, G2) = (x +
+√
+3y, −2x, x −
+√
+ck = t2M/D + rGk
+3y).
+(28)" width="467.16" height="30.54" style="width:42.858em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (28).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>6 ̄ζ
+,
+M = −1 + i
+√
+3(2a −1),
+(G0, G1, G2) = (x +
+√
+3y, −2x, x −
+√
+ck = t2M/D + rGk
+3y).
+(28)</pre></details></figure>
+<p data-source-page="12">These formulas follow by the same direct Fourier transform, not by imposing complete positivity after a fit.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00202.svg" alt="Lemma 4.2 (No singular one-step effect in this Weyl class). At r &gt; 0, every completely positive
+exact-reset source of this class has strictly positive effects Ej = Φ∗
+j(I)." width="484.93" height="28.39" style="width:44.489em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Lemma 4.2 (No singular one-step effect in this Weyl class). At r &gt; 0, every completely positive
+exact-reset source of this class has strictly positive effects Ej = Φ∗
+j(I).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00203.svg" alt="Proof. The effects have eigenvalues e0, e1, e2. If e0 = 0, positivity of the blocks forces c0 = c2 = 0. Their
+difference is r
+√" width="484.24" height="26.09" style="width:44.426em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. The effects have eigenvalues e0, e1, e2. If e0 = 0, positivity of the blocks forces c0 = c2 = 0. Their
+difference is r
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00204.svg" alt="3y/(3 ̄ζ), so y = 0. Then e0 = 0 gives r = x &gt; 0. The numerator of c0 is t2M/D + rx.
+Its imaginary part vanishes only if a = 1/2, in which case D = 1/4, t2 = x2 and the numerator is
+−4x2 + x2 = −3x2 ̸= 0, a contradiction. For a zero e1 or e2, the two forced zero off-diagonals instead
+give y = ∓
+√" width="486.12" height="56.06" style="width:44.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>3y/(3 ̄ζ), so y = 0. Then e0 = 0 gives r = x &gt; 0. The numerator of c0 is t2M/D + rx.
+Its imaginary part vanishes only if a = 1/2, in which case D = 1/4, t2 = x2 and the numerator is
+−4x2 + x2 = −3x2 ̸= 0, a contradiction. For a zero e1 or e2, the two forced zero off-diagonals instead
+give y = ∓
+√</pre></details></figure>
+<p data-source-page="12"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00205.svg" alt="3x, r = −2x = t &gt;" style="width:8.5551em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> 0 and again the numerator<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00206.svg" alt=" t2M/D + t2" style="width:5.6661em;height:1.2886em;vertical-align:-0.23em" loading="lazy"/>. Its imaginary part forces <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00207.svg" alt="a = 1/" style="width:3.0558em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>2 and its real part is<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00208.svg" alt=" −3t2 ̸" style="width:2.8487em;height:1.5109em;vertical-align:-0.23em" loading="lazy"/>= 0. Positive semidefiniteness of the effects therefore makes them positive definite.</p>
+<p data-source-page="12"><strong>Theorem 4.3</strong> (Exhaustion of the minimum-Kraus Weyl class)<strong>.</strong><em> Among all nonsingular rank-two</em> <em>coordinate-plane Weyl exact-reset sources above, with arbitrary seed diagonal weight and phase, branch</em> <em>Choi rank three is attained exactly by</em> (25)<em>, up to phase rotation by</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00209.svg" alt=" 2π/3" style="width:2.5937em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> and exchange of</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00210.svg" alt=" a" style="width:1.0346em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> with</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00211.svg" alt=" 1 −a." style="width:3.0501em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> <em>Thus</em> (26)<em> is the sharp noise boundary within this</em> minimum-Kraus Weyl class<em>. It is not established as</em> <em>the boundary for arbitrary qutrit sources, nor for members of the same Weyl class with higher Kraus</em> <em>rank.</em></p>
+<p data-source-page="12"><em>Proof.</em> Put<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00212.svg" alt=" ζ = teiφ, h = r/t, v = t2" style="width:10.9958em;height:1.3003em;vertical-align:-0.23em" loading="lazy"/>, and</p>
+<figure class="sr-formula" id="display-52" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00213.svg" alt="u0 = x/t,
+u1 = (−x +
+√
+3y)/(2t),
+u2 = (−x −
+√
+3y)/(2t)." width="288.66" height="23.76" style="width:26.483em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>u0 = x/t,
+u1 = (−x +
+√
+3y)/(2t),
+u2 = (−x −
+√
+3y)/(2t).</pre></details></figure>
+<p data-source-page="12">These are three cosines spaced by 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00214.svg" alt="π/" style="width:1.2527em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>3; their sum is zero and their squares sum to 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00215.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>2. By Lemma 4.2, every block has positive diagonal and hence rank at least one. Choi rank three therefore means that all three block determinants vanish. Directly from (27)–(28), each determinant, indexed by its opposite cosine, has the form</p>
+<figure class="sr-formula" id="equation-29" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00216.svg" alt="9d(u) = A + Bu + Cu2,
+A = q(1 −3h2/4) −v/D,
+B = h(q −v/D),
+C = h2(q −v).
+(29)" width="462.87" height="14.72" style="width:42.465em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (29).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>9d(u) = A + Bu + Cu2,
+A = q(1 −3h2/4) −v/D,
+B = h(q −v/D),
+C = h2(q −v).
+(29)</pre></details></figure>
+<p data-source-page="12">If all three cosines are distinct, a quadratic zero at all three is zero identically. As<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00217.svg" alt=" h &gt; 0, B = C = 0" style="width:8.2352em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/> implies<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00218.svg" alt=" v = qD = q" style="width:5.4397em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/>, impossible for<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00219.svg" alt=" q &gt;" style="width:2.0052em;height:1.1421em;vertical-align:-0.23em" loading="lazy"/> 0 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00220.svg" alt=" D = 1 −3q &lt;" style="width:6.4161em;height:1.1571em;vertical-align:-0.23em" loading="lazy"/> 1. Thus two cosines coincide and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00221.svg" alt=" φ" style="width:1.0630em;height:1.1421em;vertical-align:-0.23em" loading="lazy"/> is an integer multiple of<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00222.svg" alt=" π/3." style="width:2.3637em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> For an even multiple the cosine set is<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00223.svg" alt=" {1, −1/2, −1/2}" style="width:7.4680em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>. Positivity of the effect requires<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00224.svg" alt=" h &lt; 1." style="width:3.4787em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> Eliminating<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00225.svg" alt=" v" style="width:0.9625em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> from<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00226.svg" alt=" d(1) = d(−1/" style="width:6.2802em;height:1.1602em;vertical-align:-0.23em" loading="lazy"/>2) = 0 gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00227.svg" alt=" q = h/(3h −" style="width:5.8233em;height:1.1602em;vertical-align:-0.23em" loading="lazy"/>2); the excluded factors are<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00228.svg" alt=" h = 0, q = 0 or" style="width:7.0098em;height:1.1472em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00229.svg" alt="q = 1/" style="width:2.9508em;height:1.1469em;vertical-align:-0.23em" loading="lazy"/>3. For 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00230.svg" alt=" &lt; h &lt;" style="width:3.1107em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1, this value is either nonpositive or exceeds 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00231.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>4. Thus it cannot be a seed with <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00232.svg" alt="0 &lt; q ≤1/4." style="width:5.5737em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/> For an odd multiple the cosines are<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00233.svg" alt=" {−1, 1/2, 1/2}" style="width:6.6157em;height:1.1599em;vertical-align:-0.23em" loading="lazy"/>. Positive effects require 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00234.svg" alt=" &lt; h &lt;" style="width:3.1044em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 2. Elimination instead gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00235.svg" alt=" q = h/(3h" style="width:4.8094em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + 2), and either remaining determinant yields<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00236.svg" alt=" v = h(2 −h)/[2(h + 1)(3h + 2)]." style="width:14.3547em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> These are precisely (25). There are no omitted solutions at<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00237.svg" alt=" h" style="width:1.0500em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 2: an effect would be singular, already excluded. The maximum of<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p012-00238.svg" alt=" r" style="width:0.9317em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> on this curve was proved in Theorem 4.1.</p>
+<h3 id="section-what-the-improved-source-does-and-does-not-settle">What the improved source does and does not settle</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00239.svg" alt="For every member of this class, effects are positive definite and every pair posterior has rank two. With
+Fjk = Φ∗
+j(Ek), Ek ⪰ckI for some ck &gt; 0, so Fjk ⪰ckEj ≻0. Basis-complete reset implies" width="484.26" height="28.22" style="width:44.428em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For every member of this class, effects are positive definite and every pair posterior has rank two. With
+Fjk = Φ∗
+j(Ek), Ek ⪰ckI for some ck &gt; 0, so Fjk ⪰ckEj ≻0. Basis-complete reset implies</pre></details></figure>
+<figure class="sr-formula" id="display-54" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00240.svg" alt="ΦkΦj(A) = Tr(FjkA)Sjk
+on all M3." width="177.25" height="13.64" style="width:16.262em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ΦkΦj(A) = Tr(FjkA)Sjk
+on all M3.</pre></details></figure>
+<p data-source-page="13">Therefore every length-<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00241.svg" alt="n ≥" style="width:1.8027em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>2 word branch has Choi rank rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00242.svg" alt=" Fjk" style="width:1.7269em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00243.svg" alt=" Slm = 3 ·" style="width:4.3041em;height:1.3224em;vertical-align:-0.23em" loading="lazy"/> 2 = 6; all intervening transition weights are positive. The complete<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00244.svg" alt=" n" style="width:1.1656em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>-record cq channel has rank 6 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00245.svg" alt="n" style="width:0.6118em;height:0.8686em;vertical-align:-0.23em" loading="lazy"/>. For the single stationary preparation its output state instead has rank 2 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00246.svg" alt="n" style="width:0.6179em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/>. These are different operational tasks. This remains true for arbitrary phases and higher branch Kraus ranks in this coordinate-plane class. Consequently phase and diagonal freedom can remove one-step excess without reducing the globally compressed finite-horizon channel below 6 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00247.svg" alt="n" style="width:0.6118em;height:0.8686em;vertical-align:-0.23em" loading="lazy"/>. In particular it cannot improve its finite-horizon cost merely by changing these seed parameters. Any reduction below 6 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00248.svg" alt="n" style="width:0.6118em;height:0.8686em;vertical-align:-0.23em" loading="lazy"/> requires a different encoding. The stronger universal lower bound 437 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00249.svg" alt="n−4" style="width:1.6093em;height:0.8876em;vertical-align:-0.23em" loading="lazy"/> for<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00250.svg" alt=" n ≥" style="width:2.1369em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>4, proved in Section 8.5, leaves a gap below this construction; in particular the simpler 4 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00251.svg" alt="n" style="width:0.6179em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/> bound is not attainable at those horizons. The general result in Appendix A that each branch of a minimal qutrit source for this process has Choi rank at least three makes<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00252.svg" alt=" k" style="width:0.9878em;height:1.1393em;vertical-align:-0.23em" loading="lazy"/> = 9 optimal among<em> all</em> qutrit realizations, not just this ansatz. Combined with the pure-latitude two-qubit source of (<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00253.svg" alt="d, k) = (4," style="width:4.5521em;height:1.1462em;vertical-align:-0.23em" loading="lazy"/> 3) and the three-output floor<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00254.svg" alt=" k ≥3," style="width:3.1329em;height:1.1581em;vertical-align:-0.23em" loading="lazy"/> the one-step Pareto frontier is now exactly<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00255.svg" alt=" {(3, 9), (4, 3)}" style="width:6.3659em;height:1.1520em;vertical-align:-0.23em" loading="lazy"/> throughout (26). This invocation uses the full CP rank lemma in Appendix A; it is not derived from the more limited exhaustion theorem above. The algebraic identities and all-word induction, rather than finite numerical fits, establish the result. The singular endpoints<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p013-00256.svg" alt=" h = 0," style="width:3.1572em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/> 2 are not admitted finite encodings. No global monotonicity of the unrestricted qutrit-admissible set is asserted.</p>

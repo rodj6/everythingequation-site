@@ -1,3 +1,4 @@
+import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import {paperIntegrations} from '@/config/paper-integrations';
 import {continuityNote} from '@/lib/continuity-note';
 import {relationalAwareness} from '@/lib/relational-awareness';
@@ -21,7 +22,7 @@ export function articleUrl(article: ArticleMeta): string {
 }
 
 function programmeArticles(): ArticleMeta[] {
-  return [...paperIntegrations.map(p=>({slug:p.paperSlug,title:p.title,description:p.description,date:p.date,tags:['Consciousness','Enacted organization','Research'],status:'published' as const,href:p.url})),{slug:continuityNote.paperSlug,title:continuityNote.publicTitle,description:continuityNote.description,date:continuityNote.date,tags:['AI consciousness','Reflective alignment','AI welfare','Research note'],status:'published',href:continuityNote.url},{slug:relationalAwareness.paperSlug,title:relationalAwareness.publicTitle,description:relationalAwareness.description,date:relationalAwareness.date,tags:['Consciousness','Relational awareness','Philosophy of mind'],status:'published',href:relationalAwareness.url},{
+  return [...sourcePapers().filter(p=>!p.parentId&&!p.parentSlug).map(p=>({slug:`source-readout-${p.slug}`,title:p.title,description:p.description,date:p.series==='foundations'?'2026-07-15':'2026-10-27',tags:['Source and readout',p.series==='foundations'?'Foundations':'Constructive research'],status:'published' as const,href:paperUrl(p)})),...paperIntegrations.map(p=>({slug:p.paperSlug,title:p.title,description:p.description,date:p.date,tags:['Consciousness','Enacted organization','Research'],status:'published' as const,href:p.url})),{slug:continuityNote.paperSlug,title:continuityNote.publicTitle,description:continuityNote.description,date:continuityNote.date,tags:['AI consciousness','Reflective alignment','AI welfare','Research note'],status:'published',href:continuityNote.url},{slug:relationalAwareness.paperSlug,title:relationalAwareness.publicTitle,description:relationalAwareness.description,date:relationalAwareness.date,tags:['Consciousness','Relational awareness','Philosophy of mind'],status:'published',href:relationalAwareness.url},{
     slug: alignment.paperSlug,
     title: alignment.title,
     description: alignment.description,

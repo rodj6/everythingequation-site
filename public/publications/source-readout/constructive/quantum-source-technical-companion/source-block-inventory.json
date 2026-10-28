@@ -1,0 +1,5700 @@
+[
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      69.69300079345703,
+      106.10208129882812,
+      542.4103393554688,
+      145.23545837402344
+    ],
+    "text": "Technical Companion: Approximation and Accounting for Quantum\nSources"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      230.88600158691406,
+      162.39541625976562,
+      381.1269836425781,
+      202.24563598632812
+    ],
+    "text": "Jeremy Rodgers\nIndependent Researcher\nwww.everythingequation.com"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      263.8909912109375,
+      214.61544799804688,
+      348.1513366699219,
+      226.57064819335938
+    ],
+    "text": "27 October 2026"
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      284.23699951171875,
+      255.1787109375,
+      328.0723876953125,
+      265.14129638671875
+    ],
+    "text": "Abstract"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      92.0719985961914,
+      272.15740966796875,
+      520.3169555664062,
+      317.9078369140625
+    ],
+    "text": "This companion preserves alternate exact encodings, finite-record approximation, output-specific\nbath approximation and causal resource accounting. Exact minima must be used only with their\ndeclared tasks. Historical feasible constructions remain valid but are superseded as best known\nmemory intervals or channel costs where explicitly noted."
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      329.0009765625,
+      547.4532470703125,
+      367.0928039550781
+    ],
+    "text": "This companion develops approximation and resource-accounting results within Shadow Theory’s\npre-existing source–readout programme [10]. The stationary classical completion used for comparison\nis established in Rodgers [9]."
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      387.69171142578125,
+      477.58306884765625,
+      402.03790283203125
+    ],
+    "text": "1\nA noisy delayed trine process: exact qutrit realizations"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      414.6440734863281,
+      549.2371826171875,
+      493.36279296875
+    ],
+    "text": "The formerly unresolved positive-noise case admits an exact three-dimensional quantum source in a\nnonempty, explicitly certified regime. This improves the two-qubit upper bound. The result preserves\nevery finite output word, and its cone constraints are certified on an entire parameter interval by exact\nrational arithmetic. A separate analytic construction gives a narrower interval without computer-\nassisted positivity checks. Both constructions use ordinary quantum instruments; neither derives the\nBorn rule or an actual-event selection law."
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      510.6643981933594,
+      340.462890625,
+      522.61962890625
+    ],
+    "text": "1.1\nProcess, source class and baseline bounds"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      531.9058227539062,
+      231.45846557617188,
+      542.9697875976562
+    ],
+    "text": "For 0 ≤λ ≤1, write r = 1 −λ and"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      207.1219940185547,
+      552.8908081054688,
+      262.44000244140625,
+      574.0317993164062
+    ],
+    "text": "T λ\naa = 1 −r"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      248.01199340820312,
+      553.0321655273438,
+      356.26348876953125,
+      578.8178100585938
+    ],
+    "text": "3\n,\nT λ\nab = 1 + r/2"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      336.07598876953125,
+      560.2708129882812,
+      548.4788208007812,
+      578.8178100585938
+    ],
+    "text": "3\n(a ̸= b).\n(1)"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      586.1483154296875,
+      547.4801635742188,
+      610.5637817382812
+    ],
+    "text": "All parameters and probabilities are dimensionless. Interleave two independent stationary chains with\nthis symmetric doubly stochastic transition matrix. The stationary word law is"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      172.10101318359375,
+      623.899658203125,
+      251.65255737304688,
+      643.6708984375
+    ],
+    "text": "Pλ(y1 · · · yn) = 1"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      246.197998046875,
+      638.7626953125,
+      251.6525421142578,
+      649.6718139648438
+    ],
+    "text": "9"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      254.66600036621094,
+      620.7698364257812,
+      270.62310791015625,
+      639.4309692382812
+    ],
+    "text": "n−2\nY"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      255.70599365234375,
+      629.05908203125,
+      548.4788208007812,
+      653.5830688476562
+    ],
+    "text": "t=1\nT λ\nyt,yt+2,\nn ≥2,\nPλ(y1) = 1/3.\n(2)"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      662.0949096679688,
+      547.4639282226562,
+      729.5968017578125
+    ],
+    "text": "The source class is a time-homogeneous quantum instrument on Cd: CP maps Φj with P\nj Φj trace\npreserving, a stationary density matrix ω, and word probabilities Tr[Φyn · · · Φy1(ω)]. Outputs are\nemitted into a retained classical archive. The current symbol need not occupy an orthogonal sector of\nthe internal memory. Fresh Markov environments are admitted explicitly; the cost d counts internal\nmemory, not archives, purifying environments, or a hidden history-dependent controller."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      63.28767776489258,
+      498.6947326660156,
+      78.15478515625
+    ],
+    "text": "The eigenvalues of T λ are 1, −r/2, −r/2. For λ < 1 the past-two/future-two cut matrix"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      265.8260192871094,
+      86.67768859863281,
+      315.0865783691406,
+      106.7437744140625
+    ],
+    "text": "Hab,cd = 1"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      309.6319885253906,
+      91.83612060546875,
+      548.4788208007812,
+      112.44976806640625
+    ],
+    "text": "9T λ\nacT λ\nbd\n(3)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      118.9752197265625,
+      547.6393432617188,
+      212.72979736328125
+    ],
+    "text": "has ordinary rank nine. Classical finite HMMs factor this matrix through their hidden states, so require\nat least nine. Explicitly, the pair source has states (a, b), transition (a, b) 7→(b, j) with probability\nT λ\naj, uniform stationary weights 1/9, and emitted symbol j at its update; it attains the full law with\nnine states. A d-dimensional instrument gives factors Aab = ΦbΦa(ω) and Bcd = Φ∗\ncΦ∗\nd(I), with\nHab,cd = Tr(AabBcd), in the d2-dimensional real space of Hermitian matrices, so d ≥3.\nA four-dimensional construction exists for every λ. With equatorial trine Bloch vectors na, let\nρa = (I + na · σ)/2 and Ej = (I −rnj · σ)/3. Then"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      232.3159942626953,
+      221.47598266601562,
+      548.4788818359375,
+      238.94677734375
+    ],
+    "text": "Φ(4)\nj (X) = Tr1[(Ej ⊗I)X] ⊗ρj\n(4)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      247.16477966308594,
+      547.201171875,
+      274.02618408203125
+    ],
+    "text": "is CP, has effects Ej ⊗I summing to identity, and fixes I4/4 after summing j. It sends ρa ⊗ρb to\nT λ\najρb ⊗ρj, establishing every word of (2). Thus"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      234.03700256347656,
+      283.1007995605469,
+      548.4788818359375,
+      295.155029296875
+    ],
+    "text": "3 ≤dmin(λ) ≤4\n(0 ≤λ < 1),\n(5)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      305.5579833984375,
+      547.3026123046875,
+      330.1007995605469
+    ],
+    "text": "whereas at λ = 1 the law is iid uniform and dmin = 1. The rank argument and quantum-process\nframework have established antecedents [5, 8]; no new rank method is claimed."
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      347.2693786621094,
+      345.137451171875,
+      359.2245788574219
+    ],
+    "text": "1.2\nA general exact encoded-pair construction"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      364.7066955566406,
+      454.08404541015625,
+      381.055908203125
+    ],
+    "text": "Let x0, x1, x2 ∈R2 have zero sum, and let a diagonal metric g = diag(g1, g2) obey"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      232.791015625,
+      389.81597900390625,
+      247.1869659423828,
+      408.36395263671875
+    ],
+    "text": "2\nX"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      232.02902221679688,
+      400.1991882324219,
+      304.1112976074219,
+      422.5160827636719
+    ],
+    "text": "µ=1\ngµxaµxjµ ="
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      307.1400146484375,
+      390.829345703125,
+      378.7840576171875,
+      419.7757873535156
+    ],
+    "text": "(\n1\na = j,\n−1/2\na ̸= j."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      431.9928283691406,
+      547.2456665039062,
+      456.6058044433594
+    ],
+    "text": "Let A1, A2, B1, B2, C11, C12, C21, C22 be any basis of traceless Hermitian 3 × 3 matrices.\nUse the\ncontractions"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      118.62300109863281,
+      466.2723693847656,
+      160.741943359375,
+      480.6287841796875
+    ],
+    "text": "Aa =\nX"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      150.99398803710938,
+      466.2723693847656,
+      249.7489471435547,
+      489.5572204589844
+    ],
+    "text": "µ\nxaµAµ,\nBb =\nX"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      240.20700073242188,
+      466.2723693847656,
+      341.1729431152344,
+      489.5572204589844
+    ],
+    "text": "ν\nxbνBν,\nCab =\nX"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      327.906982421875,
+      466.2723693847656,
+      455.867919921875,
+      489.5572204589844
+    ],
+    "text": "µ,ν\nxaµxbνCµν,\nCν,j =\nX"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      446.3989562988281,
+      468.0701904296875,
+      493.379638671875,
+      489.5572204589844
+    ],
+    "text": "η\nxjηCνη."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.7999267578125,
+      499.1851806640625,
+      388.12762451171875,
+      510.1077880859375
+    ],
+    "text": "For nonzero positive coefficients u, v, w, define candidate pair states"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      175.33892822265625,
+      521.5722045898438,
+      548.478759765625,
+      534.2727661132812
+    ],
+    "text": "Sab = I3/3 + uAa + vBb + wCab,\nRj = I3/3 + vBj.\n(6)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.7999267578125,
+      543.97265625,
+      494.56378173828125,
+      554.8817749023438
+    ],
+    "text": "Specify a Hermiticity-preserving complex-linear map by its values on the Hermitian basis:"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      211.2529296875,
+      566.3461303710938,
+      548.4786987304688,
+      578.2600708007812
+    ],
+    "text": "Φj(I3/3) = Rj/3,\n(7)"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      217.91485595703125,
+      579.0931396484375,
+      284.8188781738281,
+      598.377197265625
+    ],
+    "text": "Φj(Aµ) = −r"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      276.6610107421875,
+      586.4732055664062,
+      548.4788208007812,
+      604.8787841796875
+    ],
+    "text": "3ugµxjµRj,\n(8)"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      218.23300170898438,
+      602.63818359375,
+      276.8719177246094,
+      621.9221801757812
+    ],
+    "text": "Φj(Bν) = u"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      268.177001953125,
+      602.63818359375,
+      317.72491455078125,
+      628.4237670898438
+    ],
+    "text": "3vAν + w"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      308.39898681640625,
+      610.0181884765625,
+      548.4788208007812,
+      628.4237670898438
+    ],
+    "text": "3vCν,j,\n(9)"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      213.61599731445312,
+      626.1841430664062,
+      289.182373046875,
+      645.4672241210938
+    ],
+    "text": "Φj(Cµν) = −ru"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      276.6610107421875,
+      626.1841430664062,
+      350.8500061035156,
+      651.9697875976562
+    ],
+    "text": "3wgµxjµAν −r"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      345.81500244140625,
+      633.5641479492188,
+      548.4793701171875,
+      651.9697875976562
+    ],
+    "text": "3gµxjµCν,j.\n(10)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      63.50600051879883,
+      659.0631713867188,
+      548.4793701171875,
+      712.6741943359375
+    ],
+    "text": "Lemma 1.1 (Exact update and full-law realization). If all Sab are positive and all maps in (10) are\nCP, then they form a quantum instrument with stationary state I3/3 and generate (2) exactly. In\nparticular,\nΦj(Sab) = T λ\najSbj.\n(11)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.197021484375,
+      718.6741943359375,
+      316.7947082519531,
+      729.5968017578125
+    ],
+    "text": "For r > 0 this attains the minimum dimension three."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      67.23219299316406,
+      548.7572021484375,
+      201.34075927734375
+    ],
+    "text": "Proof. All basis matrices except I are traceless, so the candidates have trace one. Expand (10) on (6),\nwriting qaj = P\nµ gµxaµxjµ. The constant and a terms give (1 −rqaj)Rj/3; the b and ab terms give\n(1 −rqaj)(uAb + wCbj)/3. This is T λ\najSbj, proving the update.\nSumming the trace of the maps on the basis yields trace preservation: the I/3 traces sum to one,\nthe A traces vanish because P\nj xj = 0, and the B, C images are traceless. Summing Φj(I/3) = Rj/3\ngives I/3, proving stationarity. The first output j has probability 1/3 and leaves state Rj. A direct\napplication gives Φk(Rj) = Sjk/3, so the second output is independent uniform and leaves Sjk. Every\nlater update is (11); induction proves all finite words. This does not infer temporal independence from\na reset: it uses the explicitly specified CP instrument at every step. Finally (3) gives the matching\ndimension-three lower bound."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      212.63417053222656,
+      547.7847900390625,
+      264.20379638671875
+    ],
+    "text": "For positive u, v, w, the nine candidate matrices span the full Hermitian qutrit space. The functions\n1, xa1, xa2 form a basis of functions on three labels; their tensor products provide the nine independent\ncoordinate functions used above. Thus the construction is not silently collapsing an unobserved classical\ncoordinate or omitting an internal controller."
+  },
+  {
+    "page": 3,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      281.42437744140625,
+      276.51458740234375,
+      293.37957763671875
+    ],
+    "text": "1.3\nAn analytic high-noise interval"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      302.7349853515625,
+      547.2151489257812,
+      328.4002380371094
+    ],
+    "text": "Choose the ordinary unit trine coordinates xa = (cos(2πa/3), sin(2πa/3)), g1 = g2 = 1, and an\northonormal traceless Hermitian basis with Tr(FkFl) = δkl, split as the A, B, C basis above. Put"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      176.72003173828125,
+      336.8689880371094,
+      548.4794311523438,
+      349.9888000488281
+    ],
+    "text": "r = ϵ3,\nu = ϵ2,\nv = ϵ,\nw = ϵ3,\n0 < ϵ ≤1/7.\n(12)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      357.8171691894531,
+      549.3555908203125,
+      400.7880554199219
+    ],
+    "text": "The state perturbation has exact squared Frobenius norm ϵ2 + ϵ4 + ϵ6 < 1/9, so every Sab is positive.\nFor the unnormalized Choi matrix Jj of (10), the depolarizing branch X 7→Tr(X)I/9 has Choi matrix\nI9/9. Orthonormality of the input basis makes squared Frobenius norms add, giving"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      164.447998046875,
+      409.20294189453125,
+      250.9930877685547,
+      431.8547668457031
+    ],
+    "text": "∥Jj −I9/9∥2\nF = ϵ2"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      244.18600463867188,
+      409.20294189453125,
+      275.8781433105469,
+      436.6407775878906
+    ],
+    "text": "3 + ϵ2"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      269.07000732421875,
+      406.90966796875,
+      385.0396423339844,
+      436.6407775878906
+    ],
+    "text": "9 (1/3 + ϵ2) + 2(ϵ2 + ϵ4)"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      359.5140075683594,
+      406.90966796875,
+      446.3576965332031,
+      436.6407775878906
+    ],
+    "text": "9\n+ 2(ϵ4 + ϵ6)"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      420.8330078125,
+      425.731689453125,
+      426.2875671386719,
+      436.6407775878906
+    ],
+    "text": "9"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      229.62200927734375,
+      437.14593505859375,
+      261.9021301269531,
+      457.10076904296875
+    ],
+    "text": "= 16ϵ2"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      246.91299438476562,
+      437.1459655761719,
+      292.24114990234375,
+      464.58380126953125
+    ],
+    "text": "27 + 5ϵ4"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      282.7070007324219,
+      437.1459655761719,
+      322.58111572265625,
+      464.58380126953125
+    ],
+    "text": "9 + 2ϵ6"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      313.0459899902344,
+      446.1781921386719,
+      548.4793701171875,
+      464.58380126953125
+    ],
+    "text": "9 .\n(13)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      471.85882568359375,
+      549.3192138671875,
+      510.02178955078125
+    ],
+    "text": "At ϵ = 1/7, eighty-one times this expression is 117471/117649 < 1; the expression increases with ϵ ≥0.\nThe operator norm is at most the Frobenius norm, so Jj is strictly positive and the map is CP by the\nChoi criterion [1]. Lemma 1.1 therefore proves"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      223.56700134277344,
+      523.4118041992188,
+      548.4793701171875,
+      535.466064453125
+    ],
+    "text": "dmin(λ) = 3\nfor 342/343 ≤λ < 1.\n(14)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      547.3536987304688,
+      508.94195556640625,
+      558.2628173828125
+    ],
+    "text": "This is a complete analytic interval proof, independent of the sharper finite certificate below."
+  },
+  {
+    "page": 3,
+    "kind": "heading",
+    "bbox": [
+      64.80001068115234,
+      575.482421875,
+      428.33380126953125,
+      587.4376220703125
+    ],
+    "text": "1.4\nA larger interval certified entirely by rational arithmetic"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      64.40701293945312,
+      596.877685546875,
+      211.89804077148438,
+      607.7868041992188
+    ],
+    "text": "Take rational trine coordinates"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      130.21900939941406,
+      619.433837890625,
+      481.7836608886719,
+      632.1337890625
+    ],
+    "text": "x0 = (1, 0),\nx1 = (−1/2, 1/2),\nx2 = (−1/2, −1/2),\n(g1, g2) = (1, 3)."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      642.2852172851562,
+      237.5166473388672,
+      654.8447875976562
+    ],
+    "text": "Let Epq denote matrix units and set"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      164.3749542236328,
+      664.8547973632812,
+      451.4766845703125,
+      677.5548095703125
+    ],
+    "text": "A1 = E01 + E10,\nA2 = −iE01 + iE10,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      164.281982421875,
+      681.392822265625,
+      451.4766845703125,
+      694.0927734375
+    ],
+    "text": "B1 = E02 + E20,\nB2 = −iE02 + iE20,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      160.52597045898438,
+      697.9308471679688,
+      451.4767150878906,
+      710.6307983398438
+    ],
+    "text": "C11 = E12 + E21,\nC12 = −iE12 + iE21,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      160.5260009765625,
+      714.4688110351562,
+      451.2727355957031,
+      727.1688232421875
+    ],
+    "text": "C21 = diag(1, −1, 0),\nC22 = diag(1, 1, −2)."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      65.58096313476562,
+      548.7702026367188,
+      91.70477294921875
+    ],
+    "text": "These are orthogonal, with squared Frobenius norms two except ∥C22∥2\nF = 6. This is a different,\nexplicitly specified frame from the preceding analytic construction. Put"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      81.19800567626953,
+      103.09292602539062,
+      548.4793701171875,
+      116.2127685546875
+    ],
+    "text": "r = ϵ3,\nu = αϵ2,\nv = βϵ,\nw = γϵ3,\n(α, β, γ) = (3/8, 3/4, 3/4),\n0 < ϵ ≤h := 7/20.\n(15)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      129.7981719970703,
+      549.3991088867188,
+      197.36724853515625
+    ],
+    "text": "The maps and states are now degree-three matrix polynomials in ϵ, with Gaussian rational coefficients.\nHere are explicit coefficients, making the positivity certificate reconstructible without fitting\nnumerical samples. Superscript ∨denotes the Hilbert–Schmidt dual basis (F ∨= F/2, except C∨\n22 =\nC22/6). Define\nAg,∨\nj\n=\nX"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      236.68701171875,
+      180.88095092773438,
+      366.07696533203125,
+      205.4822998046875
+    ],
+    "text": "µ\ngµxjµA∨\nµ,\nCg,∨\nj,ν =\nX"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      356.3290100097656,
+      181.68405151367188,
+      415.5027160644531,
+      205.482421875
+    ],
+    "text": "µ\ngµxjµC∨\nµν."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      212.67617797851562,
+      417.82916259765625,
+      232.78915405273438
+    ],
+    "text": "In the convention Jj = P\npq Epq ⊗Φj(Epq), write Jj(ϵ) = P3\nl=0 ϵlJjl. Then"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      177.41397094726562,
+      240.66542053222656,
+      548.4793090820312,
+      253.2239990234375
+    ],
+    "text": "Jj0 = I9/9,\n(16)"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      177.4139404296875,
+      256.2904052734375,
+      213.99449157714844,
+      276.23004150390625
+    ],
+    "text": "Jj1 = β"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      208.46600341796875,
+      256.3037414550781,
+      270.8965759277344,
+      282.0758056640625
+    ],
+    "text": "3 I ⊗Bj −1"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      261.9330139160156,
+      256.29022216796875,
+      354.7708435058594,
+      282.0758056640625
+    ],
+    "text": "9α(Ag,∨\nj\n)T ⊗I + α"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      345.1990051269531,
+      271.1531982421875,
+      356.82757568359375,
+      282.0758056640625
+    ],
+    "text": "3β"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      360.41302490234375,
+      261.8723449707031,
+      374.8089904785156,
+      271.8349304199219
+    ],
+    "text": "X"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      365.2660217285156,
+      259.02471923828125,
+      548.4793701171875,
+      285.158203125
+    ],
+    "text": "ν\n(B∨\nν )T ⊗Aν,\n(17)"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      177.41400146484375,
+      287.4480895996094,
+      225.3435516357422,
+      307.3866882324219
+    ],
+    "text": "Jj2 = −β"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      216.30499267578125,
+      287.4481506347656,
+      315.2008972167969,
+      313.2337951660156
+    ],
+    "text": "3α(Ag,∨\nj\n)T ⊗Bj + γ"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      306.5769958496094,
+      302.3111877441406,
+      318.20556640625,
+      313.2337951660156
+    ],
+    "text": "3β"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      321.791015625,
+      293.0303649902344,
+      336.1869812011719,
+      302.9929504394531
+    ],
+    "text": "X"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      326.6440124511719,
+      290.1828308105469,
+      397.3535461425781,
+      316.31622314453125
+    ],
+    "text": "ν\n(B∨\nν )T ⊗Cν,j"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      222.85000610351562,
+      315.7271728515625,
+      244.2808380126953,
+      333.8749084472656
+    ],
+    "text": "−α"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      234.9550018310547,
+      330.5901794433594,
+      246.05990600585938,
+      341.5127868652344
+    ],
+    "text": "3γ"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      249.677001953125,
+      321.3093566894531,
+      264.0729675292969,
+      331.2719421386719
+    ],
+    "text": "X"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      254.52999877929688,
+      318.4617919921875,
+      548.4793701171875,
+      344.5942077636719
+    ],
+    "text": "ν\n(Cg,∨\nj,ν )T ⊗Aν,\n(18)"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      177.41400146484375,
+      346.191650390625,
+      221.75953674316406,
+      366.11773681640625
+    ],
+    "text": "Jj3 = −1"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      216.30499267578125,
+      361.0556945800781,
+      221.75953674316406,
+      371.96478271484375
+    ],
+    "text": "3"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      224.77398681640625,
+      351.7603454589844,
+      239.16993713378906,
+      361.7229309082031
+    ],
+    "text": "X"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      229.62698364257812,
+      348.91278076171875,
+      548.4793701171875,
+      375.04620361328125
+    ],
+    "text": "ν\n(Cg,∨\nj,ν )T ⊗Cν,j.\n(19)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      385.5620422363281,
+      518.8888549804688,
+      405.08990478515625
+    ],
+    "text": "For any degree-three matrix polynomial P(ϵ) = P\nl ϵlPl, its Bernstein representation on [0, h] is"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      173.7120361328125,
+      421.1521301269531,
+      212.46267700195312,
+      432.0747375488281
+    ],
+    "text": "P(ht) ="
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      216.0120391845703,
+      410.7699279785156,
+      230.40798950195312,
+      429.31689453125
+    ],
+    "text": "3\nX"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      215.48704528808594,
+      435.8880615234375,
+      230.9234619140625,
+      443.8680114746094
+    ],
+    "text": "k=0"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      232.74703979492188,
+      411.7832946777344,
+      246.37258911132812,
+      439.5452575683594
+    ],
+    "text": "3\nk"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      246.65704345703125,
+      411.7832946777344,
+      254.54742431640625,
+      421.7458801269531
+    ],
+    "text": "!"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      254.54403686523438,
+      418.8417663574219,
+      380.3463134765625,
+      433.8527526855469
+    ],
+    "text": "tk(1 −t)3−kMk,\nMk ="
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      383.3740234375,
+      410.7590637207031,
+      397.7699890136719,
+      429.31689453125
+    ],
+    "text": "k\nX"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      383.8480224609375,
+      435.8880615234375,
+      397.28546142578125,
+      443.8680114746094
+    ],
+    "text": "l=0"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      400.7780456542969,
+      410.7250671386719,
+      414.5289306640625,
+      427.2971496582031
+    ],
+    "text": "\u0000k\nl\n\u0001"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      400.97198486328125,
+      418.9450988769531,
+      548.4793701171875,
+      443.8262023925781
+    ],
+    "text": "\u00003\nl\n\u0001hlPl.\n(20)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      453.9859924316406,
+      547.7896118164062,
+      478.5287780761719
+    ],
+    "text": "The coefficients outside Mk are nonnegative and sum to one. Thus positive control matrices certify\npositivity on the whole interval, not at sampled values."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.36000061035156,
+      490.13568115234375,
+      455.80792236328125,
+      501.0529479980469
+    ],
+    "text": "Theorem 1.2 (Exact high-noise qutrit interval). For the noisy delayed trine law,"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      220.76400756835938,
+      516.2318115234375,
+      548.4793701171875,
+      528.287109375
+    ],
+    "text": "dmin(λ) = 3\n7657/8000 ≤λ < 1.\n(21)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      542.638671875,
+      319.99609375,
+      553.5477905273438
+    ],
+    "text": "The concrete states and maps are (6), (10), and (15)."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      565.1536865234375,
+      547.3976440429688,
+      603.1618041992188
+    ],
+    "text": "Proof. For the twelve Choi Bernstein control matrices from (19)–(20), and the thirty-six state control\nmatrices from (6), exact rational LDLT certificates establish strict positivity. The certificate uses the\nrealification"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      242.14801025390625,
+      610.7648315429688,
+      279.62664794921875,
+      621.8287963867188
+    ],
+    "text": "R(Z) ="
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      282.6510009765625,
+      601.537353515625,
+      356.33990478515625,
+      628.5867919921875
+    ],
+    "text": "Re Z\n−Im Z\nIm Z\nRe Z"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      357.116943359375,
+      601.537353515625,
+      365.00732421875,
+      611.5
+    ],
+    "text": "!"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      366.8219299316406,
+      610.919677734375,
+      369.8546447753906,
+      621.8287963867188
+    ],
+    "text": ";"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      638.209228515625,
+      547.4627685546875,
+      662.581787109375
+    ],
+    "text": "a Hermitian matrix is positive definite precisely when its realification is. In the fixed computational-basis\nordering, the certified bounds on every LDL pivot are:"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      167.7449951171875,
+      674.1591796875,
+      459.2823486328125,
+      685.081787109375
+    ],
+    "text": "Bernstein index k\n0\n1\n2\n3"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      136.04702758789062,
+      693.1812133789062,
+      475.95269775390625,
+      717.6527709960938
+    ],
+    "text": "Choi control matrices (all j)\n1/9\n> 9/100\n> 3/50\n> 1/100\nState control matrices (all a, b)\n> 1/10\n> 1/10\n> 1/10\n> 1/10"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.22700500488281,
+      67.23717498779297,
+      547.4869995117188,
+      132.9048614501953
+    ],
+    "text": "These are pivot bounds, not eigenvalue bounds. They are verified with exact Fraction arithmetic in\nsupplement/memory/three/memory/exact_qutrit_certificate.py; the explicit rational control\nmatrices and all pivots are recorded in supplement/memory/expected_outputs/three/memory/qutr\nit_bernstein_matrices.json and supplement/memory/expected_outputs/three/memory/qutrit\n_certificate.json. For clarity the finite algebraic verification is the standard recurrence"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      140.44898986816406,
+      149.09938049316406,
+      217.199951171875,
+      163.59783935546875
+    ],
+    "text": "Dk = Mkk −\nX"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      203.08399963378906,
+      143.3757781982422,
+      471.5537109375,
+      173.603271484375
+    ],
+    "text": "l<k\nL2\nklDl,\nLik = Mik −P\nl<k LilLklDl\nDk\n,\nLkk = 1."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      182.28810119628906,
+      549.60791015625,
+      305.51177978515625
+    ],
+    "text": "It checks Dk > 0 and reconstructs every entry of LDLT exactly. This computer-assisted part involves\nonly 48 explicitly defined rational matrices; no numerical eigensolver or tolerance certifies their signs.\nBernstein convexity proves positivity throughout 0 ≤ϵ ≤7/20.\nThe same code independently verifies 197 exact polynomial identities by applying the Choi polyno-\nmial directly: all 27 reset identities through degree six, and trace-preservation and stationarity through\ndegree three. The universal symbolic proof of those identities is already Lemma 1.1. It follows that\nthis is a stationary CP instrument reproducing every word. The ordinary-rank lower bound gives\nminimality. Since r = ϵ3, the interval is λ = 1 −r ≥1 −(7/20)3 = 7657/8000, excluding the iid\nendpoint from the dimension-three assertion."
+  },
+  {
+    "page": 5,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      323.01336669921875,
+      417.083984375,
+      334.96856689453125
+    ],
+    "text": "1.5\nFinite observations versus exact memory requirements"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      344.39617919921875,
+      549.4406127929688,
+      382.4167785644531
+    ],
+    "text": "The exact dimension remains at least three for every λ < 1, even arbitrarily close to the iid endpoint.\nThis does not create a finite-data discontinuity. Let Un be the uniform iid law on n trits and n ≥2.\nDefine"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      188.17401123046875,
+      380.53082275390625,
+      247.010986328125,
+      398.97479248046875
+    ],
+    "text": "d(r) = 1 −r"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      232.58200073242188,
+      380.67218017578125,
+      360.29718017578125,
+      406.4577941894531
+    ],
+    "text": "3\nlog(1 −r) + 2(1 + r/2)"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      333.13800048828125,
+      388.05218505859375,
+      423.8287048339844,
+      406.4577941894531
+    ],
+    "text": "3\nlog(1 + r/2)."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.24298095703125,
+      410.53570556640625,
+      363.0819396972656,
+      421.4447937011719
+    ],
+    "text": "With 0 log 0 = 0, direct conditional-likelihood calculations give"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      150.90597534179688,
+      430.38482666015625,
+      548.4793701171875,
+      447.0752258300781
+    ],
+    "text": "D(Pλ,n∥Un) = (n −2)d(r),\nχ2(Pλ,n∥Un) = (1 + r2/2)n−2 −1.\n(22)"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      457.1448059082031,
+      548.7190551757812,
+      499.1347961425781
+    ],
+    "text": "Indeed the likelihood ratio is Qn−2\nt=1 3T λ\nyt,yt+2. The KL chain rule gives one equal row contribution d(r) per\nlink. Under Un, summing the newest symbol in the squared likelihood contributes 3 P\nj(T λ\naj)2 = 1+r2/2,\nindependently of a; recursion proves the chi-square identity. Therefore"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      152.94200134277344,
+      510.5903625488281,
+      277.7995910644531,
+      529.0162353515625
+    ],
+    "text": "TV(Pλ,n, Un) ≤min\n\u001a\n1,\nq"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      277.79901123046875,
+      514.9829711914062,
+      352.19317626953125,
+      527.893798828125
+    ],
+    "text": "(n −2)d(r)/2, 1"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      347.96099853515625,
+      523.0399780273438,
+      352.193115234375,
+      531.0101318359375
+    ],
+    "text": "2"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      353.3909912109375,
+      512.5413208007812,
+      363.35357666015625,
+      522.5039672851562
+    ],
+    "text": "q"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      363.3529968261719,
+      510.5903625488281,
+      548.4793701171875,
+      527.893798828125
+    ],
+    "text": "(1 + r2/2)n−2 −1\n\u001b\n.\n(23)"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      545.5979614257812,
+      547.8038940429688,
+      612.3687744140625
+    ],
+    "text": "The second bound is Pinsker and the third is Cauchy–Schwarz. Since d(r) = r2/4 + O(r3), fixed finite\nrecords approach the iid law continuously. These are established divergence inequalities evaluated\nexactly for this process, not new information measures. The comparison concerns the complete declared\nsymbol sequence, including its ordering; extra retained apparatus channels would require their joint\nlaw as well."
+  },
+  {
+    "page": 5,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      629.8713989257812,
+      296.1330871582031,
+      641.8265991210938
+    ],
+    "text": "1.6\nWhat the construction establishes"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      651.1830444335938,
+      547.8538208007812,
+      716.3486938476562
+    ],
+    "text": "The original trine phase geometry supplied a four-dimensional realization; its zero-noise optimality\nproof did not settle noisy qutrit models. The present construction supplies such models explicitly and\nproves exact minimality on a full interval. It introduces a hierarchical encoding of the two individual\nlabels and their joint Fourier components, with amplitudes that shrink at different rates. This permits\nthe update maps to remain inside the CP cone while retaining the complete order-two law. The sharper"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.33123779296875,
+      549.3045043945312,
+      213.64678955078125
+    ],
+    "text": "interval uses a rational qutrit frame and a convex polynomial certificate; it does not claim the endpoint\nis optimal.\nThe finite circular phase representation draws on the geometric phase and angular-register descrip-\ntions in [6, abstract and Sections 2–3] and [7, pp. 64–68]. The noisy qutrit encoding, update maps and\ninterval certificates are the constructions established here.\nThe CP-realization problem, nonorthogonal quantum process memories, quantum dimension\nadvantages and lower bounds are established research areas [3–5, 8, 11]. The contribution is the explicit\nfull-law construction, interval certificate and matching dimension bound for this declared delayed\nprocess. Targeted primary-literature checks do not establish publication priority. No claim is made\nabout reduced complete environment memory, a Hamiltonian mechanism, CSL dynamics, Born-rule\nselection, actual-event affinity, or conscious perspective."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      233.9176788330078,
+      505.8450927734375,
+      248.26388549804688
+    ],
+    "text": "2\nExact finite-record accuracy and a memoryless comparator"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      261.01922607421875,
+      547.6764526367188,
+      393.7847900390625
+    ],
+    "text": "An exact resource minimum does not alone establish that the resource is needed at a finite experimental\naccuracy. This section evaluates that distinction for the same full trine law, without changing its\nparameters or introducing an alternative Born rule. It is an analytical addition to the completion\ntheorem’s rank-based certificates. It is not a claimed optimum over all approximate hidden-source\nrealizations.\nLet Pλ,N be the N-symbol stationary word law in the main resource manuscript, and let\nUN(y1, . . . , yN) = 3−N.\nThe latter is generated by the one-dimensional quantum instrument\nΦj(x) = x/3, or a one-state classical source with fresh uniform trit emissions. Both have the same\nspecified output alphabet and the same record length. Fresh randomness or its dilation still costs\nresources and is not contained in the one-dimensional memory count."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      402.433837890625,
+      547.4736938476562,
+      433.98992919921875
+    ],
+    "text": "Theorem 2.1 (Exact binomial reduction of the finite-record discrepancy). For N ≥2 set k = N −2\nand R = Pk\nt=1 1{Yt = Yt+2}. Then"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      195.39797973632812,
+      436.8653259277344,
+      416.60467529296875,
+      449.31219482421875
+    ],
+    "text": "TV(Pλ,N, UN) = TV\n\u0000Bin(k, λ/3), Bin(k, 1/3)\n\u0001."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      458.41217041015625,
+      547.270263671875,
+      496.43280029296875
+    ],
+    "text": "The count R is a sufficient statistic for this binary experiment. Thus even retaining every symbol gives\nno stronger test for these two models than retaining that count. This is an assertion about the declared\nclassical word record, not about their microscopic output environments."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      505.22320556640625,
+      241.20840454101562,
+      516.1458129882812
+    ],
+    "text": "Proof. For each word with r repeats,"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      242.6540069580078,
+      525.8222045898438,
+      279.2446594238281,
+      537.8662109375
+    ],
+    "text": "Pλ,N(y)"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      246.07699584960938,
+      525.7498168945312,
+      341.39801025390625,
+      552.709228515625
+    ],
+    "text": "UN(y) = λr\n\u00123 −λ"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      326.0979919433594,
+      540.7677001953125,
+      331.55255126953125,
+      551.6768188476562
+    ],
+    "text": "2"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      342.59698486328125,
+      523.663818359375,
+      370.5447082519531,
+      544.1802978515625
+    ],
+    "text": "\u0013k−r\n."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      559.5964965820312,
+      547.87939453125,
+      624.706787109375
+    ],
+    "text": "Conditional on every positive-probability preceding history, the next repeat indicator has probability\nλ/3. Iterating conditional probabilities proves that these k indicators are iid Bernoulli, despite the\noverlapping symbol comparisons. Under UN their parameter is 1/3. The likelihood ratio is constant on\neach fibre of R; summing absolute signed masses fibre by fibre therefore gives the equality in TV, with\nno data-processing slack."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      635.5978393554688,
+      547.2723388671875,
+      660.2107543945312
+    ],
+    "text": "For 0 < λ < 1 put b = (3 −λ)/2 and r∗= ⌊k log b/(log b −log λ)⌋. Since the likelihood ratio\ndecreases with r, the exact error is"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      252.1370086669922,
+      670.2908325195312,
+      359.86572265625,
+      682.9290771484375
+    ],
+    "text": "Fk,λ/3(r∗) −Fk,1/3(r∗),"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      691.576171875,
+      547.6643676757812,
+      729.5968017578125
+    ],
+    "text": "where F is the binomial CDF. Equality at an integer crossing contributes zero signed mass, so either\nthreshold convention is valid. At λ = 0 the result is 1 −(2/3)k, and at λ = 1 it is zero. For N ≤2\nboth word laws agree."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      67.24568176269531,
+      285.7033996582031,
+      78.15478515625
+    ],
+    "text": "Two closed-form bounds are also available:"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      180.61099243164062,
+      99.08879089355469,
+      280.70245361328125,
+      111.27417755126953
+    ],
+    "text": "TV(Pλ,N, UN) ≤min"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      282.5950012207031,
+      86.47334289550781,
+      291.4517517089844,
+      105.40194702148438
+    ],
+    "text": "\n"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      282.5950012207031,
+      91.86366271972656,
+      308.403564453125,
+      123.33493041992188
+    ],
+    "text": "1, 1"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      302.9490051269531,
+      106.72669982910156,
+      308.403564453125,
+      117.63580322265625
+    ],
+    "text": "2"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      309.5989990234375,
+      87.19233703613281,
+      384.7481689453125,
+      110.15277099609375
+    ],
+    "text": "s\u0012\n1 + (1 −λ)2"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      363.33599853515625,
+      106.72669982910156,
+      368.7905578613281,
+      117.63580322265625
+    ],
+    "text": "2"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      386.4429931640625,
+      89.01409912109375,
+      417.6845703125,
+      110.15277099609375
+    ],
+    "text": "\u0013k\n−1"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      417.68499755859375,
+      86.47334289550781,
+      426.541748046875,
+      105.40194702148438
+    ],
+    "text": "\n"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      417.68499755859375,
+      99.23017883300781,
+      431.3907165527344,
+      123.33493041992188
+    ],
+    "text": ","
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      180.6110076904297,
+      141.51377868652344,
+      259.4892883300781,
+      153.69915771484375
+    ],
+    "text": "TV(Pλ,N, UN) ≤"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      262.5169982910156,
+      127.12129211425781,
+      289.3992614746094,
+      154.61788940429688
+    ],
+    "text": "v\nu\nu\nt1 −"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      291.82098388671875,
+      124.85984802246094,
+      307.9152526855469,
+      142.24795532226562
+    ],
+    "text": "\"√"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      307.91900634765625,
+      133.42335510253906,
+      343.0325927734375,
+      145.19781494140625
+    ],
+    "text": "λ + 2\np"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      340.47601318359375,
+      134.1338348388672,
+      387.5785827636719,
+      160.060791015625
+    ],
+    "text": "(3 −λ)/2\n3"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      388.7740173339844,
+      129.43511962890625,
+      406.9727478027344,
+      152.5643310546875
+    ],
+    "text": "#2k\n."
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      64.40699768066406,
+      173.86398315429688,
+      206.5561065673828,
+      186.7747802734375
+    ],
+    "text": "The first follows from TV ≤1"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      202.32400512695312,
+      174.6443634033203,
+      217.71560668945312,
+      189.89108276367188
+    ],
+    "text": "2\np"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      172.73501586914062,
+      547.7658081054688,
+      213.872802734375
+    ],
+    "text": "χ2 and the binomial likelihood second moment; the second follows by\nCauchy–Schwarz from the product Bhattacharyya affinity. In particular, the one-state comparator\nmeets TV tolerance ϵ whenever"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      247.6899871826172,
+      211.38998413085938,
+      364.31170654296875,
+      238.82781982421875
+    ],
+    "text": "k ≤\nlog(1 + 4ϵ2)\nlog(1 + (1 −λ)2/2)."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      245.19998168945312,
+      547.419921875,
+      269.7427978515625
+    ],
+    "text": "This is a sufficient finite-horizon resource statement, not an exact minimum-memory frontier. The\nexact CDF expression gives the sharper decision for any specified (N, λ, ϵ)."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      287.5301818847656,
+      549.5265502929688,
+      433.9397888183594
+    ],
+    "text": "What this changes.\nThe completion theorem established that nine classical hidden states remain\nnecessary for every exact non-iid trine law. The present result shows quantitatively when a one-state\nsource already approximates its complete finite passive record. Thus an exact quantum/classical\ndimension separation may coexist with a memoryless approximation at the nominated tolerance.\nResolving the exact qutrit question does not remove this operational qualification.\nA common fixed downstream reader, including a reader with an explicitly retained erasure symbol,\ncontracts this discrepancy. For a source-independent erasure probability 1 −η on each emitted label,\nretaining the original un-erased word as well makes the joint discrepancy exactly the original TV:\nthe channel y 7→(y, erased record) preserves it. Keeping only the erased report can reduce it. These\nstatements compare the same admitted classical records on both sides; neither grants access to a\nmicroscopic bath or to a quantum source’s hidden memory."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      451.7612609863281,
+      547.7501831054688,
+      557.48876953125
+    ],
+    "text": "Verification.\nThe compact release supplies supplement/memory/checks/verify_consolidated_c\nonstants.py, which independently compares ordered-word enumeration and the binomial TV formula\nin twenty exact rational cases. The analytical proof above supplies the all-horizon statement. The\nhistorical diagnostic check_finite.py, preserved in the separate evidence archive, enumerated all\nwords of lengths two through eight at six rational noise parameters (42 cases), and evaluated additional\nbinomial CDF and retained-erasure examples. Those archived diagnostics are not advertised as extra\nchecks run by the compact release’s reproduction command. These are mathematical calculations, not\nempirical data."
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      578.1786499023438,
+      455.97772216796875,
+      592.5248413085938
+    ],
+    "text": "3\nFinite observable accuracy and an explicit rank test"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      605.1395874023438,
+      547.8621826171875,
+      656.7507934570312
+    ],
+    "text": "The exact source separations have an accessible finite-accuracy consequence against qubit memories\nand classical sources with at most eight causal states. This is a known spectral-rank technique newly\nspecialized to the delayed law; it does not improve the difficult three-versus-four quantum boundary. It\nsupplies a controlled, finite-data interface for the established quantum and classical memory claims."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      667.76416015625,
+      547.1821899414062,
+      705.7847900390625
+    ],
+    "text": "Proposition 3.1 (Observable approximation floor). Let H be a normalized joint distribution of a past\nand a future block, viewed as a matrix. Let γc(H) = (P\ni>c σi(H)2)1/2. For any complete competing\nlaw P ′ factoring through a causal cut with matrix rank at most c,"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      248.4300079345703,
+      709.0758056640625,
+      355.0823059082031,
+      730.5781860351562
+    ],
+    "text": "TV(P ′, P) ≥γc(H)/\n√"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      355.08599853515625,
+      718.6741943359375,
+      363.5727233886719,
+      729.5968017578125
+    ],
+    "text": "2."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      63.986000061035156,
+      67.23219299316406,
+      547.2560424804688,
+      105.2537841796875
+    ],
+    "text": "A classical c-state source has this rank bound; a quantum memory of Hilbert dimension d has rank at\nmost d2. Every future-accessed, history-correlated system belongs to that cut. The statement allows\nnonstationary competitors and extra null symbols."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      116.77499389648438,
+      549.3963623046875,
+      222.61376953125
+    ],
+    "text": "Proof. The classical joint table is a sum of at most c past/future product matrices.\nQuantum\nsubnormalized conditional states and future effects pair in the d2-dimensional real Hermitian space.\nPad the target with zeros for extra outcomes, preserving its nonzero singular values. The matrix\ndifference has zero total sum; its positive and negative entries each sum to δ = TV(P ′, P). Consequently\nits squared Frobenius norm is at most 2δ2. The least Frobenius error of any rank-c approximant is\nγc(H), proving the assertion. The latter identity follows by truncating the singular-value decomposition\nfor attainment; for the lower bound, project onto the orthogonal complement of the approximant’s\ncolumn space and minimize the discarded quadratic mass."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      234.06480407714844,
+      488.0385437011719,
+      245.1287841796875
+    ],
+    "text": "For the four-record trine cut, put r = 1 −λ. The singular values of H = T ⊗T/9 are"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      196.19705200195312,
+      256.5169372558594,
+      415.8057556152344,
+      269.63677978515625
+    ],
+    "text": "1/9,\nr/18 (four times),\nr2/36 (four times)."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.800048828125,
+      283.2366943359375,
+      271.9201965332031,
+      294.1457824707031
+    ],
+    "text": "Every qubit-cut competitor therefore obeys"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      244.5760498046875,
+      298.03082275390625,
+      334.4503479003906,
+      326.7820739746094
+    ],
+    "text": "TV(P ′, Pλ,4) ≥r\n√"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      334.4530029296875,
+      306.50396728515625,
+      362.6981201171875,
+      318.2707824707031
+    ],
+    "text": "1 + r2"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      328.9410095214844,
+      314.1268310546875,
+      348.9372863769531,
+      334.1117858886719
+    ],
+    "text": "18\n√"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      348.9410095214844,
+      314.7281799316406,
+      367.4267272949219,
+      334.1117858886719
+    ],
+    "text": "2\n,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      344.2247009277344,
+      331.52728271484375,
+      355.1337890625
+    ],
+    "text": "while any at-most-eight-state classical competitor obeys"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      253.37901306152344,
+      365.73095703125,
+      346.1461486816406,
+      386.81707763671875
+    ],
+    "text": "TV(P ′, Pλ,4) ≥\nr2"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      328.9410095214844,
+      374.16180419921875,
+      348.9372863769531,
+      394.1457824707031
+    ],
+    "text": "36\n√"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      348.9410095214844,
+      374.76318359375,
+      358.62371826171875,
+      394.1457824707031
+    ],
+    "text": "2."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      404.3452453613281,
+      548.97265625,
+      428.7178039550781
+    ],
+    "text": "These are outer bounds, not attained optimal approximation frontiers. They vanish at the iid endpoint,\nas required. They do not exclude a qutrit, because its ordinary rank ceiling is already nine."
+  },
+  {
+    "page": 8,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      446.22039794921875,
+      399.4021301269531,
+      458.17559814453125
+    ],
+    "text": "3.1\nIndependent four-record trials and finite confidence"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      467.6021728515625,
+      547.7979125976562,
+      539.6649780273438
+    ],
+    "text": "Assume N independently prepared trials from one fixed complete four-record law, with every trial and\nnull retained. The preparation/reset mechanism, clock and independence are physical conditions, not\ninferred from a reset flag. Pool all nontarget past pairs into one extra row and all nontarget future\npairs into one extra column; this coarse-graining preserves the rank bound and gives a finite complete\ntable. Let bH be its empirical frequency matrix and"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      247.06900024414062,
+      544.5753173828125,
+      320.2126159667969,
+      564.76318359375
+    ],
+    "text": "eN(α) = 1 +\np"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      316.5610046386719,
+      545.4271850585938,
+      360.7056579589844,
+      563.1148681640625
+    ],
+    "text": "log(1/α)\n√"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      325.6520080566406,
+      552.8071899414062,
+      364.9327392578125,
+      572.4692993164062
+    ],
+    "text": "N\n."
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      64.40701293945312,
+      582.3036499023438,
+      376.2951965332031,
+      610.5399780273438
+    ],
+    "text": "Then\nPr{∥bH −H∥F > eN(α)} ≤α."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      613.4808959960938,
+      547.6044311523438,
+      632.4578857421875
+    ],
+    "text": "Indeed E∥bH −H∥2\nF = (1 −∥H∥2\nF)/N ≤1/N; replacing one trial changes the norm by at most\n√"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      627.69970703125,
+      548.992431640625,
+      695.7297973632812
+    ],
+    "text": "2/N. Bounded differences gives Pr{f −Ef > u} ≤e−Nu2, and Jensen gives the mean bound. The\nconcentration step can be derived by exposing one independent trial at a time and bounding each\nconditional centered moment-generating function by the exponential of one eighth its squared range;\noptimizing its exponential Markov bound yields the displayed inequality.\nDistance to the rank-c matrix set is one-Lipschitz, so the test"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      270.2749938964844,
+      709.315185546875,
+      341.7266540527344,
+      727.1809692382812
+    ],
+    "text": "γc( bH) > eN(α)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      67.16519927978516,
+      549.6213989257812,
+      335.58978271484375
+    ],
+    "text": "has false-rejection probability at most α for every admitted rank-c source. Against the exact target\nits rejection probability is at least 1 −β whenever γc(H) > eN(α) + eN(β). This supplies a stated\nsufficient trial budget. It is conservative and is not claimed sample-optimal. It certifies an observable\nrank obstruction, not a particular microscopic channel or the full infinite word law.\nSpectral identification, singular-value-tail thresholding and finite confidence are established tech-\nniques. Du Roy de Chaumaray et al., JMLR 25(415), 1–37 (2024), Eqs. (5)–(6), Theorem 4, uses\nthe same tail statistic for nonparametric hidden Markov order estimation under a different, mixing\nsingle-sequence sampling model. The present contribution is the exact trine specialization, joint\nclassical/quantum cut interpretation and complete-null four-record interface. Original least-rank\napproximation is Eckart–Young (1936). Hsu–Kakade–Zhang (2012), Lemma 8, already gives the same\nempirical probability-vector/Frobenius concentration method for independently sampled observation\ntriples. No first spectral memory test is claimed. Neither this test nor its target constitutes an\nexperimental distinction between Shadow Theory and ordinary quantum theory.\nAt the new noise endpoint, the calculated qubit-cut TV floor is approximately 0.00961570 and the\neight-state classical floor is 0.00111370. For one-percent false-rejection risk and at least 99-percent\npower against the exact target, the sufficient independent four-record trial budgets are 214,080 and\n15,958,893, respectively. Each trial costs four emitted records plus its independently prepared stock.\nThese conservative sufficiency budgets are not practical hardware estimates or sample-optimal claims.\nThe supplied synthetic million-trial table rejects the qubit rank cap but does not reject the eight-state\ncap at the stated threshold, as expected."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      355.58935546875,
+      550.11083984375,
+      387.8908996582031
+    ],
+    "text": "4\nA robust dimension witness for arbitrary four-record approxima-\ntions"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.4070053100586,
+      400.5606994628906,
+      547.7462768554688,
+      465.6667785644531
+    ],
+    "text": "The low-noise support argument excludes qutrit memories on a small exact-noise interval. That does\nnot by itself quantify approximation by an arbitrary qutrit process whose perturbed law need not\nremain in that one-parameter family. The same support argument gives an observable matrix witness\nand a nonzero finite-record approximation floor. The constants are deliberately conservative; they are\nnot proposed experimental accuracy targets."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      482.63983154296875,
+      547.204345703125,
+      507.2537841796875
+    ],
+    "text": "Matrix witness.\nLet C ≥0 be a 9-by-9 column-stochastic matrix, indexed by pairs (a, b), (c, d) ∈\n{0, 1, 2}2. Define"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      160.48300170898438,
+      523.7421875,
+      199.79147338867188,
+      541.2052001953125
+    ],
+    "text": "µ = min\na,b"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      201.67999267578125,
+      521.9443359375,
+      216.07594299316406,
+      531.906982421875
+    ],
+    "text": "X"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      203.6859893798828,
+      523.7422485351562,
+      333.62384033203125,
+      546.447265625
+    ],
+    "text": "c,d\nCab,cd > 0,\nL = max\na,b"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      335.6130065917969,
+      514.372314453125,
+      355.82098388671875,
+      531.906982421875
+    ],
+    "text": "\"X"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      346.4420166015625,
+      521.9443359375,
+      412.9859619140625,
+      546.447265625
+    ],
+    "text": "d\nCab,ad +\nX"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      403.9519958496094,
+      523.7422485351562,
+      440.36138916015625,
+      545.230224609375
+    ],
+    "text": "c\nCab,cb"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      440.85699462890625,
+      514.3723754882812,
+      446.6651916503906,
+      524.3350219726562
+    ],
+    "text": "#"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      448.48699951171875,
+      523.7422485351562,
+      451.51971435546875,
+      534.6513671875
+    ],
+    "text": ","
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      553.2542114257812,
+      547.2822265625,
+      593.3258056640625
+    ],
+    "text": "and let σ2, σ5 > 0 be its second and fifth singular values. If C has a complex Hermitian PSD factorization\nof size at most three, then\n27L"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      252.1540069580078,
+      580.751953125,
+      348.2633056640625,
+      610.8027954101562
+    ],
+    "text": "µ\n≥\nσ2\n2σ2\n5\n36(σ2 + 18\n√"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      348.2669982910156,
+      589.783203125,
+      548.4793701171875,
+      609.1668090820312
+    ],
+    "text": "6)2 .\n(24)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      616.8030395507812,
+      547.4423217773438,
+      641.3457641601562
+    ],
+    "text": "The indices, leakage and singular values are ordinary classical matrix data. No particular quantum\nupdate architecture or reference frame is assumed in this lower bound."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      658.461181640625,
+      549.3193969726562,
+      716.9749755859375
+    ],
+    "text": "Proof.\nSince σ5 > 0, a factorization cannot be supported on dimension two. Congruence normalization\nof its row factors gives a POVM P\na,b Aab = I3 and density matrices bcd with Cab,cd = Tr(Aabbcd).\nThe row sums imply Tr Aab ≥µ/9, hence a largest eigenvalue at least µ/27. Put Ra = P\nd bad and\nQb = P\nc bcb. Both have trace three, and the leakage implies"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      236.29501342773438,
+      718.5338134765625,
+      375.71759033203125,
+      731.2338256835938
+    ],
+    "text": "λmin(Ra + Qb) ≤e := 27L/µ."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      67.22443389892578,
+      547.6473999023438,
+      160.57220458984375
+    ],
+    "text": "We prove the required approximate plane/line dichotomy directly. Fix any s > e; all distances below\nare on the same normalized factorization.\nCase 1: some Ra or Qb has second eigenvalue at least s. By interchanging the two indices if\nnecessary, take such an Ra. Let P project onto its two largest eigenvectors and let z be a unit vector\nin the complementary line. For each b, choose a unit nb with ⟨nb, (Ra + Qb)nb⟩≤e. Positivity and\nRa ⪰sP imply\n∥Pnb∥2 ≤e/s,\n⟨nb, Qbnb⟩≤e."
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      64.79998779296875,
+      167.2218475341797,
+      289.8827209472656,
+      179.4072265625
+    ],
+    "text": "Choose the phase so ⟨z, nb⟩≥0. Since e/s < 1,"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      208.6370086669922,
+      188.30567932128906,
+      306.8255920410156,
+      205.34091186523438
+    ],
+    "text": "∥nb −z∥2 = 2(1 −\nq"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      306.82598876953125,
+      191.95199584960938,
+      403.3722839355469,
+      204.8402099609375
+    ],
+    "text": "1 −∥Pnb∥2) ≤2e/s."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.406982421875,
+      208.3038787841797,
+      453.3473815917969,
+      229.29681396484375
+    ],
+    "text": "The bound ∥Qb∥≤Tr Qb = 3 and the triangle inequality after applying √Qb give"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      182.49398803710938,
+      235.96482849121094,
+      278.1492919921875,
+      257.60821533203125
+    ],
+    "text": "⟨z, Qbz⟩≤\n\u0012√e +\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      278.15301513671875,
+      241.18629455566406,
+      293.5696105957031,
+      256.48577880859375
+    ],
+    "text": "3\nq"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      293.57000732421875,
+      236.34298706054688,
+      401.47760009765625,
+      256.48577880859375
+    ],
+    "text": "2e/s\n\u00132\n=: ℓ= e(1 +\nq"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      401.4779968261719,
+      243.36593627929688,
+      429.5077209472656,
+      256.48577880859375
+    ],
+    "text": "6/s)2."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      272.4078369140625,
+      547.2971801757812,
+      298.50189208984375
+    ],
+    "text": "Every preparation obeys bcd ⪯Qd, hence Tr[(I −P)bcd] ≤ℓfor this common plane. The projection\nbound ∥ρ −PρP∥1 ≤2\np"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      186.1959991455078,
+      276.683837890625,
+      541.6952514648438,
+      297.0375061035156
+    ],
+    "text": "Tr[(I −P)ρ] therefore bounds every preparation-compression error by 2\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      286.05230712890625,
+      549.3192138671875,
+      337.6916198730469
+    ],
+    "text": "ℓ.\nFor completeness, purify ρ, apply P ⊗I, and compute the trace norm of the difference between the\noriginal rank-one projector and the projected, unnormalized rank-one operator: for discarded mass x,\nits norm is\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      318.77081298828125,
+      547.8128051757812,
+      418.9637756347656
+    ],
+    "text": "4x −3x2 ≤2√x. Partial trace contracts this Hermitian trace norm, giving the stated\nbound also for mixed ρ.\nReplace each bcd by PbcdP and apply the same POVM. The resulting real matrix C(4) has rank\nat most four, since Hermitian operators on a two-dimensional plane have real dimension four. A\nPOVM contracts the trace norm of a Hermitian difference: if D = D+ −D−is its positive/negative\ndecomposition, then P\nab | Tr(AabD)| ≤Tr D+ + Tr D−= ∥D∥1. Consequently each of the nine column\nerrors has Euclidean norm at most 2\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      248.88999938964844,
+      408.0411682128906,
+      285.3331604003906,
+      418.9637756347656
+    ],
+    "text": "ℓ. Thus"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      180.2969970703125,
+      423.38079833984375,
+      408.4075927734375,
+      444.3938903808594
+    ],
+    "text": "σ5 ≤∥C −C(4)∥op ≤∥C −C(4)∥F ≤6√e(1 +\nq"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      408.4070129394531,
+      431.8931884765625,
+      431.7057189941406,
+      442.8157958984375
+    ],
+    "text": "6/s)."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      453.9636535644531,
+      549.4157104492188,
+      507.21392822265625
+    ],
+    "text": "The first inequality follows from the singular-value lower bound for rank-four approximation, which\napplies to every real approximant.\nCase 2: all Ra, Qb have second eigenvalue below s. Let Pa and Q′\nb be their top-eigenvector projectors.\nThe mass outside each such line is below 2s. Since bab ⪯Ra, Qb,"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      208.60604858398438,
+      507.19879150390625,
+      280.2073669433594,
+      528.8422241210938
+    ],
+    "text": "D(bab, Pa) ≤\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      280.21099853515625,
+      507.19879150390625,
+      389.7923278808594,
+      529.76123046875
+    ],
+    "text": "2s,\nD(bab, Q′\nb) ≤\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      389.7959899902344,
+      516.7981567382812,
+      403.3990783691406,
+      527.7207641601562
+    ],
+    "text": "2s,"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      538.0743408203125,
+      354.2196044921875,
+      549.8726806640625
+    ],
+    "text": "where D denotes half trace distance. Here D(ρ, |v⟩⟨v|) ≤\np"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      538.7848510742188,
+      547.282470703125,
+      579.461181640625
+    ],
+    "text": "1 −⟨v, ρv⟩: it is equality for pure states\nand follows for mixed states by convexity and Jensen’s inequality. Fix P0. Comparing through b0b gives\nD(P0, Q′\nb) ≤2\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      140.92300415039062,
+      556.9628295898438,
+      272.6822814941406,
+      578.0682373046875
+    ],
+    "text": "2s, whence D(bab, P0) ≤3\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      566.024169921875,
+      547.7603149414062,
+      604.0696411132812
+    ],
+    "text": "2s for all nine preparations. Replace every preparation by\nthis same pure state. The resulting matrix C(1) has identical normalized columns and rank at most\none. Each column difference is zero-sum and has classical total variation at most 3\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      593.052001953125,
+      547.2242431640625,
+      633.7598876953125
+    ],
+    "text": "2s by POVM\ncontraction. For a zero-sum real vector v, its positive and negative parts each have mass ∥v∥1/2, so\n∥v∥2\n2 ≤2(∥v∥1/2)2. Each column thus has Euclidean norm at most 6√s, and"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      204.18202209472656,
+      633.8368530273438,
+      407.8230895996094,
+      654.8499145507812
+    ],
+    "text": "σ2 ≤∥C −C(1)∥op ≤∥C −C(1)∥F ≤18√s."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      664.49169921875,
+      549.4439697265625,
+      702.5047607421875
+    ],
+    "text": "These two cases exhaust the possible normalized factors.\nIf the right side of (24) exceeded e, choose s < σ2\n2/324 sufficiently close to that upper endpoint.\nThen both displayed inequalities would fail, since the limiting first bound is 6√e(1 + 18\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      691.5684204101562,
+      549.3189086914062,
+      731.7230834960938
+    ],
+    "text": "6/σ2) < σ5.\nThis choice also satisfies s > e: column stochasticity gives σ2, σ5 ≤∥C∥F ≤3, and the assumed bound\non e is less than σ2\n2/(24 · 324). This contradiction proves the necessary inequality.\n□"
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      459.3096923828125,
+      78.39957427978516
+    ],
+    "text": "4.1\nA floor for every qutrit approximation of the trine record law"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      87.82716369628906,
+      354.00299072265625,
+      100.5267333984375
+    ],
+    "text": "Let Pλ,4 be the specified four-symbol delayed trine law, with"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      193.68800354003906,
+      108.53509521484375,
+      418.3157653808594,
+      135.9827880859375
+    ],
+    "text": "Hab,cd = Pλ,4(a, b, c, d) = T λ\nacT λ\nbd\n9\n,\nCλ = 9H."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      139.11476135253906,
+      549.615478515625,
+      248.7628173828125
+    ],
+    "text": "Suppose another complete four-record law P ′ is generated through a quantum causal cut of dimension\nat most three. All history-correlated systems used again in the future belong to that cut; independent\nfresh ports and an untouched retained archive obey the same convention as the accounting chapter.\nThe competing law may have a different update rule, lack stationarity, or lie outside the trine family.\nExtra null/loss outcomes can remain in its complete alphabet, with zero target probability.\nPut δ = TV(P ′, Pλ,4) < 1/9. Restrict its joint table H′ to the target trit pairs and let h′\ncd =\nP\nab H′\nab,cd ≥1/9 −δ. The column-normalized matrix C′\nab,cd = H′\nab,cd/h′\ncd still has PSD rank at most\nthree. Define"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      164.49899291992188,
+      246.87681579589844,
+      289.9389953613281,
+      272.8048095703125
+    ],
+    "text": "d =\n36δ\n1 −9δ,\na = 1 −λ"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      274.6400146484375,
+      247.01820373535156,
+      442.8575744628906,
+      272.8048095703125
+    ],
+    "text": "2\n−d,\ne∗=\n27\n1 −d\n2λ/3 + 18δ"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      402.4079895019531,
+      254.39820861816406,
+      447.50372314453125,
+      272.8048095703125
+    ],
+    "text": "1 −9δ\n."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.24301147460938,
+      276.63519287109375,
+      369.38262939453125,
+      287.55780029296875
+    ],
+    "text": "Whenever d < 1, a > 0, the following necessary condition holds:"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      256.77001953125,
+      299.1359558105469,
+      321.4131164550781,
+      319.9689025878906
+    ],
+    "text": "e∗≥\na4"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      282.322998046875,
+      307.56683349609375,
+      336.5712890625,
+      327.5517883300781
+    ],
+    "text": "36(a + 18\n√"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      336.57501220703125,
+      308.1681823730469,
+      548.4793701171875,
+      327.5517883300781
+    ],
+    "text": "6)2 .\n(25)"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      339.86865234375,
+      547.5217895507812,
+      364.27978515625
+    ],
+    "text": "Thus failure of this scalar inequality excludes every qutrit-cut approximation at that tolerance, rather\nthan merely a fitted trine member."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      381.80670166015625,
+      359.0950927734375,
+      392.7239685058594
+    ],
+    "text": "Derivation.\nColumn normalization and total variation give"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      204.34698486328125,
+      399.24981689453125,
+      293.6289367675781,
+      416.29888916015625
+    ],
+    "text": "∥C′ −Cλ∥op ≤\nX"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      277.1789855957031,
+      401.5848388671875,
+      407.66033935546875,
+      426.6002197265625
+    ],
+    "text": "ab,cd\n|C′\nab,cd −(Cλ)ab,cd| ≤d."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      433.4939880371094,
+      549.3192138671875,
+      516.1918334960938
+    ],
+    "text": "Indeed the two contributions are at most the joint-table ℓ1 error 2δ and the marginal ℓ1 error 2δ,\ndivided by 1/9 −δ. Thus row sums are at least 1 −d, and both relevant singular values are at least\na. The unnormalized leakage functional takes values in [0, 2] and has target expectation 2λ/27. Its\nchange is at most 2δ; dividing by the smallest column mass bounds L(C′) by (2λ/3 + 18δ)/(1 −9δ).\nApply (24); its right side increases with each positive singular value. This gives (25).\nFor explicit simple consequences, exact rational constants in the proof with s = 1/2000 give"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      256.541015625,
+      525.0608520507812,
+      548.4794311523438,
+      539.2850952148438
+    ],
+    "text": "TV(P ′, P0,4) > 10−9,\n(26)"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80007934570312,
+      547.7088623046875,
+      548.4794921875,
+      575.0770874023438
+    ],
+    "text": "and, uniformly for 0 ≤λ ≤10−8,\nTV(P ′, Pλ,4) > 5 × 10−10.\n(27)"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      581.7739868164062,
+      547.2607421875,
+      619.8657836914062
+    ],
+    "text": "At the first boundary the squared rank-four approximation error is below 0.216, and at the second\nbelow 0.188; the rank-one squared error is 0.162, while the required singular value exceeds 0.49 in both\ncases. These loose bounds are verified with fractions in the accompanying code."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      637.3080444335938,
+      547.7705688476562,
+      729.5968017578125
+    ],
+    "text": "What changes.\nThe earlier exact dimension statement was robust only along a specified noise\ncurve. The new witness supplies a finite-output accuracy obstruction against all ordinary qutrit-cut\nrealizations, including time-dependent alternatives and complete null/loss records. It is a quantitative\nouter bound, not a sharp approximate-memory frontier, a large practical separation, or a resource\ntheorem for nonlinear ontic assignments. Larger horizons inherit the same floor by retaining the\nfour-record marginal. It compares the declared classical record law; it identifies no microscopic source\nor conscious perspective."
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      385.1156921386719,
+      78.39957427978516
+    ],
+    "text": "4.2\nAn explicit robust version of the support witness"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      87.81097412109375,
+      549.35888671875,
+      183.82290649414062
+    ],
+    "text": "The noiseless growing lower bound is sensitive to small forbidden-event probabilities. A quantitative\nreplacement is possible, with a poor large-grid margin that should be stated explicitly. Suppose a\nrow-stochastic matrix eT factors through r classical states as AB, with both A and B row stochastic.\nSuch a normalization is available for every nonnegative factorization of a stochastic matrix after zero\nfactors are removed. Set e = maxi eTii and µ = mini̸=j eTij. For τ > 0 put Si = {ℓ: Aiℓ≥τ}. If Si ⊆Sj,\nthen\neTij ≤e/τ + rτ.\n(28)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      189.0057830810547,
+      547.5538940429688,
+      213.6426239013672
+    ],
+    "text": "Indeed, on Si the sum of Bℓj is at most e/τ because Ajℓ≥τ, and outside Si the contribution is at\nmost rτ. Choosing τ =\np"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      194.72080993652344,
+      547.2271728515625,
+      240.7177734375
+    ],
+    "text": "e/r shows that µ > 2√re forces an antichain; the case e = 0 follows by a\nlimit or the exact support argument.\nFor an entrywise perturbation of the phase-circle transition by at most δ, write"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      217.9759979248047,
+      252.82481384277344,
+      317.2566833496094,
+      272.90582275390625
+    ],
+    "text": "µm = 1 −cos(2π/m)"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      277.9779968261719,
+      251.31399536132812,
+      389.79864501953125,
+      278.73828125
+    ],
+    "text": "m\n= 2 sin2(π/m)"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      357.20599365234375,
+      260.34619140625,
+      394.02569580078125,
+      278.73828125
+    ],
+    "text": "m\n."
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      64.406982421875,
+      280.51580810546875,
+      301.0132751464844,
+      302.33489990234375
+    ],
+    "text": "The sufficient antichain condition is µm −δ > 2\n√"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      301.0169982910156,
+      289.93017578125,
+      388.5430603027344,
+      300.852783203125
+    ],
+    "text": "rδ, or equivalently"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      233.4359893798828,
+      311.449951171875,
+      548.4793701171875,
+      340.5237731933594
+    ],
+    "text": "δ < δ∗\nm,r :=\nµ2\nm\n(√r + µm + √r)2 .\n(29)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      348.0103454589844,
+      548.7191772460938,
+      376.35479736328125
+    ],
+    "text": "If a normalized observed triple distribution p′ lies at TV distance η from the exact law, with η < m−2,\nits conditional transition in any middle-symbol fibre obeys"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      217.12600708007812,
+      395.2886962890625,
+      237.42784118652344,
+      412.4721984863281
+    ],
+    "text": "max\ni,j"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      239.42201232910156,
+      386.1307678222656,
+      330.5953369140625,
+      416.4202880859375
+    ],
+    "text": "p′(i, y, j)\nP\nk p′(i, y, k) −Tij"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      331.54803466796875,
+      387.8951110839844,
+      394.876708984375,
+      416.3918762207031
+    ],
+    "text": "≤\n2η\nm−2 −η."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      424.9811706542969,
+      547.5062866210938,
+      464.6387939453125
+    ],
+    "text": "Both the single-entry and row-mass probability errors are at most η; the inequality follows by adding\nnumerator and denominator errors. Therefore, choosing r = rm −1, the original classical sector lower\nbound mrm survives whenever"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      262.697998046875,
+      460.61383056640625,
+      548.4793701171875,
+      491.1951904296875
+    ],
+    "text": "η <\nδ∗\nm,r\nm2(2 + δ∗m,r).\n(30)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      497.2798156738281,
+      547.3848266601562,
+      537.0657958984375
+    ],
+    "text": "This is a rigorous finite-data statement, but its radius scales as roughly m−8/r and is extremely small\nat m = 180, 360, 720. It is not proposed as a practical large-grid experiment. The trine rank margin is\nsubstantially more usable."
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      557.8646850585938,
+      550.0762329101562,
+      590.1438598632812
+    ],
+    "text": "5\nSharp bath approximation costs with and without retained purifi-\ncation"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      602.8992309570312,
+      547.5014038085938,
+      708.5667724609375
+    ],
+    "text": "Exact Choi rank counts even arbitrarily weak Kraus directions. It does not by itself say what apparatus\nsavings become possible at a prescribed error. For the three-charge qutrit instruments there is a\nconstructive, sharp answer at three useful budgets. The answer differs depending on whether the\npurifying bath is unread or is part of the compared retained output. This is an application of established\nspectral approximation and Stinespring methods, not a new general theory of approximate quantum\nchannels. The standard maximum-trace eigenvalue principle and minimum-pure-Stinespring dimension\nare antecedents [2, 12]; the proofs needed here are supplied below. The added result is exact saturation\nfor the declared charge-orbit channels, with separate retained and unread-bath tasks."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      432.67352294921875,
+      78.39957427978516
+    ],
+    "text": "5.1\nThe typed channel and its three trace-scaled components"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      83.79702758789062,
+      547.2775268554688,
+      112.29876708984375
+    ],
+    "text": "Let S = C3 be the reusable memory, A = C3 the registered pointer, and B an initially pure, fresh\npurifying bath. The reduced output channel is"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      226.46200561523438,
+      132.0727996826172,
+      265.0726318359375,
+      143.13677978515625
+    ],
+    "text": "A(X) ="
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      271.5050048828125,
+      121.83096313476562,
+      285.9009704589844,
+      140.37893676757812
+    ],
+    "text": "2\nX"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      268.0970153808594,
+      129.09982299804688,
+      385.54071044921875,
+      154.92904663085938
+    ],
+    "text": "j,k=0\n|j⟩⟨j|A ⊗KjkXK†\njk."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      164.56976318359375,
+      549.319091796875,
+      229.726806640625
+    ],
+    "text": "Only A and the final memory belong to this reduced output; an arbitrary inert reference is retained\nthroughout. In the retained-purification task we instead compare the full isometries into A ⊗S ⊗B.\nThe two metrics must not be substituted for one another.\nWrite ω = e2πi/3, Z = diag(1, ω, ω2) and X|p⟩= |p + 1⟩. The rank-one charge blocks give Kraus\nmatrices of the form"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      173.0360107421875,
+      238.93978881835938,
+      548.4794311523438,
+      253.9508056640625
+    ],
+    "text": "Kjk = XjK0kZ−j,\n|K0k⟩⟩= αk|fk⟩|1⟩+ βk|fk+1⟩|2⟩,\n(31)"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      259.73822021484375,
+      547.2033081054688,
+      308.8989562988281
+    ],
+    "text": "where |fk⟩= 3−1/2 P\np ωpk|p⟩and the vectorization orders input before output. Put νk = |αk|2 +|βk|2 >\n0, and assume P\nk νk = 1. The three vectors at fixed j are orthogonal. Moreover\nX"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      266.0740051269531,
+      297.6208190917969,
+      548.4793090820312,
+      323.1742248535156
+    ],
+    "text": "j\nK†\njkKjk = νkI3.\n(32)"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      333.0758056640625,
+      547.398193359375,
+      361.7822265625
+    ],
+    "text": "Indeed K†\n0kK0k is a weighted sum of two conjugate Fourier projectors, so each computational diagonal\nentry is νk/3. Twirling it by Z kills the off-diagonal entries and gives (32). Consequently"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      222.53700256347656,
+      370.80682373046875,
+      303.10595703125,
+      386.8392333984375
+    ],
+    "text": "Qk(X) = ν−1\nk\nX"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      293.9639892578125,
+      370.08782958984375,
+      388.75689697265625,
+      395.6412353515625
+    ],
+    "text": "j\n|j⟩⟨j| ⊗KjkXK†\njk"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      405.38079833984375,
+      547.723876953125,
+      444.66522216796875
+    ],
+    "text": "is CPTP with Choi rank three, and A = P\nk νkQk. The three component Choi supports are mutually\northogonal, including the pointer factor. The normalized Choi state ρA = J(A)/3 therefore has\neigenvalues νk/3, each with multiplicity three."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.79999542236328,
+      460.72137451171875,
+      271.63690185546875,
+      472.67657470703125
+    ],
+    "text": "5.2\nExact approximation theorem"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      479.84710693359375,
+      547.5054931640625,
+      520.1248168945312
+    ],
+    "text": "Relabel the weights ν(1) ≥ν(2) ≥ν(3) and put pm = Pm\ni=1 ν(i), m = 1, 2, 3. A pure bath of dimension b\nmeans the minimum pure Stinespring environment of the specified reduced channel; all fresh apparatus\nfactors purifying that channel are included."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      537.791259765625,
+      547.4287109375,
+      562.1637573242188
+    ],
+    "text": "Theorem.\nAmong all CPTP channels with the same input and reduced output spaces and pure bath\ndimension at most 3m,"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      246.406005859375,
+      561.24267578125,
+      268.1625671386719,
+      579.5317993164062
+    ],
+    "text": "inf 1"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      262.7080078125,
+      568.4678344726562,
+      548.4793701171875,
+      587.0147705078125
+    ],
+    "text": "2∥e\nA −A∥⋄= 1 −pm.\n(33)"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      590.0616455078125,
+      286.3963317871094,
+      600.9707641601562
+    ],
+    "text": "The infimum is attained by the actual channel"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      254.32801818847656,
+      616.870849609375,
+      301.88018798828125,
+      632.1452026367188
+    ],
+    "text": "Am = p−1\nm"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      304.1990661621094,
+      608.7880859375,
+      318.59503173828125,
+      627.345947265625
+    ],
+    "text": "m\nX"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      304.54205322265625,
+      619.0398559570312,
+      548.4793701171875,
+      641.630126953125
+    ],
+    "text": "i=1\nν(i)Q(i).\n(34)"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      649.8572387695312,
+      547.8690795898438,
+      701.3251953125
+    ],
+    "text": "It retains the same pointer alphabet and needs no added null branch. The normalization defines a new\nfixed trace-preserving instrument; it is not postselection on original trials.\nFor the full retained pure Stinespring output, allow any bath-only isometric identification of the\ncompetitor’s at-most-3m dimensional bath with the target bath. Then the corresponding optimum is"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      240.50799560546875,
+      709.3046875,
+      262.2635498046875,
+      727.5938110351562
+    ],
+    "text": "inf 1"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      256.8089904785156,
+      715.6353149414062,
+      336.19659423828125,
+      735.0767822265625
+    ],
+    "text": "2∥W −V∥⋄=\np"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      336.1969909667969,
+      716.5298461914062,
+      548.4793701171875,
+      728.57421875
+    ],
+    "text": "1 −pm,\n(35)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      63.20297622680664,
+      547.539306640625,
+      118.80279541015625
+    ],
+    "text": "where V(ρ) = V ρV † and similarly for W. The dimension counts are intrinsic bath dimensions; the\nisometric embedding only defines a common comparison space.\nProof of the reduced statement. For a channel of bath dimension at most b, its Choi state has rank\nat most b. If P projects onto its support, the variational characterization of trace distance gives"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      194.2310028076172,
+      136.58798217773438,
+      366.1653137207031,
+      159.87991333007812
+    ],
+    "text": "1\n2∥ρA −ρ e\nA∥1 ≥Tr[(I −P)ρA] ≥1 −"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      368.5870361328125,
+      128.18310546875,
+      382.9830017089844,
+      146.74093627929688
+    ],
+    "text": "b\nX"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      368.9300231933594,
+      138.57618713378906,
+      418.966796875,
+      161.02505493164062
+    ],
+    "text": "i=1\nλi(ρA)."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      169.2812042236328,
+      549.5328979492188,
+      261.5214538574219
+    ],
+    "text": "The last step follows by diagonalizing ρA: for any rank-b projector its diagonal weights lie in [0, 1] and\nsum to b, so the maximum weighted eigenvalue sum selects the largest b eigenvalues. Evaluating the\ndiamond norm on a maximally entangled input gives the same lower bound for half diamond distance.\nFor b = 3m this is 1 −pm.\nFor m = 3 attainment is exact and immediate. Otherwise both Am and the normalized omitted\ncomponent Rm are CPTP, and A = pmAm + (1 −pm)Rm. The half diamond distance of any two\nchannels is at most one, hence 1"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      250.43479919433594,
+      547.33203125,
+      288.5968017578125
+    ],
+    "text": "2∥A −Am∥⋄≤1 −pm. The preceding lower bound is equal, proving\n(33). Orthogonal Choi supports explain why no slack remains.\nProof of the retained statement. Use a bath basis |j, k⟩and define"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      129.49200439453125,
+      297.78338623046875,
+      167.220947265625,
+      310.5038146972656
+    ],
+    "text": "V =\nX"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      154.82699584960938,
+      297.2708740234375,
+      368.39202880859375,
+      322.2862548828125
+    ],
+    "text": "j,k\n|j⟩A ⊗Kjk ⊗|j, k⟩B,\nWm = p−1/2\nm\nX"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      338.8220520019531,
+      299.43988037109375,
+      482.51080322265625,
+      322.2961120605469
+    ],
+    "text": "j, k retained\n|j⟩A ⊗Kjk ⊗|j, k⟩B."
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      64.80007934570312,
+      332.11474609375,
+      548.4793701171875,
+      358.2088317871094
+    ],
+    "text": "Both are isometries by (32), and\nV †Wm = √pmI3.\n(36)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      357.4598388671875,
+      547.8146362304688,
+      497.2397766113281
+    ],
+    "text": "Every pure input with any inert reference therefore gives pure outputs of overlap √pm, whose half\ntrace distance is √1 −pm. Convexity handles mixed inputs. This proves the upper bound uniformly\nover references.\nFor any competing bath of dimension at most b, apply its isometry and the target isometry to a\nmaximally entangled input. The competitor output has Schmidt rank at most b across bath versus\npointer–memory–reference. After any bath-only identification it lies in some bath subspace of dimension\nat most b. Its squared overlap with the target is at most the target mass in that subspace, at most the\nlargest-b eigenvalue sum of its bath marginal. The target pure state’s nonzero bath eigenvalues are\nthose of ρA, so this sum is pm for b = 3m. Pure-state trace distance is thus at least √1 −pm. This\nproves (35).\n□"
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80001831054688,
+      514.3333740234375,
+      381.0628662109375,
+      526.28857421875
+    ],
+    "text": "5.3\nAn exact, independently checked qutrit example"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      526.6538696289062,
+      330.3332824707031,
+      546.6253051757812
+    ],
+    "text": "At the fixed-seed construction’s critical parameter t =\n√"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      330.3370056152344,
+      526.6538696289062,
+      398.02227783203125,
+      546.6387939453125
+    ],
+    "text": "14/21, r = 4\n√"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      535.7161865234375,
+      547.2769775390625,
+      574.7271118164062
+    ],
+    "text": "14/63, the three positive charge\nblocks have traces\n(ν0, ν1, ν2) = (1/9, 1/3, 5/9)."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      581.3967895507812,
+      548.7190551757812,
+      619.5597534179688
+    ],
+    "text": "For example their first diagonal entries are (2/27, 2/27, 14/27) and off-diagonal entries are c0 = t(ω−2)/9,\nc1 = c2 = −t(8 + 5ω)/9. Their determinants vanish; each is nonzero and has rank one. Thus the\nfollowing are sharp resource points for this specified channel:"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      83.08000183105469,
+      629.6096801757812,
+      528.9966430664062,
+      681.5647583007812
+    ],
+    "text": "pure bath budget\noptimal reduced half diamond error\noptimal retained half diamond error\n3\n4/9\n2/3\n6\n1/9\n1/3\n9\n0\n0"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      691.5050048828125,
+      547.4569091796875,
+      729.5968017578125
+    ],
+    "text": "No exact answer is claimed at the intervening budgets four, five, seven or eight. The same theorem\napplies to any other certified member with the charge form (31), using its actual block weights; it does\nnot require the particular numerical example."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.33123779296875,
+      547.4685668945312,
+      133.64776611328125
+    ],
+    "text": "Repeated use.\nFor the displayed streaming implementations, fresh independent pure bath ports and\nthe same internal dynamics give V †\nnWm,n = pn/2\nm I: contract the last pair of isometries using (36) and\ninduct. Their full retained distance is therefore exactly √1 −pnm for every input and reference. This\nis the error of these explicitly declared implementations, not the optimum over globally compressed\nhorizon baths or a grant of fresh preparation independence in an unrelated physical source."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      151.48486328125,
+      549.2374267578125,
+      393.351806640625
+    ],
+    "text": "Practical meaning and limits.\nThe earlier count nine was an exact one-step apparatus cost. It\nnow has a precision-sensitive interpretation: for this channel a bath of size six cannot achieve reduced\nerror below 1/9, and cannot achieve retained-pure error below 1/3; both boundaries are constructively\nattained. The comparison keeps the same source space, original preparation, pointer, clock tick and\narbitrary inert reference. It compares alternative admitted interactions. Access to a returning bath or\ncontroller changes the reusable-memory ledger. An initially mixed apparatus requires its purification\nresource to be declared; the pure-bath budget here cannot silently be replaced by its unpurified marginal\ndimension.\nThis does not optimize over all qutrit sources with the same passive word law, compare a three-\ndimensional source with a four-dimensional one under arbitrary interventions, or certify a laboratory\nrealization. It does not turn an unread-bath bound into equality of complete retained instruments. The\ntwo separate, explicit statements above provide the appropriate interfaces. The construction supplies\nno Born selection, mass-noise admission, actual-event mechanism or conscious perspective.\nsupplement/memory/five/audit/check_bath_approximation.py independently reconstructs all\nnine Kraus matrices, proves their orbit trace identities and Choi orthogonality with exact symbolic\narithmetic, and checks the scalar isometry overlaps. Its arbitrary-reference samples are numerical\ndiagnostics, not the universal proof. All parameters and outputs are in supplement/memory/expect\ned_outputs/five/audit/bath_approximation_results.json."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.79998779296875,
+      413.4864807128906,
+      547.34765625,
+      445.8758850097656
+    ],
+    "text": "6\nFinite-horizon resource accounting: what survives beyond the\nmemory box"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.93000030517578,
+      458.4652099609375,
+      547.73681640625,
+      632.0457763671875
+    ],
+    "text": "An exact streaming advantage survives the expanded accounting, but it is an advantage in reusable\ncausal memory, not a claim that an entire closed apparatus has four dimensions. For the noiseless trine\nprocess and any declared horizon n ≥4, four quantum dimensions and nine classical states are the\nexact causal-memory minima when every history-correlated controller, reference and environment that\ncan influence the future is included at the causal cut. In contrast, the retained archive and an isometric\nimplementation of its classicalization require resources growing with the horizon. These resources can\nbe calculated exactly for the supplied quantum construction. This corrects a possible overreading of\nthe earlier four-versus-nine result.\nThe calculation concerns ordinary finite-dimensional instruments and exact channels. It assumes\nBorn probabilities, does not select actual events, and does not assign hardware size, energy, temperature\nor a physical reset cost to a Hilbert dimension. The preparation, interface and accuracy must be the\nsame for every comparison; the finite-accuracy comparator elsewhere in this companion changes the\nappropriate conclusion when an exact law is unnecessary."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      649.5474243164062,
+      295.88201904296875,
+      661.5026245117188
+    ],
+    "text": "6.1\nDeclared task and phase encoding"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      670.788818359375,
+      395.09771728515625,
+      683.4888305664062
+    ],
+    "text": "For the emitted-symbol construction, use phases θj = 2πj/m, m ≥3,"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      155.05099487304688,
+      693.9031372070312,
+      244.65663146972656,
+      714.8482055664062
+    ],
+    "text": "|ψj⟩= |0⟩+ eiθj|1⟩\n√"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      218.9219970703125,
+      693.9031372070312,
+      354.3076477050781,
+      722.3278198242188
+    ],
+    "text": "2\n,\n|ψ⊥\nj ⟩= |0⟩−eiθj|1⟩\n√"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      328.572998046875,
+      695.5786743164062,
+      406.9515686035156,
+      722.3278198242188
+    ],
+    "text": "2\n,\nEj = 2"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      399.43499755859375,
+      700.6338500976562,
+      456.95172119140625,
+      721.3372802734375
+    ],
+    "text": "m|ψ⊥\nj ⟩⟨ψ⊥\nj |,"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      64.40699768066406,
+      67.09080505371094,
+      172.5664520263672,
+      79.79180908203125
+    ],
+    "text": "with ρj = |ψj⟩⟨ψj| and"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      224.72198486328125,
+      79.45579528808594,
+      383.05364990234375,
+      99.5357666015625
+    ],
+    "text": "Tij = Tr(Ejρi) = 1 −cos(θi −θj)"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      341.65399169921875,
+      86.97724914550781,
+      387.28070068359375,
+      105.36931610107422
+    ],
+    "text": "m\n."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      109.89027404785156,
+      292.09722900390625,
+      121.80313873291016
+    ],
+    "text": "Starting from τ = I4/4, the iterated instrument"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      233.54298400878906,
+      133.8098602294922,
+      548.4793701171875,
+      146.35494995117188
+    ],
+    "text": "Ψj(X) = Tr1[(Ej ⊗I2)X] ⊗ρj\n(37)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      158.0257110595703,
+      217.1674346923828,
+      168.934814453125
+    ],
+    "text": "has the full stationary word law"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      205.63401794433594,
+      183.09669494628906,
+      287.58355712890625,
+      202.86795043945312
+    ],
+    "text": "p(w1 · · · wn) = 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      277.70098876953125,
+      197.10202026367188,
+      291.5111083984375,
+      208.8563232421875
+    ],
+    "text": "m2"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      295.0249938964844,
+      179.96688842773438,
+      310.98211669921875,
+      198.62802124023438
+    ],
+    "text": "n−2\nY"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      296.06500244140625,
+      190.3219451904297,
+      548.4793701171875,
+      212.78018188476562
+    ],
+    "text": "t=1\nTwt,wt+2,\nn ≥2.\n(38)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      223.2027130126953,
+      547.8903198242188,
+      369.6037902832031
+    ],
+    "text": "The circular phase representation is informed by [6, abstract and Sections 2–3] and [7, pp. 64–68]; the\nstochastic process and instrument are defined above, and their resource costs are proved below.\nThe task here retains all n outputs in their original order, their settings and timing metadata, and\nevery declared null/loss outcome. The ideal alphabet contains no loss; a failed physical implementation\nmust add it and changes the target law. The archive is append-only: it is not consulted to decide\nfuture source transitions. Future fresh stock is initially uncorrelated with the history and memory. Any\nviolation must be explicitly added to the causal memory or to the task’s intervention interface.\nThere are two distinct output tasks. A coherent archive retains the amplitudes between different\noutput words. A classical archive is diagonal in the word basis, including when the input memory is\nentangled with an arbitrary retained reference. The passive word probabilities agree, but the channels\nand their resource requirements differ."
+  },
+  {
+    "page": 16,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      387.0353698730469,
+      263.96160888671875,
+      398.9905700683594
+    ],
+    "text": "6.2\nAn exact single-step dilation"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      408.4181823730469,
+      271.6456298828125,
+      419.3407897949219
+    ],
+    "text": "Let S swap the two memory qubits and set"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      203.11099243164062,
+      430.7473449707031,
+      239.42559814453125,
+      447.68377685546875
+    ],
+    "text": "Lj =\nq"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      239.4250030517578,
+      432.8148193359375,
+      408.8917236328125,
+      448.58990478515625
+    ],
+    "text": "2/m|ψj⟩⟨ψ⊥\nj |,\nKj = S(Lj ⊗I2)."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      459.61474609375,
+      302.0221862792969,
+      480.59490966796875
+    ],
+    "text": "Then Ψj(X) = KjXK†\nj and P\nj K†\njKj = I4. Thus"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      215.21401977539062,
+      497.714111328125,
+      235.519287109375,
+      508.63671875
+    ],
+    "text": "V ="
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      238.5480194091797,
+      487.2177429199219,
+      256.8571472167969,
+      505.8788757324219
+    ],
+    "text": "m−1\nX"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      240.3510284423828,
+      493.0687561035156,
+      548.4793701171875,
+      520.1630249023438
+    ],
+    "text": "j=0\n|j⟩A ⊗Kj : C4 −→Cm\nA ⊗C4\nM\n(39)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      531.384033203125,
+      547.495361328125,
+      583.0258178710938
+    ],
+    "text": "is an isometry. A fresh blank m-level output register and a fixed unitary extension implement the\ncoherent-output step with no additional discarded system. This does not say that the output register\nis free.\nFor comparison the dephased complete-record channel is"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      233.2790069580078,
+      594.3663330078125,
+      291.0759582519531,
+      608.0770874023438
+    ],
+    "text": "C1(X) =\nX"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      281.9329833984375,
+      593.0498657226562,
+      378.72369384765625,
+      618.6032104492188
+    ],
+    "text": "j\n|j⟩⟨j|A ⊗KjXK†\nj."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      629.9052124023438,
+      547.4658203125,
+      667.92578125
+    ],
+    "text": "Its Choi rank is exactly m: each nonzero output block has rank one. Consequently a globally isometric\nimplementation with a pure initially independent environment requires an environment of dimension\nat least m, and dimension m suffices by copying the label,"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      256.3699951171875,
+      680.9227905273438,
+      355.6317443847656,
+      693.5208740234375
+    ],
+    "text": "F : |j⟩A 7→|j⟩A|j⟩E."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      705.2242431640625,
+      549.575927734375,
+      729.58837890625
+    ],
+    "text": "The environment must be retained elsewhere or traced; tracing implements classicalization. Conditioning\non one actual outcome is a different operation from replacing this complete channel by a pure branch."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      64.11881256103516,
+      548.7845458984375,
+      93.2998046875
+    ],
+    "text": "The memory channel with its record discarded, Λ(X) = P\nj KjXK†\nj, has Choi rank exactly three,\nindependent of m. Indeed the three functions 1, eiθj, e−iθj are linearly independent for m ≥3, and"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      241.93902587890625,
+      106.08271789550781,
+      284.2756042480469,
+      126.0078125
+    ],
+    "text": "Lj =\n1\n√"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      278.5780029296875,
+      121.90919494628906,
+      293.6101989746094,
+      132.831787109375
+    ],
+    "text": "2m"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      296.6240234375,
+      104.07936096191406,
+      360.8335266113281,
+      131.137939453125
+    ],
+    "text": "1\n−e−iθj\neiθj\n−1"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      362.17401123046875,
+      104.07948303222656,
+      370.06439208984375,
+      114.04208374023438
+    ],
+    "text": "!"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.22698974609375,
+      144.4591827392578,
+      547.6214599609375,
+      264.328857421875
+    ],
+    "text": "span a three-dimensional operator space. Multiplication by S and tensoring with I2 preserve this span\ndimension. Dropping the record can therefore reduce a dilation cost from m to three, but solves a\nweaker task.\nThese minimal-environment statements are standard Choi–Kraus–Stinespring theory, applied here\nexplicitly. If a pure-environment dilation has dimension dE, its environment-basis Kraus representation\nhas at most dE terms, so rank J(C) ≤dE; a spectral decomposition of the positive Choi matrix attains\nequality. A primary textbook statement is Watrous, The Theory of Quantum Information, Corollary\n2.27, printed pp.89–90, author’s chapter PDF pp.16–17: https://cs.uwaterloo.ca/~watrous/TQI\n/TQI.double.2.pdf."
+  },
+  {
+    "page": 17,
+    "kind": "heading",
+    "bbox": [
+      64.79999542236328,
+      281.17138671875,
+      436.4633483886719,
+      293.1265869140625
+    ],
+    "text": "6.3\nExact horizon cost and the obstruction to indefinite reuse"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.79999542236328,
+      302.412841796875,
+      456.93902587890625,
+      315.95391845703125
+    ],
+    "text": "For a word w, let Kw = Kwn · · · Kw1. Define the complete classical-record channel"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      227.76296997070312,
+      324.58734130859375,
+      286.46392822265625,
+      338.2891845703125
+    ],
+    "text": "Cn(X) =\nX"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      276.1179504394531,
+      324.0747985839844,
+      548.4793090820312,
+      347.8731994628906
+    ],
+    "text": "w\n|w⟩⟨w|A ⊗KwXK†\nw.\n(40)"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      357.4737854003906,
+      547.8132934570312,
+      382.8580627441406
+    ],
+    "text": "This is a channel on arbitrary input states and hence includes all initially retained input references. It\nis stronger than requesting a distribution only for I4/4."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      399.5118408203125,
+      467.2279968261719,
+      410.583984375
+    ],
+    "text": "Horizon dilation theorem.\nFor the noiseless phase-circle instrument, n ≥2, put"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      256.2019958496094,
+      421.173828125,
+      355.80072021484375,
+      436.04278564453125
+    ],
+    "text": "Nn = m2(m −1)n−2."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      447.1748352050781,
+      547.435302734375,
+      512.434814453125
+    ],
+    "text": "Then Cn has Choi rank exactly Nn. Its minimum pure initial environment dimension is Nn. For the\nfixed stationary input I4/4, the final memory–classical-archive state also has rank Nn. Conversely the\ncoherent n-output isometry requires no additional bath beyond its output registers, while producing a\ndifferent retained-output channel.\nProof. After the first two steps,"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      244.29701232910156,
+      521.795654296875,
+      294.3765563964844,
+      542.3048095703125
+    ],
+    "text": "K(a,b) = 2"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      286.8599853515625,
+      526.851806640625,
+      367.7057189941406,
+      547.5543212890625
+    ],
+    "text": "m|ψaψb⟩⟨ψ⊥\na ψ⊥\nb |."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      555.3679809570312,
+      549.3735961914062,
+      661.2057495117188
+    ],
+    "text": "Every further step shifts the two states and contributes a scalar whose squared modulus is Twt,wt+2.\nTherefore Kw has operator rank one and is nonzero precisely when wt+2 ̸= wt at every later step.\nThere are m2 first pairs and m −1 later choices, giving Nn positive words. Each word block of the\nChoi matrix is the nonzero rank-one matrix |Kw⟩⟩⟨⟨Kw|; distinct archive blocks are orthogonal. Their\nranks add, proving the Choi claim and the pure-environment minimum. On I4/4 every word block is a\npositive scalar times ρwn−1 ⊗ρwn, so the fixed-output state has the same rank. Finally the ordered\niteration of V is an isometry before dephasing and introduces no bath.\n□\nThe lower bound is sharp for the declared final complete channel:"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      242.4510040283203,
+      672.3173217773438,
+      283.7099609375,
+      685.0242919921875
+    ],
+    "text": "X 7→\nX"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      273.3639831542969,
+      673.9738159179688,
+      368.69866943359375,
+      695.6021728515625
+    ],
+    "text": "w\n|w⟩A|w⟩E ⊗KwX"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      705.0540161132812,
+      547.4519653320312,
+      729.5726928710938
+    ],
+    "text": "is its Stinespring isometry. It is not a claim that Nn is the minimum physical bath for every source\nhaving only the same passive output law, or that independently optimizing each intermediate cut gives"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.5270004272461,
+      67.16098022460938,
+      549.3193969726562,
+      159.4508056640625
+    ],
+    "text": "a minimum protocol. It is a concrete finite-horizon implementation and lower bound for (40). The\ndistinction between a channel’s dilation rank and a whole strategy’s memory is essential; see Bisio et\nal., Phys. Rev. A 85, 032333 (2012), DOI 10.1103/PhysRevA.85.032333, Definitions 3–4 and Theorem\n3, https://arxiv.org/abs/1112.3853.\nA fixed reusable environment of dimension D, initially pure and with no reset, export or new\nenvironment, cannot realize these dephased channels at arbitrarily large n: it must satisfy D ≥Nn.\nFor m > 2,"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      252.66700744628906,
+      169.1748504638672,
+      290.1236572265625,
+      180.23883056640625
+    ],
+    "text": "n ≤2 +"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      292.5480041503906,
+      159.94740295410156,
+      351.7736511230469,
+      187.7227783203125
+    ],
+    "text": "$\nlog(D/m2)\nlog(m −1)"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      352.9679870605469,
+      159.9473419189453,
+      359.3340759277344,
+      169.90994262695312
+    ],
+    "text": "%"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      196.3788299560547,
+      549.597900390625,
+      329.38580322265625
+    ],
+    "text": "whenever a horizon n ≥2 is feasible. This is a finite-dimensional isometric obstruction, not a claim\nabout the speed or thermodynamics of erasure. If an initially mixed environment has rank r and output\ndimension D, a Kraus expansion gives only Dr ≥Nn; its purifying stock cannot be silently declared\nfree. If the apparatus exports the purifier or outcome copies, those registers belong in the resource\nledger. If a fundamental nonunitary law is introduced, this dilation accounting no longer describes that\nlaw and must not be used to rule it out.\nThe raw n-symbol archive has dimension mn for either realization. Its positive-word subspace\nhas dimension Nn, allowing an exactly reversible lossless word code of that capacity. A controller\nimplementing such global compression is additional circuitry; it is not produced by the rank bound.\nWith stationary input, the required archive entropy is"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      147.65499877929688,
+      341.1733703613281,
+      407.072021484375,
+      356.4992980957031
+    ],
+    "text": "H(W1 · · · Wn) = 2 log2 m + (n −2)hm,\nhm = −\nX"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      397.9290466308594,
+      342.97119140625,
+      464.3477478027344,
+      365.41021728515625
+    ],
+    "text": "j\nT0j log2 T0j."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      377.2592468261719,
+      547.4545288085938,
+      415.1807861328125
+    ],
+    "text": "This follows by the chain rule from the order-two law and its uniform pair distribution. For the noiseless\ntrine, h3 = 1 and all Nn = 9 2n−2 positive words are equiprobable. The purifying environment for the\nstationary output can have exactly this entropy; entropy in bits is not an energy estimate."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      432.6833801269531,
+      353.44635009765625,
+      444.6385803222656
+    ],
+    "text": "6.4\nAn explicitly budgeted classical comparator"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      454.065185546875,
+      547.8182373046875,
+      478.53680419921875
+    ],
+    "text": "For m = 3, the nine-state orthogonal-pair source achieves the exact classical minimum for this law. A\ndeclared quantum-channel embedding of that classical update on Cm ⊗Cm is"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      145.36798095703125,
+      491.9808349609375,
+      466.6347961425781,
+      504.6817932128906
+    ],
+    "text": "Dj = diag(T0j, . . . , Tm−1,j),\nQj(X) = Tr1[(Dj ⊗Im)X] ⊗|j⟩⟨j|."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      514.9789428710938,
+      547.474853515625,
+      541.0919799804688
+    ],
+    "text": "It preserves the same passive word law from Im2/m2. It retains second-register coherence in this\nextension rather than gratuitously dephasing the entire memory. Its independent Kraus operators are"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      217.16099548339844,
+      552.956298828125,
+      259.4455871582031,
+      569.2998046875
+    ],
+    "text": "Fj,a =\nq"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      259.4460144042969,
+      556.5997924804688,
+      394.84716796875,
+      569.2863159179688
+    ],
+    "text": "Taj Sm(|j⟩⟨a| ⊗Im),\na ̸= j."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      582.5828247070312,
+      547.8579711914062,
+      702.040771484375
+    ],
+    "text": "Thus its one-step complete-record Choi rank is m(m −1), and for n ≥2 its horizon Choi rank is\n(m −1)2Nn. To see the latter, a word map has pure final memory |wn−1, wn⟩and effect proportional to\nDw1 ⊗Dw2, of rank (m −1)2; archive ranks again add. These environment counts are exact for these\nspecified CP updates, not a proved optimum over every nine-state classical HMM and every physical\nextension of its diagonal-state behavior.\nFor the trine, the following ledger separates resources rather than hiding them in a single memory\nnumber. Its dilation rows concern the specified final channel; they must not be multiplied with a\nper-step memory optimum and called a simultaneously optimized closed protocol. The simple streaming\nimplementation uses independent fresh per-step ports; global compression needs its own controller."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      81.7869873046875,
+      66.01481628417969,
+      521.377197265625,
+      145.22381591796875
+    ],
+    "text": "Resource, exact horizon n ≥4\nQuantum shift\nCanonical classical pair\nReusable causal memory\n4 dimensions\n9 states\nRaw ordered symbol archive\n3n dimensions\n3n dimensions\nPositive-word archive capacity\nNn = 9 2n−2\nsame Nn\nPure bath for the specified final com-\nplete channel\nNn\n4Nn"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      81.78700256347656,
+      147.77896118164062,
+      415.06805419921875,
+      172.32177734375
+    ],
+    "text": "Pure bath for one specified recorded\nstep\n3\n6"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      81.78700256347656,
+      174.96168518066406,
+      501.18731689453125,
+      199.4207763671875
+    ],
+    "text": "Purifier of stationary mixed memory\n4\n9\nClock, switch routing, calibration\nseparately supplied\nseparately supplied"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      210.53826904296875,
+      547.480224609375,
+      316.2057800292969
+    ],
+    "text": "The purifier row refers to each stated stationary mixed-memory preparation; it is not evidence that the\ntwo process models have the same response to arbitrary interventions on those different purifiers. Bath\nranks compare specific channels, not an optimization of all closed realizations.\nFor example n = 16 needs Nn = 147456 positive-word labels (18 binary storage positions suffice\nfor their lossless fixed-length code), despite a reusable quantum memory of dimension four. Repeated\nindependent per-step baths of dimension three give a simple, larger upper bound 3n; finite-horizon\nKraus compression reduces the final-channel bath requirement to Nn. Neither count is the same as a\ndevice’s number of elementary components."
+  },
+  {
+    "page": 19,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      333.7083740234375,
+      444.4015197753906,
+      345.66357421875
+    ],
+    "text": "6.5\nA causal-cut separation that includes correlated controllers"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      355.01898193359375,
+      549.0094604492188,
+      447.30780029296875
+    ],
+    "text": "There is a precise sense in which the memory advantage is not an artifact of drawing a small box\naround the source. At the cut between outputs two and three, define Mlive to include all jointly\nhistory-correlated systems that can influence future source operations: memory, feedback controller,\nreused environment, and any history-bearing phase or clock register. A history-bearing part of a\nfuture tape belongs here, even if physically outside the nominal source. Independent fresh stock is a\ndeclared preparation resource, while an append-only archive and environments never accessed again\nare retained-history resources, not reusable causal memory."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      465.2982482910156,
+      549.3195190429688,
+      545.4909057617188
+    ],
+    "text": "Expanded causal-memory proposition.\nFor the exact noiseless trine four-output law, a quantum\nMlive needs dimension at least four, and a classical Mlive needs at least nine states. Both bounds are\nattainable while using the explicitly budgeted fresh resources and archives above. They therefore hold\nfor every exact horizon n ≥4 under this interface.\nProof. Future operations, including independent fresh ancillas, define positive effects Bcd on Mlive.\nThe unnormalized state after outputs a, b is Aab ≥0. Hence"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      201.14598083496094,
+      554.4761352539062,
+      406.1360168457031,
+      574.5567626953125
+    ],
+    "text": "Hab,cd = p(a, b, c, d) = Tr(AabBcd) = TacTbd"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      388.9549865722656,
+      561.856201171875,
+      410.855712890625,
+      580.2617797851562
+    ],
+    "text": "9\n."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      588.739013671875,
+      547.6718139648438,
+      708.1257934570312
+    ],
+    "text": "For trine T, rank T = 3, so rank H = 9. A classical D-state cut factors H through D nonnegative\ncoordinates, giving D ≥9. A quantum cut has d2 ≥9, so d ≥3. To exclude d = 3, use the zeros\nwhenever a = c or b = d. Positive matrices with zero trace pairing have orthogonal ranges. Put\nRa = spand ran Bad and Cb = spanc ran Bcb. The nonzero range of Aab is orthogonal to Ra + Cb, hence\ndim(Ra + Cb) ≤2. If one Ra has dimension two, all Cb lie in it, so every effect is supported on a\ncommon plane; compressing all factors would give rank at most four, contradicting nine. The same\nholds for a two-dimensional Cb. Otherwise all these nonzero spaces are lines. Each nonzero Bab lies in\nboth Ra and Cb, forcing all lines equal and rank at most one, again a contradiction. Thus d ≥4. The\ntwo-qubit shift and nine-state pair source attain the respective bounds.\n□"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.24568176269531,
+      542.3923950195312,
+      78.16295623779297
+    ],
+    "text": "Certified noisy-interval corollary.\nThe same expanded interface gives exact causal-cut minima"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      167.01998901367188,
+      90.80665588378906,
+      445.0793151855469,
+      129.21282958984375
+    ],
+    "text": "noise interval\nquantum dimensions\nclassical states\n0 ≤λ ≤3 × 10−8\n4\n9\n7657/8000 ≤λ < 1\n3\n9."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      141.75399780273438,
+      549.4815673828125,
+      396.6337890625
+    ],
+    "text": "For the first row use the quantitative PSD-rank exclusion proved in the main resource manuscript\nand the four-dimensional shift. This companion retains the narrower rational-encoding interval in\nthe second row so its stated construction remains self-contained; the main manuscript extends qutrit\nattainment to the larger interval beginning at λ†. For the second use the exact qutrit instrument in\nSection 1; ordinary rank nine of the same four-time cut excludes a quantum dimension below three\nand a classical size below nine. Fresh independent ancillas and fixed clocks still define effects on Mlive,\nso including correlated controllers does not change these factorization arguments. These are exact-law\nstatements for n ≥4; the middle interval and minimum approximate-memory frontier are not asserted.\nThis is the earlier proved rank/support argument with the causal interface made explicit, not a new\nlower-bound method. It closes an accounting loophole: moving history into a controller or returning\nbath does not evade the bound when that system is counted in Mlive. Allowing a pre-correlated future\ntape and then excluding it from Mlive would invalidate the factorization, not disprove the proposition.\nAllowing coherent archive feedback changes the interface and must include the interacting archive in\nthe cut.\nThis restricted four-versus-nine separation remains useful even when common archive storage is\nlarge. In logarithmic memory capacity it is log2(9/4) ≃1.170 bits. Adding an identical separately\nbudgeted storage term does not remove that difference, but the reusable-memory fraction of the total\nstorage can become small as n grows. It is not an optimization of total closed hardware, and no energy\nor speed ordering follows."
+  },
+  {
+    "page": 20,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      414.1353759765625,
+      328.4599609375,
+      426.090576171875
+    ],
+    "text": "6.6\nPhase, calibration and clock accounting"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      435.4469909667969,
+      549.6023559570312,
+      554.8338012695312
+    ],
+    "text": "The instrument is fixed at every tick. It does not call a hidden classical controller that remembers\nthe previous output and prepares a time-dependent phase state; the preparation and update are\nalready included in Kj. Nevertheless the fixed m-outcome coupler, its calibration and output ports are\nresources. Increasing m does not make those resources disappear merely because the reusable memory\nremains four-dimensional.\nA modest symmetry result limits what phase reference is actually needed in this abstract construction.\nLet U = diag(1, e2πi/m), R = U ⊗U, and let P|j⟩= |j + 1 mod m⟩. The chosen phases of Lj give\nRKjR† = Kj+1, hence\nV R = (P ⊗R)V.\n(41)"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      564.031005859375,
+      549.4198608398438,
+      723.9021606445312
+    ],
+    "text": "The stationary state is invariant. The isometry therefore respects simultaneous discrete rotation of the\nmemory and relabelling of the ports. In particular, the common azimuth is not a separate time-varying\nsource variable.\nThere is a symmetry-preserving unitary extension with a fresh output blank |s⟩= m−1/2 P\nj |j⟩,\ninvariant under P. To prove existence, the invariant subspace |s⟩⊗C4 and the image of V carry\nequivalent representations of the finite group Cm by (41). Their orthogonal complements have the same\nrepresentation multiplicities, so choose a unitary intertwiner on each complement and combine it with\nV on the input subspace. This is a finite-group constructive existence argument, not an assertion of\nreference-free implementation under continuous U(1) or of a particular energy-conserving Hamiltonian.\nPhysical phase stability and gate precision still require calibration at the declared accuracy.\nA clock supplies ticks separated by a chosen ∆t in seconds and routes the next fresh output\nregister. Its precision, reset and control law are independent implementation inputs. A finite routing"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      547.8604125976562,
+      106.3410415649414
+    ],
+    "text": "register with n + 1 orthogonal positions is one possible explicitly budgeted schedule; no minimum clock\ndimension or thermodynamic cost is proved. If that clock acquires history correlations used to modify\nthe source, it joins Mlive. An unused archival timestamp does not become hidden controller memory."
+  },
+  {
+    "page": 21,
+    "kind": "heading",
+    "bbox": [
+      64.80001068115234,
+      122.7553482055664,
+      366.04718017578125,
+      134.71055603027344
+    ],
+    "text": "6.7\nNoise, accuracy and what remains established"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      142.47613525390625,
+      548.7189331054688,
+      317.6507873535156
+    ],
+    "text": "The exact zero pattern is load bearing. For the earlier noisy construction Eλ\nj = [I −(1 −λ)nj · σ]/m\nwith 0 < λ ≤1, each effect has rank two. The same four-dimensional shift channel, which need not be\nthe minimum realization of the noisy law, then has one-step recorded Choi rank 2m and unrecorded\nrank four. For n ≥2, every word is positive and the word map has pure final memory but an input\neffect proportional to Eλ\nw1 ⊗Eλ\nw2, of rank four. Consequently its complete-channel Choi rank is 4mn,\nalthough its stationary fixed-output state without an initial retained reference has rank only mn. This\nis a concrete reason not to replace a retained-reference channel task by one fixed-input density matrix\nwhen counting environment.\nThese ranks are exact channel identities, not robust physical costs at finite tolerance. At λ = 1 the\noutput law is IID uniform and a one-dimensional source suffices; the four-dimensional shift’s dilation\nranks are plainly not process-wide minima. The exact and finite-accuracy realization results elsewhere\nin this companion must be used for the corresponding task and tolerance. No discontinuous exact rank\njump is offered as an experimentally discontinuous hardware demand."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      335.6412353515625,
+      547.8173828125,
+      441.309814453125
+    ],
+    "text": "The rational encoded-pair qutrit has a larger specified bath.\nThe exact rational certificate in\nSection 1 establishes that all three 9-by-9 Choi matrices of its qutrit branch maps are strictly positive\nthroughout 7657/8000 ≤λ < 1; the Bernstein control matrices are positive definite. This independently\ndetermines that construction’s dilation ranks, rather than borrowing the four-dimensional shift’s\nformula.\nIf J(Φ) > 0 and J(Θ) > 0, choose c > 0 with J(Φ) ≥cI ⊗I. Complete positivity and strict\npositivity of Θ(I) give\nJ(Θ ◦Φ) = (id ⊗Θ)(J(Φ)) ≥cI ⊗Θ(I) > 0."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      450.3409729003906,
+      547.3795776367188,
+      502.9730529785156
+    ],
+    "text": "Here Θ(I) > 0 follows, for example, by partially tracing a strictly positive Choi matrix. Induction\nproves that every word branch of the specified qutrit source has Choi rank nine. There are 3n positive\nwords; orthogonal classical archive blocks therefore give exact recorded-channel Choi rank 9 3n. On\nstationary input I3/3, every conditional word state is strictly positive, giving fixed-output rank 3 3n"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      504.6227111816406,
+      547.218505859375,
+      542.6298217773438
+    ],
+    "text": "instead.\nFor these specified implementations on the rational encoded-pair interval 7657/8000 ≤λ < 1, the\ncomparable ledger is"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      125.92900085449219,
+      553.6876831054688,
+      486.20196533203125,
+      605.6427612304688
+    ],
+    "text": "Same passive trine word law\nQutrit\nShift\nClassical pair\nReusable memory dimension\n3\n4\n9\nOne-step complete-record Choi rank\n27\n6\n9\nHorizon complete-record Choi rank, n ≥2\n9 3n\n4 3n\n9 3n"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      125.92900085449219,
+      606.6071166992188,
+      459.2276916503906,
+      632.7407836914062
+    ],
+    "text": "Stationary fixed-output rank, reference omit-\nted\n3 3n\n3n\n3n"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      125.92898559570312,
+      633.7051391601562,
+      459.2276916503906,
+      646.289794921875
+    ],
+    "text": "Raw classical symbol archive\n3n\n3n\n3n"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      657.3943481445312,
+      549.654296875,
+      722.4036865234375
+    ],
+    "text": "The classical column uses the explicit orthogonal-pair CP extension above; for positive noise its effects\nDj have rank three and its word effects Dw1 ⊗Dw2 have rank nine. It is again a specified implementation,\nnot a universal optimum over classical physical extensions. The source with one-step rank nine and\nthe mixed-support history source in the main manuscript improve on this rational construction. This\ntable preserves the distinct, exactly specified channels above; it is not the current process-wide frontier."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.31405639648438,
+      548.9702758789062,
+      227.19677734375
+    ],
+    "text": "The lower memory dimension and higher minimum pure bath for these particular channels form a real\nresource tradeoff. The two complete memory/bath channels are different; only the declared passive\nsymbol task is the same. This is not a lower bound on the bath of every possible qutrit realization,\nnor a proof that the four-dimensional source minimizes total hardware. It is precisely why one should\nreport a resource vector before choosing a cost function. An implementation allowed only finite output\naccuracy can use a different comparator, as quantified in Section 2.\nThe completed benefit is an explicit audit of where the earlier compression does and does not\napply: a sharp exact reusable-causal-memory separation, exact finite-horizon bath requirements for its\ncomplete channel, a proof that finite unreset environments cannot produce indefinitely many exact\nclassical records in the isometric model, and a symmetry-respecting fixed implementation. No statement\nhere closes the measurement programme’s outstanding physical obligations or identifies a conscious\nperspective."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      244.96421813964844,
+      548.8251953125,
+      364.2117919921875
+    ],
+    "text": "Verification.\nThe historical diagnostic research3/accounting/verify_accounting.py, preserved\nin the separate evidence archive, checks Kraus completeness, Choi ranks, word probabilities, conditional\nstates and discrete covariance. It tests noiseless grids m = 3, 4, 5 through horizons 7,5,5 respectively,\nand the positive trine shifts at λ = 0.2, 1 through horizon four. The canonical classical channels\nare tested separately. Numerical compositions of the qutrit certificate at ϵ = 0, 0.2, 0.35 through\nhorizon four independently check strict Choi ranks and the new tradeoff. All 7,198 checks pass; the\nmaximum completeness or state/probability error is 1.26 × 10−14. Exact proofs provide the universal\nclaims; floating-point tests diagnose implementation mistakes. These archived diagnostic counts are\nnot additional checks executed by the compact release’s nine-job memory reproduction command."
+  },
+  {
+    "page": 22,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      381.5213623046875,
+      467.42718505859375,
+      393.4765625
+    ],
+    "text": "6.8\nA conditional normal form for a mixed-support equality profile"
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      403.00323486328125,
+      547.4653930664062,
+      427.37579345703125
+    ],
+    "text": "The following reduces a candidate equality branch to a finite spectral form. It is not an existence proof\nfor the mixed support profiles."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      444.933837890625,
+      547.5125732421875,
+      497.6261901855469
+    ],
+    "text": "Lemma.\nLet Φ : M2 →M3 be CP, trace preserving, of linear rank three, with faithful Φ(I2). If two\ndistinct pure input rays have singular nonzero outputs, then after an invertible output congruence its\nimage is the full diagonal algebra. There are a density matrix ρ ≻0 and three scalars λi, at least two\ndistinct and of unit modulus, with |λi| ≤1, such that in a suitable input basis"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      181.9429931640625,
+      516.8656616210938,
+      189.81936645507812,
+      527.7747802734375
+    ],
+    "text": "Φ"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      189.82199096679688,
+      507.4823303222656,
+      221.7227325439453,
+      534.518310546875
+    ],
+    "text": "x\ny\nz\nw"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      222.00997924804688,
+      507.4823303222656,
+      229.90036010742188,
+      517.4449462890625
+    ],
+    "text": "!"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      232.92697143554688,
+      509.40081787109375,
+      430.0587158203125,
+      529.8260498046875
+    ],
+    "text": "= √ρ U diag(x + w + λiy + ¯λiz)3\ni=1U†√ρ."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      547.2777709960938,
+      549.3190307617188,
+      663.25634765625
+    ],
+    "text": "Its Choi rank is three or four, according as the remaining scalar has unit modulus or strict modulus\nbelow one.\nProof. The Hermitian kernel is one-dimensional and contains a nonzero traceless matrix because\nthe map is trace preserving. Diagonalize it. The two diagonal input projectors then have the same\noutput ρ, which is faithful. Writing the off-diagonal response as C gives Φ(X) = (x + w)ρ + yC + zC†.\nChoi positivity is equivalent to\n \nI\nK\nK†\nI"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      227.9420166015625,
+      636.21533203125,
+      235.8323974609375,
+      646.177978515625
+    ],
+    "text": "!"
+  },
+  {
+    "page": 22,
+    "kind": "math",
+    "bbox": [
+      238.8590087890625,
+      643.2748413085938,
+      426.26275634765625,
+      656.5078125
+    ],
+    "text": "⪰0,\nK = ρ−1/2Cρ−1/2,\n∥K∥≤1."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      676.3651123046875,
+      548.7191772460938,
+      729.5833129882812
+    ],
+    "text": "For a normalized pure input, its output is congruent to I + sin θ Re(eiϕK). A zero eigenvalue requires\nsin θ = 1 and a unit vector v with Re⟨v, eiϕKv⟩= −1. Equality in the contraction and Cauchy–Schwarz\ninequalities gives Kv = −e−iϕv. A unit-circle eigenvector of a contraction is reducing: K†v = −eiϕv,\nsince its saturated norm implies (I −K†K)v = 0. Distinct pure rays give distinct phases and therefore"
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      549.3375244140625,
+      111.4111099243164
+    ],
+    "text": "orthogonal reducing eigenvectors. The remaining orthogonal space is one-dimensional, so K is normal.\nDiagonalizing it gives the displayed form.\nLinear rank three makes the three diagonal response\nfunctionals independent. The Choi matrix then splits into three positive 2-by-2 blocks\n\u0010 1 λi\n¯λi 1"
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      92.20137023925781,
+      549.5903930664062,
+      216.11077880859375
+    ],
+    "text": "\u0011\nunder\ncongruence. Two have rank one and the third has rank one or two, proving the last statement.\n□\nFor a non-trace-preserving branch with faithful input effect on its two-dimensional input support,\nan invertible input whitening makes it trace preserving without changing ranks or distinct pure rays.\nIn a putative equality profile (a, b) = (1, 2), two other output planes project to distinct rays in this\nbranch’s input plane, and equality requires their posterior outputs to have rank two. Thus the lemma\napplies to that branch. It is only a necessary normal form: its output-congruenced diagonal structure\nis not literal commutativity of the physical output states, and no global full-law realization follows\nfrom it alone."
+  },
+  {
+    "page": 23,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      236.80067443847656,
+      547.3412475585938,
+      251.14688110351562
+    ],
+    "text": "7\nRetained reference access separates two optimal passive generators"
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      263.7319641113281,
+      547.735107421875,
+      328.92279052734375
+    ],
+    "text": "The source–readout programme already distinguishes a passive output law from an intervention or\nan accessible retained reference. Here this distinction has a sharp, quantitative example even after\njointly minimizing memory and one-step pure-environment dimension. It is an explicit application of\nestablished channel discrimination, not a new general identifiability ceiling.\nUse the minimum-Kraus family, writing its parameter as h ∈(0, 2):"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      106.84603881835938,
+      343.6219482421875,
+      284.02557373046875,
+      371.0597839355469
+    ],
+    "text": "r(h)2 =\nh3(2 −h)\n2(h + 1)(3h + 2),\na(h) = 1"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      278.5710144042969,
+      360.15069580078125,
+      284.02557373046875,
+      371.0597839355469
+    ],
+    "text": "2"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      287.03900146484375,
+      340.2963562011719,
+      295.75628662109375,
+      350.2589416503906
+    ],
+    "text": ""
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      287.03900146484375,
+      352.667724609375,
+      312.1206359863281,
+      368.19195556640625
+    ],
+    "text": "1 +"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      314.54498291015625,
+      341.7433776855469,
+      324.507568359375,
+      351.7059631347656
+    ],
+    "text": "s"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      325.7030029296875,
+      345.1328125,
+      356.23065185546875,
+      371.0597839355469
+    ],
+    "text": "2 −h\n3h + 2"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      357.4259948730469,
+      340.2963562011719,
+      366.1432800292969,
+      350.2589416503906
+    ],
+    "text": ""
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      357.4259948730469,
+      345.1328430175781,
+      505.15673828125,
+      371.0597839355469
+    ],
+    "text": ",\nt(h)2 =\nh(2 −h)\n2(h + 1)(3h + 2)."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      386.6259460449219,
+      547.4901123046875,
+      439.08990478515625
+    ],
+    "text": "Its nine pair states and CP reset maps, defined in the main resource manuscript, generate the entire\nstationary delayed-trine law with r = 1−λ. Each realization has reusable dimension three and recorded\none-step Choi rank nine, both minimal at the indicated parameter. Its stationary memory is I3/3. The\nmaximum of r(h) occurs at h∗= (1 +\n√"
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      427.2891845703125,
+      547.2619018554688,
+      451.76177978515625
+    ],
+    "text": "17)/4; every interior 0 < r < rmax has two distinct parameters\non opposite sides of that maximum."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      462.6388244628906,
+      548.8770751953125,
+      514.350830078125
+    ],
+    "text": "Theorem 7.1 (An exact access-dependent operational separation). Let h1 ̸= h2 have r(h1) = r(h2) > 0.\nThe two admitted source instruments generate identical passive classical word laws, attain the same\none-step Pareto point (d, k) = (3, 9), and have full-history cost 6 3n for n ≥2 (the one-step rank is\nnine). Nevertheless their single-use pointer channels on the common qutrit input obey"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      235.45799255371094,
+      525.4628295898438,
+      373.51470947265625,
+      551.3897705078125
+    ],
+    "text": "1\n2∥Mh1 −Mh2∥⋄= |h1 −h2|"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      350.07000732421875,
+      532.9841918945312,
+      377.74072265625,
+      551.3897705078125
+    ],
+    "text": "3\n."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      559.1780395507812,
+      547.2306518554688,
+      610.8187866210938
+    ],
+    "text": "The distance is attained either by one fixed known Fourier-basis input, or by retaining and reading\na common maximally entangled purifier of the stationary local input I3/3.\nIt is invisible to the\npassive pointer archive alone at every finite horizon. No claim equates the two full retained quantum\ninstruments."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      621.7670288085938,
+      547.4553833007812,
+      646.3097534179688
+    ],
+    "text": "Proof. Let Pj be the three fixed orthogonal Fourier projectors, indexed once consistently with the\nsource covariance. The effects computed from the Choi blocks are"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      250.35400390625,
+      656.2098388671875,
+      318.37164306640625,
+      675.6342163085938
+    ],
+    "text": "Ej(h) = 2 −h"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      303.1099853515625,
+      656.3511962890625,
+      346.0325927734375,
+      682.1367797851562
+    ],
+    "text": "6\nI + h"
+  },
+  {
+    "page": 23,
+    "kind": "math",
+    "bbox": [
+      340.1650085449219,
+      663.731201171875,
+      361.6487121582031,
+      682.1367797851562
+    ],
+    "text": "2Pj."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      689.9239501953125,
+      547.238037109375,
+      731.3748168945312
+    ],
+    "text": "This follows from the fixed phase ζ = −tω2, eigenvalues (2 −h)/6, (2 −h)/6, (1 + h)/3 and covariance\nunder Zj. Thus\nMh = (h/2)MP + (1 −h/2)D,"
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.09080505371094,
+      547.426025390625,
+      98.64791870117188
+    ],
+    "text": "where MP is the projective Fourier measurement with classical pointer and D(ρ) = Tr(ρ)IA/3. For\nany positive joint input ρSR of trace one put σj = TrS[(Pj ⊗I)ρSR]; σj ≥0 and P\nj σj = ρR. Then"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      182.80203247070312,
+      115.09132385253906,
+      197.19798278808594,
+      125.05392456054688
+    ],
+    "text": "X"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      188.05503845214844,
+      115.09138488769531,
+      291.0169677734375,
+      139.3292236328125
+    ],
+    "text": "j\n∥σj −ρR/3∥1 ≤\nX"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      281.8739929199219,
+      131.35919189453125,
+      285.3011474609375,
+      139.32928466796875
+    ],
+    "text": "j"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      292.8299865722656,
+      104.53138732910156,
+      299.47503662109375,
+      114.49398803710938
+    ],
+    "text": ""
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      292.8299865722656,
+      109.52272033691406,
+      306.1215515136719,
+      132.42697143554688
+    ],
+    "text": "2"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      300.6669921875,
+      109.52265930175781,
+      352.79656982421875,
+      135.2957763671875
+    ],
+    "text": "3 Tr σj + 1"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      347.3420104980469,
+      124.38667297363281,
+      352.79656982421875,
+      135.2957763671875
+    ],
+    "text": "3"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      356.1610107421875,
+      115.09132385253906,
+      370.5569763183594,
+      125.05392456054688
+    ],
+    "text": "X"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      355.80999755859375,
+      116.88917541503906,
+      396.4224853515625,
+      139.60507202148438
+    ],
+    "text": "k̸=j\nTr σk"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      397.135009765625,
+      104.53132629394531,
+      403.7800598144531,
+      114.49392700195312
+    ],
+    "text": ""
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      397.135009765625,
+      109.52265930175781,
+      424.9725646972656,
+      132.42691040039062
+    ],
+    "text": "= 4"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      419.51800537109375,
+      116.88917541503906,
+      429.2007141113281,
+      135.2957763671875
+    ],
+    "text": "3."
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      150.8423309326172,
+      549.3190307617188,
+      283.62078857421875
+    ],
+    "text": "The standard stabilization of channel trace-distance discrimination permits restriction to positive joint\ninputs. Hence half the diamond distance between MP and D is at most 2/3. A Fourier eigenstate gives\ndeterministic versus uniform labels and attains this value. Scaling by |h1 −h2|/2 proves the theorem’s\ndistance.\nFor the common purification |Ω⟩= 3−1/2 P\ni |i⟩S|i⟩R, the output pointer/reference block is Ej(h)T /3.\nIts difference is (h1 −h2)(P T\nj −I/3)/6. Since ∥Pj −I/3∥1 = 4/3, the sum of the three block norms\ngives the same half trace distance |h1 −h2|/3. One can attain it by measuring the reference in the\nconjugate Fourier basis and comparing that outcome with the pointer. All preparations, reference basis\nand decoding are fixed independently of which candidate source is used. The equal passive laws and\nresource counts follow from the original family theorem."
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      295.01641845703125,
+      547.466064453125,
+      334.7367858886719
+    ],
+    "text": "For equal prior probabilities of the two candidate generators, one use therefore achieves optimal\nsuccess probability\npsucc = 1"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      287.5849914550781,
+      322.03582763671875,
+      361.7187194824219,
+      336.8617858886719
+    ],
+    "text": "2 + |h1 −h2|/6."
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      341.72698974609375,
+      548.9727172851562,
+      406.9167785644531
+    ],
+    "text": "This is discrimination between two conventional quantum implementations, not a test of Shadow\nTheory against standard quantum mechanics. The purifier must be physically available and measurable;\nretaining an inaccessible reference does not make this decision possible. Supplying a joint purifier is an\noriginal preparation contract shared by both models; its marginal agrees with the stationary state but\nits operational access differs from a pointer-only experiment."
+  },
+  {
+    "page": 24,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      424.2923583984375,
+      375.3004455566406,
+      436.24755859375
+    ],
+    "text": "7.1\nAn algebraic pair and a reproducible certificate"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      64.4070053100586,
+      436.61279296875,
+      254.52928161621094,
+      458.2337646484375
+    ],
+    "text": "Take h1 = 1, r2 = 1/20, so λ = 1 −1/\n√"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      254.5330047607422,
+      445.5328369140625,
+      437.4037780761719,
+      458.07891845703125
+    ],
+    "text": "20. The unique root h2 ∈(3/2, 8/5) of"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      243.11001586914062,
+      467.1759948730469,
+      368.8968811035156,
+      482.8379211425781
+    ],
+    "text": "10h3\n2 −10h2\n2 −7h2 −2 = 0"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      64.799072265625,
+      493.084716796875,
+      218.1046600341797,
+      503.9938049316406
+    ],
+    "text": "is the second parameter. Indeed"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      194.54806518554688,
+      515.4466552734375,
+      241.9866180419922,
+      533.7357788085938
+    ],
+    "text": "r(h)2 −1"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      233.8040008544922,
+      511.33282470703125,
+      413.2272033691406,
+      541.2188110351562
+    ],
+    "text": "20 = −(h −1)(10h3 −10h2 −7h −2)"
+  },
+  {
+    "page": 24,
+    "kind": "math",
+    "bbox": [
+      299.94000244140625,
+      522.8131713867188,
+      417.4537353515625,
+      541.2188110351562
+    ],
+    "text": "20(h + 1)(3h + 2)\n."
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      551.613037109375,
+      547.51220703125,
+      657.4517822265625
+    ],
+    "text": "The cubic changes sign across that interval and its derivative is positive there, proving the root’s\nexistence and uniqueness. Rational bisection certifies it without a floating-point feasibility claim. The\ncode also rebuilds the effects and checks the passive full-word update from the state-basis inverse, with\nexplicit entangled-reference and ordinary-input distance calculations. The universal conclusion follows\nfrom the proof.\nThis example strengthens the concrete operational interface: equality of all passive histories and\njoint dimension optimality still do not identify the generator’s reference correlations. It establishes an\naccess-dependent distinction between the specified generators, not an additional ontological source."
+  },
+  {
+    "page": 24,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      678.1226806640625,
+      247.95790100097656,
+      692.4688720703125
+    ],
+    "text": "8\nCurrent-status overlay"
+  },
+  {
+    "page": 24,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      705.0540161132812,
+      547.753662109375,
+      731.398681640625
+    ],
+    "text": "The analytic and rational encoded-pair constructions remain valid sufficient examples, not the best\ncurrent qutrit feasibility endpoint.\nThe exact dimension-three interval now starts at λ† = 1 −"
+  },
+  {
+    "page": 25,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      64.97431945800781,
+      74.76260375976562,
+      74.93692016601562
+    ],
+    "text": "q"
+  },
+  {
+    "page": 25,
+    "kind": "math",
+    "bbox": [
+      74.76200103759766,
+      61.14580154418945,
+      119.00128173828125,
+      81.1297607421875
+    ],
+    "text": "71 −17\n√"
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      64.41799926757812,
+      70.13595581054688,
+      547.82421875,
+      148.87579345703125
+    ],
+    "text": "17/4. For complete channels retaining final memory, the current universal bounds are\n48, 145, 437 3n−4; the explicit mixed source at .99 attains 50, 152, 456 3n−4. Earlier specified-channel\ncosts remain valid for those channels, but are not universal process minima. The current one-step qutrit\noptimum is nine on the certified high-noise interval. These overlays identify the current process-wide\nstatus; historical tables continue to describe their explicitly specified channels rather than different\nupdated channels."
+  },
+  {
+    "page": 25,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      169.67469787597656,
+      140.31842041015625,
+      184.02090454101562
+    ],
+    "text": "References"
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.2540054321289,
+      196.62709045410156,
+      547.209228515625,
+      221.1488037109375
+    ],
+    "text": "[1] Man-Duen Choi. Completely positive linear maps on complex matrices. Linear Algebra and its\nApplications, 10(3):285–290, 1975. doi: 10.1016/0024-3795(75)90075-0."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.2540054321289,
+      232.7556915283203,
+      546.371337890625,
+      257.21380615234375
+    ],
+    "text": "[2] Ky Fan. On a theorem of weyl concerning eigenvalues of linear transformations I. Proceedings of\nthe National Academy of Sciences, 35(11):652–655, 1949. doi: 10.1073/pnas.35.11.652."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      268.7655334472656,
+      549.3270263671875,
+      334.4788513183594
+    ],
+    "text": "[3] Farzad Ghafari, Nora Tischler, Jayne Thompson, Mile Gu, Lynden K. Shalm, Varun B. Verma,\nSae Woo Nam, Raj B. Patel, Howard M. Wiseman, and Geoff J. Pryde. Dimensional quantum\nmemory advantage in the simulation of stochastic processes. Physical Review X, 9:041013, 2019.\ndoi: 10.1103/PhysRevX.9.041013. URL https://journals.aps.org/prx/abstract/10.1103/\nPhysRevX.9.041013."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.2540054321289,
+      345.53271484375,
+      549.3538818359375,
+      384.09283447265625
+    ],
+    "text": "[4] Mile Gu, Karoline Wiesner, Elisabeth Rieper, and Vlatko Vedral. Quantum mechanics can reduce\nthe complexity of classical models. Nature Communications, 3:762, 2012. doi: 10.1038/ncomms1761.\nURL https://arxiv.org/abs/1102.1994."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      395.0619812011719,
+      548.7368774414062,
+      433.7068176269531
+    ],
+    "text": "[5] Alex Monràs and Andreas Winter. Quantum learning of classical stochastic processes: The\ncompletely-positive realization problem. Journal of Mathematical Physics, 57:015219, 2016. doi:\n10.1063/1.4936935. URL https://arxiv.org/abs/1412.3634."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      444.67596435546875,
+      548.9647216796875,
+      482.7677917480469
+    ],
+    "text": "[6] Jason D. Padgett. Holographic mathematics: A dual representation of algebra, trigonometry,\nprobability, and calculus in quantum information holography, . Undated supplied PDF manuscript;\nabstract and Sections 2–3."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      494.37469482421875,
+      549.53125,
+      505.2837829589844
+    ],
+    "text": "[7] Jason D. Padgett. Quantum information holography, . Undated supplied manuscript; pages 64–68."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      516.8641967773438,
+      547.4093017578125,
+      555.4508056640625
+    ],
+    "text": "[8] Paul M. Riechers and Thomas J. Elliott. Identifiability and minimality bounds of quantum and\npost-quantum models of classical stochastic processes, 2025. URL https://arxiv.org/html/250\n9.03004v1. Version 1."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      566.503662109375,
+      547.86328125,
+      590.9627685546875
+    ],
+    "text": "[9] Jeremy Rodgers. Exact markov extensions of three-time readouts: Hidden state counts, reversibility\nobstructions, and nonidentifiability, 2026. Version 1.0, 6 September 2026; supplied manuscript."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      602.4840087890625,
+      549.2843017578125,
+      627.579833984375
+    ],
+    "text": "[10] Jeremy Rodgers. Source–readout non-equivalence: Descent and equivariant reconstruction ob-\nstructions, 2026. URL https://doi.org/10.5281/zenodo.21369967."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      638.5490112304688,
+      549.5402221679688,
+      677.19384765625
+    ],
+    "text": "[11] Rishi Sundar and Thomas J. Elliott. Quantum dimension reduction of hidden markov models.\nPhysical Review A, 113:062461, 2026. doi: 10.1103/plt9-cm1x. URL https://arxiv.org/html/2\n601.16126v2. Version 2, 1 July 2026."
+  },
+  {
+    "page": 25,
+    "kind": "prose",
+    "bbox": [
+      64.79999542236328,
+      688.1630249023438,
+      548.8068237304688,
+      713.2588500976562
+    ],
+    "text": "[12] John Watrous. The Theory of Quantum Information. Cambridge University Press, 2018. doi:\n10.1017/9781316848142. URL https://cs.uwaterloo.ca/~watrous/TQI/TQI.pdf."
+  }
+]

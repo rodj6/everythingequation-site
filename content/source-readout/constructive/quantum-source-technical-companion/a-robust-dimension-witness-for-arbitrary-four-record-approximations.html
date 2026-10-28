@@ -1,0 +1,383 @@
+<h2 id="section-a-robust-dimension-witness-for-arbitrary-four-record-approximations">A robust dimension witness for arbitrary four-record approximations</h2>
+<p data-source-page="9">The low-noise support argument excludes qutrit memories on a small exact-noise interval. That does not by itself quantify approximation by an arbitrary qutrit process whose perturbed law need not remain in that one-parameter family. The same support argument gives an observable matrix witness and a nonzero finite-record approximation floor. The constants are deliberately conservative; they are not proposed experimental accuracy targets.</p>
+<p data-source-page="9"><strong>Matrix witness.</strong> Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00158.svg" alt=" C ≥" style="width:2.3060em;height:1.1522em;vertical-align:-0.23em" loading="lazy"/>0 be a 9-by-9 column-stochastic matrix, indexed by pairs (<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00159.svg" alt="a, b), (c, d) ∈" style="width:5.4821em;height:1.1548em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00160.svg" alt="{0, 1, 2}2" style="width:3.9234em;height:1.2994em;vertical-align:-0.23em" loading="lazy"/>. Define</p>
+<figure class="sr-formula" id="display-41" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00161.svg" alt="&quot;X
+#
+X
+d
+Cab,ad +
+X
+μ = min
+a,b
+c,d
+Cab,cd &gt; 0,
+L = max
+a,b
+c
+Cab,cb
+," width="292.64" height="33.67" style="width:26.847em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>&quot;X
+#
+X
+d
+Cab,ad +
+X
+μ = min
+a,b
+c,d
+Cab,cd &gt; 0,
+L = max
+a,b
+c
+Cab,cb
+,</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00162.svg" alt="and let σ2, σ5 &gt; 0 be its second and fifth singular values. If C has a complex Hermitian PSD factorization
+of size at most three, then
+27L
+μ
+≥
+σ2
+2σ2
+5
+36(σ2 + 18
+√
+6)2 .
+(24)" width="485.28" height="59.15" style="width:44.521em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>and let σ2, σ5 &gt; 0 be its second and fifth singular values. If C has a complex Hermitian PSD factorization
+of size at most three, then
+27L
+μ
+≥
+σ2
+2σ2
+5
+36(σ2 + 18
+√
+6)2 .
+(24)</pre></details></figure>
+<p data-source-page="9">The indices, leakage and singular values are ordinary classical matrix data. No particular quantum update architecture or reference frame is assumed in this lower bound.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00163.svg" alt="Proof.
+Since σ5 &gt; 0, a factorization cannot be supported on dimension two. Congruence normalization
+of its row factors gives a POVM P
+a,b Aab = I3 and density matrices bcd with Cab,cd = Tr(Aabbcd).
+The row sums imply Tr Aab ≥μ/9, hence a largest eigenvalue at least μ/27. Put Ra = P
+d bad and
+Qb = P
+c bcb. Both have trace three, and the leakage implies" width="486.51" height="60.11" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof.
+Since σ5 &gt; 0, a factorization cannot be supported on dimension two. Congruence normalization
+of its row factors gives a POVM P
+a,b Aab = I3 and density matrices bcd with Cab,cd = Tr(Aabbcd).
+The row sums imply Tr Aab ≥μ/9, hence a largest eigenvalue at least μ/27. Put Ra = P
+d bad and
+Qb = P
+c bcb. Both have trace three, and the leakage implies</pre></details></figure>
+<figure class="sr-formula" id="display-42" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00164.svg" alt="λmin(Ra + Qb) ≤e := 27L/μ." width="141.02" height="14.30" style="width:12.938em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>λmin(Ra + Qb) ≤e := 27L/μ.</pre></details></figure>
+<p data-source-page="10">We prove the required approximate plane/line dichotomy directly. Fix any<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00165.svg" alt=" s &gt; e" style="width:2.7266em;height:1.1438em;vertical-align:-0.23em" loading="lazy"/>; all distances below are on the same normalized factorization. <em>Case 1: some</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00166.svg" alt=" Ra" style="width:1.7351em;height:1.2256em;vertical-align:-0.23em" loading="lazy"/><em> or</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00167.svg" alt=" Qb" style="width:1.6876em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/><em> has second eigenvalue at least</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00168.svg" alt=" s." style="width:1.3497em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> By interchanging the two indices if necessary, take such an<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00169.svg" alt=" Ra" style="width:1.6441em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00170.svg" alt=" P" style="width:1.1214em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> project onto its two largest eigenvectors and let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00171.svg" alt=" z" style="width:0.9337em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be a unit vector in the complementary line. For each<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00172.svg" alt=" b" style="width:0.9117em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, choose a unit<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00173.svg" alt=" nb" style="width:1.4152em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/> with<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00174.svg" alt=" ⟨nb, (Ra + Qb)nb⟩≤e" style="width:9.8888em;height:1.3002em;vertical-align:-0.23em" loading="lazy"/>. Positivity and <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00175.svg" alt="Ra ⪰sP" style="width:3.8082em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> imply <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00176.svg" alt="∥Pnb∥2 ≤e/s," style="width:6.3857em;height:1.6766em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00177.svg" alt="⟨nb, Qbnb⟩≤e." style="width:6.5704em;height:1.2637em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-43" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00178.svg" alt="Choose the phase so ⟨z, nb⟩≥0. Since e/s &lt; 1," width="226.68" height="13.79" style="width:20.797em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Choose the phase so ⟨z, nb⟩≥0. Since e/s &lt; 1,</pre></details></figure>
+<figure class="sr-formula" id="display-44" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00179.svg" alt="∥nb −z∥2 = 2(1 −
+q
+1 −∥Pnb∥2) ≤2e/s." width="196.34" height="18.64" style="width:18.012em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>∥nb −z∥2 = 2(1 −
+q
+1 −∥Pnb∥2) ≤2e/s.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00180.svg" alt="The bound ∥Qb∥≤Tr Qb = 3 and the triangle inequality after applying √Qb give" width="390.54" height="22.59" style="width:35.829em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The bound ∥Qb∥≤Tr Qb = 3 and the triangle inequality after applying √Qb give</pre></details></figure>
+<figure class="sr-formula" id="display-45" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00181.svg" alt="⟨z, Qbz⟩≤
+√e +
+√
+2e/s
+2
+=: l= e(1 +
+q
+3
+q
+6/s)2." width="248.61" height="23.24" style="width:22.809em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⟨z, Qbz⟩≤
+√e +
+√
+2e/s
+2
+=: l= e(1 +
+q
+3
+q
+6/s)2.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00182.svg" alt="Every preparation obeys bcd ⪯Qd, hence Tr[(I −P)bcd] ≤lfor this common plane. The projection
+bound ∥ρ −PρP∥1 ≤2
+p" width="484.10" height="27.69" style="width:44.413em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Every preparation obeys bcd ⪯Qd, hence Tr[(I −P)bcd] ≤lfor this common plane. The projection
+bound ∥ρ −PρP∥1 ≤2
+p</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00183.svg" alt="Tr[(I −P)ρ] therefore bounds every preparation-compression error by 2
+√" width="357.10" height="21.95" style="width:32.761em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Tr[(I −P)ρ] therefore bounds every preparation-compression error by 2
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00184.svg" alt="l.
+For completeness, purify ρ, apply P ⊗I, and compute the trace norm of the difference between the
+original rank-one projector and the projected, unnormalized rank-one operator: for discarded mass x,
+its norm is
+√" width="486.12" height="53.24" style="width:44.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>l.
+For completeness, purify ρ, apply P ⊗I, and compute the trace norm of the difference between the
+original rank-one projector and the projected, unnormalized rank-one operator: for discarded mass x,
+its norm is
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00185.svg" alt="4x −3x2 ≤2√x. Partial trace contracts this Hermitian trace norm, giving the stated
+bound also for mixed ρ.
+Replace each bcd by PbcdP and apply the same POVM. The resulting real matrix C(4) has rank
+at most four, since Hermitian operators on a two-dimensional plane have real dimension four. A
+POVM contracts the trace norm of a Hermitian difference: if D = D+ −D−is its positive/negative
+decomposition, then P
+ab | Tr(AabD)| ≤Tr D+ + Tr D−= ∥D∥1. Consequently each of the nine column
+errors has Euclidean norm at most 2
+√
+l. Thus" width="484.61" height="101.79" style="width:44.460em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>4x −3x2 ≤2√x. Partial trace contracts this Hermitian trace norm, giving the stated
+bound also for mixed ρ.
+Replace each bcd by PbcdP and apply the same POVM. The resulting real matrix C(4) has rank
+at most four, since Hermitian operators on a two-dimensional plane have real dimension four. A
+POVM contracts the trace norm of a Hermitian difference: if D = D+ −D−is its positive/negative
+decomposition, then P
+ab | Tr(AabD)| ≤Tr D+ + Tr D−= ∥D∥1. Consequently each of the nine column
+errors has Euclidean norm at most 2
+√
+l. Thus</pre></details></figure>
+<figure class="sr-formula" id="display-46" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00186.svg" alt="σ5 ≤∥C −C(4)∥op ≤∥C −C(4)∥F ≤6√e(1 +
+q
+6/s)." width="253.01" height="22.61" style="width:23.212em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σ5 ≤∥C −C(4)∥op ≤∥C −C(4)∥F ≤6√e(1 +
+q
+6/s).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00187.svg" alt="The first inequality follows from the singular-value lower bound for rank-four approximation, which
+applies to every real approximant.
+Case 2: all Ra, Qb have second eigenvalue below s. Let Pa and Q′
+b be their top-eigenvector projectors.
+The mass outside each such line is below 2s. Since bab ⪯Ra, Qb," width="486.61" height="54.85" style="width:44.643em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The first inequality follows from the singular-value lower bound for rank-four approximation, which
+applies to every real approximant.
+Case 2: all Ra, Qb have second eigenvalue below s. Let Pa and Q′
+b be their top-eigenvector projectors.
+The mass outside each such line is below 2s. Since bab ⪯Ra, Qb,</pre></details></figure>
+<figure class="sr-formula" id="display-47" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00188.svg" alt="D(bab, Pa) ≤
+√
+2s,
+D(bab, Q′
+b) ≤
+√
+2s," width="196.39" height="24.16" style="width:18.018em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>D(bab, Pa) ≤
+√
+2s,
+D(bab, Q′
+b) ≤
+√
+2s,</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00189.svg" alt="where D denotes half trace distance. Here D(ρ, |v⟩⟨v|) ≤
+p" width="291.41" height="13.40" style="width:26.735em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>where D denotes half trace distance. Here D(ρ, |v⟩⟨v|) ≤
+p</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00190.svg" alt="1 −⟨v, ρv⟩: it is equality for pure states
+and follows for mixed states by convexity and Jensen’s inequality. Fix P0. Comparing through b0b gives
+D(P0, Q′
+b) ≤2
+√
+2s, whence D(bab, P0) ≤3
+√" width="484.08" height="42.28" style="width:44.411em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −⟨v, ρv⟩: it is equality for pure states
+and follows for mixed states by convexity and Jensen’s inequality. Fix P0. Comparing through b0b gives
+D(P0, Q′
+b) ≤2
+√
+2s, whence D(bab, P0) ≤3
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00191.svg" alt="2s for all nine preparations. Replace every preparation by
+this same pure state. The resulting matrix C(1) has identical normalized columns and rank at most
+one. Each column difference is zero-sum and has classical total variation at most 3
+√" width="484.56" height="39.65" style="width:44.455em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2s for all nine preparations. Replace every preparation by
+this same pure state. The resulting matrix C(1) has identical normalized columns and rank at most
+one. Each column difference is zero-sum and has classical total variation at most 3
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00192.svg" alt="2s by POVM
+contraction. For a zero-sum real vector v, its positive and negative parts each have mass ∥v∥1/2, so
+∥v∥2
+2 ≤2(∥v∥1/2)2. Each column thus has Euclidean norm at most 6√s, and" width="484.02" height="42.31" style="width:44.406em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2s by POVM
+contraction. For a zero-sum real vector v, its positive and negative parts each have mass ∥v∥1/2, so
+∥v∥2
+2 ≤2(∥v∥1/2)2. Each column thus has Euclidean norm at most 6√s, and</pre></details></figure>
+<figure class="sr-formula" id="display-48" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00193.svg" alt="σ2 ≤∥C −C(1)∥op ≤∥C −C(1)∥F ≤18√s." width="205.24" height="22.61" style="width:18.829em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σ2 ≤∥C −C(1)∥op ≤∥C −C(1)∥F ≤18√s.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00194.svg" alt="These two cases exhaust the possible normalized factors.
+If the right side of (24) exceeded e, choose s &lt; σ2
+2/324 sufficiently close to that upper endpoint.
+Then both displayed inequalities would fail, since the limiting first bound is 6√e(1 + 18
+√" width="486.64" height="39.61" style="width:44.646em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>These two cases exhaust the possible normalized factors.
+If the right side of (24) exceeded e, choose s &lt; σ2
+2/324 sufficiently close to that upper endpoint.
+Then both displayed inequalities would fail, since the limiting first bound is 6√e(1 + 18
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00195.svg" alt="6/σ2) &lt; σ5.
+This choice also satisfies s &gt; e: column stochasticity gives σ2, σ5 ≤∥C∥F ≤3, and the assumed bound
+on e is less than σ2
+2/(24 · 324). This contradiction proves the necessary inequality.
+□" width="486.51" height="41.75" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>6/σ2) &lt; σ5.
+This choice also satisfies s &gt; e: column stochasticity gives σ2, σ5 ≤∥C∥F ≤3, and the assumed bound
+on e is less than σ2
+2/(24 · 324). This contradiction proves the necessary inequality.
+□</pre></details></figure>
+<h3 id="section-a-floor-for-every-qutrit-approximation-of-the-trine-record-law">A floor for every qutrit approximation of the trine record law</h3>
+<p data-source-page="11">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00196.svg" alt=" Pλ,4" style="width:2.1777em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/> be the specified four-symbol delayed trine law, with</p>
+<figure class="sr-formula" id="display-49" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00197.svg" alt="Hab,cd = Pλ,4(a, b, c, d) = T λ
+acT λ
+bd
+9
+,
+Cλ = 9H." width="226.23" height="29.05" style="width:20.755em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Hab,cd = Pλ,4(a, b, c, d) = T λ
+acT λ
+bd
+9
+,
+Cλ = 9H.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00198.svg" alt="Suppose another complete four-record law P ′ is generated through a quantum causal cut of dimension
+at most three. All history-correlated systems used again in the future belong to that cut; independent
+fresh ports and an untouched retained archive obey the same convention as the accounting chapter.
+The competing law may have a different update rule, lack stationarity, or lie outside the trine family.
+Extra null/loss outcomes can remain in its complete alphabet, with zero target probability.
+Put δ = TV(P ′, Pλ,4) &lt; 1/9. Restrict its joint table H′ to the target trit pairs and let h′
+cd =
+P
+ab H′
+ab,cd ≥1/9 −δ. The column-normalized matrix C′
+ab,cd = H′
+ab,cd/h′
+cd still has PSD rank at most
+three. Define" width="486.81" height="111.25" style="width:44.661em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Suppose another complete four-record law P ′ is generated through a quantum causal cut of dimension
+at most three. All history-correlated systems used again in the future belong to that cut; independent
+fresh ports and an untouched retained archive obey the same convention as the accounting chapter.
+The competing law may have a different update rule, lack stationarity, or lie outside the trine family.
+Extra null/loss outcomes can remain in its complete alphabet, with zero target probability.
+Put δ = TV(P ′, Pλ,4) &lt; 1/9. Restrict its joint table H′ to the target trit pairs and let h′
+cd =
+P
+ab H′
+ab,cd ≥1/9 −δ. The column-normalized matrix C′
+ab,cd = H′
+ab,cd/h′
+cd still has PSD rank at most
+three. Define</pre></details></figure>
+<figure class="sr-formula" id="display-50" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00199.svg" alt="d =
+36δ
+1 −9δ,
+a = 1 −λ
+2
+−d,
+e∗=
+27
+1 −d
+2λ/3 + 18δ
+1 −9δ
+." width="284.60" height="27.53" style="width:26.111em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>d =
+36δ
+1 −9δ,
+a = 1 −λ
+2
+−d,
+e∗=
+27
+1 −d
+2λ/3 + 18δ
+1 −9δ
+.</pre></details></figure>
+<p data-source-page="11">Whenever<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00200.svg" alt=" d &lt; 1, a &gt;" style="width:5.0269em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 0, the following necessary condition holds:</p>
+<figure class="sr-formula" id="equation-25" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00201.svg" alt="e∗≥
+a4
+36(a + 18
+√
+6)2 .
+(25)" width="293.31" height="30.02" style="width:26.909em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11, equation (25).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e∗≥
+a4
+36(a + 18
+√
+6)2 .
+(25)</pre></details></figure>
+<p data-source-page="11">Thus failure of this scalar inequality excludes<em> every</em> qutrit-cut approximation at that tolerance, rather than merely a fitted trine member.</p>
+<p data-source-page="11"><strong>Derivation.</strong> Column normalization and total variation give</p>
+<figure class="sr-formula" id="display-52" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00202.svg" alt="∥C′ −Cλ∥op ≤
+X
+ab,cd
+|C′
+ab,cd −(Cλ)ab,cd| ≤d." width="204.91" height="28.95" style="width:18.799em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>∥C′ −Cλ∥op ≤
+X
+ab,cd
+|C′
+ab,cd −(Cλ)ab,cd| ≤d.</pre></details></figure>
+<p data-source-page="11">Indeed the two contributions are at most the joint-table<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00203.svg" alt=" l1" style="width:1.3256em;height:1.2852em;vertical-align:-0.23em" loading="lazy"/> error 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00204.svg" alt="δ" style="width:0.5848em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> and the marginal<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00205.svg" alt=" l1" style="width:1.3351em;height:1.2852em;vertical-align:-0.23em" loading="lazy"/> error 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00206.svg" alt="δ," style="width:0.9035em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> divided by 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00207.svg" alt="/9 −δ" style="width:2.7959em;height:1.1525em;vertical-align:-0.23em" loading="lazy"/>. Thus row sums are at least 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00208.svg" alt=" −d" style="width:1.8722em;height:1.1493em;vertical-align:-0.23em" loading="lazy"/>, and both relevant singular values are at least <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00209.svg" alt="a" style="width:0.6690em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. The unnormalized leakage functional takes values in [0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00210.svg" alt="," style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 2] and has target expectation 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00211.svg" alt="λ/" style="width:1.2176em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>27. Its change is at most 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00212.svg" alt="δ" style="width:0.5860em;height:1.1376em;vertical-align:-0.23em" loading="lazy"/>; dividing by the smallest column mass bounds<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00213.svg" alt=" L(C′) by (2λ/3 + 18δ)/(1 −9δ)." style="width:14.5256em;height:1.3011em;vertical-align:-0.23em" loading="lazy"/> Apply (24); its right side increases with each positive singular value. This gives (25). For explicit simple consequences, exact rational constants in the proof with<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00214.svg" alt=" s = 1/" style="width:3.2625em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>2000 give</p>
+<figure class="sr-formula" id="equation-26" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00215.svg" alt="TV(P ′, P0,4) &gt; 10−9,
+(26)" width="293.54" height="15.82" style="width:26.930em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11, equation (26).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>TV(P ′, P0,4) &gt; 10−9,
+(26)</pre></details></figure>
+<p data-source-page="11">and, uniformly for 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00216.svg" alt=" ≤λ ≤10−8," style="width:5.7122em;height:1.3097em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00217.svg" alt="TV(P ′, Pλ,4) &gt; 5 × 10−10." style="width:11.3895em;height:1.4634em;vertical-align:-0.23em" loading="lazy"/> (27)</p>
+<p data-source-page="11">At the first boundary the squared rank-four approximation error is below 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00218.svg" alt="." style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>216, and at the second below 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00219.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>188; the rank-one squared error is 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00220.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>162, while the required singular value exceeds 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00221.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>49 in both cases. These loose bounds are verified with fractions in the accompanying code.</p>
+<p data-source-page="11"><strong>What changes.</strong> The earlier exact dimension statement was robust only along a specified noise curve. The new witness supplies a finite-output accuracy obstruction against all ordinary qutrit-cut realizations, including time-dependent alternatives and complete null/loss records. It is a quantitative outer bound, not a sharp approximate-memory frontier, a large practical separation, or a resource theorem for nonlinear ontic assignments. Larger horizons inherit the same floor by retaining the four-record marginal. It compares the declared classical record law; it identifies no microscopic source or conscious perspective.</p>
+<h3 id="section-an-explicit-robust-version-of-the-support-witness">An explicit robust version of the support witness</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00222.svg" alt="The noiseless growing lower bound is sensitive to small forbidden-event probabilities. A quantitative
+replacement is possible, with a poor large-grid margin that should be stated explicitly. Suppose a
+row-stochastic matrix eT factors through r classical states as AB, with both A and B row stochastic.
+Such a normalization is available for every nonnegative factorization of a stochastic matrix after zero
+factors are removed. Set e = maxi eTii and μ = mini̸=j eTij. For τ &gt; 0 put Si = {l: Ail≥τ}. If Si ⊆Sj,
+then
+eTij ≤e/τ + rτ.
+(28)" width="486.55" height="97.61" style="width:44.638em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The noiseless growing lower bound is sensitive to small forbidden-event probabilities. A quantitative
+replacement is possible, with a poor large-grid margin that should be stated explicitly. Suppose a
+row-stochastic matrix eT factors through r classical states as AB, with both A and B row stochastic.
+Such a normalization is available for every nonnegative factorization of a stochastic matrix after zero
+factors are removed. Set e = maxi eTii and μ = mini̸=j eTij. For τ &gt; 0 put Si = {l: Ail≥τ}. If Si ⊆Sj,
+then
+eTij ≤e/τ + rτ.
+(28)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00223.svg" alt="Indeed, on Si the sum of Blj is at most e/τ because Ajl≥τ, and outside Si the contribution is at
+most rτ. Choosing τ =
+p" width="484.35" height="26.24" style="width:44.436em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Indeed, on Si the sum of Blj is at most e/τ because Ajl≥τ, and outside Si the contribution is at
+most rτ. Choosing τ =
+p</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00224.svg" alt="e/r shows that μ &gt; 2√re forces an antichain; the case e = 0 follows by a
+limit or the exact support argument.
+For an entrywise perturbation of the phase-circle transition by at most δ, write" width="484.03" height="47.60" style="width:44.406em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e/r shows that μ &gt; 2√re forces an antichain; the case e = 0 follows by a
+limit or the exact support argument.
+For an entrywise perturbation of the phase-circle transition by at most δ, write</pre></details></figure>
+<figure class="sr-formula" id="display-54" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00225.svg" alt="μm = 1 −cos(2π/m)
+m
+= 2 sin2(π/m)
+m
+.
+The sufficient antichain condition is μm −δ &gt; 2
+√
+rδ, or equivalently" width="331.22" height="52.62" style="width:30.387em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>μm = 1 −cos(2π/m)
+m
+= 2 sin2(π/m)
+m
+.
+The sufficient antichain condition is μm −δ &gt; 2
+√
+rδ, or equivalently</pre></details></figure>
+<figure class="sr-formula" id="equation-29" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00226.svg" alt="δ &lt; δ∗
+m,r :=
+μ2
+m
+(√r + μm + √r)2 .
+(29)" width="316.64" height="30.67" style="width:29.050em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (29).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>δ &lt; δ∗
+m,r :=
+μ2
+m
+(√r + μm + √r)2 .
+(29)</pre></details></figure>
+<p data-source-page="12">If a normalized observed triple distribution<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00227.svg" alt=" p′" style="width:1.1822em;height:1.3085em;vertical-align:-0.23em" loading="lazy"/> lies at TV distance<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00228.svg" alt=" η" style="width:0.9729em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> from the exact law, with<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00229.svg" alt=" η &lt; m−2," style="width:4.5307em;height:1.3085em;vertical-align:-0.23em" loading="lazy"/> its conditional transition in any middle-symbol fibre obeys</p>
+<figure class="sr-formula" id="display-56" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00230.svg" alt="p′(i, y, j)
+P
+k p′(i, y, k) −Tij
+≤
+2η
+m−2 −η.
+max
+i,j" width="179.35" height="31.89" style="width:16.454em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>p′(i, y, j)
+P
+k p′(i, y, k) −Tij
+≤
+2η
+m−2 −η.
+max
+i,j</pre></details></figure>
+<p data-source-page="12">Both the single-entry and row-mass probability errors are at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00231.svg" alt=" η" style="width:0.9639em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; the inequality follows by adding numerator and denominator errors. Therefore, choosing<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00232.svg" alt=" r = rm −" style="width:4.4556em;height:1.2966em;vertical-align:-0.23em" loading="lazy"/>1, the original classical sector lower bound<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00233.svg" alt=" mrm" style="width:2.4939em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> survives whenever</p>
+<figure class="sr-formula" id="equation-30" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00234.svg" alt="η &lt;
+δ∗
+m,r
+m2(2 + δ∗m,r).
+(30)" width="287.38" height="32.18" style="width:26.365em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (30).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>η &lt;
+δ∗
+m,r
+m2(2 + δ∗m,r).
+(30)</pre></details></figure>
+<p data-source-page="12">This is a rigorous finite-data statement, but its radius scales as roughly<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00235.svg" alt=" m−8/r" style="width:3.3300em;height:1.3084em;vertical-align:-0.23em" loading="lazy"/> and is extremely small at<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00236.svg" alt=" m = 180, 360," style="width:6.3597em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 720. It is not proposed as a practical large-grid experiment. The trine rank margin is substantially more usable.</p>

@@ -1,0 +1,270 @@
+<h2 id="section-target-sensitive-summary-preprocessing-and-a-completed-restricted-improvement">Target-sensitive summary preprocessing and a completed restricted improvement</h2>
+<p data-source-page="14">The supplied OpenAI preprint’s summary routine (Lemma 3.2, pp. 22–23) scans integer tuples in a box of size (2<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p014-00236.svg" alt="D + 1)c" style="width:3.5136em;height:1.2896em;vertical-align:-0.23em" loading="lazy"/>. Its Definition 3.1 requires rational-linear replacement forms to be invariant under kernels of the specified integer measurement matrices. The following construction does not replace those conditions by an unproved nonlinear invariant. It preprocesses a declared finite boundary response<em> before</em> invoking a general contraction method, and optimizes the retained information for a specified output task. A concrete rational source example then reduces an exact weighted calculation’s arithmetic work from quadratic to linear in its horizon. This is a restricted reciprocal benefit, not an improved ETH worst-case exponent. The algebra uses established Boolean Fourier analysis <a href="/source-readout/certified-readout-design/references#reference-6">[6]</a> and finite-state dynamic programming. The contribution relative to the source–readout completion baseline is an executable synthesis of minimal parity summaries, explicit source/readout and retained-record conditions, and the complete task-specific cost comparison. It is not a new general Fourier theorem, the first use of dynamic programming or a publication-priority claim. It specializes the canonical target-relative completion principle rather than adding a new ontological premise. Rodgers’s target-family completion proposition and relation-versus-target completion theorem already give the abstract coarsening and its universal property<a href="/source-readout/certified-readout-design/references#reference-11">[11]</a>. The parity synthesis below is a restricted executable realization and cost analysis, not a stronger abstract minimal-completion theorem. For the boundary example the initial readout can be constant; when a nonconstant original readout must be retained, its coordinates must remain in the sufficient response rather than silently being dropped.</p>
+<h3 id="section-the-finite-pushforward-identity-and-its-cost">The finite pushforward identity and its cost</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00237.svg" alt="Let X be a finite boundary domain, μ : X →Q a supplied weight function, F : X →Qq a response,
+and h : X →Y a summary such that F = F ◦h. Then
+∑︂
+x∈X
+μ(x)F(x) =
+∑︂
+F(y)M(y),
+M(y) =
+∑︂
+x:h(x)=y
+μ(x).
+(1)" width="485.56" height="63.30" style="width:44.546em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let X be a finite boundary domain, μ : X →Q a supplied weight function, F : X →Qq a response,
+and h : X →Y a summary such that F = F ◦h. Then
+∑︂
+x∈X
+μ(x)F(x) =
+∑︂
+F(y)M(y),
+M(y) =
+∑︂
+x:h(x)=y
+μ(x).
+(1)</pre></details></figure>
+<figure class="sr-formula" id="display-25" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00238.svg" alt="y∈h(X)" width="30.76" height="9.68" style="width:2.822em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>y∈h(X)</pre></details></figure>
+<p data-source-page="15">This follows by partitioning the finite sum into disjoint fibres. Signed rational weights are allowed; when weights are probabilities, the right side is the ordinary pushforward probability calculation. Its cost is the cost of constructing or evaluating<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00239.svg" alt=" F" style="width:1.0689em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and computing<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00240.svg" alt=" M" style="width:1.4038em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, plus the final sum. A small summary alone does not make an arbitrary weight function easy to push forward. The group-product version clarifies the link to Lemma 3.2. Partition finite assignments into <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00241.svg" alt="x1, . . . , xr" style="width:4.2964em;height:1.2388em;vertical-align:-0.23em" loading="lazy"/> and choose summaries<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00242.svg" alt=" hg(xg" style="width:2.8078em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/>). Suppose factor product<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00243.svg" alt=" Ag" style="width:1.5858em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> depends only on<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00244.svg" alt=" xg" style="width:1.4098em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> and the other summaries. For an attainable tuple<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00245.svg" alt=" y = (y1, . . . , yr" style="width:6.7085em;height:1.2388em;vertical-align:-0.23em" loading="lazy"/>) define</p>
+<figure class="sr-formula" id="display-26" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00246.svg" alt="Bg(y) =
+∑︂
+xg:hg(xg)=yg
+Ag(xg, y−g)." width="153.95" height="27.11" style="width:14.123em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Bg(y) =
+∑︂
+xg:hg(xg)=yg
+Ag(xg, y−g).</pre></details></figure>
+<figure class="sr-formula" id="display-27" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00247.svg" alt="Distributivity gives
+∑︂
+∏︂
+g
+Ag(xg, h−g(x−g)) =
+∑︂
+∏︂
+g
+Bg(y).
+x1,...,xr
+y∈∏︁
+g hg(Xg)" width="363.21" height="42.77" style="width:33.322em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Distributivity gives
+∑︂
+∏︂
+g
+Ag(xg, h−g(x−g)) =
+∑︂
+∏︂
+g
+Bg(y).
+x1,...,xr
+y∈∏︁
+g hg(Xg)</pre></details></figure>
+<p data-source-page="15">This is a finite-fibre identity, not a new analytic assumption. Nonlinear Boolean summaries are admitted only after proving this factorization for the actual response. Computing the image, fibre sums and representatives is charged. In particular, one may not use the identity to assert that an arbitrary parity summary supplies the rational-kernel condition for the ETH paper’s Taylor-shifted forms at every interpolation node.</p>
+<h3 id="section-an-exact-minimum-within-the-parity-summary-class">An exact minimum within the parity-summary class</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00248.svg" alt="Write χa(y) = (−1)a·y for a, y ∈Fb
+2. Every vector-valued rational response has the unique Walsh
+expansion
+F(y) =
+∑︂
+ˆ︁F(a)χa(y),
+ˆ︁F(a) = 2−b ∑︂
+y
+F(y)χa(y)." width="484.74" height="54.22" style="width:44.471em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Write χa(y) = (−1)a·y for a, y ∈Fb
+2. Every vector-valued rational response has the unique Walsh
+expansion
+F(y) =
+∑︂
+ˆ︁F(a)χa(y),
+ˆ︁F(a) = 2−b ∑︂
+y
+F(y)χa(y).</pre></details></figure>
+<figure class="sr-formula" id="display-28" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00249.svg" alt="a∈Fb
+2" width="20.27" height="13.58" style="width:1.859em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>a∈Fb
+2</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00250.svg" alt="Let KF be the binary linear span of the nonzero-frequency masks with ˆ︁F(a) ̸= 0; the zero mask has no
+effect on its rank." width="484.05" height="26.21" style="width:44.408em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let KF be the binary linear span of the nonzero-frequency masks with ˆ︁F(a) ̸= 0; the zero mask has no
+effect on its rank.</pre></details></figure>
+<p data-source-page="15"><strong>Theorem B.1</strong> (Minimal sufficient parity summary)<strong>.</strong><em> On the full Boolean boundary cube,</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00251.svg" alt=" F" style="width:1.1269em;height:1.1359em;vertical-align:-0.23em" loading="lazy"/><em> factors</em> <em>through</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00252.svg" alt=" y ↦→Hy" style="width:3.9877em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/><em> over</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00253.svg" alt=" F2" style="width:1.5039em;height:1.4572em;vertical-align:-0.23em" loading="lazy"/><em> if and only if</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00254.svg" alt="KF ⊆" style="width:2.6964em;height:1.3015em;vertical-align:-0.23em" loading="lazy"/>row<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00255.svg" alt="F2 H." style="width:2.3210em;height:1.4070em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="15"><em>Thus the minimum parity-summary rank is</em> dim<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00256.svg" alt=" KF" style="width:1.6442em;height:1.2304em;vertical-align:-0.23em" loading="lazy"/><em> . A basis of</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00257.svg" alt=" KF" style="width:1.9403em;height:1.2304em;vertical-align:-0.23em" loading="lazy"/><em> and the coordinates of each</em> <em>supported frequency in that basis supply an exact constructive certificate. For any declared rational</em> <em>linear output projection</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p015-00258.svg" alt=" L, KLF ⊆KF" style="width:6.5037em;height:1.2931em;vertical-align:-0.23em" loading="lazy"/><em> ; strict inclusion can remove summary coordinates required by</em> <em>the full response.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p015-00259.svg" alt="Proof. If F factors through H, it is unchanged by translation by every u ∈ker H. Fourier uniqueness
+gives ˆ︁F(a) = χa(u) ˆ︁F(a), so each supported a is orthogonal to ker H and belongs to row H. Conversely,
+if every supported a lies in that row space, each character χa is a function of Hy, hence so is their sum.
+A basis gives attainment, and any sufficient row space has dimension at least dim KF . Applying L
+to the expansion can annihilate coefficients but cannot introduce a new frequency, proving the final
+statement. All arithmetic for constructing a basis is exact binary Gaussian elimination; no numerical
+rank threshold is involved." width="486.60" height="93.96" style="width:44.642em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. If F factors through H, it is unchanged by translation by every u ∈ker H. Fourier uniqueness
+gives ˆ︁F(a) = χa(u) ˆ︁F(a), so each supported a is orthogonal to ker H and belongs to row H. Conversely,
+if every supported a lies in that row space, each character χa is a function of Hy, hence so is their sum.
+A basis gives attainment, and any sufficient row space has dimension at least dim KF . Applying L
+to the expansion can annihilate coefficients but cannot introduce a new frequency, proving the final
+statement. All arithmetic for constructing a basis is exact binary Gaussian elimination; no numerical
+rank threshold is involved.</pre></details></figure>
+<p data-source-page="16">If<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00260.svg" alt=" s" style="width:0.9497em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> masks are supplied sparsely, basis synthesis takes polynomial work in<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00261.svg" alt=" s, b, q" style="width:2.6965em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and coefficient bit length, without a full cube scan. Obtaining the sparse expansion can nevertheless require exponential work. The minimum is only among parity summaries, not all nonlinear readouts: Hamming weight on <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00262.svg" alt="b" style="width:0.5700em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> bits has Walsh-support rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00263.svg" alt=" b" style="width:0.9049em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> but only<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00264.svg" alt=" b" style="width:0.9104em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> + 1 output values. Restrictions to an admissible proper subset of the cube can also change the minimum, so the full-domain hypothesis must not be dropped.</p>
+<h3 id="section-a-positive-stochastic-response-and-its-requested-marginal">A positive stochastic response and its requested marginal</h3>
+<p data-source-page="16">For a boundary word<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00265.svg" alt=" y = (y1, . . . , yb" style="width:6.6526em;height:1.2451em;vertical-align:-0.23em" loading="lazy"/>), let<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00266.svg" alt=" g" style="width:0.9469em;height:1.1359em;vertical-align:-0.23em" loading="lazy"/> be a noisy record of its global parity and let<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00267.svg" alt=" z1, . . . , zb−1" style="width:5.3294em;height:1.2399em;vertical-align:-0.23em" loading="lazy"/> be noisy records of the individual first<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00268.svg" alt=" b −" style="width:1.9087em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>1 bits. Specify the response law</p>
+<figure class="sr-formula" id="equation-2" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p016-00269.svg" alt="P(g, z | y) = 1 + α(−1)g+∑︁
+b−1
+∏︂
+i yi
+1 + β(−1)zi+yi
+2
+,
+α = 1
+2,
+β = 1
+3.
+(2)
+2
+i=1" width="407.81" height="35.16" style="width:37.413em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16, equation (2).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>P(g, z | y) = 1 + α(−1)g+∑︁
+b−1
+∏︂
+i yi
+1 + β(−1)zi+yi
+2
+,
+α = 1
+2,
+β = 1
+3.
+(2)
+2
+i=1</pre></details></figure>
+<p data-source-page="16">Every factor is strictly positive, and independent private noise makes the normalized joint record law. The source and fresh noise stock are independent. This is an ordinary classical stochastic model with explicit rational probabilities. It is not a quantum measurement construction or a selection of a probability law from geometry. Generating<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00270.svg" alt=" g" style="width:0.9355em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> at the deadline requires a parity accumulator and a clock; any history-correlated controller available to later production belongs in the physical causal-memory account. The workspace comparison below concerns the mathematical calculation of a probability, not a reduction of that physical apparatus or of its retained archive. The nominated full response can be the<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00271.svg" alt=" b" style="width:0.9792em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> individual zero-record probabilities, rather than its exponentially large joint table:</p>
+<figure class="sr-formula" id="display-30" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p016-00272.svg" alt="(︄
+1 + αχ1(y)
+2
+, . . . , 1 + βχeb−1(y)
+)︄
+2
+, 1 + βχe1(y)
+F(y) =
+.
+2" width="267.38" height="29.38" style="width:24.531em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+1 + αχ1(y)
+2
+, . . . , 1 + βχeb−1(y)
+)︄
+2
+, 1 + βχe1(y)
+F(y) =
+.
+2</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p016-00273.svg" alt="Its supported masks 1, e1, . . . , eb−1 span all b dimensions, so every parity summary sufficient for this
+full response has rank b. The requested target is only P(g = 0 | y), obtained by the first-coordinate
+projection. Its minimum parity-summary rank is one, with the two possible summaries ∑︁
+i yi mod 2.
+Neither the nuisance outcomes nor their physical records are erased by this mathematical calculation;
+they are unread by the nominated target. Computing their complete law remains a different task.
+There is an exact compositional elimination before any ETH deformation:" width="486.12" height="80.30" style="width:44.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Its supported masks 1, e1, . . . , eb−1 span all b dimensions, so every parity summary sufficient for this
+full response has rank b. The requested target is only P(g = 0 | y), obtained by the first-coordinate
+projection. Its minimum parity-summary rank is one, with the two possible summaries ∑︁
+i yi mod 2.
+Neither the nuisance outcomes nor their physical records are erased by this mathematical calculation;
+they are unread by the nominated target. Computing their complete law remains a different task.
+There is an exact compositional elimination before any ETH deformation:</pre></details></figure>
+<figure class="sr-formula" id="display-31" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p016-00274.svg" alt="1
+∑︂
+1 + β(−1)zi(1 −2yi)
+2
+= 1.
+zi=0" width="143.78" height="35.07" style="width:13.191em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1
+∑︂
+1 + β(−1)zi(1 −2yi)
+2
+= 1.
+zi=0</pre></details></figure>
+<p data-source-page="16">The equality holds as a rational polynomial identity in<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00275.svg" alt=" yi" style="width:1.2150em;height:1.2293em;vertical-align:-0.23em" loading="lazy"/>, not just on Boolean inputs. Thus tracing these independent noise records locally costs<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00276.svg" alt=" O(b" style="width:2.0689em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) and yields the target response without constructing <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00277.svg" alt="a 2b" style="width:1.7975em;height:1.2985em;vertical-align:-0.23em" loading="lazy"/>-entry output table. Conditional or adaptive access to the<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p016-00278.svg" alt=" zi" style="width:1.1985em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> would change the task and invalidate this omission.</p>
+<h3 id="section-an-end-to-end-exact-cost-comparison">An end-to-end exact cost comparison</h3>
+<p data-source-page="16">Use a stationary binary Markov source, with one clock tick per bit,</p>
+<figure class="sr-formula" id="display-32" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p016-00279.svg" alt="(︄
+9
+3
+4
+8
+)︄
+τ = (4/7, 3/7),
+T = 1
+.
+12" width="173.93" height="29.38" style="width:15.957em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+9
+3
+4
+8
+)︄
+τ = (4/7, 3/7),
+T = 1
+.
+12</pre></details></figure>
+<p data-source-page="16">The initial stock has the displayed distribution and is independent of future transition noise. All transition weights are positive, hence the full Boolean boundary is admissible. The task is one exact</p>
+<figure class="sr-formula" id="display-33" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00280.svg" alt="predicted record probability at horizon b:" width="198.67" height="12.52" style="width:18.227em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>predicted record probability at horizon b:</pre></details></figure>
+<figure class="sr-formula" id="display-34" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00281.svg" alt="pb = P(g = 0) = 1 + α E[(−1)
+∑︁
+i Yi]
+2
+." width="175.42" height="31.12" style="width:16.093em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>pb = P(g = 0) = 1 + α E[(−1)
+∑︁
+i Yi]
+2
+.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00282.svg" alt="A fair integer-summary comparator keeps Hamming weight W = ∑︁
+i Yi, not the needlessly large
+identity summary. W is a single integer-linear row with b + 1 attainable values (the paper’s symmetric
+box would contain 2b + 1). It is sufficient for this target. A standard exact count-histogram dynamic
+program stores last bit and current weight. At length t it has 2t nonzero integer cells. Summing all
+outgoing transitions over t = 1, . . . , b −1 requires exactly" width="484.17" height="66.79" style="width:44.419em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A fair integer-summary comparator keeps Hamming weight W = ∑︁
+i Yi, not the needlessly large
+identity summary. W is a single integer-linear row with b + 1 attainable values (the paper’s symmetric
+box would contain 2b + 1). It is sufficient for this target. A standard exact count-histogram dynamic
+program stores last bit and current weight. At length t it has 2t nonzero integer cells. Summing all
+outgoing transitions over t = 1, . . . , b −1 requires exactly</pre></details></figure>
+<figure class="sr-formula" id="display-35" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00283.svg" alt="UW (b) = 2b(b −1)" width="88.52" height="14.35" style="width:8.121em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>UW (b) = 2b(b −1)</pre></details></figure>
+<p data-source-page="17">multiply-by-constant/add updates. The target quotient instead retains last bit and parity. It has four nonzero cells from length two onwards, and requires exactly <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00284.svg" alt="Uparity(b) = 8b −12" style="width:8.5983em;height:1.2517em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00285.svg" alt="(b ≥2)." style="width:3.4647em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="17">Both programs start from integer weights 4<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00286.svg" alt="," style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 3, use transition numerators 9<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00287.svg" alt=", 3, 4," style="width:2.3105em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> 8, and share final denominator<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00288.svg" alt=" Db = 7 12b−1" style="width:6.0072em;height:1.4726em;vertical-align:-0.23em" loading="lazy"/>. If their histogram is<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00289.svg" alt=" H" style="width:1.3117em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, they return the same exact rational</p>
+<figure class="sr-formula" id="display-36" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00290.svg" alt="pb = 2Db + ∑︁
+s(−1)sH(s)
+4Db
+." width="128.44" height="30.17" style="width:11.784em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>pb = 2Db + ∑︁
+s(−1)sH(s)
+4Db
+.</pre></details></figure>
+<p data-source-page="17">For the weight program<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00291.svg" alt=" s" style="width:0.9139em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is an integer count; for the target program it is its parity. Equivalence follows either by summing count states modulo two at each update or directly from Eq. (1). Each integer has<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00292.svg" alt=" O(b" style="width:2.1969em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>) bits and updates use only multiplication by a fixed small integer and addition. Thus the displayed implementations have bit-work upper bounds<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00293.svg" alt=" O(b3" style="width:2.4563em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/>) versus<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00294.svg" alt=" O(b2" style="width:2.4717em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/>) and integer-workspace bounds<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00295.svg" alt=" O(b2" style="width:2.4557em;height:1.2898em;vertical-align:-0.23em" loading="lazy"/>) versus<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00296.svg" alt=" O(b" style="width:2.0751em;height:1.1454em;vertical-align:-0.23em" loading="lazy"/>), respectively. These are explicit algorithm bounds, not lower bounds against all possible algorithms. A specialized signed transfer-matrix method can also exploit the same target and need not form a full weight histogram.</p>
+<p data-source-page="17"><img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00297.svg" alt="b" style="width:0.5757em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00298.svg" alt="W" style="width:1.0907em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> updates parity updates <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00299.svg" alt="W" style="width:1.0907em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> live cells parity live cells</p>
+<figure class="sr-formula" id="display-37" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p017-00300.svg" alt="8
+112
+52
+16
+4
+32
+1984
+244
+64
+4
+128
+32512
+1012
+256
+4
+256
+130560
+2036
+512
+4" width="315.78" height="53.16" style="width:28.971em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>8
+112
+52
+16
+4
+32
+1984
+244
+64
+4
+128
+32512
+1012
+256
+4
+256
+130560
+2036
+512
+4</pre></details></figure>
+<p data-source-page="17">At<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00301.svg" alt=" b" style="width:0.8796em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 256 the exact update ratio is 32640<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00302.svg" alt="/509 ≃64." style="width:4.7080em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>13. The gain includes the inexpensive local output projection and the pushforward calculation; it is not merely a comparison of summary cardinalities with their construction cost omitted. Wall-clock timings are diagnostic and platform dependent. Both methods compute the same one target probability under the same fixed rational source law. The factored input has length<img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00303.svg" alt=" O(b);" style="width:2.7472em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/> compile_target_record checks the local nuisance cancellation with <img class="sr-vector-inline" src="/publications/source-readout/constructive/certified-readout-design/math/p017-00304.svg" alt="2(b −" style="width:2.4494em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>1) coefficient additions and constructs the two target Walsh coefficients directly. It does not first build the dense full response or perform an exponential Fourier transform. The table counts DP updates separately from this common linear preprocessing. General sparse Fourier synthesis can cost more. This finite-domain integer-summary comparator is not asserted to satisfy Definition 3.1 for the ETH paper’s rationally deformed polynomials either; the shared object here is its summary-enumeration stage, with a fully proved finite response factorization.</p>
+<h3 id="section-verification-reciprocal-status-and-limits">Verification, reciprocal status and limits</h3>
+<p data-source-page="18">The supplied code compiles sparse vector Walsh data to a basis and an exact frequency-coordinate certificate. Verification checks 254 response instances, 6060 complete small parity-map tests against independent fibre equality, direct source-word enumeration for lengths one through seven, and exact agreement of the two integer DPs through length 256. It also checks the Hamming-weight counterexam-ple to unrestricted nonlinear minimality. The code is a conventional exact preprocessor and reference algorithm; it is not the paper’s external ETH counter or contraction routine. This supplies an explicit answer to the reciprocal question at a restricted level: target-relative completion can remove unnecessary summary detail and improve a declared weighted calculation without recovering its full response distribution. It does not prove a new general ETH exponent, improve the best known algorithm for this simple Markov family, or show that the ETH paper overlooked a universally smaller sufficient summary. To use the parity quotient inside that paper’s own recursive Taylor/mode computation, one would additionally need a factorization and coefficient certificate at every transformed node. No such universal claim is made. The result changes computational organization, not physical access. No individual hidden source bit becomes readable through faster marginal calculation. The source, Markov law, independent noise, target projection, clock and unread-record permissions remain assumptions. No quantum resource minimum, Born-selection law or consciousness condition changes.</p>

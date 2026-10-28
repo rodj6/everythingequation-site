@@ -54,6 +54,7 @@ export default async function ResearchMapPage() {
 
   return (
     <div className="space-y-16">
+      <section className="card-surface p-6" aria-label="Source and readout development"><p className="section-label">The source–readout programme</p><h2 className="mt-2 text-2xl font-bold">From exact foundations to constructive readers.</h2><p className="mt-3 text-mute">The seven-paper sequence establishes the mathematics. Five constructive studies develop quantum sources, phase-sensitive records, feedback, validation resources and certified finite readout design.</p><Link href="/source-readout" className="mt-4 inline-block text-glow">Complete articles and connected reading paths →</Link></section>
       <header className="max-w-3xl">
         <p className="section-label">Research map</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight sm:text-5xl">

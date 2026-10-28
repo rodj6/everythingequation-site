@@ -1,0 +1,261 @@
+<h2 id="section-a-certified-non-weyl-source-with-the-same-passive-law">A certified non-Weyl source with the same passive law</h2>
+<p data-source-page="23">Coordinate-plane Weyl orbits do not exhaust the source encodings. We construct an explicit continuum of such encodings, give a computable sufficient complete-positivity condition, and certify a sizable example with exact rational principal minors. Its full passive word law is unchanged, while an admitted memory intervention separates it from its coordinate-plane parent. This construction extends the source models defined above. It improves neither the known memory threshold nor the environmental upper bound. Its benefit is a certified noncovariant realization method and an explicit limitation of passive source identification. General completely-positive realization methods and quantum reductions of hidden Markov models are established antecedents [7, 15]. The claim here is the particular certified full-law deformation and its admitted intervention witness, not the first noncovariant quantum realization.</p>
+<h3 id="section-state-basis-construction-and-an-open-positivity-neighbourhood">State-basis construction and an open positivity neighbourhood</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00512.svg" alt="Let Sab be nine normalized Hermitian states forming an operator basis, and let a stationary qutrit
+instrument obey
+Φj(Sab) = TajSbj,
+Taj &gt; 0,
+∑︂
+j
+Taj =
+∑︂
+a
+Taj = 1." width="484.51" height="51.21" style="width:44.450em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let Sab be nine normalized Hermitian states forming an operator basis, and let a stationary qutrit
+instrument obey
+Φj(Sab) = TajSbj,
+Taj &gt; 0,
+∑︂
+j
+Taj =
+∑︂
+a
+Taj = 1.</pre></details></figure>
+<p data-source-page="23">For the construction below,<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00513.svg" alt=" Sab" style="width:1.8298em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> has a rank-two support plane<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00514.svg" alt=" Qb" style="width:1.5960em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> depending only on its second index. Assume each branch Choi matrix is strictly positive on<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00515.svg" alt=" C3 ⊗Qj" style="width:4.0134em;height:1.5977em;vertical-align:-0.23em" loading="lazy"/>, of dimension six, and zero on its orthogonal complement. This is a nonempty condition: an exact example follows below. Choose three unitaries<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00516.svg" alt=" Ub" style="width:1.4894em;height:1.2508em;vertical-align:-0.23em" loading="lazy"/> and define</p>
+<figure class="sr-formula" id="display-101" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00517.svg" alt="S′
+ab = UbSabU†
+b ." width="74.26" height="18.99" style="width:6.813em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>S′
+ab = UbSabU†
+b .</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00518.svg" alt="They are normalized rank-two states. Define the 9 × 9 matrix E with columns vec Sab and E′ with
+columns vec S′
+ab, using one fixed row-major vectorization. Let Oj have columns Taj vec Sbj. When E′" width="484.40" height="32.62" style="width:44.440em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>They are normalized rank-two states. Define the 9 × 9 matrix E with columns vec Sab and E′ with
+columns vec S′
+ab, using one fixed row-major vectorization. Let Oj have columns Taj vec Sbj. When E′</pre></details></figure>
+<p data-source-page="23">is invertible, the new maps are defined on all operators by</p>
+<figure class="sr-formula" id="equation-47" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00519.svg" alt="Ψj = AdUj ◦Oj(E′)−1.
+(47)" width="296.97" height="17.58" style="width:27.245em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 23, equation (47).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ψj = AdUj ◦Oj(E′)−1.
+(47)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00520.svg" alt="Here the right-hand matrix is a superoperator. Equivalently, Ψj(S′
+ab) = TajS′
+bj. The Ub are encoding
+parameters, not gates selected at runtime by an uncounted classical copy of b. The instrument consists
+of the fixed three CP maps in Eq. (47); its finite Choi factors implement those maps without archive
+feedback." width="484.14" height="54.94" style="width:44.417em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Here the right-hand matrix is a superoperator. Equivalently, Ψj(S′
+ab) = TajS′
+bj. The Ub are encoding
+parameters, not gates selected at runtime by an uncounted classical copy of b. The instrument consists
+of the fixed three CP maps in Eq. (47); its finite Choi factors implement those maps without archive
+feedback.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00521.svg" alt="Theorem: explicit CP neighbourhood and full-law attainment.
+Put s = σmin(E) &gt; 0, let
+m &gt; 0 be the smallest positive Choi eigenvalue across the original branches, and set L = maxj ∥Oj∥F.
+If
+δ = ∥E′ −E∥op &lt; s,
+Lδ
+s(s −δ) &lt; m,
+(48)" width="486.12" height="63.13" style="width:44.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Theorem: explicit CP neighbourhood and full-law attainment.
+Put s = σmin(E) &gt; 0, let
+m &gt; 0 be the smallest positive Choi eigenvalue across the original branches, and set L = maxj ∥Oj∥F.
+If
+δ = ∥E′ −E∥op &lt; s,
+Lδ
+s(s −δ) &lt; m,
+(48)</pre></details></figure>
+<p data-source-page="24">then the new maps form a stationary CP instrument with the same complete delayed word law. They have branch Choi rank six. A sufficient unitary condition is</p>
+<figure class="sr-formula" id="display-103" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00522.svg" alt="max
+b
+∥Ub −I∥op &lt;
+ms2
+6(L + ms)." width="144.15" height="29.04" style="width:13.225em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>max
+b
+∥Ub −I∥op &lt;
+ms2
+6(L + ms).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00523.svg" alt="Proof. Resolvent inversion gives ∥(E′)−1 −E−1∥op ≤δ/[s(s −δ)]. Undo the output conjugation
+Uj. Its superoperator differs from the old one by Oj[(E′)−1 −E−1], of Frobenius norm at most the
+second quantity in Eq. (48). Choi reshuffling preserves Frobenius norm and operator norm is no larger.
+Both maps have output on the same fixed plane Qj after undoing Uj; therefore the corresponding Choi
+perturbation is supported on the same six-dimensional subspace, not on an uncontrolled former zero
+eigenspace. It is Hermitian, because the map sends a Hermitian basis to Hermitian matrices. The
+positive eigenvalue gap thus proves CP and full rank six on this support. Each changed state column
+has Frobenius error at most 2 maxb ∥Ub −I∥, so δ ≤6 maxb ∥Ub −I∥proves the sufficient condition.
+Trace preservation holds on the basis because all states have trace one and ∑︁
+j Taj = 1. Set
+τ ′ = 1" width="486.30" height="139.77" style="width:44.614em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. Resolvent inversion gives ∥(E′)−1 −E−1∥op ≤δ/[s(s −δ)]. Undo the output conjugation
+Uj. Its superoperator differs from the old one by Oj[(E′)−1 −E−1], of Frobenius norm at most the
+second quantity in Eq. (48). Choi reshuffling preserves Frobenius norm and operator norm is no larger.
+Both maps have output on the same fixed plane Qj after undoing Uj; therefore the corresponding Choi
+perturbation is supported on the same six-dimensional subspace, not on an uncontrolled former zero
+eigenspace. It is Hermitian, because the map sends a Hermitian basis to Hermitian matrices. The
+positive eigenvalue gap thus proves CP and full rank six on this support. Each changed state column
+has Frobenius error at most 2 maxb ∥Ub −I∥, so δ ≤6 maxb ∥Ub −I∥proves the sufficient condition.
+Trace preservation holds on the basis because all states have trace one and ∑︁
+j Taj = 1. Set
+τ ′ = 1</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00524.svg" alt="9
+∑︁
+ab S′
+ab. It is faithful because a positive average of an operator basis cannot have a common
+kernel. Column stochasticity gives" width="484.20" height="27.84" style="width:44.422em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>9
+∑︁
+ab S′
+ab. It is faithful because a positive average of an operator basis cannot have a common
+kernel. Column stochasticity gives</pre></details></figure>
+<figure class="sr-formula" id="display-104" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00525.svg" alt="Ψj(τ ′) = 1
+b
+S′
+bj,
+ΨkΨj(τ ′) = 1
+∑︂
+9S′
+jk.
+9" width="198.40" height="31.67" style="width:18.202em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ψj(τ ′) = 1
+b
+S′
+bj,
+ΨkΨj(τ ′) = 1
+∑︂
+9S′
+jk.
+9</pre></details></figure>
+<p data-source-page="24">Summing the first identity over<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00526.svg" alt=" j" style="width:0.9177em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> proves stationarity. The first two outputs are uniform with pair probability 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00527.svg" alt="/" style="width:0.6428em;height:1.1398em;vertical-align:-0.23em" loading="lazy"/>9; the reset rule thereafter proves every finite word by induction. No finite truncation, postselection, extra controller memory or freshly redrawn source is used. <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00528.svg" alt="□" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> This theorem is a sufficient neighbourhood criterion, not a necessary CP test. In particular its simple norm estimate can be conservative. Exact finite Choi certificates admit larger rotations, as in the following point.</p>
+<h3 id="section-an-exact-nonorthogonal-plane-realization">An exact nonorthogonal-plane realization</h3>
+<p data-source-page="24">Use the coordinate-plane state formula with</p>
+<figure class="sr-formula" id="display-105" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00529.svg" alt="α = 2/3,
+t = 9/50,
+r = 1/10,
+λ = 9/10,
+ζ = −tω2,
+ω = e2πi/3." width="338.47" height="14.73" style="width:31.052em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>α = 2/3,
+t = 9/50,
+r = 1/10,
+λ = 9/10,
+ζ = −tω2,
+ω = e2πi/3.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00530.svg" alt=")︃
+and Sab = ZaXbχX−bZ−a. Here X|p⟩= |p+1 mod 3⟩and Z = diag(1, ω, ω2).
+The seed χ is
+(︃0 0
+0
+0 α
+ζ
+0  ̄ζ 1−α" width="486.51" height="26.81" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>)︃
+and Sab = ZaXbχX−bZ−a. Here X|p⟩= |p+1 mod 3⟩and Z = diag(1, ω, ω2).
+The seed χ is
+(︃0 0
+0
+0 α
+ζ
+0  ̄ζ 1−α</pre></details></figure>
+<figure class="sr-formula" id="display-106" data-source-page="24"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p024-00531.svg" alt="Let
+⎛
+⎜
+⎝
+99/101
+−20/101
+0
+20/101
+99/101
+0
+0
+0
+1
+⎞
+U0 =
+⎟
+⎠,
+U1 = U2 = I." width="359.86" height="50.69" style="width:33.014em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 24.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let
+⎛
+⎜
+⎝
+99/101
+−20/101
+0
+20/101
+99/101
+0
+0
+0
+1
+⎞
+U0 =
+⎟
+⎠,
+U1 = U2 = I.</pre></details></figure>
+<p data-source-page="24">The nine new states and maps are given by Eq. (47). The exact certificate in the supplement verifies their basis determinant is nonzero, all reset identities, trace preservation, stationarity and the first two outputs. Undoing each output rotation and restricting its Choi matrix to the six nonzero output-plane directions, all six leading principal minors are strictly positive rational numbers. Sylvester’s criterion proves CP, without a numerical eigenvalue threshold. The eighteen exact minors are included</p>
+<p data-source-page="25">verbatim in supplement/memory/expected_outputs/six/encoding/nonweyl_results.json and are recomputed by the code. The original support-plane normals are the orthonormal vectors<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00532.svg" alt=" |0⟩, |1⟩, |2⟩" style="width:4.8560em;height:1.1608em;vertical-align:-0.23em" loading="lazy"/>. The new first normal <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00533.svg" alt="is (99|0⟩+ 20|1⟩)/" style="width:8.1001em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>101, while the other two stay fixed. Its inner product with the second normal is <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00534.svg" alt="20/101 ̸" style="width:3.3869em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>= 0. A common unitary, antiunitary or relabelling preserves normal orthogonality. This source therefore is not merely another common-unitary coordinate-plane Weyl representation. It is an exact, noncovariant qutrit source outside that class. No assertion of classification outside that class is made.</p>
+<h3 id="section-a-common-intervention-exposes-the-lost-distinction">A common intervention exposes the lost distinction</h3>
+<p data-source-page="25">After a recorded pair ending in symbol zero, admit one projective memory probe with click effect <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00535.svg" alt="P0 = |0⟩⟨0|" style="width:4.8792em;height:1.3101em;vertical-align:-0.23em" loading="lazy"/> in the same physical qutrit basis for both sources. The coordinate-plane parent gives zero. The new source gives, for every preceding symbol<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00536.svg" alt=" a," style="width:1.2867em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-107" data-source-page="25"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00537.svg" alt=")︃2
+=
+800
+30603 ≃0.02614.
+Tr(P0S′
+a0) = 2
+(︃20
+3
+101" width="208.90" height="29.23" style="width:19.165em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 25.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>)︃2
+=
+800
+30603 ≃0.02614.
+Tr(P0S′
+a0) = 2
+(︃20
+3
+101</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="25"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00538.svg" alt="This is an explicit standard-quantum intervention discriminator between two sources with identical
+passive words. It is not a test separating Shadow Theory from ordinary quantum mechanics. It tests
+the admitted physical source models after expanding the readout catalogue.
+No history needs to be discarded: retain all first two symbols and the probe outcome, and use the
+joint event “second symbol zero and click”. Its unconditional probability is zero in the parent and
+800/91809 in the new source. A controller may schedule the same fixed probe after two ticks; selection
+of the joint event is data analysis, not feedback memory hidden inside the autonomous source. The
+intervention requires physical memory access, a clock and a calibrated projector. Those are additional
+admitted operations; passive archives alone cannot supply them.
+The separation has a simple controlled tolerance. If each nominated conditional memory state
+has trace-distance error at most dS and the actual probe effect has operator-norm error at most
+dP , put d = dS + dP . The parent conditional click probability is at most d and the new one is at
+least 800/30603 −d. Their admitted intervals are disjoint whenever d &lt; 400/30603 ≃0.01307. This
+follows from contraction of effect probabilities under trace distance and ∥∆P∥op; it does not infer those
+calibration premises from passive word equality. The joint-event gap is then at least (800/30603−2d)/3
+under the same exact pre-intervention word law. Complete reference/bath equivalence is neither
+assumed nor inferred from this pointer-level discriminator.
+The example has one-step record Choi rank eighteen, rather than the minimum nine. Its pair states
+have rank two and pair effects are strictly positive: writing Ej = Ψ∗
+j(I), the certificate checks Ej &gt; 0
+and the ordered pair effect obeys" width="484.88" height="270.03" style="width:44.485em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 25.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>This is an explicit standard-quantum intervention discriminator between two sources with identical
+passive words. It is not a test separating Shadow Theory from ordinary quantum mechanics. It tests
+the admitted physical source models after expanding the readout catalogue.
+No history needs to be discarded: retain all first two symbols and the probe outcome, and use the
+joint event “second symbol zero and click”. Its unconditional probability is zero in the parent and
+800/91809 in the new source. A controller may schedule the same fixed probe after two ticks; selection
+of the joint event is data analysis, not feedback memory hidden inside the autonomous source. The
+intervention requires physical memory access, a clock and a calibrated projector. Those are additional
+admitted operations; passive archives alone cannot supply them.
+The separation has a simple controlled tolerance. If each nominated conditional memory state
+has trace-distance error at most dS and the actual probe effect has operator-norm error at most
+dP , put d = dS + dP . The parent conditional click probability is at most d and the new one is at
+least 800/30603 −d. Their admitted intervals are disjoint whenever d &lt; 400/30603 ≃0.01307. This
+follows from contraction of effect probabilities under trace distance and ∥∆P∥op; it does not infer those
+calibration premises from passive word equality. The joint-event gap is then at least (800/30603−2d)/3
+under the same exact pre-intervention word law. Complete reference/bath equivalence is neither
+assumed nor inferred from this pointer-level discriminator.
+The example has one-step record Choi rank eighteen, rather than the minimum nine. Its pair states
+have rank two and pair effects are strictly positive: writing Ej = Ψ∗
+j(I), the certificate checks Ej &gt; 0
+and the ordered pair effect obeys</pre></details></figure>
+<figure class="sr-formula" id="display-108" data-source-page="25"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00539.svg" alt="Fjk = Ψ∗
+j(Ek) ⪰λmin(Ek)Ej &gt; 0." width="159.69" height="16.87" style="width:14.651em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 25.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Fjk = Ψ∗
+j(Ek) ⪰λmin(Ek)Ej &gt; 0.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="25"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00540.svg" alt="The full-word reset factorization therefore gives complete horizon channel rank
+∑︂" width="378.51" height="34.26" style="width:34.726em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 25.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The full-word reset factorization therefore gives complete horizon channel rank
+∑︂</pre></details></figure>
+<figure class="sr-formula" id="display-109" data-source-page="25"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p025-00541.svg" alt="w
+rank S′
+last(w) rank Ffirst(w) = 6 3n,
+n ≥2." width="220.02" height="25.40" style="width:20.185em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 25.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>w
+rank S′
+last(w) rank Ffirst(w) = 6 3n,
+n ≥2.</pre></details></figure>
+<p data-source-page="25">It thus supplies a certified alternative encoding and an access-dependent distinction, not a better resource frontier or a lower noise threshold. The construction is useful because noncovariant search can now start inside a rigorously admitted open set rather than at a numerical PSD factorization with unverified dynamics.</p>
+<p data-source-page="26"><strong>Verification and limits.</strong> supplement/memory/six/encoding/verify_nonweyl.py imports no previous producer code. Exact SymPy arithmetic verifies 243 reset entries, nine normalization entries, ninety stationary/initial entries and eighteen positive principal minors. It then enumerates every word through length seven independently in floating point: 3,279 checks pass, with maximum probability error below 7<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p026-00542.svg" alt=" × 10−18" style="width:3.6797em;height:1.3075em;vertical-align:-0.23em" loading="lazy"/>. These finite word checks are diagnostics; the basis-reset induction is the full-law proof. The numerical neighbourhood estimate, search failures and output-state geometry establish no global source optimum. Conventional Born probabilities, stationary preparation, pure dilation accounting, independently fresh ports and the complete declared access catalogue remain assumptions. No measurement-selection mechanism is inferred.</p>

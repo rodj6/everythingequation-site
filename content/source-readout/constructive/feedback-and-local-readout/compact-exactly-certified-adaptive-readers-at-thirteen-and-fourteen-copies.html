@@ -1,0 +1,85 @@
+<h2 id="section-compact-exactly-certified-adaptive-readers-at-thirteen-and-fourteen-copies">Compact, exactly certified adaptive readers at thirteen and fourteen copies</h2>
+<p data-source-page="22">The four-copy trees establish a continuous-angle feedback separation, but their exhaustive retained-history representation was not a scalable synthesis method for the one-percent task. We develop a finite-horizon alpha-vector construction and a separate exact policy verifier. The completed result is a compact feasible fourteen-copy reader and a checked thirteen-copy candidate above the target; it does not settle that endpoint.</p>
+<h3 id="section-a-feasible-policy-graph-interface">A feasible policy-graph interface</h3>
+<p data-source-page="22">Use the original four fixed labels<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00462.svg" alt=" h ∈{X+, X−, Y +, Y −}" style="width:11.1140em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>, independent copies conditional on that one label, and the shared calibrated<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00463.svg" alt=" η = 4/5, v = 9/" style="width:7.2119em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>10 detector. An action<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00464.svg" alt=" a" style="width:1.0060em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> has an exact rational unit direction<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00465.svg" alt=" na = (ca, sa" style="width:5.4735em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/>). In outcome order (+<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00466.svg" alt=", −," style="width:1.6477em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> 0) its conditional kernels are</p>
+<figure class="sr-formula" id="display-67" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00467.svg" alt="Ka,h =
+(︃η
+2(1 + vxa,h), η
+2(1 −vxa,h), 1 −η
+)︃
+,
+xa,h ∈(ca, −ca, sa, −sa)." width="348.80" height="27.39" style="width:32.000em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ka,h =
+(︃η
+2(1 + vxa,h), η
+2(1 −vxa,h), 1 −η
+)︃
+,
+xa,h ∈(ca, −ca, sa, −sa).</pre></details></figure>
+<p data-source-page="22">A level-<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00468.svg" alt="t" style="width:0.5077em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> node stores one action and three child indices at level<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00469.svg" alt=" t −" style="width:1.8240em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>1. Level zero stores a sign decision. Thus the controller follows a finite outcome-labelled directed acyclic graph; it needs no access to the source label, no continuously updated posterior and no inaccessible calibration parameter. Every null follows its own declared child and consumes a trial. For node<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00470.svg" alt=" i" style="width:0.8247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> define its four-component error vector<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00471.svg" alt=" αt,i" style="width:1.8679em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. The exact recursion is</p>
+<figure class="sr-formula" id="display-68" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00472.svg" alt="α0,i(h) = 1{di ̸= R(h)},
+αt,i(h) =
+∑︂
+o∈{+,−,0}
+Kai,h(o)αt−1,ji,o(h)." width="182.46" height="43.65" style="width:16.739em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>α0,i(h) = 1{di ̸= R(h)},
+αt,i(h) =
+∑︂
+o∈{+,−,0}
+Kai,h(o)αt−1,ji,o(h).</pre></details></figure>
+<p data-source-page="22">For a hidden-label prior<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00473.svg" alt=" b" style="width:0.9032em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, its expected error is<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00474.svg" alt=" b · α" style="width:2.2623em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>. The prior is used offline for design, not assumed as a distribution in the final worst-label certificate.</p>
+<p data-source-page="22"><strong>Proposition 9.1</strong> (A rational feasible-reader certificate)<strong>.</strong><em> Every finite graph of the above type defines</em> <em>an admitted adaptive reader. Bottom-up rational evaluation gives its exact four source-label errors. For</em> <em>the full continuous equatorial class, averaging the graph over axis exchange and global sign reversal</em> <em>gives equal error on every label, equal to</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00475.svg" alt=" 1" style="width:0.9918em;height:1.2640em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula sr-source-panel" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00476.svg" alt="4
+∑︁
+h αB,root(h). Hence that mean is an attainable minimax
+upper bound. No belief-point coverage or policy-search optimality assumption is required." width="484.50" height="26.11" style="width:44.450em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>4
+∑︁
+h αB,root(h). Hence that mean is an attainable minimax
+upper bound. No belief-point coverage or policy-search optimality assumption is required.</pre></details></figure>
+<p data-source-page="22"><em>Proof.</em> Condition on a fixed source label. Independence of each fresh specimen and ready detector stock makes the three terms in the recursion the exhaustive conditional cases for the next outcome. Induction gives every node’s true error probability, including nulls and the forced terminal decision. Axis exchange acts by swapping (<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p022-00477.svg" alt="ca, sa" style="width:2.3393em;height:1.2256em;vertical-align:-0.23em" loading="lazy"/>) at every command. Global sign reversal acts by reversing virtual signs and the final decision. Both operations preserve the admitted common-noise law and continuous action class; their four compositions act transitively on the labels. Two root fair bits, retained for the controller/decoder, therefore equalize the four errors to their mean. The root bits are independent of the unavailable source label. No quantum residual-channel equivalence is claimed.</p>
+<p data-source-page="23">The base menu has thirteen rational directions; swapped commands are also admitted, whether or not they coincide with a base-menu entry. This is an attaining construction within continuous access, not an equality between a finite grid optimum and the continuous optimum.</p>
+<h3 id="section-point-based-synthesis-and-exact-separation-from-its-numerics">Point-based synthesis and exact separation from its numerics</h3>
+<p data-source-page="23">The offline construction specializes point-based POMDP value iteration <a href="/source-readout/feedback-and-local-readout/references#reference-8">[8]</a> to a static four-label terminal-cost problem. For a collection of previous feasible policy vectors and a design belief<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00478.svg" alt=" b" style="width:0.8865em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, choose separately for each action/outcome a child minimizing<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00479.svg" alt=" b · (Ka,o ⊙α" style="width:5.7380em;height:1.2897em;vertical-align:-0.23em" loading="lazy"/>), sum its four conditional errors, then select an action of least design cost. The resulting object is an actual policy graph, even if floating-point comparisons select a suboptimal child. Duplicate action/child triples are merged, and unreachable nodes are removed when freezing a nominated root. Beliefs were sampled both from Dirichlet distributions and actual random measurement trajectories, with the four source symmetries included. The pilot used 21461 distinct design beliefs and thirteen rational actions. Their half-angle parameters were rounded offline to rational numbers with denominator 10000 before forming exact unit-circle coordinates. Numerical candidate generation never supplies the final risk certificate. Nor do we import the literature’s discounted infinite-horizon coverage bound into this finite-horizon reader. The guarantee here is feasibility and exact evaluation. The independent standard-library verifier avoids relying on large exact fractions for its primary pass. At scale<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00480.svg" alt=" S = 280" style="width:3.7311em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> it propagates integer lower and upper error intervals. For common denominator <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00481.svg" alt="D" style="width:0.9747em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and nonnegative kernel numerators<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00482.svg" alt=" No" style="width:1.6499em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> summing to<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00483.svg" alt=" D" style="width:1.3087em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, it uses</p>
+<figure class="sr-formula" id="display-69" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00484.svg" alt="L =
+⌊︃∑︁
+o NoLo
+⌋︃
+,
+U =
+⌈︃∑︁
+o NoUo
+⌉︃
+.
+D
+D" width="192.74" height="27.37" style="width:17.682em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>L =
+⌊︃∑︁
+o NoLo
+⌋︃
+,
+U =
+⌈︃∑︁
+o NoUo
+⌉︃
+.
+D
+D</pre></details></figure>
+<p data-source-page="23">Every operation rounds outward. Induction gives interval width at most 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00485.svg" alt="t/S" style="width:1.6207em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> at level<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00486.svg" alt=" t" style="width:0.8029em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; terminal values are exact. The root’s group mean is then averaged as a rational number. An additional all-Fraction evaluator reproduces the label costs, and ordered-word enumeration checks small subtrees independently. Malformed directions and child indices are rejected.</p>
+<h3 id="section-completed-operating-points-and-remaining-one-percent-gap">Completed operating points and remaining one-percent gap</h3>
+<p data-source-page="23">Copies Internal graph nodes Certified attainable error One percent</p>
+<figure class="sr-formula" id="display-70" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00487.svg" alt="13
+600
+0.01102649347305383 . . .
+fails
+14
+697
+0.008749337644325401 . . .
+passes" width="298.11" height="26.07" style="width:27.349em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 23.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>13
+600
+0.01102649347305383 . . .
+fails
+14
+697
+0.008749337644325401 . . .
+passes</pre></details></figure>
+<p data-source-page="23">The displayed digits summarize exact rational intervals reproduced by research11/nominal/verify_ nominal.py from the supplied research11/nominal/policy_14.json and policy_13.json. Paths are relative to the reader supplement; no floating comparison decides pass/fail. The fourteen-copy protocol improves the specified fixed-bisector error 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00488.svg" alt=".00886634707138012 . . ." style="width:10.2411em;height:1.1477em;vertical-align:-0.23em" loading="lazy"/> at the same copy budget. Its modest error improvement does not change the attained one-percent budget. The main useful addition is a compact, independently evaluable reader and reusable primal certificate interface for larger-horizon searches. An additional frozen thirteen-copy child-pool candidate in research12/nominal/policy_13 _pool.json has certified symmetrized error 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p023-00489.svg" alt=".011009824045220384 . . ." style="width:10.8302em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>, evaluated by the supplied outward-integer recursion. It also fails one percent. This supporting refinement does not change the fourteen-copy attainment or the unresolved threshold. Neither the unsuccessful thirteen-copy candidate nor an optimizer’s failure proves a universal thirteen-copy obstruction. A separate lower-bound theorem is needed to constrain all continuous</p>
+<p data-source-page="24">readers. We make no claim of global optimality over either the thirteen-action construction class or the full continuous class, and no adaptive/nonadaptive separation at one percent. A separate numerical search examined every two-setting count allocation at budgets twelve through fourteen, optimizing its two angles. The tested solutions collapsed near the fixed bisector and did not improve attainment. This is exploratory evidence only; it does not certify that every two-setting schedule is worse, let alone every continuous nonadaptive protocol.</p>
+<h3 id="section-explicit-controller-and-retained-record-resources">Explicit controller and retained-record resources</h3>
+<p data-source-page="24">The fourteen-copy graph has 697 internal nodes and two terminal decisions. A global node pointer therefore needs ten bits; two independent root symmetry bits are additional ready/controller stock. A direct ROM upper account uses four bits per base action and three ten-bit child pointers per internal node, plus two terminal decision bits: at most 23700 bits, excluding phase-command constants, decoder/control arithmetic, physical clock, references and actuator state. This is an attaining upper account, not a controller minimum. There are at most 26 physical phase commands after the root axis transform. A conservative archive uses five command-ID bits and two outcome bits per trial, plus root-seed and timing metadata. All histories remain retained even though feedback uses only the node pointer. Exact mathematical rational commands do not assert infinite physical phase precision. A deployment must separately bound implementation error, preserve preparation/detector stability, charge phase controls and references, and validate the actual frozen reader if the nominal model is untrusted. No hardware, energy, clock-speed or thermodynamic advantage follows from the ROM count or the error improvement alone. The separate calibration route can consume this finite policy as a declared object without identifying its entire residual quantum instrument.</p>

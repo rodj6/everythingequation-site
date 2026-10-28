@@ -1,0 +1,384 @@
+<h2 id="section-complete-retained-output-comparisons-and-microscopic-detector-closure">Complete retained-output comparisons and microscopic detector closure</h2>
+<h3 id="section-a-complete-one-transition-model-and-a-reference-uniform-certificate">A complete one-transition model and a reference-uniform certificate</h3>
+<p data-source-page="4">Fix a finite input Hilbert space<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00019.svg" alt=" H0" style="width:1.6890em;height:1.2406em;vertical-align:-0.23em" loading="lazy"/>, horizon<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00020.svg" alt=" T" style="width:1.0522em;height:1.1365em;vertical-align:-0.23em" loading="lazy"/>, and common terminal output spaces. All changes of basis used for comparison are declared in advance; an arbitrary environment unitary chosen afterwards would change the meaning of retaining the physical output. For detector<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00021.svg" alt=" X = 0," style="width:3.4382em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1, let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00022.svg" alt=" HX(t) = HX(t)∗" style="width:7.5582em;height:1.4044em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="4">and a jump-amplitude map<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00023.svg" alt=" BX(t) : H0 →O" style="width:7.5633em;height:1.2966em;vertical-align:-0.23em" loading="lazy"/> be bounded, measurable coefficients. The post-transition propagation and every retained mark are included in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00024.svg" alt=" BX" style="width:1.8645em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>; this propagation must be an isometry, or its lost channels must be included. Set</p>
+<figure class="sr-formula" id="display-8" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00025.svg" alt="QX(t) = BX(t)∗BX(t),
+GX(t) = −iHX(t)/ħ−QX(t)/2,
+ ̇NX(t) = GX(t)NX(t),
+NX(0) = I." width="287.60" height="33.62" style="width:26.385em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>QX(t) = BX(t)∗BX(t),
+GX(t) = −iHX(t)/ħ−QX(t)/2,
+ ̇NX(t) = GX(t)NX(t),
+NX(0) = I.</pre></details></figure>
+<p data-source-page="4">Here<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00026.svg" alt=" HX" style="width:1.9488em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> is in joules,<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00027.svg" alt=" QX" style="width:1.9055em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00028.svg" alt=" GX" style="width:1.9044em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> in s<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00029.svg" alt="−1, BX" style="width:3.1877em;height:1.4045em;vertical-align:-0.23em" loading="lazy"/> in s<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00030.svg" alt="−1/2" style="width:1.9147em;height:0.8876em;vertical-align:-0.23em" loading="lazy"/>, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00031.svg" alt=" NX" style="width:1.9218em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> is dimensionless. This is an absorbing, one-transition model: there are no later transitions back into the untriggered sector. A finite resonance or continuum response may be used, but its amplitude map must actually be supplied. Define the complete amplitude isometry</p>
+<figure class="sr-formula" id="equation-8" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00032.svg" alt="VXψ = NX(T)ψ ⊕
+t 7→BX(t)NX(t)ψ
+
+in
+H0 ⊕L2([0, T]; O).
+(8)" width="400.37" height="16.20" style="width:36.732em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (8).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>VXψ = NX(T)ψ ⊕
+t 7→BX(t)NX(t)ψ
+
+in
+H0 ⊕L2([0, T]; O).
+(8)</pre></details></figure>
+<p data-source-page="4">The first summand is the retained null/no-transition outcome, not a discarded population. The corresponding time-resolved instrument has Kraus density<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00033.svg" alt=" KX(t) = BX(t)NX(t" style="width:9.5604em;height:1.2368em;vertical-align:-0.23em" loading="lazy"/>) and null operator <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00034.svg" alt="KX(∅) = NX(T" style="width:7.1780em;height:1.4466em;vertical-align:-0.23em" loading="lazy"/>). It may retain the output in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00035.svg" alt=" O" style="width:1.2785em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, coarsen time into bins, or apply a fixed common decoder. Its normalized law is the ordinary quantum law of this specified instrument. It is not a derivation of that law from a source theory. For a registered exact time, cq outputs are integrable trace-class conditional kernels over the null atom and time interval, with integrated trace norm. This classical output space is distinct from the coherent temporal<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00036.svg" alt=" L2" style="width:1.5253em;height:1.2852em;vertical-align:-0.23em" loading="lazy"/> field in (8); no trace-class diagonal density operator on that field is assumed. Coarsening to finite time bins gives ordinary cq blocks.</p>
+<p data-source-page="4"><strong>Proposition 2.1</strong> (Full-output amplitude and kernel mismatch certificate)<strong>.</strong><em> Let</em></p>
+<figure class="sr-formula" id="equation-9" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00037.svg" alt="e(t) =
+Z t
+0
+∥(G1(s) −G0(s))N0(s)∥ds,
+A2
+T = e(T)2 +
+Z T
+0
+(∥(B1(t) −B0(t))N0(t)∥+ ∥B1(t)∥e(t))2 dt.
+(9)" width="389.88" height="65.68" style="width:35.769em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (9).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e(t) =
+Z t
+0
+∥(G1(s) −G0(s))N0(s)∥ds,
+A2
+T = e(T)2 +
+Z T
+0
+(∥(B1(t) −B0(t))N0(t)∥+ ∥B1(t)∥e(t))2 dt.
+(9)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00038.svg" alt="Then V ∗
+XVX = I and ∥V1 −V0∥≤AT . For every input state on H0 ⊗R, with arbitrary finite inert
+reference R,
+1
+2∥(V1 ⊗IR)ρ(V ∗
+1 ⊗IR) −(V0 ⊗IR)ρ(V ∗
+0 ⊗IR)∥1 ≤min{1, AT }.
+(10)" width="487.00" height="44.50" style="width:44.679em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Then V ∗
+XVX = I and ∥V1 −V0∥≤AT . For every input state on H0 ⊗R, with arbitrary finite inert
+reference R,
+1
+2∥(V1 ⊗IR)ρ(V ∗
+1 ⊗IR) −(V0 ⊗IR)ρ(V ∗
+0 ⊗IR)∥1 ≤min{1, AT }.
+(10)</pre></details></figure>
+<p data-source-page="4"><em>The same bound applies to the complete time/null/mark cq instrument after a common readout. With</em> <em>a fixed input-independent original stock this is also a half-diamond upper bound for the two declared</em> <em>output channels.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00039.svg" alt="Proof. G∗
+X + GX = −QX gives
+d
+dt(N∗
+XNX) = −N∗
+XQXNX." width="308.13" height="40.79" style="width:28.269em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. G∗
+X + GX = −QX gives
+d
+dt(N∗
+XNX) = −N∗
+XQXNX.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00040.svg" alt="Integration proves NX(T)∗NX(T) +
+R KX(t)∗KX(t)dt = I, hence isometry and conservation of the null
+population. The two-parameter propagator generated by G1 is a contraction. Variation of constants
+gives" width="484.13" height="47.88" style="width:44.415em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Integration proves NX(T)∗NX(T) +
+R KX(t)∗KX(t)dt = I, hence isometry and conservation of the null
+population. The two-parameter propagator generated by G1 is a contraction. Variation of constants
+gives</pre></details></figure>
+<figure class="sr-formula" id="display-11" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p004-00041.svg" alt="N1(t) −N0(t) =
+Z t
+0
+N1(t, s)(G1(s) −G0(s))N0(s)ds,
+∥N1(t) −N0(t)∥≤e(t)." width="383.90" height="32.22" style="width:35.220em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>N1(t) −N0(t) =
+Z t
+0
+N1(t, s)(G1(s) −G0(s))N0(s)ds,
+∥N1(t) −N0(t)∥≤e(t).</pre></details></figure>
+<figure class="sr-formula" id="display-12" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00042.svg" alt="Since
+K1 −K0 = (B1 −B0)N0 + B1(N1 −N0)," width="340.50" height="27.70" style="width:31.238em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Since
+K1 −K0 = (B1 −B0)N0 + B1(N1 −N0),</pre></details></figure>
+<p data-source-page="5">the direct-sum norm in (8), followed by the triangle inequality, proves (9). For normalized pure inputs, the trace distance of two output vectors is at most their vector distance. Tensoring an operator with<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00043.svg" alt=" IR" style="width:1.4482em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/> does not change its operator norm; mixtures follow by convexity or purification and partial trace. Any common time measurement, mark decoder or CPTP readout contracts trace distance. This proves the reference-uniform statement without dividing by a branch probability or charging a reference dimension. The fixed-stock condition supplies actual channels on an unknown input; arbitrary input-correlated preparations supply only their stated statewise comparisons.</p>
+<p data-source-page="5">This certificate includes a term absent from a rate-only comparison: (<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00044.svg" alt="B1 −B0)N0" style="width:5.3315em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>. Even<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00045.svg" alt=" Q1 = Q0" style="width:4.2104em;height:1.2973em;vertical-align:-0.23em" loading="lazy"/> does not make it vanish. Conversely, matching the declared complex amplitude maps, null dynamics and terminal propagation makes the full output equal. Under exact<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00046.svg" alt=" H, Q" style="width:2.5435em;height:1.1404em;vertical-align:-0.23em" loading="lazy"/> matching, the computable cross-Gram operator</p>
+<figure class="sr-formula" id="equation-11" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00047.svg" alt="S = V ∗
+0 V1 = N(T)∗N(T) +
+Z T
+0
+N(t)∗B0(t)∗B1(t)N(t)dt
+(11)" width="376.50" height="32.22" style="width:34.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (11).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>S = V ∗
+0 V1 = N(T)∗N(T) +
+Z T
+0
+N(t)∗B0(t)∗B1(t)N(t)dt
+(11)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00048.svg" alt="retains the omitted phase and mark data. For the coherent complete channels their exact half-diamond
+distance is
+q" width="484.11" height="34.13" style="width:44.414em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>retains the omitted phase and mark data. For the coherent complete channels their exact half-diamond
+distance is
+q</pre></details></figure>
+<figure class="sr-formula" id="equation-12" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00049.svg" alt="1 −ν(S)2,
+ν(S) =
+min
+ρ≥0, Tr ρ=1 | Tr(ρS)|.
+(12)" width="339.27" height="20.36" style="width:31.126em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (12).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −ν(S)2,
+ν(S) =
+min
+ρ≥0, Tr ρ=1 | Tr(ρS)|.
+(12)</pre></details></figure>
+<p data-source-page="5">Indeed the overlap of the two pure outputs of any reference-extended input is Tr<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00050.svg" alt="(ρS" style="width:1.6594em;height:1.1457em;vertical-align:-0.23em" loading="lazy"/>), where<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00051.svg" alt=" ρ" style="width:0.9889em;height:1.1387em;vertical-align:-0.23em" loading="lazy"/> is its input marginal; every such<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00052.svg" alt=" ρ" style="width:0.9901em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has a finite purification. Mixed inputs cannot improve the optimum, by purification and contraction. Equation (12) is the standard numerical-range description of isometric-channel discrimination, here made explicit for the proposed detector lift. Time measurement can reduce this distance, so a time-record comparison cannot be substituted for it.</p>
+<h3 id="section-exact-scalar-kernel-formula-what-intensity-matching-pays-for">Exact scalar kernel formula: what intensity matching pays for</h3>
+<p data-source-page="5">For a prepared, untriggered scalar detector write</p>
+<figure class="sr-formula" id="display-15" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00053.svg" alt="ΛX(t) =
+Z t
+0
+ΓX(s)ds,
+pX(∅) = e−ΛX(T),
+pX(t) = ΓX(t)e−ΛX(t)." width="318.67" height="32.22" style="width:29.236em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ΛX(t) =
+Z t
+0
+ΓX(s)ds,
+pX(∅) = e−ΛX(T),
+pX(t) = ΓX(t)e−ΛX(t).</pre></details></figure>
+<p data-source-page="5">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00054.svg" alt=" |bX(t)⟩" style="width:3.4416em;height:1.2555em;vertical-align:-0.23em" loading="lazy"/>be the normalized retained quantum mark following a transition at time<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00055.svg" alt=" t" style="width:0.8287em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; assume the null ray is common. On the common time/null space the positive output kernel is</p>
+<figure class="sr-formula" id="display-16" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00056.svg" alt="σX(∅) = pX(∅)|0⟩⟨0|,
+σX(t) = pX(t)|bX(t)⟩⟨bX(t)|." width="265.35" height="15.94" style="width:24.344em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σX(∅) = pX(∅)|0⟩⟨0|,
+σX(t) = pX(t)|bX(t)⟩⟨bX(t)|.</pre></details></figure>
+<p data-source-page="5">The mark may include outgoing electron energy, polarization, vibrational state, source recoil and other specified outputs; it is not merely a rendered color. Put<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00057.svg" alt=" c(t) = |⟨b0(t)|b1(t)⟩|." style="width:9.2623em;height:1.2517em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="5"><strong>Proposition 2.2</strong> (Exact full time/mark discrepancy)<strong>.</strong><em> The retained cq half trace distance is exactly</em></p>
+<figure class="sr-formula" id="equation-13" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00058.svg" alt="Dcq = 1
+2|p1(∅) −p0(∅)|
+Z T
+q
+[p1(t) −p0(t)]2 + 4p1(t)p0(t)[1 −c(t)2] dt.
+(13)
++ 1
+2
+0" width="382.78" height="47.24" style="width:35.118em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (13).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Dcq = 1
+2|p1(∅) −p0(∅)|
+Z T
+q
+[p1(t) −p0(t)]2 + 4p1(t)p0(t)[1 −c(t)2] dt.
+(13)
++ 1
+2
+0</pre></details></figure>
+<figure class="sr-formula" id="equation-14" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p005-00059.svg" alt="For equal rates it reduces to
+Dcq =
+Z T
+0
+Γ(t)e−Λ(t)q
+1 −c(t)2 dt.
+(14)" width="485.88" height="39.91" style="width:44.576em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (14).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For equal rates it reduces to
+Dcq =
+Z T
+0
+Γ(t)e−Λ(t)q
+1 −c(t)2 dt.
+(14)</pre></details></figure>
+<p data-source-page="6"><em>For unequal rates one has the constructive calibration budget</em></p>
+<figure class="sr-formula" id="equation-15" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00060.svg" alt="Dcq ≤TV(P1, P0) +
+Z T
+0
+min(p1(t), p0(t))
+q
+1 −c(t)2 dt,
+(15)" width="373.65" height="32.22" style="width:34.279em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (15).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Dcq ≤TV(P1, P0) +
+Z T
+0
+min(p1(t), p0(t))
+q
+1 −c(t)2 dt,
+(15)</pre></details></figure>
+<p data-source-page="6"><em>where</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00061.svg" alt=" PX" style="width:1.7851em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/><em> is the complete time-plus-null probability law.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00062.svg" alt="Proof. For unit vectors u, v and nonnegative p, q, the nonzero eigenvalues of p|u⟩⟨u|−q|v⟩⟨v| lie in their
+span, have sum p−q and product −pq(1−|⟨u, v⟩|2). Their absolute sum is
+p" width="484.25" height="26.20" style="width:44.427em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. For unit vectors u, v and nonnegative p, q, the nonzero eigenvalues of p|u⟩⟨u|−q|v⟩⟨v| lie in their
+span, have sum p−q and product −pq(1−|⟨u, v⟩|2). Their absolute sum is
+p</pre></details></figure>
+<p data-source-page="6"><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00063.svg" alt="(p −q)2" style="width:3.5201em;height:1.2254em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00064.svg" alt="+ 4pq(1 −|⟨u, v⟩|2)." style="width:8.7092em;height:1.2254em;vertical-align:-0.23em" loading="lazy"/> Integrate this identity on the time/null space. For the last bound split off<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00065.svg" alt=" |p−q|" style="width:3.0167em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> times the larger-weight ray and compare the remaining equal weights. Common unchanged output factors, including a product inert reference in this scalar-input comparison, may be tensored on without altering the result. For input-correlated quantum outputs the corresponding full mark states must instead be included explicitly in the compared kernels.</p>
+<p data-source-page="6">Thus exact intensity/rate matching really does fix all waiting-time statistics<em> in this one-transition</em> <em>model</em>, not only one terminal probability. Its extension cost is determined by output-state overlaps. For constant Γ, orthogonal marks give</p>
+<figure class="sr-formula" id="display-20" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00066.svg" alt="Dbit = 0,
+Dcq = 1 −e−ΓT ." width="146.01" height="18.76" style="width:13.395em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Dbit = 0,
+Dcq = 1 −e−ΓT .</pre></details></figure>
+<p data-source-page="6">At Γ<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00067.svg" alt="T" style="width:0.7235em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 1, this is 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00068.svg" alt="." style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>6321205588. The reduced detector equivalence in [7, pp. 10–15] concerns a smaller output interface. The calculation here quantifies the additional condition required for complete retained-output comparison.</p>
+<h3 id="section-a-coherent-field-discriminator-despite-identical-count-records">A coherent-field discriminator despite identical count records</h3>
+<p data-source-page="6">A time-resolved measurement has already discarded coherence between different emission times. Retaining the unmeasured complete field is a stronger promise. A declared, broadband absorbing jump coupling can carry a time-dependent phase while leaving its reduced dissipator unchanged. With constant rate Γ<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00069.svg" alt=" &gt;" style="width:1.2025em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0, compare the two normalized complete vectors</p>
+<figure class="sr-formula" id="equation-16" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00070.svg" alt="|ΨX⟩= e−ΓT/2|0, vac⟩+
+Z T
+√
+Γe−Γt/2eiθX(t)|1, 1t⟩dt.
+(16)
+0" width="368.11" height="32.22" style="width:33.771em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (16).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|ΨX⟩= e−ΓT/2|0, vac⟩+
+Z T
+√
+Γe−Γt/2eiθX(t)|1, 1t⟩dt.
+(16)
+0</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00071.svg" alt="Here |1t⟩denotes the continuum single-quantum temporal-mode basis; the integral is an L2 wavepacket,
+not a distribution-valued state evaluated at a point. This is a signal-marker dilation of the abstract
+absorbing detector, not a microscopic model of photoelectron emission or a microtubule. The symbols
+0, 1 label ready/triggered states, not their energy ordering. An explicit Markov dilation uses the
+coupling LX(t) =
+√" width="485.54" height="71.61" style="width:44.545em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Here |1t⟩denotes the continuum single-quantum temporal-mode basis; the integral is an L2 wavepacket,
+not a distribution-valued state evaluated at a point. This is a signal-marker dilation of the abstract
+absorbing detector, not a microscopic model of photoelectron emission or a microtubule. The symbols
+0, 1 label ready/triggered states, not their energy ordering. An explicit Markov dilation uses the
+coupling LX(t) =
+√</pre></details></figure>
+<p data-source-page="6">Γ<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00072.svg" alt="eiθX(t)|1⟩⟨0|" style="width:5.1297em;height:1.2993em;vertical-align:-0.23em" loading="lazy"/> with vacuum input; once triggered it cannot jump again. The phase schedule and its source are externally prescribed resources. An autonomous realization would have to include and retain that controller and clock and reprove the comparison. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00073.svg" alt=" θ1(t) −θ0(t) = ∆ωt," style="width:9.2497em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-17" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00074.svg" alt="zT = ⟨Ψ0|Ψ1⟩= e−ΓT +
+Γ
+Γ −i∆ω[1 −e−(Γ−i∆ω)T ],
+Dcoherent =
+q
+1 −|zT |2.
+(17)" width="429.88" height="27.37" style="width:39.438em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (17).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>zT = ⟨Ψ0|Ψ1⟩= e−ΓT +
+Γ
+Γ −i∆ω[1 −e−(Γ−i∆ω)T ],
+Dcoherent =
+q
+1 −|zT |2.
+(17)</pre></details></figure>
+<p data-source-page="6">The reduced detector evolution and the entire count-time distribution agree exactly. Nevertheless, at <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00075.svg" alt="T = 1/Γ, ∆ω = 2Γ, Dcoherent = 0." style="width:14.8539em;height:1.3068em;vertical-align:-0.23em" loading="lazy"/>5551876958. In the long-time limit,</p>
+<figure class="sr-formula" id="equation-18" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p006-00076.svg" alt="Dcoherent =
+|∆ω|
+√
+Γ2 + ∆ω2 .
+(18)" width="301.96" height="28.76" style="width:27.703em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (18).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Dcoherent =
+|∆ω|
+√
+Γ2 + ∆ω2 .
+(18)</pre></details></figure>
+<p data-source-page="7">Consequently a claimed complete coherent-output error at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00077.svg" alt=" ε &lt;" style="width:1.9881em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1 requires, for this family,</p>
+<figure class="sr-formula" id="equation-19" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00078.svg" alt="|∆ω| ≤Γε/
+p
+1 −ε2.
+(19)" width="292.00" height="14.87" style="width:26.789em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7, equation (19).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|∆ω| ≤Γε/
+p
+1 −ε2.
+(19)</pre></details></figure>
+<p data-source-page="7">For one percent error the permissible detuning is approximately 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00079.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>0100005Γ. This is a usable tolerance, not a proposed new physical law. Interference of the outgoing temporal mode with a calibrated reference mode, or a phase-sensitive field measurement, can probe the missing phase; ideal equal-prior Helstrom discrimination succeeds with probability (1+<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00080.svg" alt="Dcoherent)/" style="width:4.7699em;height:1.2476em;vertical-align:-0.23em" loading="lazy"/>2. That optimal measurement is an in-principle statement. Its apparatus is not included for free in the detector model. Counting and coherent-field measurements are alternative output experiments; one cannot first measure an exact click time and then claim its erased temporal coherence was retained.</p>
+<h3 id="section-when-is-the-binary-reduction-microscopically-closed">When is the binary reduction microscopically closed?</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00081.svg" alt="Let the true finite detector have an untriggered subspace P0H, a triggered subspace P1H, a block-
+preserving Hamiltonian, and absorbing jumps Ja = P1JaP0.
+Define Q = P
+a J∗
+aJa.
+The binary
+population readout is C(ρ) = (Tr P0ρ, Tr P1ρ)." width="485.84" height="40.75" style="width:44.572em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let the true finite detector have an untriggered subspace P0H, a triggered subspace P1H, a block-
+preserving Hamiltonian, and absorbing jumps Ja = P1JaP0.
+Define Q = P
+a J∗
+aJa.
+The binary
+population readout is C(ρ) = (Tr P0ρ, Tr P1ρ).</pre></details></figure>
+<p data-source-page="7"><strong>Proposition 2.3</strong> (Exact closure and finite spectral repair)<strong>.</strong><em> For a time-independent generator, the</em> <em>binary populations obey the same absorbing scalar rate law</em>  ̇<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00082.svg" alt="p0 = −" style="width:3.1885em;height:1.3066em;vertical-align:-0.23em" loading="lazy"/>Γ<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00083.svg" alt="p0" style="width:1.0336em;height:1.2338em;vertical-align:-0.23em" loading="lazy"/><em> for</em> every<em> microscopic input if</em> <em>and only if</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00084.svg" alt="Q = ΓP0." style="width:4.2494em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/> (20)</p>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00085.svg" alt="This statement concerns populations; fixed output marks and a two-dimensional quantum-coherence law
+require additional assumptions.
+If instead Q = Pk
+i=1 γi|i⟩⟨i| on P0H, [H, Q] = 0, consider the declared controlled-rate model whose
+complete jump preserves the label and is" width="485.74" height="53.07" style="width:44.563em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>This statement concerns populations; fixed output marks and a two-dimensional quantum-coherence law
+require additional assumptions.
+If instead Q = Pk
+i=1 γi|i⟩⟨i| on P0H, [H, Q] = 0, consider the declared controlled-rate model whose
+complete jump preserves the label and is</pre></details></figure>
+<figure class="sr-formula" id="equation-21" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00086.svg" alt="k
+X
+√γi |1, i⟩⟨0, i|
+(21)
+J =
+i=1" width="294.31" height="34.44" style="width:27.001em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7, equation (21).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>k
+X
+√γi |1, i⟩⟨0, i|
+(21)
+J =
+i=1</pre></details></figure>
+<p data-source-page="7"><em>A</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00087.svg" alt=" k" style="width:1.0255em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em>-label register is an exact finite repair of this specified model, including label coherence and its inert</em> <em>purifying reference; additional output marks or phases, if present, must be retained in the repaired jump</em> <em>as well. The register must be prepared once as part of the original stock, not redrawn after each use.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00088.svg" alt="Proof. The dual generator gives L∗(P0) = −Q and L∗(P1) = Q. Equality of the scalar population
+derivative for all states forces Q = ΓP0 by polarization; this condition also makes the two-dimensional
+population observable space invariant under the dual generator, proving sufficiency for all times.
+Under the second hypotheses, each label has no-jump amplitude e−γit/2, with its specified commuting
+Hamiltonian phase, and jump amplitude √γie−γit/2. Equation (21) and its common no-jump dynamics
+give exactly these amplitudes, also when the label is entangled with an inert reference. Full comparison
+still retains any additional microscopic channels; none are deleted by naming a label." width="486.38" height="95.58" style="width:44.622em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. The dual generator gives L∗(P0) = −Q and L∗(P1) = Q. Equality of the scalar population
+derivative for all states forces Q = ΓP0 by polarization; this condition also makes the two-dimensional
+population observable space invariant under the dual generator, proving sufficiency for all times.
+Under the second hypotheses, each label has no-jump amplitude e−γit/2, with its specified commuting
+Hamiltonian phase, and jump amplitude √γie−γit/2. Equation (21) and its common no-jump dynamics
+give exactly these amplitudes, also when the label is entangled with an inert reference. Full comparison
+still retains any additional microscopic channels; none are deleted by naming a label.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00089.svg" alt="For a diagonal original label stock with probabilities wi &gt; 0, survival is S(t) = P
+i wie−γit, not
+generally an exponential. Its no-transition posterior is wi(t) = wie−γit/S(t). Therefore a reset wave or a
+reset binary flag does not reset the actual label stock. An arbitrarily prescribed time-dependent hazard
+−S′(t)/S(t) can imitate the survival of this one specified mixture; it does not establish preparation-
+independent microscopic closure, restore the retained label correlations, or license independent successive
+samples.
+For k distinct rates, the number of labels in a time-homogeneous linear classical realization cannot
+in general be reduced below k. Indeed its k × k derivative Hankel matrix is" width="486.06" height="109.13" style="width:44.593em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For a diagonal original label stock with probabilities wi &gt; 0, survival is S(t) = P
+i wie−γit, not
+generally an exponential. Its no-transition posterior is wi(t) = wie−γit/S(t). Therefore a reset wave or a
+reset binary flag does not reset the actual label stock. An arbitrarily prescribed time-dependent hazard
+−S′(t)/S(t) can imitate the survival of this one specified mixture; it does not establish preparation-
+independent microscopic closure, restore the retained label correlations, or license independent successive
+samples.
+For k distinct rates, the number of labels in a time-homogeneous linear classical realization cannot
+in general be reduced below k. Indeed its k × k derivative Hankel matrix is</pre></details></figure>
+<figure class="sr-formula" id="display-26" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p007-00090.svg" alt="i&lt;j
+(γi −γj)2 &gt; 0.
+Hab = (−1)a+bS(a+b)(0) =
+X
+i
+wiγa+b
+i
+,
+0 ≤a, b &lt; k,
+det H = (
+Y
+i
+wi)
+Y" width="435.22" height="28.54" style="width:39.929em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>i&lt;j
+(γi −γj)2 &gt; 0.
+Hab = (−1)a+bS(a+b)(0) =
+X
+i
+wiγa+b
+i
+,
+0 ≤a, b &lt; k,
+det H = (
+Y
+i
+wi)
+Y</pre></details></figure>
+<p data-source-page="8">Any<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00091.svg" alt=" n" style="width:1.0514em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-state time-homogeneous linear realization<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00092.svg" alt=" S(t) = c∗eAtb" style="width:6.2254em;height:1.3084em;vertical-align:-0.23em" loading="lazy"/> has Hankel rank at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00093.svg" alt=" n" style="width:1.0489em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, by factoring each derivative as<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00094.svg" alt=" c∗AaAbb" style="width:4.1835em;height:1.2956em;vertical-align:-0.23em" loading="lazy"/>. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00095.svg" alt=" n ≥k" style="width:3.4140em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>. This is a standard realization-rank argument applied constructively here, not a lower bound on every possible quantum or time-dependent surrogate. An approximate repair can cluster rates while retaining their original label. For a rate<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00096.svg" alt=" γ" style="width:0.9779em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> replaced by<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00097.svg" alt=" κ &gt;" style="width:2.1115em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0, the exact affinity of its complete time/null law is</p>
+<figure class="sr-formula" id="equation-22" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00098.svg" alt="aT (γ, κ) = 2√γκ
+γ + κ +
+
+1 −2√γκ
+
+e−(γ+κ)T/2.
+(22)
+γ + κ" width="350.46" height="34.74" style="width:32.153em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8, equation (22).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>aT (γ, κ) = 2√γκ
+γ + κ +
+
+1 −2√γκ
+
+e−(γ+κ)T/2.
+(22)
+γ + κ</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00099.svg" alt="This follows by adding the null overlap e−(γ+κ)T/2 to the integral of √γκe−(γ+κ)t/2. Cauchy–Schwarz" width="484.43" height="19.44" style="width:44.443em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>This follows by adding the null overlap e−(γ+κ)T/2 to the integral of √γκe−(γ+κ)t/2. Cauchy–Schwarz</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00100.svg" alt="1 −a2
+T . The same bound holds for their
+coherent positive-amplitude wavepackets by the pure-state identity. With original label weights wi the
+cq cost is at most P
+i wi
+q
+applied to |p −q| = |√p −√q|(√p + √q) gives TV(Pγ, Pκ) ≤
+q" width="484.31" height="54.90" style="width:44.432em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −a2
+T . The same bound holds for their
+coherent positive-amplitude wavepackets by the pure-state identity. With original label weights wi the
+cq cost is at most P
+i wi
+q
+applied to |p −q| = |√p −√q|(√p + √q) gives TV(Pγ, Pκ) ≤
+q</pre></details></figure>
+<p data-source-page="8"><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00101.svg" alt="1 −aT (γi, κg(i))2" style="width:7.3262em;height:1.3801em;vertical-align:-0.23em" loading="lazy"/>. For an unknown label distribution use the maximum. More strongly, for the fully specified controlled model with the same retained labels, Hamiltonian phases and marks on both sides, the coherent cross-Gram matrix is diagonal with entries<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00102.svg" alt=" aT (γi, κg(i)) &gt; 0." style="width:7.7061em;height:1.2985em;vertical-align:-0.23em" loading="lazy"/> Equation (12) then gives the exact reference-uniform coherent-channel distance</p>
+<figure class="sr-formula" id="display-28" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00103.svg" alt="q
+1 −aT (γi, κg(i))2.
+max
+i" width="115.71" height="22.48" style="width:10.616em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>q
+1 −aT (γi, κg(i))2.
+max
+i</pre></details></figure>
+<p data-source-page="8">This bound admits label superpositions and arbitrary inert references; it does not replace their amplitudes by a classical mixture. Different retained marks or phase schedules must instead be charged with the full amplitude certificate. Thus a finite approximate repair has an explicit worst-case tolerance, beyond a match to one mean rate.</p>

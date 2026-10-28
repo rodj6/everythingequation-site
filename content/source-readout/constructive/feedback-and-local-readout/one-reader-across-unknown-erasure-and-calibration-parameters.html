@@ -1,0 +1,143 @@
+<h2 id="section-one-reader-across-unknown-erasure-and-calibration-parameters">One reader across unknown erasure and calibration parameters</h2>
+<p data-source-page="27">For already calibrated readers, a generic perturbation allowance is possible. Here an explicit feedback policy yields an exact minimax law under unknown erasure efficiency, followed by a stronger model-specific calibration certificate when visibility is imperfect. The two results have different strength: erasure-only minimax optimality is proved; the visibility-box result certifies one frozen policy without claiming robust-minimax optimality. Neither depends on an ETH theorem.</p>
+<h3 id="section-a-policy-independent-of-the-nuisance-parameter">A policy independent of the nuisance parameter</h3>
+<p data-source-page="27">Choose an initial axis<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p027-00579.svg" alt=" A ∈{X, Y }" style="width:5.5434em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> with a fair independent coin. Query that axis until its nonnull signs include both + and<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p027-00580.svg" alt=" −" style="width:1.2519em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Then query the other axis. The first nonnull result on that other axis commits its sign; further records are retained but ignored by the terminal classifier. If the deadline arrives</p>
+<p data-source-page="28">before a switch, return the common sign; if there was no click, or a switch without a subsequent click, return an independent fair guess. Thus a flip at the last successful trial is explicitly an inconclusive internal state, resolved by a declared decision coin. There is always a terminal decision; nulls are not postselected away. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00581.svg" alt=" en" style="width:1.4172em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> be the ideal adaptive minimax error for the X/Y-restricted four-label sign task established in the preceding appendix, not the continuous-menu optimum:</p>
+<figure class="sr-formula" id="display-76" data-source-page="28"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00582.svg" alt="e0 = 1
+2,
+e1 = 1
+4,
+en = 2−n
+(n ≥2)." width="208.82" height="17.95" style="width:19.158em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 28.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e0 = 1
+2,
+e1 = 1
+4,
+en = 2−n
+(n ≥2).</pre></details></figure>
+<p data-source-page="28">The same value is the optimal uniform-prior Bayes error. The policy just defined attains it simultaneously at every click horizon. To see attainment, condition on the initial axis. If it is the true axis there is no error. If it is the other axis, the observed signs are fair. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00583.svg" alt=" n ≥" style="width:2.1207em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>2, errors are possible only when all<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00584.svg" alt=" n" style="width:1.0712em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> signs agree, or the first opposing sign appears at position<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00585.svg" alt=" n" style="width:1.0680em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. Each event has probability 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00586.svg" alt="1−n" style="width:1.5935em;height:0.8789em;vertical-align:-0.23em" loading="lazy"/>, with conditional error 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00587.svg" alt="/" style="width:0.6403em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>2. The fair initial axis gives error 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00588.svg" alt="−n" style="width:1.2093em;height:0.8780em;vertical-align:-0.23em" loading="lazy"/> for every source label. The<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00589.svg" alt=" n = 0," style="width:3.1878em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> 1 cases give the displayed exceptional values.</p>
+<p data-source-page="28"><strong>Theorem B.1</strong> (Exact unknown-erasure minimax frontier)<strong>.</strong><em> Fix a deadline of</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00590.svg" alt=" B" style="width:1.2471em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/><em> trials. Visibility is</em> <em>one. Trial</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00591.svg" alt=" t" style="width:0.8613em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/><em> is independently erased with probability</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00592.svg" alt=" 1 −ηt" style="width:2.9955em;height:1.2385em;vertical-align:-0.23em" loading="lazy"/><em>, regardless of source label, axis and ideal</em> <em>result, where the deterministic efficiencies satisfy</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00593.svg" alt=" 0 ≤ηt ≤1" style="width:5.0675em;height:1.2839em;vertical-align:-0.23em" loading="lazy"/><em>. For known efficiencies, the minimum</em> <em>worst-case sign error among all adaptive X/Y policies and terminal decoders is</em></p>
+<figure class="sr-formula" id="display-77" data-source-page="28"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00594.svg" alt="B
+∑︂
+EB(η1, . . . , ηB) = E[eN],
+N =
+t=1
+Zt,
+Zt ∼Bernoulli(ηt) independently." width="366.59" height="34.31" style="width:33.632em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 28.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>B
+∑︂
+EB(η1, . . . , ηB) = E[eN],
+N =
+t=1
+Zt,
+Zt ∼Bernoulli(ηt) independently.</pre></details></figure>
+<p data-source-page="28"><em>One policy, specified above without any knowledge of the efficiencies, attains this value. In particular,</em> <em>for a common efficiency and</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00595.svg" alt=" B ≥1," style="width:3.4537em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-3" data-source-page="28"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00596.svg" alt="EB(η) = (1 −η/2)B −(1 −η)B
+2
+−Bη(1 −η)B−1
+4
+.
+(3)" width="362.13" height="29.15" style="width:33.223em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 28, equation (3).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>EB(η) = (1 −η/2)B −(1 −η)B
+2
+−Bη(1 −η)B−1
+4
+.
+(3)</pre></details></figure>
+<p data-source-page="28"><em>For the robust class of all deterministic vectors</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00597.svg" alt=" ηt ∈[η0, 1]" style="width:4.9625em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/><em>, unknown when the policy is fixed, the exact</em> <em>robust minimax error is</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00598.svg" alt=" EB(η0)" style="width:3.6155em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/><em>. This includes a fixed unknown common efficiency.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="28"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00599.svg" alt="Proof. For a lower bound use the uniform prior on the four labels and give the controller the entire
+independent erasure schedule in advance. Conditional on that schedule, only N informative trials are
+available; the ideal uniform-prior Bayes lower bound is eN. Revealing independent schedule information
+cannot increase the optimum risk, so every original policy’s worst-case risk is at least E[eN].
+The proposed policy depends on the successful signs and its initial coin, not on the erased-trial
+locations or the number of future successful trials. Conditional on the independent schedule it attains
+eN on every label. This proves the matching upper bound. For common η, the binomial average of
+2−N is (1 −η/2)B; correcting its N = 0 and N = 1 terms yields (3).
+The sequence eN is nonincreasing. Couple success indicators through independent uniforms as
+Zt = 1{Ut ≤ηt} and Z0
+t = 1{Ut ≤η0}. Then N ≥N0 pointwise, so the same policy has risk at most
+EB(η0). The admitted vector with every efficiency equal to η0 supplies the matching lower bound." width="484.68" height="149.70" style="width:44.466em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 28.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. For a lower bound use the uniform prior on the four labels and give the controller the entire
+independent erasure schedule in advance. Conditional on that schedule, only N informative trials are
+available; the ideal uniform-prior Bayes lower bound is eN. Revealing independent schedule information
+cannot increase the optimum risk, so every original policy’s worst-case risk is at least E[eN].
+The proposed policy depends on the successful signs and its initial coin, not on the erased-trial
+locations or the number of future successful trials. Conditional on the independent schedule it attains
+eN on every label. This proves the matching upper bound. For common η, the binomial average of
+2−N is (1 −η/2)B; correcting its N = 0 and N = 1 terms yields (3).
+The sequence eN is nonincreasing. Couple success indicators through independent uniforms as
+Zt = 1{Ut ≤ηt} and Z0
+t = 1{Ut ≤η0}. Then N ≥N0 pointwise, so the same policy has risk at most
+EB(η0). The admitted vector with every efficiency equal to η0 supplies the matching lower bound.</pre></details></figure>
+<p data-source-page="28">The independence and sign-blindness conditions are consequential. A nuisance depending on hidden source data, a measured sign before erasure, or the past record is not covered by this theorem merely because each unconditional click rate exceeds<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p028-00600.svg" alt=" η0" style="width:1.3451em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/>. Correlated detector baths and preparation copies are also outside its parent. The theorem does permit unknown nonstationary deterministic efficiencies under independent per-trial erasure stock.</p>
+<p data-source-page="29">For seven trials and every<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00601.svg" alt=" ηt ≥49/50," style="width:5.4077em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-79" data-source-page="29"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00602.svg" alt="E7(49/50) = 897410666811
+1014
+= 0.00897410666811 &lt; 0.01." width="268.91" height="27.37" style="width:24.670em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 29.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>E7(49/50) = 897410666811
+1014
+= 0.00897410666811 &lt; 0.01.</pre></details></figure>
+<p data-source-page="29">This is a completed one-percent operating region requiring no estimate of the actual efficiency beyond the declared lower bound. Six ideal trials have optimal error 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00603.svg" alt="/64 &gt; 0." style="width:3.7564em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>01, so seven is also the exact robust minimum trial budget in this class. The comparison with the fixed-schedule analysis is explicit: its fixed deterministic schedule required eight ideal trials; randomization of the setting and the declared feedback controller expand that access class. The present result does not attribute the whole gain to feedback alone.</p>
+<h3 id="section-a-fixed-policy-certificate-for-imperfect-visibility">A fixed-policy certificate for imperfect visibility</h3>
+<p data-source-page="29">Keep the same policy unchanged when the actual, fixed unknown pair is (<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00604.svg" alt="η, v" style="width:1.6097em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) in a rational rectangle. Each trial has the specified effects<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00605.svg" alt=" E±|a = η(I ± vσa)/2, E0 = (1 −η)I" style="width:16.0810em;height:1.3531em;vertical-align:-0.23em" loading="lazy"/> and fresh independent noise stock conditional on this pair. A history’s probability is a product of terms 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00606.svg" alt=" −η, η/2, or η(1 ± v)/2." style="width:10.6846em;height:1.1599em;vertical-align:-0.23em" loading="lazy"/> Consequently every source-specific error is a polynomial in<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00607.svg" alt=" η, v" style="width:1.9266em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> of separate degree at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00608.svg" alt=" B" style="width:1.2386em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. Axis randomization and sign covariance make all four risks equal to their mean polynomial<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00609.svg" alt=" pB(η, v" style="width:3.4807em;height:1.2405em;vertical-align:-0.23em" loading="lazy"/>). This avoids optimizing a different policy after learning an inaccessible nuisance parameter.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="29"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00610.svg" alt="Proposition B.2 (Exact calibration-box certificate). Affinely map a rational rectangle [a, b] × [c, d] to
+[0, 1]2 and write the fixed policy’s risk as ∑︁
+ij Aijtisj. At degrees m, n no smaller than its respective
+degrees, set" width="484.85" height="39.76" style="width:44.482em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 29.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proposition B.2 (Exact calibration-box certificate). Affinely map a rational rectangle [a, b] × [c, d] to
+[0, 1]2 and write the fixed policy’s risk as ∑︁
+ij Aijtisj. At degrees m, n no smaller than its respective
+degrees, set</pre></details></figure>
+<figure class="sr-formula" id="display-80" data-source-page="29"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00611.svg" alt="(︁l
+j
+)︁
+(︁k
+i
+)︁
+βkl =
+∑︂
+i≤k, j≤l
+Aij
+(︁n
+j
+)︁.
+(︁m
+i
+)︁" width="116.98" height="36.28" style="width:10.732em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 29.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︁l
+j
+)︁
+(︁k
+i
+)︁
+βkl =
+∑︂
+i≤k, j≤l
+Aij
+(︁n
+j
+)︁.
+(︁m
+i
+)︁</pre></details></figure>
+<p data-source-page="29"><em>Then</em> max<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00612.svg" alt="kl βkl" style="width:2.2439em;height:1.3097em;vertical-align:-0.23em" loading="lazy"/><em> is a rigorous uniform error upper bound on that rectangle. Any evaluated point supplies</em> <em>a lower bound on the fixed policy’s worst error. Apply the same construction on a finite subdivision and</em> <em>take the maximum of its upper bounds; if an upper bound equals an attained point value, the fixed-policy</em> <em>worst error is certified exactly. Every coefficient and comparison is rational.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="29"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00613.svg" alt="Proof. The identities ti = ∑︁m
+k=i
+(︁k
+i
+)︁(︁m
+i
+)︁−1(︁m
+k
+)︁tk(1 −t)m−k and their s counterparts give the stated
+coefficients. The product Bernstein basis is nonnegative and sums to one on the unit square, so
+the polynomial is a convex combination of its coefficients. Subdivision covers the original rectangle.
+Attainment supplies the reverse inequality whenever the two bounds coincide." width="486.79" height="57.20" style="width:44.659em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 29.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. The identities ti = ∑︁m
+k=i
+(︁k
+i
+)︁(︁m
+i
+)︁−1(︁m
+k
+)︁tk(1 −t)m−k and their s counterparts give the stated
+coefficients. The product Bernstein basis is nonnegative and sums to one on the unit square, so
+the polynomial is a convex combination of its coefficients. Subdivision covers the original rectangle.
+Attainment supplies the reverse inequality whenever the two bounds coincide.</pre></details></figure>
+<p data-source-page="29">This uses an established polynomial-enclosure technique, not a new theory of Bernstein polynomials<a href="/source-readout/feedback-and-local-readout/references#reference-1">[1]</a>. Its addition here is a checked full-policy risk consumer, with the unknown parameters held fixed throughout the experiment. The implementation uses exact finite-state controller recurrences rather than accepting a grid scan as a proof. Its stored tuples may retain redundant history beyond a minimal logical-state quotient. The delivered certificates have zero enclosure gaps on the following boxes:</p>
+<p data-source-page="29"><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00614.svg" alt="B" style="width:0.9057em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> admitted<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00615.svg" alt=" η" style="width:0.9767em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> admitted<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00616.svg" alt=" v" style="width:0.9657em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> worst fixed-policy error 7 <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00617.svg" alt="[.98, 1]" style="width:2.9297em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00618.svg" alt="{1}" style="width:1.6467em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00619.svg" alt="0.00897410666811" style="width:7.9247em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 7 <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00620.svg" alt="[.99, 1]" style="width:2.9297em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00621.svg" alt="[.999, 1]" style="width:3.4297em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00622.svg" alt="0.009482646058652287 . . ." style="width:11.2587em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 8 <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00623.svg" alt="[.98, 1]" style="width:2.9297em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00624.svg" alt="[.999, 1]" style="width:3.4297em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00625.svg" alt="0.005800538606142910 . . ." style="width:11.2587em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 8 <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00626.svg" alt="[.79, .81]" style="width:3.7077em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00627.svg" alt="[.89, .91]" style="width:3.7077em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p029-00628.svg" alt="0.11822395802359147 . . ." style="width:10.7587em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="29">All entries are exact rational calculations, with full fractions in research8/robust/results.json. The worst point in each displayed box is its lower-left corner, established by a matching Bernstein</p>
+<p data-source-page="30">upper bound rather than assumed from monotonicity. The seven-copy visibility box proves a new robust one-percent guarantee. It is not a claim that this particular policy is minimax for every visibility box: at lower visibility an adaptive optimizer can choose a substantially different policy within the same X/Y menu. For the same seven-copy policy on [<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p030-00629.svg" alt=".99, 1] × [.999," style="width:6.1766em;height:1.1599em;vertical-align:-0.23em" loading="lazy"/> 1], applying a generic conditional total-variation allowance to its ideal error gives approximately 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p030-00630.svg" alt="." style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>0790373. The new model-specific upper bound is about 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p030-00631.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>00948265. This improvement is in a certified error allowance under a stronger specified noise parent, not a measured device gain. Complete retained quantum outputs or arbitrary purifiers are not certified by these classical terminal-record polynomials.</p>

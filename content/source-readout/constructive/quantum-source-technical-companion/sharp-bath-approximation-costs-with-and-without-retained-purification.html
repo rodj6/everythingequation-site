@@ -1,0 +1,187 @@
+<h2 id="section-sharp-bath-approximation-costs-with-and-without-retained-purification">Sharp bath approximation costs with and without retained purification</h2>
+<p data-source-page="12">Exact Choi rank counts even arbitrarily weak Kraus directions. It does not by itself say what apparatus savings become possible at a prescribed error. For the three-charge qutrit instruments there is a constructive, sharp answer at three useful budgets. The answer differs depending on whether the purifying bath is unread or is part of the compared retained output. This is an application of established spectral approximation and Stinespring methods, not a new general theory of approximate quantum channels. The standard maximum-trace eigenvalue principle and minimum-pure-Stinespring dimension are antecedents [2, 12]; the proofs needed here are supplied below. The added result is exact saturation for the declared charge-orbit channels, with separate retained and unread-bath tasks.</p>
+<h3 id="section-the-typed-channel-and-its-three-trace-scaled-components">The typed channel and its three trace-scaled components</h3>
+<p data-source-page="13">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00237.svg" alt=" S = C3" style="width:3.7358em;height:1.3551em;vertical-align:-0.23em" loading="lazy"/> be the reusable memory,<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00238.svg" alt=" A = C3" style="width:3.8182em;height:1.3551em;vertical-align:-0.23em" loading="lazy"/> the registered pointer, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00239.svg" alt=" B" style="width:1.2559em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> an initially pure, fresh purifying bath. The reduced output channel is</p>
+<figure class="sr-formula" id="display-58" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00240.svg" alt="2
+X
+j,k=0
+|j⟩⟨j|A ⊗KjkXK†
+jk.
+A(X) =" width="160.68" height="34.70" style="width:14.741em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2
+X
+j,k=0
+|j⟩⟨j|A ⊗KjkXK†
+jk.
+A(X) =</pre></details></figure>
+<p data-source-page="13">Only<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00241.svg" alt=" A" style="width:1.2221em;height:1.1398em;vertical-align:-0.23em" loading="lazy"/> and the final memory belong to this reduced output; an arbitrary inert reference is retained throughout. In the retained-purification task we instead compare the full isometries into<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00242.svg" alt=" A ⊗S ⊗B." style="width:5.3864em;height:1.1557em;vertical-align:-0.23em" loading="lazy"/> The two metrics must not be substituted for one another. Write<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00243.svg" alt=" ω = e2πi/3, Z =" style="width:7.3202em;height:1.2895em;vertical-align:-0.23em" loading="lazy"/> diag<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00244.svg" alt="(1, ω, ω2" style="width:3.6109em;height:1.2886em;vertical-align:-0.23em" loading="lazy"/>) and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00245.svg" alt=" X|p⟩= |p + 1⟩" style="width:6.7960em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>. The rank-one charge blocks give Kraus matrices of the form</p>
+<figure class="sr-formula" id="equation-31" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00246.svg" alt="Kjk = XjK0kZ−j,
+|K0k⟩⟩= αk|fk⟩|1⟩+ βk|fk+1⟩|2⟩,
+(31)" width="377.04" height="16.61" style="width:34.591em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (31).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Kjk = XjK0kZ−j,
+|K0k⟩⟩= αk|fk⟩|1⟩+ βk|fk+1⟩|2⟩,
+(31)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00247.svg" alt="where |fk⟩= 3−1/2 P
+p ωpk|p⟩and the vectorization orders input before output. Put νk = |αk|2 +|βk|2 &gt;
+0, and assume P
+k νk = 1. The three vectors at fixed j are orthogonal. Moreover
+X" width="484.40" height="50.76" style="width:44.440em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>where |fk⟩= 3−1/2 P
+p ωpk|p⟩and the vectorization orders input before output. Put νk = |αk|2 +|βk|2 &gt;
+0, and assume P
+k νk = 1. The three vectors at fixed j are orthogonal. Moreover
+X</pre></details></figure>
+<figure class="sr-formula" id="equation-32" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00248.svg" alt="j
+K†
+jkKjk = νkI3.
+(32)" width="284.01" height="27.15" style="width:26.056em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (32).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>j
+K†
+jkKjk = νkI3.
+(32)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00249.svg" alt="Indeed K†
+0kK0k is a weighted sum of two conjugate Fourier projectors, so each computational diagonal
+entry is νk/3. Twirling it by Z kills the off-diagonal entries and gives (32). Consequently" width="484.20" height="30.31" style="width:44.422em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Indeed K†
+0kK0k is a weighted sum of two conjugate Fourier projectors, so each computational diagonal
+entry is νk/3. Twirling it by Z kills the off-diagonal entries and gives (32). Consequently</pre></details></figure>
+<figure class="sr-formula" id="display-61" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00250.svg" alt="Qk(X) = ν−1
+k
+X
+j
+|j⟩⟨j| ⊗KjkXK†
+jk" width="167.82" height="27.15" style="width:15.396em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Qk(X) = ν−1
+k
+X
+j
+|j⟩⟨j| ⊗KjkXK†
+jk</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00251.svg" alt="is CPTP with Choi rank three, and A = P
+k νkQk. The three component Choi supports are mutually
+orthogonal, including the pointer factor. The normalized Choi state ρA = J(A)/3 therefore has
+eigenvalues νk/3, each with multiplicity three." width="484.52" height="40.88" style="width:44.452em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>is CPTP with Choi rank three, and A = P
+k νkQk. The three component Choi supports are mutually
+orthogonal, including the pointer factor. The normalized Choi state ρA = J(A)/3 therefore has
+eigenvalues νk/3, each with multiplicity three.</pre></details></figure>
+<h3 id="section-exact-approximation-theorem">Exact approximation theorem</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00252.svg" alt="Relabel the weights ν(1) ≥ν(2) ≥ν(3) and put pm = Pm
+i=1 ν(i), m = 1, 2, 3. A pure bath of dimension b
+means the minimum pure Stinespring environment of the specified reduced channel; all fresh apparatus
+factors purifying that channel are included." width="484.31" height="41.88" style="width:44.432em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Relabel the weights ν(1) ≥ν(2) ≥ν(3) and put pm = Pm
+i=1 ν(i), m = 1, 2, 3. A pure bath of dimension b
+means the minimum pure Stinespring environment of the specified reduced channel; all fresh apparatus
+factors purifying that channel are included.</pre></details></figure>
+<p data-source-page="13"><strong>Theorem.</strong> Among all CPTP channels with the same input and reduced output spaces and pure bath dimension at most 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00253.svg" alt="m," style="width:1.3026em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-33" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00254.svg" alt="inf 1
+2∥e
+A −A∥⋄= 1 −pm.
+(33)" width="303.67" height="27.37" style="width:27.860em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (33).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>inf 1
+2∥e
+A −A∥⋄= 1 −pm.
+(33)</pre></details></figure>
+<p data-source-page="13">The infimum is attained by the actual channel</p>
+<figure class="sr-formula" id="equation-34" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00255.svg" alt="m
+X
+Am = p−1
+m
+i=1
+ν(i)Q(i).
+(34)" width="295.75" height="34.44" style="width:27.133em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (34).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>m
+X
+Am = p−1
+m
+i=1
+ν(i)Q(i).
+(34)</pre></details></figure>
+<p data-source-page="13">It retains the same pointer alphabet and needs no added null branch. The normalization defines a new fixed trace-preserving instrument; it is not postselection on original trials. For the full retained pure Stinespring output, allow any bath-only isometric identification of the competitor’s at-most-3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00256.svg" alt="m" style="width:1.0247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> dimensional bath with the target bath. Then the corresponding optimum is</p>
+<figure class="sr-formula" id="equation-35" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00257.svg" alt="inf 1
+2∥W −V∥⋄=
+p
+1 −pm,
+(35)" width="309.57" height="27.37" style="width:28.401em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (35).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>inf 1
+2∥W −V∥⋄=
+p
+1 −pm,
+(35)</pre></details></figure>
+<p data-source-page="14">where<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00258.svg" alt=" V(ρ) = V ρV †" style="width:6.3716em;height:1.2989em;vertical-align:-0.23em" loading="lazy"/> and similarly for<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00259.svg" alt=" W" style="width:1.4364em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. The dimension counts are intrinsic bath dimensions; the isometric embedding only defines a common comparison space. <em>Proof of the reduced statement.</em> For a channel of bath dimension at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00260.svg" alt=" b" style="width:0.9010em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, its Choi state has rank at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00261.svg" alt=" b. If P" style="width:3.2732em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> projects onto its support, the variational characterization of trace distance gives</p>
+<figure class="sr-formula" id="display-65" data-source-page="14"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00262.svg" alt="b
+X
+1
+2∥ρA −ρ e
+A∥1 ≥Tr[(I −P)ρA] ≥1 −
+i=1
+λi(ρA)." width="226.34" height="34.44" style="width:20.765em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 14.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>b
+X
+1
+2∥ρA −ρ e
+A∥1 ≥Tr[(I −P)ρA] ≥1 −
+i=1
+λi(ρA).</pre></details></figure>
+<p data-source-page="14">The last step follows by diagonalizing<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00263.svg" alt=" ρA" style="width:1.6102em;height:1.2331em;vertical-align:-0.23em" loading="lazy"/>: for any rank-<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00264.svg" alt="b" style="width:0.5757em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> projector its diagonal weights lie in [0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00265.svg" alt="," style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1] and sum to<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00266.svg" alt=" b" style="width:0.9030em;height:1.1415em;vertical-align:-0.23em" loading="lazy"/>, so the maximum weighted eigenvalue sum selects the largest<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00267.svg" alt=" b" style="width:0.8902em;height:1.1415em;vertical-align:-0.23em" loading="lazy"/> eigenvalues. Evaluating the diamond norm on a maximally entangled input gives the same lower bound for half diamond distance. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00268.svg" alt=" b = 3m" style="width:3.6196em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> this is 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00269.svg" alt=" −pm." style="width:2.8823em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> For<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00270.svg" alt=" m" style="width:1.3447em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 3 attainment is exact and immediate. Otherwise both<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00271.svg" alt=" Am" style="width:1.9355em;height:1.2385em;vertical-align:-0.23em" loading="lazy"/> and the normalized omitted component<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00272.svg" alt=" Rm" style="width:2.0368em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/> are CPTP, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00273.svg" alt=" A = pmAm + (1 −pm)Rm" style="width:12.1195em;height:1.3001em;vertical-align:-0.23em" loading="lazy"/>. The half diamond distance of any two channels is at most one, hence<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00274.svg" alt=" 1" style="width:0.9598em;height:1.2591em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="14"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00275.svg" alt="2∥A −Am∥⋄≤1 −pm" style="width:9.7871em;height:1.4330em;vertical-align:-0.23em" loading="lazy"/>. The preceding lower bound is equal, proving (33). Orthogonal Choi supports explain why no slack remains. <em>Proof of the retained statement.</em> Use a bath basis<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00276.svg" alt=" |j, k⟩" style="width:2.5529em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>and define</p>
+<figure class="sr-formula" id="display-66" data-source-page="14"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00277.svg" alt="V =
+X
+j,k
+|j⟩A ⊗Kjk ⊗|j, k⟩B,
+Wm = p−1/2
+m
+X
+j, k retained
+|j⟩A ⊗Kjk ⊗|j, k⟩B." width="354.62" height="26.63" style="width:32.534em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 14.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>V =
+X
+j,k
+|j⟩A ⊗Kjk ⊗|j, k⟩B,
+Wm = p−1/2
+m
+X
+j, k retained
+|j⟩A ⊗Kjk ⊗|j, k⟩B.</pre></details></figure>
+<figure class="sr-formula" id="equation-36" data-source-page="14"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00278.svg" alt="Both are isometries by (32), and
+V †Wm = √pmI3.
+(36)" width="485.28" height="27.69" style="width:44.521em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 14, equation (36).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Both are isometries by (32), and
+V †Wm = √pmI3.
+(36)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="14"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00279.svg" alt="Every pure input with any inert reference therefore gives pure outputs of overlap √pm, whose half
+trace distance is √1 −pm. Convexity handles mixed inputs. This proves the upper bound uniformly
+over references.
+For any competing bath of dimension at most b, apply its isometry and the target isometry to a
+maximally entangled input. The competitor output has Schmidt rank at most b across bath versus
+pointer–memory–reference. After any bath-only identification it lies in some bath subspace of dimension
+at most b. Its squared overlap with the target is at most the target mass in that subspace, at most the
+largest-b eigenvalue sum of its bath marginal. The target pure state’s nonzero bath eigenvalues are
+those of ρA, so this sum is pm for b = 3m. Pure-state trace distance is thus at least √1 −pm. This
+proves (35).
+□" width="484.61" height="141.38" style="width:44.460em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 14.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Every pure input with any inert reference therefore gives pure outputs of overlap √pm, whose half
+trace distance is √1 −pm. Convexity handles mixed inputs. This proves the upper bound uniformly
+over references.
+For any competing bath of dimension at most b, apply its isometry and the target isometry to a
+maximally entangled input. The competitor output has Schmidt rank at most b across bath versus
+pointer–memory–reference. After any bath-only identification it lies in some bath subspace of dimension
+at most b. Its squared overlap with the target is at most the target mass in that subspace, at most the
+largest-b eigenvalue sum of its bath marginal. The target pure state’s nonzero bath eigenvalues are
+those of ρA, so this sum is pm for b = 3m. Pure-state trace distance is thus at least √1 −pm. This
+proves (35).
+□</pre></details></figure>
+<h3 id="section-an-exact-independently-checked-qutrit-example">An exact, independently checked qutrit example</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="14"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00280.svg" alt="At the fixed-seed construction’s critical parameter t =
+√
+14/21, r = 4
+√" width="335.23" height="21.58" style="width:30.755em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 14.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>At the fixed-seed construction’s critical parameter t =
+√
+14/21, r = 4
+√</pre></details></figure>
+<p data-source-page="14"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00281.svg" alt="14/" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>63, the three positive charge blocks have traces <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00282.svg" alt="(ν0, ν1, ν2) = (1/9, 1/3, 5/9)." style="width:12.3747em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="14">For example their first diagonal entries are (2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00283.svg" alt="/27, 2/27, 14/" style="width:5.9655em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>27) and off-diagonal entries are<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00284.svg" alt=" c0 = t(ω−2)/9," style="width:6.8895em;height:1.3087em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00285.svg" alt="c1 = c2 = −t(8 + 5ω)/" style="width:10.2682em;height:1.3001em;vertical-align:-0.23em" loading="lazy"/>9. Their determinants vanish; each is nonzero and has rank one. Thus the following are sharp resource points for this specified channel:</p>
+<p data-source-page="14">pure bath budget optimal reduced half diamond error optimal retained half diamond error 3 <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00286.svg" alt="4/9" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00287.svg" alt="2/3" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 6 <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00288.svg" alt="1/9" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00289.svg" alt="1/3" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 9 0 0</p>
+<p data-source-page="14">No exact answer is claimed at the intervening budgets four, five, seven or eight. The same theorem applies to any other certified member with the charge form (31), using its actual block weights; it does not require the particular numerical example.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00290.svg" alt="Repeated use.
+For the displayed streaming implementations, fresh independent pure bath ports and
+the same internal dynamics give V †
+nWm,n = pn/2
+m I: contract the last pair of isometries using (36) and
+induct. Their full retained distance is therefore exactly √1 −pnm for every input and reference. This
+is the error of these explicitly declared implementations, not the optimum over globally compressed
+horizon baths or a grant of fresh preparation independence in an unrelated physical source." width="484.27" height="67.92" style="width:44.428em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Repeated use.
+For the displayed streaming implementations, fresh independent pure bath ports and
+the same internal dynamics give V †
+nWm,n = pn/2
+m I: contract the last pair of isometries using (36) and
+induct. Their full retained distance is therefore exactly √1 −pnm for every input and reference. This
+is the error of these explicitly declared implementations, not the optimum over globally compressed
+horizon baths or a grant of fresh preparation independence in an unrelated physical source.</pre></details></figure>
+<p data-source-page="15"><strong>Practical meaning and limits.</strong> The earlier count nine was an exact one-step apparatus cost. It now has a precision-sensitive interpretation: for this channel a bath of size six cannot achieve reduced error below 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00291.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>9, and cannot achieve retained-pure error below 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00292.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>3; both boundaries are constructively attained. The comparison keeps the same source space, original preparation, pointer, clock tick and arbitrary inert reference. It compares alternative admitted interactions. Access to a returning bath or controller changes the reusable-memory ledger. An initially mixed apparatus requires its purification resource to be declared; the pure-bath budget here cannot silently be replaced by its unpurified marginal dimension. This does not optimize over all qutrit sources with the same passive word law, compare a three-dimensional source with a four-dimensional one under arbitrary interventions, or certify a laboratory realization. It does not turn an unread-bath bound into equality of complete retained instruments. The two separate, explicit statements above provide the appropriate interfaces. The construction supplies no Born selection, mass-noise admission, actual-event mechanism or conscious perspective. supplement/memory/five/audit/check_bath_approximation.py independently reconstructs all nine Kraus matrices, proves their orbit trace identities and Choi orthogonality with exact symbolic arithmetic, and checks the scalar isometry overlaps. Its arbitrary-reference samples are numerical diagnostics, not the universal proof. All parameters and outputs are in supplement/memory/expect ed_outputs/five/audit/bath_approximation_results.json.</p>

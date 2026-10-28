@@ -1,0 +1,121 @@
+<h2 id="section-continuous-equatorial-access-exact-small-horizon-optima-and-an-improved-fixed-reader">Continuous equatorial access: exact small-horizon optima and an improved fixed reader</h2>
+<p data-source-page="2">Permit every equatorial setting<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00024.svg" alt=" θ" style="width:0.9440em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, with<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00025.svg" alt=" σθ =" style="width:2.5560em;height:1.3065em;vertical-align:-0.23em" loading="lazy"/> cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00026.svg" alt=" θ X +" style="width:2.8778em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00027.svg" alt=" θ Y" style="width:1.5493em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> , and keep the same shared calibrated efficiency and visibility:</p>
+<figure class="sr-formula" id="display-4" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00028.svg" alt="E±|θ = η
+2(I ± vσθ),
+E0|θ = (1 −η)I,
+0 ≤η, v ≤1." width="275.43" height="27.39" style="width:25.269em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>E±|θ = η
+2(I ± vσθ),
+E0|θ = (1 −η)I,
+0 ≤η, v ≤1.</pre></details></figure>
+<p data-source-page="2">The source label<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00029.svg" alt=" h ∈{X+, X−, Y +, Y −}" style="width:11.0998em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> is fixed, its controller is unread, and independently prepared copies are supplied conditional on<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p002-00030.svg" alt=" h" style="width:1.0362em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. A policy selects one setting per fresh copy and always decides the sign target at the fixed deadline. All actual settings, signs, nulls and timing records remain retained. The expanded class includes randomized nonadaptive schedules and their terminal decoders,</p>
+<figure class="sr-formula sr-source-panel" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00031.svg" alt="as well as nonanticipating adaptive policies. No collective POVM, readable source register or returning
+environment is added.
+A phase rotation followed by a Hadamard beam splitter makes the bisector θ = π/4 a physically
+specified extension of the reader menu. For example, apply Uθ = exp(+iθZ/2) before the Hadamard and
+computational-path detection. Its sign effects are U†
+θ(I ± X)Uθ/2 = (I ± σθ)/2. A phase Hamiltonian
+Hz = ħΩzZ/2 realizes this command with signed pulse area
+∫︁Ωz(t) dt = −θ and constant-drive duration
+|θ|/|Ωz|. This charges phase-reference availability, preparation, calibration and switching time; the
+following optima count copies rather than total apparatus cost." width="484.44" height="108.28" style="width:44.444em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>as well as nonanticipating adaptive policies. No collective POVM, readable source register or returning
+environment is added.
+A phase rotation followed by a Hadamard beam splitter makes the bisector θ = π/4 a physically
+specified extension of the reader menu. For example, apply Uθ = exp(+iθZ/2) before the Hadamard and
+computational-path detection. Its sign effects are U†
+θ(I ± X)Uθ/2 = (I ± σθ)/2. A phase Hamiltonian
+Hz = ħΩzZ/2 realizes this command with signed pulse area
+∫︁Ωz(t) dt = −θ and constant-drive duration
+|θ|/|Ωz|. This charges phase-reference availability, preparation, calibration and switching time; the
+following optima count copies rather than total apparatus cost.</pre></details></figure>
+<h3 id="section-a-posterior-formula-and-exact-one-two-copy-theorem">A posterior formula and exact one/two-copy theorem</h3>
+<p data-source-page="3">The full continuous menu is closed under X/Y exchange and global sign reversal. These operations permute source labels transitively, transform settings as<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00032.svg" alt=" θ ↦→π/2 −θ" style="width:6.5395em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> or reverse outcomes, and transform the final sign consistently. The shared<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00033.svg" alt=" η, v" style="width:1.9289em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> noise law is invariant. Consequently averaging a uniform-prior Bayes-optimal policy over this group makes all four source risks equal. Uniform-prior Bayes lower bounds and randomized minimax optima therefore agree in both the adaptive and the randomized-nonadaptive continuous classes. This argument does not transfer unchanged to unequal axis responses.</p>
+<p data-source-page="3"><strong>Lemma 2.1</strong> (Exact one-step posterior risk)<strong>.</strong><em> For unnormalized nonnegative hypothesis weights</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00034.svg" alt=" w =" style="width:2.2892em;height:1.1457em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00035.svg" alt="(wX+, wX−, wY +, wY −)" style="width:10.3550em;height:1.2435em;vertical-align:-0.23em" loading="lazy"/><em>, put</em></p>
+<figure class="sr-formula" id="display-5" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00036.svg" alt="W =
+∑︂
+h
+wh,
+d = wX+ −wX−+ wY + −wY −,
+b = (wX+ + wX−, wY + + wY −)." width="390.33" height="26.10" style="width:35.810em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>W =
+∑︂
+h
+wh,
+d = wX+ −wX−+ wY + −wY −,
+b = (wX+ + wX−, wY + + wY −).</pre></details></figure>
+<p data-source-page="3"><em>The optimal unnormalized Bayes loss with one remaining equatorial measurement is</em></p>
+<figure class="sr-formula" id="display-6" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00037.svg" alt="L1(w) = 1
+2{W −(1 −η)|d| −η max(|d|, v∥b∥2)}." width="227.94" height="17.63" style="width:20.912em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>L1(w) = 1
+2{W −(1 −η)|d| −η max(|d|, v∥b∥2)}.</pre></details></figure>
+<p data-source-page="3"><em>A reader parallel to</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00038.svg" alt=" b" style="width:0.9327em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> attains it; when</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00039.svg" alt=" b = 0" style="width:2.7667em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/><em> any reader suffices.</em></p>
+<p data-source-page="3"><em>Proof.</em> The plus-minus target mass difference on a sign outcome<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00040.svg" alt=" r = ±1 is η[d + rv b · nθ]/" style="width:11.3868em;height:1.2637em;vertical-align:-0.23em" loading="lazy"/>2, while on a null it is (1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00041.svg" alt=" −η)d" style="width:2.8030em;height:1.1600em;vertical-align:-0.23em" loading="lazy"/>. For a two-target decision problem the Bayes error is half the total mass minus half the sum of absolute target-mass differences. The identity<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00042.svg" alt=" |d + c| + |d −c| = 2" style="width:8.9584em;height:1.1600em;vertical-align:-0.23em" loading="lazy"/> max<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00043.svg" alt="(|d|, |c|" style="width:3.0425em;height:1.1600em;vertical-align:-0.23em" loading="lazy"/>) reduces the optimization to maximizing<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00044.svg" alt=" |b · nθ|" style="width:3.1813em;height:1.2531em;vertical-align:-0.23em" loading="lazy"/>, whose maximum is<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00045.svg" alt=" ∥b∥2" style="width:2.2749em;height:1.2412em;vertical-align:-0.23em" loading="lazy"/>. This is an exact optimization over the entire circle, not a grid scan.</p>
+<p data-source-page="3"><strong>Theorem 2.2</strong> (Exact continuous optima at one and two copies)<strong>.</strong><em> For the shared-noise continuous</em> <em>equatorial class, the randomized adaptive and randomized nonadaptive minimax optima coincide at</em> <em>horizons one and two:</em></p>
+<figure class="sr-formula" id="display-7" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00046.svg" alt="ead
+1 = ena
+1 = 1
+2 −ηv
+2,
+ead
+2 = ena
+2 = 1
+2 −η(2 −η)v
+2
+√
+2
+√
+2
+." width="259.91" height="28.50" style="width:23.845em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ead
+1 = ena
+1 = 1
+2 −ηv
+2,
+ead
+2 = ena
+2 = 1
+2 −η(2 −η)v
+2
+√
+2
+√
+2
+.</pre></details></figure>
+<p data-source-page="3"><em>Repeated use of the fixed bisector</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00047.svg" alt=" θ = π/4" style="width:4.0881em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/><em>, followed by majority of the nonnull signs and a fair tie</em> <em>decision, attains both optima.</em></p>
+<p data-source-page="3"><em>Proof.</em> At the uniform prior,<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00048.svg" alt=" d" style="width:1.1249em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 0 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00049.svg" alt=" b = (1/2, 1/" style="width:6.0510em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>2), proving the one-copy statement through Lemma 2.1. For two copies, let the first angle be<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00050.svg" alt=" θ" style="width:0.9574em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. After its sign<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00051.svg" alt=" r" style="width:0.9450em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, the unnormalized posterior is <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00052.svg" alt="wa,s = η(1 + rvsnθ,a)/" style="width:9.7222em;height:1.2957em;vertical-align:-0.23em" loading="lazy"/>8. Its total mass is<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00053.svg" alt=" η/" style="width:1.4835em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>2, its target difference is<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00054.svg" alt=" ηrv(" style="width:2.3600em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00055.svg" alt=" θ +" style="width:1.7402em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00056.svg" alt=" θ)/" style="width:1.6977em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>4, and its vector <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00057.svg" alt="b = (η/4, η/" style="width:5.2834em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>4) is independent of that outcome and angle. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p003-00058.svg" alt=" |d| ≤v∥b∥2" style="width:5.2149em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/> and the bisector is optimal</p>
+<p data-source-page="4">on either sign branch. The null branch retains the uniform prior scaled by 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00059.svg" alt=" −η" style="width:1.8337em;height:1.1522em;vertical-align:-0.23em" loading="lazy"/> and also admits an optimal bisector. Adding all three optimal branch losses gives</p>
+<figure class="sr-formula" id="display-8" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00060.svg" alt="2 −ηv
+√
+L2(θ) = 1
+2
+4
+−η(1 −η)v
+4
+| cos θ + sin θ|." width="218.94" height="36.45" style="width:20.086em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2 −ηv
+√
+L2(θ) = 1
+2
+4
+−η(1 −η)v
+4
+| cos θ + sin θ|.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00061.svg" alt="Its minimum uses | cos θ + sin θ| =
+√" width="173.91" height="21.58" style="width:15.955em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Its minimum uses | cos θ + sin θ| =
+√</pre></details></figure>
+<p data-source-page="4">2, giving the formula. At<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00062.svg" alt=" η" style="width:0.9564em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 1 the first angle is immaterial to the uniform Bayes value; a repeated bisector still attains the minimax optimum. When<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00063.svg" alt=" ηv" style="width:1.4776em;height:1.1438em;vertical-align:-0.23em" loading="lazy"/> = 0 all target information vanishes. Repeated bisector records have identical laws for<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00064.svg" alt=" X" style="width:1.2946em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>+ and<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00065.svg" alt=" Y" style="width:1.0666em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> +, and identical laws for<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00066.svg" alt=" X−" style="width:2.1525em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>and<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00067.svg" alt=" Y −" style="width:2.0502em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>, so its four source risks already agree. The symmetry argument upgrades the Bayes lower bound to minimax equality. Since this attaining protocol is nonadaptive, the two admitted classes have equal optima.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00068.svg" alt="The one-copy bisector is the familiar Breidbart direction for the unitarily equivalent BB84 subset/bit
+task[4]; it is not claimed as a new measurement discovery. The addition relative to the declared
+source–readout programme is the explicit noisy two-copy continuous-class theorem and its operational
+comparison. At η = v = 1, both errors are (1 −1/
+√" width="484.54" height="53.06" style="width:44.453em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The one-copy bisector is the familiar Breidbart direction for the unitarily equivalent BB84 subset/bit
+task[4]; it is not claimed as a new measurement discovery. The addition relative to the declared
+source–readout programme is the explicit noisy two-copy continuous-class theorem and its operational
+comparison. At η = v = 1, both errors are (1 −1/
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p004-00069.svg" alt="2)/2 ≃0.1464466, below the earlier X/Y value 1/4.
+At η = 4/5, v = 9/10, the exact errors are 1/2 −(9/50)
+√
+2 and 1/2 −(27/125)
+√
+2." width="486.52" height="26.21" style="width:44.635em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2)/2 ≃0.1464466, below the earlier X/Y value 1/4.
+At η = 4/5, v = 9/10, the exact errors are 1/2 −(9/50)
+√
+2 and 1/2 −(27/125)
+√
+2.</pre></details></figure>

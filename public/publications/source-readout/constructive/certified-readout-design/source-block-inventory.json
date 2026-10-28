@@ -1,0 +1,3676 @@
+[
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      74.3239974975586,
+      106.10208129882812,
+      537.7107543945312,
+      145.23545837402344
+    ],
+    "text": "Certified Target-Sufficient Readout Design and Exact Finite-Model\nReduction"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      230.88600158691406,
+      162.39541625976562,
+      381.1269836425781,
+      202.24563598632812
+    ],
+    "text": "Jeremy Rodgers\nIndependent Researcher\nwww.everythingequation.com"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      263.8909912109375,
+      214.61544799804688,
+      348.1513366699219,
+      226.57064819335938
+    ],
+    "text": "27 October 2026"
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      284.23699951171875,
+      255.86273193359375,
+      328.0723876953125,
+      265.8253173828125
+    ],
+    "text": "Abstract"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      91.69400024414062,
+      273.5263671875,
+      522.0858154296875,
+      426.8728332519531
+    ],
+    "text": "We give an exact computational realization of target-relative readout sufficiency for finite sources.\nA unique-extension circuit compiler turns failure of target descent into an explicit pair of sources, and\ncounterexample-guided menu synthesis returns globally minimum-cost sufficient feasible selections.\nA rational branch-and-bound implementation supplies independently checkable lower and upper\ncosts even when interrupted, including non-upward-closed feasibility constraints.\nA nonlinear\nautonomous register has sharp weighted predictive-completion and full-source reconstruction cost\nformulas, yielding unit-cost values b and 2b −1. Technical appendices give exact signed rational\ncontraction with explicit precision accounting, minimal sufficient parity summaries, and context-\ncertified tensor-wire quotients with executable integer crossing factors. The working implementations\nuse conventional exact backends. Separate subexponential complexity corollaries are conditional on\nstated external preprint theorems; neither external algorithm is advertised as implemented. The\nresults distinguish target sufficiency, access cost, retained information and recovery of the actual\nsource."
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      447.78668212890625,
+      363.45904541015625,
+      462.13287353515625
+    ],
+    "text": "1\nQuestion, contribution and prior scope"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      474.7179870605469,
+      549.3443603515625,
+      729.6206665039062
+    ],
+    "text": "This paper gives finite computational realizations of target sufficiency within Shadow Theory’s pre-\nexisting source–readout programme. Its abstract descent and minimal-completion foundations are\nestablished in [10, 11]; the contributions here concern their constructive realization, constrained readout\ndesign and exact resource analysis. Let a finite source set S have readout π : S →T and target\nR : S →A. Use the reachable readout space T = π(S), including T = ∅when S = ∅. A readout-only\ncorrect answer exists exactly when R is constant on each fibre of π: necessity follows by evaluating\na factorization R = ¯R ◦π on equal readouts; sufficiency defines ¯R(t) as the common target value of\nthe fibre. This is the existing target-relative descent criterion[10]. Restrict every extension space to\nits reachable image e(S); inactive extra points are not source distinctions. An extension is a map\ne : S →E through which the original readout factors, π = pE ◦e; it is target-sufficient when also\nR = rE ◦e. The joint image {(π(s), R(s)) : s ∈S} is then the coarsest target-sufficient extension[11]:\nthe map e(s) ↦→(π(s), R(s)) is well-defined because both coordinates factor through e.\nNeither\nabstract statement alone determines which permitted measurements realize the completion or what\nthey cost. When S is empty the criterion is vacuous, but no conditional prediction is thereby assigned\nto an impossible readout. This paper adds a circuit compiler, witness-producing separation, certified\nconstrained synthesis and exact resource examples under declared finite menus. Generic implicit hitting-\nset methods are established[2, 5]; Boolean Fourier and sum–product methods are established[4, 6, 13].\nOur claims concern the explicit source/target interfaces, proofs, cost formulas and implementations,\nnot invention of those methods or a universal physical efficiency theorem. The source model in the"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      223.0800018310547,
+      233.68667602539062,
+      388.91998291015625,
+      247.02667236328125
+    ],
+    "text": "https://doi.org/10.5281/zenodo.23721133"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.25420379638672,
+      548.9381103515625,
+      240.74578857421875
+    ],
+    "text": "main constructions is classical and finitely described. Its menu can impose incompatibilities, but it is\nnot a simultaneous-value model for incompatible quantum observables. Resource prices, available ports\nand prediction deadlines are premises. A returned compatible preimage does not identify which source\nactually occurred. Probabilities require a nominated measure; no Born-selection law follows from\ncounting. The finite model does not identify Boolean gate workspace with reusable physical memory. A\nsource assignment here, a quantum symbol map generating a word law, a single-copy detector outcome,\nand a retained validation trajectory are different mathematical objects. To use a physical intervention\nas a menu item one must first specify its admitted preparations, joint protocol, disturbance, accessible\nrecords and finite representation; deterministic values for incompatible observables are not supplied by\nthe compiler. The appendices preserve related exact weighted and tensor reductions without making\nthem dependencies of the finite synthesis theorem. Their factorization/context hypotheses and costs\nare explicit. This separates the unconditional finite algorithms from external asymptotic counting\nclaims."
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      261.5447082519531,
+      547.4115600585938,
+      275.8908996582031
+    ],
+    "text": "2\nConstructive obstruction and minimum-cost predictive completion"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      288.63763427734375,
+      547.8239135742188,
+      407.86279296875
+    ],
+    "text": "Target descent and the coarsest sufficient extension provide the information criterion used below. This\nsection adds an exact finite compiler, a minimum-cost realization procedure within a specified sensor\nmenu, and an analytically solved nonlinear dynamical family. Its ETH consequence is conditional\non the supplied counting theorem. The executable backend is a conventional bounded-cache DPLL\ncounter, not an implementation or practical speed demonstration of that theorem.\nThe abstract criterion and coarsest joint-image completion are already established in Rodgers’s\ntarget-relative completion papers[10, 11]. The algorithms below realize that criterion within finite circuit\nand menu representations. The finite synchronous application is not an extension of the Hilbert-space\nanalytic hypotheses of projected-dynamics theory."
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      425.3653869628906,
+      395.3493347167969,
+      437.3205871582031
+    ],
+    "text": "2.1\nExact circuit reduction and conditional complexity"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      446.7471923828125,
+      547.7593994140625,
+      525.4158325195312
+    ],
+    "text": "An input model consists of N Boolean source bits and a Boolean circuit with G gates, each of fan-in at\nmost two; unary and constant gates are included in G. Its designated outputs are an admissibility bit\nC, a present readout π and a target R. The source is S = {x ∈{0, 1}N : C(x) = 1}. Source labels\nhave no gauge redundancy in this finite model; an application with redundant coordinates must first\nspecify its quotient or invariant target. Sensor outputs are additional nominated circuit wires and are\nincluded in the circuit size. Let q be the number of distinct target wires."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      537.0142211914062,
+      547.3206787109375,
+      561.4807739257812
+    ],
+    "text": "Theorem 2.1 (Parsimonious collision compilation). There is a 3-CNF whose satisfying assignments\nare in bijection with ordered pairs (x, x′) ∈S2 satisfying"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      229.15101623535156,
+      572.755859375,
+      382.8524169921875,
+      585.98876953125
+    ],
+    "text": "π(x) = π(x′),\nR(x) ̸= R(x′)."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      599.5029907226562,
+      547.2503051757812,
+      651.144775390625
+    ],
+    "text": "It uses at most V = 2(N + G) + 2q variables and O(V ) clauses after duplicate output comparisons\nare removed. Reading the supplied output lists incurs their usual polynomial description cost. Every\nsatisfying source pair has exactly one extension to the gate variables. The theorem also holds for the\nreadout augmented by any selected sensor subset."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      662.7516479492188,
+      547.4844970703125,
+      727.8433227539062
+    ],
+    "text": "Proof. Take two copies of the circuit. For every gate, forbid each inconsistent input/output truth-table\nrow. A binary gate contributes at most four clauses of width three, a unary gate at most two clauses of\nwidth two, and a constant a unit clause. Topological induction forces every gate variable uniquely once\nits source inputs are fixed. Add the two unit clauses C(x) = C(x′) = 1 and two width-two clauses for\nequality of each distinct readout wire across copies. There are at most N + G distinct such wires even"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      67.24993896484375,
+      547.8615112304688,
+      132.351806640625
+    ],
+    "text": "when the supplied output or sensor lists repeat them. For each distinct target wire form its two-copy\nXOR. A binary OR tree over those XORs is constrained to one; this adds at most 2q −1 gates and\ntheir unique values. If there is no target coordinate, insert an empty clause instead. Thus every source\npair either has no extension or exactly one, and it has one precisely under the displayed condition. All\ncomparison gates and normalization constraints are counted."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      63.53900146484375,
+      143.92469787597656,
+      548.748046875,
+      181.93280029296875
+    ],
+    "text": "Corollary 2.2 (Conditional constructive descent test). Assume the fixed-density part of the supplied\nOpenAI preprint’s Theorem 1.1[7]. The ordered collision count, a collision witness when one exists,\nand hence exact target descent can be computed in"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      220.58499145507812,
+      186.98178100585938,
+      390.9138488769531,
+      206.24078369140625
+    ],
+    "text": "poly(description length) 2O(V/√log V )"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      219.55496215820312,
+      547.2568969726562,
+      271.19580078125
+    ],
+    "text": "bit operations and polynomial space, with finite exceptional sizes handled directly.\nIn particular\nG = O(N), together with a polynomial-length supplied circuit/output/menu description, gives a\nsubexponential-in-source-bits test even for globally dependent targets. For larger circuits the bound is in\nthe compiled size V ; polynomial circuit size alone does not imply subexponential time in N."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      282.5509948730469,
+      547.8740844726562,
+      347.7417907714844
+    ],
+    "text": "Proof. The compiled width is three and clause density is bounded by an absolute constant. Apply\nTheorem 1.1 and recover source bits by variable-by-variable self-reduction, using only polynomially\nmany counting queries. A zero count is exactly fibre constancy by Rodgers’s criterion. Gate extension\nuniqueness ensures there is no multiplicity correction. An empty source gives count zero vacuously; the\nimplementation reports that case explicitly."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      359.22998046875,
+      547.7352905273438,
+      478.6167907714844
+    ],
+    "text": "For fixed-locality admissibility and readout predicates and a binary fixed-local target, a direct\ntruth-table construction instead uses the two source copies alone and constant-width clauses, as in\nAppendix C.2. A multi-coordinate target can be tested for descent coordinate by coordinate; summing\nthose collision counts would double-count pairs that disagree in several coordinates and is not the union\ncount. The compiler above is broader: global parity, nonlinear global feedback and circuits reusing\nintermediate values are permitted. Its gates for every menu item are compiled even if that item is not\nselected; unused-gate cone elimination is not assumed in the complexity or executable counts.\nThe same one-copy gate encoding counts compatible source/target values. For a specified finite\nprior weight w(x) ≥0, the appropriate conditional answer is"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      170.73599243164062,
+      499.0838317871094,
+      298.7542724609375,
+      510.1477966308594
+    ],
+    "text": "Pr(R = a | π = t, C = 1) ="
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      302.95098876953125,
+      490.3581848144531,
+      437.0477294921875,
+      504.0202941894531
+    ],
+    "text": "∑︁\nx:C(x)=1, π(x)=t, R(x)=a w(x)"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      319.2659912109375,
+      499.22515869140625,
+      441.26666259765625,
+      520.3692626953125
+    ],
+    "text": "∑︁\nx:C(x)=1, π(x)=t w(x)\n."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      530.6520385742188,
+      549.2559814453125,
+      582.2927856445312
+    ],
+    "text": "A zero denominator is reported as impossible or zero mass, never normalized. Uniform compatible-\nsource counting is the special nominated prior w ≡1, not a consequence of the readout and not a\nBorn-selection argument. The implementation’s arbitrary rational prior table uses exact enumeration;\nit is not labelled a fast weighted ETH backend."
+  },
+  {
+    "page": 3,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      599.763427734375,
+      388.94134521484375,
+      611.7186279296875
+    ],
+    "text": "2.2\nCounterexample-guided minimum-cost realization"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      621.1427001953125,
+      547.7127685546875,
+      687.2991943359375
+    ],
+    "text": "Let M sensor items gj have nonnegative exact rational costs cj. An item can return several bits. An\nindependently specified decidable family F ⊆2[M] declares jointly feasible selections; it may encode\nincompatibility, resource caps or prerequisites. It need not be upward closed. The realized readout for\nselection A is\neA(x) = (π(x), (gj(x))j∈A),\nc(A) =\n∑︂"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      384.8930358886719,
+      675.3432006835938,
+      414.7197570800781,
+      697.959228515625
+    ],
+    "text": "j∈A\ncj."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      705.0540161132812,
+      547.5089111328125,
+      729.5968017578125
+    ],
+    "text": "The optimizer can also be generalized to another exactly specified finite cost function; the supplied\nimplementation uses additive costs."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      65.46781158447266,
+      547.6420288085938,
+      132.351806640625
+    ],
+    "text": "For a current collision (x, x′) define D(x, x′) = {j : gj(x) ̸= gj(x′)}. Every sufficient selection must\nhit this set. Maintain such sets, minimize c(A) over A ∈F that hit all of them, and call the exact\ncollision oracle on eA. If it returns a pair, append that pair’s set and reoptimize the entire selection. If it\ncertifies no pair, return A. If a returned set is empty, the whole menu is insufficient; if the constrained\noptimization is infeasible, no feasible sufficient selection exists."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      143.94593811035156,
+      548.9234619140625,
+      195.5147705078125
+    ],
+    "text": "Theorem 2.3 (Exact minimum-cost completion synthesis). With exact optimization and separation,\nthis algorithm terminates and returns either a globally minimum-cost sufficient feasible selection or\na sound impossibility result within the declared menu/family. No tested candidate selection repeats.\nThere are at most |F| ≤2M separation calls, with at most one subsequent infeasible optimization."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      207.03695678710938,
+      549.5699462890625,
+      312.8747863769531
+    ],
+    "text": "Proof. Every true sufficient selection separates every returned target-disagreeing pair, so it satisfies\nevery accumulated cut. The current restricted optimization value is therefore a lower bound on the\ntrue optimum. If the chosen candidate has no collision, it is a sufficient feasible selection of exactly\nthat cost, giving a matching upper bound. If it has a collision, none of its selected sensors belongs to\nthe new D(x, x′), so the new cut excludes this candidate permanently. Finiteness proves termination.\nAn empty distinguishing set forbids every subset; otherwise infeasibility of the accumulated necessary\ncuts within F forbids every feasible sufficient selection. Each cut’s witness, selected set and exact cost\nare retained in the trace."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.986000061035156,
+      324.39697265625,
+      549.3685913085938,
+      633.4727783203125
+    ],
+    "text": "This is an application of established counterexample-guided synthesis and implicit hitting-set\noptimization, not their invention. Close antecedents include Solar-Lezama’s Program Synthesis by\nSketching (2008), Chandrasekaran–Karp–Moreno-Centeno–Vempala, Algorithms for Implicit Hitting Set\nProblems (SODA 2011, DOI 10.1137/1.9781611973082.48), and Moreno-Centeno–Karp, The Implicit\nHitting Set Approach to Solve Combinatorial Optimization Problems with an Application to Multigenome\nAlignment (2013, DOI 10.1287/opre.1120.1139)[2, 5, 16]. The source-specific contribution here is\nthe typed collision compiler, admitted-cost interface, exact verification and application to a proved\npredictive-completion frontier.\nThe complexity is the sum of all optimizer and separation calls. An ETH-fast separation oracle does\nnot make the whole synthesis subexponential: the finite selection family itself may be exponential. The\nprototype re-enumerates subsets exactly, with no performance-optimality claim. A feasible returned\nselection alone is not a certificate if the final oracle is incomplete. The supplied iteration cap returns\nincomplete explicitly. More generally, a certified lower bound L on a restricted optimum and a fully\nvalidated sufficient selection of cost U certify L ≤OPT ≤U. If each approximate optimizer guarantees\ncost at most α times the current restricted optimum plus δ, with α ≥1 and δ ≥0, final exact separation\ngives U ≤αOPT+δ. Unvalidated heuristic proposals or absence of a discovered counterexample supply\nno such guarantee.\nReoptimization matters even on a two-bit source. Let the target be x0 ∨x1, with no initial readout.\nOffer three singleton-indicator sensors for states 01, 10, 11 at unit cost, and raw-bit sensors x0, x1 at\ncost 6/5 each. Greedily adding a cheapest sensor for each returned collision buys all three indicators,\ncost 3. Reoptimization finds one raw-bit sensor and the missing singleton, cost 11/5. No cheaper\nselection can cover all three target-disagreeing state pairs: two unit indicators miss one and a lone raw\nbit misses one. The exact prototype and an independent subset check both reproduce this gap."
+  },
+  {
+    "page": 4,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      650.9754028320312,
+      435.0047607421875,
+      662.9306030273438
+    ],
+    "text": "2.3\nA sharp nonlinear predictive-completion resource frontier"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      672.4304809570312,
+      548.2916870117188,
+      696.8536376953125
+    ],
+    "text": "This family turns the compiler into a constructive autonomous-dynamics application to target-relative\ndescent[10] and a finite synchronous counterpart of exact projected-dynamics closure[12]. For b ≥1"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      371.52032470703125,
+      78.15478515625
+    ],
+    "text": "use 2b classical bits and one fixed clock tick, with source update"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      161.07501220703125,
+      98.52079772949219,
+      222.75637817382812,
+      111.06588745117188
+    ],
+    "text": "F0(x) = x0 ∧"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      225.17701721191406,
+      88.16580963134766,
+      243.85093688964844,
+      106.82693481445312
+    ],
+    "text": "2b−1\n⨁︂"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      227.66302490234375,
+      98.66218566894531,
+      450.9267578125,
+      121.1110610961914
+    ],
+    "text": "i=0\nxi,\nFi(x) = xi\n(i > 0),\nπ(x) = x0."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      129.4331817626953,
+      549.6114501953125,
+      275.8477783203125
+    ],
+    "text": "All source states are admissible. The target is the next observed bit R = πF, which depends globally\nand nonlinearly on the source. The permitted readers are the individual hidden-bit ports xi, i > 0, and\ndisjoint pair-parity ports pj = x2j ⊕x2j+1, 0 ≤j < b. A direct global target reader is not in the menu.\nThe source is a declared synchronous classical logic model. The ports read the same classical register\nnondestructively; joint measurement is therefore admitted. The task predicts the future from records\nacquired before the first update; waiting to observe the target after that update does not satisfy the\nprediction task. Only the stated present-time ports are admitted. No laboratory prediction-deadline\nor timing advantage is certified by this discrete model. A pair-parity port is a separately admitted\ntwo-bit reader with a specified cost, not a free computational substitute for physically inaccessible bits.\nClock, fixed logic and archival choices are external specified resources. No energy, continuous-time or\nquantum efficiency conclusion follows from the cost units."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      285.8831787109375,
+      547.1658325195312,
+      323.90478515625
+    ],
+    "text": "Theorem 2.4 (Exact predictive versus full-source port cost). Give raw port xi positive cost ui and pair\nport pj positive cost vj, with no other joint constraints. The minimum cost of a readout determining\nevery future observed bit is"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      193.61000061035156,
+      344.26983642578125,
+      298.8486328125,
+      357.0668029785156
+    ],
+    "text": "Cpred = min{u1, v0} +"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      301.4029846191406,
+      333.9148254394531,
+      315.8448181152344,
+      352.5759582519531
+    ],
+    "text": "b−1\n∑︂"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      301.2729797363281,
+      344.26983642578125,
+      418.3922424316406,
+      366.8600769042969
+    ],
+    "text": "j=1\nmin{u2j + u2j+1, vj}."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      63.08197021484375,
+      376.7456970214844,
+      305.67852783203125,
+      387.65478515625
+    ],
+    "text": "The minimum cost for full source reconstruction is"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      154.98397827148438,
+      408.01983642578125,
+      255.74560546875,
+      420.8168029785156
+    ],
+    "text": "Cfull = min{u1, v0} +"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      258.30096435546875,
+      397.6648254394531,
+      272.7427978515625,
+      416.3259582519531
+    ],
+    "text": "b−1\n∑︂"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      258.1699523925781,
+      408.01983642578125,
+      457.0181884765625,
+      430.6100769042969
+    ],
+    "text": "j=1\nmin{u2j + u2j+1, u2j + vj, u2j+1 + vj}."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      62.9370002746582,
+      440.40081787109375,
+      547.0245971679688,
+      465.0137939453125
+    ],
+    "text": "Under unit port costs, Cpred = b and Cfull = 2b −1. The selected predictive ports can be chosen so their\naugmented readout itself has an autonomous update, rather than merely predicting one step."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      474.9789733886719,
+      547.914306640625,
+      648.5637817382812
+    ],
+    "text": "Proof. Restrict to the admitted subfamily x0 = 1. Then the target is global parity. Holding every\nother block fixed shows that the selected sensors in each block must determine its pair parity. In\nblock zero, known x0 makes either x1 or p0 sufficient and at least one necessary. In another block, a\npair-parity port suffices; without it, both raw bits are necessary because changing an unmeasured bit\nflips the target while preserving every measured output. The blocks have disjoint sensor scopes, so\ntheir independently necessary minima add and the displayed selection attains the sum. For full source\nreconstruction, each other block has four independent states and any two of its three possible binary\nports recover both bits; fewer than two cannot do so. This proves its sum.\nWrite q = ⨁︁\ni>0 xi. If x0 = 0 it remains zero. If x0 = 1, the next bit is 1 ⊕q: it remains one when\nq = 0, otherwise becomes zero and stays zero. Hence all future readouts equal R after the first step, so\none-step sufficiency is all-future sufficiency. Selected raw ports are fixed under F. Pair ports for j > 0\nare also fixed; if p0 is selected, it updates as p′\n0 = p0 ⊕x0 ⊕R. Thus the cost-attaining augmented\nreadout closes autonomously."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      659.858642578125,
+      386.09991455078125,
+      670.7677612304688
+    ],
+    "text": "The ideal canonical predictive completion has only three states,"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      236.99600219726562,
+      682.3438110351562,
+      375.0288391113281,
+      693.4077758789062
+    ],
+    "text": "(π, R) ∈{(0, 0), (1, 0), (1, 1)},"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      704.9838256835938,
+      547.607421875,
+      729.5932006835938
+    ],
+    "text": "with autonomous transitions 00 ↦→00, 10 ↦→00, 11 ↦→11. Under unit costs the displayed minimum-cost\nport signature contains 2b+1 distinct values, and its postprocessing yields this three-state quotient. If"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.5270004272461,
+      67.32264709472656,
+      547.846435546875,
+      240.74578857421875
+    ],
+    "text": "raw port records are retained, that larger archive is not discarded from the resource account. Abstract\nminimal distinctions and minimum physical-menu access cost are different quantities.\nUnder unit costs the gap approaches a factor of two, but that is a declared port-cost result, not a\nuniversal hardware advantage. If raw ports cost c and each pair port costs 2c, the predictive optimum\nis (2b −1)c, the same as the raw strategy. The exact weighted formula therefore exposes the premise\non which a gain depends.\nFor the source family, the initial ordered collision count is 24b−3: only x0 = 1 contributes, with\n22b−2 sources of each target value, counted in both orders. For b = 1, . . . , 5 the compiler and exact\nsynthesizer reproduce costs 1, 2, 3, 4, 5 against raw/full-source costs 1, 3, 5, 7, 9, and yield autonomous\ncompletion signatures on every source state. Exhaustive whole-subset checks establish independent\noptima for the smaller sizes; twelve unequal rational-cost tests verify both weighted formulas. A\nuniform admitted-source prior gives Pr(R = 1 | π = 1) = 1/2; separately nominated weights three on\nR = 1 and one on R = 0 give 3/4. Neither prior is selected by the readout or by ETH."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      258.2473449707031,
+      324.3712463378906,
+      270.2025451660156
+    ],
+    "text": "2.4\nImplementation, verification and scope"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      279.5589904785156,
+      549.3162841796875,
+      493.7908020019531
+    ],
+    "text": "The implementation consists of completion.py and verify_finite.py.\nIt uses exact inte-\ngers/Fractions and a conventional DPLL counter with a cache bounded to 4096 states.\nIt\nincludes truth-table circuit compilation, a two-copy obstruction oracle, compatible target counts,\nexact finite-prior reference calculations, menu constraints, reoptimized synthesis and explicit\nincomplete/empty-source statuses. Inputs with malformed bits, sensor indices, costs or negative prior\nweights are rejected. Nonuniform prior tables are globally validated, including entries outside the\nqueried fibre.\nThe tests compare randomized CNF counts, unique gate extensions, random nonlinear constrained\nmodels, every sensor subset, compatible target counts and finite optima against direct source enu-\nmeration. They also cover empty sources, impossible readouts, empty targets, infeasible hardware\nconstraints and early stopping. The independent audit uses a distinct source-enumeration implemen-\ntation. Numerical runtime measurements describe this prototype only; no ETH-backend speedup is\nclaimed.\nThis work adds a constructive finite synthesis interface and a sharp menu-constrained dynamical\nexample to the supplied baseline. Continuous CP feasibility is not replaced by an unrestricted Boolean\ndecision problem. Source identification, source accessibility and source counting remain distinct."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      514.5896606445312,
+      529.5305786132812,
+      528.9358520507812
+    ],
+    "text": "3\nScalable completion design with checkable interrupted bounds"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      541.5336303710938,
+      549.5941772460938,
+      620.2608032226562
+    ],
+    "text": "The circuit interface permits exact source-collision separation with exhaustive menu reoptimization.\nHere a conventional exact branch-and-bound optimizer replaces exhaustive subset enumeration without\nchanging the source semantics. Its output includes a covering tree, rational dual bounds, genuine\nsource-pair witnesses and a separately validated sufficient incumbent. The improvement is an effective\nand audited implementation of established integer-optimization ideas, not an implementation of either\nexternal ETH algorithm or a new general optimization principle."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      637.7623901367188,
+      356.9133605957031,
+      649.7175903320312
+    ],
+    "text": "3.1\nProblem, admissibility and lower certificates"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      659.1452026367188,
+      547.7682495117188,
+      724.2647705078125
+    ],
+    "text": "Let the menu be [m], with nonnegative rational prices cj. Each accumulated source collision supplies a\nset D ⊆[m] that every sufficient selection must intersect. A declared feasible family may impose pair\nincompatibilities, prerequisites a ⇒b, a cardinality cap and an additional arbitrary pure decidable\npredicate. In particular, feasibility need not be upward closed. The implementation accepts that\npredicate without making unsound assumptions about its values on supersets or partial assignments."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.22867584228516,
+      547.5013427734375,
+      139.73092651367188
+    ],
+    "text": "A search node assigns some ports S present and some F absent. Propagation closes prerequisites\nand their contrapositives, propagates incompatibilities, enforces the cardinality cap, and forces the\nunique available element of a still-uncovered cut. An inconsistent node is infeasible. Write DS for the\ncuts not yet hit and U = [m] \\ (S ∪F). For nonnegative numbers yD with\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      238.28695678710938,
+      131.42478942871094,
+      373.7271423339844,
+      155.08692932128906
+    ],
+    "text": "D∈DS: j∈D\nyD ≤cj\n(j ∈U),"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      165.12269592285156,
+      228.6110382080078,
+      176.03179931640625
+    ],
+    "text": "the following lower bound is valid:"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      239.73995971679688,
+      186.99732971191406,
+      305.0489196777344,
+      199.7177734375
+    ],
+    "text": "L(S, F) =\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      290.28594970703125,
+      186.9973907470703,
+      349.22491455078125,
+      211.4122314453125
+    ],
+    "text": "j∈S\ncj +\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      329.66595458984375,
+      188.7952423095703,
+      372.26165771484375,
+      212.3159942626953
+    ],
+    "text": "D∈DS\nyD."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      222.26699829101562,
+      547.4791259765625,
+      260.35980224609375
+    ],
+    "text": "Excluded items are removed from the residual cuts. A cheap greedy dual packing constructs the\ndisplayed yD exactly: process residual cuts and increase the current dual variable by the least remaining\nprice capacity on that cut. This is a valid packing bound, not necessarily the optimal LP value."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      63.93000030517578,
+      271.36627197265625,
+      547.27734375,
+      363.48480224609375
+    ],
+    "text": "Theorem 3.1 (Certified bounded completion optimization). For the finite declared menu and feasibility\nfamily, best-first binary branch-and-bound with the displayed lower bound returns an exact optimum or\na sound infeasibility conclusion when exhausted. At any interruption, an existing feasible optimizer\nincumbent of cost Uopt and the minimum of the open node bounds and Uopt certify the restricted\noptimum interval. The bound is valid for arbitrary non-upward-closed leaf feasibility predicates. A finite\ncovering-tree certificate can verify the interval without enumerating every menu subset or rerunning the\noptimizer."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      374.2508239746094,
+      549.4750366210938,
+      409.6559143066406
+    ],
+    "text": "Proof. An extension A ⊇S disjoint from F must select at least one element of every residual cut.\nTherefore\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      227.468994140625,
+      399.6933288574219,
+      298.68994140625,
+      424.6391906738281
+    ],
+    "text": "j∈A\\S\ncj ≥\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      278.6379699707031,
+      416.5657958984375,
+      303.8952331542969,
+      424.6391906738281
+    ],
+    "text": "j∈A\\S"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      307.3189697265625,
+      399.6933288574219,
+      321.7149353027344,
+      409.6559143066406
+    ],
+    "text": "∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      306.157958984375,
+      399.6933288574219,
+      366.658935546875,
+      424.107177734375
+    ],
+    "text": "D∋j\nyD ≥\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      355.8669738769531,
+      401.49114990234375,
+      384.53369140625,
+      424.107177734375
+    ],
+    "text": "D\nyD."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      432.0352478027344,
+      548.9913940429688,
+      578.3507690429688
+    ],
+    "text": "All additional admissibility constraints only remove extensions, so ignoring them in this dual calculation\nis safe. Every propagation rule is a necessary consequence of the declared constraints or a residual\none-element cut. Branching on a free item partitions all remaining extensions into those including\nit and those excluding it. No extension is silently lost. Once the current S is itself feasible and hits\nevery cut, it is cheapest within that node: further ports have nonnegative cost. If S fails an opaque\npredicate, its supersets are still explored unless every variable is assigned. Thus non-upward feasibility\nis preserved. Nodes whose lower bound is no smaller than the incumbent are safely pruned. The\nremaining nodes, incumbent and already closed branches cover the finite family, establishing both the\ninterrupted interval and exact termination statement. A checker replays the covering tree, propagation,\neach rational capacity inequality, each solution leaf and every pruning inequality. It need not solve\nanother optimization."
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      595.724365234375,
+      335.8841552734375,
+      607.6795654296875
+    ],
+    "text": "3.2\nOuter source synthesis and safe stopping"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.4070053100586,
+      617.11962890625,
+      353.91278076171875,
+      628.0287475585938
+    ],
+    "text": "The outer counterexample loop uses the unchanged criterion"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      188.4250030517578,
+      638.4818115234375,
+      423.5810852050781,
+      652.7481689453125
+    ],
+    "text": "C(x) ∧C(x′) ∧[eA(x) = eA(x′)] ∧[R(x) ̸= R(x′)]."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      664.5258178710938,
+      547.5065307617188,
+      729.5968017578125
+    ],
+    "text": "An optimizer incumbent is not automatically a source-sufficient incumbent: it may hit all known cuts\nand miss a new source collision. Only a completed exact no-collision check promotes a feasible selection\nto an upper certificate for source completion. A user may provide such a selection initially, but it is\nverified rather than trusted. Its cost remains a real upper bound even if the run stops before finding\nanother candidate."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      63.93000030517578,
+      67.16098022460938,
+      547.3456420898438,
+      145.90081787109375
+    ],
+    "text": "Corollary 3.2 (Anytime source-completion interval). Every optimizer lower certificate on genuine\ncollision cuts is a lower bound on the minimum cost of a sufficient feasible selection. A feasible\nselection with a completed no-collision certificate supplies an upper bound. Matching bounds certify\nglobal minimum cost under the declared menu.\nInterruption, failure to find a collision with an\nincomplete oracle, and failure to find an optimizer incumbent do not establish source sufficiency or\nmenu insufficiency."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      155.84097290039062,
+      549.6541748046875,
+      234.580810546875
+    ],
+    "text": "Proof. Every sufficient selection separates each genuine target-disagreeing pair and therefore obeys\nevery stored cut. The restricted optimizer’s feasible family contains all sufficient feasible selections.\nThe previous lower bound thus applies to the true optimum, while the validated incumbent attains its\nstated upper cost. Equality sandwiches the optimum. If a genuine pair has an empty distinguishing set,\nno menu subset can separate it. If the necessary cuts are infeasible, no sufficient feasible selection exists.\nThese last two conclusions require the corresponding positive evidence, not an unfinished search."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      245.95623779296875,
+      549.611328125,
+      487.1167907714844
+    ],
+    "text": "The supplement exports the final covering tree and one source witness per necessary cut. The checker\nindependently recomputes each witness’s admissibility, original-readout equality, target disagreement\nand exact distinguishing menu. It validates the tree and replays the declared exact no-collision oracle\nfor the claimed upper selection. This is an oracle-relative certificate interface, not a new proof-logging\nSAT/UNSAT format. Opaque feasibility is a declared pure predicate supplied unchanged to both\noptimizer and checker. Certificate bounds and dual weights are exact integers or rational numbers, not\nin-memory floating-point values; masks and indices have integer types. The public JSON interface parses\ndecimal tokens directly as rational numbers and rejects nonfinite constants before certificate validation.\nThese input contracts prevent rounded arithmetic from being accepted as an exact lower-bound proof.\nAn explicit incomplete example has zero expanded nodes, a certified lower bound zero and a\npreviously validated all-port upper bound 227/3. Its status remains incomplete; that wide interval\nis reported rather than converted into an apparent optimal result. The tests also cover zero prices,\ncontradictory cuts, cyclic prerequisites, cardinality limits, unknown separation status and non-upward\nparity feasibility.\nA less trivial interrupted example has 60 explicit source rows and 24 ports. Twenty-four charged\nsource-oracle queries construct a greedy sufficient starting design of cost 26/3. A subsequent run\nlimited to sixteen expanded nodes per restricted optimization uses twenty further source-oracle calls\n(including incumbent revalidation) and certifies"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      264.40899658203125,
+      498.6618347167969,
+      347.6017761230469,
+      509.7257995605469
+    ],
+    "text": "6 ≤OPT ≤26/3."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      521.3419799804688,
+      547.6793212890625,
+      559.4347534179688
+    ],
+    "text": "Its status remains bounded, not optimal. Both the lower proof tree and the source-sufficient upper\ndesign survive interruption; the input and certificate are supplied. The forty-four source queries include\npreparation of the incumbent rather than hiding that work outside the comparison."
+  },
+  {
+    "page": 8,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      576.638427734375,
+      393.11370849609375,
+      588.5936279296875
+    ],
+    "text": "3.3\nScaling the nonlinear predictive-source application"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      598.03466796875,
+      189.4473876953125,
+      608.9437866210938
+    ],
+    "text": "For the nonlinear register,"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      192.24600219726562,
+      629.27880859375,
+      239.2063751220703,
+      641.9788208007812
+    ],
+    "text": "F0 = x0 ∧"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      241.62701416015625,
+      618.923828125,
+      260.3009338378906,
+      637.583984375
+    ],
+    "text": "2b−1\n⨁︂"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      244.114013671875,
+      629.4202270507812,
+      419.7557373046875,
+      651.869140625
+    ],
+    "text": "i=0\nxi,\nFi = xi (i > 0),\nπ = x0,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      660.2592163085938,
+      549.3798217773438,
+      700.5081176757812
+    ],
+    "text": "we preserve the same raw and disjoint-pair parity menu. An exact structural separator avoids repeatedly\nsolving its generic CNF when the recognized model promise holds. On x0 = 0 the target is constant.\nOn x0 = 1, two sources with hidden-bit difference h ∈F2b−1\n2\ncollide exactly when"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      223.02001953125,
+      709.1873168945312,
+      354.4645080566406,
+      722.8892211914062
+    ],
+    "text": "ℓj(h) = 0\n(j ∈A),\n⨁︂"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      345.4960021972656,
+      710.9851684570312,
+      388.9872741699219,
+      733.4252319335938
+    ],
+    "text": "i\nhi = 1,"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.16098022460938,
+      547.783447265625,
+      186.54876708984375
+    ],
+    "text": "where ℓj is the selected raw or pair parity functional. Gaussian elimination either supplies h and a\nconcrete source-pair witness or proves the linear system inconsistent. Conversely, any original collision\nsupplies such a difference, so the separator is complete for this actual nonlinear source family. It is not\na generic shortcut for nonlinear circuits.\nAll 292 menu subsets of the one-, two- and three-block models are checked against the inherited\ncircuit/CNF separator. At b = 20, the method certifies the unchanged optimum 20 using a 59-port\nmenu and 40 source bits, with 40 separation calls and 630 expanded optimization nodes in the recorded\nrun. This extends practical problem size, not the already proved b versus 2b −1 cost theorem. The\nextra gain from GF(2) recognition is identified separately from the optimizer gain."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      204.05137634277344,
+      410.8671875,
+      216.00657653808594
+    ],
+    "text": "3.4\nControlled comparison and non-closed-form examples"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      225.36196899414062,
+      547.8128662109375,
+      290.55279541015625
+    ],
+    "text": "The old and new optimizers use the same exact separator within each controlled comparison. Two\nfinite-table families have independently declared initial readouts, random binary target values, rational\nport prices, incompatibilities and prerequisites. These are explicit finite classical reader menus, not\nsimultaneous assignments to incompatible quantum observables. There is no free target port. No\nclosed-form optimum is assumed for the random constrained instances."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      97.10299682617188,
+      307.74322509765625,
+      515.0640258789062,
+      317.7058410644531
+    ],
+    "text": "Model\nOptimum\nOld subset visits\nNew expanded nodes\nOracle calls old/new"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      97.10299682617188,
+      325.158935546875,
+      514.9343872070312,
+      359.0448303222656
+    ],
+    "text": "Predictive b = 4\n4\n16,384\n30\n8/8\n32 rows, 12 ports\n15/2\n57,344\n128\n14/16\n40 rows, 14 ports\n89/6\n327,680\n142\n20/19"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      375.0579833984375,
+      549.5613403320312,
+      684.1337890625
+    ],
+    "text": "Subset visits and expanded nodes are different units; both are reported rather than presented as a\nhardware speedup. In the recorded controlled execution with Python allocation tracing enabled, elapsed\ntimes were about 0.376/0.017, 1.341/0.096 and 6.390/0.136 seconds for old/new respectively. These\nare reproducible synthetic prototype observations, not a universal runtime theorem or a statistical\nperformance study. The old and new source oracle counts can differ because tied optimum candidates\ndiffer.\nThe new method also certifies exact costs 28/3 for a 60-row, 24-port constrained source and 23/2\nfor an 80-row, 32-port constrained source. Their proof trees and full input tables are included. The\nlatter execution used 77 separation calls, 10,445 expanded nodes and about 39 seconds with allocation\ntracing. Larger certificates consume additional storage; retaining them is not free. Worst-case runtime,\noracle calls and tree size can remain exponential. No general subexponential synthesis bound follows\nfrom either ETH paper.\nThe independent reference suite checks 160 exact optimization instances and 640 interrupted bounds\nagainst all subsets, 20 full source-table optima and their interrupted runs against direct source-pair\nenumeration, the 292 GF(2)/CNF comparisons, and rejection of forged dual/global-bound certificates.\nThe implementation uses exact Fraction arithmetic. The distinction between empty admitted sources,\nimpossible readouts and zero prior mass remains with the inherited model interface; this optimizer\ndoes not change its prior or probability semantics.\nThe practical contribution to Rodgers’s finite target-descent interface is a checked design procedure\nthat can now stop with an honest cost interval and solve larger constrained menus. Its antecedents are\nconventional weighted hitting-set branch-and-bound, LP-dual packing and implicit hitting-set synthesis,\nincluding Chandrasekaran et al., SODA 2011, DOI 10.1137/1.9781611973082.48, and Moreno-Centeno–\nKarp, 2013, DOI 10.1287/opre.1120.1139. No worldwide priority is asserted for those methods."
+  },
+  {
+    "page": 10,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      64.5816879272461,
+      442.5639953613281,
+      78.92788696289062
+    ],
+    "text": "4\nExternal-theorem dependency and reproducibility"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      91.6242904663086,
+      549.3656616210938,
+      359.9418029785156
+    ],
+    "text": "The circuit reduction, synthesis correctness, branch-and-bound certificates and nonlinear cost frontier\nare proved here without any ETH-refutation premise. The conditional counting-time corollary invokes\nthe fixed-density part of the supplied October25 OpenAI preprint, Theorem1.1[7]. Its rational tensor\nadapter invokes that preprint’s TheoremD.1. These are external theorem assumptions, not conclusions\nof the prototype checks.\nThe cited official Lean scope description reports the weaker exponent\nOk(n(log log n)2/√log n) and distinguishes the sharper printed bounds[8]. The official release describes\nongoing external examination[9]. The supplied Anthropic manuscript reports formal checking but\nexplicitly leaves statement correspondence and mathematical interpretation to readers[3], AppendixE.\nThe supplied OpenAI manuscript is dated 17 October 2026, revised 25 October 2026; the supplied\nAnthropic manuscript is dated 26 October 2026. Their exact input hashes and inspected theorem/page\nlocators are recorded in the supplement. We inspected the relevant printed interfaces and primary-source\nscope descriptions; we did not build those formalizations, establish identity between current repository\nfiles and every pinned version, or independently reconstruct their entire proofs. No sharper theorem is\nlabelled machine-verified here solely because a related Lean statement exists. The supplement supplies\ninspected source code and exact integer/rational tests, source-pair witnesses, menu instances, covering-\ntree certificates, weighted examples and independent enumeration checks. Primary implementations are\nconventional DPLL, branch-and-bound, enumeration and variable elimination. Their finite execution\ncounts and benchmark timings do not implement the preprints’ asymptotic algorithms or establish a\npractical general SAT speedup. Exact rational arithmetic, asserted checks and actual oracle access\nremain part of the reproducibility contract."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      377.7619934082031,
+      548.9373779296875,
+      457.0548400878906
+    ],
+    "text": "Reproduction.\nThe top-level build.py builds this manuscript in a disposable source copy. re\nproduce.py--check validates the scoped input hashes, Python syntax and local-module closure;\nreproduce.py--outputPATH runs the declared checks in a disposable expanded tree and retains per-job\nreceipts, logs and products. The supplement’s evidence guide distinguishes original arithmetic/certificate\nchecks from focused input-schema regressions. Assertions are part of the verification contract: optimized\nPython execution with -O is rejected by the runner and public certificate module."
+  },
+  {
+    "page": 10,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      477.30072021484375,
+      455.1742858886719,
+      491.64691162109375
+    ],
+    "text": "5\nLimitations and relation to source–readout research"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      504.2319641113281,
+      549.0062255859375,
+      610.07080078125
+    ],
+    "text": "The abstract completion order and internal-identifiability ceilings are unchanged. Our finite tools\nmake a nominated sufficiency question effective and optimize access within a declared menu; they\ndo not select a physically separate or ontologically unique source. In continuous projected dynamics,\nthe existing all-initial-state closure criterion remains a separate theorem[12]. A small tensor response\nquotient is not a quantum-memory minimum, and a computationally reconstructed distinction is not\nautomatically a readable physical record. The conditional asymptotic transfers do not supply a better\ngeneral SAT exponent than their external inputs. Wider novelty and publication priority require\nseparate assessment."
+  },
+  {
+    "page": 10,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      630.8696899414062,
+      244.67262268066406,
+      645.2158813476562
+    ],
+    "text": "Computational assistance"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      657.8856811523438,
+      364.30908203125,
+      668.7947998046875
+    ],
+    "text": "AI assistance was used for review and computational checking."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      64.56493377685547,
+      550.0419311523438,
+      96.86087036132812
+    ],
+    "text": "A\nExact rational weighted contraction and target-dependent preci-\nsion"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      109.45867156982422,
+      549.5795288085938,
+      255.9317626953125
+    ],
+    "text": "The supplied OpenAI preprint’s Appendix D.1[7] contracts Boolean-wire networks over a truncated\npolynomial ring modulo a power of two. Rational signed weights are not an automatic instance of\nthat coefficient ring. We give an explicit transfer, including signed recovery and all precision costs,\nand a sharp improvement when the target supplies an independently justified interval. The resulting\nsource-likelihood interface is useful without implementing the paper’s asymptotic contraction algorithm.\nWeighted sum–product and variable elimination are established methods. Scott–Sorkin[13], Sections\n1–2 and 6, treat polynomial and ring-valued constraint satisfaction; Kschischang–Frey–Loeliger [4],\nSections II–III, explain factorized marginalization and its relation to forward/backward algorithms.\nWe do not claim weighted contraction, denominator clearing, modular reconstruction or dynamic\nprogramming as newly discovered techniques. The contribution here is their precise transfer to the\nsupplied ETH theorem and a checked, typed interface for the nominated source–readout tasks."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      272.9923400878906,
+      414.358154296875,
+      284.9475402832031
+    ],
+    "text": "A.1\nA rational factor model with explicit arithmetic costs"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      291.99090576171875,
+      547.2556762695312,
+      318.8457946777344
+    ],
+    "text": "Let x ∈{0, 1}N, and let Tv(x|Sv) ∈Q be explicitly supplied tables, with |Sv| ≤a. Negative entries are\npermitted for algebraic contraction, though they are not probabilities. Write"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      205.42300415039062,
+      336.51934814453125,
+      253.70895385742188,
+      349.24078369140625
+    ],
+    "text": "Z =\n∑︂"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      228.1959991455078,
+      353.1603088378906,
+      263.6773376464844,
+      361.8520812988281
+    ],
+    "text": "x∈{0,1}N"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      267.8890075683594,
+      327.92510986328125,
+      280.6212158203125,
+      346.48193359375
+    ],
+    "text": "F\n∏︂"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      266.6390075683594,
+      336.51934814453125,
+      384.07696533203125,
+      360.6340637207031
+    ],
+    "text": "v=1\nTv(x|Sv),\nI =\n∑︂"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      374.6709899902344,
+      338.17681884765625,
+      406.5823974609375,
+      359.8052062988281
+    ],
+    "text": "v\n|Sv|."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      371.21917724609375,
+      547.3305053710938,
+      437.97479248046875
+    ],
+    "text": "The table index convention, scope order and declared unused variables are part of the input. Let L be\nthe total binary description length and let b bound numerator and positive-denominator bit length of\neach rational entry. For each tensor take the positive least common denominator qv of its entries, and\nset\nWv = qvTv ∈Z2|Sv|,\nQ =\n∏︂"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      276.4960021972656,
+      423.2091369628906,
+      450.8192138671875,
+      446.90423583984375
+    ],
+    "text": "v\nqv,\nAv = max |Wv|,\nB = 2N ∏︂"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      442.24700927734375,
+      425.41619873046875,
+      468.7567443847656,
+      446.90423583984375
+    ],
+    "text": "v\nAv."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      451.7378234863281,
+      548.7193603515625,
+      571.19580078125
+    ],
+    "text": "Then Z = Zint/Q for an integer Zint satisfying |Zint| ≤B. For fixed a, each qv and each integer\nentry has Oa(b) bits, so log2(B + 1) = O(N + Fb). Zero tensors, isolated scalar tensors and unused\nsource variables can be handled directly. In particular, u unused variables multiply the contraction\nby 2u; they are not silently omitted. In the theorem below all scalar entries and these factors of two\nremain in the same modular integer contraction. The interval therefore refers to the original Zint,\nwith no further restoration multiplier after decoding. An implementation may multiply known integer\nscalar factors modulo 2P before decoding. If it instead decodes a smaller residual contraction, it must\nderive a new interval and denominator for that residual problem. Scalar products require their actual\ninput/output-bit costs in either case."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.08599853515625,
+      580.3720092773438,
+      547.81591796875,
+      659.1117553710938
+    ],
+    "text": "Theorem A.1 (Exact rational transfer of OpenAI Appendix D.1). Given a justified integer bound\nL0 ≤Zint ≤U0, choose P ≥1 with 2P > U0 −L0. The factor model can be transformed into a bipartite\nBoolean-wire tensor network with at most 4I wires and maximum degree ∆≤max{a, 3}, retaining\nscalar vertices as described above. Its integer entries reduced modulo 2P are instances of Appendix D.1\nwith truncation order one.\nLet E′ and V ′ be the actual transformed wire and vertex counts and put"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      242.55999755859375,
+      665.3916625976562,
+      369.4416809082031,
+      680.8057861328125
+    ],
+    "text": "s = 2 + E′ + V ′ + P + ∆2."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      63.50600051879883,
+      691.5050048828125,
+      547.1976928710938,
+      729.5968017578125
+    ],
+    "text": "Conditional on the supplied OpenAI preprint’s Theorem D.1, the contraction has deterministic bit\ncomplexity\npoly(s + L + N) 2O(s/√log s)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      67.16098022460938,
+      547.203125,
+      132.351806640625
+    ],
+    "text": "and polynomial space. The recovered value is the exact signed rational Z. For bounded arity, fixed\nentry bit length and no isolated scalar factors or unused source variables, s = O(E′) with the crude\nbound above; thus the time is subexponential in wires. Growing precision must remain in s. Retaining\nmany scalar vertices or unused-variable multipliers can increase V ′ or P without increasing E′; merely\npreprocessing those factors does not remove their cost from the full-integer formulation above."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      143.9586944580078,
+      549.6160278320312,
+      398.7527770996094
+    ],
+    "text": "Proof. Replace every occurrence of a variable by a port of its factor. Enforce agreement of its ports by\na tree of equality tensors of degree at most three. A variable appearing once uses the unary tensor\n(1, 1), twice uses a binary equality tensor, and d ≥3 occurrences use d −2 trivalent equality vertices.\nEvery assignment of the original bit extends uniquely to the tree; inconsistent leaf values give zero.\nThere are at most 2I edges before bipartization. Subdivide each edge with a binary equality tensor,\nplacing all original vertices on one side and all subdivision vertices on the other. This at most doubles\nthe number of edges and preserves the contraction, because the two new edge bits must agree. The\ntransformed maximum degree is at most max{a, 3}.\nReduce the integer tables Wv modulo 2P , leaving equality entries zero or one. Reduction is a ring\nhomomorphism, so contraction gives Zint mod 2P . Exact table access and reduction cost polynomial\ntime in the description and precision; this meets the entry-evaluator hypothesis of Theorem D.1. Our\nconservative s makes all its edge, vertex, degree and precision conditions hold, with fixed absolute\nconstants. The theorem gives the displayed time and space. There is exactly one integer in [L0, U0]\nwith the returned residue, since two distinct such integers would differ by at least 2P > U0 −L0. Divide\nthe recovered full integer by Q to obtain Z.\nFor fixed arity and entry bits, the crude interval [−B, B] needs P = O(N + F). Under the stated\nabsence of isolated scalar factors and unused source variables, N, F = O(I) = O(E′) for a nonempty\nconstructed network; its vertex and degree bounds have the same order. This proves the last assertion.\nBounded exceptional sizes are handled directly as in Theorem D.1."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      410.2749938964844,
+      548.4774780273438,
+      475.4657897949219
+    ],
+    "text": "The generic transfer is not uniformly subexponential in the original source bits if an encoding\nintroduces many wires or if P grows much faster than the wire count. For example, an O(E′ log E′)\npadding parameter does not give a subexponential-in-E′ bound from the displayed formula. Direct\nenumeration, low-treewidth elimination or a small transfer matrix may already be faster.\nThe\nimplementation reports these distinctions rather than promising a practical asymptotic speedup."
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      492.9673767089844,
+      354.1517028808594,
+      504.9225769042969
+    ],
+    "text": "A.2\nA sharp target-relative arithmetic interface"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.9630126953125,
+      514.3381958007812,
+      547.2844848632812,
+      552.3707885742188
+    ],
+    "text": "Theorem A.2 (Interval-assisted reconstruction and target descent). For all integers in a nonempty\ninterval [L0, U0], reduction modulo M = 2P is injective if and only if M > U0 −L0. Given a residue r\nand this promise, the unique answer is"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      196.65000915527344,
+      562.8378295898438,
+      286.3141174316406,
+      581.2817993164062
+    ],
+    "text": "z = r + M\n⌈︃L0 −r"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      265.375,
+      577.8421630859375,
+      275.9568176269531,
+      588.7512817382812
+    ],
+    "text": "M"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      287.81500244140625,
+      563.9783325195312,
+      415.36761474609375,
+      581.2817993164062
+    ],
+    "text": "⌉︃\n,\nr ∈{0, . . . , M −1},"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      598.976806640625,
+      547.19873046875,
+      637.1397705078125
+    ],
+    "text": "provided z ≤U0; otherwise the residue contradicts the interval. For a nominated target f on an\nadmitted integer set S, knowing only z mod M determines f(z) exactly if and only if f is constant on\neach residue class intersected with S."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      648.7117309570312,
+      547.4544067382812,
+      727.4008178710938
+    ],
+    "text": "Proof. An interval of width smaller than M contains no distinct pair differing by a nonzero multiple\nof M. If its width is at least M, the two integers L0, L0 + M both belong to it and have the same\nresidue. The formula chooses the least integer in the residue class not below L0, proving recovery and\nits exact failure test. For the target statement, a residue-only answer must take one value on each\nclass. Constancy makes that value well defined and sufficient, while two unequal target values in one\nclass preclude it."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.16098022460938,
+      548.9813842773438,
+      213.64678955078125
+    ],
+    "text": "Thus it is the width of a justified interval, not its distance from zero, that determines full-value\nprecision. A coarse target can need still fewer bits: parity needs P = 1 on any interval. Conversely the\ntarget f(z) = 1{z = 0} on {0, . . . , U0} needs 2P > U0 whenever U0 ≥1. Otherwise zero and 2P have\nidentical residues and different answers. A generic decision-only contraction therefore cannot drop\nthis precision merely because it returns one bit. If the admitted interval already excludes zero, that\nparticular decision is immediate.\nThe residue criterion is an instance of Rodgers’s target-relative descent principle. It supplies a sharp\narithmetic adapter, not a new source of information. The interval must be justified independently;\nit cannot be inferred from the single modular residue. The code deliberately labels a caller-supplied\ninterval as a premise. An incorrect narrow interval can silently select the wrong congruent integer,\nwhich no residue-only algorithm can prevent."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.79999542236328,
+      230.86241149902344,
+      296.3004150390625,
+      242.81761169433594
+    ],
+    "text": "A.3\nCompleted record-law calculation"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      252.17398071289062,
+      547.209228515625,
+      276.716796875
+    ],
+    "text": "For a concrete nonnegative source, take hidden bits X0, . . . , X4, initial distribution (1/2, 1/2) and\ntransitions"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      262.8110046386719,
+      284.461181640625,
+      282.85101318359375,
+      295.3837890625
+    ],
+    "text": "P ="
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      285.8760070800781,
+      275.0923767089844,
+      336.45037841796875,
+      302.1418151855469
+    ],
+    "text": "(︄\n4/5\n1/5\n1/5\n4/5"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      336.4530029296875,
+      275.0923767089844,
+      344.3433837890625,
+      285.0549621582031
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      346.1579895019531,
+      284.4612121582031,
+      349.1907043457031,
+      295.3703308105469
+    ],
+    "text": "."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      311.419189453125,
+      547.6624755859375,
+      376.5387878417969
+    ],
+    "text": "At each tick emit Yt = Xt with probability 6/7 and its complement with probability 1/7, independently\nconditional on the hidden trajectory. These preparations and emission laws define a conventional finite\nstochastic source. They are not inferred from a readout or a Born-selection argument. For the retained\nword y = (1, 0, 1, 1, 0), factor contraction and an independently implemented forward recursion both\ngive"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      179.01300048828125,
+      375.61669921875,
+      428.76123046875,
+      401.3887939453125
+    ],
+    "text": "Pr(Y = y) =\n848\n60025,\nPr(X0 = 0 | Y = y) = 1501"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      406.9429931640625,
+      382.9831848144531,
+      432.9897155761719,
+      401.3887939453125
+    ],
+    "text": "7420."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      404.468994140625,
+      549.3267211914062,
+      496.7577819824219
+    ],
+    "text": "The second is a posterior under the nominated source measure, not an identification of the actual\nhidden initial bit.\nClearing the ten factor denominators gives Q = 21 008 750 and scaled answer 296 800. The naive\nmagnitude calculation supplies B = 63 700 992, so the symmetric integer interval requires P = 27.\nThe initial distribution and transition rows sum to one, and each emitted word factor is at most 6/7.\nConsequently the event probability is between zero and (6/7)5, independently of computing its exact\nvalue. This yields the tighter scaled interval"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      225.63998413085938,
+      506.3873291015625,
+      386.36431884765625,
+      522.182861328125
+    ],
+    "text": "0 ≤Zint ≤\n⌊︂\nQ(6/7)5⌋︂\n= 9 720 000,"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      533.5910034179688,
+      547.9224243164062,
+      639.4298095703125
+    ],
+    "text": "requiring only P = 24. Both modular evaluations reconstruct the same answer. This is a three-bit\nprecision saving for a specified task; it is not an empirical speedup or a new general worst-case ETH\nbound.\nFor arbitrary nonnegative source factors, the adapter also supports exact event indicators and\nsupplied record likelihoods. It normalizes numerator and denominator separately and returns an\nexplicit undefined status if the conditioning weight is zero. Signed tables are rejected by the probability\ninterface even though the algebraic contraction backend accepts them. No probability is assigned to an\nimpossible observation, and no arbitrary uniform prior is silently introduced."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      656.6444091796875,
+      395.8394775390625,
+      668.599609375
+    ],
+    "text": "A.4\nVerification, backends and an easy-instance ceiling"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      677.9559936523438,
+      549.2694702148438,
+      729.5968017578125
+    ],
+    "text": "The reusable weighted.py exposes exact rational factor evaluation, ordinary variable elimination,\ninteger denominator clearing, modular enumeration, interval decoding, posterior queries and a Boolean-\nwire network converter. It uses Python’s exact integers and Fraction. Its backends are not an\nimplementation of the ETH paper’s recursive contraction theorem."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.16098022460938,
+      547.799560546875,
+      145.90081787109375
+    ],
+    "text": "verify_weighted.py checks 140 random signed rational factor models against independently\norganized enumeration, modular evaluation and variable elimination. It checks 3 400 signed interval\ndecodings, the sharp lower-precision failures, parity-versus-zero target counterexamples, and explicit\nport-network conversions including high incidence, isolated scalars and unused variables. It also rejects\nsigned probability measures and handles impossible conditioning.\nAs a nontrivial signed cyclic example, use the same matrix on every edge,"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      155.64601135253906,
+      166.72621154785156,
+      178.9369354248047,
+      177.6488037109375
+    ],
+    "text": "M ="
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      181.96401977539062,
+      157.35633850097656,
+      246.4801025390625,
+      184.40582275390625
+    ],
+    "text": "(︄\n1/2\n−2/3\n3/5\n−7/11"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      246.48101806640625,
+      157.35633850097656,
+      254.37139892578125,
+      167.31893920898438
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      256.1860046386719,
+      164.92835998535156,
+      335.08197021484375,
+      179.2847900390625
+    ],
+    "text": ",\nZn =\n∑︂"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      310.48199462890625,
+      181.19239807128906,
+      344.7857360839844,
+      189.88412475585938
+    ],
+    "text": "x∈{0,1}n"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      347.0999755859375,
+      164.9284210205078,
+      359.8321838378906,
+      174.89102172851562
+    ],
+    "text": "∏︂"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      352.0229797363281,
+      166.7262725830078,
+      456.3566589355469,
+      189.165283203125
+    ],
+    "text": "i\nMxi,xi+1,\nxn = x0."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      201.07110595703125,
+      548.7225341796875,
+      335.5987854003906
+    ],
+    "text": "An independently computed matrix power gives Zn = Tr(Mn), which agrees with the adapter at\nn = 3, 5, 6, 40. The small cases also agree with exhaustive and modular enumeration. For n = 40,\nordinary elimination uses 618 factor-entry evaluations with maximum bucket scope three, where\nexhaustive enumeration would inspect 240 assignments. This is a verified operation-count advantage\nof an established low-width method; the transfer-matrix solution is also polynomial. It is specifically\nevidence against replacing every easy source calculation with the general ETH algorithm.\nThe universal claim is the conditional theorem transfer and the exact reconstruction proof. Finite\ndiagnostics check the implementation, not the ETH paper’s whole proof. We do not establish continuous\nCP feasibility, a new trine-source resource bound, quantum outcome selection or a consciousness\nmechanism. Each would require its own additional interface."
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      356.2864990234375,
+      550.0336303710938,
+      388.6759033203125
+    ],
+    "text": "B\nTarget-sensitive summary preprocessing and a completed re-\nstricted improvement"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      401.26519775390625,
+      549.3991088867188,
+      656.1408081054688
+    ],
+    "text": "The supplied OpenAI preprint’s summary routine (Lemma 3.2, pp. 22–23) scans integer tuples in a\nbox of size (2D + 1)c. Its Definition 3.1 requires rational-linear replacement forms to be invariant\nunder kernels of the specified integer measurement matrices. The following construction does not\nreplace those conditions by an unproved nonlinear invariant. It preprocesses a declared finite boundary\nresponse before invoking a general contraction method, and optimizes the retained information for a\nspecified output task. A concrete rational source example then reduces an exact weighted calculation’s\narithmetic work from quadratic to linear in its horizon. This is a restricted reciprocal benefit, not an\nimproved ETH worst-case exponent.\nThe algebra uses established Boolean Fourier analysis [6] and finite-state dynamic programming.\nThe contribution relative to the source–readout completion baseline is an executable synthesis of\nminimal parity summaries, explicit source/readout and retained-record conditions, and the complete\ntask-specific cost comparison. It is not a new general Fourier theorem, the first use of dynamic\nprogramming or a publication-priority claim. It specializes the canonical target-relative completion\nprinciple rather than adding a new ontological premise. Rodgers’s target-family completion proposition\nand relation-versus-target completion theorem already give the abstract coarsening and its universal\nproperty[11]. The parity synthesis below is a restricted executable realization and cost analysis, not a\nstronger abstract minimal-completion theorem. For the boundary example the initial readout can be\nconstant; when a nonconstant original readout must be retained, its coordinates must remain in the\nsufficient response rather than silently being dropped."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      355.5385437011719,
+      78.39957427978516
+    ],
+    "text": "B.1\nThe finite pushforward identity and its cost"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      83.79702758789062,
+      548.75634765625,
+      130.49990844726562
+    ],
+    "text": "Let X be a finite boundary domain, µ : X →Q a supplied weight function, F : X →Qq a response,\nand h : X →Y a summary such that F = F ◦h. Then\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      162.7949981689453,
+      120.53730773925781,
+      263.4869689941406,
+      144.951171875
+    ],
+    "text": "x∈X\nµ(x)F(x) =\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      241.7010040283203,
+      137.40975952148438,
+      270.8636474609375,
+      145.49301147460938
+    ],
+    "text": "y∈h(X)"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      272.69000244140625,
+      120.53736877441406,
+      413.0589599609375,
+      133.2578125
+    ],
+    "text": "F(y)M(y),\nM(y) =\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      388.6529846191406,
+      122.33528137207031,
+      548.4929809570312,
+      145.49313354492188
+    ],
+    "text": "x:h(x)=y\nµ(x).\n(1)"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      154.05398559570312,
+      548.966552734375,
+      247.33407592773438
+    ],
+    "text": "This follows by partitioning the finite sum into disjoint fibres. Signed rational weights are allowed;\nwhen weights are probabilities, the right side is the ordinary pushforward probability calculation. Its\ncost is the cost of constructing or evaluating F and computing M, plus the final sum. A small summary\nalone does not make an arbitrary weight function easy to push forward.\nThe group-product version clarifies the link to Lemma 3.2.\nPartition finite assignments into\nx1, . . . , xr and choose summaries hg(xg). Suppose factor product Ag depends only on xg and the other\nsummaries. For an attainable tuple y = (y1, . . . , yr) define"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      229.82899475097656,
+      254.58131408691406,
+      304.6429443359375,
+      268.28216552734375
+    ],
+    "text": "Bg(y) =\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      271.68896484375,
+      256.379150390625,
+      382.17431640625,
+      280.087890625
+    ],
+    "text": "xg:hg(xg)=yg\nAg(xg, y−g)."
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      64.79995727539062,
+      288.3486633300781,
+      207.59490966796875,
+      310.04888916015625
+    ],
+    "text": "Distributivity gives\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      185.5919647216797,
+      315.4020690917969,
+      214.50497436523438,
+      324.05126953125
+    ],
+    "text": "x1,...,xr"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      217.0139617919922,
+      300.0863037109375,
+      229.7461700439453,
+      310.04888916015625
+    ],
+    "text": "∏︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      221.22096252441406,
+      300.0863037109375,
+      360.6959228515625,
+      323.3721618652344
+    ],
+    "text": "g\nAg(xg, h−g(x−g)) =\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      327.2919616699219,
+      316.6913146972656,
+      346.82464599609375,
+      326.6539001464844
+    ],
+    "text": "y∈∏︁"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      346.8189697265625,
+      318.05908203125,
+      379.6966247558594,
+      329.51617431640625
+    ],
+    "text": "g hg(Xg)"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      381.5159606933594,
+      300.0863037109375,
+      394.2481689453125,
+      310.04888916015625
+    ],
+    "text": "∏︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      385.72296142578125,
+      301.8851318359375,
+      426.4111633300781,
+      323.3721618652344
+    ],
+    "text": "g\nBg(y)."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      334.71923828125,
+      547.868408203125,
+      399.7388000488281
+    ],
+    "text": "This is a finite-fibre identity, not a new analytic assumption. Nonlinear Boolean summaries are admitted\nonly after proving this factorization for the actual response. Computing the image, fibre sums and\nrepresentatives is charged. In particular, one may not use the identity to assert that an arbitrary\nparity summary supplies the rational-kernel condition for the ETH paper’s Taylor-shifted forms at\nevery interpolation node."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      416.6833801269531,
+      406.6590270996094,
+      428.6385803222656
+    ],
+    "text": "B.2\nAn exact minimum within the parity-summary class"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      434.0359802246094,
+      547.3787231445312,
+      476.0867919921875
+    ],
+    "text": "Write χa(y) = (−1)a·y for a, y ∈Fb\n2. Every vector-valued rational response has the unique Walsh\nexpansion\nF(y) =\n∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      214.7370147705078,
+      479.5199279785156,
+      233.4033203125,
+      491.5043640136719
+    ],
+    "text": "a∈Fb\n2"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      235.7200164794922,
+      462.8538513183594,
+      380.9189758300781,
+      479.8649597167969
+    ],
+    "text": "ˆ︁F(a)χa(y),\nˆ︁F(a) = 2−b ∑︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      371.4820251464844,
+      465.1642150878906,
+      434.5672302246094,
+      486.6522521972656
+    ],
+    "text": "y\nF(y)χa(y)."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      498.57781982421875,
+      547.25146484375,
+      523.1907958984375
+    ],
+    "text": "Let KF be the binary linear span of the nonzero-frequency masks with ˆ︁F(a) ̸= 0; the zero mask has no\neffect on its rank."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      531.7582397460938,
+      547.2044677734375,
+      572.6732788085938
+    ],
+    "text": "Theorem B.1 (Minimal sufficient parity summary). On the full Boolean boundary cube, F factors\nthrough y ↦→Hy over F2 if and only if\nKF ⊆rowF2 H."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      577.10302734375,
+      547.193115234375,
+      628.7448120117188
+    ],
+    "text": "Thus the minimum parity-summary rank is dim KF . A basis of KF and the coordinates of each\nsupported frequency in that basis supply an exact constructive certificate. For any declared rational\nlinear output projection L, KLF ⊆KF ; strict inclusion can remove summary coordinates required by\nthe full response."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      637.2378540039062,
+      549.3933715820312,
+      729.5968017578125
+    ],
+    "text": "Proof. If F factors through H, it is unchanged by translation by every u ∈ker H. Fourier uniqueness\ngives ˆ︁F(a) = χa(u) ˆ︁F(a), so each supported a is orthogonal to ker H and belongs to row H. Conversely,\nif every supported a lies in that row space, each character χa is a function of Hy, hence so is their sum.\nA basis gives attainment, and any sufficient row space has dimension at least dim KF . Applying L\nto the expansion can annihilate coefficients but cannot introduce a new frequency, proving the final\nstatement. All arithmetic for constructing a basis is exact binary Gaussian elimination; no numerical\nrank threshold is involved."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.23219299316406,
+      549.5735473632812,
+      132.34701538085938
+    ],
+    "text": "If s masks are supplied sparsely, basis synthesis takes polynomial work in s, b, q and coefficient bit\nlength, without a full cube scan. Obtaining the sparse expansion can nevertheless require exponential\nwork. The minimum is only among parity summaries, not all nonlinear readouts: Hamming weight on\nb bits has Walsh-support rank b but only b + 1 output values. Restrictions to an admissible proper\nsubset of the cube can also change the minimum, so the full-domain hypothesis must not be dropped."
+  },
+  {
+    "page": 16,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      149.7454071044922,
+      437.0013122558594,
+      161.7006072998047
+    ],
+    "text": "B.3\nA positive stochastic response and its requested marginal"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      171.06118774414062,
+      547.5477905273438,
+      195.5997314453125
+    ],
+    "text": "For a boundary word y = (y1, . . . , yb), let g be a noisy record of its global parity and let z1, . . . , zb−1\nbe noisy records of the individual first b −1 bits. Specify the response law"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      142.27496337890625,
+      206.17225646972656,
+      275.50146484375,
+      228.20672607421875
+    ],
+    "text": "P(g, z | y) = 1 + α(−1)g+∑︁"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      275.4969482421875,
+      207.5400390625,
+      286.9219665527344,
+      218.99713134765625
+    ],
+    "text": "i yi"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      244.1540069580078,
+      224.7807159423828,
+      249.60855102539062,
+      235.6898193359375
+    ],
+    "text": "2"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      290.92901611328125,
+      206.78787231445312,
+      305.370849609375,
+      225.44900512695312
+    ],
+    "text": "b−1\n∏︂"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      291.29901123046875,
+      231.753173828125,
+      304.9996032714844,
+      239.73312377929688
+    ],
+    "text": "i=1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      308.3860168457031,
+      208.2421875,
+      376.884033203125,
+      220.82684326171875
+    ],
+    "text": "1 + β(−1)zi+yi"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      340.4049987792969,
+      215.29605102539062,
+      421.8231201171875,
+      235.6898193359375
+    ],
+    "text": "2\n,\nα = 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      417.59100341796875,
+      215.29598999023438,
+      465.4971008300781,
+      231.32308959960938
+    ],
+    "text": "2,\nβ = 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      461.2650146484375,
+      217.28419494628906,
+      548.4805297851562,
+      231.32308959960938
+    ],
+    "text": "3.\n(2)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      249.16098022460938,
+      548.8599243164062,
+      368.5487976074219
+    ],
+    "text": "Every factor is strictly positive, and independent private noise makes the normalized joint record\nlaw. The source and fresh noise stock are independent. This is an ordinary classical stochastic model\nwith explicit rational probabilities. It is not a quantum measurement construction or a selection of a\nprobability law from geometry. Generating g at the deadline requires a parity accumulator and a clock;\nany history-correlated controller available to later production belongs in the physical causal-memory\naccount. The workspace comparison below concerns the mathematical calculation of a probability, not\na reduction of that physical apparatus or of its retained archive.\nThe nominated full response can be the b individual zero-record probabilities, rather than its\nexponentially large joint table:"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      173.11000061035156,
+      388.6831970214844,
+      207.37547302246094,
+      399.6058044433594
+    ],
+    "text": "F(y) ="
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      210.41099548339844,
+      379.3133544921875,
+      271.7314758300781,
+      393.1849060058594
+    ],
+    "text": "(︄\n1 + αχ1(y)"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      242.88499450683594,
+      381.3031311035156,
+      334.13348388671875,
+      407.0887756347656
+    ],
+    "text": "2\n, 1 + βχe1(y)"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      303.82501220703125,
+      380.6891784667969,
+      424.9595031738281,
+      407.0887756347656
+    ],
+    "text": "2\n, . . . , 1 + βχeb−1(y)"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      390.135009765625,
+      396.1796875,
+      395.5895690917969,
+      407.0887756347656
+    ],
+    "text": "2"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      426.1540222167969,
+      379.3133239746094,
+      434.0444030761719,
+      389.2759094238281
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      435.8600158691406,
+      388.68316650390625,
+      438.8927307128906,
+      399.59228515625
+    ],
+    "text": "."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      419.7112121582031,
+      549.3196411132812,
+      498.4088134765625
+    ],
+    "text": "Its supported masks 1, e1, . . . , eb−1 span all b dimensions, so every parity summary sufficient for this\nfull response has rank b. The requested target is only P(g = 0 | y), obtained by the first-coordinate\nprojection. Its minimum parity-summary rank is one, with the two possible summaries ∑︁\ni yi mod 2.\nNeither the nuisance outcomes nor their physical records are erased by this mathematical calculation;\nthey are unread by the nominated target. Computing their complete law remains a different task.\nThere is an exact compositional elimination before any ETH deformation:"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      236.67800903320312,
+      509.3119812011719,
+      251.07395935058594,
+      527.8590087890625
+    ],
+    "text": "1\n∑︂"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      234.91200256347656,
+      534.0311279296875,
+      252.8284149169922,
+      542.7809448242188
+    ],
+    "text": "zi=0"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      255.8470001220703,
+      510.65313720703125,
+      352.8626708984375,
+      524.2182006835938
+    ],
+    "text": "1 + β(−1)zi(1 −2yi)"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      301.62701416015625,
+      519.6951904296875,
+      377.09527587890625,
+      538.1007690429688
+    ],
+    "text": "2\n= 1."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      552.6792602539062,
+      547.3541259765625,
+      604.2957763671875
+    ],
+    "text": "The equality holds as a rational polynomial identity in yi, not just on Boolean inputs. Thus tracing\nthese independent noise records locally costs O(b) and yields the target response without constructing\na 2b-entry output table. Conditional or adaptive access to the zi would change the task and invalidate\nthis omission."
+  },
+  {
+    "page": 16,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      621.6893920898438,
+      317.86767578125,
+      633.6445922851562
+    ],
+    "text": "B.4\nAn end-to-end exact cost comparison"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      643.0846557617188,
+      386.5093994140625,
+      653.9937744140625
+    ],
+    "text": "Use a stationary binary Markov source, with one clock tick per bit,"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      219.83700561523438,
+      666.7626953125,
+      344.9275817871094,
+      685.0518188476562
+    ],
+    "text": "τ = (4/7, 3/7),\nT = 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      336.7449951171875,
+      681.6256713867188,
+      347.65411376953125,
+      692.5347900390625
+    ],
+    "text": "12"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      350.6679992675781,
+      664.7593383789062,
+      379.42413330078125,
+      691.8087768554688
+    ],
+    "text": "(︄\n9\n3\n4\n8"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      379.427001953125,
+      664.7593383789062,
+      387.3173828125,
+      674.7219848632812
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      389.1319885253906,
+      674.1292114257812,
+      392.1647033691406,
+      685.038330078125
+    ],
+    "text": "."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      705.0540161132812,
+      547.7717895507812,
+      729.6063842773438
+    ],
+    "text": "The initial stock has the displayed distribution and is independent of future transition noise. All\ntransition weights are positive, hence the full Boolean boundary is admissible. The task is one exact"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      261.8728942871094,
+      78.15478515625
+    ],
+    "text": "predicted record probability at horizon b:"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      219.09201049804688,
+      89.21229553222656,
+      372.5145263671875,
+      113.02374267578125
+    ],
+    "text": "pb = P(g = 0) = 1 + α E[(−1)\n∑︁"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      342.4070129394531,
+      90.580078125,
+      392.90972900390625,
+      118.72979736328125
+    ],
+    "text": "i Yi]\n2\n."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      127.39999389648438,
+      547.3657836914062,
+      192.59075927734375
+    ],
+    "text": "A fair integer-summary comparator keeps Hamming weight W = ∑︁\ni Yi, not the needlessly large\nidentity summary. W is a single integer-linear row with b + 1 attainable values (the paper’s symmetric\nbox would contain 2b + 1). It is sufficient for this target. A standard exact count-histogram dynamic\nprogram stores last bit and current weight. At length t it has 2t nonzero integer cells. Summing all\noutgoing transitions over t = 1, . . . , b −1 requires exactly"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      262.5419921875,
+      206.03477478027344,
+      349.4613037109375,
+      218.7867431640625
+    ],
+    "text": "UW (b) = 2b(b −1)"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      230.69764709472656,
+      547.4390258789062,
+      283.24505615234375
+    ],
+    "text": "multiply-by-constant/add updates.\nThe target quotient instead retains last bit and parity. It has four nonzero cells from length two\nonwards, and requires exactly\nUparity(b) = 8b −12\n(b ≥2)."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      291.28497314453125,
+      547.2489013671875,
+      317.6058044433594
+    ],
+    "text": "Both programs start from integer weights 4, 3, use transition numerators 9, 3, 4, 8, and share final\ndenominator Db = 7 12b−1. If their histogram is H, they return the same exact rational"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      242.58099365234375,
+      325.5020751953125,
+      369.4217224121094,
+      354.07122802734375
+    ],
+    "text": "pb = 2Db + ∑︁\ns(−1)sH(s)\n4Db\n."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      363.274169921875,
+      547.651123046875,
+      455.4917907714844
+    ],
+    "text": "For the weight program s is an integer count; for the target program it is its parity. Equivalence follows\neither by summing count states modulo two at each update or directly from Eq. (1).\nEach integer has O(b) bits and updates use only multiplication by a fixed small integer and\naddition. Thus the displayed implementations have bit-work upper bounds O(b3) versus O(b2) and\ninteger-workspace bounds O(b2) versus O(b), respectively. These are explicit algorithm bounds, not\nlower bounds against all possible algorithms. A specialized signed transfer-matrix method can also\nexploit the same target and need not form a full weight histogram."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      160.58900451660156,
+      473.04718017578125,
+      463.239990234375,
+      483.96978759765625
+    ],
+    "text": "b\nW updates\nparity updates\nW live cells\nparity live cells"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      148.90699768066406,
+      492.08270263671875,
+      463.0895690917969,
+      543.6387939453125
+    ],
+    "text": "8\n112\n52\n16\n4\n32\n1984\n244\n64\n4\n128\n32512\n1012\n256\n4\n256\n130560\n2036\n512\n4"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      560.5188598632812,
+      549.6043701171875,
+      707.0747680664062
+    ],
+    "text": "At b = 256 the exact update ratio is 32640/509 ≃64.13. The gain includes the inexpensive local output\nprojection and the pushforward calculation; it is not merely a comparison of summary cardinalities\nwith their construction cost omitted. Wall-clock timings are diagnostic and platform dependent. Both\nmethods compute the same one target probability under the same fixed rational source law. The\nfactored input has length O(b); compile_target_record checks the local nuisance cancellation with\n2(b −1) coefficient additions and constructs the two target Walsh coefficients directly. It does not first\nbuild the dense full response or perform an exponential Fourier transform. The table counts DP updates\nseparately from this common linear preprocessing. General sparse Fourier synthesis can cost more.\nThis finite-domain integer-summary comparator is not asserted to satisfy Definition 3.1 for the ETH\npaper’s rationally deformed polynomials either; the shared object here is its summary-enumeration\nstage, with a fully proved finite response factorization."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      334.8081359863281,
+      78.39957427978516
+    ],
+    "text": "B.5\nVerification, reciprocal status and limits"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      87.75601196289062,
+      549.2267456054688,
+      315.53680419921875
+    ],
+    "text": "The supplied code compiles sparse vector Walsh data to a basis and an exact frequency-coordinate\ncertificate. Verification checks 254 response instances, 6060 complete small parity-map tests against\nindependent fibre equality, direct source-word enumeration for lengths one through seven, and exact\nagreement of the two integer DPs through length 256. It also checks the Hamming-weight counterexam-\nple to unrestricted nonlinear minimality. The code is a conventional exact preprocessor and reference\nalgorithm; it is not the paper’s external ETH counter or contraction routine.\nThis supplies an explicit answer to the reciprocal question at a restricted level: target-relative\ncompletion can remove unnecessary summary detail and improve a declared weighted calculation\nwithout recovering its full response distribution. It does not prove a new general ETH exponent,\nimprove the best known algorithm for this simple Markov family, or show that the ETH paper overlooked\na universally smaller sufficient summary. To use the parity quotient inside that paper’s own recursive\nTaylor/mode computation, one would additionally need a factorization and coefficient certificate at\nevery transformed node. No such universal claim is made.\nThe result changes computational organization, not physical access. No individual hidden source\nbit becomes readable through faster marginal calculation. The source, Markov law, independent noise,\ntarget projection, clock and unread-record permissions remain assumptions. No quantum resource\nminimum, Born-selection law or consciousness condition changes."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      336.2247009277344,
+      545.8853149414062,
+      350.5708923339844
+    ],
+    "text": "C\nContext-relative crossing compilation and explicit integer pieces"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      363.32623291015625,
+      549.0257568359375,
+      468.9937744140625
+    ],
+    "text": "The target-summary construction optimizes a finite response summary and a specified weighted dynamic\nprogramme. It does not itself implement a component of Anthropic’s crossing recursion. Here we\nsupply two checked components: an exact context-quotient network compiler, including its effect on the\nactual eight-square gadget, and explicit integer factorizations completing the single-bit rank observation\nin Appendix H of the cited preprint [3]. The quotient principle, Bell basis and single-bit identity are\nestablished mathematics. The contribution is their precise executable interface, coefficient bounds,\nproof of admissible contexts and demonstrated component costs. It is not a new crossing identity or an\nimprovement of the paper’s strongest general exponent."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      486.3843688964844,
+      399.16302490234375,
+      498.3395690917969
+    ],
+    "text": "C.1\nThe full context contract and exact scalar recovery"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      505.31011962890625,
+      549.3538818359375,
+      548.7608032226562
+    ],
+    "text": "Consider a closed integer tensor network on a graph G = (V, E), with one string ze ∈Fλe\n2\nper edge.\nThe tensor at a vertex reads all its incident edge strings. On each edge supply a full-row-rank binary\nmap He : Fλe\n2 →Fre\n2 and supply the vertex tensor in the form"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      233.54501342773438,
+      558.6641845703125,
+      378.4583435058594,
+      570.5671997070312
+    ],
+    "text": "Wv((ze)e∋v) = W v((Heze)e∋v)."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      582.3910522460938,
+      547.8903198242188,
+      620.4838256835938
+    ],
+    "text": "This is a representation promise, not a claim inferred from a few tensor queries.\nThe admitted\nsurrounding contexts are all integer or rational vertex functions of these quotient values, with arbitrary\ndependencies among the incident quotient coordinates."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      631.3438110351562,
+      548.8773803710938,
+      669.5057983398438
+    ],
+    "text": "Theorem C.1 (Context-certified wire quotient). For the declared context class, put D = ∑︁\ne(λe −re).\nThen\nZ =\n∑︂"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      215.6580047607422,
+      672.10107421875,
+      219.59523010253906,
+      680.0711669921875
+    ],
+    "text": "z"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      226.80999755859375,
+      656.7852783203125,
+      239.54220581054688,
+      666.7479248046875
+    ],
+    "text": "∏︂"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      230.97000122070312,
+      656.3760986328125,
+      326.2119445800781,
+      680.0711669921875
+    ],
+    "text": "v\nWv(z) = 2D\n∑︂"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      300.1059875488281,
+      673.3903198242188,
+      319.63763427734375,
+      683.3529663085938
+    ],
+    "text": "y∈∏︁"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      319.6319885253906,
+      672.5733032226562,
+      336.9197998046875,
+      685.7799072265625
+    ],
+    "text": "e Fre\n2"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      339.7339782714844,
+      656.7852783203125,
+      352.4661865234375,
+      666.7479248046875
+    ],
+    "text": "∏︂"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      343.8949890136719,
+      672.10107421875,
+      348.0155334472656,
+      680.0711669921875
+    ],
+    "text": "v"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      354.2829895019531,
+      656.3760986328125,
+      424.18310546875,
+      670.4871826171875
+    ],
+    "text": "W v(y) = 2DZ."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      691.6109619140625,
+      547.2420043945312,
+      729.5968017578125
+    ],
+    "text": "The replacement is valid uniformly over every admitted surrounding context, including signed ones. It\nrequires no enumeration of the discarded fibres. The factor 2D must be restored for the full value; it is\nnot a discarded normalization convention."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      64.36920166015625,
+      547.6463012695312,
+      105.2537841796875
+    ],
+    "text": "Proof. Each He is surjective and has 2λe−re preimages of each output. For each full quotient assignment\ny, every summand in its fibre has the same vertex product. Edge fibres are independent Cartesian\nfactors, so their common cardinality is 2D. Sum over y."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      116.70721435546875,
+      549.6221923828125,
+      290.1217956542969
+    ],
+    "text": "A binary right inverse is found by Gaussian elimination in polynomial work in the supplied matrices.\nThe code checks rank and constructs lifted basis vectors; it does not enumerate 2λe candidates to\nfind a lift. If dense original tables, rather than quotient tables or a proved factorized evaluator, are\nsupplied, establishing the representation can require scanning those tables. That cost cannot be omitted.\nComputing 2DZ writes up to D additional output bits; denominators and output lengths are charged.\nThe context promise is necessary: on one two-bit edge let H retain only the low bit and let both\nendpoint tensors be [z = 0]. The original contraction is one, whereas replacing each by its values at\nrepresentatives 0, 1 and restoring the two-element fibre factor gives two. The tensors do not factor\nthrough H; representative agreement alone was insufficient.\nThis theorem concerns a computational representation of a nominated boundary response. It does\nnot remove an accessible physical archive or shrink a causal quantum memory. Exact symmetry-aware\ntensor representations are well established[15]; their resource minima can depend on topology and\nadmitted symmetry[14]. No unrestricted minimum-bond-dimension assertion follows here."
+  },
+  {
+    "page": 19,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      307.3993835449219,
+      421.79425048828125,
+      319.3545837402344
+    ],
+    "text": "C.2\nTarget projection can spoil an inherited decomposition"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      328.7821960449219,
+      324.6438293457031,
+      339.7048034667969
+    ],
+    "text": "In the paper’s Eq. (27), for three-bit strings p, q, write"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      203.69900512695312,
+      349.93939208984375,
+      281.89752197265625,
+      365.80181884765625
+    ],
+    "text": "σ(p, q) = (−1)\n∑︁"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      281.89300537109375,
+      351.3071594238281,
+      408.3037414550781,
+      365.788330078125
+    ],
+    "text": "i≤j piqj+q1p2p3+p1q2p3+p1p2q3."
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      64.79904174804688,
+      377.9737243652344,
+      156.03184509277344,
+      388.8828125
+    ],
+    "text": "Its Eq. (30) defines"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      119.75804138183594,
+      400.8988342285156,
+      492.3254699707031,
+      411.9627990722656
+    ],
+    "text": "R = [x ⊕y ⊕u ⊕v = 0]σ(x, y)σ(v, u),\nC = [x ⊕y ⊕u ⊕v = 0]σ(x, u)σ(v, y),"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      424.0574035644531,
+      547.7767333984375,
+      489.2397766113281
+    ],
+    "text": "with R + C = 2[x = v][y = u]. Row indices are (x, y) and column indices (u, v); the alternative split\nuses (x, u) and (y, v). The ranks of R in those two directions are (8, 64), and those of C are (64, 8).\nNow admit every surrounding context that depends on each three-bit boundary only through its\nlow bit, H(x) = x mod 2. Let ˜︁R and ˜︁C be the sums of the original pieces over each four-boundary\nfibre. In row order 00, 01, 10, 11, exact enumeration gives"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      172.93199157714844,
+      520.7911987304688,
+      201.29563903808594,
+      535.491943359375
+    ],
+    "text": "˜︁R = 8"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      203.1179962158203,
+      499.4663391113281,
+      211.83526611328125,
+      509.4289245605469
+    ],
+    "text": "⎛"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      203.1179962158203,
+      517.0003051757812,
+      211.83526611328125,
+      545.294921875
+    ],
+    "text": "⎜\n⎜\n⎜\n⎝"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      211.83499145507812,
+      500.46368408203125,
+      280.5186767578125,
+      552.019775390625
+    ],
+    "text": "2\n0\n0\n1\n0\n−1\n2\n0\n0\n2\n−1\n0\n1\n0\n0\n2"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      280.510986328125,
+      499.4663391113281,
+      289.228271484375,
+      509.4289245605469
+    ],
+    "text": "⎞"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      280.510986328125,
+      517.0003051757812,
+      346.2948303222656,
+      545.294921875
+    ],
+    "text": "⎟\n⎟\n⎟\n⎠,\n˜︁C = 8"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      348.1089782714844,
+      499.4663391113281,
+      356.8262634277344,
+      509.4289245605469
+    ],
+    "text": "⎛"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      348.1089782714844,
+      517.0003051757812,
+      356.8262634277344,
+      545.294921875
+    ],
+    "text": "⎜\n⎜\n⎜\n⎝"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      356.8259582519531,
+      500.3088073730469,
+      425.5090637207031,
+      552.019775390625
+    ],
+    "text": "2\n0\n0\n−1\n0\n1\n2\n0\n0\n2\n1\n0\n−1\n0\n0\n2"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      425.501953125,
+      499.4663391113281,
+      434.21923828125,
+      509.4289245605469
+    ],
+    "text": "⎞"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      425.501953125,
+      517.0003051757812,
+      439.0696716308594,
+      545.294921875
+    ],
+    "text": "⎟\n⎟\n⎟\n⎠."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      563.8711547851562,
+      547.5908813476562,
+      642.539794921875
+    ],
+    "text": "Both pieces have rank four in both directions. Their sum is 32S, where S(x, y, u, v) = [x = v][y = u] on\nsingle bits. The factor 32 is 2 from the paper’s identity times 42 original crossed-string lifts. It is not\n44, because the crossing constrains two pairs.\nPut a(0, 1) = 1, a(1, 0) = −1, and a(0, 0) = a(1, 1) = 0. The identity already noted in the paper’s\nAppendix H is\nS = I −A,\nI = [x = u][y = v],\nA = a(x, y)a(u, v)."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      650.9281616210938,
+      547.6659545898438,
+      729.5968017578125
+    ],
+    "text": "Its integer factors are explicit: I is one product at the column split and a four-term coordinate-selector\nsum at the row split; −A is one product at the row split and a four-term coordinate-selector sum at\nthe column split. Thus recomposing the same fibre-summed target as 32I −32A gives directional\nranks (4, 1) and (1, 4). Each piece’s directional bit sum is two, compared with four for either projected\noctonion piece. There are still two terms. The new scalar 32 costs one more magnitude bit than the\nlargest projected entry 16; this growth is accounted for rather than interpreted as a probability."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.09700012207031,
+      67.30548095703125,
+      549.5262451171875,
+      145.90081787109375
+    ],
+    "text": "The equality is proved on all 16 basis contexts of the four retained bits, which by linearity is every\nrational context in the declared class. It is not just agreement for one selected contraction. This\nsupplies a strict improvement over projecting the inherited pieces separately and using their full-rank\ninterfaces. It is not a gain over a comparator that already recomposes the quotient crossing directly.\nThe example explains why target projection should be followed by decomposition selection, not by\nassuming that an inherited low-rank advantage automatically survives."
+  },
+  {
+    "page": 20,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      163.40342712402344,
+      505.014404296875,
+      175.35862731933594
+    ],
+    "text": "C.3\nPolynomially evaluable integer realization of Appendix H’s rank hint"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      184.88525390625,
+      547.7684326171875,
+      237.9927978515625
+    ],
+    "text": "The paper’s Appendix H points out the rank saving from the single-bit identity. To use a rank statement\nin Definitions 1 and 7, integer factors and their evaluation costs are needed. The following explicit\nconstruction supplies them without rational Gaussian elimination.\nFor integer t ≥1 and strings of t bits define Bi by"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      176.98204040527344,
+      249.8870849609375,
+      189.71424865722656,
+      268.4449157714844
+    ],
+    "text": "t∏︂"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      175.99403381347656,
+      260.1387939453125,
+      253.67066955566406,
+      282.73004150390625
+    ],
+    "text": "j=1\n(Ij −TAj) ="
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      256.6950378417969,
+      249.8870849609375,
+      271.09100341796875,
+      268.4449157714844
+    ],
+    "text": "t\n∑︂"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      257.03802490234375,
+      258.07305908203125,
+      365.8456115722656,
+      282.73004150390625
+    ],
+    "text": "i=0\nBiT i,\nF(t, k) ="
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      368.8690185546875,
+      248.78009033203125,
+      399.5937194824219,
+      268.4449157714844
+    ],
+    "text": "min(t,k)\n∑︂"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      376.68701171875,
+      274.6170959472656,
+      391.7744140625,
+      282.5970458984375
+    ],
+    "text": "z=0"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      401.4200134277344,
+      250.91029357910156,
+      414.3797302246094,
+      278.6722412109375
+    ],
+    "text": "(︄\nt\nz"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      414.8600158691406,
+      250.91029357910156,
+      422.7503967285156,
+      260.8728942871094
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      422.74700927734375,
+      258.07305908203125,
+      436.0077209472656,
+      271.2027587890625
+    ],
+    "text": "3z,"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      295.1351623535156,
+      349.74542236328125,
+      306.0577697753906
+    ],
+    "text": "with F(t, k) = 0 for k < 0. Use the four integer Bell vectors"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      133.53500366210938,
+      319.5028076171875,
+      478.4841613769531,
+      332.2027587890625
+    ],
+    "text": "v0 = (1, 0, 0, 1),\nv1 = (1, 0, 0, −1),\nv2 = (0, 1, 1, 0),\nv3 = (0, 1, −1, 0)."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      344.15216064453125,
+      547.2059936523438,
+      368.623779296875
+    ],
+    "text": "They are orthogonal and all have squared norm two. A Bell pattern d of length t gives vd = ⨂︁\nj vdj, an\ninteger vector with entries 0, ±1 and squared norm 2t."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.08599853515625,
+      378.4518127441406,
+      548.7091064453125,
+      406.32476806640625
+    ],
+    "text": "Theorem C.2 (Explicit integer crossing pieces). The integer pieces A′\ni = 2tBi, 0 ≤i ≤t, sum to 2tSt,\nwhere St = [x = v][y = u] on t-bit strings. Their exact row and column ranks are"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      190.62399291992188,
+      418.1328125,
+      421.3853759765625,
+      430.9162902832031
+    ],
+    "text": "rankrow Bi = F(t, t −i),\nrankcol Bi = F(t, i)."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.20899963378906,
+      441.0168151855469,
+      547.236083984375,
+      480.80279541015625
+    ],
+    "text": "In each direction A′\ni has an explicit integer factorization through the displayed number of terms, with\nfactors of magnitude at most 22t. An individual factor, the piece value and its index are evaluable in\npolynomial bit work in t. Thus these are pieces in the paper’s Definition 7 with"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      162.93301391601562,
+      492.39996337890625,
+      188.54612731933594,
+      505.310791015625
+    ],
+    "text": "ρ = 1"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      184.31399536132812,
+      492.19097900390625,
+      449.0663146972656,
+      509.0727844238281
+    ],
+    "text": "4 log2 12 ≃0.8962406252,\ncrow\ni\n+ ccol\ni\n≤t log2 12 + 2."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      518.8971557617188,
+      547.509765625,
+      611.1148071289062
+    ],
+    "text": "Proof. At T = 1 each factor is the single-bit crossing, proving the sum identity. At the row split, I is\nthe identity matrix and A = v3v⊤\n3 has eigenvalue two on v3, zero on the other three Bell vectors. For a\npattern with z occurrences of 3, the eigenvalue of Bi is (−2)i(︁z\ni\n)︁. It is nonzero exactly when z ≥i. The\nnumber of such patterns is F(t, t −i).\nAt the column split, I = v0v⊤\n0 and A = J ⊗J, where J =\n(︁0 1\n−1 0\n)︁. On (v0, v1, v2, v3) the polynomial\nI −TA has eigenvalues (2 −T, T, T, −T). Let z count the nonspecial entries dj ̸= 0, and let n3 count\nentries equal to 3. The coefficient eigenvalue is"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      215.9860076904297,
+      622.5703125,
+      341.3607482910156,
+      650.331298828125
+    ],
+    "text": "cd = (−1)n3+i−z2t−i\n(︄\nt −z\ni −z"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      341.844970703125,
+      622.5703125,
+      349.7353515625,
+      632.532958984375
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      360.6409606933594,
+      631.7977905273438,
+      396.0300598144531,
+      642.8617553710938
+    ],
+    "text": "(z ≤i),"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      664.2931518554688,
+      271.4074401855469,
+      695.7079467773438
+    ],
+    "text": "and zero otherwise. This gives rank F(t, i).\nSince ∑︁\nd vdv⊤\nd = 2t Id, at either split"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      253.62594604492188,
+      701.4581298828125,
+      308.806884765625,
+      716.2238159179688
+    ],
+    "text": "2tBi =\n∑︂"
+  },
+  {
+    "page": 20,
+    "kind": "math",
+    "bbox": [
+      288.8379211425781,
+      701.3548583984375,
+      358.37664794921875,
+      727.3408813476562
+    ],
+    "text": "d:cd̸=0\n(cdvd)v⊤\nd ."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.09080505371094,
+      547.53466796875,
+      186.548828125
+    ],
+    "text": "Both factors are integer; zero-padding gives an index of ⌈log2 F⌉bits. The displayed coefficients are\nbounded by 22t, and a Bell vector entry is a product of t entries in {0, ±1}. Patterns with at most\nk nonspecial entries are indexed lexicographically by suffix counts F(s, k), so unranking one pattern\nuses polynomially many integer operations on O(t)-bit counts. Binomial coefficients, eigenvalues and\nthe polynomial coefficient defining Bi are likewise polynomially evaluable. No list of all 4t patterns is\nconstructed by a factor query.\nFinally F(t, k) ≤2t3k, so the product of the two ranks is at most 12t. Taking two ceilings proves\nthe directional bit bound. The piece count is t + 1, the common scalar is 2t, and coefficient sizes and\nevaluators meet Definition 7 after increasing its absolute constant c."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      198.24127197265625,
+      549.2709350585938,
+      236.18663024902344
+    ],
+    "text": "The rank calculation is already motivated in Appendix H; the result above is its executable integer-\nfactor completion, not a new rank discovery. Its ρ is better than the main text’s simple 11/12 estimate\nbut worse than Appendix B’s 1/\n√"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      225.16897583007812,
+      548.8937377929688,
+      290.35980224609375
+    ],
+    "text": "2. Consequently it supplies a transparent alternative component,\nwith polynomial-time entry evaluators in place of that construction’s stated 2O(t) bound, not a better\ngeneral ETH exponent. As always, actual evaluation costs and term enumeration must be compared\njointly; a cheaper evaluator alone does not settle the tradeoff. The code implements these pieces, not\nthe entire recursive ETH algorithm."
+  },
+  {
+    "page": 21,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      307.86138916015625,
+      413.0908203125,
+      319.81658935546875
+    ],
+    "text": "C.4\nRational adapter, network costs and fair comparisons"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      329.2441711425781,
+      548.7576293945312,
+      360.658935546875
+    ],
+    "text": "For supplied rational quotient tables choose the positive least common denominator qv at each vertex,\nset W int\nv\n= qvW v, and let Q = ∏︁\nv qv. Then"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      270.0710144042969,
+      365.0940856933594,
+      341.9363708496094,
+      379.2150573730469
+    ],
+    "text": "Z = 2DZint/Q."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      391.73797607421875,
+      547.8858032226562,
+      443.3797912597656
+    ],
+    "text": "The same Q is used once; no scalar or discarded-bit factor is restored twice. Signed tables remain\nalgebraic weights rather than probabilities. Their exact likelihood interpretation requires a separately\nadmitted nonnegative normalized source and readout model.\nThe integer network fits Anthropic’s Definition 2 using equality edge factors, with"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      116.91900634765625,
+      455.1673583984375,
+      161.7709503173828,
+      467.8877868652344
+    ],
+    "text": "U = 2\n∑︂"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      152.6060028076172,
+      456.8238220214844,
+      268.2993469238281,
+      478.4532165527344
+    ],
+    "text": "e\nre,\nP = max{1, max\nv"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      270.2850036621094,
+      455.1673583984375,
+      284.68096923828125,
+      465.12994384765625
+    ],
+    "text": "∑︂"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      270.4880065917969,
+      454.7679748535156,
+      495.08648681640625,
+      478.62420654296875
+    ],
+    "text": "e∋v\nre},\nB = max{1, max\nv,y bitlength |W int\nv (y)|}."
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      489.5541076660156,
+      548.7191772460938,
+      529.23779296875
+    ],
+    "text": "Thus |W int\nv | < 2B. Exact table/evaluator cost is τ. For an admitted fixed K satisfying |V | ≤g = 3K8,\npad with isolated unit vertices to g. Conditional on an achievable pair (K, e), Anthropic’s Lemma 1\ngives the following bound in its stated word-RAM operation model:"
+  },
+  {
+    "page": 21,
+    "kind": "math",
+    "bbox": [
+      227.135009765625,
+      540.6151123046875,
+      384.8697204589844,
+      555.3817749023438
+    ],
+    "text": "C1 2e(U+gP/K)+2gP/K(P + B)C1τ,"
+  },
+  {
+    "page": 21,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      565.678955078125,
+      549.5816040039062,
+      727.3186645507812
+    ],
+    "text": "plus denominator clearing, output recovery and padding-description work. If |V | > 3K8, this padding\nargument does not apply at that K; one must choose a suitable larger achievable pair and charge\nits changed constants, or use a different reduction. No uniform bound is obtained by treating those\nnew constants as fixed while the network size grows. This is an explicit direct integer-network bridge.\nIt avoids modular reconstruction but does not prove a uniformly better complexity bound than the\nrational OpenAI adapter. When K grows, Appendix A(b) has the factor [K(λ+B)]C0K2. Here λ is the\ncommon clique-edge string width and B the table-entry magnitude parameter in that external theorem,\nnot an individual original edge width λe. Precision dependence cannot then be described as a fixed\npolynomial independent of K; its operation model must also be distinguished from the bit-complexity\nstatement of the OpenAI adapter.\nThe implemented ordinary enumeration backend evaluates the quotient network exactly and restores\nits scalar. For a complete four-vertex network with three-bit edge strings, one retained parity per"
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.16098022460938,
+      549.5961303710938,
+      213.64678955078125
+    ],
+    "text": "edge and positive supplied vertex tables, both independent calculations give Z = 45 621 248. Full\nenumeration uses 262 144 assignments and 1 048 576 vertex queries; quotient enumeration uses 64\nassignments and 256 vertex queries, plus polynomial representation checks and a 12-bit recovery shift.\nThe full comparator additionally builds 48 local edge-readout entries. This is an actual executed finite\ncomparison. At six vertices, quotient enumeration uses 32 768 assignments and 196 608 vertex queries,\nreturning 215 011 853 527 416 832. The 245 full assignment count is theoretical and was not executed.\nA fair specialized comparator can already apply exact bond quotienting or exploit another low-\nwidth structure. It has the same compressed task; no advantage over that comparator is claimed.\nGeneral contraction-tree costs and rank decompositions are also different computation models [1]. The\nrestricted reciprocal improvement here is relative to the explicitly inherited component pipeline, not to\nall algorithms or to the paper’s worst-case theorem."
+  },
+  {
+    "page": 22,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      231.14939880371094,
+      341.9215393066406,
+      243.10459899902344
+    ],
+    "text": "C.5\nCoverage, verification and retained limits"
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      252.6312255859375,
+      549.6083374023438,
+      453.1427917480469
+    ],
+    "text": "The implementation checks all 4,096 octonion identities, all 16 quotient basis contexts and 40 additional\nsigned contexts. It verifies the two projected rank matrices, explicit integer Bell factors in both\ndirections, exact ranks through three retained bits, 1,306 pattern-unranking cases, 2,145 right-inverse\nqueries, 30 signed rational networks and independent full small-network contractions. Tests and exact\nparameters are supplied.\nAppendix D’s sparse checks were examined but not modified into a claimed faster algorithm. A\ntarget that annihilates some unwanted assignments can restrict a coverage obligation only after that\nvanishing is proved and its representation cost charged. A target with full support need not remove\nany obligation. Signed cancellation of the final answer does not justify dropping assignments from the\npaper’s nonnegative stopping certificate. No general reduction in check count or load bound is proved.\nLikewise, the graded operators in Appendix B supply an algebraic factorization; they are not a\nderived physical interaction, detector, Born selector or consciousness mechanism. This component\nextension preserves the source–readout distinction between information required for a target and a\nuniquely identified physical source. It changes no delayed-trine memory or complete-history resource\nbound."
+  },
+  {
+    "page": 22,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      473.94171142578125,
+      140.31842041015625,
+      488.28790283203125
+    ],
+    "text": "References"
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      70.2540054321289,
+      500.87298583984375,
+      550.0624389648438,
+      539.5188598632812
+    ],
+    "text": "[1] Per Austrin, Petteri Kaski, and Kaie Kubjas. Tensor network complexity of multilinear maps.\nTheory of Computing, 18(16):1–54, 2022.\ndoi: 10.4086/toc.2022.v018a016.\nURL https:\n//theoryofcomputing.org/articles/v018a016/."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      550.4869995117188,
+      549.529052734375,
+      602.6818237304688
+    ],
+    "text": "[2] Karthekeyan Chandrasekaran, Richard Karp, Erick Moreno-Centeno, and Santosh Vempala.\nAlgorithms for implicit hitting set problems. In Proceedings of the Twenty-Second Annual ACM-\nSIAM Symposium on Discrete Algorithms, pages 614–629, 2011. doi: 10.1137/1.9781611973082.48.\nURL https://karthik.ise.illinois.edu/pubs/implicit-hitting-set.pdf."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      609.6920166015625,
+      547.2359619140625,
+      651.7427978515625
+    ],
+    "text": "[3] Claude. A 2o(n) time algorithm for 3-sat, 2026. URL https://github.com/anthropics/fo\nrmal-math/blob/16a5ce41304fcdaea4e0be7c132e1c361dc26da5/eth/paper.pdf. Supplied\nmanuscript dated 26 October 2026; Anthropic affiliation."
+  },
+  {
+    "page": 22,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      663.2639770507812,
+      548.8058471679688,
+      701.9098510742188
+    ],
+    "text": "[4] Frank R. Kschischang, Brendan J. Frey, and Hans-Andrea Loeliger. Factor graphs and the\nsum-product algorithm. IEEE Transactions on Information Theory, 47(2):498–519, 2001. doi:\n10.1109/18.910572. URL https://www.isiweb.ee.ethz.ch/papers/arch/aloe-2001-1.pdf."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      67.24568176269531,
+      549.2315673828125,
+      105.2537841796875
+    ],
+    "text": "[5] Erick Moreno-Centeno and Richard M. Karp. The implicit hitting set approach to solve combina-\ntorial optimization problems with an application to multigenome alignment. Operations Research,\n61(2):453–468, 2013. doi: 10.1287/opre.1120.1139."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      116.85969543457031,
+      548.9752197265625,
+      141.87184143066406
+    ],
+    "text": "[6] Ryan O’Donnell. Analysis of Boolean Functions. Cambridge University Press, 2014. doi: 10.1017/\nCBO9781139814782. URL https://arxiv.org/abs/2105.10386."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      152.92469787597656,
+      547.2059936523438,
+      191.48585510253906
+    ],
+    "text": "[7] OpenAI. The exponential time hypothesis is false, 2026. URL https://github.com/openai/ma\nth/blob/main/preprints/The-Exponential-Time-Hypothesis-is-False-October-25-202\n6/paper.pdf. Dated 17 October 2026, revised 25 October 2026; supplied manuscript."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      202.45822143554688,
+      547.7642822265625,
+      213.47047424316406
+    ],
+    "text": "[8] OpenAI. Scope of the lean formalization: The exponential time hypothesis is false, 2026. URL"
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      87.2239990234375,
+      216.08766174316406,
+      473.98388671875,
+      227.54981994628906
+    ],
+    "text": "https://raw.githubusercontent.com/openai/math/main/lean/docs/378.md."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      238.51895141601562,
+      549.5513305664062,
+      277.163818359375
+    ],
+    "text": "[9] OpenAI. Working with academic communities to build scientific understanding, October 2026.\nURL https://openai.com/index/building-scientific-understanding-with-academic-c\nommunities/."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      288.2176818847656,
+      547.7365112304688,
+      312.67578125
+    ],
+    "text": "[10] Jeremy Rodgers. Target-relative necessity of completion: When readout loss obstructs, and what\na sufficient extension must retain, 2026."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      324.2826843261719,
+      547.4244384765625,
+      348.74078369140625
+    ],
+    "text": "[11] Jeremy Rodgers. Canonical minimal source completion: The coarsest readout extension on which\na nominated family of source relations becomes well defined, 2026."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      360.3467102050781,
+      547.4229736328125,
+      384.8057861328125
+    ],
+    "text": "[12] Jeremy Rodgers. Observable quotients and exact projected dynamics: Closure, memory, minimal\ndynamical completion, and effective field operators, 2026."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      396.36077880859375,
+      548.8726806640625,
+      448.5218505859375
+    ],
+    "text": "[13] Alexander D. Scott and Gregory B. Sorkin. Polynomial constraint satisfaction problems, graph\nbisection, and the Ising partition function. ACM Transactions on Algorithms, 5(4):45:1–45:27,\n2009. doi: 10.1145/1597036.1597049. URL https://people.maths.ox.ac.uk/scott/Papers/c\nounting.pdf."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      459.489990234375,
+      547.4370727539062,
+      497.5827941894531
+    ],
+    "text": "[14] Sukhwinder Singh and Guifre Vidal. Global symmetries in tensor network states: Symmetric\ntensors versus minimal bond dimension. Physical Review B, 88:115147, 2013. doi: 10.1103/Phys\nRevB.88.115147."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      509.1886901855469,
+      549.4405517578125,
+      547.19677734375
+    ],
+    "text": "[15] Sukhwinder Singh, Robert N. C. Pfeifer, and Guifre Vidal. Tensor network decompositions in the\npresence of a global symmetry. Physical Review A, 82:050301, 2010. doi: 10.1103/PhysRevA.82.\n050301."
+  },
+  {
+    "page": 23,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      558.718017578125,
+      548.861572265625,
+      597.3638305664062
+    ],
+    "text": "[16] Armando Solar-Lezama. Program Synthesis by Sketching. PhD thesis, University of California,\nBerkeley, 2008. URL https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-1\n77.html."
+  }
+]

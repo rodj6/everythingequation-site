@@ -1,0 +1,6218 @@
+[
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00001.svg",
+    "sourcePage": 1,
+    "bbox": [
+      263.0909912109375,
+      213.81544799804686,
+      348.9513366699219,
+      227.3706481933594
+    ],
+    "inline": false,
+    "text": "27 October 2026"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00002.svg",
+    "sourcePage": 1,
+    "bbox": [
+      64.00000305175782,
+      531.1058227539063,
+      232.2584655761719,
+      543.7697875976562
+    ],
+    "inline": false,
+    "text": "For 0 ≤λ ≤1, write r = 1 −λ and"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00003.svg",
+    "sourcePage": 1,
+    "bbox": [
+      206.32199401855468,
+      552.0908081054688,
+      549.2788208007812,
+      579.6178100585937
+    ],
+    "inline": false,
+    "text": "T λ\naa = 1 −r\n3\n,\nT λ\nab = 1 + r/2\n3\n(a ̸= b).\n(1)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00004.svg",
+    "sourcePage": 1,
+    "bbox": [
+      171.30101318359374,
+      619.9698364257813,
+      549.2788208007812,
+      654.3830688476562
+    ],
+    "inline": false,
+    "text": "n−2\nY\nPλ(y1 · · · yn) = 1\nt=1\nT λ\nyt,yt+2,\nn ≥2,\nPλ(y1) = 1/3.\n(2)\n9"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00005.svg",
+    "sourcePage": 1,
+    "bbox": [
+      63.606997680664065,
+      661.2949096679688,
+      548.2639282226562,
+      730.3968017578125
+    ],
+    "inline": false,
+    "text": "The source class is a time-homogeneous quantum instrument on Cd: CP maps Φj with P\nj Φj trace\npreserving, a stationary density matrix ω, and word probabilities Tr[Φyn · · · Φy1(ω)]. Outputs are\nemitted into a retained classical archive. The current symbol need not occupy an orthogonal sector of\nthe internal memory. Fresh Markov environments are admitted explicitly; the cost d counts internal\nmemory, not archives, purifying environments, or a hidden history-dependent controller."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00006.svg",
+    "sourcePage": 2,
+    "bbox": [
+      168.62333984375,
+      64.77110595703125,
+      186.64046936035157,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " T λ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00007.svg",
+    "sourcePage": 2,
+    "bbox": [
+      212.8400146484375,
+      66.29080505371094,
+      267.92005615234376,
+      78.95478515625
+    ],
+    "inline": true,
+    "text": ", −r/2, −r/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00008.svg",
+    "sourcePage": 2,
+    "bbox": [
+      295.59950561523436,
+      66.43219299316407,
+      318.7090270996094,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " λ <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00009.svg",
+    "sourcePage": 2,
+    "bbox": [
+      265.02601928710936,
+      85.87768859863282,
+      549.2788208007812,
+      113.24976806640625
+    ],
+    "inline": false,
+    "text": "Hab,cd = 1\n9T λ\nacT λ\nbd\n(3)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00010.svg",
+    "sourcePage": 2,
+    "bbox": [
+      64.00000305175782,
+      118.1752197265625,
+      548.4393432617187,
+      213.52979736328126
+    ],
+    "inline": false,
+    "text": "has ordinary rank nine. Classical finite HMMs factor this matrix through their hidden states, so require\nat least nine. Explicitly, the pair source has states (a, b), transition (a, b) 7→(b, j) with probability\nT λ\naj, uniform stationary weights 1/9, and emitted symbol j at its update; it attains the full law with\nnine states. A d-dimensional instrument gives factors Aab = ΦbΦa(ω) and Bcd = Φ∗\ncΦ∗\nd(I), with\nHab,cd = Tr(AabBcd), in the d2-dimensional real space of Hermitian matrices, so d ≥3.\nA four-dimensional construction exists for every λ. With equatorial trine Bloch vectors na, let\nρa = (I + na · σ)/2 and Ej = (I −rnj · σ)/3. Then"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00011.svg",
+    "sourcePage": 2,
+    "bbox": [
+      231.5159942626953,
+      220.6759826660156,
+      549.2788818359375,
+      239.74677734375
+    ],
+    "inline": false,
+    "text": "Φ(4)\nj (X) = Tr1[(Ej ⊗I)X] ⊗ρj\n(4)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00012.svg",
+    "sourcePage": 2,
+    "bbox": [
+      64.00000305175782,
+      246.36477966308593,
+      548.001171875,
+      274.82618408203126
+    ],
+    "inline": false,
+    "text": "is CP, has effects Ej ⊗I summing to identity, and fixes I4/4 after summing j. It sends ρa ⊗ρb to\nT λ\najρb ⊗ρj, establishing every word of (2). Thus"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00013.svg",
+    "sourcePage": 2,
+    "bbox": [
+      233.23700256347655,
+      282.30079956054686,
+      549.2788818359375,
+      295.955029296875
+    ],
+    "inline": false,
+    "text": "3 ≤dmin(λ) ≤4\n(0 ≤λ < 1),\n(5)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00014.svg",
+    "sourcePage": 2,
+    "bbox": [
+      116.3391830444336,
+      304.8291809082031,
+      128.66600494384767,
+      317.3382995605469
+    ],
+    "inline": true,
+    "text": " λ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00015.svg",
+    "sourcePage": 2,
+    "bbox": [
+      283.9574462890625,
+      304.8291809082031,
+      309.68006591796876,
+      318.34205322265626
+    ],
+    "inline": true,
+    "text": " dmin"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00016.svg",
+    "sourcePage": 2,
+    "bbox": [
+      79.91636962890625,
+      365.4689208984375,
+      153.18711547851564,
+      381.855908203125
+    ],
+    "inline": true,
+    "text": " x0, x1, x2 ∈R2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00017.svg",
+    "sourcePage": 2,
+    "bbox": [
+      350.178759765625,
+      367.85219116210936,
+      360.5266540527344,
+      380.36130981445314
+    ],
+    "inline": true,
+    "text": " g"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00018.svg",
+    "sourcePage": 2,
+    "bbox": [
+      398.24501342773436,
+      367.85219116210936,
+      424.06513671875,
+      381.3650634765625
+    ],
+    "inline": true,
+    "text": "g1, g2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00019.svg",
+    "sourcePage": 2,
+    "bbox": [
+      231.22902221679686,
+      389.01597900390624,
+      379.5840576171875,
+      423.3160827636719
+    ],
+    "inline": false,
+    "text": "2\nX\n(\n1\na = j,\n−1/2\na ̸= j.\nμ=1\ngμxaμxjμ ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00020.svg",
+    "sourcePage": 2,
+    "bbox": [
+      80.23470611572266,
+      431.3341857910156,
+      239.1272399902344,
+      444.84705810546876
+    ],
+    "inline": true,
+    "text": " A1, A2, B1, B2, C11, C12, C21, C22"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00021.svg",
+    "sourcePage": 2,
+    "bbox": [
+      429.82762451171874,
+      431.1928283691406,
+      443.22727661132814,
+      443.70191650390626
+    ],
+    "inline": true,
+    "text": " ×"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00022.svg",
+    "sourcePage": 2,
+    "bbox": [
+      117.82300109863282,
+      465.4723693847656,
+      494.179638671875,
+      490.3572204589844
+    ],
+    "inline": false,
+    "text": "Aa =\nX\nμ\nxaμAμ,\nBb =\nX\nν\nxbνBν,\nCab =\nX\nμ,ν\nxaμxbνCμν,\nCν,j =\nX\nη\nxjηCνη."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00023.svg",
+    "sourcePage": 2,
+    "bbox": [
+      216.23643798828124,
+      498.3851806640625,
+      250.8315856933594,
+      510.89429931640626
+    ],
+    "inline": true,
+    "text": " u, v, w"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00024.svg",
+    "sourcePage": 2,
+    "bbox": [
+      174.53892822265624,
+      520.7722045898438,
+      549.278759765625,
+      535.0727661132812
+    ],
+    "inline": false,
+    "text": "Sab = I3/3 + uAa + vBb + wCab,\nRj = I3/3 + vBj.\n(6)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00025.svg",
+    "sourcePage": 2,
+    "bbox": [
+      210.4529296875,
+      565.5461303710938,
+      549.2793701171875,
+      652.7697875976562
+    ],
+    "inline": false,
+    "text": "Φj(I3/3) = Rj/3,\n(7)\nΦj(Aμ) = −r\n3ugμxjμRj,\n(8)\nΦj(Bν) = u\n3vAν + w\n3vCν,j,\n(9)\nΦj(Cμν) = −ru\n3wgμxjμAν −r\n3gμxjμCν,j.\n(10)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00026.svg",
+    "sourcePage": 2,
+    "bbox": [
+      62.70600051879883,
+      658.2631713867188,
+      549.2793701171875,
+      713.4741943359375
+    ],
+    "inline": false,
+    "text": "Lemma 1.1 (Exact update and full-law realization). If all Sab are positive and all maps in (10) are\nCP, then they form a quantum instrument with stationary state I3/3 and generate (2) exactly. In\nparticular,\nΦj(Sab) = T λ\najSbj.\n(11)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00027.svg",
+    "sourcePage": 2,
+    "bbox": [
+      79.85884399414063,
+      717.8741943359375,
+      110.58557586669922,
+      730.3968017578125
+    ],
+    "inline": true,
+    "text": " r > 0"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00028.svg",
+    "sourcePage": 3,
+    "bbox": [
+      62.722998809814456,
+      66.43219299316407,
+      549.5572021484375,
+      202.14075927734376
+    ],
+    "inline": false,
+    "text": "Proof. All basis matrices except I are traceless, so the candidates have trace one. Expand (10) on (6),\nwriting qaj = P\nμ gμxaμxjμ. The constant and a terms give (1 −rqaj)Rj/3; the b and ab terms give\n(1 −rqaj)(uAb + wCbj)/3. This is T λ\najSbj, proving the update.\nSumming the trace of the maps on the basis yields trace preservation: the I/3 traces sum to one,\nthe A traces vanish because P\nj xj = 0, and the B, C images are traceless. Summing Φj(I/3) = Rj/3\ngives I/3, proving stationarity. The first output j has probability 1/3 and leaves state Rj. A direct\napplication gives Φk(Rj) = Sjk/3, so the second output is independent uniform and leaves Sjk. Every\nlater update is (11); induction proves all finite words. This does not infer temporal independence from\na reset: it uses the explicitly specified CP instrument at every step. Finally (3) gives the matching\ndimension-three lower bound."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00029.svg",
+    "sourcePage": 3,
+    "bbox": [
+      135.85524291992186,
+      211.83417053222655,
+      170.1666687011719,
+      224.34327392578126
+    ],
+    "inline": true,
+    "text": " u, v, w"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00030.svg",
+    "sourcePage": 3,
+    "bbox": [
+      63.45399780273438,
+      225.3831817626953,
+      110.52612762451172,
+      238.8960388183594
+    ],
+    "inline": true,
+    "text": "1, xa1, xa2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00031.svg",
+    "sourcePage": 3,
+    "bbox": [
+      278.80101318359374,
+      301.9349853515625,
+      320.0851257324219,
+      316.18861083984376
+    ],
+    "inline": true,
+    "text": " xa = ("
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00032.svg",
+    "sourcePage": 3,
+    "bbox": [
+      333.085009765625,
+      301.9349853515625,
+      375.33070068359376,
+      314.55262451171876
+    ],
+    "inline": true,
+    "text": "(2πa/3),"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00033.svg",
+    "sourcePage": 3,
+    "bbox": [
+      389.0190002441406,
+      301.9349853515625,
+      479.60010986328126,
+      316.18861083984376
+    ],
+    "inline": true,
+    "text": "(2πa/3)), g1 = g2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00034.svg",
+    "sourcePage": 3,
+    "bbox": [
+      289.2419921875,
+      315.55519409179686,
+      343.89817504882814,
+      329.2002380371094
+    ],
+    "inline": true,
+    "text": "FkFl) = δkl"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00035.svg",
+    "sourcePage": 3,
+    "bbox": [
+      402.44374389648436,
+      315.55519409179686,
+      442.14844970703126,
+      328.06431274414064
+    ],
+    "inline": true,
+    "text": " A, B, C"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00036.svg",
+    "sourcePage": 3,
+    "bbox": [
+      175.92003173828124,
+      336.06898803710936,
+      549.2794311523437,
+      350.78880004882814
+    ],
+    "inline": false,
+    "text": "r = ε3,\nu = ε2,\nv = ε,\nw = ε3,\n0 < ε ≤1/7.\n(12)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00037.svg",
+    "sourcePage": 3,
+    "bbox": [
+      341.1866027832031,
+      359.32396240234374,
+      354.92713623046876,
+      373.485302734375
+    ],
+    "inline": true,
+    "text": " ε2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00038.svg",
+    "sourcePage": 3,
+    "bbox": [
+      356.252001953125,
+      359.32396240234374,
+      377.4391296386719,
+      373.501171875
+    ],
+    "inline": true,
+    "text": "+ ε4"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00039.svg",
+    "sourcePage": 3,
+    "bbox": [
+      378.76500244140624,
+      357.0171691894531,
+      425.9215515136719,
+      373.501171875
+    ],
+    "inline": true,
+    "text": "+ ε6 < 1/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00040.svg",
+    "sourcePage": 3,
+    "bbox": [
+      475.1393310546875,
+      360.97618408203124,
+      495.15855102539064,
+      374.62022094726564
+    ],
+    "inline": true,
+    "text": " Sab"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00041.svg",
+    "sourcePage": 3,
+    "bbox": [
+      224.663134765625,
+      374.5251953125,
+      239.1641357421875,
+      388.0292175292969
+    ],
+    "inline": true,
+    "text": " Jj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00042.svg",
+    "sourcePage": 3,
+    "bbox": [
+      391.3335754394531,
+      374.383837890625,
+      420.18308715820314,
+      387.03431396484376
+    ],
+    "inline": true,
+    "text": " X 7→"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00043.svg",
+    "sourcePage": 3,
+    "bbox": [
+      432.856005859375,
+      374.5251953125,
+      463.77149658203126,
+      387.03431396484376
+    ],
+    "inline": true,
+    "text": "(X)I/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00044.svg",
+    "sourcePage": 3,
+    "bbox": [
+      64.00000305175782,
+      388.07518310546874,
+      80.58155517578125,
+      401.5880554199219
+    ],
+    "inline": true,
+    "text": "I9/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00045.svg",
+    "sourcePage": 3,
+    "bbox": [
+      163.647998046875,
+      406.10966796875,
+      549.2793701171875,
+      465.38380126953126
+    ],
+    "inline": false,
+    "text": "9 (1/3 + ε2) + 2(ε2 + ε4)\n9\n+ 2(ε4 + ε6)\n∥Jj −I9/9∥2\nF = ε2\n3 + ε2\n9\n= 16ε2\n27 + 5ε4\n9 + 2ε6\n9 .\n(13)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00046.svg",
+    "sourcePage": 3,
+    "bbox": [
+      75.52209777832032,
+      471.20018310546874,
+      110.45354919433593,
+      483.7093017578125
+    ],
+    "inline": true,
+    "text": " ε = 1/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00047.svg",
+    "sourcePage": 3,
+    "bbox": [
+      317.1129943847656,
+      471.20018310546874,
+      367.903271484375,
+      483.7093017578125
+    ],
+    "inline": true,
+    "text": "/117649 <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00048.svg",
+    "sourcePage": 3,
+    "bbox": [
+      517.623095703125,
+      471.05882568359374,
+      550.1192138671875,
+      483.7093017578125
+    ],
+    "inline": true,
+    "text": " ε ≥0."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00049.svg",
+    "sourcePage": 3,
+    "bbox": [
+      317.59315795898436,
+      484.7491943359375,
+      332.20216064453126,
+      498.2532165527344
+    ],
+    "inline": true,
+    "text": " Jj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00050.svg",
+    "sourcePage": 3,
+    "bbox": [
+      222.76700134277343,
+      522.6118041992188,
+      549.2793701171875,
+      536.266064453125
+    ],
+    "inline": false,
+    "text": "dmin(λ) = 3\nfor 342/343 ≤λ < 1.\n(14)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00051.svg",
+    "sourcePage": 3,
+    "bbox": [
+      63.60701293945313,
+      596.077685546875,
+      212.6980407714844,
+      608.5868041992187
+    ],
+    "inline": false,
+    "text": "Take rational trine coordinates"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00052.svg",
+    "sourcePage": 3,
+    "bbox": [
+      129.41900939941405,
+      618.633837890625,
+      482.5836608886719,
+      632.9337890625
+    ],
+    "inline": false,
+    "text": "x0 = (1, 0),\nx1 = (−1/2, 1/2),\nx2 = (−1/2, −1/2),\n(g1, g2) = (1, 3)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00053.svg",
+    "sourcePage": 3,
+    "bbox": [
+      79.91632385253907,
+      641.4852172851563,
+      101.23978118896484,
+      654.989208984375
+    ],
+    "inline": true,
+    "text": " Epq"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00054.svg",
+    "sourcePage": 3,
+    "bbox": [
+      159.72597045898436,
+      664.0547973632813,
+      452.27671508789064,
+      727.9688232421875
+    ],
+    "inline": false,
+    "text": "A1 = E01 + E10,\nA2 = −iE01 + iE10,\nB1 = E02 + E20,\nB2 = −iE02 + iE20,\nC11 = E12 + E21,\nC12 = −iE12 + iE21,\nC21 = diag(1, −1, 0),\nC22 = diag(1, 1, −2)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00055.svg",
+    "sourcePage": 4,
+    "bbox": [
+      63.606997680664065,
+      64.78096313476563,
+      549.5702026367187,
+      92.50477294921875
+    ],
+    "inline": false,
+    "text": "These are orthogonal, with squared Frobenius norms two except ∥C22∥2\nF = 6. This is a different,\nexplicitly specified frame from the preceding analytic construction. Put"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00056.svg",
+    "sourcePage": 4,
+    "bbox": [
+      80.39800567626953,
+      102.29292602539063,
+      549.2793701171875,
+      117.0127685546875
+    ],
+    "inline": false,
+    "text": "r = ε3,\nu = αε2,\nv = βε,\nw = γε3,\n(α, β, γ) = (3/8, 3/4, 3/4),\n0 < ε ≤h := 7/20.\n(15)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00057.svg",
+    "sourcePage": 4,
+    "bbox": [
+      63.606997680664065,
+      128.9981719970703,
+      550.1991088867187,
+      206.282421875
+    ],
+    "inline": false,
+    "text": "The maps and states are now degree-three matrix polynomials in ε, with Gaussian rational coefficients.\nHere are explicit coefficients, making the positivity certificate reconstructible without fitting\nnumerical samples. Superscript ∨denotes the Hilbert–Schmidt dual basis (F ∨= F/2, except C∨\n22 =\nC22/6). Define\nAg,∨\nj\n=\nX\nμ\ngμxjμA∨\nμ,\nCg,∨\nj,ν =\nX\nμ\ngμxjμC∨\nμν."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00058.svg",
+    "sourcePage": 4,
+    "bbox": [
+      63.99998779296875,
+      211.8761779785156,
+      418.62916259765626,
+      233.5891540527344
+    ],
+    "inline": false,
+    "text": "In the convention Jj = P\npq Epq ⊗Φj(Epq), write Jj(ε) = P3\nl=0 εlJjl. Then"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00059.svg",
+    "sourcePage": 4,
+    "bbox": [
+      176.6139404296875,
+      239.86542053222655,
+      549.2793701171875,
+      375.84620361328126
+    ],
+    "inline": false,
+    "text": "Jj0 = I9/9,\n(16)\nJj1 = β\n3 I ⊗Bj −1\n9α(Ag,∨\nj\n)T ⊗I + α\nν\n(B∨\nν )T ⊗Aν,\n(17)\nX\n3β\nJj2 = −β\n3α(Ag,∨\nj\n)T ⊗Bj + γ\nν\n(B∨\nν )T ⊗Cν,j\nX\n3β\n−α\nν\n(Cg,∨\nj,ν )T ⊗Aν,\n(18)\nX\n3γ\nJj3 = −1\nν\n(Cg,∨\nj,ν )T ⊗Cν,j.\n(19)\nX\n3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00060.svg",
+    "sourcePage": 4,
+    "bbox": [
+      64.00001831054688,
+      384.7620422363281,
+      519.6888549804687,
+      405.88990478515626
+    ],
+    "inline": false,
+    "text": "For any degree-three matrix polynomial P(ε) = P\nl εlPl, its Bernstein representation on [0, h] is"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00061.svg",
+    "sourcePage": 4,
+    "bbox": [
+      172.9120361328125,
+      409.92506713867186,
+      549.2793701171875,
+      444.6680114746094
+    ],
+    "inline": false,
+    "text": "3\nX\nk\nX\n\u0000k\nl\n\u0001\n3\nk\n!\ntk(1 −t)3−kMk,\nMk =\n\u00003\nl\n\u0001hlPl.\n(20)\nP(ht) =\nk=0\nl=0"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00062.svg",
+    "sourcePage": 4,
+    "bbox": [
+      177.52809448242186,
+      453.25718994140624,
+      197.7424743652344,
+      466.90122680664064
+    ],
+    "inline": true,
+    "text": " Mk"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00063.svg",
+    "sourcePage": 4,
+    "bbox": [
+      219.96400756835936,
+      515.4318115234375,
+      549.2793701171875,
+      529.087109375
+    ],
+    "inline": false,
+    "text": "dmin(λ) = 3\n7657/8000 ≤λ < 1.\n(21)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00064.svg",
+    "sourcePage": 4,
+    "bbox": [
+      64.00000305175782,
+      564.3536865234375,
+      548.1976440429687,
+      612.3
+    ],
+    "inline": false,
+    "text": "Proof. For the twelve Choi Bernstein control matrices from (19)–(20), and the thirty-six state control\nmatrices from (6), exact rational LDLT certificates establish strict positivity. The certificate uses the\nrealification\n!"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00065.svg",
+    "sourcePage": 4,
+    "bbox": [
+      241.34801025390624,
+      600.737353515625,
+      370.65464477539064,
+      629.3867919921875
+    ],
+    "inline": false,
+    "text": "Re Z\n−Im Z\nIm Z\nRe Z\nR(Z) =\n;"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00066.svg",
+    "sourcePage": 4,
+    "bbox": [
+      166.9449951171875,
+      673.3591796875,
+      460.0823486328125,
+      685.881787109375
+    ],
+    "inline": false,
+    "text": "Bernstein index k\n0\n1\n2\n3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00067.svg",
+    "sourcePage": 4,
+    "bbox": [
+      263.8409912109375,
+      692.3812133789063,
+      278.38865356445314,
+      704.9038208007812
+    ],
+    "inline": true,
+    "text": " j)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00068.svg",
+    "sourcePage": 4,
+    "bbox": [
+      303.53001708984374,
+      692.3812133789063,
+      321.4935729980469,
+      704.9038208007812
+    ],
+    "inline": true,
+    "text": "1/9"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00069.svg",
+    "sourcePage": 4,
+    "bbox": [
+      340.33302612304686,
+      692.3812133789063,
+      380.72169189453126,
+      704.9038208007812
+    ],
+    "inline": true,
+    "text": "> 9/100"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00070.svg",
+    "sourcePage": 4,
+    "bbox": [
+      391.0760070800781,
+      692.3812133789063,
+      426.01011352539064,
+      704.9038208007812
+    ],
+    "inline": true,
+    "text": "> 3/50"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00071.svg",
+    "sourcePage": 4,
+    "bbox": [
+      436.36500854492186,
+      692.3812133789063,
+      476.75269775390626,
+      704.9038208007812
+    ],
+    "inline": true,
+    "text": "> 1/100"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00072.svg",
+    "sourcePage": 4,
+    "bbox": [
+      259.970751953125,
+      705.9301635742188,
+      284.69065551757814,
+      718.4527709960937
+    ],
+    "inline": true,
+    "text": " a, b)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00073.svg",
+    "sourcePage": 4,
+    "bbox": [
+      295.0450012207031,
+      705.9301635742188,
+      329.97813110351564,
+      718.4527709960937
+    ],
+    "inline": true,
+    "text": "> 1/10"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00074.svg",
+    "sourcePage": 4,
+    "bbox": [
+      343.06102294921874,
+      705.9301635742188,
+      377.99415283203126,
+      718.4527709960937
+    ],
+    "inline": true,
+    "text": "> 1/10"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00075.svg",
+    "sourcePage": 4,
+    "bbox": [
+      391.07704467773436,
+      705.9301635742188,
+      426.0101745605469,
+      718.4527709960937
+    ],
+    "inline": true,
+    "text": "> 1/10"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00076.svg",
+    "sourcePage": 4,
+    "bbox": [
+      439.09205932617186,
+      705.9301635742188,
+      474.0251892089844,
+      718.4527709960937
+    ],
+    "inline": true,
+    "text": "> 1/10"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00077.svg",
+    "sourcePage": 5,
+    "bbox": [
+      139.64898986816405,
+      142.57577819824218,
+      472.3537109375,
+      174.403271484375
+    ],
+    "inline": false,
+    "text": "l<k\nL2\nklDl,\nLik = Mik −P\nl<k LilLklDl\nDk\n,\nLkk = 1.\nDk = Mkk −\nX"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00078.svg",
+    "sourcePage": 5,
+    "bbox": [
+      105.56798858642578,
+      185.39520568847655,
+      136.4782684326172,
+      199.68128662109376
+    ],
+    "inline": true,
+    "text": " Dk >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00079.svg",
+    "sourcePage": 5,
+    "bbox": [
+      294.6461975097656,
+      183.73314208984374,
+      328.9075134277344,
+      197.90430908203126
+    ],
+    "inline": true,
+    "text": " LDLT"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00080.svg",
+    "sourcePage": 5,
+    "bbox": [
+      306.24354858398436,
+      212.35281677246093,
+      366.21275024414064,
+      225.016796875
+    ],
+    "inline": true,
+    "text": " ≤ε ≤7/20."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00081.svg",
+    "sourcePage": 5,
+    "bbox": [
+      151.24904174804686,
+      278.5879699707031,
+      188.3411071777344,
+      292.78663330078126
+    ],
+    "inline": true,
+    "text": " r = ε3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00082.svg",
+    "sourcePage": 5,
+    "bbox": [
+      263.21806640625,
+      278.5879699707031,
+      389.94111328125,
+      292.78663330078126
+    ],
+    "inline": true,
+    "text": " λ = 1 −r ≥1 −(7/20)3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00083.svg",
+    "sourcePage": 5,
+    "bbox": [
+      393.1389953613281,
+      280.168994140625,
+      435.4015625,
+      292.78663330078126
+    ],
+    "inline": true,
+    "text": "= 7657/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00084.svg",
+    "sourcePage": 5,
+    "bbox": [
+      315.8145324707031,
+      343.59617919921874,
+      338.7930114746094,
+      356.1052978515625
+    ],
+    "inline": true,
+    "text": " λ <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00085.svg",
+    "sourcePage": 5,
+    "bbox": [
+      315.29503173828124,
+      357.1451904296875,
+      332.99070434570314,
+      370.64820556640626
+    ],
+    "inline": true,
+    "text": " Un"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00086.svg",
+    "sourcePage": 5,
+    "bbox": [
+      459.2450439453125,
+      357.1451904296875,
+      470.97947387695314,
+      369.65430908203126
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00087.svg",
+    "sourcePage": 5,
+    "bbox": [
+      515.1225463867188,
+      357.0038330078125,
+      550.1193969726562,
+      369.69163208007814
+    ],
+    "inline": true,
+    "text": " n ≥2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00088.svg",
+    "sourcePage": 5,
+    "bbox": [
+      187.37401123046874,
+      379.73082275390624,
+      424.6287048339844,
+      407.25779418945314
+    ],
+    "inline": false,
+    "text": "d(r) = 1 −r\n3\nlog(1 −r) + 2(1 + r/2)\n3\nlog(1 + r/2)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00089.svg",
+    "sourcePage": 5,
+    "bbox": [
+      150.10597534179686,
+      429.58482666015624,
+      549.2793701171875,
+      447.87522583007814
+    ],
+    "inline": false,
+    "text": "D(Pλ,n∥Un) = (n −2)d(r),\nχ2(Pλ,n∥Un) = (1 + r2/2)n−2 −1.\n(22)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00090.svg",
+    "sourcePage": 5,
+    "bbox": [
+      64.00000305175782,
+      456.3448059082031,
+      549.5190551757812,
+      499.93479614257814
+    ],
+    "inline": false,
+    "text": "Indeed the likelihood ratio is Qn−2\nt=1 3T λ\nyt,yt+2. The KL chain rule gives one equal row contribution d(r) per\nlink. Under Un, summing the newest symbol in the squared likelihood contributes 3 P\nj(T λ\naj)2 = 1+r2/2,\nindependently of a; recursion proves the chi-square identity. Therefore"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00091.svg",
+    "sourcePage": 5,
+    "bbox": [
+      152.14200134277343,
+      509.7903625488281,
+      549.2793701171875,
+      531.8101318359375
+    ],
+    "inline": false,
+    "text": "TV(Pλ,n, Un) ≤min\n\u001a\n1,\nq\n(1 + r2/2)n−2 −1\n\u001b\n.\n(23)\nq\n(n −2)d(r)/2, 1\n2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00092.svg",
+    "sourcePage": 5,
+    "bbox": [
+      391.6645080566406,
+      544.7979614257813,
+      486.69111328125,
+      558.9593017578125
+    ],
+    "inline": true,
+    "text": " d(r) = r2/4 + O(r3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00093.svg",
+    "sourcePage": 6,
+    "bbox": [
+      97.170703125,
+      327.8661682128906,
+      125.92643432617187,
+      341.510205078125
+    ],
+    "inline": true,
+    "text": " Pλ,N"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00094.svg",
+    "sourcePage": 6,
+    "bbox": [
+      164.88214416503905,
+      327.8661682128906,
+      181.3729217529297,
+      340.3752868652344
+    ],
+    "inline": true,
+    "text": " N"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00095.svg",
+    "sourcePage": 6,
+    "bbox": [
+      64.00000305175782,
+      339.6498291015625,
+      184.18038635253907,
+      354.97120361328126
+    ],
+    "inline": true,
+    "text": "UN(y1, . . . , yN) = 3−N."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00096.svg",
+    "sourcePage": 6,
+    "bbox": [
+      71.64300079345703,
+      354.8929931640625,
+      120.01556091308593,
+      368.4672058105469
+    ],
+    "inline": true,
+    "text": "j(x) = x/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00097.svg",
+    "sourcePage": 6,
+    "bbox": [
+      63.163001251220706,
+      401.633837890625,
+      548.2736938476562,
+      434.78992919921876
+    ],
+    "inline": false,
+    "text": "Theorem 2.1 (Exact binomial reduction of the finite-record discrepancy). For N ≥2 set k = N −2\nand R = Pk\nt=1 1{Yt = Yt+2}. Then"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00098.svg",
+    "sourcePage": 6,
+    "bbox": [
+      194.5979797363281,
+      436.06532592773436,
+      417.40467529296876,
+      450.11219482421876
+    ],
+    "inline": false,
+    "text": "TV(Pλ,N, UN) = TV\n\u0000Bin(k, λ/3), Bin(k, 1/3)\n\u0001."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00099.svg",
+    "sourcePage": 6,
+    "bbox": [
+      109.43945617675782,
+      457.61217041015624,
+      123.2320068359375,
+      470.1212890625
+    ],
+    "inline": true,
+    "text": " R"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00100.svg",
+    "sourcePage": 6,
+    "bbox": [
+      190.54837341308593,
+      504.42320556640624,
+      200.67100219726564,
+      516.93232421875
+    ],
+    "inline": true,
+    "text": " r"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00101.svg",
+    "sourcePage": 6,
+    "bbox": [
+      241.8540069580078,
+      522.863818359375,
+      371.34470825195314,
+      553.509228515625
+    ],
+    "inline": false,
+    "text": "\u0013k−r\n.\nPλ,N(y)\nUN(y) = λr\n\u00123 −λ\n2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00102.svg",
+    "sourcePage": 6,
+    "bbox": [
+      64.00000305175782,
+      572.3361694335938,
+      77.41456298828125,
+      584.8452880859375
+    ],
+    "inline": true,
+    "text": "λ/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00103.svg",
+    "sourcePage": 6,
+    "bbox": [
+      341.5367919921875,
+      572.3361694335938,
+      352.53565673828126,
+      584.8452880859375
+    ],
+    "inline": true,
+    "text": " k"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00104.svg",
+    "sourcePage": 6,
+    "bbox": [
+      251.6684143066406,
+      585.8851806640625,
+      270.8457763671875,
+      599.4412353515625
+    ],
+    "inline": true,
+    "text": " UN"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00105.svg",
+    "sourcePage": 6,
+    "bbox": [
+      366.72301025390624,
+      585.8851806640625,
+      373.77756958007814,
+      598.3942993164062
+    ],
+    "inline": true,
+    "text": "/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00106.svg",
+    "sourcePage": 6,
+    "bbox": [
+      121.27618713378907,
+      599.4351684570313,
+      134.7460144042969,
+      611.944287109375
+    ],
+    "inline": true,
+    "text": " R"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00107.svg",
+    "sourcePage": 6,
+    "bbox": [
+      107.27164001464844,
+      634.9391967773438,
+      145.5902069091797,
+      647.4483154296875
+    ],
+    "inline": true,
+    "text": " < λ <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00108.svg",
+    "sourcePage": 6,
+    "bbox": [
+      175.2100402832031,
+      634.7978393554688,
+      244.06654052734376,
+      647.4856689453125
+    ],
+    "inline": true,
+    "text": " b = (3 −λ)/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00109.svg",
+    "sourcePage": 6,
+    "bbox": [
+      270.46217651367186,
+      634.7978393554688,
+      314.31065063476564,
+      648.3389404296875
+    ],
+    "inline": true,
+    "text": " r∗= ⌊k"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00110.svg",
+    "sourcePage": 6,
+    "bbox": [
+      328.80983276367186,
+      634.8680297851563,
+      346.8295104980469,
+      647.4856689453125
+    ],
+    "inline": true,
+    "text": " b/("
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00111.svg",
+    "sourcePage": 6,
+    "bbox": [
+      359.1698486328125,
+      634.7978393554688,
+      378.8903015136719,
+      647.4483154296875
+    ],
+    "inline": true,
+    "text": " b −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00112.svg",
+    "sourcePage": 6,
+    "bbox": [
+      394.22685546875,
+      634.7978393554688,
+      413.31663208007814,
+      647.4856689453125
+    ],
+    "inline": true,
+    "text": " λ)⌋"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00113.svg",
+    "sourcePage": 6,
+    "bbox": [
+      132.68370361328124,
+      648.4881469726563,
+      142.79200439453126,
+      660.997265625
+    ],
+    "inline": true,
+    "text": " r"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00114.svg",
+    "sourcePage": 6,
+    "bbox": [
+      251.33700866699218,
+      669.4908325195313,
+      360.66572265625,
+      683.7290771484375
+    ],
+    "inline": false,
+    "text": "Fk,λ/3(r∗) −Fk,1/3(r∗),"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00115.svg",
+    "sourcePage": 6,
+    "bbox": [
+      91.59014434814453,
+      690.776171875,
+      103.82854919433593,
+      703.2852905273437
+    ],
+    "inline": true,
+    "text": " F"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00116.svg",
+    "sourcePage": 6,
+    "bbox": [
+      224.49991149902343,
+      704.3251831054688,
+      236.22500305175782,
+      716.8343017578125
+    ],
+    "inline": true,
+    "text": " λ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00117.svg",
+    "sourcePage": 6,
+    "bbox": [
+      326.89064331054686,
+      702.663134765625,
+      371.76646118164064,
+      716.8716552734375
+    ],
+    "inline": true,
+    "text": " −(2/3)k"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00118.svg",
+    "sourcePage": 6,
+    "bbox": [
+      409.5796691894531,
+      704.3251831054688,
+      421.3870056152344,
+      716.8343017578125
+    ],
+    "inline": true,
+    "text": " λ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p006-00119.svg",
+    "sourcePage": 6,
+    "bbox": [
+      512.0314208984375,
+      704.1838256835938,
+      548.2736328125,
+      716.8716552734375
+    ],
+    "inline": true,
+    "text": " N ≤2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00120.svg",
+    "sourcePage": 7,
+    "bbox": [
+      179.8109924316406,
+      85.67334289550782,
+      432.1907165527344,
+      160.860791015625
+    ],
+    "inline": false,
+    "text": "\n\n\n\ns\u0012\n1 + (1 −λ)2\n\u0013k\n−1\n1, 1\nTV(Pλ,N, UN) ≤min\n,\n2\n2\n\"√\nv\nu\nu\nt1 −\n#2k\n.\nλ + 2\np\n(3 −λ)/2\n3\nTV(Pλ,N, UN) ≤"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00121.svg",
+    "sourcePage": 7,
+    "bbox": [
+      63.606997680664065,
+      171.9350158691406,
+      548.5658081054687,
+      214.672802734375
+    ],
+    "inline": false,
+    "text": "χ2 and the binomial likelihood second moment; the second follows by\nCauchy–Schwarz from the product Bhattacharyya affinity. In particular, the one-state comparator\nmeets TV tolerance ε whenever\nThe first follows from TV ≤1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00122.svg",
+    "sourcePage": 7,
+    "bbox": [
+      201.5240051269531,
+      173.8443634033203,
+      218.51560668945314,
+      190.6910827636719
+    ],
+    "inline": false,
+    "text": "2\np"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00123.svg",
+    "sourcePage": 7,
+    "bbox": [
+      246.88998718261718,
+      210.58998413085936,
+      365.11170654296876,
+      239.62781982421876
+    ],
+    "inline": false,
+    "text": "k ≤\nlog(1 + 4ε2)\nlog(1 + (1 −λ)2/2)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00124.svg",
+    "sourcePage": 7,
+    "bbox": [
+      383.88002319335936,
+      258.0201904296875,
+      422.591748046875,
+      270.5427978515625
+    ],
+    "inline": true,
+    "text": "N, λ, ε)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00125.svg",
+    "sourcePage": 7,
+    "bbox": [
+      419.2718078613281,
+      367.8788330078125,
+      439.59681396484376,
+      380.52930908203126
+    ],
+    "inline": true,
+    "text": " −η"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00126.svg",
+    "sourcePage": 7,
+    "bbox": [
+      119.50916595458985,
+      394.97783203125,
+      160.4749267578125,
+      407.65614013671876
+    ],
+    "inline": true,
+    "text": " y 7→(y,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00127.svg",
+    "sourcePage": 7,
+    "bbox": [
+      63.163001251220706,
+      666.96416015625,
+      547.9821899414062,
+      706.5847900390625
+    ],
+    "inline": false,
+    "text": "Proposition 3.1 (Observable approximation floor). Let H be a normalized joint distribution of a past\nand a future block, viewed as a matrix. Let γc(H) = (P\ni>c σi(H)2)1/2. For any complete competing\nlaw P ′ factoring through a causal cut with matrix rank at most c,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p007-00128.svg",
+    "sourcePage": 7,
+    "bbox": [
+      247.6300079345703,
+      708.2758056640625,
+      364.3727233886719,
+      731.3781860351562
+    ],
+    "inline": false,
+    "text": "TV(P ′, P) ≥γc(H)/\n√\n2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00129.svg",
+    "sourcePage": 8,
+    "bbox": [
+      113.68422241210938,
+      66.43219299316407,
+      123.9026382446289,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00130.svg",
+    "sourcePage": 8,
+    "bbox": [
+      479.51854248046874,
+      66.43219299316407,
+      490.6736572265625,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " d"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00131.svg",
+    "sourcePage": 8,
+    "bbox": [
+      86.31947631835938,
+      78.32997436523438,
+      101.86412506103515,
+      92.49127655029297
+    ],
+    "inline": true,
+    "text": " d2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00132.svg",
+    "sourcePage": 8,
+    "bbox": [
+      326.46473999023436,
+      116.04620666503907,
+      338.1016357421875,
+      128.55530242919923
+    ],
+    "inline": true,
+    "text": " c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00133.svg",
+    "sourcePage": 8,
+    "bbox": [
+      366.2392150878906,
+      127.94398803710938,
+      381.1951110839844,
+      142.1052978515625
+    ],
+    "inline": true,
+    "text": " d2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00134.svg",
+    "sourcePage": 8,
+    "bbox": [
+      405.0294982910156,
+      156.6942169189453,
+      425.94553833007814,
+      169.2033203125
+    ],
+    "inline": true,
+    "text": " δ ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00135.svg",
+    "sourcePage": 8,
+    "bbox": [
+      443.5179931640625,
+      154.92885131835936,
+      472.448193359375,
+      169.2033203125
+    ],
+    "inline": true,
+    "text": "(P ′, P"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00136.svg",
+    "sourcePage": 8,
+    "bbox": [
+      259.28700561523436,
+      168.59096069335936,
+      270.38010864257814,
+      182.7522705078125
+    ],
+    "inline": true,
+    "text": "δ2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00137.svg",
+    "sourcePage": 8,
+    "bbox": [
+      465.0550109863281,
+      170.2431671142578,
+      471.37864379882814,
+      182.7522705078125
+    ],
+    "inline": true,
+    "text": "c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00138.svg",
+    "sourcePage": 8,
+    "bbox": [
+      64.00000305175782,
+      183.79217834472655,
+      88.63646392822265,
+      197.2962158203125
+    ],
+    "inline": true,
+    "text": "γc(H"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00139.svg",
+    "sourcePage": 8,
+    "bbox": [
+      239.81614990234374,
+      233.26480407714843,
+      289.87904052734376,
+      245.9287841796875
+    ],
+    "inline": true,
+    "text": " r = 1 −λ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00140.svg",
+    "sourcePage": 8,
+    "bbox": [
+      401.22389526367186,
+      233.26480407714843,
+      465.157421875,
+      245.9287841796875
+    ],
+    "inline": true,
+    "text": " H = T ⊗T/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00141.svg",
+    "sourcePage": 8,
+    "bbox": [
+      195.3970520019531,
+      255.71693725585936,
+      416.6057556152344,
+      270.43677978515626
+    ],
+    "inline": false,
+    "text": "1/9,\nr/18 (four times),\nr2/36 (four times)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00142.svg",
+    "sourcePage": 8,
+    "bbox": [
+      243.7760498046875,
+      297.23082275390624,
+      368.2267272949219,
+      334.9117858886719
+    ],
+    "inline": false,
+    "text": "TV(P ′, Pλ,4) ≥r\n√\n1 + r2\n18\n√\n2\n,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00143.svg",
+    "sourcePage": 8,
+    "bbox": [
+      252.57901306152343,
+      364.93095703125,
+      359.42371826171876,
+      394.94578247070314
+    ],
+    "inline": false,
+    "text": "TV(P ′, Pλ,4) ≥\nr2\n36\n√\n2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00144.svg",
+    "sourcePage": 8,
+    "bbox": [
+      63.596003723144534,
+      466.8021728515625,
+      548.5979125976562,
+      540.4649780273437
+    ],
+    "inline": false,
+    "text": "Assume N independently prepared trials from one fixed complete four-record law, with every trial and\nnull retained. The preparation/reset mechanism, clock and independence are physical conditions, not\ninferred from a reset flag. Pool all nontarget past pairs into one extra row and all nontarget future\npairs into one extra column; this coarse-graining preserves the rank bound and gives a finite complete\ntable. Let bH be its empirical frequency matrix and"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00145.svg",
+    "sourcePage": 8,
+    "bbox": [
+      246.2690002441406,
+      543.7753173828125,
+      365.7327392578125,
+      573.2692993164062
+    ],
+    "inline": false,
+    "text": "eN(α) = 1 +\np\nlog(1/α)\n√\nN\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00146.svg",
+    "sourcePage": 8,
+    "bbox": [
+      63.60701293945313,
+      581.5036499023438,
+      377.09519653320314,
+      611.3399780273437
+    ],
+    "inline": false,
+    "text": "Then\nPr{∥bH −H∥F > eN(α)} ≤α."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00147.svg",
+    "sourcePage": 8,
+    "bbox": [
+      64.00000305175782,
+      612.6808959960938,
+      548.4044311523437,
+      633.2578857421875
+    ],
+    "inline": false,
+    "text": "Indeed E∥bH −H∥2\nF = (1 −∥H∥2\nF)/N ≤1/N; replacing one trial changes the norm by at most\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00148.svg",
+    "sourcePage": 8,
+    "bbox": [
+      73.08999938964844,
+      629.8101684570313,
+      93.75956420898437,
+      642.3327758789062
+    ],
+    "inline": true,
+    "text": "2/N"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00149.svg",
+    "sourcePage": 8,
+    "bbox": [
+      240.56199951171874,
+      626.89970703125,
+      349.8223083496094,
+      642.319287109375
+    ],
+    "inline": true,
+    "text": "{f −Ef > u} ≤e−Nu2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00150.svg",
+    "sourcePage": 8,
+    "bbox": [
+      182.9969970703125,
+      684.0071899414063,
+      189.3206298828125,
+      696.51630859375
+    ],
+    "inline": true,
+    "text": "c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p008-00151.svg",
+    "sourcePage": 8,
+    "bbox": [
+      269.47499389648436,
+      708.515185546875,
+      342.5266540527344,
+      727.9809692382812
+    ],
+    "inline": false,
+    "text": "γc( bH) > eN(α)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00152.svg",
+    "sourcePage": 9,
+    "bbox": [
+      248.07599182128905,
+      66.43219299316407,
+      260.18983154296876,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " α"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00153.svg",
+    "sourcePage": 9,
+    "bbox": [
+      381.6230041503906,
+      66.43219299316407,
+      387.94663696289064,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": "c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00154.svg",
+    "sourcePage": 9,
+    "bbox": [
+      240.20865173339843,
+      79.84079284667969,
+      261.8435485839844,
+      92.49127655029297
+    ],
+    "inline": true,
+    "text": " −β"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00155.svg",
+    "sourcePage": 9,
+    "bbox": [
+      310.04600830078124,
+      79.91096801757813,
+      426.432568359375,
+      93.53719024658203
+    ],
+    "inline": true,
+    "text": " γc(H) > eN(α) + eN(β"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00156.svg",
+    "sourcePage": 9,
+    "bbox": [
+      460.6530029296875,
+      242.57220764160155,
+      465.2857177734375,
+      255.08131103515626
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00157.svg",
+    "sourcePage": 9,
+    "bbox": [
+      204.86200256347655,
+      256.12120361328124,
+      209.49473266601564,
+      268.630322265625
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00158.svg",
+    "sourcePage": 9,
+    "bbox": [
+      177.9543029785156,
+      481.83983154296874,
+      203.27328186035157,
+      494.4903076171875
+    ],
+    "inline": true,
+    "text": " C ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00159.svg",
+    "sourcePage": 9,
+    "bbox": [
+      487.81199951171874,
+      481.83983154296874,
+      548.004345703125,
+      494.5193298339844
+    ],
+    "inline": true,
+    "text": "a, b), (c, d) ∈"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00160.svg",
+    "sourcePage": 9,
+    "bbox": [
+      63.99998779296875,
+      493.878955078125,
+      106.80112152099609,
+      508.0537841796875
+    ],
+    "inline": true,
+    "text": "{0, 1, 2}2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00161.svg",
+    "sourcePage": 9,
+    "bbox": [
+      159.68300170898436,
+      513.572314453125,
+      452.31971435546876,
+      547.247265625
+    ],
+    "inline": false,
+    "text": "\"X\n#\nX\nd\nCab,ad +\nX\nμ = min\na,b\nc,d\nCab,cd > 0,\nL = max\na,b\nc\nCab,cb\n,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00162.svg",
+    "sourcePage": 9,
+    "bbox": [
+      64.00000305175782,
+      552.4542114257813,
+      549.2793701171875,
+      611.6027954101562
+    ],
+    "inline": false,
+    "text": "and let σ2, σ5 > 0 be its second and fifth singular values. If C has a complex Hermitian PSD factorization\nof size at most three, then\n27L\nμ\n≥\nσ2\n2σ2\n5\n36(σ2 + 18\n√\n6)2 .\n(24)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00163.svg",
+    "sourcePage": 9,
+    "bbox": [
+      63.606997680664065,
+      657.661181640625,
+      550.1193969726562,
+      717.7749755859375
+    ],
+    "inline": false,
+    "text": "Proof.\nSince σ5 > 0, a factorization cannot be supported on dimension two. Congruence normalization\nof its row factors gives a POVM P\na,b Aab = I3 and density matrices bcd with Cab,cd = Tr(Aabbcd).\nThe row sums imply Tr Aab ≥μ/9, hence a largest eigenvalue at least μ/27. Put Ra = P\nd bad and\nQb = P\nc bcb. Both have trace three, and the leakage implies"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p009-00164.svg",
+    "sourcePage": 9,
+    "bbox": [
+      235.49501342773436,
+      717.7338134765625,
+      376.51759033203126,
+      732.0338256835937
+    ],
+    "inline": false,
+    "text": "λmin(Ra + Qb) ≤e := 27L/μ."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00165.svg",
+    "sourcePage": 10,
+    "bbox": [
+      422.2721435546875,
+      66.43219299316407,
+      452.0906494140625,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " s > e"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00166.svg",
+    "sourcePage": 10,
+    "bbox": [
+      149.2686340332031,
+      93.53119201660157,
+      168.38514404296876,
+      107.03419952392578
+    ],
+    "inline": true,
+    "text": " Ra"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00167.svg",
+    "sourcePage": 10,
+    "bbox": [
+      182.41473693847655,
+      93.53119201660157,
+      201.0083740234375,
+      107.17519073486328
+    ],
+    "inline": true,
+    "text": " Qb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00168.svg",
+    "sourcePage": 10,
+    "bbox": [
+      351.35203857421874,
+      93.45997924804688,
+      366.2230651855469,
+      106.07763366699218
+    ],
+    "inline": true,
+    "text": " s."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00169.svg",
+    "sourcePage": 10,
+    "bbox": [
+      174.3019592285156,
+      107.08020324707032,
+      192.23812561035157,
+      120.58321075439453
+    ],
+    "inline": true,
+    "text": " Ra"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00170.svg",
+    "sourcePage": 10,
+    "bbox": [
+      214.94266052246093,
+      107.08020324707032,
+      227.17664794921876,
+      119.58929901123047
+    ],
+    "inline": true,
+    "text": " P"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00171.svg",
+    "sourcePage": 10,
+    "bbox": [
+      457.81492919921874,
+      107.08020324707032,
+      468.00071411132814,
+      119.58929901123047
+    ],
+    "inline": true,
+    "text": " z"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00172.svg",
+    "sourcePage": 10,
+    "bbox": [
+      241.969775390625,
+      120.62921447753907,
+      252.0150115966797,
+      133.13831787109376
+    ],
+    "inline": true,
+    "text": " b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00173.svg",
+    "sourcePage": 10,
+    "bbox": [
+      322.09889526367186,
+      120.62921447753907,
+      337.69141845703126,
+      134.27320556640626
+    ],
+    "inline": true,
+    "text": " nb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00174.svg",
+    "sourcePage": 10,
+    "bbox": [
+      362.0835754394531,
+      120.48782653808594,
+      471.03464965820314,
+      134.81268005371095
+    ],
+    "inline": true,
+    "text": " ⟨nb, (Ra + Qb)nb⟩≤e"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00175.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      134.03683776855468,
+      105.54401092529297,
+      148.18296508789064
+    ],
+    "inline": true,
+    "text": "Ra ⪰sP"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00176.svg",
+    "sourcePage": 10,
+    "bbox": [
+      224.3199951171875,
+      143.08182067871093,
+      293.98228149414064,
+      161.37220458984376
+    ],
+    "inline": true,
+    "text": "∥Pnb∥2 ≤e/s,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00177.svg",
+    "sourcePage": 10,
+    "bbox": [
+      316.0089904785156,
+      147.58682556152343,
+      387.6863525390625,
+      161.37220458984376
+    ],
+    "inline": true,
+    "text": "⟨nb, Qbnb⟩≤e."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00178.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.99998779296875,
+      166.42184753417968,
+      290.68272094726564,
+      180.2072265625
+    ],
+    "inline": false,
+    "text": "Choose the phase so ⟨z, nb⟩≥0. Since e/s < 1,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00179.svg",
+    "sourcePage": 10,
+    "bbox": [
+      207.83700866699218,
+      187.50567932128905,
+      404.1722839355469,
+      206.1409118652344
+    ],
+    "inline": false,
+    "text": "∥nb −z∥2 = 2(1 −\nq\n1 −∥Pnb∥2) ≤2e/s."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00180.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.606982421875,
+      207.50387878417968,
+      454.1473815917969,
+      230.09681396484376
+    ],
+    "inline": false,
+    "text": "The bound ∥Qb∥≤Tr Qb = 3 and the triangle inequality after applying √Qb give"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00181.svg",
+    "sourcePage": 10,
+    "bbox": [
+      181.69398803710936,
+      235.16482849121093,
+      430.30772094726564,
+      258.40821533203126
+    ],
+    "inline": false,
+    "text": "⟨z, Qbz⟩≤\n\u0012√e +\n√\n2e/s\n\u00132\n=: l= e(1 +\nq\n3\nq\n6/s)2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00182.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      271.6078369140625,
+      548.0971801757812,
+      299.30189208984376
+    ],
+    "inline": false,
+    "text": "Every preparation obeys bcd ⪯Qd, hence Tr[(I −P)bcd] ≤lfor this common plane. The projection\nbound ∥ρ −PρP∥1 ≤2\np"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00183.svg",
+    "sourcePage": 10,
+    "bbox": [
+      185.3959991455078,
+      275.883837890625,
+      542.4952514648437,
+      297.83750610351564
+    ],
+    "inline": false,
+    "text": "Tr[(I −P)ρ] therefore bounds every preparation-compression error by 2\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00184.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      285.25230712890624,
+      550.1192138671875,
+      338.4916198730469
+    ],
+    "inline": false,
+    "text": "l.\nFor completeness, purify ρ, apply P ⊗I, and compute the trace norm of the difference between the\noriginal rank-one projector and the projected, unnormalized rank-one operator: for discarded mass x,\nits norm is\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00185.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      317.97081298828124,
+      548.6128051757812,
+      419.76377563476564
+    ],
+    "inline": false,
+    "text": "4x −3x2 ≤2√x. Partial trace contracts this Hermitian trace norm, giving the stated\nbound also for mixed ρ.\nReplace each bcd by PbcdP and apply the same POVM. The resulting real matrix C(4) has rank\nat most four, since Hermitian operators on a two-dimensional plane have real dimension four. A\nPOVM contracts the trace norm of a Hermitian difference: if D = D+ −D−is its positive/negative\ndecomposition, then P\nab | Tr(AabD)| ≤Tr D+ + Tr D−= ∥D∥1. Consequently each of the nine column\nerrors has Euclidean norm at most 2\n√\nl. Thus"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00186.svg",
+    "sourcePage": 10,
+    "bbox": [
+      179.4969970703125,
+      422.58079833984374,
+      432.50571899414064,
+      445.1938903808594
+    ],
+    "inline": false,
+    "text": "σ5 ≤∥C −C(4)∥op ≤∥C −C(4)∥F ≤6√e(1 +\nq\n6/s)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00187.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.606997680664065,
+      453.1636535644531,
+      550.2157104492187,
+      508.01392822265626
+    ],
+    "inline": false,
+    "text": "The first inequality follows from the singular-value lower bound for rank-four approximation, which\napplies to every real approximant.\nCase 2: all Ra, Qb have second eigenvalue below s. Let Pa and Q′\nb be their top-eigenvector projectors.\nThe mass outside each such line is below 2s. Since bab ⪯Ra, Qb,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00188.svg",
+    "sourcePage": 10,
+    "bbox": [
+      207.80604858398436,
+      506.39879150390624,
+      404.19907836914064,
+      530.56123046875
+    ],
+    "inline": false,
+    "text": "D(bab, Pa) ≤\n√\n2s,\nD(bab, Q′\nb) ≤\n√\n2s,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00189.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.606997680664065,
+      537.2743408203125,
+      355.0196044921875,
+      550.6726806640625
+    ],
+    "inline": false,
+    "text": "where D denotes half trace distance. Here D(ρ, |v⟩⟨v|) ≤\np"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00190.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      537.9848510742188,
+      548.082470703125,
+      580.261181640625
+    ],
+    "inline": false,
+    "text": "1 −⟨v, ρv⟩: it is equality for pure states\nand follows for mixed states by convexity and Jensen’s inequality. Fix P0. Comparing through b0b gives\nD(P0, Q′\nb) ≤2\n√\n2s, whence D(bab, P0) ≤3\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00191.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      565.224169921875,
+      548.5603149414062,
+      604.8696411132812
+    ],
+    "inline": false,
+    "text": "2s for all nine preparations. Replace every preparation by\nthis same pure state. The resulting matrix C(1) has identical normalized columns and rank at most\none. Each column difference is zero-sum and has classical total variation at most 3\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00192.svg",
+    "sourcePage": 10,
+    "bbox": [
+      64.00000305175782,
+      592.252001953125,
+      548.0242431640625,
+      634.5598876953125
+    ],
+    "inline": false,
+    "text": "2s by POVM\ncontraction. For a zero-sum real vector v, its positive and negative parts each have mass ∥v∥1/2, so\n∥v∥2\n2 ≤2(∥v∥1/2)2. Each column thus has Euclidean norm at most 6√s, and"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00193.svg",
+    "sourcePage": 10,
+    "bbox": [
+      203.38202209472655,
+      633.0368530273438,
+      408.6230895996094,
+      655.6499145507812
+    ],
+    "inline": false,
+    "text": "σ2 ≤∥C −C(1)∥op ≤∥C −C(1)∥F ≤18√s."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00194.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.606997680664065,
+      663.69169921875,
+      550.2439697265625,
+      703.3047607421875
+    ],
+    "inline": false,
+    "text": "These two cases exhaust the possible normalized factors.\nIf the right side of (24) exceeded e, choose s < σ2\n2/324 sufficiently close to that upper endpoint.\nThen both displayed inequalities would fail, since the limiting first bound is 6√e(1 + 18\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p010-00195.svg",
+    "sourcePage": 10,
+    "bbox": [
+      63.606997680664065,
+      690.7684204101563,
+      550.1189086914062,
+      732.5230834960937
+    ],
+    "inline": false,
+    "text": "6/σ2) < σ5.\nThis choice also satisfies s > e: column stochasticity gives σ2, σ5 ≤∥C∥F ≤3, and the assumed bound\non e is less than σ2\n2/(24 · 324). This contradiction proves the necessary inequality.\n□"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00196.svg",
+    "sourcePage": 11,
+    "bbox": [
+      79.91636962890625,
+      87.02716369628907,
+      103.67312316894531,
+      100.68101959228515
+    ],
+    "inline": true,
+    "text": " Pλ,4"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00197.svg",
+    "sourcePage": 11,
+    "bbox": [
+      192.88800354003905,
+      107.73509521484375,
+      419.1157653808594,
+      136.7827880859375
+    ],
+    "inline": false,
+    "text": "Hab,cd = Pλ,4(a, b, c, d) = T λ\nacT λ\nbd\n9\n,\nCλ = 9H."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00198.svg",
+    "sourcePage": 11,
+    "bbox": [
+      63.606997680664065,
+      138.31476135253905,
+      550.415478515625,
+      249.5628173828125
+    ],
+    "inline": false,
+    "text": "Suppose another complete four-record law P ′ is generated through a quantum causal cut of dimension\nat most three. All history-correlated systems used again in the future belong to that cut; independent\nfresh ports and an untouched retained archive obey the same convention as the accounting chapter.\nThe competing law may have a different update rule, lack stationarity, or lie outside the trine family.\nExtra null/loss outcomes can remain in its complete alphabet, with zero target probability.\nPut δ = TV(P ′, Pλ,4) < 1/9. Restrict its joint table H′ to the target trit pairs and let h′\ncd =\nP\nab H′\nab,cd ≥1/9 −δ. The column-normalized matrix C′\nab,cd = H′\nab,cd/h′\ncd still has PSD rank at most\nthree. Define"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00199.svg",
+    "sourcePage": 11,
+    "bbox": [
+      163.69899291992186,
+      246.07681579589843,
+      448.30372314453126,
+      273.6048095703125
+    ],
+    "inline": false,
+    "text": "d =\n36δ\n1 −9δ,\na = 1 −λ\n2\n−d,\ne∗=\n27\n1 −d\n2λ/3 + 18δ\n1 −9δ\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00200.svg",
+    "sourcePage": 11,
+    "bbox": [
+      111.083056640625,
+      275.83519287109374,
+      165.9219482421875,
+      288.35780029296876
+    ],
+    "inline": true,
+    "text": " d < 1, a >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00201.svg",
+    "sourcePage": 11,
+    "bbox": [
+      255.97001953125,
+      298.33595581054686,
+      549.2793701171875,
+      328.35178833007814
+    ],
+    "inline": false,
+    "text": "e∗≥\na4\n36(a + 18\n√\n6)2 .\n(25)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00202.svg",
+    "sourcePage": 11,
+    "bbox": [
+      203.54698486328124,
+      398.44981689453124,
+      408.46033935546876,
+      427.4002197265625
+    ],
+    "inline": false,
+    "text": "∥C′ −Cλ∥op ≤\nX\nab,cd\n|C′\nab,cd −(Cλ)ab,cd| ≤d."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00203.svg",
+    "sourcePage": 11,
+    "bbox": [
+      342.2264892578125,
+      435.0719787597656,
+      356.8311279296875,
+      449.23231201171876
+    ],
+    "inline": true,
+    "text": " l1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00204.svg",
+    "sourcePage": 11,
+    "bbox": [
+      393.6119873046875,
+      436.723193359375,
+      400.055615234375,
+      449.23231201171876
+    ],
+    "inline": true,
+    "text": "δ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00205.svg",
+    "sourcePage": 11,
+    "bbox": [
+      488.07435913085936,
+      435.0719787597656,
+      502.7841003417969,
+      449.23231201171876
+    ],
+    "inline": true,
+    "text": " l1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00206.svg",
+    "sourcePage": 11,
+    "bbox": [
+      539.564990234375,
+      436.65199584960936,
+      549.5193603515625,
+      449.26963500976564
+    ],
+    "inline": true,
+    "text": "δ,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00207.svg",
+    "sourcePage": 11,
+    "bbox": [
+      124.0239974975586,
+      450.13182373046874,
+      154.7976501464844,
+      462.81727294921876
+    ],
+    "inline": true,
+    "text": "/9 −δ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00208.svg",
+    "sourcePage": 11,
+    "bbox": [
+      302.12672729492186,
+      450.13182373046874,
+      322.73365478515626,
+      462.7822998046875
+    ],
+    "inline": true,
+    "text": " −d"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00209.svg",
+    "sourcePage": 11,
+    "bbox": [
+      64.00000305175782,
+      463.8221923828125,
+      71.37091522216797,
+      476.33131103515626
+    ],
+    "inline": true,
+    "text": "a"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00210.svg",
+    "sourcePage": 11,
+    "bbox": [
+      345.26201171875,
+      463.8221923828125,
+      349.8947265625,
+      476.33131103515626
+    ],
+    "inline": true,
+    "text": ","
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00211.svg",
+    "sourcePage": 11,
+    "bbox": [
+      502.45299072265624,
+      463.8221923828125,
+      515.8675659179687,
+      476.33131103515626
+    ],
+    "inline": true,
+    "text": "λ/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00212.svg",
+    "sourcePage": 11,
+    "bbox": [
+      157.83099670410155,
+      477.3711730957031,
+      164.27463989257814,
+      489.8802917480469
+    ],
+    "inline": true,
+    "text": "δ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00213.svg",
+    "sourcePage": 11,
+    "bbox": [
+      390.3953430175781,
+      475.6057922363281,
+      550.1192138671875,
+      489.9128845214844
+    ],
+    "inline": true,
+    "text": " L(C′) by (2λ/3 + 18δ)/(1 −9δ)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00214.svg",
+    "sourcePage": 11,
+    "bbox": [
+      441.08912963867186,
+      504.46922607421874,
+      476.6805847167969,
+      516.9918334960937
+    ],
+    "inline": true,
+    "text": " s = 1/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00215.svg",
+    "sourcePage": 11,
+    "bbox": [
+      255.741015625,
+      524.2608520507813,
+      549.2794311523437,
+      540.0850952148437
+    ],
+    "inline": false,
+    "text": "TV(P ′, P0,4) > 10−9,\n(26)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00216.svg",
+    "sourcePage": 11,
+    "bbox": [
+      160.1196319580078,
+      546.9088623046875,
+      222.4348114013672,
+      561.1967895507812
+    ],
+    "inline": true,
+    "text": " ≤λ ≤10−8,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00217.svg",
+    "sourcePage": 11,
+    "bbox": [
+      243.8770782470703,
+      559.9128295898438,
+      368.12583618164064,
+      575.8770874023437
+    ],
+    "inline": true,
+    "text": "TV(P ′, Pλ,4) > 5 × 10−10."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00218.svg",
+    "sourcePage": 11,
+    "bbox": [
+      432.6129943847656,
+      581.0451538085938,
+      437.24570922851564,
+      593.5542724609375
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00219.svg",
+    "sourcePage": 11,
+    "bbox": [
+      99.59900207519532,
+      594.5941650390625,
+      104.23173217773437,
+      607.1032836914062
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00220.svg",
+    "sourcePage": 11,
+    "bbox": [
+      269.61000366210936,
+      594.5941650390625,
+      274.2427185058594,
+      607.1032836914062
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p011-00221.svg",
+    "sourcePage": 11,
+    "bbox": [
+      495.03200073242186,
+      594.5941650390625,
+      499.6647155761719,
+      607.1032836914062
+    ],
+    "inline": true,
+    "text": "."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00222.svg",
+    "sourcePage": 12,
+    "bbox": [
+      63.606997680664065,
+      87.01097412109375,
+      550.15888671875,
+      184.62290649414064
+    ],
+    "inline": false,
+    "text": "The noiseless growing lower bound is sensitive to small forbidden-event probabilities. A quantitative\nreplacement is possible, with a poor large-grid margin that should be stated explicitly. Suppose a\nrow-stochastic matrix eT factors through r classical states as AB, with both A and B row stochastic.\nSuch a normalization is available for every nonnegative factorization of a stochastic matrix after zero\nfactors are removed. Set e = maxi eTii and μ = mini̸=j eTij. For τ > 0 put Si = {l: Ail≥τ}. If Si ⊆Sj,\nthen\neTij ≤e/τ + rτ.\n(28)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00223.svg",
+    "sourcePage": 12,
+    "bbox": [
+      64.00000305175782,
+      188.20578308105468,
+      548.3538940429687,
+      214.4426239013672
+    ],
+    "inline": false,
+    "text": "Indeed, on Si the sum of Blj is at most e/τ because Ajl≥τ, and outside Si the contribution is at\nmost rτ. Choosing τ =\np"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00224.svg",
+    "sourcePage": 12,
+    "bbox": [
+      64.00000305175782,
+      193.92080993652343,
+      548.0271728515625,
+      241.5177734375
+    ],
+    "inline": false,
+    "text": "e/r shows that μ > 2√re forces an antichain; the case e = 0 follows by a\nlimit or the exact support argument.\nFor an entrywise perturbation of the phase-circle transition by at most δ, write"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00225.svg",
+    "sourcePage": 12,
+    "bbox": [
+      63.606982421875,
+      250.5139953613281,
+      394.82569580078126,
+      303.13489990234376
+    ],
+    "inline": false,
+    "text": "μm = 1 −cos(2π/m)\nm\n= 2 sin2(π/m)\nm\n.\nThe sufficient antichain condition is μm −δ > 2\n√\nrδ, or equivalently"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00226.svg",
+    "sourcePage": 12,
+    "bbox": [
+      232.6359893798828,
+      310.649951171875,
+      549.2793701171875,
+      341.3237731933594
+    ],
+    "inline": false,
+    "text": "δ < δ∗\nm,r :=\nμ2\nm\n(√r + μm + √r)2 .\n(29)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00227.svg",
+    "sourcePage": 12,
+    "bbox": [
+      266.62318725585936,
+      349.3177978515625,
+      279.51939086914064,
+      363.59229736328126
+    ],
+    "inline": true,
+    "text": " p′"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00228.svg",
+    "sourcePage": 12,
+    "bbox": [
+      371.46876831054686,
+      351.0831787109375,
+      382.08179931640626,
+      363.59229736328126
+    ],
+    "inline": true,
+    "text": " η"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00229.svg",
+    "sourcePage": 12,
+    "bbox": [
+      500.0931884765625,
+      349.3177978515625,
+      549.5191772460937,
+      363.59229736328126
+    ],
+    "inline": true,
+    "text": " η < m−2,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00230.svg",
+    "sourcePage": 12,
+    "bbox": [
+      216.3260070800781,
+      385.3307678222656,
+      395.676708984375,
+      417.2202880859375
+    ],
+    "inline": false,
+    "text": "p′(i, y, j)\nP\nk p′(i, y, k) −Tij\n≤\n2η\nm−2 −η.\nmax\ni,j"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00231.svg",
+    "sourcePage": 12,
+    "bbox": [
+      378.414111328125,
+      424.18117065429686,
+      388.92982177734376,
+      436.69028930664064
+    ],
+    "inline": true,
+    "text": " η"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00232.svg",
+    "sourcePage": 12,
+    "bbox": [
+      329.27443237304686,
+      437.5888244628906,
+      377.8812683105469,
+      451.73389892578126
+    ],
+    "inline": true,
+    "text": " r = rm −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00233.svg",
+    "sourcePage": 12,
+    "bbox": [
+      94.02185363769532,
+      451.27919311523436,
+      121.22790222167968,
+      464.78321533203126
+    ],
+    "inline": true,
+    "text": " mrm"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00234.svg",
+    "sourcePage": 12,
+    "bbox": [
+      261.897998046875,
+      459.81383056640624,
+      549.2793701171875,
+      491.9951904296875
+    ],
+    "inline": false,
+    "text": "η <\nδ∗\nm,r\nm2(2 + δ∗m,r).\n(30)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00235.svg",
+    "sourcePage": 12,
+    "bbox": [
+      401.46025390625,
+      496.4798156738281,
+      437.78757934570314,
+      510.75330810546876
+    ],
+    "inline": true,
+    "text": " m−8/r"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p012-00236.svg",
+    "sourcePage": 12,
+    "bbox": [
+      73.56241912841797,
+      511.79417724609374,
+      142.94073181152345,
+      524.3032958984375
+    ],
+    "inline": true,
+    "text": " m = 180, 360,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00237.svg",
+    "sourcePage": 13,
+    "bbox": [
+      80.23470611572266,
+      84.64392395019532,
+      121.39412384033203,
+      99.57366638183593
+    ],
+    "inline": true,
+    "text": " S = C3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00238.svg",
+    "sourcePage": 13,
+    "bbox": [
+      244.56215209960936,
+      84.64392395019532,
+      286.63010864257814,
+      99.57366638183593
+    ],
+    "inline": true,
+    "text": " A = C3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00239.svg",
+    "sourcePage": 13,
+    "bbox": [
+      420.1464416503906,
+      87.02722473144532,
+      433.98301391601564,
+      99.53632049560547
+    ],
+    "inline": true,
+    "text": " B"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00240.svg",
+    "sourcePage": 13,
+    "bbox": [
+      225.66200561523436,
+      121.03096313476563,
+      386.34071044921876,
+      155.7290466308594
+    ],
+    "inline": false,
+    "text": "2\nX\nj,k=0\n|j⟩⟨j|A ⊗KjkXK†\njk.\nA(X) ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00241.svg",
+    "sourcePage": 13,
+    "bbox": [
+      87.62562103271485,
+      163.80719299316405,
+      101.03782348632812,
+      176.31629638671876
+    ],
+    "inline": true,
+    "text": " A"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00242.svg",
+    "sourcePage": 13,
+    "bbox": [
+      491.03599853515624,
+      177.21481628417968,
+      550.119091796875,
+      189.89194946289064
+    ],
+    "inline": true,
+    "text": " A ⊗S ⊗B."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00243.svg",
+    "sourcePage": 13,
+    "bbox": [
+      108.19783325195313,
+      202.7931396484375,
+      188.84902648925782,
+      217.00066833496095
+    ],
+    "inline": true,
+    "text": " ω = e2πi/3, Z ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00244.svg",
+    "sourcePage": 13,
+    "bbox": [
+      210.54800720214843,
+      202.80299682617186,
+      250.33211975097657,
+      217.00066833496095
+    ],
+    "inline": true,
+    "text": "(1, ω, ω2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00245.svg",
+    "sourcePage": 13,
+    "bbox": [
+      275.21217651367186,
+      204.31283874511718,
+      350.0886657714844,
+      217.00066833496095
+    ],
+    "inline": true,
+    "text": " X|p⟩= |p + 1⟩"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00246.svg",
+    "sourcePage": 13,
+    "bbox": [
+      172.2360107421875,
+      238.13978881835936,
+      549.2794311523437,
+      254.7508056640625
+    ],
+    "inline": false,
+    "text": "Kjk = XjK0kZ−j,\n|K0k⟩⟩= αk|fk⟩|1⟩+ βk|fk+1⟩|2⟩,\n(31)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00247.svg",
+    "sourcePage": 13,
+    "bbox": [
+      63.606997680664065,
+      258.93822021484374,
+      548.0033081054687,
+      309.69895629882814
+    ],
+    "inline": false,
+    "text": "where |fk⟩= 3−1/2 P\np ωpk|p⟩and the vectorization orders input before output. Put νk = |αk|2 +|βk|2 >\n0, and assume P\nk νk = 1. The three vectors at fixed j are orthogonal. Moreover\nX"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00248.svg",
+    "sourcePage": 13,
+    "bbox": [
+      265.2740051269531,
+      296.82081909179686,
+      549.2793090820312,
+      323.97422485351564
+    ],
+    "inline": false,
+    "text": "j\nK†\njkKjk = νkI3.\n(32)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00249.svg",
+    "sourcePage": 13,
+    "bbox": [
+      64.00000305175782,
+      332.2758056640625,
+      548.198193359375,
+      362.5822265625
+    ],
+    "inline": false,
+    "text": "Indeed K†\n0kK0k is a weighted sum of two conjugate Fourier projectors, so each computational diagonal\nentry is νk/3. Twirling it by Z kills the off-diagonal entries and gives (32). Consequently"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00250.svg",
+    "sourcePage": 13,
+    "bbox": [
+      221.73700256347655,
+      369.28782958984374,
+      389.55689697265626,
+      396.4412353515625
+    ],
+    "inline": false,
+    "text": "Qk(X) = ν−1\nk\nX\nj\n|j⟩⟨j| ⊗KjkXK†\njk"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00251.svg",
+    "sourcePage": 13,
+    "bbox": [
+      64.00000305175782,
+      404.58079833984374,
+      548.523876953125,
+      445.46522216796876
+    ],
+    "inline": false,
+    "text": "is CPTP with Choi rank three, and A = P\nk νkQk. The three component Choi supports are mutually\northogonal, including the pointer factor. The normalized Choi state ρA = J(A)/3 therefore has\neigenvalues νk/3, each with multiplicity three."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00252.svg",
+    "sourcePage": 13,
+    "bbox": [
+      64.00000305175782,
+      479.04710693359374,
+      548.3054931640625,
+      520.9248168945312
+    ],
+    "inline": false,
+    "text": "Relabel the weights ν(1) ≥ν(2) ≥ν(3) and put pm = Pm\ni=1 ν(i), m = 1, 2, 3. A pure bath of dimension b\nmeans the minimum pure Stinespring environment of the specified reduced channel; all fresh apparatus\nfactors purifying that channel are included."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00253.svg",
+    "sourcePage": 13,
+    "bbox": [
+      161.08999938964843,
+      550.4411499023438,
+      175.300732421875,
+      562.9637573242187
+    ],
+    "inline": true,
+    "text": "m,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00254.svg",
+    "sourcePage": 13,
+    "bbox": [
+      245.606005859375,
+      560.44267578125,
+      549.2793701171875,
+      587.8147705078125
+    ],
+    "inline": false,
+    "text": "inf 1\n2∥e\nA −A∥⋄= 1 −pm.\n(33)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00255.svg",
+    "sourcePage": 13,
+    "bbox": [
+      253.52801818847655,
+      607.9880859375,
+      549.2793701171875,
+      642.430126953125
+    ],
+    "inline": false,
+    "text": "m\nX\nAm = p−1\nm\ni=1\nν(i)Q(i).\n(34)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00256.svg",
+    "sourcePage": 13,
+    "bbox": [
+      172.0190002441406,
+      689.6061889648438,
+      183.1971862792969,
+      702.1153076171875
+    ],
+    "inline": true,
+    "text": "m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p013-00257.svg",
+    "sourcePage": 13,
+    "bbox": [
+      239.70799560546874,
+      708.5046875,
+      549.2793701171875,
+      735.8767822265625
+    ],
+    "inline": false,
+    "text": "inf 1\n2∥W −V∥⋄=\np\n1 −pm,\n(35)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00258.svg",
+    "sourcePage": 14,
+    "bbox": [
+      92.09282989501953,
+      64.66781158447266,
+      162.2928894042969,
+      78.97863464355468
+    ],
+    "inline": true,
+    "text": " V(ρ) = V ρV †"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00259.svg",
+    "sourcePage": 14,
+    "bbox": [
+      246.18388671875,
+      66.43219299316407,
+      262.0091979980469,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " W"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00260.svg",
+    "sourcePage": 14,
+    "bbox": [
+      424.05162353515624,
+      93.53119201660157,
+      433.88099365234376,
+      106.04028778076172
+    ],
+    "inline": true,
+    "text": " b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00261.svg",
+    "sourcePage": 14,
+    "bbox": [
+      100.4254867553711,
+      107.08020324707032,
+      136.1326416015625,
+      119.60279541015625
+    ],
+    "inline": true,
+    "text": " b. If P"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00262.svg",
+    "sourcePage": 14,
+    "bbox": [
+      193.43100280761718,
+      127.38310546875,
+      419.766796875,
+      161.82505493164064
+    ],
+    "inline": false,
+    "text": "b\nX\n1\n2∥ρA −ρ e\nA∥1 ≥Tr[(I −P)ρA] ≥1 −\ni=1\nλi(ρA)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00263.svg",
+    "sourcePage": 14,
+    "bbox": [
+      240.54706115722655,
+      168.4812042236328,
+      258.1125915527344,
+      181.93291931152345
+    ],
+    "inline": true,
+    "text": " ρA"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00264.svg",
+    "sourcePage": 14,
+    "bbox": [
+      326.39699096679686,
+      168.4812042236328,
+      332.67698364257814,
+      180.9903076171875
+    ],
+    "inline": true,
+    "text": "b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00265.svg",
+    "sourcePage": 14,
+    "bbox": [
+      512.293017578125,
+      168.4812042236328,
+      516.925732421875,
+      180.9903076171875
+    ],
+    "inline": true,
+    "text": ","
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00266.svg",
+    "sourcePage": 14,
+    "bbox": [
+      97.05486602783203,
+      182.03021545410155,
+      106.95000915527343,
+      194.53931884765626
+    ],
+    "inline": true,
+    "text": " b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00267.svg",
+    "sourcePage": 14,
+    "bbox": [
+      402.6918518066406,
+      182.03021545410155,
+      412.44700317382814,
+      194.53931884765626
+    ],
+    "inline": true,
+    "text": " b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00268.svg",
+    "sourcePage": 14,
+    "bbox": [
+      79.94910736083985,
+      209.1281768798828,
+      119.43519287109375,
+      221.65076904296876
+    ],
+    "inline": true,
+    "text": " b = 3m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00269.svg",
+    "sourcePage": 14,
+    "bbox": [
+      159.16954345703124,
+      208.98678894042968,
+      190.61272888183595,
+      222.6311767578125
+    ],
+    "inline": true,
+    "text": " −pm."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00270.svg",
+    "sourcePage": 14,
+    "bbox": [
+      97.21521301269532,
+      222.67718811035155,
+      112.03019409179687,
+      235.18629150390626
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00271.svg",
+    "sourcePage": 14,
+    "bbox": [
+      387.33668823242186,
+      222.53580017089843,
+      408.66187744140626,
+      236.1812255859375
+    ],
+    "inline": true,
+    "text": " Am"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00272.svg",
+    "sourcePage": 14,
+    "bbox": [
+      117.18839569091797,
+      236.08578796386718,
+      139.6289031982422,
+      249.73017578125
+    ],
+    "inline": true,
+    "text": " Rm"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00273.svg",
+    "sourcePage": 14,
+    "bbox": [
+      217.12889404296874,
+      236.08578796386718,
+      350.65687255859376,
+      250.40960388183595
+    ],
+    "inline": true,
+    "text": " A = pmAm + (1 −pm)Rm"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00274.svg",
+    "sourcePage": 14,
+    "bbox": [
+      211.19191284179686,
+      247.78700561523436,
+      221.76112060546876,
+      261.65305786132814
+    ],
+    "inline": true,
+    "text": " 1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00275.svg",
+    "sourcePage": 14,
+    "bbox": [
+      215.92900390625,
+      249.63479919433593,
+      323.70689086914064,
+      265.4150817871094
+    ],
+    "inline": true,
+    "text": "2∥A −Am∥⋄≤1 −pm"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00276.svg",
+    "sourcePage": 14,
+    "bbox": [
+      315.74718017578124,
+      276.7328369140625,
+      343.59666137695314,
+      289.38331298828126
+    ],
+    "inline": true,
+    "text": " |j, k⟩"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00277.svg",
+    "sourcePage": 14,
+    "bbox": [
+      128.69200439453124,
+      296.4708740234375,
+      483.31080322265626,
+      323.0961120605469
+    ],
+    "inline": false,
+    "text": "V =\nX\nj,k\n|j⟩A ⊗Kjk ⊗|j, k⟩B,\nWm = p−1/2\nm\nX\nj, k retained\n|j⟩A ⊗Kjk ⊗|j, k⟩B."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00278.svg",
+    "sourcePage": 14,
+    "bbox": [
+      64.00007934570313,
+      331.31474609375,
+      549.2793701171875,
+      359.0088317871094
+    ],
+    "inline": false,
+    "text": "Both are isometries by (32), and\nV †Wm = √pmI3.\n(36)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00279.svg",
+    "sourcePage": 14,
+    "bbox": [
+      64.00000305175782,
+      356.6598388671875,
+      548.6146362304687,
+      498.03977661132814
+    ],
+    "inline": false,
+    "text": "Every pure input with any inert reference therefore gives pure outputs of overlap √pm, whose half\ntrace distance is √1 −pm. Convexity handles mixed inputs. This proves the upper bound uniformly\nover references.\nFor any competing bath of dimension at most b, apply its isometry and the target isometry to a\nmaximally entangled input. The competitor output has Schmidt rank at most b across bath versus\npointer–memory–reference. After any bath-only identification it lies in some bath subspace of dimension\nat most b. Its squared overlap with the target is at most the target mass in that subspace, at most the\nlargest-b eigenvalue sum of its bath marginal. The target pure state’s nonzero bath eigenvalues are\nthose of ρA, so this sum is pm for b = 3m. Pure-state trace distance is thus at least √1 −pm. This\nproves (35).\n□"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00280.svg",
+    "sourcePage": 14,
+    "bbox": [
+      63.596003723144534,
+      525.8538696289063,
+      398.82227783203126,
+      547.4387939453125
+    ],
+    "inline": false,
+    "text": "At the fixed-seed construction’s critical parameter t =\n√\n14/21, r = 4\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00281.svg",
+    "sourcePage": 14,
+    "bbox": [
+      397.2260009765625,
+      534.9161865234375,
+      415.18955688476564,
+      547.4387939453125
+    ],
+    "inline": true,
+    "text": "14/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00282.svg",
+    "sourcePage": 14,
+    "bbox": [
+      238.5030090332031,
+      562.0141479492188,
+      373.49970703125,
+      575.5271118164062
+    ],
+    "inline": true,
+    "text": "(ν0, ν1, ν2) = (1/9, 1/3, 5/9)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00283.svg",
+    "sourcePage": 14,
+    "bbox": [
+      269.4980041503906,
+      580.7381469726563,
+      334.57655029296876,
+      593.247265625
+    ],
+    "inline": true,
+    "text": "/27, 2/27, 14/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00284.svg",
+    "sourcePage": 14,
+    "bbox": [
+      474.36073608398436,
+      580.5967895507813,
+      549.5190551757812,
+      594.8736694335937
+    ],
+    "inline": true,
+    "text": " c0 = t(ω−2)/9,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00285.svg",
+    "sourcePage": 14,
+    "bbox": [
+      64.00000305175782,
+      594.1468383789063,
+      177.13154296875,
+      608.470654296875
+    ],
+    "inline": true,
+    "text": "c1 = c2 = −t(8 + 5ω)/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00286.svg",
+    "sourcePage": 14,
+    "bbox": [
+      252.57899780273436,
+      642.744189453125,
+      270.5425537109375,
+      655.266796875
+    ],
+    "inline": true,
+    "text": "4/9"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00287.svg",
+    "sourcePage": 14,
+    "bbox": [
+      433.96901245117186,
+      642.744189453125,
+      451.933544921875,
+      655.266796875
+    ],
+    "inline": true,
+    "text": "2/3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00288.svg",
+    "sourcePage": 14,
+    "bbox": [
+      252.57899780273436,
+      656.2932006835938,
+      270.5425537109375,
+      668.8158081054687
+    ],
+    "inline": true,
+    "text": "1/9"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p014-00289.svg",
+    "sourcePage": 14,
+    "bbox": [
+      433.96901245117186,
+      656.2932006835938,
+      451.933544921875,
+      668.8158081054687
+    ],
+    "inline": true,
+    "text": "1/3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00290.svg",
+    "sourcePage": 15,
+    "bbox": [
+      64.00000305175782,
+      66.53123779296875,
+      548.2685668945312,
+      134.44776611328126
+    ],
+    "inline": false,
+    "text": "Repeated use.\nFor the displayed streaming implementations, fresh independent pure bath ports and\nthe same internal dynamics give V †\nnWm,n = pn/2\nm I: contract the last pair of isometries using (36) and\ninduct. Their full retained distance is therefore exactly √1 −pnm for every input and reference. This\nis the error of these explicitly declared implementations, not the optimum over globally compressed\nhorizon baths or a grant of fresh preparation independence in an unrelated physical source."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00291.svg",
+    "sourcePage": 15,
+    "bbox": [
+      126.25100250244141,
+      177.83819885253905,
+      133.30555419921876,
+      190.34730224609376
+    ],
+    "inline": true,
+    "text": "/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00292.svg",
+    "sourcePage": 15,
+    "bbox": [
+      365.8159973144531,
+      177.83819885253905,
+      372.870556640625,
+      190.34730224609376
+    ],
+    "inline": true,
+    "text": "/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00293.svg",
+    "sourcePage": 15,
+    "bbox": [
+      225.8908264160156,
+      484.68983764648436,
+      249.62728576660157,
+      497.34031372070314
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00294.svg",
+    "sourcePage": 15,
+    "bbox": [
+      295.25108642578124,
+      669.988818359375,
+      395.89771728515626,
+      684.2888305664062
+    ],
+    "inline": true,
+    "text": " θj = 2πj/m, m ≥3,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p015-00295.svg",
+    "sourcePage": 15,
+    "bbox": [
+      154.25099487304686,
+      693.1031372070313,
+      457.75172119140626,
+      723.1278198242187
+    ],
+    "inline": false,
+    "text": "|ψj⟩= |0⟩+ eiθj|1⟩\n√\n2\n,\n|ψ⊥\nj ⟩= |0⟩−eiθj|1⟩\n√\n2\n,\nEj = 2\nm|ψ⊥\nj ⟩⟨ψ⊥\nj |,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00296.svg",
+    "sourcePage": 16,
+    "bbox": [
+      63.606997680664065,
+      66.29080505371094,
+      388.08070068359376,
+      106.16931610107422
+    ],
+    "inline": false,
+    "text": "with ρj = |ψj⟩⟨ψj| and\nTij = Tr(Ejρi) = 1 −cos(θi −θj)\nm\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00297.svg",
+    "sourcePage": 16,
+    "bbox": [
+      128.62550659179686,
+      109.09027404785157,
+      169.3735321044922,
+      122.60313873291015
+    ],
+    "inline": true,
+    "text": " τ = I4/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00298.svg",
+    "sourcePage": 16,
+    "bbox": [
+      232.74298400878905,
+      133.00986022949218,
+      549.2793701171875,
+      147.1549499511719
+    ],
+    "inline": false,
+    "text": "Ψj(X) = Tr1[(Ej ⊗I2)X] ⊗ρj\n(37)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00299.svg",
+    "sourcePage": 16,
+    "bbox": [
+      204.83401794433593,
+      179.16688842773436,
+      549.2793701171875,
+      213.58018188476564
+    ],
+    "inline": false,
+    "text": "n−2\nY\np(w1 · · · wn) = 1\nt=1\nTwt,wt+2,\nn ≥2.\n(38)\nm2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00300.svg",
+    "sourcePage": 16,
+    "bbox": [
+      196.31007690429686,
+      249.4871856689453,
+      208.0194519042969,
+      261.9962890625
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00301.svg",
+    "sourcePage": 16,
+    "bbox": [
+      79.91636962890625,
+      407.61818237304686,
+      91.83227996826172,
+      420.12730102539064
+    ],
+    "inline": true,
+    "text": " S"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00302.svg",
+    "sourcePage": 16,
+    "bbox": [
+      202.3109924316406,
+      429.9473449707031,
+      409.6917236328125,
+      449.38990478515626
+    ],
+    "inline": false,
+    "text": "Lj =\nq\n2/m|ψj⟩⟨ψ⊥\nj |,\nKj = S(Lj ⊗I2)."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00303.svg",
+    "sourcePage": 16,
+    "bbox": [
+      63.60701293945313,
+      458.81474609375,
+      302.8221862792969,
+      481.39490966796876
+    ],
+    "inline": false,
+    "text": "Then Ψj(X) = KjXK†\nj and P\nj K†\njKj = I4. Thus"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00304.svg",
+    "sourcePage": 16,
+    "bbox": [
+      214.4140197753906,
+      486.41774291992186,
+      549.2793701171875,
+      520.9630249023437
+    ],
+    "inline": false,
+    "text": "m−1\nX\nj=0\n|j⟩A ⊗Kj : C4 −→Cm\nA ⊗C4\nM\n(39)\nV ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00305.svg",
+    "sourcePage": 16,
+    "bbox": [
+      208.09828491210936,
+      530.6552001953125,
+      223.25217895507814,
+      543.1643188476562
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00306.svg",
+    "sourcePage": 16,
+    "bbox": [
+      232.4790069580078,
+      592.2498657226563,
+      379.52369384765626,
+      619.4032104492187
+    ],
+    "inline": false,
+    "text": "C1(X) =\nX\nj\n|j⟩⟨j|A ⊗KjXK†\nj."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00307.svg",
+    "sourcePage": 16,
+    "bbox": [
+      173.85989685058593,
+      629.1052124023438,
+      188.50318603515626,
+      641.6143310546875
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00308.svg",
+    "sourcePage": 16,
+    "bbox": [
+      99.22548980712891,
+      656.203173828125,
+      114.0261962890625,
+      668.7122924804687
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00309.svg",
+    "sourcePage": 16,
+    "bbox": [
+      188.2888977050781,
+      656.203173828125,
+      203.05819396972657,
+      668.7122924804687
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p016-00310.svg",
+    "sourcePage": 16,
+    "bbox": [
+      255.5699951171875,
+      680.1227905273438,
+      356.43174438476564,
+      694.3208740234375
+    ],
+    "inline": false,
+    "text": "F : |j⟩A 7→|j⟩A|j⟩E."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00311.svg",
+    "sourcePage": 17,
+    "bbox": [
+      64.00000305175782,
+      63.31881256103516,
+      549.5845458984375,
+      94.0998046875
+    ],
+    "inline": false,
+    "text": "The memory channel with its record discarded, Λ(X) = P\nj KjXK†\nj, has Choi rank exactly three,\nindependent of m. Indeed the three functions 1, eiθj, e−iθj are linearly independent for m ≥3, and"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00312.svg",
+    "sourcePage": 17,
+    "bbox": [
+      241.13902587890624,
+      103.27936096191407,
+      370.86439208984376,
+      133.631787109375
+    ],
+    "inline": false,
+    "text": "1\n−e−iθj\neiθj\n−1\n!\nLj =\n1\n√\n2m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00313.svg",
+    "sourcePage": 17,
+    "bbox": [
+      342.4286376953125,
+      143.6591827392578,
+      354.1982849121094,
+      156.1682861328125
+    ],
+    "inline": true,
+    "text": " S"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00314.svg",
+    "sourcePage": 17,
+    "bbox": [
+      445.29115600585936,
+      143.6591827392578,
+      459.5091064453125,
+      157.1720397949219
+    ],
+    "inline": true,
+    "text": " I2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00315.svg",
+    "sourcePage": 17,
+    "bbox": [
+      425.1024963378906,
+      157.20819396972655,
+      440.0571716308594,
+      169.71729736328126
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00316.svg",
+    "sourcePage": 17,
+    "bbox": [
+      323.735888671875,
+      197.8562042236328,
+      340.5027282714844,
+      211.41224365234376
+    ],
+    "inline": true,
+    "text": " dE"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00317.svg",
+    "sourcePage": 17,
+    "bbox": [
+      118.84441680908203,
+      211.40521545410155,
+      135.9027069091797,
+      224.9612548828125
+    ],
+    "inline": true,
+    "text": " dE"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00318.svg",
+    "sourcePage": 17,
+    "bbox": [
+      206.34738464355468,
+      211.26382751464843,
+      258.10169677734376,
+      224.9612548828125
+    ],
+    "inline": true,
+    "text": " J(C) ≤dE"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00319.svg",
+    "sourcePage": 17,
+    "bbox": [
+      116.03640289306641,
+      301.75419921875,
+      129.07691650390626,
+      314.26331787109376
+    ],
+    "inline": true,
+    "text": " w"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00320.svg",
+    "sourcePage": 17,
+    "bbox": [
+      146.56637878417968,
+      301.612841796875,
+      238.6912811279297,
+      316.75391845703126
+    ],
+    "inline": true,
+    "text": " Kw = Kwn · · · Kw1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00321.svg",
+    "sourcePage": 17,
+    "bbox": [
+      226.9629699707031,
+      323.27479858398436,
+      549.2793090820312,
+      348.67319946289064
+    ],
+    "inline": false,
+    "text": "Cn(X) =\nX\nw\n|w⟩⟨w|A ⊗KwXK†\nw.\n(40)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00322.svg",
+    "sourcePage": 17,
+    "bbox": [
+      301.2074768066406,
+      370.1451904296875,
+      329.76670532226564,
+      383.65806274414064
+    ],
+    "inline": true,
+    "text": " I4/4."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00323.svg",
+    "sourcePage": 17,
+    "bbox": [
+      413.33861083984374,
+      398.7118408203125,
+      436.50526123046876,
+      411.36231689453126
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00324.svg",
+    "sourcePage": 17,
+    "bbox": [
+      255.40199584960936,
+      420.373828125,
+      356.60072021484376,
+      436.84278564453126
+    ],
+    "inline": false,
+    "text": "Nn = m2(m −1)n−2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00325.svg",
+    "sourcePage": 17,
+    "bbox": [
+      88.81690521240235,
+      446.3748352050781,
+      104.91171722412109,
+      460.0192077636719
+    ],
+    "inline": true,
+    "text": " Cn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00326.svg",
+    "sourcePage": 17,
+    "bbox": [
+      213.39329833984374,
+      446.5161926269531,
+      232.47572021484376,
+      460.0192077636719
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00327.svg",
+    "sourcePage": 17,
+    "bbox": [
+      485.41713256835936,
+      446.5161926269531,
+      504.42371826171876,
+      460.0192077636719
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00328.svg",
+    "sourcePage": 17,
+    "bbox": [
+      166.80528564453124,
+      460.06517333984374,
+      186.9495361328125,
+      473.5780456542969
+    ],
+    "inline": true,
+    "text": " I4/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00329.svg",
+    "sourcePage": 17,
+    "bbox": [
+      450.94365234375,
+      460.06517333984374,
+      469.94971923828126,
+      473.5681884765625
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00330.svg",
+    "sourcePage": 17,
+    "bbox": [
+      103.83896179199219,
+      473.6141845703125,
+      115.59246520996093,
+      486.12330322265626
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00331.svg",
+    "sourcePage": 17,
+    "bbox": [
+      243.49701232910155,
+      520.995654296875,
+      368.50571899414064,
+      548.3543212890625
+    ],
+    "inline": false,
+    "text": "K(a,b) = 2\nm|ψaψb⟩⟨ψ⊥\na ψ⊥\nb |."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00332.svg",
+    "sourcePage": 17,
+    "bbox": [
+      504.7293273925781,
+      554.5679809570313,
+      550.1193969726562,
+      568.8213012695312
+    ],
+    "inline": true,
+    "text": " Twt,wt+2."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00333.svg",
+    "sourcePage": 17,
+    "bbox": [
+      110.3749496459961,
+      568.1882202148438,
+      131.59019165039064,
+      581.6912353515625
+    ],
+    "inline": true,
+    "text": " Kw"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00334.svg",
+    "sourcePage": 17,
+    "bbox": [
+      395.85878295898436,
+      568.0468627929688,
+      451.6055114746094,
+      582.1919067382812
+    ],
+    "inline": true,
+    "text": " wt+2 ̸= wt"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00335.svg",
+    "sourcePage": 17,
+    "bbox": [
+      110.76439971923828,
+      580.0849487304688,
+      129.94712524414064,
+      594.2462890625
+    ],
+    "inline": true,
+    "text": " m2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00336.svg",
+    "sourcePage": 17,
+    "bbox": [
+      201.0565216064453,
+      581.5958129882813,
+      227.0042694091797,
+      594.2462890625
+    ],
+    "inline": true,
+    "text": " m −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00337.svg",
+    "sourcePage": 17,
+    "bbox": [
+      333.49025268554686,
+      581.7371704101563,
+      352.73472290039064,
+      595.2412231445312
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00338.svg",
+    "sourcePage": 17,
+    "bbox": [
+      272.49998779296874,
+      595.14482421875,
+      329.16175537109376,
+      608.790234375
+    ],
+    "inline": true,
+    "text": " |Kw⟩⟩⟨⟨Kw|"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00339.svg",
+    "sourcePage": 17,
+    "bbox": [
+      419.7723876953125,
+      608.8361694335938,
+      439.81956176757814,
+      622.349072265625
+    ],
+    "inline": true,
+    "text": " I4/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00340.svg",
+    "sourcePage": 17,
+    "bbox": [
+      163.04393310546874,
+      622.2438232421875,
+      224.98174743652345,
+      637.4958618164062
+    ],
+    "inline": true,
+    "text": " ρwn−1 ⊗ρwn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00341.svg",
+    "sourcePage": 17,
+    "bbox": [
+      117.0836898803711,
+      635.9341918945313,
+      128.65700988769532,
+      648.443310546875
+    ],
+    "inline": true,
+    "text": " V"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00342.svg",
+    "sourcePage": 17,
+    "bbox": [
+      537.9160034179688,
+      633.5508911132813,
+      548.0033081054687,
+      646.060009765625
+    ],
+    "inline": true,
+    "text": "□"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00343.svg",
+    "sourcePage": 17,
+    "bbox": [
+      241.6510040283203,
+      671.5173217773438,
+      369.49866943359376,
+      696.4021728515625
+    ],
+    "inline": false,
+    "text": "X 7→\nX\nw\n|w⟩A|w⟩E ⊗KwX"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p017-00344.svg",
+    "sourcePage": 17,
+    "bbox": [
+      299.69810791015624,
+      704.3251831054688,
+      318.727734375,
+      717.8292358398437
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00345.svg",
+    "sourcePage": 18,
+    "bbox": [
+      292.62138671875,
+      120.62921447753907,
+      307.56873779296876,
+      133.13831787109376
+    ],
+    "inline": true,
+    "text": " D"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00346.svg",
+    "sourcePage": 18,
+    "bbox": [
+      415.06572265625,
+      134.1782257080078,
+      426.728466796875,
+      146.6873291015625
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00347.svg",
+    "sourcePage": 18,
+    "bbox": [
+      503.11094970703124,
+      134.03683776855468,
+      550.1193969726562,
+      147.68226318359376
+    ],
+    "inline": true,
+    "text": " D ≥Nn."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00348.svg",
+    "sourcePage": 18,
+    "bbox": [
+      79.94910736083985,
+      147.72821350097655,
+      117.78674011230468,
+      160.2508056640625
+    ],
+    "inline": true,
+    "text": " m > 2,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00349.svg",
+    "sourcePage": 18,
+    "bbox": [
+      251.86700744628905,
+      159.1473419189453,
+      360.1340759277344,
+      188.5227783203125
+    ],
+    "inline": false,
+    "text": "$\nlog(D/m2)\nlog(m −1)\n%\nn ≤2 +"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00350.svg",
+    "sourcePage": 18,
+    "bbox": [
+      157.62140197753905,
+      195.57882995605468,
+      180.96326904296876,
+      208.2293212890625
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00351.svg",
+    "sourcePage": 18,
+    "bbox": [
+      483.5115539550781,
+      209.2691680908203,
+      492.96799926757814,
+      221.778271484375
+    ],
+    "inline": true,
+    "text": " r"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00352.svg",
+    "sourcePage": 18,
+    "bbox": [
+      112.49496002197266,
+      222.8192169189453,
+      126.73873596191406,
+      235.3283203125
+    ],
+    "inline": true,
+    "text": " D"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00353.svg",
+    "sourcePage": 18,
+    "bbox": [
+      272.6133605957031,
+      222.67782897949218,
+      320.799755859375,
+      236.322216796875
+    ],
+    "inline": true,
+    "text": " Dr ≥Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00354.svg",
+    "sourcePage": 18,
+    "bbox": [
+      122.05130310058594,
+      277.015185546875,
+      134.46746520996095,
+      289.52430419921876
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00355.svg",
+    "sourcePage": 18,
+    "bbox": [
+      283.2663146972656,
+      275.35411376953124,
+      303.7897155761719,
+      289.52430419921876
+    ],
+    "inline": true,
+    "text": " mn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00356.svg",
+    "sourcePage": 18,
+    "bbox": [
+      133.30072326660155,
+      290.56517333984374,
+      152.99570922851564,
+      304.0681884765625
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00357.svg",
+    "sourcePage": 18,
+    "bbox": [
+      146.85499877929686,
+      340.3733703613281,
+      465.1477478027344,
+      366.21021728515626
+    ],
+    "inline": false,
+    "text": "H(W1 · · · Wn) = 2 log2 m + (n −2)hm,\nhm = −\nX\nj\nT0j log2 T0j."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00358.svg",
+    "sourcePage": 18,
+    "bbox": [
+      89.37794036865235,
+      389.90916748046874,
+      105.10912017822265,
+      403.4220397949219
+    ],
+    "inline": true,
+    "text": " h3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00359.svg",
+    "sourcePage": 18,
+    "bbox": [
+      160.17019958496093,
+      388.14381713867186,
+      222.92210083007814,
+      404.06174926757814
+    ],
+    "inline": true,
+    "text": " Nn = 9 2n−2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00360.svg",
+    "sourcePage": 18,
+    "bbox": [
+      79.81068725585938,
+      453.265185546875,
+      94.62719421386718,
+      465.77430419921876
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00361.svg",
+    "sourcePage": 18,
+    "bbox": [
+      374.3312255859375,
+      462.7138244628906,
+      423.95786743164064,
+      479.1819274902344
+    ],
+    "inline": true,
+    "text": " Cm ⊗Cm"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00362.svg",
+    "sourcePage": 18,
+    "bbox": [
+      144.56798095703124,
+      491.1808349609375,
+      467.43479614257814,
+      505.48179321289064
+    ],
+    "inline": false,
+    "text": "Dj = diag(T0j, . . . , Tm−1,j),\nQj(X) = Tr1[(Dj ⊗Im)X] ⊗|j⟩⟨j|."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00363.svg",
+    "sourcePage": 18,
+    "bbox": [
+      284.7429992675781,
+      514.1789428710938,
+      326.9501159667969,
+      530.06123046875
+    ],
+    "inline": true,
+    "text": " Im2/m2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00364.svg",
+    "sourcePage": 18,
+    "bbox": [
+      216.36099548339843,
+      552.156298828125,
+      395.64716796875,
+      570.0998046875
+    ],
+    "inline": false,
+    "text": "Fj,a =\nq\nTaj Sm(|j⟩⟨a| ⊗Im),\na ̸= j."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00365.svg",
+    "sourcePage": 18,
+    "bbox": [
+      296.05595703125,
+      581.7828247070313,
+      336.77027587890626,
+      594.470654296875
+    ],
+    "inline": true,
+    "text": " m(m −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00366.svg",
+    "sourcePage": 18,
+    "bbox": [
+      391.2137023925781,
+      581.7828247070313,
+      416.41126708984376,
+      594.43330078125
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00367.svg",
+    "sourcePage": 18,
+    "bbox": [
+      62.722998809814456,
+      593.8219482421875,
+      118.37772064208984,
+      608.97724609375
+    ],
+    "inline": true,
+    "text": "(m −1)2Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00368.svg",
+    "sourcePage": 18,
+    "bbox": [
+      370.58458251953124,
+      595.3328125,
+      425.2616394042969,
+      608.9871337890625
+    ],
+    "inline": true,
+    "text": " |wn−1, wn⟩"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00369.svg",
+    "sourcePage": 18,
+    "bbox": [
+      64.00000305175782,
+      608.8818237304688,
+      117.45932464599609,
+      624.1338623046875
+    ],
+    "inline": true,
+    "text": "Dw1 ⊗Dw2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p018-00370.svg",
+    "sourcePage": 18,
+    "bbox": [
+      165.2780029296875,
+      607.3709594726563,
+      203.6981170654297,
+      621.5421875
+    ],
+    "inline": true,
+    "text": "m −1)2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00371.svg",
+    "sourcePage": 19,
+    "bbox": [
+      194.35438842773436,
+      65.21481628417969,
+      226.07455139160157,
+      77.87879638671875
+    ],
+    "inline": true,
+    "text": " n ≥4"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00372.svg",
+    "sourcePage": 19,
+    "bbox": [
+      276.2570068359375,
+      91.19114990234375,
+      288.4527099609375,
+      105.3758056640625
+    ],
+    "inline": true,
+    "text": "3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00373.svg",
+    "sourcePage": 19,
+    "bbox": [
+      408.81199951171874,
+      91.19114990234375,
+      421.00770263671876,
+      105.3758056640625
+    ],
+    "inline": true,
+    "text": "3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00374.svg",
+    "sourcePage": 19,
+    "bbox": [
+      276.2570068359375,
+      104.63784332275391,
+      335.48814086914064,
+      120.5618408203125
+    ],
+    "inline": true,
+    "text": "Nn = 9 2n−2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00375.svg",
+    "sourcePage": 19,
+    "bbox": [
+      432.5175048828125,
+      106.40222473144532,
+      451.65174560546876,
+      119.90626983642578
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00376.svg",
+    "sourcePage": 19,
+    "bbox": [
+      276.2570068359375,
+      119.95221252441407,
+      291.7627380371094,
+      133.45521240234376
+    ],
+    "inline": true,
+    "text": "Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00377.svg",
+    "sourcePage": 19,
+    "bbox": [
+      408.81203002929686,
+      119.95221252441407,
+      429.7727478027344,
+      133.45521240234376
+    ],
+    "inline": true,
+    "text": "4Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00378.svg",
+    "sourcePage": 19,
+    "bbox": [
+      140.8007843017578,
+      250.28619689941405,
+      152.614453125,
+      262.79530029296876
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00379.svg",
+    "sourcePage": 19,
+    "bbox": [
+      207.40809936523436,
+      250.28619689941405,
+      226.57772521972657,
+      263.78919677734376
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00380.svg",
+    "sourcePage": 19,
+    "bbox": [
+      469.3719970703125,
+      275.72313232421874,
+      476.1127136230469,
+      285.29322509765626
+    ],
+    "inline": true,
+    "text": "n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00381.svg",
+    "sourcePage": 19,
+    "bbox": [
+      375.4823791503906,
+      290.93419189453124,
+      394.43272094726564,
+      304.43720703125
+    ],
+    "inline": true,
+    "text": " Nn"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00382.svg",
+    "sourcePage": 19,
+    "bbox": [
+      411.6718322753906,
+      367.8391906738281,
+      440.9112976074219,
+      381.44907836914064
+    ],
+    "inline": true,
+    "text": " Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00383.svg",
+    "sourcePage": 19,
+    "bbox": [
+      64.00000305175782,
+      477.9491760253906,
+      88.88734893798828,
+      491.558056640625
+    ],
+    "inline": true,
+    "text": "Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00384.svg",
+    "sourcePage": 19,
+    "bbox": [
+      307.25563354492186,
+      477.9491760253906,
+      335.64332275390626,
+      491.558056640625
+    ],
+    "inline": true,
+    "text": " Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00385.svg",
+    "sourcePage": 19,
+    "bbox": [
+      173.54918212890624,
+      504.905810546875,
+      196.7872741699219,
+      517.5562866210937
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00386.svg",
+    "sourcePage": 19,
+    "bbox": [
+      482.81944580078124,
+      518.5961791992188,
+      504.09888916015626,
+      532.240185546875
+    ],
+    "inline": true,
+    "text": " Bcd"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00387.svg",
+    "sourcePage": 19,
+    "bbox": [
+      518.0858642578125,
+      518.5961791992188,
+      550.1195190429687,
+      532.2061279296875
+    ],
+    "inline": true,
+    "text": " Mlive."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00388.svg",
+    "sourcePage": 19,
+    "bbox": [
+      242.97442932128905,
+      532.1451904296875,
+      263.4204528808594,
+      544.6543090820312
+    ],
+    "inline": true,
+    "text": " a, b"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00389.svg",
+    "sourcePage": 19,
+    "bbox": [
+      272.79078979492186,
+      532.0038330078125,
+      306.3362548828125,
+      546.2909057617187
+    ],
+    "inline": true,
+    "text": " Aab ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00390.svg",
+    "sourcePage": 19,
+    "bbox": [
+      200.34598083496093,
+      553.6761352539063,
+      411.655712890625,
+      581.0617797851562
+    ],
+    "inline": false,
+    "text": "Hab,cd = p(a, b, c, d) = Tr(AabBcd) = TacTbd\n9\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00391.svg",
+    "sourcePage": 19,
+    "bbox": [
+      107.30736846923828,
+      587.939013671875,
+      123.97138671875,
+      600.5566528320312
+    ],
+    "inline": true,
+    "text": " T,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00392.svg",
+    "sourcePage": 19,
+    "bbox": [
+      148.14638061523436,
+      587.939013671875,
+      198.67254333496095,
+      600.5566528320312
+    ],
+    "inline": true,
+    "text": " T = 3, so"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00393.svg",
+    "sourcePage": 19,
+    "bbox": [
+      222.72838134765624,
+      588.0101806640625,
+      235.32046203613282,
+      600.5192993164062
+    ],
+    "inline": true,
+    "text": " H"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00394.svg",
+    "sourcePage": 19,
+    "bbox": [
+      317.34752197265624,
+      588.0101806640625,
+      332.04673461914064,
+      600.5192993164062
+    ],
+    "inline": true,
+    "text": " D"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00395.svg",
+    "sourcePage": 19,
+    "bbox": [
+      414.26930541992186,
+      588.0101806640625,
+      428.99046020507814,
+      600.5192993164062
+    ],
+    "inline": true,
+    "text": " H"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00396.svg",
+    "sourcePage": 19,
+    "bbox": [
+      470.76198120117186,
+      588.0101806640625,
+      485.47874145507814,
+      600.5192993164062
+    ],
+    "inline": true,
+    "text": " D"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00397.svg",
+    "sourcePage": 19,
+    "bbox": [
+      156.16725463867186,
+      601.4178344726563,
+      183.5232666015625,
+      614.068310546875
+    ],
+    "inline": true,
+    "text": " D ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00398.svg",
+    "sourcePage": 19,
+    "bbox": [
+      296.3987609863281,
+      597.4588500976563,
+      373.68427734375,
+      614.1056640625
+    ],
+    "inline": true,
+    "text": " d2 ≥9, so d ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00399.svg",
+    "sourcePage": 19,
+    "bbox": [
+      443.93214721679686,
+      601.5591918945313,
+      455.31065063476564,
+      614.068310546875
+    ],
+    "inline": true,
+    "text": " d"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00400.svg",
+    "sourcePage": 19,
+    "bbox": [
+      108.80600280761719,
+      615.0370361328125,
+      142.89063720703126,
+      627.6546752929687
+    ],
+    "inline": true,
+    "text": " a = c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00401.svg",
+    "sourcePage": 19,
+    "bbox": [
+      155.69853515625,
+      615.0370361328125,
+      189.68963317871095,
+      627.6546752929687
+    ],
+    "inline": true,
+    "text": " b = d"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00402.svg",
+    "sourcePage": 19,
+    "bbox": [
+      64.00000305175782,
+      628.6572143554688,
+      90.22653656005859,
+      642.79169921875
+    ],
+    "inline": true,
+    "text": "Ra ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00403.svg",
+    "sourcePage": 19,
+    "bbox": [
+      113.61200256347657,
+      633.5731079101563,
+      119.57164459228515,
+      643.1432006835937
+    ],
+    "inline": true,
+    "text": "d"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00404.svg",
+    "sourcePage": 19,
+    "bbox": [
+      136.08236999511718,
+      628.6572143554688,
+      156.6997802734375,
+      642.301220703125
+    ],
+    "inline": true,
+    "text": " Bad"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00405.svg",
+    "sourcePage": 19,
+    "bbox": [
+      176.3397705078125,
+      628.6572143554688,
+      204.70254211425782,
+      642.9326904296875
+    ],
+    "inline": true,
+    "text": " Cb ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00406.svg",
+    "sourcePage": 19,
+    "bbox": [
+      228.08900756835936,
+      633.5731079101563,
+      233.35525207519532,
+      643.1432006835937
+    ],
+    "inline": true,
+    "text": "c"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00407.svg",
+    "sourcePage": 19,
+    "bbox": [
+      249.86937255859374,
+      628.6572143554688,
+      268.92466430664064,
+      642.301220703125
+    ],
+    "inline": true,
+    "text": " Bcb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00408.svg",
+    "sourcePage": 19,
+    "bbox": [
+      375.02846069335936,
+      628.6572143554688,
+      396.38157348632814,
+      642.301220703125
+    ],
+    "inline": true,
+    "text": " Aab"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00409.svg",
+    "sourcePage": 19,
+    "bbox": [
+      472.43568725585936,
+      628.6572143554688,
+      514.8693969726562,
+      642.79169921875
+    ],
+    "inline": true,
+    "text": " Ra + Cb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00410.svg",
+    "sourcePage": 19,
+    "bbox": [
+      82.26199645996094,
+      642.0648071289063,
+      144.50027160644532,
+      656.3896606445312
+    ],
+    "inline": true,
+    "text": "(Ra + Cb) ≤"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00411.svg",
+    "sourcePage": 19,
+    "bbox": [
+      190.52731628417968,
+      642.2061645507813,
+      209.1141326904297,
+      655.7102172851562
+    ],
+    "inline": true,
+    "text": " Ra"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00412.svg",
+    "sourcePage": 19,
+    "bbox": [
+      322.2998840332031,
+      642.2061645507813,
+      339.49940185546876,
+      655.8512084960937
+    ],
+    "inline": true,
+    "text": " Cb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00413.svg",
+    "sourcePage": 19,
+    "bbox": [
+      193.96344299316405,
+      669.3051635742188,
+      210.57139282226564,
+      682.9492309570312
+    ],
+    "inline": true,
+    "text": " Cb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00414.svg",
+    "sourcePage": 19,
+    "bbox": [
+      494.7755920410156,
+      669.3051635742188,
+      516.2185180664062,
+      682.9492309570312
+    ],
+    "inline": true,
+    "text": " Bab"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00415.svg",
+    "sourcePage": 19,
+    "bbox": [
+      85.9353515625,
+      682.8541748046875,
+      103.94112854003906,
+      696.3571899414062
+    ],
+    "inline": true,
+    "text": " Ra"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00416.svg",
+    "sourcePage": 19,
+    "bbox": [
+      123.90819854736328,
+      682.8541748046875,
+      140.56039123535157,
+      696.4982421875
+    ],
+    "inline": true,
+    "text": " Cb"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00417.svg",
+    "sourcePage": 19,
+    "bbox": [
+      490.80968017578124,
+      682.7128173828125,
+      513.0852783203125,
+      695.3632934570312
+    ],
+    "inline": true,
+    "text": " d ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p019-00418.svg",
+    "sourcePage": 19,
+    "bbox": [
+      537.9160034179688,
+      694.0198852539063,
+      548.0033081054687,
+      706.52900390625
+    ],
+    "inline": true,
+    "text": "□"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00419.svg",
+    "sourcePage": 20,
+    "bbox": [
+      170.25799865722655,
+      102.17586822509766,
+      253.2821014404297,
+      116.463818359375
+    ],
+    "inline": true,
+    "text": "0 ≤λ ≤3 × 10−8"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00420.svg",
+    "sourcePage": 20,
+    "bbox": [
+      166.21998901367186,
+      117.34884948730469,
+      257.81953125,
+      130.01282958984376
+    ],
+    "inline": true,
+    "text": "7657/8000 ≤λ < 1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00421.svg",
+    "sourcePage": 20,
+    "bbox": [
+      405.27415771484374,
+      117.49017639160157,
+      415.3577087402344,
+      130.0127685546875
+    ],
+    "inline": true,
+    "text": "9."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00422.svg",
+    "sourcePage": 20,
+    "bbox": [
+      285.33290405273436,
+      181.6732208251953,
+      300.58692626953126,
+      195.21392517089845
+    ],
+    "inline": true,
+    "text": " λ†"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00423.svg",
+    "sourcePage": 20,
+    "bbox": [
+      517.7980224609375,
+      208.77118225097655,
+      549.5192993164062,
+      222.3810241699219
+    ],
+    "inline": true,
+    "text": " Mlive,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00424.svg",
+    "sourcePage": 20,
+    "bbox": [
+      130.9584533691406,
+      235.72781677246093,
+      154.2212646484375,
+      248.37830810546876
+    ],
+    "inline": true,
+    "text": " n ≥"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00425.svg",
+    "sourcePage": 20,
+    "bbox": [
+      360.68931884765624,
+      276.5171691894531,
+      389.0523193359375,
+      290.12705688476564
+    ],
+    "inline": true,
+    "text": " Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00426.svg",
+    "sourcePage": 20,
+    "bbox": [
+      215.41903991699218,
+      290.06618041992186,
+      243.84832458496095,
+      303.6760681152344
+    ],
+    "inline": true,
+    "text": " Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00427.svg",
+    "sourcePage": 20,
+    "bbox": [
+      294.80101318359374,
+      344.12181396484374,
+      350.926708984375,
+      358.75904541015626
+    ],
+    "inline": true,
+    "text": "2(9/4) ≃1."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00428.svg",
+    "sourcePage": 20,
+    "bbox": [
+      196.12909240722655,
+      371.36119384765624,
+      207.70545654296876,
+      383.8703125
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00429.svg",
+    "sourcePage": 20,
+    "bbox": [
+      153.40817565917968,
+      461.81618041992186,
+      171.17214660644532,
+      475.31919555664064
+    ],
+    "inline": true,
+    "text": " Kj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00430.svg",
+    "sourcePage": 20,
+    "bbox": [
+      280.62208862304686,
+      461.81618041992186,
+      295.251171875,
+      474.32529907226564
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00431.svg",
+    "sourcePage": 20,
+    "bbox": [
+      162.02012939453124,
+      475.3651916503906,
+      176.7651794433594,
+      487.8743103027344
+    ],
+    "inline": true,
+    "text": " m"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00432.svg",
+    "sourcePage": 20,
+    "bbox": [
+      80.23470611572266,
+      515.9420043945313,
+      107.14302520751953,
+      528.5596435546875
+    ],
+    "inline": true,
+    "text": " U ="
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00433.svg",
+    "sourcePage": 20,
+    "bbox": [
+      129.55699462890624,
+      514.351123046875,
+      242.0299041748047,
+      528.5596435546875
+    ],
+    "inline": true,
+    "text": "(1, e2πi/m), R = U ⊗U"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00434.svg",
+    "sourcePage": 20,
+    "bbox": [
+      283.43333740234374,
+      515.8718139648438,
+      354.36619262695314,
+      528.5596435546875
+    ],
+    "inline": true,
+    "text": " P|j⟩= |j + 1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00435.svg",
+    "sourcePage": 20,
+    "bbox": [
+      376.70973510742186,
+      515.8718139648438,
+      395.158642578125,
+      528.5222900390625
+    ],
+    "inline": true,
+    "text": " m⟩"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00436.svg",
+    "sourcePage": 20,
+    "bbox": [
+      507.21092529296874,
+      516.0131713867188,
+      523.73115234375,
+      529.5161865234375
+    ],
+    "inline": true,
+    "text": " Lj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00437.svg",
+    "sourcePage": 20,
+    "bbox": [
+      64.00000305175782,
+      527.7968017578125,
+      99.74389343261718,
+      543.0651977539062
+    ],
+    "inline": true,
+    "text": "RKjR†"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00438.svg",
+    "sourcePage": 20,
+    "bbox": [
+      101.67400665283203,
+      529.5621826171875,
+      138.75343017578126,
+      543.0750854492187
+    ],
+    "inline": true,
+    "text": "= Kj+1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00439.svg",
+    "sourcePage": 20,
+    "bbox": [
+      264.9969970703125,
+      542.9698364257813,
+      347.0066345214844,
+      555.6338012695312
+    ],
+    "inline": true,
+    "text": "V R = (P ⊗R)V."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p020-00440.svg",
+    "sourcePage": 20,
+    "bbox": [
+      63.606997680664065,
+      563.231005859375,
+      550.2198608398437,
+      724.7021606445312
+    ],
+    "inline": false,
+    "text": "The stationary state is invariant. The isometry therefore respects simultaneous discrete rotation of the\nmemory and relabelling of the ports. In particular, the common azimuth is not a separate time-varying\nsource variable.\nThere is a symmetry-preserving unitary extension with a fresh output blank |s⟩= m−1/2 P\nj |j⟩,\ninvariant under P. To prove existence, the invariant subspace |s⟩⊗C4 and the image of V carry\nequivalent representations of the finite group Cm by (41). Their orthogonal complements have the same\nrepresentation multiplicities, so choose a unitary intertwiner on each complement and combine it with\nV on the input subspace. This is a finite-group constructive existence argument, not an assertion of\nreference-free implementation under continuous U(1) or of a particular energy-conserving Hamiltonian.\nPhysical phase stability and gate precision still require calibration at the declared accuracy.\nA clock supplies ticks separated by a chosen ∆t in seconds and routes the next fresh output\nregister. Its precision, reset and control law are independent implementation inputs. A finite routing"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00441.svg",
+    "sourcePage": 21,
+    "bbox": [
+      122.86421508789063,
+      66.43219299316407,
+      134.4564636230469,
+      78.94128875732422
+    ],
+    "inline": true,
+    "text": " n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00442.svg",
+    "sourcePage": 21,
+    "bbox": [
+      152.3964416503906,
+      93.53119201660157,
+      180.8573425292969,
+      107.1410415649414
+    ],
+    "inline": true,
+    "text": " Mlive"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00443.svg",
+    "sourcePage": 21,
+    "bbox": [
+      63.606997680664065,
+      141.67613525390624,
+      549.5189331054687,
+      318.45078735351564
+    ],
+    "inline": false,
+    "text": "The exact zero pattern is load bearing. For the earlier noisy construction Eλ\nj = [I −(1 −λ)nj · σ]/m\nwith 0 < λ ≤1, each effect has rank two. The same four-dimensional shift channel, which need not be\nthe minimum realization of the noisy law, then has one-step recorded Choi rank 2m and unrecorded\nrank four. For n ≥2, every word is positive and the word map has pure final memory but an input\neffect proportional to Eλ\nw1 ⊗Eλ\nw2, of rank four. Consequently its complete-channel Choi rank is 4mn,\nalthough its stationary fixed-output state without an initial retained reference has rank only mn. This\nis a concrete reason not to replace a retained-reference channel task by one fixed-input density matrix\nwhen counting environment.\nThese ranks are exact channel identities, not robust physical costs at finite tolerance. At λ = 1 the\noutput law is IID uniform and a one-dimensional source suffices; the four-dimensional shift’s dilation\nranks are plainly not process-wide minima. The exact and finite-accuracy realization results elsewhere\nin this companion must be used for the corresponding task and tolerance. No discontinuous exact rank\njump is offered as an experimentally discontinuous hardware demand."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00444.svg",
+    "sourcePage": 21,
+    "bbox": [
+      140.8419982910156,
+      361.69981689453124,
+      201.70400695800782,
+      374.35029296875
+    ],
+    "inline": true,
+    "text": "/8000 ≤λ <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00445.svg",
+    "sourcePage": 21,
+    "bbox": [
+      88.35789031982422,
+      402.41697998046874,
+      131.12527160644532,
+      415.034619140625
+    ],
+    "inline": true,
+    "text": " J(Φ) >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00446.svg",
+    "sourcePage": 21,
+    "bbox": [
+      161.91717834472655,
+      402.41697998046874,
+      205.29726867675782,
+      415.034619140625
+    ],
+    "inline": true,
+    "text": " J(Θ) >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00447.svg",
+    "sourcePage": 21,
+    "bbox": [
+      253.07159729003905,
+      402.48817749023436,
+      276.74207763671876,
+      414.99729614257814
+    ],
+    "inline": true,
+    "text": " c >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00448.svg",
+    "sourcePage": 21,
+    "bbox": [
+      311.24156494140624,
+      402.34682006835936,
+      388.04600219726564,
+      415.034619140625
+    ],
+    "inline": true,
+    "text": " J(Φ) ≥cI ⊗I"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00449.svg",
+    "sourcePage": 21,
+    "bbox": [
+      137.69700927734374,
+      416.03819580078124,
+      144.09701232910157,
+      428.547314453125
+    ],
+    "inline": true,
+    "text": "I"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00450.svg",
+    "sourcePage": 21,
+    "bbox": [
+      200.6949951171875,
+      429.445849609375,
+      411.3076904296875,
+      442.109814453125
+    ],
+    "inline": true,
+    "text": "J(Θ ◦Φ) = (id ⊗Θ)(J(Φ)) ≥cI ⊗Θ(I) > 0."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00451.svg",
+    "sourcePage": 21,
+    "bbox": [
+      103.56199951171875,
+      449.5409729003906,
+      127.23928527832031,
+      462.1586120605469
+    ],
+    "inline": true,
+    "text": "I) >"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00452.svg",
+    "sourcePage": 21,
+    "bbox": [
+      500.9770080566406,
+      461.49913330078124,
+      507.717724609375,
+      471.06922607421876
+    ],
+    "inline": true,
+    "text": "n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00453.svg",
+    "sourcePage": 21,
+    "bbox": [
+      517.9839965820313,
+      475.04811401367186,
+      548.0086791992187,
+      489.2566345214844
+    ],
+    "inline": true,
+    "text": "n. On"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00454.svg",
+    "sourcePage": 21,
+    "bbox": [
+      142.42836303710936,
+      490.25917358398436,
+      162.59153442382814,
+      503.77305297851564
+    ],
+    "inline": true,
+    "text": " I3/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00455.svg",
+    "sourcePage": 21,
+    "bbox": [
+      540.7640258789063,
+      488.59813232421874,
+      547.5047119140625,
+      498.16822509765626
+    ],
+    "inline": true,
+    "text": "n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00456.svg",
+    "sourcePage": 21,
+    "bbox": [
+      456.2329895019531,
+      517.2167846679688,
+      517.6190307617187,
+      529.8855102539062
+    ],
+    "inline": true,
+    "text": "/8000 ≤λ <"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00457.svg",
+    "sourcePage": 21,
+    "bbox": [
+      296.23826904296874,
+      593.7787963867188,
+      327.94260864257814,
+      606.4427612304687
+    ],
+    "inline": true,
+    "text": " n ≥2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00458.svg",
+    "sourcePage": 21,
+    "bbox": [
+      350.49534912109374,
+      592.25810546875,
+      369.965771484375,
+      606.4427612304687
+    ],
+    "inline": true,
+    "text": "9 3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00459.svg",
+    "sourcePage": 21,
+    "bbox": [
+      388.98305053710936,
+      592.25810546875,
+      408.45176391601564,
+      606.4427612304687
+    ],
+    "inline": true,
+    "text": "4 3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00460.svg",
+    "sourcePage": 21,
+    "bbox": [
+      444.19603271484374,
+      592.25810546875,
+      463.6637390136719,
+      606.4427612304687
+    ],
+    "inline": true,
+    "text": "9 3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00461.svg",
+    "sourcePage": 21,
+    "bbox": [
+      350.4980041503906,
+      605.8071166992188,
+      369.96571044921876,
+      619.9917724609375
+    ],
+    "inline": true,
+    "text": "3 3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00462.svg",
+    "sourcePage": 21,
+    "bbox": [
+      392.61998291015624,
+      605.8071166992188,
+      404.81470947265626,
+      619.9917724609375
+    ],
+    "inline": true,
+    "text": "3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00463.svg",
+    "sourcePage": 21,
+    "bbox": [
+      447.8319885253906,
+      605.8071166992188,
+      460.02769165039064,
+      619.9917724609375
+    ],
+    "inline": true,
+    "text": "3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00464.svg",
+    "sourcePage": 21,
+    "bbox": [
+      125.12898559570313,
+      632.9051391601563,
+      460.02769165039064,
+      647.089794921875
+    ],
+    "inline": false,
+    "text": "Raw classical symbol archive\n3n\n3n\n3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00465.svg",
+    "sourcePage": 21,
+    "bbox": [
+      64.00000305175782,
+      670.057177734375,
+      78.05814819335937,
+      683.56123046875
+    ],
+    "inline": true,
+    "text": "Dj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p021-00466.svg",
+    "sourcePage": 21,
+    "bbox": [
+      243.33575744628905,
+      669.9158203125,
+      296.09833984375,
+      685.168896484375
+    ],
+    "inline": true,
+    "text": " Dw1 ⊗Dw2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00467.svg",
+    "sourcePage": 22,
+    "bbox": [
+      320.28322143554686,
+      271.16099853515624,
+      368.45771484375,
+      283.729931640625
+    ],
+    "inline": true,
+    "text": " m = 3, 4,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00468.svg",
+    "sourcePage": 22,
+    "bbox": [
+      216.4548828125,
+      284.67198486328124,
+      264.00071411132814,
+      297.2896240234375
+    ],
+    "inline": true,
+    "text": " λ = 0.2,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00469.svg",
+    "sourcePage": 22,
+    "bbox": [
+      427.32799072265624,
+      298.22099609375,
+      493.8777282714844,
+      310.83863525390626
+    ],
+    "inline": true,
+    "text": " ε = 0, 0.2, 0."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00470.svg",
+    "sourcePage": 22,
+    "bbox": [
+      320.86598510742186,
+      323.6258117675781,
+      375.6392333984375,
+      337.91138916015626
+    ],
+    "inline": true,
+    "text": ".26 × 10−14"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00471.svg",
+    "sourcePage": 22,
+    "bbox": [
+      151.7057373046875,
+      444.133837890625,
+      203.45911865234376,
+      458.27891235351564
+    ],
+    "inline": true,
+    "text": " M2 →M3"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00472.svg",
+    "sourcePage": 22,
+    "bbox": [
+      497.0760070800781,
+      444.2751953125,
+      507.70411376953126,
+      457.78806762695314
+    ],
+    "inline": true,
+    "text": "I2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00473.svg",
+    "sourcePage": 22,
+    "bbox": [
+      357.6263916015625,
+      471.23182983398436,
+      379.8872497558594,
+      483.88230590820314
+    ],
+    "inline": true,
+    "text": " ρ ≻"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00474.svg",
+    "sourcePage": 22,
+    "bbox": [
+      470.8535949707031,
+      471.37318725585936,
+      485.282177734375,
+      484.87620239257814
+    ],
+    "inline": true,
+    "text": " λi"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00475.svg",
+    "sourcePage": 22,
+    "bbox": [
+      228.45469970703124,
+      484.780810546875,
+      260.92677001953126,
+      498.4261901855469
+    ],
+    "inline": true,
+    "text": " |λi| ≤"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00476.svg",
+    "sourcePage": 22,
+    "bbox": [
+      181.1429931640625,
+      506.6823303222656,
+      430.8587158203125,
+      535.318310546875
+    ],
+    "inline": false,
+    "text": "x\ny\nz\nw\n!\n= √ρ U diag(x + w + λiy +  ̄λiz)3\ni=1U†√ρ.\nΦ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00477.svg",
+    "sourcePage": 22,
+    "bbox": [
+      64.00000305175782,
+      546.4777709960938,
+      550.1190307617187,
+      664.05634765625
+    ],
+    "inline": false,
+    "text": "Its Choi rank is three or four, according as the remaining scalar has unit modulus or strict modulus\nbelow one.\nProof. The Hermitian kernel is one-dimensional and contains a nonzero traceless matrix because\nthe map is trace preserving. Diagonalize it. The two diagonal input projectors then have the same\noutput ρ, which is faithful. Writing the off-diagonal response as C gives Φ(X) = (x + w)ρ + yC + zC†.\nChoi positivity is equivalent to\n \nI\nK\nK†\nI\n!"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00478.svg",
+    "sourcePage": 22,
+    "bbox": [
+      238.0590087890625,
+      642.4748413085938,
+      427.06275634765626,
+      657.3078125
+    ],
+    "inline": false,
+    "text": "⪰0,\nK = ρ−1/2Cρ−1/2,\n∥K∥≤1."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00479.svg",
+    "sourcePage": 22,
+    "bbox": [
+      325.5545227050781,
+      677.2271606445313,
+      347.12339477539064,
+      689.737744140625
+    ],
+    "inline": true,
+    "text": " I +"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00480.svg",
+    "sourcePage": 22,
+    "bbox": [
+      361.3423645019531,
+      677.2271606445313,
+      369.95335083007814,
+      689.736279296875
+    ],
+    "inline": true,
+    "text": " θ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00481.svg",
+    "sourcePage": 22,
+    "bbox": [
+      383.3579895019531,
+      675.5651123046875,
+      411.91480712890626,
+      689.737744140625
+    ],
+    "inline": true,
+    "text": "(eiφK"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00482.svg",
+    "sourcePage": 22,
+    "bbox": [
+      77.39638061523438,
+      690.776171875,
+      86.00637512207031,
+      703.2852905273437
+    ],
+    "inline": true,
+    "text": " θ"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00483.svg",
+    "sourcePage": 22,
+    "bbox": [
+      187.06236572265624,
+      690.776171875,
+      197.02390747070314,
+      703.2852905273437
+    ],
+    "inline": true,
+    "text": " v"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00484.svg",
+    "sourcePage": 22,
+    "bbox": [
+      235.71400756835936,
+      689.1141235351563,
+      308.40928344726564,
+      703.2852905273437
+    ],
+    "inline": true,
+    "text": "⟨v, eiφKv⟩= −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00485.svg",
+    "sourcePage": 22,
+    "bbox": [
+      145.39796752929686,
+      702.55986328125,
+      214.79990844726564,
+      716.8621337890625
+    ],
+    "inline": true,
+    "text": " Kv = −e−iφv"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00486.svg",
+    "sourcePage": 22,
+    "bbox": [
+      477.86488647460936,
+      702.55986328125,
+      549.5191772460937,
+      716.8621337890625
+    ],
+    "inline": true,
+    "text": " K†v = −eiφv,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p022-00487.svg",
+    "sourcePage": 22,
+    "bbox": [
+      221.17099304199218,
+      716.1098510742188,
+      275.32590942382814,
+      730.3833129882812
+    ],
+    "inline": true,
+    "text": "I −K†K)v"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00488.svg",
+    "sourcePage": 23,
+    "bbox": [
+      64.00000305175782,
+      66.43219299316407,
+      550.1375244140625,
+      112.2111099243164
+    ],
+    "inline": false,
+    "text": "orthogonal reducing eigenvectors. The remaining orthogonal space is one-dimensional, so K is normal.\nDiagonalizing it gives the displayed form.\nLinear rank three makes the three diagonal response\nfunctionals independent. The Choi matrix then splits into three positive 2-by-2 blocks\n\u0010 1 λi\n ̄λi 1"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00489.svg",
+    "sourcePage": 23,
+    "bbox": [
+      64.00000305175782,
+      91.40137023925782,
+      550.3903930664062,
+      216.91077880859376
+    ],
+    "inline": false,
+    "text": "\u0011\nunder\ncongruence. Two have rank one and the third has rank one or two, proving the last statement.\n□\nFor a non-trace-preserving branch with faithful input effect on its two-dimensional input support,\nan invertible input whitening makes it trace preserving without changing ranks or distinct pure rays.\nIn a putative equality profile (a, b) = (1, 2), two other output planes project to distinct rays in this\nbranch’s input plane, and equality requires their posterior outputs to have rank two. Thus the lemma\napplies to that branch. It is only a necessary normal form: its output-congruenced diagonal structure\nis not literal commutativity of the physical output states, and no global full-law realization follows\nfrom it alone."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00490.svg",
+    "sourcePage": 23,
+    "bbox": [
+      352.0053283691406,
+      317.05882568359374,
+      404.0347412109375,
+      329.72279052734376
+    ],
+    "inline": true,
+    "text": " h ∈(0, 2):"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00491.svg",
+    "sourcePage": 23,
+    "bbox": [
+      106.04603881835938,
+      339.49635620117186,
+      505.95673828125,
+      371.8597839355469
+    ],
+    "inline": false,
+    "text": "\n\ns\nr(h)2 =\nh3(2 −h)\n2(h + 1)(3h + 2),\na(h) = 1\n2 −h\n3h + 2\n,\nt(h)2 =\nh(2 −h)\n2(h + 1)(3h + 2).\n1 +\n2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00492.svg",
+    "sourcePage": 23,
+    "bbox": [
+      64.00000305175782,
+      385.82594604492186,
+      548.2901123046875,
+      439.88990478515626
+    ],
+    "inline": false,
+    "text": "Its nine pair states and CP reset maps, defined in the main resource manuscript, generate the entire\nstationary delayed-trine law with r = 1−λ. Each realization has reusable dimension three and recorded\none-step Choi rank nine, both minimal at the indicated parameter. Its stationary memory is I3/3. The\nmaximum of r(h) occurs at h∗= (1 +\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00493.svg",
+    "sourcePage": 23,
+    "bbox": [
+      264.05400390625,
+      426.4891845703125,
+      275.2705505371094,
+      438.99830322265626
+    ],
+    "inline": true,
+    "text": ")/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00494.svg",
+    "sourcePage": 23,
+    "bbox": [
+      357.16990966796874,
+      426.4891845703125,
+      413.7638671875,
+      440.00306396484376
+    ],
+    "inline": true,
+    "text": " < r < rmax"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00495.svg",
+    "sourcePage": 23,
+    "bbox": [
+      394.82948608398436,
+      461.8388244628906,
+      435.47813110351564,
+      475.9849060058594
+    ],
+    "inline": true,
+    "text": " h1 ̸= h2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00496.svg",
+    "sourcePage": 23,
+    "bbox": [
+      458.27476806640624,
+      461.9801818847656,
+      549.6770751953125,
+      475.4940612792969
+    ],
+    "inline": true,
+    "text": " r(h1) = r(h2) > 0."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00497.svg",
+    "sourcePage": 23,
+    "bbox": [
+      167.68182678222655,
+      489.0079833984375,
+      239.1271484375,
+      501.62562255859376
+    ],
+    "inline": true,
+    "text": " (d, k) = (3, 9)"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00498.svg",
+    "sourcePage": 23,
+    "bbox": [
+      368.5941955566406,
+      487.41713256835936,
+      392.45972900390626,
+      501.62562255859376
+    ],
+    "inline": true,
+    "text": " 6 3n"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00499.svg",
+    "sourcePage": 23,
+    "bbox": [
+      409.3548156738281,
+      488.9378234863281,
+      442.888623046875,
+      501.62562255859376
+    ],
+    "inline": true,
+    "text": " n ≥2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00500.svg",
+    "sourcePage": 23,
+    "bbox": [
+      234.65799255371093,
+      524.6628295898438,
+      378.54072265625,
+      552.1897705078125
+    ],
+    "inline": false,
+    "text": "1\n2∥Mh1 −Mh2∥⋄= |h1 −h2|\n3\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00501.svg",
+    "sourcePage": 23,
+    "bbox": [
+      407.1627685546875,
+      571.9269897460938,
+      438.05308227539064,
+      585.5111206054687
+    ],
+    "inline": true,
+    "text": " I3/3."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00502.svg",
+    "sourcePage": 23,
+    "bbox": [
+      114.41570587158203,
+      621.0381958007813,
+      130.61513977050782,
+      634.5421875
+    ],
+    "inline": true,
+    "text": " Pj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00503.svg",
+    "sourcePage": 23,
+    "bbox": [
+      249.55400390625,
+      655.4098388671875,
+      362.44871215820314,
+      682.9367797851562
+    ],
+    "inline": false,
+    "text": "Ej(h) = 2 −h\n6\nI + h\n2Pj."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00504.svg",
+    "sourcePage": 23,
+    "bbox": [
+      220.5128204345703,
+      689.1239501953125,
+      269.52610473632814,
+      703.2855346679687
+    ],
+    "inline": true,
+    "text": " ζ = −tω2"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00505.svg",
+    "sourcePage": 23,
+    "bbox": [
+      340.4755126953125,
+      690.634814453125,
+      469.3905456542969,
+      703.2855346679687
+    ],
+    "inline": true,
+    "text": " −h)/6, (2 −h)/6, (1 + h)/"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00506.svg",
+    "sourcePage": 23,
+    "bbox": [
+      91.32730407714844,
+      702.663134765625,
+      108.19314270019531,
+      716.8343017578125
+    ],
+    "inline": true,
+    "text": " Zj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p023-00507.svg",
+    "sourcePage": 23,
+    "bbox": [
+      231.00099487304686,
+      717.7328369140625,
+      381.00068359375,
+      732.1748168945312
+    ],
+    "inline": true,
+    "text": "Mh = (h/2)MP + (1 −h/2)D,"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00508.svg",
+    "sourcePage": 24,
+    "bbox": [
+      63.606997680664065,
+      66.29080505371094,
+      548.226025390625,
+      99.44791870117187
+    ],
+    "inline": false,
+    "text": "where MP is the projective Fourier measurement with classical pointer and D(ρ) = Tr(ρ)IA/3. For\nany positive joint input ρSR of trace one put σj = TrS[(Pj ⊗I)ρSR]; σj ≥0 and P\nj σj = ρR. Then"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00509.svg",
+    "sourcePage": 24,
+    "bbox": [
+      182.0020324707031,
+      103.73132629394532,
+      430.00071411132814,
+      140.4050720214844
+    ],
+    "inline": false,
+    "text": "\n\n2\n3 Tr σj + 1\n= 4\nX\nj\n∥σj −ρR/3∥1 ≤\nX\nk̸=j\nTr σk\nX\n3.\n3\nj"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00510.svg",
+    "sourcePage": 24,
+    "bbox": [
+      63.606997680664065,
+      150.04233093261718,
+      550.1190307617187,
+      284.42078857421876
+    ],
+    "inline": false,
+    "text": "The standard stabilization of channel trace-distance discrimination permits restriction to positive joint\ninputs. Hence half the diamond distance between MP and D is at most 2/3. A Fourier eigenstate gives\ndeterministic versus uniform labels and attains this value. Scaling by |h1 −h2|/2 proves the theorem’s\ndistance.\nFor the common purification |Ω⟩= 3−1/2 P\ni |i⟩S|i⟩R, the output pointer/reference block is Ej(h)T /3.\nIts difference is (h1 −h2)(P T\nj −I/3)/6. Since ∥Pj −I/3∥1 = 4/3, the sum of the three block norms\ngives the same half trace distance |h1 −h2|/3. One can attain it by measuring the reference in the\nconjugate Fourier basis and comparing that outcome with the pointer. All preparations, reference basis\nand decoding are fixed independently of which candidate source is used. The equal passive laws and\nresource counts follow from the original family theorem."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00511.svg",
+    "sourcePage": 24,
+    "bbox": [
+      64.00000305175782,
+      294.21641845703124,
+      548.266064453125,
+      337.6617858886719
+    ],
+    "inline": false,
+    "text": "For equal prior probabilities of the two candidate generators, one use therefore achieves optimal\nsuccess probability\npsucc = 1\n2 + |h1 −h2|/6."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00512.svg",
+    "sourcePage": 24,
+    "bbox": [
+      63.6070053100586,
+      435.81279296875,
+      438.2037780761719,
+      459.0337646484375
+    ],
+    "inline": false,
+    "text": "Take h1 = 1, r2 = 1/20, so λ = 1 −1/\n√\n20. The unique root h2 ∈(3/2, 8/5) of"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00513.svg",
+    "sourcePage": 24,
+    "bbox": [
+      242.3100158691406,
+      466.37599487304686,
+      369.69688110351564,
+      483.63792114257814
+    ],
+    "inline": false,
+    "text": "10h3\n2 −10h2\n2 −7h2 −2 = 0"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00514.svg",
+    "sourcePage": 24,
+    "bbox": [
+      63.999072265625,
+      492.284716796875,
+      218.9046600341797,
+      504.79380493164064
+    ],
+    "inline": false,
+    "text": "is the second parameter. Indeed"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00515.svg",
+    "sourcePage": 24,
+    "bbox": [
+      193.74806518554686,
+      510.53282470703124,
+      418.2537353515625,
+      542.0188110351562
+    ],
+    "inline": false,
+    "text": "20 = −(h −1)(10h3 −10h2 −7h −2)\nr(h)2 −1\n20(h + 1)(3h + 2)\n."
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p024-00516.svg",
+    "sourcePage": 24,
+    "bbox": [
+      492.856494140625,
+      717.7328369140625,
+      548.0033081054687,
+      732.198681640625
+    ],
+    "inline": true,
+    "text": " λ† = 1 −"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p025-00517.svg",
+    "sourcePage": 25,
+    "bbox": [
+      63.61799926757813,
+      60.345801544189456,
+      548.62421875,
+      149.67579345703126
+    ],
+    "inline": false,
+    "text": "17/4. For complete channels retaining final memory, the current universal bounds are\n48, 145, 437 3n−4; the explicit mixed source at .99 attains 50, 152, 456 3n−4. Earlier specified-channel\ncosts remain valid for those channels, but are not universal process minima. The current one-step qutrit\noptimum is nine on the certified high-noise interval. These overlays identify the current process-wide\nstatus; historical tables continue to describe their explicitly specified channels rather than different\nupdated channels.\n71 −17\n√"
+  },
+  {
+    "asset": "/publications/source-readout/constructive/quantum-source-technical-companion/math/p025-00518.svg",
+    "sourcePage": 25,
+    "bbox": [
+      64.00000305175782,
+      64.17431945800782,
+      75.56260375976562,
+      75.73692016601562
+    ],
+    "inline": false,
+    "text": "q"
+  }
+]

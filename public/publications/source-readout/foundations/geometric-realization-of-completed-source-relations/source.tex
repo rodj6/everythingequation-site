@@ -1,0 +1,2588 @@
+%% =====================================================================
+%%  Shadow Theory --- Paper 4
+%%  Geometric Realization of Completed Source Relations
+%%  Standalone LaTeX manuscript.  Compile with pdflatex (2x for refs).
+%% =====================================================================
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage[margin=1in]{geometry}
+\usepackage[expansion=false]{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+
+% ----- theorem environments -------------------------------------------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{convention}[theorem]{Convention}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ----- macros ---------------------------------------------------------
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Int}{\mathbb{Z}}
+\newcommand{\Cx}{\mathbb{C}}
+\newcommand{\gfrak}{\mathfrak{g}}
+\newcommand{\Ggeo}{\mathfrak{G}_{\mathrm{geo}}}
+\newcommand{\Cgeo}{\mathcal{C}_{\mathrm{geo}}}
+\newcommand{\Sgeo}{S_{\mathrm{geo}}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\AutB}{\operatorname{Aut}_{\mathcal{B}}}
+\newcommand{\Gau}{\operatorname{Gau}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Hol}{\operatorname{Hol}}
+\newcommand{\Ad}{\operatorname{Ad}}
+\newcommand{\Tor}{\operatorname{Tor}}
+\newcommand{\Imm}{\operatorname{Im}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\dvol}{\mathrm{d}\!\operatorname{vol}_g}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\Egeo}{E_A^{\mathrm{geo}}}
+\newcommand{\pgeo}{p_{\mathrm{geo}}}
+\newcommand{\jgeo}{j_A^{\mathrm{geo}}}
+\newcommand{\egeo}{e_A^{\mathrm{geo}}}
+\newcommand{\Mflat}{\mathcal{M}_{\mathrm{flat}}}
+\newcommand{\Lie}{\mathcal{L}}
+
+\allowdisplaybreaks
+
+% ======================================================================
+\begin{document}
+
+\title{\textbf{Geometric Realization of Completed Source Relations}\\[0.35em]
+\large Descent, Orbit Spaces, Invariant Relations, and\\
+Variational Response in Shadow Theory}
+\author{Jeremy Rodgers\thanks{Website: \href{https://everythingequation.com}{everythingequation.com}}\\
+\normalsize Independent Researcher}
+\date{June 2026}
+\maketitle
+
+\begin{abstract}
+The minimal completion constructed in Paper~3 is an abstract quotient determined by a
+declared readout together with a set-indexed family of invariant source relations. This
+paper identifies the conditions under which such a completion possesses a genuine
+realization in differential geometry and classical field theory. The realization domain is
+restricted to \emph{compatible} local metric, bundle, connection, matter, and boundary data:
+\v{C}ech cocycle and overlap equations are used to construct global fields, and uniqueness is
+asserted only up to bundle isomorphism, never up to a choice of coordinate chart or gauge
+representative. The physical geometric source is then defined as the orbit space of admissible
+global configurations under the groupoid of allowed principal-bundle isomorphisms covering
+allowed diffeomorphisms.
+
+Gauge- and diffeomorphism-invariant global relations---holonomy conjugacy classes, Wilson
+observables, characteristic numbers, boundary and asymptotic data, and spectra of geometrically
+defined operators with specified domains---descend to functions on this orbit space. Their joint
+image with a declared Tier-1 readout realizes, on the restricted domain, the canonical minimal
+completion of Paper~3. We prove a restricted geometric realization theorem, together with an
+orbit reconstruction criterion characterizing when the completion map is injective. For flat
+$U(1)$ connections on an oriented circle we prove that holonomy classifies gauge orbits
+completely, yielding the exact realization $E_{\mathrm{hol}}\cong U(1)$, and we exhibit a
+strictly coarser spectral completion $E_{\mathrm{spec}}\cong[-1,1]$ arising from a charged
+scalar relation.
+
+The final sections embed completed relation data into variational dynamics. A gauge- and
+diffeomorphism-invariant relation-dependent action yields correctly normalized stress-energy,
+gauge-current, and matter responses; the Einstein, Yang--Mills, and matter equations follow by
+functional variation, and the Ward--Noether identities associated with diffeomorphism and gauge
+invariance enforce covariant conservation. Completed source relations therefore enter Tier-1
+field equations through invariant geometric structure and derived response, not through a
+choice of coordinates or gauge. No claim is made that every abstract completion is
+geometrically realizable; the realization boundary is precisely the content of the results
+below.
+\end{abstract}
+
+\tableofcontents
+
+% ======================================================================
+\section{Introduction and scientific position}
+\label{sec:intro}
+
+\subsection{Position in the sequence}
+
+Paper~1 \cite{ST1} established source--readout non-equivalence and identified the descent
+obstructions that prevent a readout from being inverted. Paper~2 \cite{ST2} characterized when
+the information lost by a readout obstructs a nominated target, and what any target-sufficient
+extension is obliged to distinguish. Paper~3 \cite{ST3} constructed, for a set-indexed family
+$\{R_\alpha\}_{\alpha\in A}$ of invariant source relations and a declared readout
+$p\colon S\to T$, the canonical minimal completion
+\begin{equation}
+\label{eq:paper3-completion}
+E_A \;=\; \Imm\bigl(p,R_A\bigr)
+\;\subseteq\; T\times\prod_{\alpha\in A}V_\alpha ,
+\qquad
+R_A=(R_\alpha)_{\alpha\in A},
+\end{equation}
+together with its quotient realization $S\twoheadrightarrow E_A$ and its terminal universal
+property among surjective extensions through which $p$ and every $R_\alpha$ factor.
+
+Construction \eqref{eq:paper3-completion} is purely set-theoretic. It is indifferent to whether
+the relation values $(t,(v_\alpha))$ can be produced by any geometry at all. Paper~4 supplies
+exactly the missing ingredient:
+
+\begin{quote}
+\emph{When do the abstract relation coordinates of Paper~3 arise from compatible global
+metrics, bundles, connections, matter fields, boundary data, and gauge-invariant observables?}
+\end{quote}
+
+The answer has the structure of a \emph{realization boundary}. Not every point of the Cartesian
+product $T\times\prod_\alpha V_\alpha$ is attained; the attainable points are precisely the
+image of a geometric evaluation map, and that image is constrained by descent (\v{C}ech
+cocycle and overlap conditions), by invariance (the relations must be constant on orbits of the
+allowed symmetry groupoid), and by the admissibility class chosen for the model (regularity,
+signature, causal structure, boundary and asymptotic conditions). The abstract completion is
+then realized \emph{relative to} the invariant geometric relations declared, and only on that
+restricted domain.
+
+\subsection{Progression of the paper}
+
+The paper follows a single line of development. Compatible local geometric data glue to global
+fields (Section~\ref{sec:descent}, Theorem~\ref{thm:descent}). Physical configurations are
+reduced by allowed bundle isomorphisms and diffeomorphisms (Section~\ref{sec:source},
+Definition~\ref{def:sgeo}). Invariant global geometric relations become well-defined functions
+on the reduced orbit space (Section~\ref{sec:invariants}). Their joint image with a declared
+readout realizes the canonical completion of Paper~3 (Section~\ref{sec:realization},
+Theorem~\ref{thm:restricted-realization}). Flat $U(1)$ connections on an oriented circle provide
+an exact classification example (Section~\ref{sec:u1}, Theorem~\ref{thm:hol-class}). Invariant
+relation-dependent actions generate stress-energy, currents, and matter response through
+functional variation (Section~\ref{sec:variational}, Theorem~\ref{thm:field-eqs}). Gauge and
+diffeomorphism invariance impose the corresponding Ward--Noether identities
+(Section~\ref{sec:noether}, Theorem~\ref{thm:cons} and Proposition~\ref{prop:gauge-current}).
+
+\subsection{Scope}
+\label{sec:scope}
+
+The scope restrictions recorded here are load-bearing and are used explicitly in the statements
+of the theorems below. It is not claimed that every abstract completion of Paper~3 is
+geometrically realizable; realizability is a nontrivial condition, and
+Corollary~\ref{cor:realizability-boundary} exhibits the obstruction. It is not claimed that any
+finite list of curvature scalars separates arbitrary Lorentzian geometries; separation is a
+hypothesis to be established on the restricted domain of a given model, and
+Remark~\ref{rem:no-finite-separation} records why no general result of that kind is available.
+Gauge potentials and coordinate representatives are never treated as physical states: all
+realization relations are functions on the orbit space $\Sgeo$. A loop observable is not treated
+as diffeomorphism invariant unless the loop itself is included in the configuration data and
+transformed with it, or the observable is formed by an invariant construction over loops, or the
+declared boundary data pins the relevant homology class; Section~\ref{sec:diff-loops} makes these
+alternatives precise and requires a model to declare which it uses. Global relation coordinates
+are not treated as independent dynamical fields unless a model explicitly promotes them to
+fields. No new physical interaction or empirical claim is introduced, and no claim is made about
+the physical status of our universe: the relation-dependent action of
+Section~\ref{sec:variational} is a template for admissible couplings, and its consequences are
+theorems about that template, not predictions. Finally, the projected-dynamics and memory
+machinery of Paper~5, and the Randall--Sundrum construction of Paper~7, are not used and are not
+assumed; where the present results terminate in an open dynamical question, this is stated as
+such (Section~\ref{sec:tier1}).
+
+% ======================================================================
+\section{The geometric source domain}
+\label{sec:source}
+
+\subsection{Configurations}
+
+\begin{convention}[Smoothness, signature, and index conventions]
+\label{conv:basic}
+Throughout the general theory, $M$ is a smooth, connected, paracompact, oriented four-manifold,
+possibly with boundary $\partial M$. The choice $\dim M=4$ is made for definiteness in the physical
+application and is used nowhere essentially: Sections~\ref{sec:source}--\ref{sec:realization} hold
+verbatim in any dimension. Section~\ref{sec:u1} is a deliberate one-dimensional specialization,
+declared as such in Convention~\ref{conv:circle-scope}, and the dimensional stipulation of the
+present convention is suspended there. All fields are smooth unless a weaker regularity class is explicitly
+declared as part of the admissibility data. A Lorentzian metric has signature $(-,+,+,+)$; a
+\emph{time-oriented} Lorentzian metric is a pair $(g,\mathfrak{t})$ consisting of a Lorentzian
+metric $g$ together with a choice $\mathfrak{t}$ of one of the two continuous global
+orientations of the timelike cone bundle of $g$ (equivalently, the choice of a connected
+component of the set of $g$-timelike vector fields, when one exists). Not every Lorentzian
+metric admits such a choice; admitting one is a nontrivial global condition on $g$, and it is
+imposed below as part of admissibility rather than derived
+(see Remark~\ref{rem:time-orientation}). Greek indices run over $0,1,2,3$ and are raised and
+lowered with $g$. $G$ denotes a finite-dimensional Lie group with Lie algebra $\gfrak$, equipped
+with a fixed $\Ad$-invariant nondegenerate bilinear form $\langle\cdot,\cdot\rangle$ on $\gfrak$
+(for compact semisimple $G$ one may take the negative Killing form; for $G=U(1)$ the standard
+normalization on $\mathfrak{u}(1)\cong i\Real$). Finally $\rho\colon G\to \mathrm{GL}(W)$ is a
+fixed finite-dimensional representation; $\rho$ is \emph{not} assumed unitary, and where
+unitarity is needed it is hypothesized explicitly.
+\end{convention}
+
+\begin{definition}[Global geometric configuration]
+\label{def:config}
+A \emph{global geometric configuration} is a tuple
+\begin{equation}
+\label{eq:config}
+\Psi=\bigl(M,\;g,\;P,\;A,\;\Phi,\;\mathcal{B}\bigr),
+\end{equation}
+in which
+\begin{enumerate}[label=(\alph*),leftmargin=2.2em]
+\item $g$ is a Lorentzian metric on $M$;
+\item $\pi\colon P\to M$ is a principal $G$-bundle;
+\item $A\in\Omega^1(P,\gfrak)$ is a principal connection on $P$
+      \cite{KobayashiNomizu1,Bleecker};
+\item $\Phi$ is a section of the associated bundle $P\times_\rho W\to M$;
+\item $\mathcal{B}$ denotes the boundary, asymptotic, causal, and global data required to make
+      the model well posed. Among these data we \emph{always} include a choice of time
+      orientation $\mathfrak{t}$ for $g$; the remaining components of $\mathcal{B}$ are
+      model-specific and may comprise, for instance, fixed induced data on $\partial M$, a decay
+      class at infinity, a fixed conformal boundary structure, a global hyperbolicity
+      requirement, a spin structure, or a fixed topological sector.
+\end{enumerate}
+\end{definition}
+
+\begin{remark}[Where time orientation lives]
+\label{rem:time-orientation}
+Time orientation is a property of the pair $(M,g)$, not of the bare smooth manifold $M$: it is
+meaningless to speak of $M$ as ``time-orientable'' independently of a Lorentzian metric, since
+the timelike cone bundle whose components are being selected is defined by $g$. Accordingly the
+choice $\mathfrak{t}$ is carried in $\mathcal{B}$, and the arrows of the redundancy groupoid are
+required below to preserve it. This has a consequence for the descent theorem, recorded
+explicitly in Theorem~\ref{thm:descent} and Remark~\ref{rem:descent-time}: descent reconstructs
+the \emph{metric}, but membership of the reconstructed $(g,\mathfrak{t})$ in a time-oriented
+admissibility class is an additional \emph{global} condition on the glued object, which either
+must be imposed after the fact or must be built into the descent data as compatible local time
+orientations.
+\end{remark}
+
+\begin{definition}[Admissibility class]
+\label{def:admissible}
+An \emph{admissibility class} $\Cgeo$ is a specified class of tuples \eqref{eq:config}
+satisfying declared conditions on regularity, signature, causal structure, boundary and
+asymptotic behaviour, and topological sector, and in which every $g$ is time-orientable with a
+distinguished time orientation $\mathfrak{t}\in\mathcal{B}$. The class $\Cgeo$ is part of the
+data of the model. All subsequent statements are relative to a fixed $\Cgeo$.
+\end{definition}
+
+The insistence that $\Cgeo$ be declared is not pedantry. Every separation, realization, and
+conservation statement below is sensitive to it: a relation family may separate orbits in one
+admissibility class and fail to separate them in a larger one, and a Ward identity may hold with
+compactly supported variations and fail without a boundary term.
+
+\subsection{The redundancy groupoid}
+
+Gauge and coordinate freedom in a bundle-theoretic setting is not, in general, a group acting
+on a fixed configuration space: different admissible configurations may carry non-isomorphic
+bundles, and the diffeomorphisms that lift to a given bundle need not lift to another. The
+correct structure is a groupoid.
+
+\begin{definition}[Ambient allowed automorphisms]
+\label{def:ambient-aut}
+Fix a principal $G$-bundle $P\to M$. Let $\Diff_{\mathcal{B}}(M)$ denote the group of
+diffeomorphisms of $M$ preserving the orientation of $M$ and the non-metric structural data in
+$\mathcal{B}$ (boundary, asymptotic regime, topological sector), and let
+\begin{equation}
+\label{eq:AutB}
+\AutB(P)
+:=\bigl\{\hat F\in\Aut(P)\;:\;\hat F \text{ covers some } f\in\Diff_{\mathcal{B}}(M)\bigr\}
+\end{equation}
+be the group of $G$-equivariant diffeomorphisms of $P$ covering such diffeomorphisms. Define
+\begin{equation}
+\label{eq:DiffPB}
+\Diff_{P,\mathcal{B}}(M)\;:=\;\text{image of }\ \AutB(P)\ \text{ in }\ \Diff_{\mathcal{B}}(M),
+\end{equation}
+that is, the subgroup of allowed base diffeomorphisms that admit an equivariant lift to $P$.
+\end{definition}
+
+\begin{proposition}[Structure of the ambient group]
+\label{prop:aut-sequence}
+With the definitions \eqref{eq:AutB}--\eqref{eq:DiffPB} there is a short exact sequence of groups
+\begin{equation}
+\label{eq:aut-sequence}
+1\;\longrightarrow\;\Gau(P)\;\longrightarrow\;\AutB(P)\;\longrightarrow\;
+\Diff_{P,\mathcal{B}}(M)\;\longrightarrow\;1 ,
+\end{equation}
+where
+\[
+\Gau(P)\;=\;\bigl\{\hat F\in\Aut(P):\hat F\ \text{covers}\ \id_M\bigr\}
+\;\cong\;\Gamma\bigl(P\times_{\mathrm{conj}}G\bigr)
+\]
+is the gauge group. The sequence is exact by construction: $\Diff_{P,\mathcal{B}}(M)$ is
+\emph{defined} as the image of the projection, and the kernel of that projection is exactly the
+set of automorphisms covering the identity. The sequence need not split.
+\end{proposition}
+
+\begin{proof}
+Exactness at $\Gau(P)$ and at $\Diff_{P,\mathcal{B}}(M)$ is immediate from the definitions of
+kernel and image. That the extension need not split is a statement about bundle topology: a
+splitting would furnish, for each allowed $f\in\Diff_{P,\mathcal{B}}(M)$, an equivariant lift
+$\sigma(f)\in\AutB(P)$ depending on $f$ homomorphically, and there is no reason for such a
+coherent choice to exist. Consequently $\AutB(P)$ is not in general a semidirect product
+$\Gau(P)\rtimes\Diff_{P,\mathcal{B}}(M)$, and nothing below assumes it is.
+\end{proof}
+
+\begin{remark}[The ambient group is not the isotropy group]
+\label{rem:isotropy}
+Proposition~\ref{prop:aut-sequence} describes the \emph{ambient} group of allowed bundle
+automorphisms over a fixed $P$. It does \emph{not} describe the isotropy group of the groupoid at
+a configuration. The isotropy (stabilizer) group at
+$\Psi=(M,g,P,A,\Phi,\mathcal{B})$ is the subgroup
+\begin{equation}
+\label{eq:stabilizer}
+\begin{aligned}
+\Aut(\Psi)
+:=\bigl\{\hat F\in\AutB(P)\ \text{covering some}\ f\ :\ \ 
+&f_*g=g,\quad f_*\mathfrak{t}=\mathfrak{t},\quad (\hat F^{-1})^*A=A,\\[-0.15em]
+&\hat F_\rho\circ\Phi=\Phi\circ f,\quad f_*\mathcal{B}=\mathcal{B}
+\bigr\}\;\le\;\AutB(P),
+\end{aligned}
+\end{equation}
+that is, the stabilizer of the \emph{whole tuple}: it preserves the metric, the chosen time
+orientation and orientation, the connection, the matter section, and the boundary data.
+$\Aut(\Psi)$ is typically far smaller than $\AutB(P)$: for a generic $(g,A,\Phi)$ it is a small or
+even trivial group, its base part being contained in the isometry group of $g$. In particular the
+exact sequence \eqref{eq:aut-sequence} is a statement about $\AutB(P)$ and not about
+$\Aut(\Psi)$.
+\end{remark}
+
+\begin{definition}[Redundancy groupoid]
+\label{def:groupoid}
+Let $\Ggeo$ be the groupoid whose objects are the elements of $\Cgeo$. Given two objects
+\[
+\Psi=(M,g,P,A,\Phi,\mathcal{B}),
+\qquad
+\Psi'=(M,g',P',A',\Phi',\mathcal{B}'),
+\]
+the arrows $F\colon\Psi\to\Psi'$ are the pairs $F=(\hat F,f)$ consisting of
+\begin{itemize}[leftmargin=1.6em]
+\item an allowed diffeomorphism $f\in\Diff_{\mathcal{B}}(M)$, and
+\item a $G$-equivariant bundle isomorphism $\hat F\colon P\to P'$ covering $f$,
+\end{itemize}
+subject to
+\begin{equation}
+\label{eq:arrow-conditions}
+f_*g=g',
+\qquad
+f_*\mathfrak{t}=\mathfrak{t}',
+\qquad
+(\hat F^{-1})^{*}A = A',
+\qquad
+\hat F_{\rho}\circ\Phi = \Phi'\circ f,
+\qquad
+f_*\mathcal{B}=\mathcal{B}',
+\end{equation}
+where $\hat F_\rho$ is the induced isomorphism $P\times_\rho W\to P'\times_\rho W$. The second
+condition is the requirement that arrows preserve the chosen time orientation; it is not implied
+by the first, since $f_*g=g'$ alone permits $f$ to exchange the two components of the timelike
+cone bundle. Composition is composition of bundle maps; identities are $(\id_P,\id_M)$. The
+isotropy group of $\Ggeo$ at $\Psi$ is $\Aut(\Psi)$ of \eqref{eq:stabilizer}.
+\end{definition}
+
+The groupoid formulation---rather than a single group acting on a single configuration
+space---is forced by two features. First, the arrows relate objects carrying \emph{different}
+bundle representatives, which is exactly what is needed when descent produces a bundle only up to
+isomorphism (Theorem~\ref{thm:descent}). Second, isotropy jumps from configuration to
+configuration, since $\Aut(\Psi)$ depends on $\Psi$; there is no ambient group acting with
+constant stabilizer.
+
+\begin{definition}[Physical equivalence and the reduced source]
+\label{def:sgeo}
+Write
+\begin{equation}
+\label{eq:phys-equiv}
+\Psi\simeq_{\mathrm{geo}}\Psi'
+\quad\Longleftrightarrow\quad
+\exists\,F\colon\Psi\to\Psi' \text{ in } \Ggeo .
+\end{equation}
+This is an equivalence relation on $\Cgeo$ because $\Ggeo$ is a groupoid. The \emph{reduced
+geometric source} is the orbit space
+\begin{equation}
+\label{eq:sgeo}
+\Sgeo \;:=\; \Cgeo/\!\simeq_{\mathrm{geo}} ,
+\end{equation}
+with quotient map $q\colon\Cgeo\to\Sgeo$, $q(\Psi)=[\Psi]$.
+\end{definition}
+
+\begin{remark}[Set-theoretic hygiene]
+\label{rem:hygiene}
+$\Sgeo$ is used below only as a set (equivalently, as the set of isomorphism classes of objects
+of the essentially small groupoid $\Ggeo$ obtained after fixing a set of bundle
+representatives). No smooth or stratified structure on $\Sgeo$ is used or assumed; the orbit
+space of a gauge groupoid is in general not a manifold---precisely because isotropy jumps, as
+Remark~\ref{rem:isotropy} notes---and the arguments of
+Sections~\ref{sec:realization}--\ref{sec:u1} do not require it to be. Where a topology is
+needed, as for the moduli space $\Mflat(S^1,U(1))$ in Section~\ref{sec:u1}, it is supplied and
+identified explicitly.
+\end{remark}
+
+\begin{convention}[Status of relation coordinates]
+\label{conv:relation-status}
+A relation coordinate $r_\alpha$ is a \emph{function on $\Sgeo$}, not an independent field on
+$M$. It is not varied independently in Section~\ref{sec:variational} unless a model explicitly
+promotes it to a field by adjoining it to the configuration tuple \eqref{eq:config} and
+enlarging $\Cgeo$ accordingly. Where $r_\alpha$ is a functional of $(g,A,\Phi)$ its variation is
+computed by the functional chain rule of Section~\ref{sec:chain-rule}; where it labels a fixed
+topological or boundary sector it is held fixed under variations \emph{within} that sector. Both
+cases are handled in Section~\ref{sec:variational}; they are not conflated.
+\end{convention}
+
+Every realization relation used in this paper is, by construction, a function on $\Sgeo$ and
+never a function of an arbitrary coordinate chart or gauge potential.
+
+% ======================================================================
+\section{Local data and global descent}
+\label{sec:descent}
+
+We now establish the first leg of the progression: compatible local data glue to global fields.
+This is the theorem that fixes the \emph{domain} of geometric realization. The material is
+classical \cite{KobayashiNomizu1,Steenrod,Bleecker}; what is new is only the use to which it is
+put and the care with which the invariance and admissibility hypotheses are tracked.
+
+\subsection{Local data and compatibility equations}
+
+Let $\{U_i\}_{i\in I}$ be an open cover of $M$. Suppose we are given, for each $i\in I$,
+\begin{equation}
+\label{eq:local-data}
+g_i\in\Gamma\bigl(S^2T^*U_i\bigr),
+\qquad
+A_i\in\Omega^1(U_i,\gfrak),
+\qquad
+\Phi_i\in C^\infty(U_i,W),
+\end{equation}
+where each $g_i$ is an \emph{intrinsic} smooth symmetric covariant $2$-tensor field on the open
+set $U_i\subseteq M$, of Lorentzian signature at every point; together with smooth transition
+functions
+\begin{equation}
+\label{eq:transition}
+h_{ij}\colon U_i\cap U_j\longrightarrow G .
+\end{equation}
+If in addition each $U_i$ is the domain of a chart $\psi_i\colon U_i\to\psi_i(U_i)\subseteq\Real^4$,
+we may pass to \emph{coordinate components}. These live on the coordinate images, not on $M$:
+setting
+\begin{equation}
+\label{eq:components}
+\bigl(\check g_i\bigr)_{ab}
+:=\bigl((\psi_i^{-1})^*g_i\bigr)_{ab}
+\quad\text{on}\quad \psi_i(U_i)\subseteq\Real^4 ,
+\end{equation}
+and writing $\psi_{ij}:=\psi_i\circ\psi_j^{-1}$ for the coordinate transition map on
+$\psi_j(U_i\cap U_j)$, the components of a \emph{single} intrinsic tensor in two charts are
+related by the usual pullback law
+\begin{equation}
+\label{eq:component-law}
+\check g_j \;=\; \psi_{ij}^{\,*}\,\check g_i
+\qquad\text{on}\qquad \psi_j(U_i\cap U_j),
+\qquad\text{i.e.}\qquad
+\bigl(\check g_j\bigr)_{cd}
+=\frac{\partial \psi_{ij}^{\,a}}{\partial x^{c}}\,
+ \frac{\partial \psi_{ij}^{\,b}}{\partial x^{d}}\,
+ \bigl(\check g_i\bigr)_{ab}\circ\psi_{ij}.
+\end{equation}
+Equation \eqref{eq:component-law} is a statement about \emph{components on coordinate images}. It
+is distinct from the gluing condition \eqref{eq:metric-overlap} below, which is a relation among the
+intrinsic tensors $g_i$ on their overlaps.
+
+\begin{definition}[Compatible local geometric data]
+\label{def:compatible}
+The collection $\{g_i,h_{ij},A_i,\Phi_i\}$ is \emph{compatible} if, on every nonempty overlap
+(respectively triple overlap):
+\begin{align}
+\label{eq:cocycle}
+h_{ii}&=1,
+&
+h_{ji}&=h_{ij}^{-1},
+&
+h_{ij}h_{jk}&=h_{ik} ,
+\\[0.3em]
+\label{eq:metric-overlap}
+g_i\big|_{U_i\cap U_j} &= g_j\big|_{U_i\cap U_j} ,
+\\[0.3em]
+\label{eq:connection-overlap}
+A_j &= \Ad_{h_{ij}^{-1}}A_i + h_{ij}^{*}\theta_G ,
+\\[0.3em]
+\label{eq:matter-overlap}
+\Phi_j &= \rho\bigl(h_{ij}^{-1}\bigr)\Phi_i .
+\end{align}
+Here \eqref{eq:cocycle} is the \v{C}ech cocycle condition; \eqref{eq:metric-overlap} is the
+gluing condition (agreement of restrictions) for a section of the sheaf $S^2T^*M$; and \eqref{eq:connection-overlap}, \eqref{eq:matter-overlap} are
+the compatibility conditions for local connection forms and local matter representatives,
+$\theta_G$ denoting the left Maurer--Cartan form on $G$. For a matrix group
+$G\subseteq\mathrm{GL}(n)$, equation \eqref{eq:connection-overlap} takes the familiar form
+\[
+A_j = h_{ij}^{-1}A_i\,h_{ij} + h_{ij}^{-1}\,\mathrm{d}h_{ij} .
+\]
+\end{definition}
+
+\begin{remark}[\v{C}ech $H^1$ for nonabelian $G$]
+\label{rem:cech}
+A cocycle $\{h_{ij}\}$ satisfying \eqref{eq:cocycle} represents a class in
+$\check H^1(\{U_i\},\underline{G})$, where $\underline{G}$ is the sheaf of smooth $G$-valued
+functions. For nonabelian $G$ this object is a \emph{pointed set} of cocycle classes---the
+distinguished point being the class of the trivial cocycle---and not a group; two cocycles are
+equivalent when they are cohomologous in the sense
+$h'_{ij}=\lambda_i^{-1}h_{ij}\lambda_j$ for smooth $\lambda_i\colon U_i\to G$. Passing to the
+direct limit over refinements gives the pointed set $\check H^1(M,\underline{G})$, which
+classifies principal $G$-bundles over $M$ up to isomorphism \cite{Steenrod}. Only for abelian $G$
+does this pointed set carry a natural group structure; we use it below only as a pointed set.
+\end{remark}
+
+\begin{assumption}[Regularity of the descent data]
+\label{ass:descent-reg}
+The cover $\{U_i\}$ is locally finite; the $g_i$, $A_i$, $\Phi_i$, $h_{ij}$ are smooth on their
+domains; and each $g_i$ has the signature fixed in Convention~\ref{conv:basic}. If a weaker
+regularity class is used in $\Cgeo$, the same statements hold with ``smooth'' replaced uniformly
+by that class, provided the class is closed under restriction and under the gauge transformations
+appearing in \eqref{eq:connection-overlap}--\eqref{eq:matter-overlap}.
+\end{assumption}
+
+\subsection{The descent theorem}
+
+\begin{theorem}[Geometric descent]
+\label{thm:descent}
+Let $\{g_i,h_{ij},A_i,\Phi_i\}$ be compatible local geometric data in the sense of
+Definition~\ref{def:compatible}, satisfying Assumption~\ref{ass:descent-reg}. Then these data
+determine:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item a global Lorentzian metric $g$ on $M$ with $g|_{U_i}=g_i$;
+\item a principal $G$-bundle $\pi\colon P\to M$ with local trivializations over $\{U_i\}$ whose
+      transition functions are $\{h_{ij}\}$;
+\item a global principal connection $A$ on $P$ whose local representatives (pullbacks along the
+      canonical local sections $s_i$) are the $A_i$;
+\item a global section $\Phi$ of $P\times_\rho W$ whose local representatives are the $\Phi_i$.
+\end{enumerate}
+The resulting global tuple $(g,P,A,\Phi)$ is unique up to the bundle isomorphisms induced by
+change of local trivialization. Conversely, every global tuple $(g,P,A,\Phi)$ over $M$ arises in
+this way from compatible local data, for any cover trivializing $P$.
+
+The theorem reconstructs the metric $g$; it does \emph{not} by itself produce a time orientation.
+Membership of $(M,g)$ in the time-oriented admissibility class $\Cgeo$ of
+Definition~\ref{def:admissible} is an additional \emph{global} condition on the glued metric,
+discussed in Remark~\ref{rem:descent-time}.
+\end{theorem}
+
+\begin{proof}
+\emph{(1) The metric.}
+Condition \eqref{eq:metric-overlap} says exactly that the intrinsic tensors $g_i$ and $g_j$
+restrict to the same tensor field on $U_i\cap U_j$. Since $\Gamma(S^2T^*-)$ is a sheaf on $M$, the
+gluing axiom yields a unique global section $g\in\Gamma(S^2T^*M)$ with $g|_{U_i}=g_i$ for all $i$.
+Nondegeneracy and signature are pointwise properties of the symmetric bilinear form $g_x$ on
+$T_xM$; every $x\in M$ lies in some $U_i$, where $g_x=(g_i)_x$ is Lorentzian by hypothesis. Hence
+$g$ is Lorentzian. (If one prefers to present the data in coordinate components, the equivalent
+hypothesis is \eqref{eq:component-law}, which expresses that the $\check g_i$ are the component
+arrays of a single intrinsic tensor; the invariance of signature under the linear isomorphism
+$\mathrm{d}\psi_{ij}(x)$ is then Sylvester's law of inertia.)
+
+\emph{(2) The bundle.}
+Form the disjoint union $\coprod_{i\in I}U_i\times G\times\{i\}$ and impose
+\begin{equation}
+\label{eq:bundle-glue}
+(x,a,i)\;\sim\;\bigl(x,\;h_{ji}(x)\,a,\;j\bigr),
+\qquad x\in U_i\cap U_j,\; a\in G .
+\end{equation}
+Reflexivity follows from $h_{ii}=1$, symmetry from $h_{ij}=h_{ji}^{-1}$, and transitivity from
+$h_{kj}h_{ji}=h_{ki}$; hence \eqref{eq:bundle-glue} is an equivalence relation. Let $P$ be the
+quotient with the quotient topology, $\pi[(x,a,i)]:=x$.
+
+We record the trivializations rigorously. Fix $i$ and $x\in U_i$. \emph{Every equivalence class
+lying over $x$ has exactly one representative whose third entry is $i$}: existence, because if a
+class contains $(x,b,j)$ then it contains $(x,h_{ij}(x)b,i)$; uniqueness, because
+$(x,a,i)\sim(x,a',i)$ forces $a'=h_{ii}(x)a=a$. Hence the map
+\begin{equation}
+\label{eq:triv}
+\varphi_i\colon \pi^{-1}(U_i)\longrightarrow U_i\times G,
+\qquad
+\varphi_i\bigl([(x,a,i)]\bigr)=(x,a)
+\end{equation}
+is a well-defined bijection, with inverse $\varphi_i^{-1}(x,a)=[(x,a,i)]$; it is a homeomorphism
+by definition of the quotient topology, and we give $P$ the smooth structure for which the
+$\varphi_i$ are diffeomorphisms (consistent, since the change of trivialization
+$\varphi_i\circ\varphi_j^{-1}(x,a)=(x,h_{ij}(x)a)$ is smooth). The right $G$-action
+$[(x,a,i)]\cdot b:=[(x,ab,i)]$ is well defined, because $h_{ji}$ acts by \emph{left}
+multiplication and hence commutes with right multiplication; it is free and transitive on fibres,
+and each $\varphi_i$ is $G$-equivariant. Thus $\pi\colon P\to M$ is a principal $G$-bundle with
+transition functions $h_{ij}$.
+
+\emph{(3) The connection.}
+Let $s_i\colon U_i\to P$ be the canonical local sections $s_i(x):=\varphi_i^{-1}(x,1)$, so that
+$s_j=s_i\cdot h_{ij}$ on $U_i\cap U_j$. A principal connection $A\in\Omega^1(P,\gfrak)$ is
+determined by its local representatives $A_i:=s_i^*A$, and a family $\{A_i\}$ arises from a
+(necessarily unique) global $A$ if and only if it obeys the law induced by $s_j=s_i\cdot h_{ij}$,
+namely
+\[
+s_j^*A \;=\; \Ad_{h_{ij}^{-1}}\bigl(s_i^*A\bigr)+h_{ij}^*\theta_G,
+\]
+which is precisely \eqref{eq:connection-overlap}. Given \eqref{eq:connection-overlap}, define $A$
+over $U_i$ by the pullback identity
+\begin{equation}
+\label{eq:conn-reconstruct}
+\bigl(\varphi_i^{-1}\bigr)^{*}A
+\;=\;
+\Ad_{a^{-1}}\bigl(\pi_U^{*}A_i\bigr)\;+\;\theta_G
+\qquad\text{on}\qquad U_i\times G,
+\end{equation}
+where $\pi_U\colon U_i\times G\to U_i$ and the projection $U_i\times G\to G$ are understood, $a$
+denotes the $G$-coordinate, and $\theta_G$ is pulled back along that projection. Formula
+\eqref{eq:conn-reconstruct} is an equality of $\gfrak$-valued $1$-forms on the manifold
+$U_i\times G$; it is not an evaluation at a point. Two such local definitions agree on
+$\pi^{-1}(U_i\cap U_j)$: transporting \eqref{eq:conn-reconstruct} for $j$ through
+$\varphi_i\circ\varphi_j^{-1}(x,a)=(x,h_{ij}(x)a)$ and using the standard identity
+$(L_{h}\circ)^*\theta_G=\theta_G$ together with the Maurer--Cartan expansion of
+$\mathrm{d}(h_{ij}a)$ reproduces \eqref{eq:conn-reconstruct} for $i$ exactly when
+\eqref{eq:connection-overlap} holds. The resulting $1$-form is $G$-equivariant,
+$R_b^*A=\Ad_{b^{-1}}A$, and reproduces the fundamental vector fields, $A(\zeta_X)=X$; hence it is
+a principal connection \cite{KobayashiNomizu1}.
+
+\emph{(4) The matter section.}
+Sections of $P\times_\rho W$ correspond bijectively to $\rho$-equivariant maps
+$\tilde\Phi\colon P\to W$ with $\tilde\Phi(p\cdot a)=\rho(a^{-1})\tilde\Phi(p)$, and such maps
+correspond to families $\Phi_i:=\tilde\Phi\circ s_i$ obeying
+$\Phi_j=\tilde\Phi\circ(s_i\cdot h_{ij})=\rho(h_{ij}^{-1})\Phi_i$, which is
+\eqref{eq:matter-overlap}. Hence the $\Phi_i$ glue to a unique global section $\Phi$.
+
+\emph{Uniqueness up to isomorphism.}
+Suppose two systems of local trivializations over a common cover (or over covers admitting a
+common refinement, after passing to it) produce compatible data $\{g_i,h_{ij},A_i,\Phi_i\}$ and
+$\{g_i,h'_{ij},A'_i,\Phi'_i\}$ with cohomologous cocycles,
+$h'_{ij}=\lambda_i^{-1}h_{ij}\lambda_j$ for smooth $\lambda_i\colon U_i\to G$, together with
+$A'_i=\Ad_{\lambda_i^{-1}}A_i+\lambda_i^*\theta_G$ and $\Phi'_i=\rho(\lambda_i^{-1})\Phi_i$. Then
+the maps $\varphi_i'^{-1}(x,a)\mapsto\varphi_i^{-1}(x,\lambda_i(x)a)$ agree on overlaps---exactly
+because the cocycles are cohomologous---and assemble into a $G$-equivariant bundle isomorphism
+$P'\to P$ covering $\id_M$, carrying $A'$ to $A$ and $\Phi'$ to $\Phi$. That is, it is a vertical
+arrow of $\Ggeo$. Conversely, an arrow of $\Ggeo$ between global tuples, read in local
+trivializations, exhibits the two systems of local data as related in exactly this way. Hence the
+global tuple is well defined precisely as an object of $\Ggeo$ up to isomorphism.
+
+\emph{Converse.}
+Given a global tuple, choose any cover $\{U_i\}$ trivializing $P$ (possible since $M$ is
+paracompact and $P$ is locally trivial); the induced $g_i:=g|_{U_i}$, $h_{ij}$, $A_i=s_i^*A$,
+$\Phi_i$ satisfy \eqref{eq:cocycle}--\eqref{eq:matter-overlap} by the computations above.
+\end{proof}
+
+\begin{remark}[Changing the coordinate atlas is not a base diffeomorphism]
+\label{rem:atlas}
+The uniqueness clause above is stated for changes of \emph{local trivialization}, which induce
+\emph{vertical} bundle isomorphisms covering $\id_M$. A change of \emph{coordinate atlas} is a
+a different operation: re-charting $M$ changes the component arrays
+$\check g_i$ of \eqref{eq:components} according to \eqref{eq:component-law} while leaving the
+intrinsic tensor $g$---and hence the object $\Psi$ and its class $[\Psi]\in\Sgeo$---entirely
+unchanged. It does not automatically produce a nontrivial base diffeomorphism, and it does not
+move a point of $\Sgeo$. Nontrivial base diffeomorphisms enter only through the arrows of $\Ggeo$
+with $f\neq\id_M$, which act on the geometry itself and not merely on its coordinate presentation.
+\end{remark}
+
+\begin{remark}[Descent and time orientation]
+\label{rem:descent-time}
+Theorem~\ref{thm:descent} glues the local metrics to a global Lorentzian $g$, but it does not
+produce the time orientation $\mathfrak{t}$ that Definition~\ref{def:admissible} demands. Whether
+$g$ admits any time orientation at all is a global topological condition on
+$(M,g)$ (it holds if and only if the timelike cone bundle of $g$ has a global continuous section
+of one of its components), and no purely local compatibility condition can force it. Two
+consistent options are available, and a model must declare one.
+
+\emph{Option (a): impose it after descent.} Glue $g$ as above, then require, as an additional
+global admissibility condition, that $g$ be time-orientable and that a time orientation
+$\mathfrak{t}$ be chosen and recorded in $\mathcal{B}$. Under this option
+Theorem~\ref{thm:descent} reconstructs the metric, and membership of the reconstructed
+configuration in $\Cgeo$ is a further global condition, verified separately.
+
+\emph{Option (b): descend it.} Adjoin to the local data a choice, for each $i$, of a
+$g_i$-timelike vector field $\tau_i\in\Gamma(TU_i)$, and impose the additional compatibility
+condition that on every nonempty overlap $\tau_i$ and $\tau_j$ lie in the \emph{same} component
+of the timelike cone,
+\begin{equation}
+\label{eq:time-glue}
+g_i(\tau_i,\tau_j)<0 \qquad\text{on } U_i\cap U_j
+\end{equation}
+(with signature $(-,+,+,+)$, so that two timelike vectors have negative inner product exactly when
+they are causally co-oriented). Condition \eqref{eq:time-glue} is a genuine gluing condition: the
+relation ``lies in the same cone component as'' is an equivalence relation on timelike vectors at
+each point, and the local choices $\tau_i$ define, by \eqref{eq:time-glue}, a coherent global
+selection of one component of the cone bundle at every $x\in M$. That selection is by definition a
+time orientation $\mathfrak{t}$ of the glued $g$, and it is unique given the $\tau_i$. Descent then
+reconstructs the pair $(g,\mathfrak{t})$, and no further global condition on time orientation is
+needed. (A partition of unity subordinate to $\{U_i\}$ shows that $\mathfrak{t}$ is realized by an
+actual global timelike vector field, since the cone components are convex.)
+\end{remark}
+
+\begin{corollary}[Realizability boundary]
+\label{cor:realizability-boundary}
+A collection of proposed local metric, connection, and matter expressions represents a global
+geometric source configuration only if the cocycle and overlap conditions
+\eqref{eq:cocycle}--\eqref{eq:matter-overlap} hold on all overlaps, and only if the resulting
+global tuple lies in the declared admissibility class $\Cgeo$---which, by
+Remark~\ref{rem:descent-time}, includes the global time-orientation condition. Consequently, an
+abstract tuple of relation values that admits no compatible descent data lies outside the
+geometric realization domain: it is a point of the abstract product
+$T\times\prod_\alpha V_\alpha$ that is not in the image of any geometric evaluation map.
+\end{corollary}
+
+\begin{proof}
+Immediate from Theorem~\ref{thm:descent}: any global configuration restricts to compatible local
+data, so failure of compatibility for \emph{every} presentation of the proposed values is an
+obstruction to the existence of a configuration presenting them. Membership in $\Cgeo$ is a
+further restriction, since Theorem~\ref{thm:descent} produces a global tuple but does not certify
+that it satisfies the declared causal, boundary, or topological conditions.
+\end{proof}
+
+Corollary~\ref{cor:realizability-boundary} is the first and most basic restriction on the abstract
+completion of Paper~3: \emph{its coordinates must be jointly realizable by global geometric
+objects.} Two further restrictions---invariance (Section~\ref{sec:invariants}) and separation
+(Section~\ref{sec:realization})---follow.
+
+\begin{remark}[Obstructions are genuine]
+\label{rem:obstruction-genuine}
+That the constraint is not vacuous is visible already in cohomological terms: the isomorphism
+class of $P$ is the class of $\{h_{ij}\}$ in the pointed set $\check H^1(M,\underline{G})$
+(Remark~\ref{rem:cech}), and characteristic numbers computed from $A$ are constrained by that
+class \cite{ChernWeil,MilnorStasheff}. A demand such as ``a $U(1)$ bundle over $S^2$ with first
+Chern number $\tfrac12$'' fails at the cocycle stage; there is no compatible descent datum, hence
+no configuration, hence no point of $\Sgeo$, hence no point of the realized completion. The
+Cartesian product of independently nominated relation values is, in general, strictly larger than
+what geometry attains.
+\end{remark}
+
+% ======================================================================
+\section{Curvature, holonomy, and invariant global relations}
+\label{sec:invariants}
+
+\subsection{Curvature and the Bianchi identity}
+
+The curvature of the connection $A$ is the $\gfrak$-valued $2$-form
+\begin{equation}
+\label{eq:curv}
+F_A \;=\; \mathrm{d}A + A\wedge A
+\qquad
+\bigl(\text{equivalently } F_A=\mathrm{d}A+\tfrac12[A\wedge A]\bigr),
+\end{equation}
+in the matrix convention of Definition~\ref{def:compatible}. Under a gauge transformation
+represented locally by $h\colon U\to G$,
+\begin{equation}
+\label{eq:gauge-transf}
+A \;\longmapsto\; A^{h}=h^{-1}Ah+h^{-1}\mathrm{d}h,
+\qquad
+F_A \;\longmapsto\; F_{A^h}=h^{-1}F_A\,h ,
+\end{equation}
+so $F_A$ transforms in the adjoint representation: it is a section of
+$\Lambda^2T^*M\otimes \mathrm{ad}P$, and is \emph{not} itself gauge invariant, though its
+$\Ad$-invariant polynomial functions are. The Bianchi identity is
+\begin{equation}
+\label{eq:bianchi}
+D_A F_A \;=\; \mathrm{d}F_A + [A,F_A] \;=\;0 ,
+\end{equation}
+an identity, not an equation of motion \cite{KobayashiNomizu1}.
+
+The Levi-Civita connection $\nabla$ of $g$ is the unique affine connection with
+\begin{equation}
+\label{eq:LC}
+\nabla g=0,
+\qquad
+\Tor(\nabla)=0 ,
+\end{equation}
+with Riemann tensor $R^{\rho}{}_{\sigma\mu\nu}$, Ricci tensor $R_{\mu\nu}=R^{\rho}{}_{\mu\rho\nu}$,
+scalar curvature $R=g^{\mu\nu}R_{\mu\nu}$, and Einstein tensor
+$G_{\mu\nu}=R_{\mu\nu}-\tfrac12 R\,g_{\mu\nu}$ \cite{Wald}.
+
+\subsection{Invariant global relations}
+
+\begin{definition}[Invariant geometric relation]
+\label{def:invariant-relation}
+A map $J\colon\Cgeo\to V$ into a set $V$ is an \emph{invariant geometric relation} if it is
+constant on the arrows of $\Ggeo$, i.e.\ $J(\Psi)=J(\Psi')$ whenever there is an arrow
+$\Psi\to\Psi'$. Equivalently, $J$ factors uniquely through $q\colon\Cgeo\to\Sgeo$, defining
+$\bar J\colon\Sgeo\to V$. We write $J$ for both maps when no confusion arises.
+\end{definition}
+
+Invariance under $\Ggeo$ means invariance under \emph{both} gauge transformations and allowed
+diffeomorphisms (including preservation of orientation and time orientation). Both are required;
+neither alone suffices.
+
+\begin{example}[Integral invariants]
+\label{ex:integral-invariants}
+Assume $M$ compact without boundary, or that $\Cgeo$ imposes decay/boundary conditions rendering
+the following integrals absolutely convergent. Then each of
+\begin{equation}
+\label{eq:integral-invariants}
+J_{\mathrm{EH}}(\Psi)=\int_M R_g\,\dvol,
+\qquad
+J_{\mathrm{YM}}(\Psi)=\int_M \bigl\langle F_A\wedge \ast F_A\bigr\rangle,
+\qquad
+J_{\mathrm{top}}(\Psi)=\int_M \bigl\langle F_A\wedge F_A\bigr\rangle
+\end{equation}
+is an invariant geometric relation. Gauge invariance of the latter two follows from
+\eqref{eq:gauge-transf} with the $\Ad$-invariance of $\langle\cdot,\cdot\rangle$; diffeomorphism
+invariance follows because each integrand is a top-degree form built naturally from the fields and
+$\int_M f^*\omega=\int_M\omega$ for orientation-preserving $f$ (the Hodge star is natural:
+$f^*(\ast_{g'}\eta)=\ast_{g}(f^*\eta)$ when $f_*g=g'$ and $f$ preserves orientation).
+Concerning normalization, we make no claim beyond the following, which is all that is used: for
+$M$ compact oriented without boundary and $G$ compact, the de Rham class of the Chern--Weil form
+$\langle F_A\wedge F_A\rangle$ is independent of $A$ and represents (up to a normalization
+constant depending on the chosen $\Ad$-invariant form $\langle\cdot,\cdot\rangle$ and on the
+conventions for the Chern--Weil homomorphism) a characteristic class of $P$ in
+$H^4_{\mathrm{dR}}(M;\Real)$ \cite{ChernWeil,MilnorStasheff,KobayashiNomizu2}. Hence
+$J_{\mathrm{top}}$ is constant on each topological sector. We do \emph{not} assert a specific
+integrality normalization here; any such normalization is a convention that must be fixed
+together with $\langle\cdot,\cdot\rangle$, and none of the results below depend on the choice.
+\end{example}
+
+\begin{example}[Spectral relations]
+\label{ex:spectral}
+Let $\mathcal{D}[\Psi]$ be an operator constructed naturally from the configuration data
+$(g,A,\Phi,\mathcal{B})$, together with a \emph{specified domain} determined by $\mathcal{B}$.
+Then any function of
+$\mathcal{D}[\Psi]$ that is invariant under isomorphism is an invariant geometric relation. The
+spectrum, when it is well defined, is the leading example. The precise statement requires care,
+and we distinguish two cases.
+
+\emph{(i) Intertwining.} An arrow $F\colon\Psi\to\Psi'$ of $\Ggeo$ induces a linear isomorphism
+$\mathcal{U}_F$ from the space of sections over $\Psi$ to the space of sections over $\Psi'$,
+carrying the domain of $\mathcal{D}[\Psi]$ onto the domain of $\mathcal{D}[\Psi']$ and satisfying
+the \emph{operator intertwining} relation
+\begin{equation}
+\label{eq:intertwine}
+\mathcal{D}[\Psi']\circ\mathcal{U}_F=\mathcal{U}_F\circ\mathcal{D}[\Psi] .
+\end{equation}
+This holds by naturality of the construction and requires no metric structure on $W$. It already
+implies that any relation depending only on the operator up to linear isomorphism (its spectrum as
+a set, when the operator is, say, closed with nonempty resolvent set) is $\Ggeo$-invariant.
+
+\emph{(ii) Unitary equivalence.} If, in addition, the representation $\rho$ is unitary (or, more
+generally, $W$ carries a $\rho$-invariant Hermitian inner product), the associated bundle carries
+a bundle metric preserved by $\hat F_\rho$, the base measure $\dvol$ is preserved by the allowed
+$f$, and the declared boundary conditions define a self-adjoint realization of $\mathcal{D}$ on the
+resulting Hilbert space, then $\mathcal{U}_F$ is \emph{unitary} and \eqref{eq:intertwine} is a
+unitary equivalence. In that case the spectrum as a \emph{multiset} (with multiplicities), the
+heat trace $\tr e^{-t\mathcal{D}}$, zeta values, and eigenvalue gaps are all invariant geometric
+relations.
+
+An arbitrary finite-dimensional $\rho\colon G\to\mathrm{GL}(W)$ is not unitary, so case (ii)
+requires its stated hypotheses; absent them, only the intertwining statement (i) is available. In
+either case the specification of the domain is essential: without it the spectrum is not a function
+of $[\Psi]$, and distinct self-adjoint extensions yield distinct invariant relations.
+\end{example}
+
+\subsection{Holonomy and Wilson observables}
+
+Let $\gamma$ be a piecewise-smooth closed curve in $M$ based at $x\in M$, and let $p\in P_x$.
+Parallel transport of $A$ along $\gamma$ starting at $p$ ends at $p\cdot a$ for a unique $a\in G$;
+writing $\Hol_\gamma^{p}(A):=a$, a change of starting point $p\mapsto p\cdot b$ gives
+$\Hol_\gamma^{p\cdot b}(A)=b^{-1}\Hol_\gamma^p(A)\,b$. In a local trivialization with gauge $h$,
+this reads
+\begin{equation}
+\label{eq:hol-conj}
+\Hol_\gamma(A^{h})\;=\;h(x)^{-1}\,\Hol_\gamma(A)\,h(x) .
+\end{equation}
+
+\begin{proposition}[Gauge invariance of holonomy class and Wilson observables]
+\label{prop:wilson-gauge}
+For a fixed based loop $\gamma$, the conjugacy class
+\begin{equation}
+\label{eq:hol-class}
+\bigl[\Hol_\gamma(A)\bigr]_{\mathrm{conj}} \in G/\!\!\sim_{\mathrm{conj}}
+\end{equation}
+is independent of the choice of $p\in P_x$ and is invariant under all gauge transformations.
+Consequently, for any finite-dimensional representation $\sigma$ of $G$, the Wilson observable
+\begin{equation}
+\label{eq:wilson}
+W_{\gamma,\sigma}(A)\;=\;\tr_\sigma \Hol_\gamma(A)
+\end{equation}
+is gauge invariant. If $A$ is flat, $W_{\gamma,\sigma}$ depends on $\gamma$ only through its free
+homotopy class.
+\end{proposition}
+
+\begin{proof}
+Independence of $p$ and gauge invariance are immediate from \eqref{eq:hol-conj}, since a conjugacy
+class is invariant under conjugation and $\tr_\sigma$ is a class function. The final statement
+holds because for flat $A$ parallel transport depends only on the homotopy class of the path rel
+endpoints, and a free homotopy of based loops changes the holonomy by conjugation, which
+$\tr_\sigma$ does not see \cite{KobayashiNomizu1}.
+\end{proof}
+
+\subsection{Loops and diffeomorphism invariance}
+\label{sec:diff-loops}
+
+Proposition~\ref{prop:wilson-gauge} concerns \emph{gauge} invariance only. A Wilson observable
+attached to a \emph{fixed} loop $\gamma\subset M$ is in general \emph{not} invariant under the
+allowed diffeomorphisms, because a diffeomorphism $f$ moves the loop:
+$W_{\gamma,\sigma}(f_*A)=W_{f^{-1}\circ\gamma,\sigma}(A)$, and $f^{-1}\circ\gamma\neq\gamma$ in
+general. Three constructions restore genuine $\Ggeo$-invariance. They are mutually exclusive as
+declarations, and a model must state which it adopts; each is used somewhere below.
+
+\medskip
+\noindent\textbf{(L1) Include the loop in the configuration.}
+Enlarge the tuple \eqref{eq:config} to $(M,g,P,A,\Phi,\mathcal{B},\gamma)$ and extend the arrows
+of $\Ggeo$ to carry $\gamma$ to $f\circ\gamma$. Then
+$\Psi\mapsto W_{\gamma,\sigma}(A)$ is invariant on the enlarged groupoid by construction:
+$W_{f\circ\gamma,\sigma}(f_*A)=W_{\gamma,\sigma}(A)$, since parallel transport is natural under
+bundle isomorphisms. The loop is then part of the source data, not a background structure, and
+$\Sgeo$ is correspondingly enlarged.
+
+\medskip
+\noindent\textbf{(L2) Use an invariant constructed from the whole loop space.}
+Examples: the \emph{set} of Wilson values $\{W_{\gamma,\sigma}(A):\gamma\in\Omega(M,x)\}\subseteq\Cx$
+(a subset of $\Cx$, hence unaffected by any relabelling of loops); the holonomy group
+$\mathrm{Hol}_x(A)\le G$ up to conjugacy; or, for flat $A$, the holonomy homomorphism
+$\pi_1(M,x)\to G$ taken modulo conjugation \emph{and} modulo the outer action of $f_*$ on
+$\pi_1(M,x)$. Each is $\Ggeo$-invariant without enlarging the configuration, precisely because the
+diffeomorphism permutes the loops over which the construction ranges.
+
+\medskip
+\noindent\textbf{(L3) Let the declared data pin a homology class.}
+If $\mathcal{B}$ distinguishes a class $c\in H_1(M;\Int)$ that every allowed diffeomorphism
+preserves, and if the observable depends on $\gamma$ only through $c$, then it is invariant. This
+is what happens in Section~\ref{sec:u1}: there $G=U(1)$ is abelian and $A$ is flat, so
+$\Hol_\gamma(A)$ depends on $\gamma$ only through its class in $H_1(S^1;\Int)\cong\Int$; the
+allowed diffeomorphisms are declared to be the orientation-preserving ones, which act trivially on
+$H_1(S^1;\Int)$; hence $\Hol_{\gamma_0}(A)$ is a genuine function on $\Sgeo$. (Under an
+orientation-\emph{reversing} diffeomorphism the generator is sent to its inverse and
+$\Hol\mapsto\Hol^{-1}$; this is exactly why the orientation is part of the declared data.)
+
+\begin{remark}[Curvature does not determine transport]
+\label{rem:curv-vs-hol}
+Local curvature and global transport are related but not interchangeable. Curvature is the
+infinitesimal holonomy: the Ambrose--Singer theorem \cite{AmbroseSinger,KobayashiNomizu1} states
+that the Lie algebra of the holonomy group of a connection on a connected principal bundle is
+spanned by the curvature values $F_A(X,Y)$ at points reachable from the base point by horizontal
+curves, transported back along those curves. Nevertheless holonomy around noncontractible cycles is
+not determined by $F_A$: flat connections with $F_A\equiv 0$ can have arbitrary holonomy
+homomorphisms $\pi_1(M)\to G$ up to conjugacy. This is not a formal curiosity; it is the content of
+the Aharonov--Bohm effect \cite{AharonovBohm} and of the Wu--Yang analysis of the global
+significance of gauge potentials \cite{WuYang}, in which the physically operative datum is a
+holonomy in a region where the field strength vanishes identically. Section~\ref{sec:u1} is the
+sharpest mathematical illustration: there $F_A\equiv0$ identically, and yet the reduced source is a
+full circle of physically inequivalent configurations, completely parametrized by holonomy.
+\end{remark}
+
+\begin{remark}[No finite separating list of curvature scalars]
+\label{rem:no-finite-separation}
+It is not assumed anywhere below that a finite family of curvature scalars---or any fixed finite
+family of local invariants---separates arbitrary Lorentzian geometries. It does not: in Lorentzian
+signature there exist non-flat metrics all of whose polynomial scalar curvature invariants vanish
+identically, and which therefore cannot be distinguished from flat space by any such family; the
+plane-wave and more general Kundt-type ``VSI'' spacetimes are the standard examples
+\cite{Pravda2002}. Separation is therefore never invoked as a general fact. Where it is needed it
+is proved on the restricted domain of the model, as in Theorem~\ref{thm:hol-class}.
+\end{remark}
+
+% ======================================================================
+\section{Geometric realization of the minimal completion}
+\label{sec:realization}
+
+\subsection{The geometric evaluation map}
+
+\begin{definition}[Declared readout and relation family]
+\label{def:readout}
+Let
+\begin{equation}
+\label{eq:pgeo}
+\pgeo\colon \Sgeo\longrightarrow T
+\end{equation}
+be a declared Tier-1 readout: a map, defined on the reduced source, recording exactly the data
+retained by the Tier-1 description of the model. Let $A$ be an index \emph{set} and let
+\begin{equation}
+\label{eq:Jalpha}
+J_\alpha\colon \Sgeo\longrightarrow V_\alpha,
+\qquad \alpha\in A,
+\end{equation}
+be invariant geometric relations in the sense of Definition~\ref{def:invariant-relation}. Write
+$J_A=(J_\alpha)_{\alpha\in A}$ and
+\begin{equation}
+\label{eq:jgeo}
+\jgeo \;=\;\bigl(\pgeo,\;J_A\bigr)\colon
+\Sgeo\longrightarrow T\times\prod_{\alpha\in A}V_\alpha .
+\end{equation}
+\end{definition}
+
+\begin{definition}[Geometrically realized completion]
+\label{def:egeo}
+The \emph{geometrically realized completion} of $\pgeo$ relative to $\{J_\alpha\}_{\alpha\in A}$ is
+\begin{equation}
+\label{eq:egeo}
+\Egeo \;:=\; \Imm \jgeo \;\subseteq\; T\times\prod_{\alpha\in A}V_\alpha ,
+\end{equation}
+with corestriction $\egeo\colon\Sgeo\twoheadrightarrow \Egeo$ and forgetful map
+\begin{equation}
+\label{eq:uA}
+u_A\colon \Egeo\longrightarrow T,
+\qquad
+u_A\bigl(t,(v_\alpha)\bigr)=t ,
+\end{equation}
+so that $u_A\circ \egeo=\pgeo$ by construction.
+\end{definition}
+
+Note that $\Egeo$ is the image, \emph{not} the ambient product. This restriction performs the
+essential mathematical work: it enforces all the compatibility relations among metric, bundle,
+connection, matter, boundary, and invariant data that Section~\ref{sec:descent} exhibited. The
+Cartesian product of independently written coordinate values is in general \emph{not} realizable
+(Corollary~\ref{cor:realizability-boundary}, Remark~\ref{rem:obstruction-genuine}).
+
+\subsection{The restricted realization theorem}
+
+\begin{theorem}[Restricted geometric realization]
+\label{thm:restricted-realization}
+Fix an admissibility class $\Cgeo$, a readout $\pgeo$, and a family $\{J_\alpha\}_{\alpha\in A}$ of
+invariant geometric relations on $\Sgeo$. Then:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item \emph{(Realizability.)} For every $\xi\in\Egeo$ there exists $[\Psi]\in\Sgeo$ with
+      $\egeo([\Psi])=\xi$.
+\item \emph{(Factorization.)} $\pgeo=u_A\circ\egeo$ and
+      $J_\alpha=\mathrm{pr}_\alpha\circ\egeo$ for every $\alpha$.
+\item \emph{(Terminality.)} If $\pi\colon\Sgeo\twoheadrightarrow E$ is any surjection through which
+      $\pgeo$ and every $J_\alpha$ factor---say $\pgeo=u\circ\pi$ and
+      $J_\alpha=\kappa_\alpha\circ\pi$---then there is a \emph{unique} map
+      $\theta\colon E\to\Egeo$ with $\theta\circ\pi=\egeo$; $\theta$ is surjective and satisfies
+      $u_A\circ\theta=u$ and $\mathrm{pr}_\alpha\circ\theta=\kappa_\alpha$.
+\end{enumerate}
+Thus $\Egeo$ is the canonical minimal completion of $\pgeo$ relative to $\{J_\alpha\}$, in the
+sense of Paper~3 \cite{ST3}, computed on the geometric source $\Sgeo$.
+\end{theorem}
+
+\begin{proof}
+(1) is immediate: $\Egeo$ is by definition the image of $\jgeo$. (2) holds by definition of $\jgeo$
+and of the projections; well-definedness of $\pgeo$ and each $J_\alpha$ \emph{as maps on $\Sgeo$}
+is exactly the invariance hypothesis of Definition~\ref{def:invariant-relation}, which is where
+gauge and diffeomorphism invariance are consumed.
+
+(3) Define $\theta(e):=\egeo(s)$ for any $s\in\pi^{-1}(e)$; the fibre is nonempty since $\pi$ is
+surjective. This is well defined: if $\pi(s)=\pi(s')=e$ then
+$\pgeo(s)=u(\pi(s))=u(\pi(s'))=\pgeo(s')$ and likewise
+$J_\alpha(s)=\kappa_\alpha(\pi(s))=\kappa_\alpha(\pi(s'))=J_\alpha(s')$ for every $\alpha$; hence
+$\jgeo(s)=\jgeo(s')$, i.e.\ $\egeo(s)=\egeo(s')$. By construction $\theta\circ\pi=\egeo$, and since
+$\egeo$ is surjective onto $\Egeo$, so is $\theta$. Uniqueness: any $\theta'$ with
+$\theta'\circ\pi=\egeo$ agrees with $\theta$ on $\pi(\Sgeo)=E$, hence everywhere. The
+compatibilities follow by evaluating on $\pi(s)$ and using surjectivity of $\pi$.
+
+This is the terminal universal property established in Paper~3 \cite{ST3}, applied to the source set
+$\Sgeo$, the readout $\pgeo$, and the relation family $\{J_\alpha\}$; the additional content here is
+that $\Sgeo$ is the \emph{reduced} geometric source and that the $J_\alpha$ are \emph{invariant}
+geometric relations, so that all maps involved are functions of physical orbits rather than of gauge
+or coordinate representatives.
+\end{proof}
+
+\begin{remark}[Relative, not absolute]
+\label{rem:relative}
+Theorem~\ref{thm:restricted-realization} is \emph{restricted} in two independent senses, both
+essential. First, it realizes the completion only \emph{relative to the declared family}
+$\{J_\alpha\}$: a different family gives a different $\Egeo$, generally neither finer nor coarser.
+Second, it realizes only what geometry attains: $\Egeo$ is an image, and
+Corollary~\ref{cor:realizability-boundary} shows that this image can be a proper subset of the
+abstract product. Neither the theorem nor anything else in this paper asserts that an arbitrarily
+nominated abstract completion $E_A$ of Paper~3 is geometrically realizable. It is realizable exactly
+when it is isomorphic, over $T$, to $\Egeo$ for some admissible $\Cgeo$, readout, and invariant
+relation family---and establishing that in a given model is work.
+\end{remark}
+
+\subsection{When does the completion reconstruct the source?}
+
+\begin{proposition}[Orbit reconstruction criterion]
+\label{prop:orbit-reconstruction}
+The completion map $\egeo\colon\Sgeo\to\Egeo$ is injective---equivalently, bijective onto
+$\Egeo$---if and only if the family
+\begin{equation}
+\label{eq:sep-family}
+\{\pgeo\}\cup\{J_\alpha : \alpha\in A\}
+\end{equation}
+\emph{separates points of $\Sgeo$}: for all $[\Psi],[\Psi']\in\Sgeo$, equality of the readouts and
+of every $J_\alpha$ forces $[\Psi]=[\Psi']$. In that case $\Sgeo\cong\Egeo$ as sets over $T$.
+\end{proposition}
+
+\begin{proof}
+By construction $\egeo([\Psi])=\egeo([\Psi'])$ if and only if the readouts agree and every
+$J_\alpha$ agrees. Injectivity of $\egeo$ is therefore literally the separation property.
+Surjectivity onto $\Egeo$ always holds, by Theorem~\ref{thm:restricted-realization}(1). The
+identification is over $T$ because $u_A\circ\egeo=\pgeo$.
+\end{proof}
+
+Proposition~\ref{prop:orbit-reconstruction} converts a question about completions into a question of
+invariant theory: \emph{does the declared family separate the orbits?} No general answer exists, and
+none is asserted (Remark~\ref{rem:no-finite-separation}). Separation must be proved on the restricted
+domain relevant to the model. Section~\ref{sec:u1} carries out exactly such a proof in a case where
+the answer is affirmative and complete.
+
+% ======================================================================
+\section{Classification of flat \texorpdfstring{$U(1)$}{U(1)} connections on an oriented circle}
+\label{sec:u1}
+
+This section supplies an exact classification example: a restricted domain on which the separation
+hypothesis of Proposition~\ref{prop:orbit-reconstruction} can be \emph{proved}, and on which the
+geometrically realized completion can be identified on the nose.
+
+\subsection{The model and its conventions}
+
+\begin{convention}[Scope of the circle model]
+\label{conv:circle-scope}
+This section is a deliberate one-dimensional specialization, and two stipulations of the general
+framework are suspended for it. Both are recorded here, since leaving either implicit would create a
+genuine inconsistency with Section~\ref{sec:source}.
+
+\emph{Dimension.} The base is $M=S^1_L$, so $\dim M=1$ rather than the $\dim M=4$ of
+Convention~\ref{conv:basic}, and the metric is Riemannian rather than Lorentzian. Nothing in
+Sections~\ref{sec:source}--\ref{sec:realization} used the dimension or the signature: the groupoid,
+the orbit space, Definition~\ref{def:invariant-relation}, Theorem~\ref{thm:restricted-realization},
+and Proposition~\ref{prop:orbit-reconstruction} are all dimension- and signature-agnostic, and it is
+only these that the present section invokes. The descent theorem and the variational apparatus of
+Sections~\ref{sec:variational}--\ref{sec:noether} are not used here.
+
+\emph{The metric and the allowed maps.} A tension must be resolved explicitly. The model fixes the
+standard metric $\mathrm{d}x^{2}$ on $S^1_L$ while also admitting \emph{every}
+orientation-preserving diffeomorphism as an allowed base map; under the groupoid of
+Definition~\ref{def:groupoid}, whose arrows satisfy $f_*g=g'$, a fixed metric would instead restrict
+the allowed base maps to its isometries, namely the rigid rotations. Of the three consistent ways to
+proceed---restricting the allowed diffeomorphisms to orientation-preserving isometries; transforming
+the metric along with the connection; or defining the circle source purely as the gauge quotient and
+treating the diffeomorphism question separately---we adopt the third, which is the formulation the
+arguments below actually use.
+
+Accordingly, in this section the metric $\mathrm{d}x^{2}$ and its measure $\mathrm{d}x$ are treated
+as \emph{fixed background structure}, not as part of the configuration: the configuration is the
+connection $A$ alone, and the reduced circle source is \emph{defined} to be the gauge quotient
+\begin{equation}
+\label{eq:circle-source-def}
+\Sgeo \;:=\; \Cgeo^{\,\circ}\big/\Gau(P) .
+\end{equation}
+The background metric is what gives the operator $\mathcal{D}_A$ of \eqref{eq:Dop} its meaning, and
+it is not transformed by the maps considered below. The role of the orientation-preserving
+diffeomorphisms is then a separate matter, treated separately: they are \emph{not} arrows acting on
+a metric they would have to preserve, but are used solely through the fact that they fix the
+homology generator $c$, and hence preserve holonomy. Lemma~\ref{lem:spec-invariance}(1) shows that
+they consequently identify no classes beyond gauge equivalence, so that \eqref{eq:circle-source-def}
+loses nothing by omitting them; and Lemma~\ref{lem:spec-invariance}(2) shows that the spectral
+relation is invariant under them for the same reason. Definition~\ref{def:circle-model} is to be
+read in this light.
+\end{convention}
+
+\begin{definition}[The circle model]
+\label{def:circle-model}
+Fix $L>0$ and let $M=S^1_L:=\Real/L\Int$ with its standard orientation and the global angular
+coordinate $x$ (well defined modulo $L$). Let $G=U(1)$ and let $P=S^1_L\times U(1)$ be the trivial
+bundle; this is no loss of generality, since every principal $U(1)$-bundle over $S^1$ is trivial
+(the classifying space argument gives
+$\bigl[S^1,BU(1)\bigr]\cong H^2(S^1;\Int)=0$; equivalently, every $U(1)$-bundle over a
+one-complex is trivial \cite{Steenrod}). Let $\Cgeo^{\,\circ}$ be the class of smooth connections
+$A$ on $P$, and let $\Gau(P)=C^\infty(S^1_L,U(1))$ be the gauge group; by
+Convention~\ref{conv:circle-scope} the configuration is the connection alone, and the reduced source
+is the gauge quotient \eqref{eq:circle-source-def}. The declared data $\mathcal{B}$ consist of the
+orientation of $S^1_L$, the resulting generator
+$c=[\gamma_0]\in H_1(S^1_L;\Int)\cong\Int$ of the fundamental cycle, $\gamma_0(s)=s$, $s\in[0,L]$,
+and the fixed background metric $\mathrm{d}x^{2}$ with its measure. The orientation-preserving
+diffeomorphisms of $S^1_L$ fix $c$; holonomy around $c$ is therefore a legitimate function on orbits
+by mechanism (L3) of Section~\ref{sec:diff-loops}, and its invariance under those diffeomorphisms is
+established in Lemma~\ref{lem:spec-invariance}.
+\end{definition}
+
+Write a connection in the global trivialization as
+\begin{equation}
+\label{eq:A-circle}
+A=a(x)\,\mathrm{d}x,
+\qquad a\in C^\infty(S^1_L,\Real) .
+\end{equation}
+Because $\dim M=1$, every $2$-form on $M$ vanishes; hence
+\begin{equation}
+\label{eq:flat}
+F_A=\mathrm{d}A\equiv 0 \qquad\text{for every }A .
+\end{equation}
+\emph{Every} connection on the circle is flat. Local curvature is identically zero on this entire
+domain and therefore carries no information whatsoever; whatever separates orbits here must be
+global.
+
+\begin{convention}[Gauge action and charged covariant derivative]
+\label{conv:u1-norm}
+Identify $\mathfrak{u}(1)=i\Real$ and write connections with the real potential $a$ as in
+\eqref{eq:A-circle}. A gauge transformation is a smooth map $u\colon S^1_L\to U(1)$, acting on the
+connection by
+\begin{equation}
+\label{eq:u1-gauge}
+A\;\longmapsto\;A^{u}\;=\;A-i\,u^{-1}\mathrm{d}u ,
+\end{equation}
+which is real-valued because $-i\,u^{-1}\mathrm{d}u$ is real for $|u|=1$. On a charged scalar
+$\phi\in C^\infty(S^1_L,\Cx)$ of unit charge, the same $u$ acts by
+\begin{equation}
+\label{eq:u1-matter}
+\phi\;\longmapsto\;\phi^{u}\;=\;u\,\phi ,
+\end{equation}
+and the charged covariant derivative is
+\begin{equation}
+\label{eq:u1-covder}
+D_A\phi\;=\;\bigl(\partial_x - i\,a(x)\bigr)\phi\;\mathrm{d}x .
+\end{equation}
+These three conventions are mutually consistent. Writing $u=e^{i\varphi}$ locally, so that
+$-i\,u^{-1}\mathrm{d}u=\mathrm{d}\varphi$ and hence $a^{u}=a+\varphi'$, we get
+\[
+\bigl(\partial_x-i\,a^{u}\bigr)\phi^{u}
+=\bigl(\partial_x - i(a+\varphi')\bigr)\bigl(e^{i\varphi}\phi\bigr)
+= e^{i\varphi}\Bigl(i\varphi'\phi+\partial_x\phi - i a\phi - i\varphi'\phi\Bigr)
+= u\,\bigl(\partial_x - ia\bigr)\phi ,
+\]
+so $D_{A^u}\phi^{u}=u\,D_A\phi$ transforms covariantly, as required.
+\end{convention}
+
+\begin{definition}[Holonomy on the circle]
+\label{def:hol-circle}
+For $A=a\,\mathrm{d}x$ set
+\begin{equation}
+\label{eq:hol-circle}
+\Hol(A)\;:=\;\exp\!\left(i\int_0^L a(x)\,\mathrm{d}x\right)\;\in\;U(1),
+\end{equation}
+the holonomy around the declared fundamental cycle $\gamma_0$.
+\end{definition}
+
+\subsection{The classification theorem}
+
+\begin{theorem}[Holonomy classification]
+\label{thm:hol-class}
+Two smooth $U(1)$ connections $A=a\,\mathrm{d}x$ and $A'=a'\,\mathrm{d}x$ on $S^1_L$ are gauge
+equivalent if and only if
+\begin{equation}
+\label{eq:hol-equal}
+\Hol(A)=\Hol(A') .
+\end{equation}
+Consequently $[A]\mapsto\Hol(A)$ is a bijection
+\begin{equation}
+\label{eq:moduli}
+\Mflat\bigl(S^1,U(1)\bigr)
+\;:=\;
+\Cgeo^{\,\circ}/\Gau(P)
+\;\;\xrightarrow{\ \cong\ }\;\;
+U(1),
+\end{equation}
+and it is a homeomorphism when the left-hand side carries the quotient of the $C^\infty$ topology.
+\end{theorem}
+
+\begin{proof}
+\emph{Step 1: holonomy is gauge invariant.}
+Let $u\in C^\infty(S^1_L,U(1))$. Pull $u$ back to the universal cover: the composite
+$\tilde u:=u\circ\mathrm{pr}\colon[0,L]\to U(1)$, where $\mathrm{pr}(s)=s\bmod L$, lifts along the
+covering $\Real\xrightarrow{\,t\mapsto e^{it}\,}U(1)$ to a smooth
+$\varphi\colon[0,L]\to\Real$ with $u(x)=e^{i\varphi(x)}$ for $x\in[0,L]$, because $[0,L]$ is simply
+connected. Single-valuedness of $u$ on $S^1_L$ forces
+\begin{equation}
+\label{eq:winding}
+\varphi(L)-\varphi(0)\;=\;2\pi n,
+\qquad n=\deg(u)\in\Int .
+\end{equation}
+Now $-i\,u^{-1}\mathrm{d}u = -i\,e^{-i\varphi}\cdot i\varphi'\,e^{i\varphi}\,\mathrm{d}x
+=\varphi'\,\mathrm{d}x=\mathrm{d}\varphi$, so the declared action \eqref{eq:u1-gauge} gives
+\begin{equation}
+\label{eq:Au-explicit}
+A^{u}\;=\;A-i\,u^{-1}\mathrm{d}u\;=\;A+\mathrm{d}\varphi,
+\qquad\text{i.e.}\qquad
+a^{u}=a+\varphi' .
+\end{equation}
+Hence the period changes by $+2\pi n$:
+\[
+\int_0^L a^{u}
+=\int_0^L a+\bigl(\varphi(L)-\varphi(0)\bigr)
+=\int_0^L a+2\pi n ,
+\]
+and therefore
+\[
+\Hol(A^{u})
+=\exp\!\Bigl(i\int_0^L a + 2\pi i n\Bigr)
+=\exp\!\Bigl(i\int_0^L a\Bigr)
+=\Hol(A) .
+\]
+The gauge group can shift the period integral, but only by integer multiples of $2\pi$, which
+$\exp(i\,\cdot\,)$ does not see. (The sign of the shift is $+2\pi n$ with the declared convention;
+either sign would of course leave the holonomy unchanged, but we record the correct one.)
+
+\emph{Step 2: equal holonomy implies gauge equivalence.}
+Suppose $\Hol(A)=\Hol(A')$. Then $\exp\bigl(i\int_0^L(a'-a)\bigr)=1$, so there is $n\in\Int$ with
+\begin{equation}
+\label{eq:period-int}
+\int_0^L\bigl(a'(x)-a(x)\bigr)\,\mathrm{d}x \;=\; 2\pi n .
+\end{equation}
+Define
+\begin{equation}
+\label{eq:chi}
+\chi(x)\;:=\;\int_0^x\bigl(a'(y)-a(y)\bigr)\,\mathrm{d}y,
+\qquad x\in[0,L],
+\end{equation}
+so that $\chi$ is smooth with
+\begin{equation}
+\label{eq:chi-prime}
+\chi'=a'-a
+\qquad\text{and}\qquad
+\chi(L)-\chi(0)=2\pi n
+\end{equation}
+by \eqref{eq:period-int}. The function $\chi$ itself need \emph{not} descend to $S^1_L$, but
+\begin{equation}
+\label{eq:u-def}
+u(x)\;:=\;e^{\,i\chi(x)}
+\end{equation}
+does: $u(L)=e^{i\chi(0)}e^{2\pi i n}=e^{i\chi(0)}=u(0)$, and all derivatives match at the seam
+because $a,a'$ are smooth and $L$-periodic, so $\chi'$ and all its derivatives are $L$-periodic.
+Hence $u\in C^\infty(S^1_L,U(1))$ is a bona fide gauge transformation, of degree $n$. By exactly
+the computation of Step~1 applied to this $u$ (with $\varphi=\chi$),
+\begin{equation}
+\label{eq:u-mc}
+-i\,u^{-1}\mathrm{d}u \;=\; \mathrm{d}\chi \;=\; (a'-a)\,\mathrm{d}x \;=\; A'-A ,
+\end{equation}
+using \eqref{eq:chi-prime}. Therefore, directly from the declared action \eqref{eq:u1-gauge} in the
+form \eqref{eq:Au-explicit},
+\[
+A^{u}\;=\;A-i\,u^{-1}\mathrm{d}u\;=\;A+(A'-A)\;=\;A' .
+\]
+So $u$ itself carries $A$ to $A'$, and the two connections are gauge equivalent.
+
+\emph{Step 3: the bijection.}
+By Steps 1 and 2, $\Hol$ descends to an injection $\Cgeo^{\,\circ}/\Gau(P)\hookrightarrow U(1)$. It
+is surjective: for $\vartheta\in\Real$ the constant connection
+\begin{equation}
+\label{eq:Atheta}
+A_\vartheta:=\frac{\vartheta}{L}\,\mathrm{d}x
+\qquad\text{satisfies}\qquad
+\Hol(A_\vartheta)=e^{i\vartheta},
+\end{equation}
+and every element of $U(1)$ is of the form $e^{i\vartheta}$. Hence \eqref{eq:moduli} is a bijection.
+
+\emph{Step 4: the homeomorphism.}
+Give $\Cgeo^{\,\circ}\cong C^\infty(S^1_L,\Real)$ its usual Fr\'echet ($C^\infty$) topology and the
+quotient $\mathcal{M}:=\Cgeo^{\,\circ}/\Gau(P)$ the quotient topology, with projection
+$\mathrm{pr}_{\mathcal{M}}\colon\Cgeo^{\,\circ}\to\mathcal{M}$. Write
+$\Theta\colon\mathcal{M}\to U(1)$ for the bijection \eqref{eq:moduli}.
+
+$\Theta$ is continuous: the map $\Cgeo^{\,\circ}\to U(1)$, $A\mapsto\exp(i\int_0^L a)$, is
+continuous (indeed it is continuous already in the $L^1$ topology, hence in $C^\infty$), and it is
+constant on $\Gau(P)$-orbits by Step~1; the universal property of the quotient topology then makes
+$\Theta$ continuous.
+
+For the inverse, we do \emph{not} attempt to choose a global continuous argument $\vartheta$ on
+$U(1)$---no such choice exists. Instead define
+\begin{equation}
+\label{eq:sigma}
+\sigma\colon\Real\longrightarrow\mathcal{M},
+\qquad
+\sigma(\vartheta):=\mathrm{pr}_{\mathcal{M}}\bigl(A_\vartheta\bigr)
+=\bigl[\tfrac{\vartheta}{L}\,\mathrm{d}x\bigr] .
+\end{equation}
+The map $\Real\to\Cgeo^{\,\circ}$, $\vartheta\mapsto A_\vartheta$, is continuous (it is linear into
+the constants, and the $C^\infty$ seminorms of $A_\vartheta$ depend continuously on $\vartheta$), so
+$\sigma$ is continuous as a composite with $\mathrm{pr}_{\mathcal{M}}$.
+
+$\sigma$ is $2\pi$-periodic. Indeed $A_{\vartheta+2\pi}-A_\vartheta=\tfrac{2\pi}{L}\mathrm{d}x$, and
+by Step~2 (with $a=\vartheta/L$, $a'=(\vartheta+2\pi)/L$, so that $\int_0^L(a'-a)=2\pi$, i.e.\
+$n=1$) the connections $A_\vartheta$ and $A_{\vartheta+2\pi}$ are gauge equivalent; explicitly the
+gauge transformation is $u(x)=e^{2\pi i x/L}$, of degree $1$. Hence
+$\sigma(\vartheta+2\pi)=\sigma(\vartheta)$ for all $\vartheta$.
+
+Therefore $\sigma$ factors through the quotient $\Real\to\Real/2\pi\Int$, and since
+$\Real/2\pi\Int\cong U(1)$ via $\vartheta\bmod 2\pi\mapsto e^{i\vartheta}$ (a homeomorphism), we
+obtain a continuous map
+\begin{equation}
+\label{eq:sigma-bar}
+\bar\sigma\colon U(1)\longrightarrow\mathcal{M},
+\qquad
+\bar\sigma\bigl(e^{i\vartheta}\bigr)=\sigma(\vartheta) ,
+\end{equation}
+well defined and continuous by the universal property of the quotient $\Real\to\Real/2\pi\Int$
+(which is an open, hence quotient, map). Finally $\Theta\circ\bar\sigma=\id_{U(1)}$ by
+\eqref{eq:Atheta}, and $\bar\sigma\circ\Theta=\id_{\mathcal{M}}$ because both sides are the identity
+on the classes $[A_\vartheta]$, which exhaust $\mathcal{M}$ by Step~3 together with the injectivity
+of $\Theta$. Hence $\bar\sigma=\Theta^{-1}$ is continuous, and $\Theta$ is a homeomorphism.
+\end{proof}
+
+\begin{remark}[Where the hypotheses are used]
+\label{rem:u1-hyps}
+Three hypotheses were used and cannot be dropped. \emph{Smoothness and periodicity} of $a,a'$ give
+smoothness of $u$ across the seam in Step~2. \emph{Connectedness of $S^1$}, with
+$\pi_1(S^1)\cong\Int$ generated by a single class, is what makes one period integral a complete
+invariant. \emph{Orientation}, fixed in Definition~\ref{def:circle-model}, is what makes $\int_0^L$
+well defined with a sign: reversing orientation sends $\Hol\mapsto\Hol^{-1}$, and it is precisely
+this ambiguity that reappears in Corollary~\ref{cor:spec}. The declaration of the allowed
+diffeomorphism group as the orientation-preserving one is therefore part of the hypothesis of the
+theorem.
+\end{remark}
+
+\subsection{The realized completions}
+
+\begin{corollary}[Exact geometric realization of the holonomy completion]
+\label{cor:hol-completion}
+In the circle model, take the curvature readout
+\begin{equation}
+\label{eq:pF}
+p_F\colon \Sgeo=\Mflat(S^1,U(1))\longrightarrow T=\{0\},
+\qquad
+p_F\bigl([A]\bigr)=F_A=0 ,
+\end{equation}
+which by \eqref{eq:flat} is constant and hence retains \emph{no} information, and take the single
+invariant relation $J_{\mathrm{hol}}([A])=\Hol(A)\in U(1)$. Then
+\begin{equation}
+\label{eq:Ehol}
+E_{\mathrm{hol}}
+=\Imm\bigl(p_F,J_{\mathrm{hol}}\bigr)
+\;\cong\;
+\Mflat\bigl(S^1,U(1)\bigr)
+\;\cong\; U(1),
+\end{equation}
+and the completion map $e_{\mathrm{hol}}\colon\Sgeo\to E_{\mathrm{hol}}$ is a \emph{bijection}.
+\end{corollary}
+
+\begin{proof}
+$\Imm(p_F,J_{\mathrm{hol}})=\{0\}\times\Imm J_{\mathrm{hol}}=\{0\}\times U(1)\cong U(1)$, by the
+surjectivity established in Step~3 of Theorem~\ref{thm:hol-class}. The family
+$\{p_F\}\cup\{J_{\mathrm{hol}}\}$ separates orbits by the injectivity established there, so
+Proposition~\ref{prop:orbit-reconstruction} gives injectivity of $e_{\mathrm{hol}}$; surjectivity is
+Theorem~\ref{thm:restricted-realization}(1).
+\end{proof}
+
+Corollary~\ref{cor:hol-completion} is the sharpest illustration in this paper of the mechanism the
+sequence is about. The readout $p_F$ is maximally degenerate---it is constant---so on its own it
+distinguishes nothing. Yet the reduced source is not a point: it is a circle of genuinely
+inequivalent physical configurations. The completion recovers exactly that circle, from a single
+global relation, on a domain where local curvature vanishes identically. Holonomy here is not one
+invariant among many: it separates \emph{all} gauge orbits and therefore reconstructs the reduced
+geometric source completely. This is the mathematical content of the Aharonov--Bohm and Wu--Yang
+observations \cite{AharonovBohm,WuYang}.
+
+\begin{lemma}[The reduced circle source, and invariance of the charged spectrum]
+\label{lem:spec-invariance}
+In the circle model of Definition~\ref{def:circle-model}, with the scope fixed by
+Convention~\ref{conv:circle-scope}:
+\begin{enumerate}[label=(\arabic*),leftmargin=2.2em]
+\item The orientation-preserving diffeomorphisms of $S^1_L$ identify no connection classes beyond
+      gauge equivalence: for every such $f$ and every $A$, the pushforward $f_*A$ is gauge
+      equivalent to $A$. Hence adjoining them to the gauge group would coarsen nothing, and the
+      reduced source \eqref{eq:circle-source-def} may be written
+      \begin{equation}
+      \label{eq:Sgeo-circle}
+      \Sgeo \;=\; \Cgeo^{\,\circ}\big/\Gau(P) \;=\; \Mflat\bigl(S^1,U(1)\bigr) .
+      \end{equation}
+\item The spectral multiset $\operatorname{spec}\mathcal{D}_A$ of \eqref{eq:Dop}, computed with
+      respect to the fixed background metric $\mathrm{d}x^{2}$ and measure $\mathrm{d}x$ on
+      $S^1_L$, is invariant under gauge transformations and under orientation-preserving
+      diffeomorphisms, and is therefore a well-defined invariant relation on $\Sgeo$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Let $f$ be an orientation-preserving diffeomorphism of $S^1_L$ and let $A$ be a connection. Since
+$f$ preserves the orientation, it fixes the fundamental generator $c=[\gamma_0]$ of
+$H_1(S^1_L;\Int)$. Because $G=U(1)$ is abelian and every connection on $S^1_L$ is flat by
+\eqref{eq:flat}, the holonomy of a connection around a loop depends on that loop only through its
+class in $H_1(S^1_L;\Int)$; the pushforward $f_*A$ therefore has the same holonomy around $c$ as
+$A$ does:
+\begin{equation}
+\label{eq:hol-diffeo}
+\Hol\bigl(f_*A\bigr)=\Hol(A) .
+\end{equation}
+(Concretely, $\int_{S^1_L} f_*A=\int_{S^1_L}A$ by the change-of-variables formula for the
+orientation-preserving $f$, the integrand being a $1$-form.)
+
+\emph{(1).} By \eqref{eq:hol-diffeo} and the sufficiency direction of Theorem~\ref{thm:hol-class},
+equality of holonomy already implies gauge equivalence; hence $f_*A$ is gauge equivalent to $A$ for
+every orientation-preserving $f$ and every $A$. The equivalence relation generated by the gauge
+group together with the orientation-preserving diffeomorphisms therefore coincides with gauge
+equivalence alone, so the quotient \eqref{eq:circle-source-def} is unchanged by adjoining them, and
+\eqref{eq:Sgeo-circle} holds.
+
+\emph{(2).} Let $A$ and $A'$ be connections related either by a gauge transformation or by the
+pushforward along an orientation-preserving diffeomorphism. In the second case part (1) supplies a
+gauge transformation achieving the same result, so in either case there is $u\in\Gau(P)$ with
+$A'=A^{u}$. The operator $\mathcal{D}$ is defined with respect to the fixed background metric and
+measure of Convention~\ref{conv:circle-scope}, which are not transformed; the diffeomorphism
+therefore plays no further role, and only the gauge covariance established in
+Convention~\ref{conv:u1-norm} is needed. There we verified
+$D_{A^{u}}\phi^{u}=u\,D_A\phi$ for $\phi^{u}=u\phi$; iterating,
+\[
+\mathcal{D}_{A^{u}}\bigl(u\,\phi\bigr)
+=u\,\mathcal{D}_{A}\phi
+\qquad\text{for all }\phi\in C^\infty(S^1_L,\Cx).
+\]
+Thus the multiplication operator $\mathcal{U}_u\phi:=u\phi$ intertwines $\mathcal{D}_A$ with
+$\mathcal{D}_{A^{u}}$. Since $|u(x)|=1$ pointwise, $\mathcal{U}_u$ is an isometry of
+$L^2(S^1_L,\mathrm{d}x)$ with inverse $\mathcal{U}_{u^{-1}}$, hence unitary; and it preserves
+$C^\infty(S^1_L,\Cx)$, hence carries the domain of $\mathcal{D}_A$ onto that of
+$\mathcal{D}_{A^{u}}$. Therefore $\mathcal{D}_{A}$ and $\mathcal{D}_{A'}=\mathcal{D}_{A^{u}}$ are
+unitarily equivalent, and their spectral multisets coincide. Since $A$ and $A'$ were an arbitrary
+pair related by a gauge transformation or by an allowed diffeomorphism, the spectral multiset is a
+well-defined function on $\Sgeo$, which is the assertion.
+\end{proof}
+
+\begin{corollary}[A strictly coarser spectral completion]
+\label{cor:spec}
+Retain the source architecture of Corollary~\ref{cor:hol-completion}: the source is
+$\Sgeo=\Mflat(S^1,U(1))$ and the declared Tier-1 readout remains the curvature $p_F$, which is
+constant. Adjoin, as the invariant relation, the spectrum of the charged-scalar operator
+\begin{equation}
+\label{eq:Dop}
+\mathcal{D}_A:=-\bigl(\partial_x-i\,a(x)\bigr)^{2}
+\qquad\text{on}\qquad
+C^\infty(S^1_L,\Cx)\subseteq L^2(S^1_L,\mathrm{d}x),
+\end{equation}
+computed with respect to the fixed standard metric $\mathrm{d}x^2$ and measure $\mathrm{d}x$ on
+$S^1_L$, with the conventions of Convention~\ref{conv:u1-norm} and the standard self-adjoint
+domain (the closure of $\mathcal{D}_A$ on $C^\infty(S^1_L,\Cx)$; $S^1_L$ is closed, so no boundary
+conditions are needed and the operator is essentially self-adjoint there). The unitary charge-one
+representation ensures that gauge transformations act unitarily on the charged-scalar Hilbert
+space, so the spectral multiset is gauge invariant and hence a well-defined function on the declared
+gauge quotient \eqref{eq:circle-source-def}. Its invariance under the auxiliary
+orientation-preserving diffeomorphism action---which, as noted in Convention~\ref{conv:circle-scope},
+is treated separately and does not consist of arrows of the fixed-metric groupoid, a general such
+diffeomorphism not preserving $\mathrm{d}x$---is proved separately in
+Lemma~\ref{lem:spec-invariance}(2). Set
+$J_{\mathrm{spec}}([A]):=\operatorname{spec}\mathcal{D}_A$. Writing $\Hol(A)=e^{i\vartheta}$,
+\begin{equation}
+\label{eq:spec}
+\operatorname{spec}\mathcal{D}_A
+=\left\{
+\left(\frac{2\pi k-\vartheta}{L}\right)^{\!2}
+:\; k\in\Int
+\right\}
+\qquad\text{(as a multiset)} ,
+\end{equation}
+and the resulting realized completion is
+\begin{equation}
+\label{eq:Espec}
+E_{\mathrm{spec}}
+\;\cong\;
+U(1)\big/\bigl(z\sim z^{-1}\bigr)
+\;\cong\;
+[-1,1],
+\end{equation}
+which is \emph{strictly coarser} than $E_{\mathrm{hol}}$: the completion map
+$\Sgeo\to E_{\mathrm{spec}}$ is surjective but not injective, its nontrivial fibres being exactly
+the pairs $\{[A_\vartheta],[A_{-\vartheta}]\}$ with $\vartheta\not\equiv 0,\pi\pmod{2\pi}$.
+\end{corollary}
+
+\begin{proof}
+\emph{The spectrum.} By Theorem~\ref{thm:hol-class} every class has the representative
+$A_\vartheta=(\vartheta/L)\,\mathrm{d}x$ of \eqref{eq:Atheta}, and by
+Example~\ref{ex:spectral}(ii) the spectrum is unchanged along the gauge orbit, so we may compute
+with $A_\vartheta$. With $a\equiv\vartheta/L$ constant, $\mathcal{D}_{A_\vartheta}$ has the
+complete orthonormal system of eigenfunctions $\psi_k(x)=L^{-1/2}e^{2\pi i k x/L}$, $k\in\Int$
+(complete in $L^2(S^1_L,\mathrm{d}x)$ by Fourier theory). By the convention \eqref{eq:u1-covder},
+\[
+\Bigl(\partial_x-i\tfrac{\vartheta}{L}\Bigr)\psi_k
+=\Bigl(\tfrac{2\pi i k}{L}-\tfrac{i\vartheta}{L}\Bigr)\psi_k
+=i\,\frac{2\pi k-\vartheta}{L}\,\psi_k ,
+\]
+and hence, squaring and inserting the overall minus sign of \eqref{eq:Dop},
+\[
+\mathcal{D}_{A_\vartheta}\psi_k
+=-\left(i\,\frac{2\pi k-\vartheta}{L}\right)^{\!2}\psi_k
+=\left(\frac{2\pi k-\vartheta}{L}\right)^{\!2}\psi_k .
+\]
+Since the $\psi_k$ are complete, the spectrum is purely discrete and is exactly the multiset
+\eqref{eq:spec}. Note that $\vartheta$ is defined only modulo $2\pi$, and \eqref{eq:spec} is
+invariant under $\vartheta\mapsto\vartheta+2\pi$ via the relabelling $k\mapsto k+1$; the multiset
+is therefore a well-defined function of $[A]$, as it must be.
+
+\emph{``If'': inversion-related holonomies are spectrally equal.} Replacing $\vartheta$ by
+$-\vartheta$ in \eqref{eq:spec} and relabelling $k\mapsto -k$ carries the multiset to itself, since
+$(2\pi(-k)-(-\vartheta))^2=(-(2\pi k-\vartheta))^2=(2\pi k-\vartheta)^2$. Hence
+$[A_\vartheta]$ and $[A_{-\vartheta}]$---which by Theorem~\ref{thm:hol-class} are distinct classes
+whenever $e^{i\vartheta}\neq e^{-i\vartheta}$, i.e.\ whenever
+$\vartheta\not\equiv0,\pi\pmod{2\pi}$---have the same spectrum.
+
+\emph{``Only if'': equal spectra force inversion-related holonomies.} We prove this directly rather
+than by citation. Suppose $\operatorname{spec}\mathcal{D}_{A_\vartheta}
+=\operatorname{spec}\mathcal{D}_{A_{\vartheta'}}$ as multisets. Normalize
+$\vartheta,\vartheta'\in[0,2\pi)$, which is permissible by the periodicity just noted. By
+\eqref{eq:spec} every eigenvalue of $\mathcal{D}_{A_\vartheta}$ is a nonnegative real number, so we
+may form the set of both real square roots of the eigenvalues, rescaled by $L/2\pi$:
+\begin{align*}
+\Sigma(\vartheta)
+&:=\Bigl\{\pm\tfrac{L}{2\pi}\sqrt{\lambda}\;:\;
+\lambda\in\operatorname{spec}\mathcal{D}_{A_\vartheta}\Bigr\}
+\\
+&\phantom{:}=
+\Bigl\{k-\tfrac{\vartheta}{2\pi}\;:\;k\in\Int\Bigr\}
+\;\cup\;
+\Bigl\{-k+\tfrac{\vartheta}{2\pi}\;:\;k\in\Int\Bigr\}
+\\
+&\phantom{:}=
+\Bigl(-\tfrac{\vartheta}{2\pi}+\Int\Bigr)
+\;\cup\;
+\Bigl(\tfrac{\vartheta}{2\pi}+\Int\Bigr),
+\end{align*}
+which is determined by the spectral multiset alone. Thus equality of spectra gives
+\[
+\Bigl(\tfrac{\vartheta}{2\pi}+\Int\Bigr)\cup\Bigl(-\tfrac{\vartheta}{2\pi}+\Int\Bigr)
+\;=\;
+\Bigl(\tfrac{\vartheta'}{2\pi}+\Int\Bigr)\cup\Bigl(-\tfrac{\vartheta'}{2\pi}+\Int\Bigr)
+\]
+as subsets of $\Real$.
+Intersecting both sides with the interval $[0,1)$ and comparing, the unordered pair of residues
+$\{\tfrac{\vartheta}{2\pi}\bmod 1,\;-\tfrac{\vartheta}{2\pi}\bmod 1\}$ equals the pair
+$\{\tfrac{\vartheta'}{2\pi}\bmod 1,\;-\tfrac{\vartheta'}{2\pi}\bmod 1\}$. Hence
+$\vartheta'\equiv\vartheta$ or $\vartheta'\equiv-\vartheta \pmod{2\pi}$, that is,
+$\Hol(A')=\Hol(A)^{\pm1}$, as claimed.
+
+\emph{The completion.} By the two directions just proved, the relation $J_{\mathrm{spec}}$ has
+exactly the level sets of the map $U(1)\to U(1)/(z\sim z^{-1})$. Since the readout $p_F$ is constant
+and contributes nothing, Definition~\ref{def:egeo} gives
+$E_{\mathrm{spec}}=\Imm(p_F,J_{\mathrm{spec}})\cong U(1)/(z\sim z^{-1})$. The map
+$z=e^{i\vartheta}\mapsto\tfrac12(z+z^{-1})=\cos\vartheta$ is a continuous bijection from this
+quotient onto $[-1,1]$ (it is well defined and injective on the quotient, and surjective onto
+$[-1,1]$), and it is a homeomorphism since the quotient is compact and $[-1,1]$ is Hausdorff. This
+gives \eqref{eq:Espec}. Non-injectivity of the completion map and the description of its fibres now
+follow from Proposition~\ref{prop:orbit-reconstruction} applied to the coarser relation family
+$\{p_F\}\cup\{J_{\mathrm{spec}}\}$.
+\end{proof}
+
+\begin{remark}[The two corollaries together]
+\label{rem:two-corollaries}
+Corollaries~\ref{cor:hol-completion} and \ref{cor:spec} are two halves of one lesson, and both are
+consequences of Theorem~\ref{thm:restricted-realization} and
+Proposition~\ref{prop:orbit-reconstruction} applied to the \emph{same} source $\Sgeo$ with the
+\emph{same} constant readout $p_F$; only the declared invariant relation differs. The realized
+completion is relative to the declared relation family (Remark~\ref{rem:relative}). Declare holonomy
+and the source is reconstructed exactly; declare instead the charged-scalar spectrum and a residual
+$z\sim z^{-1}$ degeneracy survives the completion---the shadow of the complex conjugation
+$\phi\mapsto\bar\phi$, equivalently of the orientation reversal excluded in
+Definition~\ref{def:circle-model} (Remark~\ref{rem:u1-hyps}). This is the Paper~2 phenomenon
+\cite{ST2}, realized geometrically: whether the lost information obstructs the nominated target
+depends on the target.
+\end{remark}
+
+% ======================================================================
+\section{Variational realization of completed relations}
+\label{sec:variational}
+
+We now embed the completed relation data into dynamics. The claim to be established is narrow and
+precise: an invariant relation-dependent action yields, by functional variation, correctly
+normalized stress-energy, gauge-current, and matter responses, and nothing is postulated by naming
+it.
+
+\subsection{Variational setting}
+
+\begin{assumption}[Well-posed variational problem]
+\label{ass:variational}
+The global configuration satisfies the descent conditions of Theorem~\ref{thm:descent} and lies in
+$\Cgeo$. Furthermore, \emph{one} of the following holds, and which one is part of the declaration of
+the model:
+\begin{enumerate}[label=(V\arabic*),leftmargin=2.8em]
+\item\label{V1} all variations $\delta g$, $\delta A$, $\delta\Phi$ have compact support in the
+      interior of $M$; or
+\item\label{V2} boundary values of the fields, and for gravity the induced metric on $\partial M$,
+      are held fixed, so that boundary contributions vanish identically; or
+\item\label{V3} the gravitational and gauge actions are supplemented by the boundary terms required
+      for a well-posed variational problem. For gravity this is the Gibbons--Hawking--York
+      term
+      \[
+      \frac{1}{8\pi G_N}\oint_{\partial M} K\,\sqrt{|h|}\;\mathrm{d}^3y
+      \]
+      \cite{York1972,GibbonsHawking1977}, with the appropriate subtraction or counterterms in
+      the asymptotic case; for the gauge sector, whatever boundary term the declared $\mathcal{B}$
+      requires.
+\end{enumerate}
+All functional derivatives below are asserted to exist on the declared domain; where
+$S_{\mathrm{rel}}$ is nonlocal, this existence is a hypothesis on the model, not a theorem.
+\end{assumption}
+
+\begin{definition}[Relation-dependent total action]
+\label{def:action}
+Let $r=(r_\alpha)_{\alpha\in A}$ denote the completed invariant relation coordinates, i.e.\ the
+components of $\egeo$. Consider
+\begin{equation}
+\label{eq:Stot}
+S_{\mathrm{tot}}[g,A,\Phi;r]
+=
+S_{\mathrm{EH}}[g]
++S_{\mathrm{YM}}[g,A]
++S_{\mathrm{m}}[g,A,\Phi]
++S_{\mathrm{rel}}[g,A,\Phi;r],
+\end{equation}
+with
+\begin{align}
+\label{eq:SEH}
+S_{\mathrm{EH}}[g]
+&=\frac{1}{16\pi G_N}\int_M \bigl(R-2\Lambda\bigr)\,\dvol
+\;\;(+\text{ boundary term under \ref{V3}}),
+\\[0.3em]
+\label{eq:SYM}
+S_{\mathrm{YM}}[g,A]
+&=-\frac{1}{4g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle F_{\mu\nu},F^{\mu\nu}\bigr\rangle\,\dvol ,
+\end{align}
+and $S_{\mathrm{m}}$ a matter action for $\Phi$ \cite{YangMills1954}. The functional
+$S_{\mathrm{rel}}$ carries the model-specific dependence on $r$. It may be local,
+boundary-supported, or nonlocal, provided that
+\begin{enumerate}[label=(R\arabic*),leftmargin=2.8em]
+\item\label{R1} it depends on the relation coordinates through a finite or countable dynamical
+      subfamily $A_{\mathrm{dyn}}\subseteq A$, and its Fr\'echet derivatives with respect to
+      $g^{\mu\nu}$, $A_\mu$, and the independent matter components exist on the stated domain and
+      are represented by distributional kernels, as set out in Section~\ref{sec:chain-rule}; and
+\item\label{R2} it is invariant under the allowed bundle automorphisms and allowed
+      diffeomorphisms---that is, $S_{\mathrm{rel}}$ is constant on the arrows of $\Ggeo$, exactly as
+      the $J_\alpha$ are (Definition~\ref{def:invariant-relation}).
+\end{enumerate}
+\end{definition}
+
+Condition \ref{R2} is what makes $S_{\mathrm{rel}}$ a functional of the \emph{physical orbit}, and it
+is what supplies the Ward identities of Section~\ref{sec:noether}. An $S_{\mathrm{rel}}$ that fails to be $\Ggeo$-invariant does not define a geometric realization of
+a completed relation.
+
+\subsection{The functional chain rule for relation functionals}
+\label{sec:chain-rule}
+
+\begin{convention}[Two regimes for $r$, and the correct chain rule]
+\label{conv:two-regimes}
+By Convention~\ref{conv:relation-status}, exactly one of the following applies to each component
+$r_\alpha$, and the model declares which.
+
+\medskip
+\noindent\textbf{(a) $r_\alpha$ is a functional of the fields.}
+Paper~3 permits an arbitrary index \emph{set} $A$, and nothing in
+Sections~\ref{sec:realization}--\ref{sec:u1} requires more. A differentiable action, however, needs
+additional analytic structure, and we impose it only where it is used. We therefore require that
+$S_{\mathrm{rel}}$ depend on the relation coordinates through a distinguished \emph{dynamical
+subfamily}
+\begin{equation}
+\label{eq:Adyn}
+A_{\mathrm{dyn}}\subseteq A,
+\qquad
+A_{\mathrm{dyn}} \text{ finite or countable},
+\end{equation}
+so that $S_{\mathrm{rel}}=S_{\mathrm{rel}}[g,A,\Phi;(r_\alpha)_{\alpha\in A_{\mathrm{dyn}}}]$ and
+$\partial S_{\mathrm{rel}}/\partial r_\alpha=0$ for $\alpha\notin A_{\mathrm{dyn}}$. When
+$A_{\mathrm{dyn}}$ is countably infinite we require in addition that the derivative series in
+\eqref{eq:chain-rule} below converge \emph{unconditionally} in the distributional-dual topology of
+the relevant space of kernels; when $A_{\mathrm{dyn}}$ is finite this is vacuous. The remaining
+relation coordinates, indexed by $A\setminus A_{\mathrm{dyn}}$, continue to serve as completion
+coordinates in the sense of Sections~\ref{sec:realization}--\ref{sec:u1}; they simply do not enter
+the action.
+
+Now suppose $r_\alpha=r_\alpha[g,A,\Phi]$, $\alpha\in A_{\mathrm{dyn}}$, takes values in a Banach
+(or finite-dimensional) space $V_\alpha$ and is Fr\'echet differentiable on the declared domain.
+Then $r_\alpha$ is in general \emph{nonlocal}: a Wilson observable integrates around a loop, an
+integral invariant integrates over $M$, a spectral quantity depends on the fields through a global
+eigenvalue problem. Its variation is accordingly given not by a pointwise partial derivative but by
+the pairing of distributional kernels with the variations:
+\begin{equation}
+\label{eq:drho}
+\delta r_\alpha
+=\int_M\!\Bigl[
+\frac{\delta r_\alpha}{\delta g^{\mu\nu}(y)}\,\delta g^{\mu\nu}(y)
++\Bigl\langle \frac{\delta r_\alpha}{\delta A_\mu(y)},\,\delta A_\mu(y)\Bigr\rangle
++\Bigl\langle\!\Bigl\langle \frac{\delta r_\alpha}{\delta \Phi(y)},\,\delta\Phi(y)
+\Bigr\rangle\!\Bigr\rangle
+\Bigr]\sqrt{-g(y)}\;\mathrm{d}^4y ,
+\end{equation}
+where $\delta r_\alpha/\delta g^{\mu\nu}(y)$ etc.\ denote the $V_\alpha$-valued distributional
+kernels representing the derivative, $\langle\cdot,\cdot\rangle$ is the $\Ad$-invariant pairing on
+$\gfrak$, and $\langle\!\langle\cdot,\cdot\rangle\!\rangle$ is the duality pairing between
+$W^{*}$ and $W$ discussed in Section~\ref{sec:matter-pairing}. (For a Wilson loop $r_\alpha$ the
+kernel $\delta r_\alpha/\delta A_\mu(y)$ is supported on the loop and is a distribution, not a
+function; \eqref{eq:drho} is exactly the statement that must be used, and a pointwise
+$\partial r_\alpha/\partial A_\mu(y)$ does not exist.)
+
+Then, writing $\partial S_{\mathrm{rel}}/\partial r_\alpha\in V_\alpha^{*}$ for the derivative of
+$S_{\mathrm{rel}}$ with respect to its $V_\alpha$-argument (a bounded linear functional, and an
+ordinary partial derivative only when $V_\alpha$ is finite-dimensional), the chain rule reads
+\begin{equation}
+\label{eq:chain-rule}
+\frac{\delta S_{\mathrm{rel}}}{\delta g^{\mu\nu}(y)}
+=\left.\frac{\delta S_{\mathrm{rel}}}{\delta g^{\mu\nu}(y)}\right|_{r\;\mathrm{fixed}}
++\sum_{\alpha\in A_{\mathrm{dyn}}}
+\Bigl\langle \frac{\partial S_{\mathrm{rel}}}{\partial r_\alpha},\;
+\frac{\delta r_\alpha}{\delta g^{\mu\nu}(y)}\Bigr\rangle_{V_\alpha^*\!,V_\alpha} ,
+\end{equation}
+and identically with $g^{\mu\nu}(y)$ replaced by $A_\mu(y)$ or by the matter components. The sum is
+over the dynamical subfamily \eqref{eq:Adyn}, and converges by the unconditional-convergence
+hypothesis imposed there. Only in the special case where $V_\alpha=\Real$ and $r_\alpha$ is a
+\emph{local} scalar field does \eqref{eq:chain-rule} reduce to an ordinary pointwise partial
+derivative; in general it does not.
+
+\medskip
+\noindent\textbf{(b) $r_\alpha$ labels a fixed topological or boundary sector.}
+Then $\delta r_\alpha=0$ under all variations within the sector---this is what ``fixed sector''
+means---and $r_\alpha$ enters the field equations only as a parameter. The second term of
+\eqref{eq:chain-rule} is absent.
+
+\medskip
+In neither case is $r_\alpha$ varied as an independent dynamical field. A model wishing to promote
+$r_\alpha$ to a field must adjoin it to the configuration tuple, enlarge $\Cgeo$, and supply its own
+kinetic term; that is a different model, and its Euler--Lagrange equation is an additional equation
+not derived here.
+\end{convention}
+
+\subsection{Matter pairings and independent components}
+\label{sec:matter-pairing}
+
+\begin{convention}[Matter variation and the dual pairing]
+\label{conv:matter}
+The representation $\rho\colon G\to\mathrm{GL}(W)$ is not assumed unitary
+(Convention~\ref{conv:basic}), and $W$ may be complex. Accordingly the matter Euler operator is
+valued in the dual, and the variational pairing must be specified. We adopt the following, and use
+it consistently.
+
+\emph{(i) Real independent components.} Suppose $\Phi$ denotes a collection of \emph{real}
+independent field components. This is always achievable: decompose a complex field into its real
+and imaginary parts, or a section of a complex bundle into its underlying real bundle. Then
+$\delta S/\delta\Phi$ is valued in the real dual bundle $P\times_{\rho^{*}}W^{*}$, and the
+pairing
+\[
+\langle\!\langle\cdot,\cdot\rangle\!\rangle\colon W^{*}\times W\longrightarrow\Real
+\]
+is the canonical duality pairing. This pairing is $G$-invariant for the contragredient action
+$\rho^{*}(h)=\rho(h^{-1})^{\mathsf{T}}$, and requires no metric on $W$. There is then a single
+Euler equation $\mathcal{E}_\Phi=0$.
+
+\emph{(ii) Complex fields treated holomorphically.} If instead $\Phi$ is treated as a complex field
+with $\Phi$ and $\bar\Phi$ varied independently---the usual convention for a charged scalar or a
+Dirac spinor---then there are \emph{two} Euler equations,
+\begin{equation}
+\label{eq:conj-euler}
+\mathcal{E}_{\Phi}:=\frac{1}{\sqrt{-g}}\frac{\delta S}{\delta \bar\Phi}=0
+\qquad\text{and}\qquad
+\overline{\mathcal{E}_{\Phi}}:=\frac{1}{\sqrt{-g}}\frac{\delta S}{\delta \Phi}=0 ,
+\end{equation}
+which are conjugate to one another when the action is real, and the pairing used in the variation is
+the sesquilinear one furnished by a $\rho$-invariant Hermitian form on $W$---which exists precisely
+when $\rho$ is unitary. If $\rho$ is not unitary, no such Hermitian form is available and one must
+revert to convention (i).
+
+For definiteness, and to avoid carrying two conjugate equations through every formula, \emph{in the
+statements below $\Phi$ denotes real independent field components in the sense of (i)}, and
+$\mathcal{E}_\Phi$ is the corresponding single dual-valued Euler operator. Every result restates
+verbatim in convention (ii) upon replacing $\mathcal{E}_{\Phi}=0$ by the conjugate pair
+\eqref{eq:conj-euler} and $\langle\!\langle\cdot,\cdot\rangle\!\rangle$ by the invariant Hermitian
+pairing.
+\end{convention}
+
+\subsection{Response tensors, currents, and Euler operators}
+
+\begin{definition}[Responses]
+\label{def:responses}
+For each nongravitational sector $X\in\{\mathrm{YM},\mathrm{m},\mathrm{rel}\}$ define the
+stress-energy tensor
+\begin{equation}
+\label{eq:Tdef}
+T^{X}_{\mu\nu}
+\;:=\;
+-\frac{2}{\sqrt{-g}}\,\frac{\delta S_X}{\delta g^{\mu\nu}} ,
+\end{equation}
+the gauge current
+\begin{equation}
+\label{eq:Jdef}
+J^{\mu}_{\mathrm{m}}
+\;:=\;
+-\frac{1}{\sqrt{-g}}\,\frac{\delta S_{\mathrm{m}}}{\delta A_\mu},
+\qquad
+J^{\mu}_{\mathrm{rel}}
+\;:=\;
+-\frac{1}{\sqrt{-g}}\,\frac{\delta S_{\mathrm{rel}}}{\delta A_\mu},
+\end{equation}
+each valued in $\gfrak$ (with $\gfrak$-indices contracted using $\langle\cdot,\cdot\rangle$), and the
+matter Euler operators
+\begin{equation}
+\label{eq:Edef}
+\mathcal{E}^{X}_{\Phi}
+\;:=\;
+\frac{1}{\sqrt{-g}}\,\frac{\delta S_X}{\delta\Phi} ,
+\end{equation}
+valued in the dual bundle and paired with $\delta\Phi$ by
+$\langle\!\langle\cdot,\cdot\rangle\!\rangle$ as in Convention~\ref{conv:matter}(i). For
+$X=\mathrm{rel}$ the functional derivatives in \eqref{eq:Tdef}--\eqref{eq:Edef} are those computed by
+the chain rule \eqref{eq:chain-rule}, and thus already include the relation-mediated contributions.
+\end{definition}
+
+\begin{lemma}[Yang--Mills stress tensor]
+\label{lem:TYM}
+With the normalization \eqref{eq:SYM},
+\begin{equation}
+\label{eq:TYM}
+T^{\mathrm{YM}}_{\mu\nu}
+=\frac{1}{g_{\mathrm{YM}}^{2}}
+\left(
+\bigl\langle F_{\mu\rho},F_{\nu}{}^{\rho}\bigr\rangle
+-\tfrac14\,g_{\mu\nu}\,\bigl\langle F_{\rho\sigma},F^{\rho\sigma}\bigr\rangle
+\right),
+\end{equation}
+which is symmetric, gauge invariant, and (in four dimensions) trace free.
+\end{lemma}
+
+\begin{proof}
+Write $S_{\mathrm{YM}}=-\tfrac{1}{4g_{\mathrm{YM}}^2}\int_M
+\langle F_{\mu\rho},F_{\nu\sigma}\rangle g^{\mu\nu}g^{\rho\sigma}\sqrt{-g}\,\mathrm{d}^4x$; the
+components $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu]$ are independent of $g$.
+Using $\delta\sqrt{-g}=-\tfrac12\sqrt{-g}\,g_{\mu\nu}\,\delta g^{\mu\nu}$ and varying the two inverse
+metrics,
+\[
+\delta S_{\mathrm{YM}}
+=-\frac{1}{4g_{\mathrm{YM}}^2}\int_M
+\Bigl(
+2\langle F_{\mu\rho},F_{\nu}{}^{\rho}\rangle
+-\tfrac12 g_{\mu\nu}\langle F_{\rho\sigma},F^{\rho\sigma}\rangle
+\Bigr)\delta g^{\mu\nu}\sqrt{-g}\,\mathrm{d}^4x ,
+\]
+and \eqref{eq:Tdef} gives \eqref{eq:TYM}. Gauge invariance follows from $\Ad$-invariance of
+$\langle\cdot,\cdot\rangle$ and \eqref{eq:gauge-transf}; tracelessness from
+$g^{\mu\nu}\langle F_{\mu\rho},F_\nu{}^\rho\rangle=\langle F_{\rho\sigma},F^{\rho\sigma}\rangle$ and
+$g^{\mu\nu}g_{\mu\nu}=4$.
+\end{proof}
+
+\begin{lemma}[Yang--Mills variation with respect to the connection]
+\label{lem:YMvar}
+Under Assumption~\ref{ass:variational},
+\begin{equation}
+\label{eq:dSYM}
+\delta S_{\mathrm{YM}}
+=-\frac{1}{g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle F^{\mu\nu},\,D_\mu\,\delta A_\nu\bigr\rangle\,\dvol
+=\;\frac{1}{g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle D_\mu F^{\mu\nu},\,\delta A_\nu\bigr\rangle\,\dvol ,
+\end{equation}
+up to the treated boundary term.
+\end{lemma}
+
+\begin{proof}
+From $F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu]$ one has
+\begin{equation}
+\label{eq:dF}
+\delta F_{\mu\nu}=D_\mu\,\delta A_\nu - D_\nu\,\delta A_\mu .
+\end{equation}
+Hence, from \eqref{eq:SYM},
+\[
+\delta S_{\mathrm{YM}}
+=-\frac{1}{4g_{\mathrm{YM}}^{2}}\int_M
+2\,\bigl\langle F^{\mu\nu},\,\delta F_{\mu\nu}\bigr\rangle\,\dvol
+=-\frac{1}{2g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle F^{\mu\nu},\,D_\mu\delta A_\nu - D_\nu\delta A_\mu\bigr\rangle\,\dvol .
+\]
+The two terms in the bracket are \emph{equal} after relabelling, by the antisymmetry of $F^{\mu\nu}$:
+swapping the dummy indices $\mu\leftrightarrow\nu$ in the second term gives
+$-\langle F^{\nu\mu},D_\mu\delta A_\nu\rangle=+\langle F^{\mu\nu},D_\mu\delta A_\nu\rangle$.
+Therefore the bracket contributes twice the first term, the factor $\tfrac12$ cancels, and
+\[
+\delta S_{\mathrm{YM}}
+=-\frac{1}{g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle F^{\mu\nu},\,D_\mu\delta A_\nu\bigr\rangle\,\dvol ,
+\]
+which is the first equality in \eqref{eq:dSYM}. Covariant integration by parts---legitimate
+because
+$\langle\cdot,\cdot\rangle$ is $\Ad$-invariant, hence $D$-compatible, and because the boundary term
+vanishes by Assumption~\ref{ass:variational}---moves $D_\mu$ onto $F^{\mu\nu}$ and flips the sign,
+giving the second equality.
+\end{proof}
+
+\subsection{The coupled field equations}
+
+\begin{theorem}[Coupled field equations]
+\label{thm:field-eqs}
+Under Assumption~\ref{ass:variational} and Conventions~\ref{conv:two-regimes} and
+\ref{conv:matter}(i), stationarity of $S_{\mathrm{tot}}$ under independent variations of
+$g^{\mu\nu}$, $A_\mu$, and $\Phi$ is equivalent to the system
+\begin{align}
+\label{eq:einstein}
+G_{\mu\nu}+\Lambda g_{\mu\nu}
+&=8\pi G_N\Bigl(
+T^{\mathrm{YM}}_{\mu\nu}+T^{\mathrm{m}}_{\mu\nu}+T^{\mathrm{rel}}_{\mu\nu}
+\Bigr),
+\\[0.35em]
+\label{eq:ym}
+\frac{1}{g_{\mathrm{YM}}^{2}}\,D_\mu F^{\mu\nu}
+&=J^{\nu}_{\mathrm{m}}+J^{\nu}_{\mathrm{rel}},
+\\[0.35em]
+\label{eq:matter}
+\mathcal{E}^{\mathrm{m}}_{\Phi}+\mathcal{E}^{\mathrm{rel}}_{\Phi}
+&=0,
+\end{align}
+with representation indices and the pairings $\langle\cdot,\cdot\rangle$ and
+$\langle\!\langle\cdot,\cdot\rangle\!\rangle$ restored as required by $G$ and $\rho$.
+\end{theorem}
+
+\begin{proof}
+\emph{Metric variation.}
+The standard variation of \eqref{eq:SEH}, after the boundary treatment stipulated in
+Assumption~\ref{ass:variational} (which is exactly what disposes of the total-derivative term
+$\int_M g^{\mu\nu}\delta R_{\mu\nu}\sqrt{-g}$; under \ref{V3} it is the Gibbons--Hawking--York term
+that cancels it \cite{York1972,GibbonsHawking1977}), gives
+\begin{equation}
+\label{eq:dSEH}
+\delta S_{\mathrm{EH}}
+=\frac{1}{16\pi G_N}\int_M
+\bigl(G_{\mu\nu}+\Lambda g_{\mu\nu}\bigr)\,\delta g^{\mu\nu}\,\dvol .
+\end{equation}
+By Definition~\ref{def:responses},
+\begin{equation}
+\label{eq:dSmatter}
+\delta\bigl(S_{\mathrm{YM}}+S_{\mathrm{m}}+S_{\mathrm{rel}}\bigr)\Big|_{\delta g}
+=-\frac12\int_M
+\bigl(
+T^{\mathrm{YM}}_{\mu\nu}+T^{\mathrm{m}}_{\mu\nu}+T^{\mathrm{rel}}_{\mu\nu}
+\bigr)\,\delta g^{\mu\nu}\,\dvol ,
+\end{equation}
+where $\delta S_{\mathrm{rel}}$ is computed by the chain rule \eqref{eq:chain-rule}: in regime (a)
+of Convention~\ref{conv:two-regimes} it includes the relation-mediated kernel contributions, and in
+regime (b) those are absent. In either case \eqref{eq:dSmatter} \emph{defines} its left side via
+\eqref{eq:Tdef} and adds no assumption. Setting $\delta S_{\mathrm{tot}}=0$ for arbitrary symmetric
+$\delta g^{\mu\nu}$ (compactly supported, or boundary-vanishing) and applying the fundamental lemma
+of the calculus of variations gives
+\[
+\frac{1}{16\pi G_N}\bigl(G_{\mu\nu}+\Lambda g_{\mu\nu}\bigr)
+-\frac12\bigl(T^{\mathrm{YM}}_{\mu\nu}+T^{\mathrm{m}}_{\mu\nu}+T^{\mathrm{rel}}_{\mu\nu}\bigr)=0 ,
+\]
+which is \eqref{eq:einstein} with the displayed $8\pi G_N$ normalization.
+
+\emph{Gauge variation.}
+By Lemma~\ref{lem:YMvar},
+\[
+\delta S_{\mathrm{YM}}\big|_{\delta A}
+=\frac{1}{g_{\mathrm{YM}}^{2}}\int_M
+\bigl\langle D_\mu F^{\mu\nu},\,\delta A_\nu\bigr\rangle\,\dvol ,
+\]
+while by the definitions \eqref{eq:Jdef},
+\[
+\delta\bigl(S_{\mathrm{m}}+S_{\mathrm{rel}}\bigr)\big|_{\delta A}
+=-\int_M\bigl\langle J^{\nu}_{\mathrm{m}}+J^{\nu}_{\mathrm{rel}},\,
+\delta A_\nu\bigr\rangle\,\dvol .
+\]
+Setting the sum of the two to zero for arbitrary $\delta A_\nu$, and using the nondegeneracy of
+$\langle\cdot,\cdot\rangle$, gives \eqref{eq:ym}.
+
+\emph{Matter variation.}
+$S_{\mathrm{EH}}$ and $S_{\mathrm{YM}}$ are independent of $\Phi$, so by \eqref{eq:Edef}
+$\delta_\Phi S_{\mathrm{tot}}
+=\int_M \langle\!\langle\,\mathcal{E}^{\mathrm{m}}_\Phi+\mathcal{E}^{\mathrm{rel}}_\Phi,\;
+\delta\Phi\,\rangle\!\rangle\,\dvol$; arbitrariness of the real independent components $\delta\Phi$
+and nondegeneracy of the duality pairing give \eqref{eq:matter}. Under
+Convention~\ref{conv:matter}(ii) this is replaced by the conjugate pair \eqref{eq:conj-euler}.
+
+The three variations are independent, so stationarity of $S_{\mathrm{tot}}$ is equivalent to the
+simultaneous validity of \eqref{eq:einstein}--\eqref{eq:matter}.
+\end{proof}
+
+\begin{remark}[What has and has not been derived]
+\label{rem:not-postulated}
+The tensor $T^{\mathrm{rel}}_{\mu\nu}$ is not an independent postulate. By \eqref{eq:Tdef} and the
+chain rule \eqref{eq:chain-rule} it is the metric functional derivative of a specified
+$\Ggeo$-invariant action satisfying \ref{R1}--\ref{R2}. Different source completions, and
+different couplings of the same completion, produce different $T^{\mathrm{rel}}_{\mu\nu}$,
+$J^{\mu}_{\mathrm{rel}}$, $\mathcal{E}^{\mathrm{rel}}_{\Phi}$. Theorem~\ref{thm:field-eqs} asserts
+only the \emph{structure} of the response---that a completed relation enters Tier-1 dynamics through
+functional variation of an invariant action, with the normalizations displayed---and asserts nothing
+about the magnitude, sign, or empirical existence of any such term. No new interaction is proposed,
+and no empirical claim is made.
+\end{remark}
+
+% ======================================================================
+\section{Ward--Noether identities and covariant consistency}
+\label{sec:noether}
+
+Gauge and diffeomorphism invariance impose Noether identities \cite{Noether1918}, and those
+identities constrain every effective representation of a completed source relation. Two logically
+distinct routes to covariant conservation must be kept apart, and we present them separately.
+
+\begin{convention}[Infinitesimal allowed arrows and the induced field variations]
+\label{conv:lie}
+A base vector field $\xi$ on $M$ does not by itself define a Lie derivative of a principal
+connection or of a section of an associated bundle: differentiating such objects requires a lift of
+the flow of $\xi$ to the total space $P$. We therefore generate the variations from the groupoid
+itself.
+
+Let $(\hat F_t,f_t)_{t\in(-\epsilon,\epsilon)}$ be a smooth one-parameter family of allowed arrows
+of $\Ggeo$ with $(\hat F_0,f_0)=(\id_P,\id_M)$, and let
+\[
+\xi:=\frac{\mathrm{d}}{\mathrm{d}t}\Big|_{t=0} f_t
+\]
+be the generating base vector field, taken compactly supported in the interior of $M$. Write
+$\hat\xi$ for the induced $G$-invariant vector field on $P$ generating $\hat F_t$, which projects to
+$\xi$. The induced infinitesimal variations of the fields are defined by
+\begin{equation}
+\label{eq:delta-xi}
+\begin{aligned}
+\delta_\xi g^{\mu\nu}
+&:=-\frac{\mathrm{d}}{\mathrm{d}t}\Big|_{t=0}\bigl(f_t^{*}g^{\mu\nu}\bigr)
+=-\Lie_\xi g^{\mu\nu},
+\\[0.35em]
+\delta_{\hat\xi} A
+&:=-\frac{\mathrm{d}}{\mathrm{d}t}\Big|_{t=0}\bigl(\hat F_t^{*}A\bigr),
+\\[0.35em]
+\delta_{\hat\xi}\Phi
+&:=-\frac{\mathrm{d}}{\mathrm{d}t}\Big|_{t=0}
+\bigl(\hat F_{t,\rho}^{-1}\circ\Phi\circ f_t\bigr).
+\end{aligned}
+\end{equation}
+The first is intrinsic to the base, and we record the inverse-metric identity we shall use:
+differentiating $g^{\mu\rho}g_{\rho\nu}=\delta^{\mu}_{\nu}$ gives
+\begin{equation}
+\label{eq:lie-inverse}
+\Lie_\xi g^{\mu\nu}=-\bigl(\nabla^{\mu}\xi^{\nu}+\nabla^{\nu}\xi^{\mu}\bigr),
+\end{equation}
+the sign being opposite to that for the covariant metric,
+$\Lie_\xi g_{\mu\nu}=\nabla_\mu\xi_\nu+\nabla_\nu\xi_\mu$. Hence, with the convention
+\eqref{eq:delta-xi},
+\begin{equation}
+\label{eq:delta-xi-metric}
+\delta_\xi g^{\mu\nu}=\nabla^{\mu}\xi^{\nu}+\nabla^{\nu}\xi^{\mu} .
+\end{equation}
+
+The bundle variations require a further remark. The lift $\hat\xi$ of $\xi$ is not unique: any two
+allowed lifts differ by a vertical, i.e.\ gauge, direction. Concretely, in a local trivialization
+over $U\subseteq M$, in which $A$ is represented by $A_\mu$ and $\Phi$ by a $W$-valued map, a choice
+of lift yields
+\begin{equation}
+\label{eq:delta-xi-local}
+\delta_{\hat\xi}A_\mu = -\bigl(\Lie_\xi A\bigr)_\mu + D_\mu\varepsilon,
+\qquad
+\delta_{\hat\xi}\Phi = -\Lie_\xi\Phi - \rho_*(\varepsilon)\,\Phi ,
+\end{equation}
+where $\Lie_\xi$ denotes the coordinate Lie derivative of the local representatives and
+$\varepsilon\in\Gamma(\mathrm{ad}P|_U)$ is the vertical gauge parameter recording the choice of
+lift; changing the lift changes $\varepsilon$. Thus the induced connection variation agrees with the
+naive coordinate Lie derivative only up to a vertical term $D_\mu\varepsilon$, with the
+corresponding representation action $-\rho_*(\varepsilon)\Phi$ on the matter field.
+
+This ambiguity is harmless for the Ward identity of Theorem~\ref{thm:cons}, and we note why once
+here. The extra terms in \eqref{eq:delta-xi-local} are precisely an infinitesimal gauge
+transformation, of the form \eqref{eq:inf-gauge}. In the Ward computation they are contracted with
+the Euler coefficients of $A$ and $\Phi$, which vanish identically on the gauge and matter shell on
+which the theorem is evaluated. The vertical terms therefore multiply zero and drop out, and the
+conclusion is independent of the choice of lift.
+\end{convention}
+
+\begin{definition}[Total stress-energy]
+\label{def:Ttot}
+\begin{equation}
+\label{eq:Ttot}
+T^{\mathrm{tot}}_{\mu\nu}
+:=T^{\mathrm{YM}}_{\mu\nu}+T^{\mathrm{m}}_{\mu\nu}+T^{\mathrm{rel}}_{\mu\nu} .
+\end{equation}
+\end{definition}
+
+\subsection{Route (a): on a full solution, via the contracted Bianchi identity}
+
+\begin{proposition}[Conservation on a full solution]
+\label{prop:cons-bianchi}
+Suppose the Einstein equation \eqref{eq:einstein} holds, with $\Lambda$ constant. Then
+\begin{equation}
+\label{eq:cons-a}
+\nabla^{\mu}T^{\mathrm{tot}}_{\mu\nu}=0 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Take the covariant divergence of \eqref{eq:einstein}. The contracted second Bianchi identity gives
+$\nabla^{\mu}G_{\mu\nu}=0$ \cite{Wald}, and metric compatibility \eqref{eq:LC} with constancy of
+$\Lambda$ gives $\nabla^{\mu}(\Lambda g_{\mu\nu})=0$. Hence
+$8\pi G_N\,\nabla^\mu T^{\mathrm{tot}}_{\mu\nu}=0$, and \eqref{eq:cons-a} follows since
+$G_N\neq0$.
+\end{proof}
+
+This argument uses the Einstein equation: it is valid on a full solution of the coupled system,
+including the gravitational field equation, and it does not establish \eqref{eq:cons-a} from the
+gauge and matter equations alone. Route (b) below derives the same conclusion without the Einstein
+equation, as a Noether identity of diffeomorphism invariance.
+
+\subsection{Route (b): diffeomorphism invariance, independent of the Einstein equation}
+
+\begin{theorem}[Diffeomorphism invariance and on-shell covariant conservation]
+\label{thm:cons}
+Let
+$S_{\mathrm{ng}}:=S_{\mathrm{YM}}+S_{\mathrm{m}}+S_{\mathrm{rel}}$
+denote the nongravitational part of the action \eqref{eq:Stot}, and assume:
+\begin{enumerate}[label=(C\arabic*),leftmargin=2.8em]
+\item\label{C1} \emph{(Invariance.)} $S_{\mathrm{ng}}$ is invariant under every smooth
+      one-parameter family of allowed arrows $(\hat F_t,f_t)$ of $\Ggeo$ with compactly supported
+      generator $\xi$, the fields $(g,A,\Phi)$ transforming as in \eqref{eq:delta-xi}. This is the
+      hypothesis \ref{R2} of Definition~\ref{def:action}, restricted to arrows near the identity;
+\item\label{C2} \emph{(Invariance of the fixed data.)} all data held fixed during the variation are
+      themselves invariant under that flow. Concretely: any background or external structure in
+      $\mathcal{B}$ entering $S_{\mathrm{ng}}$ is either dragged along with the fields or is
+      preserved by the flow; and every relation coordinate $r_\alpha$ in regime (b) of
+      Convention~\ref{conv:two-regimes} (a fixed topological or boundary sector label) satisfies
+      $\delta_\xi r_\alpha=0$, which holds because such labels are $\Ggeo$-invariant by
+      construction and $\xi$ generates arrows of $\Ggeo$;
+\item\label{C3} \emph{(Boundary terms.)} $\xi$ has compact support in the interior of $M$, or the
+      boundary terms generated by the integrations by parts below vanish under the treatment
+      declared in Assumption~\ref{ass:variational};
+\item\label{C4} \emph{(Full Euler coefficients.)} the coefficients of $\delta_{\hat\xi} A_\mu$ and
+      $\delta_{\hat\xi}\Phi$ in $\delta_\xi S_{\mathrm{ng}}$ are the \emph{full} Euler expressions
+      appearing on the left sides of \eqref{eq:ym} and \eqref{eq:matter}---that is, they include the
+      YM, matter, \emph{and} relation contributions, computed with the chain rule
+      \eqref{eq:chain-rule};
+\item\label{C5} \emph{(Availability of lifts.)} for \emph{every} smooth vector field $\xi$ with
+      compact support in the interior of $M$, the admissibility class and allowed-arrow structure of
+      $\Ggeo$ contain a smooth allowed one-parameter family of arrows $(\hat F_t,f_t)$ whose base
+      generator is $\xi$, with the fields $(g,A,\Phi)$ and the fixed data of $\mathcal{B}$
+      transformed as in \eqref{eq:delta-xi}. Thus every such $\xi$ generates an allowed flow to which
+      \ref{C1} and \ref{C2} apply.
+\end{enumerate}
+Write the full Euler operators of the gauge and matter sectors as
+\begin{equation}
+\label{eq:euler-ops}
+\mathcal{G}^{\nu}
+:=\frac{1}{g_{\mathrm{YM}}^{2}}\,D_\mu F^{\mu\nu}
+-\bigl(J^{\nu}_{\mathrm{m}}+J^{\nu}_{\mathrm{rel}}\bigr),
+\qquad
+\mathcal{E}_\Phi
+:=\mathcal{E}^{\mathrm{m}}_{\Phi}+\mathcal{E}^{\mathrm{rel}}_{\Phi},
+\end{equation}
+so that the gauge equation \eqref{eq:ym} reads $\mathcal{G}^{\nu}=0$ and the matter equation
+\eqref{eq:matter} reads $\mathcal{E}_\Phi=0$.
+
+Then diffeomorphism invariance gives the integrated variational identity displayed in the proof. On
+every configuration satisfying $\mathcal{G}^{\nu}=0$ and $\mathcal{E}_\Phi=0$, but not necessarily
+the Einstein equation, one has
+\begin{equation}
+\label{eq:cons-b}
+\nabla^{\mu}T^{\mathrm{tot}}_{\mu\nu}=0 .
+\end{equation}
+If the sectors exchange energy--momentum, the individual divergences $\nabla^\mu T^{X}_{\mu\nu}$
+need not vanish; only the sum does.
+\end{theorem}
+
+\begin{proof}
+By \ref{C1} and \ref{C2}, $\delta_\xi S_{\mathrm{ng}}=0$ \emph{identically} in the fields---this is
+the off-shell content of diffeomorphism invariance, and \ref{C2} is exactly what licenses it, since
+a non-invariant fixed datum would contribute an uncancelled term. Expanding the total variation in
+the three field arguments, with the full Euler coefficients of \ref{C4},
+\begin{equation}
+\label{eq:ward-expand}
+0=\delta_\xi S_{\mathrm{ng}}
+=\int_M\left[
+\frac{\delta S_{\mathrm{ng}}}{\delta g^{\mu\nu}}\,\delta_\xi g^{\mu\nu}
++\Bigl\langle \frac{\delta S_{\mathrm{ng}}}{\delta A_\mu},\,\delta_{\hat\xi} A_\mu\Bigr\rangle
++\Bigl\langle\!\Bigl\langle \frac{\delta S_{\mathrm{ng}}}{\delta \Phi},\,\delta_{\hat\xi} \Phi
+\Bigr\rangle\!\Bigr\rangle
+\right]\mathrm{d}^4x ,
+\end{equation}
+We first identify the three coefficients in \eqref{eq:ward-expand}. By \eqref{eq:Jdef},
+\eqref{eq:Edef} and Lemma~\ref{lem:YMvar}, the coefficient of $\delta_{\hat\xi} A_\mu$ is $\sqrt{-g}$
+times $\mathcal{G}^{\mu}$, and the coefficient of $\delta_{\hat\xi}\Phi$ is $\sqrt{-g}$ times
+$\mathcal{E}_\Phi$, in the notation \eqref{eq:euler-ops}. The coefficient of $\delta_\xi g^{\mu\nu}$
+is, by \eqref{eq:Tdef} and \eqref{eq:Ttot}, equal to $-\tfrac12\sqrt{-g}\,T^{\mathrm{tot}}_{\mu\nu}$.
+Hence \eqref{eq:ward-expand} reads
+\begin{equation}
+\label{eq:ward-three-terms}
+0=
+-\frac12\int_M T^{\mathrm{tot}}_{\mu\nu}\,\delta_\xi g^{\mu\nu}\,\dvol
++\int_M\Bigl[
+\bigl\langle \mathcal{G}^{\mu},\,\delta_{\hat\xi}A_\mu\bigr\rangle
++\bigl\langle\!\bigl\langle \mathcal{E}_\Phi,\,\delta_{\hat\xi}\Phi\bigr\rangle\!\bigr\rangle
+\Bigr]\,\dvol .
+\end{equation}
+Equation \eqref{eq:ward-three-terms} is the integrated variational identity referred to in the
+statement. It holds for every compactly supported $\xi$ generating a family of allowed arrows, and
+we now impose the gauge and matter equations on it.
+
+Accordingly, let the configuration satisfy $\mathcal{G}^{\mu}=0$ and $\mathcal{E}_\Phi=0$. The
+second integral in \eqref{eq:ward-three-terms} then vanishes term by term, whatever the variations
+$\delta_{\hat\xi}A_\mu$ and $\delta_{\hat\xi}\Phi$ happen to be. This is also the step announced in
+Convention~\ref{conv:lie}: whatever lift $\hat\xi$ of $\xi$ was chosen, and hence whatever vertical
+terms $D_\mu\varepsilon$ and $-\rho_*(\varepsilon)\Phi$ appear in \eqref{eq:delta-xi-local}, they
+enter only through $\delta_{\hat\xi}A_\mu$ and $\delta_{\hat\xi}\Phi$, which are here contracted with
+the vanishing $\mathcal{G}^{\mu}$ and $\mathcal{E}_\Phi$; the conclusion is therefore independent of
+the choice of lift. Hence \eqref{eq:ward-three-terms} reduces to
+\[
+0=-\frac12\int_M T^{\mathrm{tot}}_{\mu\nu}\,\delta_\xi g^{\mu\nu}\,\dvol .
+\]
+Insert $\delta_\xi g^{\mu\nu}=\nabla^{\mu}\xi^{\nu}+\nabla^{\nu}\xi^{\mu}$ from
+\eqref{eq:delta-xi-metric}, whose sign is fixed by \eqref{eq:lie-inverse}, and use the symmetry of
+$T^{\mathrm{tot}}_{\mu\nu}$:
+\[
+0=-\int_M T^{\mathrm{tot}}_{\mu\nu}\,\nabla^{\mu}\xi^{\nu}\,\dvol
+=\int_M \bigl(\nabla^{\mu}T^{\mathrm{tot}}_{\mu\nu}\bigr)\,\xi^{\nu}\,\dvol ,
+\]
+the last step by covariant integration by parts, whose boundary term vanishes by \ref{C3}. By
+\ref{C5}, every smooth compactly supported vector field $\xi$ in the interior of $M$ arises as the
+base generator of an allowed flow, so the identity above holds for all such $\xi$; since $\xi$ is
+thereby arbitrary among compactly supported interior fields, the fundamental lemma of the calculus
+of variations gives \eqref{eq:cons-b}.
+
+This argument nowhere uses the Einstein equation: \eqref{eq:cons-b} follows from diffeomorphism
+invariance \cite{Noether1918} together with the gauge and matter equations alone.
+\end{proof}
+
+\subsection{The gauge Ward identity}
+
+\begin{proposition}[Gauge-current identity]
+\label{prop:gauge-current}
+Assume $S_{\mathrm{m}}+S_{\mathrm{rel}}$ is invariant under the vertical (gauge) subgroup
+$\Gau(P)$; that any relation coordinate in regime (b) is gauge invariant (as it is, by
+construction); and that Assumption~\ref{ass:variational} holds. Then on solutions of the matter
+equation \eqref{eq:matter},
+\begin{equation}
+\label{eq:current-cons}
+D_\mu\bigl(J^{\mu}_{\mathrm{m}}+J^{\mu}_{\mathrm{rel}}\bigr)=0 .
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Let $\epsilon\in\Gamma(\mathrm{ad}P)$ be a compactly supported infinitesimal gauge parameter, acting
+by
+\begin{equation}
+\label{eq:inf-gauge}
+\delta_\epsilon A_\mu=D_\mu\epsilon,
+\qquad
+\delta_\epsilon\Phi=-\rho_*(\epsilon)\,\Phi ,
+\end{equation}
+where $\rho_*\colon\gfrak\to\mathfrak{gl}(W)$ is the induced Lie-algebra representation and
+$\delta_\epsilon\Phi$ is valued in $W$ (no inner product on $W$ is used). Gauge invariance gives
+$\delta_\epsilon(S_{\mathrm{m}}+S_{\mathrm{rel}})=0$ identically:
+\[
+0=\int_M\left(
+\Bigl\langle\frac{\delta (S_{\mathrm{m}}+S_{\mathrm{rel}})}{\delta A_\mu},\;D_\mu\epsilon\Bigr\rangle
++\Bigl\langle\!\Bigl\langle
+\frac{\delta (S_{\mathrm{m}}+S_{\mathrm{rel}})}{\delta \Phi},\;-\rho_*(\epsilon)\Phi
+\Bigr\rangle\!\Bigr\rangle
+\right)\mathrm{d}^4x ,
+\]
+the second pairing being the duality pairing of Convention~\ref{conv:matter}(i) between the
+dual-valued Euler operator and the $W$-valued variation. On the matter equation \eqref{eq:matter} the
+second term vanishes. Using \eqref{eq:Jdef}, the first term is
+\[
+0=-\int_M\bigl\langle J^{\mu}_{\mathrm{m}}+J^{\mu}_{\mathrm{rel}},\;D_\mu\epsilon\bigr\rangle\,\dvol .
+\]
+Covariant integration by parts---valid because $\langle\cdot,\cdot\rangle$ is $\Ad$-invariant, hence
+$D$-compatible, and because the boundary term vanishes by Assumption~\ref{ass:variational}---gives
+\[
+0=\int_M\bigl\langle D_\mu\bigl(J^{\mu}_{\mathrm{m}}+J^{\mu}_{\mathrm{rel}}\bigr),\;
+\epsilon\bigr\rangle\,\dvol .
+\]
+Since $\epsilon$ is arbitrary and $\langle\cdot,\cdot\rangle$ is nondegenerate,
+\eqref{eq:current-cons} follows.
+\end{proof}
+
+\begin{remark}[Consistency of the gauge equation with the current identity]
+\label{rem:consistency-check}
+Identity \eqref{eq:current-cons} is consistent with, and indeed implied on shell by, the gauge
+equation \eqref{eq:ym}. Applying $D_\nu$ to \eqref{eq:ym} requires evaluating
+$D_\nu D_\mu F^{\mu\nu}$. Decomposing the second covariant derivative into its symmetric and
+antisymmetric parts in $(\mu,\nu)$ and contracting with the antisymmetric $F^{\mu\nu}$, only the
+antisymmetric part survives:
+\[
+D_\nu D_\mu F^{\mu\nu}
+=\tfrac12\,[D_\nu,D_\mu]\,F^{\mu\nu}
+=\tfrac12\,\bigl[F_{\nu\mu},\,F^{\mu\nu}\bigr] ,
+\]
+by the Ricci identity for the gauge-covariant derivative on a section of $\mathrm{ad}P$, namely
+$[D_\nu,D_\mu]X=[F_{\nu\mu},X]$. (The Levi-Civita curvature terms cancel between the two
+spacetime indices of the antisymmetric $F^{\mu\nu}$, by the first Bianchi identity for $R$.) The
+remaining bracket vanishes: writing $F_{\nu\mu}=-F_{\mu\nu}$ gives
+$[F_{\nu\mu},F^{\mu\nu}]=-[F_{\mu\nu},F^{\mu\nu}]$, and $[X,X]=0$ for the $\gfrak$-valued
+quantity $X=F_{\mu\nu}$ contracted with its own index-raised counterpart. Hence
+$D_\nu D_\mu F^{\mu\nu}=0$, and \eqref{eq:ym} therefore forces
+$D_\mu\bigl(J^{\mu}_{\mathrm{m}}+J^{\mu}_{\mathrm{rel}}\bigr)=0$ after relabelling the free index, in
+agreement with
+Proposition~\ref{prop:gauge-current}. The two derivations are independent: the proposition uses
+only gauge invariance and the matter equation, whereas this computation uses the gauge equation.
+\end{remark}
+
+\begin{remark}[Ward identities as a constraint on realizations]
+\label{rem:noether-constraint}
+Theorem~\ref{thm:cons} and Proposition~\ref{prop:gauge-current} function as selection rules. Every
+effective representation of a completed source relation must satisfy them,
+because they follow from nothing more than the invariance requirement \ref{R2} that made
+$S_{\mathrm{rel}}$ a functional of the physical orbit in the first place. Consequently, a proposed
+correction to the Tier-1 field equations that violates the relevant Ward identity is \emph{not} a
+geometric realization of an invariant completion. This is a sharp, checkable necessary condition on
+any candidate coupling of completed relations to Tier-1 dynamics.
+\end{remark}
+
+% ======================================================================
+\section{From completion to Tier-1 representation}
+\label{sec:tier1}
+
+The completed geometric architecture established by Theorems~\ref{thm:descent},
+\ref{thm:restricted-realization} and \ref{thm:field-eqs} is the factorization
+\begin{equation}
+\label{eq:architecture}
+\Sgeo
+\;\xrightarrow{\;\;\egeo\;\;}\;
+\Egeo
+\;\xrightarrow{\;\;u_A\;\;}\;
+T ,
+\qquad
+u_A\circ\egeo=\pgeo .
+\end{equation}
+The first map retains the readout together with the selected invariant geometric relations; the
+second forgets those completion coordinates and returns the original Tier-1 state. Neither map
+chooses a coordinate chart, a gauge potential, or a preferred representative of a physical orbit:
+$\Sgeo$ is already the orbit space, and $\egeo$ is built from $\Ggeo$-invariant functions. This is
+what it means for the completion to be geometric rather than notational.
+
+When a relation-dependent action is specified in the sense of Definition~\ref{def:action}, the
+completed state enters Tier-1 dynamics through the derived response fields
+\begin{equation}
+\label{eq:responses-summary}
+T^{\mathrm{rel}}_{\mu\nu},
+\qquad
+J^{\mu}_{\mathrm{rel}},
+\qquad
+\mathcal{E}^{\mathrm{rel}}_{\Phi} .
+\end{equation}
+A distinction must be drawn here, since the two halves of the construction carry invariance in
+different senses, and conflating them would misdescribe the responses.
+
+\emph{Invariance.} What is invariant are the \emph{scalars} and the \emph{orbit-defined
+information}: the action $S_{\mathrm{rel}}$ is a $\Ggeo$-invariant functional by hypothesis
+\ref{R2}; the relation coordinates $r_\alpha$ and the readout $\pgeo$ are functions on the orbit
+space $\Sgeo$ by Definition~\ref{def:invariant-relation}; and the completion \eqref{eq:architecture}
+is assembled from these.
+
+\emph{Covariance.} The responses \eqref{eq:responses-summary}, by contrast, are \emph{not} invariant
+pointwise, and are not scalars. They are the functional derivatives of an invariant action with
+respect to the fields, hence tensorial objects on $M$ carrying spacetime and representation indices:
+$T^{\mathrm{rel}}_{\mu\nu}$ is a symmetric $2$-tensor, $J^{\mu}_{\mathrm{rel}}$ an
+$\mathrm{ad}P$-valued spacetime vector field, and $\mathcal{E}^{\mathrm{rel}}_{\Phi}$ a section of
+the dual matter bundle. Under an arrow $(\hat F,f)$ of $\Ggeo$ they transform \emph{covariantly}---by pushforward of
+tensor indices along $f$ and by the adjoint or dual representation along $\hat F$---rather than
+being fixed. Thus, for instance, $J^{\mu}_{\mathrm{rel}}\mapsto \Ad_{h^{-1}}J^{\mu}_{\mathrm{rel}}$
+under a gauge transformation $h$, and $T^{\mathrm{rel}}_{\mu\nu}\mapsto (f^{-1})^{*}
+T^{\mathrm{rel}}_{\mu\nu}$ under an allowed diffeomorphism $f$.
+
+The correct statement is therefore the following. What descends to the orbit space is the invariant
+action and the relation data; what the variation produces is a family of covariant response tensors,
+one per gauge and coordinate representative, transforming into one another under the arrows of
+$\Ggeo$. It is precisely this covariance---not pointwise invariance---that makes the field equations
+\eqref{eq:einstein}--\eqref{eq:matter} well posed as equations between tensors, and that makes the
+Ward identities of Section~\ref{sec:noether} meaningful: $\nabla^{\mu}T^{\mathrm{tot}}_{\mu\nu}=0$
+is a covariant equation, and is preserved under the arrows of $\Ggeo$ rather than being invariant
+under them in the sense of Definition~\ref{def:invariant-relation}. By
+Theorem~\ref{thm:field-eqs} and Section~\ref{sec:noether}, the responses
+\eqref{eq:responses-summary} are correctly normalized, Ward-consistent, covariant objects obtained
+by functional variation of a $\Ggeo$-invariant action.
+
+This is the whole of what the present paper establishes about dynamics, and the boundary of the
+argument should be stated precisely. Paper~4 constructs covariant response fields from
+$\Ggeo$-invariant actions. It does not determine whether the resulting Tier-1 evolution closes autonomously on $T$, which
+completion coordinates (if any) must be retained for a closed description, what happens when
+unresolved variables are eliminated, or whether such elimination produces memory or other
+history-dependent effective behaviour. In particular, no inference of Tier-1 autonomy may be drawn
+merely from the observation that some response functional happens to descend to a function of $t$ at
+the kinematic level considered here: descent of a response at one level does not establish closure of
+an evolution, and the two questions are not the same. Autonomous closure, retained variables,
+elimination, memory, and projected evolution require the separate analysis of Paper~5, and are not
+treated here.
+
+% ======================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+Canonical source completion acquires physical meaning only on a domain where its relation
+coordinates are jointly realized by compatible geometric data. Four results establish where that
+domain lies and what it supports.
+
+The geometric descent theorem (Theorem~\ref{thm:descent}) constructs the global metric, principal
+bundle, connection, and matter section from compatible local data, uniquely up to bundle
+isomorphism, with the global time-orientation condition treated explicitly
+(Remark~\ref{rem:descent-time}); its corollary (Corollary~\ref{cor:realizability-boundary}) exhibits
+the realizability boundary, since relation values admitting no compatible descent data are simply
+outside the geometric realization domain. Passage to the orbit space of the bundle-automorphism
+groupoid (Definition~\ref{def:sgeo}) removes coordinate and gauge redundancy \emph{before}
+completion, so that no gauge representative is taken for a physical state; the isotropy of a
+configuration is its stabilizer, which is in general a proper subgroup of the ambient automorphism
+group (Remark~\ref{rem:isotropy}). The restricted geometric realization theorem
+(Theorem~\ref{thm:restricted-realization}) then identifies the joint image of the readout and the
+declared invariant relations with the canonical minimal completion of Paper~3---relative to that
+family, and only on that domain---while the orbit reconstruction criterion
+(Proposition~\ref{prop:orbit-reconstruction}) reduces exact reconstruction to a separation question
+in invariant theory, answered case by case and never by fiat.
+
+The flat-circle classification (Theorem~\ref{thm:hol-class} and
+Corollaries~\ref{cor:hol-completion}--\ref{cor:spec}) shows in a fully solvable case that a global
+relation can completely parametrize a reduced source even when local curvature vanishes identically,
+and that a coarser declared relation leaves a strictly coarser completion behind. Finally, invariant
+relation-dependent actions (Theorem~\ref{thm:field-eqs}) convert completed structure into correctly
+normalized Einstein, Yang--Mills, and matter equations, with the associated covariant response
+fields derived rather than postulated, and the Ward--Noether identities (Proposition~\ref{prop:cons-bianchi},
+Theorem~\ref{thm:cons}, Proposition~\ref{prop:gauge-current}) enforce covariant conservation and
+supply a sharp necessary condition on any candidate realization.
+
+This supplies the geometric bridge from abstract completion to observable Tier-1 structure. It does
+not assert that every abstract completion is geometrically realizable, that any finite family of
+local invariants separates Lorentzian geometries, or anything about the physical status of our
+universe. The dynamical questions of closure, retention, elimination, and memory belong to Paper~5.
+
+% ======================================================================
+\begin{thebibliography}{99}
+
+\bibitem{AharonovBohm}
+Y.~Aharonov and D.~Bohm,
+\emph{Significance of Electromagnetic Potentials in the Quantum Theory},
+Physical Review \textbf{115} (1959), 485--491.
+
+\bibitem{AmbroseSinger}
+W.~Ambrose and I.~M.~Singer,
+\emph{A theorem on holonomy},
+Transactions of the American Mathematical Society \textbf{75} (1953), 428--443.
+
+\bibitem{Bleecker}
+D.~Bleecker,
+\emph{Gauge Theory and Variational Principles},
+Addison--Wesley, Reading, MA, 1981.
+
+\bibitem{ChernWeil}
+S.-S.~Chern,
+\emph{Complex Manifolds Without Potential Theory},
+2nd ed., Springer, New York, 1979.
+
+\bibitem{GibbonsHawking1977}
+G.~W.~Gibbons and S.~W.~Hawking,
+\emph{Action integrals and partition functions in quantum gravity},
+Physical Review D \textbf{15} (1977), 2752--2756.
+
+\bibitem{KobayashiNomizu1}
+S.~Kobayashi and K.~Nomizu,
+\emph{Foundations of Differential Geometry}, Volume I,
+Interscience Publishers, New York, 1963.
+
+\bibitem{KobayashiNomizu2}
+S.~Kobayashi and K.~Nomizu,
+\emph{Foundations of Differential Geometry}, Volume II,
+Interscience Publishers, New York, 1969.
+
+\bibitem{MilnorStasheff}
+J.~W.~Milnor and J.~D.~Stasheff,
+\emph{Characteristic Classes},
+Annals of Mathematics Studies 76, Princeton University Press, Princeton, NJ, 1974.
+
+\bibitem{Noether1918}
+E.~Noether,
+\emph{Invariante Variationsprobleme},
+Nachrichten von der Gesellschaft der Wissenschaften zu G\"ottingen,
+Mathematisch-Physikalische Klasse (1918), 235--257.
+
+\bibitem{Pravda2002}
+V.~Pravda, A.~Pravdov\'a, A.~Coley, and R.~Milson,
+\emph{All spacetimes with vanishing curvature invariants},
+Classical and Quantum Gravity \textbf{19} (2002), 6213--6236.
+
+\bibitem{Steenrod}
+N.~Steenrod,
+\emph{The Topology of Fibre Bundles},
+Princeton University Press, Princeton, NJ, 1951.
+
+\bibitem{Wald}
+R.~M.~Wald,
+\emph{General Relativity},
+University of Chicago Press, Chicago, 1984.
+
+\bibitem{WuYang}
+T.~T.~Wu and C.~N.~Yang,
+\emph{Concept of nonintegrable phase factors and global formulation of gauge fields},
+Physical Review D \textbf{12} (1975), 3845--3857.
+
+\bibitem{YangMills1954}
+C.~N.~Yang and R.~L.~Mills,
+\emph{Conservation of Isotopic Spin and Isotopic Gauge Invariance},
+Physical Review \textbf{96} (1954), 191--195.
+
+\bibitem{York1972}
+J.~W.~York, Jr.,
+\emph{Role of Conformal Three-Geometry in the Dynamics of Gravitation},
+Physical Review Letters \textbf{28} (1972), 1082--1085.
+
+\bibitem{ST1}
+J.~Rodgers,
+\emph{Source--Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions},
+Zenodo, 2026.
+\href{https://doi.org/10.5281/zenodo.21369967}{doi:10.5281/zenodo.21369967}.
+
+\bibitem{ST2}
+J.~Rodgers,
+\emph{Target-Relative Necessity of Completion: When Readout Loss Obstructs, and What a Sufficient
+Extension Must Retain},
+Zenodo, 2026.
+\href{https://doi.org/10.5281/zenodo.21370501}{doi:10.5281/zenodo.21370501}.
+
+\bibitem{ST3}
+J.~Rodgers,
+\emph{Canonical Minimal Source Completion: The Coarsest Readout Extension on which a Nominated
+Family of Source Relations Becomes Well Defined},
+Zenodo, 2026.
+\href{https://doi.org/10.5281/zenodo.21370763}{doi:10.5281/zenodo.21370763}.
+
+\end{thebibliography}
+
+\end{document}

@@ -16,6 +16,7 @@ export interface NavItem {
 export const navigation: NavItem[] = [
   { href: "/", label: "Home" },
   { href: "/framework", label: "Framework" },
+  { href: "/source-readout", label: "Source & Readout" },
   { href: "/atlas", label: "Atlas" },
   { href: "/quantum-measurement", label: "Quantum Measurement" },
   { href: "/consciousness", label: "Consciousness" },
@@ -29,6 +30,7 @@ export const navigation: NavItem[] = [
 
 /** Secondary links rendered in the footer only. */
 export const footerLinks: NavItem[] = [
+  { href: "/source-readout/manifest.json", label: "Source–readout text inventory" },
   { href: "/sitemap.xml", label: "Sitemap" },
   { href: "/feed.xml", label: "Feed" },
   { href: "/llms.txt", label: "llms.txt" },

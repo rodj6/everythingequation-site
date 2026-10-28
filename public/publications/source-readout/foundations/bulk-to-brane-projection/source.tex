@@ -1,0 +1,2625 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs}
+\usepackage{bm}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{enumitem}
+
+\hypersetup{colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\newcommand{\kfive}{\kappa_5}
+\newcommand{\kfour}{\kappa_4}
+\newcommand{\Lfive}{\Lambda_5}
+\newcommand{\Lfour}{\Lambda_4}
+\newcommand{\TT}{\mathrm{TT}}
+\newcommand{\KK}{\mathrm{KK}}
+\newcommand{\RS}{\mathrm{RS}}
+\newcommand{\Diff}{\mathrm{Diff}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Op}{\operatorname{Op}}
+\newcommand{\ee}{\mathbf{e}}
+
+\title{\bf Bulk-to-Brane Projection, Dynamical Nonclosure, and Observable
+Residues in Randall--Sundrum Gravity}
+
+\author{%
+  Jeremy Rodgers\thanks{Website: \href{https://everythingequation.com}{everythingequation.com}}\\
+  \small Independent Researcher
+}
+
+\date{June 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We study, within the positive-tension, two-sided, $Z_2$-symmetric
+Randall--Sundrum model (RS2), the precise sense in which the
+instantaneous state of a brane observer fails to determine its own
+future, and the precise sense in which that failure can and cannot be
+detected. Selecting RS2 is an additional physical postulate; nothing
+below derives it. For a brane of tension $\lambda>0$ with
+five-dimensional coupling $\kfive^2$, bulk cosmological constant
+$\Lfive$, induced metric $q_{\mu\nu}$, and brane stress tensor
+$T_{\mu\nu}$, the Israel condition and the Gauss--Codazzi identity give
+the exact projected equation
+$G_{\mu\nu}[q]+\Lfour q_{\mu\nu}=\kfour^2T_{\mu\nu}
++\mathcal C^{\RS}_{\mu\nu}$ with
+$\mathcal C^{\RS}_{\mu\nu}=\kfive^4\Pi_{\mu\nu}-E_{\mu\nu}$,
+where $\Pi_{\mu\nu}$ is quadratic in $T_{\mu\nu}$ and $E_{\mu\nu}$ is
+the electric projection of the bulk Weyl tensor. We construct an
+explicit gauge-inequivalent pair of bulk data with identical brane
+readout and different brane futures, proving that the source evolution
+admits no deterministic quotient flow on the instantaneous brane Cauchy
+state over the full RS2 source domain. We then evaluate the projection
+exactly in the homogeneous Friedmann sector, obtaining a positive
+$\rho^2$ term and a bulk-state-dependent dark-radiation term $\mu/a^4$.
+In the linear weak-field sector the Gaussian/Schur-complement elimination
+of the bulk is exact at linear tree level; evaluating the resulting
+response asymptotically for $r\gg\ell$ --- a controlled expansion, not an
+exact closed form at arbitrary distance --- gives the long-distance
+potentials
+$\Phi=-\tfrac{G_4M}{r}(1+\tfrac{2\ell^2}{3r^2}+\cdots)$ and
+$\Psi=-\tfrac{G_4M}{r}(1+\tfrac{\ell^2}{3r^2}+\cdots)$.
+Eliminating the common AdS radius $\ell$ between the two regimes yields
+the parameter-free cross-regime relation
+$A_\Psi=\tfrac12A_\Phi$, $B=\tfrac{\kfour^4}{24}A_\Phi
+=\tfrac{\kfour^4}{12}A_\Psi$,
+where $H^2\supset B\rho^2$ and $A_\Phi,A_\Psi$ are the leading $1/r^3$
+potential coefficients. Violation falsifies minimal RS2; agreement at a
+nonzero value is a parameter-saving cross-regime success but does not
+falsify a four-dimensional theory that treats the three coefficients as
+independent. Finally, an elementary pushforward lemma fixes the exact
+interpretive boundary: for every brane-only protocol, including adaptive
+ones, the induced Tier-1 history law reproduces the RS2 record
+distribution exactly, and in RS2 this
+obstruction is realized concretely by the four-dimensional
+gravity-plus-CFT description, which reproduces the same $1/r^3$
+residue. The result is therefore positive at the level of model-relative
+projection and nonclosure, and negative at the level of unrestricted
+ontological discrimination.
+\end{abstract}
+
+\tableofcontents
+
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{The physical problem}
+
+A brane observer in a braneworld model has direct access to the induced
+metric on the brane and to the matter fields confined there. Gravity,
+however, propagates in the bulk. Two questions immediately arise, and
+they are logically independent.
+
+The first is a question about \emph{states}. Does the instantaneous
+brane data --- induced three-metric, its brane-intrinsic extrinsic
+curvature, and matter Cauchy data --- determine the subsequent brane
+history? If not, the brane state is incomplete relative to brane
+evolution: there exist bulk configurations, physically distinct after
+every gauge identification has been made, which look identical now and
+diverge later.
+
+The second is a question about \emph{theories}. Suppose the answer to
+the first question is negative. Does it follow that a brane observer
+could, even in principle, discover that the world is five-dimensional?
+This does not follow, and the distinction is the central logical point
+of this paper. Failure of a deterministic flow on the \emph{instantaneous}
+state is not failure of every brane-only history law. Any source theory,
+pushed forward through any readout map, defines a brane-only stochastic
+process with exactly the correct statistics; that process is generally
+nonlocal, non-Markovian, and state-dependent, but it is a complete
+theory of brane records.
+
+We answer both questions inside the specific model that makes them
+sharpest.
+
+\subsection{Contributions}
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{An explicit same-readout witness.} We exhibit two
+linearized RS2 source data sets which agree exactly on the instantaneous
+brane readout, are \emph{not} related by any five-dimensional
+diffeomorphism (their gauge-invariant Weyl curvature differs), and whose
+brane futures differ. Existence of such data is proved, not asserted, by
+an explicit Kaluza--Klein spectral construction using the positivity of
+the brane spectral weight $u_m(0)^2$. This establishes failure of
+deterministic projectability of the source flow onto the instantaneous
+brane Cauchy state, over the full RS2 source domain
+(Section~\ref{sec:witness}, Theorem~\ref{thm:main} part 1). The result is conditional on that source
+domain: if the model is \emph{defined} to admit only the stationary
+vacuum bulk state, the witness lies outside the domain
+(Section~\ref{sec:failure}, item 1).
+
+\item \textbf{Derivation, not quotation, of the projected equation.}
+Section~\ref{sec:projected} carries out the Israel matching and
+Gauss--Codazzi projection in full, including all coefficients, signs, and
+dimensions, and derives the Bianchi/nonclosure relation
+$\nabla^\mu E_{\mu\nu}=\kfive^4\nabla^\mu\Pi_{\mu\nu}$, which constrains
+the divergence of $E_{\mu\nu}$ but not its transverse-traceless content.
+
+\item \textbf{Complete evaluation in two regimes.} The homogeneous sector
+(Section~\ref{sec:frw}) is evaluated exactly. In the linear weak-field
+sector (Section~\ref{sec:linear}) two distinct claims must be kept apart:
+the Gaussian/Schur-complement elimination of the bulk is \emph{exact at
+linear tree level}, whereas the resulting metric potentials
+\eqref{eq:potentials} are a \emph{controlled asymptotic evaluation} valid
+for $r\gg\ell$ and not an exact expression at arbitrary distance. Brane
+bending is treated explicitly throughout.
+
+\item \textbf{A parameter-eliminated cross-regime relation.} Eliminating
+$\ell$ between the two regimes gives
+$A_\Psi=A_\Phi/2$ and $B=\kfour^4A_\Phi/24$
+(Section~\ref{sec:crossregime}). We claim no literature priority for this
+algebraic elimination; the two input results are established. Its content
+is a falsifiable, parameter-free link between two otherwise independent
+observational sectors.
+
+\item \textbf{An exact operational-discrimination boundary.}
+Section~\ref{sec:opeq} gives the classical pushforward lemma --- whose
+proof is immediate, and whose value is interpretive rather than technical
+--- together with its quantum process-tensor and closed-time-path forms,
+and states exactly what is and is not excluded (Section~\ref{sec:main}).
+\end{enumerate}
+
+\subsection{Relation to established results, and this paper's contribution}
+\label{sec:relation}
+
+The physical inputs used below are established results and are credited as
+such. The RS2 model and its tuning are due to Randall and Sundrum
+\cite{RS2}. The junction condition is Israel's \cite{Israel}, and the
+projected brane equation with $\Pi_{\mu\nu}$ and $E_{\mu\nu}$ is that of
+Shiromizu, Maeda, and Sasaki \cite{SMS}. The brane Friedmann equation with
+its $\rho^2$ and $\mu/a^4$ terms is due to Binetruy, Deffayet, Ellwanger,
+and Langlois \cite{BDEL} and Mukohyama \cite{Mukohyama1,Mukohyama2}. The
+linearized brane propagator, the KK spectral weight, the brane-bending
+treatment, and the long-distance potentials are due to Garriga and Tanaka
+\cite{GarrigaTanaka} and Giddings, Katz, and Randall \cite{GKR}. The
+four-dimensional CFT reproduction of the $1/r^3$ residue is due to Duff
+and Liu \cite{DuffLiu} and related work
+\cite{APR,PerezVictoria}. The influence-functional
+\cite{FeynmanVernon}, Mori--Zwanzig \cite{MoriZwanzig}, and process-tensor
+\cite{Pollock} formalisms are standard.
+
+The distinctive contribution of this paper is their integration into a
+single proved chain. Concretely, we establish that
+\begin{equation}
+\label{eq:chain}
+\text{same instantaneous brane state}
+\;\not\Rightarrow\;
+\text{same brane future},
+\end{equation}
+by way of
+\begin{equation}
+\label{eq:chain2}
+\begin{gathered}
+\text{explicit gauge-reduced bulk witness}
+\;+\;
+\mathcal C^{\RS}_{\mu\nu}=\kfive^4\Pi_{\mu\nu}-E_{\mu\nu}\\
++\;\text{parameter-eliminated cross-regime relation}
+\;+\;\text{exact operational-discrimination boundary}.
+\end{gathered}
+\end{equation}
+The projected equation and the weak-field and cosmological inputs are
+established physics; what is new here is the rigorous combined
+source/readout argument \cite{Paper1,Paper2,Paper3,Paper4,Paper5,Paper6},
+the explicit spectral construction of the
+same-readout witness, the cross-regime algebraic synthesis, and the exact
+statement of its interpretive boundary. We make no literature-priority
+claim for the coefficient elimination itself.
+
+\subsection{Scope, and what is \emph{not} claimed}
+\label{sec:scope}
+
+RS2 is not derived from any prior structure; its selection is a physical
+postulate. Nothing below shows that our universe \emph{is} a projection.
+The cross-regime relation does not prove five-dimensional ontology:
+Section~\ref{sec:fourdim} exhibits a four-dimensional realization of the
+same weak-field residue, and Section~\ref{sec:opeq} proves that no
+brane-only experiment can do better. The KK branch cut excludes only a
+pre-specified finite-pole free or tree-level linear alternative, not every
+local interacting four-dimensional theory. The long-distance weak-field
+expansion is not valid at $r\lesssim\ell$, and the bulk parameter $\mu$ is
+not fixed without a bulk-state condition. All nine conditions on which the
+positive results depend --- including the bulk-state domain, the RS
+tuning, positive tension, the no-flux assumption, and the detuned-brane
+limitation --- are collected once, in Section~\ref{sec:failure}, and are
+not repeated elsewhere.
+
+\section{The five-dimensional source model}
+\label{sec:model}
+
+\subsection{Action and conventions}
+
+Let $(\mathcal M_5,g_{AB})$ be a five-dimensional Lorentzian manifold
+containing a timelike hypersurface $\Sigma$ (the brane). Capital Latin
+indices $A,B,\dots$ run over the five dimensions; Greek indices
+$\mu,\nu,\dots$ are tangent to $\Sigma$; Latin $i,j,\dots$ are spatial on
+a brane Cauchy slice. The signature is $(-++++)$, and $c=\hbar=1$. The
+classical action is
+\begin{equation}
+\label{eq:action}
+\begin{aligned}
+S_5[g,X,\psi]
+={}&\frac{1}{2\kfive^2}\int_{\mathcal M_5}d^5x\,\sqrt{-g_5}\,
+\bigl(R_5-2\Lfive\bigr)\\
+&+\frac{1}{\kfive^2}\sum_{\pm}\int_{\Sigma}d^4x\,\sqrt{-q}\,K_\pm
++\int_{\Sigma}d^4x\,\sqrt{-q}\,
+\bigl[-\lambda+\mathcal L_m(q,\psi)\bigr].
+\end{aligned}
+\end{equation}
+Gibbons--Hawking--York terms appear on \emph{both} sides of the thin
+brane, with the corresponding outward normals. The embedding is
+$X^A(x^\mu)$, the tangent basis $e^A{}_\mu=\partial_\mu X^A$, the unit
+spacelike normal $n^A$, and
+\begin{equation}
+\label{eq:induced}
+q_{\mu\nu}=g_{AB}e^A{}_\mu e^B{}_\nu,
+\qquad
+K_{\mu\nu}=e^A{}_\mu e^B{}_\nu\nabla_A n_B .
+\end{equation}
+The sign convention for $\Lfive$ is fixed by requiring the bulk field
+equation away from the brane to read
+\begin{equation}
+\label{eq:bulkEE}
+{}^{(5)}G_{AB}+\Lfive g_{AB}=0 ,
+\end{equation}
+so $[\Lfive]=L^{-2}$. The brane stress tensor is
+\begin{equation}
+\label{eq:Tdef}
+T_{\mu\nu}=-\frac{2}{\sqrt{-q}}
+\frac{\delta(\sqrt{-q}\,\mathcal L_m)}{\delta q^{\mu\nu}} .
+\end{equation}
+Dimensionally, $[\kfive^2]=L^3$, $[\kfour^2]=L^2$, $[T_{\mu\nu}]=L^{-4}$,
+and $[E_{\mu\nu}]=L^{-2}$. The brane tension appears in \eqref{eq:action}
+integrated over $d^4x$, exactly like $\mathcal L_m$; it is therefore a
+four-dimensional energy density,
+\begin{equation}
+\label{eq:lambdadim}
+[\lambda]=L^{-4},
+\qquad
+[\kfive^2\lambda]=L^{3}\cdot L^{-4}=L^{-1}.
+\end{equation}
+This is consistent throughout: $K_{\mu\nu}\sim\kfive^2\lambda$ has
+dimension $L^{-1}$, as an extrinsic curvature must; and
+$\kfour^2=\kfive^4\lambda/6$ gives
+$[\kfour^2]=L^{6}\cdot L^{-4}=L^{2}$, as required.
+
+Varying \eqref{eq:action} with respect to $g_{AB}$ gives
+\eqref{eq:bulkEE} in the bulk together with the Israel junction condition
+at $\Sigma$; varying with respect to $X^A$ gives the brane equation of
+motion, which for a $Z_2$-symmetric configuration is implied by the
+junction condition and the Codazzi identity. The response tensor
+$\mathcal C^{\RS}_{\mu\nu}$ below is obtained from this variation; it is
+not introduced by hand.
+
+\subsection{Physical equivalence and the reduced source space}
+
+\begin{definition}[Source configuration]
+\label{def:source}
+A source configuration is a tuple
+\begin{equation}
+\label{eq:sourcetuple}
+s=\bigl(g_{AB},\,X^A,\,\psi;\ \text{initial and boundary data}\bigr),
+\end{equation}
+solving the five-dimensional constraints, with the brane embedded as a
+timelike hypersurface.
+\end{definition}
+
+\begin{definition}[Physical equivalence]
+\label{def:equiv}
+Two source configurations are physically equivalent when related by a
+five-dimensional diffeomorphism carrying the brane and its orientation to
+the same physical hypersurface, composed with an internal gauge
+transformation of the brane matter fields. The reduced source space is
+\begin{equation}
+\label{eq:Sspace}
+S_{\RS}
+=\frac{\{(g_{AB},X^A,\psi;\ \text{data})\ \text{solving the constraints}\}}
+{\Diff_5\ltimes\mathcal G_m}.
+\end{equation}
+\end{definition}
+
+This quotient does \emph{not} remove bulk transverse-traceless
+gravitational waves, Kaluza--Klein continuum amplitudes, or the
+AdS--Schwarzschild mass parameter. Each changes gauge-invariant
+five-dimensional curvature invariants, energy flux, horizon structure, or
+the later induced brane metric, and hence is not pure gauge. This point
+is what makes the witness of Section~\ref{sec:witness} a genuine physical
+distinction rather than a coordinate artifact.
+
+\subsection{The instantaneous brane readout}
+\label{sec:readout}
+
+Choose a five-dimensional Cauchy surface $\mathcal C_5$ intersecting the
+brane worldvolume in a three-dimensional surface $\mathcal C_3$.
+
+\begin{definition}[Tier-1 readout]
+\label{def:readout}
+The instantaneous brane readout is the map
+\begin{equation}
+\label{eq:readout}
+p:S_{\RS}\longrightarrow T_{\mathrm{brane}},
+\qquad
+p(s)=\bigl(\gamma_{ij},\Theta_{ij};\ \psi,\pi_\psi\bigr)\big|_{\mathcal C_3},
+\end{equation}
+where $\gamma_{ij}$ is the three-metric induced on $\mathcal C_3$,
+$\Theta_{ij}$ is the extrinsic curvature of $\mathcal C_3$ regarded as a
+spatial hypersurface \emph{within the brane worldvolume}, and
+$(\psi,\pi_\psi)$ are the brane matter Cauchy data. The constraints
+induced from the five-dimensional equations and the matter gauge
+constraints are imposed; spatial diffeomorphisms of $\mathcal C_3$ and
+matter gauge transformations are quotiented.
+\end{definition}
+
+Two features of this definition matter. First, $\Theta_{ij}$ records the
+gauge-independent first normal derivative of the induced metric along the
+brane without presupposing that the brane possesses a closed intrinsic
+Einstein Hamiltonian --- which is exactly what is at issue. Second, the
+quotient by spatial diffeomorphisms and the imposition of the constraints
+means that no lapse-, shift-, or time-coordinate-dependent velocity
+enters, so the readout is not made noninjective by a trivial gauge
+artifact.
+
+The readout is physically motivated inside the model: standard-model
+matter is confined to $\Sigma$, and local rods, clocks, detectors, and
+gravitational-wave interferometers respond to induced brane fields. Bulk
+data can be inferred only through their subsequent influence on those
+fields; they are not components of the present brane state.
+
+\begin{remark}[Instantaneity is essential]
+\label{rem:instant}
+If the readout were redefined to include the \emph{complete} brane
+history for all times, any bulk distinction that changes that history
+would by definition already be distinguished. The dynamical question is
+precisely whether the present brane state closes under time evolution.
+Sections~\ref{sec:witness} and \ref{sec:opeq} answer the two versions of
+the question in opposite directions, and it is essential not to conflate
+them.
+\end{remark}
+
+\section{A genuine same-readout bulk distinction}
+\label{sec:witness}
+
+Linearize about the positive-tension RS2 background,
+\begin{equation}
+\label{eq:background}
+ds^2=dy^2+e^{-2|y|/\ell}\eta_{\mu\nu}dx^\mu dx^\nu,
+\qquad
+\Lfive=-\frac{6}{\ell^2},
+\qquad
+\lambda=\frac{6}{\kfive^2\ell},
+\end{equation}
+which is the tuning that makes the brane worldvolume flat. After fixing
+five-dimensional diffeomorphisms, the bulk perturbation retains
+gauge-invariant transverse-traceless (TT) gravitational modes.
+
+\begin{proposition}[Same readout, different future]
+\label{prop:witness}
+Let the admissible source domain include smooth, finite-energy TT bulk
+initial data. Consider
+\begin{align}
+s_0&:\quad h^{\TT}_{AB}=0,
+\label{eq:s0}\\
+s_1&:\quad h^{\TT}_{AB}\ \text{a smooth wave packet whose initial
+support lies a positive bulk distance from }\Sigma,
+\label{eq:s1}
+\end{align}
+with the packet chosen so that $h^{\TT}_{AB}$ and its first time
+derivative vanish identically in a neighborhood of the brane on the
+initial Cauchy surface. Then
+\begin{equation}
+\label{eq:samereadout}
+p(s_0)=p(s_1),
+\end{equation}
+the configurations $s_0$ and $s_1$ are not physically equivalent in the
+sense of Definition~\ref{def:equiv}, and there exists $\tau>0$ with
+\begin{equation}
+\label{eq:diffFuture}
+p(\Phi_\tau s_0)\ne p(\Phi_\tau s_1),
+\end{equation}
+where $\Phi_t$ is the source evolution flow.
+\end{proposition}
+
+\begin{proof}
+Equation \eqref{eq:samereadout} holds because the readout
+\eqref{eq:readout} depends only on data at $\mathcal C_3\subset\Sigma$
+and on a neighborhood of $\mathcal C_3$ within the brane, and by
+construction $h^{\TT}$ and $\partial_t h^{\TT}$ vanish there; the induced
+three-metric, its brane-intrinsic extrinsic curvature, and the matter
+data therefore coincide.
+
+The two configurations are not gauge-related. The linearized
+five-dimensional Weyl tensor of $s_1$ is nonzero on the support of the
+packet, while that of $s_0$ vanishes identically. Weyl curvature is a
+tensor; a diffeomorphism cannot map a configuration with vanishing
+gauge-invariant curvature to one with nonvanishing curvature. Hence
+$[s_0]\ne[s_1]$ in $S_{\RS}$.
+
+It remains to prove \eqref{eq:diffFuture}, i.e.\ that a packet with the
+stated properties \emph{exists} and does eventually disturb the brane.
+This is established by an explicit spectral construction, which we now
+give.
+
+\emph{(i) The homogeneous brane boundary condition.} Set the brane source
+in \eqref{eq:bulkwave} to zero and integrate that equation across the
+brane over $y\in(-\epsilon,\epsilon)$. The $\partial_y^2$ term gives
+$\partial_yh^{\TT}_{\mu\nu}\big|_{0^-}^{0^+}$; the $\delta(y)$ term gives
+$(4/\ell)h^{\TT}_{\mu\nu}(0)$; the remaining terms are bounded and drop
+out as $\epsilon\to0$. Using $Z_2$ symmetry,
+$\partial_yh^{\TT}\big|_{0^-}=-\partial_yh^{\TT}\big|_{0^+}$, so
+\begin{equation}
+\label{eq:homobc}
+\Bigl(\partial_y+\frac{2}{\ell}\Bigr)h^{\TT}_{\mu\nu}\Big|_{y=0^+}=0 ,
+\end{equation}
+in the conventions of \eqref{eq:bulkwave}. This is the homogeneous RS2
+boundary condition.
+
+\emph{(ii) The mode basis.} Let $\{u_m(y)\}$ be the complete set of
+eigenfunctions of the transverse operator appearing in
+\eqref{eq:bulkwave}, defined on the physical half-space $y\ge0$ with the
+homogeneous Robin condition \eqref{eq:homobc} at $y=0^+$ and the
+appropriate regularity condition in the bulk interior, and extended to the
+two-sided covering space by the required $Z_2$ reflection. The spectrum
+consists of
+\begin{itemize}[leftmargin=*]
+\item one \emph{normalizable discrete} zero mode
+$u_0\propto e^{-2|y|/\ell}$; and
+\item a \emph{delta-normalized generalized continuum} $\{u_m\}_{m>0}$ of
+Bessel combinations satisfying \eqref{eq:homobc} and the bulk/horizon
+condition.
+\end{itemize}
+The continuum modes are \emph{not} normalizable; they are delta-normalized
+in the usual generalized sense, and together with $u_0$ they furnish a
+complete resolution of the identity on the relevant space of TT bulk data
+\cite{RS2,GarrigaTanaka,GKR}.
+
+\emph{(iii) Time-symmetric continuum data.} Choose
+\begin{equation}
+\label{eq:tsym}
+\partial_t h^{\TT}_{\mu\nu}\big|_{t=0}=0,
+\end{equation}
+together with a nonzero smooth, finite-energy TT displacement
+$h^{\TT}_{\mu\nu}\big|_{t=0}$ whose support lies in $y\ge y_0>0$ and which
+is \emph{orthogonal to the normalizable zero mode}, so that it lies
+entirely in the KK continuum subspace. Such data exist: the zero-mode
+overlap is a single linear functional on the displacement, so given any
+two smooth profiles supported in disjoint regions of $y\ge y_0$ with
+nonzero and unequal zero-mode overlaps, an appropriate linear combination
+of them annihilates that functional while remaining nonzero, smooth, and
+supported away from the brane. Because the data vanish identically in a
+neighborhood of the brane, all compatibility conditions at $y=0$ hold
+trivially and the initial brane readout agrees with that of the zero
+solution --- which is \eqref{eq:samereadout}. The vanishing initial
+velocity \eqref{eq:tsym} makes the resulting solution, and hence its brane
+trace, \emph{even in time}.
+
+\emph{(iv) The evolved brane trace.} Expanding the data of (iii) in the
+basis of (ii) and in spatial Fourier modes, and using that the zero-mode
+coefficient vanishes by construction while
+$\widehat g_{\mu\nu}\equiv0$ by \eqref{eq:tsym}, the evolved solution on
+the brane is carried entirely by the continuum:
+\begin{equation}
+\label{eq:branetrace}
+h^{\TT}_{\mu\nu}(t,\mathbf x,0)
+=\int d^3k\int_0^\infty dm\;
+u_m(0)\,\widehat f_{\mu\nu}(m,\mathbf k)\,
+\cos\!\bigl(\sqrt{\mathbf k^2+m^2}\;t\bigr)\,
+e^{i\mathbf k\cdot\mathbf x},
+\end{equation}
+where $\widehat f_{\mu\nu}(m,\mathbf k)$ is the continuum spectral
+coefficient of the initial displacement.
+
+\emph{(v) Nonvanishing coupled component.} By \eqref{eq:um},
+\begin{equation}
+\label{eq:upos}
+u_m(0)^2
+=\frac{2}{\pi^2m\ell\bigl[J_1^2(m\ell)+Y_1^2(m\ell)\bigr]}>0
+\qquad\text{for all }m>0,
+\end{equation}
+so \emph{no} continuum mode is decoupled from the brane. Moreover, by
+completeness of the basis of (ii) and the associated Plancherel identity,
+the spectral transform is an isometry onto the direct sum of the discrete
+and continuum spectral spaces. Since the displacement chosen in (iii) is
+nonzero and orthogonal to the discrete zero mode, its continuum spectral
+coefficient $\widehat f_{\mu\nu}$ is therefore nonzero on a set of
+positive spectral measure.
+
+\emph{(vi) Nonvanishing in the future.} Suppose, for contradiction, that
+$h^{\TT}_{\mu\nu}(t,\mathbf x,0)=0$ for every $t\ge0$ and every
+$\mathbf x$. By the evenness in time established in (iii), the brane trace
+then vanishes for every $t\in\mathbb R$. Fourier-transforming
+\eqref{eq:branetrace} in $\mathbf x$, each $\mathbf k$-component vanishes
+for all $t$. For fixed $\mathbf k$ the map
+\begin{equation}
+\label{eq:momega}
+m\longmapsto\omega=\sqrt{\mathbf k^2+m^2}
+\end{equation}
+is one-to-one on $m\ge0$, so \eqref{eq:branetrace} is, for each
+$\mathbf k$, a Fourier-cosine transform in the variable $\omega$ of the
+reparameterized coefficient. Injectivity of the Fourier-cosine transform
+therefore forces
+\begin{equation}
+\label{eq:forced}
+u_m(0)\,\widehat f_{\mu\nu}(m,\mathbf k)=0
+\qquad\text{for almost every }(m,\mathbf k).
+\end{equation}
+Since $u_m(0)^2>0$ for every $m>0$ by \eqref{eq:upos}, this forces
+$\widehat f_{\mu\nu}=0$ almost everywhere, contradicting (v). Hence the
+brane trace is nonzero at some $t=\tau>0$. Because the induced brane
+perturbation and the electric Weyl term $E_{\mu\nu}$ on the brane are
+determined by that trace and its normal derivative, \eqref{eq:diffFuture}
+follows.
+
+\emph{(vii) Causal delay.} Finally, the linearized bulk equation is
+hyperbolic with finite propagation speed on this background, so the brane
+trace remains \emph{zero} until the causal future of the remote initial
+support reaches $y=0$. The disturbance is therefore genuinely delayed, not
+instantaneous, which is exactly why the two configurations share a readout
+now and differ later. Together with (vi) this establishes the required
+$\tau>0$ same-readout/different-future statement.
+\end{proof}
+
+\begin{corollary}[Nonprojectability]
+\label{cor:nonproj}
+There exists no map $U_t$ on the instantaneous brane readout satisfying
+$p\circ\Phi_t=U_t\circ p$ for all admissible source data. Moreover, for
+any admissible preparation class rich enough to resolve the two witness
+states --- for instance one containing delta preparations at $s_0$ and
+$s_1$, or any class whose members assign them different conditional
+future laws --- universal (strong) Markov lumpability of the readout
+fails as well. Nothing here asserts that a deterministic witness by
+itself furnishes a stochastic experiment; that requires a preparation
+law.
+\end{corollary}
+
+\begin{proof}
+Such a $U_t$ would require $p(s_0)=p(s_1)\Rightarrow
+p(\Phi_ts_0)=p(\Phi_ts_1)$, contradicting
+Proposition~\ref{prop:witness}. The stochastic statement is conditional
+as stated: a deterministic witness does not by itself define a stochastic
+experiment. It becomes a failure of lumpability once a preparation law is
+specified, and \eqref{eq:noflow} then defeats it because the two
+conditional future laws within the fiber differ.
+\end{proof}
+
+\begin{remark}[Scope]
+\label{rem:witnessScope}
+Corollary~\ref{cor:nonproj} is conditional on the source domain admitting
+the normalizable bulk radiation used in the construction. If the model is
+\emph{defined} to have a unique stationary vacuum bulk state with all
+homogeneous incoming data excluded, the witness is outside the domain and
+the fiber must be reassessed for that restricted domain; the forced
+retarded KK response and the effective-action results of
+Sections~\ref{sec:linear}--\ref{sec:opeq} survive unchanged. See
+Section~\ref{sec:failure}, item 1.
+\end{remark}
+
+The construction also identifies \emph{what} must be added. At linear
+order the required completion is the bulk gravitational initial data
+modulo the subspace whose retarded brane response vanishes identically;
+in a KK decomposition, the coupled continuum amplitudes modulo
+zero-response modes. In the nonlinear theory it is the bulk
+initial/boundary data or, after elimination, the induced nonlocal brane
+history functional. Adding the instantaneous value of $E_{\mu\nu}$ alone
+does \emph{not} in general close its future evolution --- as
+Section~\ref{sec:conservation} makes precise.
+
+\section{The exact projected Einstein equation}
+\label{sec:projected}
+
+\subsection{Israel junction condition}
+
+Let the brane surface stress tensor be
+\begin{equation}
+\label{eq:Smunu}
+S_{\mu\nu}=-\lambda q_{\mu\nu}+T_{\mu\nu},
+\qquad
+S\equiv q^{\mu\nu}S_{\mu\nu}=-4\lambda+T .
+\end{equation}
+The Israel condition \cite{Israel} for a thin shell in five dimensions is
+\begin{equation}
+\label{eq:israel}
+[K_{\mu\nu}]\equiv K^+_{\mu\nu}-K^-_{\mu\nu}
+=-\kfive^2\Bigl(S_{\mu\nu}-\tfrac13q_{\mu\nu}S\Bigr),
+\end{equation}
+the factor $\tfrac13$ being $1/(D-2)$ with $D=5$. Imposing the RS2 $Z_2$
+reflection symmetry gives $K^+_{\mu\nu}=-K^-_{\mu\nu}$, so
+$[K_{\mu\nu}]=2K_{\mu\nu}$ evaluated with the outward normal on one side,
+and hence
+\begin{equation}
+\label{eq:Kfixed}
+\boxed{\;
+K_{\mu\nu}
+=-\frac{\kfive^2}{2}
+\Bigl[\,T_{\mu\nu}+\tfrac13(\lambda-T)q_{\mu\nu}\,\Bigr].
+\;}
+\end{equation}
+Indeed, $S_{\mu\nu}-\tfrac13q_{\mu\nu}S
+=T_{\mu\nu}-\lambda q_{\mu\nu}
+-\tfrac13q_{\mu\nu}(T-4\lambda)
+=T_{\mu\nu}+\tfrac13q_{\mu\nu}(\lambda-T)$,
+which gives \eqref{eq:Kfixed} on halving. Traces:
+\begin{equation}
+\label{eq:Ktrace}
+K=q^{\mu\nu}K_{\mu\nu}
+=-\frac{\kfive^2}{2}\Bigl[T+\tfrac43(\lambda-T)\Bigr]
+=-\frac{\kfive^2}{2}\Bigl[\tfrac43\lambda-\tfrac13T\Bigr]
+=-\frac{\kfive^2}{6}\bigl(4\lambda-T\bigr).
+\end{equation}
+
+Thus, under $Z_2$ symmetry, the extrinsic curvature is fixed
+\emph{algebraically} by the brane stress tensor. This is precisely why
+the quadratic correction below descends to brane data while the projected
+Weyl tensor does not.
+
+\subsection{Gauss--Codazzi projection}
+\label{sec:gauss}
+
+The Gauss equation for the embedding is
+\begin{equation}
+\label{eq:gauss}
+{}^{(4)}R_{\mu\nu\rho\sigma}
+={}^{(5)}R_{ABCD}\,
+e^A{}_\mu e^B{}_\nu e^C{}_\rho e^D{}_\sigma
++K_{\mu\rho}K_{\nu\sigma}-K_{\mu\sigma}K_{\nu\rho}.
+\end{equation}
+Decompose the five-dimensional Riemann tensor into Weyl and Ricci parts,
+\begin{equation}
+\label{eq:weyldecomp}
+{}^{(5)}R_{ABCD}
+={}^{(5)}C_{ABCD}
++\tfrac23\bigl(g_{A[C}{}^{(5)}R_{D]B}
+-g_{B[C}{}^{(5)}R_{D]A}\bigr)
+-\tfrac16\,{}^{(5)}R\,g_{A[C}g_{D]B},
+\end{equation}
+and use \eqref{eq:bulkEE}, which gives
+${}^{(5)}R_{AB}=\tfrac23\Lfive g_{AB}$ and
+${}^{(5)}R=\tfrac{10}{3}\Lfive$ away from the brane. Define the electric
+projection of the bulk Weyl tensor,
+\begin{equation}
+\label{eq:Edef}
+E_{\mu\nu}:={}^{(5)}C_{ABCD}\,
+n^Ae^B{}_\mu\,n^Ce^D{}_\nu ,
+\end{equation}
+which is symmetric and traceless, $q^{\mu\nu}E_{\mu\nu}=0$, by the trace
+identities of the Weyl tensor and $n\cdot n=1$.
+
+Contracting \eqref{eq:gauss} twice and substituting
+\eqref{eq:weyldecomp} yields the well-known intermediate identity
+\begin{equation}
+\label{eq:Gintermediate}
+G_{\mu\nu}
+=-\tfrac12\Lfive q_{\mu\nu}
++Q_{\mu\nu}(K)-E_{\mu\nu},
+\end{equation}
+where the complete extrinsic-curvature contribution is
+\begin{equation}
+\label{eq:QK}
+Q_{\mu\nu}(K)
+=KK_{\mu\nu}-K_{\mu\beta}K_\nu{}^\beta
+-\tfrac12q_{\mu\nu}\bigl(K^2-K_{\alpha\beta}K^{\alpha\beta}\bigr).
+\end{equation}
+
+We now insert \eqref{eq:Kfixed} into \eqref{eq:QK}. Write
+$K_{\mu\nu}=-\tfrac{\kfive^2}{2}\bigl(T_{\mu\nu}+\alpha q_{\mu\nu}\bigr)$
+with $\alpha\equiv\tfrac13(\lambda-T)$, so that
+$K=-\tfrac{\kfive^2}{2}(T+4\alpha)$. Then
+\begin{align}
+KK_{\mu\nu}
+&=\frac{\kfive^4}{4}\bigl(T+4\alpha\bigr)
+\bigl(T_{\mu\nu}+\alpha q_{\mu\nu}\bigr),
+\label{eq:KK1}\\
+K_{\mu\beta}K_\nu{}^\beta
+&=\frac{\kfive^4}{4}
+\bigl(T_{\mu\beta}T_\nu{}^\beta
++2\alpha T_{\mu\nu}+\alpha^2q_{\mu\nu}\bigr),
+\label{eq:KK2}\\
+K^2
+&=\frac{\kfive^4}{4}\bigl(T+4\alpha\bigr)^2,
+\qquad
+K_{\alpha\beta}K^{\alpha\beta}
+=\frac{\kfive^4}{4}
+\bigl(T_{\alpha\beta}T^{\alpha\beta}
++2\alpha T+4\alpha^2\bigr).
+\label{eq:KK3}
+\end{align}
+Substituting \eqref{eq:KK1}--\eqref{eq:KK3} directly into \eqref{eq:QK},
+without yet using the value of $\alpha$, gives the unsimplified expression
+\begin{equation}
+\label{eq:Qexpanded}
+\begin{aligned}
+Q_{\mu\nu}
+=\frac{\kfive^4}{4}\Bigl[
+&\bigl(T+4\alpha\bigr)\bigl(T_{\mu\nu}+\alpha q_{\mu\nu}\bigr)
+-\bigl(T_{\mu\beta}T_\nu{}^\beta
++2\alpha T_{\mu\nu}+\alpha^2q_{\mu\nu}\bigr)\\
+&-\tfrac12 q_{\mu\nu}
+\bigl(\bigl(T+4\alpha\bigr)^2
+-T_{\alpha\beta}T^{\alpha\beta}
+-2\alpha T-4\alpha^2\bigr)
+\Bigr].
+\end{aligned}
+\end{equation}
+Expanding and collecting on the independent structures
+$T_{\mu\nu}$, $T_{\mu\beta}T_\nu{}^\beta$, and $q_{\mu\nu}$:
+\begin{equation}
+\label{eq:Qsimplified}
+Q_{\mu\nu}
+=\frac{\kfive^4}{4}\Bigl[
+\bigl(T+2\alpha\bigr)T_{\mu\nu}
+-T_{\mu\beta}T_\nu{}^\beta
++q_{\mu\nu}\Bigl(
+\tfrac12 T_{\alpha\beta}T^{\alpha\beta}
+-\tfrac12 T^2
+-2\alpha T
+-3\alpha^2
+\Bigr)\Bigr].
+\end{equation}
+Indeed, the $q_{\mu\nu}$ coefficient collects
+$\alpha(T+4\alpha)-\alpha^2
+-\tfrac12\bigl(T^2+8\alpha T+16\alpha^2
+-T_{\alpha\beta}T^{\alpha\beta}-2\alpha T-4\alpha^2\bigr)
+=\tfrac12 T_{\alpha\beta}T^{\alpha\beta}-\tfrac12T^2-2\alpha T-3\alpha^2$,
+while the $T_{\mu\nu}$ coefficient collects $(T+4\alpha)-2\alpha=T+2\alpha$.
+
+Now restore $\alpha=\tfrac13(\lambda-T)$ in \eqref{eq:Qsimplified} and
+collect by powers of $\lambda$. The $T_{\mu\nu}$ coefficient becomes
+$T+\tfrac23(\lambda-T)=\tfrac13T+\tfrac23\lambda$, contributing
+$\tfrac{\kfive^4}{4}\bigl(\tfrac13 T T_{\mu\nu}
++\tfrac23\lambda T_{\mu\nu}\bigr)
+=\tfrac{\kfive^4}{12}TT_{\mu\nu}+\tfrac{\kfive^4\lambda}{6}T_{\mu\nu}$.
+The $q_{\mu\nu}$ coefficient becomes
+$\tfrac12 T_{\alpha\beta}T^{\alpha\beta}-\tfrac12T^2
+-\tfrac23(\lambda-T)T-\tfrac13(\lambda-T)^2
+=\tfrac12T_{\alpha\beta}T^{\alpha\beta}-\tfrac16T^2-\tfrac13\lambda^2$,
+contributing
+$\tfrac{\kfive^4}{8}q_{\mu\nu}T_{\alpha\beta}T^{\alpha\beta}
+-\tfrac{\kfive^4}{24}q_{\mu\nu}T^2
+-\tfrac{\kfive^4\lambda^2}{12}q_{\mu\nu}$. Together with the
+$-\tfrac{\kfive^4}{4}T_{\mu\beta}T_\nu{}^\beta$ term this is exactly
+\begin{equation}
+\label{eq:Qsorted}
+\boxed{\;
+Q_{\mu\nu}
+=-\frac{\kfive^4\lambda^2}{12}\,q_{\mu\nu}
++\frac{\kfive^4\lambda}{6}\,T_{\mu\nu}
++\kfive^4\,\Pi_{\mu\nu},
+\;}
+\end{equation}
+with
+\begin{equation}
+\label{eq:Pi}
+\boxed{\;
+\Pi_{\mu\nu}
+=-\tfrac14 T_{\mu\beta}T_\nu{}^\beta
++\tfrac1{12}\,T\,T_{\mu\nu}
++\tfrac18\,q_{\mu\nu}T_{\alpha\beta}T^{\alpha\beta}
+-\tfrac1{24}\,q_{\mu\nu}T^2 .
+\;}
+\end{equation}
+No cross terms are dropped and no $\lambda$-dependence is hidden in the
+purely quadratic part: all $\lambda^2$ dependence enters through
+$-\tfrac13\lambda^2$ in the $q_{\mu\nu}$ coefficient, and all $\lambda T$
+dependence through $\tfrac23\lambda$ in the $T_{\mu\nu}$ coefficient.
+
+Substituting \eqref{eq:Qsorted} into \eqref{eq:Gintermediate} gives the
+Shiromizu--Maeda--Sasaki equation \cite{SMS}:
+\begin{equation}
+\label{eq:SMS}
+\boxed{\;
+G_{\mu\nu}[q]
+=-\Lfour\,q_{\mu\nu}
++\kfour^2\,T_{\mu\nu}
++\kfive^4\,\Pi_{\mu\nu}
+-E_{\mu\nu},
+\;}
+\end{equation}
+with
+\begin{equation}
+\label{eq:constants}
+\boxed{\;
+\Lfour=\tfrac12\Bigl(\Lfive+\tfrac16\kfive^4\lambda^2\Bigr),
+\qquad
+\kfour^2=8\pi G_4=\tfrac16\kfive^4\lambda .
+\;}
+\end{equation}
+Equivalently, writing the equation in the form
+$G_{\mu\nu}+\Lfour q_{\mu\nu}=\kfour^2T_{\mu\nu}
++\mathcal C^{\RS}_{\mu\nu}$, the RS2 realization of the
+source-induced metric response is
+\begin{equation}
+\label{eq:CRS}
+\boxed{\;
+\mathcal C^{\RS}_{\mu\nu}
+=\kfive^4\,\Pi_{\mu\nu}-E_{\mu\nu}.
+\;}
+\end{equation}
+
+Every coefficient in \eqref{eq:SMS}--\eqref{eq:CRS} follows from the
+action \eqref{eq:action}, the junction condition \eqref{eq:israel}, and
+the Gauss identity \eqref{eq:gauss}. Dimensions are consistent:
+$[\kfive^4]=L^6$, $[T_{\mu\nu}T^{\mu\nu}]=L^{-8}$, so
+$[\kfive^4\Pi]=L^{-2}=[E_{\mu\nu}]=[G_{\mu\nu}]$.
+
+\begin{remark}[The superscript is not decorative]
+The tensor \eqref{eq:CRS} is \emph{not} predicted by any abstract
+source/readout considerations. It is the response obtained after choosing
+five-dimensional Einstein gravity, the RS2 brane action, the $Z_2$
+junction condition, and the stated source domain. Other source models
+induce different response tensors.
+\end{remark}
+
+\subsection{Conservation, Bianchi, and nonclosure}
+\label{sec:conservation}
+
+With no exchange of matter energy into the bulk, the Codazzi equation
+$D^\mu\bigl(K_{\mu\nu}-Kq_{\mu\nu}\bigr)
+={}^{(5)}R_{AB}n^Ae^B{}_\nu=\tfrac23\Lfive\,n_Ae^A{}_\nu=0$
+combined with \eqref{eq:Kfixed} gives
+\begin{equation}
+\label{eq:Tcons}
+\nabla^\mu T_{\mu\nu}=0 .
+\end{equation}
+Applying the four-dimensional contracted Bianchi identity
+$\nabla^\mu G_{\mu\nu}=0$ to \eqref{eq:SMS} then yields
+\begin{equation}
+\label{eq:bianchiE}
+\boxed{\;
+\nabla^\mu E_{\mu\nu}
+=\kfive^4\,\nabla^\mu\Pi_{\mu\nu}.
+\;}
+\end{equation}
+
+This is the exact nonclosure statement in local form. Equation
+\eqref{eq:bianchiE} fixes the \emph{divergence} of $E_{\mu\nu}$, which is
+four of its components' worth of information, but leaves its
+transverse-traceless content --- precisely the free bulk gravitational
+response --- undetermined by brane data. The projected system
+\eqref{eq:SMS}--\eqref{eq:bianchiE} is covariantly consistent but is not
+in general a closed four-dimensional initial-value system. This is the
+tensorial counterpart of Proposition~\ref{prop:witness}: the wave packet
+of Section~\ref{sec:witness} supplies two solutions with identical
+instantaneous brane data and different later $E_{\mu\nu}$.
+
+\section{Exact evaluation in the homogeneous sector}
+\label{sec:frw}
+
+Take an FRW brane and a perfect fluid,
+\begin{equation}
+\label{eq:frwansatz}
+ds_4^2=-dt^2+a(t)^2\,d\Sigma_k^2,
+\qquad
+T_{\mu\nu}=\rho\,u_\mu u_\nu+p\,h_{\mu\nu},
+\qquad
+h_{\mu\nu}=q_{\mu\nu}+u_\mu u_\nu,
+\end{equation}
+with $u^\mu u_\mu=-1$. Then $T=-\rho+3p$ and
+$T_{\alpha\beta}T^{\alpha\beta}=\rho^2+3p^2$.
+
+\begin{lemma}[Perfect-fluid $\Pi_{\mu\nu}$]
+\label{lem:PiFRW}
+For \eqref{eq:frwansatz}, \eqref{eq:Pi} evaluates to
+\begin{equation}
+\label{eq:PiFRW}
+\boxed{\;
+\Pi_{\mu\nu}
+=\frac{\rho}{12}\Bigl[\rho\,u_\mu u_\nu+(\rho+2p)\,h_{\mu\nu}\Bigr].
+\;}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Direct substitution. In the rest frame, $T_{00}=\rho$,
+$T_{ij}=p\,q_{ij}$, and
+\begin{equation}
+\Pi_{00}
+=\frac{\rho^2}{4}
++\frac{(-\rho+3p)\rho}{12}
+-\frac{\rho^2+3p^2}{8}
++\frac{(-\rho+3p)^2}{24}
+=\frac{\rho^2}{12},
+\end{equation}
+where the first term carries a $+$ sign because
+$-\tfrac14T_{0\beta}T_0{}^\beta
+=-\tfrac14 T_{00}T_0{}^0=-\tfrac14\rho\cdot(-\rho)=+\tfrac14\rho^2$,
+and the third and fourth carry the signs induced by $q_{00}=-1$.
+Assembling the terms:
+$\tfrac{\rho^2}{4}
+-\tfrac{\rho^2}{12}+\tfrac{p\rho}{4}
+-\tfrac{\rho^2}{8}-\tfrac{3p^2}{8}
++\tfrac{\rho^2}{24}-\tfrac{p\rho}{4}+\tfrac{3p^2}{8}
+=\rho^2\bigl(\tfrac14-\tfrac1{12}-\tfrac18+\tfrac1{24}\bigr)
+=\tfrac{\rho^2}{12}$.
+Similarly $\Pi_{ij}=\tfrac{1}{12}\rho(\rho+2p)\,q_{ij}$. These are the
+$u_\mu u_\nu$ and $h_{\mu\nu}$ components of \eqref{eq:PiFRW}.
+\end{proof}
+
+Homogeneity, isotropy, tracelessness, and \eqref{eq:bianchiE} (whose
+right-hand side vanishes in this sector because $\Pi_{\mu\nu}$ is a
+conserved perfect-fluid combination) force
+\begin{equation}
+\label{eq:EFRW}
+E_{\mu\nu}=-\mathcal U(t)\Bigl(u_\mu u_\nu+\tfrac13h_{\mu\nu}\Bigr),
+\qquad
+\dot{\mathcal U}+4H\mathcal U=0
+\quad\Longrightarrow\quad
+\mathcal U(t)=\frac{3\mu}{a^4(t)} ,
+\end{equation}
+where $\mu$ is a constant fixed by the bulk geometry --- in an
+AdS--Schwarzschild realization, proportional to the bulk black-hole mass
+parameter \cite{Mukohyama1,BDEL}. It is \emph{not} determined by the
+brane matter state.
+
+The response is now fully evaluated:
+\begin{equation}
+\label{eq:CFRW}
+\boxed{\;
+\mathcal C^{\RS}_{00}
+=\frac{\kfive^4}{12}\rho^2+\frac{3\mu}{a^4},
+\qquad
+\mathcal C^{\RS}_{ij}
+=\Bigl[\frac{\kfive^4}{12}\rho(\rho+2p)+\frac{\mu}{a^4}\Bigr]q_{ij}.
+\;}
+\end{equation}
+
+\begin{proposition}[Exact brane Friedmann equations]
+\label{prop:friedmann}
+For the model of Section~\ref{sec:model} with an FRW brane, conserved
+brane matter, and no bulk matter flux,
+\begin{equation}
+\label{eq:friedmann}
+\boxed{\;
+H^2+\frac{k}{a^2}
+=\frac{\Lfour}{3}
++\frac{\kfour^2}{3}\rho
++\frac{\kfive^4}{36}\rho^2
++\frac{\mu}{a^4}.
+\;}
+\end{equation}
+Using $\kfour^2=\kfive^4\lambda/6$ this is equivalently
+\begin{equation}
+\label{eq:friedmann2}
+H^2+\frac{k}{a^2}
+=\frac{\Lfour}{3}
++\frac{\kfour^2}{3}\rho\Bigl(1+\frac{\rho}{2\lambda}\Bigr)
++\frac{\mu}{a^4},
+\end{equation}
+and, with $\dot\rho+3H(\rho+p)=0$,
+\begin{equation}
+\label{eq:accel}
+\dot H-\frac{k}{a^2}
+=-\frac{\kfour^2}{2}(\rho+p)\Bigl(1+\frac{\rho}{\lambda}\Bigr)
+-\frac{2\mu}{a^4}.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Take the $00$ component of \eqref{eq:SMS} with
+\eqref{eq:PiFRW}--\eqref{eq:EFRW}. The Einstein tensor gives
+$G_{00}=3(H^2+k/a^2)$; the correction contributes
+$\kfive^4\Pi_{00}-E_{00}
+=\tfrac{\kfive^4}{12}\rho^2+3\mu/a^4$. Dividing by $3$ gives
+\eqref{eq:friedmann}. Substituting
+$\kfive^4=6\kfour^2/\lambda$ gives
+$\kfive^4\rho^2/36=\kfour^2\rho^2/(6\lambda)$, i.e.\
+the $\rho^2/(2\lambda)$ term in \eqref{eq:friedmann2}. Differentiating
+\eqref{eq:friedmann2} and eliminating $\dot\rho$ with conservation gives
+\eqref{eq:accel}.
+\end{proof}
+
+The signs and scalings are fixed and physically transparent. Positive
+brane tension gives a \emph{positive} $\rho^2$ correction, enhancing the
+expansion rate at high density. The Weyl contribution scales as
+radiation, but its magnitude is set by a bulk-state parameter, not by
+brane matter. For $\rho/\lambda\ll1$ and $\mu/a^4\ll H^2$, standard
+four-dimensional cosmology is recovered.
+
+The homogeneous sector already exhibits the exact division between what
+the projection fixes and what it leaves open:
+\begin{itemize}[leftmargin=*]
+\item the form and coefficient of the $\rho^2$ term are fixed once
+$\kfive$ and $\lambda$ are specified;
+\item the exponent $a^{-4}$ is fixed by symmetry and conservation alone;
+\item the constant $\mu$ is bulk initial/boundary data, undetermined by
+the brane matter state. It is not a prediction of the model without a
+bulk-state condition.
+\end{itemize}
+
+\section{Exact tree-level bulk elimination in the linear weak-field sector}
+\label{sec:linear}
+
+The homogeneous sector evaluates the nonlinear local response but hides
+the spectral structure of the eliminated bulk gravitons. That structure
+is explicit at linear order \cite{RS2,GarrigaTanaka,GKR}.
+
+\subsection{Bulk perturbation equation, brane bending, and the boundary condition}
+\label{sec:bending}
+
+In Randall--Sundrum gauge, a TT perturbation of the background
+\eqref{eq:background} obeys
+\begin{equation}
+\label{eq:bulkwave}
+\Bigl[
+e^{2|y|/\ell}\,\Box_4
++\partial_y^2-\frac{4}{\ell^2}
++\frac{4}{\ell}\,\delta(y)
+\Bigr]h^{\TT}_{\mu\nu}
+=-2\kfive^2\,\Sigma^{\TT}_{\mu\nu}\,\delta(y).
+\end{equation}
+The source $\Sigma_{\mu\nu}$ contains the brane stress tensor
+\emph{and} the brane-bending contribution required by the junction
+condition. In the Garriga--Tanaka convention \cite{GarrigaTanaka},
+\begin{equation}
+\label{eq:bending}
+\boxed{\;
+\Sigma_{\mu\nu}
+=T_{\mu\nu}-\tfrac13\eta_{\mu\nu}T
++\frac{2}{\kfive^2}\,\partial_\mu\partial_\nu\hat\xi^5,
+\qquad
+\Box_4\hat\xi^5=\frac{\kfive^2}{6}\,T .
+\;}
+\end{equation}
+The bending equation makes $\Sigma^\mu{}_\mu=0$: indeed
+$\eta^{\mu\nu}\Sigma_{\mu\nu}
+=T-\tfrac43T+\tfrac{2}{\kfive^2}\Box_4\hat\xi^5
+=-\tfrac13T+\tfrac13T=0$.
+Together with $\partial^\mu T_{\mu\nu}=0$ it also gives
+$\partial^\mu\Sigma_{\mu\nu}=0$, as RS gauge requires.
+
+Brane bending is not an optional refinement. It is the statement that
+the brane, being a dynamical surface, is displaced from $y=0$ in RS gauge
+by the presence of matter; restoring the Gaussian-normal frame adapted to
+the physical brane produces, up to a tangential gauge transformation,
+\begin{equation}
+\label{eq:gaussnormal}
+\bar h_{\mu\nu}
+=h_{\mu\nu}
++\ell\,\partial_\mu\partial_\nu\hat\xi^5
++\frac{2}{\ell}\,\eta_{\mu\nu}\hat\xi^5
+-\partial_{(\mu}\hat\xi_{\nu)} .
+\end{equation}
+Decomposing $h_{\mu\nu}=h^{(m)}_{\mu\nu}+h^{(\xi)}_{\mu\nu}$ into the
+part sourced by $T_{\mu\nu}-\tfrac13\eta_{\mu\nu}T$ and the part sourced
+by the bending term, and choosing the tangential gauge to cancel the pure
+gradient pieces, the brane value reduces to
+\begin{equation}
+\label{eq:hbar}
+\boxed{\;
+\bar h_{\mu\nu}
+=h^{(m)}_{\mu\nu}
++\frac{2}{\ell}\,\eta_{\mu\nu}\,\hat\xi^5 .
+\;}
+\end{equation}
+This single term converts the apparent $\tfrac13$ trace coefficient of
+the RS-gauge source into the four-dimensional massless $\tfrac12$
+coefficient in the zero-mode response --- as Section~\ref{sec:projectors}
+makes explicit. Omitting brane bending, or using the wrong trace
+coefficient, produces a graviton that is not the four-dimensional
+graviton and gives the wrong light-bending prediction.
+
+The retarded Green function imposes causal response; regularity, i.e.\
+absence of incoming radiation from the AdS horizon, selects the forced
+solution. If arbitrary incoming bulk radiation is admitted, a homogeneous
+solution must be added; \emph{that homogeneous term is exactly the
+initial-state contribution associated with the same-readout fiber of
+Section~\ref{sec:witness}}. The two constructions are the same physics
+seen twice.
+
+\subsection{Brane-to-brane propagator: zero mode and KK continuum}
+\label{sec:propagator}
+
+The brane-to-brane retarded Green function of \eqref{eq:bulkwave} has the
+spectral resolution
+\begin{equation}
+\label{eq:GR}
+\boxed{\;
+\begin{aligned}
+G_R(p;0,0)
+&=G_R^{(0)}(p)+G_R^{(\KK)}(p),\\
+G_R^{(0)}(p)
+&=-\frac{1}{\ell}\,
+\frac{1}{-(\omega+i0^+)^2+\mathbf k^2},\\
+G_R^{(\KK)}(p)
+&=-\int_0^\infty dm\,
+\frac{u_m(0)^2}{m^2-(\omega+i0^+)^2+\mathbf k^2} .
+\end{aligned}
+\;}
+\end{equation}
+The normalized continuum modes of the transverse operator are Bessel
+combinations, and their brane value gives the spectral weight
+\begin{equation}
+\label{eq:um}
+\boxed{\;
+u_m(0)^2
+=\frac{2}{\pi^2 m\ell\bigl[J_1^2(m\ell)+Y_1^2(m\ell)\bigr]} .
+\;}
+\end{equation}
+Using the small-argument behavior
+$J_1(x)\simeq x/2$ and $Y_1(x)\simeq-2/(\pi x)$, one has
+$J_1^2+Y_1^2\simeq 4/(\pi^2x^2)$, hence
+\begin{equation}
+\label{eq:umsmall}
+u_m(0)^2
+=\frac{m\ell}{2}
++O\bigl((m\ell)^3\log(m\ell)\bigr),
+\qquad m\ell\ll1 .
+\end{equation}
+
+Two structural facts follow. The first term in \eqref{eq:GR} is the
+normalizable four-dimensional graviton zero mode: an isolated massless
+pole. The second is a \emph{continuum} of physical KK modes with
+nonnegative spectral density $u_m(0)^2\ge0$, producing a branch cut
+beginning at threshold $m=0$.
+
+\begin{remark}[What the branch cut does and does not exclude]
+\label{rem:cut}
+A finite-dimensional classical linear system, or a finite set of free
+fields with a finite-order quadratic action evaluated at tree level, has
+only a finite rational pole structure and cannot reproduce
+\eqref{eq:GR}--\eqref{eq:um} exactly. It does \emph{not} follow that
+every four-dimensional theory is excluded. An interacting four-dimensional
+field theory, a nonlocal theory, an infinite tower, a continuum of
+fields, or a conformal sector reproduces a branch cut without difficulty
+--- multiparticle thresholds generically produce cuts. See
+Sections~\ref{sec:fourdim} and \ref{sec:failure}, item 8.
+\end{remark}
+
+\subsection{Tensor projectors and the response operator}
+\label{sec:projectors}
+
+At linear order the bulk gravitational action is quadratic. Integration
+over bulk modes is therefore Gaussian, and the resulting Schur complement
+is \emph{exact at tree level}. We first retain the tensor structure that
+distinguishes the massless graviton from the massive continuum.
+
+For four-momentum $p$, define the transverse tensor
+\begin{equation}
+\label{eq:theta}
+\theta_{\mu\nu}
+=\eta_{\mu\nu}-\frac{p_\mu p_\nu}{p^2+i0^+},
+\end{equation}
+and the Barnes--Rivers spin projectors on symmetric tensors
+\cite{PinheiroPires},
+\begin{equation}
+\label{eq:BR}
+\begin{aligned}
+P^{(2)}_{\mu\nu\rho\sigma}
+&=\tfrac12\bigl(\theta_{\mu\rho}\theta_{\nu\sigma}
++\theta_{\mu\sigma}\theta_{\nu\rho}\bigr)
+-\tfrac13\theta_{\mu\nu}\theta_{\rho\sigma},\\
+P^{(0)}_{\mu\nu\rho\sigma}
+&=\tfrac13\theta_{\mu\nu}\theta_{\rho\sigma}.
+\end{aligned}
+\end{equation}
+(The $\tfrac13$ is $1/(D-1)$ with $D=4$, appropriate to the
+three-dimensional transverse subspace.)
+
+\begin{lemma}[Trace coefficients]
+\label{lem:traces}
+For a conserved source, $p^\mu T_{\mu\nu}=0$, so
+$\theta_{\mu\nu}T^{\mu\nu}=T$ and
+\begin{equation}
+\label{eq:projT}
+\bigl(P^{(2)}T\bigr)_{\mu\nu}=T_{\mu\nu}-\tfrac13\theta_{\mu\nu}T,
+\qquad
+\bigl(P^{(0)}T\bigr)_{\mu\nu}=\tfrac13\theta_{\mu\nu}T .
+\end{equation}
+Consequently
+\begin{equation}
+\label{eq:massless}
+\Bigl(P^{(2)}-\tfrac12P^{(0)}\Bigr)T
+=T_{\mu\nu}-\tfrac12\theta_{\mu\nu}T ,
+\end{equation}
+which is the massless four-dimensional graviton structure, while a
+massive spin-two exchange gives $P^{(2)}T=T_{\mu\nu}
+-\tfrac13\theta_{\mu\nu}T$, the van Dam--Veltman--Zakharov structure.
+\end{lemma}
+
+\begin{proof}
+Contract \eqref{eq:BR} with $T^{\rho\sigma}$ using
+$\theta_{\mu\rho}T^{\rho\sigma}\theta_{\sigma\nu}=T_{\mu\nu}$ for a
+conserved source, and $\theta_{\rho\sigma}T^{\rho\sigma}=T$. Then
+$P^{(2)}T=T_{\mu\nu}-\tfrac13\theta_{\mu\nu}T$ and
+$P^{(0)}T=\tfrac13\theta_{\mu\nu}T$. Subtracting half the latter,
+$T_{\mu\nu}-\tfrac13\theta_{\mu\nu}T-\tfrac16\theta_{\mu\nu}T
+=T_{\mu\nu}-\tfrac12\theta_{\mu\nu}T$.
+\end{proof}
+
+The brane-bending field of Section~\ref{sec:bending} is precisely what
+converts the scalar coefficient of the massless part from $\tfrac13$ to
+$\tfrac12$: the term $\tfrac{2}{\ell}\eta_{\mu\nu}\hat\xi^5$ in
+\eqref{eq:hbar} supplies a trace piece proportional to
+$\Box_4^{-1}T$, i.e.\ $-\tfrac16\theta_{\mu\nu}T$ times the zero-mode
+propagator. Consequently the complete gauge-invariant response to a
+conserved brane source, modulo longitudinal pure-gauge terms, is
+\begin{equation}
+\label{eq:response}
+\boxed{\;
+\bar h_{\mu\nu}(p)
+=-\mathbb R_{R\,\mu\nu}{}^{\rho\sigma}(p)\,T_{\rho\sigma}(p),
+\;}
+\end{equation}
+with
+\begin{equation}
+\label{eq:RR}
+\boxed{\;
+\mathbb R_R(p)
+=2\kfive^2\Bigl[
+G_R^{(0)}(p)\Bigl(P^{(2)}-\tfrac12P^{(0)}\Bigr)
++G_R^{(\KK)}(p)\,P^{(2)}
+\Bigr].
+\;}
+\end{equation}
+Equation \eqref{eq:RR} fixes both the normalization and the relative
+tensor coefficients. It is equivalent to the RS-gauge source equation
+\eqref{eq:bulkwave} together with the bending equation
+\eqref{eq:bending} and the transformation \eqref{eq:hbar}. It displays
+directly why the zero mode carries the four-dimensional massless trace
+coefficient while the KK continuum carries the massive spin-two
+coefficient --- the physical content of the fact that RS2 has no vDVZ
+discontinuity in the observable weak-field limit.
+
+\subsection{Causal influence functional}
+\label{sec:ctp}
+
+The same result follows from a causal influence functional, which is the
+formulation that makes the initial-state dependence explicit
+\cite{FeynmanVernon}. Causality requires the closed-time-path fields to
+remain doubled. Set
+\begin{equation}
+\label{eq:keldysh}
+h_c=\tfrac12(h_++h_-),
+\qquad
+h_\Delta=h_+-h_- .
+\end{equation}
+On the physical conserved-source subspace let
+$\mathbb K_R=\mathbb R_R^{-1}$. For equal physical sources on the two
+contour branches, the quadratic closed-time-path functional is
+\begin{equation}
+\label{eq:CTP}
+\boxed{\;
+\Gamma^{(2)}_{\mathrm{CTP}}[h_c,h_\Delta;T]
+=\tfrac12\bigl\langle h_\Delta,\mathbb K_R h_c\bigr\rangle
++\tfrac12\bigl\langle h_\Delta,T\bigr\rangle
++\tfrac{i}{2}\bigl\langle h_\Delta,\mathbb N h_\Delta\bigr\rangle ,
+\;}
+\end{equation}
+where the pairing includes momentum integration and contraction on the
+conserved tensor subspace. The factor $\tfrac12$ in the source term is
+the standard linear metric coupling
+$\delta S_m=\tfrac12\int T^{\mu\nu}\delta h_{\mu\nu}$. The symmetric
+kernel $\mathbb N$ is fixed by the chosen bulk density matrix; it
+controls fluctuations and does not enter the mean classical field.
+Varying \eqref{eq:CTP} with respect to $h_\Delta$ and then taking the
+physical limit $h_\Delta=0$ gives
+\begin{equation}
+\label{eq:ctpEOM}
+\tfrac12\,\mathbb K_R h_c+\tfrac12\,T=0
+\qquad\Longrightarrow\qquad
+h_c=-\mathbb R_R\,T ,
+\end{equation}
+reproducing \eqref{eq:response}. Restricted to the TT source in RS gauge
+this reduces to
+\begin{equation}
+\label{eq:TTresponse}
+h_c^{\TT}=-2\kfive^2\,\mathcal G_R\,\Sigma^{\TT},
+\end{equation}
+where $\mathcal G_R$ denotes the retarded convolution operator whose
+momentum-space kernel is the brane-to-brane Green function
+$G_R(p;0,0)=G_R^{(0)}(p)+G_R^{(\KK)}(p)$ of \eqref{eq:GR}, acting as
+\begin{equation}
+\label{eq:GRop}
+\bigl(\mathcal G_R\,\Sigma^{\TT}\bigr)(x)
+=\int d^4x'\;\mathcal G_R(x-x')\,\Sigma^{\TT}(x'),
+\qquad
+\mathcal G_R(x-x')
+=\int\frac{d^4p}{(2\pi)^4}\;e^{ip\cdot(x-x')}\,G_R(p;0,0).
+\end{equation}
+This recovers the normalization used in \eqref{eq:bulkwave}. Thus the
+standard $\tfrac12 h_{\mu\nu}T^{\mu\nu}$ matter coupling \emph{reproduces}
+the response normalization rather than fixing it by convention.
+
+The retarded prescription fixes causality. In the positive-tension model
+the KK spectral density \eqref{eq:um} is positive, so the linear
+continuum introduces no negative-norm graviton. The negative-tension
+branch instead gives the wrong sign of the four-dimensional Newton
+constant and is not used.
+
+\begin{remark}[Status of the elimination]
+\label{rem:treelevel}
+This is a \emph{tree-level, linear-response} calculation, and must not be
+confused with the exact nonlinear equation \eqref{eq:SMS}. Gauge fixing
+isolates the physical TT operator; brane bending restores the response
+required by the conserved four-dimensional source and its Ward identity.
+At tree level, ghost fields carry no external classical source and
+contribute no exchange term between conserved brane stresses; ghost and
+graviton determinants enter only beyond this approximation. Ultraviolet
+local terms at coincident points renormalize the brane tension, the
+Newton coupling, and admissible higher-curvature operators; the
+nonanalytic continuum term and its $1/r^3$ residue at $r>0$ are
+insensitive to those local subtractions. Covariant conservation of the
+resulting response agrees with \eqref{eq:bianchiE}. The bulk initial
+state enters the full closed-time-contour functional through its density
+matrix: under the no-incoming/regular choice the forced retarded kernel
+is fixed; changing that choice changes both the homogeneous response and
+the fluctuation kernel $\mathbb N$.
+\end{remark}
+
+\subsection{Evaluated long-distance response}
+\label{sec:longdistance}
+
+For a static source and $r\gg\ell$, the three-dimensional massive Green
+function is $-e^{-mr}/(4\pi r)$. The small-$m$ spectral weight
+\eqref{eq:umsmall} therefore \emph{evaluates} the KK contribution rather
+than leaving it as a formal kernel:
+\begin{equation}
+\label{eq:GKKr}
+G^{(\KK)}(r)
+=-\frac{1}{4\pi r}\int_0^\infty dm\,u_m(0)^2\,e^{-mr}
+=-\frac{1}{4\pi r}\cdot\frac{\ell}{2}\int_0^\infty dm\,m\,e^{-mr}
++\cdots
+=-\frac{\ell}{8\pi r^3}
++O\!\Bigl(\frac{\ell^3}{r^5}\log\frac r\ell\Bigr),
+\end{equation}
+using $\int_0^\infty m e^{-mr}dm=r^{-2}$. Adding the zero mode
+$G^{(0)}(r)=-1/(4\pi\ell r)$ gives the brane scalar Green function
+\begin{equation}
+\label{eq:Gtotal}
+G(\mathbf x,0;\mathbf x',0)
+=-\frac{1}{4\pi\ell r}
+\Bigl[1+\frac{\ell^2}{2r^2}
++O\!\Bigl(\frac{\ell^4}{r^4}\log\frac r\ell\Bigr)\Bigr],
+\qquad r=|\mathbf x-\mathbf x'| .
+\end{equation}
+
+For a nonrelativistic point source, $T_{00}=M\delta^3(\mathbf x)$ and
+$T=-M\delta^3(\mathbf x)$, so the bending equation \eqref{eq:bending}
+gives
+\begin{equation}
+\label{eq:xi5}
+\nabla^2\hat\xi^5=-\frac{\kfive^2M}{6}\,\delta^3(\mathbf x),
+\qquad
+\hat\xi^5(r)=\frac{\kfive^2M}{24\pi r} .
+\end{equation}
+Substituting \eqref{eq:Gtotal} into
+$h^{(m)}=-2\kfive^2\,G*\bigl(T_{\mu\nu}-\tfrac13\eta_{\mu\nu}T\bigr)$,
+adding $2\eta_{\mu\nu}\hat\xi^5/\ell$ as in \eqref{eq:hbar}, and using
+$G_4=\kfive^2/(8\pi\ell)$ (Section~\ref{sec:normalization}), one obtains,
+outside a nonrelativistic spherical source of mass $M$,
+\begin{equation}
+\label{eq:h00}
+\boxed{\;
+\bar h_{00}
+=\frac{2G_4M}{r}
+\Bigl[1+\frac{2\ell^2}{3r^2}
++O\!\Bigl(\frac{\ell^4}{r^4}\log\frac r\ell\Bigr)\Bigr],
+\;}
+\end{equation}
+\begin{equation}
+\label{eq:hij}
+\boxed{\;
+\bar h_{ij}
+=\frac{2G_4M}{r}
+\Bigl[1+\frac{\ell^2}{3r^2}
++O\!\Bigl(\frac{\ell^4}{r^4}\log\frac r\ell\Bigr)\Bigr]\delta_{ij}.
+\;}
+\end{equation}
+Equivalently, in asymptotically Minkowski Newtonian gauge,
+\begin{equation}
+\label{eq:newtoniangauge}
+ds^2=-(1+2\Phi)\,dt^2+(1-2\Psi)\,d\mathbf x^2,
+\end{equation}
+the gauge-invariant static potentials are
+\begin{equation}
+\label{eq:potentials}
+\boxed{\;
+\Phi(r)=-\frac{G_4M}{r}
+\Bigl(1+\frac{2\ell^2}{3r^2}+\cdots\Bigr),
+\qquad
+\Psi(r)=-\frac{G_4M}{r}
+\Bigl(1+\frac{\ell^2}{3r^2}+\cdots\Bigr).
+\;}
+\end{equation}
+This reproduces the Garriga--Tanaka result \cite{GarrigaTanaka}.
+
+Three observations. First, the correction is \emph{not} a mass
+renormalization: it has a different radial scaling and cannot be absorbed
+into $G_4M$. Second, the coefficients in $\Phi$ and $\Psi$ are unequal,
+which correlates nonrelativistic acceleration with light deflection: the
+former probes $\Phi$, the latter $\Phi+\Psi$. Third, in momentum space
+the same physics is the KK branch cut of \eqref{eq:GR}, not an extra
+isolated pole.
+
+The result is controlled by
+\begin{equation}
+\label{eq:controlconds}
+\frac{G_4M}{r}\ll1,
+\qquad
+\frac{\ell}{r}\ll1 ,
+\end{equation}
+and assumes the minimal two-derivative bulk action and the regular
+retarded bulk state. \emph{It is not an expansion valid at
+$r\lesssim\ell$}, where the full spectral integral \eqref{eq:um} must be
+used.
+
+\subsection{One-sided versus two-sided normalization}
+\label{sec:normalization}
+
+Two conventions occur in the literature and must not be mixed. In the
+two-sided covering-space convention used throughout this paper,
+\begin{equation}
+\label{eq:twosided}
+y\in(-\infty,\infty),
+\qquad
+a(y)=e^{-|y|/\ell},
+\end{equation}
+and the zero-mode reduction gives
+\begin{equation}
+\label{eq:kappa4}
+\frac{1}{\kfour^2}
+=\frac{1}{\kfive^2}\int_{-\infty}^{\infty}dy\;a(y)^2
+=\frac{1}{\kfive^2}\int_{-\infty}^{\infty}dy\;e^{-2|y|/\ell}
+=\frac{\ell}{\kfive^2},
+\end{equation}
+so that
+\begin{equation}
+\label{eq:G4}
+\boxed{\;
+\kfour^2=\frac{\kfive^2}{\ell},
+\qquad
+G_4=\frac{G_5}{\ell}.
+\;}
+\end{equation}
+If instead one works on a single AdS patch $y\ge0$ with the same
+undoubled bulk normalization, the integral is $\ell/2$ and
+\begin{equation}
+\label{eq:onesided}
+\kfour^2=\frac{2\kappa_{5,\mathrm{one}}^2}{\ell},
+\qquad
+G_4=\frac{2G_{5,\mathrm{one}}}{\ell}.
+\end{equation}
+Equivalently, the $Z_2$ orbifold fundamental domain may be assigned a
+doubled bulk action, reproducing the two-sided convention. The weak-field
+coefficients $2\ell^2/3$ and $\ell^2/3$, expressed in terms of the
+\emph{measured} $G_4$, are unchanged provided the gravitational coupling
+and the number of AdS patches are converted consistently.
+
+The same distinction appears in the four-dimensional dual description
+(Section~\ref{sec:fourdim}). One AdS patch corresponds to one cutoff CFT
+contribution; a two-sided geometry has two identical bulk regions and
+hence a doubled CFT polarization contribution. Duff and Liu \cite{DuffLiu}
+present the one-patch normalization explicitly; doubling both the bulk
+contribution and its CFT counterpart gives the two-sided convention used
+here. Their equality of the nonanalytic $1/r^3$ residue therefore remains
+valid, but only after this conversion. No equation in this paper combines
+a one-sided Newton-constant relation with a two-sided junction condition.
+
+\section{The parameter-eliminated cross-regime prediction}
+\label{sec:crossregime}
+
+Under the RS tuning
+\begin{equation}
+\label{eq:tuning}
+\Lfive=-\frac{6}{\ell^2},
+\qquad
+\lambda=\frac{6}{\kfive^2\ell},
+\qquad
+\kfour^2=\frac{\kfive^2}{\ell},
+\end{equation}
+one also has $\lambda=6/(\kfour^2\ell^2)$, and \eqref{eq:constants} gives
+$\Lfour=\tfrac12\bigl(-6/\ell^2+\tfrac16\kfive^4\lambda^2\bigr)=0$
+exactly, since $\kfive^4\lambda^2=\kfive^4\cdot36/(\kfive^4\ell^2)
+=36/\ell^2$.
+
+\begin{remark}[Status of $\Lfour$ below]
+The symbol $\Lfour$ retained in \eqref{eq:phenomB} is a
+\emph{phenomenological} background term that may be fitted or supplied by
+a much smaller late-time brane energy component. It is not an independent
+parameter of the exactly tuned flat-brane theorem. Applying the
+coefficient relation on a weakly curved cosmological background requires
+$H\ell\ll1$ and negligible detuning corrections in the compared regime.
+See Section~\ref{sec:failure}, item 9.
+\end{remark}
+
+Write the two independently measurable departures from four-dimensional
+GR, \emph{without} using RS2 in the fits, as
+\begin{equation}
+\label{eq:phenomB}
+H^2+\frac{k}{a^2}
+=\frac{\Lfour}{3}+\frac{\kfour^2}{3}\rho
++B\rho^2+\frac{\mu}{a^4},
+\end{equation}
+\begin{equation}
+\label{eq:phenomA}
+\Phi(r)=-\frac{G_4M}{r}\Bigl(1+\frac{A_\Phi}{r^2}+\cdots\Bigr),
+\qquad
+\Psi(r)=-\frac{G_4M}{r}\Bigl(1+\frac{A_\Psi}{r^2}+\cdots\Bigr).
+\end{equation}
+
+\begin{theorem}[Cross-regime coefficient relation]
+\label{thm:crossregime}
+In minimal, exactly tuned, positive-tension RS2 with the regular retarded
+bulk state, the source calculation gives
+\begin{equation}
+\label{eq:sourcecoeffs}
+B=\frac{\kfive^4}{36}=\frac{\kfour^4\ell^2}{36},
+\qquad
+A_\Phi=\frac{2\ell^2}{3},
+\qquad
+A_\Psi=\frac{\ell^2}{3},
+\end{equation}
+and eliminating $\ell$ yields
+\begin{equation}
+\label{eq:crossregime}
+\boxed{\;
+A_\Psi=\tfrac12 A_\Phi,
+\qquad
+B=\frac{\kfour^4}{24}A_\Phi
+=\frac{\kfour^4}{12}A_\Psi .
+\;}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+$B=\kfive^4/36$ is read off from \eqref{eq:friedmann}. Using
+$\kfive^2=\kfour^2\ell$ from \eqref{eq:G4} gives
+$\kfive^4=\kfour^4\ell^2$, hence $B=\kfour^4\ell^2/36$. The values
+$A_\Phi=2\ell^2/3$, $A_\Psi=\ell^2/3$ are read off from
+\eqref{eq:potentials}. Eliminating, $\ell^2=3A_\Phi/2=3A_\Psi$, so
+$A_\Psi=A_\Phi/2$, and
+$B=\tfrac{\kfour^4}{36}\cdot\tfrac{3A_\Phi}{2}
+=\tfrac{\kfour^4}{24}A_\Phi
+=\tfrac{\kfour^4}{12}A_\Psi$.
+\end{proof}
+
+\paragraph{Dimensional consistency.}
+$[\kfour^2]=L^2$, $[A_\Phi]=L^2$, hence $[B]=L^4\cdot L^2=L^6$; and with
+$[\rho]=L^{-4}$, $[B\rho^2]=L^{6-8}=L^{-2}=[H^2]$, as required.
+
+\paragraph{Scope, and what it does and does not do.}
+The relation \eqref{eq:crossregime} contains no unknown brane parameter
+once $G_4$ and the phenomenological coefficients are measured. It is
+independent of the dark-radiation constant $\mu$, whose $a^{-4}$ scaling
+is separable from $\rho^2$ when the matter equation of state and energy
+density are independently constrained. Its content is exact within its
+\emph{intersecting} regimes:
+\begin{itemize}[leftmargin=*]
+\item $B$ comes from the exact homogeneous thin-brane equation
+\eqref{eq:friedmann};
+\item $A_\Phi,A_\Psi$ are the leading terms of the controlled
+$r\gg\ell$ weak-field expansion \eqref{eq:potentials};
+\item the same $\ell$ and the same tuned source action govern both
+sectors;
+\item no fit of $\ell$ remains after the coefficients are compared.
+\end{itemize}
+
+A violation of either equality falsifies minimal classical RS2 under the
+stated assumptions. A statistically significant \emph{nonzero} common
+signal satisfying both equalities is a parameter-saving, out-of-sample
+success for RS2 and favours it over pure four-dimensional GR in model
+comparison. It does \emph{not} falsify a four-dimensional theory that
+independently parameterizes all three coefficients: such a theory fits
+either agreement or violation. Only a restricted alternative predicting
+an \emph{incompatible} relation is excluded. Note also the all-zero limit:
+$A_\Phi=A_\Psi=B=0$ satisfies both equalities trivially and merely bounds
+$\ell$ from above. And even nonzero agreement does not establish that the
+five-dimensional variables are ontologically fundamental, as
+Section~\ref{sec:opeq} proves.
+
+\section{Minimal dynamical completion and memory}
+\label{sec:completion}
+
+\subsection{Linear completion: a quotient by the kernel of the brane response}
+
+Restrict first to the linearized, fixed-background problem with fixed
+brane forcing, for which the gauge-reduced bulk perturbation data form a
+vector space. Let $z_0$ denote the bulk gravitational initial data
+omitted by the readout \eqref{eq:readout}, and define the brane-response
+operator
+\begin{equation}
+\label{eq:Osigma}
+\mathcal O_\Sigma z_0
+=\text{the induced brane response generated by }z_0,
+\end{equation}
+with brane initial data and applied brane sources held fixed. Put
+$N_\Sigma=\ker\mathcal O_\Sigma$.
+
+\begin{definition}[Minimal linear dynamical completion]
+\label{def:Edyn}
+\begin{equation}
+\label{eq:Edyn}
+\boxed{\;
+E^{\RS}_{\mathrm{dyn}}
+=\frac{\{\text{admissible gauge-reduced bulk initial data}\}}
+{N_\Sigma} .
+\;}
+\end{equation}
+\end{definition}
+
+This quotient discards exactly the bulk directions that never influence
+the brane, and retains no more. In the linear spectral representation it
+retains precisely the coupled KK amplitudes together with the allowed
+incoming homogeneous modes. Under a prescribed regular no-incoming state,
+the homogeneous amplitudes are fixed and the entire remaining response is
+the retarded convolution encoded by $G_R^{(\KK)}$.
+
+Schematically, in each relevant projected tensor sector, the exact linear
+brane equation takes the causal, generally nonlocal form
+\begin{equation}
+\label{eq:memoryeq}
+\mathcal D_0 h_\Sigma(x)
++\int d^4x'\;\mathcal K_R(x,x')\,h_\Sigma(x')
+=T_\Sigma(x)+\eta_{z_0}(x),
+\end{equation}
+with
+\begin{equation}
+\label{eq:KR}
+\mathcal K_R
+=\bigl(G_R^{(0)}+G_R^{(\KK)}\bigr)^{-1}
+-\bigl(G_R^{(0)}\bigr)^{-1}.
+\end{equation}
+Tensor indices and normalizations are suppressed throughout
+\eqref{eq:memoryeq}--\eqref{eq:KR}: the symbols $\mathcal D_0$,
+$T_\Sigma$, and $\mathcal K_R$ denote the appropriately normalized
+operators and sources within the projected tensor sector under
+consideration. In equation \eqref{eq:KR},
+$G_R^{(0)}+G_R^{(\KK)}$ is specifically the scalar coefficient
+multiplying $P^{(2)}$ in the full response operator \eqref{eq:RR}; thus
+$\mathcal K_R$ is the spin-two-sector correction relative to the
+zero-mode operator. The $P^{(0)}$ contribution occurs only through the
+massless combination $G_R^{(0)}\bigl(P^{(2)}-\tfrac12P^{(0)}\bigr)$ and
+must be retained through the full projector-valued response
+\eqref{eq:RR}. The combination $P^{(2)}-\tfrac12P^{(0)}$ is the complete
+massless-graviton exchange structure, not a scalar sector. Equation
+\eqref{eq:memoryeq} is accordingly a schematic sector-by-sector statement,
+not a fully explicit tensor identity; the explicit tensor content is
+\eqref{eq:response}--\eqref{eq:RR}. The term $\eta_{z_0}$ is the
+homogeneous response of the unresolved bulk initial data. Two points
+deserve emphasis. First, $\mathcal K_R$ is
+\emph{computed} by the KK spectral integral \eqref{eq:um}; it is not an
+arbitrary phenomenological memory function. Second, the same spectral
+density fixes both the branch cut of Section~\ref{sec:propagator} and the
+long-distance $1/r^3$ residue of Section~\ref{sec:longdistance} --- they
+are one prediction, not two. This structure agrees with the explicit
+integro-differential brane perturbation equation of Mukohyama
+\cite{Mukohyama2}.
+
+\subsection{Nonlinear completion}
+
+At the nonlinear level there is generally no vector-space kernel and
+hence no quotient by a subspace. Instead:
+
+\begin{definition}[Operational equivalence of bulk data]
+\label{def:nonlinearEquiv}
+Two admissible gauge-reduced bulk data sets are equivalent when, for the
+same retained brane initial data, they induce the same complete brane
+record for every allowed brane protocol. The minimal predictive
+completion is the set of these equivalence classes.
+\end{definition}
+
+The tensor $E_{\mu\nu}$ is the \emph{local manifestation} of the missing
+bulk response, not a substitute for it. Its divergence equation
+\eqref{eq:bianchiE} constrains it but does not evolve it; supplying
+$E_{\mu\nu}$ instantaneously does not close the system, because its
+subsequent evolution requires the bulk problem. The nonlinear completion
+is therefore neither the linear quotient \eqref{eq:Edyn} nor, in general,
+a finite set of four-dimensional functions.
+
+\section{What the source model fixes}
+\label{sec:fixed}
+
+Conditional on RS2, the source action fixes the following:
+\begin{enumerate}[leftmargin=*]
+\item the tensor form and numerical coefficients of $\Pi_{\mu\nu}$,
+\eqref{eq:Pi};
+\item the sign of the high-density correction for a positive-tension
+brane;
+\item the $\rho^2$ and $a^{-4}$ scalings in the homogeneous sector;
+\item the massless graviton pole plus a positive KK continuum in linear
+RS2;
+\item the leading $1/r^3$ potential correction and the ratio of the two
+metric potentials;
+\item the cross-regime relation \eqref{eq:crossregime};
+\item covariant conservation of the total projected response.
+\end{enumerate}
+
+Everything \emph{not} fixed --- the choice of RS2 itself, the value of
+$\ell$, the bulk state and $\mu$, the boundary condition, possible
+non-minimal operators, and the ultraviolet completion --- is collected
+with the corresponding failure modes in Section~\ref{sec:failure}. The
+cross-regime relation removes $\ell$ from one comparison; it does not
+remove the physical assumptions defining the source model.
+
+\section{The strongest conventional four-dimensional description}
+\label{sec:fourdim}
+
+\subsection{Homogeneous sector}
+
+Define
+\begin{equation}
+\label{eq:Teff}
+T^{\mathrm{eff}}_{\mu\nu}
+=T_{\mu\nu}
++\frac{\kfive^4}{\kfour^2}\Pi_{\mu\nu}
+-\frac{1}{\kfour^2}E_{\mu\nu}.
+\end{equation}
+The projected equation \eqref{eq:SMS} becomes ordinary four-dimensional
+Einstein gravity sourced by $T^{\mathrm{eff}}_{\mu\nu}$. In the
+homogeneous sector,
+\begin{equation}
+\label{eq:rhoeff}
+\rho_{\mathrm{eff}}
+=\rho+\frac{\rho^2}{2\lambda}
++\frac{3\mu}{\kfour^2a^4},
+\qquad
+p_{\mathrm{eff}}
+=p+\frac{\rho(\rho+2p)}{2\lambda}
++\frac{\mu}{\kfour^2a^4}.
+\end{equation}
+This four-dimensional fluid description reproduces the background
+expansion \emph{exactly}, and may perfectly well be regarded as
+fundamental rather than induced. Background cosmological data alone
+cannot decide between the two readings.
+
+\subsection{\texorpdfstring{Linear sector, and the CFT realization of the $1/r^3$ residue}{Linear sector, and the CFT realization of the 1/r\textthreesuperior{} residue}}
+
+The quadratic action of Section~\ref{sec:linear} is already a
+four-dimensional \emph{nonlocal} action once $\mathcal G_R$ is taken as
+its primitive kernel. That such nonlocal braneworld actions with explicit
+KK form factors can be written down constructively is shown, in the
+two-brane setting, by Barvinsky \emph{et al.} \cite{Barvinsky}; we invoke
+that work only as a constructive control on the \emph{form} of the
+eliminated action, not as an identity for RS2, whose single-brane
+spectrum is a continuum rather than a discrete tower. It contains the same massless pole, the same
+continuum branch cut, the same causal response, and the same weak-field
+coefficients as the five-dimensional description.
+
+The four-dimensional alternative is not hypothetical. The stress-tensor
+vacuum-polarization loop of an appropriate four-dimensional conformal
+sector corrects the graviton propagator with the \emph{same} $1/r^3$
+coefficient as the classical RS2 bulk calculation \cite{DuffLiu,APR,PerezVictoria}.
+Thus even the most characteristic weak-field residue of the model has a
+conventional four-dimensional realization. This is the concrete form
+taken, inside RS2, by the general obstruction proved in
+Section~\ref{sec:opeq}.
+
+The discrimination supplied by the model is therefore
+\begin{equation}
+\label{eq:discrim}
+\text{minimal RS2}
+\quad\text{versus}\quad
+\text{4D GR or another \emph{independently restricted} model class},
+\end{equation}
+and \emph{not}
+\begin{equation}
+\label{eq:notdiscrim}
+\text{source projection}
+\quad\text{versus}\quad
+\text{every possible brane-only theory}.
+\end{equation}
+
+\section{The operational-equivalence obstruction}
+\label{sec:opeq}
+
+Sections~\ref{sec:witness}--\ref{sec:completion} establish nonclosure of
+the \emph{instantaneous} brane state. That statement must be sharply
+distinguished from the far stronger claim that no autonomous description
+using only brane observables can exist. The stronger claim is
+\emph{false} when arbitrary history dependence is allowed.
+
+\subsection{Classical pushforward lemma}
+
+Let $\mathfrak E_T$ be the class of all experiments that prepare,
+intervene on, and read only Tier-1 (brane) variables. For each protocol
+$e\in\mathfrak E_T$, a fully specified source theory defines a
+probability measure $\mu^S_e$ on its admissible source histories
+$\Gamma^e_S$. Let
+\begin{equation}
+\label{eq:Re}
+R_e:\Gamma^e_S\longrightarrow\Gamma^e_T
+\end{equation}
+be the measurable map returning the complete Tier-1 record.
+
+\begin{lemma}[Pushforward representation of Tier-1 operational laws]
+\label{lem:pushforward}
+Define
+\begin{equation}
+\label{eq:nu}
+\boxed{\;
+\nu_e=(R_e)_*\mu^S_e,
+\qquad e\in\mathfrak E_T .
+\;}
+\end{equation}
+Then $M^\star_T=\{\nu_e:e\in\mathfrak E_T\}$ is a theory whose sample
+space contains only Tier-1 histories and whose prediction for every
+Tier-1 experiment coincides exactly with the source prediction:
+\begin{equation}
+\label{eq:TVzero}
+d_{\mathrm{TV}}\bigl((R_e)_*\mu^S_e,\ \nu^\star_e\bigr)=0
+\qquad\text{for every }e\in\mathfrak E_T ,
+\end{equation}
+where $\nu^\star_e:=\nu_e$ regarded as the surrogate theory's law.
+\end{lemma}
+
+\begin{proof}
+By the definition of pushforward, for every bounded measurable statistic
+$F:\Gamma^e_T\to\mathbb R$,
+\begin{equation}
+\label{eq:changeofvars}
+\int_{\Gamma^e_T}F(\gamma)\,\nu_e(d\gamma)
+=\int_{\Gamma^e_S}F(R_e\omega)\,\mu^S_e(d\omega).
+\end{equation}
+Taking $F$ to be the indicator of an arbitrary measurable event proves
+equality of the complete record distributions, hence \eqref{eq:TVzero}.
+Taking $F$ to encode an estimator, a randomized decision rule, a stopping
+rule, a correlation function, or a loss function proves equality of its
+distribution as well. Adaptive interventions are already covered, because
+each complete adaptive protocol \emph{is} a member of $\mathfrak E_T$ and
+its record map is measurable. Marginalization, random mixtures of
+protocols, and causal consistency are inherited because pushforward
+commutes with measurable composition and with marginalization.
+\end{proof}
+
+\begin{remark}[Status of Lemma~\ref{lem:pushforward}]
+\label{rem:pushstatus}
+The equality \eqref{eq:TVzero} is mathematically immediate from the
+definition of pushforward; nothing in the proof is deep, and no claim of
+mathematical originality is made for it. Its significance here is
+\emph{interpretive}. It establishes the exact boundary on what brane-only
+observations can discriminate, and hence fixes the strongest conclusion
+that the positive results of
+Sections~\ref{sec:witness}--\ref{sec:crossregime} can support. The
+substantive work lies in identifying which restrictions on the alternative
+class \emph{do} permit discrimination
+(Section~\ref{sec:boundary}), and in exhibiting --- through the
+four-dimensional CFT description of Section~\ref{sec:fourdim} --- that the
+obstruction is realized concretely in RS2 and not merely as a formal
+possibility.
+\end{remark}
+
+For standard Borel state spaces the finite-time laws disintegrate into
+causal history kernels,
+\begin{equation}
+\label{eq:disintegration}
+\nu(dx_{0:n}\mid u_{0:n-1})
+=K_0(dx_0)\prod_{j=0}^{n-1}
+K_{j+1}\bigl(dx_{j+1}\mid x_{0:j},u_{0:j}\bigr),
+\end{equation}
+an autonomous stochastic law on Tier-1 histories and controls. It need
+not be Markovian, finite-dimensional, local, simple, or state-independent.
+Those are \emph{explanatory} restrictions, not consequences of autonomy
+in the unrestricted operational sense.
+
+\subsection{Quantum and field-theoretic forms}
+
+In quantum theory, equality of one-time reduced states, or of an ordinary
+in--out generating functional, is insufficient: interventions can expose
+temporal correlations. The exact Tier-1 object is the \emph{process
+tensor} \cite{Pollock}. If $\mathcal A^{(j)}_{x_j}$ are Tier-1
+instruments and $\mathcal U_{j+1:j}$ the joint source propagator, then
+\begin{equation}
+\label{eq:processprob}
+\Pr(\mathbf x\mid\mathbf A)
+=\Tr_{TE}\Bigl[
+\mathcal A^{(n)}_{x_n}\,\mathcal U_{n:n-1}\cdots
+\mathcal A^{(0)}_{x_0}(\rho_{TE})\Bigr].
+\end{equation}
+Contracting every eliminated-sector index defines a positive, causally
+normalized multilinear functional $\Upsilon^T_{n:0}$ with Tier-1 legs
+only, such that
+\begin{equation}
+\label{eq:processtensor}
+\Pr(\mathbf x\mid\mathbf A)
+=\Upsilon^T_{n:0}\bigl[
+\mathcal A^{(n)}_{x_n},\mathcal A^{(n-1)}_{x_{n-1}},\ldots,
+\mathcal A^{(0)}_{x_0}\bigr].
+\end{equation}
+
+The field-theoretic counterpart is the Feynman--Vernon closed-time-path
+influence functional \cite{FeynmanVernon}. With
+$S[\phi,\chi]=S_T[\phi]+S_E[\chi]+S_{\mathrm{int}}[\phi,\chi]$ and a
+factorized initial environment state,
+\begin{equation}
+\label{eq:IF}
+e^{iS_{\mathrm{IF}}[\phi_+,\phi_-]}
+=\int_{\chi_+(t_f)=\chi_-(t_f)}
+\mathcal D\chi_+\,\mathcal D\chi_-\;
+\rho_E(\chi^+_i,\chi^-_i)\,
+e^{iS_E[\chi_+]+iS_{\mathrm{int}}[\phi_+,\chi_+]
+-iS_E[\chi_-]-iS_{\mathrm{int}}[\phi_-,\chi_-]},
+\end{equation}
+\begin{equation}
+\label{eq:ZT}
+Z_T[J_+,J_-]
+=\int\mathcal D\phi_+\,\mathcal D\phi_-\;
+\rho_T(\phi^+_i,\phi^-_i)\,
+e^{iS_T[\phi_+]-iS_T[\phi_-]
++iS_{\mathrm{IF}}[\phi_+,\phi_-]
++iJ_+\phi_+-iJ_-\phi_-} .
+\end{equation}
+The retained action is counted exactly once. A \emph{correlated} initial
+state replaces $\rho_E$ by the corresponding joint boundary functional;
+the process-tensor construction \eqref{eq:processtensor} covers that case
+with no factorization assumption. The resulting closed-time-path
+functional contains retarded response, fluctuations, and multi-time
+Tier-1 probabilities, and may be complex, nonlocal, and state-dependent
+while remaining a complete Tier-1 description.
+
+\subsection{The exact boundary of the conclusion}
+\label{sec:boundary}
+
+The witness of Section~\ref{sec:witness} proves
+\begin{equation}
+\label{eq:noflow}
+p\circ\Phi_t\ne U_t\circ p
+\end{equation}
+for every deterministic flow $U_t$ on the specified instantaneous brane
+state, and --- for any preparation class that resolves the two witness
+states, so that the conditional future law differs within a readout fiber
+--- it also defeats universal Markov lumpability. It does
+\textbf{not} defeat the pushed-forward law \eqref{eq:nu} on complete
+brane histories.
+
+Accordingly, source projection can be empirically distinguished only
+relative to a \emph{restricted} alternative class $\mathfrak M^R_T$. If
+$\Op(M)$ denotes the complete family of protocol-conditioned Tier-1 laws
+of a model, the necessary and sufficient condition that the restricted
+class contain no exactly operationally equivalent model is
+\begin{equation}
+\label{eq:identifiability}
+\boxed{\;
+\Op(M_S,p)\notin\bigl\{\Op(M):M\in\mathfrak M^R_T\bigr\}.
+\;}
+\end{equation}
+
+\begin{remark}[Identifiability is not a finite-data testing theorem]
+\label{rem:finitedata}
+Condition \eqref{eq:identifiability} is exact identifiability. Uniform
+statistical discrimination from a \emph{composite} alternative class
+additionally requires separation of the source law from the
+\emph{closure} of that class in an operational metric appropriate to the
+allowed protocols --- total variation, or a relative-entropy rate. If the
+source law lies outside the class but can be approximated arbitrarily
+closely by its members, exact equivalence is absent while finite-data
+discrimination may nonetheless be arbitrarily difficult.
+\end{remark}
+
+Useful independent restrictions include: a fixed finite set of free or
+weakly coupled instantaneous fields at a stated perturbative order; a
+Markov or finite-memory condition; fixed finite-pole local quadratic
+dynamics; a finite EFT basis with coefficients fixed before the test; a
+prescribed preparation/boundary-state class. \emph{Locality alone, or
+finitely many interacting field species alone, is insufficient}, because
+multiparticle states generate branch cuts. If arbitrary kernels,
+continua, initial correlations, and complete-history states are admitted,
+the pushforward theory \emph{belongs} to the alternative class and
+discrimination is impossible.
+
+\section{Main theorem}
+\label{sec:main}
+
+\begin{theorem}[RS2 source projection and its exact discrimination boundary]
+\label{thm:main}
+Consider the two-sided, $Z_2$-symmetric, positive-tension RS2 model
+defined by \eqref{eq:action}, with pure five-dimensional Einstein gravity
+and a negative cosmological constant in the bulk. Tune
+$\Lfive=-6/\ell^2$ and $\lambda=6/(\kfive^2\ell)$, so that $\Lfour=0$,
+and let the instantaneous readout be Definition~\ref{def:readout}.
+Assume the full source domain contains smooth finite-energy TT bulk
+initial data. For the stationary weak-field coefficients, impose the
+regular retarded/no-incoming bulk condition. Then:
+\begin{enumerate}[leftmargin=*]
+\item the readout has physically distinct fibers on which future induced
+brane observables differ, so no deterministic evolution on that
+instantaneous readout is valid for all admissible bulk initial data;
+\item the exact projected tensor equation contains the model-specific
+correction
+$\mathcal C^{\RS}_{\mu\nu}=\kfive^4\Pi_{\mu\nu}-E_{\mu\nu}$
+with $\Pi_{\mu\nu}$ as in \eqref{eq:Pi}, and predictive closure requires
+either bulk response data or an equivalent causal, generally nonlocal
+brane history law;
+\item in the homogeneous and long-distance weak-field regimes the
+observable coefficients obey
+$A_\Psi=\tfrac12A_\Phi$ and $B=\tfrac{\kfour^4}{24}A_\Phi$;
+\item these statements distinguish minimal RS2 from any independently
+specified Tier-1 model class that cannot realize the correlated quadratic
+term, slip ratio, and continuum response --- but no experiment restricted
+to brane observables distinguishes the five-dimensional source model from
+its \emph{unrestricted} exact four-dimensional pushforward theory.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\textbf{Part 1.} Take zero bulk perturbation and a nonzero, normalizable
+TT wave packet initially supported away from the brane, with the
+perturbation and its first time derivative vanishing in a brane
+neighborhood. The two induced Cauchy data sets coincide
+(Proposition~\ref{prop:witness}). Their five-dimensional Weyl curvatures
+do not, so they are not related by a diffeomorphism. Hyperbolic finite
+propagation permits the packet to reach the brane and change the induced
+perturbation. Hence one readout fiber is not preserved by source
+evolution, contradicting the defining condition for a deterministic
+quotient flow (Corollary~\ref{cor:nonproj}).
+
+\textbf{Part 2.} The Israel equation \eqref{eq:israel} with $Z_2$
+symmetry gives \eqref{eq:Kfixed}. The contracted Gauss identity separates
+the bulk Riemann tensor into its Ricci part, fixed by $\Lfive$ via
+\eqref{eq:bulkEE}, and its Weyl part $E_{\mu\nu}$. The terms quadratic in
+$K_{\mu\nu}$ expand into a constant, a term linear in $T_{\mu\nu}$, and
+$\kfive^4\Pi_{\mu\nu}$, as computed line by line in
+\eqref{eq:Qexpanded}--\eqref{eq:Qsorted} with $\Pi_{\mu\nu}$ given by
+\eqref{eq:Pi},
+giving
+\begin{equation}
+G_{\mu\nu}
+=-\tfrac12\Bigl(\Lfive+\tfrac{\kfive^4\lambda^2}{6}\Bigr)q_{\mu\nu}
++\frac{\kfive^4\lambda}{6}T_{\mu\nu}
++\kfive^4\Pi_{\mu\nu}-E_{\mu\nu},
+\end{equation}
+which proves \eqref{eq:SMS} and \eqref{eq:constants}. The Bianchi
+identity fixes only $\nabla^\mu E_{\mu\nu}$, \eqref{eq:bianchiE}. Part 1
+supplies two solutions with the same instantaneous brane data and
+different later $E_{\mu\nu}$; the remaining information must therefore be
+supplied as bulk initial/boundary response data or, after exact
+elimination, as a causal functional of the brane history and the chosen
+bulk state (Section~\ref{sec:completion}).
+
+\textbf{Part 3.} Perfect-fluid substitution gives $\Pi_{00}=\rho^2/12$
+(Lemma~\ref{lem:PiFRW}), while FRW symmetry gives $-E_{00}=3\mu/a^4$
+\eqref{eq:EFRW}. The $00$ equation therefore gives $B=\kfive^4/36$. RS
+tuning with $\kfour^2=\kfive^2/\ell$ gives $B=\kfour^4\ell^2/36$.
+Independently, the regular brane-to-brane propagator gives
+$A_\Phi=2\ell^2/3$ and $A_\Psi=\ell^2/3$ at $r\gg\ell$
+\eqref{eq:potentials}. Eliminating $\ell^2$ proves
+$A_\Psi=A_\Phi/2$ and $B=\kfour^4A_\Phi/24$
+(Theorem~\ref{thm:crossregime}).
+
+\textbf{Part 4.} A restricted theory that cannot realize one of these
+fixed relations is falsified when all assumptions and coefficients are
+fixed before observing the test data. Conversely, for every brane
+protocol, push the RS2 source-history measure forward through the
+complete brane readout. Lemma~\ref{lem:pushforward} shows the resulting
+four-dimensional history theory has exactly the same record distribution
+for that protocol, including adaptive interventions; their total-variation
+distance vanishes for every brane experiment. This proves both the
+positive antecedent and the negative ontological-discrimination
+statement.
+\end{proof}
+
+Theorem~\ref{thm:main} establishes a concrete, quantitative
+source-projection realization together with its exact discrimination
+boundary. A stronger conclusion requires an independently justified
+restriction on admissible Tier-1 dynamics --- fixed finite-pole local
+quadratic dynamics, prescribed finite perturbative content, or finite
+memory.
+
+\section{Comparative examples and limits of interpretation}
+\label{sec:controls}
+
+\subsection{An exactly soluble projection: two coupled oscillators}
+\label{sec:oscillator}
+
+The following systems are scientific comparisons that clarify the meaning
+and limits of the RS2 result. An ordinary Hamiltonian model verifies, without gravitational
+complications, every step from fiber nonprojectability through memory to
+an exact Tier-1 surrogate, and simultaneously exhibits the logical
+boundary that Section~\ref{sec:opeq} proves in general. The projected
+equation obtained below is the elementary exactly soluble instance of the
+Mori--Zwanzig projection-operator structure \cite{MoriZwanzig}: a memory
+kernel, an initial-slip term, and a retained susceptibility. Let
+\begin{equation}
+\label{eq:Hosc}
+H_f=\frac{p_x^2}{2m}+\tfrac12 m\omega_0^2x^2
++\frac{p_y^2}{2M}
++\tfrac12 M\Omega^2\Bigl(y-\frac{cx}{M\Omega^2}\Bigr)^2
+-f(t)\,x ,
+\end{equation}
+and retain $X=(x,v)^T$ while eliminating $Z=(y,w)^T$. With
+$\delta\equiv c^2/(mM\Omega^2)$, the first-order generator has blocks
+\begin{equation}
+\label{eq:blocks}
+A=\begin{pmatrix}0&1\\-(\omega_0^2+\delta)&0\end{pmatrix},
+\quad
+B=\begin{pmatrix}0&0\\c/m&0\end{pmatrix},
+\quad
+C=\begin{pmatrix}0&0\\c/M&0\end{pmatrix},
+\quad
+D=\begin{pmatrix}0&1\\-\Omega^2&0\end{pmatrix},
+\end{equation}
+with
+$e^{tD}=\begin{pmatrix}\cos\Omega t&\sin\Omega t/\Omega\\
+-\Omega\sin\Omega t&\cos\Omega t\end{pmatrix}$.
+Variation of constants evaluates \emph{every} projected term:
+\begin{equation}
+\label{eq:oscproj}
+\dot X(t)=AX(t)+Be^{tD}Z_0
++\int_0^t\mathcal K(t-s)X(s)\,ds
++\binom{0}{f(t)/m},
+\end{equation}
+\begin{equation}
+\label{eq:oscK}
+\boxed{\;
+\mathcal K(t)=Be^{tD}C
+=\begin{pmatrix}
+0&0\\[2pt]
+\dfrac{c^2}{mM\Omega}\sin\Omega t&0
+\end{pmatrix}.
+\;}
+\end{equation}
+Equivalently, after one integration by parts,
+\begin{equation}
+\label{eq:oscGLE}
+\boxed{\;
+\ddot x+\omega_0^2x
++\int_0^t\delta\cos\bigl[\Omega(t-s)\bigr]\dot x(s)\,ds
+=\frac{f(t)}{m}+\zeta(t),
+\;}
+\end{equation}
+\begin{equation}
+\label{eq:oscnoise}
+\zeta(t)=\frac{c}{m}
+\Bigl[\Bigl(y_0-\frac{cx_0}{M\Omega^2}\Bigr)\cos\Omega t
++\frac{w_0}{\Omega}\sin\Omega t\Bigr].
+\end{equation}
+Two states with equal $(x_0,v_0)$ and different $(y_0,w_0)$ have
+different later trajectories --- the instantaneous readout is
+nonprojectable, exactly as in Proposition~\ref{prop:witness}, with
+$\zeta$ playing the role of $\eta_{z_0}$ in \eqref{eq:memoryeq}. The
+smallest generic Markov completion carries the two hidden coordinates,
+exactly as $E^{\RS}_{\mathrm{dyn}}$ does. The exact retarded
+susceptibility is
+\begin{equation}
+\label{eq:chi}
+\boxed{\;
+\chi^R_{xx}(\omega)
+=\frac{\Omega^2-z^2}
+{m\bigl[(\omega_0^2-z^2)(\Omega^2-z^2)-\delta z^2\bigr]},
+\qquad z=\omega+i0^+ .
+\;}
+\end{equation}
+
+And yet eliminating $y$ also gives a \emph{local, Tier-1-only},
+higher-derivative equation,
+\begin{equation}
+\label{eq:oscfourth}
+\boxed{\;
+\bigl[(\partial_t^2+\omega_0^2)(\partial_t^2+\Omega^2)
++\delta\,\partial_t^2\bigr]x
+=\frac1m(\partial_t^2+\Omega^2)f .
+\;}
+\end{equation}
+Its extra initial derivatives encode precisely the two missing constants.
+This exactly soluble example exposes the logical boundary: nonprojectability
+of $(x,\dot x)$ proves the need for completion \emph{relative to that
+state choice}, and proves nothing about the nonexistence of a
+higher-derivative or history-level theory written in $x$ alone. This is
+the finite-dimensional shadow of Lemma~\ref{lem:pushforward}.
+
+\subsection{Einstein--Cartan and Aharonov--Bohm comparisons}
+\label{sec:countercontrols}
+
+These two examples distinguish a genuine propagating source degree of
+freedom from an auxiliary variable and from an incomplete choice of
+observable state: Einstein--Cartan--Dirac torsion is auxiliary and
+introduces no same-readout fiber, whereas the Aharonov--Bohm phase is
+already determined once the observable state is chosen completely.
+
+\paragraph{Einstein--Cartan--Dirac.}
+Minimal Einstein--Cartan--Dirac theory fails as the required
+\emph{propagating source-projection antecedent} --- not as a theory ---
+because its torsion is \emph{auxiliary}: it introduces no independent
+propagating degree of freedom, and hence no same-readout fiber of the
+kind Proposition~\ref{prop:witness} exhibits. The connection equation
+determines the contorsion algebraically from the axial current, and
+substitution gives the four-fermion term \cite{Diakonov}
+\begin{equation}
+\label{eq:ECD}
+S_{\mathrm{eff}}
+=S_{\mathrm{EH}}+S_{\mathrm{Dirac}}[\mathring\omega]
++\frac{3\kappa}{16}\int d^4x\;e\,J_{5a}J_5^a,
+\end{equation}
+up to signature and current conventions. A torsion-free theory containing
+this operator has \emph{identical} retained observables. There is no
+independent propagating fiber analogous to a remote RS2 wave packet ---
+which is exactly what RS2 supplies and Einstein--Cartan does not.
+
+\paragraph{Aharonov--Bohm.}
+The Aharonov--Bohm effect \cite{AharonovBohm} remains a clean control for
+readout incompleteness: equal local curvature can coexist with different
+gauge-invariant holonomy and different interference phases. But holonomy
+is already a standard observable of four-dimensional gauge theory. The
+effect shows that a \emph{curvature-only} state is incomplete; it does
+not show that a deeper source ontology has been observed. It is the
+correct model for ``the readout you chose was too small,'' not for
+``there is a hidden dimension.''
+
+\section{Empirical discrimination}
+\label{sec:empirical}
+
+\subsection{A pre-registered model test}
+
+Fit the three phenomenological coefficients of
+\eqref{eq:phenomB}--\eqref{eq:phenomA} \emph{without} using RS2 in the
+fits, and form the null combinations
+\begin{equation}
+\label{eq:nulls}
+\boxed{\;
+D_1=A_\Phi-2A_\Psi,
+\qquad
+D_2=24B-\kfour^4A_\Phi .
+\;}
+\end{equation}
+Minimal RS2 predicts $D_1=D_2=0$ with $A_\Phi,A_\Psi,B\ge0$.
+
+\begin{remark}[These are consistency tests, not a detection criterion]
+Pure four-dimensional GR has $A_\Phi=A_\Psi=B=0$ and passes both nulls
+trivially. Discrimination from GR requires at least one \emph{statistically
+significant positive} coefficient together with consistency of the
+others. The coefficients must be fit from independent observables, with
+the functional forms fixed before examining residuals.
+\end{remark}
+
+In the nonrelativistic sector,
+\begin{equation}
+\label{eq:accel_frac}
+\frac{\Delta|\mathbf a|}{|\mathbf a|}
+=\frac{3A_\Phi}{r^2}+O(r^{-4}),
+\end{equation}
+whereas relativistic propagation probes $\Phi+\Psi$ and therefore the
+different combination $(A_\Phi+A_\Psi)/2=3A_\Phi/4$. The two probes are
+not degenerate, which is what prevents a single rescaling of $G_4M$ from
+absorbing the signal.
+
+Short-range torsion-balance experiments already test the inverse-square
+law at submillimetre separations \cite{Lee}. Such data should be fitted
+to the \emph{full} RS2 KK spectral potential built from \eqref{eq:um},
+convolved with the extended attractor and detector geometry, rather than
+by translating a Yukawa exclusion curve. The truncated $1/r^3$ potential
+may be used only after the fitted parameter range verifies $r\gg\ell$;
+near $r\sim\ell$ it is uncontrolled. Primordial-abundance and expansion
+data constrain the nonstandard high-density expansion and the separate
+radiation-like term \cite{Ichiki}. A combined analysis must fit $B$ and
+$\mu$ \emph{separately}: during radiation domination $\rho^2\propto
+a^{-8}$ whereas dark radiation scales as $a^{-4}$, so a single-epoch
+expansion residual can mix their amplitudes, but multi-epoch data and
+equation-of-state transitions separate them.
+
+This is a falsification test, not a discovery forecast. Existing
+short-distance bounds already make the corresponding high-energy
+cosmological term small at late epochs, and a simultaneous precision
+measurement of both static potentials at microscopic distances is
+technically difficult. At present the cross-regime relation is more
+useful as a consistency condition on any \emph{claimed} anomaly than as a
+near-term detection channel.
+
+\subsection{Spectral test}
+
+A time-dependent brane source couples to a massless pole plus a
+continuum. A response measurement with sufficient bandwidth could compare
+a finite-pole local model against the positive KK spectral measure
+\begin{equation}
+\label{eq:rhoKK}
+\rho_{\KK}(m)=u_m(0)^2\ge0,
+\qquad m\in[0,\infty).
+\end{equation}
+A resolved threshold continuum, or the corresponding power-law late-time
+tail, would exclude a \emph{pre-specified finite-pole free or tree-level
+linear} alternative. It would \emph{not} exclude an interacting
+four-dimensional conformal sector or continuum model, which has the same
+analytic structure (Remark~\ref{rem:cut}).
+
+\subsection{What no experiment of this kind can decide}
+
+No statistic constructed solely from induced brane fields can decide
+between RS2 and the exact Tier-1 process functional built from RS2. This
+is not a limitation of experimental sensitivity; it follows from equality
+of probability measures, \eqref{eq:TVzero}. An experiment that couples
+directly to a bulk coordinate could distinguish the source fiber, but it
+would thereby enlarge the observable algebra and would no longer be
+confined to the readout used in the theorem.
+
+\section{Scope and regime of validity}
+\label{sec:failure}
+
+The results derived above apply to the following physical domain and
+assumptions.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Bulk-state domain.} The same-readout witness requires that
+admissible initial data include normalizable bulk radiation. If the model
+definition fixes a unique stationary vacuum and excludes all homogeneous
+incoming data, the witness lies outside the restricted domain. The forced
+KK response and the effective-action equivalence remain, but the claimed
+instantaneous fiber must be reassessed for that domain.
+
+\item \textbf{Minimal action.} A brane Einstein term, a Gauss--Bonnet
+term, additional bulk fields, finite brane thickness, a second brane, or
+broken $Z_2$ symmetry changes the junction condition, the propagator, and
+the coefficient relation. In such theories $D_1=D_2=0$ need not hold.
+
+\item \textbf{Positive-tension branch.} The sign and stability statements
+use $\lambda>0$. The negative-tension branch can reverse kinetic signs or
+the effective Newton coupling; it is not a harmless sign convention.
+
+\item \textbf{Homogeneous sector.} Equation \eqref{eq:friedmann} assumes
+an FRW brane, conserved brane matter, and no bulk matter flux. With bulk
+exchange, both $\dot\rho+3H(\rho+p)=0$ and $\mathcal U\propto a^{-4}$ are
+modified.
+
+\item \textbf{Weak-field sector.} The coefficients $A_\Phi,A_\Psi$ assume
+a static weak source, $r\gg\ell$, and the regular retarded/no-incoming
+bulk condition. They are unreliable in the strong-field region and at
+$r\lesssim\ell$.
+
+\item \textbf{The state parameter $\mu$.} Neither the sign nor the
+magnitude of $\mu$ is fixed by the projected brane equation. Positivity
+follows only after imposing a positive-mass regular AdS--Schwarzschild
+bulk. Treating dark radiation as a universal fixed prediction would
+overstate the model.
+
+\item \textbf{Observable versus decomposition.} The induced metric and
+matter records are observable; the \emph{split}
+$\mathcal C^{\RS}=\kfive^4\Pi-E$ is source-model dependent. A
+four-dimensional theory may reorganize the same total response into
+different fields or a nonlocal kernel.
+
+\item \textbf{Unrestricted alternatives.} Nonlocality, colored noise, a
+branch cut, or preparation dependence does not by itself refute a Tier-1
+theory. Each is permitted in the exact pushed-forward history law
+\eqref{eq:nu}. A contrary conclusion requires an independently imposed
+restriction --- finite-pole local quadratic dynamics, fixed perturbative
+content, or Markovianity. Locality, or finitely many interacting fields,
+is \emph{not} enough.
+
+\item \textbf{Flat-brane tuning.} The cross-regime relation was derived
+at $\Lfour=0$. A detuned or de Sitter brane changes the background
+junction relation and can modify the weak-field coefficients. Applying
+the flat-brane relation to a weakly curved universe is an approximation
+requiring $H\ell\ll1$ and negligible curvature/detuning effects; it is not
+a complete late-time cosmological fit.
+\end{enumerate}
+
+Two further parameters are simply undetermined rather than failure modes.
+The numerical value of $\ell$ --- equivalently $\lambda$ or $\kfive$ once
+$G_4$ is fixed --- is not predicted; only bounds on it follow from data.
+And the theory is a five-dimensional effective field theory, so nothing
+here constrains its ultraviolet completion above the corresponding cutoff.
+
+\paragraph{Decoupling limits.}
+These are consistent. As $\ell\to0$ at fixed $G_4$: $A_\Phi,A_\Psi\to0$,
+$\lambda\to\infty$, and $B\to0$. As $\rho/\lambda\to0$,
+$\mu/(a^4H^2)\to0$, and $r/\ell\to\infty$, ordinary four-dimensional GR
+is recovered in every sector.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Minimal positive-tension RS2 contains a complete source-projection
+antecedent. In that model, the projection from gauge-reduced bulk gravity
+to the instantaneous brane state removes genuine gravitational degrees of
+freedom: a remote transverse-traceless bulk wave, whose existence is
+established by an explicit KK spectral construction, supplies a
+same-readout, different-future pair, so no deterministic evolution law
+exists on that instantaneous state over the full source domain.
+Gauss--Codazzi projection and Israel matching \emph{derive}, rather than
+posit,
+\begin{equation}
+\mathcal C^{\RS}_{\mu\nu}=\kfive^4\Pi_{\mu\nu}-E_{\mu\nu}.
+\end{equation}
+Its local nonlinear part gives the exact positive $\rho^2$ correction;
+its bulk Weyl part carries the completion data and the retarded KK memory.
+The same source scale $\ell$ fixes the leading weak-field potentials,
+producing the parameter-eliminated relation
+\begin{equation}
+A_\Psi=A_\Phi/2,
+\qquad
+B=\kfour^4A_\Phi/24 ,
+\end{equation}
+a genuine, falsifiable residue linking two otherwise independent
+observational regimes. This is the strongest quantitative result obtained
+here.
+
+The strongest possible \emph{interpretation} is nevertheless bounded by
+Lemma~\ref{lem:pushforward}: every source model induces, by pushforward, a
+brane-only path law with identical brane statistics, and RS2 makes that
+obstruction concrete through its four-dimensional CFT description, which
+reproduces the same $1/r^3$ residue. The result is therefore positive at
+the level of model-relative source projection and nonclosure, and negative
+at the level of unrestricted ontological discrimination. Absent an
+independently motivated restriction on the admissible brane-only theory
+class, no brane observation can establish that the source representation
+is ontologically fundamental; and establishing that nature realizes this
+antecedent at all requires empirical selection of RS2, or of another source
+model with comparably specific residues. The conditions under which the
+positive results hold are stated once, in Section~\ref{sec:failure}.
+
+\begin{thebibliography}{99}
+
+\bibitem{RS2}
+L.~Randall and R.~Sundrum,
+``An Alternative to Compactification,''
+\emph{Phys.\ Rev.\ Lett.} \textbf{83}, 4690 (1999),
+arXiv:hep-th/9906064.
+
+\bibitem{SMS}
+T.~Shiromizu, K.~Maeda, and M.~Sasaki,
+``The Einstein Equations on the 3-Brane World,''
+\emph{Phys.\ Rev.\ D} \textbf{62}, 024012 (2000),
+arXiv:gr-qc/9910076.
+
+\bibitem{Israel}
+W.~Israel,
+``Singular Hypersurfaces and Thin Shells in General Relativity,''
+\emph{Nuovo Cim.\ B} \textbf{44}, 1 (1966),
+doi:10.1007/BF02710419.
+
+\bibitem{BDEL}
+P.~Binetruy, C.~Deffayet, U.~Ellwanger, and D.~Langlois,
+``Brane Cosmological Evolution in a Bulk with Cosmological Constant,''
+\emph{Phys.\ Lett.\ B} \textbf{477}, 285 (2000),
+arXiv:hep-th/9910219.
+
+\bibitem{Mukohyama1}
+S.~Mukohyama,
+``Brane-World Solutions, Standard Cosmology, and Dark Radiation,''
+\emph{Phys.\ Lett.\ B} \textbf{473}, 241 (2000),
+arXiv:hep-th/9911165.
+
+\bibitem{GarrigaTanaka}
+J.~Garriga and T.~Tanaka,
+``Gravity in the Randall--Sundrum Brane World,''
+\emph{Phys.\ Rev.\ Lett.} \textbf{84}, 2778 (2000),
+arXiv:hep-th/9911055.
+
+\bibitem{GKR}
+S.~B.~Giddings, E.~Katz, and L.~Randall,
+``Linearized Gravity in Brane Backgrounds,''
+\emph{JHEP} \textbf{03}, 023 (2000),
+arXiv:hep-th/0002091.
+
+\bibitem{Mukohyama2}
+S.~Mukohyama,
+``Integro-Differential Equation for Brane-World Cosmological
+Perturbations,''
+\emph{Phys.\ Rev.\ D} \textbf{64}, 064006 (2001),
+arXiv:hep-th/0104185.
+
+\bibitem{DuffLiu}
+M.~J.~Duff and J.~T.~Liu,
+``Complementarity of the Maldacena and Randall--Sundrum Pictures,''
+\emph{Phys.\ Rev.\ Lett.} \textbf{85}, 2052 (2000),
+arXiv:hep-th/0003237.
+
+\bibitem{APR}
+N.~Arkani-Hamed, M.~Porrati, and L.~Randall,
+``Holography and Phenomenology,''
+\emph{JHEP} \textbf{08}, 017 (2001),
+arXiv:hep-th/0012148.
+
+\bibitem{Barvinsky}
+A.~O.~Barvinsky, A.~Yu.~Kamenshchik, A.~Rathke, and C.~Kiefer,
+``Nonlocal Braneworld Action: An Alternative to Kaluza--Klein
+Description,''
+\emph{Phys.\ Rev.\ D} \textbf{67}, 023513 (2003),
+arXiv:hep-th/0206188.
+
+\bibitem{FeynmanVernon}
+R.~P.~Feynman and F.~L.~Vernon, Jr.,
+``The Theory of a General Quantum System Interacting with a Linear
+Dissipative System,''
+\emph{Ann.\ Phys.} \textbf{24}, 118 (1963),
+doi:10.1016/0003-4916(63)90068-X.
+
+\bibitem{MoriZwanzig}
+H.~Mori,
+``Transport, Collective Motion, and Brownian Motion,''
+\emph{Prog.\ Theor.\ Phys.} \textbf{33}, 423 (1965),
+doi:10.1143/PTP.33.423;
+R.~Zwanzig,
+``Nonlinear Generalized Langevin Equations,''
+\emph{J.\ Stat.\ Phys.} \textbf{9}, 215 (1973),
+doi:10.1007/BF01008729.
+
+\bibitem{Pollock}
+F.~A.~Pollock, C.~Rodr\'iguez-Rosario, T.~Frauenheim, M.~Paternostro,
+and K.~Modi,
+``Non-Markovian Quantum Processes: Complete Framework and Efficient
+Characterisation,''
+\emph{Phys.\ Rev.\ A} \textbf{97}, 012127 (2018),
+arXiv:1512.00589.
+
+\bibitem{Diakonov}
+D.~Diakonov, A.~G.~Tumanov, and A.~A.~Vladimirov,
+``Low-Energy General Relativity with Torsion: A Systematic Derivative
+Expansion,''
+\emph{Phys.\ Rev.\ D} \textbf{84}, 124042 (2011),
+arXiv:1104.2432.
+
+\bibitem{Lee}
+J.~G.~Lee, E.~G.~Adelberger, T.~S.~Cook, S.~M.~Fleischer, and
+B.~R.~Heckel,
+``New Test of the Gravitational $1/r^2$ Law at Separations down to
+52~$\mu$m,''
+\emph{Phys.\ Rev.\ Lett.} \textbf{124}, 101101 (2020),
+arXiv:2002.11761.
+
+\bibitem{Ichiki}
+K.~Ichiki, M.~Yahiro, T.~Kajino, M.~Orito, and G.~J.~Mathews,
+``Observational Constraints on Dark Radiation in Brane Cosmology,''
+\emph{Phys.\ Rev.\ D} \textbf{66}, 043521 (2002),
+arXiv:astro-ph/0203272.
+
+\bibitem{PerezVictoria}
+M.~P\'erez-Victoria,
+``Randall--Sundrum Models and the Regularized AdS/CFT Correspondence,''
+\emph{JHEP} \textbf{05}, 064 (2001),
+arXiv:hep-th/0105048.
+
+\bibitem{AharonovBohm}
+Y.~Aharonov and D.~Bohm,
+``Significance of Electromagnetic Potentials in the Quantum Theory,''
+\emph{Phys.\ Rev.} \textbf{115}, 485 (1959),
+doi:10.1103/PhysRev.115.485.
+
+\bibitem{PinheiroPires}
+C.~Pinheiro and G.~O.~Pires,
+``Extending the Barnes--Rivers Operators to $D=3$ Topological Gravity,''
+\emph{Phys.\ Lett.\ B} \textbf{301}, 339 (1993),
+arXiv:hep-th/9212008.
+
+\bibitem{Paper1}
+J.~Rodgers,
+``Source--Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21369967}{doi:10.5281/zenodo.21369967}.
+
+\bibitem{Paper2}
+J.~Rodgers,
+``Target-Relative Necessity of Completion: When Readout Loss Obstructs, and What a Sufficient Extension Must Retain,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21370501}{doi:10.5281/zenodo.21370501}.
+
+\bibitem{Paper3}
+J.~Rodgers,
+``Canonical Minimal Source Completion: The Coarsest Readout Extension on which a Nominated Family of Source Relations Becomes Well Defined,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21370763}{doi:10.5281/zenodo.21370763}.
+
+\bibitem{Paper4}
+J.~Rodgers,
+``Geometric Realization of Completed Source Relations: Descent, Orbit Spaces, Invariant Relations, and Variational Response in Shadow Theory,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21370985}{doi:10.5281/zenodo.21370985}.
+
+\bibitem{Paper5}
+J.~Rodgers,
+``Observable Quotients and Exact Projected Dynamics: Closure, Memory, Minimal Dynamical Completion, and Effective Field Operators,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21371251}{doi:10.5281/zenodo.21371251}.
+
+\bibitem{Paper6}
+J.~Rodgers,
+``Non-Source Projection and Internal Identifiability,''
+Zenodo (2026),
+\href{https://doi.org/10.5281/zenodo.21371451}{doi:10.5281/zenodo.21371451}.
+
+\end{thebibliography}
+
+\end{document}

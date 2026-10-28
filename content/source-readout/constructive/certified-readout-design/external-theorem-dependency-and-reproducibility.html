@@ -1,0 +1,43 @@
+<h2 id="section-external-theorem-dependency-and-reproducibility">External-theorem dependency and reproducibility</h2>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/certified-readout-design/math/p010-00137.svg" alt="The circuit reduction, synthesis correctness, branch-and-bound certificates and nonlinear cost frontier
+are proved here without any ETH-refutation premise. The conditional counting-time corollary invokes
+the fixed-density part of the supplied October25 OpenAI preprint, Theorem1.1[7]. Its rational tensor
+adapter invokes that preprint’s TheoremD.1. These are external theorem assumptions, not conclusions
+of the prototype checks.
+The cited official Lean scope description reports the weaker exponent
+Ok(n(log log n)2/√log n) and distinguishes the sharper printed bounds[8]. The official release describes
+ongoing external examination[9]. The supplied Anthropic manuscript reports formal checking but
+explicitly leaves statement correspondence and mathematical interpretation to readers[3], AppendixE.
+The supplied OpenAI manuscript is dated 17 October 2026, revised 25 October 2026; the supplied
+Anthropic manuscript is dated 26 October 2026. Their exact input hashes and inspected theorem/page
+locators are recorded in the supplement. We inspected the relevant printed interfaces and primary-source
+scope descriptions; we did not build those formalizations, establish identity between current repository
+files and every pinned version, or independently reconstruct their entire proofs. No sharper theorem is
+labelled machine-verified here solely because a related Lean statement exists. The supplement supplies
+inspected source code and exact integer/rational tests, source-pair witnesses, menu instances, covering-
+tree certificates, weighted examples and independent enumeration checks. Primary implementations are
+conventional DPLL, branch-and-bound, enumeration and variable elimination. Their finite execution
+counts and benchmark timings do not implement the preprints’ asymptotic algorithms or establish a
+practical general SAT speedup. Exact rational arithmetic, asserted checks and actual oracle access
+remain part of the reproducibility contract." width="486.57" height="269.92" style="width:44.639em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The circuit reduction, synthesis correctness, branch-and-bound certificates and nonlinear cost frontier
+are proved here without any ETH-refutation premise. The conditional counting-time corollary invokes
+the fixed-density part of the supplied October25 OpenAI preprint, Theorem1.1[7]. Its rational tensor
+adapter invokes that preprint’s TheoremD.1. These are external theorem assumptions, not conclusions
+of the prototype checks.
+The cited official Lean scope description reports the weaker exponent
+Ok(n(log log n)2/√log n) and distinguishes the sharper printed bounds[8]. The official release describes
+ongoing external examination[9]. The supplied Anthropic manuscript reports formal checking but
+explicitly leaves statement correspondence and mathematical interpretation to readers[3], AppendixE.
+The supplied OpenAI manuscript is dated 17 October 2026, revised 25 October 2026; the supplied
+Anthropic manuscript is dated 26 October 2026. Their exact input hashes and inspected theorem/page
+locators are recorded in the supplement. We inspected the relevant printed interfaces and primary-source
+scope descriptions; we did not build those formalizations, establish identity between current repository
+files and every pinned version, or independently reconstruct their entire proofs. No sharper theorem is
+labelled machine-verified here solely because a related Lean statement exists. The supplement supplies
+inspected source code and exact integer/rational tests, source-pair witnesses, menu instances, covering-
+tree certificates, weighted examples and independent enumeration checks. Primary implementations are
+conventional DPLL, branch-and-bound, enumeration and variable elimination. Their finite execution
+counts and benchmark timings do not implement the preprints’ asymptotic algorithms or establish a
+practical general SAT speedup. Exact rational arithmetic, asserted checks and actual oracle access
+remain part of the reproducibility contract.</pre></details></figure>
+<p data-source-page="10"><strong>Reproduction.</strong> The top-level build.py builds this manuscript in a disposable source copy. re produce.py--check validates the scoped input hashes, Python syntax and local-module closure; reproduce.py--outputPATH runs the declared checks in a disposable expanded tree and retains per-job receipts, logs and products. The supplement’s evidence guide distinguishes original arithmetic/certificate checks from focused input-schema regressions. Assertions are part of the verification contract: optimized Python execution with -O is rejected by the runner and public certificate module.</p>

@@ -1,0 +1,454 @@
+<h2 id="section-finite-charge-references-and-complete-heralded-phase-measurement">Finite charge references and complete heralded phase measurement</h2>
+<h3 id="section-physical-encoding-and-admitted-experiment">Physical encoding and admitted experiment</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00104.svg" alt="Let the source S have basis |x⟩, x = 0, . . . , N −1, N ≥2, and dimensionless charge QS = P
+x x|x⟩⟨x|.
+For an energy implementation take HS = ħωQS, with ω &gt; 0 in radians per second. A fixed, known
+chirp setting a defines the orthonormal basis" width="486.12" height="39.76" style="width:44.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let the source S have basis |x⟩, x = 0, . . . , N −1, N ≥2, and dimensionless charge QS = P
+x x|x⟩⟨x|.
+For an energy implementation take HS = ħωQS, with ω &gt; 0 in radians per second. A fixed, known
+chirp setting a defines the orthonormal basis</pre></details></figure>
+<figure class="sr-formula" id="equation-23" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00105.svg" alt="N−1
+X
+|a, b⟩=
+1
+√
+x=0
+exp[2πi(ax2 + bx)/N]|x⟩,
+b = 0, . . . , N −1.
+(23)
+N" width="396.24" height="34.41" style="width:36.353em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8, equation (23).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>N−1
+X
+|a, b⟩=
+1
+√
+x=0
+exp[2πi(ax2 + bx)/N]|x⟩,
+b = 0, . . . , N −1.
+(23)
+N</pre></details></figure>
+<p data-source-page="8">No primality assumption is required for this single basis. Its diagonal quadratic mask commutes with <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00106.svg" alt="QS" style="width:1.4092em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>; the noncommuting resource is the Fourier mixing/readout, not the diagonal phase notation. The active reference<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00107.svg" alt=" C" style="width:1.2045em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> has integer charges<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00108.svg" alt=" n" style="width:1.0916em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> and a fixed prepared state<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00109.svg" alt=" τC" style="width:1.4767em;height:1.2303em;vertical-align:-0.23em" loading="lazy"/>, independent of the unknown source and its arbitrary inert reference<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00110.svg" alt=" R" style="width:1.2264em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. At most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00111.svg" alt=" M" style="width:1.4486em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> charge sectors are populated. The ideal pure reference is</p>
+<figure class="sr-formula" id="display-30" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00112.svg" alt="|uM⟩= M−1/2
+M−1
+X
+n=0
+|n⟩." width="110.99" height="34.41" style="width:10.183em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|uM⟩= M−1/2
+M−1
+X
+n=0
+|n⟩.</pre></details></figure>
+<p data-source-page="8">Admissible readout effects on<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00113.svg" alt=" SC" style="width:1.8579em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> commute with<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00114.svg" alt=" Q = QS + QC" style="width:6.5095em;height:1.3025em;vertical-align:-0.23em" loading="lazy"/>. All other accessible apparatus states are invariant under the same<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00115.svg" alt=" U" style="width:1.1554em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(1) symmetry and pointer records carry zero charge. Equivalently one may use charge-preserving joint unitaries with invariant ancillas and a neutral pointer satisfying the Yanase condition. A neutral-pointer Naimark dilation realizes every invariant POVM used here. This is an explicit conditional resource model. It applies, for example, to coherent mixing of equally spaced energy modes when no additional phase-bearing drive is admitted. It does<em> not</em> impose a phase-reference cost on arbitrary degenerate spatial modes: if<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00116.svg" alt=" QS" style="width:1.7105em;height:1.2304em;vertical-align:-0.23em" loading="lazy"/> is proportional to<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p008-00117.svg" alt=" I" style="width:0.9093em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, their basis</p>
+<p data-source-page="9">measurement commutes with charge and can be exact with no such token. An accessible macroscopic oscillator, pump, hidden phase controller or purifying asymmetry register must be added to<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00118.svg" alt=" C" style="width:1.1966em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>; its resource cannot be silently treated as free. A clock and fixed setting record are common to the compared experiments; their allowed couplings must obey the declared symmetry. No speed, bandwidth or interaction-strength bound is inferred from this resource count. The task is an exact state-independent heralded measurement: outcomes<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00119.svg" alt=" b" style="width:0.8934em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> have induced effects <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00120.svg" alt="η|a, b⟩⟨a, b|" style="width:4.7978em;height:1.1550em;vertical-align:-0.23em" loading="lazy"/>, and the retained null effect is (1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00121.svg" alt=" −η)I" style="width:2.7201em;height:1.1571em;vertical-align:-0.23em" loading="lazy"/>. The theorem below optimizes<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00122.svg" alt=" η" style="width:0.9666em;height:1.1421em;vertical-align:-0.23em" loading="lazy"/> in this class, not every possible approximate measurement with errors.</p>
+<h3 id="section-optimal-exact-heralding-from-finite-reference-support">Optimal exact heralding from finite reference support</h3>
+<p data-source-page="9"><strong>Sharp support/loss theorem.</strong> For any reference supported on at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00123.svg" alt=" M" style="width:1.4373em;height:1.1444em;vertical-align:-0.23em" loading="lazy"/> integer charge sectors, the largest possible exact heralding probability is</p>
+<figure class="sr-formula" id="equation-24" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00124.svg" alt="ηmax(N, M) = (M −N + 1)+
+M
+.
+(24)" width="316.88" height="27.51" style="width:29.072em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9, equation (24).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ηmax(N, M) = (M −N + 1)+
+M
+.
+(24)</pre></details></figure>
+<p data-source-page="9">A uniform pure reference on<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00125.svg" alt=" M" style="width:1.4894em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> consecutive charges attains it. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00126.svg" alt=" M ≥N" style="width:3.9182em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>, equality among pure reference states requires this uniform probability profile on a consecutive interval, up to charge translation and arbitrary known phases compensated by the readout. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00127.svg" alt=" M &lt; N" style="width:3.6798em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, every reference has zero exact success; no uniqueness assertion applies.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00128.svg" alt="Proof.
+For a pure reference |r⟩= P
+n rn|n⟩set pn = |rn|2, with missing charges assigned pn = 0. An
+invariant measurement sees independently the total-charge blocks" width="484.01" height="27.72" style="width:44.404em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof.
+For a pure reference |r⟩= P
+n rn|n⟩set pn = |rn|2, with missing charges assigned pn = 0. An
+invariant measurement sees independently the total-charge blocks</pre></details></figure>
+<figure class="sr-formula" id="display-32" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00129.svg" alt="N−1
+X
+|vbq⟩=
+1
+√
+x=0
+rq−xeN(ax2 + bx)|x, q −x⟩,
+eN(t) = e2πit/N.
+N" width="309.05" height="34.41" style="width:28.353em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>N−1
+X
+|vbq⟩=
+1
+√
+x=0
+rq−xeN(ax2 + bx)|x, q −x⟩,
+eN(t) = e2πit/N.
+N</pre></details></figure>
+<p data-source-page="9">Twirling is only a device for calculating invariant record probabilities; it does not authorize discarding an actually retained coherent charge archive. Within a block containing all<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00130.svg" alt=" N" style="width:1.2775em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> terms the reciprocal vectors</p>
+<figure class="sr-formula" id="display-33" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00131.svg" alt="eN(ax2 + bx)
+|wbq⟩=
+1
+√
+X
+r∗
+q−x
+|x, q −x⟩
+N
+x" width="187.07" height="34.41" style="width:17.163em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eN(ax2 + bx)
+|wbq⟩=
+1
+√
+X
+r∗
+q−x
+|x, q −x⟩
+N
+x</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00132.svg" alt="satisfy ⟨wbq|vb′q⟩= δbb′. Averaging a measurement over the cyclic relabelings b preserves its mean success,
+invariance and zero-error property. Every averaged zero-error effect therefore has form tq|wbq⟩⟨wbq|.
+Its normalization requires tq
+P
+x p−1
+q−x|x, q −x⟩⟨x, q −x| ≤I, so tq ≤minx pq−x, which is attainable. A
+block with fewer than N terms cannot give positive symmetric zero-error success: otherwise all N
+vectors would be linearly independent, since applying their zero-error effects to a linear relation isolates
+each coefficient. There are fewer than N available dimensions. Thus the exact optimal average success
+is
+η(r) =
+X
+q
+min
+0≤x&lt;N pq−x.
+(25)" width="486.40" height="118.07" style="width:44.624em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>satisfy ⟨wbq|vb′q⟩= δbb′. Averaging a measurement over the cyclic relabelings b preserves its mean success,
+invariance and zero-error property. Every averaged zero-error effect therefore has form tq|wbq⟩⟨wbq|.
+Its normalization requires tq
+P
+x p−1
+q−x|x, q −x⟩⟨x, q −x| ≤I, so tq ≤minx pq−x, which is attainable. A
+block with fewer than N terms cannot give positive symmetric zero-error success: otherwise all N
+vectors would be linearly independent, since applying their zero-error effects to a linear relation isolates
+each coefficient. There are fewer than N available dimensions. Thus the exact optimal average success
+is
+η(r) =
+X
+q
+min
+0≤x&lt;N pq−x.
+(25)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00133.svg" alt="An exact state-independent heralded measurement must in particular discriminate this basis with mean
+success η, so this is an upper bound for the nominated task.
+For a finite subset A of integer charges, the number of contained length-N consecutive windows is
+P
+runs(|run| −N + 1)+ ≤(|A| −N + 1)+. Apply the layer-cake identity to At = {n : pn &gt; t}:" width="484.68" height="55.18" style="width:44.466em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>An exact state-independent heralded measurement must in particular discriminate this basis with mean
+success η, so this is an upper bound for the nominated task.
+For a finite subset A of integer charges, the number of contained length-N consecutive windows is
+P
+runs(|run| −N + 1)+ ≤(|A| −N + 1)+. Apply the layer-cake identity to At = {n : pn &gt; t}:</pre></details></figure>
+<figure class="sr-formula" id="display-34" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p009-00134.svg" alt="q
+min
+x pq−x =
+Z ∞
+Z ∞
+0
+#{length-N windows in At} dt ≤(M −N + 1)+
+X
+0
+|At| dt = ηmax.
+M" width="418.91" height="34.69" style="width:38.432em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>q
+min
+x pq−x =
+Z ∞
+Z ∞
+0
+#{length-N windows in At} dt ≤(M −N + 1)+
+X
+0
+|At| dt = ηmax.
+M</pre></details></figure>
+<p data-source-page="10">For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00135.svg" alt=" M ≥N" style="width:4.0522em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>, the inequality is strict at every nonempty superlevel set of size below<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00136.svg" alt=" M" style="width:1.5073em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, and at a nonconsecutive set of size<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00137.svg" alt=" M" style="width:1.4284em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Equality therefore forces the stated uniform consecutive profile. Uniform <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00138.svg" alt="pn = 1/M" style="width:4.3887em;height:1.2957em;vertical-align:-0.23em" loading="lazy"/> has<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00139.svg" alt=" M −N" style="width:3.5847em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> + 1 complete windows and attains the bound. Mixed references cannot improve it: decompose the reference into pure states within the same charge support. Zero-error probabilities are nonnegative, so a zero-error mixture measurement is zero-error on each component, and its success is bounded by the same number on every component. An invariant ancillary state decomposes into pure fixed-charge states. On each component its addition merely shifts the reference charge labels, with degeneracy vectors orthogonal between sectors; the same bound applies. Such ancillas therefore do not improve it. The construction below attains the full state-independent effects, not just basis-state average success. <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00140.svg" alt="□" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> For any allowed loss ceiling 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00141.svg" alt=" &lt; ε &lt;" style="width:2.9425em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1, exact heralding requires and permits</p>
+<figure class="sr-formula" id="equation-26" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00142.svg" alt="M ≥
+N −1
+
+.
+(26)
+ε" width="281.04" height="27.51" style="width:25.784em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (26).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>M ≥
+N −1
+
+.
+(26)
+ε</pre></details></figure>
+<p data-source-page="10">At the hypothetical<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00143.svg" alt=" N" style="width:1.3145em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 180 energy-mode encoding, one-percent null probability requires at least <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00144.svg" alt="17," style="width:1.4147em;height:1.1468em;vertical-align:-0.23em" loading="lazy"/>900 populated reference charges. This is a conditional resource requirement for the declared charge encoding; angular divisions alone do not specify physical reference states. An attaining reference on charges 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00145.svg" alt=", . . . , M −" style="width:4.4203em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>1 has energy span (<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00146.svg" alt="M −1)ħω" style="width:4.4265em;height:1.3651em;vertical-align:-0.23em" loading="lazy"/> and mean energy (<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00147.svg" alt="M −1)ħω/" style="width:4.9625em;height:1.3651em;vertical-align:-0.23em" loading="lazy"/>2. No numerical energy is inferred without a physical<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00148.svg" alt=" ω." style="width:1.4079em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<h3 id="section-full-retained-instrument-coherent-versus-classical-charge-record">Full retained instrument: coherent versus classical charge record</h3>
+<p data-source-page="10">Take<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00149.svg" alt=" M ≥N, K = M −N + 1, η = K/M" style="width:16.4207em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00150.svg" alt=" I = {N −1, . . . , M −1}" style="width:11.0815em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>. Define normalized vectors within total-charge sectors</p>
+<figure class="sr-formula" id="display-36" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00151.svg" alt="|φbq⟩=
+1
+√
+x
+eN(ax2 + bx)|x, q −x⟩,
+q ∈I.
+X
+N" width="238.41" height="30.45" style="width:21.873em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|φbq⟩=
+1
+√
+x
+eN(ax2 + bx)|x, q −x⟩,
+q ∈I.
+X
+N</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00152.svg" alt="The mutually orthogonal invariant projectors Fb = P
+q∈I |φbq⟩⟨φbq| and F? = I −P
+b Fb form a projective
+measurement on SC. Outside the occupied input sector the identity may be extended arbitrarily
+without affecting this experiment.
+Retain a charge archive A by the invariant coherent copying isometry CQ|ξq⟩= |ξq⟩|q⟩A. Its basis
+states are neutral; this records q without changing the charge of SC. Prepare C in |uM⟩and let
+Jψ = ψ ⊗uM. The full operators from the logical input S to SCA are" width="485.03" height="81.44" style="width:44.498em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The mutually orthogonal invariant projectors Fb = P
+q∈I |φbq⟩⟨φbq| and F? = I −P
+b Fb form a projective
+measurement on SC. Outside the occupied input sector the identity may be extended arbitrarily
+without affecting this experiment.
+Retain a charge archive A by the invariant coherent copying isometry CQ|ξq⟩= |ξq⟩|q⟩A. Its basis
+states are neutral; this records q without changing the charge of SC. Prepare C in |uM⟩and let
+Jψ = ψ ⊗uM. The full operators from the logical input S to SCA are</pre></details></figure>
+<figure class="sr-formula" id="equation-27" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00153.svg" alt="Kb = CQFbJ = √η|χb⟩⟨a, b|,
+|χb⟩= K−1/2 X
+q∈I
+|φbq⟩|q⟩A,
+K? = CQF?J.
+(27)" width="424.06" height="31.67" style="width:38.905em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (27).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Kb = CQFbJ = √η|χb⟩⟨a, b|,
+|χb⟩= K−1/2 X
+q∈I
+|φbq⟩|q⟩A,
+K? = CQF?J.
+(27)</pre></details></figure>
+<figure class="sr-formula" id="display-38" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00154.svg" alt="Direct substitution gives" width="118.71" height="12.51" style="width:10.891em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Direct substitution gives</pre></details></figure>
+<figure class="sr-formula" id="equation-28" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00155.svg" alt="K†
+?K? = (1 −η)I,
+X
+b
+K†
+bKb + K†
+?K? = I.
+(28)" width="352.35" height="27.42" style="width:32.326em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (28).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K†
+?K? = (1 −η)I,
+X
+b
+K†
+bKb + K†
+?K? = I.
+(28)</pre></details></figure>
+<p data-source-page="10">Consequently, for every joint input<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00156.svg" alt=" ρSR," style="width:2.4131em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-29" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p010-00157.svg" alt="Ib(ρSR) = η|χb⟩⟨χb| ⊗⟨a, b|ρSR|a, b⟩,
+I?(ρSR) = (K? ⊗IR)ρSR(K†
+? ⊗IR).
+(29)" width="426.46" height="18.81" style="width:39.125em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 10, equation (29).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ib(ρSR) = η|χb⟩⟨χb| ⊗⟨a, b|ρSR|a, b⟩,
+I?(ρSR) = (K? ⊗IR)ρSR(K†
+? ⊗IR).
+(29)</pre></details></figure>
+<p data-source-page="10">This retains the active phase reference, source residual, coherent charge archive, neutral outcome pointer and arbitrary inert reference. The normalized null operator is an isometry into the joint output. It preserves the logical source information there; it does not restore the initial hardware source or reference state, provide a free symmetry-preserving inverse, or make the reference reusable.</p>
+<p data-source-page="11">A genuinely classical charge record is a different instrument: apply charge dephasing to<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00158.svg" alt=" A" style="width:1.2360em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> and retain the value<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00159.svg" alt=" q" style="width:0.9219em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Then the conclusive output state becomes the fixed mixed state</p>
+<figure class="sr-formula" id="display-41" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00160.svg" alt="σb = K−1 X
+q∈I
+|φbq⟩⟨φbq| ⊗|q⟩⟨q|A," width="158.62" height="26.53" style="width:14.552em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σb = K−1 X
+q∈I
+|φbq⟩⟨φbq| ⊗|q⟩⟨q|A,</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00161.svg" alt="still multiplying η⟨a, b|ρSR|a, b⟩. The null channel is now a sum of charge-resolved Kraus branches and
+is not generally an isometry. Indeed their K†
+?,qK?,q are different partial diagonal projectors divided by
+M; the Knill–Laflamme scalar condition fails. Thus the coherent-null conclusion is not applied to a
+classically measured charge archive." width="484.54" height="54.33" style="width:44.454em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>still multiplying η⟨a, b|ρSR|a, b⟩. The null channel is now a sum of charge-resolved Kraus branches and
+is not generally an isometry. Indeed their K†
+?,qK?,q are different partial diagonal projectors divided by
+M; the Knill–Laflamme scalar condition fails. Thus the coherent-null conclusion is not applied to a
+classically measured charge archive.</pre></details></figure>
+<p data-source-page="11"><strong>Exact complete-output comparison.</strong> Declare the completed ideal basis-measurement channel<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00162.svg" alt=" J" style="width:1.1463em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> to have output state<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00163.svg" alt=" |χb⟩⟨χb|" style="width:3.8012em;height:1.2637em;vertical-align:-0.23em" loading="lazy"/> in outcome<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00164.svg" alt=" b" style="width:0.8919em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and zero null branch. For the classical-charge version use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00165.svg" alt=" σb" style="width:1.3531em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> instead. These are specified completions of the ideal readout, not a microscopic identification with an arbitrary detector. The actual channel<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00166.svg" alt=" I" style="width:1.0160em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has exactly</p>
+<figure class="sr-formula" id="equation-30" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00167.svg" alt="1
+2∥I −J ∥⋄= 1 −η = N −1
+M
+.
+(30)" width="312.69" height="27.51" style="width:28.687em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 11, equation (30).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1
+2∥I −J ∥⋄= 1 −η = N −1
+M
+.
+(30)</pre></details></figure>
+<p data-source-page="11">In fact every normalized input, including every inert-reference extension, attains this distance.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00168.svg" alt="Proof.
+Each actual conclusive branch is precisely η times its ideal branch on every ρSR by Eq. (29).
+The conclusive difference is negative with total trace 1 −η. The orthogonal actual null block is positive
+with the same trace. Adding the block trace norms gives 2(1 −η). The same argument survives
+classical charge recording, since the conclusive factorization and null trace remain exact. This is an
+exact full-output identity, not a scalar probability bound substituted for an instrument error.
+□
+The isometry P
+y Fy ⊗|y⟩with a neutral outcome pointer commutes with total charge and extends
+to a blockwise charge-preserving unitary. The coherent charge-copy map has the same property.
+Hence the model has a finite unitary realization; it has not hidden a noninvariant Fourier gate in the
+apparatus. A common fixed readout of the outcome pointer supplies the declared instrument. Reading
+additional microscopic pointer/environment degrees of freedom requires declaring their common states
+and couplings as well; no universal detector equivalence follows.
+The finite resource ledger of this explicit dilation is: source dimension N, active reference dimension
+M, neutral charge-archive dimension N + M −1, and neutral outcome-pointer dimension N + 1, plus
+the nominated fixed controller/clock and arbitrary inert R. A coherent charge archive is quantum
+memory; a classical one still retains its entire record. The optimum in Eq. (24) counts populated
+phase-reference charge sectors only. It is not a bound on total apparatus or complete-archive dimension,
+and it does not identify a single-use Choi rank with retained history capacity." width="486.75" height="229.31" style="width:44.656em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof.
+Each actual conclusive branch is precisely η times its ideal branch on every ρSR by Eq. (29).
+The conclusive difference is negative with total trace 1 −η. The orthogonal actual null block is positive
+with the same trace. Adding the block trace norms gives 2(1 −η). The same argument survives
+classical charge recording, since the conclusive factorization and null trace remain exact. This is an
+exact full-output identity, not a scalar probability bound substituted for an instrument error.
+□
+The isometry P
+y Fy ⊗|y⟩with a neutral outcome pointer commutes with total charge and extends
+to a blockwise charge-preserving unitary. The coherent charge-copy map has the same property.
+Hence the model has a finite unitary realization; it has not hidden a noninvariant Fourier gate in the
+apparatus. A common fixed readout of the outcome pointer supplies the declared instrument. Reading
+additional microscopic pointer/environment degrees of freedom requires declaring their common states
+and couplings as well; no universal detector equivalence follows.
+The finite resource ledger of this explicit dilation is: source dimension N, active reference dimension
+M, neutral charge-archive dimension N + M −1, and neutral outcome-pointer dimension N + 1, plus
+the nominated fixed controller/clock and arbitrary inert R. A coherent charge archive is quantum
+memory; a classical one still retains its entire record. The optimum in Eq. (24) counts populated
+phase-reference charge sectors only. It is not a bound on total apparatus or complete-archive dimension,
+and it does not identify a single-use Choi rank with retained history capacity.</pre></details></figure>
+<h3 id="section-reference-dephasing-exact-errorerasure-boundary">Reference dephasing: exact error–erasure boundary</h3>
+<p data-source-page="11">The exact-success boundary is fragile under a specified physical noise model. Let the accessible reference state be <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00169.svg" alt="τν = (1 −ν)|uM⟩⟨uM| + νIM/M," style="width:14.5005em;height:1.3108em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p011-00170.svg" alt="0 ≤ν ≤1." style="width:4.6489em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/> (31)</p>
+<p data-source-page="11">This is partial dephasing in charge, not an unspecified decoherence rate. Its environment can be included and retained as a fixed passive purification, but is unavailable to the nominated decoder for measurement, conditioning, postselection or feedback. Retaining that quantum output does not grant this access. If a later reader can use a classical noise flag or measure the purification, that is extra accessible side information or a phase resource and the optimization must be recomputed. The following frontier is not asserted optimal for that enlarged complete-archive readout.</p>
+<p data-source-page="12">Give the<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00171.svg" alt=" N" style="width:1.2751em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> basis letters equal priors and retain every result, including nulls and charge records. For total charge<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00172.svg" alt=" q" style="width:0.9237em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> let</p>
+<figure class="sr-formula" id="display-43" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00173.svg" alt="Xq = {x : 0 ≤x &lt; N, 0 ≤q −x &lt; M},
+mq = |Xq|,
+wq = mq
+NM ,
+cq = ν + (1 −ν)mq
+N
+." width="428.58" height="27.51" style="width:39.319em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Xq = {x : 0 ≤x &lt; N, 0 ≤q −x &lt; M},
+mq = |Xq|,
+wq = mq
+NM ,
+cq = ν + (1 −ν)mq
+N
+.</pre></details></figure>
+<p data-source-page="12">The weights<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00174.svg" alt=" wq" style="width:1.5395em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> sum to one. The subnormalized input block is</p>
+<figure class="sr-formula" id="equation-32" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00175.svg" alt="ρbq = (1 −ν)|ubq⟩⟨ubq| + νImq
+x∈Xq
+eN(ax2 + bx)|x, q −x⟩.
+(32)
+NM
+,
+|ubq⟩=
+X" width="413.54" height="32.84" style="width:37.940em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (32).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ρbq = (1 −ν)|ubq⟩⟨ubq| + νImq
+x∈Xq
+eN(ax2 + bx)|x, q −x⟩.
+(32)
+NM
+,
+|ubq⟩=
+X</pre></details></figure>
+<figure class="sr-formula" id="display-45" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00176.svg" alt="Its prior average is Imq/(NM)." width="150.15" height="14.06" style="width:13.775em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Its prior average is Imq/(NM).</pre></details></figure>
+<p data-source-page="12"><strong>Exact fixed-token frontier.</strong> For a specified conclusive probability<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00177.svg" alt=" P ∈[0," style="width:4.1931em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> 1], the maximum unconditional correct-letter probability is exactly</p>
+<figure class="sr-formula" id="equation-33" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00178.svg" alt="X
+Cmax(P) =
+max
+0≤tq≤1
+P
+q
+wqcqtq.
+(33)
+q wqtq=P" width="320.82" height="34.47" style="width:29.433em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12, equation (33).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+Cmax(P) =
+max
+0≤tq≤1
+P
+q
+wqcqtq.
+(33)
+q wqtq=P</pre></details></figure>
+<p data-source-page="12">It is obtained by accepting the highest<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00179.svg" alt=" mq" style="width:1.6707em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> blocks first, with fractional acceptance of the final tied block if needed. The minimum conditional label error is 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00180.svg" alt=" −Cmax(P)/P" style="width:6.2713em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/> for<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00181.svg" alt=" P &gt;" style="width:2.3154em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0. This is globally optimal over all invariant POVMs at this fixed reference state; it is not claimed optimal over all reference profiles at intermediate<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00182.svg" alt=" P." style="width:1.5328em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00183.svg" alt="Proof with a full POVM upper certificate.
+For arbitrary conclusive effects Ebq with P
+b Ebq ≤I,
+the largest eigenvalue of ρbq is [ν + (1 −ν)mq]/(NM). Thus correct probability in that block is at most
+cq times its conclusive probability. The latter is at most wq because the prior average is Imq/(NM).
+This proves the linear-program upper bound without assuming a covariant candidate.
+It is attained by the invariant effects" width="486.51" height="66.86" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof with a full POVM upper certificate.
+For arbitrary conclusive effects Ebq with P
+b Ebq ≤I,
+the largest eigenvalue of ρbq is [ν + (1 −ν)mq]/(NM). Thus correct probability in that block is at most
+cq times its conclusive probability. The latter is at most wq because the prior average is Imq/(NM).
+This proves the linear-program upper bound without assuming a covariant candidate.
+It is attained by the invariant effects</pre></details></figure>
+<figure class="sr-formula" id="display-47" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00184.svg" alt="Ebq = tq
+N |ubq⟩⟨ubq|,
+X
+b
+Ebq = tqImq," width="190.25" height="31.69" style="width:17.454em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ebq = tq
+N |ubq⟩⟨ubq|,
+X
+b
+Ebq = tqImq,</pre></details></figure>
+<p data-source-page="12">and the retained complementary null effect. Each effect occupies a maximal-eigenvalue direction of its matching input block. The linear objective therefore sorts the<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00185.svg" alt=" cq" style="width:1.2421em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. For a dual certificate at multiplier<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00186.svg" alt=" λ," style="width:1.3267em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> choose<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00187.svg" alt=" Yq =" style="width:2.5134em;height:1.2957em;vertical-align:-0.23em" loading="lazy"/> max<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00188.svg" alt="(0, cq −λ)Imq/(NM" style="width:8.7992em;height:1.3022em;vertical-align:-0.23em" loading="lazy"/>). It obeys<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00189.svg" alt=" Yq ≥ρbq/N −λImq/(NM" style="width:11.5358em;height:1.3022em;vertical-align:-0.23em" loading="lazy"/>) for all<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00190.svg" alt=" b" style="width:0.9044em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and its trace sum equals the attained Lagrange objective. This independently certifies the boundary against arbitrary effects. <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00191.svg" alt="□" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00192.svg" alt=" M ≥N" style="width:3.6588em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>, there are<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00193.svg" alt=" M −N" style="width:3.3968em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> +1 blocks of size<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00194.svg" alt=" N" style="width:1.2422em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, total weight<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00195.svg" alt=" η0 = (M −N +1)/M" style="width:9.4795em;height:1.3086em;vertical-align:-0.23em" loading="lazy"/>; every smaller size<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00196.svg" alt=" m = 1, . . . , N −" style="width:7.3169em;height:1.1600em;vertical-align:-0.23em" loading="lazy"/>1 occurs twice, weight 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00197.svg" alt="m/(NM" style="width:3.7934em;height:1.1470em;vertical-align:-0.23em" loading="lazy"/>). Therefore for 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00198.svg" alt=" &lt; P ≤η0" style="width:4.4823em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/> the sharp error floor is <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00199.svg" alt="1 −Cmax(P)/P = ν(1 −1/N)." style="width:13.4476em;height:1.2517em;vertical-align:-0.23em" loading="lazy"/> (34)</p>
+<p data-source-page="12">Beyond<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00200.svg" alt=" η0" style="width:1.4877em;height:1.2266em;vertical-align:-0.23em" loading="lazy"/>, the additional slopes are [<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00201.svg" alt="ν + (1 −ν)m]/N" style="width:7.7305em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> for<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00202.svg" alt=" m = N −1, . . . , 1." style="width:9.0683em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> This is a closed piecewise-linear correct-probability boundary. At the interior-block operating point<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00203.svg" alt=" P = η0" style="width:3.4700em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/>, the effects on every unknown logical input, not only the basis test states, are</p>
+<figure class="sr-formula" id="display-48" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00204.svg" alt="Eb = η0[(1 −ν)|a, b⟩⟨a, b| + νI/N],
+E? = (1 −η0)I." width="262.82" height="14.44" style="width:24.112em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Eb = η0[(1 −ν)|a, b⟩⟨a, b| + νI/N],
+E? = (1 −η0)I.</pre></details></figure>
+<p data-source-page="12">Thus for the declared classical pointer channel, retaining an arbitrary inert reference, the exact half-diamond discrepancy from the pure-token heralded pointer channel is<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p012-00205.svg" alt=" η0ν(1 −1/N" style="width:5.7874em;height:1.2424em;vertical-align:-0.23em" loading="lazy"/>). It is a uniform</p>
+<p data-source-page="13">randomization of the ideal letter with probability<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00206.svg" alt=" ν" style="width:1.0191em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>; the maximum column total variation of that classical postprocessing is 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00207.svg" alt=" −1/N" style="width:3.1484em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>, attained by a basis input. This pointer certificate is not a full active-token output bound. Any<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00208.svg" alt=" ν &gt;" style="width:2.0932em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0 makes exact zero-error heralding impossible at every positive conclusive probability: all letter states have the same full support within each block. More generally, any strictly positive reference density matrix on its populated charge space has the same obstruction: every relevant principal submatrix is strictly positive, so each letter’s total-charge block has the same full support. This is an exact-zero-error obstruction, not a claim that a small noise produces a large ordinary statistical error. The nearby faithful repair is not to discard the reader but to keep the complete null/error archive and use the exact controlled error floor. For example<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00209.svg" alt=" N = 5, M = 9, ν = 0." style="width:10.0121em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/>03 permits<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00210.svg" alt=" P = 5/" style="width:3.5887em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/>9 with minimum conditional error 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00211.svg" alt="." style="width:0.4234em;height:1.1432em;vertical-align:-0.23em" loading="lazy"/>024; no lower-confidence filtering can beat that value. At all-conclusive readout,</p>
+<figure class="sr-formula" id="display-49" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00212.svg" alt="1 −N2 −1
+&quot;
+#
++ ν
+Cmax(1) = (1 −ν)
+N ,
+M ≥N.
+3NM" width="246.72" height="31.49" style="width:22.635em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −N2 −1
+&quot;
+#
++ ν
+Cmax(1) = (1 −ν)
+N ,
+M ≥N.
+3NM</pre></details></figure>
+<p data-source-page="13">All these formulas concern declared label statistics. A full noisy retained-output comparison additionally uses the explicit Kraus maps and retained purification; it is not inferred from label error alone. The effects and their positive square roots already give such a normalized finite instrument, tensored with <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00213.svg" alt="IR" style="width:1.1707em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> for an arbitrary inert reference.</p>
+<h3 id="section-different-objective-best-no-erasure-reference">Different objective: best no-erasure reference</h3>
+<p data-source-page="13"><strong>Exact finite eigenvalue optimization.</strong> For a pure reference on charges 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00214.svg" alt=", . . . , M −" style="width:4.3222em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>1 with amplitude magnitudes<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00215.svg" alt=" rn ≥" style="width:2.5011em;height:1.2966em;vertical-align:-0.23em" loading="lazy"/>0, the maximum equal-prior correct-letter probability with no inconclusive output is</p>
+<figure class="sr-formula" id="equation-35" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00216.svg" alt="!2
+= rTTN,Mr
+N−1
+X
+Pcorrect(r) =
+1
+N2
+X
+x=0
+rq−x
+N2
+,
+(TN,M)nm = (N −|n −m|)+.
+(35)
+q" width="429.80" height="37.59" style="width:39.431em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13, equation (35).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>!2
+= rTTN,Mr
+N−1
+X
+Pcorrect(r) =
+1
+N2
+X
+x=0
+rq−x
+N2
+,
+(TN,M)nm = (N −|n −m|)+.
+(35)
+q</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00217.svg" alt="Consequently the best reference has P opt
+correct = λmax(TN,M)/N2, with its nonnegative principal eigen-
+vector as amplitude profile." width="486.20" height="29.07" style="width:44.606em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Consequently the best reference has P opt
+correct = λmax(TN,M)/N2, with its nonnegative principal eigen-
+vector as amplitude profile.</pre></details></figure>
+<p data-source-page="13"><strong>Proof.</strong> Within each total-charge block, cyclic symmetrization makes the seed effect have diagonal entries 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00218.svg" alt="/N" style="width:1.3947em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and hence off-diagonal magnitudes at most 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00219.svg" alt="/N" style="width:1.3947em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by positivity. This upper-bounds correct probability by the first expression, attained by a phase-aligned rank-one seed. Summing<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00220.svg" alt=" q" style="width:0.9546em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> counts <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00221.svg" alt="N −|n −m|" style="width:5.2821em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> pairs when<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00222.svg" alt=" |n −m| &lt; N" style="width:5.7108em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>, proving the matrix formula. The variational principle and Perron positivity give the optimum. Mixed references cannot improve a maximization over all pure states and measurements. Compressing any nonconsecutive set of<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00223.svg" alt=" M" style="width:1.4505em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> integer charges decreases every pairwise distance, hence increases this nonnegative kernel entrywise; consecutive charges are sufficient for the global optimum at that cardinality. <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00224.svg" alt="□" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> At<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00225.svg" alt=" N" style="width:1.2841em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 2 this gives the known sine-state result</p>
+<figure class="sr-formula" id="display-51" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00226.svg" alt="s
+2
+M + 1 sin (n + 1)π
+M + 1 ,
+P opt
+error = 1 −cos[π/(M + 1)]
+rn =
+2
+." width="292.20" height="30.56" style="width:26.808em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>s
+2
+M + 1 sin (n + 1)π
+M + 1 ,
+P opt
+error = 1 −cos[π/(M + 1)]
+rn =
+2
+.</pre></details></figure>
+<p data-source-page="13">For the binary<em> classical outcome channel</em>, this is also the exact minimum half-diamond error to the ideal basis measurement, uniform over inert references: the achieved effects are (<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00227.svg" alt="I ± vX)/" style="width:4.1977em;height:1.1590em;vertical-align:-0.23em" loading="lazy"/>2 in target-basis coordinates after the known diagonal chirp mask, with<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00228.svg" alt=" v =" style="width:1.9810em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00229.svg" alt="[π/(M" style="width:2.8809em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> +1)], and any channel comparison is lower-bounded by its equal-prior basis discrimination error. This assertion does not compare retained active-token outputs. The quadratic<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00230.svg" alt=" M−2" style="width:2.5333em;height:1.2956em;vertical-align:-0.23em" loading="lazy"/> label-error scaling and the<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p013-00231.svg" alt=" M−1" style="width:2.5352em;height:1.2956em;vertical-align:-0.23em" loading="lazy"/> exact-heralding loss law answer different questions.</p>

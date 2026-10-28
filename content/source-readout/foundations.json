@@ -1,0 +1,1790 @@
+{
+  "papers": [
+    {
+      "id": "source-readout-non-equivalence",
+      "slug": "source-readout-non-equivalence",
+      "title": "Source\u2013Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions",
+      "doi": "10.5281/zenodo.21369967",
+      "series": "foundations",
+      "number": 1,
+      "description": "Exact quotients, source relations, and symmetry-compatible reconstruction.",
+      "url": "/source-readout/source-readout-non-equivalence",
+      "publicationUrl": "/papers/source-readout-non-equivalence",
+      "pdfUrl": "/publications/source-readout/foundations/source-readout-non-equivalence/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/source-readout-non-equivalence/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/source-readout-non-equivalence/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/abstract.html",
+          "url": "/source-readout/source-readout-non-equivalence/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/introduction.html",
+          "url": "/source-readout/source-readout-non-equivalence/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "contribution",
+            "scope"
+          ]
+        },
+        {
+          "slug": "realization-states-physical-equivalence-and-readout",
+          "title": "Realization states, physical equivalence, and readout",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/realization-states-physical-equivalence-and-readout.html",
+          "url": "/source-readout/source-readout-non-equivalence/realization-states-physical-equivalence-and-readout",
+          "anchors": [
+            "realization-states-physical-equivalence-and-readout",
+            "sec:setup",
+            "the-realization-space-and-its-reduction",
+            "def:reduced",
+            "the-readout-and-its-induced-map",
+            "def:fibers"
+          ]
+        },
+        {
+          "slug": "quotient-exactness-and-source-equivalence",
+          "title": "Quotient exactness and source equivalence",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/quotient-exactness-and-source-equivalence.html",
+          "url": "/source-readout/source-readout-non-equivalence/quotient-exactness-and-source-equivalence",
+          "anchors": [
+            "quotient-exactness-and-source-equivalence",
+            "sec:exact",
+            "prop:exactquotient",
+            "prop:sourceeq",
+            "def:sourceequiv"
+          ]
+        },
+        {
+          "slug": "descent-of-source-relations",
+          "title": "Descent of source relations",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/descent-of-source-relations.html",
+          "url": "/source-readout/source-readout-non-equivalence/descent-of-source-relations",
+          "anchors": [
+            "descent-of-source-relations",
+            "sec:descent",
+            "relations-and-descent",
+            "def:descent",
+            "thm:descent",
+            "it:desc1",
+            "it:desc2",
+            "cor:descentobstruction",
+            "relative-completeness",
+            "def:relcomplete",
+            "thm:separating"
+          ]
+        },
+        {
+          "slug": "representative-selection-is-not-reconstruction",
+          "title": "Representative selection is not reconstruction",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/representative-selection-is-not-reconstruction.html",
+          "url": "/source-readout/source-readout-non-equivalence/representative-selection-is-not-reconstruction",
+          "anchors": [
+            "representative-selection-is-not-reconstruction",
+            "sec:selection",
+            "def:section",
+            "prop:selection"
+          ]
+        },
+        {
+          "slug": "equivariant-reconstruction",
+          "title": "Equivariant reconstruction",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/equivariant-reconstruction.html",
+          "url": "/source-readout/source-readout-non-equivalence/equivariant-reconstruction",
+          "anchors": [
+            "equivariant-reconstruction",
+            "sec:equivariant",
+            "setup",
+            "def:stab",
+            "def:equivsection",
+            "the-criterion",
+            "thm:equivsection",
+            "it:eq1",
+            "it:eq2",
+            "it:eq3",
+            "rem:choice",
+            "rem:notcanonical",
+            "consequences",
+            "cor:noselector",
+            "cor:transitive"
+          ]
+        },
+        {
+          "slug": "a-finite-marked-carrier-occupation-model",
+          "title": "A finite marked-carrier occupation model",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/a-finite-marked-carrier-occupation-model.html",
+          "url": "/source-readout/source-readout-non-equivalence/a-finite-marked-carrier-occupation-model",
+          "anchors": [
+            "a-finite-marked-carrier-occupation-model",
+            "sec:occupation",
+            "the-model",
+            "fibers",
+            "prop:multinomial",
+            "the-symmetry-and-the-obstruction",
+            "prop:occinvariance",
+            "ex:occ",
+            "rem:boundary"
+          ]
+        },
+        {
+          "slug": "invariant-ensembles-versus-deterministic-selection",
+          "title": "Invariant ensembles versus deterministic selection",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/invariant-ensembles-versus-deterministic-selection.html",
+          "url": "/source-readout/source-readout-non-equivalence/invariant-ensembles-versus-deterministic-selection",
+          "anchors": [
+            "invariant-ensembles-versus-deterministic-selection",
+            "sec:probabilistic",
+            "fiber-supported-probability-kernels",
+            "def:kernel",
+            "the-finite-model",
+            "prop:ensemble",
+            "an-ensemble-is-not-a-realized-state"
+          ]
+        },
+        {
+          "slug": "a-continuous-obstruction-the-hopf-fibration",
+          "title": "A continuous obstruction: the Hopf fibration",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/a-continuous-obstruction-the-hopf-fibration.html",
+          "url": "/source-readout/source-readout-non-equivalence/a-continuous-obstruction-the-hopf-fibration",
+          "anchors": [
+            "a-continuous-obstruction-the-hopf-fibration",
+            "sec:hopf",
+            "the-hopf-bundle",
+            "first-obstruction-no-equivariant-section",
+            "prop:hopfequiv",
+            "second-obstruction-no-continuous-section",
+            "lem:trivialize",
+            "prop:hopftop",
+            "rem:hopfindep",
+            "the-modeling-boundary-again",
+            "rem:hopfgauge"
+          ]
+        },
+        {
+          "slug": "the-source-readout-non-equivalence-theorem",
+          "title": "The source\u2013readout non-equivalence theorem",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/the-source-readout-non-equivalence-theorem.html",
+          "url": "/source-readout/source-readout-non-equivalence/the-source-readout-non-equivalence-theorem",
+          "anchors": [
+            "the-sourcereadout-non-equivalence-theorem",
+            "sec:combined",
+            "thm:combined",
+            "it:D",
+            "it:E"
+          ]
+        },
+        {
+          "slug": "interpretation-and-scope",
+          "title": "Interpretation and scope",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/interpretation-and-scope.html",
+          "url": "/source-readout/source-readout-non-equivalence/interpretation-and-scope",
+          "anchors": [
+            "interpretation-and-scope",
+            "sec:shadow"
+          ]
+        },
+        {
+          "slug": "discussion",
+          "title": "Discussion",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/discussion.html",
+          "url": "/source-readout/source-readout-non-equivalence/discussion",
+          "anchors": [
+            "discussion",
+            "sec:discussion",
+            "the-levels-of-obstruction",
+            "what-the-theorems-do-not-say",
+            "position-within-the-wider-program"
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/conclusion.html",
+          "url": "/source-readout/source-readout-non-equivalence/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/source-readout-non-equivalence/references.html",
+          "url": "/source-readout/source-readout-non-equivalence/references",
+          "anchors": [
+            "references",
+            "bib-Lang",
+            "bib-Bredon",
+            "bib-Steenrod",
+            "bib-Husemoller",
+            "bib-KobayashiNomizu",
+            "bib-Hatcher",
+            "bib-MilnorStasheff",
+            "bib-BottTu",
+            "bib-Naber",
+            "bib-Rodgers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "target-relative-necessity-of-completion",
+      "slug": "target-relative-necessity-of-completion",
+      "title": "Target-Relative Necessity of Completion: When Readout Loss Obstructs, and What a Sufficient Extension Must Retain",
+      "doi": "10.5281/zenodo.21370501",
+      "series": "foundations",
+      "number": 2,
+      "description": "When missing distinctions obstruct a target and what any sufficient repair must retain.",
+      "url": "/source-readout/target-relative-necessity-of-completion",
+      "publicationUrl": "/papers/target-relative-necessity-of-completion",
+      "pdfUrl": "/publications/source-readout/foundations/target-relative-necessity-of-completion/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/target-relative-necessity-of-completion/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/target-relative-necessity-of-completion/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/abstract.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/introduction.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "the-question-left-open-by-exactness",
+            "targets-and-correct-answer-maps",
+            "contributions"
+          ]
+        },
+        {
+          "slug": "reduced-source-readout-and-target",
+          "title": "Reduced source, readout, and target",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/reduced-source-readout-and-target.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/reduced-source-readout-and-target",
+          "anchors": [
+            "reduced-source-readout-and-target",
+            "sec:setup",
+            "the-reduced-source-space",
+            "def:readout",
+            "targets",
+            "def:target",
+            "def:solvable",
+            "rem:weaker"
+          ]
+        },
+        {
+          "slug": "exact-target-solvability-and-its-obstruction",
+          "title": "Exact target solvability and its obstruction",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/exact-target-solvability-and-its-obstruction.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/exact-target-solvability-and-its-obstruction",
+          "anchors": [
+            "exact-target-solvability-and-its-obstruction",
+            "sec:exact",
+            "the-criterion",
+            "thm:exact-solvability",
+            "it:solv",
+            "it:fibconst",
+            "it:imp",
+            "the-obstruction",
+            "cor:obstruction",
+            "prop:fiberconst-form",
+            "prop:auxiliary-useless"
+          ]
+        },
+        {
+          "slug": "active-and-inactive-information-loss",
+          "title": "Active and inactive information loss",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/active-and-inactive-information-loss.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/active-and-inactive-information-loss",
+          "anchors": [
+            "active-and-inactive-information-loss",
+            "sec:active",
+            "def:relation",
+            "def:active",
+            "thm:active-obstructs",
+            "thm:inactive-preserves",
+            "def:loss-types",
+            "rem:activity-vs-descent"
+          ]
+        },
+        {
+          "slug": "minimal-sound-uncertainty-without-completion",
+          "title": "Minimal sound uncertainty without completion",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/minimal-sound-uncertainty-without-completion.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/minimal-sound-uncertainty-without-completion",
+          "anchors": [
+            "minimal-sound-uncertainty-without-completion",
+            "sec:uncertainty",
+            "def:compat",
+            "def:sound",
+            "rem:powerset",
+            "thm:minimal-sound",
+            "it:cmin-sound",
+            "it:cmin-least",
+            "cor:singleton",
+            "rem:not-probability"
+          ]
+        },
+        {
+          "slug": "readout-extensions-and-target-sufficiency",
+          "title": "Readout extensions and target sufficiency",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/readout-extensions-and-target-sufficiency.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/readout-extensions-and-target-sufficiency",
+          "anchors": [
+            "readout-extensions-and-target-sufficiency",
+            "sec:extensions",
+            "def:extension",
+            "lem:extension-basic",
+            "it:u-unique",
+            "it:u-surj",
+            "it:refine",
+            "def:sufficient",
+            "rem:completion-meaning",
+            "lem:sufficiency-criterion"
+          ]
+        },
+        {
+          "slug": "what-every-sufficient-extension-must-retain",
+          "title": "What every sufficient extension must retain",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/what-every-sufficient-extension-must-retain.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/what-every-sufficient-extension-must-retain",
+          "anchors": [
+            "what-every-sufficient-extension-must-retain",
+            "sec:separation",
+            "thm:separation",
+            "cor:critical-pair",
+            "prop:separation-iff"
+          ]
+        },
+        {
+          "slug": "the-joint-target-image-and-universal-minimality",
+          "title": "The joint target image and universal minimality",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/the-joint-target-image-and-universal-minimality.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/the-joint-target-image-and-universal-minimality",
+          "anchors": [
+            "the-joint-target-image-and-universal-minimality",
+            "sec:joint",
+            "def:joint",
+            "prop:EQ-sufficient",
+            "thm:universal",
+            "cor:ordering"
+          ]
+        },
+        {
+          "slug": "flat-mathrm-u-1-connections-on-the-circle",
+          "title": "Flat U(1) connections on the circle",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/flat-mathrm-u-1-connections-on-the-circle.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/flat-mathrm-u-1-connections-on-the-circle",
+          "anchors": [
+            "flat-mathrmu1-connections-on-the-circle",
+            "sec:flat",
+            "the-reduced-moduli-space",
+            "gauge-convention-and-the-reduction",
+            "holonomy",
+            "the-curvature-readout",
+            "rem:curvature-restricted",
+            "ex:unobstructed"
+          ]
+        },
+        {
+          "slug": "the-charged-covariant-laplacian-and-the-curvature-obstruction",
+          "title": "The charged covariant Laplacian and the curvature obstruction",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/the-charged-covariant-laplacian-and-the-curvature-obstruction.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/the-charged-covariant-laplacian-and-the-curvature-obstruction",
+          "anchors": [
+            "the-charged-covariant-laplacian-and-the-curvature-obstruction",
+            "sec:spectrum",
+            "operator-domain-and-spectrum",
+            "the-spectrum",
+            "prop:spectrum",
+            "rem:multiplicities",
+            "the-spectral-target-and-the-curvature-obstruction",
+            "def:spectral-target",
+            "thm:curvature-obstruction",
+            "cor:holonomy-active",
+            "rem:physical-reading"
+          ]
+        },
+        {
+          "slug": "the-minimal-completion-for-the-spectral-target",
+          "title": "The minimal completion for the spectral target",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/the-minimal-completion-for-the-spectral-target.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/the-minimal-completion-for-the-spectral-target",
+          "anchors": [
+            "the-minimal-completion-for-the-spectral-target",
+            "sec:minimal-spectral",
+            "holonomy-is-sufficient",
+            "prop:holonomy-sufficient",
+            "spectral-rigidity-the-exact-equivalence",
+            "thm:isospectral",
+            "cor:inversion",
+            "the-coarsest-sufficient-completion-and-its-coordinate",
+            "thm:cos-minimal",
+            "it:c-welldef",
+            "it:c-classes",
+            "it:c-suff",
+            "it:c-min",
+            "rem:cos-caveat",
+            "ex:transport"
+          ]
+        },
+        {
+          "slug": "finite-time-dynamical-descent",
+          "title": "Finite-time dynamical descent",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/finite-time-dynamical-descent.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/finite-time-dynamical-descent",
+          "anchors": [
+            "finite-time-dynamical-descent",
+            "sec:dynamics",
+            "setting",
+            "def:future-target",
+            "def:propagator",
+            "the-closure-criterion",
+            "thm:closure",
+            "cor:dynamical-obstruction",
+            "prediction-at-time-tau-versus-autonomous-evolution",
+            "subsec:predict-vs-evolve",
+            "prop:qtau-provides",
+            "def:autonomous-E",
+            "prop:autonomous-criterion",
+            "prop:auto-implies-suff",
+            "ex:suff-not-autonomous",
+            "rem:EQtau-scope",
+            "what-the-obstruction-does-and-does-not-license",
+            "rem:stochastic"
+          ]
+        },
+        {
+          "slug": "discussion-and-scope",
+          "title": "Discussion and scope",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/discussion-and-scope.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/discussion-and-scope",
+          "anchors": [
+            "discussion-and-scope",
+            "sec:discussion",
+            "what-has-been-established",
+            "the-example-as-a-test-of-the-theory",
+            "scope-and-what-is-not-claimed"
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/conclusion.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/target-relative-necessity-of-completion/references.html",
+          "url": "/source-readout/target-relative-necessity-of-completion/references",
+          "anchors": [
+            "references",
+            "bib-AharonovBohm",
+            "bib-BaezMuniain",
+            "bib-Kobayashi",
+            "bib-NakaharaBook",
+            "bib-Grabert",
+            "bib-ReedSimonI",
+            "bib-ReedSimonIV",
+            "bib-ShadowI",
+            "bib-ShadowIII",
+            "bib-ShadowV",
+            "bib-WuYang",
+            "bib-Zwanzig"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "canonical-minimal-source-completion",
+      "slug": "canonical-minimal-source-completion",
+      "title": "Canonical Minimal Source Completion: The Coarsest Readout Extension on which a Nominated Family of Source Relations Becomes Well Defined",
+      "doi": "10.5281/zenodo.21370763",
+      "series": "foundations",
+      "number": 3,
+      "description": "The coarsest extension carrying a nominated family of source relations.",
+      "url": "/source-readout/canonical-minimal-source-completion",
+      "publicationUrl": "/papers/canonical-minimal-source-completion",
+      "pdfUrl": "/publications/source-readout/foundations/canonical-minimal-source-completion/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/canonical-minimal-source-completion/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/canonical-minimal-source-completion/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/abstract.html",
+          "url": "/source-readout/canonical-minimal-source-completion/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/introduction.html",
+          "url": "/source-readout/canonical-minimal-source-completion/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "the-problem-inherited-from-papers-1-and-2",
+            "what-this-paper-proves",
+            "what-this-paper-does-not-prove",
+            "subsec:scope-front",
+            "notation"
+          ]
+        },
+        {
+          "slug": "reduced-source-readout-and-the-nominated-relation-family",
+          "title": "Reduced source, readout, and the nominated relation family",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/reduced-source-readout-and-the-nominated-relation-family.html",
+          "url": "/source-readout/canonical-minimal-source-completion/reduced-source-readout-and-the-nominated-relation-family",
+          "anchors": [
+            "reduced-source-readout-and-the-nominated-relation-family",
+            "sec:setup",
+            "the-reduced-source",
+            "def:eligible",
+            "external-nomination",
+            "the-completion-problem",
+            "def:problem",
+            "rem:empty"
+          ]
+        },
+        {
+          "slug": "the-joint-image-construction-and-its-quotient-realization",
+          "title": "The joint-image construction and its quotient realization",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-joint-image-construction-and-its-quotient-realization.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-joint-image-construction-and-its-quotient-realization",
+          "anchors": [
+            "the-joint-image-construction-and-its-quotient-realization",
+            "sec:construction",
+            "def:EA",
+            "prop:factorization",
+            "the-induced-equivalence-relation",
+            "def:simA",
+            "prop:quotient",
+            "the-information-ordering",
+            "prop:ordering",
+            "what-completion-adds-above-a-readout-value",
+            "prop:fibers",
+            "rem:no-selector"
+          ]
+        },
+        {
+          "slug": "the-category-of-relation-sufficient-extensions",
+          "title": "The category of relation-sufficient extensions",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-category-of-relation-sufficient-extensions.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-category-of-relation-sufficient-extensions",
+          "anchors": [
+            "the-category-of-relation-sufficient-extensions",
+            "sec:category",
+            "def:sufficient",
+            "def:morphism",
+            "lem:structure-preserved",
+            "prop:category"
+          ]
+        },
+        {
+          "slug": "the-canonical-minimal-completion-theorem",
+          "title": "The canonical minimal-completion theorem",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-canonical-minimal-completion-theorem.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-canonical-minimal-completion-theorem",
+          "anchors": [
+            "the-canonical-minimal-completion-theorem",
+            "sec:main",
+            "thm:terminal",
+            "cor:unique",
+            "cor:coarsest",
+            "rem:construction-scope",
+            "rem:minimality"
+          ]
+        },
+        {
+          "slug": "redundant-and-indispensable-relation-coordinates",
+          "title": "Redundant and indispensable relation coordinates",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/redundant-and-indispensable-relation-coordinates.html",
+          "url": "/source-readout/canonical-minimal-source-completion/redundant-and-indispensable-relation-coordinates",
+          "anchors": [
+            "redundant-and-indispensable-relation-coordinates",
+            "sec:redundancy",
+            "def:redundant",
+            "thm:indispensable",
+            "it:indisp",
+            "it:witness",
+            "cor:deletion",
+            "rem:not-unique-coords"
+          ]
+        },
+        {
+          "slug": "nested-families-refinement-maps-and-reparameterization",
+          "title": "Nested families, refinement maps, and reparameterization",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/nested-families-refinement-maps-and-reparameterization.html",
+          "url": "/source-readout/canonical-minimal-source-completion/nested-families-refinement-maps-and-reparameterization",
+          "anchors": [
+            "nested-families-refinement-maps-and-reparameterization",
+            "sec:refinement",
+            "nested-families",
+            "prop:refinement",
+            "rem:not-strict",
+            "faithful-reparameterization",
+            "prop:reparam",
+            "rem:reparam-precise"
+          ]
+        },
+        {
+          "slug": "completion-determined-by-a-family-of-target-answers",
+          "title": "Completion determined by a family of target answers",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/completion-determined-by-a-family-of-target-answers.html",
+          "url": "/source-readout/canonical-minimal-source-completion/completion-determined-by-a-family-of-target-answers",
+          "anchors": [
+            "completion-determined-by-a-family-of-target-answers",
+            "sec:targets",
+            "prop:target-completion",
+            "mediation-and-the-canonical-surjection",
+            "def:mediation",
+            "thm:chi",
+            "rem:rel-vs-target"
+          ]
+        },
+        {
+          "slug": "the-gauge-reduction-boundary",
+          "title": "The gauge-reduction boundary",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-gauge-reduction-boundary.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-gauge-reduction-boundary",
+          "anchors": [
+            "the-gauge-reduction-boundary",
+            "sec:gauge",
+            "cor:gauge"
+          ]
+        },
+        {
+          "slug": "the-topological-universal-property",
+          "title": "The topological universal property",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-topological-universal-property.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-topological-universal-property",
+          "anchors": [
+            "the-topological-universal-property",
+            "sec:topology",
+            "def:top-EA",
+            "prop:top-structure",
+            "thm:top-terminal",
+            "quotient-topology-versus-subspace-topology",
+            "prop:embedding",
+            "it:iota-cts",
+            "it:iota-embed",
+            "cor:compact-hausdorff",
+            "rem:no-agreement-without-hypotheses"
+          ]
+        },
+        {
+          "slug": "worked-example-flat-u-1-connections-on-the-circle",
+          "title": "Worked example: flat U(1) connections on the circle",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/worked-example-flat-u-1-connections-on-the-circle.html",
+          "url": "/source-readout/canonical-minimal-source-completion/worked-example-flat-u-1-connections-on-the-circle",
+          "anchors": [
+            "worked-example-flat-u1-connections-on-the-circle",
+            "sec:u1",
+            "the-reduced-source-and-the-readout",
+            "transport-completion",
+            "spectral-completion",
+            "prop:interval",
+            "the-refinement-map-concretely",
+            "rem:u1-endpoints"
+          ]
+        },
+        {
+          "slug": "the-exact-scope-of-reconstruction",
+          "title": "The exact scope of reconstruction",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/the-exact-scope-of-reconstruction.html",
+          "url": "/source-readout/canonical-minimal-source-completion/the-exact-scope-of-reconstruction",
+          "anchors": [
+            "the-exact-scope-of-reconstruction",
+            "sec:reconstruction",
+            "prop:reconstruction",
+            "rem:two-reconstructions"
+          ]
+        },
+        {
+          "slug": "discussion-and-scope",
+          "title": "Discussion and scope",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/discussion-and-scope.html",
+          "url": "/source-readout/canonical-minimal-source-completion/discussion-and-scope",
+          "anchors": [
+            "discussion-and-scope",
+            "sec:discussion",
+            "what-has-been-established",
+            "the-three-standing-confusions",
+            "what-has-not-been-established",
+            "outlook"
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/conclusion.html",
+          "url": "/source-readout/canonical-minimal-source-completion/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/canonical-minimal-source-completion/references.html",
+          "url": "/source-readout/canonical-minimal-source-completion/references",
+          "anchors": [
+            "references",
+            "bib-Paper1",
+            "bib-Paper2",
+            "bib-MacLane",
+            "bib-Munkres",
+            "bib-KobayashiNomizu",
+            "bib-AharonovBohm",
+            "bib-WuYang"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geometric-realization-of-completed-source-relations",
+      "slug": "geometric-realization-of-completed-source-relations",
+      "title": "Geometric Realization of Completed Source Relations Descent, Orbit Spaces, Invariant Relations, and Variational Response in Shadow Theory",
+      "doi": "10.5281/zenodo.21370985",
+      "series": "foundations",
+      "number": 4,
+      "description": "Compatible geometric fields, invariant relations, and variational response.",
+      "url": "/source-readout/geometric-realization-of-completed-source-relations",
+      "publicationUrl": "/papers/geometric-realization-of-completed-source-relations",
+      "pdfUrl": "/publications/source-readout/foundations/geometric-realization-of-completed-source-relations/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/geometric-realization-of-completed-source-relations/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/geometric-realization-of-completed-source-relations/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/abstract.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction-and-scientific-position",
+          "title": "Introduction and scientific position",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/introduction-and-scientific-position.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/introduction-and-scientific-position",
+          "anchors": [
+            "sec:intro",
+            "position-in-the-sequence",
+            "progression-of-the-paper",
+            "sec:scope"
+          ]
+        },
+        {
+          "slug": "the-geometric-source-domain",
+          "title": "The geometric source domain",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/the-geometric-source-domain.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/the-geometric-source-domain",
+          "anchors": [
+            "sec:source",
+            "configurations",
+            "conv:basic",
+            "def:config",
+            "rem:time-orientation",
+            "def:admissible",
+            "the-redundancy-groupoid",
+            "def:ambient-aut",
+            "prop:aut-sequence",
+            "rem:isotropy",
+            "def:groupoid",
+            "def:sgeo",
+            "rem:hygiene",
+            "conv:relation-status"
+          ]
+        },
+        {
+          "slug": "local-data-and-global-descent",
+          "title": "Local data and global descent",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/local-data-and-global-descent.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/local-data-and-global-descent",
+          "anchors": [
+            "local-data-and-global-descent",
+            "sec:descent",
+            "local-data-and-compatibility-equations",
+            "def:compatible",
+            "rem:cech",
+            "ass:descent-reg",
+            "the-descent-theorem",
+            "thm:descent",
+            "rem:atlas",
+            "rem:descent-time",
+            "cor:realizability-boundary",
+            "rem:obstruction-genuine"
+          ]
+        },
+        {
+          "slug": "curvature-holonomy-and-invariant-global-relations",
+          "title": "Curvature, holonomy, and invariant global relations",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/curvature-holonomy-and-invariant-global-relations.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/curvature-holonomy-and-invariant-global-relations",
+          "anchors": [
+            "curvature-holonomy-and-invariant-global-relations",
+            "sec:invariants",
+            "curvature-and-the-bianchi-identity",
+            "invariant-global-relations",
+            "def:invariant-relation",
+            "ex:integral-invariants",
+            "ex:spectral",
+            "holonomy-and-wilson-observables",
+            "prop:wilson-gauge",
+            "loops-and-diffeomorphism-invariance",
+            "sec:diff-loops",
+            "rem:curv-vs-hol",
+            "rem:no-finite-separation"
+          ]
+        },
+        {
+          "slug": "geometric-realization-of-the-minimal-completion",
+          "title": "Geometric realization of the minimal completion",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/geometric-realization-of-the-minimal-completion.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/geometric-realization-of-the-minimal-completion",
+          "anchors": [
+            "geometric-realization-of-the-minimal-completion",
+            "sec:realization",
+            "the-geometric-evaluation-map",
+            "def:readout",
+            "def:egeo",
+            "the-restricted-realization-theorem",
+            "thm:restricted-realization",
+            "rem:relative",
+            "when-does-the-completion-reconstruct-the-source",
+            "prop:orbit-reconstruction"
+          ]
+        },
+        {
+          "slug": "classification-of-flat-u-1-connections-on-an-oriented-circle",
+          "title": "Classification of flat U(1) connections on an oriented circle",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/classification-of-flat-u-1-connections-on-an-oriented-circle.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/classification-of-flat-u-1-connections-on-an-oriented-circle",
+          "anchors": [
+            "classification-of-flat-u1-connections-on-an-oriented-circle",
+            "sec:u1",
+            "the-model-and-its-conventions",
+            "conv:circle-scope",
+            "def:circle-model",
+            "conv:u1-norm",
+            "def:hol-circle",
+            "the-classification-theorem",
+            "thm:hol-class",
+            "rem:u1-hyps",
+            "the-realized-completions",
+            "cor:hol-completion",
+            "lem:spec-invariance",
+            "cor:spec",
+            "rem:two-corollaries"
+          ]
+        },
+        {
+          "slug": "variational-realization-of-completed-relations",
+          "title": "Variational realization of completed relations",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/variational-realization-of-completed-relations.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/variational-realization-of-completed-relations",
+          "anchors": [
+            "variational-realization-of-completed-relations",
+            "sec:variational",
+            "variational-setting",
+            "ass:variational",
+            "V1",
+            "V2",
+            "V3",
+            "def:action",
+            "R1",
+            "R2",
+            "the-functional-chain-rule-for-relation-functionals",
+            "sec:chain-rule",
+            "conv:two-regimes",
+            "matter-pairings-and-independent-components",
+            "sec:matter-pairing",
+            "conv:matter",
+            "response-tensors-currents-and-euler-operators",
+            "def:responses",
+            "lem:TYM",
+            "lem:YMvar",
+            "the-coupled-field-equations",
+            "thm:field-eqs",
+            "rem:not-postulated"
+          ]
+        },
+        {
+          "slug": "ward-noether-identities-and-covariant-consistency",
+          "title": "Ward\u2013Noether identities and covariant consistency",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/ward-noether-identities-and-covariant-consistency.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/ward-noether-identities-and-covariant-consistency",
+          "anchors": [
+            "wardnoether-identities-and-covariant-consistency",
+            "sec:noether",
+            "conv:lie",
+            "def:Ttot",
+            "route-a-on-a-full-solution-via-the-contracted-bianchi-identity",
+            "prop:cons-bianchi",
+            "route-b-diffeomorphism-invariance-independent-of-the-einstein-equation",
+            "thm:cons",
+            "C1",
+            "C2",
+            "C3",
+            "C4",
+            "C5",
+            "the-gauge-ward-identity",
+            "prop:gauge-current",
+            "rem:consistency-check",
+            "rem:noether-constraint"
+          ]
+        },
+        {
+          "slug": "from-completion-to-tier-1-representation",
+          "title": "From completion to Tier-1 representation",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/from-completion-to-tier-1-representation.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/from-completion-to-tier-1-representation",
+          "anchors": [
+            "from-completion-to-tier-1-representation",
+            "sec:tier1"
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/conclusion.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/geometric-realization-of-completed-source-relations/references.html",
+          "url": "/source-readout/geometric-realization-of-completed-source-relations/references",
+          "anchors": [
+            "references",
+            "bib-AharonovBohm",
+            "bib-AmbroseSinger",
+            "bib-Bleecker",
+            "bib-ChernWeil",
+            "bib-GibbonsHawking1977",
+            "bib-KobayashiNomizu1",
+            "bib-KobayashiNomizu2",
+            "bib-MilnorStasheff",
+            "bib-Noether1918",
+            "bib-Pravda2002",
+            "bib-Steenrod",
+            "bib-Wald",
+            "bib-WuYang",
+            "bib-YangMills1954",
+            "bib-York1972",
+            "bib-ST1",
+            "bib-ST2",
+            "bib-ST3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "observable-quotients-and-exact-projected-dynamics",
+      "slug": "observable-quotients-and-exact-projected-dynamics",
+      "title": "Observable Quotients and Exact Projected Dynamics: Closure, Memory, Minimal Dynamical Completion, and Effective Field Operators",
+      "doi": "10.5281/zenodo.21371251",
+      "series": "foundations",
+      "number": 5,
+      "description": "Autonomous projected laws, memory, and minimal dynamical completion.",
+      "url": "/source-readout/observable-quotients-and-exact-projected-dynamics",
+      "publicationUrl": "/papers/observable-quotients-and-exact-projected-dynamics",
+      "pdfUrl": "/publications/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/abstract.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/introduction.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "the-problem",
+            "four-distinctions-that-must-not-be-merged",
+            "contributions",
+            "what-is-established-mathematics-and-what-is-new-here",
+            "subsec:originality",
+            "what-is-not-claimed",
+            "relation-to-the-companion-papers",
+            "notation-and-standing-conventions",
+            "subsec:notation"
+          ]
+        },
+        {
+          "slug": "the-exact-observable-quotient",
+          "title": "The exact observable quotient",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/the-exact-observable-quotient.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/the-exact-observable-quotient",
+          "anchors": [
+            "the-exact-observable-quotient",
+            "sec:quotient",
+            "ass:K",
+            "def:equiv",
+            "thm:quotient",
+            "rem:twonorms",
+            "cor:loss"
+          ]
+        },
+        {
+          "slug": "descent-of-observable-functionals",
+          "title": "Descent of observable functionals",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/descent-of-observable-functionals.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/descent-of-observable-functionals",
+          "anchors": [
+            "descent-of-observable-functionals",
+            "sec:functionals",
+            "def:obsfun",
+            "prop:descent",
+            "cor:lindescent",
+            "thm:stableobs",
+            "rem:closure"
+          ]
+        },
+        {
+          "slug": "compact-observation-and-controlled-reduction",
+          "title": "Compact observation and controlled reduction",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/compact-observation-and-controlled-reduction.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/compact-observation-and-controlled-reduction",
+          "anchors": [
+            "compact-observation-and-controlled-reduction",
+            "sec:compact",
+            "ass:compact",
+            "lem:schmidt",
+            "def:trunc",
+            "thm:ey",
+            "ex:diagonal"
+          ]
+        },
+        {
+          "slug": "descent-of-source-dynamics",
+          "title": "Descent of source dynamics",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/descent-of-source-dynamics.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/descent-of-source-dynamics",
+          "anchors": [
+            "descent-of-source-dynamics",
+            "sec:descent",
+            "def:induced",
+            "thm:semigroup",
+            "prop:topology",
+            "cor:failure",
+            "prop:bddgen",
+            "rem:unbdd"
+          ]
+        },
+        {
+          "slug": "the-exact-projected-dynamics-identity",
+          "title": "The exact projected-dynamics identity",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/the-exact-projected-dynamics-identity.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/the-exact-projected-dynamics-identity",
+          "anchors": [
+            "the-exact-projected-dynamics-identity",
+            "sec:projection",
+            "ass:proj",
+            "thm:projected",
+            "rem:MZ",
+            "thm:closure",
+            "rem:quantifier",
+            "ex:block"
+          ]
+        },
+        {
+          "slug": "minimal-dynamical-completion",
+          "title": "Minimal dynamical completion",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/minimal-dynamical-completion.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/minimal-dynamical-completion",
+          "anchors": [
+            "minimal-dynamical-completion",
+            "sec:completion",
+            "def:response",
+            "def:NQ",
+            "lem:NQclosed",
+            "thm:minimal",
+            "rem:relative",
+            "thm:volterra",
+            "prop:observability",
+            "rem:kalman"
+          ]
+        },
+        {
+          "slug": "nonlinear-dynamical-descent",
+          "title": "Nonlinear dynamical descent",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/nonlinear-dynamical-descent.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/nonlinear-dynamical-descent",
+          "anchors": [
+            "nonlinear-dynamical-descent",
+            "sec:nonlinear",
+            "ass:submersion",
+            "thm:projectable",
+            "rem:nonlinear"
+          ]
+        },
+        {
+          "slug": "elimination-of-a-source-sector-schur-complement-effective-operators",
+          "title": "Elimination of a source sector: Schur-complement effective operators",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/elimination-of-a-source-sector-schur-complement-effective-operators.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/elimination-of-a-source-sector-schur-complement-effective-operators",
+          "anchors": [
+            "elimination-of-a-source-sector-schur-complement-effective-operators",
+            "sec:schur",
+            "ass:schur",
+            "thm:schur",
+            "rem:nonlocal",
+            "rem:unbddschur",
+            "rem:treelevel"
+          ]
+        },
+        {
+          "slug": "effective-metric-response",
+          "title": "Effective metric response",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/effective-metric-response.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/effective-metric-response",
+          "anchors": [
+            "effective-metric-response",
+            "sec:metric",
+            "ass:gravity",
+            "prop:envelope",
+            "def:Teff",
+            "prop:einstein",
+            "thm:conservation",
+            "rem:invcov"
+          ]
+        },
+        {
+          "slug": "exact-versus-approximate-reduction",
+          "title": "Exact versus approximate reduction",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/exact-versus-approximate-reduction.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/exact-versus-approximate-reduction",
+          "anchors": [
+            "exact-versus-approximate-reduction",
+            "sec:discussion"
+          ]
+        },
+        {
+          "slug": "consequences-for-shadow-theory-and-conclusion",
+          "title": "Consequences for Shadow Theory and conclusion",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/consequences-for-shadow-theory-and-conclusion.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/consequences-for-shadow-theory-and-conclusion",
+          "anchors": [
+            "consequences-for-shadow-theory-and-conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/observable-quotients-and-exact-projected-dynamics/references.html",
+          "url": "/source-readout/observable-quotients-and-exact-projected-dynamics/references",
+          "anchors": [
+            "references",
+            "bib-Brezis",
+            "bib-EckartYoung",
+            "bib-EngelNagel",
+            "bib-EnglHankeNeubauer",
+            "bib-GripenbergLondenStaffans",
+            "bib-Kalman1960",
+            "bib-Kato",
+            "bib-Lee",
+            "bib-Mirsky",
+            "bib-Mori1965",
+            "bib-Pazy",
+            "bib-Peskin",
+            "bib-ReedSimon1",
+            "bib-Schmidt",
+            "bib-Sontag",
+            "bib-Wald",
+            "bib-Weinberg2",
+            "bib-Zeidler1",
+            "bib-Zhang",
+            "bib-Zwanzig1960",
+            "bib-Zwanzig2001",
+            "bib-Paper1",
+            "bib-Paper2",
+            "bib-Paper3",
+            "bib-Paper4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "non-source-projection-and-internal-identifiability",
+      "slug": "non-source-projection-and-internal-identifiability",
+      "title": "Non-Source Projection and Internal Identifiability",
+      "doi": "10.5281/zenodo.21371451",
+      "series": "foundations",
+      "number": 6,
+      "description": "Model-relative non-source projection and the limits of internal identification.",
+      "url": "/source-readout/non-source-projection-and-internal-identifiability",
+      "publicationUrl": "/papers/non-source-projection-and-internal-identifiability",
+      "pdfUrl": "/publications/source-readout/foundations/non-source-projection-and-internal-identifiability/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/non-source-projection-and-internal-identifiability/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/non-source-projection-and-internal-identifiability/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/abstract.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/introduction.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "the-problem",
+            "contribution",
+            "relation-to-established-work",
+            "scope",
+            "subsec:scope"
+          ]
+        },
+        {
+          "slug": "the-source-to-readout-architecture",
+          "title": "The source-to-readout architecture",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/the-source-to-readout-architecture.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/the-source-to-readout-architecture",
+          "anchors": [
+            "the-source-to-readout-architecture",
+            "sec:architecture",
+            "reduction-and-readout",
+            "def:source",
+            "def:readout",
+            "lem:induced",
+            "def:exact",
+            "relations-and-the-minimal-completion",
+            "def:relations",
+            "def:completion",
+            "lem:completionbasic",
+            "specializations",
+            "ex:geo",
+            "ex:linear",
+            "ex:coarse"
+          ]
+        },
+        {
+          "slug": "equivalent-forms-of-source-completeness",
+          "title": "Equivalent forms of source completeness",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/equivalent-forms-of-source-completeness.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/equivalent-forms-of-source-completeness",
+          "anchors": [
+            "equivalent-forms-of-source-completeness",
+            "sec:completeness",
+            "def:completeness",
+            "lem:descent",
+            "ass:separating",
+            "thm:completeness",
+            "rem:hypotheses",
+            "cor:nontrivialcompletion"
+          ]
+        },
+        {
+          "slug": "the-non-source-projection-theorem",
+          "title": "The non-source projection theorem",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/the-non-source-projection-theorem.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/the-non-source-projection-theorem",
+          "anchors": [
+            "the-non-source-projection-theorem",
+            "sec:nonsource",
+            "targets-essential-distinctions-and-sufficiency",
+            "def:target",
+            "def:essential",
+            "def:sufficient",
+            "def:EQ",
+            "the-theorem",
+            "thm:nonsource",
+            "thm:universal",
+            "rem:direction",
+            "corollaries-relation-linear-and-equivariant-forms",
+            "cor:relationform",
+            "cor:linear",
+            "def:equivariant",
+            "cor:equivariant",
+            "rem:equivariantscope",
+            "the-scope-of-theorem-4.5",
+            "ex:finite"
+          ]
+        },
+        {
+          "slug": "the-projected-law-dichotomy",
+          "title": "The projected-law dichotomy",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/the-projected-law-dichotomy.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/the-projected-law-dichotomy",
+          "anchors": [
+            "the-projected-law-dichotomy",
+            "sec:dynamics",
+            "descent-of-dynamics",
+            "def:dynamics",
+            "thm:dichotomy",
+            "cor:coherence",
+            "what-failed-descent-actually-requires",
+            "subsec:faileddescent",
+            "the-hilbert-space-instance",
+            "subsec:hilbert",
+            "prop:invariance",
+            "examples",
+            "ex:fiberpreserving",
+            "ex:fiberbreaking"
+          ]
+        },
+        {
+          "slug": "joint-probes-and-source-identifiability",
+          "title": "Joint probes and source identifiability",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/joint-probes-and-source-identifiability.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/joint-probes-and-source-identifiability",
+          "anchors": [
+            "joint-probes-and-source-identifiability",
+            "sec:probes",
+            "def:probes",
+            "thm:identifiability",
+            "cor:residual",
+            "prop:monotone"
+          ]
+        },
+        {
+          "slug": "the-internal-observation-ceiling",
+          "title": "The internal observation ceiling",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/the-internal-observation-ceiling.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/the-internal-observation-ceiling",
+          "anchors": [
+            "the-internal-observation-ceiling",
+            "sec:ceiling",
+            "ass:factorization",
+            "thm:ceiling",
+            "cor:noselector",
+            "rem:ceilingscope"
+          ]
+        },
+        {
+          "slug": "statistical-identifiability",
+          "title": "Statistical identifiability",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/statistical-identifiability.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/statistical-identifiability",
+          "anchors": [
+            "statistical-identifiability",
+            "sec:statistical",
+            "def:experiment",
+            "thm:statistical",
+            "rem:statscope",
+            "cor:statceiling",
+            "rem:twoceilings",
+            "the-exact-relations-among-the-three-obstructions",
+            "subsec:relations",
+            "prop:relations",
+            "ex:statistical"
+          ]
+        },
+        {
+          "slug": "exact-markovian-projection-strong-lumpability",
+          "title": "Exact Markovian projection: strong lumpability",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/exact-markovian-projection-strong-lumpability.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/exact-markovian-projection-strong-lumpability",
+          "anchors": [
+            "exact-markovian-projection-strong-lumpability",
+            "sec:lumpability",
+            "def:chain",
+            "def:lumpable",
+            "thm:lumpability",
+            "cor:nonmarkov",
+            "rem:lumpscope",
+            "ex:lumpability"
+          ]
+        },
+        {
+          "slug": "physical-instantiation-and-its-boundary",
+          "title": "Physical instantiation and its boundary",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/physical-instantiation-and-its-boundary.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/physical-instantiation-and-its-boundary",
+          "anchors": [
+            "physical-instantiation-and-its-boundary",
+            "sec:physical",
+            "what-a-physical-model-must-supply",
+            "what-counts-as-a-witness",
+            "the-alternatives-the-framework-generates",
+            "the-boundary-of-the-result",
+            "subsec:boundary"
+          ]
+        },
+        {
+          "slug": "synthesis",
+          "title": "Synthesis",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/synthesis.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/synthesis",
+          "anchors": [
+            "synthesis",
+            "sec:synthesis"
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/conclusion.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/non-source-projection-and-internal-identifiability/references.html",
+          "url": "/source-readout/non-source-projection-and-internal-identifiability/references",
+          "anchors": [
+            "references",
+            "bib-BallYeo1993",
+            "bib-Blackwell1951",
+            "bib-Buchholz1994",
+            "bib-tomDieck",
+            "bib-EngelNagel",
+            "bib-Goedel1931",
+            "bib-Kalman1963",
+            "bib-KemenySnell",
+            "bib-LeCam1964",
+            "bib-Lehmann",
+            "bib-MacLane",
+            "bib-Mori1965",
+            "bib-Nakajima1958",
+            "bib-Yosida",
+            "bib-Zwanzig1960",
+            "bib-Paper1",
+            "bib-Paper2",
+            "bib-Paper3",
+            "bib-Paper4",
+            "bib-Paper5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bulk-to-brane-projection",
+      "slug": "bulk-to-brane-projection",
+      "title": "Bulk-to-Brane Projection, Dynamical Nonclosure, and Observable Residues in Randall\u2013Sundrum Gravity",
+      "doi": "10.5281/zenodo.21371861",
+      "series": "foundations",
+      "number": 7,
+      "description": "A complete source-projection witness and observable residues within RS2 gravity.",
+      "url": "/source-readout/bulk-to-brane-projection",
+      "publicationUrl": "/papers/bulk-to-brane-projection",
+      "pdfUrl": "/publications/source-readout/foundations/bulk-to-brane-projection/paper.pdf",
+      "texUrl": "/publications/source-readout/foundations/bulk-to-brane-projection/source.tex",
+      "markdownUrl": "/publications/source-readout/foundations/bulk-to-brane-projection/complete.md",
+      "chapters": [
+        {
+          "slug": "abstract",
+          "title": "Abstract",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/abstract.html",
+          "url": "/source-readout/bulk-to-brane-projection/abstract",
+          "anchors": [
+            "abstract"
+          ]
+        },
+        {
+          "slug": "introduction",
+          "title": "Introduction",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/introduction.html",
+          "url": "/source-readout/bulk-to-brane-projection/introduction",
+          "anchors": [
+            "introduction",
+            "sec:intro",
+            "the-physical-problem",
+            "contributions",
+            "relation-to-established-results-and-this-papers-contribution",
+            "sec:relation",
+            "scope-and-what-is-not-claimed",
+            "sec:scope"
+          ]
+        },
+        {
+          "slug": "the-five-dimensional-source-model",
+          "title": "The five-dimensional source model",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/the-five-dimensional-source-model.html",
+          "url": "/source-readout/bulk-to-brane-projection/the-five-dimensional-source-model",
+          "anchors": [
+            "the-five-dimensional-source-model",
+            "sec:model",
+            "action-and-conventions",
+            "physical-equivalence-and-the-reduced-source-space",
+            "def:source",
+            "def:equiv",
+            "the-instantaneous-brane-readout",
+            "sec:readout",
+            "def:readout",
+            "rem:instant"
+          ]
+        },
+        {
+          "slug": "a-genuine-same-readout-bulk-distinction",
+          "title": "A genuine same-readout bulk distinction",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/a-genuine-same-readout-bulk-distinction.html",
+          "url": "/source-readout/bulk-to-brane-projection/a-genuine-same-readout-bulk-distinction",
+          "anchors": [
+            "a-genuine-same-readout-bulk-distinction",
+            "sec:witness",
+            "prop:witness",
+            "cor:nonproj",
+            "rem:witnessScope"
+          ]
+        },
+        {
+          "slug": "the-exact-projected-einstein-equation",
+          "title": "The exact projected Einstein equation",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/the-exact-projected-einstein-equation.html",
+          "url": "/source-readout/bulk-to-brane-projection/the-exact-projected-einstein-equation",
+          "anchors": [
+            "the-exact-projected-einstein-equation",
+            "sec:projected",
+            "israel-junction-condition",
+            "gausscodazzi-projection",
+            "sec:gauss",
+            "conservation-bianchi-and-nonclosure",
+            "sec:conservation"
+          ]
+        },
+        {
+          "slug": "exact-evaluation-in-the-homogeneous-sector",
+          "title": "Exact evaluation in the homogeneous sector",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/exact-evaluation-in-the-homogeneous-sector.html",
+          "url": "/source-readout/bulk-to-brane-projection/exact-evaluation-in-the-homogeneous-sector",
+          "anchors": [
+            "exact-evaluation-in-the-homogeneous-sector",
+            "sec:frw",
+            "lem:PiFRW",
+            "prop:friedmann"
+          ]
+        },
+        {
+          "slug": "exact-tree-level-bulk-elimination-in-the-linear-weak-field-sector",
+          "title": "Exact tree-level bulk elimination in the linear weak-field sector",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/exact-tree-level-bulk-elimination-in-the-linear-weak-field-sector.html",
+          "url": "/source-readout/bulk-to-brane-projection/exact-tree-level-bulk-elimination-in-the-linear-weak-field-sector",
+          "anchors": [
+            "exact-tree-level-bulk-elimination-in-the-linear-weak-field-sector",
+            "sec:linear",
+            "bulk-perturbation-equation-brane-bending-and-the-boundary-condition",
+            "sec:bending",
+            "brane-to-brane-propagator-zero-mode-and-kk-continuum",
+            "sec:propagator",
+            "rem:cut",
+            "tensor-projectors-and-the-response-operator",
+            "sec:projectors",
+            "lem:traces",
+            "causal-influence-functional",
+            "sec:ctp",
+            "rem:treelevel",
+            "evaluated-long-distance-response",
+            "sec:longdistance",
+            "one-sided-versus-two-sided-normalization",
+            "sec:normalization"
+          ]
+        },
+        {
+          "slug": "the-parameter-eliminated-cross-regime-prediction",
+          "title": "The parameter-eliminated cross-regime prediction",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/the-parameter-eliminated-cross-regime-prediction.html",
+          "url": "/source-readout/bulk-to-brane-projection/the-parameter-eliminated-cross-regime-prediction",
+          "anchors": [
+            "the-parameter-eliminated-cross-regime-prediction",
+            "sec:crossregime",
+            "thm:crossregime",
+            "dimensional-consistency.",
+            "scope-and-what-it-does-and-does-not-do."
+          ]
+        },
+        {
+          "slug": "minimal-dynamical-completion-and-memory",
+          "title": "Minimal dynamical completion and memory",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/minimal-dynamical-completion-and-memory.html",
+          "url": "/source-readout/bulk-to-brane-projection/minimal-dynamical-completion-and-memory",
+          "anchors": [
+            "minimal-dynamical-completion-and-memory",
+            "sec:completion",
+            "linear-completion-a-quotient-by-the-kernel-of-the-brane-response",
+            "def:Edyn",
+            "nonlinear-completion",
+            "def:nonlinearEquiv"
+          ]
+        },
+        {
+          "slug": "what-the-source-model-fixes",
+          "title": "What the source model fixes",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/what-the-source-model-fixes.html",
+          "url": "/source-readout/bulk-to-brane-projection/what-the-source-model-fixes",
+          "anchors": [
+            "what-the-source-model-fixes",
+            "sec:fixed"
+          ]
+        },
+        {
+          "slug": "the-strongest-conventional-four-dimensional-description",
+          "title": "The strongest conventional four-dimensional description",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/the-strongest-conventional-four-dimensional-description.html",
+          "url": "/source-readout/bulk-to-brane-projection/the-strongest-conventional-four-dimensional-description",
+          "anchors": [
+            "the-strongest-conventional-four-dimensional-description",
+            "sec:fourdim",
+            "homogeneous-sector",
+            "linear-sector-and-the-cft-realization-of-the-1r3-residue"
+          ]
+        },
+        {
+          "slug": "the-operational-equivalence-obstruction",
+          "title": "The operational-equivalence obstruction",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/the-operational-equivalence-obstruction.html",
+          "url": "/source-readout/bulk-to-brane-projection/the-operational-equivalence-obstruction",
+          "anchors": [
+            "the-operational-equivalence-obstruction",
+            "sec:opeq",
+            "classical-pushforward-lemma",
+            "lem:pushforward",
+            "rem:pushstatus",
+            "quantum-and-field-theoretic-forms",
+            "the-exact-boundary-of-the-conclusion",
+            "sec:boundary",
+            "rem:finitedata"
+          ]
+        },
+        {
+          "slug": "main-theorem",
+          "title": "Main theorem",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/main-theorem.html",
+          "url": "/source-readout/bulk-to-brane-projection/main-theorem",
+          "anchors": [
+            "main-theorem",
+            "sec:main",
+            "thm:main"
+          ]
+        },
+        {
+          "slug": "comparative-examples-and-limits-of-interpretation",
+          "title": "Comparative examples and limits of interpretation",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/comparative-examples-and-limits-of-interpretation.html",
+          "url": "/source-readout/bulk-to-brane-projection/comparative-examples-and-limits-of-interpretation",
+          "anchors": [
+            "comparative-examples-and-limits-of-interpretation",
+            "sec:controls",
+            "an-exactly-soluble-projection-two-coupled-oscillators",
+            "sec:oscillator",
+            "einsteincartan-and-aharonovbohm-comparisons",
+            "sec:countercontrols",
+            "einsteincartandirac.",
+            "aharonovbohm."
+          ]
+        },
+        {
+          "slug": "empirical-discrimination",
+          "title": "Empirical discrimination",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/empirical-discrimination.html",
+          "url": "/source-readout/bulk-to-brane-projection/empirical-discrimination",
+          "anchors": [
+            "empirical-discrimination",
+            "sec:empirical",
+            "a-pre-registered-model-test",
+            "spectral-test",
+            "what-no-experiment-of-this-kind-can-decide"
+          ]
+        },
+        {
+          "slug": "scope-and-regime-of-validity",
+          "title": "Scope and regime of validity",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/scope-and-regime-of-validity.html",
+          "url": "/source-readout/bulk-to-brane-projection/scope-and-regime-of-validity",
+          "anchors": [
+            "scope-and-regime-of-validity",
+            "sec:failure",
+            "decoupling-limits."
+          ]
+        },
+        {
+          "slug": "conclusion",
+          "title": "Conclusion",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/conclusion.html",
+          "url": "/source-readout/bulk-to-brane-projection/conclusion",
+          "anchors": [
+            "conclusion",
+            "sec:conclusion"
+          ]
+        },
+        {
+          "slug": "references",
+          "title": "References",
+          "htmlPath": "content/source-readout/foundations/bulk-to-brane-projection/references.html",
+          "url": "/source-readout/bulk-to-brane-projection/references",
+          "anchors": [
+            "references",
+            "bib-RS2",
+            "bib-SMS",
+            "bib-Israel",
+            "bib-BDEL",
+            "bib-Mukohyama1",
+            "bib-GarrigaTanaka",
+            "bib-GKR",
+            "bib-Mukohyama2",
+            "bib-DuffLiu",
+            "bib-APR",
+            "bib-Barvinsky",
+            "bib-FeynmanVernon",
+            "bib-MoriZwanzig",
+            "bib-Pollock",
+            "bib-Diakonov",
+            "bib-Lee",
+            "bib-Ichiki",
+            "bib-PerezVictoria",
+            "bib-AharonovBohm",
+            "bib-PinheiroPires",
+            "bib-Paper1",
+            "bib-Paper2",
+            "bib-Paper3",
+            "bib-Paper4",
+            "bib-Paper5",
+            "bib-Paper6"
+          ]
+        }
+      ]
+    }
+  ]
+}

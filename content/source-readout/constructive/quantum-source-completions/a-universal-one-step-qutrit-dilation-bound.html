@@ -1,0 +1,145 @@
+<h2 id="section-a-universal-one-step-qutrit-dilation-bound">A universal one-step qutrit dilation bound</h2>
+<p data-source-page="26">The branch-image dimension forces a lower bound on Choi rank. The following elementary proof treats every complex qutrit CP map with the stated linear rank, without a covariance or source-encoding assumption.</p>
+<h3 id="section-a-cp-map-of-qutrit-linear-rank-three-needs-at-least-three-kraus-operators">A CP map of qutrit linear rank three needs at least three Kraus operators</h3>
+<p data-source-page="27"><strong>Lemma A.1</strong> (Kraus rank from three image directions)<strong>.</strong><em> If a nonzero CP map</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00552.svg" alt=" Φ : M3(C) →M3(C)" style="width:9.3910em;height:1.4428em;vertical-align:-0.23em" loading="lazy"/> <em>has complex-linear rank three, its Choi rank is at least three.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="27"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00553.svg" alt="Proof. A one-Kraus map X ↦→AXA† has linear rank (rank A)2, which cannot equal three. Suppose
+two Kraus matrices A, B suffice.
+First consider input support of dimension at most two. Dimension one gives rank at most one.
+On a two-dimensional support, an invertible input congruence normalizes A†A + B†B to identity
+without changing linear rank. If the resulting trace-preserving map had rank three, its Hermitian
+kernel would contain a nonzero traceless X. Diagonalizing X gives orthonormal u, v with equal outputs
+Φ(|u⟩⟨u|) = Φ(|v⟩⟨v|) = ρ. This common output has rank at most two. Positivity places all four Kraus
+vectors Au, Bu, Av, Bv in its support, reducing the output to dimension two. If ρ has rank one the image
+is one-dimensional. Otherwise write the two output-vector matrices as M0 = √ρU0 and M1 = √ρU1,
+where U0, U1 are 2-by-2 unitaries. The off-diagonal response is C = √ρU√ρ, U = U0U†
+1, and trace
+preservation gives Tr(ρU) = 0. A positive weighted average of the two unit-modulus eigenvalues of
+U can vanish only if they are antipodal. Hence U is Hermitian up to a common phase, and C† is
+proportional to C. The entire image then lies in span{ρ, C}, contradicting rank three. The same
+argument applied to the adjoint handles output support of dimension at most two.
+It remains to treat full input and output support. If the pencil A + tB contains an invertible
+matrix, a unitary change of Kraus basis makes the first Kraus matrix invertible. An invertible output
+congruence then reduces the map to X ↦→X + CXC†. Its superoperator is I + C ⊗C. Among three
+eigenvalues c1, c2, c3 of C, no diagonal product |ci|2 equals −1, and at most two unordered pairs can
+satisfy cicj = −1: all three pairs would force one product to be positive. The algebraic multiplicity of
+−1 is therefore at most four, also for defective C. The superoperator has rank at least five.
+Finally suppose every pencil matrix is singular. Some linear combination has rank two; otherwise
+two rank-one matrices either have common image or common kernel, contradicting full supports.
+For invertible L, R, replacing both Kraus matrices by LAR, LBR composes the map with invertible
+input/output congruences. This preserves CP and complex-linear rank, although it need not preserve
+trace normalization. Such transformations put" width="486.73" height="343.72" style="width:44.654em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 27.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. A one-Kraus map X ↦→AXA† has linear rank (rank A)2, which cannot equal three. Suppose
+two Kraus matrices A, B suffice.
+First consider input support of dimension at most two. Dimension one gives rank at most one.
+On a two-dimensional support, an invertible input congruence normalizes A†A + B†B to identity
+without changing linear rank. If the resulting trace-preserving map had rank three, its Hermitian
+kernel would contain a nonzero traceless X. Diagonalizing X gives orthonormal u, v with equal outputs
+Φ(|u⟩⟨u|) = Φ(|v⟩⟨v|) = ρ. This common output has rank at most two. Positivity places all four Kraus
+vectors Au, Bu, Av, Bv in its support, reducing the output to dimension two. If ρ has rank one the image
+is one-dimensional. Otherwise write the two output-vector matrices as M0 = √ρU0 and M1 = √ρU1,
+where U0, U1 are 2-by-2 unitaries. The off-diagonal response is C = √ρU√ρ, U = U0U†
+1, and trace
+preservation gives Tr(ρU) = 0. A positive weighted average of the two unit-modulus eigenvalues of
+U can vanish only if they are antipodal. Hence U is Hermitian up to a common phase, and C† is
+proportional to C. The entire image then lies in span{ρ, C}, contradicting rank three. The same
+argument applied to the adjoint handles output support of dimension at most two.
+It remains to treat full input and output support. If the pencil A + tB contains an invertible
+matrix, a unitary change of Kraus basis makes the first Kraus matrix invertible. An invertible output
+congruence then reduces the map to X ↦→X + CXC†. Its superoperator is I + C ⊗C. Among three
+eigenvalues c1, c2, c3 of C, no diagonal product |ci|2 equals −1, and at most two unordered pairs can
+satisfy cicj = −1: all three pairs would force one product to be positive. The algebraic multiplicity of
+−1 is therefore at most four, also for defective C. The superoperator has rank at least five.
+Finally suppose every pencil matrix is singular. Some linear combination has rank two; otherwise
+two rank-one matrices either have common image or common kernel, contradicting full supports.
+For invertible L, R, replacing both Kraus matrices by LAR, LBR composes the map with invertible
+input/output congruences. This preserves CP and complex-linear rank, although it need not preserve
+trace normalization. Such transformations put</pre></details></figure>
+<figure class="sr-formula" id="display-110" data-source-page="27"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00554.svg" alt="(︄
+D
+c
+q
+b
+)︄
+A = diag(1, 1, 0),
+B =
+." width="173.69" height="28.64" style="width:15.935em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 27.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+D
+c
+q
+b
+)︄
+A = diag(1, 1, 0),
+B =
+.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="27"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00555.svg" alt="The coefficients of t, t2 in det(A + tB) ≡0 give b = 0 and qc = 0. Full supports give q, c ̸= 0. A
+matched invertible two-dimensional change of basis preserving A puts c = e1, q = eT
+2 , so" width="484.81" height="32.87" style="width:44.478em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 27.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The coefficients of t, t2 in det(A + tB) ≡0 give b = 0 and qc = 0. Full supports give q, c ̸= 0. A
+matched invertible two-dimensional change of basis preserving A puts c = e1, q = eT
+2 , so</pre></details></figure>
+<figure class="sr-formula" id="display-111" data-source-page="27"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00556.svg" alt="⎛
+⎜
+⎝
+a
+b′
+1
+s
+d
+0
+0
+1
+0
+⎞
+B =
+⎟
+⎠." width="85.88" height="41.40" style="width:7.879em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 27.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎛
+⎜
+⎝
+a
+b′
+1
+s
+d
+0
+0
+1
+0
+⎞
+B =
+⎟
+⎠.</pre></details></figure>
+<p data-source-page="27">The cubic coefficient gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00557.svg" alt=" s =" style="width:1.9982em;height:1.1470em;vertical-align:-0.23em" loading="lazy"/> det<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00558.svg" alt=" B" style="width:1.0716em;height:1.1455em;vertical-align:-0.23em" loading="lazy"/> = 0. Subtracting<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00559.svg" alt=" d" style="width:0.9974em;height:1.1455em;vertical-align:-0.23em" loading="lazy"/> times row three from row two, then<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00560.svg" alt=" a" style="width:1.0036em;height:1.1455em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00561.svg" alt=" b′" style="width:1.1181em;height:1.3072em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="27">times column three from columns one and two, preserves<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00562.svg" alt=" A" style="width:1.2307em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00563.svg" alt=" B = E13 + E32" style="width:6.9025em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/>. Its CP map is</p>
+<figure class="sr-formula" id="display-112" data-source-page="27"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p027-00564.svg" alt="⎛
+⎞
+⎜
+⎝
+x11 + x33
+x12
+x32
+x21
+x22
+0
+x23
+0
+x22
+X ↦−→
+⎟
+⎠," width="151.48" height="42.39" style="width:13.897em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 27.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎛
+⎞
+⎜
+⎝
+x11 + x33
+x12
+x32
+x21
+x22
+0
+x23
+0
+x22
+X ↦−→
+⎟
+⎠,</pre></details></figure>
+<p data-source-page="27">of linear rank six. Every case contradicts rank three.</p>
+<p data-source-page="27">The qubit-support reduction also follows from the standard two-Kraus qubit canonical form of Wolf and Perez-Garcia <a href="/source-readout/quantum-source-completions/references#reference-16">[16]</a>, Eq.(5); the proof above supplies the elementary argument actually</p>
+<p data-source-page="28">used. The displayed singular-pencil map has six independent image directions by direct inspection. The supplement also supplies an independent rational row-reduction check of this normal form in supplement/check_structural_lemmas.py.</p>
+<p data-source-page="28"><strong>Universal one-step bath consequence.</strong> By (30), every branch of any minimal qutrit realization needs at least three Kraus operators. Its classical-record channel has Choi rank at least 3 + 3 + 3 = 9. This is a universal lower bound for the declared qutrit realization class. The exact normal measurement-model apparatus rule is an established antecedent: Pellonpää and Tukiainen,<em> Rep. Math. Phys.</em> 79, 261–278 (2017), Eq.(22), Corollary 1 and the finite-dimensional apparatus bound, DOI 10.1016/S0034- 4877(17)30040-X, <a href="https://arxiv.org/abs/1509.08886.">https://arxiv.org/abs/1509.08886.</a> Pure initial apparatus and a sharp pointer are retained hypotheses.</p>

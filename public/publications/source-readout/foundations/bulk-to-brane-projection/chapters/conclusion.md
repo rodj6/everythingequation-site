@@ -1,0 +1,11 @@
+# Conclusion
+
+<div id="sec:conclusion">
+
+</div>
+
+Minimal positive-tension RS2 contains a complete source-projection antecedent. In that model, the projection from gauge-reduced bulk gravity to the instantaneous brane state removes genuine gravitational degrees of freedom: a remote transverse-traceless bulk wave, whose existence is established by an explicit KK spectral construction, supplies a same-readout, different-future pair, so no deterministic evolution law exists on that instantaneous state over the full source domain. Gauss–Codazzi projection and Israel matching *derive*, rather than posit, $$\mathcal C^{\mathrm{RS}}_{\mu\nu}=\kappa_5^4\Pi_{\mu\nu}-E_{\mu\nu}.$$ Its local nonlinear part gives the exact positive $\rho^2$ correction; its bulk Weyl part carries the completion data and the retarded KK memory. The same source scale $\ell$ fixes the leading weak-field potentials, producing the parameter-eliminated relation $$A_\Psi=A_\Phi/2,
+\qquad
+B=\kappa_4^4A_\Phi/24 ,$$ a genuine, falsifiable residue linking two otherwise independent observational regimes. This is the strongest quantitative result obtained here.
+
+The strongest possible *interpretation* is nevertheless bounded by Lemma [11.1](/source-readout/bulk-to-brane-projection/the-operational-equivalence-obstruction#lem:pushforward): every source model induces, by pushforward, a brane-only path law with identical brane statistics, and RS2 makes that obstruction concrete through its four-dimensional CFT description, which reproduces the same $1/r^3$ residue. The result is therefore positive at the level of model-relative source projection and nonclosure, and negative at the level of unrestricted ontological discrimination. Absent an independently motivated restriction on the admissible brane-only theory class, no brane observation can establish that the source representation is ontologically fundamental; and establishing that nature realizes this antecedent at all requires empirical selection of RS2, or of another source model with comparably specific residues. The conditions under which the positive results hold are stated once, in Section [15](/source-readout/bulk-to-brane-projection/scope-and-regime-of-validity#sec:failure).

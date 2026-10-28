@@ -27,12 +27,13 @@ export const articleMetas: ArticleMeta[] = [
   {
     "slug": "from-everything-equation-to-shadow-theory",
     "title": "From the Everything Equation to Shadow Theory",
-    "description": "What changed, what was kept, and why the older material is now a historical archive.",
+    "description": "How the original closure question developed into precise source–readout mathematics, constructive quantum sources and certified physical readers.",
     "date": "2026-07-03",
-    "updated": "2026-07-15",
+    "updated": "2026-10-28",
     "tags": [
       "history",
-      "programme"
+      "programme",
+      "source-readout"
     ],
     "status": "published"
   },

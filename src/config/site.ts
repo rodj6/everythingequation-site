@@ -20,7 +20,7 @@ export const site = {
 
 Source and readout are complementary aspects of one whole. We, including our bodies, instruments, memories and experienced scenes, belong within the readout. Their relationship sits within a wider architecture: unconditioned ground, unsplit unity, and recursive differentiation into a physical world.
 
-The seven-paper foundation develops exact mathematics for what readouts preserve, what they lose, and what reconstruction requires. Sealed or Leaky advances that programme with quantitative information bounds and explicit conditions for hidden distinctions to become accessible.`,
+The seven-paper foundation develops exact mathematics for what readouts preserve, what they lose, and what reconstruction requires. Five constructive studies develop quantum sources, robust readers, retained-record certification and exact finite readout design. Sealed or Leaky connects missing information to operational access.`,
 
   /**
    * One-sentence description used in <meta name="description">, Open Graph,

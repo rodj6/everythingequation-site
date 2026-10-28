@@ -1,3 +1,4 @@
+import {sourcePapers,paperUrl,chapterUrl} from '@/lib/source-readout';
 import {paperIntegrations,integrationChapters} from '@/lib/paper-integrations';
 import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
 import {relationalAwareness, listRelationalDocuments, relationalDocumentUrl} from '@/lib/relational-awareness';
@@ -68,6 +69,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    {loc:'/source-readout/origins',lastmod:'2026-10-28',priority:'0.8'},
+    ...sourcePapers().flatMap(p=>[{loc:paperUrl(p),lastmod:'2026-10-28',priority:'0.9'},...p.chapters.map(c=>({loc:chapterUrl(p,c),lastmod:'2026-10-28',priority:'0.8'}))]),
     ...paperIntegrations.map(p=>({loc:p.url,lastmod:'2026-10-23',priority:'0.9'})),
     ...integrationChapters.map(c=>({loc:c.url,lastmod:'2026-10-23',priority:'0.8'})),
     {loc:continuityNote.url,lastmod:editorialUpdateDate,priority:'0.9'},
@@ -142,6 +145,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    ...sourcePapers().filter(p=>!p.parentId&&!p.parentSlug).map(p=>({title:p.title,url:`${canonicalBase}${paperUrl(p)}`,date:'2026-10-28',summary:`${p.description} Complete web-edition release; the original publication date and DOI remain on its article page.`})),
     ...integrationChapters.map(c=>({title:c.title,url:`${canonicalBase}${c.url}`,date:'2026-10-23',summary:c.description})),
     {title:'What Shadow Theory holds fundamental: authorial clarification',url:`${canonicalBase}/consciousness#what-shadow-theory-holds-fundamental`,date:editorialUpdateDate,summary:'The unknown ground is fundamental throughout reality in the author’s philosophical account. Awareness provisionally names an attributed quality, not knowing or universal conscious subjects. The dated A0 note distinguishes this clarified position from the unchanged publication; no new constitutive law or publication version is issued.'},
     {title:continuityNote.fullTitle,url:`${canonicalBase}${continuityNote.url}`,date:continuityNote.date,summary:`${continuityNote.description} Philosophical research note accompanying Reflective Alignment and AI Consciousness. DOI ${continuityNote.doi}.`},
@@ -246,6 +250,13 @@ export async function generateLlmsTxt(): Promise<string> {
     `> ${site.tagline}`,
     '',
     site.description,
+    '',
+    '## Source and readout: complete mathematical editions',
+    `- [Programme and reading paths](${baseUrl}/source-readout)`,
+    `- [Everything Equation development](${baseUrl}/source-readout/origins): organizing schema and precise descendants; no universal solver claim.`,
+    `- [Text inventory](${baseUrl}/source-readout/manifest.json) · [Full-text search](${baseUrl}/source-readout/search.json)`,
+    'The seven foundations use source-derived HTML and MathML. PDF-only constructive articles preserve exact vector mathematics with accessible linear transcriptions; these transcriptions are not semantic MathML.',
+    ...sourcePapers().flatMap(p=>[`- [${p.title}](${baseUrl}${paperUrl(p)}): ${p.description}${p.doi?` DOI https://doi.org/${p.doi}`:''}; [PDF](${baseUrl}${p.pdfUrl})`,...p.chapters.map(c=>`  - [${c.title}](${baseUrl}${chapterUrl(p,c)})`)]),
     '',
     '## Complete October paper articles',
     ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
@@ -467,6 +478,9 @@ export async function generateGraph() {
   const publicProblemSlugs = new Set(problems.map((problem) => problem.slug));
 
   const nodes = [
+    {id:'source-readout',type:'research-programme',title:'Source and Readout',url:`${baseUrl}/source-readout`,manifest:`${baseUrl}/source-readout/manifest.json`},
+    {id:'source-readout:origins',type:'programme-development',title:'From the Everything Equation to Source–Readout Theory',url:`${baseUrl}/source-readout/origins`},
+    ...sourcePapers().flatMap(p=>[{id:`source-readout:${p.id}`,type:p.parentId?'technical-companion':'complete-technical-edition',title:p.title,url:`${baseUrl}${paperUrl(p)}`,doi:p.doi,series:p.series},...p.chapters.map(c=>({id:`source-readout:${p.id}:${c.slug}`,type:'technical-section',title:c.title,url:`${baseUrl}${chapterUrl(p,c)}`}))]),
     ...paperIntegrations.map(p=>({id:`integrated:${p.id}`,type:'complete-paper-article',title:p.title,url:`${baseUrl}${p.url}`,doi:p.doi,manifest:`${baseUrl}${p.manifestUrl}`})),
     ...integrationChapters.map(c=>({id:`integrated:${c.paperId}:${c.slug}`,type:'complete-article-chapter',title:c.title,url:`${baseUrl}${c.url}`,order:c.order,sections:c.sections})),
     ...papers.map((p) => ({
@@ -662,6 +676,12 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({from:'source-readout',to:'source-readout:origins',relation:'developed-from'});
+  for(const p of sourcePapers()){
+    edges.push({from:p.parentId?`source-readout:${p.parentId}`:'source-readout',to:`source-readout:${p.id}`,relation:p.parentId?'has-technical-companion':'contains-complete-article'});
+    if(!p.parentId)edges.push({from:`source-readout:${p.id}`,to:`paper:${p.slug}`,relation:'published-as'});
+    p.chapters.forEach((c,i)=>{edges.push({from:`source-readout:${p.id}`,to:`source-readout:${p.id}:${c.slug}`,relation:'contains-complete-section'});if(p.chapters[i+1])edges.push({from:`source-readout:${p.id}:${c.slug}`,to:`source-readout:${p.id}:${p.chapters[i+1].slug}`,relation:'reading-order'});});
+  }
   for(const p of paperIntegrations){edges.push({from:'consciousness',to:`integrated:${p.id}`,relation:'contains-complete-article'});edges.push({from:`integrated:${p.id}`,to:`paper:${p.paperSlug}`,relation:'published-as'});const chapters=integrationChapters.filter(c=>c.paperId===p.id);chapters.forEach((c,i)=>{edges.push({from:`integrated:${p.id}`,to:`integrated:${p.id}:${c.slug}`,relation:'contains-complete-chapter'});if(chapters[i+1])edges.push({from:`integrated:${p.id}:${c.slug}`,to:`integrated:${p.id}:${chapters[i+1].slug}`,relation:'reading-order'});});}
   for(const [from,to,relation] of [['whole-field','temporal-passage','constitutive-foundation-for'],['whole-field','constituted-agency','related-within-unit-account'],['temporal-passage','block-universe','temporal-application-in'],['constituted-agency','misleading-ai','authority-revision-context-for']])edges.push({from:`integrated:${from}`,to:`integrated:${to}`,relation});
   edges.push({from:'consciousness',to:'consciousness:continuity-note',relation:'contains-research-note'});

@@ -1,0 +1,368 @@
+<h2 id="section-symmetric-family-calibration-with-explicit-confidence-and-drift">Symmetric-family calibration with explicit confidence and drift</h2>
+<h3 id="section-source-trusted-assays-and-all-nulls">Source, trusted assays and all nulls</h3>
+<p data-source-page="15">Use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00289.svg" alt=" HS" style="width:1.7953em;height:1.2555em;vertical-align:-0.23em" loading="lazy"/> = span<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00290.svg" alt="{|" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>vac<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00291.svg" alt="⟩, |0⟩, |1⟩}" style="width:4.2578em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/>. The qubit marginal block is<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00292.svg" alt=" wρ" style="width:1.7342em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, with</p>
+<figure class="sr-formula" id="display-55" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00293.svg" alt="ρ = (I + tX + vY + uZ)/2,
+u2 + t2 + v2 ≤1,
+p = (1 + u)/2." width="327.13" height="17.17" style="width:30.012em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ρ = (I + tX + vY + uZ)/2,
+u2 + t2 + v2 ≤1,
+p = (1 + u)/2.</pre></details></figure>
+<p data-source-page="15">For hypothesis<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00294.svg" alt=" h = −" style="width:3.2675em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>, apply the stipulated qubit<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00295.svg" alt=" Z" style="width:1.1721em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> phase flip to the<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00296.svg" alt=" h" style="width:1.0689em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = + preparation, reversing the transverse components. The source/controller relation is an assumption. Its hidden true label is not available to the classifier. Sequential use must also obey its declared conditional-state conditions; calibration does not establish them. Vacuum/qubit coherence may exist, since dark-free label effects annihilate vacuum and hence do not see that coherence. Predetermine<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00297.svg" alt=" NZ, NX" style="width:3.8414em;height:1.2304em;vertical-align:-0.23em" loading="lazy"/> calibration trials using independently prepared copies of one stationary source marginal. A common trusted calibrator has the same state-independent efficiency<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00298.svg" alt=" ηc &gt; 0 in" style="width:4.4614em;height:1.2904em;vertical-align:-0.23em" loading="lazy"/> both settings and known contrast 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00299.svg" alt=" &lt; γ ≤1:" style="width:4.1646em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-37" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00300.svg" alt="Z :
+E0 = ηc|0⟩⟨0|,
+E1 = ηc|1⟩⟨1|,
+(36)
+X :
+E± = ηc(Pq ± γX)/2,
+E∅= I −ηcPq.
+(37)" width="356.93" height="30.84" style="width:32.746em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 15, equation (37).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Z :
+E0 = ηc|0⟩⟨0|,
+E1 = ηc|1⟩⟨1|,
+(36)
+X :
+E± = ηc(Pq ± γX)/2,
+E∅= I −ηcPq.
+(37)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="15"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p015-00301.svg" alt="Every null is counted and retained. The positive square roots with a neutral pointer give the finite
+isometry V = P
+j
+pEj ⊗|j⟩, retaining output source and any inert reference. For degenerate modes
+a balanced rotation and a complete basis absorber realize γ = 1; known unsharpness permits other
+values. Nondegenerate energy modes require the phase-reference stock from the finite-reference model.
+No calibration phase resource is free.
+A hit has probability wηc, independent of setting. Its conditional Bernoulli parameters are p and
+q = (1 + γt)/2. This conditioning is justified by independent preparations and state-independent loss,
+not by a reset wave. Let nZ, nX be hit counts and KZ, KX the true counts of label 0, +. An adversary
+may change at most kZ, kX accepted labels, even after seeing all data, producing f
+KZ, f
+KX. Nulls cannot
+be forged, suppressed or selected. This is robustness of the nominated reported-count readout; no
+optimum over hidden corruption-controller records is asserted." width="486.71" height="148.09" style="width:44.652em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 15.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Every null is counted and retained. The positive square roots with a neutral pointer give the finite
+isometry V = P
+j
+pEj ⊗|j⟩, retaining output source and any inert reference. For degenerate modes
+a balanced rotation and a complete basis absorber realize γ = 1; known unsharpness permits other
+values. Nondegenerate energy modes require the phase-reference stock from the finite-reference model.
+No calibration phase resource is free.
+A hit has probability wηc, independent of setting. Its conditional Bernoulli parameters are p and
+q = (1 + γt)/2. This conditioning is justified by independent preparations and state-independent loss,
+not by a reset wave. Let nZ, nX be hit counts and KZ, KX the true counts of label 0, +. An adversary
+may change at most kZ, kX accepted labels, even after seeing all data, producing f
+KZ, f
+KX. Nulls cannot
+be forged, suppressed or selected. This is robustness of the nominated reported-count readout; no
+optimum over hidden corruption-controller records is asserted.</pre></details></figure>
+<h3 id="section-one-global-finite-confidence-event">One global finite confidence event</h3>
+<p data-source-page="16">For binomial count<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00302.svg" alt=" k" style="width:0.9965em;height:1.1450em;vertical-align:-0.23em" loading="lazy"/> in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00303.svg" alt=" n" style="width:1.0782em;height:1.1450em;vertical-align:-0.23em" loading="lazy"/> trials, let [<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00304.svg" alt="Lβ(k, n), Uβ(k, n" style="width:7.3449em;height:1.2488em;vertical-align:-0.23em" loading="lazy"/>)] be the two-sided Clopper–Pearson interval of failure at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00305.svg" alt=" β" style="width:1.0430em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. In the interior,</p>
+<figure class="sr-formula" id="display-57" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00306.svg" alt="Lβ = B−1(β/2; k, n −k + 1),
+Uβ = B−1(1 −β/2; k + 1, n −k)." width="307.85" height="16.61" style="width:28.243em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Lβ = B−1(β/2; k, n −k + 1),
+Uβ = B−1(1 −β/2; k + 1, n −k).</pre></details></figure>
+<p data-source-page="16">Use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00307.svg" alt=" L(0, n) = 0, U(n, n" style="width:8.5854em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>) = 1, and [0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00308.svg" alt=", 1] if n" style="width:3.2188em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> = 0. Define the corruption envelope</p>
+<figure class="sr-formula" id="equation-38" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00309.svg" alt="Cβ(f
+K, n, kf) = [Lβ((f
+K −kf)+, n), Uβ(min(n, f
+K + kf), n)].
+(38)" width="381.34" height="19.61" style="width:34.985em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16, equation (38).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Cβ(f
+K, n, kf) = [Lβ((f
+K −kf)+, n), Uβ(min(n, f
+K + kf), n)].
+(38)</pre></details></figure>
+<p data-source-page="16">Allocate source failure<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00310.svg" alt=" αS" style="width:1.5858em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>, set<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00311.svg" alt=" β = αS/" style="width:4.1289em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>3, and take</p>
+<figure class="sr-formula" id="display-59" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00312.svg" alt="Ip = Cβ(f
+KZ, nZ, kZ),
+Iq = Cβ(f
+KX, nX, kX),
+It = [(2IL
+q −1)/γ, (2IU
+q −1)/γ] ∩[−1, 1]." width="420.81" height="18.51" style="width:38.607em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ip = Cβ(f
+KZ, nZ, kZ),
+Iq = Cβ(f
+KX, nX, kX),
+It = [(2IL
+q −1)/γ, (2IU
+q −1)/γ] ∩[−1, 1].</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00313.svg" alt="Let Iω be the ordinary CP interval for total hits nZ + nX in NZ + NX trials. For trusted ηc ∈[ηL, ηU],
+use
+Iw = [IL
+ω /ηU, IU
+ω /ηL] ∩[0, 1]," width="485.52" height="42.45" style="width:44.543em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let Iω be the ordinary CP interval for total hits nZ + nX in NZ + NX trials. For trusted ηc ∈[ηL, ηU],
+use
+Iw = [IL
+ω /ηU, IU
+ω /ηL] ∩[0, 1],</pre></details></figure>
+<p data-source-page="16">with upper endpoint one when<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00314.svg" alt=" ηL" style="width:1.4971em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> = 0. Then</p>
+<figure class="sr-formula" id="equation-39" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00315.svg" alt="GS = {p0 ∈Ip, t0 ∈It, w0 ∈Iw},
+Pr(GS) ≥1 −αS.
+(39)" width="372.85" height="14.35" style="width:34.206em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16, equation (39).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>GS = {p0 ∈Ip, t0 ∈It, w0 ∈Iw},
+Pr(GS) ≥1 −αS.
+(39)</pre></details></figure>
+<p data-source-page="16">A statistical efficiency calibration requires its own allocated failure.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00316.svg" alt="Proof.
+Conditional on a hit count the true label count is binomial; CP coverage remains valid after
+averaging over that random count. Monotonic endpoints and |K −f
+K| ≤kf make the envelope contain
+the true count’s interval on every corrupted transcript. Total hits are binomial with parameter w0ηc.
+A union bound proves coverage; independence of the three intervals is unnecessary. CP coverage itself
+follows by binomial-tail inversion, each excluded tail having probability at most β/2. Thus this is
+finite-sample coverage for each fixed underlying state, not a posterior probability on a parameter. □
+Hits alone identify wηc, not its factors. Without efficiency information the safe bound w ≥IL
+ω still
+follows from ηc ≤1. One event constrains the source for every reader, allowing subsequent reader or
+sign-orientation choice without another source-confidence penalty. A transverse interval straddling
+zero does not become a positive-direction certificate merely by clipping its lower endpoint." width="486.52" height="134.46" style="width:44.635em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof.
+Conditional on a hit count the true label count is binomial; CP coverage remains valid after
+averaging over that random count. Monotonic endpoints and |K −f
+K| ≤kf make the envelope contain
+the true count’s interval on every corrupted transcript. Total hits are binomial with parameter w0ηc.
+A union bound proves coverage; independence of the three intervals is unnecessary. CP coverage itself
+follows by binomial-tail inversion, each excluded tail having probability at most β/2. Thus this is
+finite-sample coverage for each fixed underlying state, not a posterior probability on a parameter. □
+Hits alone identify wηc, not its factors. Without efficiency information the safe bound w ≥IL
+ω still
+follows from ηc ≤1. One event constrains the source for every reader, allowing subsequent reader or
+sign-orientation choice without another source-confidence penalty. A transverse interval straddling
+zero does not become a positive-direction certificate merely by clipping its lower endpoint.</pre></details></figure>
+<h3 id="section-exact-source-class-minimax-certificate">Exact source-class minimax certificate</h3>
+<p data-source-page="16">For every future actual conditional input, given the preceding record, assume</p>
+<figure class="sr-formula" id="display-61" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00317.svg" alt="|p −p0| ≤dp,
+t ≥t0 −dt,
+w ≥w0 −dw." width="228.77" height="14.15" style="width:20.988em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|p −p0| ≤dp,
+t ≥t0 −dt,
+w ≥w0 −dw.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00318.svg" alt="Inputs may otherwise be adversarial and correlated through history. These are future admission
+conditions, not consequences of finite calibration. Trace-distance qubit drift at most δ suffices for
+dp = δ, dt = 2δ, but the componentwise class below may be larger.
+On GS, enlarge the population interval to I′
+p, put l = IL
+t −dt ≥0, wL = (IL
+w −dw)+, and define" width="484.27" height="55.78" style="width:44.428em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 16.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Inputs may otherwise be adversarial and correlated through history. These are future admission
+conditions, not consequences of finite calibration. Trace-distance qubit drift at most δ suffices for
+dp = δ, dt = 2δ, but the componentwise class below may be larger.
+On GS, enlarge the population interval to I′
+p, put l = IL
+t −dt ≥0, wL = (IL
+w −dw)+, and define</pre></details></figure>
+<figure class="sr-formula" id="equation-40" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00319.svg" alt="I = [2(I′
+p)L −1, 2(I′
+p)U −1] ∩[−R, R],
+R =
+p
+1 −l2.
+(40)" width="377.54" height="19.21" style="width:34.637em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16, equation (40).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>I = [2(I′
+p)L −1, 2(I′
+p)U −1] ∩[−R, R],
+R =
+p
+1 −l2.
+(40)</pre></details></figure>
+<p data-source-page="16">If<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00320.svg" alt=" l &lt;" style="width:1.8224em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0 this positive-direction theorem is not used; an empty set means model/confidence inconsistency, not a vacuous certificate. Use the real symmetric reader</p>
+<figure class="sr-formula" id="equation-41" data-source-page="16"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00321.svg" alt="x
+±z
+±z
+y
+!
+,
+E∅= I −diag(x, y),
+0 ≤x, y ≤1,
+0 ≤z ≤√xy.
+(41)
+E± = 1
+2" width="421.97" height="28.64" style="width:38.713em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 16, equation (41).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>x
+±z
+±z
+y
+!
+,
+E∅= I −diag(x, y),
+0 ≤x, y ≤1,
+0 ≤z ≤√xy.
+(41)
+E± = 1
+2</pre></details></figure>
+<p data-source-page="16">The reader acts as null on vacuum. Its transverse axis can differ from the calibration axis by any <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00322.svg" alt="|θ| ≤" style="width:2.3195em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>∆<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00323.svg" alt="≤π/" style="width:2.3715em;height:1.1482em;vertical-align:-0.23em" loading="lazy"/>2. Only differential phase matters; global phase convention is irrelevant. The actual coefficients must be known or calibrated. Set<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00324.svg" alt=" d = (x + y)/2, e = (x −y)/" style="width:12.1873em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>2, with<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00325.svg" alt=" A(u) = d + eu &gt; 0 on" style="width:9.8510em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p016-00326.svg" alt="I." style="width:0.9427em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="17"><strong>C2: sharp error and success.</strong> For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00327.svg" alt=" a = l" style="width:2.6391em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> cos ∆<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00328.svg" alt=", b" style="width:1.0207em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = sin ∆,</p>
+<figure class="sr-formula" id="equation-42" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00329.svg" alt="1 −z min
+u∈I
+a −b
+√
+R2 −u2
+&quot;
+#
+ε∗= 1
+,
+(42)
+2
+d + eu" width="325.75" height="36.70" style="width:29.885em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17, equation (42).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −z min
+u∈I
+a −b
+√
+R2 −u2
+&quot;
+#
+ε∗= 1
+,
+(42)
+2
+d + eu</pre></details></figure>
+<figure class="sr-formula" id="equation-43" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00330.svg" alt="Q∗= wL min
+u∈I (d + eu).
+(43)" width="329.94" height="19.63" style="width:30.270em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17, equation (43).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Q∗= wL min
+u∈I (d + eu).
+(43)</pre></details></figure>
+<p data-source-page="17">These are the exact worst conditional error and guaranteed unconditional conclusive probability over the stated physical source/drift/axis class. The conditional-error statement applies only to members with positive conclusive probability. In particular,<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00331.svg" alt=" Q∗" style="width:1.6828em;height:1.2162em;vertical-align:-0.23em" loading="lazy"/>= 0 supplies no positive-rate guarantee and assigns no value to a 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00332.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>0 conditional error. They hold for every inert-reference extension, as statements about marginal labels, not full output-state equality.</p>
+<p data-source-page="17"><strong>Proof.</strong> At fixed<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00333.svg" alt=" u" style="width:1.0508em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, Bloch positivity gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00334.svg" alt=" t2" style="width:1.2243em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00335.svg" alt="+ v2 ≤1 −u2" style="width:6.1170em;height:1.5238em;vertical-align:-0.23em" loading="lazy"/>. The smallest reader component is</p>
+<figure class="sr-formula" id="display-66" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00336.svg" alt="Xmin(u) = l cos ∆−
+p
+1 −u2 −l2 sin ∆." width="189.16" height="16.81" style="width:17.354em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Xmin(u) = l cos ∆−
+p
+1 −u2 −l2 sin ∆.</pre></details></figure>
+<p data-source-page="17">Choose the adverse sign of<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00337.svg" alt=" v" style="width:0.9521em;height:1.1410em;vertical-align:-0.23em" loading="lazy"/>, saturate its allowed magnitude, and take<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00338.svg" alt=" t = l, |θ|" style="width:3.9678em;height:1.1562em;vertical-align:-0.23em" loading="lazy"/> = ∆: the expression increases in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00339.svg" alt=" t ≥" style="width:1.8908em;height:1.1585em;vertical-align:-0.23em" loading="lazy"/>0 and decreases in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00340.svg" alt=" |θ| ≤π/" style="width:3.9629em;height:1.1585em;vertical-align:-0.23em" loading="lazy"/>2. A pure state attains it. For either hypothesis the exact error is [1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00341.svg" alt="−zXreader/A(u)]/" style="width:7.8468em;height:1.2605em;vertical-align:-0.23em" loading="lazy"/>2; minimizing over<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00342.svg" alt=" u" style="width:1.0010em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> proves the first claim. Conclusive probability is<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00343.svg" alt=" wA(u)," style="width:3.5185em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> minimized by<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00344.svg" alt=" wL" style="width:1.7219em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/> and an endpoint. References do not change these marginals. <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00345.svg" alt="□" style="width:0.9247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> The finite minimization evaluates endpoints and the admissible interior roots of</p>
+<figure class="sr-formula" id="equation-44" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00346.svg" alt="R2 −u2.
+(44)
+b(du + eR2) = ea
+p" width="310.28" height="15.82" style="width:28.466em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17, equation (44).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>R2 −u2.
+(44)
+b(du + eR2) = ea
+p</pre></details></figure>
+<figure class="sr-formula" id="equation-45" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00347.svg" alt="Squaring gives
+(b2d2 + e2a2)u2 + 2b2deR2u + b2e2R4 −e2a2R2 = 0.
+(45)" width="485.28" height="26.06" style="width:44.521em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17, equation (45).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Squaring gives
+(b2d2 + e2a2)u2 + 2b2deR2u + b2e2R4 −e2a2R2 = 0.
+(45)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00348.svg" alt="Keep the original sign/equality check to reject extraneous roots.
+This follows by differentiating
+the ratio. Cases b = 0 or R = 0 reduce directly. Endpoint-only checking fails, for example, at
+I = [−0.8, 0.8], l = 0.6, ∆= 0.3, (x, y, z) = (0.9, 0.3,
+√" width="484.47" height="39.68" style="width:44.447em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Keep the original sign/equality check to reject extraneous roots.
+This follows by differentiating
+the ratio. Cases b = 0 or R = 0 reduce directly. Endpoint-only checking fails, for example, at
+I = [−0.8, 0.8], l = 0.6, ∆= 0.3, (x, y, z) = (0.9, 0.3,
+√</pre></details></figure>
+<p data-source-page="17"><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00349.svg" alt="0.27" style="width:1.9244em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>): the worst point is<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00350.svg" alt=" u = 0." style="width:3.1406em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>3685962371, error <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00351.svg" alt="0.3671399216." style="width:6.2024em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula sr-source-panel" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00352.svg" alt="C3: sharper coherence interface.
+Let u∗be the point of I closest to zero, rmax =
+p" width="430.53" height="15.08" style="width:39.499em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>C3: sharper coherence interface.
+Let u∗be the point of I closest to zero, rmax =
+p</pre></details></figure>
+<p data-source-page="17"><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00353.svg" alt="1 −u2∗" style="width:2.8222em;height:1.3995em;vertical-align:-0.23em" loading="lazy"/>. For <img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00354.svg" alt="rmax &gt;" style="width:3.1520em;height:1.2966em;vertical-align:-0.23em" loading="lazy"/> 0, define<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00355.svg" alt=" q = l/rmax" style="width:5.0069em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/>. The exact source-only combined visibility/phase lower bound is</p>
+<figure class="sr-formula" id="equation-46" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00356.svg" alt="mcal = q cos ∆−
+q
+1 −q2 sin ∆.
+(46)" width="318.52" height="18.99" style="width:29.222em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17, equation (46).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>mcal = q cos ∆−
+q
+1 −q2 sin ∆.
+(46)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p017-00357.svg" alt="1 −u2, hence is minimized at u∗, proving
+the claim. Supply this directly to the robust frontier; it already includes differential phase and must
+not be multiplied by another cosine. An independent p, m box is valid but can be looser than Eq. (43),
+which retains their correlation. If rmax = 0, the admitted states have zero transverse coherence; their
+conditional error is 1/2 for every positive conclusive output. Use C2 directly and do not divide by rmax.
+The positive-contrast robust frontier uses this interface only when mcal ≥0. If it is negative, use
+the general admissible-error certificate C2 or another appropriately enlarged problem; do not insert it
+into a theorem assuming nonnegative contrast.
+At ∆= 0, direct calibration gives m ≥q. Separately inferring visibility at least q and phase
+cosine at least q, then multiplying, gives only q2. Those extrema occur at different states: visibility q
+with zero phase, or unit visibility with phase arccos q. Keeping the measured product removes this
+unnecessary loss. No source Y assay is needed for this objective: the unmeasured component is retained
+adversarially within the physical Bloch disk.
+Divide Xmin(u) by
+√
+1 −u2. The result increases with l/
+√" width="486.51" height="184.43" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −u2, hence is minimized at u∗, proving
+the claim. Supply this directly to the robust frontier; it already includes differential phase and must
+not be multiplied by another cosine. An independent p, m box is valid but can be looser than Eq. (43),
+which retains their correlation. If rmax = 0, the admitted states have zero transverse coherence; their
+conditional error is 1/2 for every positive conclusive output. Use C2 directly and do not divide by rmax.
+The positive-contrast robust frontier uses this interface only when mcal ≥0. If it is negative, use
+the general admissible-error certificate C2 or another appropriately enlarged problem; do not insert it
+into a theorem assuming nonnegative contrast.
+At ∆= 0, direct calibration gives m ≥q. Separately inferring visibility at least q and phase
+cosine at least q, then multiplying, gives only q2. Those extrema occur at different states: visibility q
+with zero phase, or unit visibility with phase arccos q. Keeping the measured product removes this
+unnecessary loss. No source Y assay is needed for this objective: the unmeasured component is retained
+adversarially within the physical Bloch disk.
+Divide Xmin(u) by
+√
+1 −u2. The result increases with l/
+√</pre></details></figure>
+<h3 id="section-actual-reader-probes-and-a-measured-phase-axis-bound">Actual-reader probes and a measured phase-axis bound</h3>
+<p data-source-page="18">A held uncertain loss rate may alter a tuned amplitude ratio, so a worst scalar transfer factor is not an actual-effect certificate. Instead freeze the source-data-selected pulse, then calibrate</p>
+<figure class="sr-formula" id="equation-47" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00358.svg" alt="x
+±c
+±c∗
+y
+!
+,
+|c|2 ≤xy.
+(47)
+E± = 1
+2" width="328.36" height="28.64" style="width:30.125em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (47).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>x
+±c
+±c∗
+y
+!
+,
+|c|2 ≤xy.
+(47)
+E± = 1
+2</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00359.svg" alt="This structural family follows from the actual two-tap model: a balanced flag matrix times diag(a0, a1)
+gives x = |a0|2, y = |a1|2, c = a∗
+0a1. Input-independent mixtures preserve it by Cauchy–Schwarz.
+Unknown path loss and phase change the coefficients but preserve the family. This is a physical-model
+admission; finite probes cannot prove exact symmetry or dark-free behavior for an unrestricted device.
+Use independent identically prepared copies within each trusted-probe batch |0⟩, |1⟩, |+⟩, | + i⟩, with
+a fixed input-independent reader preparation and stationary pointer probabilities during calibration.
+Every plus, minus and null is counted:" width="486.81" height="93.82" style="width:44.661em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>This structural family follows from the actual two-tap model: a balanced flag matrix times diag(a0, a1)
+gives x = |a0|2, y = |a1|2, c = a∗
+0a1. Input-independent mixtures preserve it by Cauchy–Schwarz.
+Unknown path loss and phase change the coefficients but preserve the family. This is a physical-model
+admission; finite probes cannot prove exact symmetry or dark-free behavior for an unrestricted device.
+Use independent identically prepared copies within each trusted-probe batch |0⟩, |1⟩, |+⟩, | + i⟩, with
+a fixed input-independent reader preparation and stationary pointer probabilities during calibration.
+Every plus, minus and null is counted:</pre></details></figure>
+<figure class="sr-formula" id="display-71" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00360.svg" alt="x = Pcon|0,
+y = Pcon|1,
+Re c = P+| + −P−|+,
+Im c = P−| + i −P+| + i." width="364.81" height="13.66" style="width:33.469em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>x = Pcon|0,
+y = Pcon|1,
+Re c = P+| + −P−|+,
+Im c = P−| + i −P+| + i.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00361.svg" alt="The fourth probe prevents an imaginary-offdiagonal blind spot. Six marginal CP intervals, with failures
+summing to αD, give Ix, Iy, Ir, Ii. Corruption envelopes apply to bounded accepted-label errors. For
+probe preparation trace error δprep, widen each event interval by δprep, since effects are trace-distance
+contractive. That probe-preparation accuracy is independently trusted.
+If IL
+r &gt; 0, infer" width="484.80" height="69.30" style="width:44.477em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The fourth probe prevents an imaginary-offdiagonal blind spot. Six marginal CP intervals, with failures
+summing to αD, give Ix, Iy, Ir, Ii. Corruption envelopes apply to bounded accepted-label errors. For
+probe preparation trace error δprep, widen each event interval by δprep, since effects are trace-distance
+contractive. That probe-preparation accuracy is independently trusted.
+If IL
+r &gt; 0, infer</pre></details></figure>
+<figure class="sr-formula" id="display-72" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00362.svg" alt="(IL
+r )2 + dist(0, Ii)2,
+∆D = arctan max(|IL
+i |, |IU
+i |)
+IL
+r
+.
+zL =
+q" width="291.44" height="31.09" style="width:26.737em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(IL
+r )2 + dist(0, Ii)2,
+∆D = arctan max(|IL
+i |, |IU
+i |)
+IL
+r
+.
+zL =
+q</pre></details></figure>
+<p data-source-page="18">Future hardware allowances widen<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00363.svg" alt=" x, y" style="width:1.9650em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, lower<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00364.svg" alt=" zL" style="width:1.4583em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/>, and add to ∆<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00365.svg" alt="D" style="width:0.7837em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/>. They must bound actual conditional instruments, not merely averaged dynamics. The global event is</p>
+<figure class="sr-formula" id="equation-48" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00366.svg" alt="G = GS ∩GD,
+Pr(G) ≥1 −α,
+α = αS + αD.
+(48)" width="367.69" height="14.35" style="width:33.733em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (48).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>G = GS ∩GD,
+Pr(G) ≥1 −α,
+α = αS + αD.
+(48)</pre></details></figure>
+<p data-source-page="18">Device coverage is conditional on the preceding source-based choice. Accepting or rejecting the frozen pulse afterward is allowed. Retuning requires fresh calibration or simultaneous catalogue coverage; source-confidence uniformity does not calibrate every hardware setting. When all admitted source reader components are nonnegative, use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00367.svg" alt=" xU, yU, zL in Eq. (43)" style="width:9.7236em;height:1.3005em;vertical-align:-0.23em" loading="lazy"/> for a valid device-box error certificate. It is sharp for that outer Cartesian coefficient class when the corner is physical. Use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p018-00368.svg" alt=" xL, yL" style="width:3.0765em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> for a safe success lower bound, which need not be attained: positivity or raw-data correlations may exclude that lower corner. No joint optimum over the original multinomial confidence region is claimed. If the source component can be negative, this monotone device-box rule is not used. Effects certify nominated labels on arbitrary inert-reference inputs; they do not identify the retained field, recoil, controller or bath. The complete operational construction still supplies those maps. Their agreement cannot be inferred from count calibration.</p>

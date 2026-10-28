@@ -1,0 +1,552 @@
+<h2 id="section-bounded-coherent-conversion-and-complete-detector-records">Bounded coherent conversion and complete detector records</h2>
+<h3 id="section-source-and-declared-apparatus">Source and declared apparatus</h3>
+<p data-source-page="2">Use two degenerate source modes, with a single excitation spanning<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00007.svg" alt=" R =" style="width:2.5493em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> span<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00008.svg" alt="{|0⟩, |1⟩}" style="width:3.9054em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>. The two possible source states are</p>
+<figure class="sr-formula" id="equation-1" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00009.svg" alt="|ψ±⟩= a|0⟩± b|1⟩,
+a =
+√︂
+(1 + s)/2,
+b =
+√︂
+(1 −s)/2,
+0 &lt; s &lt; 1.
+(1)" width="412.91" height="17.78" style="width:37.882em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (1).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|ψ±⟩= a|0⟩± b|1⟩,
+a =
+√︂
+(1 + s)/2,
+b =
+√︂
+(1 −s)/2,
+0 &lt; s &lt; 1.
+(1)</pre></details></figure>
+<p data-source-page="2">They have the same separate mode intensities and overlap<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00010.svg" alt=" s" style="width:0.9352em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Their relative phase differs by<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00011.svg" alt=" π" style="width:1.0424em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Using normalized phase-sensitive templates, informed by [7, pp. 18–21, Eqs. (58)–(70)] and [8, Section 32, pp. 42–43], define the reciprocal reader states</p>
+<figure class="sr-formula" id="display-4" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00012.svg" alt="|φ±⟩= b|0⟩± a|1⟩,
+⟨φ±|ψ∓⟩= 0,
+|⟨φ±|ψ±⟩|2 = 1 −s2." width="295.16" height="17.89" style="width:27.079em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|φ±⟩= b|0⟩± a|1⟩,
+⟨φ±|ψ∓⟩= 0,
+|⟨φ±|ψ±⟩|2 = 1 −s2.</pre></details></figure>
+<p data-source-page="2">The readout has two orthogonal, stable flag modes<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00013.svg" alt=" F" style="width:1.1968em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> labelled + and<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00014.svg" alt=" −" style="width:1.2605em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. There are also orthogonal lost-output modes, initially vacant. Every mode is included in the one-excitation description; no new actual sample is loaded after a null result. Source/reference inputs can be any<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00015.svg" alt=" ρRR" style="width:2.2342em;height:1.2304em;vertical-align:-0.23em" loading="lazy"/> with arbitrary finite inert reference<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00016.svg" alt=" R" style="width:1.2266em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. The reader and vacant output modes have one common input-independent preparation. The loss bath starts in its vacuum, independently of that original preparation; the scalar Markov loss law and absence of re-excitation are physical model assumptions of the declared apparatus. The claim of unambiguity is for the designated pair (1); the instrument itself is defined for every reference-extended input. The apparatus Hamiltonian on the ready-plus-flag subspace is</p>
+<figure class="sr-formula" id="equation-2" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00017.svg" alt="(︄
+A(t)
+C(t)∗
+)︄
+H(t) = ħ
+,
+A = A∗,
+D = D∗,
+∥C(t)∥≤G.
+(2)
+C(t)
+D(t)" width="398.46" height="28.65" style="width:36.556em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (2).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+A(t)
+C(t)∗
+)︄
+H(t) = ħ
+,
+A = A∗,
+D = D∗,
+∥C(t)∥≤G.
+(2)
+C(t)
+D(t)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00018.svg" alt="A, C, D are piecewise continuous on the finite control interval; the stated bound holds almost everywhere.
+This regularity ensures that the propagator below exists. G &gt; 0, A, C, D have units s−1 and H has
+units joules. Uniform irreversible loss acts only on the ready subspace at rate l≥0 in s−1. Its complete
+amplitude map is Lloss =
+√" width="486.79" height="54.90" style="width:44.659em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A, C, D are piecewise continuous on the finite control interval; the stated bound holds almost everywhere.
+This regularity ensures that the propagator below exists. G &gt; 0, A, C, D have units s−1 and H has
+units joules. Uniform irreversible loss acts only on the ready subspace at rate l≥0 in s−1. Its complete
+amplitude map is Lloss =
+√</pre></details></figure>
+<p data-source-page="2"><img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00019.svg" alt="lWPR" style="width:3.1179em;height:1.2332em;vertical-align:-0.23em" loading="lazy"/>, where<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p002-00020.svg" alt=" W" style="width:1.4230em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is an isometry to the lost-output space. It isometrically transports the instantaneous ready component, including its conditional reference assemblage. Earlier filtering and conditioning may have changed the original source/reference correlations; no preservation of those original correlations is asserted. The outgoing state is not replaced by a vacuum or a classical label. Once lost, the excitation never returns. There are no other protected storage subspaces, fresh inputs, gain channels or readers of the lost field in the allowed conclusive-record catalogue. Block Hamiltonians are allowed in the upper bound; they cannot be used to add an uncounted protected</p>
+<p data-source-page="3">ancilla. The optical/cavity coupling and its timing are prescribed controls; this is not an autonomous clock construction. The no-loss propagator on the four-dimensional ready-plus-flag space is</p>
+<figure class="sr-formula" id="display-6" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00021.svg" alt=" ̇Ueff(t) = [−iH(t)/ħ−lPR/2] Ueff(t)." width="175.91" height="16.35" style="width:16.139em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre> ̇Ueff(t) = [−iH(t)/ħ−lPR/2] Ueff(t).</pre></details></figure>
+<p data-source-page="3">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00022.svg" alt=" IR" style="width:1.5816em;height:1.2332em;vertical-align:-0.23em" loading="lazy"/> embed the two-dimensional source. A complete terminal instrument consists of</p>
+<figure class="sr-formula" id="equation-3" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00023.svg" alt="K± = P±Ueff(T)IR,
+K0 = PRUeff(T)IR,
+Kloss(t) =
+√
+lWtPRUeff(t)IR.
+(3)" width="372.92" height="32.89" style="width:34.213em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (3).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K± = P±Ueff(T)IR,
+K0 = PRUeff(T)IR,
+Kloss(t) =
+√
+lWtPRUeff(t)IR.
+(3)</pre></details></figure>
+<p data-source-page="3">Here<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00024.svg" alt=" Wt" style="width:1.6828em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> retains the outgoing quantum mode. The coherent temporal output is an<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00025.svg" alt=" L2" style="width:1.5131em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> amplitude sector; a registered loss time is instead a classical record, with the output-space convention specified below. The identity</p>
+<figure class="sr-formula" id="equation-4" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00026.svg" alt="K∗
+0K0 + K∗
++K+ + K∗
+−K−+
+∫︂T
+0
+Kloss(t)∗Kloss(t)dt = I
+(4)" width="373.10" height="29.06" style="width:34.230em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (4).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K∗
+0K0 + K∗
++K+ + K∗
+−K−+
+∫︂T
+0
+Kloss(t)∗Kloss(t)dt = I
+(4)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00027.svg" alt="follows by differentiating U∗
+effUeff. It makes the sum of the instrument branches completely positive and
+trace preserving on every ρRR with identity on R. Before readout, the direct-sum amplitude map is an
+isometry retaining coherent quantum output sectors. A classically recorded instrument is obtained by
+the specified dephasing or measurement of those sectors (and time bins, when used). For an exact-time
+classical record the output is an integrable trace-class-valued kernel on the null/flag atoms and [0, T],
+with norm ∑︁
+c ∥ωc∥1 +
+∫︁T
+0 ∥ω(t)∥1dt. It is not a trace-class diagonal density operator on the coherent
+temporal L2 space. Finite time bins give ordinary cq direct sums. These channels share the displayed
+effects but are not identical channels; their dilation and storage costs must be counted separately. This
+uses the stipulated ordinary quantum probability law; it does not derive that law.
+Only the terminal flags are conclusive. They are committed after the active coupling is switched
+off. Before that time, flag amplitudes can coherently return to the source, so no promise of an earlier
+immutable event is made. After decoupling, later controls act on other systems and leave all flag and
+loss modes untouched; the final records then persist. Reading or dephasing the flags during the active
+pulse is a different physical model." width="485.91" height="190.43" style="width:44.579em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>follows by differentiating U∗
+effUeff. It makes the sum of the instrument branches completely positive and
+trace preserving on every ρRR with identity on R. Before readout, the direct-sum amplitude map is an
+isometry retaining coherent quantum output sectors. A classically recorded instrument is obtained by
+the specified dephasing or measurement of those sectors (and time bins, when used). For an exact-time
+classical record the output is an integrable trace-class-valued kernel on the null/flag atoms and [0, T],
+with norm ∑︁
+c ∥ωc∥1 +
+∫︁T
+0 ∥ω(t)∥1dt. It is not a trace-class diagonal density operator on the coherent
+temporal L2 space. Finite time bins give ordinary cq direct sums. These channels share the displayed
+effects but are not identical channels; their dilation and storage costs must be counted separately. This
+uses the stipulated ordinary quantum probability law; it does not derive that law.
+Only the terminal flags are conclusive. They are committed after the active coupling is switched
+off. Before that time, flag amplitudes can coherently return to the source, so no promise of an earlier
+immutable event is made. After decoupling, later controls act on other systems and leave all flag and
+loss modes untouched; the final records then persist. Reading or dephasing the flags during the active
+pulse is a different physical model.</pre></details></figure>
+<h3 id="section-sharp-finite-lifetime-success-frontier">Sharp finite-lifetime success frontier</h3>
+<p data-source-page="3">For a two-dimensional input, error-free conclusive effects necessarily have</p>
+<figure class="sr-formula" id="equation-5" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00028.svg" alt="E± = K∗
+±K± =
+q±
+1 −s2 |φ±⟩⟨φ±|,
+ ̄q = (q+ + q−)/2.
+(5)" width="371.99" height="27.39" style="width:34.128em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (5).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>E± = K∗
+±K± =
+q±
+1 −s2 |φ±⟩⟨φ±|,
+ ̄q = (q+ + q−)/2.
+(5)</pre></details></figure>
+<p data-source-page="3">This follows because a positive effect with zero expectation in<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00029.svg" alt=" |ψ∓⟩" style="width:2.3674em;height:1.2413em;vertical-align:-0.23em" loading="lazy"/>annihilates that vector. In particular,</p>
+<figure class="sr-formula" id="equation-6" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00030.svg" alt="⟨1|(E+ + E−)|1⟩=
+ ̄q
+1 −s.
+(6)" width="304.79" height="27.39" style="width:27.962em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (6).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⟨1|(E+ + E−)|1⟩=
+ ̄q
+1 −s.
+(6)</pre></details></figure>
+<p data-source-page="3">A bound on coherent transfer of the input<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00031.svg" alt=" |1⟩" style="width:1.6318em;height:1.1543em;vertical-align:-0.23em" loading="lazy"/>therefore bounds the average success of every allowed unambiguous reader, including asymmetric ones. Define<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00032.svg" alt=" t∗" style="width:1.2269em;height:1.2284em;vertical-align:-0.23em" loading="lazy"/>by</p>
+<figure class="sr-formula" id="equation-7" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p003-00033.svg" alt="⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+arctan(4Ω/l)
+G2 −l2/16,
+Ω
+,
+0 &lt; l&lt; 4G,
+Ω=
+√︁
+1/G,
+l= 4G,
+artanh(4χ/l)
+t∗=
+(7)
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+χ
+,
+l&gt; 4G,
+χ =
+√︁
+l2/16 −G2,
+π/(2G),
+l= 0." width="378.36" height="86.28" style="width:34.712em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (7).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎧
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎨
+arctan(4Ω/l)
+G2 −l2/16,
+Ω
+,
+0 &lt; l&lt; 4G,
+Ω=
+√︁
+1/G,
+l= 4G,
+artanh(4χ/l)
+t∗=
+(7)
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎩
+χ
+,
+l&gt; 4G,
+χ =
+√︁
+l2/16 −G2,
+π/(2G),
+l= 0.</pre></details></figure>
+<figure class="sr-formula" id="equation-8" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00034.svg" alt="Let τ = min(T, t∗) and
+(G/Ω)e−lt/4 sin(Ωt),
+l&lt; 4G,
+Gte−Gt,
+l= 4G,
+(G/χ)e−lt/4 sinh(χt),
+l&gt; 4G.
+⎧
+⎪
+⎪
+⎨
+fG(t) =
+(8)
+⎪
+⎪
+⎩
+The l= 0 first case has Ω= G." width="485.67" height="79.75" style="width:44.557em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (8).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let τ = min(T, t∗) and
+(G/Ω)e−lt/4 sin(Ωt),
+l&lt; 4G,
+Gte−Gt,
+l= 4G,
+(G/χ)e−lt/4 sinh(χt),
+l&gt; 4G.
+⎧
+⎪
+⎪
+⎨
+fG(t) =
+(8)
+⎪
+⎪
+⎩
+The l= 0 first case has Ω= G.</pre></details></figure>
+<p data-source-page="4"><strong>Proposition 2.1</strong> (Optimal phase-to-flag conversion with an independent loss sink)<strong>.</strong><em> Under the declared</em> <em>apparatus and stable-flag readout catalogue,</em></p>
+<figure class="sr-formula" id="equation-9" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00035.svg" alt=" ̄q ≤(1 −s)fG(τ)2.
+(9)" width="287.52" height="15.75" style="width:26.378em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (9).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre> ̄q ≤(1 −s)fG(τ)2.
+(9)</pre></details></figure>
+<p data-source-page="4"><em>The bound is attained with</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00036.svg" alt=" q+ = q−" style="width:3.9837em;height:1.2980em;vertical-align:-0.23em" loading="lazy"/><em>. For a deadline at least</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00037.svg" alt=" t∗" style="width:1.2530em;height:1.2284em;vertical-align:-0.23em" loading="lazy"/><em>it is</em></p>
+<figure class="sr-formula" id="equation-10" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00038.svg" alt="qmax = (1 −s)e−lt∗/2.
+(10)" width="295.41" height="16.47" style="width:27.102em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (10).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>qmax = (1 −s)e−lt∗/2.
+(10)</pre></details></figure>
+<p data-source-page="4"><em>It remains valid when arbitrary inert references and all original loss/null outputs are retained. It is not</em> <em>an optimum over new measurements of those retained outputs or of the reference.</em></p>
+<p data-source-page="4"><em>Proof.</em> First consider any normalized source input and its no-loss vector, split into ready and flag components with norms<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00039.svg" alt=" x" style="width:1.1224em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00040.svg" alt=" y" style="width:1.0451em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. Write<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00041.svg" alt=" x = r" style="width:3.1920em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00042.svg" alt=" θ, y = r" style="width:4.1086em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00043.svg" alt=" θ, 0 ≤θ ≤π/" style="width:6.8304em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>2. Loss gives  ̇<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00044.svg" alt="r/r =" style="width:2.7919em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00045.svg" alt="−l" style="width:1.3410em;height:1.1590em;vertical-align:-0.23em" loading="lazy"/>cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00046.svg" alt="2 θ/" style="width:1.7433em;height:1.5087em;vertical-align:-0.23em" loading="lazy"/>2. Cauchy–Schwarz applied to the cross Hamiltonian gives an effective real transfer control <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00047.svg" alt="geff" style="width:1.4214em;height:1.2475em;vertical-align:-0.23em" loading="lazy"/> with<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00048.svg" alt=" |geff| ≤G" style="width:4.5290em;height:1.2604em;vertical-align:-0.23em" loading="lazy"/> and  ̇<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00049.svg" alt="θ = geff + (l/" style="width:5.8793em;height:1.3068em;vertical-align:-0.23em" loading="lazy"/>2) sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00050.svg" alt=" θ" style="width:0.7897em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00051.svg" alt=" θ." style="width:1.0887em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="4">Block Hamiltonians cancel from these norm equations. At zero components the same conclusions follow by continuous limits. Define</p>
+<figure class="sr-formula" id="display-15" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00052.svg" alt="0
+lcos2 u
+G + (l/2) sin u cos u du.
+F(θ) =
+∫︂θ" width="167.92" height="32.06" style="width:15.405em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>0
+lcos2 u
+G + (l/2) sin u cos u du.
+F(θ) =
+∫︂θ</pre></details></figure>
+<p data-source-page="4">For every trajectory, including controls that reverse direction,</p>
+<figure class="sr-formula" id="display-16" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00053.svg" alt="d
+dt[log r2 + F(θ)] = lcos2 θ
+[︃geff + (l/2) sin θ cos θ
+G + (l/2) sin θ cos θ −1
+]︃
+≤0." width="282.66" height="27.39" style="width:25.932em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>d
+dt[log r2 + F(θ)] = lcos2 θ
+[︃geff + (l/2) sin θ cos θ
+G + (l/2) sin θ cos θ −1
+]︃
+≤0.</pre></details></figure>
+<p data-source-page="4">Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00054.svg" alt=" y2 ≤e−F(θ)" style="width:5.4276em;height:1.5225em;vertical-align:-0.23em" loading="lazy"/> sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00055.svg" alt="2 θ" style="width:1.2162em;height:1.5096em;vertical-align:-0.23em" loading="lazy"/>. This upper envelope increases on 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00056.svg" alt=" &lt; θ &lt; π/" style="width:4.4073em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>2, since its logarithmic derivative is</p>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00057.svg" alt="2 cot θ −
+lcos2 θ
+G + (l/2) sin θ cos θ =
+2G cot θ
+G + (l/2) sin θ cos θ &gt; 0." width="270.46" height="31.34" style="width:24.813em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2 cot θ −
+lcos2 θ
+G + (l/2) sin θ cos θ =
+2G cot θ
+G + (l/2) sin θ cos θ &gt; 0.</pre></details></figure>
+<p data-source-page="4">Scalar comparison also bounds<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00058.svg" alt=" θ(t" style="width:1.7151em;height:1.1462em;vertical-align:-0.23em" loading="lazy"/>) by the trajectory with<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00059.svg" alt=" geff = G" style="width:3.9584em;height:1.3045em;vertical-align:-0.23em" loading="lazy"/> until that trajectory first reaches <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00060.svg" alt="π/" style="width:1.2403em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>2. Hence constant maximal coupling, stopped at that first time, maximizes flag transfer at every deadline. Its two scalar amplitudes are</p>
+<figure class="sr-formula" id="display-17" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00061.svg" alt="uG(t) = e−lt/4[cos(Ωt) −lsin(Ωt)/(4Ω)],
+vG(t) = −ifG(t)," width="296.99" height="15.87" style="width:27.247em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>uG(t) = e−lt/4[cos(Ωt) −lsin(Ωt)/(4Ω)],
+vG(t) = −ifG(t),</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00062.svg" alt="with their continuous critical and hyperbolic forms. Its first ready zero is (7); at that time fG(t∗)2 =
+e−lt∗/2. This proves the transfer bound y(T)2 ≤fG(τ)2. Apply it to |1⟩in (6) to obtain (9).
+For attainability let H be the real balanced two-mode matrix 2−1/2(︁1 1
+1 −1
+)︁. Set A = D = 0 and,
+during the active time τ," width="485.93" height="57.13" style="width:44.581em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>with their continuous critical and hyperbolic forms. Its first ready zero is (7); at that time fG(t∗)2 =
+e−lt∗/2. This proves the transfer bound y(T)2 ≤fG(τ)2. Apply it to |1⟩in (6) to obtain (9).
+For attainability let H be the real balanced two-mode matrix 2−1/2(︁1 1
+1 −1
+)︁. Set A = D = 0 and,
+during the active time τ,</pre></details></figure>
+<figure class="sr-formula" id="equation-11" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p004-00063.svg" alt="√︄
+1 −s
+1 + s fG(τ).
+(11)
+C = H diag(g0, G),
+fg0(τ) =" width="355.29" height="30.56" style="width:32.595em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (11).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>√︄
+1 −s
+1 + s fG(τ).
+(11)
+C = H diag(g0, G),
+fg0(τ) =</pre></details></figure>
+<p data-source-page="5">For<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00064.svg" alt=" g" style="width:0.9362em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 0 the transfer amplitude is zero and for<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00065.svg" alt=" g = G" style="width:3.0668em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> it is<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00066.svg" alt=" fG(τ" style="width:2.4175em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>). Continuity in<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00067.svg" alt=" g" style="width:0.9341em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> therefore guarantees a solution 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00068.svg" alt=" ≤g0 ≤G" style="width:4.4945em;height:1.2928em;vertical-align:-0.23em" loading="lazy"/> to this intermediate target. No monotonicity assumption is needed. These are two independent damped taps in the balanced flag basis. Their terminal flag map is</p>
+<figure class="sr-formula" id="display-19" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00069.svg" alt="−iH diag(fg0(τ), fG(τ))." width="115.33" height="14.32" style="width:10.581em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>−iH diag(fg0(τ), fG(τ)).</pre></details></figure>
+<p data-source-page="5">Equation (11) makes each wrong flag amplitude exactly zero for its excluded source state, and each correct probability equals (1<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00070.svg" alt=" −s)fG(τ)2" style="width:5.0751em;height:1.3933em;vertical-align:-0.23em" loading="lazy"/>. Switch off the coupling after<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00071.svg" alt=" τ" style="width:0.9104em;height:1.1461em;vertical-align:-0.23em" loading="lazy"/>; the stable flags then remain unchanged until<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00072.svg" alt=" T" style="width:1.0374em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Residual ready amplitudes may subsequently be lost, and are included in (3). That proves attainability and preserves (4) on all inputs and their references.</p>
+<p data-source-page="5">For<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00073.svg" alt=" s = 0.6, G = l" style="width:7.6771em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>and<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00074.svg" alt=" T = 2/G" style="width:4.7806em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>, one has<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00075.svg" alt=" t∗= 1.3613444250/G, g0 = 0.3764245988G" style="width:20.1352em;height:1.2938em;vertical-align:-0.23em" loading="lazy"/>, and <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00076.svg" alt="q+ = q−= 0." style="width:5.7832em;height:1.2957em;vertical-align:-0.23em" loading="lazy"/>2025106210. The loss-limited transfer factor is 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00077.svg" alt="." style="width:0.4234em;height:1.1432em;vertical-align:-0.23em" loading="lazy"/>5062765525. Requiring success at least <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00078.svg" alt="0." style="width:0.9181em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>2 with that overlap and a sufficiently long deadline gives the sharp threshold<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00079.svg" alt=" l/G ≤1.0211025506 in" style="width:10.3599em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> this apparatus class. Above it no permitted pulse sequence achieves the target. At the critical damping point<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00080.svg" alt=" l= 4G" style="width:3.4699em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, the transfer factor is<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00081.svg" alt=" e−2" style="width:1.9115em;height:1.3085em;vertical-align:-0.23em" loading="lazy"/>; for large<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00082.svg" alt=" l/G" style="width:2.1622em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> it is asymptotic to 4<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00083.svg" alt="G2/l2" style="width:2.6713em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/>. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00084.svg" alt=" l" style="width:0.8770em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>= 0 the frontier reduces to ideal unambiguous discrimination after a finite coherent pulse. These results are parameter requirements for a possible experiment, not measured biological lifetimes or coupling strengths.</p>
+<h3 id="section-bounded-coherent-action-and-minimum-output-ranks">Bounded coherent action and minimum output ranks</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00085.svg" alt="The loss-free implementation can be specified without a continuum bath. For any desired 0 ≤q ≤1 −s,
+set
+n0 =
+√︂
+1 −q/(1 + s),
+n1 =
+√︂
+1 −q/(1 −s),
+θj = arccos nj." width="485.91" height="41.40" style="width:44.579em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The loss-free implementation can be specified without a continuum bath. For any desired 0 ≤q ≤1 −s,
+set
+n0 =
+√︂
+1 −q/(1 + s),
+n1 =
+√︂
+1 −q/(1 −s),
+θj = arccos nj.</pre></details></figure>
+<p data-source-page="5">A constant four-mode Hamiltonian (2) with<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00086.svg" alt=" C =" style="width:2.3227em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> H diag(<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00087.svg" alt="θ0, θ1)/τ" style="width:3.7163em;height:1.2388em;vertical-align:-0.23em" loading="lazy"/> gives exactly</p>
+<figure class="sr-formula" id="equation-12" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00088.svg" alt="K0 = diag(n0, n1),
+K± = −i
+√︃
+q
+1 −s2 |±⟩⟨φ±|.
+(12)" width="362.50" height="27.39" style="width:33.256em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (12).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K0 = diag(n0, n1),
+K± = −i
+√︃
+q
+1 −s2 |±⟩⟨φ±|.
+(12)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00089.svg" alt="This is a single finite unitary interaction with blank detector modes, not a concatenation of statistical
+bounds. Excitation-preserving couplings between a source mode and a detector mode are ordinary
+beam-splitter or resonant Jaynes–Cummings interactions in the one-excitation sector. Their matrix
+entries have units ħθj/τ. After the pulse, decoupled detector excitations are the final stable records.
+No independent samples or erased failure populations are assumed.
+If the resource is instead the cross-subspace action A =
+∫︁∥PFHPR∥dt/ħ, the same norm equations
+at l= 0 give
+ ̄q ≤(1 −s) sin2(︁min{A, π/2}
+)︁." width="486.75" height="107.31" style="width:44.656em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>This is a single finite unitary interaction with blank detector modes, not a concatenation of statistical
+bounds. Excitation-preserving couplings between a source mode and a detector mode are ordinary
+beam-splitter or resonant Jaynes–Cummings interactions in the one-excitation sector. Their matrix
+entries have units ħθj/τ. After the pulse, decoupled detector excitations are the final stable records.
+No independent samples or erased failure populations are assumed.
+If the resource is instead the cross-subspace action A =
+∫︁∥PFHPR∥dt/ħ, the same norm equations
+at l= 0 give
+ ̄q ≤(1 −s) sin2(︁min{A, π/2}
+)︁.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00090.svg" alt="The construction saturates it, with A = arcsin
+√︁" width="237.21" height="13.39" style="width:21.762em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The construction saturates it, with A = arcsin
+√︁</pre></details></figure>
+<p data-source-page="5"><img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00091.svg" alt="q/(1 −s)" style="width:4.0733em;height:1.1540em;vertical-align:-0.23em" loading="lazy"/>. This is a specialization of known unitary measurement resource bounds, included to make the physical resource contract explicit. Bounded Hamiltonian coupling is not the same constraint as a bounded Markov jump hazard; neither bound may be substituted into the other. For 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00092.svg" alt=" &lt; q &lt; 1 −s" style="width:5.4791em;height:1.1599em;vertical-align:-0.23em" loading="lazy"/> the three terminal POVM effects have ranks 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00093.svg" alt=", 1," style="width:1.3687em;height:1.1470em;vertical-align:-0.23em" loading="lazy"/> 2 for +<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00094.svg" alt=", −," style="width:1.6460em;height:1.1585em;vertical-align:-0.23em" loading="lazy"/> 0. Any orthogonal-record amplitude dilation of these exact effects requires at least 1 + 1 + 2 = 4 output dimensions: the amplitude map in each orthogonal record sector has rank equal to its effect. Equation (12) attains this count. At<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p005-00095.svg" alt=" q = 1 −s" style="width:4.4746em;height:1.1539em;vertical-align:-0.23em" loading="lazy"/> the null effect has rank one and the abstract minimum is three. The four-mode Hamiltonian is still a sufficient implementation; we do not claim it is a minimum-level Hamiltonian at that endpoint. Original input references tensor onto this count; they are not newly consumed reader ancillas. These are reachable orthogonal amplitude-sector dimensions. They do not include an extra pure environment needed to realize a fully dephased classical record channel; classicalizing a coherent flag requires its own retained-output accounting.</p>
+<h3 id="section-why-a-static-dark-matched-reader-fails-and-a-continuous-repair">Why a static dark matched reader fails, and a continuous repair</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00096.svg" alt="Consider a static absorbing implementation of the matched-template prescription [7, pp. 18–21], with
+fixed jump readers dark to the other source: L± = √γ |±⟩⟨φ±|. Initially the excluded click amplitude
+is zero. However the full hazard is Q = γ diag(1 −s, 1 + s), so its null evolution changes the source.
+For |ψ−⟩, the wrong + density at time t is" width="486.25" height="54.03" style="width:44.610em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Consider a static absorbing implementation of the matched-template prescription [7, pp. 18–21], with
+fixed jump readers dark to the other source: L± = √γ |±⟩⟨φ±|. Initially the excluded click amplitude
+is zero. However the full hazard is Q = γ diag(1 −s, 1 + s), so its null evolution changes the source.
+For |ψ−⟩, the wrong + density at time t is</pre></details></figure>
+<figure class="sr-formula" id="equation-13" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00097.svg" alt="p+|−(t) = γa2b2[e−γ(1−s)t/2 −e−γ(1+s)t/2]2.
+(13)" width="344.85" height="18.74" style="width:31.638em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (13).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>p+|−(t) = γa2b2[e−γ(1−s)t/2 −e−γ(1+s)t/2]2.
+(13)</pre></details></figure>
+<p data-source-page="6">It is positive for<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00098.svg" alt=" s, t &gt;" style="width:2.7521em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0. Its integrated infinite-time value is<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00099.svg" alt=" s2/2; at s = 0.6, γT = 2, it is 0.0394994846." style="width:19.1143em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/> This is a tested obstruction to calling a fixed dark instantaneous kernel an error-free continuous instrument. A faithful repair keeps the reciprocal geometry and changes the reader to account for its own null back-action. Write</p>
+<figure class="sr-formula" id="display-22" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00100.svg" alt="q(t) = (1 −s)(1 −e−κt),
+N(t) = diag
+(︃√︂
+1 −q(t)/(1 −s)
+)︃
+,
+1 −q(t)/(1 + s),
+√︂" width="392.06" height="18.90" style="width:35.969em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>q(t) = (1 −s)(1 −e−κt),
+N(t) = diag
+(︃√︂
+1 −q(t)/(1 −s)
+)︃
+,
+1 −q(t)/(1 + s),
+√︂</pre></details></figure>
+<p data-source-page="6">where<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00101.svg" alt=" κ &gt;" style="width:2.1117em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0 is a declared maximum signal hazard. Use</p>
+<figure class="sr-formula" id="equation-14" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00102.svg" alt="√︄
+q′(t)
+1 −s2 |±⟩⟨φ±|N(t)−1.
+(14)
+L±(t) =" width="322.90" height="31.22" style="width:29.624em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (14).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>√︄
+q′(t)
+1 −s2 |±⟩⟨φ±|N(t)−1.
+(14)
+L±(t) =</pre></details></figure>
+<p data-source-page="6">At finite times these coefficients are bounded and known in advance. The Hamiltonian is zero; the reader does not acquire an actual sign to decide its next setting. Direct calculation gives</p>
+<figure class="sr-formula" id="display-24" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00103.svg" alt="√︄
+±
+L∗
+±L± = diag
+(︃
+q′
+1 + s −q,
+q′
+q′(t)
+1 −s2 |±⟩⟨φ±|.
+)︃
+≤κI,
+L±(t)N(t) =
+∑︂
+1 −s −q" width="390.26" height="34.70" style="width:35.804em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>√︄
+±
+L∗
+±L± = diag
+(︃
+q′
+1 + s −q,
+q′
+q′(t)
+1 −s2 |±⟩⟨φ±|.
+)︃
+≤κI,
+L±(t)N(t) =
+∑︂
+1 −s −q</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00104.svg" alt="Thus every conclusive time is unambiguous. A null result filters the surviving quantum source, and the
+predetermined reader compensates exactly for that filter. No fresh independence is inferred.
+This bounded-hazard construction is also optimal in its own model class. For any absorbing two-port
+unambiguous instrument with Q(t) ≤κI, the no-transition matrix satisfies N(t)∗N(t) ≥e−κtI, since
+d
+dt(N∗N) = −N∗QN ≥−κN∗N. With average cumulative success  ̄q(t), (6) gives" width="484.91" height="69.73" style="width:44.488em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Thus every conclusive time is unambiguous. A null result filters the surviving quantum source, and the
+predetermined reader compensates exactly for that filter. No fresh independence is inferred.
+This bounded-hazard construction is also optimal in its own model class. For any absorbing two-port
+unambiguous instrument with Q(t) ≤κI, the no-transition matrix satisfies N(t)∗N(t) ≥e−κtI, since
+d
+dt(N∗N) = −N∗QN ≥−κN∗N. With average cumulative success  ̄q(t), (6) gives</pre></details></figure>
+<figure class="sr-formula" id="display-25" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00105.svg" alt="1 − ̄q(t)/(1 −s) = ⟨1|N(t)∗N(t)|1⟩≥e−κt." width="203.09" height="14.83" style="width:18.632em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 − ̄q(t)/(1 −s) = ⟨1|N(t)∗N(t)|1⟩≥e−κt.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00106.svg" alt="Therefore  ̄q(t) ≤q(t), attained above, including when the two successes are allowed to be asymmetric.
+Add independent uniform ready loss at rate l. The no-event matrix becomes e−lt/2N(t), the signal
+Kraus density is e−lt/2L±(t)N(t) and the loss density is
+√" width="486.56" height="40.64" style="width:44.638em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Therefore  ̄q(t) ≤q(t), attained above, including when the two successes are allowed to be asymmetric.
+Add independent uniform ready loss at rate l. The no-event matrix becomes e−lt/2N(t), the signal
+Kraus density is e−lt/2L±(t)N(t) and the loss density is
+√</pre></details></figure>
+<p data-source-page="6"><img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00107.svg" alt="le−lt/2WtN(t" style="width:5.9387em;height:1.3872em;vertical-align:-0.23em" loading="lazy"/>). The three full effects plus the null effect sum to identity, as in (4). The optimal conclusive probability is</p>
+<figure class="sr-formula" id="equation-15" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00108.svg" alt="qhazard,loss(T) = (1 −s)
+κ
+κ + l[1 −e−(κ+l)T ].
+(15)" width="345.84" height="27.39" style="width:31.728em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 6, equation (15).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>qhazard,loss(T) = (1 −s)
+κ
+κ + l[1 −e−(κ+l)T ].
+(15)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="6"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00109.svg" alt="To see optimality rather than only attainability, consider any competing schedule without loss and its
+cumulative success qc(t) ≤q(t). Uniform loss multiplies its conclusive time density by e−lt. Integration
+by parts gives
+∫︂T
+0
+e−ltdqc(t) = e−lT qc(T) + l
+∫︂T
+0
+e−ltqc(t)dt ≤
+∫︂T
+0
+e−ltdq(t)," width="484.64" height="66.97" style="width:44.463em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 6.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>To see optimality rather than only attainability, consider any competing schedule without loss and its
+cumulative success qc(t) ≤q(t). Uniform loss multiplies its conclusive time density by e−lt. Integration
+by parts gives
+∫︂T
+0
+e−ltdqc(t) = e−lT qc(T) + l
+∫︂T
+0
+e−ltqc(t)dt ≤
+∫︂T
+0
+e−ltdq(t),</pre></details></figure>
+<p data-source-page="6">which is (15). This argument requires the same independent scalar loss law and the same stable conclusive-output catalogue; it does not combine unrelated noise models. At<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00110.svg" alt=" s = 0.6, l= 0.25κ" style="width:8.2592em;height:1.1454em;vertical-align:-0.23em" loading="lazy"/> and <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00111.svg" alt="κT" style="width:1.2938em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 2, the conclusive, null and loss probabilities are respectively 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00112.svg" alt=".2937328004, 0." style="width:6.8791em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>3967523953 and <img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p006-00113.svg" alt="0.3095148043." style="width:6.2027em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<h3 id="section-a-finite-collision-implementation-and-retained-retry-records">A finite collision implementation and retained retry records</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00114.svg" alt="The continuous model has infinitely many temporal modes. A finite version need not pretend to
+store such a continuum in a finite register. Choose M stages, tk = k∆, ∆= T/M, qk = q(tk) and
+Nk = diag
+√︁" width="484.64" height="41.49" style="width:44.462em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The continuous model has infinitely many temporal modes. A finite version need not pretend to
+store such a continuum in a finite register. Choose M stages, tk = k∆, ∆= T/M, qk = q(tk) and
+Nk = diag
+√︁</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00115.svg" alt="1 −qk/(1 ± s). At stage k, first attenuate both ready modes by e−l∆/2 into two fresh,
+retained loss modes. Then use a two-mode tap with local null matrix NkN−1
+k−1 and two fresh conclusive
+modes. Its tap angles are" width="485.56" height="43.65" style="width:44.547em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>1 −qk/(1 ± s). At stage k, first attenuate both ready modes by e−l∆/2 into two fresh,
+retained loss modes. Then use a two-mode tap with local null matrix NkN−1
+k−1 and two fresh conclusive
+modes. Its tap angles are</pre></details></figure>
+<figure class="sr-formula" id="display-27" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00116.svg" alt="θkj = arccos (Nk)jj
+(Nk−1)jj
+." width="109.48" height="28.52" style="width:10.044em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>θkj = arccos (Nk)jj
+(Nk−1)jj
+.</pre></details></figure>
+<p data-source-page="7">The same finite Hamiltonian construction as (12) implements these taps and their balanced output mixing. Excitations already in old output modes never interact again. Consequently the cumulative null map is exactly<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00117.svg" alt=" e−ltk/2Nk" style="width:4.5915em;height:1.4125em;vertical-align:-0.23em" loading="lazy"/>, not a redraw. The conclusive Kraus maps in bin<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00118.svg" alt=" k" style="width:1.0007em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are</p>
+<figure class="sr-formula" id="display-28" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00119.svg" alt="K±,k = e−ltk/2
+√︄
+qk −qk−1
+1 −s2
+|±, k⟩⟨φ±|," width="178.20" height="30.31" style="width:16.349em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K±,k = e−ltk/2
+√︄
+qk −qk−1
+1 −s2
+|±, k⟩⟨φ±|,</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00120.svg" alt="and the loss map is
+Kloss,k =
+√︁
+1 −e−l∆e−ltk−1/2WkNk−1." width="332.94" height="27.84" style="width:30.545em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>and the loss map is
+Kloss,k =
+√︁
+1 −e−l∆e−ltk−1/2WkNk−1.</pre></details></figure>
+<p data-source-page="7">Every original mode, source remainder and detector register is retained. These finite Kraus maps satisfy completeness exactly, for arbitrary inputs and inert references. They have success</p>
+<figure class="sr-formula" id="equation-16" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00121.svg" alt="M
+∑︂
+k=1
+e−ltk(qk −qk−1),
+e−l∆qhazard,loss ≤qM ≤qhazard,loss.
+(16)
+qM =" width="398.93" height="34.71" style="width:36.599em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7, equation (16).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>M
+∑︂
+k=1
+e−ltk(qk −qk−1),
+e−l∆qhazard,loss ≤qM ≤qhazard,loss.
+(16)
+qM =</pre></details></figure>
+<p data-source-page="7">The bounds follow by bounding<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00122.svg" alt=" e−lt" style="width:2.2058em;height:1.2956em;vertical-align:-0.23em" loading="lazy"/> on each interval in the exact integral. This is a probability convergence guarantee; no equality of the unmeasured continuum bath and the finite bath is asserted. For the numerical example above<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00123.svg" alt=" M" style="width:1.4507em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 8 gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00124.svg" alt=" qM = 0." style="width:3.8984em;height:1.3027em;vertical-align:-0.23em" loading="lazy"/>2842794177, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00125.svg" alt=" M" style="width:1.4507em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 128 gives 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00126.svg" alt=".2931579860." style="width:5.7027em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> For positive loss and finite nonzero stages, each of the 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00127.svg" alt="M" style="width:1.1057em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> conclusive effects has rank one, each of the<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00128.svg" alt=" M" style="width:1.4372em;height:1.1370em;vertical-align:-0.23em" loading="lazy"/> loss effects rank two, and the null effect rank two. An orthogonal time-bin record dilation thus needs at least 4<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00129.svg" alt="M" style="width:1.1057em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> + 2 reachable output dimensions; the one-excitation mode construction has exactly that count. With zero loss it is 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/phase-to-record-conversion/math/p007-00130.svg" alt="M" style="width:1.1122em;height:1.1421em;vertical-align:-0.23em" loading="lazy"/> + 2. This counts reachable orthogonal amplitude sectors for the specified record isometry, not all physical hardware, an autonomous controller, or an additional environment implementing a fully dephased classical record channel. Arrival-time labels are histories of different possible single absorptions, not independent trials on one reused source.</p>

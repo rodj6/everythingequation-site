@@ -1,0 +1,102 @@
+<h2 id="section-one-calibration-event-and-a-finite-adaptive-record">One calibration event and a finite adaptive record</h2>
+<p data-source-page="19">The calibration certificate can be used over a finite sequence without charging its failure probability at every use. This is an application of established martingale concentration, not a new probability law or an independence theorem. It makes the batch-calibration and robust-reader constructions compatible at the level of the complete declared classical record. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00385.svg" alt=" F0" style="width:1.5865em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/> contain all original calibration settings, counts, nulls, chosen reader settings and admitted calibration metadata. For the fixed true calibration parameters, let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00386.svg" alt=" G ∈F0" style="width:3.9138em;height:1.2393em;vertical-align:-0.23em" loading="lazy"/> be the simultaneous confidence event with Pr<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00387.svg" alt="(G) ≥1 −α" style="width:5.3999em;height:1.1581em;vertical-align:-0.23em" loading="lazy"/>. The drift, access and preparation conditions of the calibration section are physical assumptions: on<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00388.svg" alt=" G" style="width:1.2527em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, every future actual input conditional on its preceding declared history must remain in the certified set. Neither an unchanged wave, a reset flag nor a null outcome proves this condition for a reused source. For use<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00389.svg" alt=" t" style="width:0.8390em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00390.svg" alt=" Ct" style="width:1.4735em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> indicate a conclusive flag and<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00391.svg" alt=" Wt" style="width:1.6967em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> a wrong conclusive flag; hence 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00392.svg" alt=" ≤Wt ≤Ct ≤1." style="width:7.2273em;height:1.2966em;vertical-align:-0.23em" loading="lazy"/> The source-label truth needed to score<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00393.svg" alt=" Wt" style="width:1.6285em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> must be defined in the test model and recorded in a validation experiment; an unknown production label does not become observable from this theorem. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00394.svg" alt=" t ≥1," style="width:2.9227em;height:1.1562em;vertical-align:-0.23em" loading="lazy"/> take<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00395.svg" alt=" Ft" style="width:1.4679em;height:1.2434em;vertical-align:-0.23em" loading="lazy"/> to contain the completed-trial outcomes, scoring truths and original calibration record. The physical controller is adapted only to its permitted accessible-record subfiltration. The conditional contracts below are assumed on this augmented mathematical past; they do not follow merely by enlarging an observed-record filtration. Scoring access in the proof grants the reader no access to an unread preparation label. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00396.svg" alt=" εt ∈[0," style="width:3.5429em;height:1.2839em;vertical-align:-0.23em" loading="lazy"/> 1] and<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00397.svg" alt=" qt ∈[0," style="width:3.5900em;height:1.2839em;vertical-align:-0.23em" loading="lazy"/> 1] be predictable, calibrated bounds for the selected reader. On<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00398.svg" alt=" G" style="width:1.2601em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> suppose</p>
+<figure class="sr-formula" id="equation-49" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p019-00399.svg" alt="E[Wt | Ft−1] ≤εtE[Ct | Ft−1],
+E[Ct | Ft−1] ≥qt.
+(49)" width="367.01" height="16.39" style="width:33.670em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19, equation (49).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>E[Wt | Ft−1] ≤εtE[Ct | Ft−1],
+E[Ct | Ft−1] ≥qt.
+(49)</pre></details></figure>
+<p data-source-page="19">The constructed symmetric robust reader supplies these inequalities label by label under the calibrated conditional-state contract. Consequently its certificate permits arbitrary, history-dependent label</p>
+<p data-source-page="20">priors when both label-conditioned source marginals satisfy that contract. This does not transfer an optimality claim from a different prior-weighted task. Arbitrary inert quantum references may be retained. Their additional measurement or feedback is outside the contract unless the augmented conditional input bounds have also been established.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00400.svg" alt="Theorem 7.1 (Finite-use certificate with a single calibration fee). For any predetermined horizon N
+and 0 &lt; β &lt; 1, put bN =
+p" width="483.65" height="27.76" style="width:44.372em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Theorem 7.1 (Finite-use certificate with a single calibration fee). For any predetermined horizon N
+and 0 &lt; β &lt; 1, put bN =
+p</pre></details></figure>
+<p data-source-page="20"><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00401.svg" alt="(N/" style="width:1.8656em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>2) log(2<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00402.svg" alt="/β)" style="width:1.6540em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/><em>. With probability at least</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00403.svg" alt=" 1 −α −β" style="width:4.6565em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/><em>, simultaneously</em></p>
+<figure class="sr-formula" id="equation-51" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00404.svg" alt="N
+X
+N
+X
+t=1
+Wt ≤
+t=1
+εtCt + bN,
+(50)
+N
+X
+N
+X
+t=1
+Ct ≥
+t=1
+qt −bN.
+(51)" width="298.72" height="70.46" style="width:27.405em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20, equation (51).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>N
+X
+N
+X
+t=1
+Wt ≤
+t=1
+εtCt + bN,
+(50)
+N
+X
+N
+X
+t=1
+Ct ≥
+t=1
+qt −bN.
+(51)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00405.svg" alt="No independence of the future trials is required. With fixed εt = ε and qt = q, if Nq &gt; bN this implies
+P
+t Wt
+P
+t Ct
+≤ε +
+bN
+Nq −bN
+." width="484.63" height="48.08" style="width:44.461em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>No independence of the future trials is required. With fixed εt = ε and qt = q, if Nq &gt; bN this implies
+P
+t Wt
+P
+t Ct
+≤ε +
+bN
+Nq −bN
+.</pre></details></figure>
+<p data-source-page="20"><em>Every null and loss event remains in the record and in the horizon cost.</em></p>
+<p data-source-page="20"><em>Proof.</em> On each calibration outcome in<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00406.svg" alt=" G" style="width:1.2699em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>, set<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00407.svg" alt=" Zt = Wt −εtCt" style="width:7.1191em;height:1.3001em;vertical-align:-0.23em" loading="lazy"/>. It has nonpositive conditional mean and its conditional range is contained in [<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00408.svg" alt="−εt, 1 −εt" style="width:4.5054em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>], of length one. The conditional Hoeffding lemma therefore gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00409.svg" alt=" E[eθZt | Ft−1] ≤eθ2/8" style="width:9.6400em;height:1.5232em;vertical-align:-0.23em" loading="lazy"/> for<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00410.svg" alt=" θ &gt;" style="width:2.0321em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0. Induction and exponential Markov give</p>
+<figure class="sr-formula" id="display-80" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00411.svg" alt="X
+!
+≤e−2b2/N.
+Pr
+t
+Zt ≥b | F0" width="152.08" height="33.04" style="width:13.952em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+!
+≤e−2b2/N.
+Pr
+t
+Zt ≥b | F0</pre></details></figure>
+<p data-source-page="20">Apply the same argument to<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00412.svg" alt=" qt −Ct" style="width:3.4622em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>, whose conditional mean is nonpositive and whose range also has length one. Taking<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00413.svg" alt=" b = bN" style="width:3.2707em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> bounds each failure by<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00414.svg" alt=" β/" style="width:1.5927em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>2. The union bound supplies<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00415.svg" alt=" β" style="width:1.0383em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> on<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00416.svg" alt=" G" style="width:1.2659em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; the original calibration failure adds<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00417.svg" alt=" α" style="width:1.1618em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> once. This proof permits adaptation to all admitted preceding classical outcomes, not retroactive selection of a better calibration confidence event.</p>
+<p data-source-page="20">The range-dependent lemma can be checked directly: among bounded variables with fixed mean, convexity maximizes the moment generating function on the two endpoints. The centered endpoint Bernoulli log-mgf has second derivative at most 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00418.svg" alt="/" style="width:0.6403em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>4; integrating twice from zero bounds it by<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00419.svg" alt=" θ2/8." style="width:2.6798em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/> This proves the concentration constant used above. An anytime version is also available. For any fixed<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00420.svg" alt=" θ &gt;" style="width:2.0223em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0, with failure at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00421.svg" alt=" α + β," style="width:3.2389em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="display-81" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00422.svg" alt="n
+X
+t=1
+(Wt −εtCt) &lt; θn
+8 + log(1/β)
+θ
+for every n ≥1." width="241.86" height="34.31" style="width:22.189em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n
+X
+t=1
+(Wt −εtCt) &lt; θn
+8 + log(1/β)
+θ
+for every n ≥1.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/detector-interfaces-companion/math/p020-00423.svg" alt="Indeed exp[θ P
+t≤n Zt −nθ2/8] is a nonnegative supermartingale starting at one; stopping it at its first
+crossing and using the expectation bound proves the displayed probability inequality. This supports an
+admitted stopping policy without falsely applying a fixed-horizon bound to a data-selected horizon." width="484.47" height="41.27" style="width:44.447em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Indeed exp[θ P
+t≤n Zt −nθ2/8] is a nonnegative supermartingale starting at one; stopping it at its first
+crossing and using the expectation bound proves the displayed probability inequality. This supports an
+admitted stopping policy without falsely applying a fixed-horizon bound to a data-selected horizon.</pre></details></figure>

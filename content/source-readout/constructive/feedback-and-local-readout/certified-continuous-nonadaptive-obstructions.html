@@ -1,0 +1,245 @@
+<h2 id="section-certified-continuous-nonadaptive-obstructions">Certified continuous nonadaptive obstructions</h2>
+<h3 id="section-four-ideal-copies-an-all-angle-lower-certificate">Four ideal copies: an all-angle lower certificate</h3>
+<p data-source-page="7"><strong>Theorem 4.1</strong> (Continuous nonadaptive four-copy lower bound)<strong>.</strong><em> In the ideal parent</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00137.svg" alt=" η = v = 1" style="width:4.6945em;height:1.1470em;vertical-align:-0.23em" loading="lazy"/><em>, every</em> <em>randomized nonadaptive four-copy continuous equatorial reader, with arbitrary terminal decision and</em> <em>retained settings, has worst-label sign error at least</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00138.svg" alt=" 1/32." style="width:2.8117em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="7"><em>Proof.</em> For a fixed schedule, an optimal uniform-prior decoder can be chosen odd on four sign bits. Its Walsh expansion has coefficients only on singletons and triples. There are 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00139.svg" alt="8" style="width:0.5293em;height:0.8686em;vertical-align:-0.23em" loading="lazy"/> = 256 such odd decoders; exact enumeration divides them into seven orbits under independent outcome reversals and permutations of the four measurements, of respective sizes 8<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00140.svg" alt=", 64, 32, 48, 64, 32," style="width:7.5469em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 8. For coefficients<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00141.svg" alt=" αi" style="width:1.3739em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> and <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00142.svg" alt="βI" style="width:1.0491em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/>, its target correlation is</p>
+<figure class="sr-formula" id="display-20" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00143.svg" alt="⎧
+⎨
+)︄⎫
+⎬
+(︄∏︂
+C = 1
+∑︂
+i
+αi(ci + si) +
+∑︂
+i∈I
+ci +
+∏︂
+|I|=3
+βI
+i∈I
+si
+⎭.
+2
+⎩" width="244.67" height="38.46" style="width:22.447em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎧
+⎨
+)︄⎫
+⎬
+(︄∏︂
+C = 1
+∑︂
+i
+αi(ci + si) +
+∑︂
+i∈I
+ci +
+∏︂
+|I|=3
+βI
+i∈I
+si
+⎭.
+2
+⎩</pre></details></figure>
+<p data-source-page="7">Eliminate the fourth measurement analytically. With</p>
+<figure class="sr-formula" id="display-21" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00144.svg" alt="A = α4 + β124c1c2 + β134c1c3 + β234c2c3,
+B = α4 + β124s1s2 + β134s1s3 + β234s2s3,
+3
+∑︂
+F0 =
+i=1
+αi(ci + si) + β123(c1c2c3 + s1s2s3)," width="208.33" height="67.46" style="width:19.113em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A = α4 + β124c1c2 + β134c1c3 + β234c2c3,
+B = α4 + β124s1s2 + β134s1s3 + β234s2s3,
+3
+∑︂
+F0 =
+i=1
+αi(ci + si) + β123(c1c2c3 + s1s2s3),</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="7"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p007-00145.svg" alt="A2 + B2)/2. This maximization covers the full fourth circle,
+not a discretized setting.
+its largest possible correlation is (F0 +
+√" width="485.64" height="35.39" style="width:44.554em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 7.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A2 + B2)/2. This maximization covers the full fourth circle,
+not a discretized setting.
+its largest possible correlation is (F0 +
+√</pre></details></figure>
+<p data-source-page="8">For the first three directions use the rational circle</p>
+<figure class="sr-formula" id="display-22" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00146.svg" alt="(︄
+1 −t2
+i
+1 + t2
+i
+,
+2ti
+1 + t2
+i
+)︄
+(ci, si) = εi
+,
+−1 ≤ti ≤1,
+εi ∈{−1, 1}." width="295.41" height="31.90" style="width:27.101em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(︄
+1 −t2
+i
+1 + t2
+i
+,
+2ti
+1 + t2
+i
+)︄
+(ci, si) = εi
+,
+−1 ≤ti ≤1,
+εi ∈{−1, 1}.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00147.svg" alt="The hemisphere signs are explicitly enumerated: suppressing them after choosing a decoder represen-
+tative would not establish a full-circle bound. Together with seven decoder orbits this gives 56 cube
+calculations.
+The delivered certificate partitions each cube into a finite prefix-free set of dyadic octree boxes.
+On a box, exact endpoint formulas enclose each ci, si; ci additionally has maximum one when its
+interval contains zero. Rational interval products and sums give an upper bound on F0 and intervals
+for A, B. An integer-square-root enclosure bounds
+√" width="486.81" height="93.83" style="width:44.661em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The hemisphere signs are explicitly enumerated: suppressing them after choosing a decoder represen-
+tative would not establish a full-circle bound. Together with seven decoder orbits this gives 56 cube
+calculations.
+The delivered certificate partitions each cube into a finite prefix-free set of dyadic octree boxes.
+On a box, exact endpoint formulas enclose each ci, si; ci additionally has maximum one when its
+interval contains zero. Rational interval products and sums give an upper bound on F0 and intervals
+for A, B. An integer-square-root enclosure bounds
+√</pre></details></figure>
+<p data-source-page="8">max<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00148.svg" alt=" A2" style="width:1.4529em;height:1.2120em;vertical-align:-0.23em" loading="lazy"/> + max<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00149.svg" alt=" B2" style="width:1.5110em;height:1.2120em;vertical-align:-0.23em" loading="lazy"/> upwards. Every resulting correlation bound is at most 15<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00150.svg" alt="/" style="width:0.6403em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>16. The exact verifier checks all 143633 leaves, all orbit and sign variants, prefix-freeness and total cube volume one; the largest octree depth is eight. These finite exact inequalities prove the continuum bound. Floating calculations only constructed a candidate partition and are not accepted as proof of any leaf. Thus uniform-prior error is at least (1<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00151.svg" alt="−15/16)/2 = 1/" style="width:7.2020em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>32 for every schedule. A randomized schedule is an average of such experiments with its retained seed and cannot lower this average Bayes bound. Worst-label error is no smaller than uniform-prior error, proving the claim.</p>
+<p data-source-page="8">The delivered research10/nonadaptive/four_certificate.json.gz contains the finite proof object. The reproduction runner expands it without changing the underlying JSON content (the expanded hash is verified); research10/nonadaptive/verify_four.py recomputes every accepted inequality with standard-library rational arithmetic and integer square roots. The exploratory partition generator is retained in the historical evidence archive and is not required for verification. The bound <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00152.svg" alt="1/" style="width:1.1397em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>32 is deliberately sufficient for discrimination and is not claimed as the exact four-copy nonadaptive optimum. Floating exploratory optimization suggests a minimum near 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00153.svg" alt="." style="width:0.4230em;height:1.1421em;vertical-align:-0.23em" loading="lazy"/>03740607, but that number carries no global optimality claim. The certificate concerns the ideal parent only; it is not the principal nominal noisy four-copy optimum.</p>
+<h3 id="section-a-noisy-full-continuum-separation-at-the-principal-benchmark">A noisy full-continuum separation at the principal benchmark</h3>
+<p data-source-page="8">The ideal separation is not the only surviving regime. A second exact certificate treats the principal shared detector parent, retaining all nulls and all measurement settings.</p>
+<p data-source-page="8"><strong>Theorem 4.2</strong> (Nominal continuous nonadaptive four-copy lower bound)<strong>.</strong><em> At</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00154.svg" alt=" η = 4/5, v = 9/10," style="width:9.3844em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> <em>every randomized nonadaptive four-copy continuous equatorial reader has worst-label sign error at least</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00155.svg" alt="13/125 = 0.104." style="width:7.0657em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="8"><em>Proof.</em> Condition on the entire source-independent erasure pattern and maximize the terminal decision separately on each pattern. Denote by<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00156.svg" alt=" Ck" style="width:1.5093em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> the optimal uniform-prior target correlation for the nominated <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00157.svg" alt="k" style="width:0.6677em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> nonnull directions. For a single fixed direction<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00158.svg" alt=" i" style="width:0.8247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, put<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00159.svg" alt=" ai = ci + si" style="width:5.3343em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/>; then</p>
+<figure class="sr-formula" id="display-23" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00160.svg" alt="C1(i) = v
+2|ai|,
+C2(i, j) = v
+2 max(|ai|, |aj|).
+For three specified directions," width="351.15" height="44.93" style="width:32.216em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>C1(i) = v
+2|ai|,
+C2(i, j) = v
+2 max(|ai|, |aj|).
+For three specified directions,</pre></details></figure>
+<figure class="sr-formula" id="display-24" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00161.svg" alt="⃓⃓⃓⃓⃓v
+3
+∑︂
+⃓⃓⃓⃓⃓,
+r1 = 1.
+C3(1, 2, 3) = 1
+∑︂
+i=1
+riai + v3r1r2r3(c1c2c3 + s1s2s3)
+8
+r2,r3=±1" width="340.90" height="36.09" style="width:31.275em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⃓⃓⃓⃓⃓v
+3
+∑︂
+⃓⃓⃓⃓⃓,
+r1 = 1.
+C3(1, 2, 3) = 1
+∑︂
+i=1
+riai + v3r1r2r3(c1c2c3 + s1s2s3)
+8
+r2,r3=±1</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="8"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p008-00162.svg" alt="The preceding exact three-copy theorem gives global upper correlations C1 = C2 = v/
+√
+2 and
+C3 = v(6 −v2)/(4
+√
+2)." width="484.40" height="36.77" style="width:44.441em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 8.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The preceding exact three-copy theorem gives global upper correlations C1 = C2 = v/
+√
+2 and
+C3 = v(6 −v2)/(4
+√
+2).</pre></details></figure>
+<p data-source-page="9">Fix the first three directions, and grant separate fourth-direction optimization to the different erasure patterns. This relaxation need not be a realizable nonadaptive schedule; it only increases the upper correlation used for the lower error bound. With<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00163.svg" alt=" z = 1 −η" style="width:4.5417em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/>, the resulting upper bound is</p>
+<figure class="sr-formula" id="display-25" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00164.svg" alt="U = ηz3{C1(1) + C1(2) + C1(3) + C1}
++ η2z2{C2(1, 2) + C2(1, 3) + C2(2, 3) + 3C1}
++ η3z{C3(1, 2, 3) + 3C3} + η4Cfree
+4
+(1, 2, 3)." width="238.93" height="52.51" style="width:21.920em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>U = ηz3{C1(1) + C1(2) + C1(3) + C1}
++ η2z2{C2(1, 2) + C2(1, 3) + C2(2, 3) + 3C1}
++ η3z{C3(1, 2, 3) + 3C3} + η4Cfree
+4
+(1, 2, 3).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00165.svg" alt="For Cfree
+4
+, enumerate the same odd four-bit decoders as in Theorem 4.1. Multiply every triple coefficient
+by v2 in F0, A, B, then its free-fourth correlation is v(F0 +
+√" width="484.53" height="29.37" style="width:44.453em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For Cfree
+4
+, enumerate the same odd four-bit decoders as in Theorem 4.1. Multiply every triple coefficient
+by v2 in F0, A, B, then its free-fourth correlation is v(F0 +
+√</pre></details></figure>
+<p data-source-page="9"><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00166.svg" alt="A2" style="width:1.2783em;height:1.2180em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00167.svg" alt="+ B2)/" style="width:3.2656em;height:1.2203em;vertical-align:-0.23em" loading="lazy"/>2. The first-three conditional term can also be capped by<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00168.svg" alt=" C3." style="width:1.9718em;height:1.2388em;vertical-align:-0.23em" loading="lazy"/> The original objective is invariant under simultaneous schedule/decoder outcome reversals and permutations. Apply these symmetries before choosing the relaxed fourth direction. The lower-click optimum terms are invariant under outcome reversals. Thus the seven decoder orbits and eight hemisphere sign choices again cover all original schedules. Relaxing first and then silently imposing a symmetry of the relaxed formula would not be justified. The delivered research10/nonadaptive/nominal_certificate.json.gz, expanded by the reproduction runner, bounds<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00169.svg" alt=" U ≤99/" style="width:4.2032em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>125 on all 56 cube variants. It contains 4230653 leaves, with maximum depth eleven. Every inequality is checked using outward dyadic intervals with scale 2<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00170.svg" alt="60." style="width:1.2398em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/> Interval sums, rational scalar products and general products use integer floor and ceiling. Integer square roots are rounded upwards. No floating number is used to accept a bound. Exact endpoint formulas for the rational circle give the starting intervals. For clarity, at the stated<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00171.svg" alt=" η, v" style="width:1.9692em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> let<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00172.svg" alt=" c1, c2, c3" style="width:3.9335em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/> denote upper interval numerators of the three braces above, and let<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00173.svg" alt=" f0, A, B" style="width:3.7905em;height:1.2362em;vertical-align:-0.23em" loading="lazy"/> be upper/intermediate numerators for the free-fourth decoder expression. All are expressed at the same dyadic scale. The total upper numerator is rounded from</p>
+<figure class="sr-formula" id="display-26" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00174.svg" alt="20c1 + 80c2 + 320c3 + 576{f0 +
+√
+max A2 + max B2}
+3125
+." width="256.53" height="36.70" style="width:23.535em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>20c1 + 80c2 + 320c3 + 576{f0 +
+√
+max A2 + max B2}
+3125
+.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00175.svg" alt="2/8000 upwards. Prefix-freeness and exact
+cube-volume one establish full coverage, not merely a collection of point checks. The decoder orbit
+enumeration and all hemisphere signs are checked again. Hence every schedule has average error at
+least (1 −99/125)/2 = 13/125; retaining its random seed and mixing schedules cannot improve that
+average lower bound. Worst-label risk is no smaller.
+The constants enclose C1 = 9
+√
+2/20 and C3 = 4671
+√" width="484.98" height="75.78" style="width:44.494em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2/8000 upwards. Prefix-freeness and exact
+cube-volume one establish full coverage, not merely a collection of point checks. The decoder orbit
+enumeration and all hemisphere signs are checked again. Hence every schedule has average error at
+least (1 −99/125)/2 = 13/125; retaining its random seed and mixing schedules cannot improve that
+average lower bound. Worst-label risk is no smaller.
+The constants enclose C1 = 9
+√
+2/20 and C3 = 4671
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="9"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00176.svg" alt="Combining this universal nonadaptive bound with the separately certified four-copy adaptive error
+&lt; 0.103471 proves strict feedback benefit in the principal noisy parent over all continuous nonadaptive
+equatorial schedules. This is stronger than comparing selected angle allocations. The certificate is not
+an exact nonadaptive optimum; numerical exploration near 0.10476238 remains separately labelled.
+For the selected tolerance 519/5000 = 0.1038, the exact copy minima are four adaptive versus
+five randomized nonadaptive. The three-copy adaptive equality gives a lower risk ≃0.13587961, the
+four-copy adaptive construction passes, and the universal four-copy nonadaptive lower bound fails the
+target. Five repeated bisectors attain 1/2 −(11631897/39062500)
+√" width="484.57" height="107.32" style="width:44.456em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 9.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Combining this universal nonadaptive bound with the separately certified four-copy adaptive error
+&lt; 0.103471 proves strict feedback benefit in the principal noisy parent over all continuous nonadaptive
+equatorial schedules. This is stronger than comparing selected angle allocations. The certificate is not
+an exact nonadaptive optimum; numerical exploration near 0.10476238 remains separately labelled.
+For the selected tolerance 519/5000 = 0.1038, the exact copy minima are four adaptive versus
+five randomized nonadaptive. The three-copy adaptive equality gives a lower risk ≃0.13587961, the
+four-copy adaptive construction passes, and the universal four-copy nonadaptive lower bound fails the
+target. Five repeated bisectors attain 1/2 −(11631897/39062500)
+√</pre></details></figure>
+<p data-source-page="9"><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00177.svg" alt="2 ≃0." style="width:2.8688em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>07888035. This post hoc tolerance demonstrates an attained copy separation; it is not the original one-percent target. The strict separation also persists on a specified open parameter box. For a frozen policy, or uniformly for every nonadaptive competitor, changing shared parameters by (<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00178.svg" alt="δη, δv" style="width:2.5473em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>) changes the one-trial record law by TV at most<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00179.svg" alt=" κ = |δη| + |δv|/" style="width:7.2063em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>2. Sequential coupling bounds any four-copy target risk change by 4<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00180.svg" alt="κ" style="width:0.7155em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. Thus the strict nominal gap of more than 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00181.svg" alt="." style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>000529 remains positive whenever <img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00182.svg" alt="8κ &lt; 0." style="width:3.3141em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>000529. In particular<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00183.svg" alt=" |δη|, |δv| ≤10−5" style="width:7.2816em;height:1.3085em;vertical-align:-0.23em" loading="lazy"/> leaves a certified gap of more than 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p009-00184.svg" alt="." style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>000409. The adaptive</p>
+<p data-source-page="10">policy stays frozen; inaccessible parameters do not select a different policy. This is a shared-noise robustness statement, not a solution of the separate asymmetric fixed-unknown-gain problem. verify_nominal_integer.py carries the efficient exact replay; verify_nominal.py supplies a separately written Fraction interval reference. 961 selected leaf bounds are cross-checked with that reference. An independent audit checks every leaf with a root-free final squared allowance. The full certificate is large because it covers continuous settings rigorously, rather than claiming a finite grid solves the continuum. It is compressed in the supporting package.</p>
+<h3 id="section-the-resulting-ideal-feedback-separation-and-its-limits">The resulting ideal feedback separation and its limits</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p010-00185.svg" alt="The separately constructed adaptive four-copy policy has a certified ideal error strictly below 1/32.
+The preceding lower bound therefore covers every continuous nonadaptive competitor, rather than
+only the old X/Y menu or selected fixed-angle designs. This is a genuine continuous-access feedback
+separation under the stated preparation and record contract.
+At the explicitly selected tolerance 0.031, the exhibited adaptive policy passes with four copies.
+Every nonadaptive reader with at most four copies fails by the 1/32 bound and monotonicity. A
+five-copy repeated bisector has error 1/2 −(43/128)
+√" width="486.68" height="93.91" style="width:44.650em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The separately constructed adaptive four-copy policy has a certified ideal error strictly below 1/32.
+The preceding lower bound therefore covers every continuous nonadaptive competitor, rather than
+only the old X/Y menu or selected fixed-angle designs. This is a genuine continuous-access feedback
+separation under the stated preparation and record contract.
+At the explicitly selected tolerance 0.031, the exhibited adaptive policy passes with four copies.
+Every nonadaptive reader with at most four copies fails by the 1/32 bound and monotonicity. A
+five-copy repeated bisector has error 1/2 −(43/128)
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="10"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/feedback-and-local-readout/math/p010-00186.svg" alt="2 ≃0.02491263, so five suffice nonadaptively.
+Thus the adaptive four-copy construction and exact nonadaptive five-copy minimum give a concrete
+task separation at that post hoc illustrative tolerance. The separate three-copy adaptive theorem gives
+the same ideal lower value 1/2 −(5/16)
+√" width="486.59" height="53.30" style="width:44.641em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 10.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2 ≃0.02491263, so five suffice nonadaptively.
+Thus the adaptive four-copy construction and exact nonadaptive five-copy minimum give a concrete
+task separation at that post hoc illustrative tolerance. The separate three-copy adaptive theorem gives
+the same ideal lower value 1/2 −(5/16)
+√</pre></details></figure>
+<p data-source-page="10"><img class="sr-vector-inline" src="/publications/source-readout/constructive/feedback-and-local-readout/math/p010-00187.svg" alt="2 &gt; 0." style="width:2.7518em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>031, so four is also the exact adaptive minimum. Thus the exact copy minima at this selected tolerance are four adaptive versus five randomized nonadaptive copies. The tolerance was chosen after the frontier calculation and is not the original one-percent target. Full large-horizon continuous optima, exact four-copy optimum values and general robust adaptation remain separate questions.</p>

@@ -1,0 +1,558 @@
+<h2 id="section-a-mixed-support-qutrit-source-with-lower-complete-history-cost">A mixed-support qutrit source with lower complete-history cost</h2>
+<p data-source-page="17">Mixed input/output support profiles are compatible with a completely positive, stationary, full-law source. At<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00370.svg" alt=" λ = 99/" style="width:3.8921em;height:1.1458em;vertical-align:-0.23em" loading="lazy"/>100 the construction below has one faithful output branch and two faithful input branches, and generates the entire delayed-trine law. Its complete retained-memory/classical-history channel has <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00371.svg" alt="R2 = 50," style="width:3.9515em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00372.svg" alt="R3 = 152," style="width:4.4516em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00373.svg" alt="Rn = 456 3n−4" style="width:6.3848em;height:1.5097em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00374.svg" alt="(n ≥4)." style="width:3.6367em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="17">The coordinate-plane Weyl sources attain 54<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00375.svg" alt=", 162, 486 3n−4" style="width:6.1734em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> instead. This reduces the long-horizon coefficient by 30<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00376.svg" alt="/486 = 5/" style="width:4.4865em;height:1.1459em;vertical-align:-0.23em" loading="lazy"/>81, about 6<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00377.svg" alt="." style="width:0.4223em;height:1.1404em;vertical-align:-0.23em" loading="lazy"/>173%. A separate universal obstruction below raises the lower coefficient from 418 to 437, leaving the interval [437<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00378.svg" alt="," style="width:0.4211em;height:1.1370em;vertical-align:-0.23em" loading="lazy"/> 456]. The specified source uses fifteen one-step Kraus operators, compared with the separate optimum nine: the improvement is in the complete final channel task, not in every resource simultaneously.</p>
+<h3 id="section-task-and-baseline-identities">Task and baseline identities</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00379.svg" alt="Write Φj : M3(C) →M3(C) for autonomous CP symbol maps, with ∑︁
+j Φj trace preserving and
+stationary preparation τ. The target transition matrix and stationary word law are" width="484.63" height="28.46" style="width:44.461em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Write Φj : M3(C) →M3(C) for autonomous CP symbol maps, with ∑︁
+j Φj trace preserving and
+stationary preparation τ. The target transition matrix and stationary word law are</pre></details></figure>
+<figure class="sr-formula" id="display-75" data-source-page="17"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p017-00380.svg" alt="n−2
+∏︂
+Taa = λ/3,
+Tab = (3 −λ)/6 (a ̸= b),
+P(w1 · · · wn) = 1
+t=1
+Twt,wt+2.
+9" width="355.51" height="34.41" style="width:32.616em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 17.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n−2
+∏︂
+Taa = λ/3,
+Tab = (3 −λ)/6 (a ̸= b),
+P(w1 · · · wn) = 1
+t=1
+Twt,wt+2.
+9</pre></details></figure>
+<p data-source-page="18">All symbols range over<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00381.svg" alt=" {0, 1, 2}" style="width:3.8280em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>. At the parameter considered here,<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00382.svg" alt=" Taa = 33/" style="width:4.7181em;height:1.2958em;vertical-align:-0.23em" loading="lazy"/>100 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00383.svg" alt=" Tab = 67/" style="width:4.6444em;height:1.3087em;vertical-align:-0.23em" loading="lazy"/>200 for <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00384.svg" alt="a ̸= b" style="width:2.4377em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/>. The complete channel is</p>
+<figure class="sr-formula" id="display-76" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00385.svg" alt="Cn(X) =
+∑︂
+w
+|w⟩⟨w|A ⊗Φw(X),
+Rn = rank J(Cn)." width="254.70" height="24.89" style="width:23.367em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Cn(X) =
+∑︂
+w
+|w⟩⟨w|A ⊗Φw(X),
+Rn = rank J(Cn).</pre></details></figure>
+<p data-source-page="18">It retains final memory and the classical archive, including any inert input reference.<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00386.svg" alt=" Rn" style="width:1.7773em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> is the minimum pure Stinespring remainder dimension for this specified final channel, rather than peak causal hardware or the number of append-only records. The comparisons below use this same task and the same three-dimensional internal input/output type. For a full-law minimal qutrit source the basis-complete reset proof establishes that the nine normalized pair states<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00387.svg" alt=" σab" style="width:1.7902em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> are an operator basis and</p>
+<figure class="sr-formula" id="equation-38" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00388.svg" alt="Φj(σab) = Tajσbj,
+ΦkΦj(X) = Tr(FjkX)σjk,
+Fjk = Φ∗
+jΦ∗
+k(I).
+(38)" width="401.32" height="16.87" style="width:36.819em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (38).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Φj(σab) = Tajσbj,
+ΦkΦj(X) = Tr(FjkX)σjk,
+Fjk = Φ∗
+jΦ∗
+k(I).
+(38)</pre></details></figure>
+<p data-source-page="18">Consequently, with<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00389.svg" alt=" sab" style="width:1.6890em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> = rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00390.svg" alt=" σab" style="width:1.6388em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00391.svg" alt=" fab" style="width:1.7132em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> = rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00392.svg" alt=" Fab," style="width:2.0340em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-39" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00393.svg" alt="R2 =
+∑︂
+ab
+sabfab,
+R3 =
+∑︂
+abc
+fabsbc,
+Rn = 3n−4
+(︄∑︂
+)︄(︄∑︂
+)︄
+ab
+sab
+ab
+fab
+(n ≥4).
+(39)" width="342.31" height="89.31" style="width:31.405em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (39).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>R2 =
+∑︂
+ab
+sabfab,
+R3 =
+∑︂
+abc
+fabsbc,
+Rn = 3n−4
+(︄∑︂
+)︄(︄∑︂
+)︄
+ab
+sab
+ab
+fab
+(n ≥4).
+(39)</pre></details></figure>
+<p data-source-page="18">The final identity counts freely chosen first/last pairs; the intervening strictly positive weights do not change Choi ranks. We explicitly verify (38) for the source below, rather than assuming that a PSD factorization alone yields a recurrent source.</p>
+<h3 id="section-explicit-algebraic-source">Explicit algebraic source</h3>
+<figure class="sr-formula sr-source-panel" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00394.svg" alt="Let (e0, e1, e2) be an orthonormal qutrit basis and ω = (−1 + i
+√
+3)/2. Set" width="353.87" height="22.58" style="width:32.465em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Let (e0, e1, e2) be an orthonormal qutrit basis and ω = (−1 + i
+√
+3)/2. Set</pre></details></figure>
+<figure class="sr-formula" id="display-79" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00395.svg" alt="p = 32
+35,
+c = 7
+20,
+u1 = e1 −e2
+√
+2
+,
+u2 = e1 −ωe2
+√
+2
+." width="268.55" height="28.50" style="width:24.637em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>p = 32
+35,
+c = 7
+20,
+u1 = e1 −e2
+√
+2
+,
+u2 = e1 −ωe2
+√
+2
+.</pre></details></figure>
+<p data-source-page="18">The two output planes are<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00396.svg" alt=" Qb" style="width:1.5973em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> = span<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00397.svg" alt="{e0, ub}, b = 1," style="width:6.5911em;height:1.2637em;vertical-align:-0.23em" loading="lazy"/> 2. Define the unit vectors and their projectors</p>
+<figure class="sr-formula" id="display-80" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00398.svg" alt="√︃3
+√︃32
+√︃3
+√︃32
+w1 =
+35e0 +
+35e1,
+w2 =
+35e0 −
+35e1,
+w3 = e2,
+Wl = |wl⟩⟨wl|." width="377.23" height="28.03" style="width:34.608em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>√︃3
+√︃32
+√︃3
+√︃32
+w1 =
+35e0 +
+35e1,
+w2 =
+35e0 −
+35e1,
+w3 = e2,
+Wl = |wl⟩⟨wl|.</pre></details></figure>
+<p data-source-page="18">The pair states in column zero are</p>
+<figure class="sr-formula" id="equation-40" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00399.svg" alt="σ00 = W1 + W2 + W3
+3
+,
+σ10 = W2 + W3
+2
+,
+σ20 = W1 + W3
+2
+.
+(40)" width="388.85" height="27.39" style="width:35.674em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (40).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σ00 = W1 + W2 + W3
+3
+,
+σ10 = W2 + W3
+2
+,
+σ20 = W1 + W3
+2
+.
+(40)</pre></details></figure>
+<p data-source-page="18">Put<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00400.svg" alt=" q0 = 33/" style="width:4.1930em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/>35 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00401.svg" alt=" q1 = q2 = 67/" style="width:6.4065em;height:1.2979em;vertical-align:-0.23em" loading="lazy"/>70. The remaining states are</p>
+<figure class="sr-formula" id="equation-41" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00402.svg" alt="σab = (1 −qa)|e0⟩⟨e0| + qa|ub⟩⟨ub| + zab|e0⟩⟨ub| + zab|ub⟩⟨e0|,
+b = 1, 2.
+(41)" width="412.55" height="14.44" style="width:37.849em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18, equation (41).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>σab = (1 −qa)|e0⟩⟨e0| + qa|ub⟩⟨ub| + zab|e0⟩⟨ub| + zab|ub⟩⟨e0|,
+b = 1, 2.
+(41)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00403.svg" alt="2(Aab + Babω), and all coefficients are exact:
+Here zab =
+√" width="277.58" height="23.36" style="width:25.466em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2(Aab + Babω), and all coefficients are exact:
+Here zab =
+√</pre></details></figure>
+<figure class="sr-formula" id="display-83" data-source-page="18"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p018-00404.svg" alt="(a, b)
+104Aab
+104Bab
+(0, 1)
+104
+−112
+(0, 2)
+319
+226
+(1, 1)
+−439
+−1028
+(1, 2)
+−299
+54
+(2, 1)
+269
+597
+(2, 2)
+1119
+714" width="115.13" height="95.87" style="width:10.562em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 18.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(a, b)
+104Aab
+104Bab
+(0, 1)
+104
+−112
+(0, 2)
+319
+226
+(1, 1)
+−439
+−1028
+(1, 2)
+−299
+54
+(2, 1)
+269
+597
+(2, 2)
+1119
+714</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00405.svg" alt="All source matrices have entries in the algebraic field K = Q(
+√
+6, ω): the
+√" width="345.45" height="21.58" style="width:31.693em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>All source matrices have entries in the algebraic field K = Q(
+√
+6, ω): the
+√</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00406.svg" alt="2 in z cancels the denominator
+of ub, and w1, w2 projector cross terms are ±4
+√" width="484.29" height="27.71" style="width:44.430em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2 in z cancels the denominator
+of ub, and w1, w2 projector cross terms are ±4
+√</pre></details></figure>
+<p data-source-page="19"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00407.svg" alt="6/35." style="width:2.4247em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> Let vec stack matrix rows consistently, and form the nine-by-nine matrices</p>
+<figure class="sr-formula" id="display-84" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00408.svg" alt="S:(a,b) = vec σab,
+(Bj):(a,b) = Taj vec σbj," width="206.51" height="14.74" style="width:18.946em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>S:(a,b) = vec σab,
+(Bj):(a,b) = Taj vec σbj,</pre></details></figure>
+<p data-source-page="19">with columns indexed lexicographically by (<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00409.svg" alt="a, b) ∈{0, 1, 2}2" style="width:6.8990em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/>. Define the entire arbitrary-input maps by</p>
+<figure class="sr-formula" id="equation-42" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00410.svg" alt="vec Φj(X) = BjS−1 vec X.
+(42)" width="305.25" height="17.99" style="width:28.005em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19, equation (42).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>vec Φj(X) = BjS−1 vec X.
+(42)</pre></details></figure>
+<p data-source-page="19">The inverse exists by the exact certificate. Equation (42), together with the small rational table, specifies each map exactly and independently of horizon.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00411.svg" alt="The first branch has a direct measure–prepare realization.
+Let vl = (e1 +ωle2)/
+√
+2, l = 0, 1, 2.
+Then" width="486.51" height="35.13" style="width:44.634em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The first branch has a direct measure–prepare realization.
+Let vl = (e1 +ωle2)/
+√
+2, l = 0, 1, 2.
+Then</pre></details></figure>
+<figure class="sr-formula" id="equation-43" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00412.svg" alt="2
+∑︂
+Φ0(X) = 2c
+l=0
+⟨vl|X|vl⟩Wl+1,
+E0 = Φ∗
+0(I) = c
+(︁|e1⟩⟨e1| + |e2⟩⟨e2|
+)︁.
+(43)
+3" width="410.91" height="34.70" style="width:37.698em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19, equation (43).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2
+∑︂
+Φ0(X) = 2c
+l=0
+⟨vl|X|vl⟩Wl+1,
+E0 = Φ∗
+0(I) = c
+(︁|e1⟩⟨e1| + |e2⟩⟨e2|
+)︁.
+(43)
+3</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00413.svg" alt="The three Kraus operators are
+√︁" width="161.03" height="13.38" style="width:14.773em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The three Kraus operators are
+√︁</pre></details></figure>
+<p data-source-page="19"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00414.svg" alt="2c/3|wl+1⟩⟨vl|" style="width:6.1683em;height:1.2627em;vertical-align:-0.23em" loading="lazy"/>. Their vectorizations are independent because the<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00415.svg" alt=" wl" style="width:1.4108em;height:1.2488em;vertical-align:-0.23em" loading="lazy"/> are independent. Thus this branch has Choi rank exactly three, plane input support and full output support. The antipodal relations<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00416.svg" alt=" ⟨v0|u1⟩" style="width:3.4529em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/>= 0 and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00417.svg" alt=" ⟨v1|u2⟩" style="width:3.4603em;height:1.2516em;vertical-align:-0.23em" loading="lazy"/>= 0 explain the two rank-two states<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00418.svg" alt=" σ10, σ20," style="width:3.9823em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/> while the common entrance line<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00419.svg" alt=" e0" style="width:1.3269em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/> is killed. This gives a concrete mixed-support branch mechanism.</p>
+<h3 id="section-exact-certificate-and-full-law-proof">Exact certificate and full-law proof</h3>
+<p data-source-page="19"><strong>Lemma 8.1</strong> (Exact algebraic admissibility)<strong>.</strong><em> For the explicit data above,</em> S<em> is nonsingular; all nine</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00420.svg" alt="σab" style="width:1.4481em;height:1.2385em;vertical-align:-0.23em" loading="lazy"/><em> are positive semidefinite of trace one. The maps in</em> (42)<em> are CP. Branch zero is precisely</em> (43)<em>;</em> <em>branches one and two have Choi matrices positive definite on</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00421.svg" alt=" C3 ⊗Q1" style="width:4.0621em;height:1.6145em;vertical-align:-0.23em" loading="lazy"/><em> and</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00422.svg" alt=" C3 ⊗Q2" style="width:4.0616em;height:1.6145em;vertical-align:-0.23em" loading="lazy"/><em>, respectively, and</em> <em>zero on the orthogonal output complements. Their Choi ranks are six each.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00423.svg" alt="Certificate verification. The supplied exact verifier certifies this lemma with arithmetic in Q(
+√" width="460.62" height="21.61" style="width:42.258em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Certificate verification. The supplied exact verifier certifies this lemma with arithmetic in Q(
+√</pre></details></figure>
+<p data-source-page="19"><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00424.svg" alt="6, ω)," style="width:2.4064em;height:1.1453em;vertical-align:-0.23em" loading="lazy"/> not floating-point eigenvalue signs. It checks nonsingularity, symbolic equality with (43), exact Hermiticity/support and positive leading principal minors of the two six-dimensional Choi compressions. State positivity follows from<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00425.svg" alt=" qa(1 −qa) −|zab|2 &gt;" style="width:9.2960em;height:1.5977em;vertical-align:-0.23em" loading="lazy"/> 0 for the six plane states, and from independence of the explicit<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00426.svg" alt=" wl" style="width:1.4471em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/> in (40). All certificate values and verification instructions accompany the source. Floating-point reconstruction, useful only as a diagnostic, gives a smallest supported Choi eigenvalue approximately 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00427.svg" alt=".8332 × 10−4" style="width:5.6361em;height:1.3097em;vertical-align:-0.23em" loading="lazy"/>. This diagnostic is not used to establish positivity.</p>
+<p data-source-page="19"><strong>Theorem 8.2</strong> (Stationary full-word attainment at<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00428.svg" alt=" λ = 99/100)." style="width:6.4203em;height:1.1460em;vertical-align:-0.23em" loading="lazy"/><em> The maps in</em> (42)<em>, initialized at</em> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00429.svg" alt="τ = 1" style="width:2.5278em;height:1.3302em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00430.svg" alt="9
+∑︁
+ab σab, generate every finite word of the stationary delayed-trine process at λ = 99/100." width="433.13" height="15.64" style="width:39.736em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>9
+∑︁
+ab σab, generate every finite word of the stationary delayed-trine process at λ = 99/100.</pre></details></figure>
+<p data-source-page="19"><em>Proof.</em> CP is supplied by the certificate lemma. On each basis state,</p>
+<figure class="sr-formula" id="display-87" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00431.svg" alt="Tr
+∑︂
+j
+Φj(σab) =
+∑︂
+j
+Taj = 1 = Tr σab." width="177.97" height="25.84" style="width:16.327em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Tr
+∑︂
+j
+Φj(σab) =
+∑︂
+j
+Taj = 1 = Tr σab.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00432.svg" alt="Since the states are an operator basis, the summed map is trace preserving on all inputs. The initial
+state is faithful because it includes a positive multiple of the faithful σ00. Double stochasticity of T
+gives
+∑︂
+j
+Φj(τ) = 1
+∑︂
+abj
+Tajσbj = 1
+∑︂
+bj
+σbj = τ." width="484.27" height="68.77" style="width:44.428em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Since the states are an operator basis, the summed map is trace preserving on all inputs. The initial
+state is faithful because it includes a positive multiple of the faithful σ00. Double stochasticity of T
+gives
+∑︂
+j
+Φj(τ) = 1
+∑︂
+abj
+Tajσbj = 1
+∑︂
+bj
+σbj = τ.</pre></details></figure>
+<figure class="sr-formula" id="display-88" data-source-page="19"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p019-00433.svg" alt="9
+9" width="76.97" height="12.51" style="width:7.061em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 19.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>9
+9</pre></details></figure>
+<figure class="sr-formula" id="display-89" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00434.svg" alt="Moreover
+Φj(τ) = 1
+b
+σbj,
+ΦkΦj(τ) = 1
+b
+Tbkσjk = 1
+∑︂
+∑︂
+9σjk.
+9
+9" width="372.43" height="39.54" style="width:34.168em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Moreover
+Φj(τ) = 1
+b
+σbj,
+ΦkΦj(τ) = 1
+b
+Tbkσjk = 1
+∑︂
+∑︂
+9σjk.
+9
+9</pre></details></figure>
+<p data-source-page="20">Every adjacent pair therefore has probability 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00435.svg" alt="/" style="width:0.6403em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>9 and the designated posterior state. Repeatedly applying the exact basis relation Φ<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00436.svg" alt="j(σab) = Tajσbj" style="width:6.6283em;height:1.2448em;vertical-align:-0.23em" loading="lazy"/> yields the stated product for all longer words. It also proves (38) on each basis operator and hence on arbitrary operators. No fitted finite word list is used to infer the full law.</p>
+<h3 id="section-exact-ranks-and-improved-horizon-boundary">Exact ranks and improved horizon boundary</h3>
+<p data-source-page="20"><strong>Theorem 8.3</strong> (Attainable mixed-support resources)<strong>.</strong><em> This fixed source has</em></p>
+<figure class="sr-formula" id="display-90" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00437.svg" alt="⎛
+⎞
+⎛
+⎞
+⎜
+⎝
+3
+2
+2
+2
+2
+2
+2
+2
+2
+⎜
+⎝
+2
+2
+2
+3
+3
+3
+3
+3
+3
+[sab] =
+⎟
+⎠,
+[fab] =
+⎟
+⎠." width="211.88" height="41.40" style="width:19.439em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⎛
+⎞
+⎛
+⎞
+⎜
+⎝
+3
+2
+2
+2
+2
+2
+2
+2
+2
+⎜
+⎝
+2
+2
+2
+3
+3
+3
+3
+3
+3
+[sab] =
+⎟
+⎠,
+[fab] =
+⎟
+⎠.</pre></details></figure>
+<p data-source-page="20"><em>In particular</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00438.svg" alt=" Sσ = 19, SF = 24" style="width:8.2143em;height:1.2988em;vertical-align:-0.23em" loading="lazy"/><em>, branch support counts</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00439.svg" alt=" (a, b) = (1, 2)" style="width:6.2420em;height:1.1454em;vertical-align:-0.23em" loading="lazy"/><em>, and one-step recorded-channel</em> <em>Choi rank</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00440.svg" alt=" k = 15." style="width:3.6967em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="20"><em>Proof.</em> The state ranks follow from the certificate lemma and (40). Branches one and two have full input support because their supported Choi matrices are strictly positive; their output supports are exactly<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00441.svg" alt=" Q1, Q2" style="width:3.2946em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/>. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00442.svg" alt=" E1, E2" style="width:3.1907em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/> are faithful, whereas<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00443.svg" alt=" E0 = cP" style="width:4.0386em;height:1.2937em;vertical-align:-0.23em" loading="lazy"/> has plane support<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00444.svg" alt=" P =" style="width:2.3093em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> span<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00445.svg" alt="{e1, e2}" style="width:3.3553em;height:1.2393em;vertical-align:-0.23em" loading="lazy"/>. For every<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00446.svg" alt=" k, (43" style="width:3.0327em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/>) gives</p>
+<figure class="sr-formula" id="display-91" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00447.svg" alt="F0k = 2c
+∑︂
+l
+⟨wl+1|Ek|wl+1⟩|vl⟩⟨vl|.
+3" width="166.91" height="31.69" style="width:15.313em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>F0k = 2c
+∑︂
+l
+⟨wl+1|Ek|wl+1⟩|vl⟩⟨vl|.
+3</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00448.svg" alt="All three coefficients are positive: for k = 0 their weights are cp, cp, c, and for k = 1, 2 positivity follows
+from faithfulness. Therefore every F0k has rank two on P. For j = 1, 2 and each nonzero input vector
+x, strict Choi positivity on C3 ⊗Qj implies ⟨x|Φ∗
+j(Ek)|x⟩&gt; 0 whenever the compression of Ek to Qj
+is nonzero and positive semidefinite. That compression is faithful for k = 1, 2, and nonzero rank one
+for k = 0. Hence all six Fjk are faithful. Finally the Choi supports of the three classically recorded
+branches are orthogonal, so their ranks sum to 3 + 6 + 6 = 15." width="484.71" height="80.27" style="width:44.469em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>All three coefficients are positive: for k = 0 their weights are cp, cp, c, and for k = 1, 2 positivity follows
+from faithfulness. Therefore every F0k has rank two on P. For j = 1, 2 and each nonzero input vector
+x, strict Choi positivity on C3 ⊗Qj implies ⟨x|Φ∗
+j(Ek)|x⟩&gt; 0 whenever the compression of Ek to Qj
+is nonzero and positive semidefinite. That compression is faithful for k = 1, 2, and nonzero rank one
+for k = 0. Hence all six Fjk are faithful. Finally the Choi supports of the three classically recorded
+branches are orthogonal, so their ranks sum to 3 + 6 + 6 = 15.</pre></details></figure>
+<p data-source-page="20">Substituting these ranks into (39) gives the claimed exact 50<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00449.svg" alt=", 152, 456 3n−4" style="width:6.1735em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/>. Together with the universal bounds, the improved attainable intervals at this parameter are</p>
+<figure class="sr-formula" id="display-92" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00450.svg" alt="48 ≤Rmin
+2
+≤50,
+145 ≤Rmin
+3
+≤152,
+437 3n−4 ≤Rmin
+n
+≤456 3n−4 (n ≥4)." width="365.77" height="19.22" style="width:33.557em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>48 ≤Rmin
+2
+≤50,
+145 ≤Rmin
+3
+≤152,
+437 3n−4 ≤Rmin
+n
+≤456 3n−4 (n ≥4).</pre></details></figure>
+<p data-source-page="20">The old relaxed profile (<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00451.svg" alt="Sσ, SF ) = (19," style="width:6.3489em;height:1.3020em;vertical-align:-0.23em" loading="lazy"/> 22) is excluded by the universal theorem below. Attainment of the improved relaxed profile (19<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00452.svg" alt="," style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 23), or its reverse, remains open. Our source has one further faithful effect beyond that new bound. At<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00453.svg" alt=" n" style="width:1.0797em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 4 the final certified upper-minus-lower gap is nineteen.</p>
+<p data-source-page="20"><strong>Local persistence, with no claimed certified endpoints.</strong> For<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00454.svg" alt=" λ" style="width:1.0627em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> near 99<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00455.svg" alt="/" style="width:0.6467em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>100, replace</p>
+<figure class="sr-formula" id="display-93" data-source-page="20"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00456.svg" alt="p ↦−→4λ −3
+6 −5λ,
+c ↦−→
+λ
+2p + 1,
+q0 ↦−→2p + 1
+3
+,
+q1 = q2 ↦−→p + 1
+2
+," width="323.92" height="27.53" style="width:29.718em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 20.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>p ↦−→4λ −3
+6 −5λ,
+c ↦−→
+λ
+2p + 1,
+q0 ↦−→2p + 1
+3
+,
+q1 = q2 ↦−→p + 1
+2
+,</pre></details></figure>
+<p data-source-page="20">keep the rational<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00457.svg" alt=" A, B" style="width:2.4306em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> table fixed, and use the same definitions. Branch zero remains exactly (43), as direct substitution into the trine probabilities verifies. The basis determinant, six state determinants and two supported Choi matrices vary continuously, and all have strict nonzero/positive values at <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p020-00458.svg" alt="99/" style="width:1.6502em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>100. Thus there is an open nonempty parameter neighborhood on which this same rank profile and 456 coefficient are attained. This existence statement supplies no explicit certified endpoints and does not move the known qutrit memory threshold. The finite-parameter theorem above is the fully specified certificate.</p>
+<h3 id="section-a-universal-pure-output-obstruction-the-lower-coefficient-is-437">A universal pure-output obstruction: the lower coefficient is 437</h3>
+<p data-source-page="21">The construction above establishes that mixed support profiles exist. A separate positivity argument shows that the former relaxed lower value 418 cannot occur for any admitted qutrit source at any <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00459.svg" alt="0 &lt; λ &lt;" style="width:3.6187em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> 1. No numerical search or symmetry ansatz enters this obstruction.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="21"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00460.svg" alt="Lemma 8.4 (A singular composite effect forces a pure output). Let Uj = im Φj. For any full-law
+minimal qutrit source, U0 ⊕U1 ⊕U2 = M3(C) as vector spaces: the three states in each column form a
+basis of Uj, and all nine states are independent. Suppose Ek has rank two, with kernel line L. Among
+indices j with faithful Ej, at most one effect Fjk = Φ∗
+j(Ek) can be singular." width="484.82" height="55.49" style="width:44.479em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 21.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Lemma 8.4 (A singular composite effect forces a pure output). Let Uj = im Φj. For any full-law
+minimal qutrit source, U0 ⊕U1 ⊕U2 = M3(C) as vector spaces: the three states in each column form a
+basis of Uj, and all nine states are independent. Suppose Ek has rank two, with kernel line L. Among
+indices j with faithful Ej, at most one effect Fjk = Φ∗
+j(Ek) can be singular.</pre></details></figure>
+<p data-source-page="21"><em>Proof.</em> If<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00461.svg" alt=" Fjk" style="width:1.9157em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/> is singular, choose 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00462.svg" alt=" ̸= x ∈" style="width:3.2322em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/>ker<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00463.svg" alt=" Fjk" style="width:1.6987em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/>. The positive operator<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00464.svg" alt=" Y = Φj(|x⟩⟨x|" style="width:6.7952em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/>) is nonzero because Tr<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00465.svg" alt=" Y = ⟨x|Ej|x⟩&gt;" style="width:7.1129em;height:1.2508em;vertical-align:-0.23em" loading="lazy"/> 0. Moreover Tr<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00466.svg" alt="(EkY ) = ⟨x|Fjk|x⟩" style="width:8.1950em;height:1.2638em;vertical-align:-0.23em" loading="lazy"/>= 0. Positivity therefore places ran<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00467.svg" alt=" Y" style="width:0.9017em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> in ker<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00468.svg" alt=" Ek = L, so Y" style="width:5.9129em;height:1.3086em;vertical-align:-0.23em" loading="lazy"/> is a positive multiple of the rank-one projector<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00469.svg" alt=" PL" style="width:1.6388em;height:1.2425em;vertical-align:-0.23em" loading="lazy"/>. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00470.svg" alt=" PL ∈Uj" style="width:3.9121em;height:1.3014em;vertical-align:-0.23em" loading="lazy"/>. Two such distinct indices would put the same nonzero projector in two disjoint branch images, a contradiction.</p>
+<p data-source-page="21">The faithful<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00471.svg" alt=" Ej" style="width:1.4492em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> hypothesis matters. If<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00472.svg" alt=" Ej" style="width:1.4462em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> has a kernel, the chosen input might instead be annihilated; no pure-output conclusion follows. Likewise, this lemma does not assert that all singular composite effects are impossible: one faithful-input branch may supply the ray.</p>
+<p data-source-page="21"><strong>Theorem 8.5</strong> (Universal complete-history lower bounds)<strong>.</strong><em> For every stationary autonomous qutrit</em> <em>realization of the entire delayed trine process at any feasible</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00473.svg" alt=" 0 &lt; λ &lt; 1," style="width:5.0617em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="equation-44" data-source-page="21"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00474.svg" alt="R2 ≥48,
+R3 ≥145,
+Rn ≥437 3n−4
+(n ≥4).
+(44)" width="371.31" height="16.32" style="width:34.066em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 21, equation (44).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>R2 ≥48,
+R3 ≥145,
+Rn ≥437 3n−4
+(n ≥4).
+(44)</pre></details></figure>
+<p data-source-page="21"><em>Proof.</em> Retain the preliminary notation<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00475.svg" alt=" A = {j :" style="width:4.0782em;height:1.1605em;vertical-align:-0.23em" loading="lazy"/> rank Φ<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00476.svg" alt="j(I) = 3}, B = {j :" style="width:8.4447em;height:1.2508em;vertical-align:-0.23em" loading="lazy"/> rank<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00477.svg" alt=" Ej = 3}" style="width:3.7927em;height:1.3106em;vertical-align:-0.23em" loading="lazy"/>, and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00478.svg" alt=" a = |A|," style="width:3.9200em;height:1.1605em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00479.svg" alt="b = |B|" style="width:3.2733em;height:1.1608em;vertical-align:-0.23em" loading="lazy"/>. The baseline support-incidence proof gives<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00480.svg" alt=" a + b ≥" style="width:3.6992em;height:1.1608em;vertical-align:-0.23em" loading="lazy"/>3, and every pair state/effect has rank at least two. There are forced rank-three states in<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00481.svg" alt=" A × A" style="width:3.1569em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> and forced rank-three effects in<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00482.svg" alt=" B × B. If b = 2," style="width:7.4810em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00483.svg" alt=" k" style="width:0.9931em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> be the sole index outside<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00484.svg" alt=" B" style="width:1.2222em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/>. The lemma implies that at least one of the two additional effects <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00485.svg" alt="Fjk, j ∈B" style="width:4.7647em;height:1.2512em;vertical-align:-0.23em" loading="lazy"/>, has rank three. Consequently<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00486.svg" alt=" SF ≥" style="width:2.8325em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/>18 + 4 + 1 = 23, improving the old 22. Stationary adjoint reversal preserves the full passive law and exchanges state/effect ranks with transposed indices. Thus<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00487.svg" alt=" a" style="width:1.0097em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 2 similarly implies<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00488.svg" alt=" Sσ ≥" style="width:2.6587em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>23. The complete rank-sum bounds are therefore</p>
+<figure class="sr-formula" id="display-95" data-source-page="21"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00489.svg" alt="Sσ ≥g(a),
+SF ≥g(b),
+(g(0), g(1), g(2), g(3)) = (18, 19, 23, 27)." width="334.11" height="14.20" style="width:30.653em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 21.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Sσ ≥g(a),
+SF ≥g(b),
+(g(0), g(1), g(2), g(3)) = (18, 19, 23, 27).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="21"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00490.svg" alt="Minimization under a + b ≥3 gives min g(a)g(b) = 19 · 23 = 437, at profiles (1, 2) or (2, 1). The
+alternatives (0, 3), (3, 0) cost at least 486; (2, 2) costs at least 529; all other allowed profiles are higher.
+Equation (39) proves the long-horizon bound.
+For completeness the short-horizon counting retains the labels, not just rank sums. Consider
+(a, b) = (1, 2), put h = |A ∩B| ∈{0, 1}, and let k /∈B. The old forced pairs yield R2 ≥46 + h2 and
+R3 ≥138 + 2h. The new faithful Fjk adds at least sjk ≥2 at horizon two. At horizon three it adds
+∑︁
+l skl, which is at least seven when k ∈A (h = 0), and at least six when k /∈A (h = 1). Thus" width="487.52" height="96.70" style="width:44.727em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 21.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Minimization under a + b ≥3 gives min g(a)g(b) = 19 · 23 = 437, at profiles (1, 2) or (2, 1). The
+alternatives (0, 3), (3, 0) cost at least 486; (2, 2) costs at least 529; all other allowed profiles are higher.
+Equation (39) proves the long-horizon bound.
+For completeness the short-horizon counting retains the labels, not just rank sums. Consider
+(a, b) = (1, 2), put h = |A ∩B| ∈{0, 1}, and let k /∈B. The old forced pairs yield R2 ≥46 + h2 and
+R3 ≥138 + 2h. The new faithful Fjk adds at least sjk ≥2 at horizon two. At horizon three it adds
+∑︁
+l skl, which is at least seven when k ∈A (h = 0), and at least six when k /∈A (h = 1). Thus</pre></details></figure>
+<figure class="sr-formula" id="display-96" data-source-page="21"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00491.svg" alt="R2 ≥48 + h2 ≥48,
+R3 ≥145 + h ≥145." width="214.03" height="18.65" style="width:19.636em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 21.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>R2 ≥48 + h2 ≥48,
+R3 ≥145 + h ≥145.</pre></details></figure>
+<p data-source-page="21">Stationary reversal gives the same bounds for (2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00492.svg" alt="," style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1): its word Choi matrices are invertible congruences of adjoints of reversed word maps, so total word Choi ranks are unchanged. The extreme profiles give <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00493.svg" alt="54," style="width:1.4304em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> 162, while the remaining profiles already exceed 48<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00494.svg" alt="," style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 145 from the old forced counts alone. This proves all three inequalities.</p>
+<p data-source-page="21">The exact integer verifier supplement/memory/six/resources/verify_support_bound.py enumerates all 93 minimal labelled patterns after these forced additions and reproduces 48<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p021-00495.svg" alt=", 145, 437." style="width:4.3281em;height:1.1457em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="22">It is a check of the finite counting argument, not a test of CP attainability. The analytical lemma supplies that necessary dynamical constraint; no claim that 437 is attained follows. A necessary condition for attaining 437 is now more concrete. In the (1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00496.svg" alt="," style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 2) case, exactly one faithful-input branch must map some pure input to the kernel ray of the sole plane-supported effect, while the other branch must avoid that ray in its image. The dual statement applies to (2<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00497.svg" alt="," style="width:0.4205em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 1). Our strictly supported-positive two-plane branches avoid both pure-output degeneracies, explaining their stable 456 coefficient.</p>
+<h3 id="section-resources-and-limits">Resources and limits</h3>
+<p data-source-page="22">The source’s minimum internal memory dimension is three: the nine-by-nine past/future predictive ma-trix has ordinary rank nine, so any<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00498.svg" alt=" d" style="width:0.9292em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-dimensional quantum realization needs<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00499.svg" alt=" d2 ≥" style="width:2.4179em;height:1.5225em;vertical-align:-0.23em" loading="lazy"/>9. An implementation of the specified one-step instrument can use a fresh pure fifteen-dimensional port and a three-symbol classical record per clock tick. The independently initialized ports do not carry preinstalled history, and the stationary initial memory and any retained purifier are declared stock. No returning environment, feedback archive or history-dependent external preparation is used. A time-homogeneous Stinespring isometry exists for the CP instrument; the construction here is an operational quantum-source model, not a specified laboratory Hamiltonian, energy budget or clock design. <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00500.svg" alt="Rn" style="width:1.3636em;height:1.2257em;vertical-align:-0.23em" loading="lazy"/> minimizes the pure remainder of the complete final channel, allowing a global dila-tion/compression for that channel. It is not the product of one-step minima and does not prove a causal apparatus can store its entire working bath in dimension<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00501.svg" alt=" Rn" style="width:1.6865em;height:1.2316em;vertical-align:-0.23em" loading="lazy"/> at every intermediate time. The simple fresh-port implementation uses raw port dimension 15<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00502.svg" alt="n" style="width:0.6118em;height:0.8686em;vertical-align:-0.23em" loading="lazy"/> before any compression. The prior <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00503.svg" alt="k" style="width:0.6611em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 9 source therefore remains better on the separate one-step objective, while this source is better on the declared complete history objective. Both retain final memory and a sharp classical archive; neither comparison gives a hardware, speed, work or thermodynamic advantage. The rational coherence table, algebraic CP maps and resource theorem extend the operator-support analysis to the mixed-support source defined here. Standard quantum probabilities, admitted preparation/intervention class, fresh stock, stationary clock, reference and archive conditions remain assumptions. The result supplies neither a new Born-selection principle nor an ontology or consciousness mechanism.</p>
+<h3 id="section-two-typed-horizon-tasks-do-have-exact-qutrit-optima">Two typed horizon tasks do have exact qutrit optima</h3>
+<p data-source-page="22"><strong>Stationary memory–archive state, initial purifier omitted.</strong> For the fixed stationary input and no retained original purifier, the state is</p>
+<figure class="sr-formula" id="display-97" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00504.svg" alt="Ωn =
+∑︂
+w
+P(w)|w⟩⟨w|A ⊗σwn−1wn." width="163.43" height="24.89" style="width:14.993em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ωn =
+∑︂
+w
+P(w)|w⟩⟨w|A ⊗σwn−1wn.</pre></details></figure>
+<figure class="sr-formula" id="display-98" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00505.svg" alt="Orthogonal archive blocks give" width="148.47" height="12.51" style="width:13.621em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Orthogonal archive blocks give</pre></details></figure>
+<figure class="sr-formula" id="equation-45" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00506.svg" alt="rank Ωn = 3n−2Sσ ≥2 3n
+(n ≥2).
+(45)" width="333.36" height="16.47" style="width:30.584em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 22, equation (45).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>rank Ωn = 3n−2Sσ ≥2 3n
+(n ≥2).
+(45)</pre></details></figure>
+<p data-source-page="22">The known orbit source has all nine conditional states of rank two, and attains equality throughout its certified feasible range. This is a complete fixed-input state-rank optimum among the declared qutrit sources. It is a minimum dimension of a global purifier for that state, not a proof of the smallest causal apparatus implementing every intermediate operation.</p>
+<figure class="sr-formula sr-source-panel" data-source-page="22"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p022-00507.svg" alt="Archive-only channel, original input reference retained.
+If final memory is deliberately omitted,
+the channel is
+Dn(X) =
+∑︂
+w
+Tr(Ψw(X))|w⟩⟨w|A." width="485.67" height="50.09" style="width:44.557em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 22.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Archive-only channel, original input reference retained.
+If final memory is deliberately omitted,
+the channel is
+Dn(X) =
+∑︂
+w
+Tr(Ψw(X))|w⟩⟨w|A.</pre></details></figure>
+<p data-source-page="23">Its word Choi blocks are transposed effects, so</p>
+<figure class="sr-formula" id="equation-46" data-source-page="23"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00508.svg" alt="rank J(Dn) = 3n−2SF ≥2 3n
+(n ≥2).
+(46)" width="342.12" height="16.37" style="width:31.388em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 23, equation (46).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>rank J(Dn) = 3n−2SF ≥2 3n
+(n ≥2).
+(46)</pre></details></figure>
+<p data-source-page="23">The stationary adjoint reverse of the orbit source attains this lower bound: its pair effects are congruent to the forward pair states and therefore all have rank two. The reverse is an explicit stationary source with the same complete passive word law. At the known one-step optimum its Kraus ranks are unchanged by adjunction, so its reusable memory is three and its one-step pure apparatus cost is nine as before. The pure Stinespring remainder in (46) includes the omitted final memory. It must not be called an additional external bath independently of that memory. In contrast<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00509.svg" alt=" Rn" style="width:1.6877em;height:1.2335em;vertical-align:-0.23em" loading="lazy"/> retains final memory and counts an external purifying remainder. If the original stationary purifier is retained in (45), faithful<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00510.svg" alt=" τ" style="width:0.9136em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> makes the resulting joint-state rank equal to<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-completions/math/p023-00511.svg" alt=" Rn" style="width:1.6985em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/>, by an invertible input congruence of the Choi matrix; the smaller marginal-state rank cannot be substituted for it.</p>

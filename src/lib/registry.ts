@@ -1,3 +1,4 @@
+import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import {paperIntegrations} from '@/config/paper-integrations';
 import {continuityNote} from '@/lib/continuity-note';
 import {relationalAwareness} from '@/lib/relational-awareness';
@@ -66,7 +67,7 @@ export interface LoadedPaper {
   supplementPdfUrl?: string;
   texUrl?: string;
   markdownUrl?: string;
-  researchProgramme?: 'quantum-measurement' | 'consciousness';
+  researchProgramme?: 'quantum-measurement' | 'consciousness' | 'source-readout';
   /** Problem slugs this paper supports. */
   supports: string[];
   /** For superseded records: slug of the current canonical paper that replaced it. */
@@ -249,6 +250,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
         ? raw.category
         : 'historical';
 
+    const sourceReadout = sourcePapers().find(p=>p.slug===slug);
     loaded.push({
       slug,
       rawId,
@@ -262,12 +264,12 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       summary: raw.summary,
       version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? `Version ${publication.version}` : raw.version,
       date: research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
-      webUrl: integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
-      pdfUrl: integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
+      webUrl: sourceReadout ? paperUrl(sourceReadout) : integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
+      pdfUrl: sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       supplementPdfUrl: raw.supplementPdfUrl,
-      texUrl: research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
-      markdownUrl: integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
+      texUrl: sourceReadout?.texUrl ?? research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
+      markdownUrl: sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
+      researchProgramme: sourceReadout ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

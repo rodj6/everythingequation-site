@@ -1,0 +1,2840 @@
+[
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      95.33999633789062,
+      106.10208129882812,
+      516.7039184570312,
+      145.23545837402344
+    ],
+    "text": "Technical Supplement: Continuous Reader Optimization and\nDeployment Interfaces"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      230.88600158691406,
+      162.39541625976562,
+      381.1269836425781,
+      202.24563598632812
+    ],
+    "text": "Jeremy Rodgers\nIndependent Researcher\nwww.everythingequation.com"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      263.8909912109375,
+      214.61544799804688,
+      348.1513366699219,
+      226.57064819335938
+    ],
+    "text": "27 October 2026"
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      284.23699951171875,
+      255.41375732421875,
+      328.0723876953125,
+      265.3763732910156
+    ],
+    "text": "Abstract"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      92.0719985961914,
+      272.6923828125,
+      522.0811157226562,
+      342.35284423828125
+    ],
+    "text": "We give supporting methods and restricted benchmarks for common-sign readout of a fixed four-\nstate qubit source: deterministic measurement allocation, an expanded rational menu, continuous-risk\nlower backups, fixed-nuisance polynomial certificates and physical timing/calibration interfaces.\nEvery result retains its own measurement and stability contract. These methods support the\nassociated reader frontiers without settling the remaining adjacent copy thresholds or a universal\ntotal-resource optimum."
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      353.750244140625,
+      549.3190307617188,
+      486.51678466796875
+    ],
+    "text": "This supplement develops optimization and deployment interfaces within Shadow Theory’s pre-existing\nsource–readout programme [5]. It supplies independently checkable methods for the fixed-label four-\nstate source. Copies are independent conditional on one label throughout a block; the preparation\ncontroller is inaccessible. The shared detector law is E±|θ = η(I ±v[cos θX +sin θY ])/2, E0|θ = (1−η)I.\nThe asymmetric parent separately applies one fixed Pauli channel with multipliers (gX, gY , gXgY )\nbefore a reader with fixed phase offset δ and independent sign-blind erasure. These response laws\nare premises, not inferred from equal one-copy marginals. The current one-percent copy intervals\nare [13, 14] nominally and [16, 17] for the specified asymmetric robust task, separately for both local\npolicy classes. Supporting lower comparisons and unsuccessful candidates do not alter those status\nstatements."
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      507.1576843261719,
+      127.88025665283203,
+      521.5038452148438
+    ],
+    "text": "Contents"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      534.2528686523438,
+      547.39599609375,
+      599.3858032226562
+    ],
+    "text": "1\nA physically admissible weighted completion-design frontier\n2\n1.1\nSource, allowed interventions and retained outputs . . . . . . . . . . . . . . . . . . . .\n2\n1.2\nAn exact ideal fixed-schedule optimum . . . . . . . . . . . . . . . . . . . . . . . . . . .\n3\n1.3\nExact rational noisy design with matching certificates\n. . . . . . . . . . . . . . . . . .\n4\n1.4\nControlled deviations and fair physical accounting\n. . . . . . . . . . . . . . . . . . . .\n5"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      612.9078979492188,
+      547.3850708007812,
+      664.4917602539062
+    ],
+    "text": "2\nA larger rational measurement menu: the copy gap closes but feedback still helps\n6\n2.1\nDeclared settings, noise and symmetry . . . . . . . . . . . . . . . . . . . . . . . . . . .\n6\n2.2\nExact adaptive and randomized-nonadaptive certificates . . . . . . . . . . . . . . . . .\n7\n2.3\nImplementation and limits . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n8"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.79996490478516,
+      678.0138549804688,
+      547.3739624023438,
+      729.5968017578125
+    ],
+    "text": "3\nNominal threshold: a checked obstruction and a continuous lower-backup method\n9\n3.1\nThe thirteen-copy operator comparison . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9\n3.2\nA rational lower dynamic programme for the full circle . . . . . . . . . . . . . . . . . .\n9\n3.3\nExact demonstrations and scalability ceiling . . . . . . . . . . . . . . . . . . . . . . . .\n11"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.13810729980469,
+      547.3851318359375,
+      145.90081787109375
+    ],
+    "text": "4\nOriginal robust task: fixed-nuisance certification and an unresolved sixteen-copy\nendpoint\n11\n4.1\nA three-variable exact interface for a frozen reader . . . . . . . . . . . . . . . . . . . .\n11\n4.2\nExact Bernstein cover certificates . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n12\n4.3\nWhy gain-endpoint checks alone are invalid\n. . . . . . . . . . . . . . . . . . . . . . . .\n13\n4.4\nSearches and exact updated status . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n13"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.8000259399414,
+      159.42385864257812,
+      547.36328125,
+      197.45782470703125
+    ],
+    "text": "5\nUniform angular approximation\n14\n5.1\nA certified angular-net transfer, not a grid optimum\n. . . . . . . . . . . . . . . . . . .\n14\n5.2\nVerification and exact status . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n14"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.8000259399414,
+      210.97988891601562,
+      547.3851318359375,
+      289.661865234375
+    ],
+    "text": "6\nFrom the continuous feedback gap to a physical resource certificate\n15\n6.1\nA nonzero noise and control-error operating region . . . . . . . . . . . . . . . . . . . .\n15\n6.2\nActual phase travel, rather than a generic switch charge . . . . . . . . . . . . . . . . .\n16\n6.3\nA full-menu copy advantage with a conditional time advantage\n. . . . . . . . . . . . .\n18\n6.4\nFinite calibration covering all continuous angles . . . . . . . . . . . . . . . . . . . . . .\n18\n6.5\nReproducible checks and remaining limits . . . . . . . . . . . . . . . . . . . . . . . . .\n20"
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.8000259399414,
+      310.3157653808594,
+      512.3869018554688,
+      324.6619567871094
+    ],
+    "text": "1\nA physically admissible weighted completion-design frontier"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      337.2469787597656,
+      549.0147094726562,
+      415.9867858886719
+    ],
+    "text": "The deterministic collision test identifies whether a target is exactly fixed by a record. A physical\nquantum reader also needs a quantitative error analysis when different targets can produce the\nsame finite record. Here rational record likelihoods and exact optimization close that gap for one\nfinite, explicitly specified phase-source experiment. This is a new programme-specific construction,\nindependent of the ETH theorem; it demonstrates a substantive consumer of the weighted-completion\ninterface. It is not a faster implementation of the ETH algorithm."
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      433.3433532714844,
+      395.0264892578125,
+      445.2985534667969
+    ],
+    "text": "1.1\nSource, allowed interventions and retained outputs"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      454.5838317871094,
+      547.27685546875,
+      479.19677734375
+    ],
+    "text": "Use a two-mode one-excitation register with computational basis |0⟩, |1⟩and equal populations. The\nfinite preparation promise is"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      208.98800659179688,
+      491.71380615234375,
+      403.0147399902344,
+      504.4667663574219
+    ],
+    "text": "ρX± = (I ± X)/2,\nρY ± = (I ± Y )/2."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      506.37481689453125,
+      363.9282531738281,
+      526.3468017578125
+    ],
+    "text": "Equivalently their phases are 0, π, π/2, 3π/2 in (|0⟩+ eiϕ|1⟩)/\n√"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      515.44970703125,
+      549.4863891601562,
+      729.6206665039062
+    ],
+    "text": "2. All four preparations have the same\nseparate-mode intensity readout (1/2, 1/2). The target is only the sign class: R(X+) = R(Y +) = +\nand R(X−) = R(Y −) = −. This target is an externally nominated function on the finite preparation\nset, not the eigenvalue of a quantum observable assigned to all states.\nA source label h is chosen once and held fixed for an experiment. Conditional on h, the source\nsupplies independent copies ρ⊗B\nh\n, independent of the reader ready stock. This is a preparation promise,\nnot a conclusion from matching one-copy marginals or from resetting a device. The source controller\nretaining h is declared preparation stock and is unavailable to the decoder; no generator-memory\nseparation is inferred from this experiment.\nThe permitted experiment menu consists of a fixed, nonadaptive schedule: nX copies measured\nwith the X reader and nY with the Y reader. The two incompatible observables act on different copies.\nNeither is silently assumed jointly measurable on the same source. The Z intensity reader alone yields\nexactly uniform outcome sequences for all h and cannot improve worst-case sign error below 1/2.\nA phase-controlled beam splitter implements the ideal reader: rotate by Ua = exp(−iθaZ/2) with\nθX = 0, θY = −π/2 under a fixed phase convention, then apply a Hadamard beam splitter and\ndetect the two terminal paths. The convention can equivalently be fixed by the effects below. A"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      64.84889221191406,
+      547.4850463867188,
+      118.80279541015625
+    ],
+    "text": "controlled Hamiltonian Hz = ℏΩzZ/2 realizes the phase rotation in duration |θa|/|Ωz|, with the sign\nof the drive declared. The beam splitter and detector have separately allotted durations; there is no\ninstantaneous-pulse or speed optimum claim.\nThe calibrated noisy reader has terminal effects"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      174.6400146484375,
+      126.65321350097656,
+      216.0668487548828,
+      147.6077880859375
+    ],
+    "text": "E(a)\n± = η"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      210.82200622558594,
+      130.58013916015625,
+      548.4788208007812,
+      152.4398193359375
+    ],
+    "text": "2(I ± vσa),\nE(a)\n0\n= (1 −η)I,\n0 ≤η, v ≤1,\n(1)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      160.98719787597656,
+      549.6231079101562,
+      293.8517761230469
+    ],
+    "text": "where σX = X, σY = Y . A realization measures the ideal Pauli observable, flips its reported sign with\nindependent probability (1 −v)/2, and independently replaces it with a null with probability 1 −η.\nFresh independent coin/environment stock per copy is admitted and counted as apparatus resources.\nThe ordered record retains every setting, terminal sign, null and time. Environments may remain\nretained but unread; no assertion equates their complete quantum channels.\nThis specifies effects and a conventional realization rather than importing a complete apparatus-\nresponse certificate from terminal counts. It is an ideal/specified-noise reader construction, not a\nsolution of arbitrary detector mismatch. A separate phase-to-record model can supply perturbation\nbudgets only when its preparation, access and output assumptions match. No delayed-trine resource\nbound is inferred from this copy-allocation task."
+  },
+  {
+    "page": 3,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      311.3543701171875,
+      324.347412109375,
+      323.3095703125
+    ],
+    "text": "1.2\nAn exact ideal fixed-schedule optimum"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      330.9718017578125,
+      549.6224975585938,
+      370.7577819824219
+    ],
+    "text": "Let e∗(nX, nY ) be the minimum over all randomized terminal decoders of the maximum sign error over\nthe four possible source labels. It includes the entire original population, with no click postselection.\nIn this subsection η = v = 1."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.36001586914062,
+      382.2098083496094,
+      415.6941223144531,
+      394.806884765625
+    ],
+    "text": "Theorem 1.1 (Target-relative phase-reader allocation). For nX, nY ≥1,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      245.78402709960938,
+      403.91668701171875,
+      548.4788818359375,
+      429.68878173828125
+    ],
+    "text": "e∗(nX, nY ) =\n1\n2nX + 2nY .\n(2)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      438.0428161621094,
+      547.2399291992188,
+      477.8298034667969
+    ],
+    "text": "If either count is zero, e∗= 1/2. At total copy budget B ≥2, the optimal permitted allocation is\n(1, B −1) or its swap, giving e∗\nB = 1/(2 + 2B−1). The minimum worst-case error for identifying the\nfull four-valued label under the same fixed schedule is 2/(2nX + 2nY ) when both counts are positive."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      489.42218017578125,
+      548.7432861328125,
+      513.893798828125
+    ],
+    "text": "Proof. An X+ source gives only plus signs at the X reader and fair independent signs at the Y reader;\nexchange signs or axes for the other sources. Apart from the two opposing corners"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      181.572998046875,
+      527.3388061523438,
+      430.4287109375,
+      538.4027709960938
+    ],
+    "text": "A = (X all +, Y all −),\nB = (X all −, Y all +),"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      549.2969970703125,
+      548.7190551757812,
+      711.9517822265625
+    ],
+    "text": "the record determines the target sign. Corner A has probability a = 2−nY under X+ and b = 2−nX\nunder Y −. If a decoder chooses + there with probability q, its worst error is at least max{a(1 −q), bq},\nwhose minimum is ab/(a + b). Choosing q = a/(a + b) at A, 1 −q at B, and the uniquely determined\nsign elsewhere attains this bound on all four sources. If one axis is absent, the two opposite signs of\nthat axis induce identical records, which forces worst error at least 1/2; a fair guess attains it.\nFor fixed B and positive counts, maximize 2nX + 2B−nX. This convex function has its maximum on\nthe integer interval 1 ≤nX ≤B −1 at an endpoint. For full-label discrimination, all four constant-sign\ncorners have two possible labels, one from each axis. Assign the X label with probability a/(a + b)\nat each corner. Each source then incurs error 2ab/(a + b). For a matching lower bound, use prior\nweights α/2 on each X label and (1 −α)/2 on each Y label with α = b/(a + b). At each corner the two\nweighted likelihoods are equal, contributing ab/[2(a + b)] to every decoder’s Bayes error. Summing four\ncorners gives the claimed lower bound."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.09080505371094,
+      547.777587890625,
+      308.4917907714844
+    ],
+    "text": "For eight source copies, the target-optimal schedule (1, 7) has error 1/130 ≃0.0076923, while the\nbalanced (4, 4) schedule has error 1/32 = 0.03125. The comparison charges the same eight copies, one\nreadout per copy, both calibrated axes and the same retained archive. It is not comparison against\nan optimal arbitrary POVM or adaptive protocol. For a one-percent sign-error target the optimal\nmenu schedule needs eight copies, while balanced or nearly balanced schedules need twelve. Full-label\nidentification optimized over the same menu needs nine. Thus target choice and experiment allocation\nboth change the accessible-resource requirement. The eight-copy one-percent guarantee does not require\nan exact biased decision coin: with (1, 7), return the common Y sign if all seven Y results agree, and\notherwise return the single X result. Its worst error is 1/128 < 1/100. This deterministic decoder\ngives a nearby constructive repair when ideal rational randomization is unavailable; the sharper 1/130\nremains the randomized-class optimum. Extend the rule to every record by returning + whenever a\nnull occurs. Those records have zero nominal probability but must have a declared decision before\napplying an actual-device perturbation bound.\nEvery finite positive-count experiment still has a record compatible with opposite target values. On\nthe admissible relation of source labels and possible outcome records, an exact support-only completion\ntest correctly rejects zero-error sufficiency at every finite budget. A small weighted error is a different\ntarget and is not called an exact repair of that collision. This is why the likelihood/weight extension\nadds something the Boolean collision oracle alone cannot supply."
+  },
+  {
+    "page": 4,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      325.9933776855469,
+      412.1822814941406,
+      337.9485778808594
+    ],
+    "text": "1.3\nExact rational noisy design with matching certificates"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      347.38970947265625,
+      411.9512634277344,
+      377.12078857421875
+    ],
+    "text": "From (1), let\np(a)\nh (±) = η(1 ± vra(h))/2,\np(a)\nh (0) = 1 −η,"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      382.7108154296875,
+      547.239013671875,
+      408.3150634765625
+    ],
+    "text": "where rX(X±) = ±1, rY (Y ±) = ±1 and the cross-axis values are zero. For rational η, v these are\nrational probabilities. A setting’s histogram k = (k+, k−, k0) has probability"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      234.18899536132812,
+      418.59918212890625,
+      379.0087585449219,
+      445.37506103515625
+    ],
+    "text": "n!\nk+!k−!k0!p(+)k+p(−)k−p(0)k0."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      455.3279724121094,
+      549.5487670898438,
+      561.165771484375
+    ],
+    "text": "The product of the two setting histograms is sufficient for this likelihood task: under the declared\nconditional product law, all permutations with the same histogram have identical likelihood ratios.\nThe complete ordered physical archive is retained; the decoder’s sufficient statistic does not erase\nor return it to the source. For fixed setting counts, there are only\n\u0000nX+2\n2\n\u0001\u0000nY +2\n2\n\u0001 histograms. Their\nrational probabilities can already be computed in polynomial time here; the ETH algorithm is not\nneeded or claimed to speed this simple special case.\nWrite the four likelihoods at record o as PX+(o), PX−(o), PY +(o), PY −(o). For any α ∈[0, 1], every\ndecoder has worst-case error at least"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      131.0590057373047,
+      569.0816650390625,
+      175.1835479736328,
+      587.3707885742188
+    ],
+    "text": "L(α) = 1"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      169.72900390625,
+      583.9447021484375,
+      175.1835479736328,
+      594.8538208007812
+    ],
+    "text": "2"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      178.19700622558594,
+      574.6503295898438,
+      192.59295654296875,
+      584.6129760742188
+    ],
+    "text": "X"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      183.34600830078125,
+      576.3068237304688,
+      548.4788818359375,
+      597.9351806640625
+    ],
+    "text": "o\nmin{αPX+(o) + (1 −α)PY +(o), αPX−(o) + (1 −α)PY −(o)}.\n(3)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      608.1956176757812,
+      549.5822143554688,
+      646.1558227539062
+    ],
+    "text": "This is the Bayes risk for an explicit prior, not an assumption that the source actually uses that prior.\nThe function is concave piecewise linear. Its maximum occurs at an endpoint or at a rational crossing\nof its two affine record weights."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      663.9573364257812,
+      549.3193359375,
+      730.0439453125
+    ],
+    "text": "Exact construction and certificate.\nEnumerate those breakpoints and select a maximizing α∗.\nOn non-tied records use the weighted likelihood-ratio decision. On tied records construct two policies\nminimizing and maximizing the difference between the X-axis and Y -axis average errors. Symmetrize\nunder global sign reversal so the errors of the two signs within each axis agree. Every such policy\nattains L(α∗) at its nominated prior. If 0 < α∗< 1, optimality of the concave maximum makes"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.16098022460938,
+      549.385986328125,
+      227.19677734375
+    ],
+    "text": "the two attainable error-difference endpoints bracket zero; mix them to equalize the axis errors. At\nα∗= 0, choose the endpoint whose X error does not exceed its Y error; at α∗= 1 choose the converse.\nOne-sided maximality supplies the respective endpoint condition. Thus the constructed policy’s worst\nerror equals the lower bound L(α∗). This proves exact minimax optimality for each schedule.\nThe implementation retains a simpler independently checkable certificate: all rational likelihoods,\nthe prior α∗, and a rational decision probability q(o) for each histogram. Recomputing each of the four\nerrors gives an upper bound. Evaluating (3) gives a lower bound. Equality is an exact zero primal/dual\ngap; it requires no floating optimizer or assumption of numerical convergence. For any histogram\nabsent from the union of nominal supports, the exported decoder returns +; this completes it on actual\nperturbed records.\nWith calibrated η = 4/5 and v = 9/10, enumerate every fixed schedule of at most B copies at unit\ncost:"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      130.9149932861328,
+      234.32118225097656,
+      481.0858459472656,
+      313.3878173828125
+    ],
+    "text": "Budget B\nCertified optimal (nX, nY )\nExact minimax error\n2\n(1, 1)\n71/250\n4\n(2, 2)\n229/1250\n6\n(3, 3)\n94003/781250\n8\n(4, 4)\n8077061/97656250\n10\n(4, 6) or (6, 4)\n3252843423709/56955566406250"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      323.3742370605469,
+      549.5687255859375,
+      401.94378662109375
+    ],
+    "text": "This table minimizes over a single deterministic X/Y count allocation and its minimax decoder. It does\nnot optimize mixtures over different allocations; the randomized-schedule comparator is a broader class.\nIn particular, at budget eight this fixed-allocation optimum error is 0.08270910464, while the formerly\nideal-optimal (1, 7) schedule has error 726821937001/4803417968750 ≃0.1513134900. Noise changes\nthe optimal design. Balanced allocation is not asserted optimal at all budgets: the exact ten-copy\nresult is asymmetric. The data are mathematical model outputs, not experimental measurements."
+  },
+  {
+    "page": 5,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      419.1063537597656,
+      390.78240966796875,
+      431.0615539550781
+    ],
+    "text": "1.4\nControlled deviations and fair physical accounting"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      440.34783935546875,
+      547.4521484375,
+      492.05877685546875
+    ],
+    "text": "Suppose deterministic bounds δt ∈[0, 1] control the total variation between actual and nominated\nconditional outcome laws at every matched past history. Sequential maximal coupling keeps the records\nmatched at step t, conditional on matching so far, with probability at least 1 −δt. Consequently the\ncomplete classical-record distance is at most"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      236.6790008544922,
+      512.0458374023438,
+      281.154296875,
+      524.7987670898438
+    ],
+    "text": "κB = 1 −"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      284.1500244140625,
+      501.7940979003906,
+      296.8822326660156,
+      520.3519287109375
+    ],
+    "text": "B\nY"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      283.5760192871094,
+      510.38934326171875,
+      362.0730285644531,
+      534.5040893554688
+    ],
+    "text": "t=1\n(1 −δt) ≤\nX"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      353.34405517578125,
+      512.1871948242188,
+      375.3237609863281,
+      534.2601928710938
+    ],
+    "text": "t\nδt."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      542.63427734375,
+      548.2913208007812,
+      730.5880737304688
+    ],
+    "text": "Independence is not needed under this stronger uniform conditional contract; one-copy marginal bounds\ndo not imply it. The product bound is sharp as a record-distance statement: compare a nominal all-zero\nword with independent per-position flips of probabilities δt. Every fixed classifier’s error increases by at\nmost κB. This is not a claim of robust minimax optimality and covers classical outputs, not residual\nquantum baths.\nFor example, the eight-copy ideal (1, 7) decoder retains a one-percent worst-case error guarantee\nwhenever the actual conditional laws obey δt ≤1/4000 at every history: the exact rational bound\n1/130 + 1 −(3999/4000)8 is strictly below 1/100. This makes the finite design’s calibration allowance\nquantitative without inferring future stability from past calibration alone. The deterministic decoder\nalso passes: replace 1/130 by 1/128 in that bound, obtaining approximately 0.0098107509 < 0.01\nwithout a randomized-decision port.\nFor the specific reader family, changing (η0, v0) to (η, v) changes each one-copy outcome law by at\nmost\n|η −η0| + η0|v −v0|/2."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.16098022460938,
+      549.6114501953125,
+      281.39276123046875
+    ],
+    "text": "Trace-distance preparation error δS adds at most δS. These are explicit consumers for a certified\ncalibration/drift budget. An unconditional one-copy marginal estimate alone does not justify the\nsequential conditional promise or independent fresh apparatus stock.\nThe resource optimized above is only source-copy/readout count within the declared menu. Each\ntrial consumes an independent preparation and reader port, a calibrated phase setting and clock interval.\nThe archived setting and three-outcome record remain append-only and unavailable to future source\noperations. Histogram counters and the final decoder are additional classical resources. Randomized\ndecisions also consume independent ready stock. An exact rational coin can be admitted as a separately\ncalibrated qubit prepared by a finite rotation: Hc = ℏΩcY/2 for duration 2 arcsin √q/Ωc, followed by a\nterminal computational measurement. Its preparation and parameter accuracy are not free. With only\nfair bits, exact rational rejection sampling has finite expected cost but unbounded stopping time; a\nfinite deadline requires an explicit residual error margin. No total energy, hardware or thermodynamic\noptimum follows.\nFor example, a continuous equatorial bisector-basis measurement is outside this menu and can\noutperform some small-budget axis schedules. There is also a useful unrestricted lower comparison for\nevery always-deciding measurement on B copies, collective or otherwise:"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      246.84500122070312,
+      284.6578063964844,
+      302.8182678222656,
+      313.96588134765625
+    ],
+    "text": "eB ≥1 −\n√"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      302.8219909667969,
+      293.17181396484375,
+      340.0350341796875,
+      305.0517883300781
+    ],
+    "text": "1 −2−B"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      305.2090148925781,
+      301.5091857910156,
+      365.1577453613281,
+      319.914794921875
+    ],
+    "text": "2\n> 0."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      327.7008361816406,
+      547.6162109375,
+      352.338623046875
+    ],
+    "text": "Indeed restrict the four-label minimax problem to the opposite-target pair X+, Y −, whose B-copy\nsquared overlap is 2−B. Their trace distance is\n√"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.5270004272461,
+      340.4338073730469,
+      549.4161987304688,
+      487.8067932128906
+    ],
+    "text": "1 −2−B, obtained in their two-dimensional span.\nMaximizing Tr E(ρ −σ) over 0 ≤E ≤I gives this trace distance, so the optimal pair-average error\nis the displayed value; four-label worst error cannot be smaller. This is the established two-state\ntrace-distance bound, not a new global optimum. An unambiguous task with abstentions has a different\nobjective. Collective measurements and adaptive basis choices are also excluded from the present\noptimum. These limitations are essential: arbitrary quantum-state discrimination is established theory,\nand the new result is a sharply typed target-relative design example with exact noise certificates.\nGeneral discrimination and multiple-copy local/adaptive comparisons have established treatments[1,\n3]. The result here is a target-relative weighted access-design example with exact noise certificates\nunder the declared preparation and measurement restrictions. No worldwide novelty claim is made for\nBB84-family discrimination or the general idea of allocating measurements."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      508.3964538574219,
+      547.7866821289062,
+      540.786865234375
+    ],
+    "text": "2\nA larger rational measurement menu: the copy gap closes but\nfeedback still helps"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      553.3720092773438,
+      549.6008911132812,
+      618.5628051757812
+    ],
+    "text": "The axis-restricted result proved a nineteen-versus-twenty-one copy threshold inside its X/Y menu.\nThat statement does not imply a separation after additional phase settings become available. We\nmake a strict, exactly computable expansion of the same physical reader and compare both protocol\nclasses in that same expanded menu. The result distinguishes a surviving error advantage from a copy\nthreshold that no longer separates the classes."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      635.9674072265625,
+      323.7735290527344,
+      647.922607421875
+    ],
+    "text": "2.1\nDeclared settings, noise and symmetry"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      657.3626708984375,
+      412.5054016113281,
+      668.2717895507812
+    ],
+    "text": "Admit exactly four equatorial axes, listed by their unit direction vectors:"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      207.63101196289062,
+      681.0958251953125,
+      404.3716125488281,
+      692.1597900390625
+    ],
+    "text": "M = {(1, 0), (0, 1), (3/5, 4/5), (4/5, 3/5)}."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      705.1251831054688,
+      549.5731201171875,
+      729.5763549804688
+    ],
+    "text": "These are the original X/Y settings and two additional phase rotations θ = arctan(4/3) and arctan(3/4),\nimplemented by the specified controlled two-mode phase rotation, beam splitter and terminal detector."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.09080505371094,
+      549.6776123046875,
+      240.74578857421875
+    ],
+    "text": "The effects are E±|a = η(I ± v(caX + saY ))/2 and E0|a = (1 −η)I. We use the same known, fixed\ncommon parameters η = 4/5, v = 9/10 for every setting. No setting-dependent calibration or switching\ncost is silently inferred from that assumption. All four source preparations, unavailable source label,\nindependent fresh copies, fixed deadline and retained signs/nulls/settings keep the specified contract.\nDifferent observables act on different copies. This is a finite physical menu, not a discretization claimed\nto equal the continuous equatorial class.\nThe menu is closed under exchanging X and Y. Global source-sign reversal is implemented in a\nprotocol by reversing its recorded signs and final decision. These two symmetries act transitively on\nthe source labels. Consequently the uniform-prior Bayes optimum is a lower bound for minimax risk\nand averaging an optimal policy over the four symmetries attains it with equal error on each label.\nTwo fair root bits suffice; our implementation resolves terminal posterior ties deterministically as plus\nbefore applying that root symmetry. This avoids charging an unneeded additional decision coin. The\nroot seed must remain available to the decoder and is a counted controller resource."
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      258.2473449707031,
+      425.9426574707031,
+      270.2025451660156
+    ],
+    "text": "2.2\nExact adaptive and randomized-nonadaptive certificates"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      279.5589904785156,
+      547.3035888671875,
+      331.2007751464844
+    ],
+    "text": "For this menu all likelihoods have denominator D = 125. For the X reader the plus numerators\non (X+, X−, Y +, Y −) are (95, 5, 50, 50), and for the two new directions they are (77, 23, 86, 14) and\n(86, 14, 77, 23). Minus swaps each sign pair and every null numerator is 25. Let ka,o denote these\nfour-vectors. The exact recurrence on integer prior weights is"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      119.02799987792969,
+      341.2376708984375,
+      377.0076904296875,
+      367.0097961425781
+    ],
+    "text": "V0(w) = min(w1 + w3, w2 + w4),\nVt(w) = min\na∈M\n1\n125"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      392.98602294921875,
+      346.8063659667969,
+      407.3819885253906,
+      356.7689514160156
+    ],
+    "text": "X"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      380.02203369140625,
+      348.46282958984375,
+      492.9737548828125,
+      371.7620849609375
+    ],
+    "text": "o∈{+,−,0}\nVt−1(w ⊙ka,o)."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      384.0432434082031,
+      547.75146484375,
+      530.3588256835938
+    ],
+    "text": "Homogeneity permits division by the integer gcd of a weight vector, giving an exact rational memoized\ncomputation. Every action is included at each node. Selecting a minimizing action and then a\nterminal Bayes decision attains the lower bound. The preceding symmetry promotes the root value\nVB(1, 1, 1, 1)/4 to minimax equality over all randomized, nonanticipating protocols using this menu.\nFor nonadaptive protocols, conditional product likelihoods imply that an action sequence’s Bayes\nrisk depends only on its four action counts. Enumerate all\n\u0000B+3\n3\n\u0001 count allocations and all ternary\nhistograms within each setting. At a histogram the multiplicity-weighted contribution is the minimum of\nits two target likelihood sums, divided by four. This is an integer sum over 125B, with exact multinomial\nmultiplicities. A mixture of schedules has average Bayes risk at least the smallest component risk. Root\nsymmetrization of a minimizing schedule gives the matching minimax upper bound, so this comparator\nincludes every randomized nonadaptive schedule and terminal decision rule in the same menu."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      541.959228515625,
+      548.7161254882812,
+      566.4227905273438
+    ],
+    "text": "Theorem 2.1 (Finite expanded-menu frontier). For the specified four-setting menu and detector law,\nthe exact minimax errors are:"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      120.54299926757812,
+      575.34619140625,
+      491.4573974609375,
+      613.7658081054688
+    ],
+    "text": "B\nAdaptive\nRandomized nonadaptive\n4\n2062489/19531250\n414539/3906250\n8\n177227695861393/4768371582031250\n35860640527277/953674316406250"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      624.8832397460938,
+      547.233154296875,
+      649.2557983398438
+    ],
+    "text": "Both inequalities are strict, so feedback retains a genuine advantage within this larger menu. Nevertheless\nboth classes require exactly fourteen copies for one-percent worst-case sign error."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.51599884033203,
+      660.8616943359375,
+      547.659912109375,
+      725.9677734375
+    ],
+    "text": "Proof. The recurrence and full count-allocation enumeration above give exact lower and attaining upper\ncertificates. The saved four/eight-copy Bellman DAGs contain both terminal losses and every action\nvalue, and the checker verifies all equalities with rational arithmetic. Direct evaluation of the selected\npolicy’s four label errors supplies an additional upper check before group averaging. Nonadaptive\nhistogram sums are independently compared with ordered records on small horizons."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      67.23219299316406,
+      312.2738037109375,
+      78.15478515625
+    ],
+    "text": "For the copy threshold, at B = 13 the errors are"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      142.6840057373047,
+      86.72370910644531,
+      470.51470947265625,
+      112.49578857421875
+    ],
+    "text": "20475493238962971614182459\n1818989403545856475830078125,\n20862994861778108626565401\n1818989403545856475830078125,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      120.24122619628906,
+      342.61285400390625,
+      131.163818359375
+    ],
+    "text": "respectively, both greater than 1/100. At B = 14 they are"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      137.22900390625,
+      140.3377227783203,
+      475.96868896484375,
+      166.10980224609375
+    ],
+    "text": "162424078504800687452994223\n18189894035458564758300781250,\n165670382020832988542373811\n18189894035458564758300781250,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      173.8551788330078,
+      549.5902709960938,
+      238.97479248046875
+    ],
+    "text": "both less than 1/100. The exact computation enumerates all 560 and 680 nonadaptive count allocations\nat those horizons and covers all adaptive actions by the same Bellman recursion. Its code, inputs and\nexact values are delivered; large threshold DAGs can be regenerated instead of being duplicated as a\nlarge static archive. More copies cannot worsen either optimum because an extra record can be ignored.\nThe adjacent exact comparisons therefore establish the minimum budgets."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      250.3222198486328,
+      549.3192138671875,
+      410.28680419921875
+    ],
+    "text": "At eight copies the errors are approximately 0.03716734 and 0.03760261, both substantially lower\nthan the old X/Y values 0.06714193 and 0.07977783. At fourteen they are 0.00892936 and 0.00910783.\nThe best nonadaptive fourteen-copy allocation uses seven copies at each new oblique setting and none\nat X or Y. Thus a feasible broader nonadaptive reader already beats the nineteen-copy restricted\nadaptive budget. The original theorem remains correct in its original class, but its copy saving is not a\nmeasurement-menu-independent advantage.\nThere is a constructive repair at a stricter declared target. The fourteen-copy gap gives an entire\ninterval of tolerances for which the adaptive reader passes and every nonadaptive reader fails. For\nexample, at error tolerance 9/1000 the exact minimum budgets are fourteen adaptive versus fifteen\nrandomized nonadaptive copies. The thirteen-copy adaptive lower bound already exceeds this tolerance,\nand the fourteen-copy nonadaptive lower bound does too. For attainment at fifteen use the explicit\nallocation (0, 0, 7, 8) and its root-symmetrized counterpart; its exact error is"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      152.06100463867188,
+      419.4607238769531,
+      461.13671875,
+      445.2327880859375
+    ],
+    "text": "206141219809325120449786527454\n28421709430404007434844970703125 ≃0.00725294938 < 9/1000."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      452.4102478027344,
+      547.475830078125,
+      490.331787109375
+    ],
+    "text": "Thus an expanded-menu copy advantage survives on a specified accuracy frontier, although the original\none-percent separation closes. The 0.9% illustration was selected within the proved risk-gap interval\nafter calculation; it is not presented as a pre-registered experimental target or a universal advantage."
+  },
+  {
+    "page": 8,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      507.6033630371094,
+      251.8629913330078,
+      519.55859375
+    ],
+    "text": "2.3\nImplementation and limits"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      528.9149780273438,
+      549.5821533203125,
+      729.5775756835938
+    ],
+    "text": "research9/menu/expanded_reader.py supplies the exact kernels, generic finite-menu Bellman\ncalculation, direct policy risks, schedule optimization and certificate checker. Its public minimax\ninterface requires exact axis-swap closure; it rejects an asymmetric menu rather than incorrectly\nreusing uniform-prior minimax equality. Nominally unreachable branches have declared defaults.\nresearch9/menu/verify_menu.py checks 48 normalized-posterior reference problems, 16 ordered-\nrecord/histogram comparisons, malformed menus, a forged certificate, the four/eight-copy certificates\nand the thirteen/fourteen-copy thresholds. The replay runtime is hardware dependent; no asymptotic\nspeed claim follows from a particular execution time.\nThe added settings, feedback controller, root coins, phase accuracy and switching times are\nadditional apparatus resources. The current theorem optimizes copies and error within the declared\nmenu, not total physical cost. Unequal setting efficiencies, common phase drift and uncertain controls\nare separate physical parents requiring new bounds. These exact rational results supply a useful\nrestriction and benchmark for the continuous-menu investigation, not a global continuous optimum.\nThe methods extend established Bayesian/minimax decision theory and the previous programme’s\nsource–readout interface; no worldwide priority or new Born, trine or consciousness result is asserted."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      64.5816879272461,
+      550.06884765625,
+      96.86087036132812
+    ],
+    "text": "3\nNominal threshold: a checked obstruction and a continuous lower-\nbackup method"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      109.44601440429688,
+      547.7086791992188,
+      161.0877685546875
+    ],
+    "text": "The nominal one-percent copy threshold remains [13, 14] for each admitted reader class. This route\ndoes not establish thirteen-copy feasibility or impossibility. It supplies an exact thirteen-copy risk lower\ncertificate and a convergent continuous-action lower-backup construction, while identifying why the\ntested cheaper relaxations do not settle the endpoint."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      178.58934020996094,
+      327.07318115234375,
+      190.54454040527344
+    ],
+    "text": "3.1\nThe thirteen-copy operator comparison"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      199.90097045898438,
+      547.7239379882812,
+      253.17877197265625
+    ],
+    "text": "The local-effect grouped-target block representation and residual-corrected Gram dual bound also\nadmit a thirteen-click certificate. Rational Gram factorization and exact residual charging give, at\nthirteen trials,\ne13 ≥L13 = 0.009440886794141703 . . . ."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.22702026367188,
+      260.5740051269531,
+      549.5646362304688,
+      434.15777587890625
+    ],
+    "text": "The exact rational in research12/threshold/verification_results.json is authoritative. It\napplies to both declared local classes and is below 0.01: it cannot exclude thirteen copies. The supplied\nbaseline thirteen-copy policy has error 0.011026493473 . . .; the additional child-pool policy research12\n/nominal/policy_13_pool.json improves its certified error to 0.011009824045220384 . . ., still above\n0.01. The outward rational bounds are reproduced by research12/nominal/verify_nominal12.py.\nFourteen copies attain 0.008749337644 . . .. These are not matching lower and upper certificates.\nWe also tested a stricter first-step relaxation: the first command is local and chosen before erasures,\nand each posterior continuation is relaxed to a general permutation/local-transpose-invariant effect.\nThe posterior need not be sign symmetric, so all real Pauli coefficient degrees, including the identity,\nenter the continuation SDP. On nine sampled directions from zero to π/2, the smallest proposed bound\nwas about 0.00949372508, at the bisector; the axis endpoints gave about 0.01001652347. These are\nfloating explorations, not continuous certificates. Their failure to close the gap is recorded without\ntreating a sample minimum or solver status as proof."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      451.65936279296875,
+      419.9411926269531,
+      463.61456298828125
+    ],
+    "text": "3.2\nA rational lower dynamic programme for the full circle"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      472.9709777832031,
+      549.5686645507812,
+      578.8087768554688
+    ],
+    "text": "A finite angular menu normally restricts the reader and supplies upper, not lower, bounds on the\ncontinuous optimum. The following outer-action construction reverses that inclusion in a controlled way.\nLet w ∈R4\n+ be an unnormalized label weight vector. Write Vt(w) for minimum expected terminal-error\nmass with t trials remaining. Thus V0(w) = min(wX+ + wY +, wX−+ wY −). Every fixed continuation\nhas a four-component loss vector in [0, 1]4; Vt is their infimum. It is positively homogeneous, concave,\nand on the unit simplex is 1/2-Lipschitz in ℓ1 distance. For normalized w, the last statement follows\nbecause any loss vector has range at most one and P\nh(wh −w′\nh) = 0.\nFor a real pair a = (c, s) define the nominal kernels"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      148.89195251464844,
+      589.817138671875,
+      206.71401977539062,
+      604.439208984375
+    ],
+    "text": "K±,h(a) = η"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      202.61700439453125,
+      592.2528686523438,
+      463.1107177734375,
+      606.43310546875
+    ],
+    "text": "2(1 ± vah),\nK0,h(a) = 1 −η,\nah = (c, −c, s, −s)h."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      612.8729858398438,
+      547.714599609375,
+      654.9237670898438
+    ],
+    "text": "These are physical for c2 + s2 = 1. They are still nonnegative normalized classical label kernels\nthroughout [−1, 1]2, although points outside the unit disk are explicitly fictitious relaxations, not\nallowed phase commands. Define"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      230.031005859375,
+      666.7113037109375,
+      298.35595703125,
+      680.4122314453125
+    ],
+    "text": "Qt(w, a) =\nX"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      289.1089782714844,
+      668.3677978515625,
+      381.9717102050781,
+      689.9971923828125
+    ],
+    "text": "o\nVt−1(w ⊙Ko(a))."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      700.1961669921875,
+      357.0648498535156,
+      711.1187744140625
+    ],
+    "text": "It is concave in a wherever these kernels remain nonnegative."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      67.24568176269531,
+      264.4524841308594,
+      78.15478515625
+    ],
+    "text": "Take rational unit supporting normals"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      183.3249969482422,
+      98.98017883300781,
+      226.7786407470703,
+      110.88422393798828
+    ],
+    "text": "(cj, sj) ="
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      229.80299377441406,
+      89.61030578613281,
+      290.3111267089844,
+      102.52276611328125
+    ],
+    "text": "1 −(j/N)2"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      238.88600158691406,
+      91.60023498535156,
+      349.4751281738281,
+      117.38580322265625
+    ],
+    "text": "1 + (j/N)2 ,\n2j/N\n1 + (j/N)2"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      351.1710205078125,
+      89.61036682128906,
+      359.0614013671875,
+      99.57296752929688
+    ],
+    "text": "!"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      360.8760070800781,
+      98.83885192871094,
+      428.68487548828125,
+      109.90283203125
+    ],
+    "text": ",\n0 ≤j < N,"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      130.61285400390625,
+      547.5501708984375,
+      182.23779296875
+    ],
+    "text": "with their three quarter-turn rotations. Intersect successive supporting lines cjc + sjs = 1 to obtain\nthe 4N vertices of a circumscribed polygon PN. Cardinal normals ensure PN ⊂[−1, 1]2; all fictitious\nkernels are therefore valid classical kernels. Let GM be the simplex grid whose coordinates are integer\nmultiples of 1/M."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.1969985961914,
+      193.68882751464844,
+      548.8770751953125,
+      218.30279541015625
+    ],
+    "text": "Theorem 3.1 (Certified outer-action/grid lower backups). Suppose Lt−1(q) ≤Vt−1(q) at every q ∈GM.\nFor each grid point w and polygon vertex a, decompose each outcome weight as"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      131.02096557617188,
+      230.0893096923828,
+      233.7169189453125,
+      244.44677734375
+    ],
+    "text": "zo = w ⊙Ko(a) =\nX"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      225.07496643066406,
+      230.0893096923828,
+      420.8099060058594,
+      254.32720947265625
+    ],
+    "text": "i\nγo,iqo,i,\nγo,i ≥0,\nqo,i ∈GM,\nX"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      412.16693115234375,
+      231.74681091308594,
+      480.98065185546875,
+      254.32720947265625
+    ],
+    "text": "i\nγo,i = ∥zo∥1."
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      63.081939697265625,
+      264.5397033691406,
+      281.46124267578125,
+      296.3538818359375
+    ],
+    "text": "Then\nLt(w) :=\nmin\na∈vert PN"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      284.42291259765625,
+      276.2773132324219,
+      298.8188781738281,
+      286.2398986816406
+    ],
+    "text": "X"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      286.95391845703125,
+      277.9347839355469,
+      412.981689453125,
+      300.5151672363281
+    ],
+    "text": "o,i\nγo,iLt−1(qo,i) ≤Vt(w)."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      307.78118896484375,
+      547.2156982421875,
+      345.8017883300781
+    ],
+    "text": "Starting from exact L0 = V0 on the grid gives valid full-circle adaptive Bayes-risk lower bounds at every\nhorizon. They also lower-bound minimax risk and every randomized nonadaptive reader. They do not\nestablish local attainment of any polygon vertex."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      357.2538146972656,
+      549.4425048828125,
+      449.61279296875
+    ],
+    "text": "Proof. Homogeneity and concavity of the true Vt−1 imply P\ni γo,iLt−1(qo,i) ≤Vt−1(zo). Every phys-\nical circle point lies in the convex hull of the polygon vertices.\nConcavity of the true Qt gives\nmina∈vert PN Qt(w, a) ≤mina∈S1 Qt(w, a) = Vt(w). Combining the two inequalities proves the backup.\nIn particular, no concavity of a chosen piecewise-linear interpolant is asserted or needed. The argument\nfirst compares the true Qt on the outer polygon, then bounds its vertex values individually. Random\nschedules and feedback coins are covered because a Bayes minimum over randomized policies cannot\nbe smaller than the minimum over its deterministic components."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.09700012207031,
+      461.2786560058594,
+      547.22705078125,
+      486.2308349609375
+    ],
+    "text": "Proposition 3.2 (Explicit convergence allowance). Use the cumulative-coordinate simplex triangulation\nimplemented in co nv ex _g ri d_ bo un d. py . At normalized grid beliefs,"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      217.37098693847656,
+      489.5467224121094,
+      342.2265319824219,
+      515.72021484375
+    ],
+    "text": "0 ≤Vt(w) −Lt(w) ≤t\n\u0012 4"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      333.6130065917969,
+      496.4371643066406,
+      376.54248046875,
+      522.2227783203125
+    ],
+    "text": "M + ηv"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      361.1109924316406,
+      510.4549255371094,
+      380.7521057128906,
+      522.2227783203125
+    ],
+    "text": "4N2"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      382.4469909667969,
+      497.43634033203125,
+      394.6317138671875,
+      514.726318359375
+    ],
+    "text": "\u0013\n."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.51599884033203,
+      532.5244750976562,
+      548.7713012695312,
+      597.6431884765625
+    ],
+    "text": "Proof. In cumulative coordinates, each interpolating simplex vertex differs from the normalized child\nby less than 1/M in each cumulative coordinate. The four original probability coordinates consequently\ndiffer by at most 2/M each. The ℓ1/2 Lipschitz bound charges at most 4/M for the interpolation;\nchild masses sum to one. For consecutive normals the half-gap has tangent at most 1/N, so any outer\nvertex has radius at most\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      583.4188232421875,
+      547.678466796875,
+      651.830810546875
+    ],
+    "text": "1 + N−2 ≤1 + 1/(2N2). Project it radially to the circle. For every label\nthe outcome kernels change in total variation by at most ηv/(4N2). The same bound applies to any\ncontinuation’s terminal [0, 1] loss and hence to its optimal value. Combining the one-step bounds\nwith the preceding grid-value error and inducting proves the claim. This is an explicit conservative\nallowance, not a claim that it is sharp."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      663.5232543945312,
+      549.2817993164062,
+      714.9948120117188
+    ],
+    "text": "This is a finite-label specialization of established belief-grid bounding methods, with a rational outer-\naction interface for this continuous reader. Lovejoy’s grid-based upper/lower POMDP approximation[4]\nis a close antecedent (Operations Research 39(1), 1991, pp. 162–175, DOI 10.1287/opre.39.1.162); the\ntheorem above is proved independently. No worldwide novelty claim is made."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      354.95269775390625,
+      78.39957427978516
+    ],
+    "text": "3.3\nExact demonstrations and scalability ceiling"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      87.90480041503906,
+      547.8885498046875,
+      125.8477783203125
+    ],
+    "text": "The standard-library implementation constructs rational intersections, checks every support inequality\nand kernel normalization, and verifies every child’s nonnegative exact barycentric reconstruction. At\n(M, 4N) = (8, 16), the exact lower values at the uniform prior are"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      172.31100463867188,
+      139.4331817626953,
+      439.691650390625,
+      151.9927978515625
+    ],
+    "text": "L1 = 6/25,\nL2 = 199/1250,\nL3 = 18278/171875."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      163.87100219726562,
+      549.5551147460938,
+      310.3567810058594
+    ],
+    "text": "They are deliberately coarse and do not improve the existing small-horizon closed forms. Replays\nat (4, 8) and (8, 8) verify the same algorithm under coarser interpolation; exact results are supplied.\nThere are\n\u0000M+3\n3\n\u0001 belief points, 4N actions and three outcomes; a straightforward backup has O(tNM3)\nrational operations and O(NM3) cached interpolation storage. Each child needs at most four vertices.\nBit complexity is additional and depends on the exact rational directions and horizon.\nTo force the conservative allowance below 10−4 at thirteen trials, one sufficient choice is M >\n1,040,000 together with a correspondingly large angular resolution. A full uniform grid is therefore\nimpractical as an immediate endpoint solver. Targeted refinements, stronger continuation bounds or a\ndifferent structure could improve it, but were not established here. We record this limit rather than\npropose an enormous unperformed run. The branch’s current threshold statement remains [13, 14] for\neach class."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      331.1546936035156,
+      547.3554077148438,
+      363.43389892578125
+    ],
+    "text": "4\nOriginal robust task: fixed-nuisance certification and an unresolved\nsixteen-copy endpoint"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      375.9488220214844,
+      549.6072998046875,
+      481.8577880859375
+    ],
+    "text": "Throughout the generic domain statements, 0 < η0 ≤1; the benchmark uses η0 = 4/5. The gain floors\nand phase bound retain the stated physical-parent constraints.\nThe original robust one-percent intervals remain [16, 17], separately for adaptive and randomized\nnonadaptive continuous local readers. A larger endpoint-policy search did not attain sixteen copies.\nWe do not count its very small endpoint-risk improvement as a substantive threshold advance. The\nuseful supporting result is an exact low-dimensional representation of any frozen finite policy’s entire\nnuisance-dependent risk, together with a sound, strict-feasibility-complete certificate procedure. It\ndoes not prove that sixteen copies are impossible."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      499.359375,
+      395.5286560058594,
+      511.3145751953125
+    ],
+    "text": "4.1\nA three-variable exact interface for a frozen reader"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      520.6710205078125,
+      547.4353637695312,
+      601.0988159179688
+    ],
+    "text": "A finite policy is a directed acyclic graph, with one rational unit direction (c, s) and three outcome\nchildren at each internal node, a fixed deadline B, and sign decisions at leaves. It may be compiled from\na larger history tree. A fixed rational root mixture is allowed by taking the corresponding weighted\nsum of the deterministic-root polynomials below. Classical root sign symmetrization is treated in the\nsame way. No axis-exchange symmetry is assumed for the asymmetric parent.\nFor a fixed source label, let g be its relevant gain (gX or gY ), and introduce"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      209.64804077148438,
+      612.9961547851562,
+      402.3460388183594,
+      623.9187622070312
+    ],
+    "text": "e = η,\nu = ηg cos δ,\nw = ηg sin δ."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      637.5390014648438,
+      547.7018432617188,
+      675.5247802734375
+    ],
+    "text": "These parameters remain fixed throughout the complete graph. They are a coordinate change for the\nspecified physical parent, not a new dynamics or an adversary choosing fresh values at each node. For\na positive X source, the three outcome probabilities at direction (c, s) are"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      201.4700469970703,
+      688.9688110351562,
+      410.53643798828125,
+      700.0327758789062
+    ],
+    "text": "(e + cu −sw)/2,\n(e −cu + sw)/2,\n1 −e."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80007934570312,
+      713.4778442382812,
+      527.6396484375,
+      724.5418090820312
+    ],
+    "text": "For a positive Y source replace cu −sw by su + cw; the negative label reverses the signed terms."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      67.23219299316406,
+      547.2676391601562,
+      132.351806640625
+    ],
+    "text": "Theorem 4.1 (Exact frozen-policy nuisance polynomial). For every such B-trial reader, each label risk\nis a rational polynomial qh(e, u, w) of total degree at most B. Its coefficients are computed bottom-up\nby the same three-child recurrence as the risk itself, with polynomial rather than scalar arithmetic. The\nnumber of possible monomials per label and node is at most\n\u0000B+3\n3\n\u0001. For gain floor ah > 0, the exact\nphysical parameter domain is"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      98.20600128173828,
+      141.29173278808594,
+      513.7966918945312,
+      158.90118408203125
+    ],
+    "text": "Kh = {(e, u, w) : e ∈[η0, 1], u ≥0, |w| ≤tu, a2\nhe2 ≤u2 + w2 ≤e2},\nt = tan ∆< 1."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.50600051879883,
+      170.30381774902344,
+      546.9124145507812,
+      194.91778564453125
+    ],
+    "text": "Consequently uniform certification of this frozen reader is equivalent to qh ≤ϵ on each Kh. The unused\nother-axis gain need not be introduced into a label’s risk calculation."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      206.5102081298828,
+      547.901611328125,
+      258.06732177734375
+    ],
+    "text": "Proof. At a leaf the error polynomial is zero or one. Each kernel is affine in (e, u, w). Multiplying the\nthree child risks by their kernels and adding raises the degree by at most one, proving the assertion by\ninduction. For the domain, a specified physical point plainly satisfies the stated inequalities. Conversely\nthe positive lower radial bound and |w| ≤tu force u > 0. Define g =\n√"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      244.0197296142578,
+      549.3190307617188,
+      312.2778015136719
+    ],
+    "text": "u2 + w2/e and δ = arctan(w/u).\nThen g ∈[ah, 1] and |δ| ≤∆, and the original coordinates are recovered. Every point of Kh is therefore\nadmitted. Maximizing separately over labels is valid because the original robust objective is a supremum\nover label and one nuisance choice fixed for that experiment. This does not authorize changing nuisance\nvalues within a single trajectory."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      323.9649353027344,
+      549.6116333007812,
+      402.5387878417969
+    ],
+    "text": "This reduces certification from a superficial five-parameter search to four three-variable polynomial\nproblems. It does not reduce the unknown policy’s optimization dimension, assume that the gain\nfloors alone are worst cases, or certify arbitrary command-dependent errors outside the specified parent.\nCoefficient growth, graph compilation, precision and the cost of the resulting polynomial optimization\nstill have to be charged. The bound is a monomial count, not a practical polynomial-time robust-design\nclaim."
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      420.0413818359375,
+      293.0965270996094,
+      431.99658203125
+    ],
+    "text": "4.2\nExact Bernstein cover certificates"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      437.4574279785156,
+      547.211181640625,
+      466.8761901855469
+    ],
+    "text": "For a rational box Q = Q\ni[li, ri], map its coordinates affinely to the unit cube. If eq(t) = P\nβ aβtβ has\ncoordinate degrees di, its tensor Bernstein coefficients are"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      259.6029968261719,
+      487.0603332519531,
+      299.3359680175781,
+      501.5577697753906
+    ],
+    "text": "bk =\nX"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      283.95001220703125,
+      487.06036376953125,
+      328.1142272949219,
+      511.5632019042969
+    ],
+    "text": "β≤k\naβ\nY"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      320.3050231933594,
+      503.3271179199219,
+      323.190185546875,
+      511.2972106933594
+    ],
+    "text": "i"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      331.1250305175781,
+      476.8811340332031,
+      348.16790771484375,
+      494.23291015625
+    ],
+    "text": "\u0000ki\nβi\n\u0001"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      331.125,
+      488.8581848144531,
+      352.39971923828125,
+      512.7098999023438
+    ],
+    "text": "\u0000di\nβi\n\u0001."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      523.2318115234375,
+      549.5902099609375,
+      615.5907592773438
+    ],
+    "text": "The Bernstein basis functions are nonnegative and sum to one, hence mink bk ≤q ≤maxk bk on Q.\nAll entries are rational for the compiled policy and rational box. This standard polynomial-enclosure\nmethod is used here as an exact frozen-reader certificate, not claimed as a new approximation technique.\nStart with Q0 = [η0, 1] × [0, 1] × [−t, t]. Discard boxes whose interval radial or angular inequalities\nexclude Kh; otherwise accept a box only when every Bernstein coefficient is strictly below ϵ. Bisect\nunresolved boxes, cycling through their nontrivial coordinates. A finite accepted cover proves the\nuniform risk guarantee; a cap or interrupted search reports inconclusive."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      627.1580810546875,
+      547.2327880859375,
+      678.7537841796875
+    ],
+    "text": "Proposition 4.2 (Soundness and strict-feasibility completeness). Every finite cover accepted by this\nprocedure is a valid original-parent risk certificate. For a fixed polynomial with maxKh qh < ϵ, the\nuncapped subdivision procedure terminates. No termination is asserted when the maximum equals the\ntarget or exceeds it."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      690.3606567382812,
+      548.9807739257812,
+      730.1217041015625
+    ],
+    "text": "Proof. Pruning only removes boxes disjoint from the physical set by necessary inequalities. Accepted\nboxes have a polynomial upper bound below the target, so their union proves the claim. For completeness,\nthe compact set Kh has a positive strict risk margin. Continuity supplies a neighborhood on which the"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.30976867675781,
+      547.765869140625,
+      145.90081787109375
+    ],
+    "text": "margin persists. Bernstein coefficient ranges converge to the point value as a box shrinks. Every point\noutside Kh violates at least one defining closed inequality strictly; the elementary interval exclusions\neventually recognize a sufficiently small box around it. Compactness of the initial box then yields\na finite subdivision depth at which every surviving box is either excluded or risk-certified. Cycling\nnontrivial coordinates ensures shrinking box diameters. The argument is a completeness statement for\nstrict certification, not a complexity bound or unrestricted quantum-reader theorem."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      156.89895629882812,
+      548.864990234375,
+      235.6387939453125
+    ],
+    "text": "polynomial_certificate.py implements exact polynomial compilation, Bernstein bounds,\nphysical-domain exclusions and a capped cover search. Independent ordered-word enumeration verifies\n108 polynomial identities on a three-trial genuinely adaptive graph; 500 exact grid evaluations check\nthe Bernstein enclosures. The proof, rather than those finite tests, covers arbitrary degrees. Constant\nsafe and unsafe examples exercise the stopping and inconclusive statuses. This package does not claim\nthat the cover code certified a new sixteen-copy operating region."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      252.6473846435547,
+      351.36614990234375,
+      264.6025695800781
+    ],
+    "text": "4.3\nWhy gain-endpoint checks alone are invalid"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      273.988525390625,
+      548.7191162109375,
+      312.05078125
+    ],
+    "text": "Even a legal fixed reader can have an interior maximum in one source label’s gain. Set η = 1, δ = 0,\nuse a direction with c = 4/5, s = 3/5 for sixteen trials, and decide minus exactly when fourteen plus\noutcomes occur. For X+ the error is"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      174.8699951171875,
+      328.5181884765625,
+      205.73263549804688,
+      339.4407958984375
+    ],
+    "text": "q(g) ="
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      208.75698852539062,
+      319.1483459472656,
+      227.55307006835938,
+      346.9237976074219
+    ],
+    "text": "16\n14"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      227.552978515625,
+      319.1483459472656,
+      235.443359375,
+      329.1109313964844
+    ],
+    "text": "!"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      235.43997192382812,
+      326.32098388671875,
+      437.1327209472656,
+      339.4407958984375
+    ],
+    "text": "p(g)14[1 −p(g)]2,\np(g) = (1 + 4g/5)/2."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.51599884033203,
+      357.5888366699219,
+      547.571044921875,
+      422.8487854003906
+    ],
+    "text": "On g ∈[9/10, 1] it is maximized at g = 15/16, where q = .28914388658 . . ., larger than the endpoint\nvalues .28471846580 . . . and .27452150946 . . .. The maximizer follows from 14/p −2/(1 −p) = 0, and all\nthree comparisons are exact rational inequalities in the verifier. This is a counterexample to unjustified\nper-label gain-endpoint certification, not a low-error reader or a counterexample to the correctly scoped\nfrozen-majority theorem. Other labels of this deliberately poor reader can have still larger errors."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      439.85736083984375,
+      299.289306640625,
+      451.81256103515625
+    ],
+    "text": "4.4\nSearches and exact updated status"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      461.1985168457031,
+      548.7190551757812,
+      729.5968017578125
+    ],
+    "text": "The specified transpose-invariant operator relaxation, evaluated at sixteen copies under the existing\nfixed hard prior, gives only approximately .00838194185. That value is exploratory and too weak to\nexclude sixteen; we did not repeat the unchanged solve or call its optimizer a physical reader.\nA new point-based policy proposal used 24 rational directions, including rational approximations\nto the optimized frozen direction and nearby commands, with 150 sampled hard-endpoint trajectories\nand a design-belief bank. It retained approximately 12,214 candidate nodes at level sixteen. A separate\nlinear programme mixed two roots and used a fresh sign-symmetry coin. The resulting pruned graph\nhas 1,467 nodes and floating endpoint errors approximately .01023427595453 on each hard axis. This\nis still above one percent. Its tiny change from .0102368487113 does not settle an adjacent threshold\nand is not advertised as a robust advance. The full original nuisance continuum was not certified for\nthis unsuccessful candidate.\nFour separately optimized two-setting nonadaptive schedules used splits (1, 15), (2, 14), (4, 12), (8, 8),\nthe exact endpoint offset arctan(.01), and an optimized terminal Bayes-decoder prior. Their best\nobserved endpoint worst errors remained near the frozen benchmark. Such searches cannot exclude all\nschedules, all feedback policies, or the original continuous uncertainty set. They remain reproducible\nexploratory evidence.\nBoth full continuous robust thresholds therefore remain in [16, 17]. Seventeen is still the exact\nminimum only in the established random-frozen common-positive-angle class. Further repetition of\nthese same policy families is not supported by the current search outcomes; a new structural lower\nbound or substantially different control construction would be needed."
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      64.5816879272461,
+      313.6491394042969,
+      78.92788696289062
+    ],
+    "text": "5\nUniform angular approximation"
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      91.19535064697266,
+      403.65826416015625,
+      103.15055084228516
+    ],
+    "text": "5.1\nA certified angular-net transfer, not a grid optimum"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.36000061035156,
+      112.65068054199219,
+      547.2071533203125,
+      137.0498046875
+    ],
+    "text": "Theorem 5.1 (Uniform finite-horizon setting-rounding bound). Let a rational menu contain the circle\npoints"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      195.90499877929688,
+      146.9162139892578,
+      219.09027099609375,
+      159.61578369140625
+    ],
+    "text": "nk ="
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      222.1179962158203,
+      135.4358367919922,
+      271.29412841796875,
+      150.4453125
+    ],
+    "text": "M2 −k2"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      231.1999969482422,
+      139.5362091064453,
+      319.12713623046875,
+      165.32177734375
+    ],
+    "text": "M2 + k2 ,\n2Mk\nM2 + k2"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      320.822021484375,
+      137.5463409423828,
+      328.71240234375,
+      147.50894165039062
+    ],
+    "text": "!"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      330.52801513671875,
+      146.7748260498047,
+      416.1016540527344,
+      157.8253173828125
+    ],
+    "text": ",\n−M ≤k ≤M,"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      174.40194702148438,
+      547.2277221679688,
+      215.42376708984375
+    ],
+    "text": "their negatives and their axis swaps, where M ≥1. For the fixed shared η, v parent, write econt\nB\nand egrid\nB\nfor the minimax error in either the adaptive class or the randomized nonadaptive class, consistently on\nboth sides. Then"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      161.1020050048828,
+      226.0502471923828,
+      391.5624694824219,
+      246.979248046875
+    ],
+    "text": "econt\nB\n≤egrid\nB\n≤econt\nB\n+ ϵB,\nϵB = 1 −\n\u0012\n1 −ηv"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      377.5870056152344,
+      240.91322326660156,
+      393.6228332519531,
+      251.8358154296875
+    ],
+    "text": "2M"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      396.010009765625,
+      224.1990966796875,
+      446.29290771484375,
+      244.19790649414062
+    ],
+    "text": "\u0013B\n≤Bηv"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      427.90301513671875,
+      233.4302520751953,
+      450.89971923828125,
+      251.8358154296875
+    ],
+    "text": "2M ."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      262.65380859375,
+      547.203369140625,
+      287.26678466796875
+    ],
+    "text": "Thus an independently certified grid interval [L, U] gives the continuous interval [max(0, L −ϵB), U]\nfor the same policy class."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      297.2079772949219,
+      547.201171875,
+      323.331787109375
+    ],
+    "text": "Proof. Up to sign, every direction is n(t) = ((1 −t2)/(1 + t2), 2t/(1 + t2)) for t ∈[−1, 1]. Round t to\nk/M, within 1/(2M). The chord identity"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      206.2449951171875,
+      333.7127990722656,
+      351.5387268066406,
+      360.18792724609375
+    ],
+    "text": "∥n(t) −n(t′)∥2 =\n2|t −t′|\np"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      301.66400146484375,
+      335.49169921875,
+      401.4005432128906,
+      362.05279541015625
+    ],
+    "text": "(1 + t2)(1 + t′2) ≤1"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      392.7869873046875,
+      350.3411865234375,
+      403.3688049316406,
+      361.25030517578125
+    ],
+    "text": "M"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      372.455810546875,
+      549.3190307617188,
+      452.8777770996094
+    ],
+    "text": "implies source-specific one-trial outcome-law TV at most ηv∥n −n′∥2/2 ≤ηv/(2M). For an adaptive\npolicy the rounded controller maintains its virtual nominal history and applies the rounded setting at\neach branch. Coupling the outcome records sequentially gives probability of any divergence at most ϵB.\nThe terminal target error changes by at most that amount on every source label. This rounds every\ncontinuous policy to a legal grid policy, without converting feedback to a nonadaptive schedule. Root\nmixtures are rounded componentwise. The converse inclusion of classes gives the other inequality."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      464.5726318359375,
+      548.98486328125,
+      583.7987670898438
+    ],
+    "text": "The coupling compares outcome histories and their logical policy commands. It does not claim TV\ncloseness of literal physical setting archives: a different real angle can make those raw setting records\ndisjoint. All actual settings remain retained, and this theorem certifies target-decision risk rather than\nfull retained quantum-channel equivalence. It assumes the same calibrated noise model at the omitted\nand retained angles; unrelated setting-dependent losses do not satisfy it automatically.\nThe code constructs the rational menu and an interval-transfer adapter, but it does not solve a\nlarge grid or advertise its illustrative interval as a measured continuous optimum. Required grid size,\npolicy search cost and coefficient precision must all be charged by any consumer. This keeps the\ncontinuous-angle guarantee distinct from an uncertified finite scan."
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      601.3013916015625,
+      264.05731201171875,
+      613.256591796875
+    ],
+    "text": "5.2\nVerification and exact status"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      622.6119995117188,
+      547.4947509765625,
+      687.8230590820312
+    ],
+    "text": "The all-posterior formula is also exposed as a reusable terminal-control certificate: rational weights\nspecify a direction numerator, squared norm and an exact rational-plus-square-root loss. It can eliminate\nthe last continuous setting search in a policy optimizer; it does not by itself solve the preceding controls\nor establish a new minimax prior.\nThe standard-library implementation provides exact arithmetic in Q(\n√"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      676.8216552734375,
+      549.5794677734375,
+      728.4256591796875
+    ],
+    "text": "2), the fixed-reader risks,\nsmall-horizon theorem values, the rational circle menu and the transfer allowance.\nIndependent\nformulas check 85 click-mixture sums, 125 two-copy ordered-record calculations and 720 exact rational\nchord-rounding cases, plus 114 arbitrary-posterior terminal checks with rational Pythagorean directions."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      67.16519927978516,
+      547.8685302734375,
+      145.90081787109375
+    ],
+    "text": "Analytical proofs, rather than those finite tests, cover every angle and the all-horizon transfer. The\nangular-net interface alone establishes no large-horizon continuous optimum, collective optimum or\ntotal energy/apparatus advantage. Exact continuous equalities through three copies and four-copy\ncomparison certificates are supplied separately in the reader paper. The physical interaction remains the\ndeclared controlled reader under ordinary Born probabilities. No trine, Born-selection or consciousness\ntheorem is added."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      166.69972229003906,
+      547.34130859375,
+      181.04592895507812
+    ],
+    "text": "6\nFrom the continuous feedback gap to a physical resource certificate"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      193.72850036621094,
+      549.5004272460938,
+      258.8085632324219
+    ],
+    "text": "The continuous four-copy construction and universal nonadaptive lower certificate support a resource\nstatement: a feedback advantage in the same complete equatorial menu, including a nonzero operating\nregion of asymmetric gain, erasure and phase errors. We also replace a crude setting-switch count by\nan exact actuator-path account and give a finite calibration interface covering the whole circle. All\nthese are restricted operational claims, not a universal apparatus, energy or thermodynamic optimum."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      276.3243713378906,
+      396.49700927734375,
+      288.2795715332031
+    ],
+    "text": "6.1\nA nonzero noise and control-error operating region"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      297.7061767578125,
+      547.7127685546875,
+      377.9089050292969
+    ],
+    "text": "Let eA denote the delivered exact rational ideal risk of the frozen four-copy adaptive tree, including its\ntwo root symmetry bits. Its value is eA = 0.0306041631615 . . .. All forty action nodes and eighty-one\nternary leaves remain specified, including nominally impossible ideal null histories. Keep the four\nfixed-label preparations and inaccessible preparation controller. At a fixed unknown detector tuple use\nthe asymmetric parent\nη ≥η0,\ngX, gY ≥g0,\nη, gX, gY ≤1,"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      385.4059753417969,
+      549.4444580078125,
+      531.8917846679688
+    ],
+    "text": "with the fixed Pauli channel of Bloch multipliers (gX, gY , gXgY ) before the phase reader.\nEvery\ncommanded angle has total phase error of absolute value at most d < 1 radian, including the common\nfixed offset and declared control inaccuracy. The phase-error bound must apply to every command\nused by the policy; it is not inferred from earlier calibration alone.\nFresh apparatus stock and\ncopies are independent conditional on the fixed hidden source and nuisance parameters. For the\nadaptive/nonadaptive comparison, η, gX, gY and the common offset are fixed throughout the block.\nAny residual optical/control error or quantization is a response to the command and trial index fixed in\nadvance, never a function of deployment outcomes or an uncounted feedback controller. Independent\nstateless fresh noise may be included if declared separately. The uniform TV upper bound tolerates\nbroader conditional errors, but that fact does not license outcome-dependent hidden feedback in the\nnonadaptive comparator."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      543.3868408203125,
+      546.9430541992188,
+      567.956787109375
+    ],
+    "text": "Theorem 6.1 (Frozen-tree operating certificate). The same implementable four-copy policy, fixed\nbefore the nuisance parameters are revealed, has worst sign error at most"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      169.5279998779297,
+      579.1508178710938,
+      438.2515869140625,
+      599.2837524414062
+    ],
+    "text": "eA + 1 −(1 −κ)4,\nκ = (1 −η0) + (1 −η0g0) + η0g0d"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      366.9150085449219,
+      586.6721801757812,
+      442.4747314453125,
+      605.0778198242188
+    ],
+    "text": "2\n."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      613.5540161132812,
+      548.3973388671875,
+      665.19580078125
+    ],
+    "text": "The coupling bound controls the complete retained classical deployment record, including com-\nmanded/logical setting identifiers, nulls and controller coins, for the same frozen policy. Unknown\nactual analog phases are part of the response kernel, not additional accessible phase logs. It is not a\nnorm bound on the residual quantum instrument or its bath."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      676.7891845703125,
+      547.3138427734375,
+      730.1358032226562
+    ],
+    "text": "Proof. For a source sign along either axis the ideal signed mean is one nominated component nh of the\nunit direction. In the perturbed apparatus it is µh = ηghn′\nh. The Euclidean chord is at most the phase\nerror, so\n|nh −µh| ≤1 −ηgh + ηghd ≤1 −η0g0 + η0g0d."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.24568176269531,
+      359.6512145996094,
+      78.15478515625
+    ],
+    "text": "For ternary rows parametrized by efficiency and signed mean,"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      232.25399780273438,
+      89.43496704101562,
+      261.9580993652344,
+      102.34576416015625
+    ],
+    "text": "p = (1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      257.72601318359375,
+      89.43496704101562,
+      307.63214111328125,
+      105.46207427978516
+    ],
+    "text": "2(η + µ), 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      303.3999938964844,
+      91.28178405761719,
+      379.74871826171875,
+      105.46207427978516
+    ],
+    "text": "2(η −µ), 1 −η),"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      64.80001831054688,
+      115.62763977050781,
+      183.1964874267578,
+      126.5367431640625
+    ],
+    "text": "the exact row distance is"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      191.77401733398438,
+      137.49472045898438,
+      254.99813842773438,
+      150.72772216796875
+    ],
+    "text": "TV(p, p′) = 1"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      250.76600646972656,
+      137.49478149414062,
+      420.2277526855469,
+      153.84408569335938
+    ],
+    "text": "2{|η −η′| + max(|η −η′|, |µ −µ′|)}."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      163.8547821044922,
+      549.640625,
+      243.6982421875
+    ],
+    "text": "The displayed mean allowance dominates 1 −η0, giving row distance at most κ. Couple identical\nroot coins and, until the first record mismatch, use the same history-dependent command in both\nexperiments. The probability of no mismatch is at least (1 −κ)4 by the conditional row bound. Every\nterminal event, including a wrong decision, therefore differs in probability by at most 1 −(1 −κ)4. The\nbound is uniform in the four source labels and preserves one fixed nuisance tuple throughout the tree.\nThe nominal final minimax risk is eA, which proves the assertion."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      254.2187042236328,
+      224.75428771972656,
+      265.1278076171875
+    ],
+    "text": "For the explicit operating box"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      204.63400268554688,
+      278.3962097167969,
+      407.3686828613281,
+      290.9548034667969
+    ],
+    "text": "η0 = g0 = 99999/100000,\nd = 1/10000,"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.406982421875,
+      302.58721923828125,
+      391.9444580078125,
+      313.50982666015625
+    ],
+    "text": "we obtain the exact rational κ = 12999790001/200000000000000 and"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      190.8949737548828,
+      322.2732238769531,
+      421.10772705078125,
+      339.3888244628906
+    ],
+    "text": "eA + 1 −(1 −κ)4 < 0.030865 < 31/1000 < 1/32."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      350.9681701660156,
+      549.591552734375,
+      524.505615234375
+    ],
+    "text": "The total phase allowance is about 0.00573 degrees. This is a narrow, precisely declared operating region\nnear the ideal apparatus, not an operating certificate for the principal noisy benchmark η = .8, v = .9\n(whose separate finite-horizon comparison is handled in the continuous-reader paper), nor for the\nspecified larger asymmetric box a = .9, b = .8, η0 = .8.\nThe uncertainty set includes the ideal apparatus. Hence every robust randomized-nonadaptive\nprotocol still has worst error at least the universal ideal lower bound 1/32 at four copies. A stronger\npointwise statement is also available: for any fixed nuisance tuple, each nonnull unsharp equatorial\nmeasurement is an ideal equatorial projector at its effective Bloch direction followed by an independent\nsign flip, together with the sign-blind erasure. A nonadaptive schedule remains nonadaptive under\nthis simulation. Thus adding these detector imperfections cannot improve the full-menu nonadaptive\noptimum. This is a statistical simulation, not an identification of inaccessible environments.\nAn explicit five-copy nonadaptive upper construction repeats the bisector and takes fair-tie majority.\nIts ideal error is 1/2 −43\n√"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      513.4879760742188,
+      547.3102416992188,
+      553.1138916015625
+    ],
+    "text": "2/128 < 2492/100000. Applying the same row comparison at five copies\ngives\neN,5 ≤2492/100000 + 1 −(1 −κ)5 < 0.025245 < 31/1000."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      560.5589599609375,
+      548.9976196289062,
+      639.1928100585938
+    ],
+    "text": "Together with the independent ideal three-copy adaptive lower bound in the continuous-reader paper,\nthese results give exact minimum budgets of four adaptive versus five nonadaptive at the selected\ntarget 31/1000 throughout this operating box. The target was selected transparently inside a certified\ngap, not presented as a preregistered experimental tolerance. The fixed unknown detector tuple is\nnever learned by an inaccessible oracle. The error guarantee holds for the same published four-copy\npolicy over the entire box."
+  },
+  {
+    "page": 16,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      656.6444091796875,
+      426.6360778808594,
+      668.599609375
+    ],
+    "text": "6.2\nActual phase travel, rather than a generic switch charge"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      677.9559936523438,
+      547.4978637695312,
+      730.5781860351562
+    ],
+    "text": "There are two distinct physical timing parents. In the serial pulse parent, each fresh copy receives\nHz = ℏΩ(t)Z/2 with |Ω(t)| ≤Ωp. A fresh-copy phase command costs its required rotation angle\ndivided by Ωp. In the held-actuator parent, a calibrated phase element obeys ˙q = u, |u| ≤Ωs, and its\ncurrent setting is retained between trials. Its time is the total actual phase travel divided by Ωs. This"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.27980041503906,
+      549.6053466796875,
+      159.4508056640625
+    ],
+    "text": "is an additional apparatus assumption, not a consequence of a single qubit’s Hamiltonian pulse. Both\nstart at phase zero. No terminal reset is included; any required reset is a separately charged operation.\nEquatorial axes have period π if the controller keeps track of an outcome-polarity relabelling. This\ndoes not permit an instantaneous physical π jump. A continuous shortest axis path is lifted to the\nactual phase coordinate, and its known polarity bit recodes the recorded signs. Hardware without\nthat permission instead pays for its actual angle range. Rates are in radians per second; all timing\nexpressions below are in seconds."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.93000030517578,
+      170.26840209960938,
+      547.2363891601562,
+      248.9417724609375
+    ],
+    "text": "Theorem 6.2 (Nonadaptive schedule ordering). For independent copies and time-homogeneous fixed\nnuisance parameters, a nonadaptive schedule’s decision risk is unchanged by permuting its settings and\ncorrespondingly permuting the labelled outcome data supplied to its decoder. Let S be the set of required\nprojective-axis settings and include the actuator’s initial point q0. On the angle circle of circumference\nπ, delete each consecutive gap in turn. If the remaining arc has length L and q0 has distances u and\nL −u from its endpoints, then the exact minimum open actuator travel over schedule orders is"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      220.9390106201172,
+      261.4608154296875,
+      391.0636901855469,
+      277.8570861816406
+    ],
+    "text": "L(S; q0) = min\ngaps{L + min(u, L −u)}."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      288.5999755859375,
+      547.2322998046875,
+      314.77978515625
+    ],
+    "text": "Repeated settings require no additional travel when measured consecutively. In the common-positive\nquadrant with q0 = 0, increasing angle order attains L = max S."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      323.90240478515625,
+      547.65673828125,
+      483.9297790527344
+    ],
+    "text": "Proof. The conditional likelihood is a product of setting-labelled factors, so a permutation with the\ninverse data relabelling leaves every source-label error unchanged. The physical timestamps change\nand are retained; this is not equality of the original timed apparatus channels.\nAn optimal open actuator route can be shorter than a full circle, since starting at q0 and visiting\nall settings in one circular direction already has length strictly below π for a nontrivial finite set. Its\ntravelled support therefore lies in a proper closed arc containing all required points and q0. Shortening\neither unused endpoint to a required point shows that the omitted gap may be chosen consecutive. On\nan interval of length L, a route starting at coordinate u must visit both endpoints. It pays at least\nL + min(u, L −u), attained by visiting the nearer endpoint first and then traversing to the farther\nendpoint. Minimize over omitted gaps. Conversely every such candidate route is implementable by the\nbounded-speed actuator. In the common-positive quadrant, direct increasing order from zero attains\nthe farthest point’s unavoidable distance."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      495.2969970703125,
+      547.8370971679688,
+      587.5857543945312
+    ],
+    "text": "This theorem gives the nonadaptive comparator its best setting order; it cannot be charged an\narbitrary back-and-forth order to manufacture a feedback advantage. It does not apply to arbitrary\ndrift or correlated future stock. An adaptive schedule generally cannot be reordered without changing\nits observation-dependent actions.\nFor the actual forty-node adaptive tree, evaluate every ternary history and both root axis-swap\ncontrols. The sign-reversal root operation is implemented by logical sign and decision recoding and\nadds no phase motion. Rational outward arctangent intervals give worst total phase costs"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      115.33000183105469,
+      600.1058349609375,
+      496.6727294921875,
+      612.8442993164062
+    ],
+    "text": "LA < 139/25 = 5.56\n(held actuator),\nPA < 47/10 = 4.7\n(per-copy pulse)."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      623.759033203125,
+      549.3193359375,
+      729.5955810546875
+    ],
+    "text": "The enclosed values are respectively 5.5517277189120 . . . and 4.6905651101989 . . . radians. All 162\nternary-history/root-swap cases are covered, so rare perturbed nulls have not been discarded.\nA finite command interface can use fifteen-bit indices for 32768 equally spaced levels on [0, π/2].\nNearest rounding has error at most π/[4(32767)] < 1/40000 radian, using π < 22/7. Allocate at\nmost 1/20000 to the fixed offset and at most 1/40000 to additional optical phase error; the total\nremains inside d = 1/10000. The archived command identifiers and finite packets are identical in\nthe reference and perturbed record comparison; quantization enters their response kernel. No TV\ncomparison of disjoint exact-analog-angle logs is asserted. Quantization adds at most seven rounding"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.23219299316406,
+      547.6658935546875,
+      200.0977783203125
+    ],
+    "text": "errors to a four-trial held path and four to the pulse sum. Thus 7/40000 and 4/40000 respectively still\nfit inside the conservative 5.56 and 4.7 radian caps. The assumed slew model concerns the commanded\nactuator trajectory; bounded optical phase error alone would not bound arbitrary unmodelled actuator\nwandering or settling time.\nThe policy already uses a useful physical tie-break: on twenty-one final nodes no nonnull sign can\nchange the nominated decision, and it keeps the previous setting. Twenty of those nodes have the same\ndecision on all three outcomes. One has a different default decision on the ideal-impossible null, but its\nnull probability is angle-independent in this parent. The retained terminal trial remains present. The\nrepair preserves ideal risk and avoids unnecessary held-actuator movement; the operating certificate\ndirectly covers the resulting frozen tree rather than assuming all residual records are unchanged."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      217.6003875732422,
+      465.0362243652344,
+      229.5555877685547
+    ],
+    "text": "6.3\nA full-menu copy advantage with a conditional time advantage"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      238.98219299316406,
+      547.4337768554688,
+      277.0037841796875
+    ],
+    "text": "Let τ > 0 be the serial per-copy duration for preparation, propagation, detection and matched terminal\nhandling, excluding the separately modelled phase operation. Let ℓ≥0 upper-bound each of the three\nnoninitial causal lookup/feedback delays. Sufficient adaptive time bounds are"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      183.0570068359375,
+      287.6466979980469,
+      286.190673828125,
+      307.46990966796875
+    ],
+    "text": "TA,s ≤4τ + 3ℓ+ 139"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      266.4070129394531,
+      287.6466979980469,
+      428.9457092285156,
+      314.3992004394531
+    ],
+    "text": "25Ωs\n,\nTA,p ≤4τ + 3ℓ+\n47\n10Ωp\n."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      325.1998291015625,
+      547.431884765625,
+      363.1737976074219
+    ],
+    "text": "Every nonadaptive protocol meeting the same target within the same continuous menu and operating\nbox needs at least five fresh copies, so its time is at least 5τ, even before its optimized phase travel is\ncharged. Consequently either"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      207.54800415039062,
+      373.210693359375,
+      251.85963439941406,
+      391.4997863769531
+    ],
+    "text": "3ℓ+ 139"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      232.07699584960938,
+      373.210693359375,
+      403.2202453613281,
+      399.96319580078125
+    ],
+    "text": "25Ωs\n< τ,\nor\n3ℓ+\n47\n10Ωp\n< τ"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      410.7937927246094,
+      547.7872924804688,
+      665.5247802734375
+    ],
+    "text": "suffices for a strict clock advantage in its corresponding serial parent. These are conservative sufficient\nconditions, not exact hardware optima.\nThe two rates refer to different controls and cannot be\nsubstituted for one another by reusing a single apparatus certificate.\nFor Ωsτ = 20 and ℓ/τ = 1/20, the held implementation saves at least 143τ/250 = 0.572τ per\nexperiment relative to the universal nonadaptive lower time. In the separately specified pulse parent\nwith Ωpτ = 20 the lower saving is 123τ/200 = 0.615τ. These are illustrative declared rates, not\nmeasured device data. If an actual extra net setup/calibration time D is charged to the adaptive\napparatus, R repeated uses certify a benefit only when R times that lower saving exceeds D. For\nthe illustrative D = 10τ, the sufficient counts are 18 and 17 uses, respectively. Reuse requires a\ncalibration/reference hold contract over the whole block. The nonadaptive reader is not forced to\ncalibrate settings it never uses. Failed sufficient inequalities do not prove that feedback is slower.\nThe constructive adaptive controller may store a seven-bit pointer over the 121 internal/terminal\nprefixes; the remaining deadline is encoded in the pointer’s depth.\nTwo root group bits remain\nseparate. A direct finite-command ROM account uses at most 80 · 15 = 1200 angle bits for both root\naxis controls, plus 81 terminal decision bits; indexed tree arithmetic avoids a separate child-pointer\ntable. Arithmetic workspace, clock precision, the held actuator’s physical state, phase tracking and\nthe reference remain additional resources. A fully explicit ternary-prefix archive can be retained\nindependently. These are upper resource accounts, not minimum-controller theorems. They cannot be\nturned into a thermodynamic work, energy or apparatus-volume conclusion."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      683.0264282226562,
+      376.79486083984375,
+      694.9816284179688
+    ],
+    "text": "6.4\nFinite calibration covering all continuous angles"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      704.4696044921875,
+      549.0101318359375,
+      728.9046630859375
+    ],
+    "text": "A finite calibration route is available under an explicit structural promise: shared sign-blind efficiency,\nunbiased outcomes, and a time-homogeneous sinusoidal effect law. For each trusted positive source"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      371.091552734375,
+      93.48175048828125
+    ],
+    "text": "h = X+, Y + write\nµh(θ) = Ah cos θ + Bh sin θ,"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      100.17778015136719,
+      547.6732788085938,
+      178.97430419921875
+    ],
+    "text": "with the negative source having mean −µh(θ). The asymmetric Pauli/phase parent with fixed gains\nand a common fixed offset has exactly this form about the known realized command angle. This\ncalibration theorem is a separate structural promise: arbitrary command-dependent optical errors or\nnonlinear quantization residuals need not preserve the sinusoid. They require a separately validated\nuniform row-error allowance, additional command calibration, or a justified response model; four probe\nbatches do not certify them automatically. Use M independent trusted probes for each of the four pairs"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      206.4949951171875,
+      191.59718322753906,
+      405.5066223144531,
+      202.519775390625
+    ],
+    "text": "(X+, 0), (X+, π/2), (Y +, 0), (Y +, π/2)."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      214.9888153076172,
+      546.0098266601562,
+      239.601806640625
+    ],
+    "text": "The recorded variable Z ∈{−1, 0, 1} estimates the four coefficients; the pooled click fraction over 4M\nprobes estimates η. Hoeffding and a union bound give the simultaneous predeployment event"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      123.30497741699219,
+      250.0813751220703,
+      488.6968078613281,
+      274.4249572753906
+    ],
+    "text": "Pr\n\u0012\nmax\nh {| bAh −Ah|, | bBh −Bh|} > u or |bη −η| > w\n\u0013\n≤8e−Mu2/2 + 2e−8Mw2."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      283.202880859375,
+      548.8955078125,
+      365.2747802734375
+    ],
+    "text": "For completeness, the bounded-variable inequality follows by writing K(t) = log Eet(Z−EZ). Under\nexponential tilting, K′′(t) is a variance and is at most one quarter of the squared support width;\nK(0) = K′(0) = 0 then bounds the moment generating function by et2(b−a)2/8. Chernoff optimization\nfor an independent sample gives the two-sided bound 2e−2Mu2/(b−a)2. Apply widths two and one to\nthe signed means and pooled clicks respectively, then union the five events. For α = 2−k the exact\nconservative choice"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      231.8140106201172,
+      363.5301818847656,
+      333.6583251953125,
+      381.8327941894531
+    ],
+    "text": "M =\n\u0018\nmax\n\u001a2(k + 4)"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      308.7929992675781,
+      363.5301818847656,
+      365.7066345214844,
+      389.30230712890625
+    ],
+    "text": "u2\n, k + 2"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      344.1570129394531,
+      377.5489807128906,
+      361.9471435546875,
+      389.3157958984375
+    ],
+    "text": "8w2"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      366.90301513671875,
+      364.52935791015625,
+      380.18316650390625,
+      374.491943359375
+    ],
+    "text": "\u001b\u0019"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      394.63818359375,
+      548.7324829101562,
+      419.1109924316406
+    ],
+    "text": "makes the failure probability at most α; total consumed stock is 4M. This bound covers every angle,\nbecause the coefficient error has absolute value at most u(| cos θ| + | sin θ|) ≤\n√"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      408.18719482421875,
+      547.47509765625,
+      473.3067932128906
+    ],
+    "text": "2u. It cannot validate\nan arbitrary detector between unmeasured settings; without the sinusoidal/common-efficiency promise\nadditional coverage is required. Trusted source preparation and independence are paid premises.\nFor any nominated valid reference kernel whose four coefficients and efficiency lie inside those same\ncalibration intervals, the actual and reference kernels differ by at most"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      226.53500366210938,
+      476.31683349609375,
+      364.06427001953125,
+      498.5718078613281
+    ],
+    "text": "κcal = min{1, w + max(w,\n√"
+  },
+  {
+    "page": 19,
+    "kind": "math",
+    "bbox": [
+      364.0679931640625,
+      485.7748107910156,
+      385.46453857421875,
+      496.8387756347656
+    ],
+    "text": "2u)}"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      509.3779602050781,
+      549.1111450195312,
+      616.2492065429688
+    ],
+    "text": "in every source/angle row. Thus the same policy at horizon B has retained classical commanded-\nsetting/outcome record distance at most 1 −(1 −κcal)B. It excludes an extra unread analog-phase\nlog. This includes policies and angles selected from the calibration data: the event covers the whole\ncontinuous family before deployment. It does not identify the full residual quantum instrument or\nunread environment.\nIf calibration acceptance is A, a selected reference policy has verified reference error e and transfer\nallowance dB, then\nPr(A ∩error) ≤(e + dB) Pr(A) + α."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      623.759033203125,
+      549.619384765625,
+      729.6063842773438
+    ],
+    "text": "An accepted-run conditional error bound must retain the corresponding α/ Pr(A) term, unless a\nseparate acceptance-probability guarantee justifies a smaller expression. Bad calibration is charged\nonce for a stable shared block; past samples do not prove future stability or a reference-reuse lifetime.\nThis is a completed finite interface, not a practical calibration-cost claim. For example, k = 10, u =\nw = .01 consumes 1,120,000 probes but does not by itself certify any advertised reader accuracy. A\nmuch tighter illustration, k = 20, u = 1/22000, w = 1/88000, consumes 92,928,000,000 probes. Its\nconservative coupling allowance certifies Pr(A∩error) < .01 for the nominal fourteen-copy bisector under\nthe stated reference-acceptance contract; this is not an unqualified conditional-on-acceptance bound."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.29691314697266,
+      548.6621704101562,
+      145.90081787109375
+    ],
+    "text": "The stock cost plainly overwhelms a few saved copies. Better device-specific likelihood calibration can\nbe pursued; it is not hidden inside the present resource claim.\nPhase-reference preparation, conditional update, reset, holding and consumption remain separately\ndeclared resources. Established reference- degradation analyses may bound an average even when\nrecords are kept; that does not automatically supply a uniform conditional guarantee or the adaptive\ninteraction model used here[2]. No reference lifetime is transferred without matching those contracts."
+  },
+  {
+    "page": 20,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      163.40342712402344,
+      341.8737487792969,
+      175.35862731933594
+    ],
+    "text": "6.5\nReproducible checks and remaining limits"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      184.76995849609375,
+      549.571044921875,
+      317.6507873535156
+    ],
+    "text": "The delivered research10/resources/verify_resources.py and research10/resources/policy_\nresources.py, with the independent research10/audit/check_resources.py, check 84 exhaustive\nschedule-tour instances against independent permutation enumeration, 873 individual quadrant orders,\n81 exact ternary row distances, the two exact calibration allocations, and the rational operating\nand clock inequalities. The policy cost evaluator uses the delivered tree and outward arctangent\nintervals rather than a floating-point maximum. The independent checker can verify these certificates\nwithout trusting the exploratory angle search. The nominal .8/.9 continuous one-percent threshold,\nthe larger asymmetric robust frontier and universal total-resource optimization remain unresolved.\nThe source–readout contribution is a typed full-menu reader, calibration and cost interface, not a\nBorn-selector, source-ontology or consciousness mechanism."
+  },
+  {
+    "page": 20,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      338.44970703125,
+      140.31842041015625,
+      352.7958984375
+    ],
+    "text": "References"
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      365.3809814453125,
+      547.1969604492188,
+      404.0268249511719
+    ],
+    "text": "[1] Stephen M. Barnett and Sarah Croke. Quantum state discrimination. Advances in Optics and\nPhotonics, 1(2):238–278, 2009. doi: 10.1364/AOP.1.000238. URL https://opg.optica.org/aop\n/abstract.cfm?URI=aop-1-2-238."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      415.0796813964844,
+      549.3346557617188,
+      453.6408386230469
+    ],
+    "text": "[2] Stephen D. Bartlett, Terry Rudolph, Robert W. Spekkens, and Peter S. Turner. Degradation of a\nquantum reference frame. New Journal of Physics, 8:58, 2006. doi: 10.1088/1367-2630/8/4/058.\nURL https://arxiv.org/html/quant-ph/0602069v2."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      464.6089782714844,
+      548.7329711914062,
+      503.25482177734375
+    ],
+    "text": "[3] B. L. Higgins, A. C. Doherty, S. D. Bartlett, G. J. Pryde, and H. M. Wiseman. Multiple-copy\nstate discrimination: Thinking globally, acting locally. Physical Review A, 83:052314, 2011. doi:\n10.1103/PhysRevA.83.052314. URL https://arxiv.org/html/1012.3525v2."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      514.2230224609375,
+      547.4234619140625,
+      538.7658081054688
+    ],
+    "text": "[4] William S. Lovejoy.\nComputationally feasible bounds for partially observed markov decision\nprocesses. Operations Research, 39(1):162–175, 1991. doi: 10.1287/opre.39.1.162."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      550.3726806640625,
+      549.29443359375,
+      575.3838500976562
+    ],
+    "text": "[5] Jeremy Rodgers. Source–readout non-equivalence: Descent and equivariant reconstruction obstruc-\ntions, 2026. URL https://doi.org/10.5281/zenodo.21369967."
+  }
+]

@@ -41,7 +41,7 @@ export default async function HomePage() {
         />
         <div className="mx-auto max-w-3xl text-center">
           <p className="section-label animate-rise">
-            A mathematical Theory of Everything architecture · Papers 1–7
+            Source structure, observable laws and physical readers
           </p>
           <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
             <span className="text-luminous">Shadow Theory</span>
@@ -51,6 +51,9 @@ export default async function HomePage() {
           </p>
 
           <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Link href="/source-readout" className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]">
+              Read Source–Readout Theory
+            </Link>
             <Link
               href="/atlas"
               className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
@@ -145,11 +148,21 @@ export default async function HomePage() {
               </li>
               <li>
                 <span className="font-mono text-glow">7 · </span>
-                The seven papers establish the foundation. Sealed or Leaky adds quantitative information bounds and finite-resource witnesses, with every proof available on this site.
+                The seven foundational papers establish the mathematics. Five constructive papers develop quantum sources, physical readers, feedback, certification and minimum-cost readout design.
               </li>
             </ol>
           </div>
         </div>
+      </section>
+      <section aria-labelledby="source-readout-heading" className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
+        <p className="section-label">Source–Readout Theory · Complete technical articles</p>
+        <h2 id="source-readout-heading" className="mt-3 max-w-3xl text-2xl font-bold tracking-tight sm:text-4xl">What a shadow preserves. What a reader can reveal.</h2>
+        <p className="mt-5 max-w-3xl leading-relaxed text-mute">An exact observable description can leave genuine source distinctions unresolved. The mathematical foundation establishes when those distinctions matter and what a sufficient completion must retain. The constructive programme builds quantum generators and physical readers, proves resource bounds, and certifies target access.</p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <Link href="/source-readout#foundations" className="rounded-xl border border-edge p-5 transition hover:border-[hsl(var(--accent)/0.5)]"><span className="section-label">Seven foundational papers</span><h3 className="mt-2 text-lg font-semibold text-fg">Obstruction, completion and projected dynamics</h3><p className="mt-2 text-sm leading-relaxed text-mute">Follow the complete arguments from source–readout non-equivalence to the RS2 physical witness.</p><span className="mt-3 inline-block text-sm font-medium text-glow">Read the foundation →</span></Link>
+          <Link href="/source-readout#constructive" className="rounded-xl border border-edge p-5 transition hover:border-[hsl(var(--accent)/0.5)]"><span className="section-label">Five constructive papers</span><h3 className="mt-2 text-lg font-semibold text-fg">Sources, readers and certified access</h3><p className="mt-2 text-sm leading-relaxed text-mute">Explore memory tradeoffs, phase-to-record conversion, feedback, retained records and sufficient readout design.</p><span className="mt-3 inline-block text-sm font-medium text-glow">Read the new results →</span></Link>
+        </div>
+        <p className="mt-5 text-sm text-mute">The equations, proofs, appendices and references are available in the web editions. <Link href="/source-readout/origins" className="font-medium text-glow">See how the Everything Equation led to this programme →</Link></p>
       </section>
       <RelationalAwarenessFeature/>
       <AlignmentFeature home />
@@ -219,7 +232,7 @@ export default async function HomePage() {
               The seven-paper sequence
             </h2>
             <p className="mt-2 max-w-2xl text-mute">
-              Papers 1–6 build the source–readout mathematics from first principles: our observed world is treated as a structured shadow of source reality, and the framework develops exact criteria for what that shadow reveals, hides, and allows us to reconstruct. Paper 7 then realizes the whole architecture in Randall–Sundrum gravity as its physical witness.
+              Papers 1–6 establish exact criteria for descent, target sufficiency, minimal completion, geometric realization, dynamical closure and internal identifiability. Paper 7 supplies a model-relative physical witness in Randall–Sundrum gravity. Their complete web editions form the foundation of the current source–readout programme.
             </p>
           </div>
           <Link href="/papers" className="shrink-0 text-sm font-medium text-glow hover:text-glow-strong">
@@ -238,7 +251,7 @@ export default async function HomePage() {
           />
           <p className="section-label relative">Programme context</p>
           <h2 id="schema-heading" className="relative mt-2 text-xl font-bold tracking-tight sm:text-2xl">
-            The Everything Equation, from shorthand to typed form
+            From the Everything Equation to source–readout theory
           </h2>
 
           <p className="relative mt-5 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
@@ -251,9 +264,9 @@ export default async function HomePage() {
             )}
           />
           <p className="relative mx-auto mt-2 max-w-xl text-sm leading-relaxed text-mute">
-            This was the broad public shorthand for the Everything Equation: a law becomes
-            complete only after it passes through aperture, obstruction, and completion
-            structure.
+            The original schema organized a question about lawhood: what survives
+            presentation changes, admissibility filtering and canonical completion? It
+            gives this site its name and marks the starting point of the programme.
           </p>
 
           <p className="relative mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-mute">
@@ -268,18 +281,19 @@ export default async function HomePage() {
           <p className="relative mx-auto mt-3 max-w-xl text-sm leading-relaxed text-mute">
             The updated form is a scope correction. The operator{" "}
             <span dangerouslySetInnerHTML={tex(String.raw`\Omega_{T1}`, false)} /> marks
-            the public Tier-1 completion/readout operator, not hidden source magic and not
-            a universal solver. This schema is broader programme and monograph context —
-            the site's historical name comes from it — and it is not a theorem of the
-            seven-paper canonical sequence. The papers prove exact completion and closure
-            criteria; the schema is shorthand for the architecture they study.
+            the intended Tier-1 completion/readout role. Shadow Theory develops the
+            underlying questions through exact descent tests, canonical minimal
+            completions, projected dynamics and constructive readers. These are specific
+            mathematical results with their own definitions and hypotheses. The schema
+            organizes their development; it is not a single equation that calculates or
+            solves everything.
           </p>
 
           <Link
-            href="/framework#everything-equation"
+            href="/source-readout/origins"
             className="relative mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong"
           >
-            How the equation is formulated →
+            Follow the mathematical development →
           </Link>
         </div>
       </section>

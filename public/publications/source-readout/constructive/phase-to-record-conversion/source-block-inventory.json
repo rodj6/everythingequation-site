@@ -1,0 +1,4567 @@
+[
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      81.13099670410156,
+      106.10208129882812,
+      530.8659057617188,
+      123.3174819946289
+    ],
+    "text": "Robust Phase-to-Record Conversion with Retained Loss Outputs"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      230.88600158691406,
+      140.47744750976562,
+      381.1269836425781,
+      180.32766723632812
+    ],
+    "text": "Jeremy Rodgers\nIndependent Researcher\nwww.everythingequation.com"
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      263.8909912109375,
+      192.69747924804688,
+      348.1513366699219,
+      204.65267944335938
+    ],
+    "text": "27 October 2026"
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      284.23699951171875,
+      234.50177001953125,
+      328.0723876953125,
+      244.46437072753906
+    ],
+    "text": "Abstract"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      91.56400299072266,
+      252.63087463378906,
+      522.0911865234375,
+      370.2678527832031
+    ],
+    "text": "We specify a two-mode phase source, bounded coherent reader and terminal stable detector\nflags in one complete instrument, retaining all null/loss outputs and arbitrary inert references.\nA solved finite-lifetime control problem gives the sharp unambiguous-success frontier. A distinct\nbounded-jump-hazard problem has a different attaining instrument and finite collision realization.\nWe derive an analytic minimax conditional-error/conclusive-rate frontier for amplitude, phase and\nvisibility uncertainty, and realize it with the same bounded coupling. A calibrated entrance filter\nseparates the reader ratio from common uncertain conversion; a complete controlled-path overlap\ncertificate then gives a sharp imperfect-matching tolerance and a pointer/reference distance. The\nresults concern declared apparatus and output-access classes. They neither derive Born statistics\nnor establish a biological or consciousness mechanism."
+  },
+  {
+    "page": 1,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      391.27471923828125,
+      373.30059814453125,
+      405.62091064453125
+    ],
+    "text": "1\nTask, antecedents and operational scope"
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      418.3633728027344,
+      549.3842163085938,
+      591.789794921875
+    ],
+    "text": "This paper develops phase-sensitive source–readout constructions within Shadow Theory’s pre-existing\nprogramme [9]. A source distinction may be invisible in separate mode intensities yet accessible to a\nphase-sensitive interaction. To turn that observation into a physical statement one must specify the\nsource stock, interaction, committed records, null/loss outputs and admitted decoder. We study the\ncommon-sign phase distinction in two degenerate one-excitation modes. The preparation controller\nis unread by the reader, failed trials are not replaced by freshly sampled sources, and all complete\ninstruments act with identity on an arbitrary inert reference. Unambiguous discrimination and optical\nfiltering are established techniques. Uzdin–Gat’s norm-action bound supplies a close unitary-resource\nantecedent; Chefles–Barnett’s state-separation and symmetric-state discrimination results supply the\nunderlying pure-state geometry. The added results here solve the specified independently lossy stable-flag\ncontrol problem, a source-uncertainty minimax and a restricted common-conversion/imperfect-matching\nfilter problem. These antecedents are credited explicitly [1–6, 10]. No worldwide priority claim is made.\nOrdinary quantum probabilities and the prescribed preparation/control laws remain premises."
+  },
+  {
+    "page": 1,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      609.6210327148438,
+      547.6658935546875,
+      728.997802734375
+    ],
+    "text": "Trial, outputs and notation.\nOne trial here uses one original source preparation and retains its\nconclusive, null and loss branches. A conclusive-rate guarantee Q and conditional error ε therefore\ndescribe a decision problem with inconclusive outcomes. They are not a fixed-copy deadline task in\nwhich every record must receive a sign. In particular, the preparation visibility v and transfer ceiling η\nbelow have different physical meanings from the detector visibility and erasure efficiency of a repeated\nequatorial-reader model. Identifying them requires a derived common instrument, not equality of their\nsymbols. A coherent direct-sum output, a classically recorded instrument and its pointer-only marginal\nare also different channels. We state which is used in each norm or resource claim; none of these choices\ngives the decoder access to an otherwise unread retained bath or reference."
+  },
+  {
+    "page": 1,
+    "kind": "math",
+    "bbox": [
+      223.0800018310547,
+      212.04721069335938,
+      388.91998291015625,
+      225.38720703125
+    ],
+    "text": "https://doi.org/10.5281/zenodo.23721103"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.22018432617188,
+      549.5709228515625,
+      132.351806640625
+    ],
+    "text": "The Hamiltonians, uncertainty sets and control theorems below specify the apparatus and access\nconditions for the stated tasks. Specifying and optimizing one reader does not establish a unique\nunderlying source, and retaining a loss bath does not automatically grant permission to measure it.\nReduced detector equivalence and complete retained-output comparison are separate claims, treated\nexplicitly in the technical companion."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      150.3016815185547,
+      549.5902099609375,
+      215.34881591796875
+    ],
+    "text": "Organization.\nSection 2 treats bounded coherent conversion and the distinct bounded-hazard model.\nSection 3 develops preparation uncertainty and fixed upstream attenuation. The remaining sections\nseparate a calibrated entrance filter from common conversion, then quantify departures from exact\nmatching. The companion contains absorbing-reader banks, detector comparison, finite references and\ncalibration/monitoring interfaces under their own stated contracts."
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      236.13270568847656,
+      516.3176879882812,
+      250.47891235351562
+    ],
+    "text": "2\nBounded coherent conversion and complete detector records"
+  },
+  {
+    "page": 2,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      262.7463684082031,
+      276.71783447265625,
+      274.7015686035156
+    ],
+    "text": "2.1\nSource and declared apparatus"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      283.98681640625,
+      547.2119140625,
+      308.59979248046875
+    ],
+    "text": "Use two degenerate source modes, with a single excitation spanning R = span{|0⟩, |1⟩}. The two\npossible source states are"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      137.18701171875,
+      320.3623352050781,
+      279.37261962890625,
+      336.5398864746094
+    ],
+    "text": "|ψ±⟩= a|0⟩± b|1⟩,\na =\n√︂"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      279.37298583984375,
+      320.3623352050781,
+      367.6165771484375,
+      335.66278076171875
+    ],
+    "text": "(1 + s)/2,\nb =\n√︂"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      367.6159973144531,
+      324.59881591796875,
+      548.4996948242188,
+      335.66278076171875
+    ],
+    "text": "(1 −s)/2,\n0 < s < 1.\n(1)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      349.15618896484375,
+      548.74853515625,
+      387.1767883300781
+    ],
+    "text": "They have the same separate mode intensities and overlap s. Their relative phase differs by π. Using\nnormalized phase-sensitive templates, informed by [7, pp. 18–21, Eqs. (58)–(70)] and [8, Section 32,\npp. 42–43], define the reciprocal reader states"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      159.2220001220703,
+      396.1796875,
+      452.7807312011719,
+      412.47088623046875
+    ],
+    "text": "|ϕ±⟩= b|0⟩± a|1⟩,\n⟨ϕ±|ψ∓⟩= 0,\n|⟨ϕ±|ψ±⟩|2 = 1 −s2."
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      424.9458312988281,
+      549.5794677734375,
+      544.40380859375
+    ],
+    "text": "The readout has two orthogonal, stable flag modes F labelled + and −. There are also orthogonal\nlost-output modes, initially vacant. Every mode is included in the one-excitation description; no new\nactual sample is loaded after a null result. Source/reference inputs can be any ρRR with arbitrary\nfinite inert reference R. The reader and vacant output modes have one common input-independent\npreparation. The loss bath starts in its vacuum, independently of that original preparation; the scalar\nMarkov loss law and absence of re-excitation are physical model assumptions of the declared apparatus.\nThe claim of unambiguity is for the designated pair (1); the instrument itself is defined for every\nreference-extended input.\nThe apparatus Hamiltonian on the ready-plus-flag subspace is"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      151.6190185546875,
+      562.7528686523438,
+      194.43722534179688,
+      576.0587768554688
+    ],
+    "text": "H(t) = ℏ"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      196.25601196289062,
+      555.767333984375,
+      260.34112548828125,
+      569.2667846679688
+    ],
+    "text": "(︄\nA(t)\nC(t)∗"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      204.14300537109375,
+      571.8941650390625,
+      258.863037109375,
+      582.8167724609375
+    ],
+    "text": "C(t)\nD(t)"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      260.84100341796875,
+      555.767333984375,
+      268.73138427734375,
+      565.72998046875
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 2,
+    "kind": "math",
+    "bbox": [
+      270.5459899902344,
+      562.8258056640625,
+      548.4837036132812,
+      576.0597534179688
+    ],
+    "text": ",\nA = A∗,\nD = D∗,\n∥C(t)∥≤G.\n(2)"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      596.732177734375,
+      549.59375,
+      650.0335693359375
+    ],
+    "text": "A, C, D are piecewise continuous on the finite control interval; the stated bound holds almost everywhere.\nThis regularity ensures that the propagator below exists. G > 0, A, C, D have units s−1 and H has\nunits joules. Uniform irreversible loss acts only on the ready subspace at rate ℓ≥0 in s−1. Its complete\namplitude map is Lloss =\n√"
+  },
+  {
+    "page": 2,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      637.3792114257812,
+      547.75732421875,
+      729.6206665039062
+    ],
+    "text": "ℓWPR, where W is an isometry to the lost-output space. It isometrically\ntransports the instantaneous ready component, including its conditional reference assemblage. Earlier\nfiltering and conditioning may have changed the original source/reference correlations; no preservation\nof those original correlations is asserted. The outgoing state is not replaced by a vacuum or a classical\nlabel. Once lost, the excitation never returns. There are no other protected storage subspaces, fresh\ninputs, gain channels or readers of the lost field in the allowed conclusive-record catalogue. Block\nHamiltonians are allowed in the upper bound; they cannot be used to add an uncounted protected"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.2669906616211,
+      547.44775390625,
+      105.2537841796875
+    ],
+    "text": "ancilla. The optical/cavity coupling and its timing are prescribed controls; this is not an autonomous\nclock construction.\nThe no-loss propagator on the four-dimensional ready-plus-flag space is"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      218.84500122070312,
+      114.98170471191406,
+      393.1591796875,
+      129.73605346679688
+    ],
+    "text": "˙Ueff(t) = [−iH(t)/ℏ−ℓPR/2] Ueff(t)."
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      141.12123107910156,
+      478.42694091796875,
+      153.73284912109375
+    ],
+    "text": "Let IR embed the two-dimensional source. A complete terminal instrument consists of"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      177.16299438476562,
+      164.51722717285156,
+      271.3087158203125,
+      177.0758056640625
+    ],
+    "text": "K± = P±Ueff(T)IR,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      179.5159912109375,
+      173.29783630371094,
+      354.6722717285156,
+      195.80877685546875
+    ],
+    "text": "K0 = PRUeff(T)IR,\nKloss(t) =\n√"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      354.6759948730469,
+      183.2501983642578,
+      548.4797973632812,
+      195.26004028320312
+    ],
+    "text": "ℓWtPRUeff(t)IR.\n(3)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      202.7852783203125,
+      549.6196899414062,
+      244.665771484375
+    ],
+    "text": "Here Wt retains the outgoing quantum mode. The coherent temporal output is an L2 amplitude sector;\na registered loss time is instead a classical record, with the output-space convention specified below.\nThe identity"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      176.99200439453125,
+      244.60394287109375,
+      326.0625305175781,
+      265.9230041503906
+    ],
+    "text": "K∗\n0K0 + K∗\n+K+ + K∗\n−K−+\n∫︂T"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      316.7010192871094,
+      250.63858032226562,
+      548.4964599609375,
+      272.0668640136719
+    ],
+    "text": "0\nKloss(t)∗Kloss(t)dt = I\n(4)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      274.6078186035156,
+      548.721435546875,
+      463.4347839355469
+    ],
+    "text": "follows by differentiating U∗\neffUeff. It makes the sum of the instrument branches completely positive and\ntrace preserving on every ρRR with identity on R. Before readout, the direct-sum amplitude map is an\nisometry retaining coherent quantum output sectors. A classically recorded instrument is obtained by\nthe specified dephasing or measurement of those sectors (and time bins, when used). For an exact-time\nclassical record the output is an integrable trace-class-valued kernel on the null/flag atoms and [0, T],\nwith norm ∑︁\nc ∥ωc∥1 +\n∫︁T\n0 ∥ω(t)∥1dt. It is not a trace-class diagonal density operator on the coherent\ntemporal L2 space. Finite time bins give ordinary cq direct sums. These channels share the displayed\neffects but are not identical channels; their dilation and storage costs must be counted separately. This\nuses the stipulated ordinary quantum probability law; it does not derive that law.\nOnly the terminal flags are conclusive. They are committed after the active coupling is switched\noff. Before that time, flag amplitudes can coherently return to the source, so no promise of an earlier\nimmutable event is made. After decoupling, later controls act on other systems and leave all flag and\nloss modes untouched; the final records then persist. Reading or dephasing the flags during the active\npulse is a different physical model."
+  },
+  {
+    "page": 3,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      480.7623596191406,
+      307.49053955078125,
+      492.7175598144531
+    ],
+    "text": "2.2\nSharp finite-lifetime success frontier"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      502.1576843261719,
+      414.731201171875,
+      513.0667724609375
+    ],
+    "text": "For a two-dimensional input, error-free conclusive effects necessarily have"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      178.09600830078125,
+      519.80517578125,
+      548.4857788085938,
+      545.5907592773438
+    ],
+    "text": "E± = K∗\n±K± =\nq±\n1 −s2 |ϕ±⟩⟨ϕ±|,\n¯q = (q+ + q−)/2.\n(5)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      554.4598388671875,
+      548.812744140625,
+      566.4009399414062
+    ],
+    "text": "This follows because a positive effect with zero expectation in |ψ∓⟩annihilates that vector. In particular,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      245.29200744628906,
+      575.0401611328125,
+      548.4781494140625,
+      600.8267822265625
+    ],
+    "text": "⟨1|(E+ + E−)|1⟩=\n¯q\n1 −s.\n(6)"
+  },
+  {
+    "page": 3,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      609.6958618164062,
+      547.3698120117188,
+      648.7359619140625
+    ],
+    "text": "A bound on coherent transfer of the input |1⟩therefore bounds the average success of every allowed\nunambiguous reader, including asymmetric ones.\nDefine t∗by"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      171.7150115966797,
+      684.8311767578125,
+      191.90428161621094,
+      696.6309204101562
+    ],
+    "text": "t∗="
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      194.9320068359375,
+      648.163330078125,
+      203.78875732421875,
+      691.0029296875
+    ],
+    "text": "⎧\n⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎨"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      194.9320068359375,
+      698.9733276367188,
+      203.78875732421875,
+      732.845947265625
+    ],
+    "text": "⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎪\n⎩"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      204.9840087890625,
+      648.2341918945312,
+      267.2313537597656,
+      659.1567993164062
+    ],
+    "text": "arctan(4Ω/ℓ)"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      232.16000366210938,
+      654.7103271484375,
+      383.77459716796875,
+      674.0208129882812
+    ],
+    "text": "Ω\n,\n0 < ℓ< 4G,\nΩ=\n√︁"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      383.7749938964844,
+      652.3218383789062,
+      439.0914001464844,
+      666.5368041992188
+    ],
+    "text": "G2 −ℓ2/16,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      203.7880096435547,
+      675.8582153320312,
+      318.67169189453125,
+      701.8338012695312
+    ],
+    "text": "1/G,\nℓ= 4G,\nartanh(4χ/ℓ)"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      232.76600646972656,
+      697.3863525390625,
+      362.72259521484375,
+      716.6832885742188
+    ],
+    "text": "χ\n,\nℓ> 4G,\nχ =\n√︁"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      362.72198486328125,
+      697.4459228515625,
+      418.0386657714844,
+      709.2138061523438
+    ],
+    "text": "ℓ2/16 −G2,"
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      203.78794860839844,
+      719.2761840820312,
+      310.0970764160156,
+      730.1987915039062
+    ],
+    "text": "π/(2G),\nℓ= 0."
+  },
+  {
+    "page": 3,
+    "kind": "math",
+    "bbox": [
+      534.5369262695312,
+      684.8446655273438,
+      548.478759765625,
+      695.7537841796875
+    ],
+    "text": "(7)"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      173.66282653808594,
+      79.03294372558594
+    ],
+    "text": "Let τ = min(T, t∗) and"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      207.67698669433594,
+      98.07221984863281,
+      244.06045532226562,
+      110.02722930908203
+    ],
+    "text": "fG(t) ="
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      247.08499145507812,
+      79.33735656738281,
+      255.94174194335938,
+      104.24398803710938
+    ],
+    "text": "⎧\n⎪\n⎪\n⎨"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      247.08499145507812,
+      112.21437072753906,
+      255.94174194335938,
+      128.15499877929688
+    ],
+    "text": "⎪\n⎪\n⎩"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      255.94097900390625,
+      78.39173889160156,
+      403.149169921875,
+      125.77777099609375
+    ],
+    "text": "(G/Ω)e−ℓt/4 sin(Ωt),\nℓ< 4G,\nGte−Gt,\nℓ= 4G,\n(G/χ)e−ℓt/4 sinh(χt),\nℓ> 4G."
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      534.5369873046875,
+      98.08564758300781,
+      548.4788208007812,
+      108.9947509765625
+    ],
+    "text": "(8)"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      64.406982421875,
+      134.45716857910156,
+      214.16712951660156,
+      145.3797607421875
+    ],
+    "text": "The ℓ= 0 first case has Ω= G."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      156.5056610107422,
+      547.0994262695312,
+      180.90478515625
+    ],
+    "text": "Proposition 2.1 (Optimal phase-to-flag conversion with an independent loss sink). Under the declared\napparatus and stable-flag readout catalogue,"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      262.5637512207031,
+      194.24191284179688,
+      548.4788208007812,
+      208.39520263671875
+    ],
+    "text": "¯q ≤(1 −s)fG(τ)2.\n(9)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      221.37623596191406,
+      382.8813171386719,
+      233.93585205078125
+    ],
+    "text": "The bound is attained with q+ = q−. For a deadline at least t∗it is"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      254.67703247070312,
+      242.92684936523438,
+      548.48486328125,
+      257.79583740234375
+    ],
+    "text": "qmax = (1 −s)e−ℓt∗/2.\n(10)"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      269.197265625,
+      547.2461547851562,
+      293.5697937011719
+    ],
+    "text": "It remains valid when arbitrary inert references and all original loss/null outputs are retained. It is not\nan optimum over new measurements of those retained outputs or of the reference."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      304.5519714355469,
+      547.4549560546875,
+      371.4757995605469
+    ],
+    "text": "Proof. First consider any normalized source input and its no-loss vector, split into ready and flag\ncomponents with norms x and y. Write x = r cos θ, y = r sin θ, 0 ≤θ ≤π/2. Loss gives ˙r/r =\n−ℓcos2 θ/2. Cauchy–Schwarz applied to the cross Hamiltonian gives an effective real transfer control\ngeff with |geff| ≤G and\n˙θ = geff + (ℓ/2) sin θ cos θ."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      378.6202392578125,
+      547.8262939453125,
+      416.54180908203125
+    ],
+    "text": "Block Hamiltonians cancel from these norm equations. At zero components the same conclusions follow\nby continuous limits.\nDefine"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      222.84800720214844,
+      414.7461242675781,
+      273.7491760253906,
+      434.0137939453125
+    ],
+    "text": "F(θ) =\n∫︂θ"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      265.3680114746094,
+      411.7521667480469,
+      389.1662902832031,
+      442.20806884765625
+    ],
+    "text": "0\nℓcos2 u\nG + (ℓ/2) sin u cos u du."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      447.9776916503906,
+      359.4439392089844,
+      458.88677978515625
+    ],
+    "text": "For every trajectory, including controls that reverse direction,"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      166.07400512695312,
+      469.5751647949219,
+      398.5502014160156,
+      495.3472900390625
+    ],
+    "text": "d\ndt[log r2 + F(θ)] = ℓcos2 θ\n[︃geff + (ℓ/2) sin θ cos θ"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      303.5950012207031,
+      470.5743408203125,
+      447.1292724609375,
+      495.36077880859375
+    ],
+    "text": "G + (ℓ/2) sin θ cos θ −1\n]︃\n≤0."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      504.309814453125,
+      547.2809448242188,
+      532.8817749023438
+    ],
+    "text": "Thus y2 ≤e−F(θ) sin2 θ. This upper envelope increases on 0 < θ < π/2, since its logarithmic derivative\nis"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      171.57400512695312,
+      528.0911865234375,
+      440.4332580566406,
+      557.8357543945312
+    ],
+    "text": "2 cot θ −\nℓcos2 θ\nG + (ℓ/2) sin θ cos θ =\n2G cot θ\nG + (ℓ/2) sin θ cos θ > 0."
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      564.9549560546875,
+      547.8259887695312,
+      602.9917602539062
+    ],
+    "text": "Scalar comparison also bounds θ(t) by the trajectory with geff = G until that trajectory first reaches\nπ/2. Hence constant maximal coupling, stopped at that first time, maximizes flag transfer at every\ndeadline. Its two scalar amplitudes are"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      158.30599975585938,
+      613.619873046875,
+      453.69720458984375,
+      627.88623046875
+    ],
+    "text": "uG(t) = e−ℓt/4[cos(Ωt) −ℓsin(Ωt)/(4Ω)],\nvG(t) = −ifG(t),"
+  },
+  {
+    "page": 4,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      635.8329467773438,
+      548.7376098632812,
+      691.3607788085938
+    ],
+    "text": "with their continuous critical and hyperbolic forms. Its first ready zero is (7); at that time fG(t∗)2 =\ne−ℓt∗/2. This proves the transfer bound y(T)2 ≤fG(τ)2. Apply it to |1⟩in (6) to obtain (9).\nFor attainability let H be the real balanced two-mode matrix 2−1/2(︁1 1\n1 −1\n)︁. Set A = D = 0 and,\nduring the active time τ,"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      194.79800415039062,
+      713.1261596679688,
+      346.145263671875,
+      725.7083129882812
+    ],
+    "text": "C = H diag(g0, G),\nfg0(τ) ="
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      349.1719665527344,
+      702.5673217773438,
+      359.1345520019531,
+      712.5299682617188
+    ],
+    "text": "√︄"
+  },
+  {
+    "page": 4,
+    "kind": "math",
+    "bbox": [
+      360.3299865722656,
+      705.6047973632812,
+      548.4830932617188,
+      731.5317993164062
+    ],
+    "text": "1 −s\n1 + s fG(τ).\n(11)"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      547.39306640625,
+      105.2537841796875
+    ],
+    "text": "For g = 0 the transfer amplitude is zero and for g = G it is fG(τ). Continuity in g therefore guarantees\na solution 0 ≤g0 ≤G to this intermediate target. No monotonicity assumption is needed. These are\ntwo independent damped taps in the balanced flag basis. Their terminal flag map is"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      249.1370086669922,
+      118.32579040527344,
+      362.86566162109375,
+      131.0492706298828
+    ],
+    "text": "−iH diag(fg0(τ), fG(τ))."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      142.5436248779297,
+      547.5004272460938,
+      194.17279052734375
+    ],
+    "text": "Equation (11) makes each wrong flag amplitude exactly zero for its excluded source state, and each\ncorrect probability equals (1 −s)fG(τ)2. Switch off the coupling after τ; the stable flags then remain\nunchanged until T. Residual ready amplitudes may subsequently be lost, and are included in (3). That\nproves attainability and preserves (4) on all inputs and their references."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      205.63198852539062,
+      547.712646484375,
+      297.9217834472656
+    ],
+    "text": "For s = 0.6, G = ℓand T = 2/G, one has t∗= 1.3613444250/G, g0 = 0.3764245988G, and\nq+ = q−= 0.2025106210. The loss-limited transfer factor is 0.5062765525. Requiring success at least\n0.2 with that overlap and a sufficiently long deadline gives the sharp threshold ℓ/G ≤1.0211025506 in\nthis apparatus class. Above it no permitted pulse sequence achieves the target. At the critical damping\npoint ℓ= 4G, the transfer factor is e−2; for large ℓ/G it is asymptotic to 4G2/ℓ2. For ℓ= 0 the frontier\nreduces to ideal unambiguous discrimination after a finite coherent pulse. These results are parameter\nrequirements for a possible experiment, not measured biological lifetimes or coupling strengths."
+  },
+  {
+    "page": 5,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      315.3653564453125,
+      409.372802734375,
+      327.320556640625
+    ],
+    "text": "2.3\nBounded coherent action and minimum output ranks"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      336.6058349609375,
+      548.7190551757812,
+      376.4047546386719
+    ],
+    "text": "The loss-free implementation can be specified without a continuum bath. For any desired 0 ≤q ≤1 −s,\nset\nn0 =\n√︂"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      188.39300537109375,
+      359.4683532714844,
+      301.8295593261719,
+      376.40478515625
+    ],
+    "text": "1 −q/(1 + s),\nn1 =\n√︂"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      301.8290100097656,
+      363.704833984375,
+      459.397705078125,
+      376.40478515625
+    ],
+    "text": "1 −q/(1 −s),\nθj = arccos nj."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.39599609375,
+      383.6842041015625,
+      439.24005126953125,
+      395.59808349609375
+    ],
+    "text": "A constant four-mode Hamiltonian (2) with C = H diag(θ0, θ1)/τ gives exactly"
+  },
+  {
+    "page": 5,
+    "kind": "math",
+    "bbox": [
+      187.583984375,
+      405.7961730957031,
+      548.4796752929688,
+      431.581787109375
+    ],
+    "text": "K0 = diag(n0, n1),\nK± = −i\n√︃\nq\n1 −s2 |±⟩⟨ϕ±|.\n(12)"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      441.4616394042969,
+      549.5591430664062,
+      547.1677856445312
+    ],
+    "text": "This is a single finite unitary interaction with blank detector modes, not a concatenation of statistical\nbounds. Excitation-preserving couplings between a source mode and a detector mode are ordinary\nbeam-splitter or resonant Jaynes–Cummings interactions in the one-excitation sector. Their matrix\nentries have units ℏθj/τ. After the pulse, decoupled detector excitations are the final stable records.\nNo independent samples or erased failure populations are assumed.\nIf the resource is instead the cross-subspace action A =\n∫︁∥PFHPR∥dt/ℏ, the same norm equations\nat ℓ= 0 give\n¯q ≤(1 −s) sin2(︁min{A, π/2}\n)︁."
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      555.2322998046875,
+      300.0135803222656,
+      567.0211181640625
+    ],
+    "text": "The construction saturates it, with A = arcsin\n√︁"
+  },
+  {
+    "page": 5,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      555.9428100585938,
+      549.0511474609375,
+      729.5968017578125
+    ],
+    "text": "q/(1 −s). This is a specialization of known unitary\nmeasurement resource bounds, included to make the physical resource contract explicit. Bounded\nHamiltonian coupling is not the same constraint as a bounded Markov jump hazard; neither bound\nmay be substituted into the other.\nFor 0 < q < 1 −s the three terminal POVM effects have ranks 1, 1, 2 for +, −, 0. Any orthogonal-\nrecord amplitude dilation of these exact effects requires at least 1 + 1 + 2 = 4 output dimensions: the\namplitude map in each orthogonal record sector has rank equal to its effect. Equation (12) attains this\ncount. At q = 1 −s the null effect has rank one and the abstract minimum is three. The four-mode\nHamiltonian is still a sufficient implementation; we do not claim it is a minimum-level Hamiltonian at\nthat endpoint. Original input references tensor onto this count; they are not newly consumed reader\nancillas. These are reachable orthogonal amplitude-sector dimensions. They do not include an extra\npure environment needed to realize a fully dephased classical record channel; classicalizing a coherent\nflag requires its own retained-output accounting."
+  },
+  {
+    "page": 6,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      473.4765930175781,
+      78.39957427978516
+    ],
+    "text": "2.4\nWhy a static dark matched reader fails, and a continuous repair"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      87.84071350097656,
+      549.4494018554688,
+      140.27488708496094
+    ],
+    "text": "Consider a static absorbing implementation of the matched-template prescription [7, pp. 18–21], with\nfixed jump readers dark to the other source: L± = √γ |±⟩⟨ϕ±|. Initially the excluded click amplitude\nis zero. However the full hazard is Q = γ diag(1 −s, 1 + s), so its null evolution changes the source.\nFor |ψ−⟩, the wrong + density at time t is"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      205.2239990234375,
+      146.52476501464844,
+      548.4760131835938,
+      163.66702270507812
+    ],
+    "text": "p+|−(t) = γa2b2[e−γ(1−s)t/2 −e−γ(1+s)t/2]2.\n(13)"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      172.21298217773438,
+      549.3196411132812,
+      238.98480224609375
+    ],
+    "text": "It is positive for s, t > 0. Its integrated infinite-time value is s2/2; at s = 0.6, γT = 2, it is 0.0394994846.\nThis is a tested obstruction to calling a fixed dark instantaneous kernel an error-free continuous\ninstrument.\nA faithful repair keeps the reciprocal geometry and changes the reader to account for its own null\nback-action. Write"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      110.77000427246094,
+      246.50636291503906,
+      325.60760498046875,
+      263.809814453125
+    ],
+    "text": "q(t) = (1 −s)(1 −e−κt),\nN(t) = diag\n(︃√︂"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      325.6080017089844,
+      248.5093536376953,
+      414.73358154296875,
+      263.809814453125
+    ],
+    "text": "1 −q(t)/(1 + s),\n√︂"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      414.7340087890625,
+      246.50636291503906,
+      501.23272705078125,
+      263.809814453125
+    ],
+    "text": "1 −q(t)/(1 −s)\n)︃\n,"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      279.772216796875,
+      328.3417663574219,
+      290.69482421875
+    ],
+    "text": "where κ > 0 is a declared maximum signal hazard. Use"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      227.18601989746094,
+      311.9482116699219,
+      265.6404724121094,
+      323.7489318847656
+    ],
+    "text": "L±(t) ="
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      268.6650085449219,
+      300.7353820800781,
+      278.6275939941406,
+      310.6979675292969
+    ],
+    "text": "√︄"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      279.822998046875,
+      303.6108093261719,
+      548.4859619140625,
+      330.35479736328125
+    ],
+    "text": "q′(t)\n1 −s2 |±⟩⟨ϕ±|N(t)−1.\n(14)"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      339.9079895019531,
+      547.4534301757812,
+      364.4517822265625
+    ],
+    "text": "At finite times these coefficients are bounded and known in advance. The Hamiltonian is zero; the\nreader does not acquire an actual sign to decide its next setting. Direct calculation gives"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      111.66999816894531,
+      383.9073486328125,
+      126.06595611572266,
+      393.86993408203125
+    ],
+    "text": "∑︂"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      115.5719985961914,
+      376.559814453125,
+      226.70538330078125,
+      407.5879211425781
+    ],
+    "text": "±\nL∗\n±L± = diag\n(︃\nq′"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      201.9290008544922,
+      376.5597839355469,
+      276.4413757324219,
+      404.11077880859375
+    ],
+    "text": "1 + s −q,\nq′"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      251.6649932861328,
+      393.04681396484375,
+      293.7740783691406,
+      404.11077880859375
+    ],
+    "text": "1 −s −q"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      295.3559875488281,
+      379.3243408203125,
+      416.6789245605469,
+      397.5048828125
+    ],
+    "text": ")︃\n≤κI,\nL±(t)N(t) ="
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      419.6969909667969,
+      374.4923400878906,
+      429.6595764160156,
+      384.4549255371094
+    ],
+    "text": "√︄"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      430.8550109863281,
+      377.3668212890625,
+      500.3344421386719,
+      404.11077880859375
+    ],
+    "text": "q′(t)\n1 −s2 |±⟩⟨ϕ±|."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      417.0072326660156,
+      547.7208862304688,
+      485.1332092285156
+    ],
+    "text": "Thus every conclusive time is unambiguous. A null result filters the surviving quantum source, and the\npredetermined reader compensates exactly for that filter. No fresh independence is inferred.\nThis bounded-hazard construction is also optimal in its own model class. For any absorbing two-port\nunambiguous instrument with Q(t) ≤κI, the no-transition matrix satisfies N(t)∗N(t) ≥e−κtI, since\nd\ndt(N∗N) = −N∗QN ≥−κN∗N. With average cumulative success ¯q(t), (6) gives"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      205.2580108642578,
+      491.48883056640625,
+      406.74371337890625,
+      504.7218017578125
+    ],
+    "text": "1 −¯q(t)/(1 −s) = ⟨1|N(t)∗N(t)|1⟩≥e−κt."
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      516.3538208007812,
+      549.364501953125,
+      555.3929443359375
+    ],
+    "text": "Therefore ¯q(t) ≤q(t), attained above, including when the two successes are allowed to be asymmetric.\nAdd independent uniform ready loss at rate ℓ. The no-event matrix becomes e−ℓt/2N(t), the signal\nKraus density is e−ℓt/2L±(t)N(t) and the loss density is\n√"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      541.827880859375,
+      547.2906494140625,
+      568.0647583007812
+    ],
+    "text": "ℓe−ℓt/2WtN(t). The three full effects plus\nthe null effect sum to identity, as in (4). The optimal conclusive probability is"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      204.24600219726562,
+      574.7091674804688,
+      548.48583984375,
+      600.4948120117188
+    ],
+    "text": "qhazard,loss(T) = (1 −s)\nκ\nκ + ℓ[1 −e−(κ+ℓ)T ].\n(15)"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      608.1870727539062,
+      547.4494018554688,
+      658.5079345703125
+    ],
+    "text": "To see optimality rather than only attainability, consider any competing schedule without loss and its\ncumulative success qc(t) ≤q(t). Uniform loss multiplies its conclusive time density by e−ℓt. Integration\nby parts gives\n∫︂T"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      165.66500854492188,
+      646.0941162109375,
+      320.6155090332031,
+      673.5560913085938
+    ],
+    "text": "0\ne−ℓtdqc(t) = e−ℓT qc(T) + ℓ\n∫︂T"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      311.2539978027344,
+      646.0941162109375,
+      403.30548095703125,
+      673.55712890625
+    ],
+    "text": "0\ne−ℓtqc(t)dt ≤\n∫︂T"
+  },
+  {
+    "page": 6,
+    "kind": "math",
+    "bbox": [
+      393.9439697265625,
+      652.1288452148438,
+      451.8759765625,
+      673.55712890625
+    ],
+    "text": "0\ne−ℓtdq(t),"
+  },
+  {
+    "page": 6,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      677.9559936523438,
+      547.4298095703125,
+      729.5968017578125
+    ],
+    "text": "which is (15). This argument requires the same independent scalar loss law and the same stable\nconclusive-output catalogue; it does not combine unrelated noise models. At s = 0.6, ℓ= 0.25κ and\nκT = 2, the conclusive, null and loss probabilities are respectively 0.2937328004, 0.3967523953 and\n0.3095148043."
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      447.74896240234375,
+      78.39957427978516
+    ],
+    "text": "2.5\nA finite collision implementation and retained retry records"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      87.75601196289062,
+      547.442138671875,
+      127.64964294433594
+    ],
+    "text": "The continuous model has infinitely many temporal modes. A finite version need not pretend to\nstore such a continuum in a finite register. Choose M stages, tk = k∆, ∆= T/M, qk = q(tk) and\nNk = diag\n√︁"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      110.89596557617188,
+      548.7579956054688,
+      152.94677734375
+    ],
+    "text": "1 −qk/(1 ± s). At stage k, first attenuate both ready modes by e−ℓ∆/2 into two fresh,\nretained loss modes. Then use a two-mode tap with local null matrix NkN−1\nk−1 and two fresh conclusive\nmodes. Its tap angles are"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      252.05999755859375,
+      153.3231964111328,
+      349.35357666015625,
+      173.40277099609375
+    ],
+    "text": "ϑkj = arccos (Nk)jj"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      314.2569885253906,
+      160.7032012939453,
+      359.94171142578125,
+      180.24002075195312
+    ],
+    "text": "(Nk−1)jj\n."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      186.95498657226562,
+      547.6392211914062,
+      226.169189453125
+    ],
+    "text": "The same finite Hamiltonian construction as (12) implements these taps and their balanced output\nmixing. Excitations already in old output modes never interact again. Consequently the cumulative\nnull map is exactly e−ℓtk/2Nk, not a redraw. The conclusive Kraus maps in bin k are"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      217.7020263671875,
+      236.9013214111328,
+      297.2566223144531,
+      259.90478515625
+    ],
+    "text": "K±,k = e−ℓtk/2\n√︄"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      298.4530029296875,
+      239.68382263183594,
+      342.08306884765625,
+      252.36990356445312
+    ],
+    "text": "qk −qk−1"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      306.2019958496094,
+      247.06382751464844,
+      394.3024597167969,
+      265.61077880859375
+    ],
+    "text": "1 −s2\n|±, k⟩⟨ϕ±|,"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      277.9717102050781,
+      270.3766174316406,
+      304.2068176269531
+    ],
+    "text": "and the loss map is\nKloss,k =\n√︁"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      270.37701416015625,
+      289.1968078613281,
+      396.1387634277344,
+      303.5610656738281
+    ],
+    "text": "1 −e−ℓ∆e−ℓtk−1/2WkNk−1."
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      311.46099853515625,
+      547.4790649414062,
+      336.0037841796875
+    ],
+    "text": "Every original mode, source remainder and detector register is retained. These finite Kraus maps\nsatisfy completeness exactly, for arbitrary inputs and inert references. They have success"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      151.14700317382812,
+      358.2901611328125,
+      177.01426696777344,
+      370.9007568359375
+    ],
+    "text": "qM ="
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      180.5679931640625,
+      347.8970947265625,
+      194.9639434814453,
+      366.4549255371094
+    ],
+    "text": "M\n∑︂"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      180.04299926757812,
+      355.9798278808594,
+      548.4766235351562,
+      381.00506591796875
+    ],
+    "text": "k=1\ne−ℓtk(qk −qk−1),\ne−ℓ∆qhazard,loss ≤qM ≤qhazard,loss.\n(16)"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      389.1429748535156,
+      549.6082153320312,
+      526.0387573242188
+    ],
+    "text": "The bounds follow by bounding e−ℓt on each interval in the exact integral. This is a probability\nconvergence guarantee; no equality of the unmeasured continuum bath and the finite bath is asserted.\nFor the numerical example above M = 8 gives qM = 0.2842794177, and M = 128 gives 0.2931579860.\nFor positive loss and finite nonzero stages, each of the 2M conclusive effects has rank one, each\nof the M loss effects rank two, and the null effect rank two. An orthogonal time-bin record dilation\nthus needs at least 4M + 2 reachable output dimensions; the one-excitation mode construction has\nexactly that count. With zero loss it is 2M + 2. This counts reachable orthogonal amplitude sectors\nfor the specified record isometry, not all physical hardware, an autonomous controller, or an additional\nenvironment implementing a fully dephased classical record channel. Arrival-time labels are histories\nof different possible single absorptions, not independent trials on one reused source."
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      546.8377075195312,
+      529.6023559570312,
+      561.1838989257812
+    ],
+    "text": "3\nPreparation uncertainty and a sharp conditional-error frontier"
+  },
+  {
+    "page": 7,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      573.450439453125,
+      374.10498046875,
+      585.4056396484375
+    ],
+    "text": "3.1\nUncertainty and the unchanged access contract"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      594.6918334960938,
+      547.2060546875,
+      619.3048095703125
+    ],
+    "text": "Use two degenerate one-excitation source modes |0⟩, |1⟩. The unknown label is h ∈{+1, −1}. Its\nsource marginal belongs to"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      84.04200744628906,
+      640.1301879882812,
+      140.58367919921875,
+      652.1741943359375
+    ],
+    "text": "ρh(p, δ, v) ="
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      143.6110076904297,
+      630.7603149414062,
+      256.0726013183594,
+      644.247314453125
+    ],
+    "text": "(︄\np\nhv\n√︁"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      256.0719909667969,
+      631.5728759765625,
+      312.61639404296875,
+      644.2608032226562
+    ],
+    "text": "p(1 −p)e−iδ"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      151.4979705810547,
+      646.102294921875,
+      173.42556762695312,
+      657.86328125
+    ],
+    "text": "hv\n√︁"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      173.4250030517578,
+      645.2921142578125,
+      285.91473388671875,
+      657.8767700195312
+    ],
+    "text": "p(1 −p)eiδ\n1 −p"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      313.4159851074219,
+      630.7603149414062,
+      321.3063659667969,
+      640.7229614257812
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 7,
+    "kind": "math",
+    "bbox": [
+      323.1209716796875,
+      639.9888305664062,
+      548.480224609375,
+      652.0430908203125
+    ],
+    "text": ",\np ∈[p−, p+],\n|δ| ≤∆,\nv ∈[v−, 1],\n(17)"
+  },
+  {
+    "page": 7,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      672.3418579101562,
+      549.4351196289062,
+      724.07763671875
+    ],
+    "text": "where 0 < p−≤p+ < 1, 0 ≤v−≤1 and 0 ≤∆≤π/2. Both labels have the same mode intensities.\nThe width in p is source-amplitude uncertainty; v is source visibility, which may arise from correlations\nwith a retained inaccessible environment. An unknown reader phase offset can be included in ∆by\nadding its bounded offset to the source phase interval, provided the resulting halfwidth is at most"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.23219299316406,
+      547.5062866210938,
+      118.80279541015625
+    ],
+    "text": "π/2. Separate finite calibration procedures can supply these bounds, but they are assumptions of this\ntheorem. No future sample or statistical independence is inferred from a calibration trace.\nThe physical apparatus is exactly the coherent conversion model’s ready subspace plus two stable\nflags. Its Hamiltonian is"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      204.17100524902344,
+      126.28590393066406,
+      246.9892120361328,
+      139.591796875
+    ],
+    "text": "H(t) = ℏ"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      248.80801391601562,
+      119.29933166503906,
+      312.89312744140625,
+      132.7998046875
+    ],
+    "text": "(︄\nA(t)\nC(t)∗"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      256.69500732421875,
+      135.4262237548828,
+      311.41510009765625,
+      146.34881591796875
+    ],
+    "text": "C(t)\nD(t)"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      313.39300537109375,
+      119.29933166503906,
+      321.28338623046875,
+      129.26193237304688
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      323.0989990234375,
+      128.52781677246094,
+      407.8408508300781,
+      139.591796875
+    ],
+    "text": ",\n∥C(t)∥≤G,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      153.26400756835938,
+      549.5889282226562,
+      286.2008056640625
+    ],
+    "text": "with Hermitian block controls.\nUniform ready-subspace loss at rate ℓtransfers the source state\nisometrically into orthogonal retained output modes. The bath starts in its vacuum, all preparations\nare independent of the unknown input, and there is no re-excitation or additional protected storage. G\nand ℓhave units s−1; the deadline T is in seconds. Source plus arbitrary inert reference R may be in\nany joint state with marginal (17). The reference is retained and unread. The lost bath, surviving\nsource and null flag are also retained but are inconclusive to this fixed stable-flag readout catalogue.\nA new coherent bath reader or a procedure reporting guesses on a null outcome changes the allowed\ndecision problem. The two physical stable flags, observed only after the active coupling is off, are the\nonly conclusive outcomes here.\nLet η ∈(0, 1] be the coherent conversion model’s optimal transfer ceiling:"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      231.09600830078125,
+      292.39300537109375,
+      548.4820556640625,
+      306.5462341308594
+    ],
+    "text": "η = fG(τ)2,\nτ = min(T, t∗).\n(18)"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      64.800048828125,
+      313.9031982421875,
+      120.5346450805664,
+      324.8258056640625
+    ],
+    "text": "For ℓ< 4G,"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      145.91305541992188,
+      325.20220947265625,
+      195.09060668945312,
+      344.5382385253906
+    ],
+    "text": "fG(t) = G"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      186.86500549316406,
+      328.0917053222656,
+      307.17657470703125,
+      350.98779296875
+    ],
+    "text": "Ωe−ℓt/4 sin(Ωt),\nΩ=\n√︂"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      307.177001953125,
+      325.2021789550781,
+      461.8783874511719,
+      344.38189697265625
+    ],
+    "text": "G2 −ℓ2/16,\nt∗= arctan(4Ω/ℓ)"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      426.8070068359375,
+      332.5821838378906,
+      466.0897216796875,
+      350.98779296875
+    ],
+    "text": "Ω\n."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      352.57879638671875,
+      547.2547607421875,
+      378.8396301269531
+    ],
+    "text": "At ℓ= 0 take t∗= π/(2G). At ℓ= 4G, use fG(t) = Gte−Gt, t∗= 1/G. For ℓ> 4G, replace sine\nby hyperbolic sine and Ωby χ =\n√︁"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      367.0489807128906,
+      547.2738647460938,
+      392.3647766113281
+    ],
+    "text": "ℓ2/16 −G2, with t∗= artanh(4χ/ℓ)/χ. The previously proved\namplitude barrier implies, for every allowed control,"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      269.6780090332031,
+      400.6138000488281,
+      548.495361328125,
+      413.3137512207031
+    ],
+    "text": "E+ + E−≤ηI,\n(19)"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      419.9959716796875,
+      549.4701538085938,
+      459.82080078125
+    ],
+    "text": "because each input’s flag probability is at most η. For completeness, its proof can be stated briefly.\nSplit any no-loss vector into ready/flag norms r cos θ, r sin θ.\nThen ˙r/r = −ℓcos2 θ/2 and ˙θ =\ngeff + (ℓ/2) sin θ cos θ with |geff| ≤G. For"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      223.7570037841797,
+      464.7821350097656,
+      274.6581726074219,
+      484.0498046875
+    ],
+    "text": "F(θ) =\n∫︂θ"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      266.2770080566406,
+      461.7881774902344,
+      388.2572937011719,
+      492.24407958984375
+    ],
+    "text": "0\nℓcos2 u\nG + (ℓ/2) sin u cos udu,"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      496.07415771484375,
+      549.3953857421875,
+      648.2247924804688
+    ],
+    "text": "d\ndt[log r2 + F(θ)] ≤0. The envelope e−F(θ) sin2 θ is increasing up to π/2, since its logarithmic derivative\nis 2G cot θ/[G + (ℓ/2) sin θ cos θ]. Scalar comparison bounds θ by the constant-maximal-coupling path.\nThat path first has zero ready amplitude at t∗and flag amplitude fG(t); switching it off after τ attains\nthe bound. Hence every input has flag probability at most η, proving (19). This is the coherent\nconversion result’s proof, repeated as a dependency, included for completeness. The original loss,\ndeadline and access hypotheses are retained. No unrelated noise bounds are combined with it. The\nceiling is an effect inequality; it does not assert that all retained-output channels with those effects are\nequal.\nFor a candidate reader define its conclusive probability and wrong-label probability at each admitted\nstate by\nqh = Tr[(E+ + E−)ρh],\nwh = Tr[E−hρh]."
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.406982421875,
+      652.9522094726562,
+      420.0654296875,
+      663.8748168945312
+    ],
+    "text": "The objective is to maximize a guaranteed Q such that, for every h, p, δ, v,"
+  },
+  {
+    "page": 8,
+    "kind": "math",
+    "bbox": [
+      252.9089813232422,
+      672.122802734375,
+      548.486572265625,
+      684.8088989257812
+    ],
+    "text": "qh ≥Q,\nwh ≤εqh.\n(20)"
+  },
+  {
+    "page": 8,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      691.5260620117188,
+      549.003662109375,
+      729.5968017578125
+    ],
+    "text": "Thus ε bounds the error conditioned on a conclusive record; Q explicitly pays for that selection. No\nlabel prior is needed. The error condition is linear in the effects even on a zero-probability branch,\nwhere it is simply 0 ≤0."
+  },
+  {
+    "page": 9,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      235.5561065673828,
+      78.39957427978516
+    ],
+    "text": "3.2\nExact minimax solution"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      87.84065246582031,
+      82.53820037841797,
+      98.749755859375
+    ],
+    "text": "Put"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      87.3280029296875,
+      110.29927062988281,
+      214.1896209716797,
+      127.23675537109375
+    ],
+    "text": "m = v−cos ∆,\nξ± =\n√︂"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      214.19000244140625,
+      112.68899536132812,
+      326.80712890625,
+      126.47795104980469
+    ],
+    "text": "p±/(1 −p±),\nw = 1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      322.57501220703125,
+      107.15580749511719,
+      503.3238525390625,
+      129.36181640625
+    ],
+    "text": "2 log(ξ+/ξ−),\nεmin = 1 −m sech w"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      470.906005859375,
+      114.67720031738281,
+      548.4800415039062,
+      133.082763671875
+    ],
+    "text": "2\n.\n(21)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      141.5885467529297,
+      547.829345703125,
+      166.102783203125
+    ],
+    "text": "All these quantities are dimensionless. The logarithm is a log-amplitude-odds coordinate, not a new\nphysical geometry."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      177.69520568847656,
+      548.3740844726562,
+      217.19790649414062
+    ],
+    "text": "Proposition 3.1 (Sharp robust conditional-error/conclusive frontier). If ε < εmin, no positive guaran-\nteed conclusive probability satisfies (20). The zero-conclusive reader is still allowed. For m > 0 and\nεmin ≤ε < 1/2, define"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      154.10800170898438,
+      224.1731719970703,
+      548.48388671875,
+      249.95880126953125
+    ],
+    "text": "hε = arcosh\nm\n1 −2ε,\nL = −hε −log ξ−,\nU = hε −log ξ+.\n(22)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      258.42010498046875,
+      547.1656494140625,
+      284.5538024902344
+    ],
+    "text": "The interval [L, U] is nonempty. Let z∗be its point nearest zero and put r = ez∗. Then the exact\nmaximum is"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      219.9550018310547,
+      283.1647033691406,
+      387.8284912109375,
+      308.0037841796875
+    ],
+    "text": "Qmax = η minp∈{p−,p+}[pr2 + 1 −p]"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      303.44500732421875,
+      295.4451904296875,
+      548.4793701171875,
+      313.8507995605469
+    ],
+    "text": "max(1, r2)\n.\n(23)"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      64.20901489257812,
+      324.0426940917969,
+      191.0818328857422,
+      334.9517822265625
+    ],
+    "text": "It is attained by the effects"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      148.3710174560547,
+      346.74493408203125,
+      202.3411407470703,
+      366.69976806640625
+    ],
+    "text": "x =\nηr2"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      170.3470001220703,
+      348.3971862792969,
+      370.9261474609375,
+      374.18280029296875
+    ],
+    "text": "max(1, r2),\ny =\nη\nmax(1, r2),\nE± = 1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      366.6940002441406,
+      361.8459777832031,
+      370.9261169433594,
+      369.8160705566406
+    ],
+    "text": "2"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      373.9419860839844,
+      342.07080078125,
+      450.5034484863281,
+      373.44329833984375
+    ],
+    "text": "(︄\nx\n±√xy\n±√xy\ny"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      450.89300537109375,
+      346.4073486328125,
+      458.78338623046875,
+      356.36993408203125
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      460.5979919433594,
+      355.7771911621094,
+      548.481689453125,
+      366.6997985839844
+    ],
+    "text": ".\n(24)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      387.9898376464844,
+      548.876708984375,
+      412.602783203125
+    ],
+    "text": "For ε ≥1/2, x = y = η attains Qmax = η. If m = 0, positive conclusive probability requires ε ≥1/2.\nThese are optima within the declared stable-flag catalogue, not over readings of every retained output."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      424.1249694824219,
+      547.591796875,
+      475.7657775878906
+    ],
+    "text": "Proof. First enlarge the physical set to all positive effects satisfying (19). This can only raise the\noptimum. The source set is invariant under Z = diag(1, −1) with label exchange and under complex\nconjugation with δ ↦→−δ. Averaging the candidate effects with these two transformations preserves all\nlinear constraints (20). Thus an optimum in this enlarged set may be taken as"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      173.58099365234375,
+      495.2089538574219,
+      208.69210815429688,
+      509.7557678222656
+    ],
+    "text": "E± = 1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      204.4600067138672,
+      503.2659606933594,
+      208.69212341308594,
+      511.2360534667969
+    ],
+    "text": "2"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      211.7080078125,
+      487.82733154296875,
+      257.1614685058594,
+      514.86328125
+    ],
+    "text": "(︄\nx\n±z\n±z\ny"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      257.63299560546875,
+      487.82733154296875,
+      265.52337646484375,
+      497.7899169921875
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      267.3379821777344,
+      492.55181884765625,
+      438.4441223144531,
+      508.1197814941406
+    ],
+    "text": ",\n0 ≤x, y ≤η,\nz2 ≤xy,\nz real."
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      528.914794921875,
+      549.3877563476562,
+      580.451416015625
+    ],
+    "text": "This averaging is an upper-bound argument about effects; it introduces no unaccounted physical coin\nor protected register. Because cos δ ≥0 and v ≥0, replacing z by √xy reduces every wrong probability\nwithout changing any conclusive probability. Therefore the rank-one form (24) suffices in the relaxation.\nFor positive x, y set r =\n√︁"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      569.3898315429688,
+      547.2411499023438,
+      594.0037841796875
+    ],
+    "text": "x/y. The worst phase and visibility are |δ| = ∆, v = v−. At a specified\np,"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      154.28201293945312,
+      607.4478149414062,
+      254.65658569335938,
+      618.5117797851562
+    ],
+    "text": "q(p) = px + (1 −p)y,"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      150.24501037597656,
+      625.93017578125,
+      172.32501220703125,
+      636.852783203125
+    ],
+    "text": "w(p)"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      151.66600036621094,
+      631.3219604492188,
+      193.49012756347656,
+      651.7157592773438
+    ],
+    "text": "q(p) = 1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      189.25799560546875,
+      639.3789672851562,
+      193.4901123046875,
+      647.34912109375
+    ],
+    "text": "2"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      196.50599670410156,
+      623.9403076171875,
+      202.31419372558594,
+      633.9029541015625
+    ],
+    "text": "[︄"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      202.3179931640625,
+      625.0783081054688,
+      247.29660034179688,
+      644.2327880859375
+    ],
+    "text": "1 −2m\n√︁"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      228.1320037841797,
+      625.788818359375,
+      297.1297607421875,
+      651.7157592773438
+    ],
+    "text": "p(1 −p)xy\npx + (1 −p)y"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      298.7170104980469,
+      623.9403076171875,
+      304.52520751953125,
+      633.9029541015625
+    ],
+    "text": "]︄"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      307.55902099609375,
+      631.3219604492188,
+      324.50213623046875,
+      644.2327880859375
+    ],
+    "text": "= 1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      320.2699890136719,
+      633.1688232421875,
+      548.517333984375,
+      647.34912109375
+    ],
+    "text": "2[1 −m sech(log r + log ξ(p))].\n(25)"
+  },
+  {
+    "page": 9,
+    "kind": "prose",
+    "bbox": [
+      64.39596557617188,
+      665.6641845703125,
+      547.418212890625,
+      717.2337646484375
+    ],
+    "text": "A reader with x = 0 or y = 0 has conditional error 1/2 whenever it clicks; it cannot improve the case\nε < 1/2. The least contrast in (25) occurs at an endpoint of the log-odds interval. Balancing its two\nendpoint distances gives the unique minimum possible worst distance w, proving (21). At the floor the\noptimal ratio obeys log r = −1"
+  },
+  {
+    "page": 9,
+    "kind": "math",
+    "bbox": [
+      206.6020050048828,
+      706.3111572265625,
+      263.1613464355469,
+      720.9957885742188
+    ],
+    "text": "2 log(ξ−ξ+)."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      67.24568176269531,
+      426.13623046875,
+      78.15478515625
+    ],
+    "text": "For an error tolerance at or above the floor, the requirement is precisely"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      229.00299072265625,
+      90.91081237792969,
+      383.01544189453125,
+      102.95520782470703
+    ],
+    "text": "| log r + log ξ(p)| ≤hε\nfor all p,"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      114.82209777832031,
+      549.35791015625,
+      207.08978271484375
+    ],
+    "text": "which is (22). At fixed r, error is independent of the common scale. Maximal conclusive probability\ntherefore uses the largest scale allowed by x, y ≤η, as in (24). For r ≤1 its guaranteed probability is\nη[1 −p+ + p+r2], strictly increasing with r. For r ≥1 it is η[p−+ (1 −p−)/r2], strictly decreasing with\nr. The point of the admissible log interval nearest zero is thus optimal, proving (23) in the relaxation.\nThe following construction attains those effects in the actual apparatus, so the upper bound is sharp\nfor the physical model as well. The m = 0 and ε ≥1/2 boundary cases follow directly from (25) and\n(19)."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      218.51385498046875,
+      547.5152587890625,
+      271.77484130859375
+    ],
+    "text": "This yields a precise obstruction and its useful repair. Robust zero error with positive success is\npossible only when m = 1 and the amplitude interval is a single point. With any genuine amplitude\nwidth, visibility loss or phase width, one must either abstain always or allow a positive error. For the\npoint case p−= p+ = p, m = 1, ε = 0,"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      200.07000732421875,
+      278.54473876953125,
+      411.95233154296875,
+      295.59381103515625
+    ],
+    "text": "r2 = (1 −p)/p,\nQmax = 2η min(p, 1 −p),"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      306.8551940917969,
+      547.4473266601562,
+      331.3267822265625
+    ],
+    "text": "recovering the coherent conversion model’s exact unambiguous reader. With p−= p+ = 1/2, the error\nfloor is (1 −m)/2 and no amplitude filter improves it."
+  },
+  {
+    "page": 10,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      348.7203674316406,
+      452.973388671875,
+      360.6755676269531
+    ],
+    "text": "3.3\nAttaining interaction, complete outputs and the loss frontier"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      64.80000305175781,
+      368.3377990722656,
+      253.09817504882812,
+      383.1650390625
+    ],
+    "text": "Let H = 2−1/2(︁1 1\n1 −1\n)︁and use, during τ,"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      141.95199584960938,
+      385.4097900390625,
+      548.4744262695312,
+      406.38690185546875
+    ],
+    "text": "A = D = 0,\nC = H diag(gx, gy),\nfgx(τ) = √x,\nfgy(τ) = √y.\n(26)"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      417.6709899902344,
+      550.5972290039062,
+      482.8482971191406
+    ],
+    "text": "The coherent conversion model’s damped transfer amplitude at coupling g is continuous on [0, G],\nequals zero at g = 0 and equals √η at g = G. Since x, y ≤η, both required couplings exist by the\nintermediate-value theorem. The coupling is fixed before the unknown input, uses no actual-sign\nfeedback, has ∥C∥≤G, and hence has cross-subspace Hamiltonian norm at most ℏG. Switch it off\nafter τ; the flags then remain untouched until the deadline T. The terminal conclusive maps are exactly"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      141.6479949951172,
+      492.52117919921875,
+      191.38063049316406,
+      512.4608154296875
+    ],
+    "text": "K+ = −i\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      191.31399536132812,
+      491.3888244628906,
+      367.5516052246094,
+      519.2847900390625
+    ],
+    "text": "2|+⟩(√x⟨0| + √y⟨1|),\nK−= −i\n√"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      367.4849853515625,
+      491.3888244628906,
+      548.4775390625,
+      519.2847900390625
+    ],
+    "text": "2|−⟩(√x⟨0| −√y⟨1|).\n(27)"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40701293945312,
+      529.376708984375,
+      549.114013671875,
+      569.007568359375
+    ],
+    "text": "They reproduce (24) for every source-reference input, not only for the designated family.\nFor full bookkeeping let V (t) = exp[(−iH/ℏ−ℓPR/2)t]IR on the active interval. The surviving-\nsource map is K0 = e−ℓ(T−τ)/2PRV (τ). Lost quantum outputs have maps Kloss(t) =\n√"
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      556.461181640625,
+      547.635009765625,
+      580.9193115234375
+    ],
+    "text": "ℓWtPRV (t) for\nt ≤τ, and the freely decaying ready remainder gives the corresponding maps for τ < t ≤T. They obey"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      175.4759979248047,
+      591.14111328125,
+      324.5465087890625,
+      612.4600830078125
+    ],
+    "text": "K∗\n0K0 + K∗\n+K+ + K∗\n−K−+\n∫︂T"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      315.1860046386719,
+      597.1758422851562,
+      436.5377197265625,
+      618.6041259765625
+    ],
+    "text": "0\nKloss(t)∗Kloss(t)dt = I."
+  },
+  {
+    "page": 10,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      627.0380249023438,
+      549.5582275390625,
+      705.7777709960938
+    ],
+    "text": "The isometries Wt transport the instantaneous lost two-mode component, including its conditional\ncorrelations with R. Earlier filtering and conditioning need not preserve the original input correlations.\nNo failure is removed or redrawn. Tensoring each map with IR defines the complete retained instrument.\nCoherent bath output and a measured time archive are alternative output choices; extra physical\nclassicalization environments are not included in a four-mode count for the active Hamiltonian.\nThe attained reader has phase-independent conclusive, null and loss probabilities at specified p:"
+  },
+  {
+    "page": 10,
+    "kind": "math",
+    "bbox": [
+      122.22400665283203,
+      718.5328369140625,
+      489.78302001953125,
+      731.2337646484375
+    ],
+    "text": "q(p) = px + (1 −p)y,\nn(p) = pnx + (1 −p)ny,\nl(p) = 1 −q(p) −n(p),"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      63.20297622680664,
+      549.5422973632812,
+      146.7789764404297
+    ],
+    "text": "where nj = e−ℓ(T−τ)|ugj(τ)|2 and ug is the ready amplitude of the damped tap. Thus loss and null\nremain separately predictable and retained. The theorem optimizes conclusive probability under an\nerror constraint; it does not additionally minimize lost mass among every possible realization of the\nsame effects.\nWrite B = Qmax/η, with B determined entirely by the source uncertainty and chosen error budget.\nA required guaranteed rate Q∗is feasible exactly when"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      230.6219940185547,
+      157.83885192871094,
+      548.4852905273438,
+      169.89309692382812
+    ],
+    "text": "ε ≥εmin,\nη(G, ℓ, T)B ≥Q∗.\n(28)"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      180.91000366210938,
+      547.734130859375,
+      232.55181884765625
+    ],
+    "text": "This is a sharp physical loss/control requirement within the same model. It keeps the preparation\npenalty B separate from the independently specified loss/control factor η. It does not join a visibility\nparameter from one noise model to an incompatible apparatus bound. For a deadline at least the first\ntransfer peak, η = e−ℓt∗/2 gives an explicit one-variable loss threshold."
+  },
+  {
+    "page": 11,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      249.8174285888672,
+      391.9541015625,
+      261.7726135253906
+    ],
+    "text": "3.4\nAn exact extension for uncertain mode efficiencies"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      271.1701965332031,
+      547.4776611328125,
+      295.6717834472656
+    ],
+    "text": "A calibrated efficiency interval can be treated without pretending that it is uncertainty in the entire\nHamiltonian. Put an unknown but fixed two-mode attenuator before every reader control, with"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      165.3820037841797,
+      299.2378234863281,
+      254.51058959960938,
+      320.4497985839844
+    ],
+    "text": "Aαβ = diag(√α,\n√︁"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      254.50999450683594,
+      298.6058349609375,
+      373.18927001953125,
+      320.4497985839844
+    ],
+    "text": "β),\nBαβ = W diag(\n√"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      373.1929931640625,
+      306.3613586425781,
+      413.81158447265625,
+      318.67279052734375
+    ],
+    "text": "1 −α,\n√︁"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      413.8110046386719,
+      307.60882568359375,
+      446.6255798339844,
+      318.67279052734375
+    ],
+    "text": "1 −β),"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      328.98681640625,
+      547.468017578125,
+      382.32177734375
+    ],
+    "text": "where W maps into two retained upstream-loss modes and A∗\nαβAαβ + B∗\nαβBαβ = I. Assume Cartesian\nbounds 0 < α−≤α ≤α+ ≤1 and 0 < β−≤β ≤β+ ≤1. There is no statistical independence\nassumption on these device parameters.\nThey are not refreshed following loss, and there is no\ncompensating input-dependent control before the attenuator or conclusive reader of its lost modes."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      392.7015380859375,
+      547.389404296875,
+      418.1220703125
+    ],
+    "text": "Proposition 3.2 (Sharp uncertainty in upstream path transmission). The preceding solution remains\nexact after replacing the log-odds interval [log ξ−, log ξ+] by"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      160.4720001220703,
+      427.22198486328125,
+      232.55711364746094,
+      441.0099182128906
+    ],
+    "text": "t−= log ξ−+ 1"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      228.3249969482422,
+      427.2219543457031,
+      390.1451110839844,
+      443.894775390625
+    ],
+    "text": "2 log(α−/β+),\nt+ = log ξ+ + 1"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      385.9129943847656,
+      429.2101745605469,
+      451.5313415527344,
+      443.894775390625
+    ],
+    "text": "2 log(α+/β−)."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.20899963378906,
+      452.06982421875,
+      547.1669311523438,
+      478.1649169921875
+    ],
+    "text": "Its conditional-error floor is [1 −m sech((t+ −t−)/2)]/2. For a feasible ε < 1/2, choose log r nearest\nzero in [−hε −t−, hε −t+]. The exact guaranteed probability on the original trial population is"
+  },
+  {
+    "page": 11,
+    "kind": "math",
+    "bbox": [
+      189.72500610351562,
+      483.6331787109375,
+      548.4867553710938,
+      509.5973205566406
+    ],
+    "text": "Qeff\nmax =\nη\nmax(1, r2)\nmin\np∈{p−,p+}[pα−r2 + (1 −p)β−].\n(29)"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      520.1288452148438,
+      549.3193359375,
+      544.7427978515625
+    ],
+    "text": "Proof. The actual conclusive probability is pαx + (1 −p)βy. Its conditional contrast is m sech(log r +\nlog ξ(p) + 1"
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      533.8201904296875,
+      549.4335327148438,
+      639.5867919921875
+    ],
+    "text": "2 log(α/β)). The possible argument is exactly the interval just stated, so the same endpoint\nminimax calculation gives the conditional-error constraint. Conclusive probability is smallest at α−, β−\nand an endpoint of p. At maximum allowed scale its value is increasing in r for r ≤1 and decreasing for\nr ≥1, for each p separately and hence also for their minimum. This proves (29). The relaxed-POVM\nupper-bound proof and the actual attaining post-attenuation pulse are unchanged. Every downstream\nKraus map is now multiplied on the right by Aαβ, and Bαβ is a further retained quantum branch.\nCompleteness therefore remains exact on arbitrary references. No normalization by the probability of\nupstream survival has been silently performed."
+  },
+  {
+    "page": 11,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      650.7868041992188,
+      547.4896240234375,
+      729.6206665039062
+    ],
+    "text": "For the example below, adding α, β ∈[0.95, 1] raises the conditional-error floor from 0.05764696773\nto 0.06144954979. At ε = 0.08, it reduces guaranteed conclusive probability from 0.1809098506 to\n0.1656759538, attained by gains x = 0.1375200951, y = 0.5062765525. This is a sharp reader with\nuncertain path transmission, not an approximate bound on arbitrary gain miscalibration.\nUncertain scalar lifetime or coherent coupling is a different interface and is held open here. The\nphysical-threshold curve (28) permits redesign at each known ℓ; it is not one pulse certified for an"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      67.23219299316406,
+      547.4437866210938,
+      132.351806640625
+    ],
+    "text": "unknown range of ℓ. Indeed the fixed eight-percent pulse designed at ℓ= 1 below has worst conditional\nerror 0.08016304046 if the actual rate is 0.8. Less loss changes the relative transfer amplitudes and\ncan increase the conditional error. Substituting a worst-case η while keeping its nominal optimal ratio\nwould therefore be invalid. A joint calibrated effect region or an additional robust-control optimization\nis needed for that task."
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      152.3177032470703,
+      468.1863098144531,
+      166.66390991210938
+    ],
+    "text": "4\nA calibrated filter with common uncertain conversion"
+  },
+  {
+    "page": 12,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      178.93040466308594,
+      442.0821838378906,
+      190.88560485839844
+    ],
+    "text": "4.1\nThe original source population and the two physical stages"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      200.32667541503906,
+      432.0111999511719,
+      211.23577880859375
+    ],
+    "text": "Keep the preparation-uncertainty construction’s one-excitation source family"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      92.46300506591797,
+      226.75819396972656,
+      149.00466918945312,
+      238.80218505859375
+    ],
+    "text": "ρh(p, δ, v) ="
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      152.03199768066406,
+      217.38832092285156,
+      264.4925842285156,
+      230.87530517578125
+    ],
+    "text": "(︄\np\nhv\n√︁"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      264.4930114746094,
+      218.20083618164062,
+      321.03741455078125,
+      230.8887939453125
+    ],
+    "text": "p(1 −p)e−iδ"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      159.9189910888672,
+      232.73133850097656,
+      181.84559631347656,
+      244.4913330078125
+    ],
+    "text": "hv\n√︁"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      181.8459930419922,
+      231.92108154296875,
+      294.3357238769531,
+      244.5047607421875
+    ],
+    "text": "p(1 −p)eiδ\n1 −p"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      321.83599853515625,
+      217.38832092285156,
+      329.72637939453125,
+      227.35092163085938
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      331.5419921875,
+      226.61680603027344,
+      519.5485229492188,
+      238.67105102539062
+    ],
+    "text": ",\np ∈[p−, p+],\n|δ| ≤∆,\nv ∈[v−, 1]."
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      253.66783142089844,
+      547.481201171875,
+      307.03961181640625
+    ],
+    "text": "Here 0 < p−≤p+ < 1, 0 ≤∆≤π/2 and h = ±1. An arbitrary finite inert reference R is retained and\nunread. The apparatus and its internal controller have one input-independent original preparation; no\nfailed trial is replaced by a fresh source.\nFor a feasible error ceiling ε < 1/2 and m > 0, put m = v−cos ∆, ξ± =\n√︁"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      294.3158264160156,
+      547.6207885742188,
+      332.477783203125
+    ],
+    "text": "p±/(1 −p±) and\nhε = arcosh[m/(1 −2ε)]. The previous source theorem, or direct calculation of the two rank-one reader\neffects, gives the allowed amplitude-ratio interval"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      236.3140106201172,
+      338.4497985839844,
+      548.4779052734375,
+      352.6740417480469
+    ],
+    "text": "a = e−hε/ξ−,\nb = ehε/ξ+.\n(30)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      359.8248291015625,
+      549.6004028320312,
+      397.9867858886719
+    ],
+    "text": "We develop the case 0 < a ≤b < 1, where mode zero should be attenuated; interchanging source modes\ntreats the reflected case. The interval exists at or above the previously proved conditional-error floor.\nFor any effective ratio R the worst conditional error is"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      197.3590087890625,
+      403.2809753417969,
+      338.10113525390625,
+      431.7373046875
+    ],
+    "text": "max\np∈{p−,p+}\n1 −m sech[log R + 1"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      323.4649963378906,
+      405.12884521484375,
+      414.6437072753906,
+      431.5597839355469
+    ],
+    "text": "2 log(p/(1 −p))]\n2\n,"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.79998779296875,
+      438.47381591796875,
+      367.8817443847656,
+      463.0867919921875
+    ],
+    "text": "so the error ceiling is equivalent to R ∈[a, b].\nFirst place a calibrated, static passive filter at the entrance:"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      123.82398986816406,
+      469.0183410644531,
+      257.4895935058594,
+      483.92877197265625
+    ],
+    "text": "Fr = diag(r, 1),\nBr =\n√︁"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      257.489990234375,
+      469.0588073730469,
+      548.4879760742188,
+      484.97528076171875
+    ],
+    "text": "1 −r2|f⟩⟨0|,\nF ∗\nr Fr + B∗\nrBr = I,\n0 < r ≤1.\n(31)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      490.5039978027344,
+      549.0117797851562,
+      623.4407958984375
+    ],
+    "text": "The reflected mode f is retained and never interacts with the subsequent cell. This is a unitary\nbeam-splitter isometry with one additional vacant mode. For example an exchange Hamiltonian with\nangle arccos r implements it; its interaction entries have units ℏ(arccos r)/TF for a finite calibrated\nprefix duration TF . Its phase must also be calibrated or charged to ∆. This prefix is an additional\ndeclared resource. It is outside the uncertain conversion cell; its own losses are included in its calibrated\namplitudes, not presumed absent in a real device. The comparison uses the same prefix interval with a\nbypass for the unfiltered apparatus. The quoted internal time uncertainty concerns the following cell;\ntotal elapsed time also includes TF . No instantaneous filter or unchanged total hardware is asserted.\nNext use identical path couplings. In the bright-flag basis the ready/flag Hamiltonian and all\ninternal interactions are path independent:"
+  },
+  {
+    "page": 12,
+    "kind": "math",
+    "bbox": [
+      224.7310028076172,
+      631.5818481445312,
+      548.48681640625,
+      644.223876953125
+    ],
+    "text": "Hcell(t) = Ipath ⊗Hport,controller(t).\n(32)"
+  },
+  {
+    "page": 12,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      649.163818359375,
+      549.3193969726562,
+      729.5968017578125
+    ],
+    "text": "For the simple resonant cell this is the four-mode model with C(t) = g(t)H, where H = 2−1/2(︁1 1\n1 −1\n)︁.\nUniform ready-subspace loss preserves the path state while transferring its excitation to retained lost\nmodes. The full loss dynamics must be path blind; equal population decay rates alone do not exclude\nadditional path dephasing. The bath and controller are retained. The physical + and −flags read\n⟨±x| = 2−1/2(⟨0| ± ⟨1|) once the cell is off. Null, filter failure, source remainder and lost modes are\ninconclusive; no additional reader of them or of R is included."
+  },
+  {
+    "page": 13,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      466.3154602050781,
+      78.39957427978516
+    ],
+    "text": "4.2\nExact factorization under unknown common internal dynamics"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      63.941001892089844,
+      87.75431060791016,
+      547.1881713867188,
+      141.08575439453125
+    ],
+    "text": "Proposition 4.1 (Internal uncertainty changes exposure, not reader ratio). For any path-blind cell\nwith its stated original input-independent stock, there is a positive retained controller/bath output τF\non the flag branch, independent of the path input, with Tr τF = η ∈[0, 1]. The conclusive instrument\non any ρSR has the exact form"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      199.864990234375,
+      150.67178344726562,
+      548.4812622070312,
+      166.44790649414062
+    ],
+    "text": "I±(ρSR) = |±⟩⟨±| ⊗τF ⊗⟨±x|FrρSRF ∗\nr |±x⟩.\n(33)"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      63.506011962890625,
+      177.50465393066406,
+      125.68788146972656,
+      188.41375732421875
+    ],
+    "text": "Consequently"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      257.14703369140625,
+      190.90016174316406,
+      293.4478454589844,
+      210.8387451171875
+    ],
+    "text": "E± = η"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      288.2030029296875,
+      205.7766876220703,
+      293.6575622558594,
+      216.685791015625
+    ],
+    "text": "2"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      296.8479919433594,
+      188.9103546142578,
+      341.81427001953125,
+      215.9598388671875
+    ],
+    "text": "(︄\nr2\n±r\n±r\n1"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      342.1169738769531,
+      188.9103546142578,
+      350.0073547363281,
+      198.87295532226562
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 13,
+    "kind": "math",
+    "bbox": [
+      351.82196044921875,
+      198.2802276611328,
+      354.85467529296875,
+      209.1893310546875
+    ],
+    "text": "."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      225.41195678710938,
+      548.9022216796875,
+      277.05377197265625
+    ],
+    "text": "All conclusive conditional errors and normalized reference assemblages are independent of unknown\ncommon gain, detuning, loss, waveform or stopping time, whenever that branch has nonzero probability.\nTheir common conclusive scale η can change and can even vanish. A positive rate requires a separate\nlower bound on η."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.79999542236328,
+      288.5759582519531,
+      549.1695556640625,
+      463.8487854003906
+    ],
+    "text": "Proof. Purify the apparatus stock with its inert original purifier. In the transmitted branch, the\nfull path-independent cell isometry acts as identity on the path and reference and as one common\nisometry on the ready-port/controller stock. Projecting the latter to the flag port gives a subnormalized\napparatus vector whose projector, or the corresponding mixture, is τF . Projecting the path into the\nphysical ±x flag modes gives (33). Its trace supplies the stated effects. The apparatus state conditional\non either conclusive flag is the same τF /η, independent of the input and reported label. The reference\nfactor is the displayed matrix element; after normalization it has no η dependence.\nThe filter-failure amplitude Br and every remaining ready/lost-port amplitude are retained orthog-\nonal output sectors. Combining the filter isometry with the full cell isometry makes their complete\nsum trace preserving and retains coherences if the output is left unmeasured. This does not claim that\nfull outputs for two different internal cells are equal: τF , lost temporal modes and cross-sector phases\ncan differ. The invariance is the exact specified reader/reference interface. No reset or redraw is used,\nand tensoring with IR incurs no reference-dimension cost."
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      473.6819763183594,
+      548.4854736328125,
+      581.2528076171875
+    ],
+    "text": "For an original ensemble of unknown internal parameters, retain that ensemble label and its\napparatus state. The same formula holds with the corresponding mixture of τF , since the stock is\nindependent of the unknown input. There is no fresh statistical independence across uses: one unknown\ncommon cell can correlate their success flags. Pointwise error guarantees do not turn those flags into\nindependent trials.\nAmong calibrated diagonal filters followed by a common cell known only to obey η ≥ηmin > 0, the\nsharp maximin rate is\nQfilter = ηmin[1 −p+ + p+b2],\nr = b.\n(34)"
+  },
+  {
+    "page": 13,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      588.4808349609375,
+      547.7315063476562,
+      640.1917724609375
+    ],
+    "text": "Indeed the error constraint is r ∈[a, b], and for r < 1 the original population’s conclusive rate is\nη[1 −p + pr2], smallest at p = p+ and at ηmin and increasing with r. Allowing an extra common\nattenuation cannot improve it. This is a sharp optimum in this filter/common-conversion subclass; it\nis not an unrestricted robust-control optimum."
+  },
+  {
+    "page": 14,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      66.44437408447266,
+      292.3193359375,
+      78.39957427978516
+    ],
+    "text": "4.3\nSharp gain/loss/time box bounds"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      87.81946563720703,
+      547.2372436523438,
+      112.29876708984375
+    ],
+    "text": "For a constant positive resonant coupling g, scalar ready loss ℓand interaction duration t, define the\npositive flag amplitude before its first maximum by"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      174.7860107421875,
+      140.25778198242188,
+      260.35009765625,
+      153.49078369140625
+    ],
+    "text": "f(g, ℓ, t) = ge−ℓt/4"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      262.6710205078125,
+      123.83332824707031,
+      271.52777099609375,
+      148.74093627929688
+    ],
+    "text": "⎧\n⎪\n⎪\n⎨"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      262.6710205078125,
+      156.71034240722656,
+      271.52777099609375,
+      172.65097045898438
+    ],
+    "text": "⎪\n⎪\n⎩"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      271.5270080566406,
+      122.73387145996094,
+      436.0276794433594,
+      170.2747802734375
+    ],
+    "text": "sin(Ωt)/Ω,\nΩ2 = g2 −ℓ2/16 > 0,\nt,\ng2 = ℓ2/16,\nsinh(χt)/χ,\nχ2 = ℓ2/16 −g2 > 0."
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      529.0830078125,
+      142.58168029785156,
+      548.4793701171875,
+      153.49078369140625
+    ],
+    "text": "(35)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.79901123046875,
+      183.7136993408203,
+      251.5628204345703,
+      194.622802734375
+    ],
+    "text": "Its first ready-amplitude zero occurs at"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      222.46200561523438,
+      206.0511474609375,
+      292.72894287109375,
+      226.19590759277344
+    ],
+    "text": "t∗(g, ℓ) =\n∫︂π/2"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      274.6880187988281,
+      207.01625061035156,
+      548.4862670898438,
+      233.51309204101562
+    ],
+    "text": "0\ndθ\ng + (ℓ/2) sin θ cos θ.\n(36)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      244.84222412109375,
+      547.4866333007812,
+      269.21478271484375
+    ],
+    "text": "This is the arctangent/critical/hyperbolic formula of the coherent conversion result. Let actual constants\nobey"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      86.04800415039062,
+      282.6588134765625,
+      525.95361328125,
+      295.25689697265625
+    ],
+    "text": "g ∈[gL, gU],\nℓ∈[ℓL, ℓU],\nt ∈[tL, tU],\n0 < gL ≤gU,\n0 ≤ℓL ≤ℓU,\n0 < tL ≤tU,"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      64.79989624023438,
+      307.3216857910156,
+      548.485107421875,
+      333.3138732910156
+    ],
+    "text": "and assume\ntU ≤t∗(gU, ℓU).\n(37)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      339.1178283691406,
+      547.4520874023438,
+      378.9037780761719
+    ],
+    "text": "The gain and loss are in s−1; the duration is in seconds. This is uncertainty in one rectangular pulse’s\nconstants and clock duration, not a bound for arbitrary time-varying coefficients taking values in those\nintervals."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.08599853515625,
+      390.4961853027344,
+      548.4772338867188,
+      430.1537780761719
+    ],
+    "text": "Proposition 4.2 (Exact transfer and ratio corners). In this box, f increases with g and t and decreases\nwith ℓ. Thus\nηmin = f(gL, ℓU, tL)2,\nηmax = f(gU, ℓL, tU)2.\n(38)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.19696044921875,
+      437.62017822265625,
+      538.7619018554688,
+      449.6642150878906
+    ],
+    "text": "For a fixed relative coupling 0 < d < 1 define Rd(g, ℓ, t) = f(dg, ℓ, t)/f(g, ℓ, t). Its exact extrema are"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      173.42996215820312,
+      462.128173828125,
+      548.4834594726562,
+      474.1722106933594
+    ],
+    "text": "Rmin(d) = Rd(gL, ℓU, tL),\nRmax(d) = Rd(gU, ℓL, tU).\n(39)"
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.20895385742188,
+      486.63616943359375,
+      374.7583923339844,
+      497.55877685546875
+    ],
+    "text": "It increases with g, t and decreases with ℓ, and is increasing in d."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.79995727539062,
+      509.0809631347656,
+      547.7801513671875,
+      548.8087768554688
+    ],
+    "text": "Proof. Equation (36) decreases in both g and ℓ, so the entire box precedes each pulse’s first ready\nzero. Since ˙f = gu for its nonnegative ready amplitude u, f increases in time. For the gain and loss\nderivatives put a0 = ℓ/4. In the oscillatory case x = Ωt,"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      143.1389923095703,
+      557.815673828125,
+      199.24053955078125,
+      577.7417602539062
+    ],
+    "text": "∂g log f = 1"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      193.71600341796875,
+      557.8021850585938,
+      223.7466583251953,
+      583.5877685546875
+    ],
+    "text": "g + g"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      215.03500366210938,
+      557.8021850585938,
+      405.1551208496094,
+      583.5877685546875
+    ],
+    "text": "Ω2 (x cot x −1),\n∂a0 log f = −t + a0"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      394.1000061035156,
+      565.0408325195312,
+      468.8878479003906,
+      583.5877685546875
+    ],
+    "text": "Ω2 (1 −x cot x)."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      594.1849365234375,
+      548.7190551757812,
+      633.8577880859375
+    ],
+    "text": "For t ≤t∗, x ≤arctan(Ω/a0). The decreasing function x cot x is at least arctan z/z ≥1/(1+z2) = a2\n0/g2,\nz = Ω/a0, which proves the gain derivative is nonnegative. Also 1 −x cot x ≤x tan x and a0 tan x ≤Ω,\nwhich prove the loss derivative is nonpositive. In the hyperbolic case y = χt the derivatives are"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      139.0419921875,
+      643.8946533203125,
+      195.14353942871094,
+      663.82080078125
+    ],
+    "text": "∂g log f = 1"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      189.61900329589844,
+      643.8811645507812,
+      219.1236572265625,
+      669.6668090820312
+    ],
+    "text": "g + g"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      210.93800354003906,
+      643.8811645507812,
+      404.62811279296875,
+      669.6533203125
+    ],
+    "text": "χ2 (1 −y coth y),\n∂a0 log f = −t + a0"
+  },
+  {
+    "page": 14,
+    "kind": "math",
+    "bbox": [
+      394.1000061035156,
+      651.1198120117188,
+      472.97412109375,
+      669.6533203125
+    ],
+    "text": "χ2 (y coth y −1)."
+  },
+  {
+    "page": 14,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      680.2639770507812,
+      548.9307250976562,
+      719.936767578125
+    ],
+    "text": "Here y ≤artanh(χ/a0), y coth y ≤artanh z/z ≤1/(1 −z2) = a2\n0/g2, and y coth y −1 ≤y tanh y,\na0 tanh y ≤χ. These prove the same signs. The critical and zero-loss limits follow by continuity,\nestablishing (38)."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      81.73600006103516,
+      67.24568176269531,
+      428.2526550292969,
+      78.15478515625
+    ],
+    "text": "For the ratio use the entire sine product, which also covers imaginary Ω:"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      209.39599609375,
+      98.98017883300781,
+      242.76864624023438,
+      111.67974853515625
+    ],
+    "text": "Rd = d"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      246.19000244140625,
+      88.48380279541016,
+      258.9222106933594,
+      107.14492797851562
+    ],
+    "text": "∞\n∏︂"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      244.5760040283203,
+      113.317138671875,
+      260.5321350097656,
+      121.2970962524414
+    ],
+    "text": "n=1"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      262.3529968261719,
+      89.61036682128906,
+      268.16119384765625,
+      99.57296752929688
+    ],
+    "text": "[︄"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      268.16400146484375,
+      89.94802856445312,
+      367.2890930175781,
+      109.90283203125
+    ],
+    "text": "1 +\n(1 −d2)g2t2"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      288.14801025390625,
+      103.17082214355469,
+      390.7486572265625,
+      117.38580322265625
+    ],
+    "text": "π2n2 −g2t2 + ℓ2t2/16"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      391.9439697265625,
+      89.61036682128906,
+      397.7521667480469,
+      99.57296752929688
+    ],
+    "text": "]︄"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      399.573974609375,
+      98.98023986816406,
+      548.483154296875,
+      109.90283203125
+    ],
+    "text": ".\n(40)"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      131.5471954345703,
+      549.6006469726562,
+      183.1177978515625
+    ],
+    "text": "All denominators are positive in the prepeak box. Each factor increases in g, t and decreases in ℓ. The\nproduct converges uniformly on compact subsets of this box, so its limits preserve those monotonicities.\nThis gives (39). Increasing d increases its numerator amplitude f(dg, ℓ, t) by the gain result; the\ndenominator is fixed."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      200.61936950683594,
+      393.4365234375,
+      212.57456970214844
+    ],
+    "text": "4.4\nA solved, optimized comparison with unequal taps"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      221.93003845214844,
+      547.4544677734375,
+      274.69317626953125
+    ],
+    "text": "The earlier rectangular-pulse subclass has no calibrated input filter and uses C = gH diag(d, 1) with\none fixed d chosen before unknown g, ℓ, t. It is the actual unequal-tap architecture, retuned for the\nwhole uncertainty box rather than frozen at its nominal value. Its conditional error is controlled by the\neffective ratio Rd. For 0 < a ≤b < 1, all pulses in the box are valid exactly when"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      233.45701599121094,
+      287.01580810546875,
+      548.490478515625,
+      299.071044921875
+    ],
+    "text": "Rmin(d) ≥a,\nRmax(d) ≤b.\n(41)"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      309.2718200683594,
+      547.2166748046875,
+      336.1377868652344
+    ],
+    "text": "Both functions increase from zero to one. The feasible coupling interval is [R−1\nmin(a), R−1\nmax(b)], if\nnonempty. Its sharp maximal rate is attained at"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      168.5070037841797,
+      347.41180419921875,
+      548.486572265625,
+      362.6970520019531
+    ],
+    "text": "d∗= R−1\nmax(b),\nQunequal = ηmin[1 −p+ + p+Rmin(d∗)2].\n(42)"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      374.15997314453125,
+      547.716796875,
+      507.0968017578125
+    ],
+    "text": "To prove the rate statement, both individual transfer amplitudes increase with gain and time and\ndecrease with loss. Thus their weighted conclusive sum is smallest at (gL, ℓU, tL) and p = p+. It\nincreases with d, giving the largest feasible value (42). This is a solved restricted minimax, not a\nsampled optimizer. If the feasible interval is empty, this rectangular unequal-tap subclass has no\npositive-rate valid design.\nWhenever the box creates strict ratio variation, Rmin(d∗) < Rmax(d∗) = b, comparison of (34) and\n(42) gives Qfilter > Qunequal. The calibrated filter fixes the desired ratio outside the uncertain conversion\ndynamics. It does not cancel loss or recover a missing input sample. That improvement consumes\nthe extra resource specified at the start. A shaped pulse or larger controller could outperform either\nrestricted subclass; no bound on such a protocol is claimed."
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      527.8956909179688,
+      518.7852783203125,
+      542.2418823242188
+    ],
+    "text": "5\nSharp protection against imperfect controlled-path matching"
+  },
+  {
+    "page": 15,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      554.5084228515625,
+      453.75054931640625,
+      566.463623046875
+    ],
+    "text": "5.1\nPhysical model and a certificate weaker than exact matching"
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      575.8200073242188,
+      547.8304443359375,
+      600.3507690429688
+    ],
+    "text": "The transmitted input path is a two-mode one-excitation register. The original apparatus stock is\nindependent of that register and any inert source reference. After purification, let the actual cell obey"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      198.75599670410156,
+      613.8068237304688,
+      413.25634765625,
+      625.8511962890625
+    ],
+    "text": "|i⟩|ready⟩↦−→|i⟩|vi⟩,\n∥vi∥= 1,\ni = 0, 1."
+  },
+  {
+    "page": 15,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      638.4561767578125,
+      547.7206420898438,
+      703.5758056640625
+    ],
+    "text": "The path is preserved; all port, controller and bath variables belong to vi. This allows path-dependent\ncoherent interactions and marking, but not arbitrary path exchange. Let PF be the common conclusive\nport and PN = I −PF its complete inconclusive complement, including surviving source and all lost\noutputs. Only the terminal + and −flags supply decisions; the complementary path, bath and original\nreference are retained but unread. In this solvable class the two actual efficiencies remain equal:"
+  },
+  {
+    "page": 15,
+    "kind": "math",
+    "bbox": [
+      184.47100830078125,
+      712.670654296875,
+      427.5362548828125,
+      729.75927734375
+    ],
+    "text": "∥PF v0∥2 = ∥PF v1∥2 = η,\n0 < ηL ≤η ≤ηU ≤1."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      60.31779861450195,
+      548.4990234375,
+      106.24405670166016
+    ],
+    "text": "Equal efficiencies do not imply equal apparatus states or phase. Write fi = PF vi/√η, and admit the\nfull-response certificate\nRe⟨v0, v1⟩≥γ = cos Θ,\n0 ≤Θ ≤π.\n(43)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.4070053100586,
+      114.12779235839844,
+      548.7190551757812,
+      248.82275390625
+    ],
+    "text": "It is a real overlap in a calibrated relative-phase convention, not an absolute fidelity: |⟨v0, v1⟩| = 1\nalone permits an unknown relative phase of π and cannot protect this reader. The certificate is a\nphysical premise or an independently justified calibration result. Reading all lost ports to estimate it\nwould require additional coherent access, not granted by retaining them.\nA sufficient microscopic consumer uses two controlled-path Hamiltonians Hi(t) on the same finite\ndilation, with a common initial stock and\n∫︁∥H0−H1∥∞dt/ℏ≤b. Duhamel’s identity gives ∥v0−v1∥≤b,\nhence Re⟨v0, v1⟩≥1 −b2/2. It requires a bound on the actual full dilation difference; equal averaged\ndecay rates do not establish it. Sharpness below is for the declared Gram class, not for every Hamiltonian\nnorm ball. The common conversion and uniform loss model can supply ηL when its own hypotheses\nstill hold. Otherwise ηL needs a new certificate."
+  },
+  {
+    "page": 16,
+    "kind": "heading",
+    "bbox": [
+      64.80001068115234,
+      264.6093444824219,
+      370.8889465332031,
+      276.5645446777344
+    ],
+    "text": "5.2\nSharp postselected overlap and phase response"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80001068115234,
+      285.8507995605469,
+      333.5067443847656,
+      297.905029296875
+    ],
+    "text": "Put χ = ⟨f0, f1⟩. Orthogonality of the port sectors gives"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      173.83502197265625,
+      310.184814453125,
+      438.18896484375,
+      322.2821960449219
+    ],
+    "text": "Re⟨v0, v1⟩= η Re χ + Re⟨PNv0, PNv1⟩≤η Re χ + 1 −η."
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      64.406982421875,
+      334.6746826171875,
+      392.55035400390625,
+      360.82977294921875
+    ],
+    "text": "Thus\n|χ| ≤1,\nRe χ ≥k(η) := 1 −1 −γ"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      377.7309875488281,
+      349.90716552734375,
+      548.485595703125,
+      368.2992858886719
+    ],
+    "text": "η\n.\n(44)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.24299621582031,
+      374.330810546875,
+      548.9800415039062,
+      426.0417785644531
+    ],
+    "text": "When k < −1 the latter supplies no additional restriction. This is exact: any point in the intersection\nof that disk and half-plane can be completed by normalized null vectors having a suitable real overlap,\nwhenever the global inequality requires it. For −1 ≤k(η) ≤1, the boundary used in the positive-contrast\noptimization below has"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      126.78300476074219,
+      432.0018005371094,
+      205.3476104736328,
+      452.01275634765625
+    ],
+    "text": "v0 = √η|F⟩+\n√︁"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      205.3470001220703,
+      432.0018310546875,
+      366.3005676269531,
+      452.0127868652344
+    ],
+    "text": "1 −η|N⟩,\nv1 = √ηeiα|F⟩+\n√︁"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      366.3009948730469,
+      439.3128356933594,
+      485.2537841796875,
+      450.3768005371094
+    ],
+    "text": "1 −η|N⟩,\ncos α = k(η)."
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      463.8872375488281,
+      547.8370971679688,
+      557.6947631835938
+    ],
+    "text": "It saturates the global certificate in that domain. A conventional common conversion pulse followed by\nthe controlled flag-only Hamiltonian Hmark = −ℏα|1, F⟩⟨1, F|/TM for duration TM > 0 realizes it. Its\nfinite action and timing are declared; there is no claim of a free or instantaneous phase pulse. This uses\nthe same two paths and two ready/flag ports, plus the common-conversion filter-failure port. Null/loss\namplitudes are retained, not renormalized away.\nLet the source family have population p ∈[pL, pU], visibility v ∈[vL, 1], with 0 ≤vL ≤1, and\nrelative phase |δ| ≤∆. For kL = k(ηL) satisfying"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      235.1430206298828,
+      569.2767944335938,
+      548.4837646484375,
+      582.0162963867188
+    ],
+    "text": "kL > sin ∆,\n0 ≤∆< π/2,\n(45)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      593.7666625976562,
+      260.37835693359375,
+      604.67578125
+    ],
+    "text": "the exact least real conclusive contrast is"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      152.55801391601562,
+      620.2171630859375,
+      187.73239135742188,
+      632.1722412109375
+    ],
+    "text": "m = vL"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      190.04501342773438,
+      613.8363037109375,
+      257.86859130859375,
+      632.8278198242188
+    ],
+    "text": "[︃\nkL cos ∆−\n√︂"
+  },
+  {
+    "page": 16,
+    "kind": "math",
+    "bbox": [
+      257.8689880371094,
+      613.8363037109375,
+      548.4781494140625,
+      634.4218139648438
+    ],
+    "text": "1 −k2\nL sin ∆\n]︃\n= vL cos(arccos kL + ∆) ≥0.\n(46)"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      648.7333984375,
+      547.494873046875,
+      690.6146850585938
+    ],
+    "text": "It is strictly positive when vL > 0. If vL = 0, no correctly labelled reader in this family with positive\nguaranteed conclusive probability can guarantee conditional error below one half. Indeed, for fixed phase\nthe minimizing unit-disk point is χ = kL + i\n√︂"
+  },
+  {
+    "page": 16,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      676.575927734375,
+      547.6778564453125,
+      730.6301879882812
+    ],
+    "text": "1 −k2\nL, with adverse phase sign; increasing η increases k\nand improves the contrast. The minimum over δ is at an endpoint. Visibility is worst at vL in the\npositive regime. The explicit phase-marking dilation above attains every stated minimum. Outside\nthis regime the minimum is cos[min{π, arccos(max{−1, kL}) + ∆}] before visibility minimization. A"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.3740005493164,
+      67.16098022460938,
+      547.779541015625,
+      159.4508056640625
+    ],
+    "text": "negative contrast cannot certify the present correctly labelled reader below one-half error; it is not\nsilently clipped positive.\nThe limiting cases expose the operational gain. At Θ = 0 the general-POVM matched-reader\ncontrast is recovered. At η = 1 the phase budget is the ordinary sum Θ + ∆. At fixed nonzero\nΘ and decreasing efficiency, conditioning eventually destroys the positive-contrast guarantee. This\nis a quantified consequence of mismatch concentrated in rare flag events, not an additive generic\nchannel-error estimate."
+  },
+  {
+    "page": 17,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      176.9174041748047,
+      408.4521789550781,
+      188.8726043701172
+    ],
+    "text": "5.3\nExactly optimal filter with bounded calibration error"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      196.63812255859375,
+      549.3193969726562,
+      263.41876220703125
+    ],
+    "text": "Place the same entrance filter before the cell. Its actual transmitted matrix is F = diag(reu, 1), where\nthe chosen nominal r > 0 has fixed unknown log-gain error |u| ≤u0, with u0 ≥0, and r ≤e−u0.\nIts phase error is charged to ∆; failure remains an orthogonal retained flag. These are amplitude\nconstraints on the actual passive prefix, not a statistical independence assumption between errors. The\nconclusive effects are"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      239.84100341796875,
+      263.78411865234375,
+      276.1418151855469,
+      283.72271728515625
+    ],
+    "text": "E± = η"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      270.8970031738281,
+      278.66070556640625,
+      276.3515625,
+      289.5697937011719
+    ],
+    "text": "2"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      279.5419921875,
+      261.7943420410156,
+      359.4270935058594,
+      288.84381103515625
+    ],
+    "text": "(︄\nr2e2u\n±reuχ\n±reu ¯χ\n1"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      359.4229736328125,
+      261.7943420410156,
+      367.3133544921875,
+      271.7569274902344
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      369.12896728515625,
+      271.1641845703125,
+      372.16168212890625,
+      282.07330322265625
+    ],
+    "text": "."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40699768066406,
+      298.1839904785156,
+      547.4421997070312,
+      322.727783203125
+    ],
+    "text": "The complex conjugation convention is immaterial to the symmetric phase set. For either label the\nconditional wrong probability is"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      180.35800170898438,
+      335.9617004394531,
+      273.41156005859375,
+      354.25079345703125
+    ],
+    "text": "ϵ(p, u, η, χ, δ, v) = 1"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      267.9570007324219,
+      350.82470703125,
+      273.41156005859375,
+      361.7337951660156
+    ],
+    "text": "2"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      276.42498779296875,
+      333.9583435058594,
+      282.2331848144531,
+      343.9209289550781
+    ],
+    "text": "[︄"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      282.2359924316406,
+      334.2861022949219,
+      339.0215759277344,
+      354.25079345703125
+    ],
+    "text": "1 −2reuv\n√︁"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      327.1180114746094,
+      334.2861022949219,
+      419.78765869140625,
+      361.7337951660156
+    ],
+    "text": "p(1 −p) Re(χeiδ)\npr2e2u + 1 −p"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      420.9820251464844,
+      333.9583435058594,
+      426.79022216796875,
+      343.9209289550781
+    ],
+    "text": "]︄"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      428.6120300292969,
+      343.32818603515625,
+      431.6447448730469,
+      354.2373046875
+    ],
+    "text": "."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.40704345703125,
+      374.8037109375,
+      432.0328369140625,
+      385.7127990722656
+    ],
+    "text": "Thus it depends on the normalized apparatus overlap as well as path counts."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.895999908447266,
+      396.9778137207031,
+      546.8950805664062,
+      423.3036193847656
+    ],
+    "text": "Theorem 5.1 (Sharp Gram-robust filter frontier). Assume Eq. (45), 0 < pL ≤pU < 1 and an admitted\nerror ceiling 0 ≤ε < 1/2. Put ξL =\n√︁"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      252.38999938964844,
+      409.81634521484375,
+      353.62457275390625,
+      423.3036193847656
+    ],
+    "text": "pL/(1 −pL), ξU =\n√︁"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.93000030517578,
+      410.5268249511719,
+      547.2034301757812,
+      435.1398010253906
+    ],
+    "text": "pU/(1 −pU). If m < 1 −2ε, no positive\nconclusive reader in this subclass meets the ceiling. Otherwise define"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      142.40399169921875,
+      442.76617431640625,
+      469.59869384765625,
+      468.5517883300781
+    ],
+    "text": "h = arcosh\nm\n1 −2ε,\nL = −h −log ξL + u0,\nU = h −log ξU −u0."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.9630012512207,
+      478.309814453125,
+      548.4846801757812,
+      518.409912109375
+    ],
+    "text": "A feasible filter exists precisely when L ≤min{U, −u0}. Its maximin conclusive probability is attained\nat\nr∗= exp min{U, −u0},\nQ∗= ηL[1 −pU + pUr2\n∗e−2u0].\n(47)"
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      63.082000732421875,
+      525.412109375,
+      547.2261962890625,
+      549.9337768554688
+    ],
+    "text": "The optimum is among these calibrated attenuate-mode-zero filters and controlled-path cells with the\nstated Gram and efficiency uncertainty. It is not an unrestricted optical-control optimum."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      561.1978149414062,
+      547.695556640625,
+      653.5568237304688
+    ],
+    "text": "Proof. The exact worst contrast is m. With x = log r + u + log ξ(p), the conditional error is (1 −\nm sech x)/2. Its ceiling is equivalent to |x| ≤h for every p, u, giving L ≤log r ≤U. Passivity gives\nthe additional cap. At fixed r the original-population success is η[1 −p + pr2e2u], minimized at\nηL, u = −u0, p = pU; it increases with r. This proves the displayed choice and rate. The worst error\nand worst success can occur at different admitted parameters; each is an individually attained uniform\nguarantee. The explicit port vectors establish physical attainment of the error bound, and no null or\nprefix-failure outcome is postselected away."
+  },
+  {
+    "page": 17,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      671.391357421875,
+      547.3671264648438,
+      697.5217895507812
+    ],
+    "text": "Exact admitted mismatch threshold.\nThere is a closed symmetry-breaking tolerance when the\nbalancing filter is passive. Assume rc = (ξLξU)−1/2 ≤e−u0, and put"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      186.1039581298828,
+      712.9939575195312,
+      217.89508056640625,
+      725.90478515625
+    ],
+    "text": "W = 1"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      213.66299438476562,
+      707.4608154296875,
+      420.15789794921875,
+      729.6668090820312
+    ],
+    "text": "2 log(ξU/ξL) + u0,\ncε = (1 −2ε) cosh W"
+  },
+  {
+    "page": 17,
+    "kind": "math",
+    "bbox": [
+      378.8909912109375,
+      714.982177734375,
+      425.898681640625,
+      734.4212036132812
+    ],
+    "text": "vL\n."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.09080505371094,
+      548.4959716796875,
+      106.8897705078125
+    ],
+    "text": "For 0 < cε ≤cos ∆, define ϕ = arccos cε −∆≥0. A positive-rate filter meeting the error ceiling exists\nexactly when\nΘ ≤Θmax := arccos [1 −ηL(1 −cos ϕ)] .\n(48)"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      63.52299880981445,
+      114.03897094726562,
+      548.7965698242188,
+      206.32781982421875
+    ],
+    "text": "To prove it, the largest absolute log-ratio over the uncertain source and gain interval has minimum\nW, attained by rc; passivity does not obstruct it by assumption. Thus feasibility is exactly m ≥\n(1 −2ε) cosh W.\nInsert Eq. (46) and invert cosine on its positive branch.\nAt the boundary the\nadmissible filter interval collapses to the balancing choice. If cε > cos ∆, no mismatch budget is feasible,\nincluding zero. If vL = 0 this positive-error-ceiling theorem is not used. For the worked example\nbelow, Θmax = 0.1001806624 radians, about 5.73993◦. This threshold applies to the full-response Gram\nbudget; it is not the same numerical budget as a microscopic detuning angle."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      223.75340270996094,
+      459.62042236328125,
+      235.70860290527344
+    ],
+    "text": "5.4\nAn exact pointer/reference distance, distinct from full output"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.39600372314453,
+      241.10501098632812,
+      549.0379028320312,
+      310.2547912597656
+    ],
+    "text": "At fixed actual ra = reu and η, compare with the matched reader χ = 1 having the same filter and\nefficiency. The aggregate inconclusive pointer effect, summing filter failure, loss and surviving-ready\noutcomes, is identical. These sectors are coarsened only for the present pointer/reference comparison;\ntheir separate retained quantum outputs need not agree. The two conclusive effect differences are A\nand −A, where"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      243.7629852294922,
+      312.7411804199219,
+      283.0248107910156,
+      331.0437927246094
+    ],
+    "text": "A = raη"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      272.8210144042969,
+      327.6177062988281,
+      278.27557373046875,
+      338.52679443359375
+    ],
+    "text": "2"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      286.4250183105469,
+      310.7513427734375,
+      355.5120849609375,
+      337.80078125
+    ],
+    "text": "(︄\n0\nχ −1\n¯χ −1\n0"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      355.5020446777344,
+      310.7513427734375,
+      363.3924255371094,
+      320.71392822265625
+    ],
+    "text": ")︄"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      365.20703125,
+      320.1211853027344,
+      368.23974609375,
+      331.0303039550781
+    ],
+    "text": "."
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80001831054688,
+      347.09271240234375,
+      464.1166687011719,
+      358.0018005371094
+    ],
+    "text": "For the nominated classical pointer channels, including an arbitrary inert reference,"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      143.5240020751953,
+      368.7511901855469,
+      288.3017883300781,
+      390.1700744628906
+    ],
+    "text": "1\n2∥Mχ −M1∥⋄= ∥A∥∞= raη"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      278.0979919433594,
+      361.3948059082031,
+      361.72882080078125,
+      394.53680419921875
+    ],
+    "text": "2 |χ −1| ≤ra√η"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      346.9800109863281,
+      371.75335693359375,
+      427.6595764160156,
+      394.53680419921875
+    ],
+    "text": "2\nd,\nd =\n√︂"
+  },
+  {
+    "page": 18,
+    "kind": "math",
+    "bbox": [
+      427.6600036621094,
+      375.9898376464844,
+      548.4891967773438,
+      387.0538024902344
+    ],
+    "text": "2(1 −γ).\n(49)"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      402.5811767578125,
+      549.2938232421875,
+      481.26177978515625
+    ],
+    "text": "In the positive regime the last bound is sharp for the phase-marking vectors. To prove the reference-\nuniform upper bound, trace-norm duality gives ∥TrS[(A ⊗I)ρSR]∥1 ≤∥A∥∞; the two classical blocks\nhave opposite signs. An eigenvector input of A attains equality. Finally |χ −1|2 ≤2(1 −Re χ) ≤d2/η\nproves the last inequality. This certifies pointer plus reference, not the surviving source, full bath,\nunknown controller state or equality of their purified outputs. Retaining those outputs does not grant\npermission to read them."
+  },
+  {
+    "page": 18,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      501.9836730957031,
+      473.86737060546875,
+      516.329833984375
+    ],
+    "text": "6\nOperating examples, compatibility and reproducibility"
+  },
+  {
+    "page": 18,
+    "kind": "prose",
+    "bbox": [
+      64.25399780273438,
+      524.9559936523438,
+      549.3195190429688,
+      729.5726928710938
+    ],
+    "text": "For overlap s = .6, G = ℓ= 1 s−1 and deadline 2 s, the sharp coherent optimum has active time\n1.3613444250 s, weaker coupling .3764245988 s−1, and each correct conclusive probability .2025106210.\nThe static reciprocal absorbing bank instead has wrong-click probability .0394994846 by time 2/γ; the\nmoving bounded-hazard reader repairs this back-action in its different model. For source box p ∈[.7, .9],\nv ≥.95, |δ| ≤10◦, the calibrated-loss model has error floor .05764696773. At conditional-error ceiling\n.08 its exact conclusive guarantee is .1809098506. Unknown internal loss cannot be handled by inserting\na worst-case transfer factor into a fixed nominal unequal pulse: the nominal pulse can exceed its error\nceiling even when loss decreases. For common rectangular uncertainty g ∈[.9, 1.1], ℓ∈[.8, 1.2] in\ninverse seconds and t ∈[.9, 1.1] seconds, the optimized unequal-tap guarantee is .09490563225, while\nthe calibrated-filter/common-cell subclass gives .1120453274. Its 18.0597% improvement costs one extra\nfilter-failure port and a calibrated prefix. It is not universal hardware superiority. With additional full-\nresponse mismatch Θ = .05 radians and log-filter error .01, the sharp protected design gives .1018845501\nat conditional error .08; the formerly matched filter fails at .09010468261. This compares protection\nunder a larger uncertainty set, not a rate increase over perfect matching. The analytical proofs\nestablish the quantifiers. Replayed NumPy/SciPy calculations independently reconstruct Hamiltonians,"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.18630981445312,
+      548.99951171875,
+      186.54876708984375
+    ],
+    "text": "Gram matrices, retained-reference normalization and numerical optima; their decimals are binary64\ndiagnostics, not rigorous enclosures or physical data. The clean supplement preserves actual inputs\nand the exact code used. Calibration of terminal effects does not identify a full residual instrument;\nfinite-reference, detector-comparison and monitoring interfaces are developed separately in the technical\ncompanion. The bounded coherent-coupling, bounded hazard, common-cell and imperfect-matching\ntheorems use different declared physical parents. They may not be concatenated without proving\ncommon preparation, controller, clock, reference, loss and access conditions. All future uses require fresh\nstock or a separately established reuse law. No reset alone supplies independence, no flag constitutes a\nperspective, and the original measurement obligations remain open."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      204.42684936523438,
+      539.3458251953125,
+      215.36279296875
+    ],
+    "text": "Research assistance and status.\nAI assistance was used for computational review and testing."
+  },
+  {
+    "page": 19,
+    "kind": "heading",
+    "bbox": [
+      64.80000305175781,
+      236.1616973876953,
+      140.31842041015625,
+      250.50790405273438
+    ],
+    "text": "References"
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.2540054321289,
+      263.1777038574219,
+      549.481201171875,
+      301.1847839355469
+    ],
+    "text": "[1] E. Bagan, R. Munoz-Tapia, G. A. Olivares-Renteria, and J. A. Bergou. Optimal discrimination of\nquantum states with a fixed rate of inconclusive outcomes. Physical Review A, 86:040303, 2012.\ndoi: 10.1103/PhysRevA.86.040303."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      312.79168701171875,
+      547.8421020507812,
+      350.7987976074219
+    ],
+    "text": "[2] Anthony Chefles and Stephen M. Barnett. Optimum unambiguous discrimination between linearly\nindependent symmetric states. Physics Letters A, 250(4–6):223–229, 1998. doi: 10.1016/S0375-9\n601(98)00827-5."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      362.40570068359375,
+      549.4031982421875,
+      400.9658203125
+    ],
+    "text": "[3] Anthony Chefles and Stephen M. Barnett. Quantum state separation, unambiguous discrimination\nand exact cloning. Journal of Physics A: Mathematical and General, 31(50):10097–10103, 1998.\ndoi: 10.1088/0305-4470/31/50/007. URL https://arxiv.org/pdf/quant-ph/9808018."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      411.9349670410156,
+      549.3191528320312,
+      450.579833984375
+    ],
+    "text": "[4] Miloslav Dušek, Mika Jahma, and Norbert Lütkenhaus.\nUnambiguous state discrimination\nin quantum cryptography with weak coherent states. Physical Review A, 62:022306, 2000. doi:\n10.1103/PhysRevA.62.022306. URL https://muj.optol.cz/dusek/clanky/pra62-022306.pdf."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      461.5489807128906,
+      549.2063598632812,
+      499.6407775878906
+    ],
+    "text": "[5] B. Huttner, A. Muller, J. D. Gautier, H. Zbinden, and N. Gisin.\nUnambiguous quan-\ntum measurement of nonorthogonal states.\nPhysical Review A, 54:3783–3789, 1996.\ndoi:\n10.1103/PhysRevA.54.3783."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      511.2477111816406,
+      549.2479248046875,
+      549.2548217773438
+    ],
+    "text": "[6] Kenji Nakahira, Kentaro Kato, and Tsuyoshi Sasaki Usuda. Generalized quantum state discrimi-\nnation problems. Physical Review A, 91:052304, 2015. doi: 10.1103/PhysRevA.91.052304. Read\ntogether with errata Physical Review A 92, 059901 (2015) and 103, 019902 (2021)."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      560.8192749023438,
+      549.2611083984375,
+      598.8687744140625
+    ],
+    "text": "[7] Jason D. Padgett. Formal operator-level equivalence between photoelectric detection and a qih-\ninspired microtubule readout model, . Supplied unpublished manuscript, 35 pages. Relevant reader\nconstruction pp.18–21; reduced equivalence pp.10–15."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      610.395263671875,
+      549.0023193359375,
+      662.0317993164062
+    ],
+    "text": "[8] Jason D. Padgett. Exact reduced-operator equivalence between the photoelectric effect, a QIH\nhorizon readout, and a microtubule quantum readout, . Supplied unpublished manuscript, 74\npages, filename Photoelectric Origin Microtubules.pdf. Matched-reader construction, Section 32,\npp.42–43."
+  },
+  {
+    "page": 19,
+    "kind": "prose",
+    "bbox": [
+      70.25399780273438,
+      673.5540161132812,
+      549.2843017578125,
+      698.6498413085938
+    ],
+    "text": "[9] Jeremy Rodgers. Source–readout non-equivalence: Descent and equivariant reconstruction ob-\nstructions, 2026. URL https://doi.org/10.5281/zenodo.21369967."
+  },
+  {
+    "page": 20,
+    "kind": "prose",
+    "bbox": [
+      64.80000305175781,
+      67.24568176269531,
+      549.43505859375,
+      105.80683898925781
+    ],
+    "text": "[10] Raam Uzdin and Omri Gat. Time-energy trade-off in unambiguous-state-discrimination positive\noperator-valued measures. Physical Review A, 88:052327, 2013. doi: 10.1103/PhysRevA.88.052327.\nURL https://journals.aps.org/pra/abstract/10.1103/PhysRevA.88.052327."
+  }
+]

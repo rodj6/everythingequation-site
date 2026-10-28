@@ -1,0 +1,569 @@
+<h2 id="section-a-noisy-delayed-trine-process-exact-qutrit-realizations">A noisy delayed trine process: exact qutrit realizations</h2>
+<p data-source-page="1">The formerly unresolved positive-noise case admits an exact three-dimensional quantum source in a nonempty, explicitly certified regime. This improves the two-qubit upper bound. The result preserves every finite output word, and its cone constraints are certified on an entire parameter interval by exact rational arithmetic. A separate analytic construction gives a narrower interval without computer-assisted positivity checks. Both constructions use ordinary quantum instruments; neither derives the Born rule or an actual-event selection law.</p>
+<h3 id="section-process-source-class-and-baseline-bounds">Process, source class and baseline bounds</h3>
+<figure class="sr-formula" id="display-2" data-source-page="1"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00002.svg" alt="For 0 ≤λ ≤1, write r = 1 −λ and" width="168.26" height="12.66" style="width:15.437em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 1.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For 0 ≤λ ≤1, write r = 1 −λ and</pre></details></figure>
+<figure class="sr-formula" id="equation-1" data-source-page="1"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00003.svg" alt="T λ
+aa = 1 −r
+3
+,
+T λ
+ab = 1 + r/2
+3
+(a ̸= b).
+(1)" width="342.96" height="27.53" style="width:31.464em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 1, equation (1).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>T λ
+aa = 1 −r
+3
+,
+T λ
+ab = 1 + r/2
+3
+(a ̸= b).
+(1)</pre></details></figure>
+<p data-source-page="1">All parameters and probabilities are dimensionless. Interleave two independent stationary chains with this symmetric doubly stochastic transition matrix. The stationary word law is</p>
+<figure class="sr-formula" id="equation-2" data-source-page="1"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00004.svg" alt="n−2
+Y
+Pλ(y1 · · · yn) = 1
+t=1
+T λ
+yt,yt+2,
+n ≥2,
+Pλ(y1) = 1/3.
+(2)
+9" width="377.98" height="34.41" style="width:34.677em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 1, equation (2).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n−2
+Y
+Pλ(y1 · · · yn) = 1
+t=1
+T λ
+yt,yt+2,
+n ≥2,
+Pλ(y1) = 1/3.
+(2)
+9</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="1"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p001-00005.svg" alt="The source class is a time-homogeneous quantum instrument on Cd: CP maps Φj with P
+j Φj trace
+preserving, a stationary density matrix ω, and word probabilities Tr[Φyn · · · Φy1(ω)]. Outputs are
+emitted into a retained classical archive. The current symbol need not occupy an orthogonal sector of
+the internal memory. Fresh Markov environments are admitted explicitly; the cost d counts internal
+memory, not archives, purifying environments, or a hidden history-dependent controller." width="484.66" height="69.10" style="width:44.464em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 1.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The source class is a time-homogeneous quantum instrument on Cd: CP maps Φj with P
+j Φj trace
+preserving, a stationary density matrix ω, and word probabilities Tr[Φyn · · · Φy1(ω)]. Outputs are
+emitted into a retained classical archive. The current symbol need not occupy an orthogonal sector of
+the internal memory. Fresh Markov environments are admitted explicitly; the cost d counts internal
+memory, not archives, purifying environments, or a hidden history-dependent controller.</pre></details></figure>
+<p data-source-page="2">The eigenvalues of<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00006.svg" alt=" T λ" style="width:1.6516em;height:1.2989em;vertical-align:-0.23em" loading="lazy"/> are 1<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00007.svg" alt=", −r/2, −r/" style="width:5.0490em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/>2. For<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00008.svg" alt=" λ &lt;" style="width:2.1184em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1 the past-two/future-two cut matrix</p>
+<figure class="sr-formula" id="equation-3" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00009.svg" alt="Hab,cd = 1
+9T λ
+acT λ
+bd
+(3)" width="284.25" height="27.37" style="width:26.078em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (3).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Hab,cd = 1
+9T λ
+acT λ
+bd
+(3)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00010.svg" alt="has ordinary rank nine. Classical finite HMMs factor this matrix through their hidden states, so require
+at least nine. Explicitly, the pair source has states (a, b), transition (a, b) 7→(b, j) with probability
+T λ
+aj, uniform stationary weights 1/9, and emitted symbol j at its update; it attains the full law with
+nine states. A d-dimensional instrument gives factors Aab = ΦbΦa(ω) and Bcd = Φ∗
+cΦ∗
+d(I), with
+Hab,cd = Tr(AabBcd), in the d2-dimensional real space of Hermitian matrices, so d ≥3.
+A four-dimensional construction exists for every λ. With equatorial trine Bloch vectors na, let
+ρa = (I + na · σ)/2 and Ej = (I −rnj · σ)/3. Then" width="484.44" height="95.35" style="width:44.444em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>has ordinary rank nine. Classical finite HMMs factor this matrix through their hidden states, so require
+at least nine. Explicitly, the pair source has states (a, b), transition (a, b) 7→(b, j) with probability
+T λ
+aj, uniform stationary weights 1/9, and emitted symbol j at its update; it attains the full law with
+nine states. A d-dimensional instrument gives factors Aab = ΦbΦa(ω) and Bcd = Φ∗
+cΦ∗
+d(I), with
+Hab,cd = Tr(AabBcd), in the d2-dimensional real space of Hermitian matrices, so d ≥3.
+A four-dimensional construction exists for every λ. With equatorial trine Bloch vectors na, let
+ρa = (I + na · σ)/2 and Ej = (I −rnj · σ)/3. Then</pre></details></figure>
+<figure class="sr-formula" id="equation-4" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00011.svg" alt="Φ(4)
+j (X) = Tr1[(Ej ⊗I)X] ⊗ρj
+(4)" width="317.76" height="19.07" style="width:29.153em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (4).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Φ(4)
+j (X) = Tr1[(Ej ⊗I)X] ⊗ρj
+(4)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00012.svg" alt="is CP, has effects Ej ⊗I summing to identity, and fixes I4/4 after summing j. It sends ρa ⊗ρb to
+T λ
+ajρb ⊗ρj, establishing every word of (2). Thus" width="484.00" height="28.46" style="width:44.404em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>is CP, has effects Ej ⊗I summing to identity, and fixes I4/4 after summing j. It sends ρa ⊗ρb to
+T λ
+ajρb ⊗ρj, establishing every word of (2). Thus</pre></details></figure>
+<figure class="sr-formula" id="equation-5" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00013.svg" alt="3 ≤dmin(λ) ≤4
+(0 ≤λ &lt; 1),
+(5)" width="316.04" height="13.65" style="width:28.995em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (5).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>3 ≤dmin(λ) ≤4
+(0 ≤λ &lt; 1),
+(5)</pre></details></figure>
+<p data-source-page="2">whereas at<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00014.svg" alt=" λ" style="width:1.1188em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> = 1 the law is iid uniform and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00015.svg" alt=" dmin" style="width:2.3347em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/> = 1. The rank argument and quantum-process framework have established antecedents [5, 8]; no new rank method is claimed.</p>
+<h3 id="section-a-general-exact-encoded-pair-construction">A general exact encoded-pair construction</h3>
+<p data-source-page="2">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00016.svg" alt=" x0, x1, x2 ∈R2" style="width:6.7165em;height:1.5021em;vertical-align:-0.23em" loading="lazy"/> have zero sum, and let a diagonal metric<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00017.svg" alt=" g" style="width:0.9486em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = diag(<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00018.svg" alt="g1, g2" style="width:2.3668em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/>) obey</p>
+<figure class="sr-formula" id="display-8" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00019.svg" alt="2
+X
+(
+1
+a = j,
+−1/2
+a ̸= j.
+μ=1
+gμxaμxjμ =" width="148.36" height="34.30" style="width:13.611em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2
+X
+(
+1
+a = j,
+−1/2
+a ̸= j.
+μ=1
+gμxaμxjμ =</pre></details></figure>
+<p data-source-page="2">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00020.svg" alt=" A1, A2, B1, B2, C11, C12, C21, C22" style="width:14.4216em;height:1.2265em;vertical-align:-0.23em" loading="lazy"/> be any basis of traceless Hermitian 3<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00021.svg" alt=" ×" style="width:1.2162em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> 3 matrices. Use the contractions</p>
+<figure class="sr-formula" id="display-9" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00022.svg" alt="Aa =
+X
+μ
+xaμAμ,
+Bb =
+X
+ν
+xbνBν,
+Cab =
+X
+μ,ν
+xaμxbνCμν,
+Cν,j =
+X
+η
+xjηCνη." width="376.36" height="24.88" style="width:34.528em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Aa =
+X
+μ
+xaμAμ,
+Bb =
+X
+ν
+xbνBν,
+Cab =
+X
+μ,ν
+xaμxbνCμν,
+Cν,j =
+X
+η
+xjηCνη.</pre></details></figure>
+<p data-source-page="2">For nonzero positive coefficients<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00023.svg" alt=" u, v, w" style="width:3.1712em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, define candidate pair states</p>
+<figure class="sr-formula" id="equation-6" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00024.svg" alt="Sab = I3/3 + uAa + vBb + wCab,
+Rj = I3/3 + vBj.
+(6)" width="374.74" height="14.30" style="width:34.380em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (6).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Sab = I3/3 + uAa + vBb + wCab,
+Rj = I3/3 + vBj.
+(6)</pre></details></figure>
+<p data-source-page="2">Specify a Hermiticity-preserving complex-linear map by its values on the Hermitian basis:</p>
+<figure class="sr-formula" id="equation-10" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00025.svg" alt="Φj(I3/3) = Rj/3,
+(7)
+Φj(Aμ) = −r
+3ugμxjμRj,
+(8)
+Φj(Bν) = u
+3vAν + w
+3vCν,j,
+(9)
+Φj(Cμν) = −ru
+3wgμxjμAν −r
+3gμxjμCν,j.
+(10)" width="338.83" height="87.22" style="width:31.085em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 2, equation (10).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Φj(I3/3) = Rj/3,
+(7)
+Φj(Aμ) = −r
+3ugμxjμRj,
+(8)
+Φj(Bν) = u
+3vAν + w
+3vCν,j,
+(9)
+Φj(Cμν) = −ru
+3wgμxjμAν −r
+3gμxjμCν,j.
+(10)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="2"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00026.svg" alt="Lemma 1.1 (Exact update and full-law realization). If all Sab are positive and all maps in (10) are
+CP, then they form a quantum instrument with stationary state I3/3 and generate (2) exactly. In
+particular,
+Φj(Sab) = T λ
+ajSbj.
+(11)" width="486.57" height="55.21" style="width:44.640em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 2.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Lemma 1.1 (Exact update and full-law realization). If all Sab are positive and all maps in (10) are
+CP, then they form a quantum instrument with stationary state I3/3 and generate (2) exactly. In
+particular,
+Φj(Sab) = T λ
+ajSbj.
+(11)</pre></details></figure>
+<p data-source-page="2"><em>For</em><img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p002-00027.svg" alt=" r &gt; 0" style="width:2.8166em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/><em> this attains the minimum dimension three.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00028.svg" alt="Proof. All basis matrices except I are traceless, so the candidates have trace one. Expand (10) on (6),
+writing qaj = P
+μ gμxaμxjμ. The constant and a terms give (1 −rqaj)Rj/3; the b and ab terms give
+(1 −rqaj)(uAb + wCbj)/3. This is T λ
+ajSbj, proving the update.
+Summing the trace of the maps on the basis yields trace preservation: the I/3 traces sum to one,
+the A traces vanish because P
+j xj = 0, and the B, C images are traceless. Summing Φj(I/3) = Rj/3
+gives I/3, proving stationarity. The first output j has probability 1/3 and leaves state Rj. A direct
+application gives Φk(Rj) = Sjk/3, so the second output is independent uniform and leaves Sjk. Every
+later update is (11); induction proves all finite words. This does not infer temporal independence from
+a reset: it uses the explicitly specified CP instrument at every step. Finally (3) gives the matching
+dimension-three lower bound." width="486.83" height="135.71" style="width:44.664em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. All basis matrices except I are traceless, so the candidates have trace one. Expand (10) on (6),
+writing qaj = P
+μ gμxaμxjμ. The constant and a terms give (1 −rqaj)Rj/3; the b and ab terms give
+(1 −rqaj)(uAb + wCbj)/3. This is T λ
+ajSbj, proving the update.
+Summing the trace of the maps on the basis yields trace preservation: the I/3 traces sum to one,
+the A traces vanish because P
+j xj = 0, and the B, C images are traceless. Summing Φj(I/3) = Rj/3
+gives I/3, proving stationarity. The first output j has probability 1/3 and leaves state Rj. A direct
+application gives Φk(Rj) = Sjk/3, so the second output is independent uniform and leaves Sjk. Every
+later update is (11); induction proves all finite words. This does not infer temporal independence from
+a reset: it uses the explicitly specified CP instrument at every step. Finally (3) gives the matching
+dimension-three lower bound.</pre></details></figure>
+<p data-source-page="3">For positive<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00029.svg" alt=" u, v, w" style="width:3.1452em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, the nine candidate matrices span the full Hermitian qutrit space. The functions <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00030.svg" alt="1, xa1, xa2" style="width:4.3149em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/> form a basis of functions on three labels; their tensor products provide the nine independent coordinate functions used above. Thus the construction is not silently collapsing an unobserved classical coordinate or omitting an internal controller.</p>
+<h3 id="section-an-analytic-high-noise-interval">An analytic high-noise interval</h3>
+<p data-source-page="3">Choose the ordinary unit trine coordinates<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00031.svg" alt=" xa = (" style="width:3.7471em;height:1.2937em;vertical-align:-0.23em" loading="lazy"/>cos<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00032.svg" alt="(2πa/3)," style="width:3.8344em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/> sin<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00033.svg" alt="(2πa/3)), g1 = g2" style="width:8.2215em;height:1.2937em;vertical-align:-0.23em" loading="lazy"/> = 1, and an orthonormal traceless Hermitian basis with Tr(<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00034.svg" alt="FkFl) = δkl" style="width:5.0101em;height:1.2508em;vertical-align:-0.23em" loading="lazy"/>, split as the<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00035.svg" alt=" A, B, C" style="width:3.6396em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> basis above. Put</p>
+<figure class="sr-formula" id="equation-12" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00036.svg" alt="r = ε3,
+u = ε2,
+v = ε,
+w = ε3,
+0 &lt; ε ≤1/7.
+(12)" width="373.36" height="14.72" style="width:34.253em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (12).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>r = ε3,
+u = ε2,
+v = ε,
+w = ε3,
+0 &lt; ε ≤1/7.
+(12)</pre></details></figure>
+<p data-source-page="3">The state perturbation has exact squared Frobenius norm<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00037.svg" alt=" ε2" style="width:1.2583em;height:1.2968em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00038.svg" alt="+ ε4" style="width:1.9402em;height:1.2983em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00039.svg" alt="+ ε6 &lt; 1/" style="width:4.3184em;height:1.5095em;vertical-align:-0.23em" loading="lazy"/>9, so every<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00040.svg" alt=" Sab" style="width:1.8333em;height:1.2495em;vertical-align:-0.23em" loading="lazy"/> is positive. For the unnormalized Choi matrix<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00041.svg" alt=" Jj" style="width:1.3293em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> of (10), the depolarizing branch<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00042.svg" alt=" X 7→" style="width:2.6445em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/>Tr<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00043.svg" alt="(X)I/" style="width:2.8339em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>9 has Choi matrix <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00044.svg" alt="I9/" style="width:1.5200em;height:1.2387em;vertical-align:-0.23em" loading="lazy"/>9. Orthonormality of the input basis makes squared Frobenius norms add, giving</p>
+<figure class="sr-formula" id="equation-13" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00045.svg" alt="9 (1/3 + ε2) + 2(ε2 + ε4)
+9
++ 2(ε4 + ε6)
+∥Jj −I9/9∥2
+F = ε2
+3 + ε2
+9
+= 16ε2
+27 + 5ε4
+9 + 2ε6
+9 .
+(13)" width="385.63" height="59.27" style="width:35.379em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (13).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>9 (1/3 + ε2) + 2(ε2 + ε4)
+9
++ 2(ε4 + ε6)
+∥Jj −I9/9∥2
+F = ε2
+3 + ε2
+9
+= 16ε2
+27 + 5ε4
+9 + 2ε6
+9 .
+(13)</pre></details></figure>
+<p data-source-page="3">At<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00046.svg" alt=" ε = 1/" style="width:3.2020em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>7, eighty-one times this expression is 117471<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00047.svg" alt="/117649 &lt;" style="width:4.6558em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1; the expression increases with<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00048.svg" alt=" ε ≥0." style="width:2.9788em;height:1.1596em;vertical-align:-0.23em" loading="lazy"/> The operator norm is at most the Frobenius norm, so<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00049.svg" alt=" Jj" style="width:1.3392em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> is strictly positive and the map is CP by the Choi criterion <a href="/source-readout/quantum-source-technical-companion/references#reference-1">[1]</a>. Lemma 1.1 therefore proves</p>
+<figure class="sr-formula" id="equation-14" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00050.svg" alt="dmin(λ) = 3
+for 342/343 ≤λ &lt; 1.
+(14)" width="326.51" height="13.65" style="width:29.955em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3, equation (14).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>dmin(λ) = 3
+for 342/343 ≤λ &lt; 1.
+(14)</pre></details></figure>
+<p data-source-page="3">This is a complete analytic interval proof, independent of the sharper finite certificate below.</p>
+<h3 id="section-a-larger-interval-certified-entirely-by-rational-arithmetic">A larger interval certified entirely by rational arithmetic</h3>
+<figure class="sr-formula" id="display-15" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00051.svg" alt="Take rational trine coordinates" width="149.09" height="12.51" style="width:13.678em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Take rational trine coordinates</pre></details></figure>
+<figure class="sr-formula" id="display-16" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00052.svg" alt="x0 = (1, 0),
+x1 = (−1/2, 1/2),
+x2 = (−1/2, −1/2),
+(g1, g2) = (1, 3)." width="353.16" height="14.30" style="width:32.400em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>x0 = (1, 0),
+x1 = (−1/2, 1/2),
+x2 = (−1/2, −1/2),
+(g1, g2) = (1, 3).</pre></details></figure>
+<p data-source-page="3">Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00053.svg" alt=" Epq" style="width:1.9546em;height:1.2379em;vertical-align:-0.23em" loading="lazy"/> denote matrix units and set</p>
+<figure class="sr-formula" id="display-17" data-source-page="3"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p003-00054.svg" alt="A1 = E01 + E10,
+A2 = −iE01 + iE10,
+B1 = E02 + E20,
+B2 = −iE02 + iE20,
+C11 = E12 + E21,
+C12 = −iE12 + iE21,
+C21 = diag(1, −1, 0),
+C22 = diag(1, 1, −2)." width="292.55" height="63.91" style="width:26.840em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 3.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A1 = E01 + E10,
+A2 = −iE01 + iE10,
+B1 = E02 + E20,
+B2 = −iE02 + iE20,
+C11 = E12 + E21,
+C12 = −iE12 + iE21,
+C21 = diag(1, −1, 0),
+C22 = diag(1, 1, −2).</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00055.svg" alt="These are orthogonal, with squared Frobenius norms two except ∥C22∥2
+F = 6. This is a different,
+explicitly specified frame from the preceding analytic construction. Put" width="485.96" height="27.72" style="width:44.584em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>These are orthogonal, with squared Frobenius norms two except ∥C22∥2
+F = 6. This is a different,
+explicitly specified frame from the preceding analytic construction. Put</pre></details></figure>
+<figure class="sr-formula" id="equation-15" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00056.svg" alt="r = ε3,
+u = αε2,
+v = βε,
+w = γε3,
+(α, β, γ) = (3/8, 3/4, 3/4),
+0 &lt; ε ≤h := 7/20.
+(15)" width="468.88" height="14.72" style="width:43.017em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (15).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>r = ε3,
+u = αε2,
+v = βε,
+w = γε3,
+(α, β, γ) = (3/8, 3/4, 3/4),
+0 &lt; ε ≤h := 7/20.
+(15)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00057.svg" alt="The maps and states are now degree-three matrix polynomials in ε, with Gaussian rational coefficients.
+Here are explicit coefficients, making the positivity certificate reconstructible without fitting
+numerical samples. Superscript ∨denotes the Hilbert–Schmidt dual basis (F ∨= F/2, except C∨
+22 =
+C22/6). Define
+Ag,∨
+j
+=
+X
+μ
+gμxjμA∨
+μ,
+Cg,∨
+j,ν =
+X
+μ
+gμxjμC∨
+μν." width="486.59" height="77.28" style="width:44.641em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The maps and states are now degree-three matrix polynomials in ε, with Gaussian rational coefficients.
+Here are explicit coefficients, making the positivity certificate reconstructible without fitting
+numerical samples. Superscript ∨denotes the Hilbert–Schmidt dual basis (F ∨= F/2, except C∨
+22 =
+C22/6). Define
+Ag,∨
+j
+=
+X
+μ
+gμxjμA∨
+μ,
+Cg,∨
+j,ν =
+X
+μ
+gμxjμC∨
+μν.</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00058.svg" alt="In the convention Jj = P
+pq Epq ⊗Φj(Epq), write Jj(ε) = P3
+l=0 εlJjl. Then" width="354.63" height="21.71" style="width:32.535em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>In the convention Jj = P
+pq Epq ⊗Φj(Epq), write Jj(ε) = P3
+l=0 εlJjl. Then</pre></details></figure>
+<figure class="sr-formula" id="equation-19" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00059.svg" alt="Jj0 = I9/9,
+(16)
+Jj1 = β
+3 I ⊗Bj −1
+9α(Ag,∨
+j
+)T ⊗I + α
+ν
+(B∨
+ν )T ⊗Aν,
+(17)
+X
+3β
+Jj2 = −β
+3α(Ag,∨
+j
+)T ⊗Bj + γ
+ν
+(B∨
+ν )T ⊗Cν,j
+X
+3β
+−α
+ν
+(Cg,∨
+j,ν )T ⊗Aν,
+(18)
+X
+3γ
+Jj3 = −1
+ν
+(Cg,∨
+j,ν )T ⊗Cν,j.
+(19)
+X
+3" width="372.67" height="135.98" style="width:34.189em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (19).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Jj0 = I9/9,
+(16)
+Jj1 = β
+3 I ⊗Bj −1
+9α(Ag,∨
+j
+)T ⊗I + α
+ν
+(B∨
+ν )T ⊗Aν,
+(17)
+X
+3β
+Jj2 = −β
+3α(Ag,∨
+j
+)T ⊗Bj + γ
+ν
+(B∨
+ν )T ⊗Cν,j
+X
+3β
+−α
+ν
+(Cg,∨
+j,ν )T ⊗Aν,
+(18)
+X
+3γ
+Jj3 = −1
+ν
+(Cg,∨
+j,ν )T ⊗Cν,j.
+(19)
+X
+3</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00060.svg" alt="For any degree-three matrix polynomial P(ε) = P
+l εlPl, its Bernstein representation on [0, h] is" width="455.69" height="21.13" style="width:41.806em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For any degree-three matrix polynomial P(ε) = P
+l εlPl, its Bernstein representation on [0, h] is</pre></details></figure>
+<figure class="sr-formula" id="equation-20" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00061.svg" alt="3
+X
+k
+X
+ k
+l
+
+3
+k
+!
+tk(1 −t)3−kMk,
+Mk =
+ 3
+l
+hlPl.
+(20)
+P(ht) =
+k=0
+l=0" width="376.37" height="34.74" style="width:34.529em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (20).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>3
+X
+k
+X
+ k
+l
+
+3
+k
+!
+tk(1 −t)3−kMk,
+Mk =
+ 3
+l
+hlPl.
+(20)
+P(ht) =
+k=0
+l=0</pre></details></figure>
+<p data-source-page="4">The coefficients outside<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00062.svg" alt=" Mk" style="width:1.8347em;height:1.2384em;vertical-align:-0.23em" loading="lazy"/> are nonnegative and sum to one. Thus positive control matrices certify positivity on the whole interval, not at sampled values.</p>
+<p data-source-page="4"><strong>Theorem 1.2</strong> (Exact high-noise qutrit interval)<strong>.</strong><em> For the noisy delayed trine law,</em></p>
+<figure class="sr-formula" id="equation-21" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00063.svg" alt="dmin(λ) = 3
+7657/8000 ≤λ &lt; 1.
+(21)" width="329.32" height="13.66" style="width:30.212em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4, equation (21).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>dmin(λ) = 3
+7657/8000 ≤λ &lt; 1.
+(21)</pre></details></figure>
+<p data-source-page="4"><em>The concrete states and maps are</em> (6)<em>,</em> (10)<em>, and</em> (15)<em>.</em></p>
+<figure class="sr-formula sr-source-panel" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00064.svg" alt="Proof. For the twelve Choi Bernstein control matrices from (19)–(20), and the thirty-six state control
+matrices from (6), exact rational LDLT certificates establish strict positivity. The certificate uses the
+realification
+!" width="484.20" height="47.95" style="width:44.422em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. For the twelve Choi Bernstein control matrices from (19)–(20), and the thirty-six state control
+matrices from (6), exact rational LDLT certificates establish strict positivity. The certificate uses the
+realification
+!</pre></details></figure>
+<figure class="sr-formula" id="display-22" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00065.svg" alt="Re Z
+−Im Z
+Im Z
+Re Z
+R(Z) =
+;" width="129.31" height="28.65" style="width:11.863em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Re Z
+−Im Z
+Im Z
+Re Z
+R(Z) =
+;</pre></details></figure>
+<p data-source-page="4">a Hermitian matrix is positive definite precisely when its realification is. In the fixed computational-basis ordering, the certified bounds on every LDL pivot are:</p>
+<figure class="sr-formula" id="display-23" data-source-page="4"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00066.svg" alt="Bernstein index k
+0
+1
+2
+3" width="293.14" height="12.52" style="width:26.893em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 4.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Bernstein index k
+0
+1
+2
+3</pre></details></figure>
+<p data-source-page="4">Choi control matrices (all<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00067.svg" alt=" j)" style="width:1.3335em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00068.svg" alt="1/9" style="width:1.6467em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00069.svg" alt="&gt; 9/100" style="width:3.7023em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00070.svg" alt="&gt; 3/50" style="width:3.2023em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00071.svg" alt="&gt; 1/100" style="width:3.7022em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> State control matrices (all<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00072.svg" alt=" a, b)" style="width:2.2660em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00073.svg" alt="&gt; 1/10" style="width:3.2022em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00074.svg" alt="&gt; 1/10" style="width:3.2022em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00075.svg" alt="&gt; 1/10" style="width:3.2022em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p004-00076.svg" alt="&gt; 1/10" style="width:3.2022em;height:1.1479em;vertical-align:-0.23em" loading="lazy"/></p>
+<p data-source-page="5">These are pivot bounds, not eigenvalue bounds. They are verified with exact Fraction arithmetic in supplement/memory/three/memory/exact_qutrit_certificate.py; the explicit rational control matrices and all pivots are recorded in supplement/memory/expected_outputs/three/memory/qutr it_bernstein_matrices.json and supplement/memory/expected_outputs/three/memory/qutrit _certificate.json. For clarity the finite algebraic verification is the standard recurrence</p>
+<figure class="sr-formula" id="display-24" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00077.svg" alt="l&lt;k
+L2
+klDl,
+Lik = Mik −P
+l&lt;k LilLklDl
+Dk
+,
+Lkk = 1.
+Dk = Mkk −
+X" width="332.70" height="31.83" style="width:30.523em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>l&lt;k
+L2
+klDl,
+Lik = Mik −P
+l&lt;k LilLklDl
+Dk
+,
+Lkk = 1.
+Dk = Mkk −
+X</pre></details></figure>
+<p data-source-page="5">It checks<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00078.svg" alt=" Dk &gt;" style="width:2.8334em;height:1.3096em;vertical-align:-0.23em" loading="lazy"/> 0 and reconstructs every entry of<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00079.svg" alt=" LDLT" style="width:3.1406em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> exactly. This computer-assisted part involves only 48 explicitly defined rational matrices; no numerical eigensolver or tolerance certifies their signs. Bernstein convexity proves positivity throughout 0<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00080.svg" alt=" ≤ε ≤7/20." style="width:5.4972em;height:1.1609em;vertical-align:-0.23em" loading="lazy"/> The same code independently verifies 197 exact polynomial identities by applying the Choi polyno-mial directly: all 27 reset identities through degree six, and trace-preservation and stationarity through degree three. The universal symbolic proof of those identities is already Lemma 1.1. It follows that this is a stationary CP instrument reproducing every word. The ordinary-rank lower bound gives minimality. Since<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00081.svg" alt=" r = ε3" style="width:3.3666em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/>, the interval is<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00082.svg" alt=" λ = 1 −r ≥1 −(7/20)3" style="width:11.5018em;height:1.2887em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00083.svg" alt="= 7657/" style="width:3.8359em;height:1.1452em;vertical-align:-0.23em" loading="lazy"/>8000, excluding the iid endpoint from the dimension-three assertion.</p>
+<h3 id="section-finite-observations-versus-exact-memory-requirements">Finite observations versus exact memory requirements</h3>
+<p data-source-page="5">The exact dimension remains at least three for every<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00084.svg" alt=" λ &lt;" style="width:2.1064em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1, even arbitrarily close to the iid endpoint. This does not create a finite-data discontinuity. Let<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00085.svg" alt=" Un" style="width:1.6061em;height:1.2256em;vertical-align:-0.23em" loading="lazy"/> be the uniform iid law on<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00086.svg" alt=" n" style="width:1.0651em;height:1.1354em;vertical-align:-0.23em" loading="lazy"/> trits and<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00087.svg" alt=" n ≥2." style="width:3.1764em;height:1.1516em;vertical-align:-0.23em" loading="lazy"/> Define</p>
+<figure class="sr-formula" id="display-25" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00088.svg" alt="d(r) = 1 −r
+3
+log(1 −r) + 2(1 + r/2)
+3
+log(1 + r/2)." width="237.25" height="27.53" style="width:21.766em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>d(r) = 1 −r
+3
+log(1 −r) + 2(1 + r/2)
+3
+log(1 + r/2).</pre></details></figure>
+<p data-source-page="5">With 0 log 0 = 0, direct conditional-likelihood calculations give</p>
+<figure class="sr-formula" id="equation-22" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00089.svg" alt="D(Pλ,n∥Un) = (n −2)d(r),
+χ2(Pλ,n∥Un) = (1 + r2/2)n−2 −1.
+(22)" width="399.17" height="18.29" style="width:36.621em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (22).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>D(Pλ,n∥Un) = (n −2)d(r),
+χ2(Pλ,n∥Un) = (1 + r2/2)n−2 −1.
+(22)</pre></details></figure>
+<figure class="sr-formula sr-source-panel" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00090.svg" alt="Indeed the likelihood ratio is Qn−2
+t=1 3T λ
+yt,yt+2. The KL chain rule gives one equal row contribution d(r) per
+link. Under Un, summing the newest symbol in the squared likelihood contributes 3 P
+j(T λ
+aj)2 = 1+r2/2,
+independently of a; recursion proves the chi-square identity. Therefore" width="485.52" height="43.59" style="width:44.543em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Technical passage, source page 5.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Indeed the likelihood ratio is Qn−2
+t=1 3T λ
+yt,yt+2. The KL chain rule gives one equal row contribution d(r) per
+link. Under Un, summing the newest symbol in the squared likelihood contributes 3 P
+j(T λ
+aj)2 = 1+r2/2,
+independently of a; recursion proves the chi-square identity. Therefore</pre></details></figure>
+<figure class="sr-formula" id="equation-23" data-source-page="5"><div class="sr-formula-scroll"><img src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00091.svg" alt="TV(Pλ,n, Un) ≤min
+
+1,
+q
+(1 + r2/2)n−2 −1
+
+.
+(23)
+q
+(n −2)d(r)/2, 1
+2" width="397.14" height="22.02" style="width:36.435em;height:auto;max-width:none" loading="lazy"/></div><figcaption>Source page 5, equation (23).</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>TV(Pλ,n, Un) ≤min
+
+1,
+q
+(1 + r2/2)n−2 −1
+
+.
+(23)
+q
+(n −2)d(r)/2, 1
+2</pre></details></figure>
+<p data-source-page="5">The second bound is Pinsker and the third is Cauchy–Schwarz. Since<img class="sr-vector-inline" src="/publications/source-readout/constructive/quantum-source-technical-companion/math/p005-00092.svg" alt=" d(r) = r2/4 + O(r3" style="width:8.7108em;height:1.2981em;vertical-align:-0.23em" loading="lazy"/>), fixed finite records approach the iid law continuously. These are established divergence inequalities evaluated exactly for this process, not new information measures. The comparison concerns the complete declared symbol sequence, including its ordering; extra retained apparatus channels would require their joint law as well.</p>
+<h3 id="section-what-the-construction-establishes">What the construction establishes</h3>
+<p data-source-page="5">The original trine phase geometry supplied a four-dimensional realization; its zero-noise optimality proof did not settle noisy qutrit models. The present construction supplies such models explicitly and proves exact minimality on a full interval. It introduces a hierarchical encoding of the two individual labels and their joint Fourier components, with amplitudes that shrink at different rates. This permits the update maps to remain inside the CP cone while retaining the complete order-two law. The sharper</p>
+<p data-source-page="6">interval uses a rational qutrit frame and a convex polynomial certificate; it does not claim the endpoint is optimal. The finite circular phase representation draws on the geometric phase and angular-register descrip-tions in [6, abstract and Sections 2–3] and [7, pp. 64–68]. The noisy qutrit encoding, update maps and interval certificates are the constructions established here. The CP-realization problem, nonorthogonal quantum process memories, quantum dimension advantages and lower bounds are established research areas [3–5, 8, 11]. The contribution is the explicit full-law construction, interval certificate and matching dimension bound for this declared delayed process. Targeted primary-literature checks do not establish publication priority. No claim is made about reduced complete environment memory, a Hamiltonian mechanism, CSL dynamics, Born-rule selection, actual-event affinity, or conscious perspective.</p>

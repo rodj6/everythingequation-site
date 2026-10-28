@@ -13,7 +13,7 @@ export const dynamic = "force-static";
 export const metadata: Metadata = {
   title: "Framework",
   description:
-    "The full Shadow model and its seven-paper foundation: source–readout non-equivalence, target-relative obstruction, canonical minimal completion, geometric realization, projected dynamics, internal identifiability, and the Randall–Sundrum physical witness.",
+    "Shadow Theory's source–readout framework: mathematical foundations, constructive quantum sources and readers, certified target access, and the development from the Everything Equation.",
   alternates: { canonical: "/framework" },
 };
 
@@ -95,9 +95,11 @@ export default async function FrameworkPage() {
           source–readout mathematics: why an exact readout is not the source, when lost
           structure actually matters, what any completion must retain, when completions
           are realized by genuine geometry, when observable dynamics close, and what an
-          internal observer can ever identify. Paper 7 instantiates the whole
-          architecture in Randall–Sundrum gravity as the sequence's physical witness.
+          internal observer can identify under the stated access conditions. Paper 7
+          instantiates that architecture within Randall–Sundrum gravity.
         </p>
+        <p className="mt-4 leading-relaxed text-mute">Five constructive papers carry those questions into explicit quantum sources, bounded phase-sensitive readers, feedback policies, retained-record certification and exact finite readout design. The foundation and its constructive development are presented together, with complete technical articles and connected reading paths.</p>
+        <div className="mt-6 flex flex-wrap gap-3"><Link href="/source-readout" className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-ink">Read Source–Readout Theory →</Link><Link href="/source-readout/origins" className="rounded-lg border border-edge px-5 py-2.5 text-sm font-medium text-glow">From the Everything Equation →</Link></div>
       </section>
 <PaperIntegrationFeature compact ids={["block-universe", "whole-field", "temporal-passage"]}/>
 
@@ -108,7 +110,7 @@ export default async function FrameworkPage() {
       {/* Chain */}
       <section aria-labelledby="chain-heading">
         <h2 id="chain-heading" className="mb-6 text-2xl font-bold tracking-tight">
-          The canonical sequence
+          The foundational sequence
         </h2>
         <PaperChain papers={canonical} />
       </section>
@@ -173,6 +175,22 @@ export default async function FrameworkPage() {
         </div>
       </section>
 
+      <section aria-labelledby="constructive-heading" className="mx-auto max-w-3xl">
+        <p className="section-label">Constructive development</p>
+        <h2 id="constructive-heading" className="mt-3 text-2xl font-bold tracking-tight">Making source–readout questions operational</h2>
+        <p className="mt-4 leading-relaxed text-mute">A minimal information object does not yet specify a physical reader. The five constructive papers distinguish the resources and interventions needed to generate a process, expose a source distinction, decide a target, and certify the reader's performance.</p>
+        <ol className="mt-6 space-y-4">
+          {[
+            ["Quantum sources", "Stationary generators reproduce full passive word laws with explicit internal-memory and retained-output costs. Common admitted interventions can distinguish implementations that passive records cannot."],
+            ["Phase-to-record conversion", "Bounded interactions convert a phase distinction into stable flags, with sharp success and uncertainty frontiers and all null/loss outputs retained."],
+            ["Feedback and local readers", "Exact small-horizon results locate when feedback first improves the grouped sign decision, while larger-budget certificates preserve the remaining threshold gaps."],
+            ["Certification and records", "Frozen-reader validation has information and source-stock costs. Under a shared physical-family promise, readable trajectories strictly improve the resources required by terminal-error-only validation."],
+            ["Target-sufficient design", "Finite algorithms find target-disagreeing source pairs and synthesize minimum-cost sufficient sensor selections, with exact certificates and explicit feasibility constraints."],
+          ].map(([title,body],i)=><li key={title} className="card-surface p-5"><h3 className="font-semibold text-fg"><span className="mr-3 font-mono text-glow">{String(i+1).padStart(2,"0")}</span>{title}</h3><p className="mt-2 text-sm leading-relaxed text-mute">{body}</p></li>)}
+        </ol>
+        <Link href="/source-readout#constructive" className="mt-5 inline-block text-sm font-medium text-glow">Read the constructive papers and technical companions →</Link>
+      </section>
+
       {/* Vocabulary */}
       <section aria-labelledby="vocab-heading" className="mx-auto max-w-3xl">
         <h2 id="vocab-heading" className="text-2xl font-bold tracking-tight">
@@ -200,25 +218,12 @@ export default async function FrameworkPage() {
         <h2 id="ee-heading" className="text-2xl font-bold tracking-tight">
           The role of the Everything Equation
         </h2>
-        <p className="mt-4 leading-relaxed text-mute">The full model places this formal closure programme within a broader account of ground, unsplit unity and complementary source/readout aspects. The schema keeps its declared operator meanings; the unspecified ground is not an extra variable in it. <Link href="/articles/full-shadow-model" className="text-glow">Read how the levels connect →</Link></p>
+        <p className="mt-4 leading-relaxed text-mute">The original Everything Equation organized the programme around presentation independence, admissibility and completion. Shadow Theory turns those concerns into separate mathematical questions about what a readout determines and what a sufficient realization requires.</p>
         <div className="card-surface mt-6 p-6 sm:p-8">
           <div className="text-center" dangerouslySetInnerHTML={tex(String.raw`L \;=\; \Omega_{T1}\,\Delta\,\partial\,[\,L\,]`)} />
-          <p className="mt-4 leading-relaxed text-mute">
-            This site's historical name comes from this expression. Its role is precise
-            and deliberately modest: it is a{" "}
-            <strong className="text-fg">compact closure schema</strong> from the broader
-            programme and the monograph — shorthand for the idea that a public law closes
-            only through declared readout-facing completion machinery. It belongs to the
-            programme's context, not to the canonical sequence's theorems.
-          </p>
-          <p className="mt-3 leading-relaxed text-mute">
-            The seven papers do not prove, and do not rely on, this schema. What they
-            prove are the exact criteria the schema gestures at: when relations descend,
-            when targets are obstructed, what the minimal completion is, when it is
-            realized geometrically, when projected dynamics close, and what internal
-            observers can identify. It is <em>not</em> source-level equality, <em>not</em>{" "}
-            empirical validation, and <em>not</em> a solved theory of everything.
-          </p>
+          <p className="mt-4 leading-relaxed text-mute">This is a compact closure schema. The subscript identifies the intended Tier-1 completion/readout role; it does not turn the expression into a universal solution formula. The precise results now live in descent criteria, canonical completion constructions, dynamical closure theorems and operational resource bounds.</p>
+          <p className="mt-3 leading-relaxed text-mute">For a fixed source, readout and target family, canonical completion adds exactly the nominated distinctions. Applying that completion again adds none, up to canonical isomorphism. This gives the original fixed-point idea a concrete mathematical descendant. It does not identify every later construction with the historical operator triple.</p>
+          <Link href="/source-readout/origins" className="mt-5 inline-block text-sm font-medium text-glow">Read the full development and its mathematical connections →</Link>
         </div>
       </section>
 

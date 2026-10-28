@@ -1,3 +1,4 @@
+import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -44,6 +45,13 @@ export default async function PapersPage() {
           authority.
         </p>
       </header>
+      <section aria-labelledby="source-readout-heading" className="card-surface p-6">
+        <p className="section-label">Mathematical foundations and constructive development</p>
+        <h2 id="source-readout-heading" className="mt-2 text-2xl font-bold">Source and readout</h2>
+        <p className="mt-3 max-w-3xl leading-relaxed text-mute">Complete technical articles for the seven foundational papers and five constructive studies, with three technical companions. Follow definitions, equations, proofs and references directly on site.</p>
+        <Link href="/source-readout" className="mt-4 inline-block text-glow">Explore the complete programme →</Link>
+        <ul className="mt-5 grid gap-3 md:grid-cols-2">{sourcePapers().filter(p=>p.series==='constructive'&&!p.parentId).map(p=><li key={p.id}><Link className="text-glow" href={paperUrl(p)}>{p.title} →</Link></li>)}</ul>
+      </section>
       <SealedLeakyFeature />
 
       <section aria-labelledby="quantum-heading">
