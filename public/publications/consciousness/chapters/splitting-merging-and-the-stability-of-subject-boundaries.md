@@ -1,6 +1,6 @@
 # Chapter 20: Splitting, merging, and the stability of subject boundaries
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R

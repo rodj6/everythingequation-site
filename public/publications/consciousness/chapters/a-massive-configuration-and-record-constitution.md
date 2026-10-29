@@ -1,6 +1,6 @@
 # Chapter 7: A massive configuration and record constitution
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -72,7 +72,7 @@ j_j=\frac{\hbar}{m_j}\operatorname{Im}(\Psi^\dagger\partial_{q_j}\Psi),
 
 $$
 
- The complete initial configuration has density $\rho(\cdot,0)$. These are constitutive premises. They belong to the configuration-guided tradition <a id="citation-11"></a>[[7](/consciousness/monograph/bibliography#bib-Bohm1952), [16](/consciousness/monograph/bibliography#bib-Durr1992)]; they are not inferred from source incompleteness.
+ The complete initial configuration has density $\rho(\cdot,0)$. These are constitutive premises. They belong to the configuration-guided tradition <a id="citation-revised-26"></a>[[7](/consciousness/monograph/bibliography#bib-Bohm1952), [17](/consciousness/monograph/bibliography#bib-Durr1992)]; they are not inferred from source incompleteness.
 
 The Schrödinger equation gives $\partial_t\rho+\nabla\cdot j=0$. Transport by the guidance velocity obeys the same continuity equation, hence preserves the initial equilibrium density under the stated flow hypotheses. This is equivariance. It supplies ordinary position distributions at all times while the actual history remains the guided path. The mathematical existence assumptions are kept explicit rather than being hidden behind the formal quotient $j/\rho$ at nodes.
 
@@ -276,7 +276,7 @@ $$
 
 $$
 
- with the old correlations retained. The active register is restored, but usable global capacity has not been created. A later interaction with $R$ must use its actual correlated state. If reset is realized by a moving trap, the potential, transport, and receiver remain part of the programme <a id="citation-12"></a>[[35](/consciousness/monograph/bibliography#bib-RodgersMassive)].
+ with the old correlations retained. The active register is restored, but usable global capacity has not been created. A later interaction with $R$ must use its actual correlated state. If reset is realized by a moving trap, the potential, transport, and receiver remain part of the programme <a id="citation-revised-27"></a>[[48](/consciousness/monograph/bibliography#bib-RodgersMassive)].
 
 Spatial feedback is equally concrete. A bounded function $g(y)$ can control an ordinary internal operator $B$ through $g(Y)B$. Let $G_{\rm id}$ be the intended branch-constant control on the retained key space, commuting with $B$, and let $\Psi_{\rm id}(s)$ be the ideal programme wave. Suppose 
 

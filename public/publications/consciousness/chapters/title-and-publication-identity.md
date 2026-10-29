@@ -1,6 +1,6 @@
 # Title and publication identity
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -60,6 +60,10 @@ phenomenological, and philosophical monograph
 
  SPC-2: candidate psychophysical constitution
 
- Version 2 — publication edition
+ Revised edition
 
- 20 September 2026
+ 28 October 2026
+
+ [doi:10.5281/zenodo.23755118](https://doi.org/10.5281/zenodo.23755118)
+
+ Based on the publication edition of 20 September 2026

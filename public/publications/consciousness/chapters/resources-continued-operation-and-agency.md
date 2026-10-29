@@ -1,6 +1,6 @@
 # Chapter 9: Resources, continued operation, and agency
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -48,7 +48,7 @@
 
 <a id="section:resources:finite-records-are-physical-resources"></a> A record is not merely a scalar assigned to a state. It requires a physical carrier, distinguishable alternatives, a writing interaction, a retention interval, and an allowed way of reading or reusing it. Exact copying of a known orthogonal alphabet can be unitary: ${\lvert a\rangle}{\lvert 0\rangle}\mapsto{\lvert a\rangle}{\lvert a\rangle}$. This is not a universal cloner of unknown states. Superpositions evolve to correlated states rather than two independent copies.
 
-A reversible implementation of a many-to-one logical step must retain enough information to distinguish its inputs. Bennett's reversible computation and Landauer's analysis of logical irreversibility provide the standard background <a id="citation-16"></a>[[4](/consciousness/monograph/bibliography#bib-Bennett1973), [23](/consciousness/monograph/bibliography#bib-Landauer1961)]. Here the finite consequence can be stated directly. If $n$ independent binary historical alternatives must remain perfectly distinguishable in a retained carrier of dimension $D$, then $2^n\le D$. The bound follows from orthogonality of perfectly distinguishable records. It is not a theorem that a finite system cannot recur, preserve a fixed record, or reuse a reversible working register.
+A reversible implementation of a many-to-one logical step must retain enough information to distinguish its inputs. Bennett's reversible computation and Landauer's analysis of logical irreversibility provide the standard background <a id="citation-revised-31"></a>[[4](/consciousness/monograph/bibliography#bib-Bennett1973), [24](/consciousness/monograph/bibliography#bib-Landauer1961)]. Here the finite consequence can be stated directly. If $n$ independent binary historical alternatives must remain perfectly distinguishable in a retained carrier of dimension $D$, then $2^n\le D$. The bound follows from orthogonality of perfectly distinguishable records. It is not a theorem that a finite system cannot recur, preserve a fixed record, or reuse a reversible working register.
 
 A finite ready bank with $N$ cells can support at most $N$ operations that each consume a distinct ready cell and never restore global readiness. SWAP reset restores a local register by spending a receiver. The availability of another environment does not restore the bank unless an admitted coupling actually transfers a compatible resource. “Open” is a physical interaction condition, not an accounting word that creates capacity.
 
@@ -110,11 +110,57 @@ The distinction is philosophically significant. Treating awareness as primitive 
 
 ## 9.4 Agency and stable decisions
 
-<a id="section:resources:agency-and-stable-decisions"></a> The agency manuscripts define a functional target: usable world modeling, counterfactual evaluation, and reliable action selection <a id="citation-17"></a>[[31](/consciousness/monograph/bibliography#bib-RodgersAgency)]. This target is independent of a phenomenal predicate. A controller can implement a specified comparison procedure without that procedure constituting evidence of experiential presence.
+<a id="section:resources:agency-and-stable-decisions"></a> The earlier agency manuscript studies a demanding functional target: usable world modeling, counterfactual evaluation, and reliable action selection <a id="citation-revised-32"></a>[[35](/consciousness/monograph/bibliography#bib-RodgersAgency)]. The later account distinguishes this target from a more general baseline: selecting consequence-distinct executable transformations through retained evaluative organization <a id="citation-revised-33"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Section 2]. A restricted controller can do this without a source-complete world model, while broad competence across sufficiently rich tasks can require recoverable predictive structure. These operational predicates are distinct from experiential admission. A controller can implement a specified comparison procedure without its success score supplying the psychophysical law that assigns experience.
 
 A quantum no-go must specify its input encoding and allowed resources. Unitary linearity rules out a generic nonlinear winner-selection rule on arbitrary unknown amplitude-encoded inputs. It does not rule out reversible evaluation of a classical decision function on orthogonally encoded data. A reversible circuit can retain the input and computational garbage while writing a definite decision label for each basis input. Superposed inputs then yield the corresponding correlated superposition. The physical interpretation of an actual outcome belongs to the event constitution, not to a general slogan that quantum systems cannot decide.
 
 Similarly, choosing a diagonal conditional expectation builds a record algebra into the construction. Showing that its image is diagonal does not derive the basis. A constant contraction $T(\rho)=I/2$ has one fixed density operator but does not select one of its two classical outcome labels. Banach uniqueness is uniqueness of a mathematical fixed state, not actualization of one sample. These distinctions allow useful fixed-point stability results without inheriting an invalid universal derivation of decisions or Born weights.
+
+
+
+<a id="section-9-4-1"></a>
+
+### 9.4.1 Information limits do not erase control
+
+ The later reversible-control programme makes the difference between representing a source and controlling a target exact <a id="citation-revised-34"></a>[[38](/consciousness/monograph/bibliography#bib-RodgersReversibleControl), Sections 2–5]. A ready receiver can absorb an unknown plant state under a reversible SWAP while the plant reaches a prescribed target. No lossless source model is required for that task. Conversely, complete observation cannot help when the actuator admits only the identity. What matters is the joint contract of accessible records, compatible actions, executable transformations, residual storage and deadlines. Neither ignorance nor a storage count alone decides a controller's agency.
+
+For a finite observation channel $Q(h\mid\theta)$ and nonnegative regret table $\ell_{\theta a}$ whose rows each have a zero, a record-measurable policy can achieve zero regret for every admitted source condition precisely when 
+
+$$
+
+ \bigcap_{\theta:Q(h\mid\theta)>0}
+       \operatorname*{arg\,min}_{a}\ell_{\theta a}\ne\varnothing
+ \quad\text{for every possible record }h.
+
+$$
+
+ A common minimizing action at each record suffices. Necessity follows because every positive term in a zero expected nonnegative regret must vanish, so each action used at that record must minimize every compatible row. This action-compatibility condition is weaker than lossless source reconstruction. The companion paper supplies the quantitative minimax and receiver-capacity results, including operation-class and online-deadline restrictions. Its compact-interface algorithms serve those control problems; they are not conditions of phenomenal presence.
+
+
+
+<a id="section-9-4-2"></a>
+
+### 9.4.2 Reflective freedom as bounded evaluative self-governance
+
+ A physically caused assessment can still be the agent's own evaluation. The reflective-freedom construction makes this claim concrete through retained commitments, a writable conditional charter, an assessor, an installation path, and fresh cases on which the installed charter acts <a id="citation-revised-35"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Sections 2–4]. The assessor can retain an endorsed current rule or install an endorsed alternative. Its fixed interpreter and metarule do not prevent revision of the represented rule. The construction therefore exhibits a real capacity for local assessment and self-revision without requiring an additional chooser outside the physical process.
+
+Three obligations remain distinct: the assessment must agree with the declared endorsement relation, the actual commitment-read route must mediate it, and the installed result must govern the relevant later disposition, with changed rules distinguishable on fresh cases. A systematically inverted evaluator can exhibit exactly the same intact-versus-cut causal contrast as a faithful evaluator. Causal sensitivity therefore does not by itself establish warranted evaluation. Likewise, agreement with a commitment in one case does not demonstrate that the commitment governed the result. Read masking, installation clamping and fresh-case probes discriminate these possibilities.
+
+Freedom on this account is a context- and resource-dependent profile of evaluative mediation, accessible consequence-distinct options and available rule revision. Physically imaginable commands need not be callable options for the installed dispatcher before its deadline. A larger output alphabet need not enlarge reflective capacity. An assessed precommitment can exercise agency now while reducing later options. Preservation of future auditability is one explicit objective, not a necessary condition of every agentic act. The companion paper proves finite preservation criteria and exact noisy-inquiry bounds under charged information-access contracts.
+
+The connection to SPC-2 is constructive and separately conditional <a id="citation-revised-36"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Section 7]. A protected-source identity tour after each ordinary write supplies a covering native return while preserving the ordinary computation and its actual interventions. With $m$ nominated bit carriers and $N$ source-disjoint ordinary single-target gates with funded following tours, the declared compiler uses $2(m-1)+N(2m-1)$ elementary windows. An eighteen-cell charter witness revises a represented rule; a separate twenty-three-cell inquiry witness allocates paid internal and external observations. The latter's native records do not grant its executive an uncharged read port. The same return wrapper also qualifies a constant-output circuit under the stated native contract, so return organization alone does not imply evaluation. These constructions establish coexistence of independently checked evaluative capacities and the native organization used by A1–A2 at specified ordinary boundaries. They do not establish uninterrupted A3 identity through every intervening native or analog instant.
+
+
+
+<a id="section-9-4-3"></a>
+
+### 9.4.3 Constituted participation and warranted self-revision
+
+ The later account of constituted agency strengthens the positive interpretation of control: a person's understanding can change conduct without the person having first authored every condition enabling that understanding <a id="citation-revised-37"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 2, 9–11]. If the relevant organized activity is the person's deliberation, explaining its realization does not relocate the activity to another controller. Present authorship of a judgment, ultimate authorship of its entire enabling basis, and moral responsibility are separate questions. Common constitution alone does not prove deterministic evolution or exclude a dependent initiating power. The stronger exclusions require their own causal, modal or well-founded authorization premises. A complete history can contain action occurring through deliberation rather than regardless of it.
+
+The constructive development distinguishes information retained about a recommendation-producing mechanism from the authority that mechanism presently receives. An acquired model can accurately predict fresh recommendations while an unavailable read or installation route prevents its use. A compensating monitor can improve output while leaving the former authority relation intact. Conversely, a direct neutral write can match improved output without acquiring the model. Recognition is warranted through the conjunction of a credible account of the actual mechanism, an independently supported evaluative criterion, and an executable route carrying the assessment into fresh action. The criterion can favor retention as well as revision. Useful bodily calibration, practical memory, protective constraints and relationships need not be erased when a particular self-description loses unwarranted priority.
+
+The companion construction implements these distinctions with acquired probe records, a retained mechanism estimate, an active authority selector, a separate compensation route and an archive of the previous selector. Its exact value comparisons concern paid selective revision within a declared audit grammar; its local circuit realizes one audit and one fresh case under explicit preparation, ingress, clock, holding and error contracts <a id="citation-revised-38"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 11–15]. These results explain how understanding can become consequential. They do not identify improved output with phenomenal insight or supply a new admission law. Where an independently certified core's actual intrinsic states are distinguished by one common admitted native experiment, A2 assigns different pointed relational organization; A3 separately governs whether the qualifying process continues as one episode.
 
 
 

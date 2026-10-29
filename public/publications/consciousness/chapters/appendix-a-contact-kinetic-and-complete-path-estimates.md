@@ -1,6 +1,6 @@
 # Appendix A: Contact, kinetic, and complete-path estimates
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -46,7 +46,7 @@
 
 ## A.1 Finite contact gas and its Poisson comparison
 
-<a id="section:kinetic:finite-contact-gas-and-its-poisson-comparison"></a> This appendix supplies the quantitative implication used in the pilot construction. It concerns a fixed finite graph and a fixed physical horizon, not a limit in which the graph, reference, or duration also grows. The primitive export and contact laws remain constitutive inputs <a id="citation-53"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
+<a id="section:kinetic:finite-contact-gas-and-its-poisson-comparison"></a> This appendix supplies the quantitative implication used in the pilot construction. It concerns a fixed finite graph and a fixed physical horizon, not a limit in which the graph, reference, or duration also grows. The primitive export and contact laws remain constitutive inputs <a id="citation-revised-100"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
 
 Take $M$ independent points with uniform positions in an interval of length $M/R$, translated at unit speed towards a contact surface. During $[0,T]$, with $RT\le M$, each point crosses with probability $p=RT/M$ and crosses at most once. Conditional on crossing, its time is uniform on $[0,T]$. Independent marks can be attached in both descriptions. Compare the crossing indicator of each point with a Poisson count of mean $p$. Their exact total variation is 
 

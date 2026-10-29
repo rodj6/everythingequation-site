@@ -262,7 +262,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       subtitle: publication?.subtitle ?? raw.subtitle,
       role: raw.role,
       summary: raw.summary,
-      version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? `Version ${publication.version}` : raw.version,
+      version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? (consciousness ? publication.version : `Version ${publication.version}`) : raw.version,
       date: research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
       webUrl: sourceReadout ? paperUrl(sourceReadout) : integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
       pdfUrl: sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,

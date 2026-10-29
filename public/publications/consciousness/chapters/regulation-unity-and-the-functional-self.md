@@ -1,6 +1,6 @@
 # Chapter 11: Regulation, unity, and the functional self
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -46,7 +46,7 @@
 
 ## 11.1 A typed regulation architecture
 
-<a id="section:crr:a-typed-regulation-architecture"></a> The Conscious Record Realization framework (CRR) organizes preservation, access, valuation, and control as distinct data <a id="citation-19"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersCRR)]. In a finite deterministic specialization, let $P$ be a state/record space, $\epsilon:P\to E$ a defect readout, and $Z\subseteq E$ the acceptable region. The preserved region is the pullback 
+<a id="section:crr:a-typed-regulation-architecture"></a> The Conscious Record Realization framework (CRR) organizes preservation, access, valuation, and control as distinct data <a id="citation-revised-40"></a>[[59](/consciousness/monograph/bibliography#bib-RodgersCRR)]. In a finite deterministic specialization, let $P$ be a state/record space, $\epsilon:P\to E$ a defect readout, and $Z\subseteq E$ the acceptable region. The preserved region is the pullback 
 
 $$
 

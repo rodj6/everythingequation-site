@@ -79,7 +79,7 @@ export default function ConsciousnessNetwork() {
         </svg>
       </div>
     </div>
-    <div className="c-network-labels"><div><span>01 / Biological organization</span><strong>Human consciousness</strong></div><div><span>02 / Artificial organization</span><strong>Artificial consciousness?</strong></div></div>
+    <div className="c-network-labels"><div><span>01 / Biological organization</span><strong>Human consciousness</strong></div><div><span>02 / Artificial organization</span><strong>Artificial consciousness</strong></div></div>
     <figcaption><div><p>Different vessels. What makes a perspective?</p><span>A conceptual illustration—not measured activity or a consciousness score.</span></div><button type="button" disabled={!ready} onClick={()=>setPaused(value=>!value)} aria-pressed={!paused} aria-label={paused ? "Play network animation" : "Pause network animation"}><span aria-hidden="true">{paused?"▷":"Ⅱ"}</span> {paused ? "Play" : "Pause"} motion{reduced && paused ? " · reduced" : ""}</button></figcaption>
   </figure>;
 }

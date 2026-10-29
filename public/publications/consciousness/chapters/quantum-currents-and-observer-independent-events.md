@@ -1,6 +1,6 @@
 # Chapter 6: Quantum currents and observer-independent events
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -104,7 +104,7 @@ $$
 
 Equation (6.3).
 
- The construction is established in the Bell-process literature <a id="citation-9"></a>[[3](/consciousness/monograph/bibliography#bib-Bell1986), [15](/consciousness/monograph/bibliography#bib-Durr2005)]. Its selection from a physical constitution is a further problem. For example, directed expected traffic of the form 
+ The construction is established in the Bell-process literature <a id="citation-revised-23"></a>[[3](/consciousness/monograph/bibliography#bib-Bell1986), [16](/consciousness/monograph/bibliography#bib-Durr2005)]. Its selection from a physical constitution is a further problem. For example, directed expected traffic of the form 
 
 $$
 
@@ -155,7 +155,7 @@ The theorem is about informational sufficiency. It says nothing about whether $\
 
 ## 6.3 The independence of physical events from conscious observation
 
-<a id="section:quantum:the-independence-of-physical-events-from-conscious-observation"></a> The mature measurement programme contains two different constitutive completions <a id="citation-10"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersMeasurement), [35](/consciousness/monograph/bibliography#bib-RodgersMassive), [34](/consciousness/monograph/bibliography#bib-RodgersPilot)]. One uses actual continuous configurations guided by the complete wave and an initial equilibrium law. The other uses a deterministic pilot medium with an initial spatial ensemble and a controlled complete-path limit to Bell dynamics. Neither includes conscious awareness as the trigger of an event.
+<a id="section:quantum:the-independence-of-physical-events-from-conscious-observation"></a> The mature measurement programme contains two different constitutive completions <a id="citation-revised-24"></a>[[53](/consciousness/monograph/bibliography#bib-RodgersMeasurement), [48](/consciousness/monograph/bibliography#bib-RodgersMassive), [43](/consciousness/monograph/bibliography#bib-RodgersPilot)]. One uses actual continuous configurations guided by the complete wave and an initial equilibrium law. The other uses a deterministic pilot medium with an initial spatial ensemble and a controlled complete-path limit to Bell dynamics. Neither includes conscious awareness as the trigger of an event.
 
 This is a conditional physical result. It establishes that the specified models define events and records without an awareness variable. It does not prove that these models are the unique laws of nature, nor that consciousness has no relation to the processes they describe. The relevance is conceptual and technical: a psychophysical aspect can be added to the realized history without being invoked to complete an otherwise undefined measurement.
 
@@ -200,3 +200,13 @@ Replace kernels one at a time. The common remaining suffix contracts the chosen 
 
 
 The positivity of conditioning probabilities is not optional. A formal cap by one cannot define conditioning on a null event. Likewise, closeness of final output probabilities does not by itself imply closeness of the actual historical record. These distinctions are crucial when physical reports are later used as evidence concerning experience.
+
+A further restricted result makes the cost of physical record access quantitative <a id="citation-revised-25"></a>[[68](/consciousness/monograph/bibliography#bib-ShadowEventLawRound003), Section 8]. Take a fixed finite, preparation-independent controlled coherent writer with one common pure ready apparatus state. Let its two normalized archive states be $a_0,a_1$, including every future-active coherent memory, purifying degree and stored control key. In the source chemistry specified by that report, the joint kinetic limit derives the reader's terminal-record probabilities. The archive is subsequently read by an admitted coherent reader with independently ready resources and no source access. A separate diagnostic writes known equal-amplitude source superpositions and then applies a bare noncommuting native quarter-pulse, with no compensating archive control. If $D_N$ is the actual archive-only record distinguishability and $\Delta_N$ the written-versus-clean native-path distance for the calibrated diagnostic phase, the finite-source estimate is 
+
+$$
+
+[D_N-\epsilon_A]_+^2\le4(\Delta_N+\epsilon_P),
+
+$$
+
+ where $\epsilon_A$ sums the two archive-programme kinetic errors and $\epsilon_P$ sums the written and clean diagnostic errors. This bounds information obtainable from the complete archive by native-path discrepancy in the declared calibrated experiment; it does not claim that every individual input is disturbed. A display reset leaves the comparison unchanged when its retained copy or key remains. The theorem neither consumes the archive nor identifies law reconstruction with recovery of its original event. Its coherent writer, archive-only access and bare-probe contracts are essential: the same source constructs classical reporters outside that class, so this result does not establish universal apparatus admission or a phenomenal law.

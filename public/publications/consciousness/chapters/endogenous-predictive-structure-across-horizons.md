@@ -1,6 +1,6 @@
 # Chapter 16: Endogenous predictive structure across horizons
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -40,7 +40,7 @@
 \one = \mathbf 1
 -->
 
-<a id="ch:predictive"></a> Predictive and causal-state representations are established antecedents <a id="citation-26"></a>[[48](/consciousness/monograph/bibliography#bib-Shalizi2001), [26](/consciousness/monograph/bibliography#bib-Littman2002)]. The present intrinsic-state quotient adds an explicit transition-congruence requirement; its phenomenal identification is a separate law. 
+<a id="ch:predictive"></a> Predictive and causal-state representations are established antecedents <a id="citation-revised-49"></a>[[69](/consciousness/monograph/bibliography#bib-Shalizi2001), [27](/consciousness/monograph/bibliography#bib-Littman2002)]. The present intrinsic-state quotient adds an explicit transition-congruence requirement; its phenomenal identification is a separate law. 
 
 <a id="section-16-1"></a>
 
@@ -217,6 +217,38 @@ The assumption gives representative independence. Nonnegativity and normalizatio
 The conditional distribution describes uncertainty about the actual next point. It is not itself that point. There is generally no deterministic update $z\mapsto z'$ from the record alone. A theorem about Bayesian filtering on histories cannot replace the congruence assumption for intrinsic actual states.
 
 For clarity, a five-state example shows why the assumption is needed. With one action, let $a$ emit $0$ and remain at $a$; let $b$ emit $1$ and remain at $b$; let $c$ emit $0$ and enter $a$ with probability $1/2$, or emit $1$ and enter $b$ with probability $1/2$. Let $x$ emit $\#$ and enter $a$ or $b$ with equal probabilities, whereas $y$ emits $\#$ and enters $c$ surely. States $x,y$ have identical laws for every finite transcript: $\#$ followed by all zeros or all ones, with probabilities $1/2$. The predictive classes are $\{a\},\{b\},\{c\},\{x,y\}$. Nevertheless the probability of entering $\{c\}$ after $\#$ is zero from $x$ and one from $y$. Output equivalence has therefore not supplied actual-class closure.
+
+
+
+<a id="section-16-3-1"></a>
+
+### 16.3.1 A predictive organization as an effective component
+
+ <a id="sec:update-encapsulation"></a> The later composition results give a precise sense in which a realized relation can become a relatum in a larger organization <a id="citation-revised-50"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)]. Equip a finite module with a strong quotient $q_i$ preserving its joint record and successor-class law, together with protected operating-type, timing, ownership and resource marks. In a matching causal wiring, retain the exterior controller, delayed messages, shared drivers and owned resources as context $c$. The wiring may use only declared ports and may not inspect discarded coordinates. Push the entire prepared joint law forward, retaining correlations. Then 
+
+$$
+
+Q(x_1,\ldots,x_n,c)=(q_1(x_1),\ldots,q_n(x_n),c)
+
+$$
+
+ is a strong quotient of the composite. It preserves every admitted finite adaptive transcript law, including delayed feedback and finite stopping. Simultaneous shared random events require a joint instrument; separately correct local marginals do not establish this result. Reused modules retain their memory and exhausted resources.
+
+Under these same finite marked-domain conditions, taking the coarsest strong marked quotient after causal composition agrees, up to marked-instrument isomorphism, with composing the local coarsest quotients and minimizing again. This is a conditional substitution theorem. It does not identify different physical devices, assert that every useful quotient is a proper reduction, or assign a subject to every effective module.
+
+Approximation has an explicit physical-call budget. If the matching initial joint laws differ by at most $\delta_0$, and module $i$ has uniform joint-record/coarse-successor error $\epsilon_i$ on every admitted conditional row and is called at most $n_i$ times along any path, then 
+
+$$
+
+\operatorname{TV}(P^\pi,\widehat P^\pi)
+\le 1-(1-\delta_0)\prod_i(1-\epsilon_i)^{n_i}
+\le\min\{1,\delta_0+\sum_i n_i\epsilon_i\}.
+
+$$
+
+ Adaptive choice does not require independent errors: while histories agree, the controller makes the same next choice, and each coupled joint row retains its conditional agreement bound. Errors between several descriptions of the same event instead add by the triangle inequality; they are not extra physical calls.
+
+Preserving the target process is still insufficient to preserve a cut comparison. If $\mathcal N$ and $\widehat{\mathcal N}$ are the allowed coherent simulator-law families, the relevant distance is $\inf_{Q\in\mathcal N}d_{\mathcal E}(P,Q)$ for one common complete-experiment metric. Target error $\beta$ and two-sided Hausdorff error $\nu$ between those families bound the change of that distance by $\beta+\nu$. Timely communication, local memory or a shared seed must not become free merely because the target was compressed. These physical and comparison contracts are what make higher-level reuse meaningful.
 
 
 

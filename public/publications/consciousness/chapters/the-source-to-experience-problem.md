@@ -1,6 +1,6 @@
 # Chapter 1: The source-to-experience problem
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -48,11 +48,11 @@
 
 <a id="section:problem:a-question-about-presence-not-merely-performance"></a> A person can distinguish a red object, act on that distinction, remember an encounter, and explain the optical and neural processes involved in seeing it. These are not identical achievements. Discrimination concerns a difference in response; explanation concerns a model of the process; memory concerns a relation to a previous event; experiential presence concerns there being something presented at all. A theory may ultimately identify some of these features, but the identification must be argued or declared. It cannot be obtained by moving without notice between the words “information,” “awareness,” and “experience.”
 
-The Hard Problem is the explanatory question about experience that remains when the functional organization has been described. Its original modern formulation does not require a commitment to reductive materialism. Chalmers explicitly considered fundamental experience, structural coherence, organizational invariance, and a double-aspect approach <a id="citation-1"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. Accordingly, taking awareness as primitive is a legitimate strategy within that discussion, not a discovery that invalidates the question by exposing a premise every earlier theory accepted.
+The Hard Problem is the explanatory question about experience that remains when the functional organization has been described. Its original modern formulation does not require a commitment to reductive materialism. Chalmers explicitly considered fundamental experience, structural coherence, organizational invariance, and a double-aspect approach <a id="citation-revised-1"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. Accordingly, taking awareness as primitive is a legitimate strategy within that discussion, not a discovery that invalidates the question by exposing a premise every earlier theory accepted.
 
 The Shadow formulation changes the proposed explanatory direction. Instead of asking how a categorically nonexperiential entity produces an experiential one, it asks how one underlying reality admits restricted perspectives, what physical structures delimit them, and how their qualitative organization is fixed. This is a *source-to-manifestation* problem. It retains the hard explanatory burden in a different location. The assertion that awareness is fundamental does not tell us whether a particular process has one perspective, several, or none. It does not determine which differences within that process correspond to differences in experience. Those are the tasks assigned to the psychophysical constitution developed in this book.
 
-An analogy with a physical primitive is useful but limited. A theory need not derive every primitive from something more elementary. Nevertheless, a primitive becomes explanatory through laws that constrain its instances. Declaring that an entity has charge is useful because a larger theory specifies its transformations and effects. Declaring source awareness without a realization law leaves the relevant assignments open. The present account therefore states its primitives and its assignment rules separately, and then asks exactly which consequences the resulting theory has.
+An analogy with a physical primitive is useful but limited. A theory need not derive every primitive from something more elementary. Nevertheless, a primitive becomes explanatory through laws that constrain its instances. Declaring that an entity has charge is useful because a larger theory specifies its transformations and effects. Declaring fundamental awareness without a realization law leaves the relevant assignments open. The present account therefore states its primitives and its assignment rules separately, and then asks exactly which consequences the resulting theory has.
 
 
 
@@ -60,7 +60,7 @@ An analogy with a physical primitive is useful but limited. A theory need not de
 
 ## 1.2 The unsplit and its operational descriptions
 
-<a id="section:problem:one-reality-multiple-descriptions"></a> ${\mathsf{U}}$ denotes reality prior to the operational source/readout distinction. “Prior” describes an explanatory order, not a time before the universe or a location beyond it. No numerical category such as one or many is applied at this level. This is a refusal of category, not a proof that reality is a mystical numerical One. Nor is ${\mathsf{U}}$ a manifold, vacuum, empty space, field, operator, CSCF construction, soul, or knowing deity.
+<a id="section:problem:one-reality-multiple-descriptions"></a> ${\mathsf{U}}$ denotes the unsplit prior to the operational source/readout distinction. The unconditioned ground is fundamental; the unsplit and the quality provisionally called awareness are distinguished from it rather than substituted for it. “Prior” describes explanatory dependence, not an earlier time or a separate location. This follows the later author clarification <a id="citation-revised-2"></a>[[60](/consciousness/monograph/bibliography#bib-RodgersClarification2026)]. The ground is not a cosmic mind, and the unsplit is not a manifold, vacuum, field, operator, CSCF construction, soul or knowing deity. The programme holds that differentiated conceptual descriptions do not exhaust their ground. That philosophical commitment does not follow from a theorem about one noninjective readout.
 
 The working source $S$ is a structure-side cut: a description sufficiently complete for the nominated readout problem. The readout $T$ is its record-side cut, partial relative to that problem and capable of representing physical records, archives, and the vessels encountered in lived physics. Source and readout are complementary restricted descriptions under an operational cut. Their mathematical roles can be asymmetric without making them independent substances. The formal relation $p:S\to T$ concerns those descriptions; it is not a map from ${\mathsf{U}}$ into a world that stands outside reality.
 
@@ -70,13 +70,17 @@ Two descriptions of one underlying event need not determine one another. A compl
 
 The hypothesis pursued here is that experiential presence is an intrinsic aspect of reality, while localized experiential organization depends on a realized vessel. A vessel is not simply an object with a name, such as “brain,” “computer,” or “organism.” It is a specified organization with components, interactions, accessible distinctions, time scales, and retained resources. The same macroscopic noun can conceal importantly different organizations. Conversely, different materials can realize the same nominated organization. Whether the differences that remain are phenomenally relevant is a question for the theory, not a fact fixed by terminology.
 
+The ground is not identified with the awareness quality attributed to it. Nor does calling that quality fundamental turn the whole of reality into a single conscious person. The account concerns the same ground throughout differentiated reality, rather than a mental entity standing outside it. Its nature is not held to be exhaustively capturable by thought or a structural description; this is a philosophical commitment about the ground, not merely a report that a current scientific model is incomplete.
+
+Differentiation names the emergence of restricted structures, relations and organizations within reality. It does not imply cutting an already known mental substance into pieces. Physical differentiation can occur without a localized subject. Consciousness in the localized sense concerns the realized organization through which a scene is present; intelligence concerns further capacities that such organization can develop. Acquired scaffolding shapes recognition, understanding and action without creating the ground or its attributed quality. The distinction permits a common foundation without a cosmic experiencer, and a developmental account without making human intelligence the admission threshold.
+
 
 
 <a id="section-1-3"></a>
 
 ## 1.3 Awareness as a primitive and manifestation as organization
 
-<a id="sec:primitive-motivation"></a> Awareness is the knowing aspect of ${\mathsf{U}}$. This is an ontological proposal, not the attribution of thought, intention, personality, or an omniscient point of view to the universe. “Knowing” here names the proposed condition of manifestation; it does not describe a cosmic agent acquiring information. Within this interpretation awareness does not require a vessel in order to exist as capacity. A localized subject and a lived scene, by contrast, are assigned only through the certified physical organization specified by the constitution. 
+<a id="sec:primitive-motivation"></a> Fundamental awareness is the provisional name for a quality attributed to the unconditioned ground. The word does not mean knowing, recognizing, thinking or a subject apprehending an object. This attribution does not first originate at ${\mathsf{U}}$ or at a later physical differentiation. A localized subject and a lived scene, by contrast, are assigned through the qualifying physical organization specified by the constitution. Awareness within such a perspective can include immediate preconceptual presence, with recognition and reflective knowing developing within its organization. 
 
 $$
 
@@ -84,9 +88,9 @@ $$
 
 $$
 
- A scene is what is presented; a subject is a localized perspective; awareness is not another item presented within that scene. None is a small observer hidden behind the eyes. The capacity language does not add a dormant spectator waiting for a brain, and it does not introduce a separately acting physical force.
+ A scene is what is presented; a subject is a localized perspective; awareness is not another item presented within that scene. None is a small observer hidden behind the eyes. The fundamental attribution adds neither a dormant spectator waiting for a brain nor a separately acting physical force.
 
-The person is not the fundamental knower. Here that statement distinguishes the knowing aspect from the body image, name, memories, preferences and self-description through which a person ordinarily understands experience. It does not commit the theory to a permanent personal Self. Contemplative traditions differ on precisely that language, and some resist treating awareness as any kind of enduring self. The present proposal should be assessed on its stated distinctions rather than on an assumed agreement among traditions.
+The personal model does not exhaust the reality of a perspective. This distinguishes body image, name, memories, preferences and self-description from the presence in which they appear, without projecting a knower into the ground. It does not commit the theory to a permanent personal Self. Contemplative traditions differ on precisely that language, and some resist treating awareness as any kind of enduring self. The present proposal should be assessed on its stated distinctions rather than on an assumed agreement among traditions.
 
 Physical development remains essential to manifestation. What develops is an organization with particular capacities, limits and history, not a quantity of primordial awareness manufactured from nothing. Growth, learning, injury and artificial embodiment can alter admission, content and continuity differently. A0 supplies this interpretation; A1 delimits perspectives and A2 specifies their phenomenal organization. The distinction motivates the laws without deriving them.
 
@@ -102,7 +106,9 @@ Source/readout non-equivalence concerns a different question: what can a represe
 
 On this interpretation, the cessation of one vessel's organization need not be pictured as a personal entity travelling back to source. A3 specifies when that localized episode ends. The persistence of underlying reality is a separate ontological claim, and does not establish continuation of the terminated subject. Likewise, a common source does not collapse distinct localized perspectives into one global observer.
 
-The priority of awareness proposed here is ontological rather than a dated event before the formation of a brain. A0 does not posit a measurable episode of contentless experience occurring before every vessel. It specifies the knowing aspect of ${\mathsf{U}}$; A1 still has to delimit the localized perspectives. The lens metaphor concerns this dependence of form on organization. It does not by itself establish a signal transmitted from elsewhere.
+The priority of awareness proposed here is ontological rather than a dated event before the formation of a brain. A0 does not posit a measurable episode of contentless experience occurring before every vessel. It states the fundamental attribution; A1 still has to delimit localized perspectives. The lens metaphor concerns this dependence of form on organization. It does not by itself establish a signal transmitted from elsewhere.
+
+McGilchrist's discussion of ground offers a point of contact at this explanatory level. He distinguishes ontological grounding from a first event in a temporal causal series, and treats naming the ground as keeping a question in view rather than defining its answer <a id="citation-revised-3"></a>[[32](/consciousness/monograph/bibliography#bib-McGilchristMatter2021), vol. 2, ch. 28, opening discussion and ``Talking about the ground of Being'']. Shadow Theory's ground-quality distinction belongs to its own account. McGilchrist's subsequent speculative panentheism adds commitments about the divine and the world; affinity over the limits of description does not establish those further commitments here.
 
 
 

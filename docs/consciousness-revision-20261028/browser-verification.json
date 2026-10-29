@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "testedOutput": "Local mirror of the completed production HTML, Next static files and public assets; no deployment",
+  "desktop": {
+    "viewportWidth": 1363,
+    "contentWidth": 1348,
+    "documentScrollWidth": 1348,
+    "checked": [
+      "monograph landing page",
+      "worked finite vessel Chapter 19",
+      "transition matrix equation 19.2",
+      "sticky contents and chapter navigation",
+      "current edition and DOI display"
+    ]
+  },
+  "mobile": {
+    "method": "390 CSS pixel wide same-origin iframe containing unmodified production pages, rather than device emulation",
+    "viewportWidth": 390,
+    "contentWidth": 375,
+    "documentScrollWidth": 375,
+    "checked": [
+      "monograph landing page",
+      "mobile menu open and close",
+      "begin-reading navigation to preface",
+      "chapter navigation to revised artificial-systems chapter",
+      "responsive chapter header and publication links",
+      "full-programme search for enacted with revised monograph matches",
+      "worked finite vessel Chapter 19",
+      "section anchor 19.2 and transition matrix rendering"
+    ]
+  },
+  "equations": {
+    "chapter19RenderedExpressions": 41,
+    "chapter22RenderedExpressions": 25,
+    "observedKatexErrors": 0
+  },
+  "navigationAndDiscovery": "Client navigation and search completed successfully; published DOI, bundled PDF and supplement record targets also verified in source/production audits.",
+  "console": "Only browser-extension metadata errors observed; no application error observed during the tested flow.",
+  "scope": "Responsive layout verified at narrow and desktop CSS widths; touch-device hardware emulation was not used."
+}

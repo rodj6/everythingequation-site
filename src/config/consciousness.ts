@@ -1,21 +1,19 @@
-/** Fixed publication identity from the supplied Version 2 manuscript.
- * The DOI is author-supplied; no unverified licence or review status is inferred.
- */
+/** Current revised monograph publication, dated 28 October 2026. */
 export const consciousnessPublication = {
   id: "monograph",
   title: "Shadow Theory and Consciousness: Awareness, Perspectival Realization, and the Source-to-Experience Problem",
   subtitle: "Awareness, Perspectival Realization, and the Source-to-Experience Problem",
   shortTitle: "Shadow Theory and Consciousness",
   constitution: "Shadow Psychophysical Constitution (SPC-2)",
-  doi: "10.5281/zenodo.22853774",
-  doiUrl: "https://doi.org/10.5281/zenodo.22853774",
+  doi: "10.5281/zenodo.23755118",
+  doiUrl: "https://doi.org/10.5281/zenodo.23755118",
   paperSlug: "shadow-theory-and-consciousness",
-  version: "2",
-  published: "2026-09-20",
-  dateLabel: "20 September 2026",
+  version: "Revised edition",
+  published: "2026-10-28",
+  dateLabel: "28 October 2026",
   author: "Jeremy Rodgers",
   authorRole: "Independent Researcher",
-  description: "SPC-2 proposes explicit laws for qualifying perspectives, lived content and process continuation, with a conditional finite completion theorem, worked models and open realization and validation obligations.",
+  description: "SPC-2 connects the unconditioned ground, awareness and localized experience through explicit laws of perspective, predictive content and process continuation. The revised edition integrates enactment, temporal experience, relational appearance, agency and an affirmative framework-based account of current AI consciousness, alongside implementation-specific certification.",
   status: "Candidate internal constitutive resolution under declared assumptions.",
   webUrl: "/consciousness/monograph",
   pdfUrl: "/publications/consciousness/monograph.pdf",
@@ -25,7 +23,9 @@ export const consciousnessPublication = {
   socialImage: "/publications/consciousness/social.png",
   predecessorPaperSlug: "zenodo-19324253",
   historyUrl: "/legacy/consciousness-field-theorem",
-  versionNote: "Version 2 supersedes the earlier Consciousness Field account. The current formulation is SPC-2, presented in Shadow Theory and Consciousness.",
+  versionNote: "The revised edition of 28 October 2026 integrates the later programme into the 20 September publication. A0 distinguishes the unconditioned ground, the unsplit and awareness; A1–A3 retain their admission, content and continuation rules. SPC-2 remains the successor to the earlier Consciousness Field account.",
+  supplementRecordUrl: "https://zenodo.org/records/23755118",
+  previousEdition: { version: "2", published: "2026-09-20", doi: "10.5281/zenodo.22853774", doiUrl: "https://doi.org/10.5281/zenodo.22853774", pdfUrl: "/publications/consciousness/history/2026-09-20/monograph.pdf" },
 } as const;
 
 export type ConsciousnessPublication = typeof consciousnessPublication;

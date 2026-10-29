@@ -1,6 +1,6 @@
 # Chapter 14: Why a manifestation law is additional
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -40,7 +40,7 @@
 \one = \mathbf 1
 -->
 
-<a id="part:constitution"></a> <a id="ch:underdetermination"></a> The preceding parts describe source/readout relations and capabilities of physically realized systems. This part supplies the proposed laws of manifestation. Its first task is to identify which choices the physical results leave open, so that the later constitution makes those choices explicitly. The underdetermination examples below explain why a constitutive law is needed; they do not replace the positive argument for the particular law adopted.
+<a id="part:constitution"></a>   <a id="ch:underdetermination"></a> The preceding parts describe source/readout relations and capabilities of physically realized systems. This part supplies the proposed laws of manifestation. Its first task is to identify which choices the physical results leave open, so that the later constitution makes those choices explicitly. The underdetermination examples below explain why a constitutive law is needed; they do not replace the positive argument for the particular law adopted.
 
 
 
@@ -50,7 +50,7 @@
 
 <a id="section:underdetermination:common-source-does-not-determine-a-bridge"></a> The physical results establish structures that a vessel can realize. They do not yet determine an experiential assignment. Let $S=\{0,1\}^2$, with $p(s_1,s_2)=s_1$ and $\phi(s_1,s_2)=s_2$. Both are descriptions of the same source, but no function $f$ satisfies $\phi=f\circ p$. A common-source ontology alone does not imply the desired fibre compatibility.
 
-Adding a constant awareness argument imposes no further mathematical restriction. For every $M:X\to\Phi$ and fixed $a_*$, the map $\widetilde M(a_*,x)=M(x)$ is a possible assignment on $\{a_*\}\times X$. Primitive awareness can be a legitimate ontological commitment while leaving the entire manifestation map unspecified. Its introduction must therefore be followed by actual laws rather than treated as the completion of the theory.
+Adding a constant awareness argument imposes no further mathematical restriction. The following dummy argument illustrates mathematical freedom; it is not a state variable or formal representation of the ground or its attributed quality. For every $M:X\to\Phi$ and fixed $a_*$, the map $\widetilde M(a_*,x)=M(x)$ is a possible assignment on $\{a_*\}\times X$. Primitive awareness can be a legitimate ontological commitment while leaving the entire manifestation map unspecified. Its introduction must therefore be followed by actual laws rather than treated as the completion of the theory.
 
 
 
@@ -102,7 +102,7 @@ Equation (14.2).
 
  If both $\mu$ and $Q$ are unrestricted, invertible changes of latent coordinates leave $R$ unchanged after the corresponding decoder transformation. More general inequivalent latent spaces can also induce the same report law. Thus a fitted report distribution is not automatically a unique phenomenal law.
 
-An independently specified physical descriptor and experience-facing measurement map define a conditional factorization problem <a id="citation-24"></a>[[33](/consciousness/monograph/bibliography#bib-RodgersField)]. This formulation permits the target to constrain the descriptor rather than be defined by it. The stronger constitutive proposal below makes a different move: it identifies phenomenal relational organization with a canonical physical predictive object. This excludes alternative organizations *by a declared law*, not by claiming that generic regularity or report agreement has already ruled them out.
+An independently specified physical descriptor and experience-facing measurement map define a conditional factorization problem <a id="citation-revised-45"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersField)]. This formulation permits the target to constrain the descriptor rather than be defined by it. The stronger constitutive proposal below makes a different move: it identifies phenomenal relational organization with a canonical physical predictive object. This excludes alternative organizations *by a declared law*, not by claiming that generic regularity or report agreement has already ruled them out.
 
 
 

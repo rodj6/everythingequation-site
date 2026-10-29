@@ -85,8 +85,8 @@ export default function AboutPage() {
 
       <section aria-labelledby="consciousness-publication-heading">
         <h2 id="consciousness-publication-heading" className="text-2xl font-bold tracking-tight">The consciousness publication</h2>
-        <p className="mt-4 leading-relaxed text-fg/90">Shadow Theory and Consciousness, Version 2, dated 20 September 2026, develops the Shadow Psychophysical Constitution (SPC-2). It proposes explicit laws for perspective admission, lived content and process continuation, and a finite completion theorem conditional on certified realization, a declared selection doctrine and the stated constitutive premises.</p>
-        <p className="mt-4 leading-relaxed text-mute">The current edition supersedes the earlier Consciousness Field account. Historical fixed-point and EEG claims remain provenance, not validation of SPC-2. Biological interpretation and empirical assessment remain open obligations; current AI systems are not certified by the monograph.</p>
+        <p className="mt-4 leading-relaxed text-fg/90">Shadow Theory and Consciousness, revised edition dated 28 October 2026, develops the Shadow Psychophysical Constitution (SPC-2). It proposes explicit laws for perspective admission, lived content and process continuation, and a finite completion theorem conditional on certified realization, a declared selection doctrine and the stated constitutive premises.</p>
+        <p className="mt-4 leading-relaxed text-mute">The current edition supersedes the earlier Consciousness Field account. Historical fixed-point and EEG claims remain provenance, not validation of SPC-2. The revised edition argues affirmatively for consciousness in current active AI within the framework and keeps implementation-specific certification distinct from that attribution.</p>
         <Link href="/consciousness" className="mt-5 inline-block text-sm font-medium text-glow hover:text-glow-strong">Explore consciousness and the complete publication →</Link>
       </section>
 

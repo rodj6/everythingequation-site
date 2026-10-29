@@ -35,7 +35,7 @@ export default async function PapersPage() {
           follow-on Sealed or Leaky paper quantifies missing information and operational access. The
           Quantum Measurement programme develops its own explicit physical constitutions,
           with a complete monograph and two companion papers. The consciousness monograph
-          develops SPC-2, the current Version 2 successor of the Consciousness Field account.
+          develops SPC-2 in the revised edition of 28 October 2026, integrating its later programme and affirmative AI argument.
           Three companion papers examine relational boundaries, effective interface learning and
           the identification of binary realizations. Further publications develop
           conscious scaffolding, bounded agency and reflective AI alignment.

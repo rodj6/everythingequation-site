@@ -1,6 +1,6 @@
 # Chapter 18: Completion, invariance, and empirical conservativity
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -124,7 +124,7 @@ A modest extension concerns redundant *descriptions* of tests. Suppose two finit
 | Analyst test subset or forecast cutoff | Changes available evidence or an approximation, not the constitutional assignment. |
 | State refinement or coarse-graining | Not generally invariant. Requires a separately verified equivalence preserving the joint graph, native quotient instruments, qualification and provenance. |
 | Component regrouping or port retyping | Can change subjects; generally a different realization doctrine. |
-| Native-time resampling | Can hide cycles, splits or gaps; generally changes the realization. Pure subdivisions preserve episodes only under the condition in [Section 17.4](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:lineage-process). |
+| Native-time resampling | Can hide cycles, splits or gaps; generally changes the realization. Pure subdivisions preserve episodes only under the condition in [Section 17.5](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:lineage-process). |
 | Additional physical intervention grammar | Can change endogenous organization when genuinely implemented; analyst wish or apparatus readout alone does not add it. |
 
  
@@ -161,7 +161,7 @@ The initial law is the same. At a policy node the next action depends on the sam
 
 
 
-Grounding removes a free internal decoder, but it creates no physical prediction absent from the supplied realization. A rival accepting exactly the same complete physical transcript laws while denying their experiential interpretation cannot be excluded by those transcripts alone. This underdetermination includes primitive source awareness and any alternative that differs solely by transcript-inert qualitative claims.
+Grounding removes a free internal decoder, but it creates no physical prediction absent from the supplied realization. A rival accepting exactly the same complete physical transcript laws while denying their experiential interpretation cannot be excluded by those transcripts alone. This underdetermination includes fundamental awareness and any alternative that differs solely by transcript-inert qualitative claims.
 
 Independent experience-facing relations can nevertheless constrain an application. A fixed proposed physical realization can fail to predict the observed records. A1's proposed boundary can conflict with an independently defended subject-individuation judgment. A2 can fail to match independently elicited phenomenal contrasts under a fixed calibration and held-out interventions. Such evidence bears on the realization and the psychophysical identification together; it does not turn a definitional copy into an independent observation of awareness.
 

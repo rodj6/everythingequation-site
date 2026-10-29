@@ -1,5 +1,5 @@
 /**
- * Deterministic, source-preserving conversion of the fixed SPC-2 consciousness edition.
+ * Deterministic, source-preserving conversion of the revised SPC-2 consciousness edition.
  * Run: node scripts/convert-consciousness.mjs [--source-dir <directory>]
  * The checked-in original .tex files are the default input. Original bytes and
  * PDFs are immutable. No scientific rewriting or equation simplification occurs.
@@ -18,7 +18,7 @@ const assetDir = path.join(root, "public/publications/consciousness");
 const contentDir = path.join(root, "content/consciousness");
 const sourceArg = process.argv.indexOf("--source-dir");
 const sourceDir = sourceArg < 0 ? assetDir : path.resolve(process.argv[sourceArg + 1]);
-const sources = [{ id: "monograph", source: "Shadow_Theory_and_Consciousness_Final.tex", pdf: "Shadow_Theory_and_Consciousness.pdf", book: true }];
+const sources = [{ id: "monograph", source: "Shadow_Theory_and_Consciousness_Revised_Edition_2026-10-28.tex", pdf: "Shadow_Theory_and_Consciousness_Revised_Edition_2026-10-28.pdf", book: true }];
 fs.mkdirSync(assetDir, { recursive: true });
 fs.mkdirSync(contentDir, { recursive: true });
 const escape = s => String(s).replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
@@ -38,7 +38,7 @@ function groupAt(s, i, open = "{", close = "}") {
   throw new Error(`Unclosed ${open} at ${start}: ${s.slice(start, start + 80)}`);
 }
 const oneArg = new Set(["part", "chapter", "section", "subsection", "subsubsection", "paragraph", "subparagraph", "label", "ref", "eqref", "pageref", "autoref", "cite", "citep", "citet", "emph", "textbf", "textit", "texttt", "textsc", "textrm", "textnormal", "mbox", "url", "path", "footnote", "thanks", "caption", "includegraphics", "vspace", "hspace", "bibliographystyle", "textsuperscript", "textsubscript", "noindent", "phantom", "fbox", "underline", "cref", "status", "doi", "textsf", "nolinkurl", "hypersetup", "enlargethispage", "Needspace", "c"]);
-const zeroArg = new Set(["maketitle", "tableofcontents", "newpage", "clearpage", "cleardoublepage", "frontmatter", "mainmatter", "backmatter", "appendix", "small", "footnotesize", "normalsize", "large", "Large", "bfseries", "itshape", "centering", "raggedright", "arraybackslash", "toprule", "midrule", "bottomrule", "hline", "endhead", "endfirsthead", "endfoot", "endlastfoot", "noindent", "medskip", "smallskip", "bigskip", "hfill", "vfill", "protect", "relax", "Huge", "LARGE", "allowbreak"]);
+const zeroArg = new Set(["maketitle", "tableofcontents", "newpage", "clearpage", "cleardoublepage", "frontmatter", "mainmatter", "backmatter", "appendix", "small", "footnotesize", "normalsize", "large", "Large", "bfseries", "itshape", "centering", "raggedright", "arraybackslash", "toprule", "midrule", "bottomrule", "hline", "endhead", "endfirsthead", "endfoot", "endlastfoot", "noindent", "medskip", "smallskip", "bigskip", "hfill", "vfill", "protect", "relax", "Huge", "LARGE", "allowbreak", "begingroup", "endgroup"]);
 const twoArg = new Set(["href", "setcounter", "setlength", "textcolor"]);
 const threeArg = new Set(["addcontentsline", "multicolumn"]);
 const mathEnvs = new Set(["equation", "equation*", "align", "align*", "gather", "gather*", "multline", "multline*", "displaymath"]);
@@ -109,7 +109,7 @@ function plain(s) {
   return s.replace(/\\(?:emph|textbf|textit|texttt|textsc|textrm|textnormal)\{([^{}]*)\}/g, "$1")
     .replace(/\\(?:small|large|normalsize|bfseries)\b/g, "").replace(/\\\\(?:\[[^\]]*\])?/g, " ")
     .replace(/\\"\{?o\}?/g, "ö").replace(/\\"\{?u\}?/g, "ü").replace(/[{}]/g, "")
-    .replace(/\\_/g, "_").replace(/~/g, " ").replace(/---/g, "—").replace(/--/g, "–").replace(/\s+/g, " ").trim();
+    .replace(/\\_/g, "_").replace(/~/g, " ").replace(/---|—/g, ", ").replace(/--/g, "–").replace(/\s+/g, " ").trim();
 }
 function roman(n) { return ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII"][n] || String(n); }
 function expandMacros(tex, macros) {
@@ -148,8 +148,9 @@ function splitTop(s, delimiter) {
   parts.push(s.slice(start)); return parts;
 }
 
-const pdfOutline = JSON.parse(fs.readFileSync(path.join(root, "docs/consciousness/pdf-outline.json"), "utf8"));
-const pdfPageTexts = fs.readFileSync(path.join(root, "docs/consciousness/pdf-extracted-text.txt"), "utf8").split(/\r?\n\f\r?\n/);
+const pdfOutline = JSON.parse(fs.readFileSync(path.join(root, "docs/consciousness-revision-20261028/pdf-outline.json"), "utf8"));
+const pdfPageTexts = JSON.parse(fs.readFileSync(path.join(root, "docs/consciousness-revision-20261028/pdf-page-texts.json"), "utf8"));
+const legacyNavigation = JSON.parse(fs.readFileSync(path.join(root,"docs/consciousness-revision-20261028/legacy-navigation.json"),"utf8"));
 const locatorText = value => value.normalize("NFKD").toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
 const inventory = []; const audit = { schemaVersion: 1, converter: "scripts/convert-consciousness.mjs", documents: [] };
 for (const source of sources) {
@@ -168,7 +169,7 @@ for (const source of sources) {
     if (/^\\[a-zA-Z]+$/.test(command) && !["\\tabularxcolumn"].includes(command)) macros[command] = g.value;
   }
   const bodyStart = clean.indexOf("\\begin{document}") + "\\begin{document}".length;
-  const bibliographyData = prepareBibliography(original, assetDir, root);
+  const bibliographyData = prepareBibliography(original, assetDir, root, JSON.parse(fs.readFileSync(path.join(root,"docs/consciousness-revision-20261028/bibliography-order.json"),"utf8")));
   let body = clean.slice(bodyStart, clean.lastIndexOf("\\end{document}"));
   body = body.replace(/\\spctwo\b/g, "SPC-2").replace(/\\spcone\b/g, "SPC-1");
   body = body.replace(/\\apptocmd\{\\thebibliography\}\{.*?\}\{\}\{\}/gs, "");
@@ -183,7 +184,7 @@ for (const source of sources) {
     const doc = { publicationId: source.id, slug, title, label: number ? `${kind[0].toUpperCase() + kind.slice(1)} ${number}` : "", kind, order: documents.length + 1, url: source.book ? `/consciousness/monograph/${slug}` : `/consciousness/${source.id}`, part: part ? roman(part) : "", sections: [], stats: { equations: 0, displayEquations: 0, theorems: 0, proofs: 0, tables: 0, bibliographyEntries: 0, figures: 0 }, nodes: [], rawTitle };
     const normalized = title.replace(/--/g, "–").toLowerCase();
     const outlineIndex = pdfOutline.findIndex(entry => entry[1].replace(/^[A-Z0-9.]+\s+/, "").toLowerCase() === normalized);
-    if (outlineIndex >= 0) { const hit = pdfOutline[outlineIndex]; const next = pdfOutline.slice(outlineIndex + 1).find(entry => entry[0] <= hit[0]); doc.source = { pdfPage: hit[2], pdfEndPage: (next?.[2] || 134) - 1, title: hit[1] }; }
+    if (outlineIndex >= 0) { const hit = pdfOutline[outlineIndex]; const next = pdfOutline.slice(outlineIndex + 1).find(entry => entry[0] <= hit[0]); doc.source = { pdfPage: hit[2], pdfEndPage: (next?.[2] || pdfPageTexts.length+1) - 1, title: hit[1] }; }
     if (title === "Title and publication identity") doc.source = { pdfPage: 1, pdfEndPage: 1 };
     doc.markdownUrl = source.book ? `/publications/consciousness/chapters/${slug}.md` : `/publications/consciousness/${source.id}.md`;
     documents.push(doc); currentDoc = doc; return doc;
@@ -216,6 +217,10 @@ for (const source of sources) {
           const topNumber = !source.book && appendix ? String.fromCharCode(64 + section) : `${numberingPrefix()}${section}`;
           node.number = starred || name.includes("paragraph") ? "" : name === "section" ? topNumber : name === "subsection" ? `${topNumber}.${subsection}` : `${topNumber}.${subsection}.${subsubsection}`;
           node.anchor = node.number ? `section-${node.number.replaceAll(".", "-")}` : `paragraph-${++genericHeading}`;
+          const legacySections = legacyNavigation[currentDoc.slug]?.sections || [];
+          const historical = legacySections.find(s => s.title === plain(node.args[0]));
+          if (historical) node.anchor = historical.anchor;
+          else if (legacySections.some(s=>s.anchor===node.anchor)) node.anchor += "-revised";
           node.level = name === "section" ? 2 : name === "subsection" ? 3 : 4;
           current = { number: node.number, kind: name };
           const pdfSection = pdfOutline.find(entry => entry[1].startsWith(`${node.number} `));
@@ -223,7 +228,7 @@ for (const source of sources) {
         }
         if (name === "label") register(node.args[0]);
         if (["cite", "citep", "citet"].includes(name)) {
-          node.citationAnchor = `citation-${++citationSerial}`;
+          node.citationAnchor = `citation-revised-${++citationSerial}`;
           for (const key of node.args[0].split(/\s*,\s*/)) {
             if (!citationUses.has(key)) citationUses.set(key, []);
             citationUses.get(key).push({ url: `${currentDoc.url}#${node.citationAnchor}`, title: currentDoc.label || currentDoc.title });
@@ -292,15 +297,16 @@ for (const source of sources) {
   }
   documents.forEach((doc, i) => { doc.order = i + 1; if (doc.kind === "appendix") doc.part = "Appendices"; });
   const bibliography = documents.find(d => d.kind === "bibliography");
-  bibliography.part = ""; bibliography.source = { pdfPage: 130, pdfEndPage: 133 };
+  bibliography.part = ""; bibliography.source = { pdfPage: pdfOutline.find(entry=>entry[1]==="Bibliography")?.[2] || pdfPageTexts.length, pdfEndPage: pdfPageTexts.length };
   for (let i = 0; i < documents.length - 1; i++) if (documents[i].source && documents[i + 1].source) documents[i].source.pdfEndPage = documents[i + 1].source.pdfPage - 1;
   const originalLabelLocations = new Map([...original.matchAll(/\\label\{([^}]+)\}/g)].map(match => [match[1], original.slice(0, match.index).split("\n").length]));
   for (const [key, target] of labels) target.sourceLine = originalLabelLocations.get(key);
   for (const doc of documents) {
     const lines = [...labels.values()].filter(target => target.document === doc.slug).map(target => target.sourceLine).filter(Boolean);
     doc.source.texFile = "/publications/consciousness/monograph.tex";
-    doc.source.texStartLine = doc.kind === "bibliography" ? 5 : doc.slug === "title-and-publication-identity" ? 451 : Math.min(...lines);
-    doc.source.texEndLine = doc.kind === "bibliography" ? 367 : Math.max(...lines);
+    doc.source ||= {pdfPage:1,pdfEndPage:pdfPageTexts.length};
+    doc.source.texStartLine = doc.kind === "bibliography" ? 5 : doc.slug === "title-and-publication-identity" ? original.slice(0,original.indexOf("\\begin{document}")).split("\n").length : Math.min(...lines);
+    doc.source.texEndLine = doc.kind === "bibliography" ? original.slice(0,original.indexOf("\\end{filecontents*}")).split("\n").length : Math.max(...lines);
     for (const section of doc.sections) {
       const line = original.split("\n").findIndex(value => {
         const command = /^\\(?:section|subsection|subsubsection|paragraph|subparagraph)\*?/.exec(value);
@@ -351,7 +357,7 @@ for (const source of sources) {
         const parts = node.raw.split(/\n\s*\n/);
         for (let k = 0; k < parts.length; k++) {
           if (k) { flush(); md += "\n\n"; }
-          const text = parts[k].replace(/~/g, " ").replace(/---/g, "—").replace(/--/g, "–").replace(/``/g, "“").replace(/''/g, "”").replace(/\s+/g, " ");
+          const text = parts[k].replace(/~/g, " ").replace(/---|—/g, ", ").replace(/--/g, "–").replace(/``/g, "“").replace(/''/g, "”").replace(/\s+/g, " ");
           emit(escape(text), text);
         }
       } else if (node.type === "macro") {
@@ -483,9 +489,28 @@ for (const source of sources) {
   }
   function words(text) { return text.normalize("NFC").toLowerCase().match(/[\p{L}\p{N}]+/gu) || []; }
   function counts(tokens) { const result = new Map(); for (const token of tokens) result.set(token, (result.get(token) || 0) + 1); return result; }
-  const macroHeader = `<!-- Fixed Version 2 source. Mathematical macros used below:\n${Object.entries(macros).map(([name, body]) => `${name} = ${body}`).join("\n")}\n-->\n\n`;
+  const macroHeader = `<!-- Revised edition, 28 October 2026. Mathematical macros used below:\n${Object.entries(macros).map(([name, body]) => `${name} = ${body}`).join("\n")}\n-->\n\n`;
   for (const doc of documents) {
-    const value = render(doc.nodes, doc); const title = doc.label ? `${doc.label}: ${doc.title}` : doc.title;
+    const value = render(doc.nodes, doc);
+    const legacy = legacyNavigation[doc.slug];
+    if(legacy){
+      const citationMatches = [...value.html.matchAll(/<span id="(citation-revised-\d+)"[^>]*><\/span>\[([^\]]+)\]/g)];
+      for(const old of legacy.citations){
+        const hit = citationMatches.find(m => old.keys.every(key=>m[2].includes(`#bib-${key}\"`)));
+        if(!hit)throw new Error(`Missing corresponding revised citation ${doc.slug}#${old.anchor}`);
+        value.html=value.html.replace(`<span id="${hit[1]}"`,`<span id="${old.anchor}" class="quantum-anchor"></span><span id="${hit[1]}"`);
+      }
+      for(const old of legacy.sections){
+        if(!value.html.includes(`id="${old.anchor}"`)){
+          // The old AI ethics heading is superseded by the affirmative moral-responsibility section.
+          const ethics=doc.sections.find(s=>/moral|responsibil|ethic/i.test(s.title));
+          const target=ethics?.anchor||doc.sections[0]?.anchor||"publication-heading";
+          value.html=value.html.replace(`id="${target}"`,`data-legacy-target="${old.anchor}" id="${target}"`);
+          value.html=`<span id="${old.anchor}" class="quantum-anchor"></span>`+value.html;
+        }
+      }
+    }
+    const title = doc.label ? `${doc.label}: ${doc.title}` : doc.title;
     const expectedWords = words(sourceProse(doc.nodes)); const actualWords = words(htmlProse(value.html));
     const expectedCounts = counts(expectedWords), actualCounts = counts(actualWords);
     const missing = [...expectedCounts].filter(([word, count]) => (actualCounts.get(word) || 0) < count).map(([word, count]) => ({ word, source: count, rendered: actualCounts.get(word) || 0 }));
@@ -513,7 +538,8 @@ for (const source of sources) {
   };
   const convertedStats = { chapters: documents.filter(d => ["chapter", "appendix", "frontmatter"].includes(d.kind) && d.slug !== "title-and-publication-identity").length, parts: partCount, sections: documents.reduce((n,d) => n+d.sections.length,0), theorems: documents.reduce((n,d) => n+d.stats.theorems,0), proofs: documents.reduce((n,d) => n+d.stats.proofs,0), tables: documents.reduce((n,d) => n+d.stats.tables,0), figures: documents.reduce((n,d) => n+d.stats.figures,0), labels: labels.size, bibliographyEntries: citations.size };
   const mismatches = Object.entries(sourceStats).filter(([key,value]) => convertedStats[key] !== value);
-  const sourceLimitations = [{ type: "unsupplied-verification-materials", locations: [{ section: "D.4", pdfPages: [123, 124] }, { section: "F.4", pdfPages: [129] }], observation: "Appendix D.4 describes a companion executable verification package; Appendix F.4 refers to accompanying coverage/verification materials, executable scripts and results. These research supplements were not supplied, and the manuscript does not give their filenames. The complete descriptions are preserved; no unavailable supplement or claimed research result has been fabricated. This is not a missing-text or mathematics blocker." }];
+  const sourceLimitations = [];
+
   const record = { id: source.id, sourceFile: source.source, sourceSha256: hash(bytes), sourceBytes: bytes.length, pdfSha256: hash(fs.readFileSync(path.join(assetDir, `${source.id}.pdf`))), pages: documents.length, sourceStats, convertedStats, proseChecks, macros, labels: Object.fromEntries(labels), unresolvedReferences: [...new Set(unresolved)], unsupportedCommands: [...unknown], mathErrors, structuralMismatches: mismatches, sourceLimitations, status: mismatches.length || unresolved.length || unknown.size || mathErrors.length || proseChecks.some(check => check.missingWords.length || check.duplicateIds.length) ? "FAIL" : "PASS" };
   audit.documents.push(record);
   console.log(`${source.id}: ${documents.length} pages, ${labels.size} labels, ${convertedStats.theorems} statements, ${convertedStats.proofs} proofs; ${record.status}`);
@@ -525,15 +551,15 @@ fs.writeFileSync(path.join(contentDir, "audit.json"), JSON.stringify(audit, null
 fs.writeFileSync(path.join(assetDir, "conversion-audit.json"), JSON.stringify(audit, null, 2) + "\n");
 const coverage = {
   schemaVersion: 1,
-  publication: { title: "Shadow Theory and Consciousness: Awareness, Perspectival Realization, and the Source-to-Experience Problem", author: "Jeremy Rodgers", affiliation: "Independent Researcher", edition: "Version 2 — publication edition", datePublished: "2026-09-20", constitution: "SPC-2", doi: "10.5281/zenodo.22853774" },
-  provenance: { method: "Genuine separately supplied final LaTeX, matched to the archival PDF; bibliography extracted from its embedded filecontents block.", sourceFile: "/publications/consciousness/monograph.tex", sourceSha256: audit.documents[0].sourceSha256, pdfFile: "/publications/consciousness/monograph.pdf", pdfSha256: audit.documents[0].pdfSha256, pdfPages: 133, publicationPdfBytesUnmodified: true, externallyReferencedFigureAssets: [] },
-  corrections: [{ location: "Section 18.1", pdfPage: 81, printedPage: 69, originalTypography: "?? 16.4", webTypography: "Assumption 16.4", target: "/consciousness/monograph/endogenous-predictive-structure-across-horizons#ass:spc2-congruence", reason: "The source uses cleveref for an assumption environment whose display name was unresolved in the supplied PDF. The web renderer resolves its source label and theorem number. Scientific wording, equations and archival PDF are unchanged." }],
+  publication: { title: "Shadow Theory and Consciousness: Awareness, Perspectival Realization, and the Source-to-Experience Problem", author: "Jeremy Rodgers", affiliation: "Independent Researcher", edition: "Revised edition", datePublished: "2026-10-28", constitution: "SPC-2", doi: "10.5281/zenodo.23755118" },
+  provenance: { method: "Genuine separately supplied final LaTeX, matched to the archival PDF; bibliography extracted from its embedded filecontents block.", sourceFile: "/publications/consciousness/monograph.tex", sourceSha256: audit.documents[0].sourceSha256, pdfFile: "/publications/consciousness/monograph.pdf", pdfSha256: audit.documents[0].pdfSha256, pdfPages: pdfPageTexts.length, publicationPdfBytesUnmodified: true, externallyReferencedFigureAssets: [] },
+  corrections: [],
   adaptations: ["Five part dividers are retained as contents groups and source-label anchors on their opening chapters; the unnumbered technical appendices divider introduces the appendix group.", "The printed contents is replaced by linked web navigation. Repeated long-table headings remain preserved.", "Bibliography numbers and entry identities follow the archival PDF; field typography and name presentation derive deterministically from the embedded source bibliography.", "KaTeX supplies visual HTML and accessible MathML. Original mathematical macros expand in Markdown; displayed equation numbering is retained.", "Bibliography backlinks are explicitly navigational web additions."],
   limitations: audit.documents[0].sourceLimitations,
-  summary: { chapters: 25, appendices: 6, frontmatterPages: 5, bibliographyEntries: 54, parts: 5, sections: 165, mathematicalExpressions: inventory.reduce((n, doc) => n + doc.stats.equations, 0), displayMathematicalExpressions: inventory.reduce((n, doc) => n + doc.stats.displayEquations, 0), formalStatements: 40, proofs: 30, tables: 8, sourceLabels: 281 },
+  summary: { chapters: 25, appendices: 6, frontmatterPages: 5, bibliographyEntries: audit.documents[0].sourceStats.bibliographyEntries, parts: 5, sections: audit.documents[0].sourceStats.sections, mathematicalExpressions: inventory.reduce((n, doc) => n + doc.stats.equations, 0), displayMathematicalExpressions: inventory.reduce((n, doc) => n + doc.stats.displayEquations, 0), formalStatements: audit.documents[0].sourceStats.theorems, proofs: audit.documents[0].sourceStats.proofs, tables: audit.documents[0].sourceStats.tables, sourceLabels: audit.documents[0].sourceStats.labels },
   documents: inventory,
   sourceLabels: audit.documents[0].labels,
-  checks: { conversion: "/publications/consciousness/conversion-audit.json", independentVerification: "/publications/consciousness/source-verification.json", pdfMatchingEvidence: "docs/consciousness/source-pdf-comparison.json" },
+  checks: { conversion: "/publications/consciousness/conversion-audit.json", independentVerification: "/publications/consciousness/source-verification.json", pdfMatchingEvidence: "docs/consciousness-revision-20261028/source-pdf-comparison.json" },
 };
 fs.writeFileSync(path.join(assetDir, "source-coverage.json"), JSON.stringify(coverage, null, 2) + "\n");
 fs.writeFileSync(path.join(contentDir, "source-coverage.json"), JSON.stringify(coverage, null, 2) + "\n");

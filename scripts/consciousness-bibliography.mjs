@@ -5,7 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export function prepareBibliography(original, assetDir, root) {
+export function prepareBibliography(original, assetDir, root, suppliedOrder) {
   const bib = /\\begin\{filecontents\*\}[^\n]*\n([\s\S]*?)\\end\{filecontents\*\}/.exec(original)?.[1];
   if (!bib) throw new Error("Missing embedded bibliography");
   function group(s, i) {
@@ -31,9 +31,9 @@ export function prepareBibliography(original, assetDir, root) {
     }
     entries.set(m[2], { type: m[1], fields });
   }
-  const order = JSON.parse(fs.readFileSync(path.join(root, "docs/consciousness/bibliography-order.json"), "utf8"));
+  const order = suppliedOrder || JSON.parse(fs.readFileSync(path.join(root, "docs/consciousness/bibliography-order.json"), "utf8"));
   if (order.length !== entries.size || new Set(order).size !== entries.size || order.some(key => !entries.has(key))) throw new Error("Bibliography ordering does not cover the embedded source exactly");
-  function authors(text) {
+  function authors(text = "") {
     const names = text.split(" and ").map(name => {
       if (name === "others") return "et al.";
       const split = name.split(", "); return split.length === 2 ? `${split[1]} ${split[0]}` : name;
@@ -42,7 +42,7 @@ export function prepareBibliography(original, assetDir, root) {
   }
   const rows = order.map(key => {
     const { fields: f } = entries.get(key);
-    let text = `${authors(f.author)}. ${f.title}. `;
+    let text = `${f.author ? authors(f.author) + ". " : ""}${f.title}. `;
     if (f.journal) {
       text += `\\emph{${f.journal}}${f.volume ? `, ${f.volume}` : ""}${f.number ? `(${f.number})` : ""}${f.pages ? `:${f.pages}` : ""}, ${f.year}. `;
     } else {

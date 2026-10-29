@@ -1,6 +1,6 @@
 # Appendix B: Predictive equivalence: algorithms and infinite-horizon limits
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -89,9 +89,41 @@ For rational instrument matrices and rational specified beliefs, this supplies a
 
 
 
+<a id="section-B-2-revised"></a>
+
+## B.2 Complete diagnostic panels and their conditioning
+
+ <a id="sec:update-diagnostics"></a> The later scaffolding study strengthens the finite word-span result into a diagnostic criterion <a id="citation-revised-101"></a>[[51](/consciousness/monograph/bibliography#bib-RodgersDevelopment2026)]. Fix a known finite closed native instrument on $N$ states with common admitted actions, and let $W$ be the span of its word-likelihood columns, of dimension $r$. Every event-probability or bounded-score vector of a finite adaptive experiment belongs to $W$: expand the finite policy tree into word leaves and sum their common policy weights.
+
+For admitted diagnostics $f_1,\ldots,f_m$, put $T=\operatorname{span}\{\mathbf1,f_1,\ldots,f_m\}$. Equality of all selected diagnostic means implies equality of all finite adaptive laws for every pair of preparation distributions on the full simplex if and only if $T=W$. Sufficiency follows by linearity. For necessity, if $T$ is a proper subspace, choose a nonzero row $d$ annihilating $T$ but not $W$. Because $d\mathbf1=0$, sufficiently small opposite perturbations of a strictly positive distribution by $d$ remain probability distributions. They agree on the selected means but disagree on a word column. Consequently at least $r-1$ scalar diagnostics are necessary for this full-simplex guarantee, and a physically admitted word basis attains the count. The necessity need not hold on a smaller physical preparation family or when only actual states are compared.
+
+There is also a uniform quantitative consequence within this exact known model. Let $B=[\mathbf1,f_1,\ldots,f_{r-1}]$ be a basis matrix, and choose $r$ row indices $I$ for which $A=B_I$ is invertible. For preparation distributions $\mu,\nu$, write $p=(\mu-\nu)B=(0,\Delta_1,\ldots,\Delta_{r-1})$. Then 
+
+$$
+
+\sup_{\pi\text{ finite native}}
+\operatorname{TV}(P_\mu^\pi,P_\nu^\pi)
+\le\min\{1,\tfrac12\|pA^{-1}\|_1\}.
+
+$$
+
+ Indeed an event vector is $v=B A^{-1}v_I$, with $0\le v_I\le\mathbf1$. The row $pA^{-1}$ sums to zero, so its absolute evaluation on that cube is at most half its $\ell_1$ norm. The bound is independent of the chosen finite horizon, because the exact observable space and its conditioning were already supplied.
+
+Conditioning cannot be replaced by state dimension alone. Compare a one-state process always emitting zero with a one-state process independently emitting one with probability $a>0$. On their disjoint two-state representation a basis is 
+
+$$
+
+B=\begin{pmatrix}1&0\\1&a\end{pmatrix}.
+
+$$
+
+ The one-tick diagnostic gap is $a$, but $H$ ticks have discrepancy $1-(1-a)^H$, whose supremum is one. The inverse basis contains $1/a$. Thus arbitrarily close basis scores in dimension two can conceal a large sufficiently long continuation difference. Finite empirical agreement becomes an all-future certificate only with the exact-model and conditioning premises, or additional justified separation assumptions. Estimated transition laws require their own accumulating physical-call error budget.
+
+
+
 <a id="section-B-2"></a>
 
-## B.2 Why a finite hidden system can have infinitely many predictive states
+## B.3 Why a finite hidden system can have infinitely many predictive states
 
 <a id="section:predictive:why-a-finite-hidden-system-can-have-infinitely-many-predictive-states"></a> Let a hidden bit $X$ remain fixed, with prior $P(X=1)=1/2$. Repeated observations satisfy 
 
@@ -117,7 +149,7 @@ A finite nominated past/history domain, a finite fully observed Markov state con
 
 <a id="section-B-3"></a>
 
-## B.3 Conditioning and continuation
+## B.4 Conditioning and continuation
 
 <a id="section:predictive:conditioning-and-continuation"></a> Suppose $b,b'$ have the same complete predictive profile and an action/output pair $(a,y)$ has common positive probability $p$. For every future word $w$, 
 
@@ -136,7 +168,7 @@ Different physical preparations can give different conditional beliefs for the s
 
 <a id="section-B-4"></a>
 
-## B.4 A controlled measurable extension
+## B.5 A controlled measurable extension
 
 <a id="section:predictive:a-controlled-measurable-extension"></a> A countable family of probability-valued predictive tests on a standard-Borel history space gives a measurable map into a countable product of probability spaces. Equality of profiles still defines an equivalence relation. But the image need not automatically be a standard-Borel quotient with all the desired transition properties. Regular conditional laws and measurable descent require hypotheses.
 

@@ -1,6 +1,6 @@
 # Chapter 10: Internal representation and self-referential records
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -48,7 +48,7 @@
 
 ## 10.1 Representing a specified target
 
-<a id="section:src:representing-a-specified-target"></a> Self-Referential Record Closure (SRC) concerns the representation of nominated self-related quantities in a declared observable carrier <a id="citation-18"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersSRC)]. It is valuable precisely when the target, state family, algebra, and actual record dynamics are kept separate. Let $W$ be a finite-dimensional real vector space of Hermitian operators on ${\mathcal H}$, let $\rho_1,\ldots,\rho_m$ be admissible preparations, and define 
+<a id="section:src:representing-a-specified-target"></a> Self-Referential Record Closure (SRC) concerns the representation of nominated self-related quantities in a declared observable carrier <a id="citation-revised-39"></a>[[52](/consciousness/monograph/bibliography#bib-RodgersSRC)]. It is valuable precisely when the target, state family, algebra, and actual record dynamics are kept separate. Let $W$ be a finite-dimensional real vector space of Hermitian operators on ${\mathcal H}$, let $\rho_1,\ldots,\rho_m$ be admissible preparations, and define 
 
 $$
 
@@ -123,7 +123,7 @@ Choose a Hilbert–Schmidt orthonormal basis $G_1,\ldots,G_d$ of $W$. The evalua
 
 **Theorem 10.2 (Robust witness identification).**
 
-<a id="thm:robust-witness"></a> Assume $A$ has smallest singular value $\sigma>0$, $y=Aa$, and measured quantities are $\widehat A=A+E$, $\widehat y=y+e$, with ${\lVert E\rVert}_2<\sigma$. The least-squares coefficients $\widehat a=\widehat A^+\widehat y$ satisfy <a id="eq:witness-error"></a>
+<a id="thm:robust-witness"></a> Assume the evaluation matrix $A$ has full column rank with smallest singular value $\sigma>0$, $y=Aa$, and measured quantities are $\widehat A=A+E$, $\widehat y=y+e$, with ${\lVert E\rVert}_2<\sigma$. The least-squares coefficients $\widehat a=\widehat A^+\widehat y$ satisfy <a id="eq:witness-error"></a>
 
 
 $$

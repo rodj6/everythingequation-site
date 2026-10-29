@@ -1,6 +1,6 @@
 # Conventions and principal distinctions
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -40,7 +40,7 @@
 \one = \mathbf 1
 -->
 
-<a id="chapter:conventions-and-principal-distinctions"></a>  ${\mathsf{U}}$ denotes reality prior to the operational source/readout distinction. The different typeface distinguishes this ontological notation from locally defined evolution operators such as $U_t$ in the mathematics. $S$ is the working source or structure-side cut; $T$ is the readout or record-side cut. The schematic map is $p:S\to T$. The descent theorems use $X$ for that readout codomain; this is a local notation convention, not another ontological level. Symbols such as $T$ for a time horizon or $T_u$ for a transition kernel retain their expressly defined mathematical meanings.
+<a id="chapter:conventions-and-principal-distinctions"></a>  The unconditioned ground has no mathematical symbol in this account. ${\mathsf{U}}$ denotes the unsplit prior to the operational source/readout distinction, rather than the ground itself or the quality attributed to it. The different typeface distinguishes this ontological notation from locally defined evolution operators such as $U_t$ in the mathematics. $S$ is the working source or structure-side cut; $T$ is the readout or record-side cut. The schematic map is $p:S\to T$. The descent theorems use $X$ for that readout codomain; this is a local notation convention, not another ontological level. Symbols such as $T$ for a time horizon or $T_u$ for a transition kernel retain their expressly defined mathematical meanings.
 
 The older ontological notation ${\Omega_{\mathrm{src}}}$ is interpreted here through ${\mathsf{U}}$, not through a source state in $S$. Neither symbol names the closure operator $\mathcal O$ in $L=\mathcal O\Delta\partial[L]$. No theorem in this book treats ${\mathsf{U}}$ as a set, a Hilbert space, a field, or an argument of a computable transition law.
 
@@ -67,10 +67,12 @@ The phrase *candidate internal resolution* has one controlled meaning in this mo
 | Term | Meaning in this monograph |
 | --- | --- |
 | Term | Meaning in this monograph (continued) |
-| ${\mathsf{U}}$ | Unsplit ontological prior: reality before an operational source/readout distinction. Not a countable individual or a mathematical state space. |
+| Unconditioned ground | Fundamental ground of reality; not given a mathematical symbol or identified with a complete formal model. |
+| ${\mathsf{U}}$ | The unsplit prior to an operational source/readout distinction; distinct from the ground and its attributed quality. Not a mathematical state space. |
 | $S$ | Working source, the structure-side description complete relative to the nominated problem. |
 | $T$ | Readout, the restricted record-side description in which physical histories, archives and vessels are represented. Called $X$ in the descent theorem. |
-| Awareness | The proposed knowing aspect of ${\mathsf{U}}$; not a person, a scene, a report, or an extra force. |
+| Fundamental awareness | Provisional name for a quality attributed to the ground; not thought, knowing, a subject, a scene, or an extra force. |
+| Awareness within consciousness | Lived presence within a localized perspective, including preconceptual presentation and developed knowing. |
 | Localized subject | An experiential perspective instantiated only during qualification under A1, with a lived scene under A2. A3 relates qualifying occurrences into episodes; a genuine gap ends the episode. |
 | Lived scene | What it is like now: the current phenomenal presentation. Scene does not require vision, spatial imagery, reflective attention, or a narrative self. |
 | Unconscious/ generative organization | Processes contributing to an awareness-bearing vessel without appearing as separately presented contents or possessing a second scene. |

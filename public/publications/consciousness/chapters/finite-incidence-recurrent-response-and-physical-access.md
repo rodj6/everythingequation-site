@@ -1,6 +1,6 @@
 # Chapter 12: Finite incidence, recurrent response, and physical access
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -56,7 +56,7 @@ D=d+d^\dagger,\qquad K=D^2=dd^\dagger+d^\dagger d.
 
 $$
 
- This is finite Hodge mathematics. Its source status depends on the admitted response principles and Hilbertization, as the constructive O1 source explicitly states <a id="citation-20"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersO1)].
+ This is finite Hodge mathematics. Its source status depends on the admitted response principles and Hilbertization, as the constructive O1 source explicitly states <a id="citation-revised-41"></a>[[55](/consciousness/monograph/bibliography#bib-RodgersO1)].
 
 Separate chains lying entirely in the root support from mixed-interface and fresh chains. Let $P_R$ project onto root-supported chains and $P_F=I-P_R$ onto the remainder. The decomposition is assigned by provenance before the spectral calculation. It is not chosen to produce a desired gap.
 

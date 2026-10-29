@@ -1,6 +1,6 @@
 # Chapter 5: Source/readout foundations
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -46,7 +46,7 @@
 
 ## 5.1 Nominated sources and restricted descriptions
 
-<a id="section:source:nominated-sources-and-restricted-descriptions"></a> A mathematical source domain is a specified class of states or histories relevant to a question. It is the working structure-side cut, complete relative to that problem, not ${\mathsf{U}}$. The schematic record-side codomain $T$ of the philosophical discussion is denoted $X$ in the following theorems. These results concern operational descriptions and make no set-theoretic claim about the unsplit prior. Let $S$ be such a domain after declared descriptive redundancies have been removed. A readout is a surjection $p:S\to X$. A target $a:S\to A$ is a property or relation that the investigation asks the readout to retain. This formulation precedes a probability measure, a Hamiltonian, or a phenomenal assignment <a id="citation-8"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersSource), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
+<a id="section:source:nominated-sources-and-restricted-descriptions"></a> A mathematical source domain is a specified class of states or histories relevant to a question. It is the working structure-side cut, complete relative to that problem, not ${\mathsf{U}}$. The schematic record-side codomain $T$ of the philosophical discussion is denoted $X$ in the following theorems. These results concern operational descriptions and make no set-theoretic claim about the unsplit prior. Let $S$ be such a domain after declared descriptive redundancies have been removed. A readout is a surjection $p:S\to X$. A target $a:S\to A$ is a property or relation that the investigation asks the readout to retain. This formulation precedes a probability measure, a Hamiltonian, or a phenomenal assignment <a id="citation-revised-19"></a>[[57](/consciousness/monograph/bibliography#bib-RodgersSource), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
 
 
 
@@ -126,9 +126,32 @@ Target-relative sufficiency permits exact knowledge of some source distinctions 
 
 
 
+<a id="section-5-4-revised"></a>
+
+## 5.4 From a retained distinction to its actual use
+
+<a id="sec:source-to-use-update"></a> The later temporal construction follows one nominated relation through physical delivery, retention, source binding and finite-time use <a id="citation-revised-20"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersBlock2026)]. In its diagonal joint-record family, independent uniform source bits $a,b$ have directed target $D=b-a$. If predecessor and live records have survival parameters $p,q$ and joint retention $j$, the exact optimal average success is $(1+j)/2$. The independent prescribed source has $j=pq$; local survival probabilities alone do not determine the joint resource. With an active memory survival $r$ and delivery probabilities $q_A,q_B$, accuracy $1-\epsilon$ therefore requires $q_A r q_B\ge1-2\epsilon$ in that program. A relation can exist in the source while failing to reach the occasion at which the organization needs it.
+
+Availability and enactment remain distinct even after successful delivery. Closing the use gate leaves the archive intact without executing the update. Exchanging predecessor and live bindings preserves the bits while reversing the relation actually computed. Later retrieval is another operation; later deletion changes later access rather than undoing an earlier use. For an already qualifying subject under a complete-enactment constitution, actual integration into its ongoing recognition, relating, appraisal or response supplies the experiential application. The detached task device does not establish that application merely by producing the correct answer.
+
+Coherent joint resources require a different calculation. For the precisely declared coherent family extending the block paper's Section 6.3 example, the integration report proves 
+
+$$
+
+S_3(p,r)=\frac12+\frac{pr^2}{2(1+2r)},\qquad
+0\le p\le\frac12,\quad0\le r\le1,
+
+$$
+
+ with known phase and no readable correlated side resource beyond the declared two-qubit code <a id="citation-revised-21"></a>[[13](/consciousness/monograph/bibliography#bib-RodgersIntegration2026)]. Here $r$ denotes excitation coherence, separately from the preceding memory survival. The endpoint $p=1/2,r=1$ has sharp success $7/12$. The earlier $9/16$ was a correct attainable score, not an optimum claim. The report supplies a matching measurement and upper certificate, a strict two-versus-three excitation-outcome comparison, and robust finite-deadline realization. This coherent preparation changes the joint encoding; it is not a free improvement to the independent diagonal source. At zero effective coherence, the zero-weight measurement effect requires no normalized absorber template; its absorber is omitted. Its significance is quantitative: a completion must retain the right kind of usable relation, not merely matching local populations. The native organization and constitutive application remain those required by the consciousness account.
+
+The block integration also locates the source claim carefully. With $F:S\to H$ a realization of complete physical histories and $q:H\to Z$ a local access map, failure of a target to descend through $q$ does not establish loss through $F$: $F=\mathrm{id}_H$ is already a countermodel. A complete passive local history can likewise omit the environment distinction needed to predict a controlled response. Source-relative insufficiency must therefore name its map and intervention class. The block paper's reciprocal-pair theorem concerns a fixed co-reality relation under its specified transitivity and spacetime invariances; a process lasting through time does not by itself supply a reciprocal-actuality witness. These distinctions preserve the explanatory integration of temporal experience while keeping its ontological premises explicit <a id="citation-revised-22"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersBlock2026)].
+
+
+
 <a id="section-5-4"></a>
 
-## 5.4 The Everything Equation and constitutive selection
+## 5.5 The Everything Equation and constitutive selection
 
 <a id="section:source:the-everything-equation-and-constitutive-selection"></a> The broader Shadow programme expresses lawhood by a fixed-point relation, conventionally written $L=\Omega\Delta\partial[L]$. Here the operator version is <a id="eq:everything"></a>
 

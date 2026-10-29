@@ -1,6 +1,6 @@
 # Chapter 4: Altered identity and unfamiliar experience
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -50,7 +50,7 @@
 
 The example is included as one retrospective report, not a controlled experiment and not a recommendation for inducing altered states. Its philosophical importance lies in the reported dissociation between experiential presentation and ordinary personal organization. Its epistemic limits are equally important. Kaleidoscopic presentation is still content. Later recall cannot establish that all encoding mechanisms had ceased. The report does not prove that the subject became an external object, accessed a universal field, or occupied a state numerically identical with every other instance of awareness.
 
-Controlled salvinorin-A work has examined dissociation, unusual experiences, and memory effects <a id="citation-6"></a>[[28](/consciousness/monograph/bibliography#bib-MacLean2013)]. The relevance here is the need to distinguish occurrence, contemporaneous interpretation, and later recollection. Neither dismissing the report as “only a hallucination” nor treating its felt certainty as metaphysical verification adequately captures that distinction.
+Controlled salvinorin-A work has examined dissociation, unusual experiences, and memory effects <a id="citation-revised-17"></a>[[29](/consciousness/monograph/bibliography#bib-MacLean2013)]. The relevance here is the need to distinguish occurrence, contemporaneous interpretation, and later recollection. Neither dismissing the report as “only a hallucination” nor treating its felt certainty as metaphysical verification adequately captures that distinction.
 
 
 
@@ -72,7 +72,7 @@ This separation is essential to the intended philosophical synthesis. The claim 
 
 <a id="sec:altered-weighting"></a> Sensory isolation and flotation suggest a simple interpretive contrast: when external constraint is reduced, continuing generative activity can carry more of the scene's content. This is a possible description of such experience, not a claim that reduced input inevitably causes hallucination or that flotation reveals an otherwise inaccessible reality. A scene remains conditioned by the vessel even when familiar environmental anchors are weak.
 
-Classic psychedelic and dissociative states should not be treated as a single mechanism. One influential predictive-processing account of classic serotonergic psychedelics proposes altered constraint by high-level expectations <a id="citation-7"></a>[[9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)]; that proposal is a model, not a demonstrated explanation of every altered state. The salvinorin-A findings cited above concern a different pharmacological case. Across these examples, the interpretive question is how ordinary self/world binding, attention and mnemonic scaffolding can be reorganized while some experience remains.
+Classic psychedelic and dissociative states should not be treated as a single mechanism. One influential predictive-processing account of classic serotonergic psychedelics proposes altered constraint by high-level expectations <a id="citation-revised-18"></a>[[9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)]; that proposal is a model, not a demonstrated explanation of every altered state. The salvinorin-A findings cited above concern a different pharmacological case. Across these examples, the interpretive question is how ordinary self/world binding, attention and mnemonic scaffolding can be reorganized while some experience remains.
 
 A weakened identification with the self-model need not remove content or reflective capacity in the same way in every episode. Dissociation can involve changes in ownership, bodily location, agency, familiarity or autobiographical access; these should be described separately rather than collapsed into “ego loss.” Neither unusual vividness nor a feeling of revelation establishes that a scene gives direct access to ${\mathsf{U}}$. An internally generated presentation is real as an occurrence without being externally veridical.
 

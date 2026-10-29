@@ -1,6 +1,6 @@
 # Chapter 15: The realized domain and its boundaries
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -156,6 +156,71 @@ When physical constraints leave holes in the comparison domain, the argument req
 
 
 
+<a id="section-15-3-1"></a>
+
+### 15.3.1 The later masking audit and its quantitative repair
+
+ <a id="sec:update-masking"></a> The later relational-boundary analysis identifies a second instability of exact target minimality, distinct from the appearance of weak edges discussed in Chapter [20](/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#ch:split) <a id="citation-revised-46"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)]. A small proper-subset effect can delete an edge previously supported by a strong joint effect. Retaining the exact definition above makes that consequence inspectable rather than concealing a change of admission law.
+
+Let a prepared bit $b$ be encoded into two registers by 
+
+$$
+
+E_\varepsilon(b,c)=
+\begin{cases}
+(\xi,\xi\oplus b),&\text{with probability }1-\varepsilon,\\
+(b,\zeta),&\text{with probability }\varepsilon,
+\end{cases}
+\qquad D(b,c)=(b\oplus c,0),
+
+$$
+
+ where the fresh fair bits and branch choice are independent of the source. In output order $00,01,10,11$, the encoder rows are 
+
+$$
+
+P_0=(1/2,\varepsilon/2,0,(1-\varepsilon)/2),\qquad
+P_1=(0,(1-\varepsilon)/2,1/2,\varepsilon/2).
+
+$$
+
+ At $\varepsilon=0$, both singleton laws agree while the pair distinguishes $b$, so the joint target projects an edge $1\to2$. For every $0<\varepsilon\le1/2$, the first singleton acquires contrast $\varepsilon$. The pair ceases to be minimal and that projected edge disappears. Nevertheless, 
+
+$$
+
+\sup_x\operatorname{TV}(E_\varepsilon(x),E_0(x))=\varepsilon/2,
+\qquad d_{12}=1-\varepsilon,
+\qquad r_{(E_\varepsilon,D)}=1-\varepsilon.
+
+$$
+
+ The same encoder and decoder therefore retain a strong joint distinction and a strong scheduled terminal return while the exact graph-derived candidate changes. This terminal calculation does not preserve the old route certificate after its graph edge has disappeared. Nor does it classify every proper subcomponent phenomenally.
+
+The continuous repair asks a different question: how much of a complete experiment is lost after a view is deleted? For finite preparation labels $\theta$, joint laws $P_{J,\theta}$, and retained marginals $P_{L,\theta}$, define directed statistical deficiency by 
+
+$$
+
+\delta_P(J\mid L)=\min_G\max_\theta
+\operatorname{TV}(P_{J,\theta},P_{L,\theta}G),
+
+$$
+
+ where one stochastic reconstruction kernel $G$ must work for every unknown preparation. The kernel reproduces distributions and may resample retained coordinates. It need not preserve the original archive or recover the actual past event. For the displayed encoder, on $0\le\varepsilon\le1$, 
+
+$$
+
+\delta_P(12\mid1)=\max\{1/2-\varepsilon,(1-\varepsilon)/4\},
+\qquad
+\delta_P(12\mid2)=\tfrac12\max\{\varepsilon,1-\varepsilon\}.
+
+$$
+
+ The companion paper supplies the matching reconstruction kernels and lower bounds. Common-conditional padding adds no deficiency, whereas a coordinate with a source-independent marginal can still participate in indispensable joint information. Under a uniform row-law perturbation $\eta$ of the same experiment and projection, the deficiency changes by at most $2\eta$.
+
+These results strengthen the analysis of joint information without silently replacing A1. A reconstruction diagnostic, a physically executable native return and resistance to an allowed disconnected simulator answer different questions. The successor analysis retains schedule-indexed supports with separate information, return and cut profiles. No particular threshold or overlapping candidate family is thereby selected as the collection of subjects. A revised admission doctrine would have to justify that selection, reconstruct the resulting native predictive objects for A2, and recompute their provenance continuations for A3.
+
+
+
 <a id="section-15-4"></a>
 
 ## 15.4 Native recurrence and admission
@@ -220,7 +285,7 @@ $$
 
 Each candidate has two prime-sized factors, independent uniform preparation, independent identity updates, and a jointly sufficient four-state description. These requirements do not break the symmetry. Returning the entire set of candidates is covariant, but does not select one primitive decomposition. Extra physical ports, geometry, or carrier structure can break the symmetry; their selection is additional data.
 
-Causal-emergence analysis offers one principled way to compare descriptions using specified coarse-grainings and intervention distributions <a id="citation-25"></a>[[20](/consciousness/monograph/bibliography#bib-Hoel2013)]. Such comparisons can reveal advantages of a macro description without deriving a unique primitive factorization from an unstructured kernel. The following consequence concerns precisely that latter, more demanding selection task.
+Causal-emergence analysis offers one principled way to compare descriptions using specified coarse-grainings and intervention distributions <a id="citation-revised-47"></a>[[21](/consciousness/monograph/bibliography#bib-Hoel2013)]. Such comparisons can reveal advantages of a macro description without deriving a unique primitive factorization from an unstructured kernel. The following consequence concerns precisely that latter, more demanding selection task.
 
 The same obstruction applies to any numerical selection score invariant under the automorphisms of these bare data: the score is constant on the three-element orbit, so optimization cannot pick one member uniquely. Each factorization already has independent subsystem histories under uniform preparation and identity evolution; a conditional-independence requirement that these histories have an empty separating boundary does not distinguish them. Likewise each is exactly sufficient and dynamically stable. Minimality, independence, stability and symmetry therefore reduce no further freedom in this example. This does not refute enriched causal factorizations or multiscale models. It identifies the additional physical structure or selection premise they must supply before a unique choice can be claimed.
 
@@ -245,6 +310,35 @@ Finally, the fixed kernel $T=(I+\mathrm{SWAP})/2$ has self-dependence and cross-
 
 
 The proposition does not rule out a deeper physical selection law. It shows why the source/readout premise and a bare kernel are insufficient to supply one. The successor states its interface doctrine rather than calling that missing selection canonical.
+
+
+
+<a id="paragraph-4"></a>
+
+### Additional response evidence can identify a chart
+
+ The obstruction concerns selection from bare data. Enriching those data with independently characterized interventions can resolve a restricted part of the realization question. On a completely distinguished finite state set $S$ of size $N=2^n$, suppose a strictly positive response family factors in an unknown bijective binary chart $c:S\to\{0,1\}^n$: 
+
+$$
+
+Q_\alpha(s)=\prod_{i=1}^n q_i(\alpha)^{c_i(s)}
+                    [1-q_i(\alpha)]^{1-c_i(s)},\qquad0<q_i(\alpha)<1.
+
+$$
+
+ Let $L_{\alpha s}=\log Q_\alpha(s)-N^{-1}\sum_t\log Q_\alpha(t)$, using uniform output centering. If $\operatorname{rank}L=n$, the chart is unique up to coordinate permutation and independent complementation <a id="citation-revised-48"></a>[[46](/consciousness/monograph/bibliography#bib-RodgersInterventional2026)]. Its row-space projector satisfies 
+
+$$
+
+P_{st}=\frac{n-2d_H(c(s),c(t))}{N},
+
+$$
+
+ so it reconstructs the cube adjacency. The proof writes the centered log rows in the span of binary sign coordinates. Any other binary coordinate in that span must be a signed singleton: its maximum absolute value is the coefficient $\ell^1$ norm and its mean square is the squared $\ell^2$ norm, both equal to one. Independence then forces a signed permutation. This is identification within an enriched response class, consistent with the impossibility of selecting from the symmetric bare kernel alone.
+
+The same paper gives a sufficient stability certificate. For a nonempty class of exact product-response models obeying $\|\widehat L-L\|_2\le e$, the inequality $\widehat\sigma_n>Ne$ makes their charts agree up to that ambiguity; the estimated leading row-space projector recovers adjacency by threshold $(n-3)/N$. Nonemptiness and the error bound are part of the certificate. Rank deficiency alone does not establish ambiguity, and an observed rank by itself does not justify the physical product model.
+
+In the supplied five-register construction, unlabeled response laws recover the original, nonlocally recoded and signed-control charts. Combined with the unchanged service and remaining realization contracts, they recover the inherited two-, one- and two-core assignments. These are synthetic response-to-chart calculations. Complete state discrimination, binary cardinality, response stationarity and product factorization must be established independently for a device. The result identifies a candidate microchart; it does not select a macrograin, exclude hidden refinements or multivalued carriers, or supply native timing, endogenous records, resources and A3 provenance.
 
 
 

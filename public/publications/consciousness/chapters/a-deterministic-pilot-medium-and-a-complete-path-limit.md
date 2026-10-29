@@ -1,6 +1,6 @@
 # Chapter 8: A deterministic pilot medium and a complete path limit
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -46,7 +46,7 @@
 
 ## 8.1 The declared microscopic inventory
 
-<a id="section:pilot:the-declared-microscopic-inventory"></a> The pilot completion uses a different ontology <a id="citation-13"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)]. Its complete finite ordinary configuration graph includes source, apparatus, fuel, loss products, displays, archives, receivers, clock, and any actual basis coordinate of a reference. One predesignated carrier is the actual ordinary configuration. Other carrier positions and packet banks are pilot degrees of freedom, not independent copies of the unknown quantum input.
+<a id="section:pilot:the-declared-microscopic-inventory"></a> The pilot completion uses a different ontology <a id="citation-revised-28"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)]. Its complete finite ordinary configuration graph includes source, apparatus, fuel, loss products, displays, archives, receivers, clock, and any actual basis coordinate of a reference. One predesignated carrier is the actual ordinary configuration. Other carrier positions and packet banks are pilot degrees of freedom, not independent copies of the unknown quantum input.
 
 Four constitutive commitments are essential. The canonical field has a numerical Hermitian energy with primitive bond couplings. A declared exporter and complete binary reaction catalogue govern the pilot medium. Additional direct ordinary forces depending on readable pilot coordinates are absent from that catalogue. Finally, deterministic gas flight and contact are supplied with an initially independent spatial ensemble and a carrier preparation law. These are physical assumptions; in particular, the access restriction is not a rule allowing a coupling and then refusing to examine its consequences.
 
@@ -163,7 +163,7 @@ $$
 
 Equation (8.4).
 
- For a fixed finite graph and horizon, bounded-variation currents and $\mu_N\to\infty$, $\mu_N/N\to0$ give integrated directional-flux and census convergence. The proof uses a positive population cutoff for a companion queue, scalar monotonicity, a martingale estimate, and a separate low-population charge bound. A full proof of the implication used here is given in Appendix [A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#app:kinetic); it is important because replacing low weights by a fixed positive lower bound would omit nodes and dark intervals.
+ For a fixed finite graph and horizon, bounded-variation currents, a calibrated initial census, and $\mu_N\to\infty$, $\mu_N/N\to0$ give integrated directional-flux and census convergence. The proof uses a positive population cutoff for a companion queue, scalar monotonicity, a martingale estimate, and a separate low-population charge bound. A full proof of the implication used here is given in Appendix [A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#app:kinetic); it is important because replacing low weights by a fixed positive lower bound would omit nodes and dark intervals.
 
 Let 
 
@@ -199,7 +199,7 @@ $$
 
 $$
 
- and appropriately faster gas and recombination scales <a id="citation-14"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot)]. This is not a rate uniform over growing circuits, increasing reference dimensions represented as new graph coordinates, or unlimited storage times.
+ and appropriately faster gas and recombination scales <a id="citation-revised-29"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot)]. This is not a rate uniform over growing circuits, increasing reference dimensions represented as new graph coordinates, or unlimited storage times.
 
 
 
@@ -219,7 +219,7 @@ $$
 
 Equation (8.6).
 
- This familiar circuit-to-Hamiltonian architecture is related to reversible computation and engineered transfer chains <a id="citation-15"></a>[[17](/consciousness/monograph/bibliography#bib-Feynman1986), [11](/consciousness/monograph/bibliography#bib-Christandl2004)]. The particular propagation identity needed here follows directly.
+ This familiar circuit-to-Hamiltonian architecture is related to reversible computation and engineered transfer chains <a id="citation-revised-30"></a>[[18](/consciousness/monograph/bibliography#bib-Feynman1986), [11](/consciousness/monograph/bibliography#bib-Christandl2004)]. The particular propagation identity needed here follows directly.
 
 
 

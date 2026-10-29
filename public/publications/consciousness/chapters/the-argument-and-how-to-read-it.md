@@ -1,6 +1,6 @@
 # The argument and how to read it
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -48,7 +48,7 @@ $$
 
 \begin{gathered}
 R^\ast:\ \text{physical organization and native selection doctrine}\\
-+\quad\text{A0--A3: presence, admission, content, continuation}\\[3pt]
++\quad\text{A0--A3: ontology, admission, content, continuation}\\[3pt]
 \Longrightarrow\quad\text{determinate constitutive assignment}.
 \end{gathered}
 

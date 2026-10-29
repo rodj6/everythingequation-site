@@ -1,0 +1,215 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> shadow-theory-site@1.0.0 prebuild
+> node scripts/generate-content-maps.mjs
+
+Content maps generated.
+
+> shadow-theory-site@1.0.0 build
+> node scripts/build-production.mjs
+
+▲ Next.js 16.4.2 (webpack)
+✓ Running next.config.mjs took 126ms
+- Experiments (use with caution):
+  · cpus: 2
+  ✓ webpackMemoryOptimizations
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 50s
+  Running TypeScript ...
+  Finished TypeScript in 9.2s ...
+  Collecting page data using 2 workers ...
+  Generating static pages using 2 workers (0/900) ...
+  Generating static pages using 2 workers (225/900) 
+  Generating static pages using 2 workers (450/900) 
+  Generating static pages using 2 workers (675/900) 
+✓ Generating static pages using 2 workers (900/900) in 22.3s
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /articles
+├   /articles/[slug]
+│ ├ ● /articles/agency-and-the-constructed-self
+│ ├ ● /articles/full-shadow-model
+│ ├ ● /articles/sealed-or-leaky
+│ └ ● [+3 more paths]
+├ ○ /atlas
+├ ○ /atlas/quantum-measurement
+├ ○ /consciousness
+├ ○ /consciousness/agency
+├   /consciousness/agency/[slug]
+│ ├ ● /consciousness/agency/agency-as-a-physical-capacity
+│ ├ ● /consciousness/agency/operational-contract
+│ ├ ● /consciousness/agency/revising-an-evaluative-rule
+│ └ ● [+14 more paths]
+├ ○ /consciousness/agency/manifest.json
+├ ○ /consciousness/ai-alignment
+├ ○ /consciousness/ai-alignment/continuity
+├ ○ /consciousness/ai-alignment/continuity/manifest.json
+├ ○ /consciousness/ai-alignment/manifest.json
+├ ○ /consciousness/ai-alignment/misleading-ai
+├   /consciousness/ai-alignment/misleading-ai/[chapter]
+│ ├ ● /consciousness/ai-alignment/misleading-ai/01-development-before-diagnosis
+│ ├ ● /consciousness/ai-alignment/misleading-ai/02-evidence-and-scope
+│ ├ ● /consciousness/ai-alignment/misleading-ai/03-selection-error-and-initiative
+│ └ ● [+10 more paths]
+├ ○ /consciousness/ai-alignment/misleading-ai/manifest.json
+├ ○ /consciousness/ai-alignment/read
+├ ○ /consciousness/block-universe
+├   /consciousness/block-universe/[chapter]
+│ ├ ● /consciousness/block-universe/01-a-world-lived-from-within
+│ ├ ● /consciousness/block-universe/02-ground-source-history-and-readout
+│ ├ ● /consciousness/block-universe/03-relativity-and-reciprocal-reality
+│ └ ● [+11 more paths]
+├ ○ /consciousness/block-universe/manifest.json
+├ ○ /consciousness/constituted-agency
+├   /consciousness/constituted-agency/[chapter]
+│ ├ ● /consciousness/constituted-agency/01-constituted-participation
+│ ├ ● /consciousness/constituted-agency/02-constitution-and-authorship
+│ ├ ● /consciousness/constituted-agency/03-physical-histories
+│ └ ● [+18 more paths]
+├ ○ /consciousness/constituted-agency/manifest.json
+├ ○ /consciousness/development
+├   /consciousness/development/[slug]
+│ ├ ● /consciousness/development/overview-and-publication-identity
+│ ├ ● /consciousness/development/orientation-and-contribution
+│ ├ ● /consciousness/development/sources-and-representational-access
+│ └ ● [+12 more paths]
+├ ○ /consciousness/development/manifest.json
+├ ○ /consciousness/faq
+├ ○ /consciousness/glossary
+├ ○ /consciousness/guides
+├   /consciousness/guides/[slug]
+│ ├ ● /consciousness/guides/what-is-consciousness
+│ ├ ● /consciousness/guides/can-ai-be-conscious
+│ ├ ● /consciousness/guides/brain-organization-and-experience
+│ └ ● [+5 more paths]
+├ ○ /consciousness/manifest.json
+├ ○ /consciousness/monograph
+├   /consciousness/monograph/[slug]
+│ ├ ● /consciousness/monograph/title-and-publication-identity
+│ ├ ● /consciousness/monograph/preface-and-scope
+│ ├ ● /consciousness/monograph/abstract
+│ └ ● [+34 more paths]
+├ ○ /consciousness/monograph/manifest.json
+├ ○ /consciousness/relational-awareness
+├   /consciousness/relational-awareness/[chapter]
+│ ├ ● /consciousness/relational-awareness/read
+│ ├ ● /consciousness/relational-awareness/technical-guide
+│ ├ ● /consciousness/relational-awareness/module-a
+│ └ ● [+10 more paths]
+├ ○ /consciousness/relational-awareness/manifest.json
+├ ○ /consciousness/research
+├   /consciousness/research/[paper]
+│ ├ ● /consciousness/research/paper-2
+│ ├ ● /consciousness/research/paper-3
+│ └ ● /consciousness/research/paper-4
+├   /consciousness/research/[paper]/[slug]
+│ ├ ● /consciousness/research/paper-2/overview-and-publication-identity
+│ ├ ● /consciousness/research/paper-2/introduction
+│ ├ ● /consciousness/research/paper-2/the-inherited-realization-and-finite-operational-setting
+│ └ ● [+46 more paths]
+├ ○ /consciousness/search.json
+├ ○ /consciousness/temporal-passage
+├   /consciousness/temporal-passage/[chapter]
+│ ├ ● /consciousness/temporal-passage/01-the-problem-of-passage
+│ ├ ● /consciousness/temporal-passage/02-experience-as-enacted-scaffolding
+│ ├ ● /consciousness/temporal-passage/03-an-experience-of-succession
+│ └ ● [+12 more paths]
+├ ○ /consciousness/temporal-passage/manifest.json
+├ ○ /consciousness/whole-field
+├   /consciousness/whole-field/[chapter]
+│ ├ ● /consciousness/whole-field/01-experience-is-enactment
+│ ├ ● /consciousness/whole-field/02-incorporation-and-linked-realization
+│ ├ ● /consciousness/whole-field/03-the-field-and-its-relations
+│ └ ● [+3 more paths]
+├ ○ /consciousness/whole-field/manifest.json
+├ ○ /feed.xml
+├ ○ /framework
+├ ○ /graph.json
+├   /legacy/[slug]
+│ ├ ● /legacy/monograph
+│ ├ ● /legacy/tier-1
+│ └ ● /legacy/what-is-the-everything-equation
+├ ○ /legacy/consciousness-field-theorem
+├ ○ /llms.txt
+├ ○ /monograph
+├   /monograph/[slug]
+│ ├ ● /monograph/the-architecture-and-central-thesis
+│ ├ ● /monograph/the-source-closure-substrate
+│ ├ ● /monograph/source-to-tier-1-realization
+│ └ ● [+18 more paths]
+├ ○ /monograph/manifest.json
+├ ○ /papers
+├   /papers/[slug]
+│ ├ ● /papers/conscious-scaffolding-and-preference-for-continuity
+│ ├ ● /papers/physical-comparison-relational-appearance
+│ ├ ● /papers/reflective-alignment-ai-consciousness
+│ └ ● [+128 more paths]
+├ ○ /problems
+├   /problems/[slug]
+│ ├ ● /problems/consciousness
+│ ├ ● /problems/standard-model
+│ ├ ● /problems/fine-structure-constant
+│ └ ● [+15 more paths]
+├ ○ /quantum-measurement
+├ ○ /quantum-measurement/manifest.json
+├ ○ /quantum-measurement/massive-configuration
+├ ○ /quantum-measurement/monograph
+├   /quantum-measurement/monograph/[slug]
+│ ├ ● /quantum-measurement/monograph/abstract
+│ ├ ● /quantum-measurement/monograph/conventions-provenance-and-scope
+│ ├ ● /quantum-measurement/monograph/roadmap-and-principal-conclusions
+│ └ ● [+50 more paths]
+├ ○ /quantum-measurement/monograph/manifest.json
+├ ○ /quantum-measurement/pilot-medium
+├   /quantum-measurement/research/[publication]
+│ ├ ● /quantum-measurement/research/control-consistency
+│ ├ ● /quantum-measurement/research/preparation-returns
+│ ├ ● /quantum-measurement/research/equilibrium-records
+│ └ ● [+6 more paths]
+├   /quantum-measurement/research/[publication]/[slug]
+│ ├ ● /quantum-measurement/research/control-consistency/abstract-and-publication-identity
+│ ├ ● /quantum-measurement/research/control-consistency/introduction
+│ ├ ● /quantum-measurement/research/control-consistency/physical-model-and-statistical-assumptions
+│ └ ● [+157 more paths]
+├ ○ /quantum-measurement/research/manifest.json
+├ ○ /research-map
+├ ○ /robots.txt
+├ ○ /sealed-or-leaky
+├   /sealed-or-leaky/[slug]
+│ ├ ● /sealed-or-leaky/overview-and-publication-identity
+│ ├ ● /sealed-or-leaky/question-main-result-and-scope
+│ ├ ● /sealed-or-leaky/the-source-tetralemma
+│ └ ● [+14 more paths]
+├ ○ /sealed-or-leaky/manifest.json
+├ ○ /sealed-or-leaky/search.json
+├ ○ /sitemap.xml
+├ ○ /source-readout
+├   /source-readout/[paper]
+│ ├ ● /source-readout/source-readout-non-equivalence
+│ ├ ● /source-readout/target-relative-necessity-of-completion
+│ ├ ● /source-readout/canonical-minimal-source-completion
+│ └ ● [+12 more paths]
+├   /source-readout/[paper]/[chapter]
+│ ├ ● /source-readout/source-readout-non-equivalence/abstract
+│ ├ ● /source-readout/source-readout-non-equivalence/introduction
+│ ├ ● /source-readout/source-readout-non-equivalence/realization-states-physical-equivalence-and-readout
+│ └ ● [+190 more paths]
+├ ○ /source-readout/manifest.json
+├ ○ /source-readout/origins
+└ ○ /source-readout/search.json
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+> shadow-theory-site@1.0.0 postbuild
+> node scripts/security-headers.mjs
+
+Static CSP installed for 876 HTML routes (legacy-next); largest policy 1813 bytes.

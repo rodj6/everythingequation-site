@@ -1,6 +1,6 @@
 # Appendix D: Exact finite matrices and reproducibility
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -46,7 +46,7 @@
 
 ## D.1 Boundary data for the five O1 profiles
 
-<a id="section:matrices:boundary-data-for-the-five-o1-profiles"></a> The following matrices, together with the stated basis conventions, determine every $d,D,K$ and spectral projector in [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#ch:o1). They are reconstructed from the relation lists in the O1 source <a id="citation-54"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersO1)], not from a fit to the desired spectra. Vertices are ordered $0,1,2,3$. Higher-dimensional cells are ordered lexicographically after increasing-label orientation. Write $B_1:C_1\to C_0$ and $B_2:C_2\to C_1$ for their alternating-face boundary matrices.
+<a id="section:matrices:boundary-data-for-the-five-o1-profiles"></a> The following matrices, together with the stated basis conventions, determine every $d,D,K$ and spectral projector in [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#ch:o1). They are reconstructed from the relation lists in the O1 source <a id="citation-revised-102"></a>[[55](/consciousness/monograph/bibliography#bib-RodgersO1)], not from a fit to the desired spectra. Vertices are ordered $0,1,2,3$. Higher-dimensional cells are ordered lexicographically after increasing-label orientation. Write $B_1:C_1\to C_0$ and $B_2:C_2\to C_1$ for their alternating-face boundary matrices.
 
 In this grading, 
 
@@ -159,7 +159,7 @@ $$
 
 <a id="section:matrices:signed-relabelling"></a> A vertex permutation transports every oriented simplex with the sign of the induced reordering of its vertices. Let $U$ be the resulting signed permutation on the chain carrier. Alternating face deletion gives $d'U=Ud$. Orthogonality then gives $D'U=UD$, $K'U=UK$, and $P_R'U=UP_R$ when root provenance is transported as well. Hence spectral projectors and cross-block ranks intertwine. Reassigning the retained root after a permutation would be a different model, not a relabelling test.
 
-The verifier checks all 24 vertex permutations for each of the five profiles. It also checks $d^2=0$, orthogonality and completeness of the projectors, the exact characteristic spectra, and the current-support identities. These 120 signed transports certify the finite arithmetic in the supplied basis convention; they do not establish an unstated physical actuator law.
+The verifier checks all 24 vertex permutations for each of the five profiles. It also checks $d^2=0$, projector idempotence and self-adjointness, the eigenvalue equations, exact characteristic spectra, and current-support identities. Mutual orthogonality and completeness of the spectral projectors follow from their polynomial construction. These 120 signed transports certify the finite arithmetic in the supplied basis convention; they do not establish an unstated physical actuator law.
 
 
 
@@ -188,7 +188,7 @@ $$
 
 ## D.4 What the executable package checks
 
-<a id="section:matrices:what-the-executable-package-checks"></a> The companion script performs exact rational matrix calculations for the five profiles and the recurrent vessel, the non-Born probability counterexample, the finite null/continuation benchmark, and the delayed jet example. It also performs 100 reproducibly seeded numerical stress tests of the witness perturbation inequality. Those finite numerical tests supplement the analytic proof; they do not establish a universal bound by sampling.
+<a id="section:matrices:what-the-executable-package-checks"></a> The verification supplement includes the six-script monograph suite and its original results, preserved from the 18 September 2026 supporting archive, together with fresh execution records for this edition. That archive's manuscript snapshot precedes the 20 September publication edition; it is retained as provenance rather than substituted for the present text. The displayed O1 matrices, recurrent-vessel data and principal SPC-2 constructions were compared with the archived inputs. The following counts describe the finite examples implemented by that suite. They do not assert exhaustive verification of every physical realization or every later companion paper. The companion script performs exact rational matrix calculations for the five profiles and the recurrent vessel, the non-Born probability counterexample, the finite null/continuation benchmark, and the delayed jet example. It also performs 100 reproducibly seeded numerical stress tests of the witness perturbation inequality. Those finite numerical tests supplement the analytic proof; they do not establish a universal bound by sampling.
 
 The package also retains the earlier finite continuation, admissibility, weak-coupling, product and spectral illustrations with their original scope. The actual SPC-2 construction has separate exact checks. A four-state intrinsic model with hidden duplicate states yields two predictive classes; its quotient reproduces all 723 admitted adaptive trees through depth three from each of four initial states, giving 2,892 exact transcript-law comparisons. The five-state counterexample detects failed predictive-fibre congruence rather than silently treating trace equivalence as actual-state closure.
 

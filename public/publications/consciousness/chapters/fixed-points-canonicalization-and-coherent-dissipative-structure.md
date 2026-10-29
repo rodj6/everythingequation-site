@@ -1,6 +1,6 @@
 # Chapter 13: Fixed points, canonicalization, and coherent–dissipative structure
 
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -65,7 +65,7 @@ $$
 
 $$
 
- Let $q=\sqrt{1-2\eta m+\eta^2L^2}\in[0,1)$. Banach's theorem supplies a unique fixed point and geometric convergence. The projection variational inequality identifies that point with the constrained minimizer of $J$ under the stated convexity assumptions <a id="citation-21"></a>[[33](/consciousness/monograph/bibliography#bib-RodgersField)].
+ Let $q=\sqrt{1-2\eta m+\eta^2L^2}\in[0,1)$. Banach's theorem supplies a unique fixed point and geometric convergence. The projection variational inequality identifies that point with the constrained minimizer of $J$ under the stated convexity assumptions <a id="citation-revised-42"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersField)].
 
 The residual gives a practical certificate: <a id="eq:fixedres"></a>
 
@@ -109,7 +109,7 @@ $$
 
  then ${\lVert P_E(x-y)\rVert}\ge{\lVert x-y\rVert}/\sqrt{1+\kappa^2}$. This supplies a legitimate lower constant. Without the cone or an equivalent restriction, stabilization of a few coordinates can coexist with change in unobserved directions. The semantic names of channels do not change this geometry.
 
-For global selectors a clean result is available on a supplied compact metric domain. Successively minimize a countable separating family of continuous functions on nested nonempty compact sets. Compactness gives a nonempty intersection, and separation makes it a singleton. This proves uniqueness relative to the domain and function family. It does not establish compactness of a geometric model from insufficient regularity bounds, or identify its selected point with source awareness.
+For global selectors a clean result is available on a supplied compact metric domain. Successively minimize a countable separating family of continuous functions on nested nonempty compact sets. Compactness gives a nonempty intersection, and separation makes it a singleton. This proves uniqueness relative to the domain and function family. It does not establish compactness of a geometric model from insufficient regularity bounds, or identify its selected point with fundamental awareness.
 
 
 
@@ -117,7 +117,7 @@ For global selectors a clean result is available on a supplied compact metric do
 
 ## 13.3 One operator, two analytic regimes
 
-<a id="section:cscf:one-operator-two-analytic-regimes"></a> The strengthened Canonical Spectral Curvature Field construction starts with a specified densely defined nonnegative closed quadratic form and its self-adjoint representing operator $K$ <a id="citation-22"></a>[[32](/consciousness/monograph/bibliography#bib-RodgersCSCF)]. The analytic family <a id="eq:cscf"></a>
+<a id="section:cscf:one-operator-two-analytic-regimes"></a> The strengthened Canonical Spectral Curvature Field construction starts with a specified densely defined nonnegative closed quadratic form and its self-adjoint representing operator $K$ <a id="citation-revised-43"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersCSCF)]. The analytic family <a id="eq:cscf"></a>
 
 
 $$
@@ -148,7 +148,7 @@ Nor is $\rho\mapsto e^{-tK}\rho e^{-tK}$ generally trace preserving. Treating it
 
 ## 13.4 A shared spectral carrier with a general coherent symbol
 
-<a id="section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol"></a> The more general Atlas formulation specifies a real spectral symbol $h$ and a damping coefficient $\gamma\ge0$ in addition to $K$ <a id="citation-23"></a>[[40](/consciousness/monograph/bibliography#bib-RodgersAtlas2026)]. This preserves a single spectral carrier while allowing oscillation and decay to have different dependence on its spectral parameter.
+<a id="section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol"></a> The more general Atlas formulation specifies a real spectral symbol $h$ and a damping coefficient $\gamma\ge0$ in addition to $K$ <a id="citation-revised-44"></a>[[56](/consciousness/monograph/bibliography#bib-RodgersAtlas2026)]. This preserves a single spectral carrier while allowing oscillation and decay to have different dependence on its spectral parameter.
 
 
 

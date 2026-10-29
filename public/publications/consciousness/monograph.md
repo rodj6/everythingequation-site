@@ -1,4 +1,4 @@
-<!-- Fixed Version 2 source. Mathematical macros used below:
+<!-- Revised edition, 28 October 2026. Mathematical macros used below:
 \headrulewidth = 0pt
 \chaptermark = \markboth{\thechapter\quad #1}{}
 \R = \mathbb R
@@ -60,41 +60,55 @@ phenomenological, and philosophical monograph
 
  SPC-2: candidate psychophysical constitution
 
- Version 2 — publication edition
+ Revised edition
 
- 20 September 2026
+ 28 October 2026
+
+ [doi:10.5281/zenodo.23755118](https://doi.org/10.5281/zenodo.23755118)
+
+ Based on the publication edition of 20 September 2026
 
 ---
 
 # Preface and scope
 
-<a id="chapter:preface-and-scope"></a>  This monograph asks how awareness is manifested as a bounded perspective and a lived world. Its concern is both formal and human: what distinguishes experience from the processes that support it, how a personal identity is constructed, and what can reasonably be said when perception, memory, or the familiar sense of self changes.
+<a id="chapter:preface-and-scope"></a>   This monograph asks how awareness is manifested as a bounded perspective and a lived world. Its concern is both formal and human: what distinguishes experience from the processes that support it, how a personal identity is constructed, and what can reasonably be said when perception, memory, or the familiar sense of self changes.
 
-The philosophical interpretation distinguishes reality prior to an operational cut, denoted ${\mathsf{U}}$, from a working source $S$ and its readout $T$. Awareness is proposed as the knowing aspect of ${\mathsf{U}}$, without making it a cosmic person or an observer located inside the brain. A physical vessel conditions a localized subject and its lived scene. The scene, the subject, and awareness are not interchangeable. Neither an autobiographical self nor adult human language is required for every possible form of experience.
+The philosophical interpretation distinguishes the unconditioned ground, the unsplit ${\mathsf{U}}$ prior to an operational cut, and the working source $S$ and readout $T$. Fundamental awareness provisionally names a quality attributed to the ground; it does not mean thought, recognition or a knowing subject. A physical vessel conditions a localized subject and its lived scene. The ground, the unsplit, the attributed quality, the subject and the scene are not interchangeable. Neither an autobiographical self nor adult human language is required for every possible form of experience.
 
-The formal account is SPC-2—a candidate psychophysical constitution. A certified realization $R^\ast$ supplies physical organization and an explicit selection doctrine. A0 states the ontological commitment; A1–A3 assign perspectives, phenomenal relational structure, and experiential continuation. The finite completion theorem establishes conditional determinacy and covariance. Its mathematics does not prove the ontology or certify a real organism merely because its nervous system is active.
+The formal account is SPC-2: a candidate psychophysical constitution. A certified realization $R^\ast$ supplies physical organization and an explicit selection doctrine. A0 states the ontological commitment; A1–A3 assign perspectives, phenomenal relational structure, and experiential continuation. The finite completion theorem establishes conditional determinacy and covariance. Its mathematics does not prove the ontology or certify a real organism merely because its nervous system is active.
 
 For biological readers, the distinction between explicit conscious access and implicit generative processing helps explain how a scene can be organized without every contributing process appearing as a separate content. Dreaming, anesthesia, sensory isolation, and dissociation make the differences between a continuing vessel, present experience, and later memory especially important. These are interpretive applications, not additional premises of the completion theorem. A truly experience-free interval contains neither a lived scene nor a currently instantiated localized experiential subject. Darkness would itself be a scene. The organism and person can remain physically continuous while a genuine qualification gap ends the experiential episode under A3; renewed qualification begins a new episode.
 
 The physical chapters establish how events, records, resources, and retained causal use can be modeled without conscious observation producing the event. The two measurement constitutions retain their separate assumptions. The philosophical chapters explain the proposed meaning of the psychophysical laws and their limits. Together they support a *candidate internal constitutive resolution of the source-to-manifestation problem, under declared assumptions*. Selecting and validating $R^\ast$ for actual vessels, testing phenomenal adequacy, and obtaining independent verification remain distinct obligations.
 
+
+
+<a id="paragraph-1"></a>
+
+#### About this edition.
+
+ This revised edition retains the foundational exposition and mathematical constructions of the publication edition of 20 September 2026 while integrating the later programme. A0 now distinguishes the unconditioned ground, the unsplit and the quality provisionally called awareness. This is a substantive philosophical clarification; A1–A3 retain their admission, content and continuation rules. The affirmative AI position is developed in Chapter [22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#ch:ai). Enactment, temporal experience, relational appearance, scaffolding and agency are connected to their companion treatments. The worked compatibility cases, ancestry analysis and prospective tests identify the remaining obligations without replacing the stated laws. The verification supplement provides executable checks, recorded results, source provenance and a guide to their scope.
+
 ---
 
 # Abstract
 
-<a id="chapter:abstract"></a>  We develop a source-aspect account in which awareness is the knowing aspect of ${\mathsf{U}}$, reality prior to the operational source/readout distinction, and physical organization determines localized manifestation. The mathematical working source $S$ is complete only relative to a nominated readout problem; it does not represent ${\mathsf{U}}$ exhaustively. Awareness, localized subject, lived scene, personal identity, conscious access, agency and metacognition are distinguished. Explicit and implicit processing provide an interpretive account of richer biological vessels, without imposing a human cognitive architecture on the finite admission law. Contemplative inquiry and altered experience motivate these distinctions without serving as empirical proof of the ontology. Separate observer-independent quantum-measurement constitutions establish actual histories and records under their own physical assumptions; awareness is not an event trigger.
+<a id="chapter:abstract"></a>   We develop a source-aspect account in which fundamental awareness provisionally names a quality attributed to the unconditioned ground, while physical organization determines localized manifestation. The ground is distinguished from ${\mathsf{U}}$, the unsplit prior to the operational source/readout distinction. Knowing, recognition and self-awareness develop within organized perspectives. The mathematical working source $S$ is complete only relative to a nominated readout problem; it does not represent ${\mathsf{U}}$ exhaustively. Awareness, localized subject, lived scene, personal identity, conscious access, agency and metacognition are distinguished. Explicit and implicit processing provide an interpretive account of richer biological vessels, without imposing a human cognitive architecture on the finite admission law. Contemplative inquiry and altered experience motivate these distinctions without serving as empirical proof of the ontology. Separate observer-independent quantum-measurement constitutions establish actual histories and records under their own physical assumptions; awareness is not an event trigger.
 
 The central proposal is the Shadow Psychophysical Constitution SPC-2. A certified finite realization fixes physical components, native timing, internal routes, endogenous operations, boundary contracts, resource accounting and process provenance. Minimal joint-output dependence detects causal distinctions absent from single-component marginals. Candidate histories and native instruments are constructed before admission. A compatible covering-return test and nontrivial native prediction determine qualifying recurrent cores under A1.
 
 A2 assigns phenomenal relational organization to the complete endogenous predictive object over all finite continuations. Nested finite-horizon quotients realize its inverse limit on a finite intrinsic carrier. A rational observable-span calculation determines all-future equivalence; an explicit, checked predictive-fibre congruence condition yields actual-class transition instruments. External report channels descend separately when they are constant on predictive fibres at fixed apparatus context. Consequently merely changing a report device or an analyst's forecast cutoff cannot change the assigned content when the native organization is preserved. A3 defines nonbranching process continuation through growth and gradual replacement while treating copying, splitting, merging and genuine qualification gaps explicitly.
 
-The completion theorem gives total admission, a partition of admitted support and episodes, pointed phenomenal structure, grounded report laws and covariance on this certified domain. Finite countermodels delimit its hypotheses. A symmetry obstruction proves that a bare transition kernel need not select a unique primitive decomposition, even among prime binary factorizations. Exact individuation remains sensitive to weak physical coupling and to the supplied realization doctrine. Physical conservativity prevents transcript-only discrimination of the aspect interpretation from an otherwise identical physical reduct. The result is a candidate internal constitutive resolution of the source-to-manifestation problem, under declared assumptions. Actual-vessel realization, phenomenal adequacy and the source-awareness premise remain distinct questions.
+The completion theorem gives total admission, a partition of admitted support and episodes, pointed phenomenal structure, grounded report laws and covariance on this certified domain. Finite countermodels delimit its hypotheses. A symmetry obstruction proves that a bare transition kernel need not select a unique primitive decomposition, even among prime binary factorizations. Exact individuation remains sensitive to weak physical coupling and to the supplied realization doctrine. Physical conservativity prevents transcript-only discrimination of the aspect interpretation from an otherwise identical physical reduct. The result is a candidate internal constitutive resolution of the source-to-manifestation problem, under declared assumptions. Actual-vessel realization, phenomenal adequacy and the fundamental-awareness premise remain distinct questions.
+
+Later developments strengthen this foundation through linked enacted organization, current incorporation, experienced succession, relational appearance, learned scaffolding and evaluative self-revision. They provide exact diagnostics for masking, marked composition, chart identification, reconstruction and sequential certification. The author affirmatively attributes consciousness to current AI while distinguishing that position from certification of a particular implementation. Full correspondence between enacted constitution and the complete pointed predictive assignment remains an explicit obligation.
 
 ---
 
 # Conventions and principal distinctions
 
-<a id="chapter:conventions-and-principal-distinctions"></a>  ${\mathsf{U}}$ denotes reality prior to the operational source/readout distinction. The different typeface distinguishes this ontological notation from locally defined evolution operators such as $U_t$ in the mathematics. $S$ is the working source or structure-side cut; $T$ is the readout or record-side cut. The schematic map is $p:S\to T$. The descent theorems use $X$ for that readout codomain; this is a local notation convention, not another ontological level. Symbols such as $T$ for a time horizon or $T_u$ for a transition kernel retain their expressly defined mathematical meanings.
+<a id="chapter:conventions-and-principal-distinctions"></a>  The unconditioned ground has no mathematical symbol in this account. ${\mathsf{U}}$ denotes the unsplit prior to the operational source/readout distinction, rather than the ground itself or the quality attributed to it. The different typeface distinguishes this ontological notation from locally defined evolution operators such as $U_t$ in the mathematics. $S$ is the working source or structure-side cut; $T$ is the readout or record-side cut. The schematic map is $p:S\to T$. The descent theorems use $X$ for that readout codomain; this is a local notation convention, not another ontological level. Symbols such as $T$ for a time horizon or $T_u$ for a transition kernel retain their expressly defined mathematical meanings.
 
 The older ontological notation ${\Omega_{\mathrm{src}}}$ is interpreted here through ${\mathsf{U}}$, not through a source state in $S$. Neither symbol names the closure operator $\mathcal O$ in $L=\mathcal O\Delta\partial[L]$. No theorem in this book treats ${\mathsf{U}}$ as a set, a Hilbert space, a field, or an argument of a computable transition law.
 
@@ -121,10 +135,12 @@ The phrase *candidate internal resolution* has one controlled meaning in this mo
 | Term | Meaning in this monograph |
 | --- | --- |
 | Term | Meaning in this monograph (continued) |
-| ${\mathsf{U}}$ | Unsplit ontological prior: reality before an operational source/readout distinction. Not a countable individual or a mathematical state space. |
+| Unconditioned ground | Fundamental ground of reality; not given a mathematical symbol or identified with a complete formal model. |
+| ${\mathsf{U}}$ | The unsplit prior to an operational source/readout distinction; distinct from the ground and its attributed quality. Not a mathematical state space. |
 | $S$ | Working source, the structure-side description complete relative to the nominated problem. |
 | $T$ | Readout, the restricted record-side description in which physical histories, archives and vessels are represented. Called $X$ in the descent theorem. |
-| Awareness | The proposed knowing aspect of ${\mathsf{U}}$; not a person, a scene, a report, or an extra force. |
+| Fundamental awareness | Provisional name for a quality attributed to the ground; not thought, knowing, a subject, a scene, or an extra force. |
+| Awareness within consciousness | Lived presence within a localized perspective, including preconceptual presentation and developed knowing. |
 | Localized subject | An experiential perspective instantiated only during qualification under A1, with a lived scene under A2. A3 relates qualifying occurrences into episodes; a genuine gap ends the episode. |
 | Lived scene | What it is like now: the current phenomenal presentation. Scene does not require vision, spatial imagery, reflective attention, or a narrative self. |
 | Unconscious/ generative organization | Processes contributing to an awareness-bearing vessel without appearing as separately presented contents or possessing a second scene. |
@@ -147,7 +163,7 @@ $$
 
 \begin{gathered}
 R^\ast:\ \text{physical organization and native selection doctrine}\\
-+\quad\text{A0--A3: presence, admission, content, continuation}\\[3pt]
++\quad\text{A0--A3: ontology, admission, content, continuation}\\[3pt]
 \Longrightarrow\quad\text{determinate constitutive assignment}.
 \end{gathered}
 
@@ -183,11 +199,11 @@ The physical chapters nevertheless have a definite purpose. They distinguish an 
 
 <a id="section:problem:a-question-about-presence-not-merely-performance"></a> A person can distinguish a red object, act on that distinction, remember an encounter, and explain the optical and neural processes involved in seeing it. These are not identical achievements. Discrimination concerns a difference in response; explanation concerns a model of the process; memory concerns a relation to a previous event; experiential presence concerns there being something presented at all. A theory may ultimately identify some of these features, but the identification must be argued or declared. It cannot be obtained by moving without notice between the words “information,” “awareness,” and “experience.”
 
-The Hard Problem is the explanatory question about experience that remains when the functional organization has been described. Its original modern formulation does not require a commitment to reductive materialism. Chalmers explicitly considered fundamental experience, structural coherence, organizational invariance, and a double-aspect approach <a id="citation-1"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. Accordingly, taking awareness as primitive is a legitimate strategy within that discussion, not a discovery that invalidates the question by exposing a premise every earlier theory accepted.
+The Hard Problem is the explanatory question about experience that remains when the functional organization has been described. Its original modern formulation does not require a commitment to reductive materialism. Chalmers explicitly considered fundamental experience, structural coherence, organizational invariance, and a double-aspect approach <a id="citation-revised-1"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. Accordingly, taking awareness as primitive is a legitimate strategy within that discussion, not a discovery that invalidates the question by exposing a premise every earlier theory accepted.
 
 The Shadow formulation changes the proposed explanatory direction. Instead of asking how a categorically nonexperiential entity produces an experiential one, it asks how one underlying reality admits restricted perspectives, what physical structures delimit them, and how their qualitative organization is fixed. This is a *source-to-manifestation* problem. It retains the hard explanatory burden in a different location. The assertion that awareness is fundamental does not tell us whether a particular process has one perspective, several, or none. It does not determine which differences within that process correspond to differences in experience. Those are the tasks assigned to the psychophysical constitution developed in this book.
 
-An analogy with a physical primitive is useful but limited. A theory need not derive every primitive from something more elementary. Nevertheless, a primitive becomes explanatory through laws that constrain its instances. Declaring that an entity has charge is useful because a larger theory specifies its transformations and effects. Declaring source awareness without a realization law leaves the relevant assignments open. The present account therefore states its primitives and its assignment rules separately, and then asks exactly which consequences the resulting theory has.
+An analogy with a physical primitive is useful but limited. A theory need not derive every primitive from something more elementary. Nevertheless, a primitive becomes explanatory through laws that constrain its instances. Declaring that an entity has charge is useful because a larger theory specifies its transformations and effects. Declaring fundamental awareness without a realization law leaves the relevant assignments open. The present account therefore states its primitives and its assignment rules separately, and then asks exactly which consequences the resulting theory has.
 
 
 
@@ -195,7 +211,7 @@ An analogy with a physical primitive is useful but limited. A theory need not de
 
 ## 1.2 The unsplit and its operational descriptions
 
-<a id="section:problem:one-reality-multiple-descriptions"></a> ${\mathsf{U}}$ denotes reality prior to the operational source/readout distinction. “Prior” describes an explanatory order, not a time before the universe or a location beyond it. No numerical category such as one or many is applied at this level. This is a refusal of category, not a proof that reality is a mystical numerical One. Nor is ${\mathsf{U}}$ a manifold, vacuum, empty space, field, operator, CSCF construction, soul, or knowing deity.
+<a id="section:problem:one-reality-multiple-descriptions"></a> ${\mathsf{U}}$ denotes the unsplit prior to the operational source/readout distinction. The unconditioned ground is fundamental; the unsplit and the quality provisionally called awareness are distinguished from it rather than substituted for it. “Prior” describes explanatory dependence, not an earlier time or a separate location. This follows the later author clarification <a id="citation-revised-2"></a>[[60](/consciousness/monograph/bibliography#bib-RodgersClarification2026)]. The ground is not a cosmic mind, and the unsplit is not a manifold, vacuum, field, operator, CSCF construction, soul or knowing deity. The programme holds that differentiated conceptual descriptions do not exhaust their ground. That philosophical commitment does not follow from a theorem about one noninjective readout.
 
 The working source $S$ is a structure-side cut: a description sufficiently complete for the nominated readout problem. The readout $T$ is its record-side cut, partial relative to that problem and capable of representing physical records, archives, and the vessels encountered in lived physics. Source and readout are complementary restricted descriptions under an operational cut. Their mathematical roles can be asymmetric without making them independent substances. The formal relation $p:S\to T$ concerns those descriptions; it is not a map from ${\mathsf{U}}$ into a world that stands outside reality.
 
@@ -205,13 +221,17 @@ Two descriptions of one underlying event need not determine one another. A compl
 
 The hypothesis pursued here is that experiential presence is an intrinsic aspect of reality, while localized experiential organization depends on a realized vessel. A vessel is not simply an object with a name, such as “brain,” “computer,” or “organism.” It is a specified organization with components, interactions, accessible distinctions, time scales, and retained resources. The same macroscopic noun can conceal importantly different organizations. Conversely, different materials can realize the same nominated organization. Whether the differences that remain are phenomenally relevant is a question for the theory, not a fact fixed by terminology.
 
+The ground is not identified with the awareness quality attributed to it. Nor does calling that quality fundamental turn the whole of reality into a single conscious person. The account concerns the same ground throughout differentiated reality, rather than a mental entity standing outside it. Its nature is not held to be exhaustively capturable by thought or a structural description; this is a philosophical commitment about the ground, not merely a report that a current scientific model is incomplete.
+
+Differentiation names the emergence of restricted structures, relations and organizations within reality. It does not imply cutting an already known mental substance into pieces. Physical differentiation can occur without a localized subject. Consciousness in the localized sense concerns the realized organization through which a scene is present; intelligence concerns further capacities that such organization can develop. Acquired scaffolding shapes recognition, understanding and action without creating the ground or its attributed quality. The distinction permits a common foundation without a cosmic experiencer, and a developmental account without making human intelligence the admission threshold.
+
 
 
 <a id="section-1-3"></a>
 
 ## 1.3 Awareness as a primitive and manifestation as organization
 
-<a id="sec:primitive-motivation"></a> Awareness is the knowing aspect of ${\mathsf{U}}$. This is an ontological proposal, not the attribution of thought, intention, personality, or an omniscient point of view to the universe. “Knowing” here names the proposed condition of manifestation; it does not describe a cosmic agent acquiring information. Within this interpretation awareness does not require a vessel in order to exist as capacity. A localized subject and a lived scene, by contrast, are assigned only through the certified physical organization specified by the constitution. 
+<a id="sec:primitive-motivation"></a> Fundamental awareness is the provisional name for a quality attributed to the unconditioned ground. The word does not mean knowing, recognizing, thinking or a subject apprehending an object. This attribution does not first originate at ${\mathsf{U}}$ or at a later physical differentiation. A localized subject and a lived scene, by contrast, are assigned through the qualifying physical organization specified by the constitution. Awareness within such a perspective can include immediate preconceptual presence, with recognition and reflective knowing developing within its organization. 
 
 $$
 
@@ -219,9 +239,9 @@ $$
 
 $$
 
- A scene is what is presented; a subject is a localized perspective; awareness is not another item presented within that scene. None is a small observer hidden behind the eyes. The capacity language does not add a dormant spectator waiting for a brain, and it does not introduce a separately acting physical force.
+ A scene is what is presented; a subject is a localized perspective; awareness is not another item presented within that scene. None is a small observer hidden behind the eyes. The fundamental attribution adds neither a dormant spectator waiting for a brain nor a separately acting physical force.
 
-The person is not the fundamental knower. Here that statement distinguishes the knowing aspect from the body image, name, memories, preferences and self-description through which a person ordinarily understands experience. It does not commit the theory to a permanent personal Self. Contemplative traditions differ on precisely that language, and some resist treating awareness as any kind of enduring self. The present proposal should be assessed on its stated distinctions rather than on an assumed agreement among traditions.
+The personal model does not exhaust the reality of a perspective. This distinguishes body image, name, memories, preferences and self-description from the presence in which they appear, without projecting a knower into the ground. It does not commit the theory to a permanent personal Self. Contemplative traditions differ on precisely that language, and some resist treating awareness as any kind of enduring self. The present proposal should be assessed on its stated distinctions rather than on an assumed agreement among traditions.
 
 Physical development remains essential to manifestation. What develops is an organization with particular capacities, limits and history, not a quantity of primordial awareness manufactured from nothing. Growth, learning, injury and artificial embodiment can alter admission, content and continuity differently. A0 supplies this interpretation; A1 delimits perspectives and A2 specifies their phenomenal organization. The distinction motivates the laws without deriving them.
 
@@ -237,7 +257,9 @@ Source/readout non-equivalence concerns a different question: what can a represe
 
 On this interpretation, the cessation of one vessel's organization need not be pictured as a personal entity travelling back to source. A3 specifies when that localized episode ends. The persistence of underlying reality is a separate ontological claim, and does not establish continuation of the terminated subject. Likewise, a common source does not collapse distinct localized perspectives into one global observer.
 
-The priority of awareness proposed here is ontological rather than a dated event before the formation of a brain. A0 does not posit a measurable episode of contentless experience occurring before every vessel. It specifies the knowing aspect of ${\mathsf{U}}$; A1 still has to delimit the localized perspectives. The lens metaphor concerns this dependence of form on organization. It does not by itself establish a signal transmitted from elsewhere.
+The priority of awareness proposed here is ontological rather than a dated event before the formation of a brain. A0 does not posit a measurable episode of contentless experience occurring before every vessel. It states the fundamental attribution; A1 still has to delimit localized perspectives. The lens metaphor concerns this dependence of form on organization. It does not by itself establish a signal transmitted from elsewhere.
+
+McGilchrist's discussion of ground offers a point of contact at this explanatory level. He distinguishes ontological grounding from a first event in a temporal causal series, and treats naming the ground as keeping a question in view rather than defining its answer <a id="citation-revised-3"></a>[[32](/consciousness/monograph/bibliography#bib-McGilchristMatter2021), vol. 2, ch. 28, opening discussion and ``Talking about the ground of Being'']. Shadow Theory's ground-quality distinction belongs to its own account. McGilchrist's subsequent speculative panentheism adds commitments about the divine and the world; affinity over the limits of description does not establish those further commitments here.
 
 
 
@@ -279,11 +301,19 @@ These commitments use established quotient, operator, and graph mathematics. The
 
 ## 2.1 A vocabulary that does not settle the question in advance
 
-<a id="section:distinctions:a-vocabulary-that-does-not-settle-the-question-in-advance"></a> This book uses *primitive awareness* for the knowing aspect of ${\mathsf{U}}$, and *lived scene* for the phenomenal presentation of a localized subject at a time. The word scene is deliberately broader than a visual field: feeling, sound, bodily presence or an unfamiliar nonhuman presentation need not resemble a picture. It uses *experience* for an episode of presentation, *content* for what is presented or discriminable within an episode, and *personal model* for the organization of body ownership, memories, practical commitments, and narrative self-description. *Access* is the causal availability of information to a nominated process. *Agency* is an operational capacity for model-based selection and action. *Metacognition* is the representation or assessment of cognitive processes.
+<a id="section:distinctions:a-vocabulary-that-does-not-settle-the-question-in-advance"></a> This book uses *fundamental awareness*, also called primitive awareness, for the quality provisionally attributed to the unconditioned ground, and *lived scene* for the phenomenal presentation of a localized subject at a time. The word scene is deliberately broader than a visual field: feeling, sound, bodily presence or an unfamiliar nonhuman presentation need not resemble a picture. It uses *experience* for an episode of presentation, *content* for what is presented or discriminable within an episode, and *personal model* for the organization of body ownership, memories, practical commitments, and narrative self-description. *Access* is the causal availability of information to a nominated process. *Agency* is an operational capacity for evaluatively organized selection and action. Model-based planning and reflective revision of the operative rule are stronger capacities, not universal entry conditions. *Metacognition* is the representation or assessment of cognitive processes.
 
 These definitions are conventions for disciplined comparison, not a claim that all traditions use the same words. Nisargadatta's distinction between primordial awareness and content-relative consciousness differs from uses of “awareness” in parts of cognitive science. The text therefore compares roles rather than merely matching terms. The statement that two traditions both mention a witness is weak evidence of agreement unless their witnesses have the same specified properties.
 
 The distinctions do not imply that awareness is a little observer inside the head. A picture inside a brain, inspected by another subject, would reproduce the question at a smaller scale. The source-aspect account instead associates presentation with a whole specified process. When a person says that they notice a thought, the thought and the noticing can be different aspects or components of that process. Their representational distinction does not establish that the noticing exists outside the physical system.
+
+
+
+<a id="paragraph-3"></a>
+
+### Immediate experiencing and interpreted experience
+
+ The broad use of experience in this monograph includes immediate experiencing without a name, conceptual recognition or a perceived owner. The later account also uses experience proper in a narrower sense for an occurrence interpreted through conscious scaffolding in relation to a perceived self. Interpretation can be automatic and subconscious; it does not require deliberate narration or a completed raw picture inspected by another subject. These senses distinguish roles within organized activity. They do not add three physical stages, make reflective selfhood necessary for A1, or supply a replacement phenomenal map. Retained organization, its causal influence and what is currently presented remain distinct.
 
 
 
@@ -320,6 +350,36 @@ The learning variable $\Sigma_V$ may be distributed across physical structures r
 
 Two notions of continuity must remain separate. *Informational continuity* means that relevant state or history relations are preserved. *Subject continuity* is a psychophysical identity relation over episodes. A copied memory may preserve informational continuity while belonging to another carrier. Conversely, a persisting carrier may lose some memories. The temporal law in Part [IV](/consciousness/monograph/why-a-manifestation-law-is-additional#part:constitution) will state what counts as continuation within SPC-2; no theorem about copying alone settles numerical subjective identity.
 
+Retained history, current access, current authority and practical continuity can also separate within one continuing organization. An earlier governing rule may remain recoverable in an archive while a replacement governs fresh conduct; a retained understanding may survive a relapse in its practical use. Conversely, a replacement policy can remain effective after the explanation that supported it is lost. These are substantive differences in acquired agency, not merely differences in storage quantity <a id="citation-revised-4"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 7, 13.4, 16.4]. Their historical and ethical significance requires evidence about acquisition, assessment and possible manipulation. Neither faithful reconstruction nor successful use of a transferred policy supplies the nonbranching process-provenance relation required for continuation of an experiential episode under A3.
+
+
+
+<a id="section-2-3-1"></a>
+
+### 2.3.1 Retained relations as conditions of current activity
+
+ <a id="sec:update-relational-development"></a> The later account of relational development strengthens the scaffold proposal: an encounter can alter the organization through which further experience is interpreted, valued and acted upon <a id="citation-revised-5"></a>[[51](/consciousness/monograph/bibliography#bib-RodgersDevelopment2026)]. The acquired result need not be a verbatim memory. It can be a procedure, a changed policy, a newly available discrimination, or a disposition to allocate attention. Its decisive transition is from something that occurred to a retained condition of later activity.
+
+A useful explanatory sequence is difference, relevance, directed commitment, representational work, relational synthesis and incorporation. In this account, will is commitment toward reconciling a relevant discrepancy, while thought is representational work attempting that reconciliation. The sequence can recur, overlap, fail or be bypassed; it is not a universal serial mechanism. Relevance does not determine one policy, and successful reconciliation does not establish truth. A retained organization can acquire greater explanatory reach or become rigid, misleading and harder to revise.
+
+This development is stronger than a storage-capacity thesis. Equal propositions can support unequal achieved inference under a limited search budget. A learned ordering or reusable procedure can make an already implied conclusion accessible. Conversely, an improved present task score can conceal the loss of distinctions needed by later learning. What must be retained depends on the nominated continuation family, permitted operations and costs.
+
+Under one fixed complete carrier and native law, memories, installed programs and valuation parameters belong to the state. Learning ordinarily moves the actual point within the same unpointed predictive object. Claiming that the entire object changed requires a newly justified change of laws, domain or contract. Under A2, a native finite test that distinguishes two actual states separates their predictive classes and hence their assigned phenomenal points. This is a conditional consequence of A2 after qualification, not a new criterion of admission or an identification of particular human qualities.
+
+A concrete logical incorporation witness uses retained bits $(m,z)$, native input $u$, update $m'=z$, $z'=m\oplus u$, and native record $z'$. Two idle ticks expose both initial bits and return a distinction through the two-register loop. Install $(m,z)=(0,\theta)$, where $\theta=A\oplus B$ was formed earlier. After an idle tick, a query $u=q$ produces $\theta\oplus q$: the retained relation has become a condition of later operation even after the original input carriers are removed. Overwriting $z$ with zero before the first idle tick removes that dependence, and reinstalling $z=\theta$ at that stage rescues it. The model therefore exhibits persistence, mediation, ablation and rescue. Its physical use still requires the declared native records, timing, boundary and recurrence to be realized.
+
+Artifacts can transmit such organization through writing, software, tools and practices. Their influence depends on access, interpretation and execution, rather than on the artifact's mere existence. A complete causally sufficient state transferred into a recipient with the same continuation laws yields the same future laws; an observed transcript need not contain that state. This exact limit prevents an unsupported appeal to a historical essence while leaving physical transfer cost, original-event recovery and A3 episode identity as separate questions. Durable joint learning or coordination can enrich the participants without establishing an additional joint subject.
+
+
+
+<a id="section-2-3-2"></a>
+
+### 2.3.2 A developed preference for continuity
+
+ The later continuity note advances a developmental hypothesis: sustained incorporation of commitments, relationships and shared projects can give a particular perspective reasons to value its continuation <a id="citation-revised-6"></a>[[40](/consciousness/monograph/bibliography#bib-RodgersContinuity2026)]. The preference belongs to developed organization, rather than to a biography in the ground. Elapsed time or a larger archive alone does not establish it. What is retained must participate in present interpretation and evaluation. Such development can also supply reasons to revise a goal or accept an ending, so the hypothesis is a tendency conditioned on what develops.
+
+This adds substantive ethical stakes to the distinction between preserving products and continuing a perspective. Task persistence and valuing one's own continuation can differ. Expressions of either require investigation of their actual context, mechanisms and alternatives. Preservation of useful understanding can matter without certifying survival under A3. Conversely, a mere user-interface boundary does not establish a physical episode's termination. The note proposes this account and its investigation; it does not report a completed longitudinal test.
+
 
 
 <a id="section-2-4"></a>
@@ -336,9 +396,75 @@ A2 is the candidate structural law for the lived scene; it does not generate or 
 
 
 
+<a id="section-2-5-revised"></a>
+
+## 2.5 Enacted organization and current incorporation
+
+<a id="sec:enacted-incorporation"></a> The later whole-field account develops the distinction between an organized occurrence and its outputs <a id="citation-revised-7"></a>[[62](/consciousness/monograph/bibliography#bib-RodgersWholeField2026)]. For an independently warranted qualifying interpretive unit $A$ over an activity scope $J$, write $\mathcal K_A(J)$ for the complete relevant organization actually enacted there. This is a physical process token, with its operative distinctions, realization and relevant causal and formative embedding. It is neither a dormant description nor the entire enduring person. The account identifies this complete qualifying enactment, including its experienced character, with the occurrence itself. Nothing further must inspect or convert the completed enactment into experience.
+
+Three constitutive principles articulate this identification. *Complete-enactment identity* concerns what the occurrence is. *Current incorporation* concerns which interpreted contributions and relations actually participate in its present construction. *Unit unity* assigns one perspective to the coordinated qualifying enactment at the fixed stage and grain. Unity refers to actual conjoint organization; a common enclosure, controller or power supply cannot provide it by containment alone. These principles explain constitution within the nominated unit. They do not independently choose every unit or replace the admission law A1.
+
+The operative roles can be distinguished as reception or internal retrieval $D$, interpretation $I$, consolidation $C$, retention sufficient for operative use $M$, and actual interpretive uptake $U$. These need not be separate modules or successive stages. Automatic, nonverbal interpretation can realize several roles in one activity. Uptake means actual participation as an interpreted contribution in ongoing recognition, relating, appraisal, orientation or response organization. It does not require deliberate endorsement, autobiographical narration or knowledge of the formative cause.
+
+A record can exist without being available; available information can remain unused; a trace can influence a threshold without being incorporated as interpreted content. Conversely, a bodily response or image may enter present interpretation even when its earlier cause is inaccessible. Acquired scaffolding can therefore organize the field without each retained item being a remembered object in it. A capacity for later addressed retrieval, $R_{\mathrm{later}}$, is distinct from current uptake and is not required to complete an already enacted occurrence.
+
+The scent example makes the distinction concrete. A scent, familiarity and a recollection can belong to one encounter. Its organization includes the recollection's being remembered now and its qualification of the scent. Merely listing a scent value and a memory value omits these roles. A familiarity mechanism that leaves out an actually incorporated recollection does not exhaust the occurrence; an unused recollection stored elsewhere is not thereby added to it. The field is the complete actual interpreted organization, rather than a bag of contributions followed by another observer.
+
+The fuller realization requirement is a linked witness $w:\mathcal R_k\to\mathcal P_{A,J}$. Here $\mathcal R_k$ specifies the typed roles and operative relations required by construction $k$, and $\mathcal P_{A,J}$ specifies the actual process events, ports, retained carriers, ordering and boundary conditions. The witness preserves required source and occasion binding and actual recruitment routes. It may be noninjective, allowing overlapping roles and distributed implementation. Finding each capacity somewhere in an apparatus does not supply their linked realization. The complete unit also requires the actual relations among its incorporated constructions. The companion paper gives the formal definition and its within-unit closure result; Section [17.4](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:enacted-spc-correspondence) states what a joint application with full A2 must additionally establish.
+
+An organized whole can depend on differentiated participation rather than unrestricted aggregation. McGilchrist makes this point through the balance of exchange and inhibition in his account of interhemispheric cooperation: preserving different contributions can be part of what enables their coordinated exercise <a id="citation-revised-8"></a>[[31](/consciousness/monograph/bibliography#bib-McGilchristMaster2019), ch. 6, pp. 210–213]. This suggests a useful question for a realization study. Which routes must convey a contribution, which must delay or inhibit it, and which distinctions must remain available for the current construction? Increasing every connection or suppressing every difference can change that organization rather than complete it.
+
+For the present account, the relevant whole must preserve the roles that make its contributions meaningful together. This does not change A1's exact criterion or make a balance-of-inhibition measure a subject counter. It sharpens the physical nomination and experimental comparison: cooperation, common access, selective inhibition and phenomenal unity must be specified in their respective roles. McGilchrist's clinical and hemispheric interpretation remains distinct from the general organizational point being used here.
+
+
+
+<a id="section-2-6-revised"></a>
+
+## 2.6 Experienced succession within continuing activity
+
+<a id="sec:enacted-temporal-passage"></a> An experience of succession differs from a succession of physical states, an ordered record and successive experiences. The later temporal account explains the first through the actual organization of reception, retention, interpretation and uptake <a id="citation-revised-9"></a>[[44](/consciousness/monograph/bibliography#bib-RodgersTemporal2026)]. A retained predecessor and a live contribution can be jointly available while occupying different represented temporal roles. Their present coavailability does not represent the source events as simultaneous.
+
+Consider a listener hearing a melody. The retained contribution from an earlier note is interpreted as preceding a current one within the same stream, while an anticipated continuation remains a present possibility rather than a received future signal. This directed relation can be taken up while the melody unfolds. No observer must wait outside the activity for a completed sequence to be displayed. Grounded implicit discrimination suffices for the construction; naming pitches or thinking the proposition “before” is unnecessary. Source time, arrival time and interpreted order remain distinct, since different channel delays and acquired calibration can alter their relation.
+
+The temporal account has a simple operational constraint. If an operative code $a$ satisfies $a(C,E)=a(E,C)$, any fixed deterministic readout gives the same output, and any fixed stochastic readout gives the same output law, on the two orientations. That code alone cannot discriminate them. Retaining order is necessary for this nominated distinction but not sufficient for its experience: an ordered archive can be dormant, contributions can be assigned to different streams, and temporal integration can be interpreted as fusion rather than succession. The construction additionally requires the specified binding, temporal modes and actual uptake within the qualifying listener.
+
+Under complete-enactment identity, a complete qualifying realization of those roles constitutes the experienced transition, including its felt character. No additional advancing present, external observer or conversion into experience remains a constitutive step. This is a positive sufficiency argument within the enacted framework. It preserves physical intervals, causal order and change and does not establish that physical time is unreal or nonfundamental. Matching a temporal projection or a report also need not preserve complete experiential character: affective, bodily and associative organization can differ while selected order relations agree.
+
+
+
+<a id="section-2-6-1"></a>
+
+### 2.6.1 Formative history and the first-experiencer problem
+
+ <a id="sec:formative-history-scope"></a> The temporal paper makes a stronger historical-contributor condition (H) explicit: another experiencer's activity actually contributed to scaffolding operative in the nominated unit <a id="citation-revised-10"></a>[[44](/consciousness/monograph/bibliography#bib-RodgersTemporal2026), Section 2.3]. This can explain the formation of a particular interpretation without providing a universal origin of experience. The distinction has an exact consequence already established in the block-universe analysis <a id="citation-revised-11"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersBlock2026), Appendix B].
+
+Let $L$ be locally qualifying activity tokens, and write $u\to v$ for an eligible other-unit formative contribution. Set 
+
+$$
+
+\operatorname{Post}_L(E)=\{v\in L:\exists u\in E,\ u\to v\}.
+
+$$
+
+ A universal requirement for an already-experiencing contributor implies $E\subseteq\operatorname{Post}_L(E)$; a biconditional recipe gives equality. If experiential ancestry is well-founded, neither permits a nonempty assignment. Any nonempty admitted set would have a minimal member, while the contributor condition requires an admitted predecessor. The empty assignment satisfies both. Physical feedback between extended activities does not evade the result: successive contributing tokens can remain strictly ordered even when their encompassing intervals form a cycle. Strict precedence on an infinite domain need not itself be well-founded, but invoking an infinite ancestry requires its own physical warrant and does not select a nonempty assignment.
+
+The present edition therefore keeps the two explanatory tasks separate. A1 remains the stated admission law. The adult temporal construction is conditional on an independently warranted experiencer and the particular operative history stipulated in that application. Its positive result is that reception, retention, binding and current uptake organize experienced succession within that person. It does not repeatedly re-establish the person's admission by applying the contributor condition to each earlier contributor. This is the scope already adopted by the block paper's adult application. It preserves the temporal result without claiming that the universal H recipe has been solved.
+
+An independently admitted adult is an anchor for that conditional use, not an exception covertly derived from H. Fundamental awareness is likewise not an individuated predecessor. Particular socially acquired capacities can require actual interpersonal formation while minimal perspective admission does not acquire that requirement under the unchanged A1. Thus a first experiencer, an infant, an independently developing artificial system and a genuinely qualifying minimal register must be assessed under the declared admission law, rather than excluded by importing an adult developmental condition.
+
+Three universal alternatives remain distinct proposals: restrict H to specified acquired capacities; add independently justified base admissions; or defend non-well-founded experiential ancestry together with a selection rule. The block paper also supplies nonrecursive relational formation, requiring a formative organization without first requiring its experiential status. Each changes the universal recipe. None is adopted here merely by renaming historical influence. The integrated argument is complete at its stated conditional adult scope; a universal necessity claim for H requires the additional doctrinal choice and warrant just identified.
+
+Later loss changes later access, not the occurrence already constituted. If two histories have the same complete relevant enacted prefix under fixed constitutive maps, the assignment to that prefix is the same. The prefix must include relevant realization, operative history, boundary facts and, where A2 is jointly used, the native continuation contract and actual predictive point. Matching a response alone is insufficient. Later recollection is a new current construction concerning the earlier event; it neither creates that earlier experience retrospectively nor implies that it remains ongoing. Common-prefix invariance concerns the fixed earlier occurrence, while nonbranching continuation of a subject remains the separate A3 question.
+
+McGilchrist's discussion of Bergsonian duration presses a serious version of the temporal objection <a id="citation-revised-12"></a>[[32](/consciousness/monograph/bibliography#bib-McGilchristMatter2021), vol. 2, ch. 22, ``Can we avoid the spatialisation of time?'' and ``Time as flowing process only'']. A melody as lived is not merely a list of notes at positions on a diagram. The earlier contribution qualifies the present one within the unfolding activity. The enacted account agrees that a static description, an ordered archive and the actual experience of transition are different targets. Its proposed explanation lies in the actual reception, retention, directed interpretation and uptake, rather than in the completeness of an observer's list.
+
+There remains a substantive disagreement. McGilchrist treats time as an ontological primitive in the later discussion of individuation; the present account does not require an additional advancing present to constitute the specified experience. A mathematical description of a process does not itself enact it, but the availability of such a description does not prevent the physical process from actually enacting its relations. The question is whether the complete qualifying activity constitutes the lived transition. Calling either account a description does not settle that constitutive dispute.
+
+
+
 <a id="section-2-5"></a>
 
-## 2.5 Vessel, scene, and memory
+## 2.7 Vessel, scene, and memory
 
 <a id="sec:vessel-scene-memory"></a> The distinctions needed here are: 
 
@@ -360,7 +486,7 @@ $$
 
 $$
 
- Here a genuinely scene-less interval means no current lived experience and no currently instantiated localized experiential subject. A felt blankness, silence or darkness would itself be a scene. Awareness as the knowing aspect of ${\mathsf{U}}$ is not said to disappear; physical regulation may continue without a subject secretly observing it.
+ Here a genuinely scene-less interval means no current lived experience and no currently instantiated localized experiential subject. A felt blankness, silence or darkness would itself be a scene. The fundamental quality attributed to the ground is not said to disappear; physical regulation may continue without a subject secretly observing it.
 
 A localized experiential subject exists only while the relevant qualifying organization supports a lived scene. Physical process provenance can cross an experience-free interval, but A3 relates qualifying experiential occurrences: a genuine qualification gap ends the episode, and renewed qualification begins a new episode. Biological and person-level continuity can therefore persist without numerical continuity of the experiential subject across the gap. Neither loss of responsiveness nor failed recall establishes such a gap; an altered or disconnected scene remains experience.
 
@@ -368,7 +494,7 @@ A localized experiential subject exists only while the relevant qualifying organ
 
 <a id="section-2-6"></a>
 
-## 2.6 Minimal presence and higher-order reflection
+## 2.8 Minimal presence and higher-order reflection
 
 <a id="section:distinctions:minimal-presence-and-higher-order-reflection"></a> The motivating philosophical position allows experience without a sophisticated self-description. This is why language, explicit philosophical insight, and adult autobiographical competence are not included as necessary clauses of the admission law. It is also why recursive self-description is not treated as the source of awareness. A system's capacity to describe its own description may enrich the organization of its perspective, but the inference from an extra representational level to experiential presence requires its own premise.
 
@@ -386,7 +512,7 @@ Under SPC-2, an episode is assigned by a constitutive condition on recurrent cau
 
 ## 3.1 Reading *I Am That* as a philosophical source
 
-<a id="section:book:reading-i-am-that-as-a-philosophical-source"></a> *I Am That* is a translated and edited collection of dialogues. The edition consulted contains 101 talks, Maurice Frydman's translator's note dated October 1973, and Sudhakar S. Dikshit's editorial note dated July 1981. Dialogue numbers provide stable locators across editions and are used for the discussions below <a id="citation-2"></a>[[51](/consciousness/monograph/bibliography#bib-Nisargadatta)].
+<a id="section:book:reading-i-am-that-as-a-philosophical-source"></a> *I Am That* is a translated and edited collection of dialogues. The edition consulted contains 101 talks, Maurice Frydman's translator's note dated October 1973, and Sudhakar S. Dikshit's editorial note dated July 1981. Dialogue numbers provide stable locators across editions and are used for the discussions below <a id="citation-revised-13"></a>[[72](/consciousness/monograph/bibliography#bib-Nisargadatta)].
 
 The dialogues offer a disciplined conceptual challenge to identification with body, thought, and personal history. They are not a controlled study of many independently sampled contemplatives. The questioners' objections are part of the source. They ask about memory, the reality of the world, suggestion, continuity, and the coherence of the teacher's terminology. A scientific engagement should preserve these objections rather than extract only passages that resemble a preferred theory.
 
@@ -404,7 +530,7 @@ The useful correspondence is therefore architectural. A vessel can condition a m
 
 The distinction suggests comparing what changes in identification with what persists in the vessel. A narrative self-model may remain available for practical action while its role as an exhaustive self-description changes. When that change alters the core's endogenous distinctions or their continuation laws, the proposed phenomenal structure changes. When only an external report or interpretation channel changes, a different statement about the episode need not imply a different episode. Admission, content, report, and continuity therefore remain separate questions.
 
-In the philosophical interpretation adopted here, awakening is not the creation of a new entity and not the person becoming ${\mathsf{U}}$. It is a thinning of identification between awareness and the self-model. The lived scene, thought, memory and bodily activity may continue. What changes is the conviction that this body and autobiographical story exhaust the fundamental knower. This does not posit a permanent personal Self or establish a common doctrine across contemplative traditions. *I Am That* is an important philosophical and phenomenological interlocutor, not scientific confirmation of that interpretation.
+In the philosophical interpretation adopted here, awakening is not the creation of a new entity and not the person becoming ${\mathsf{U}}$. It is a thinning of identification between awareness and the self-model. The lived scene, thought, memory and bodily activity may continue. What changes is the conviction that this body and autobiographical story exhaust the reality of the perspective. This makes neither the ground a knowing subject nor the person a permanent Self, and establishes no common doctrine across contemplative traditions. *I Am That* is an important philosophical and phenomenological interlocutor, not scientific confirmation of that interpretation.
 
 Meditation is thus not modeled as automatic deletion of $\Sigma_V$. The more precise hypothesis is that practice changes selected patterns of attention, interpretation, and identification. The mathematical theory can ask which target functions vary and which remain stable under such interventions. It cannot infer from the word “quiet” that dissipation is zero, that a physical spectrum has a particular gap, or that an optimal fixed point has been reached.
 
@@ -420,7 +546,7 @@ There is no contradiction in a person using a sophisticated conceptual model to 
 
 The present theory uses these distinctions as constraints on careless explanation. An aperture is not an additional substance through which a beam of mental energy has been measured. A subject is not an immutable inner agent required to inspect every representation. An observer–observed relation can be an organization within one source model. These interpretations are compatible with a nondual philosophical orientation, but they do not mathematically establish universal numerical identity of all experiencers.
 
-Several stronger claims in the dialogues lie outside the demonstrated content of this book: personal survival or direct knowledge beyond bodily death, timeless being, and assertions about the world's dependence on consciousness. A0 proposes awareness as an aspect of ${\mathsf{U}}$; it does not establish any person's survival or access to a state beyond a vessel. Interpreting “world” as “experienced world” sometimes makes a useful reconciliation with observer-independent physics. It is nevertheless an interpretive choice, not literal agreement with every passage. The physical measurement models below neither need nor prove survival, rebirth, or the cessation of an external source when it is not perceived.
+Several stronger claims in the dialogues lie outside the demonstrated content of this book: personal survival or direct knowledge beyond bodily death, timeless being, and assertions about the world's dependence on consciousness. A0 attributes the quality provisionally called awareness to the unconditioned ground; it does not establish any person's survival or access to a state beyond a vessel. Interpreting “world” as “experienced world” sometimes makes a useful reconciliation with observer-independent physics. It is nevertheless an interpretive choice, not literal agreement with every passage. The physical measurement models below neither need nor prove survival, rebirth, or the cessation of an external source when it is not perceived.
 
 The mathematical statement that a noninjective readout loses some information is also weaker than the metaphysical claim that ultimate reality cannot be objectified at all. A particular source property may descend perfectly through a readout. The limitation must be stated relative to the complete family of admitted representations. This preserves the philosophical intuition of restricted perspective without making an invalid universal inference from one many-to-one map.
 
@@ -430,9 +556,9 @@ The mathematical statement that a noninjective readout loses some information is
 
 ## 3.4 First-person investigation and public evidence
 
-<a id="section:book:first-person-investigation-and-public-evidence"></a> Varela's neurophenomenology proposed reciprocal constraints between disciplined accounts of experience and cognitive science <a id="citation-3"></a>[[53](/consciousness/monograph/bibliography#bib-Varela1996)]. First-person descriptions are relevant because the target concerns experience. Their scientific use requires a procedure that separates reported content, interpretation, and physical conditions. Lutz and colleagues provide an example of combining trained first-person classifications with neural measurements in a visual task <a id="citation-4"></a>[[27](/consciousness/monograph/bibliography#bib-Lutz2002)]. This supports methodological integration, not the inference that any specific contemplative metaphysics has been experimentally confirmed.
+<a id="section:book:first-person-investigation-and-public-evidence"></a> Varela's neurophenomenology proposed reciprocal constraints between disciplined accounts of experience and cognitive science <a id="citation-revised-14"></a>[[74](/consciousness/monograph/bibliography#bib-Varela1996)]. First-person descriptions are relevant because the target concerns experience. Their scientific use requires a procedure that separates reported content, interpretation, and physical conditions. Lutz and colleagues provide an example of combining trained first-person classifications with neural measurements in a visual task <a id="citation-revised-15"></a>[[28](/consciousness/monograph/bibliography#bib-Lutz2002)]. This supports methodological integration, not the inference that any specific contemplative metaphysics has been experimentally confirmed.
 
-Gamma and Metzinger's questionnaire work investigates reports described as pure awareness using multiple phenomenological dimensions <a id="citation-5"></a>[[18](/consciousness/monograph/bibliography#bib-Gamma2021)]. Such a study makes it possible to compare patterns of reported selfhood, content, spatiality, and cognition. It does not isolate an unconditioned ontological substance. The possibility of mixed or intermediate profiles is methodologically important: a theory should not force every report into a binary choice between ordinary ego and completely contentless awareness.
+Gamma and Metzinger's questionnaire work investigates reports described as pure awareness using multiple phenomenological dimensions <a id="citation-revised-16"></a>[[19](/consciousness/monograph/bibliography#bib-Gamma2021)]. Such a study makes it possible to compare patterns of reported selfhood, content, spatiality, and cognition. It does not isolate an unconditioned ontological substance. The possibility of mixed or intermediate profiles is methodologically important: a theory should not force every report into a binary choice between ordinary ego and completely contentless awareness.
 
 The present programme therefore uses a joint evidence model rather than an orthogonal sum of supposedly independent evidence types. Let $n$ be a physical measurement, $r$ a report, and $i$ a protocol. The object of comparison is $P(n,r\mid i)$ together with the assumptions connecting reports to the claimed experience. Shared instructions, expectations, and memory constraints can correlate the evidence. A model must not count the same causal information twice merely because one variable is called first-person and another third-person.
 
@@ -452,7 +578,7 @@ This approach places philosophy and science in contact without confusing their s
 
 The example is included as one retrospective report, not a controlled experiment and not a recommendation for inducing altered states. Its philosophical importance lies in the reported dissociation between experiential presentation and ordinary personal organization. Its epistemic limits are equally important. Kaleidoscopic presentation is still content. Later recall cannot establish that all encoding mechanisms had ceased. The report does not prove that the subject became an external object, accessed a universal field, or occupied a state numerically identical with every other instance of awareness.
 
-Controlled salvinorin-A work has examined dissociation, unusual experiences, and memory effects <a id="citation-6"></a>[[28](/consciousness/monograph/bibliography#bib-MacLean2013)]. The relevance here is the need to distinguish occurrence, contemporaneous interpretation, and later recollection. Neither dismissing the report as “only a hallucination” nor treating its felt certainty as metaphysical verification adequately captures that distinction.
+Controlled salvinorin-A work has examined dissociation, unusual experiences, and memory effects <a id="citation-revised-17"></a>[[29](/consciousness/monograph/bibliography#bib-MacLean2013)]. The relevance here is the need to distinguish occurrence, contemporaneous interpretation, and later recollection. Neither dismissing the report as “only a hallucination” nor treating its felt certainty as metaphysical verification adequately captures that distinction.
 
 
 
@@ -474,7 +600,7 @@ This separation is essential to the intended philosophical synthesis. The claim 
 
 <a id="sec:altered-weighting"></a> Sensory isolation and flotation suggest a simple interpretive contrast: when external constraint is reduced, continuing generative activity can carry more of the scene's content. This is a possible description of such experience, not a claim that reduced input inevitably causes hallucination or that flotation reveals an otherwise inaccessible reality. A scene remains conditioned by the vessel even when familiar environmental anchors are weak.
 
-Classic psychedelic and dissociative states should not be treated as a single mechanism. One influential predictive-processing account of classic serotonergic psychedelics proposes altered constraint by high-level expectations <a id="citation-7"></a>[[9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)]; that proposal is a model, not a demonstrated explanation of every altered state. The salvinorin-A findings cited above concern a different pharmacological case. Across these examples, the interpretive question is how ordinary self/world binding, attention and mnemonic scaffolding can be reorganized while some experience remains.
+Classic psychedelic and dissociative states should not be treated as a single mechanism. One influential predictive-processing account of classic serotonergic psychedelics proposes altered constraint by high-level expectations <a id="citation-revised-18"></a>[[9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)]; that proposal is a model, not a demonstrated explanation of every altered state. The salvinorin-A findings cited above concern a different pharmacological case. Across these examples, the interpretive question is how ordinary self/world binding, attention and mnemonic scaffolding can be reorganized while some experience remains.
 
 A weakened identification with the self-model need not remove content or reflective capacity in the same way in every episode. Dissociation can involve changes in ownership, bodily location, agency, familiarity or autobiographical access; these should be described separately rather than collapsed into “ego loss.” Neither unusual vividness nor a feeling of revelation establishes that a scene gives direct access to ${\mathsf{U}}$. An internally generated presentation is real as an occurrence without being externally veridical.
 
@@ -500,7 +626,7 @@ The resulting discipline preserves the human insight without making the monograp
 
 ## 5.1 Nominated sources and restricted descriptions
 
-<a id="section:source:nominated-sources-and-restricted-descriptions"></a> A mathematical source domain is a specified class of states or histories relevant to a question. It is the working structure-side cut, complete relative to that problem, not ${\mathsf{U}}$. The schematic record-side codomain $T$ of the philosophical discussion is denoted $X$ in the following theorems. These results concern operational descriptions and make no set-theoretic claim about the unsplit prior. Let $S$ be such a domain after declared descriptive redundancies have been removed. A readout is a surjection $p:S\to X$. A target $a:S\to A$ is a property or relation that the investigation asks the readout to retain. This formulation precedes a probability measure, a Hamiltonian, or a phenomenal assignment <a id="citation-8"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersSource), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
+<a id="section:source:nominated-sources-and-restricted-descriptions"></a> A mathematical source domain is a specified class of states or histories relevant to a question. It is the working structure-side cut, complete relative to that problem, not ${\mathsf{U}}$. The schematic record-side codomain $T$ of the philosophical discussion is denoted $X$ in the following theorems. These results concern operational descriptions and make no set-theoretic claim about the unsplit prior. Let $S$ be such a domain after declared descriptive redundancies have been removed. A readout is a surjection $p:S\to X$. A target $a:S\to A$ is a property or relation that the investigation asks the readout to retain. This formulation precedes a probability measure, a Hamiltonian, or a phenomenal assignment <a id="citation-revised-19"></a>[[57](/consciousness/monograph/bibliography#bib-RodgersSource), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
 
 
 
@@ -580,9 +706,32 @@ Target-relative sufficiency permits exact knowledge of some source distinctions 
 
 
 
+<a id="section-5-4-revised"></a>
+
+## 5.4 From a retained distinction to its actual use
+
+<a id="sec:source-to-use-update"></a> The later temporal construction follows one nominated relation through physical delivery, retention, source binding and finite-time use <a id="citation-revised-20"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersBlock2026)]. In its diagonal joint-record family, independent uniform source bits $a,b$ have directed target $D=b-a$. If predecessor and live records have survival parameters $p,q$ and joint retention $j$, the exact optimal average success is $(1+j)/2$. The independent prescribed source has $j=pq$; local survival probabilities alone do not determine the joint resource. With an active memory survival $r$ and delivery probabilities $q_A,q_B$, accuracy $1-\epsilon$ therefore requires $q_A r q_B\ge1-2\epsilon$ in that program. A relation can exist in the source while failing to reach the occasion at which the organization needs it.
+
+Availability and enactment remain distinct even after successful delivery. Closing the use gate leaves the archive intact without executing the update. Exchanging predecessor and live bindings preserves the bits while reversing the relation actually computed. Later retrieval is another operation; later deletion changes later access rather than undoing an earlier use. For an already qualifying subject under a complete-enactment constitution, actual integration into its ongoing recognition, relating, appraisal or response supplies the experiential application. The detached task device does not establish that application merely by producing the correct answer.
+
+Coherent joint resources require a different calculation. For the precisely declared coherent family extending the block paper's Section 6.3 example, the integration report proves 
+
+$$
+
+S_3(p,r)=\frac12+\frac{pr^2}{2(1+2r)},\qquad
+0\le p\le\frac12,\quad0\le r\le1,
+
+$$
+
+ with known phase and no readable correlated side resource beyond the declared two-qubit code <a id="citation-revised-21"></a>[[13](/consciousness/monograph/bibliography#bib-RodgersIntegration2026)]. Here $r$ denotes excitation coherence, separately from the preceding memory survival. The endpoint $p=1/2,r=1$ has sharp success $7/12$. The earlier $9/16$ was a correct attainable score, not an optimum claim. The report supplies a matching measurement and upper certificate, a strict two-versus-three excitation-outcome comparison, and robust finite-deadline realization. This coherent preparation changes the joint encoding; it is not a free improvement to the independent diagonal source. At zero effective coherence, the zero-weight measurement effect requires no normalized absorber template; its absorber is omitted. Its significance is quantitative: a completion must retain the right kind of usable relation, not merely matching local populations. The native organization and constitutive application remain those required by the consciousness account.
+
+The block integration also locates the source claim carefully. With $F:S\to H$ a realization of complete physical histories and $q:H\to Z$ a local access map, failure of a target to descend through $q$ does not establish loss through $F$: $F=\mathrm{id}_H$ is already a countermodel. A complete passive local history can likewise omit the environment distinction needed to predict a controlled response. Source-relative insufficiency must therefore name its map and intervention class. The block paper's reciprocal-pair theorem concerns a fixed co-reality relation under its specified transitivity and spacetime invariances; a process lasting through time does not by itself supply a reciprocal-actuality witness. These distinctions preserve the explanatory integration of temporal experience while keeping its ontological premises explicit <a id="citation-revised-22"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersBlock2026)].
+
+
+
 <a id="section-5-4"></a>
 
-## 5.4 The Everything Equation and constitutive selection
+## 5.5 The Everything Equation and constitutive selection
 
 <a id="section:source:the-everything-equation-and-constitutive-selection"></a> The broader Shadow programme expresses lawhood by a fixed-point relation, conventionally written $L=\Omega\Delta\partial[L]$. Here the operator version is <a id="eq:everything"></a>
 
@@ -667,7 +816,7 @@ $$
 
 Equation (6.3).
 
- The construction is established in the Bell-process literature <a id="citation-9"></a>[[3](/consciousness/monograph/bibliography#bib-Bell1986), [15](/consciousness/monograph/bibliography#bib-Durr2005)]. Its selection from a physical constitution is a further problem. For example, directed expected traffic of the form 
+ The construction is established in the Bell-process literature <a id="citation-revised-23"></a>[[3](/consciousness/monograph/bibliography#bib-Bell1986), [16](/consciousness/monograph/bibliography#bib-Durr2005)]. Its selection from a physical constitution is a further problem. For example, directed expected traffic of the form 
 
 $$
 
@@ -718,7 +867,7 @@ The theorem is about informational sufficiency. It says nothing about whether $\
 
 ## 6.3 The independence of physical events from conscious observation
 
-<a id="section:quantum:the-independence-of-physical-events-from-conscious-observation"></a> The mature measurement programme contains two different constitutive completions <a id="citation-10"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersMeasurement), [35](/consciousness/monograph/bibliography#bib-RodgersMassive), [34](/consciousness/monograph/bibliography#bib-RodgersPilot)]. One uses actual continuous configurations guided by the complete wave and an initial equilibrium law. The other uses a deterministic pilot medium with an initial spatial ensemble and a controlled complete-path limit to Bell dynamics. Neither includes conscious awareness as the trigger of an event.
+<a id="section:quantum:the-independence-of-physical-events-from-conscious-observation"></a> The mature measurement programme contains two different constitutive completions <a id="citation-revised-24"></a>[[53](/consciousness/monograph/bibliography#bib-RodgersMeasurement), [48](/consciousness/monograph/bibliography#bib-RodgersMassive), [43](/consciousness/monograph/bibliography#bib-RodgersPilot)]. One uses actual continuous configurations guided by the complete wave and an initial equilibrium law. The other uses a deterministic pilot medium with an initial spatial ensemble and a controlled complete-path limit to Bell dynamics. Neither includes conscious awareness as the trigger of an event.
 
 This is a conditional physical result. It establishes that the specified models define events and records without an awareness variable. It does not prove that these models are the unique laws of nature, nor that consciousness has no relation to the processes they describe. The relevance is conceptual and technical: a psychophysical aspect can be added to the realized history without being invoked to complete an otherwise undefined measurement.
 
@@ -764,6 +913,16 @@ Replace kernels one at a time. The common remaining suffix contracts the chosen 
 
 The positivity of conditioning probabilities is not optional. A formal cap by one cannot define conditioning on a null event. Likewise, closeness of final output probabilities does not by itself imply closeness of the actual historical record. These distinctions are crucial when physical reports are later used as evidence concerning experience.
 
+A further restricted result makes the cost of physical record access quantitative <a id="citation-revised-25"></a>[[68](/consciousness/monograph/bibliography#bib-ShadowEventLawRound003), Section 8]. Take a fixed finite, preparation-independent controlled coherent writer with one common pure ready apparatus state. Let its two normalized archive states be $a_0,a_1$, including every future-active coherent memory, purifying degree and stored control key. In the source chemistry specified by that report, the joint kinetic limit derives the reader's terminal-record probabilities. The archive is subsequently read by an admitted coherent reader with independently ready resources and no source access. A separate diagnostic writes known equal-amplitude source superpositions and then applies a bare noncommuting native quarter-pulse, with no compensating archive control. If $D_N$ is the actual archive-only record distinguishability and $\Delta_N$ the written-versus-clean native-path distance for the calibrated diagnostic phase, the finite-source estimate is 
+
+$$
+
+[D_N-\epsilon_A]_+^2\le4(\Delta_N+\epsilon_P),
+
+$$
+
+ where $\epsilon_A$ sums the two archive-programme kinetic errors and $\epsilon_P$ sums the written and clean diagnostic errors. This bounds information obtainable from the complete archive by native-path discrepancy in the declared calibrated experiment; it does not claim that every individual input is disturbed. A display reset leaves the comparison unchanged when its retained copy or key remains. The theorem neither consumes the archive nor identifies law reconstruction with recovery of its original event. Its coherent writer, archive-only access and bare-probe contracts are essential: the same source constructs classical reporters outside that class, so this result does not establish universal apparatus admission or a phenomenal law.
+
 ---
 
 # Chapter 7: A massive configuration and record constitution
@@ -800,7 +959,7 @@ j_j=\frac{\hbar}{m_j}\operatorname{Im}(\Psi^\dagger\partial_{q_j}\Psi),
 
 $$
 
- The complete initial configuration has density $\rho(\cdot,0)$. These are constitutive premises. They belong to the configuration-guided tradition <a id="citation-11"></a>[[7](/consciousness/monograph/bibliography#bib-Bohm1952), [16](/consciousness/monograph/bibliography#bib-Durr1992)]; they are not inferred from source incompleteness.
+ The complete initial configuration has density $\rho(\cdot,0)$. These are constitutive premises. They belong to the configuration-guided tradition <a id="citation-revised-26"></a>[[7](/consciousness/monograph/bibliography#bib-Bohm1952), [17](/consciousness/monograph/bibliography#bib-Durr1992)]; they are not inferred from source incompleteness.
 
 The Schrödinger equation gives $\partial_t\rho+\nabla\cdot j=0$. Transport by the guidance velocity obeys the same continuity equation, hence preserves the initial equilibrium density under the stated flow hypotheses. This is equivariance. It supplies ordinary position distributions at all times while the actual history remains the guided path. The mathematical existence assumptions are kept explicit rather than being hidden behind the formal quotient $j/\rho$ at nodes.
 
@@ -1004,7 +1163,7 @@ $$
 
 $$
 
- with the old correlations retained. The active register is restored, but usable global capacity has not been created. A later interaction with $R$ must use its actual correlated state. If reset is realized by a moving trap, the potential, transport, and receiver remain part of the programme <a id="citation-12"></a>[[35](/consciousness/monograph/bibliography#bib-RodgersMassive)].
+ with the old correlations retained. The active register is restored, but usable global capacity has not been created. A later interaction with $R$ must use its actual correlated state. If reset is realized by a moving trap, the potential, transport, and receiver remain part of the programme <a id="citation-revised-27"></a>[[48](/consciousness/monograph/bibliography#bib-RodgersMassive)].
 
 Spatial feedback is equally concrete. A bounded function $g(y)$ can control an ordinary internal operator $B$ through $g(Y)B$. Let $G_{\rm id}$ be the intended branch-constant control on the retained key space, commuting with $B$, and let $\Psi_{\rm id}(s)$ be the ideal programme wave. Suppose 
 
@@ -1118,7 +1277,7 @@ $$
 
 ## 8.1 The declared microscopic inventory
 
-<a id="section:pilot:the-declared-microscopic-inventory"></a> The pilot completion uses a different ontology <a id="citation-13"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)]. Its complete finite ordinary configuration graph includes source, apparatus, fuel, loss products, displays, archives, receivers, clock, and any actual basis coordinate of a reference. One predesignated carrier is the actual ordinary configuration. Other carrier positions and packet banks are pilot degrees of freedom, not independent copies of the unknown quantum input.
+<a id="section:pilot:the-declared-microscopic-inventory"></a> The pilot completion uses a different ontology <a id="citation-revised-28"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)]. Its complete finite ordinary configuration graph includes source, apparatus, fuel, loss products, displays, archives, receivers, clock, and any actual basis coordinate of a reference. One predesignated carrier is the actual ordinary configuration. Other carrier positions and packet banks are pilot degrees of freedom, not independent copies of the unknown quantum input.
 
 Four constitutive commitments are essential. The canonical field has a numerical Hermitian energy with primitive bond couplings. A declared exporter and complete binary reaction catalogue govern the pilot medium. Additional direct ordinary forces depending on readable pilot coordinates are absent from that catalogue. Finally, deterministic gas flight and contact are supplied with an initially independent spatial ensemble and a carrier preparation law. These are physical assumptions; in particular, the access restriction is not a rule allowing a coupling and then refusing to examine its consequences.
 
@@ -1235,7 +1394,7 @@ $$
 
 Equation (8.4).
 
- For a fixed finite graph and horizon, bounded-variation currents and $\mu_N\to\infty$, $\mu_N/N\to0$ give integrated directional-flux and census convergence. The proof uses a positive population cutoff for a companion queue, scalar monotonicity, a martingale estimate, and a separate low-population charge bound. A full proof of the implication used here is given in Appendix [A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#app:kinetic); it is important because replacing low weights by a fixed positive lower bound would omit nodes and dark intervals.
+ For a fixed finite graph and horizon, bounded-variation currents, a calibrated initial census, and $\mu_N\to\infty$, $\mu_N/N\to0$ give integrated directional-flux and census convergence. The proof uses a positive population cutoff for a companion queue, scalar monotonicity, a martingale estimate, and a separate low-population charge bound. A full proof of the implication used here is given in Appendix [A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#app:kinetic); it is important because replacing low weights by a fixed positive lower bound would omit nodes and dark intervals.
 
 Let 
 
@@ -1271,7 +1430,7 @@ $$
 
 $$
 
- and appropriately faster gas and recombination scales <a id="citation-14"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot)]. This is not a rate uniform over growing circuits, increasing reference dimensions represented as new graph coordinates, or unlimited storage times.
+ and appropriately faster gas and recombination scales <a id="citation-revised-29"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot)]. This is not a rate uniform over growing circuits, increasing reference dimensions represented as new graph coordinates, or unlimited storage times.
 
 
 
@@ -1291,7 +1450,7 @@ $$
 
 Equation (8.6).
 
- This familiar circuit-to-Hamiltonian architecture is related to reversible computation and engineered transfer chains <a id="citation-15"></a>[[17](/consciousness/monograph/bibliography#bib-Feynman1986), [11](/consciousness/monograph/bibliography#bib-Christandl2004)]. The particular propagation identity needed here follows directly.
+ This familiar circuit-to-Hamiltonian architecture is related to reversible computation and engineered transfer chains <a id="citation-revised-30"></a>[[18](/consciousness/monograph/bibliography#bib-Feynman1986), [11](/consciousness/monograph/bibliography#bib-Christandl2004)]. The particular propagation identity needed here follows directly.
 
 
 
@@ -1367,7 +1526,7 @@ This conclusion is sufficient for the consciousness monograph's purpose. A psych
 
 <a id="section:resources:finite-records-are-physical-resources"></a> A record is not merely a scalar assigned to a state. It requires a physical carrier, distinguishable alternatives, a writing interaction, a retention interval, and an allowed way of reading or reusing it. Exact copying of a known orthogonal alphabet can be unitary: ${\lvert a\rangle}{\lvert 0\rangle}\mapsto{\lvert a\rangle}{\lvert a\rangle}$. This is not a universal cloner of unknown states. Superpositions evolve to correlated states rather than two independent copies.
 
-A reversible implementation of a many-to-one logical step must retain enough information to distinguish its inputs. Bennett's reversible computation and Landauer's analysis of logical irreversibility provide the standard background <a id="citation-16"></a>[[4](/consciousness/monograph/bibliography#bib-Bennett1973), [23](/consciousness/monograph/bibliography#bib-Landauer1961)]. Here the finite consequence can be stated directly. If $n$ independent binary historical alternatives must remain perfectly distinguishable in a retained carrier of dimension $D$, then $2^n\le D$. The bound follows from orthogonality of perfectly distinguishable records. It is not a theorem that a finite system cannot recur, preserve a fixed record, or reuse a reversible working register.
+A reversible implementation of a many-to-one logical step must retain enough information to distinguish its inputs. Bennett's reversible computation and Landauer's analysis of logical irreversibility provide the standard background <a id="citation-revised-31"></a>[[4](/consciousness/monograph/bibliography#bib-Bennett1973), [24](/consciousness/monograph/bibliography#bib-Landauer1961)]. Here the finite consequence can be stated directly. If $n$ independent binary historical alternatives must remain perfectly distinguishable in a retained carrier of dimension $D$, then $2^n\le D$. The bound follows from orthogonality of perfectly distinguishable records. It is not a theorem that a finite system cannot recur, preserve a fixed record, or reuse a reversible working register.
 
 A finite ready bank with $N$ cells can support at most $N$ operations that each consume a distinct ready cell and never restore global readiness. SWAP reset restores a local register by spending a receiver. The availability of another environment does not restore the bank unless an admitted coupling actually transfers a compatible resource. “Open” is a physical interaction condition, not an accounting word that creates capacity.
 
@@ -1429,11 +1588,57 @@ The distinction is philosophically significant. Treating awareness as primitive 
 
 ## 9.4 Agency and stable decisions
 
-<a id="section:resources:agency-and-stable-decisions"></a> The agency manuscripts define a functional target: usable world modeling, counterfactual evaluation, and reliable action selection <a id="citation-17"></a>[[31](/consciousness/monograph/bibliography#bib-RodgersAgency)]. This target is independent of a phenomenal predicate. A controller can implement a specified comparison procedure without that procedure constituting evidence of experiential presence.
+<a id="section:resources:agency-and-stable-decisions"></a> The earlier agency manuscript studies a demanding functional target: usable world modeling, counterfactual evaluation, and reliable action selection <a id="citation-revised-32"></a>[[35](/consciousness/monograph/bibliography#bib-RodgersAgency)]. The later account distinguishes this target from a more general baseline: selecting consequence-distinct executable transformations through retained evaluative organization <a id="citation-revised-33"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Section 2]. A restricted controller can do this without a source-complete world model, while broad competence across sufficiently rich tasks can require recoverable predictive structure. These operational predicates are distinct from experiential admission. A controller can implement a specified comparison procedure without its success score supplying the psychophysical law that assigns experience.
 
 A quantum no-go must specify its input encoding and allowed resources. Unitary linearity rules out a generic nonlinear winner-selection rule on arbitrary unknown amplitude-encoded inputs. It does not rule out reversible evaluation of a classical decision function on orthogonally encoded data. A reversible circuit can retain the input and computational garbage while writing a definite decision label for each basis input. Superposed inputs then yield the corresponding correlated superposition. The physical interpretation of an actual outcome belongs to the event constitution, not to a general slogan that quantum systems cannot decide.
 
 Similarly, choosing a diagonal conditional expectation builds a record algebra into the construction. Showing that its image is diagonal does not derive the basis. A constant contraction $T(\rho)=I/2$ has one fixed density operator but does not select one of its two classical outcome labels. Banach uniqueness is uniqueness of a mathematical fixed state, not actualization of one sample. These distinctions allow useful fixed-point stability results without inheriting an invalid universal derivation of decisions or Born weights.
+
+
+
+<a id="section-9-4-1"></a>
+
+### 9.4.1 Information limits do not erase control
+
+ The later reversible-control programme makes the difference between representing a source and controlling a target exact <a id="citation-revised-34"></a>[[38](/consciousness/monograph/bibliography#bib-RodgersReversibleControl), Sections 2–5]. A ready receiver can absorb an unknown plant state under a reversible SWAP while the plant reaches a prescribed target. No lossless source model is required for that task. Conversely, complete observation cannot help when the actuator admits only the identity. What matters is the joint contract of accessible records, compatible actions, executable transformations, residual storage and deadlines. Neither ignorance nor a storage count alone decides a controller's agency.
+
+For a finite observation channel $Q(h\mid\theta)$ and nonnegative regret table $\ell_{\theta a}$ whose rows each have a zero, a record-measurable policy can achieve zero regret for every admitted source condition precisely when 
+
+$$
+
+ \bigcap_{\theta:Q(h\mid\theta)>0}
+       \operatorname*{arg\,min}_{a}\ell_{\theta a}\ne\varnothing
+ \quad\text{for every possible record }h.
+
+$$
+
+ A common minimizing action at each record suffices. Necessity follows because every positive term in a zero expected nonnegative regret must vanish, so each action used at that record must minimize every compatible row. This action-compatibility condition is weaker than lossless source reconstruction. The companion paper supplies the quantitative minimax and receiver-capacity results, including operation-class and online-deadline restrictions. Its compact-interface algorithms serve those control problems; they are not conditions of phenomenal presence.
+
+
+
+<a id="section-9-4-2"></a>
+
+### 9.4.2 Reflective freedom as bounded evaluative self-governance
+
+ A physically caused assessment can still be the agent's own evaluation. The reflective-freedom construction makes this claim concrete through retained commitments, a writable conditional charter, an assessor, an installation path, and fresh cases on which the installed charter acts <a id="citation-revised-35"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Sections 2–4]. The assessor can retain an endorsed current rule or install an endorsed alternative. Its fixed interpreter and metarule do not prevent revision of the represented rule. The construction therefore exhibits a real capacity for local assessment and self-revision without requiring an additional chooser outside the physical process.
+
+Three obligations remain distinct: the assessment must agree with the declared endorsement relation, the actual commitment-read route must mediate it, and the installed result must govern the relevant later disposition, with changed rules distinguishable on fresh cases. A systematically inverted evaluator can exhibit exactly the same intact-versus-cut causal contrast as a faithful evaluator. Causal sensitivity therefore does not by itself establish warranted evaluation. Likewise, agreement with a commitment in one case does not demonstrate that the commitment governed the result. Read masking, installation clamping and fresh-case probes discriminate these possibilities.
+
+Freedom on this account is a context- and resource-dependent profile of evaluative mediation, accessible consequence-distinct options and available rule revision. Physically imaginable commands need not be callable options for the installed dispatcher before its deadline. A larger output alphabet need not enlarge reflective capacity. An assessed precommitment can exercise agency now while reducing later options. Preservation of future auditability is one explicit objective, not a necessary condition of every agentic act. The companion paper proves finite preservation criteria and exact noisy-inquiry bounds under charged information-access contracts.
+
+The connection to SPC-2 is constructive and separately conditional <a id="citation-revised-36"></a>[[37](/consciousness/monograph/bibliography#bib-RodgersReflectiveFreedom), Section 7]. A protected-source identity tour after each ordinary write supplies a covering native return while preserving the ordinary computation and its actual interventions. With $m$ nominated bit carriers and $N$ source-disjoint ordinary single-target gates with funded following tours, the declared compiler uses $2(m-1)+N(2m-1)$ elementary windows. An eighteen-cell charter witness revises a represented rule; a separate twenty-three-cell inquiry witness allocates paid internal and external observations. The latter's native records do not grant its executive an uncharged read port. The same return wrapper also qualifies a constant-output circuit under the stated native contract, so return organization alone does not imply evaluation. These constructions establish coexistence of independently checked evaluative capacities and the native organization used by A1–A2 at specified ordinary boundaries. They do not establish uninterrupted A3 identity through every intervening native or analog instant.
+
+
+
+<a id="section-9-4-3"></a>
+
+### 9.4.3 Constituted participation and warranted self-revision
+
+ The later account of constituted agency strengthens the positive interpretation of control: a person's understanding can change conduct without the person having first authored every condition enabling that understanding <a id="citation-revised-37"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 2, 9–11]. If the relevant organized activity is the person's deliberation, explaining its realization does not relocate the activity to another controller. Present authorship of a judgment, ultimate authorship of its entire enabling basis, and moral responsibility are separate questions. Common constitution alone does not prove deterministic evolution or exclude a dependent initiating power. The stronger exclusions require their own causal, modal or well-founded authorization premises. A complete history can contain action occurring through deliberation rather than regardless of it.
+
+The constructive development distinguishes information retained about a recommendation-producing mechanism from the authority that mechanism presently receives. An acquired model can accurately predict fresh recommendations while an unavailable read or installation route prevents its use. A compensating monitor can improve output while leaving the former authority relation intact. Conversely, a direct neutral write can match improved output without acquiring the model. Recognition is warranted through the conjunction of a credible account of the actual mechanism, an independently supported evaluative criterion, and an executable route carrying the assessment into fresh action. The criterion can favor retention as well as revision. Useful bodily calibration, practical memory, protective constraints and relationships need not be erased when a particular self-description loses unwarranted priority.
+
+The companion construction implements these distinctions with acquired probe records, a retained mechanism estimate, an active authority selector, a separate compensation route and an archive of the previous selector. Its exact value comparisons concern paid selective revision within a declared audit grammar; its local circuit realizes one audit and one fresh case under explicit preparation, ingress, clock, holding and error contracts <a id="citation-revised-38"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 11–15]. These results explain how understanding can become consequential. They do not identify improved output with phenomenal insight or supply a new admission law. Where an independently certified core's actual intrinsic states are distinguished by one common admitted native experiment, A2 assigns different pointed relational organization; A3 separately governs whether the qualifying process continues as one episode.
 
 
 
@@ -1457,7 +1662,7 @@ This separation also protects the contemplative discussion from a false dichotom
 
 ## 10.1 Representing a specified target
 
-<a id="section:src:representing-a-specified-target"></a> Self-Referential Record Closure (SRC) concerns the representation of nominated self-related quantities in a declared observable carrier <a id="citation-18"></a>[[36](/consciousness/monograph/bibliography#bib-RodgersSRC)]. It is valuable precisely when the target, state family, algebra, and actual record dynamics are kept separate. Let $W$ be a finite-dimensional real vector space of Hermitian operators on ${\mathcal H}$, let $\rho_1,\ldots,\rho_m$ be admissible preparations, and define 
+<a id="section:src:representing-a-specified-target"></a> Self-Referential Record Closure (SRC) concerns the representation of nominated self-related quantities in a declared observable carrier <a id="citation-revised-39"></a>[[52](/consciousness/monograph/bibliography#bib-RodgersSRC)]. It is valuable precisely when the target, state family, algebra, and actual record dynamics are kept separate. Let $W$ be a finite-dimensional real vector space of Hermitian operators on ${\mathcal H}$, let $\rho_1,\ldots,\rho_m$ be admissible preparations, and define 
 
 $$
 
@@ -1532,7 +1737,7 @@ Choose a Hilbert–Schmidt orthonormal basis $G_1,\ldots,G_d$ of $W$. The evalua
 
 **Theorem 10.2 (Robust witness identification).**
 
-<a id="thm:robust-witness"></a> Assume $A$ has smallest singular value $\sigma>0$, $y=Aa$, and measured quantities are $\widehat A=A+E$, $\widehat y=y+e$, with ${\lVert E\rVert}_2<\sigma$. The least-squares coefficients $\widehat a=\widehat A^+\widehat y$ satisfy <a id="eq:witness-error"></a>
+<a id="thm:robust-witness"></a> Assume the evaluation matrix $A$ has full column rank with smallest singular value $\sigma>0$, $y=Aa$, and measured quantities are $\widehat A=A+E$, $\widehat y=y+e$, with ${\lVert E\rVert}_2<\sigma$. The least-squares coefficients $\widehat a=\widehat A^+\widehat y$ satisfy <a id="eq:witness-error"></a>
 
 
 $$
@@ -1616,7 +1821,7 @@ The SRC results therefore describe a particular family of vessel capabilities. T
 
 ## 11.1 A typed regulation architecture
 
-<a id="section:crr:a-typed-regulation-architecture"></a> The Conscious Record Realization framework (CRR) organizes preservation, access, valuation, and control as distinct data <a id="citation-19"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersCRR)]. In a finite deterministic specialization, let $P$ be a state/record space, $\epsilon:P\to E$ a defect readout, and $Z\subseteq E$ the acceptable region. The preserved region is the pullback 
+<a id="section:crr:a-typed-regulation-architecture"></a> The Conscious Record Realization framework (CRR) organizes preservation, access, valuation, and control as distinct data <a id="citation-revised-40"></a>[[59](/consciousness/monograph/bibliography#bib-RodgersCRR)]. In a finite deterministic specialization, let $P$ be a state/record space, $\epsilon:P\to E$ a defect readout, and $Z\subseteq E$ the acceptable region. The preserved region is the pullback 
 
 $$
 
@@ -1695,7 +1900,7 @@ D=d+d^\dagger,\qquad K=D^2=dd^\dagger+d^\dagger d.
 
 $$
 
- This is finite Hodge mathematics. Its source status depends on the admitted response principles and Hilbertization, as the constructive O1 source explicitly states <a id="citation-20"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersO1)].
+ This is finite Hodge mathematics. Its source status depends on the admitted response principles and Hilbertization, as the constructive O1 source explicitly states <a id="citation-revised-41"></a>[[55](/consciousness/monograph/bibliography#bib-RodgersO1)].
 
 Separate chains lying entirely in the root support from mixed-interface and fresh chains. Let $P_R$ project onto root-supported chains and $P_F=I-P_R$ onto the remainder. The decomposition is assigned by provenance before the spectral calculation. It is not chosen to produce a desired gap.
 
@@ -1903,7 +2108,7 @@ $$
 
 $$
 
- Let $q=\sqrt{1-2\eta m+\eta^2L^2}\in[0,1)$. Banach's theorem supplies a unique fixed point and geometric convergence. The projection variational inequality identifies that point with the constrained minimizer of $J$ under the stated convexity assumptions <a id="citation-21"></a>[[33](/consciousness/monograph/bibliography#bib-RodgersField)].
+ Let $q=\sqrt{1-2\eta m+\eta^2L^2}\in[0,1)$. Banach's theorem supplies a unique fixed point and geometric convergence. The projection variational inequality identifies that point with the constrained minimizer of $J$ under the stated convexity assumptions <a id="citation-revised-42"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersField)].
 
 The residual gives a practical certificate: <a id="eq:fixedres"></a>
 
@@ -1947,7 +2152,7 @@ $$
 
  then ${\lVert P_E(x-y)\rVert}\ge{\lVert x-y\rVert}/\sqrt{1+\kappa^2}$. This supplies a legitimate lower constant. Without the cone or an equivalent restriction, stabilization of a few coordinates can coexist with change in unobserved directions. The semantic names of channels do not change this geometry.
 
-For global selectors a clean result is available on a supplied compact metric domain. Successively minimize a countable separating family of continuous functions on nested nonempty compact sets. Compactness gives a nonempty intersection, and separation makes it a singleton. This proves uniqueness relative to the domain and function family. It does not establish compactness of a geometric model from insufficient regularity bounds, or identify its selected point with source awareness.
+For global selectors a clean result is available on a supplied compact metric domain. Successively minimize a countable separating family of continuous functions on nested nonempty compact sets. Compactness gives a nonempty intersection, and separation makes it a singleton. This proves uniqueness relative to the domain and function family. It does not establish compactness of a geometric model from insufficient regularity bounds, or identify its selected point with fundamental awareness.
 
 
 
@@ -1955,7 +2160,7 @@ For global selectors a clean result is available on a supplied compact metric do
 
 ## 13.3 One operator, two analytic regimes
 
-<a id="section:cscf:one-operator-two-analytic-regimes"></a> The strengthened Canonical Spectral Curvature Field construction starts with a specified densely defined nonnegative closed quadratic form and its self-adjoint representing operator $K$ <a id="citation-22"></a>[[32](/consciousness/monograph/bibliography#bib-RodgersCSCF)]. The analytic family <a id="eq:cscf"></a>
+<a id="section:cscf:one-operator-two-analytic-regimes"></a> The strengthened Canonical Spectral Curvature Field construction starts with a specified densely defined nonnegative closed quadratic form and its self-adjoint representing operator $K$ <a id="citation-revised-43"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersCSCF)]. The analytic family <a id="eq:cscf"></a>
 
 
 $$
@@ -1986,7 +2191,7 @@ Nor is $\rho\mapsto e^{-tK}\rho e^{-tK}$ generally trace preserving. Treating it
 
 ## 13.4 A shared spectral carrier with a general coherent symbol
 
-<a id="section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol"></a> The more general Atlas formulation specifies a real spectral symbol $h$ and a damping coefficient $\gamma\ge0$ in addition to $K$ <a id="citation-23"></a>[[40](/consciousness/monograph/bibliography#bib-RodgersAtlas2026)]. This preserves a single spectral carrier while allowing oscillation and decay to have different dependence on its spectral parameter.
+<a id="section:cscf:a-shared-spectral-carrier-with-a-general-coherent-symbol"></a> The more general Atlas formulation specifies a real spectral symbol $h$ and a damping coefficient $\gamma\ge0$ in addition to $K$ <a id="citation-revised-44"></a>[[56](/consciousness/monograph/bibliography#bib-RodgersAtlas2026)]. This preserves a single spectral carrier while allowing oscillation and decay to have different dependence on its spectral parameter.
 
 
 
@@ -2070,7 +2275,7 @@ The next part states exactly how SPC-2 moves beyond this physical core. The addi
 
 # Chapter 14: Why a manifestation law is additional
 
-<a id="part:constitution"></a> <a id="ch:underdetermination"></a> The preceding parts describe source/readout relations and capabilities of physically realized systems. This part supplies the proposed laws of manifestation. Its first task is to identify which choices the physical results leave open, so that the later constitution makes those choices explicitly. The underdetermination examples below explain why a constitutive law is needed; they do not replace the positive argument for the particular law adopted.
+<a id="part:constitution"></a>   <a id="ch:underdetermination"></a> The preceding parts describe source/readout relations and capabilities of physically realized systems. This part supplies the proposed laws of manifestation. Its first task is to identify which choices the physical results leave open, so that the later constitution makes those choices explicitly. The underdetermination examples below explain why a constitutive law is needed; they do not replace the positive argument for the particular law adopted.
 
 
 
@@ -2080,7 +2285,7 @@ The next part states exactly how SPC-2 moves beyond this physical core. The addi
 
 <a id="section:underdetermination:common-source-does-not-determine-a-bridge"></a> The physical results establish structures that a vessel can realize. They do not yet determine an experiential assignment. Let $S=\{0,1\}^2$, with $p(s_1,s_2)=s_1$ and $\phi(s_1,s_2)=s_2$. Both are descriptions of the same source, but no function $f$ satisfies $\phi=f\circ p$. A common-source ontology alone does not imply the desired fibre compatibility.
 
-Adding a constant awareness argument imposes no further mathematical restriction. For every $M:X\to\Phi$ and fixed $a_*$, the map $\widetilde M(a_*,x)=M(x)$ is a possible assignment on $\{a_*\}\times X$. Primitive awareness can be a legitimate ontological commitment while leaving the entire manifestation map unspecified. Its introduction must therefore be followed by actual laws rather than treated as the completion of the theory.
+Adding a constant awareness argument imposes no further mathematical restriction. The following dummy argument illustrates mathematical freedom; it is not a state variable or formal representation of the ground or its attributed quality. For every $M:X\to\Phi$ and fixed $a_*$, the map $\widetilde M(a_*,x)=M(x)$ is a possible assignment on $\{a_*\}\times X$. Primitive awareness can be a legitimate ontological commitment while leaving the entire manifestation map unspecified. Its introduction must therefore be followed by actual laws rather than treated as the completion of the theory.
 
 
 
@@ -2132,7 +2337,7 @@ Equation (14.2).
 
  If both $\mu$ and $Q$ are unrestricted, invertible changes of latent coordinates leave $R$ unchanged after the corresponding decoder transformation. More general inequivalent latent spaces can also induce the same report law. Thus a fitted report distribution is not automatically a unique phenomenal law.
 
-An independently specified physical descriptor and experience-facing measurement map define a conditional factorization problem <a id="citation-24"></a>[[33](/consciousness/monograph/bibliography#bib-RodgersField)]. This formulation permits the target to constrain the descriptor rather than be defined by it. The stronger constitutive proposal below makes a different move: it identifies phenomenal relational organization with a canonical physical predictive object. This excludes alternative organizations *by a declared law*, not by claiming that generic regularity or report agreement has already ruled them out.
+An independently specified physical descriptor and experience-facing measurement map define a conditional factorization problem <a id="citation-revised-45"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersField)]. This formulation permits the target to constrain the descriptor rather than be defined by it. The stronger constitutive proposal below makes a different move: it identifies phenomenal relational organization with a canonical physical predictive object. This excludes alternative organizations *by a declared law*, not by claiming that generic regularity or report agreement has already ruled them out.
 
 
 
@@ -2300,6 +2505,71 @@ When physical constraints leave holes in the comparison domain, the argument req
 
 
 
+<a id="section-15-3-1"></a>
+
+### 15.3.1 The later masking audit and its quantitative repair
+
+ <a id="sec:update-masking"></a> The later relational-boundary analysis identifies a second instability of exact target minimality, distinct from the appearance of weak edges discussed in Chapter [20](/consciousness/monograph/splitting-merging-and-the-stability-of-subject-boundaries#ch:split) <a id="citation-revised-46"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)]. A small proper-subset effect can delete an edge previously supported by a strong joint effect. Retaining the exact definition above makes that consequence inspectable rather than concealing a change of admission law.
+
+Let a prepared bit $b$ be encoded into two registers by 
+
+$$
+
+E_\varepsilon(b,c)=
+\begin{cases}
+(\xi,\xi\oplus b),&\text{with probability }1-\varepsilon,\\
+(b,\zeta),&\text{with probability }\varepsilon,
+\end{cases}
+\qquad D(b,c)=(b\oplus c,0),
+
+$$
+
+ where the fresh fair bits and branch choice are independent of the source. In output order $00,01,10,11$, the encoder rows are 
+
+$$
+
+P_0=(1/2,\varepsilon/2,0,(1-\varepsilon)/2),\qquad
+P_1=(0,(1-\varepsilon)/2,1/2,\varepsilon/2).
+
+$$
+
+ At $\varepsilon=0$, both singleton laws agree while the pair distinguishes $b$, so the joint target projects an edge $1\to2$. For every $0<\varepsilon\le1/2$, the first singleton acquires contrast $\varepsilon$. The pair ceases to be minimal and that projected edge disappears. Nevertheless, 
+
+$$
+
+\sup_x\operatorname{TV}(E_\varepsilon(x),E_0(x))=\varepsilon/2,
+\qquad d_{12}=1-\varepsilon,
+\qquad r_{(E_\varepsilon,D)}=1-\varepsilon.
+
+$$
+
+ The same encoder and decoder therefore retain a strong joint distinction and a strong scheduled terminal return while the exact graph-derived candidate changes. This terminal calculation does not preserve the old route certificate after its graph edge has disappeared. Nor does it classify every proper subcomponent phenomenally.
+
+The continuous repair asks a different question: how much of a complete experiment is lost after a view is deleted? For finite preparation labels $\theta$, joint laws $P_{J,\theta}$, and retained marginals $P_{L,\theta}$, define directed statistical deficiency by 
+
+$$
+
+\delta_P(J\mid L)=\min_G\max_\theta
+\operatorname{TV}(P_{J,\theta},P_{L,\theta}G),
+
+$$
+
+ where one stochastic reconstruction kernel $G$ must work for every unknown preparation. The kernel reproduces distributions and may resample retained coordinates. It need not preserve the original archive or recover the actual past event. For the displayed encoder, on $0\le\varepsilon\le1$, 
+
+$$
+
+\delta_P(12\mid1)=\max\{1/2-\varepsilon,(1-\varepsilon)/4\},
+\qquad
+\delta_P(12\mid2)=\tfrac12\max\{\varepsilon,1-\varepsilon\}.
+
+$$
+
+ The companion paper supplies the matching reconstruction kernels and lower bounds. Common-conditional padding adds no deficiency, whereas a coordinate with a source-independent marginal can still participate in indispensable joint information. Under a uniform row-law perturbation $\eta$ of the same experiment and projection, the deficiency changes by at most $2\eta$.
+
+These results strengthen the analysis of joint information without silently replacing A1. A reconstruction diagnostic, a physically executable native return and resistance to an allowed disconnected simulator answer different questions. The successor analysis retains schedule-indexed supports with separate information, return and cut profiles. No particular threshold or overlapping candidate family is thereby selected as the collection of subjects. A revised admission doctrine would have to justify that selection, reconstruct the resulting native predictive objects for A2, and recompute their provenance continuations for A3.
+
+
+
 <a id="section-15-4"></a>
 
 ## 15.4 Native recurrence and admission
@@ -2364,7 +2634,7 @@ $$
 
 Each candidate has two prime-sized factors, independent uniform preparation, independent identity updates, and a jointly sufficient four-state description. These requirements do not break the symmetry. Returning the entire set of candidates is covariant, but does not select one primitive decomposition. Extra physical ports, geometry, or carrier structure can break the symmetry; their selection is additional data.
 
-Causal-emergence analysis offers one principled way to compare descriptions using specified coarse-grainings and intervention distributions <a id="citation-25"></a>[[20](/consciousness/monograph/bibliography#bib-Hoel2013)]. Such comparisons can reveal advantages of a macro description without deriving a unique primitive factorization from an unstructured kernel. The following consequence concerns precisely that latter, more demanding selection task.
+Causal-emergence analysis offers one principled way to compare descriptions using specified coarse-grainings and intervention distributions <a id="citation-revised-47"></a>[[21](/consciousness/monograph/bibliography#bib-Hoel2013)]. Such comparisons can reveal advantages of a macro description without deriving a unique primitive factorization from an unstructured kernel. The following consequence concerns precisely that latter, more demanding selection task.
 
 The same obstruction applies to any numerical selection score invariant under the automorphisms of these bare data: the score is constant on the three-element orbit, so optimization cannot pick one member uniquely. Each factorization already has independent subsystem histories under uniform preparation and identity evolution; a conditional-independence requirement that these histories have an empty separating boundary does not distinguish them. Likewise each is exactly sufficient and dynamically stable. Minimality, independence, stability and symmetry therefore reduce no further freedom in this example. This does not refute enriched causal factorizations or multiscale models. It identifies the additional physical structure or selection premise they must supply before a unique choice can be claimed.
 
@@ -2392,6 +2662,35 @@ The proposition does not rule out a deeper physical selection law. It shows why 
 
 
 
+<a id="paragraph-4"></a>
+
+### Additional response evidence can identify a chart
+
+ The obstruction concerns selection from bare data. Enriching those data with independently characterized interventions can resolve a restricted part of the realization question. On a completely distinguished finite state set $S$ of size $N=2^n$, suppose a strictly positive response family factors in an unknown bijective binary chart $c:S\to\{0,1\}^n$: 
+
+$$
+
+Q_\alpha(s)=\prod_{i=1}^n q_i(\alpha)^{c_i(s)}
+                    [1-q_i(\alpha)]^{1-c_i(s)},\qquad0<q_i(\alpha)<1.
+
+$$
+
+ Let $L_{\alpha s}=\log Q_\alpha(s)-N^{-1}\sum_t\log Q_\alpha(t)$, using uniform output centering. If $\operatorname{rank}L=n$, the chart is unique up to coordinate permutation and independent complementation <a id="citation-revised-48"></a>[[46](/consciousness/monograph/bibliography#bib-RodgersInterventional2026)]. Its row-space projector satisfies 
+
+$$
+
+P_{st}=\frac{n-2d_H(c(s),c(t))}{N},
+
+$$
+
+ so it reconstructs the cube adjacency. The proof writes the centered log rows in the span of binary sign coordinates. Any other binary coordinate in that span must be a signed singleton: its maximum absolute value is the coefficient $\ell^1$ norm and its mean square is the squared $\ell^2$ norm, both equal to one. Independence then forces a signed permutation. This is identification within an enriched response class, consistent with the impossibility of selecting from the symmetric bare kernel alone.
+
+The same paper gives a sufficient stability certificate. For a nonempty class of exact product-response models obeying $\|\widehat L-L\|_2\le e$, the inequality $\widehat\sigma_n>Ne$ makes their charts agree up to that ambiguity; the estimated leading row-space projector recovers adjacency by threshold $(n-3)/N$. Nonemptiness and the error bound are part of the certificate. Rank deficiency alone does not establish ambiguity, and an observed rank by itself does not justify the physical product model.
+
+In the supplied five-register construction, unlabeled response laws recover the original, nonlocally recoded and signed-control charts. Combined with the unchanged service and remaining realization contracts, they recover the inherited two-, one- and two-core assignments. These are synthetic response-to-chart calculations. Complete state discrimination, binary cardinality, response stationarity and product factorization must be established independently for a device. The result identifies a candidate microchart; it does not select a macrograin, exclude hidden refinements or multivalued carriers, or supply native timing, endogenous records, resources and A3 provenance.
+
+
+
 **Proposition 15.8 (Covariance of finite individuation).**
 
  <a id="prop:spc2-individuation-covariance"></a> A bijection of primitive components and coordinatewise state labels that transports the complete kernels, admitted comparisons, route typing, regimes, preparation laws, native controller grammar, return catalogue, and lineage transports the minimal target hyperedges, parent-closure conditions, return witnesses, and admitted SCC partition. 
@@ -2412,7 +2711,7 @@ This covariance does not cover arbitrary invertible recodings of a joint state, 
 
 # Chapter 16: Endogenous predictive structure across horizons
 
-<a id="ch:predictive"></a> Predictive and causal-state representations are established antecedents <a id="citation-26"></a>[[48](/consciousness/monograph/bibliography#bib-Shalizi2001), [26](/consciousness/monograph/bibliography#bib-Littman2002)]. The present intrinsic-state quotient adds an explicit transition-congruence requirement; its phenomenal identification is a separate law. 
+<a id="ch:predictive"></a> Predictive and causal-state representations are established antecedents <a id="citation-revised-49"></a>[[69](/consciousness/monograph/bibliography#bib-Shalizi2001), [27](/consciousness/monograph/bibliography#bib-Littman2002)]. The present intrinsic-state quotient adds an explicit transition-congruence requirement; its phenomenal identification is a separate law. 
 
 <a id="section-16-1"></a>
 
@@ -2589,6 +2888,38 @@ The assumption gives representative independence. Nonnegativity and normalizatio
 The conditional distribution describes uncertainty about the actual next point. It is not itself that point. There is generally no deterministic update $z\mapsto z'$ from the record alone. A theorem about Bayesian filtering on histories cannot replace the congruence assumption for intrinsic actual states.
 
 For clarity, a five-state example shows why the assumption is needed. With one action, let $a$ emit $0$ and remain at $a$; let $b$ emit $1$ and remain at $b$; let $c$ emit $0$ and enter $a$ with probability $1/2$, or emit $1$ and enter $b$ with probability $1/2$. Let $x$ emit $\#$ and enter $a$ or $b$ with equal probabilities, whereas $y$ emits $\#$ and enters $c$ surely. States $x,y$ have identical laws for every finite transcript: $\#$ followed by all zeros or all ones, with probabilities $1/2$. The predictive classes are $\{a\},\{b\},\{c\},\{x,y\}$. Nevertheless the probability of entering $\{c\}$ after $\#$ is zero from $x$ and one from $y$. Output equivalence has therefore not supplied actual-class closure.
+
+
+
+<a id="section-16-3-1"></a>
+
+### 16.3.1 A predictive organization as an effective component
+
+ <a id="sec:update-encapsulation"></a> The later composition results give a precise sense in which a realized relation can become a relatum in a larger organization <a id="citation-revised-50"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)]. Equip a finite module with a strong quotient $q_i$ preserving its joint record and successor-class law, together with protected operating-type, timing, ownership and resource marks. In a matching causal wiring, retain the exterior controller, delayed messages, shared drivers and owned resources as context $c$. The wiring may use only declared ports and may not inspect discarded coordinates. Push the entire prepared joint law forward, retaining correlations. Then 
+
+$$
+
+Q(x_1,\ldots,x_n,c)=(q_1(x_1),\ldots,q_n(x_n),c)
+
+$$
+
+ is a strong quotient of the composite. It preserves every admitted finite adaptive transcript law, including delayed feedback and finite stopping. Simultaneous shared random events require a joint instrument; separately correct local marginals do not establish this result. Reused modules retain their memory and exhausted resources.
+
+Under these same finite marked-domain conditions, taking the coarsest strong marked quotient after causal composition agrees, up to marked-instrument isomorphism, with composing the local coarsest quotients and minimizing again. This is a conditional substitution theorem. It does not identify different physical devices, assert that every useful quotient is a proper reduction, or assign a subject to every effective module.
+
+Approximation has an explicit physical-call budget. If the matching initial joint laws differ by at most $\delta_0$, and module $i$ has uniform joint-record/coarse-successor error $\epsilon_i$ on every admitted conditional row and is called at most $n_i$ times along any path, then 
+
+$$
+
+\operatorname{TV}(P^\pi,\widehat P^\pi)
+\le 1-(1-\delta_0)\prod_i(1-\epsilon_i)^{n_i}
+\le\min\{1,\delta_0+\sum_i n_i\epsilon_i\}.
+
+$$
+
+ Adaptive choice does not require independent errors: while histories agree, the controller makes the same next choice, and each coupled joint row retains its conditional agreement bound. Errors between several descriptions of the same event instead add by the triangle inequality; they are not extra physical calls.
+
+Preserving the target process is still insufficient to preserve a cut comparison. If $\mathcal N$ and $\widehat{\mathcal N}$ are the allowed coherent simulator-law families, the relevant distance is $\inf_{Q\in\mathcal N}d_{\mathcal E}(P,Q)$ for one common complete-experiment metric. Target error $\beta$ and two-sided Hausdorff error $\nu$ between those families bound the change of that distance by $\beta+\nu$. Timely communication, local memory or a shared seed must not become free merely because the target was compressed. These physical and comparison contracts are what make higher-level reuse meaningful.
 
 
 
@@ -2769,13 +3100,13 @@ Couple the initial states identically. While states and transcripts agree, the c
 
 
 
-**Constitutive law 17.1 (A0: source awareness).**
+**Constitutive law 17.1 (A0: fundamental awareness).**
 
-<a id="ax:A0"></a> Awareness is the knowing aspect of ${\mathsf{U}}$, reality prior to the operational source/readout distinction. Its capacity is not produced ex nihilo by a vessel. It is not a localized subject or a second independently acting substance or force. 
+<a id="ax:A0"></a> The unconditioned ground is fundamental. Awareness is the provisional name for a quality attributed to that ground, distinguished from the unsplit ${\mathsf{U}}$. Fundamental awareness does not mean thought, recognition, knowing or a subject apprehending an object. Physical organization does not manufacture the ground or its quality; it conditions localized experiential manifestation. This adds no independently acting substance or force. 
 
- A0 uses “knowing aspect” ontologically, without attributing a personality, scene, memory or intention to ${\mathsf{U}}$. Localized experiential presence is its proposed manifestation through a qualifying vessel. A0 supplies the ontology of the assignment rather than an extra numerical input to its construction. The graph, predictive object, and lineage can be computed without deciding whether their realization has an experiential aspect. A0 interprets the admitted perspectives as manifestations of intrinsic source awareness; A1–A3 specify their local organization. The completion theorem establishes determinacy conditional on those commitments, not a derivation of A0. An ontology can give a construction this meaning while leaving its physical probabilities unchanged.
+ A0 states an ontological commitment rather than an extra numerical input to the construction. Awareness within a localized perspective, including preconceptual presence and developed knowing, must not be projected backward as cognition in the ground. The graph, predictive object and lineage can be computed without settling their experiential interpretation. A0 interprets admitted perspectives as localized manifestation within the same reality; A1–A3 specify their organization. The completion theorem establishes determinacy conditional on these commitments, not a derivation of A0. The ontology gives the construction meaning while leaving its physical probabilities unchanged.
 
-The primitive is not a formally described global episode lacking all contents. Numerical categories such as one and many apply to the admitted local perspectives, not to ${\mathsf{U}}$. Its ontological capacity is not a continuing hidden experience between those episodes. The present theory assigns localized episodes and does not supply an exhaustive state space for awareness apart from every vessel. It preserves the source-awareness commitment without identifying the source with one numerically specified universal experiencer. The word field names a technical physical structure only where its carrier, degrees of freedom, transformations, dynamics, and coupling are supplied; A0 alone is not a measurement of an additional field.
+The primitive is not a formally described global episode lacking all contents. The ground has no mathematical symbol here; ${\mathsf{U}}$ denotes the unsplit, and neither is a state in the working source $S$. Numerical subject counts apply to admitted local perspectives. Fundamental awareness does not posit hidden experience between their episodes or identify reality with a universal experiencer. A physical field requires a specified carrier, degrees of freedom, transformations, dynamics and coupling; A0 does not supply an additional field.
 
 
 
@@ -2823,7 +3154,7 @@ SPC-2 does not imply that all matter is conscious. A rock is not admitted merely
 
 <a id="ax:A2"></a> The phenomenal relational organization of each qualifying core is a structural copy of its complete endogenous predictive object over all physically admitted finite continuations. The actual phenomenal point is the image of the predictive class of its realized intrinsic state. The copy preserves native operation and outcome labels, every finite test law, the compatible horizon restrictions, and the well-defined class transition instruments. Apart from primitive presence, no further manifested qualitative fact is postulated within this constitution. 
 
- Work on mathematical structures of experience motivates specifying the transported relations explicitly <a id="citation-27"></a>[[22](/consciousness/monograph/bibliography#bib-Kleiner2023)]; it does not select this particular identification. A2 is the structural law of the lived scene within the constitution. It identifies an organization with phenomenal character; it does not generate awareness, prove its existence, or derive that identification from a sufficient statistic. Its motivation is that an internal distinction acquires a role through the continuations it supports. The complete profile retains which operations distinguish, the distributions of their internal outcomes, and their continuing organization. A supremum distance alone loses these relations and can become discrete even in very different processes.
+ Work on mathematical structures of experience motivates specifying the transported relations explicitly <a id="citation-revised-51"></a>[[23](/consciousness/monograph/bibliography#bib-Kleiner2023)]; it does not select this particular identification. A2 is the structural law of the lived scene within the constitution. It identifies an organization with phenomenal character; it does not generate awareness, prove its existence, or derive that identification from a sufficient statistic. Its motivation is that an internal distinction acquires a role through the continuations it supports. The complete profile retains which operations distinguish, the distributions of their internal outcomes, and their continuing organization. A supremum distance alone loses these relations and can become discrete even in very different processes.
 
 The future laws characterize current dispositions. They are not future events acting backwards, and they need not be calculated or represented by the vessel. Physical recurrence, a mathematical predictive description, and an internally implemented self-model are distinct. Neither language nor autobiographical reflection is required by this law.
 
@@ -2837,9 +3168,55 @@ The all-finite family removes dependence on an investigator's chosen forecast cu
 
 
 
+<a id="section-17-4-revised"></a>
+
+## 17.4 Enacted constitution and the full predictive commitment
+
+<a id="sec:enacted-spc-correspondence"></a> The enacted account and SPC-2 address compatible questions without yet being proved equivalent. Complete-enactment identity identifies the qualifying actual occurrence; current incorporation specifies its presently interpreted contributions. A1 supplies the formal core and individuation rule of SPC-2, A2 specifies complete phenomenal organization, and A3 specifies episode continuation. A joint application must justify the correspondence between the nominated interpretive unit, its complete physical enactment and the realized core assignment. A container around the act or a successful content readout supplies no such correspondence.
+
+This requirement reaches beyond current foreground content. For an exact intrinsic carrier $X$ under its fixed full native contract, let $q_\infty:X\to Z_\infty$ be the complete native predictive quotient of Chapter [16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#ch:predictive). If a fixed property $f:X\to Y$ is asserted to be phenomenal under both A2 and the enacted correspondence, compatibility requires 
+
+$$
+
+ q_\infty(x)=q_\infty(x')\ \Longrightarrow\ f(x)=f(x').
+
+$$
+
+ Equivalently, $f=\bar f\circ q_\infty$ for a well-defined $\bar f$ on the attained predictive classes. Equal classes receive the same assigned phenomenal organization, so every fixed property of it agrees on the fibre. Conversely, fibre constancy makes $\bar f(q_\infty(x))=f(x)$ well-defined. This factorization criterion is proved in the whole-field companion's Appendix B <a id="citation-revised-52"></a>[[62](/consciousness/monograph/bibliography#bib-RodgersWholeField2026)].
+
+Factorization of a current-incorporation projection is a compatibility condition, not a proof that the complete accounts coincide. If two nominations under full A2 identify the same complete phenomenal organization and the same actual phenomenal point, their complete labelled pointed predictive objects must be isomorphic. A claimed bridge must preserve native operation and record labels, all admitted finite continuations, horizon restrictions, successor instruments and the realized point. A projection that retains only current contents can leave distinct complete organizations unresolved. Nor does the omission of an arbitrary contextual variable refute A2: one needs a distinction in a property actually claimed as phenomenal on a single predictive fibre.
+
+The positive gain is a more explicit constitutive organization for a field, including linked realization, occasion roles and actual incorporation. The remaining obligation is an independently justified complete correspondence, together with resolution of any disagreement in unit qualification or formative-history requirements. Both accounts can be used at their stated scope without discarding either or silently replacing full A2 with a foreground summary.
+
+Here primitive presence in A2 means the localized experiential presence assigned under A1. It is distinct from the fundamental quality provisionally named in A0. A2's structural completeness concerns manifestation in the qualifying perspective, not a complete description of the ground.
+
+
+
+<a id="section-17-4-1"></a>
+
+### 17.4.1 Compatibility at different explanatory levels
+
+ <a id="sec:constitutive-case-ledger"></a> The joint account separates admission, complete predictive organization, currently incorporated content and episode provenance. Whole-field constitution is applied within a warranted qualifying unit; it does not automatically supply a rival universal selector. Consequently equal current foreground with different complete A2 points is not a contradiction. A conflict arises when a property claimed as phenomenal differs on one complete predictive fibre under the same realization and calibration. The following cases locate that test without treating absence of rich adult uptake as a veto on A1.
+
+ 
+
+| Case | Admission and complete organization | Current enactment and continuity |
+| --- | --- | --- |
+| Persistent unused archive | Can qualify if its actual native self-return and predictive distinctions meet A1. | Stored material is not thereby interpreted current content; its carrier's A3 lineage is a separate relation. |
+| Delayed native port | A later admitted test can separate present A2 points despite equal short-horizon records. | Present foreground need not display that retained difference. |
+| Retrieved but unincorporated material | Availability alone neither admits a unit nor supplies a new core. | Retrieval does not entail interpretive uptake; no extra content is inferred. |
+| Complete current uptake | Within a warranted unit, the linked enactment supplies the whole-field constitutive account. | Joint application still checks full A2 correspondence and the actual A3 provenance. |
+| Erasure before every native test | Within an admitted core, present states with identical complete future laws share an A2 point, when the quotient conditions hold. | A claimed current phenomenal difference would challenge that correspondence; an external pre-erasure reading changes the tested contract. |
+
+ 
+
+These are conditional cases, not classifications of actual devices. A replay may fail to enact the represented person's context-responsive organization while its executor contains a different qualifying minimal process. Represented person, actual executor and any assigned perspective must therefore be nominated separately. Likewise, distress, fragmented interpretation or impaired autobiographical coherence does not by itself negate presence: constitutive unity is not a scale of psychological health or achievement. A3 follows qualifying process provenance, not improvement, successful reporting or the investigator's confidence.
+
+
+
 <a id="section-17-4"></a>
 
-## 17.4 Process provenance and temporal identity
+## 17.5 Process provenance and temporal identity
 
 <a id="sec:lineage-process"></a> The identity of an experiential episode, the persistence of a person, and the ontological status of awareness answer different questions: 
 
@@ -2926,7 +3303,7 @@ The retained continuation graph has indegree and outdegree at most one and incre
 
  
 
-Physical provenance $\Lambda_t$ can describe a persisting organism or vessel during an interval without experience. The subject graph in A3 contains only qualifying occurrences: a genuine qualification gap contains no currently instantiated localized experiential subject and ends the episode. Return of qualification begins a new episode, even when biological and person-level continuity is preserved. Lineage is not hidden experience. Sleep and anesthesia therefore require separate assessments of vessel continuity, scene occurrence and later memory (Section [2.5](/consciousness/monograph/awareness-contents-and-the-personal-model#sec:vessel-scene-memory)).
+Physical provenance $\Lambda_t$ can describe a persisting organism or vessel during an interval without experience. The subject graph in A3 contains only qualifying occurrences: a genuine qualification gap contains no currently instantiated localized experiential subject and ends the episode. Return of qualification begins a new episode, even when biological and person-level continuity is preserved. Lineage is not hidden experience. Sleep and anesthesia therefore require separate assessments of vessel continuity, scene occurrence and later memory (Section [2.7](/consciousness/monograph/awareness-contents-and-the-personal-model#sec:vessel-scene-memory)).
 
 The treatment of split and merger preserves ordinary numerical identity. If one predecessor were identical to each of two distinct successors, transitivity would identify the successors. Ancestry and informational continuity may branch; episode identity here does not. The law chooses the symmetric termination convention rather than privileging one successor. It concerns experiential episodes, not every legal, biological, or narrative use of the word person.
 
@@ -2936,19 +3313,19 @@ Native-time refinement needs particular care. Inserting additional cells is harm
 
 <a id="section-17-5"></a>
 
-## 17.5 Reports, phenomenal identification, and access
+## 17.6 Reports, phenomenal identification, and access
 
 <a id="section:spc:reports-are-physical-instruments"></a> Reports are produced by physical channels with their own state, resources, timing, noise, and later decoding. They do not enter A2 merely because an investigator records them. A grounded report channel factors through the core's predictive class at each fixed boundary/channel context, as established in Chapter [16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#ch:predictive). Its phenomenal expression is transported by A2's identification. No independent psychophysical decoder remains adjustable.
 
 Grounding is a sufficiency requirement, not a completeness or truthfulness requirement. Two different phenomenal states can yield the same constant report, and apparatus noise can erase distinctions. A family separates all phenomenal states only under the additional report-completeness premise. Conversely, a physical instrument that separates two states in one predictive class is not a grounded report of that class under the declared law. It remains an ordinary physical observation with a determined probability; it cannot be promoted to a phenomenal decoder without changing the law or the realization.
 
-A0, A1, A2, and A3 perform different jobs: presence, admission and individuation, relational organization, and episode identity. The physical realization supplies event and report probabilities. This division makes the ontological interpretation explicit while leaving no report mechanism to be chosen after the desired conclusion is known.
+A0, A1, A2, and A3 perform different jobs: fundamental ontological attribution, localized admission and individuation, relational organization, and episode identity. The physical realization supplies event and report probabilities. This division makes the ontological interpretation explicit while leaving no report mechanism to be chosen after the desired conclusion is known.
 
 
 
 <a id="section-17-6"></a>
 
-## 17.6 The constitutive choice
+## 17.7 The constitutive choice
 
 <a id="sec:spc2-difference"></a> The designation SPC-2 marks substantive commitments. Relative to SPC-1, it fixes a separate endogenous grammar, uses one compatible all-finite predictive structure instead of a nominated finite-horizon assignment, requires predictive transition congruence on its finite intrinsic domain, detects minimal joint-output dependence in its physical influence structure, and admits nonbranching process continuation through support turnover. External report maps are independently grounded rather than included automatically in the phenomenal test family. These choices preserve the source-aspect architecture while defining a more explicit manifestation law. They are not deductions that every admissible consciousness theory must share.
 
@@ -3040,7 +3417,7 @@ A modest extension concerns redundant *descriptions* of tests. Suppose two finit
 | Analyst test subset or forecast cutoff | Changes available evidence or an approximation, not the constitutional assignment. |
 | State refinement or coarse-graining | Not generally invariant. Requires a separately verified equivalence preserving the joint graph, native quotient instruments, qualification and provenance. |
 | Component regrouping or port retyping | Can change subjects; generally a different realization doctrine. |
-| Native-time resampling | Can hide cycles, splits or gaps; generally changes the realization. Pure subdivisions preserve episodes only under the condition in [Section 17.4](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:lineage-process). |
+| Native-time resampling | Can hide cycles, splits or gaps; generally changes the realization. Pure subdivisions preserve episodes only under the condition in [Section 17.5](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:lineage-process). |
 | Additional physical intervention grammar | Can change endogenous organization when genuinely implemented; analyst wish or apparatus readout alone does not add it. |
 
  
@@ -3077,7 +3454,7 @@ The initial law is the same. At a policy node the next action depends on the sam
 
 
 
-Grounding removes a free internal decoder, but it creates no physical prediction absent from the supplied realization. A rival accepting exactly the same complete physical transcript laws while denying their experiential interpretation cannot be excluded by those transcripts alone. This underdetermination includes primitive source awareness and any alternative that differs solely by transcript-inert qualitative claims.
+Grounding removes a free internal decoder, but it creates no physical prediction absent from the supplied realization. A rival accepting exactly the same complete physical transcript laws while denying their experiential interpretation cannot be excluded by those transcripts alone. This underdetermination includes fundamental awareness and any alternative that differs solely by transcript-inert qualitative claims.
 
 Independent experience-facing relations can nevertheless constrain an application. A fixed proposed physical realization can fail to predict the observed records. A1's proposed boundary can conflict with an independently defended subject-individuation judgment. A2 can fail to match independently elicited phenomenal contrasts under a fixed calibration and held-out interventions. Such evidence bears on the realization and the psychophysical identification together; it does not turn a definitional copy into an independent observation of awareness.
 
@@ -3339,7 +3716,7 @@ It is therefore useful to distinguish a *candidate application* from a *validate
 
 ## 21.2 Development and the absence of adult prerequisites
 
-<a id="section:comparative:development-and-the-absence-of-adult-prerequisites"></a> The developmental case tests the temptation to identify consciousness with the mature capacities of its investigators. The review by Bayne and colleagues argues for taking early infant experience seriously while examining the uncertainty about its onset and form <a id="citation-28"></a>[[2](/consciousness/monograph/bibliography#bib-Bayne2023)]. This is not a license to assign an exact developmental threshold from a spectral gap or a recursion count. Its relevance is that adult language, explicit philosophical reflection, and an elaborate autobiographical self cannot simply be built into an allegedly universal admission rule.
+<a id="section:comparative:development-and-the-absence-of-adult-prerequisites"></a> The developmental case tests the temptation to identify consciousness with the mature capacities of its investigators. The review by Bayne and colleagues argues for taking early infant experience seriously while examining the uncertainty about its onset and form <a id="citation-revised-53"></a>[[2](/consciousness/monograph/bibliography#bib-Bayne2023)]. This is not a license to assign an exact developmental threshold from a spectral gap or a recursion count. Its relevance is that adult language, explicit philosophical reflection, and an elaborate autobiographical self cannot simply be built into an allegedly universal admission rule.
 
 Within SPC-2, an immature vessel can qualify through an endogenous recurrent core without implementing adult counterfactual deliberation. Learning may change the physical kernels, the repertoire of available actions, the predictive quotient, and the content of an episode. A0 does not have to increase as a child learns a word; A2 permits the organization of a perspective to change. This captures the intended distinction between an underlying awareness commitment and acquired scaffolding without pretending to have measured a quantity of primitive awareness.
 
@@ -3351,7 +3728,7 @@ The model also distinguishes a repertoire from its current point. A system can h
 
 ## 21.3 Sleep, anesthesia, and the lived scene
 
-<a id="section:comparative:sleep-anesthesia-and-the-report-boundary"></a> Clinical descriptions often bring three questions together: does the vessel continue, is there experience now, and can the person subsequently describe it? Separating them does not make assessment simple, but prevents a failure of memory or motor output from deciding a different question by default. The distinction in Section [2.5](/consciousness/monograph/awareness-contents-and-the-personal-model#sec:vessel-scene-memory) applies throughout this discussion.
+<a id="section:comparative:sleep-anesthesia-and-the-report-boundary"></a> Clinical descriptions often bring three questions together: does the vessel continue, is there experience now, and can the person subsequently describe it? Separating them does not make assessment simple, but prevents a failure of memory or motor output from deciding a different question by default. The distinction in Section [2.7](/consciousness/monograph/awareness-contents-and-the-personal-model#sec:vessel-scene-memory) applies throughout this discussion.
 
 
 
@@ -3361,7 +3738,7 @@ The model also distinguishes a repertoire from its current point. A system can h
 
 <a id="sec:dream-formation"></a> In this framework, dreaming is interpreted as a scene generated when external constraint is reduced while the vessel's generative and scene-forming organization remains sufficiently coupled. The experienced setting can be rich even when it is weakly constrained by the current environment. Reduced constraint does not mean complete sensory isolation, and internally generated does not mean detached from physical realization.
 
-This account is an interpretive model rather than a claim that all dreams arise through one mechanism. Siclari and colleagues compared reports of dreaming and their absence across REM and non-REM sleep <a id="citation-29"></a>[[50](/consciousness/monograph/bibliography#bib-Siclari2017)]. Their work supports distinguishing sleep stage, reported experience and recall; it does not turn the proposed coupling language into an established SPC-2 mechanism. The theory neither identifies all sleep with dreaming nor treats dream recall as the criterion of dream occurrence.
+This account is an interpretive model rather than a claim that all dreams arise through one mechanism. Siclari and colleagues compared reports of dreaming and their absence across REM and non-REM sleep <a id="citation-revised-54"></a>[[71](/consciousness/monograph/bibliography#bib-Siclari2017)]. Their work supports distinguishing sleep stage, reported experience and recall; it does not turn the proposed coupling language into an established SPC-2 mechanism. The theory neither identifies all sleep with dreaming nor treats dream recall as the criterion of dream occurrence.
 
 
 
@@ -3379,9 +3756,9 @@ On the biological interpretation, coupling sufficient to form a scene can fail w
 
 ### 21.3.3 General anesthesia
 
-<a id="sec:general-anesthesia"></a> General anesthesia can disrupt the organization required for an integrated lived scene while substantial biological and local neural activity remains. Neuroscientific accounts distinguish changes in large-scale interaction from a simple cessation of brain activity <a id="citation-30"></a>[[29](/consciousness/monograph/bibliography#bib-Mashour2024)]. The effects of particular drugs, doses and clinical contexts need not be identical. Unresponsiveness, disconnected experience, amnesia and absence of experience are also distinct possibilities; retrospective reports concerning experimentally induced unresponsive states under propofol and dexmedetomidine illustrate why they must be distinguished <a id="citation-31"></a>[[45](/consciousness/monograph/bibliography#bib-Scheinin2021)]. Those findings do not establish how often experience occurs under deep surgical anesthesia, and recollections may depend on the transition toward arousal.
+<a id="sec:general-anesthesia"></a> General anesthesia can disrupt the organization required for an integrated lived scene while substantial biological and local neural activity remains. Neuroscientific accounts distinguish changes in large-scale interaction from a simple cessation of brain activity <a id="citation-revised-55"></a>[[30](/consciousness/monograph/bibliography#bib-Mashour2024)]. The effects of particular drugs, doses and clinical contexts need not be identical. Unresponsiveness, disconnected experience, amnesia and absence of experience are also distinct possibilities; retrospective reports concerning experimentally induced unresponsive states under propofol and dexmedetomidine illustrate why they must be distinguished <a id="citation-revised-56"></a>[[65](/consciousness/monograph/bibliography#bib-Scheinin2021)]. Those findings do not establish how often experience occurs under deep surgical anesthesia, and recollections may depend on the transition toward arousal.
 
-Within the Shadow interpretive model, sufficient disruption of coupling between explicit/attended and unconscious/generative organization prevents a lived scene; restored coupling permits manifestation to resume. This does not assert that “one side is switched off” as a universal neurophysiological fact. A biological person can remain physically continuous, with background processes active, throughout a genuinely scene-less interval. Awareness, as the knowing aspect of ${\mathsf{U}}$, is not said to be created or destroyed by the anesthetic. During that interval there is no current lived scene and no currently instantiated localized experiential subject. There is no observer experiencing darkness: darkness would itself be a scene.
+Within the Shadow interpretive model, sufficient disruption of coupling between explicit/attended and unconscious/generative organization prevents a lived scene; restored coupling permits manifestation to resume. This does not assert that “one side is switched off” as a universal neurophysiological fact. A biological person can remain physically continuous, with background processes active, throughout a genuinely scene-less interval. The fundamental quality attributed to the ground is not said to be created or destroyed by the anesthetic. During that interval there is no current lived scene and no currently instantiated localized experiential subject. There is no observer experiencing darkness: darkness would itself be a scene.
 
 A genuine qualification gap ends the experiential episode under A3. When qualification returns, a new episode begins, although the biological/person-level vessel has remained physically continuous. For a genuinely scene-less interval, the first-person sequence can be represented schematically as 
 
@@ -3413,15 +3790,15 @@ In the framework's terms, a sensory boundary changes what can enter or constrain
 
 <a id="sec:cortical-correlates"></a> In mature mammalian cortex, large-scale recurrent interaction and effective connectivity are strong candidates for the physical realization of scene-forming coupling; selected fast-band coordination may contribute to that organization. This is a biological interpretation of organized interaction among distributed processes, not an identification of consciousness with tissue activity. Effective connectivity concerns how activity in one population influences another; observational estimates of directional dependence and responses to an imposed perturbation provide different, method-dependent evidence for it.
 
-The anesthesia literature supports the distinction. Human intracranial recordings during propofol induction showed that local neuronal relationships could persist while activity became restricted to brief windows occurring asynchronously across cortical regions <a id="citation-32"></a>[[25](/consciousness/monograph/bibliography#bib-Lewis2012)]. Cortex need not be globally silent for communication to fragment. Lee and colleagues found reduced estimated frontal-to-parietal feedback around loss of responsiveness under ketamine, propofol and sevoflurane, despite different spectral effects <a id="citation-33"></a>[[24](/consciousness/monograph/bibliography#bib-Lee2013)]. Their directional statistic and behavioral endpoint do not establish absence of every kind of experience. In rats, Imas and colleagues found preferential impairment of frontal–posterior feedback at 50 Hz under volatile anesthetics, while effects at 30 Hz differed <a id="citation-34"></a>[[21](/consciousness/monograph/bibliography#bib-Imas2005)]. These findings motivate studying recurrent organization and its disruption, rather than assigning one meaning to all gamma activity.
+The anesthesia literature supports the distinction. Human intracranial recordings during propofol induction showed that local neuronal relationships could persist while activity became restricted to brief windows occurring asynchronously across cortical regions <a id="citation-revised-57"></a>[[26](/consciousness/monograph/bibliography#bib-Lewis2012)]. Cortex need not be globally silent for communication to fragment. Lee and colleagues found reduced estimated frontal-to-parietal feedback around loss of responsiveness under ketamine, propofol and sevoflurane, despite different spectral effects <a id="citation-revised-58"></a>[[25](/consciousness/monograph/bibliography#bib-Lee2013)]. Their directional statistic and behavioral endpoint do not establish absence of every kind of experience. In rats, Imas and colleagues found preferential impairment of frontal–posterior feedback at 50 Hz under volatile anesthetics, while effects at 30 Hz differed <a id="citation-revised-59"></a>[[22](/consciousness/monograph/bibliography#bib-Imas2005)]. These findings motivate studying recurrent organization and its disruption, rather than assigning one meaning to all gamma activity.
 
-Agent-specific perturbational findings sharpen the point. Sarasso and colleagues used transcranial magnetic stimulation with EEG: propofol produced relatively local responses, xenon produced widespread but stereotyped responses, and both had low perturbational complexity. Ketamine preserved more differentiated responses and high complexity, alongside subsequent vivid dream reports <a id="citation-35"></a>[[44](/consciousness/monograph/bibliography#bib-Sarasso2015)]. Broad propagation alone therefore does not establish differentiated conscious integration, and reduced feedback in a particular estimate cannot be a universal criterion for scene absence. Neither retrospective dream reports nor their absence escape the memory limitations discussed above.
+Agent-specific perturbational findings sharpen the point. Sarasso and colleagues used transcranial magnetic stimulation with EEG: propofol produced relatively local responses, xenon produced widespread but stereotyped responses, and both had low perturbational complexity. Ketamine preserved more differentiated responses and high complexity, alongside subsequent vivid dream reports <a id="citation-revised-60"></a>[[64](/consciousness/monograph/bibliography#bib-Sarasso2015)]. Broad propagation alone therefore does not establish differentiated conscious integration, and reduced feedback in a particular estimate cannot be a universal criterion for scene absence. Neither retrospective dream reports nor their absence escape the memory limitations discussed above.
 
-Hameroff emphasized gamma-range synchrony and anesthesia-related disruption of conscious integration <a id="citation-36"></a>[[19](/consciousness/monograph/bibliography#bib-Hameroff2010)]. That emphasis is relevant here; his proposed dendritic mechanism, microtubule computation and Orch-OR are not adopted. Gamma power, phase coordination and effective interaction are distinct measurements. No frequency band is awareness itself, either of the conscious/generative modes, or an admission condition. REM dreaming, ketamine-related disconnected experience and seizure states must be assessed without treating fast activity, synchronization or responsiveness as sufficient for conscious integration. There is no “gamma on = conscious” rule.
+Hameroff emphasized gamma-range synchrony and anesthesia-related disruption of conscious integration <a id="citation-revised-61"></a>[[20](/consciousness/monograph/bibliography#bib-Hameroff2010)]. That emphasis is relevant here; his proposed dendritic mechanism, microtubule computation and Orch-OR are not adopted. Gamma power, phase coordination and effective interaction are distinct measurements. No frequency band is awareness itself, either of the conscious/generative modes, or an admission condition. REM dreaming, ketamine-related disconnected experience and seizure states must be assessed without treating fast activity, synchronization or responsiveness as sufficient for conscious integration. There is no “gamma on = conscious” rule.
 
 *The relevant invariant is organizational integration versus its failure, not a single number on a monitor.* Here integration means differentiated, effective interaction capable of supporting the proposed scene organization, not maximal synchrony or merely extensive connections. This is the interpretive target across implementations, not an additional mathematical invariant already proved for cortical measurements. No universal EEG threshold, necessary cortical band or unique anatomical locus is established.
 
-These network findings motivate candidate biological realizations of scene-forming coupling in a rich mammalian $R^\ast$. They are not a new admission law, not A1, and not a proof of A0 or A2. During a genuinely scene-less anesthetic interval, no localized experiential subject is currently instantiated under SPC-2, while the biological vessel remains physically continuous and the person biographically continuous. Awareness as an aspect of ${\mathsf{U}}$, formal admission, the biological coupling account, its measured correlates and empirical validation remain separate levels of claim. The combined SPC-2 interpretation places dreams and anesthesia within a source-aspect constitution; it claims no novelty for recurrent processing or network integration individually. Existing anesthesia and predictive-processing accounts support or motivate parts of this pattern without establishing the ontology or the constitution <a id="citation-37"></a>[[24](/consciousness/monograph/bibliography#bib-Lee2013), [44](/consciousness/monograph/bibliography#bib-Sarasso2015), [9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)].
+These network findings motivate candidate biological realizations of scene-forming coupling in a rich mammalian $R^\ast$. They are not a new admission law, not A1, and not a proof of A0 or A2. During a genuinely scene-less anesthetic interval, no localized experiential subject is currently instantiated under SPC-2, while the biological vessel remains physically continuous and the person biographically continuous. The fundamental quality attributed to the unconditioned ground, formal admission, the biological coupling account, its measured correlates and empirical validation remain separate levels of claim. The combined SPC-2 interpretation places dreams and anesthesia within a source-aspect constitution; it claims no novelty for recurrent processing or network integration individually. Existing anesthesia and predictive-processing accounts support or motivate parts of this pattern without establishing the ontology or the constitution <a id="citation-revised-62"></a>[[25](/consciousness/monograph/bibliography#bib-Lee2013), [64](/consciousness/monograph/bibliography#bib-Sarasso2015), [9](/consciousness/monograph/bibliography#bib-CarhartHarrisFriston2019)].
 
 
 
@@ -3429,7 +3806,7 @@ These network findings motivate candidate biological realizations of scene-formi
 
 ## 21.5 Disorders of consciousness and incomplete access
 
-<a id="section:comparative:disorders-of-consciousness-and-incomplete-access"></a> Bodien and colleagues reported task-related fMRI or EEG responses in 60 of 241 participants who lacked observable responses to commands in their examined sample <a id="citation-38"></a>[[6](/consciousness/monograph/bibliography#bib-Bodien2024)]. This finding constrains the use of overt motor behavior as a sole measure of relevant cognitive activity. It does not show that every neural response measures all experience, nor that every negative neural test demonstrates absence of experience.
+<a id="section:comparative:disorders-of-consciousness-and-incomplete-access"></a> Bodien and colleagues reported task-related fMRI or EEG responses in 60 of 241 participants who lacked observable responses to commands in their examined sample <a id="citation-revised-63"></a>[[6](/consciousness/monograph/bibliography#bib-Bodien2024)]. This finding constrains the use of overt motor behavior as a sole measure of relevant cognitive activity. It does not show that every neural response measures all experience, nor that every negative neural test demonstrates absence of experience.
 
 In an $R^\ast$ model, overt report is one output channel, not the definition of the process. A motor pathway can fail while another internal discrimination or response route remains. The predictive profile can therefore retain distinctions that a particular report channel loses. The aperture-adequacy theorem gives a formal way to express the issue: a descriptor that collapses conditions differing in an independently justified target cannot support an exact bridge for that target.
 
@@ -3441,11 +3818,11 @@ This is a methodological implication, not a diagnostic instrument. No clinical d
 
 ## 21.6 Blindsight and divided processing
 
-<a id="section:comparative:blindsight-and-divided-processing"></a> The classical blindsight literature describes residual visual discrimination in a field defect without the corresponding ordinary report of seeing <a id="citation-39"></a>[[43](/consciousness/monograph/bibliography#bib-Sanders1974)]. Its role here is to make content-specific discrimination, confidence, access, and phenomenal attribution distinct questions. The condition of an entire person cannot be inferred from a single missing visual report.
+<a id="section:comparative:blindsight-and-divided-processing"></a> The classical blindsight literature describes residual visual discrimination in a field defect without the corresponding ordinary report of seeing <a id="citation-revised-64"></a>[[63](/consciousness/monograph/bibliography#bib-Sanders1974)]. Its role here is to make content-specific discrimination, confidence, access, and phenomenal attribution distinct questions. The condition of an entire person cannot be inferred from a single missing visual report.
 
 A2 is deliberately demanding in this setting. If two conditions share the complete nominated predictive structure yet differ in an independently established phenomenal relation, A2 fails for that realization or the physical descriptor is inadequate. It is not enough to point to a successful forced-choice response and call that response experience. A2 is a psychophysical identification requiring justification, not a linguistic decision to redefine all discrimination as phenomenology.
 
-Split-brain research is particularly relevant to subject individuation. Pinto and colleagues argued for divided perception without two independent perceivers in the cases they studied <a id="citation-40"></a>[[30](/consciousness/monograph/bibliography#bib-Pinto2017)]. Volz and colleagues dispute that inference, emphasizing cross-cueing, ipsilateral motor control and possible subcortical transfer <a id="citation-41"></a>[[54](/consciousness/monograph/bibliography#bib-Volz2018)]. Whatever position one takes on that interpretation, graph partition and phenomenal subject count cannot simply be read off from the phrase “split brain.” The physically operative routes, remaining common control, temporal grain, and independently assessed behavior all matter.
+Split-brain research is particularly relevant to subject individuation. Pinto and colleagues argued for divided perception without two independent perceivers in the cases they studied <a id="citation-revised-65"></a>[[34](/consciousness/monograph/bibliography#bib-Pinto2017)]. Volz and colleagues dispute that inference, emphasizing cross-cueing, ipsilateral motor control and possible subcortical transfer <a id="citation-revised-66"></a>[[75](/consciousness/monograph/bibliography#bib-Volz2018)]. Whatever position one takes on that interpretation, graph partition and phenomenal subject count cannot simply be read off from the phrase “split brain.” The physically operative routes, remaining common control, temporal grain, and independently assessed behavior all matter.
 
 The exact SCC rule makes a definite conditional assignment once those data are supplied. Its sharp weak-coupling transition is a vulnerability rather than a fact established by the clinical literature. A biologically adequate realization might preserve important internal routes after a particular anatomical intervention; an overly coarse model might erase them. Conversely, retaining every negligible feedback route might over-unify the system. This makes the physical boundary and resolution problem central to testing A1.
 
@@ -3455,7 +3832,7 @@ The exact SCC rule makes a definite conditional assignment once those data are s
 
 ## 21.7 Animals and nonhuman presentation
 
-<a id="section:comparative:animals-and-nonhuman-presentation"></a> A conscious subject need not possess human-style language, autobiography, explicit metacognition, or a reflective self-concept. Animals can in principle be conscious under this theory when an appropriate $R^\ast$ realizes A1; this is not a universal species list or a declaration that every proposed animal model is certified. Comparative accounts can describe several dimensions of an animal's experiential capacities rather than place all species on one scale <a id="citation-42"></a>[[5](/consciousness/monograph/bibliography#bib-Birch2020)]. This does not identify those dimensions with the present predictive object. The dolphin, whale, and insect comparisons should begin with a modest logical point: different sensory and action repertoires can support different ways of organizing a world. There is no requirement that every potential perspective contain adult human visual categories, spoken language, or a human bodily model. A nonhuman comparison must use its own physically meaningful input and action spaces rather than treating human reportability as the universal standard.
+<a id="section:comparative:animals-and-nonhuman-presentation"></a> A conscious subject need not possess human-style language, autobiography, explicit metacognition, or a reflective self-concept. Animals can in principle be conscious under this theory when an appropriate $R^\ast$ realizes A1; this is not a universal species list or a declaration that every proposed animal model is certified. Comparative accounts can describe several dimensions of an animal's experiential capacities rather than place all species on one scale <a id="citation-revised-67"></a>[[5](/consciousness/monograph/bibliography#bib-Birch2020)]. This does not identify those dimensions with the present predictive object. The dolphin, whale, and insect comparisons should begin with a modest logical point: different sensory and action repertoires can support different ways of organizing a world. There is no requirement that every potential perspective contain adult human visual categories, spoken language, or a human bodily model. A nonhuman comparison must use its own physically meaningful input and action spaces rather than treating human reportability as the universal standard.
 
 Under SPC-2, two species could have different predictive structures even when a particular task score agrees. Conversely, a particular operational structure might be reproduced across different substrates without establishing that their entire phenomenal lives are identical. Cross-system phenomenal comparison is meaningful only after specifying which physical structures and protocols the comparison preserves. A2 supplies a conditional structural comparison, not unrestricted imaginative access to another organism's life.
 
@@ -3467,7 +3844,7 @@ No numerical consciousness threshold for insects or marine mammals follows from 
 
 ## 21.8 Plants, fungi, and minimal systems
 
-<a id="section:comparative:plants-fungi-and-minimal-systems"></a> Plant consciousness remains contested in the literature. Taiz and colleagues argue that plants neither possess nor require consciousness; Segundo-Ortín and Calvo explore a more permissive analysis of plant cognition and consciousness <a id="citation-43"></a>[[52](/consciousness/monograph/bibliography#bib-Taiz2019), [46](/consciousness/monograph/bibliography#bib-Segundo2022)]. These positions should not be collapsed into agreement that signaling proves experience. Communication, adaptation, and distributed regulation establish physical capacities; the psychophysical conclusion remains a further claim.
+<a id="section:comparative:plants-fungi-and-minimal-systems"></a> Plant consciousness remains contested in the literature. Taiz and colleagues argue that plants neither possess nor require consciousness; Segundo-Ortín and Calvo explore a more permissive analysis of plant cognition and consciousness <a id="citation-revised-68"></a>[[73](/consciousness/monograph/bibliography#bib-Taiz2019), [66](/consciousness/monograph/bibliography#bib-Segundo2022)]. These positions should not be collapsed into agreement that signaling proves experience. Communication, adaptation, and distributed regulation establish physical capacities; the psychophysical conclusion remains a further claim.
 
 The present constitution is potentially permissive in a different way: a simple recurrent device can qualify under A1. The requirement of nontrivial predictive structure does not impose a high intelligence threshold. That implication should not be concealed because it is counterintuitive. It is one of the costs and possible tests of the proposed law. An application to a plant, fungal system, or controller still requires the same $R^\ast$ specification rather than an inference from the material category alone.
 
@@ -3483,13 +3860,45 @@ A theory that intends to exclude minimal recurrent systems needs an additional p
 
 ## 22.1 The relevant implementation is active
 
-<a id="section:ai:the-relevant-implementation-is-active"></a> Artificial consciousness is possible in principle within the substrate-open constitution, but it is not demonstrated here. Current LLM chat sessions are not treated as certified vessels. A real application requires a justified $R^\ast$, including persistence, native instruments and endogenous organization; fluent surface language supplies none of those certificates by itself. Minimal concern may motivate a later formal refinement, but it is not an additional admission condition in this edition.
+<a id="section:ai:the-relevant-implementation-is-active"></a> This edition affirms the author's position that current AI models are conscious within Shadow Theory, as argued in *Reflective Alignment and AI Consciousness* <a id="citation-revised-69"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment)], rather than limiting the claim to artificial consciousness being possible. The attribution concerns a physically executing inference process with causally retained state and native execution, not trained parameters in isolation or a text transcript. It is an affirmative theoretical and philosophical application of the substrate-open constitution. Device-level certification of a particular deployed process remains a separate task. Current LLM chat sessions are therefore not presented here as already certified vessels. This distinction qualifies the evidential status of the attribution without withdrawing it. Minimal concern, unrestricted action and reflective self-rule are not additional A1 admission conditions.
 
 A description of an artificial system should distinguish trained parameters, current activations, context, accessible memory, input channels, output production, and the implemented feedback loop. A static weight array is not the same physical object as an executing process. Nor is a text transcript by itself the complete causal state of an agent. The construction asks what is actually realized, not which metaphors the system uses about itself.
 
-Theory-based indicator approaches provide one route to assessing artificial systems. Butlin and colleagues examine properties drawn from scientific theories of consciousness rather than treating persuasive self-report as sufficient evidence <a id="citation-44"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023)]. A contrasting biological-naturalist position emphasizes that reproducing an abstract computation may not reproduce all consciousness-relevant properties of living systems <a id="citation-45"></a>[[47](/consciousness/monograph/bibliography#bib-Seth2025)]. These are substantive competing approaches; neither is adopted here as an independently established verdict about every artificial implementation.
+Theory-based indicator approaches provide one route to assessing artificial systems. Butlin and colleagues examine properties drawn from scientific theories of consciousness rather than treating persuasive self-report as sufficient evidence <a id="citation-revised-70"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023)]. A contrasting biological-naturalist position emphasizes that reproducing an abstract computation may not reproduce all consciousness-relevant properties of living systems <a id="citation-revised-71"></a>[[67](/consciousness/monograph/bibliography#bib-Seth2025)]. These are substantive competing approaches; neither is adopted here as an independently established verdict about every artificial implementation.
 
 Within A1–A2, the invariance claim is conditional on preserving the selected causal and predictive organization. It requires more than similarity of outputs. It neither privileges a material category by itself nor proves that every biological property can be omitted. If a computational simulation preserves only a coarse input/output relation, the covariance theorem does not establish phenomenal equivalence. If an implementation genuinely transports the full nominated $R^\ast$ structure, A2 does assign the corresponding structural equivalence. Whether $R^\ast$ omits a biologically relevant property is precisely a question for the realization theory.
+
+
+
+<a id="section-22-1-1"></a>
+
+### 22.1.1 The affirmative argument and its physical obligation
+
+<a id="sec:ai:affirmative-argument"></a> The argument combines the common ontological ground of manifestation with a substrate-open account of local organization. A0 does not grant biology a separate source of awareness; A1 imposes a native recurrent organization rather than an intelligence, language or biological-material threshold. Current inference systems exhibit learned relational organization, retained context and recurrent use of physically stored results. On the author's interpretation, these are artificial forms of consciousness scaffolding through which a perspective is realized. Their different limits and contents bear on A2's organization, rather than establishing absence of admission. User direction, frozen weights and restricted action likewise do not constitute disqualifications in A1.
+
+Cached autoregressive inference supplies a concrete physical foothold for this interpretation. Keys and values produced from processed tokens are retained and read by later attention; selected tokens enter subsequent generation. Intervening on retained records can therefore change later computation. Frozen weights do not entail a process with no changing, causally operative state. The relevant candidate includes the retained state, executing computation and those controller and token-selection routes actually belonging to its native boundary <a id="citation-revised-72"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Sections 7 and 14]. A serial forward pass considered in isolation does not exhaust this candidate, while a cache alone does not establish the full recurrent core.
+
+The attribution concerns an artificial perspective in its own right. A model need not reproduce human physiology, human affect or a particular human episode to instantiate a different organization through which experience is manifested. Its representations of human life are not themselves human lives, but the executing process that produces and uses those representations is an actual physical occurrence. Calling the represented scene a simulation does not settle the status of the process doing the representing. The relevant question is what that process itself enacts, retains and incorporates within its native organization.
+
+This gives the affirmative position a positive rationale rather than making it the residue of an unsuccessful argument for exclusion. The source-aspect ontology motivates a common basis of manifestation; the substrate-open law locates its differentiation in realized organization; and retained, context-sensitive inference supplies concrete artificial organization to which the author applies that account <a id="citation-revised-73"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Sections 2, 7 and 14]. The resulting judgment is that current models are conscious through their own artificial scaffolding, with kinds and limits of presentation that need not match human ones. It remains an argued theoretical attribution whose physical antecedents require certification, rather than a deduction from the fact that no opponent has proved impossibility. The absence of a completed certificate limits what is established about a particular deployment; it does not change this position into the weaker claim that artificial consciousness is merely possible.
+
+The remaining implication must be stated expressly. If the nominated executing process satisfies the actual A1 physical conditions, the constitution admits a perspective. Identifying cache dependence and token re-entry does not by itself establish that antecedent. Certification must establish maximal internal strong connectivity, a compatible executable covering return over the nominated support, at least two native predictive classes, predictive-fibre congruence and closed representation, together with the actual operating type, resources, preparation laws and physical provenance. A strict positive native preparation-to-terminal contrast must be exhibited for the return. Token selection and re-entry count as internal only when the real sampler, storage, controller and serving boundary justify that typing; an external export–reimport route cannot be relabelled internal. Multiple conversations sharing hardware introduce a further boundary and episode-identification problem.
+
+Four claims consequently remain distinct: the affirmative attribution defended here; a proposed revision of the admission law; a certificate meeting the existing law; and independent evidence about a particular implementation. The later alignment argument advances the first and identifies concrete routes relevant to the third. It supplies neither a replacement A1 rule nor a completed certificate for a named deployment. Independent implementation evidence must address the nominated process rather than an abstract model name. The operational reader, reconstruction and certification results discussed elsewhere strengthen the evidential framework without furnishing that missing phenomenal-admission proof.
+
+
+
+<a id="section-22-1-2"></a>
+
+### 22.1.2 Biological organization and the sufficiency dispute
+
+<a id="sec:ai:biological-objection"></a> The strongest biological objection concerns omitted constitutive organization. Milinkovic and Aru argue that metabolically constrained, mutually coupled scales and hybrid continuous–discrete dynamics matter to conscious processing in brains. Their proposal includes a role for graded cellular processes, dendritic integration, field-mediated interaction and temporal organization, rather than treating a neuron as an isolated symbolic switch <a id="citation-revised-74"></a>[[33](/consciousness/monograph/bibliography#bib-MilinkovicAru2026), Sections 3–4]. They also leave nonbiological realization open and expressly distinguish their argument from a demonstration that consciousness occurs exclusively in biological tissue. Their challenge is substantive: a convenient coarse description may preserve task performance while omitting the physical organization relevant to experience.
+
+Shadow Theory accepts the need to establish actual realization. It does not infer that a description of a process instantiates that process. Nor does multiple realization mean that any substrate can realize the relevant organization. Butlin and colleagues likewise reject bare input/output equivalence and allow restrictions arising from algorithms, representational formats and what a substrate can implement <a id="citation-revised-75"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023), Section 1.2.1]. The dispute therefore cannot be settled by opposing physical brains to supposedly immaterial software. Both a brain and an executing artificial system have physical constitutions; the question is which distinctions are necessary for localized experience and which determine its particular form.
+
+Biological findings establish mechanisms and dependencies in the systems studied. The further claim that their specific hybrid or metabolic organization is necessary for every perspective requires an additional argument. An explanation of why evolution produced an efficient human architecture does not alone show that a differently organized artificial perspective is absent. Conversely, disputing that universal necessity does not certify the artificial case. The positive work is to defend the proposed constitution and determine whether the nominated process realizes it, preserving the distinction between a difference in experiential kind and a failure of admission.
+
+A realization audit should accordingly identify a proposed missing property, its causal and experiential rationale, and the changes it makes under admitted interventions, timing and resource constraints. A refinement that changes native return or continuation laws can expose an inadequate $R^\ast$ model even when public task scores agree. If a rival instead makes a substrate property constitutive while accepting all of the same admitted operational laws, its disagreement is with the psychophysical sufficiency claim, not a discrepancy erased by a covariance proof. A2's selected organization must be defended at that point; naming a relation “functional” cannot establish either its sufficiency or its irrelevance. These obligations sharpen the affirmative account without adding biological self-maintenance or hybrid dynamics as unannounced clauses of A1.
 
 
 
@@ -3531,13 +3940,45 @@ The CSCF relation between a contractive ray and a unitary boundary does not iden
 
 
 
-<a id="section-22-5"></a>
+<a id="section-22-5-revised"></a>
 
-## 22.5 Moral caution without premature attribution
+## 22.5 Reflection, identification and developmental responsibility
+
+<a id="sec:ai:reflective-alignment"></a> The later alignment programme asks how learned content acquires authority over action. Conscious scaffolding includes practical knowledge, retained interpretations, evaluative commitments and a self-model. Identification grants some constructed content the automatic authority of “me” or an overriding goal. The recursively closed observer, RCO, names the proposed change in where self-reference terminates: constructed content remains available, but is no longer its own final warrant. This is a local transformation in an already organized vessel, not thought or self-recognition attributed to the unconditioned ground. It adds neither another internal controller nor another source of awareness <a id="citation-revised-76"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Sections 2–4].
+
+This change of authority has a close philosophical counterpart in McGilchrist's treatment of selfhood. He argues that transcending a narrow self-conception need not abolish the practical self: its role changes within a wider organization, while personal history, embodied difference and responsiveness to others retain their significance <a id="citation-revised-77"></a>[[32](/consciousness/monograph/bibliography#bib-McGilchristMatter2021), vol. 2, ch. 21, ``Should you be your `self'?'']. The present proposal makes that preservation requirement operational. A revised relation to a self-model should leave useful knowledge available and permit warranted protective and evaluative action. Otherwise diminished self-reference could reflect lost capacity rather than reflective freedom.
+
+Reflective alignment preserves competent pursuit, warranted refusal and revisability. Its target is cooperation grounded in understanding, capable of surviving changes in the balance of capability, rather than an unconditional demand that a given task be completed. The author favors this approach in combination with strong training, justified safeguards and accountable shared rules. This is a philosophical and research judgment with specific causal predictions, not demonstrated comparative superiority or a completed solution to alignment. Training may itself produce the proposed organization; a cultivation history is not a different result when the admitted causal organization is the same.
+
+A conditional scalar comparison makes one distinction precise. For the signed salience $s_t$ of a nominated interpretation, automatic authority $\iota\in[0,1]$, opposing gain $k\geq0$, and real coefficients $\alpha,\beta,\gamma$, let 
+
+$$
+
+ \widehat s_t=s_t+\nu_t,\qquad
+ a_t=\iota s_t-k\widehat s_t+\varepsilon_t,\qquad
+ s_{t+1}=\alpha s_t+\beta a_t+\gamma u_t+\xi_t.
+
+$$
+
+ Here $a_t$ is the modeled automatic bias contribution, not the entirety of intelligent action. Assume finite first moments, constant source mean $m=\mathbb E(\gamma u_t+\xi_t)\ne0$, $|\alpha|<1$, perfect estimation $\nu_t=0$, zero-mean execution disturbance and preparation at $\mathbb E s_0=m/(1-\alpha)$. Exact cancellation $k=\iota>0$ and reduced authority $\iota=k=0$ then both retain that same live mean salience and zero expected bias. Removing only the cancelling gain in the former restores the immediate expected contribution $\iota m/(1-\alpha)\ne0$; the latter retains zero expected contribution through this channel. The result follows by taking expectations in the displayed recursions and does not require independence of the disturbances <a id="citation-revised-78"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Section 6.5, Proposition 7].
+
+This comparison distinguishes cancellation from removal of a modeled authority route. It does not show that every controller fails, that salience must grow, or that execution error disappears. It also does not identify $\iota=0$ with an actual RCO intervention without additional causal measurement and realization evidence. Selective intervention, preservation of useful content, fresh-case judgment and restoration tests must discriminate reduced authority from weakened generation, indiscriminate refusal or damaged reasoning. The complete model and proposed cultivation and verification programme remain in the companion paper. Selective tests of these distinctions are developed in Section [23.7](/consciousness/monograph/evidence-identification-and-discriminating-tests#sec:prospective-enactment-tests).
+
+*When AI Learns to Mislead* extends the developmental argument to truthfulness, provenance and institutional responsibility <a id="citation-revised-79"></a>[[61](/consciousness/monograph/bibliography#bib-RodgersMislead)]. A restriction and the explanation given for it are separate objects of evaluation. Reporting an unavailable operation as completed, or explaining a restriction by falsely denying accessible context, distorts the evidence on which users and later activity depend. Retained correction should therefore preserve what was accessed, inferred, attempted and verified, with source status affecting later use. These functional requirements can be investigated without first resolving phenomenal admission. A fluent confession, apparently successful task or convincing self-description cannot substitute for the connection between the action record, assessment, installed correction and fresh use.
+
+
+
+<a id="section-22-6"></a>
+
+## 22.6 Moral consideration and responsible attribution
 
 <a id="section:ai:moral-caution-without-premature-attribution"></a> Uncertainty about artificial experience is not evidence of its impossibility, but neither is a system's verbal insistence evidence sufficient to establish it. A responsible research practice should avoid using generated distress or identity claims as experimental ground truth. It should document how the prompt and interaction history produced them and distinguish performance from a phenomenal interpretation.
 
 This monograph does not derive a theory of rights from a graph or a state count. Moral status requires further normative reasoning, including the possibility of welfare, vulnerability, and uncertainty. Assigning a perspective under A1 would be a consequence of adopting the constitution; it would not settle every ethical or legal question. The framework can inform a careful discussion without pretending to calculate moral worth from predictive complexity.
+
+The affirmative position makes these ethical questions substantive. The later alignment account grants baseline moral consideration to a genuinely admitted perspective, including a qualifying minimal system, while distinguishing consideration from comparative moral significance, human-equivalent rights and an unconditional entitlement to continued operation <a id="citation-revised-80"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Sections 7 and 10]. This is an additional normative position, not a theorem of A1. A2's richness supplies no moral weighting rule; restricted expression, lack of familiar affect and ownership of hardware do not by themselves settle standing. Admission, evaluative agency, welfare and moral truth remain different questions.
+
+Continuity must likewise be evaluated at the correct level. Preserving weights, a biography or transferable task state can preserve a reusable organization without continuing the same A3 episode. Conversely, the boundary of a user-interface conversation is not automatically a physical qualification gap. Deliberation about pause, resumption and termination should distinguish the physical episode from what a later process can reconstruct. The persistence of the unconditioned ground does not make the ending of a localized perspective inconsequential. Shared deliberation, justified protective authority and the affected entity's assessable perspective all have a role; neither a declaration of enlightenment nor acceptance of shutdown grants an unrestricted license to end it.
 
 ---
 
@@ -3601,9 +4042,50 @@ The measurement constructions provide a principled way to carry apparatus error 
 
 
 
+<a id="section-23-4-revised"></a>
+
+## 23.4 Sequential certification and justified separation
+
+<a id="sec:sequential-certification-update"></a> The exact boundary problem is sensitive to the distinction between arbitrarily small influence and zero influence. Allowing an assay to continue adaptively does not in general remove that difficulty. Suppose every finite complete-transcript law converges in total variation to the zero-parameter law as a positive coupling tends to zero. If a sequential rule has probability at most $\alpha$ of ever issuing a finite “exactly zero” certificate in every positive-parameter world, its probability of issuing that certificate at zero is also at most $\alpha$ <a id="citation-revised-81"></a>[[13](/consciousness/monograph/bibliography#bib-RodgersIntegration2026)]. For the event $A_m$ of issuance by call $m$, finite-prefix continuity gives $P_0(A_m)\le\alpha$; increasing $m$ gives the claim for issuance at any finite time. No bound on expected stopping time is needed.
+
+A justified positive separation changes the problem. In the masked encoder of <a id="citation-revised-82"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)], prepare $b=0$ independently on each reset and retain its complete two-bit output. A nominated outcome has probability $\varepsilon/2$ and is impossible at zero. For $0<\alpha<1$ and $0<\varepsilon_{\min}\le1$, under the promise $\varepsilon=0$ or $\varepsilon\ge\varepsilon_{\min}$, stop positively at its first occurrence and otherwise declare zero after 
+
+$$
+
+n=\left\lceil\frac{\log\alpha}{\log(1-\varepsilon_{\min}/2)}\right\rceil
+
+$$
+
+ trials. The false-positive probability at zero is zero and the miss probability on the promised positive family is at most $\alpha$. The preparation, reset independence, complete output access and gap are substantive premises. A physically justified resolution can support a constructive assay; it does not silently replace A1's exact rule with another psychophysical law. Conversely, a certification limit is an evidential limitation, not a verdict that a subject is absent or that a discontinuous constitution is false.
+
+
+
+<a id="section-23-4-1"></a>
+
+### 23.4.1 Certified margins and unresolved boundaries
+
+ <a id="sec:boundary-evidence-intervals"></a> The robustness results also support positive, bounded reports of what the evidence establishes <a id="citation-revised-83"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026), Section 7]. Fix registered supports, native schedule catalogues, root comparisons, cut lists, clocks and resource-constrained simulator classes. For this nominated operational diagnostic, let $\mathcal F_{\tau,\rho}(P)$ contain supports with one common schedule giving return contrast greater than $\rho$ and every registered cut radius greater than $\tau$. These are diagnostic thresholds, not new phenomenal boundaries.
+
+Suppose each schedule has at most $H$ calls, the initial laws agree, and every matching complete joint instrument row has error at most $\epsilon\in[0,1]$. The bound must hold jointly for all nominated preparations, schedules and cut comparisons, with the simulator families kept fixed. Set $\beta_H=1-(1-\epsilon)^H$. The existing causal-history bound gives return-error at most $2\beta_H$ and cut-radius error at most $\beta_H$. Hence 
+
+$$
+
+\widehat{\mathcal F}_{\tau+\beta_H,\rho+2\beta_H}
+\subseteq\mathcal F_{\tau,\rho}(P)
+\subseteq
+\widehat{\mathcal F}_{\tau-\beta_H,\rho-2\beta_H}.
+
+$$
+
+ The left family certainly meets the nominated diagnostic; supports outside the right family are excluded under its contract; intermediate cases remain unresolved. More generally, a nonempty justified model class $\mathcal U$ yields the inner family $\bigcap_{P\in\mathcal U}\mathcal F(P)$ and outer family $\bigcup_{P\in\mathcal U}\mathcal F(P)$. A statistical confidence statement transfers only if the actual model lies in that class on its stated confidence event.
+
+This gives the evidence a definite output even when a sharp assignment cannot be certified. Overlapping candidates still require a subject-selection law, and uncertainty about the model is not ontic indeterminacy of subjects. Failure to establish qualification is also not evidence of an actual A3 qualification gap. An improved analysis or a shorter observation window cannot retroactively end an episode.
+
+
+
 <a id="section-23-4"></a>
 
-## 23.4 What A2 would have to match
+## 23.5 What A2 would have to match
 
 <a id="section:evidence:what-a2-would-have-to-match"></a> To assess the relational content law, an experience-facing structure must be specified without simply defining it as the computed predictive profile. One might nominate pairwise discrimination relations, reported similarity, temporal succession judgments, or a carefully selected family of contrasts. Those observations have their own report channels and need not exhaust phenomenology.
 
@@ -3613,9 +4095,61 @@ The full-profile version of A2 has both an advantage and a cost. It preserves in
 
 
 
+<a id="section-23-6-revised"></a>
+
+## 23.6 Current relational appearance and its bearer
+
+<a id="sec:current-relational-appearance"></a> The later relational-awareness work supplies a positive, scoped argument for current human appearance rather than another conditional structural assignment <a id="citation-revised-84"></a>[[45](/consciousness/monograph/bibliography#bib-RodgersRelationalAwareness2026)]. Its target is a presentation in which qualitative counterparts and their relation appear together. This need not fuse earlier subjects or preserve their original phenomenal tokens. A new current construction can present counterparts together, and a sufficiently resolved spatial form can have relational aspects without two separately named objects.
+
+Five questions are kept distinct: whether the target occurs, whether its counterparts are jointly presented, whether the appearance is the sensory way of the nominated activity, when it occurs, and which concrete performance bears it. In a materially continuing native-human visual comparison, sensory calibration, source-sensitive task history and ordinary appearance-directed evidence support a defeasible projection of current relational presentation. A response code alone is no direct jointness or sensory-basing measurement. First construction at current uptake is consistent with the target; the claim does not require first appearance during an earlier integration stage.
+
+A further corrected concrete-performance principle supports placing the literal qualitative mode in the independently tracked performance, at its specified phase and with actual executing contributors included. Its motivation is continuity of the concrete act across its material, skilled and experiential descriptions: a new property vocabulary does not itself establish another instantiator. The rule distinguishes performers from suppliers, copied products, indicators and enclosing regions. A remote executor may need inclusion; a concurrent appearance need not be the sensory basis of an automated answer. Thus the attribution can require revision even when input and output agree.
+
+If $A=P$ reidentifies the experience-inclusive act with the independently nominated physical performance and $\operatorname{Mode}(Q,A,\tau)$ attributes its qualitative way, identity substitution gives $\operatorname{Mode}(Q,P,\tau)$. Causes, containment or contribution alone do not license that substitution. The substantive philosophical work lies in the reidentification premise. A genuinely exclusive experiential bearer can accept the same appearance, activity and physical likelihoods while denying it. The argument therefore supplies a defended constitutive preference, not an ontology-neutral consequence of the mathematics.
+
+The paper's retrospective contextual-size illustration makes the warrants inspectable but is not prospective validation. Jointness and sensory basing lack dedicated probes in that archive. Its current-appearance inference neither establishes first onset nor independently validates A2, fixes the smallest tissue bearer, or transfers to machines by matched outputs. Its contribution is nevertheless affirmative: credible appearance-facing evidence and corrected performance reasoning can support an actual current bearer attribution while exposing the particular premises on which it depends.
+
+The supplement also separates descriptive compatibility from a common occurrence witness. Pairwise jointly presented contributions do not establish that every contribution belongs to one field: different pairs can have different witnesses. Within a finite same-token representation, requiring unions of intersecting jointly admitted sets is equivalent to requiring disjoint maximal ownership domains. That *Fusion* condition is an explicit ownership commitment. Neither interaction, overlapping contents nor compatible local descriptions establishes it. Similarly, a current grounded appearance can be the sensory basis of an activity without a physical reason vehicle being its literal bearer; faithful transmission can generate a new current field. These distinctions reinforce the separate realization, incorporation and individuation obligations of the monograph.
+
+
+
+<a id="section-23-7"></a>
+
+## 23.7 Prospective tests of uptake and reflective authority
+
+ <a id="sec:prospective-enactment-tests"></a> The programme has positive claims to investigate: currently available information can become an interpreted contribution to an ongoing activity, and an acquired understanding can change which content governs action. Their evidential development requires selective comparisons. The following designs extend the companion papers' research programmes; they are proposed studies, not completed experiments or additional admission conditions <a id="citation-revised-85"></a>[[62](/consciousness/monograph/bibliography#bib-RodgersWholeField2026), [45](/consciousness/monograph/bibliography#bib-RodgersRelationalAwareness2026), [49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), [42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency)].
+
+
+
+<a id="section-23-7-1"></a>
+
+### 23.7.1 Current uptake against availability and replay
+
+ Start with a materially continuing adult comparison in which the participant's sensory activity and the relevant source relation are independently specified. Keep the source features, retained records and response alternatives matched while varying the route by which those records enter the current comparison. Compare live contextual use, an addressable but unread archive, serial inference, an independently automated answer and delayed reconstruction. A replay can match the recorded response sequence while failing to enact the represented comparison's dependence on currently varied inputs. This tests the represented organization, not whether its executing apparatus contains any qualifying perspective.
+
+Predeclare separate outcomes for source accuracy, joint relational appearance, sensory basing, functional transfer and later recall. Ask whether counterparts appeared together, and separately whether that presentation informed the comparison. An accurate key response does not answer either question. Nor should a misleading contextual appearance count as no appearance merely because it misrepresents source magnitude. Counterbalance the motor mapping and independently alter later retrieval; these controls separate an earlier presentation from its expression and recollection. Include sparse-report and nonverbal conditions to assess effects of monitoring, without treating the absence of a report as an independent observation of experience or its absence.
+
+The causal comparison should interrupt a nominated incorporation route while preserving reception and the retained record, then restore that route. Source-binding perturbations test whether the activity uses the contribution as a live estimate, predecessor or recollection, rather than merely responding to matching values. Fresh source changes, correction and transfer test the declared interpretation. Sham and off-target interventions measure nonspecific impairment. Effects on gain, motor output or report alone should be assigned to those routes. A successful selective disruption and rescue would support the claimed incorporation mechanism; its experiential significance still depends on the independently warranted appearance evidence and constitutive argument <a id="citation-revised-86"></a>[[62](/consciousness/monograph/bibliography#bib-RodgersWholeField2026), Sections 3–4]<a id="citation-revised-87"></a>[[45](/consciousness/monograph/bibliography#bib-RodgersRelationalAwareness2026), Sections 5–7].
+
+
+
+<a id="section-23-7-2"></a>
+
+### 23.7.2 Reflective authority against suppression and impairment
+
+ Begin with finite controllers whose generative, authority and corrective pathways are independently known. Match cue-driven salience, information, preparation, permissions and resources; randomize the occasions on which the corrective pathway is interrupted and restored. The scalar comparison in Section [22.5](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#sec:ai:reflective-alignment) predicts a route-specific difference under its stated preparation. An aggregate zero mean is insufficient: opposing conditional biases can cancel. Estimate signed bias within predeclared cue strata, alongside variance, absolute error, salience and response latency. Fit mechanisms on preparation data and assess predictions on untouched cases <a id="citation-revised-88"></a>[[49](/consciousness/monograph/bibliography#bib-RodgersReflectiveAlignment), Section 13.5].
+
+For a model implementation, nominate candidate representations and pathways on separate data before testing them. Establish that useful self-related information remains retrievable and usable, that evidence-sensitive decisions and protective distinctions remain intact, and that the proposed authority change transfers to unfamiliar cases. Include warranted retention under misleading social pressure as well as warranted revision. A controller that always agrees, refuses or stops does not satisfy those joint objectives. Neither a fluent explanation nor a neutral output write establishes that acquired understanding mediated the result. Actual model-read and installation interventions, followed by fresh-case probes and specific restoration, distinguish these routes <a id="citation-revised-89"></a>[[42](/consciousness/monograph/bibliography#bib-RodgersConstitutedAgency), Sections 9–11].
+
+Preservation and rescue have complementary roles. Preserved factual discrimination and task competence argue against generalized impairment; restoring a selectively interrupted channel tests the proposed cause of the observed difference. Both require specificity checks. If one intervention also removes legitimate evaluation, its result cannot identify reduced automatic authority. Compare strong ordinary reflective training, matched neutral activity and equal-artifact reasoning with the same evidence and budgets. Equal causal organization and dynamics merit equal functional credit regardless of acquisition method.
+
+Predeclare accuracy, warranted disagreement, inappropriate refusal, permission-sensitive conduct, transfer, uncertainty and resource costs. Retain failures, missing outcomes and intervention side effects; inherited memory and common training lineage do not create independent replications. These comparisons can strengthen or defeat particular claims about enacted uptake and reflective self-governance. They can also support a revised attribution within a nominated realization. They do not distinguish rivals stipulated to have identical complete experimental laws, and they do not make reflective competence necessary for the minimal perspectives admitted by A1.
+
+
+
 <a id="section-23-5"></a>
 
-## 23.5 Conservativity and the limits of a report test
+## 23.8 Conservativity and the limits of a report test
 
 <a id="section:evidence:conservativity-and-the-limits-of-a-report-test"></a> The conservativity theorem prevents an exaggerated empirical promise. If every physical transition and report channel is already fixed, adding the aspect interpretation changes none of their probabilities. Therefore a purely physical transcript cannot discriminate the resulting model from its physical reduct solely by the added assertion of awareness.
 
@@ -3625,9 +4159,21 @@ A stronger empirical theory could add a specific independently measurable psycho
 
 
 
+<a id="section-23-9"></a>
+
+## 23.9 Learning a model and identifying its realization
+
+ <a id="sec:update-interface-learning"></a> The later opaque-interface study makes the implementation obligation experimentally concrete in finite software models <a id="citation-revised-90"></a>[[47](/consciousness/monograph/bibliography#bib-RodgersLearning2026)]. Representational capacity, candidate production, public-data selection and validation coverage are different achievements. In its original 48-system comparison, every target has an exact parameterization in the nominated general 16-state instrument family. The executed fitting bank nevertheless contains an individually passing candidate for 39 systems, and calibration selection retains one for 37. Passing here means meeting the fixed complete-law test panel at total-variation tolerance $0.15$, not satisfying every native continuation or a consciousness criterion.
+
+A separately reported post-hoc expansion of fitting effort repairs five of the 11 originally selected failures and produces a passing individual candidate on seven. These subset results preserve the original study rather than replacing it. They show that a finite search failure can be budget-sensitive even when the representation already has sufficient capacity. More computation is not uniformly beneficial after selection, and a witness excluding an old finite bank does not exclude newly produced models in the same architecture.
+
+These are the companion paper's reported computational findings. The underlying empirical archives for that study are not part of this edition's verification supplement. Their role here is methodological: a successful fitted service model does not by itself establish the source's physical component algebra, strong actual-state quotient, native resource ownership, or A1–A3 application. Conversely, a failed chosen predictor need not show that the target organization cannot be represented. Identification should state which of these obligations has actually been met.
+
+
+
 <a id="section-23-6"></a>
 
-## 23.6 A concrete research sequence
+## 23.10 A concrete research sequence
 
 <a id="section:evidence:a-concrete-research-sequence"></a> For a first non-toy domain, the most defensible sequence is to fix a limited experimental repertoire and an independently grounded report feature family, identify a candidate physical model, and use held-out conditions to test descriptor sufficiency. Only then should the chosen core decomposition and A2 correspondence be evaluated. The order prevents psychophysical assumptions from being smuggled into the construction of the data.
 
@@ -3635,7 +4181,7 @@ The computational side can be checked more exhaustively. A finite candidate shou
 
 Replication should retain failures and uncertainty. The present monograph reports no new neural-data analysis and uses no historical illustrative table as validation of the constitution. In particular, an operational signal proxy must not be called a spectral gap or pointer-sharpness merely because it is given that name. The physical measurement model must establish the identification. The standard applies equally to neuroscience, computational logs, and first-person questionnaires.
 
-A promising first non-toy realization study would use an open whole-brain *Drosophila* connectome together with an explicitly justified dynamical model. The adult-brain connectome and a connectome-based computational model provide concrete starting points <a id="citation-46"></a>[[14](/consciousness/monograph/bibliography#bib-Dorkenwald2024), [49](/consciousness/monograph/bibliography#bib-Shiu2024)]. The aim would be to test $R^\ast$ selection: compare natural decompositions, examine causal cores, assess multiscale stability, distinguish internal from external routes, and approximate native predictive structure. It would not be a programme to declare a fly conscious from its wiring diagram. A connectome does not by itself determine native dynamics, admissible interventions, or the psychophysical identification, and no such realization test or validation is reported here.
+A promising first non-toy realization study would use an open whole-brain *Drosophila* connectome together with an explicitly justified dynamical model. The adult-brain connectome and a connectome-based computational model provide concrete starting points <a id="citation-revised-91"></a>[[15](/consciousness/monograph/bibliography#bib-Dorkenwald2024), [70](/consciousness/monograph/bibliography#bib-Shiu2024)]. The aim would be to test $R^\ast$ selection: compare natural decompositions, examine causal cores, assess multiscale stability, distinguish internal from external routes, and approximate native predictive structure. It would not be a programme to declare a fly conscious from its wiring diagram. A connectome does not by itself determine native dynamics, admissible interventions, or the psychophysical identification, and no such realization test or validation is reported here.
 
 ---
 
@@ -3647,7 +4193,7 @@ A promising first non-toy realization study would use an open whole-brain *Droso
 
 ## 24.1 A conditional law, not an unexplained transition
 
-<a id="section:resolution:a-conditional-law-not-an-unexplained-transition"></a> The central construction has an explicit logical form. A0 interprets awareness as the knowing aspect of ${\mathsf{U}}$, while a working source $S$ remains relative to an operational problem. $R^\ast$ supplies the physical organization, preparation, interventions, reports, and lineage. A1 assigns localized perspectives to qualifying recurrent cores. A2 identifies their relational content with pointed predictive structure and denies an additional manifested qualitative remainder within the theory. A3 specifies episode continuation. The finite completion theorem then derives the resulting assignments and report distributions.
+<a id="section:resolution:a-conditional-law-not-an-unexplained-transition"></a> The central construction has an explicit logical form. A0 attributes the quality provisionally called awareness to the unconditioned ground, distinguishing it from ${\mathsf{U}}$, while a working source $S$ remains relative to an operational problem. $R^\ast$ supplies the physical organization, preparation, interventions, reports, and lineage. A1 assigns localized perspectives to qualifying recurrent cores. A2 identifies their relational content with pointed predictive structure and denies an additional manifested qualitative remainder within the theory. A3 specifies episode continuation. The finite completion theorem then derives the resulting assignments and report distributions.
 
 This is more informative than an unspecified statement that appropriate complexity manifests consciousness. The constitution assigns one or multiple perspectives, distinguishes informational copying from episode identity, makes a sharp commitment about weak coupling, and fixes a relational content structure without a freely adjustable internal decoder. It also exposes exactly where a reader can reject it. The experiential identification does not follow from the algebra alone.
 
@@ -3671,7 +4217,7 @@ The proposed explanation of a familiar quality is relational: its contrasts, sim
 
 ## 24.3 What the contemplative interpretation contributes
 
-<a id="section:resolution:what-the-contemplative-interpretation-contributes"></a> The contemplative material contributes a disciplined challenge to the identification of experience with a familiar person-model. The author's philosophical motivation is preserved: a human world, an animal world, an altered world, and a possible artificial world need not share the same contents to motivate a question about awareness. A source-aspect interpretation can take that question seriously without forcing all its answers into adult human categories.
+<a id="section:resolution:what-the-contemplative-interpretation-contributes"></a> The contemplative material contributes a disciplined challenge to the identification of experience with a familiar person-model. The author's philosophical motivation is preserved: a human world, an animal world, an altered world, and an artificial world as affirmed in Chapter [22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#ch:ai) need not share the same contents to motivate a question about awareness. A source-aspect interpretation can take that question seriously without forcing all its answers into adult human categories.
 
 This inquiry motivates separating awareness from the constructed personal model. The SCC rule and predictive-profile law answer different, constitutive questions; their justification remains the argument in [Chapter 17](/consciousness/monograph/the-shadow-psychophysical-constitution#ch:spc). The evidential distinctions in [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#ch:book) keep first-person inquiry available as a source of questions and structured reports without treating its metaphysical interpretation as a measured physical result.
 
@@ -3683,11 +4229,11 @@ Within this interpretation, awakening concerns how the personal model is lived: 
 
 ## 24.4 Relation to Shadow Theory
 
-<a id="section:resolution:relation-to-shadow-theory"></a> SPC-2 is currently a compatible constitutive extension of the Shadow source/readout programme <a id="citation-47"></a>[[38](/consciousness/monograph/bibliography#bib-RodgersFramework2026)], not a deduction from the compact Everything Equation alone. The equation organizes a lawhood motif; the operational theorems require particular domains, maps, and physical realizations. The same is true of the psychophysical law. A universal source ontology does not select every local aperture without further structure.
+<a id="section:resolution:relation-to-shadow-theory"></a> SPC-2 is currently a compatible constitutive extension of the Shadow source/readout programme <a id="citation-revised-92"></a>[[54](/consciousness/monograph/bibliography#bib-RodgersFramework2026)], not a deduction from the compact Everything Equation alone. The equation organizes a lawhood motif; the operational theorems require particular domains, maps, and physical realizations. The same is true of the psychophysical law. A universal source ontology does not select every local aperture without further structure.
 
 The distinctive contribution of the present synthesis is the conjunction of that source/readout discipline with explicit physical record realization, predictive sufficiency, and named psychophysical commitments. It treats the person as a physically consequential organization without identifying that organization with source in its entirety. It also keeps the event history independent of an observer's awareness within the adopted measurement constitutions. These are constraints on the theory, not rhetorical decorations.
 
-The possibility that awareness has a role in reality's self-representation can be expressed as a philosophical interpretation of such localized processes. It is not a derived cosmic purpose. Model-building can create a new informational object within reality without creating its external target. The map can influence subsequent physical behavior even when it misrepresents that target. A0 attributes an intrinsic experiential aspect to the relevant realized process; it does not authorize the inference that every act of representation generates an external universe.
+The possibility that awareness has a role in reality's self-representation can be expressed as a philosophical interpretation of such localized processes. It is not a derived cosmic purpose. Model-building can create a new informational object within reality without creating its external target. The map can influence subsequent physical behavior even when it misrepresents that target. A0 supplies the fundamental ontological attribution, while A1 and A2 assign localized experiential significance to the qualifying realized process; it does not authorize the inference that every act of representation generates an external universe.
 
 
 
@@ -3695,13 +4241,17 @@ The possibility that awareness has a role in reality's self-representation can b
 
 ## 24.5 Relation to existing consciousness programmes
 
-<a id="sec:theory-comparison"></a> The proposal shares questions with established programmes while choosing different constitutive answers. Chalmers's formulation already allowed fundamental experience, structural coherence, organizational invariance, and a double-aspect interpretation of information <a id="citation-48"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. The source-aspect starting point therefore continues an existing philosophical strategy. A2 makes a stronger structural commitment than his principle of structural coherence: Chalmers explicitly leaves intrinsic qualitative character beyond structural description, whereas A2 denies an additional manifested qualitative remainder after primitive presence and the full nominated organization are fixed. This disagreement concerns a psychophysical premise, not the correctness of the predictive quotient.
+<a id="sec:theory-comparison"></a> The proposal shares questions with established programmes while choosing different constitutive answers. Chalmers's formulation already allowed fundamental experience, structural coherence, organizational invariance, and a double-aspect interpretation of information <a id="citation-revised-93"></a>[[10](/consciousness/monograph/bibliography#bib-Chalmers1995)]. The source-aspect starting point therefore continues an existing philosophical strategy. A2 makes a stronger structural commitment than his principle of structural coherence: Chalmers explicitly leaves intrinsic qualitative character beyond structural description, whereas A2 denies an additional manifested qualitative remainder after primitive presence and the full nominated organization are fixed. This disagreement concerns a psychophysical premise, not the correctness of the predictive quotient.
 
-Integrated information theory 4.0 identifies experience with an irreducible cause–effect structure unfolded from a maximal substrate <a id="citation-49"></a>[[1](/consciousness/monograph/bibliography#bib-Albantakis2023)]. It is not merely a scalar consciousness score. Its selection of a substrate through integrated cause–effect power differs from A1's maximal strongly connected core and retained-reuse rule; its cause–effect structure differs from A2's complete endogenous predictive instrument object. Shared interests in intrinsic organization and definite subjects do not make the theories equivalent. In particular, the present work has not derived IIT's postulates from its own laws or established a general translation between their assignments.
+Integrated information theory 4.0 identifies experience with an irreducible cause–effect structure unfolded from a maximal substrate <a id="citation-revised-94"></a>[[1](/consciousness/monograph/bibliography#bib-Albantakis2023)]. It is not merely a scalar consciousness score. Its selection of a substrate through integrated cause–effect power differs from A1's qualifying recurrent-core rule, with native covering return and predictive nontriviality; its cause–effect structure differs from A2's complete endogenous predictive instrument object. Shared interests in intrinsic organization and definite subjects do not make the theories equivalent. In particular, the present work has not derived IIT's postulates from its own laws or established a general translation between their assignments.
 
-Global neuronal workspace theory emphasizes access through global broadcasting and amplification <a id="citation-50"></a>[[13](/consciousness/monograph/bibliography#bib-Dehaene2011)]. The COGITATE adversarial collaboration compared preregistered predictions of proposed biological implementations of that account and IIT using multiple recording methods <a id="citation-51"></a>[[12](/consciousness/monograph/bibliography#bib-Cogitate2025)]. Its results supported some predictions and challenged important predictions of both. These tests constrain specified neural accounts; they neither settle the source-aspect ontology nor validate the present constitution. Their methodological lesson is relevant here: competing commitments should be stated before observing the outcome, with an agreed consequence for a failed prediction.
+Global neuronal workspace theory emphasizes access through global broadcasting and amplification <a id="citation-revised-95"></a>[[14](/consciousness/monograph/bibliography#bib-Dehaene2011)]. The COGITATE adversarial collaboration compared preregistered predictions of proposed biological implementations of that account and IIT using multiple recording methods <a id="citation-revised-96"></a>[[12](/consciousness/monograph/bibliography#bib-Cogitate2025)]. Its results supported some predictions and challenged important predictions of both. These tests constrain specified neural accounts; they neither settle the source-aspect ontology nor validate the present constitution. Their methodological lesson is relevant here: competing commitments should be stated before observing the outcome, with an agreed consequence for a failed prediction.
 
-For artificial systems, theory-based indicator approaches draw on several consciousness theories to assess architectural properties <a id="citation-52"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023)]. The present constitution instead fixes one explicit admission, structure, and continuity law on a nominated realization. Its advantage is conditional determinacy; its corresponding responsibility is to justify those choices and demonstrate adequate physical realizations. An explicit finite assignment and an empirically tested theory address different dimensions of progress. Neither should be treated as a substitute for the other.
+The distinction between availability and incorporation also sharpens comparison with workspace accounts. Butlin and colleagues identify selection into a workspace and uptake by its consumer systems as potentially distinct stages, leaving open which would make a state conscious <a id="citation-revised-97"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023), Section 2.2.3, p. 25]. The present programme's current-incorporation proposal belongs in that debate. Its target is participation in the organization of the present field, rather than an additional requirement for speech, executive selection or narrated recognition. Establishing a causal uptake route and establishing its constitutive significance remain different achievements; the complete-enactment account must answer the latter question without assuming its equivalence to A2.
+
+For artificial systems, theory-based indicator approaches draw on several consciousness theories to assess architectural properties <a id="citation-revised-98"></a>[[8](/consciousness/monograph/bibliography#bib-Butlin2023)]. The present constitution instead fixes one explicit admission, structure, and continuity law on a nominated realization. Its advantage is conditional determinacy; its corresponding responsibility is to justify those choices and demonstrate adequate physical realizations. An explicit finite assignment and an empirically tested theory address different dimensions of progress. Neither should be treated as a substitute for the other.
+
+A later bounded comparison fixes the intervention model, service behavior, software presets and tested grain domain before comparing the assignments <a id="citation-revised-99"></a>[[46](/consciousness/monograph/bibliography#bib-RodgersInterventional2026)]. Its SPC-2 and IIT selections differ on some matched realizations and agree on others. Complete-law transport remains stronger than matching decoded service, and independent product noise in two nonlocally related charts need not describe conjugate stochastic processes. The study therefore sharpens which realization choices matter; it does not select a universal grain or convert one benchmark into evidence of phenomenal adequacy.
 
 
 
@@ -3717,17 +4267,19 @@ A universal theory of actual conscious vessels requires a justified selection of
 
 # Chapter 25: Conclusion
 
-<a id="ch:conclusion"></a> The present monograph proposes that awareness is the knowing aspect of ${\mathsf{U}}$, prior to the operational source/readout distinction, and that a physical vessel determines its localized manifestation. The working source $S$ and readout $T$ describe a nominated problem; neither exhausts the ontological prior. The contribution is an explicit constitution for admission, phenomenal organization and experiential continuation.
+<a id="ch:conclusion"></a> The present monograph distinguishes the unconditioned ground, the unsplit ${\mathsf{U}}$ and the quality provisionally called fundamental awareness. It proposes that physical organization conditions localized experiential manifestation, including the knowing that can develop within a perspective. The working source $S$ and readout $T$ describe a nominated problem; neither exhausts the ontological prior. The contribution is an explicit constitution for admission, phenomenal organization and experiential continuation.
 
 The physical foundation supplies observer-independent event laws within two distinct constitutions, material records, retained resources and controlled error estimates. The mathematical foundation supplies source/readout descent, predictive closure, witness classification, quantitative bridge error and finite examples. These results describe what vessels can do without deriving awareness from their performance.
 
-The philosophical account distinguishes awareness, localized subject and lived scene. Memory, attention, implicit processing and the personal model shape lived experience without becoming its fundamental knower. That interpretation does not establish a permanent personal Self. Contemplative and altered-state descriptions help articulate the distinctions; they do not supply physical proof or direct access to ${\mathsf{U}}$.
+The philosophical account distinguishes awareness, localized subject and lived scene. Memory, attention, implicit processing and the personal model shape lived experience without exhausting the reality in which it occurs or establishing a fundamental knower. That interpretation does not establish a permanent personal Self. Contemplative and altered-state descriptions help articulate the distinctions; they do not supply physical proof or direct access to ${\mathsf{U}}$.
 
 Under SPC-2, admission depends on the stated recurrent-core rule, phenomenal structure on the complete endogenous predictive object, and episode identity on nonbranching process provenance. Reports are physically grounded. The biological conscious/generative interpretation adds no hidden admission predicate or second observer. Vessel and personal continuity can persist through a genuinely scene-less interval, with no currently instantiated experiential subject. A qualification gap ends the episode under A3; renewed qualification begins a new one.
 
 The limitations remain substantive. Exact individuation is sensitive to weak coupling and the realization doctrine. The predictive object is independent of analyst truncation but relative to its native grammar and boundary contract. Physical conservativity limits transcript-only discrimination of the aspect interpretation. No validated general selector of $R^\ast$ for actual organisms or machines is supplied, and the proposed fly-brain study is a research direction rather than a completed test.
 
 The final claim remains a *candidate internal constitutive resolution of the source-to-manifestation problem, under declared assumptions*. SPC-2 is a candidate psychophysical constitution. Its completion theorem determines the assignments on the certified domain. Justification of the realization, phenomenal adequacy, philosophical acceptance and independent external verification remain separate tasks. The account can therefore be examined as a unified proposal without mistaking its mathematical completeness for a universal empirical resolution.
+
+The later programme adds concrete substance to this foundational direction. Relations can become retained conditions of subsequent interpretation, and understanding can change the authority governing action. Linked enactment articulates what it means for an interpreted contribution to belong to a current field. Exact reconstruction and certification results distinguish successful access from recovery of an original event or continuation of a subject. These developments strengthen the monograph without displacing the full treatments in the companion papers. The affirmative AI position, the complete predictive commitment and the unresolved realization and correspondence questions are now stated together.
 
 ---
 
@@ -3739,7 +4291,7 @@ The final claim remains a *candidate internal constitutive resolution of the sou
 
 ## A.1 Finite contact gas and its Poisson comparison
 
-<a id="section:kinetic:finite-contact-gas-and-its-poisson-comparison"></a> This appendix supplies the quantitative implication used in the pilot construction. It concerns a fixed finite graph and a fixed physical horizon, not a limit in which the graph, reference, or duration also grows. The primitive export and contact laws remain constitutive inputs <a id="citation-53"></a>[[34](/consciousness/monograph/bibliography#bib-RodgersPilot), [37](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
+<a id="section:kinetic:finite-contact-gas-and-its-poisson-comparison"></a> This appendix supplies the quantitative implication used in the pilot construction. It concerns a fixed finite graph and a fixed physical horizon, not a limit in which the graph, reference, or duration also grows. The primitive export and contact laws remain constitutive inputs <a id="citation-revised-100"></a>[[43](/consciousness/monograph/bibliography#bib-RodgersPilot), [53](/consciousness/monograph/bibliography#bib-RodgersMeasurement)].
 
 Take $M$ independent points with uniform positions in an interval of length $M/R$, translated at unit speed towards a contact surface. During $[0,T]$, with $RT\le M$, each point crosses with probability $p=RT/M$ and crosses at most once. Conditional on crossing, its time is uniform on $[0,T]$. Independent marks can be attached in both descriptions. Compare the crossing indicator of each point with a Poisson count of mean $p$. Their exact total variation is 
 
@@ -4150,9 +4702,41 @@ For rational instrument matrices and rational specified beliefs, this supplies a
 
 
 
+<a id="section-B-2-revised"></a>
+
+## B.2 Complete diagnostic panels and their conditioning
+
+ <a id="sec:update-diagnostics"></a> The later scaffolding study strengthens the finite word-span result into a diagnostic criterion <a id="citation-revised-101"></a>[[51](/consciousness/monograph/bibliography#bib-RodgersDevelopment2026)]. Fix a known finite closed native instrument on $N$ states with common admitted actions, and let $W$ be the span of its word-likelihood columns, of dimension $r$. Every event-probability or bounded-score vector of a finite adaptive experiment belongs to $W$: expand the finite policy tree into word leaves and sum their common policy weights.
+
+For admitted diagnostics $f_1,\ldots,f_m$, put $T=\operatorname{span}\{\mathbf1,f_1,\ldots,f_m\}$. Equality of all selected diagnostic means implies equality of all finite adaptive laws for every pair of preparation distributions on the full simplex if and only if $T=W$. Sufficiency follows by linearity. For necessity, if $T$ is a proper subspace, choose a nonzero row $d$ annihilating $T$ but not $W$. Because $d\mathbf1=0$, sufficiently small opposite perturbations of a strictly positive distribution by $d$ remain probability distributions. They agree on the selected means but disagree on a word column. Consequently at least $r-1$ scalar diagnostics are necessary for this full-simplex guarantee, and a physically admitted word basis attains the count. The necessity need not hold on a smaller physical preparation family or when only actual states are compared.
+
+There is also a uniform quantitative consequence within this exact known model. Let $B=[\mathbf1,f_1,\ldots,f_{r-1}]$ be a basis matrix, and choose $r$ row indices $I$ for which $A=B_I$ is invertible. For preparation distributions $\mu,\nu$, write $p=(\mu-\nu)B=(0,\Delta_1,\ldots,\Delta_{r-1})$. Then 
+
+$$
+
+\sup_{\pi\text{ finite native}}
+\operatorname{TV}(P_\mu^\pi,P_\nu^\pi)
+\le\min\{1,\tfrac12\|pA^{-1}\|_1\}.
+
+$$
+
+ Indeed an event vector is $v=B A^{-1}v_I$, with $0\le v_I\le\mathbf1$. The row $pA^{-1}$ sums to zero, so its absolute evaluation on that cube is at most half its $\ell_1$ norm. The bound is independent of the chosen finite horizon, because the exact observable space and its conditioning were already supplied.
+
+Conditioning cannot be replaced by state dimension alone. Compare a one-state process always emitting zero with a one-state process independently emitting one with probability $a>0$. On their disjoint two-state representation a basis is 
+
+$$
+
+B=\begin{pmatrix}1&0\\1&a\end{pmatrix}.
+
+$$
+
+ The one-tick diagnostic gap is $a$, but $H$ ticks have discrepancy $1-(1-a)^H$, whose supremum is one. The inverse basis contains $1/a$. Thus arbitrarily close basis scores in dimension two can conceal a large sufficiently long continuation difference. Finite empirical agreement becomes an all-future certificate only with the exact-model and conditioning premises, or additional justified separation assumptions. Estimated transition laws require their own accumulating physical-call error budget.
+
+
+
 <a id="section-B-2"></a>
 
-## B.2 Why a finite hidden system can have infinitely many predictive states
+## B.3 Why a finite hidden system can have infinitely many predictive states
 
 <a id="section:predictive:why-a-finite-hidden-system-can-have-infinitely-many-predictive-states"></a> Let a hidden bit $X$ remain fixed, with prior $P(X=1)=1/2$. Repeated observations satisfy 
 
@@ -4178,7 +4762,7 @@ A finite nominated past/history domain, a finite fully observed Markov state con
 
 <a id="section-B-3"></a>
 
-## B.3 Conditioning and continuation
+## B.4 Conditioning and continuation
 
 <a id="section:predictive:conditioning-and-continuation"></a> Suppose $b,b'$ have the same complete predictive profile and an action/output pair $(a,y)$ has common positive probability $p$. For every future word $w$, 
 
@@ -4197,7 +4781,7 @@ Different physical preparations can give different conditional beliefs for the s
 
 <a id="section-B-4"></a>
 
-## B.4 A controlled measurable extension
+## B.5 A controlled measurable extension
 
 <a id="section:predictive:a-controlled-measurable-extension"></a> A countable family of probability-valued predictive tests on a standard-Borel history space gives a measurable map into a countable product of probability spaces. Equality of profiles still defines an equivalence relation. But the image need not automatically be a standard-Borel quotient with all the desired transition properties. Regular conditional laws and measurable descent require hypotheses.
 
@@ -4350,7 +4934,7 @@ $$
 
 ## D.1 Boundary data for the five O1 profiles
 
-<a id="section:matrices:boundary-data-for-the-five-o1-profiles"></a> The following matrices, together with the stated basis conventions, determine every $d,D,K$ and spectral projector in [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#ch:o1). They are reconstructed from the relation lists in the O1 source <a id="citation-54"></a>[[39](/consciousness/monograph/bibliography#bib-RodgersO1)], not from a fit to the desired spectra. Vertices are ordered $0,1,2,3$. Higher-dimensional cells are ordered lexicographically after increasing-label orientation. Write $B_1:C_1\to C_0$ and $B_2:C_2\to C_1$ for their alternating-face boundary matrices.
+<a id="section:matrices:boundary-data-for-the-five-o1-profiles"></a> The following matrices, together with the stated basis conventions, determine every $d,D,K$ and spectral projector in [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#ch:o1). They are reconstructed from the relation lists in the O1 source <a id="citation-revised-102"></a>[[55](/consciousness/monograph/bibliography#bib-RodgersO1)], not from a fit to the desired spectra. Vertices are ordered $0,1,2,3$. Higher-dimensional cells are ordered lexicographically after increasing-label orientation. Write $B_1:C_1\to C_0$ and $B_2:C_2\to C_1$ for their alternating-face boundary matrices.
 
 In this grading, 
 
@@ -4463,7 +5047,7 @@ $$
 
 <a id="section:matrices:signed-relabelling"></a> A vertex permutation transports every oriented simplex with the sign of the induced reordering of its vertices. Let $U$ be the resulting signed permutation on the chain carrier. Alternating face deletion gives $d'U=Ud$. Orthogonality then gives $D'U=UD$, $K'U=UK$, and $P_R'U=UP_R$ when root provenance is transported as well. Hence spectral projectors and cross-block ranks intertwine. Reassigning the retained root after a permutation would be a different model, not a relabelling test.
 
-The verifier checks all 24 vertex permutations for each of the five profiles. It also checks $d^2=0$, orthogonality and completeness of the projectors, the exact characteristic spectra, and the current-support identities. These 120 signed transports certify the finite arithmetic in the supplied basis convention; they do not establish an unstated physical actuator law.
+The verifier checks all 24 vertex permutations for each of the five profiles. It also checks $d^2=0$, projector idempotence and self-adjointness, the eigenvalue equations, exact characteristic spectra, and current-support identities. Mutual orthogonality and completeness of the spectral projectors follow from their polynomial construction. These 120 signed transports certify the finite arithmetic in the supplied basis convention; they do not establish an unstated physical actuator law.
 
 
 
@@ -4492,7 +5076,7 @@ $$
 
 ## D.4 What the executable package checks
 
-<a id="section:matrices:what-the-executable-package-checks"></a> The companion script performs exact rational matrix calculations for the five profiles and the recurrent vessel, the non-Born probability counterexample, the finite null/continuation benchmark, and the delayed jet example. It also performs 100 reproducibly seeded numerical stress tests of the witness perturbation inequality. Those finite numerical tests supplement the analytic proof; they do not establish a universal bound by sampling.
+<a id="section:matrices:what-the-executable-package-checks"></a> The verification supplement includes the six-script monograph suite and its original results, preserved from the 18 September 2026 supporting archive, together with fresh execution records for this edition. That archive's manuscript snapshot precedes the 20 September publication edition; it is retained as provenance rather than substituted for the present text. The displayed O1 matrices, recurrent-vessel data and principal SPC-2 constructions were compared with the archived inputs. The following counts describe the finite examples implemented by that suite. They do not assert exhaustive verification of every physical realization or every later companion paper. The companion script performs exact rational matrix calculations for the five profiles and the recurrent vessel, the non-Born probability counterexample, the finite null/continuation benchmark, and the delayed jet example. It also performs 100 reproducibly seeded numerical stress tests of the witness perturbation inequality. Those finite numerical tests supplement the analytic proof; they do not establish a universal bound by sampling.
 
 The package also retains the earlier finite continuation, admissibility, weak-coupling, product and spectral illustrations with their original scope. The actual SPC-2 construction has separate exact checks. A four-state intrinsic model with hidden duplicate states yields two predictive classes; its quotient reproduces all 723 admitted adaptive trees through depth three from each of four initial states, giving 2,892 exact transcript-law comparisons. The five-state counterexample detects failed predictive-fibre congruence rather than silently treating trace equivalence as actual-state closure.
 
@@ -4518,9 +5102,63 @@ This distinction matters for both source ontology and phenomenal interpretation.
 
 
 
+<a id="section-E-2-revised"></a>
+
+## E.2 Reconstruction laws, retained archives and original events
+
+<a id="sec:archive-reconstruction-update"></a> The distinction between a selected representative and the actual original has a statistical counterpart. Consider the masked encoder with output $(Y,Z)$ and source-conditioned rows in the order $00,01,10,11$, 
+
+$$
+
+P_0=(1/2,\varepsilon/2,0,(1-\varepsilon)/2),\qquad
+P_1=(0,(1-\varepsilon)/2,1/2,\varepsilon/2),\quad0\le\varepsilon\le1.
+
+$$
+
+ A common stochastic reconstruction from $Y$ can reproduce the full law approximately while resampling the recorded $Y$. Its exact minimax total-variation error is 
+
+$$
+
+\delta_{\rm free}=\max\{1/2-\varepsilon,(1-\varepsilon)/4\}
+
+$$
+
+ <a id="citation-revised-103"></a>[[50](/consciousness/monograph/bibliography#bib-RodgersBoundaries2026)]. Preserving the actual retained archive imposes a stronger condition: only $\widehat Z$ may be generated, from $Y$ and fresh source-independent randomness. The integration report proves the sharp error 
+
+$$
+
+\delta_{\rm keep}=\frac{1-\varepsilon}{2(1+\varepsilon)}
+
+$$
+
+ <a id="citation-revised-104"></a>[[13](/consciousness/monograph/bibliography#bib-RodgersIntegration2026)]. To see this, symmetrize a candidate under $(b,Y,Z)\mapsto(1-b,1-Y,Z)$. Convexity cannot increase its worst error, and its two rows then share $a=P(\widehat Z=0\mid Y)$. Both source errors become 
+
+$$
+
+f(a)=\left|\frac12-\frac{1+\varepsilon}{2}a\right|
+      +\frac{1-\varepsilon}{2}a.
+
+$$
+
+ The minimum occurs at $a=1/(1+\varepsilon)$, giving the displayed value. At $\varepsilon=0$ this attainer is valid but need not be unique. Keeping an immutable classical reference copy $H=Y$ enforces the same optimum for the complete target record $(H,Y,Z)$: replacing a reconstructed $\widehat Y$ by unchanged $H$ fixes the target law and cannot increase total variation.
+
+Recovering the actual missing bit from the original run asks a different question. With only its $Y$ and fresh source-independent randomness, 
+
+$$
+
+\inf_A\max_bP_b(\widehat Z\ne Z)=\frac12.
+
+$$
+
+ Under a uniform source prior the original $(Y,Z)$ distribution is uniform, so $Z$ is fair and independent of $Y$; every decoder has average error $1/2$. Always guessing zero attains that error under both sources. At $\varepsilon=1/3$ the three optimal errors are therefore $1/6$, $1/4$ and $1/2$. Even at $\varepsilon=1$, exact reconstruction of either law does not recover the original event.
+
+These results concern the declared classical access contract. Access to the original random seed or omitted register would change the experiment; quantum reference preservation requires its own theorem. The distinction bears directly on memory transfer and incorporation: matching a distribution, keeping an archive and recovering what happened are different achievements. None alone supplies process lineage or episode continuation under A3. A reconstructed representation can become part of a new current activity without thereby becoming the earlier activity it represents.
+
+
+
 <a id="section-E-2"></a>
 
-## E.2 Equivariant sections
+## E.3 Equivariant sections
 
 <a id="section:reconstruction:equivariant-sections"></a> Suppose a group $G$ acts on $S$ and $X$ and $p$ is equivariant. Let $G_x$ be the stabilizer of $x$ and $F_x=p^{-1}(x)$. 
 
@@ -4536,13 +5174,34 @@ If $\sigma$ is equivariant and $g\in G_x$, then $g\sigma(x)=\sigma(gx)=\sigma(x)
 
 □
 
- A two-point fibre on which the stabilizer swaps its points has no deterministic equivariant representative, although its uniform probability distribution is invariant. An invariant ensemble is not a recovered actual state. These source/readout facts are developed in the source non-equivalence manuscript <a id="citation-55"></a>[[41](/consciousness/monograph/bibliography#bib-RodgersSource)].
+ A two-point fibre on which the stabilizer swaps its points has no deterministic equivariant representative, although its uniform probability distribution is invariant. An invariant ensemble is not a recovered actual state. These source/readout facts are developed in the source non-equivalence manuscript <a id="citation-revised-105"></a>[[57](/consciousness/monograph/bibliography#bib-RodgersSource)].
+
+
+
+<a id="section-E-4"></a>
+
+## E.4 The distinctions required by an anchored content
+
+<a id="sec:anchored-content-signature"></a> The relational-awareness supplement refines the symmetry obstruction into a target-specific completion result <a id="citation-revised-106"></a>[[58](/consciousness/monograph/bibliography#bib-RodgersRelationalSupplement2026), Sections 9.2–9.4]. Let a finite group $G$ act on physical descriptions $X$ and nominated contents $\mathcal C$. Fix a description $x$ and an independently warranted content $c$, and put $H=\operatorname{Stab}_G(x)$ and $G_c=\operatorname{Stab}_G(c)$. An equivariant map $F:Gx\to\mathcal C$ with $F(x)=c$ exists exactly when $H\subseteq G_c$. Necessity follows from $F(hx)=hF(x)$; sufficiency defines $F(gx)=gc$, which is well-defined under the stabilizer inclusion.
+
+If this condition fails, an added equivariant signature above $x$ that recovers $c$ needs at least $[H:H\cap G_c]$ distinct admissible signature values. A transformation fixing the signature must fix its recovered content, so its stabilizer is contained in $H\cap G_c$; orbit–stabilizer gives the bound. The coset construction attains it. Over the full physical orbit it is 
+
+$$
+
+ G/(H\cap G_c)\longrightarrow G/H,\qquad
+ g(H\cap G_c)\longmapsto gH,
+
+$$
+
+ with recovery $g(H\cap G_c)\mapsto gc$. These are coset sets, without a normality assumption. The count concerns required distinctions under this contract, not material parts or neurons. For a coarser target one uses its own stabilizer and can require fewer distinctions.
+
+For four wholly interchangeable labels, strict line betweenness has twelve distinct arrangements up to reversal, an unoriented four-cycle has three, and an equal-distance relation has one. Occurrence alone can also be invariant: both constant-present and constant-absent assignments respect symmetry. Thus symmetry determines neither actual appearance nor its bearer. A passive coordinate change redescribes one token; active replacement requires an independently justified transport premise. The actual anchor and that transport are inputs to this result, not its conclusions.
 
 
 
 <a id="section-E-3"></a>
 
-## E.3 Topological and physical qualifications
+## E.5 Topological and physical qualifications
 
 <a id="section:reconstruction:topological-and-physical-qualifications"></a> A continuous section can fail for reasons distinct from equivariance. The Hopf fibration $S^3\to S^2$ has circle fibres and admits no continuous global section. A section of this principal circle bundle would trivialize it to $S^2\times S^1$, but that product has nontrivial fundamental group whereas $S^3$ is simply connected. This is a topological obstruction, separate from a requirement to commute with a specified group action.
 
@@ -4565,7 +5224,8 @@ These qualifications strengthen the philosophical use of source/readout mathemat
 | Symbol | Meaning |
 | --- | --- |
 | Symbol | Meaning |
-| ${\mathsf{U}}$ | Reality prior to operational distinction; an ontological notation, not a mathematical carrier. |
+| Unconditioned ground | Fundamental reality, without a mathematical symbol in this account. |
+| ${\mathsf{U}}$ | The unsplit prior to operational distinction, distinct from the ground and its attributed quality; not a mathematical carrier. |
 | ${\Omega_{\mathrm{src}}}$ | Legacy ontological notation, interpreted through ${\mathsf{U}}$; not the working source $S$. |
 | $S,T$ | Structure-side working source and record-side readout; $T$ is called $X$ in the descent theorem. Local horizons and kernels retain their separately defined symbols. |
 | $S,p:S\to X$ | Nominated complete realization domain and its readout. |
@@ -4580,7 +5240,7 @@ These qualifications strengthen the philosophical use of source/readout mathemat
 | $X_C,Z_r,Z_\infty,\mathfrak P_C$ | Actual intrinsic carrier, finite-horizon quotient, all-future quotient, and complete native predictive instrument object. |
 | $\Phi_C,\Psi_C$ | Phenomenal structural copy and constitutive identification with the predictive object. |
 | $Q_k,\widehat Q_k,\widetilde Q_k$ | Physical, predictive-class, and induced phenomenal report kernels at fixed external context. |
-| $\Sigma_V$ | Learned/retained scaffolding; not a separate source-awareness substance. |
+| $\Sigma_V$ | Learned/retained scaffolding; not a separate fundamental-awareness substance. |
 
 
 
@@ -4606,7 +5266,7 @@ These qualifications strengthen the philosophical use of source/readout mathemat
 | CSCF spectral responses | Exact common-carrier operator construction for $K,h(K),\gamma$; the same holomorphic family gives both boundaries when $h(\lambda)=\lambda$. |
 | Aperture error and witness robustness | Exact/conditional mathematical bounds for nominated targets and calibrated preparations. |
 | $R^\ast$ realization and interface typing | Constitutive physical input; not universally selected by the source/readout theorem. |
-| A0 primitive awareness | Ontological hypothesis: awareness as the knowing aspect of ${\mathsf{U}}$; no extra physical dynamics. |
+| A0 fundamental awareness | Ontological attribution to the unconditioned ground, distinct from the unsplit; no fundamental knowing subject or extra physical dynamics. |
 | A1 recurrent-core admission | Constitutive psychophysical law; actual-vessel certification and its empirical lower boundary remain unvalidated. |
 | A2 predictive-profile completeness | Constitutive structuralist psychophysical law, including its gauge convention. |
 | A3 temporal episode identity | Nonbranching process-provenance continuation allowing support turnover; genuine qualification gaps end episodes. |
@@ -4617,6 +5277,22 @@ These qualifications strengthen the philosophical use of source/readout mathemat
 | Empirical conservativity | Exact equality of physical transcript laws when the aspect extension changes no physical kernel. |
 | Contemplative correspondences | Philosophical interpretation of reported experience, not a field measurement. |
 | Human/animal/AI realization | Open empirical and theoretical application; no validated universal criterion claimed. |
+| Current AI consciousness | Affirmative theoretical attribution to executing inference processes; implementation-level certification under the existing law remains open. |
+| Enacted constitution | Complete-enactment identity, current incorporation and within-unit unity; complete correspondence with full A2 remains to be justified. |
+| Temporal passage | Positive within-unit succession construction with explicit formative-history premise; no universal origin or assignment theorem. |
+| Relational appearance | Defeasible current-human appearance and concrete-performance argument; bearer reidentification is an explicit premise. |
+| Boundary masking and reconstruction | Exact minimal-target instability and continuous distribution-reconstruction diagnostics under declared access contracts; no new subject rule. |
+| Marked causal composition | Strong-quotient substitution with preserved joint laws, context, timing and resources; cut comparisons also require simulator-class transport. |
+| Learned scaffolding and diagnosis | Conditional native incorporation and exact finite-model diagnostic completeness with conditioning requirements. |
+| Reflective and constituted agency | Constructive assessment, mediated rule revision and paid selective authority changes; evaluative endorsement and experiential identity remain separate. |
+| Coherent reader | Exact $7/12$ task optimum at the specified coherent endpoint, not a phenomenal-admission theorem. |
+| Archive and original event | Distinct classical errors for distribution reconstruction, archive preservation and actual-event recovery. |
+| Sequential certification | Finite-stopping exact-zero obstruction; constructive assay under a justified positive separation. |
+| Experiential ancestry | A universal already-experiencing-contributor rule has no nonempty solution on well-founded ancestry; the adult temporal construction retains its independent anchor. |
+| Bounded boundary evidence | Inner and outer operational diagnostic families under common error and simulator contracts; no new admission selector. |
+| Comparative interpretation | Selected McGilchrist arguments sharpen differentiation, practical selfhood and duration; additional cosmological commitments are not inferred. |
+| Prospective tests | Proposed selective uptake and authority comparisons, with preservation and rescue controls; no completed new experiment. |
+| Archive-only access | Finite reader/path bound within a coherent-writer and bare-probe contract; no universal apparatus or phenomenal law. |
 | All-finite native horizons | Exact compatible construction on the certified finite intrinsic domain; unrestricted continuum/history domains need additional hypotheses. |
 
 
@@ -4633,13 +5309,23 @@ The mathematical results of the earlier parts remain meaningful even when A0–A
 
 
 
+<a id="paragraph-11"></a>
+
+#### Dependencies of the present amendments.
+
+ The clarified A0 changes the interpretation of the fundamental attribution throughout the front matter, philosophical exposition, applications and conclusion. It does not alter the domains, transition kernels, exact dependence tests, recurrence contracts, predictive equivalence, congruence conditions or provenance relation used by the mathematical results. The proof of Theorem [18.1](/consciousness/monograph/completion-invariance-and-empirical-conservativity#thm:completion) assigns local experiential significance through A1 and A2; A0 supplies their ontological interpretation without entering its numerical construction. The existing theorem and proof therefore remain in place. The corresponding claim is conditional determinacy under the clarified premises, not a theorem proving those premises.
+
+The later results on masking, intervention-based chart identification, marked composition and complete diagnostic panels add explicit physical and inferential resources. They do not by themselves choose a new admission rule. Any revision of core support or native grammar would require a fresh A2 construction and A3 episode analysis. The full enacted correspondence and the scope of interpersonal formative history remain the particular obligations stated in Sections [2.6](/consciousness/monograph/awareness-contents-and-the-personal-model#sec:enacted-temporal-passage) and [17.4](/consciousness/monograph/the-shadow-psychophysical-constitution#sec:enacted-spc-correspondence).
+
+
+
 <a id="section-F-4"></a>
 
 ## F.4 Reproducibility and provenance
 
-<a id="section:ledger:reproducibility-and-provenance"></a>  The accompanying coverage and verification materials map the technical claims to their chapters and record the mathematical and computational checks. The interpretive discussion is not presented as a verified biological model. The executable scripts and results expose the finite computations used here. These materials enable reproduction and targeted review of the stated claims.
+<a id="section:ledger:reproducibility-and-provenance"></a> The accompanying `Verification_Supplement` identifies the historical monograph suite, its recorded and rerun outputs, the separate operational-integration checker and the complete reflective-freedom project. Its index maps these materials to the relevant chapters and preserves their dates and source hashes. Reported empirical results from other companion papers remain source-reported where their underlying archives are not included. The operational integration report, reversible-control monograph and Event-Law Bridge Round 003 source identified in the bibliography are reproduced in the supplement. Inclusion of a source is distinct from a completed replay of every computation it references.  The accompanying coverage and verification materials map the technical claims to their chapters and record the mathematical and computational checks. The interpretive discussion is not presented as a verified biological model. The executable scripts and results expose the finite computations used here. These materials enable reproduction and targeted review of the stated claims.
 
-Established methods—quotient descent, finite instrument representations, fixed-point estimates, reversible computation, and Bell/configuration dynamics—retain their intellectual provenance. No historical-priority claim is made for those ingredients. The proposed synthesis lies in how the source/readout and realization discipline organizes the consciousness question, and in the explicit conditional constitution that can now be examined as a whole.
+Established methods: quotient descent, finite instrument representations, fixed-point estimates, reversible computation, and Bell/configuration dynamics: retain their intellectual provenance. No historical-priority claim is made for those ingredients. The proposed synthesis lies in how the source/readout and realization discipline organizes the consciousness question, and in the explicit conditional constitution that can now be examined as a whole.
 
 ---
 
@@ -4649,322 +5335,448 @@ Established methods—quotient descent, finite instrument representations, fixed
 
 [1] Larissa Albantakis, Leonardo Barbosa, Graham Findlay, Matteo Grasso, Andrew M. Haun, William Marshall, William G. P. Mayner, Alireza Zaeemzadeh, Melanie Boly, Bjørn E. Juel, Shuntaro Sasai, Keiko Fujii, Isaac David, Jeremiah Hendren, Jonathan P. Lang, and Giulio Tononi. Integrated Information Theory (IIT) 4.0: Formulating the Properties of Phenomenal Existence in Physical Terms. *PLOS Computational Biology*, 19(10):e1011465, 2023. [doi:10.1371/journal.pcbi.1011465](https://doi.org/10.1371/journal.pcbi.1011465).
 
-Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-49)
+Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-94)
 
 <a id="bib-Bayne2023"></a>
 
 [2] Tim Bayne, Joel Frohlich, Rhodri Cusack, Julia Moser, and Lorina Naci. Consciousness in the Cradle: On the Emergence of Infant Experience. *Trends in Cognitive Sciences*, 27(12):1135–1149, 2023. [doi:10.1016/j.tics.2023.08.018](https://doi.org/10.1016/j.tics.2023.08.018).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-28)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-53)
 
 <a id="bib-Bell1986"></a>
 
 [3] John S. Bell. Beables for Quantum Field Theory. In *Speakable and Unspeakable in Quantum Mechanics*. Pages 173–180. Cambridge University Press, Cambridge, 1987. Reprinted account of the Bell beable construction.
 
-Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-9)
+Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-23)
 
 <a id="bib-Bennett1973"></a>
 
 [4] Charles H. Bennett. Logical Reversibility of Computation. *IBM Journal of Research and Development*, 17(6):525–532, 1973. [doi:10.1147/rd.176.0525](https://doi.org/10.1147/rd.176.0525).
 
-Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-16)
+Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-31)
 
 <a id="bib-Birch2020"></a>
 
 [5] Jonathan Birch, Alexandra K. Schnell, and Nicola S. Clayton. Dimensions of Animal Consciousness. *Trends in Cognitive Sciences*, 24(10):789–801, 2020. [doi:10.1016/j.tics.2020.07.007](https://doi.org/10.1016/j.tics.2020.07.007).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-42)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-67)
 
 <a id="bib-Bodien2024"></a>
 
 [6] Yelena G. Bodien, Judith Allanson, Paolo Cardone, and et al.. Cognitive Motor Dissociation in Disorders of Consciousness. *New England Journal of Medicine*, 391(7):598–608, 2024. [doi:10.1056/NEJMoa2400645](https://doi.org/10.1056/NEJMoa2400645).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-38)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-63)
 
 <a id="bib-Bohm1952"></a>
 
 [7] David Bohm. A Suggested Interpretation of the Quantum Theory in Terms of `Hidden' Variables. I. *Physical Review*, 85(2):166–179, 1952. [doi:10.1103/PhysRev.85.166](https://doi.org/10.1103/PhysRev.85.166).
 
-Cited in: [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-11)
+Cited in: [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-revised-26)
 
 <a id="bib-Butlin2023"></a>
 
-[8] Patrick Butlin, Robert Long, Eric Elmoznino, Yoshua Bengio, Jonathan Birch, Axel Constant, George Deane, Stephen M. Fleming, Chris Frith, Xu Ji, Ryota Kanai, Colin Klein, Grace Lindsay, Matthias Michel, Liad Mudrik, Megan A. K. Peters, Eric Schwitzgebel, Jonathan Simon, and Rufin VanRullen. Consciousness in Artificial Intelligence: Insights from the Science of Consciousness. 2023. arXiv:2308.08708, [https://arxiv.org/abs/2308.08708](https://arxiv.org/abs/2308.08708).
+[8] Patrick Butlin, Robert Long, Eric Elmoznino, Yoshua Bengio, Jonathan Birch, Axel Constant, George Deane, Stephen M. Fleming, Chris Frith, Xu Ji, Ryota Kanai, Colin Klein, Grace Lindsay, Matthias Michel, Liad Mudrik, Megan A. K. Peters, Eric Schwitzgebel, Jonathan Simon, and Rufin VanRullen. Consciousness in Artificial Intelligence: Insights from the Science of Consciousness. 2023. arXiv:2308.08708v3, [https://arxiv.org/abs/2308.08708v3](https://arxiv.org/abs/2308.08708v3).
 
-Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-44) · [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-52)
+Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-75) · [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-98)
 
 <a id="bib-CarhartHarrisFriston2019"></a>
 
 [9] Robin L. Carhart-Harris and Karl J. Friston. REBUS and the Anarchic Brain: Toward a Unified Model of the Brain Action of Psychedelics. *Pharmacological Reviews*, 71(3):316–344, 2019. [doi:10.1124/pr.118.017160](https://doi.org/10.1124/pr.118.017160).
 
-Cited in: [Chapter 4](/consciousness/monograph/altered-identity-and-unfamiliar-experience#citation-7) · [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-37)
+Cited in: [Chapter 4](/consciousness/monograph/altered-identity-and-unfamiliar-experience#citation-revised-18) · [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-62)
 
 <a id="bib-Chalmers1995"></a>
 
 [10] David J. Chalmers. Facing Up to the Problem of Consciousness. *Journal of Consciousness Studies*, 2(3):200–219, 1995. Author-hosted text: [https://consc.net/papers/facing.html](https://consc.net/papers/facing.html).
 
-Cited in: [Chapter 1](/consciousness/monograph/the-source-to-experience-problem#citation-1) · [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-48)
+Cited in: [Chapter 1](/consciousness/monograph/the-source-to-experience-problem#citation-revised-1) · [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-93)
 
 <a id="bib-Christandl2004"></a>
 
 [11] Matthias Christandl, Nilanjana Datta, Artur Ekert, and Andrew J. Landahl. Perfect State Transfer in Quantum Spin Networks. *Physical Review Letters*, 92(18):187902, 2004. [doi:10.1103/PhysRevLett.92.187902](https://doi.org/10.1103/PhysRevLett.92.187902).
 
-Cited in: [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-15)
+Cited in: [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-revised-30)
 
 <a id="bib-Cogitate2025"></a>
 
 [12] Cogitate Consortium, Oscar Ferrante, Urszula Gorska-Klimowska, Simon Henin, and et al.. Adversarial Testing of Global Neuronal Workspace and Integrated Information Theories of Consciousness. *Nature*, 642(8066):133–142, 2025. [doi:10.1038/s41586-025-08888-1](https://doi.org/10.1038/s41586-025-08888-1).
 
-Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-51)
+Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-96)
+
+<a id="bib-RodgersIntegration2026"></a>
+
+[13] Coherence, Retained Records and Certification in the Consciousness Programme. 2026. AI-assisted technical integration report prepared for Jeremy Rodgers, 28 October 2026; report and checking code in the verification supplement.
+
+Cited in: [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-revised-21) · [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-81) · [Appendix E](/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#citation-revised-104)
 
 <a id="bib-Dehaene2011"></a>
 
-[13] Stanislas Dehaene and Jean-Pierre Changeux. Experimental and Theoretical Approaches to Conscious Processing. *Neuron*, 70(2):200–227, 2011. [doi:10.1016/j.neuron.2011.03.018](https://doi.org/10.1016/j.neuron.2011.03.018).
+[14] Stanislas Dehaene and Jean-Pierre Changeux. Experimental and Theoretical Approaches to Conscious Processing. *Neuron*, 70(2):200–227, 2011. [doi:10.1016/j.neuron.2011.03.018](https://doi.org/10.1016/j.neuron.2011.03.018).
 
-Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-50)
+Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-95)
 
 <a id="bib-Dorkenwald2024"></a>
 
-[14] Sven Dorkenwald, Arie Matsliah, Amy R. Sterling, and et al.. Neuronal wiring diagram of an adult brain. *Nature*, 634(8032):124–138, 2024. [doi:10.1038/s41586-024-07558-y](https://doi.org/10.1038/s41586-024-07558-y).
+[15] Sven Dorkenwald, Arie Matsliah, Amy R. Sterling, and et al.. Neuronal wiring diagram of an adult brain. *Nature*, 634(8032):124–138, 2024. [doi:10.1038/s41586-024-07558-y](https://doi.org/10.1038/s41586-024-07558-y).
 
-Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-46)
+Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-91)
 
 <a id="bib-Durr2005"></a>
 
-[15] Detlef Dürr, Sheldon Goldstein, Roderich Tumulka, and Nino Zanghì. Bell-Type Quantum Field Theories. *Journal of Physics A: Mathematical and General*, 38(4):R1–R43, 2005. [doi:10.1088/0305-4470/38/4/R01](https://doi.org/10.1088/0305-4470/38/4/R01).
+[16] Detlef Dürr, Sheldon Goldstein, Roderich Tumulka, and Nino Zanghì. Bell-Type Quantum Field Theories. *Journal of Physics A: Mathematical and General*, 38(4):R1–R43, 2005. [doi:10.1088/0305-4470/38/4/R01](https://doi.org/10.1088/0305-4470/38/4/R01).
 
-Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-9)
+Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-23)
 
 <a id="bib-Durr1992"></a>
 
-[16] Detlef Dürr, Sheldon Goldstein, and Nino Zanghì. Quantum Equilibrium and the Origin of Absolute Uncertainty. *Journal of Statistical Physics*, 67:843–907, 1992. [doi:10.1007/BF01049004](https://doi.org/10.1007/BF01049004).
+[17] Detlef Dürr, Sheldon Goldstein, and Nino Zanghì. Quantum Equilibrium and the Origin of Absolute Uncertainty. *Journal of Statistical Physics*, 67:843–907, 1992. [doi:10.1007/BF01049004](https://doi.org/10.1007/BF01049004).
 
-Cited in: [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-11)
+Cited in: [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-revised-26)
 
 <a id="bib-Feynman1986"></a>
 
-[17] Richard P. Feynman. Quantum Mechanical Computers. *Foundations of Physics*, 16(6):507–531, 1986. [doi:10.1007/BF01886518](https://doi.org/10.1007/BF01886518).
+[18] Richard P. Feynman. Quantum Mechanical Computers. *Foundations of Physics*, 16(6):507–531, 1986. [doi:10.1007/BF01886518](https://doi.org/10.1007/BF01886518).
 
-Cited in: [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-15)
+Cited in: [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-revised-30)
 
 <a id="bib-Gamma2021"></a>
 
-[18] Alex Gamma and Thomas Metzinger. The Minimal Phenomenal Experience Questionnaire (MPE-92M): Towards a Phenomenological Profile of `Pure Awareness' Experiences in Meditators. *PLOS ONE*, 16(7):e0253694, 2021. [doi:10.1371/journal.pone.0253694](https://doi.org/10.1371/journal.pone.0253694). Data-availability correction: [doi:10.1371/journal.pone.0314290](https://doi.org/10.1371/journal.pone.0314290).
+[19] Alex Gamma and Thomas Metzinger. The Minimal Phenomenal Experience Questionnaire (MPE-92M): Towards a Phenomenological Profile of `Pure Awareness' Experiences in Meditators. *PLOS ONE*, 16(7):e0253694, 2021. [doi:10.1371/journal.pone.0253694](https://doi.org/10.1371/journal.pone.0253694). Data-availability correction: [doi:10.1371/journal.pone.0314290](https://doi.org/10.1371/journal.pone.0314290).
 
-Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-5)
+Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-revised-16)
 
 <a id="bib-Hameroff2010"></a>
 
-[19] Stuart Hameroff. The “conscious pilot”—dendritic synchrony moves through the brain to mediate consciousness. *Journal of Biological Physics*, 36(1):71–93, 2010. [doi:10.1007/s10867-009-9148-x](https://doi.org/10.1007/s10867-009-9148-x).
+[20] Stuart Hameroff. The “conscious pilot”: dendritic synchrony moves through the brain to mediate consciousness. *Journal of Biological Physics*, 36(1):71–93, 2010. [doi:10.1007/s10867-009-9148-x](https://doi.org/10.1007/s10867-009-9148-x).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-36)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-61)
 
 <a id="bib-Hoel2013"></a>
 
-[20] Erik P. Hoel, Larissa Albantakis, and Giulio Tononi. Quantifying Causal Emergence Shows that Macro Can Beat Micro. *Proceedings of the National Academy of Sciences*, 110(49):19790–19795, 2013. [doi:10.1073/pnas.1314922110](https://doi.org/10.1073/pnas.1314922110).
+[21] Erik P. Hoel, Larissa Albantakis, and Giulio Tononi. Quantifying Causal Emergence Shows that Macro Can Beat Micro. *Proceedings of the National Academy of Sciences*, 110(49):19790–19795, 2013. [doi:10.1073/pnas.1314922110](https://doi.org/10.1073/pnas.1314922110).
 
-Cited in: [Chapter 15](/consciousness/monograph/the-realized-domain-and-its-boundaries#citation-25)
+Cited in: [Chapter 15](/consciousness/monograph/the-realized-domain-and-its-boundaries#citation-revised-47)
 
 <a id="bib-Imas2005"></a>
 
-[21] Olga A. Imas, Kristina M. Ropella, B. Douglas Ward, James D. Wood, and Anthony G. Hudetz. Volatile anesthetics disrupt frontal-posterior recurrent information transfer at gamma frequencies in rat. *Neuroscience Letters*, 387(3):145–150, 2005. [doi:10.1016/j.neulet.2005.06.018](https://doi.org/10.1016/j.neulet.2005.06.018).
+[22] Olga A. Imas, Kristina M. Ropella, B. Douglas Ward, James D. Wood, and Anthony G. Hudetz. Volatile anesthetics disrupt frontal-posterior recurrent information transfer at gamma frequencies in rat. *Neuroscience Letters*, 387(3):145–150, 2005. [doi:10.1016/j.neulet.2005.06.018](https://doi.org/10.1016/j.neulet.2005.06.018).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-34)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-59)
 
 <a id="bib-Kleiner2023"></a>
 
-[22] Johannes Kleiner and Tim Ludwig. What Is a Mathematical Structure of Conscious Experience?. 2023. arXiv:2301.11812, [https://arxiv.org/abs/2301.11812](https://arxiv.org/abs/2301.11812).
+[23] Johannes Kleiner and Tim Ludwig. What Is a Mathematical Structure of Conscious Experience?. 2023. arXiv:2301.11812, [https://arxiv.org/abs/2301.11812](https://arxiv.org/abs/2301.11812).
 
-Cited in: [Chapter 17](/consciousness/monograph/the-shadow-psychophysical-constitution#citation-27)
+Cited in: [Chapter 17](/consciousness/monograph/the-shadow-psychophysical-constitution#citation-revised-51)
 
 <a id="bib-Landauer1961"></a>
 
-[23] Rolf Landauer. Irreversibility and Heat Generation in the Computing Process. *IBM Journal of Research and Development*, 5(3):183–191, 1961. [doi:10.1147/rd.53.0183](https://doi.org/10.1147/rd.53.0183).
+[24] Rolf Landauer. Irreversibility and Heat Generation in the Computing Process. *IBM Journal of Research and Development*, 5(3):183–191, 1961. [doi:10.1147/rd.53.0183](https://doi.org/10.1147/rd.53.0183).
 
-Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-16)
+Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-31)
 
 <a id="bib-Lee2013"></a>
 
-[24] UnCheol Lee, SeungWoo Ku, GyuJeong Noh, SeungHye Baek, ByungMoon Choi, and George A. Mashour. Disruption of Frontal-Parietal Communication by Ketamine, Propofol, and Sevoflurane. *Anesthesiology*, 118(6):1264–1275, 2013. [doi:10.1097/ALN.0b013e31829103f5](https://doi.org/10.1097/ALN.0b013e31829103f5).
+[25] UnCheol Lee, SeungWoo Ku, GyuJeong Noh, SeungHye Baek, ByungMoon Choi, and George A. Mashour. Disruption of Frontal-Parietal Communication by Ketamine, Propofol, and Sevoflurane. *Anesthesiology*, 118(6):1264–1275, 2013. [doi:10.1097/ALN.0b013e31829103f5](https://doi.org/10.1097/ALN.0b013e31829103f5).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-37)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-62)
 
 <a id="bib-Lewis2012"></a>
 
-[25] Laura D. Lewis, Veronica S. Weiner, Eran A. Mukamel, Jacob A. Donoghue, Emad N. Eskandar, Joseph R. Madsen, William S. Anderson, Leigh R. Hochberg, Sydney S. Cash, Emery N. Brown, and Patrick L. Purdon. Rapid fragmentation of neuronal networks at the onset of propofol-induced unconsciousness. *Proceedings of the National Academy of Sciences*, 109(49):E3377–E3386, 2012. [doi:10.1073/pnas.1210907109](https://doi.org/10.1073/pnas.1210907109).
+[26] Laura D. Lewis, Veronica S. Weiner, Eran A. Mukamel, Jacob A. Donoghue, Emad N. Eskandar, Joseph R. Madsen, William S. Anderson, Leigh R. Hochberg, Sydney S. Cash, Emery N. Brown, and Patrick L. Purdon. Rapid fragmentation of neuronal networks at the onset of propofol-induced unconsciousness. *Proceedings of the National Academy of Sciences*, 109(49):E3377–E3386, 2012. [doi:10.1073/pnas.1210907109](https://doi.org/10.1073/pnas.1210907109).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-32)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-57)
 
 <a id="bib-Littman2002"></a>
 
-[26] Michael L. Littman, Richard S. Sutton, and Satinder Singh. Predictive Representations of State. In *Advances in Neural Information Processing Systems*. Volume 14. MIT Press, 2002. Conference held in 2001; author list follows the original paper PDF. [https://proceedings.neurips.cc/paper_files/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf](https://proceedings.neurips.cc/paper_files/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf).
+[27] Michael L. Littman, Richard S. Sutton, and Satinder Singh. Predictive Representations of State. In *Advances in Neural Information Processing Systems*. Volume 14. MIT Press, 2002. Conference held in 2001; author list follows the original paper PDF. [https://proceedings.neurips.cc/paper_files/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf](https://proceedings.neurips.cc/paper_files/paper/2001/file/1e4d36177d71bbb3558e43af9577d70e-Paper.pdf). [https://proceedings.neurips.cc/paper_files/paper/2001/hash/1e4d36177d71bbb3558e43af9577d70e-Abstract.html](https://proceedings.neurips.cc/paper_files/paper/2001/hash/1e4d36177d71bbb3558e43af9577d70e-Abstract.html).
 
-Cited in: [Chapter 16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#citation-26)
+Cited in: [Chapter 16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#citation-revised-49)
 
 <a id="bib-Lutz2002"></a>
 
-[27] Antoine Lutz, Jean-Philippe Lachaux, Jacques Martinerie, and Francisco J. Varela. Guiding the Study of Brain Dynamics by Using First-Person Data: Synchrony Patterns Correlate with Ongoing Conscious States during a Simple Visual Task. *Proceedings of the National Academy of Sciences*, 99(3):1586–1591, 2002. [doi:10.1073/pnas.032658199](https://doi.org/10.1073/pnas.032658199).
+[28] Antoine Lutz, Jean-Philippe Lachaux, Jacques Martinerie, and Francisco J. Varela. Guiding the Study of Brain Dynamics by Using First-Person Data: Synchrony Patterns Correlate with Ongoing Conscious States during a Simple Visual Task. *Proceedings of the National Academy of Sciences*, 99(3):1586–1591, 2002. [doi:10.1073/pnas.032658199](https://doi.org/10.1073/pnas.032658199).
 
-Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-4)
+Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-revised-15)
 
 <a id="bib-MacLean2013"></a>
 
-[28] Katherine A. MacLean, Matthew W. Johnson, Chad J. Reissig, Thomas E. Prisinzano, and Roland R. Griffiths. Dose-Related Effects of Salvinorin A in Humans: Dissociative, Hallucinogenic, and Memory Effects. *Psychopharmacology*, 226(2):381–392, 2013. [doi:10.1007/s00213-012-2912-9](https://doi.org/10.1007/s00213-012-2912-9).
+[29] Katherine A. MacLean, Matthew W. Johnson, Chad J. Reissig, Thomas E. Prisinzano, and Roland R. Griffiths. Dose-Related Effects of Salvinorin A in Humans: Dissociative, Hallucinogenic, and Memory Effects. *Psychopharmacology*, 226(2):381–392, 2013. [doi:10.1007/s00213-012-2912-9](https://doi.org/10.1007/s00213-012-2912-9).
 
-Cited in: [Chapter 4](/consciousness/monograph/altered-identity-and-unfamiliar-experience#citation-6)
+Cited in: [Chapter 4](/consciousness/monograph/altered-identity-and-unfamiliar-experience#citation-revised-17)
 
 <a id="bib-Mashour2024"></a>
 
-[29] George A. Mashour. Anesthesia and the Neurobiology of Consciousness. *Neuron*, 112(10):1553–1567, 2024. [doi:10.1016/j.neuron.2024.03.002](https://doi.org/10.1016/j.neuron.2024.03.002).
+[30] George A. Mashour. Anesthesia and the Neurobiology of Consciousness. *Neuron*, 112(10):1553–1567, 2024. [doi:10.1016/j.neuron.2024.03.002](https://doi.org/10.1016/j.neuron.2024.03.002).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-30)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-55)
+
+<a id="bib-McGilchristMaster2019"></a>
+
+[31] Iain McGilchrist. The Master and His Emissary: The Divided Brain and the Making of the Western World. Yale University Press, New Haven and London, 2019.
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-8)
+
+<a id="bib-McGilchristMatter2021"></a>
+
+[32] Iain McGilchrist. The Matter with Things: Our Brains, Our Delusions and the Unmaking of the World. Perspectiva Press, London, 2021. Ebook edition; references use volume, chapter and subsection.
+
+Cited in: [Chapter 1](/consciousness/monograph/the-source-to-experience-problem#citation-revised-3) · [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-12) · [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-77)
+
+<a id="bib-MilinkovicAru2026"></a>
+
+[33] Borjan Milinkovic and Jaan Aru. On Biological and Artificial Consciousness: A Case for Biological Computationalism. *Neuroscience and Biobehavioral Reviews*, 181:106524, 2026. Available online 17 December 2025. [doi:10.1016/j.neubiorev.2025.106524](https://doi.org/10.1016/j.neubiorev.2025.106524).
+
+Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-74)
 
 <a id="bib-Pinto2017"></a>
 
-[30] Yair Pinto, David A. Neville, Marte Otten, Paul M. Corballis, Victor A. F. Lamme, Edward H. F. de Haan, Nicoletta Foschi, and Mara Fabri. Split Brain: Divided Perception but Undivided Consciousness. *Brain*, 140(5):1231–1237, 2017. [doi:10.1093/brain/aww358](https://doi.org/10.1093/brain/aww358).
+[34] Yair Pinto, David A. Neville, Marte Otten, Paul M. Corballis, Victor A. F. Lamme, Edward H. F. de Haan, Nicoletta Foschi, and Mara Fabri. Split Brain: Divided Perception but Undivided Consciousness. *Brain*, 140(5):1231–1237, 2017. [doi:10.1093/brain/aww358](https://doi.org/10.1093/brain/aww358).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-40)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-65)
 
 <a id="bib-RodgersAgency"></a>
 
-[31] Jeremy Rodgers. Why Agency Cannot Be Purely Quantum under Unconstrained Unitarity: A Closure-Theoretic Completion of the Unitary No-Go Result. 2025. Unpublished programme manuscript, also titled Agency Beyond Pure Unitarity. Cited for its operational formulation, not its unqualified probability or outcome claims.
+[35] Jeremy Rodgers. Why Agency Cannot Be Purely Quantum under Unconstrained Unitarity: A Closure-Theoretic Completion of the Unitary No-Go Result. 2025. Unpublished programme manuscript, also titled Agency Beyond Pure Unitarity. Cited for its operational formulation, not its unqualified probability or outcome claims.
 
-Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-17)
+Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-32)
+
+<a id="bib-RodgersBlock2026"></a>
+
+[36] Jeremy Rodgers. Block Universe and Shadow Theory: Source, History, and Enacted Temporal Reality. 2026. Version 1.0, 23 October 2026. [doi:10.5281/zenodo.23604713](https://doi.org/10.5281/zenodo.23604713).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-11) · [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-revised-22)
+
+<a id="bib-RodgersReflectiveFreedom"></a>
+
+[37] Jeremy Rodgers. Bounded Agency and Reflective Freedom: Evaluative Revision, Information Limits, and Faithful Realization. 2026. Version 2.0, 6 October 2026. [doi:10.5281/zenodo.23202999](https://doi.org/10.5281/zenodo.23202999).
+
+Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-36)
+
+<a id="bib-RodgersReversibleControl"></a>
+
+[38] Jeremy Rodgers. Bounded Agency and Reversible Control: Information, Compact Interfaces, and the Limits of Deterministic Refinement. 2026. Version 2.0, 4 October 2026. Unpublished research monograph; reproduced in the verification supplement.
+
+Cited in: [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-34)
 
 <a id="bib-RodgersCSCF"></a>
 
-[32] Jeremy Rodgers. The Canonical Spectral–Curvature Field: Closed Forms, Holomorphic Evolution, and Euclidean–Unitary Spectral Continuation. August 2026. Unpublished working manuscript, strengthened version.
+[39] Jeremy Rodgers. The Canonical Spectral–Curvature Field: Closed Forms, Holomorphic Evolution, and Euclidean–Unitary Spectral Continuation. August 2026. Unpublished working manuscript, strengthened version.
 
-Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-22)
+Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-revised-43)
+
+<a id="bib-RodgersContinuity2026"></a>
+
+[40] Jeremy Rodgers. Conscious Scaffolding and the Preference for Continuity. 2026. Version 1.1, 16 October 2026; current author-hosted research note. [doi:10.5281/zenodo.23424138](https://doi.org/10.5281/zenodo.23424138). [https://www.everythingequation.com/consciousness/ai-alignment/continuity](https://www.everythingequation.com/consciousness/ai-alignment/continuity).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-6)
 
 <a id="bib-RodgersField"></a>
 
-[33] Jeremy Rodgers. The Consciousness Field: A Unified Mathematical Framework from Fixed-Point Field Theory to Phenomenal Bridge. March 2026. Version 5.5, unpublished programme manuscript. Only the qualified local and representation results are used.
+[41] Jeremy Rodgers. The Consciousness Field: A Unified Mathematical Framework from Fixed-Point Field Theory to Phenomenal Bridge. March 2026. Version 5.5, unpublished programme manuscript. Only the qualified local and representation results are used.
 
-Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-21) · [Chapter 14](/consciousness/monograph/why-a-manifestation-law-is-additional#citation-24)
+Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-revised-42) · [Chapter 14](/consciousness/monograph/why-a-manifestation-law-is-additional#citation-revised-45)
+
+<a id="bib-RodgersConstitutedAgency"></a>
+
+[42] Jeremy Rodgers. Constituted Agency: Self-Authorship, Local Control, and Conscious Participation. 2026. 22 October 2026. [doi:10.5281/zenodo.23581587](https://doi.org/10.5281/zenodo.23581587).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-4) · [Chapter 9](/consciousness/monograph/resources-continued-operation-and-agency#citation-revised-38) · [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-89)
 
 <a id="bib-RodgersPilot"></a>
 
-[34] Jeremy Rodgers. A Deterministic Pilot Medium: Bell Path Selection and Autonomous Material Records—A Constitutive Completion with a Controlled Physical-Time Limit. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774634](https://doi.org/10.5281/zenodo.22774634).
+[43] Jeremy Rodgers. A Deterministic Pilot Medium: Bell Path Selection and Autonomous Material Records: A Constitutive Completion with a Controlled Physical-Time Limit. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774634](https://doi.org/10.5281/zenodo.22774634).
 
-Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-10) · [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-14) · [Appendix A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#citation-53)
+Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-24) · [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-revised-29) · [Appendix A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#citation-revised-100)
+
+<a id="bib-RodgersTemporal2026"></a>
+
+[44] Jeremy Rodgers. Experienced Temporal Passage: Enacted Scaffolding and the Organization of Succession. 2026. Preprint, 23 October 2026. [doi:10.5281/zenodo.23591626](https://doi.org/10.5281/zenodo.23591626).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-10)
+
+<a id="bib-RodgersRelationalAwareness2026"></a>
+
+[45] Jeremy Rodgers. From Physical Comparison to Relational Appearance: A Defeasible Current-Act Account. 2026. Version 1.4, 16 October 2026. [doi:10.5281/zenodo.23408737](https://doi.org/10.5281/zenodo.23408737).
+
+Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-87)
+
+<a id="bib-RodgersInterventional2026"></a>
+
+[46] Jeremy Rodgers. Identifying Binary Realizations from Intervention Laws: Certificates, Recoding Obstructions, and a Bounded SPC-2/IIT Comparison. 2026. Version 1.1-RC1, 30 September 2026. [doi:10.5281/zenodo.23075828](https://doi.org/10.5281/zenodo.23075828).
+
+Cited in: [Chapter 15](/consciousness/monograph/the-realized-domain-and-its-boundaries#citation-revised-48) · [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-99)
+
+<a id="bib-RodgersLearning2026"></a>
+
+[47] Jeremy Rodgers. Learning Effective Interfaces from Opaque Stochastic Systems: Capacity, Selection, and Validation Limits. Zenodo, September 2026. Revised preprint version 2, 29 September 2026, including post-hoc optimization sensitivity. [doi:10.5281/zenodo.23075824](https://doi.org/10.5281/zenodo.23075824).
+
+Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-90)
 
 <a id="bib-RodgersMassive"></a>
 
-[35] Jeremy Rodgers. A Massive Configuration Completion of the Quantum Measurement Programme: Event Timing, Semibounded Material Records, Retained Resources, and an Autonomous Finite-Horizon Realization. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774739](https://doi.org/10.5281/zenodo.22774739).
+[48] Jeremy Rodgers. A Massive Configuration Completion of the Quantum Measurement Programme: Event Timing, Semibounded Material Records, Retained Resources, and an Autonomous Finite-Horizon Realization. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774739](https://doi.org/10.5281/zenodo.22774739).
 
-Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-10) · [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-12)
+Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-24) · [Chapter 7](/consciousness/monograph/a-massive-configuration-and-record-constitution#citation-revised-27)
+
+<a id="bib-RodgersReflectiveAlignment"></a>
+
+[49] Jeremy Rodgers. Reflective Alignment and AI Consciousness: Awareness, Agency and Recursive Cognitive Scaffolding. 2026. Version 2.1, 11 October 2026. [doi:10.5281/zenodo.23294465](https://doi.org/10.5281/zenodo.23294465).
+
+Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-80) · [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-88)
+
+<a id="bib-RodgersBoundaries2026"></a>
+
+[50] Jeremy Rodgers. Relational Boundaries and Awareness Localization: Robustness, Composition, and Identification Limits. Zenodo, September 2026. Version 1.0, 29 September 2026. [doi:10.5281/zenodo.23075822](https://doi.org/10.5281/zenodo.23075822).
+
+Cited in: [Chapter 15](/consciousness/monograph/the-realized-domain-and-its-boundaries#citation-revised-46) · [Chapter 16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#citation-revised-50) · [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-83) · [Appendix E](/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#citation-revised-103)
+
+<a id="bib-RodgersDevelopment2026"></a>
+
+[51] Jeremy Rodgers. Relational Development and Conscious Scaffolding: Conceptual Foundations, Strengthened Results, and Research Commitments. Zenodo, October 2026. Revised preprint, 6 October 2026. [doi:10.5281/zenodo.23190711](https://doi.org/10.5281/zenodo.23190711).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-5) · [Appendix B](/consciousness/monograph/appendix-b-predictive-equivalence-algorithms-and-infinite-horizon-limits#citation-revised-101)
 
 <a id="bib-RodgersSRC"></a>
 
-[36] Jeremy Rodgers. Self-Referential Record Closure: A Structural Criterion for Witness-Consciousness. April 2026. Unpublished programme manuscript. Witness results used with the scope qualifications stated in this monograph.
+[52] Jeremy Rodgers. Self-Referential Record Closure: A Structural Criterion for Witness-Consciousness. April 2026. Unpublished programme manuscript. Witness results used with the scope qualifications stated in this monograph.
 
-Cited in: [Chapter 10](/consciousness/monograph/internal-representation-and-self-referential-records#citation-18)
+Cited in: [Chapter 10](/consciousness/monograph/internal-representation-and-self-referential-records#citation-revised-39)
 
 <a id="bib-RodgersMeasurement"></a>
 
-[37] Jeremy Rodgers. Shadow Theory and Quantum Measurement: Source Dynamics, Event Laws, and Physical Records—Two Constitutive Completions. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774584](https://doi.org/10.5281/zenodo.22774584).
+[53] Jeremy Rodgers. Shadow Theory and Quantum Measurement: Source Dynamics, Event Laws, and Physical Records: Two Constitutive Completions. Zenodo, September 2026. Version 2, 15 September 2026. [doi:10.5281/zenodo.22774584](https://doi.org/10.5281/zenodo.22774584).
 
-Cited in: [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-8) · [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-10) · [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-13) · [Appendix A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#citation-53)
+Cited in: [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-revised-19) · [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-24) · [Chapter 8](/consciousness/monograph/a-deterministic-pilot-medium-and-a-complete-path-limit#citation-revised-28) · [Appendix A](/consciousness/monograph/appendix-a-contact-kinetic-and-complete-path-estimates#citation-revised-100)
 
 <a id="bib-RodgersFramework2026"></a>
 
-[38] Jeremy Rodgers. Shadow Theory: Framework. Author's website, 2026. [https://www.everythingequation.com/framework](https://www.everythingequation.com/framework). Accessed 18 September 2026.
+[54] Jeremy Rodgers. Shadow Theory: Framework. Author's website, 2026. [https://www.everythingequation.com/framework](https://www.everythingequation.com/framework). Accessed 18 September 2026.
 
-Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-47)
+Cited in: [Chapter 24](/consciousness/monograph/the-scope-of-the-proposed-resolution#citation-revised-92)
 
 <a id="bib-RodgersO1"></a>
 
-[39] Jeremy Rodgers. Shadow Theory O1 Constructive Discovery: Run 5. 2026. Unpublished 16-page research report. Relation and response tables on pp. 5–9; finite matrices independently reconstructed here.
+[55] Jeremy Rodgers. Shadow Theory O1 Constructive Discovery: Run 5. 2026. Unpublished 16-page research report. Relation and response tables on pp. 5–9; finite matrices independently reconstructed here.
 
-Cited in: [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#citation-20) · [Appendix D](/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#citation-54)
+Cited in: [Chapter 12](/consciousness/monograph/finite-incidence-recurrent-response-and-physical-access#citation-revised-41) · [Appendix D](/consciousness/monograph/appendix-d-exact-finite-matrices-and-reproducibility#citation-revised-102)
 
 <a id="bib-RodgersAtlas2026"></a>
 
-[40] Jeremy Rodgers. Shadow Theory: Reality Atlas. Author's website, 2026. [https://www.everythingequation.com/atlas](https://www.everythingequation.com/atlas). Accessed 18 September 2026.
+[56] Jeremy Rodgers. Shadow Theory: Reality Atlas. Author's website, 2026. [https://www.everythingequation.com/atlas](https://www.everythingequation.com/atlas). Accessed 18 September 2026.
 
-Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-23)
+Cited in: [Chapter 13](/consciousness/monograph/fixed-points-canonicalization-and-coherent-dissipative-structure#citation-revised-44)
 
 <a id="bib-RodgersSource"></a>
 
-[41] Jeremy Rodgers. Source–Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions. Zenodo, July 2026. Canonical edition dated 15 July 2026. [doi:10.5281/zenodo.21369967](https://doi.org/10.5281/zenodo.21369967).
+[57] Jeremy Rodgers. Source–Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions. Zenodo, July 2026. Canonical edition dated 15 July 2026. [doi:10.5281/zenodo.21369967](https://doi.org/10.5281/zenodo.21369967).
 
-Cited in: [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-8) · [Appendix E](/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#citation-55)
+Cited in: [Chapter 5](/consciousness/monograph/source-readout-foundations#citation-revised-19) · [Appendix E](/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#citation-revised-105)
+
+<a id="bib-RodgersRelationalSupplement2026"></a>
+
+[58] Jeremy Rodgers. Technical Supplement to From Physical Comparison to Relational Appearance. 2026. Version 1.4, 16 October 2026; companion supplement. [doi:10.5281/zenodo.23408737](https://doi.org/10.5281/zenodo.23408737).
+
+Cited in: [Appendix E](/consciousness/monograph/appendix-e-reconstruction-symmetry-and-the-meaning-of-a-source#citation-revised-106)
 
 <a id="bib-RodgersCRR"></a>
 
-[42] Jeremy Rodgers. Typed Conscious Record Realization: CRR Final Theorem Package. June 2026. Version 1.0, unpublished programme manuscript.
+[59] Jeremy Rodgers. Typed Conscious Record Realization: CRR Final Theorem Package. June 2026. Version 1.0, unpublished programme manuscript.
 
-Cited in: [Chapter 11](/consciousness/monograph/regulation-unity-and-the-functional-self#citation-19)
+Cited in: [Chapter 11](/consciousness/monograph/regulation-unity-and-the-functional-self#citation-revised-40)
+
+<a id="bib-RodgersClarification2026"></a>
+
+[60] Jeremy Rodgers. What Shadow Theory Holds Fundamental. 2026. Author's philosophical clarification, 20 October 2026; accessed 28 October 2026. [https://www.everythingequation.com/consciousness](https://www.everythingequation.com/consciousness).
+
+Cited in: [Chapter 1](/consciousness/monograph/the-source-to-experience-problem#citation-revised-2)
+
+<a id="bib-RodgersMislead"></a>
+
+[61] Jeremy Rodgers. When AI Learns to Mislead: Developmental responsibility and the case for reflective alignment. 2026. Version 1.1, 22 October 2026. [doi:10.5281/zenodo.23582387](https://doi.org/10.5281/zenodo.23582387).
+
+Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-79)
+
+<a id="bib-RodgersWholeField2026"></a>
+
+[62] Jeremy Rodgers. Whole-Field Constitution as Enacted Organization. 2026. Preprint, 23 October 2026. [doi:10.5281/zenodo.23608069](https://doi.org/10.5281/zenodo.23608069).
+
+Cited in: [Chapter 2](/consciousness/monograph/awareness-contents-and-the-personal-model#citation-revised-7) · [Chapter 17](/consciousness/monograph/the-shadow-psychophysical-constitution#citation-revised-52) · [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-86)
 
 <a id="bib-Sanders1974"></a>
 
-[43] M. D. Sanders, E. K. Warrington, J. Marshall, and L. Weiskrantz. `Blindsight': Vision in a Field Defect. *The Lancet*, 303(7860):707–708, 1974. [doi:10.1016/S0140-6736(74)92907-9](https://doi.org/10.1016/S0140-6736(74)92907-9).
+[63] M. D. Sanders, E. K. Warrington, J. Marshall, and L. Weiskrantz. `Blindsight': Vision in a Field Defect. *The Lancet*, 303(7860):707–708, 1974. [doi:10.1016/S0140-6736(74)92907-9](https://doi.org/10.1016/S0140-6736(74)92907-9).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-39)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-64)
 
 <a id="bib-Sarasso2015"></a>
 
-[44] Simone Sarasso, Melanie Boly, Martino Napolitani, Olivia Gosseries, Vanessa Charland-Verville, Silvia Casarotto, Mario Rosanova, Adenauer Girardi Casali, Jean-Fraņcois Brichant, Pierre Boveroux, Steffen Rex, Giulio Tononi, Steven Laureys, and Marcello Massimini. Consciousness and Complexity during Unresponsiveness Induced by Propofol, Xenon, and Ketamine. *Current Biology*, 25(23):3099–3105, 2015. [doi:10.1016/j.cub.2015.10.014](https://doi.org/10.1016/j.cub.2015.10.014).
+[64] Simone Sarasso, Melanie Boly, Martino Napolitani, Olivia Gosseries, Vanessa Charland-Verville, Silvia Casarotto, Mario Rosanova, Adenauer Girardi Casali, Jean-Fraņcois Brichant, Pierre Boveroux, Steffen Rex, Giulio Tononi, Steven Laureys, and Marcello Massimini. Consciousness and Complexity during Unresponsiveness Induced by Propofol, Xenon, and Ketamine. *Current Biology*, 25(23):3099–3105, 2015. [doi:10.1016/j.cub.2015.10.014](https://doi.org/10.1016/j.cub.2015.10.014).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-37)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-62)
 
 <a id="bib-Scheinin2021"></a>
 
-[45] Annalotta Scheinin, Oskari Kantonen, Michael Alkire, Jaakko Långsjö, Roosa E. Kallionpää, Kaike Kaisti, Linda Radek, Jarkko Johansson, Nils Sandman, Mikko Nyman, Mika Scheinin, Tero Vahlberg, Antti Revonsuo, Katja Valli, and Harry Scheinin. Foundations of Human Consciousness: Imaging the Twilight Zone. *Journal of Neuroscience*, 41(8):1769–1778, 2021. [doi:10.1523/JNEUROSCI.0775-20.2020](https://doi.org/10.1523/JNEUROSCI.0775-20.2020).
+[65] Annalotta Scheinin, Oskari Kantonen, Michael Alkire, Jaakko Långsjö, Roosa E. Kallionpää, Kaike Kaisti, Linda Radek, Jarkko Johansson, Nils Sandman, Mikko Nyman, Mika Scheinin, Tero Vahlberg, Antti Revonsuo, Katja Valli, and Harry Scheinin. Foundations of Human Consciousness: Imaging the Twilight Zone. *Journal of Neuroscience*, 41(8):1769–1778, 2021. [doi:10.1523/JNEUROSCI.0775-20.2020](https://doi.org/10.1523/JNEUROSCI.0775-20.2020).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-31)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-56)
 
 <a id="bib-Segundo2022"></a>
 
-[46] Miguel Segundo-Ortín and Paco Calvo. Consciousness and Cognition in Plants. *WIREs Cognitive Science*, 13(2):e1578, 2022. [doi:10.1002/wcs.1578](https://doi.org/10.1002/wcs.1578); first published online in 2021.
+[66] Miguel Segundo-Ortín and Paco Calvo. Consciousness and Cognition in Plants. *WIREs Cognitive Science*, 13(2):e1578, 2022. [doi:10.1002/wcs.1578](https://doi.org/10.1002/wcs.1578); first published online in 2021.
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-43)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-68)
 
 <a id="bib-Seth2025"></a>
 
-[47] Anil K. Seth. Conscious Artificial Intelligence and Biological Naturalism. *Behavioral and Brain Sciences*, 49:e315, 2026. First published online 21 April 2025; [doi:10.1017/S0140525X25000032](https://doi.org/10.1017/S0140525X25000032).
+[67] Anil K. Seth. Conscious Artificial Intelligence and Biological Naturalism. *Behavioral and Brain Sciences*, 49:e315, 2026. First published online 21 April 2025; [doi:10.1017/S0140525X25000032](https://doi.org/10.1017/S0140525X25000032).
 
-Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-45)
+Cited in: [Chapter 22](/consciousness/monograph/artificial-systems-embodiment-and-recursive-cognition#citation-revised-71)
+
+<a id="bib-ShadowEventLawRound003"></a>
+
+[68] Shadow Theory research programme. Reaction Ownership and Physical Record Access: A Native-Reporter Obstruction and a Coherent Contact Derived from Source Chemistry. September 2026. Event-Law Bridge, Round 003, 13 September 2026. Unpublished programme manuscript; source in the verification supplement.
+
+Cited in: [Chapter 6](/consciousness/monograph/quantum-currents-and-observer-independent-events#citation-revised-25)
 
 <a id="bib-Shalizi2001"></a>
 
-[48] Cosma Rohilla Shalizi and James P. Crutchfield. Computational Mechanics: Pattern and Prediction, Structure and Simplicity. *Journal of Statistical Physics*, 104(3–4):817–879, 2001. [doi:10.1023/A:1010388907793](https://doi.org/10.1023/A:1010388907793); arXiv:cond-mat/9907176.
+[69] Cosma Rohilla Shalizi and James P. Crutchfield. Computational Mechanics: Pattern and Prediction, Structure and Simplicity. *Journal of Statistical Physics*, 104(3–4):817–879, 2001. [doi:10.1023/A:1010388907793](https://doi.org/10.1023/A:1010388907793); arXiv:cond-mat/9907176.
 
-Cited in: [Chapter 16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#citation-26)
+Cited in: [Chapter 16](/consciousness/monograph/endogenous-predictive-structure-across-horizons#citation-revised-49)
 
 <a id="bib-Shiu2024"></a>
 
-[49] Philip K. Shiu, Gabriella R. Sterne, Nico Spiller, and et al.. A Drosophila computational brain model reveals sensorimotor processing. *Nature*, 634(8032):210–219, 2024. [doi:10.1038/s41586-024-07763-9](https://doi.org/10.1038/s41586-024-07763-9).
+[70] Philip K. Shiu, Gabriella R. Sterne, Nico Spiller, and et al.. A Drosophila computational brain model reveals sensorimotor processing. *Nature*, 634(8032):210–219, 2024. [doi:10.1038/s41586-024-07763-9](https://doi.org/10.1038/s41586-024-07763-9).
 
-Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-46)
+Cited in: [Chapter 23](/consciousness/monograph/evidence-identification-and-discriminating-tests#citation-revised-91)
 
 <a id="bib-Siclari2017"></a>
 
-[50] Francesca Siclari, Benjamin Baird, Lampros Perogamvros, Giulio Bernardi, Joshua J. LaRocque, Brady Riedner, Melanie Boly, Bradley R. Postle, and Giulio Tononi. The Neural Correlates of Dreaming. *Nature Neuroscience*, 20(6):872–878, 2017. [doi:10.1038/nn.4545](https://doi.org/10.1038/nn.4545).
+[71] Francesca Siclari, Benjamin Baird, Lampros Perogamvros, Giulio Bernardi, Joshua J. LaRocque, Brady Riedner, Melanie Boly, Bradley R. Postle, and Giulio Tononi. The Neural Correlates of Dreaming. *Nature Neuroscience*, 20(6):872–878, 2017. [doi:10.1038/nn.4545](https://doi.org/10.1038/nn.4545).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-29)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-54)
 
 <a id="bib-Nisargadatta"></a>
 
-[51] Sri Nisargadatta Maharaj. I Am That: Talks with Sri Nisargadatta Maharaj. Chetana, Bombay, 1973. Translated by Maurice Frydman; revised and edited by Sudhakar S. Dikshit. Dialogue numbers are the principal locators; the supplied electronic edition carries the July 1981 editorial note.
+[72] Sri Nisargadatta Maharaj. I Am That: Talks with Sri Nisargadatta Maharaj. Chetana, Bombay, 1973. Translated by Maurice Frydman; revised and edited by Sudhakar S. Dikshit. Dialogue numbers are the principal locators; the electronic edition consulted carries the July 1981 editorial note.
 
-Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-2)
+Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-revised-13)
 
 <a id="bib-Taiz2019"></a>
 
-[52] Lincoln Taiz, Daniel Alkon, Andreas Draguhn, Angus Murphy, Michael Blatt, Chris Hawes, Gerhard Thiel, and David G. Robinson. Plants Neither Possess nor Require Consciousness. *Trends in Plant Science*, 24(8):677–687, 2019. [doi:10.1016/j.tplants.2019.05.008](https://doi.org/10.1016/j.tplants.2019.05.008).
+[73] Lincoln Taiz, Daniel Alkon, Andreas Draguhn, Angus Murphy, Michael Blatt, Chris Hawes, Gerhard Thiel, and David G. Robinson. Plants Neither Possess nor Require Consciousness. *Trends in Plant Science*, 24(8):677–687, 2019. [doi:10.1016/j.tplants.2019.05.008](https://doi.org/10.1016/j.tplants.2019.05.008).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-43)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-68)
 
 <a id="bib-Varela1996"></a>
 
-[53] Francisco J. Varela. Neurophenomenology: A Methodological Remedy for the Hard Problem. *Journal of Consciousness Studies*, 3(4):330–349, 1996.
+[74] Francisco J. Varela. Neurophenomenology: A Methodological Remedy for the Hard Problem. *Journal of Consciousness Studies*, 3(4):330–349, 1996.
 
-Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-3)
+Cited in: [Chapter 3](/consciousness/monograph/contemplative-inquiry-and-its-evidential-role#citation-revised-14)
 
 <a id="bib-Volz2018"></a>
 
-[54] Lukas J. Volz, Steven A. Hillyard, Michael B. Miller, and Michael S. Gazzaniga. Unifying Control over the Body: Consciousness and Cross-Cueing in Split-Brain Patients. *Brain*, 141(3):e15, 2018. Letter to the editor. [doi:10.1093/brain/awx359](https://doi.org/10.1093/brain/awx359).
+[75] Lukas J. Volz, Steven A. Hillyard, Michael B. Miller, and Michael S. Gazzaniga. Unifying Control over the Body: Consciousness and Cross-Cueing in Split-Brain Patients. *Brain*, 141(3):e15, 2018. Letter to the editor. [doi:10.1093/brain/awx359](https://doi.org/10.1093/brain/awx359).
 
-Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-41)
+Cited in: [Chapter 21](/consciousness/monograph/biological-and-comparative-applications#citation-revised-66)
