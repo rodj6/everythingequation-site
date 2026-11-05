@@ -1,0 +1,83 @@
+---
+title: "What a ratio profile measures exactly"
+description: "Finite window counts become exact masses of the log-spectrum autocorrelation after self-pair subtraction and native conditioning."
+order: 3
+---
+
+<a id="section-3"></a>
+
+## Ratio statistics and mathematical foundations
+
+<a id="section-3-1"></a>
+
+### Count ordered pairs on their native support
+
+For a positive readout multiset $v=(v_1,\ldots,v_n)$, let $E$ contain eligible ordered pairs $(i,j)$ with $i\ne j$ and set $N_R=|E|$. Kerr retains $0.05<v_i/v_j<5$. Hydrogen and spatial readouts have no finite upper cut. The fixed slot order is
+
+<a id="eq-5"></a>
+
+$$
+(c_1,\ldots,c_{15})=(\varphi,\varphi^{-1},\varphi^2,\sqrt 2,\sqrt 3,\sqrt 5,\pi,\pi/2,\pi/10,e,e^{-1},\ln 2,j_{0,1},3/13,1/7). \tag{5}
+$$
+
+Here $j_{0,1}$ is the first positive zero of $J_0$. The fine-structure constant is not one of the fifteen centers. At relative tolerance $\epsilon$,
+
+<a id="eq-6"></a>
+
+$$
+h_j=\sum_{(a,b)\in E}\mathbf 1\{c_j(1-\epsilon)\le v_a/v_b\le c_j(1+\epsilon)\},\qquad p_j=h_j/N_R. \tag{6}
+$$
+
+<a id="eq-7"></a>
+
+$$
+\begin{aligned}
+A_{\mathrm{SUM}}&=\frac{\sum_j h_j}{N_R},\\
+A_{\mathrm{UNION}}&=\frac{1}{N_R}\sum_{(a,b)\in E}\mathbf 1\!\left\{v_a/v_b\in\bigcup_j[c_j(1-\epsilon),c_j(1+\epsilon)]\right\}.
+\end{aligned}\tag{7}
+$$
+
+SUM counts overlap multiplicity. UNION counts a ratio once. The structural signature is $p=(p_1,\ldots,p_{15})$, not a vector of null-relative enrichments. Related centers, shared ratios and overlapping windows create dependence. Fifteen slots do not supply fifteen independent physical observations.
+
+The retained tolerances are $\epsilon=0.03,0.01,0.005$. Primary abundance is 3% SUM for Kerr, 3% UNION for minimum-normalized hydrogen log1p, and 1% UNION for spatial graphs. Shape comparisons use the same tolerance across domains and retain all three widths. Spearman with average tied ranks is primary descriptive; Pearson is secondary. There is no independent-slot significance test. Scaling a nonzero profile by a positive scalar changes neither coefficient: $h/N_R$ and $h/\mathrm{SUM}$ yield the same within-profile shape correlation, with different abundance interpretations.
+
+<a id="section-3-2"></a>
+
+### The exact log-autocorrelation identity
+
+Write $u_i=\log v_i$, $\mu_n=n^{-1}\sum_i\delta_{u_i}$, and let $\check\mu_n$ be reflection about zero. The normalized unfiltered nonself measure is
+
+<a id="eq-8"></a>
+
+$$
+\nu_n=\frac{1}{n(n-1)}\sum_{i\ne j}\delta_{u_i-u_j}
+=\frac{n}{n-1}\mu_n*\check\mu_n-\frac{1}{n-1}\delta_0. \tag{8}
+$$
+
+**Derivation.** The convolution includes all $n^2$ ordered terms. Subtract exactly the $n$ diagonal self-pairs and divide the result by $n(n-1)$. Distinct equal-valued modes still contribute at zero after subtraction. Deduplication would change the measure.
+
+<a id="eq-9"></a>
+
+$$
+I_j=[\log c_j+\log(1-\epsilon),\ \log c_j+\log(1+\epsilon)]. \tag{9}
+$$
+
+With $B=\mathbb R$ in the uncut cases and $B=(\log 0.05,\log 5)$ for Kerr, the exact native profile is
+
+<a id="eq-10"></a>
+
+$$
+p_j=\frac{\nu_n(I_j\cap B)}{\nu_n(B)},\qquad N_R=n(n-1)\nu_n(B). \tag{10}
+$$
+
+Keep the closed matching intervals distinct from the open native cutoff. SUM adds window masses with multiplicity; UNION measures their union. Relative windows are not perfectly symmetric in log coordinates. The ordered measure $\nu_n$ is symmetric; an asymmetric Kerr cutoff can break reciprocal balance in the conditioned distribution.
+
+The log spectrum means $\log v$, so in primary hydrogen it is $\log\log(1+\lambda/\lambda_{\min,+})$. Spatial mean normalization only translates it. For Fourier convention $\widehat\eta(k)=\int e^{ikt}\,\eta(dt)$, the unnormalized nonself difference measure gives
+
+<a id="eq-11"></a>
+
+$$
+n(n-1)\widehat\nu_n(k)=\left|\sum_i e^{iku_i}\right|^2-n. \tag{11}
+$$
+
+The squared modulus arises by multiplying the sum and its conjugate; the $-n$ removes diagonal terms. This is a form factor in native log coordinates. It is not an unfolded, ensemble-averaged GOE form factor. Equations (8)–(11) characterize exactly what was counted. An explanation must supply more than reconstruction from the same complete observed spectrum.

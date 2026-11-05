@@ -1,0 +1,224 @@
+---
+title: "The full source stress closes the cubic bootstrap"
+description: "Lift the action and horizontal variation, compute the quotient inverse, and derive the exact off-shell residual."
+order: 5
+---
+
+<a id="section-5"></a>
+## 5. The bootstrap on the projective quotient
+
+<a id="section-5-1"></a>
+### 5.1 Recover the action and its variation domain
+
+Let $A[T]$ be the generator reconstructed in Theorem 3.1. The source action uses endpoint and short-path operations:
+
+<a id="eq-30"></a>
+
+$$
+S_{\mathrm{src}}[T,B,\chi]=\lambda^{-2}\int_U
+\left[(B-\eta)^{\mu\nu}D_{\mu\nu}(A[T])
++B^{\mu\nu}Q_{\mu\nu}(A[T])\right]\,d^4x+S_m[B,\chi].
+\tag{30}
+$$
+
+This is the chosen variational law in raw relation [(4)](/source-readout/transport-projective/02-source-support-and-preparation#eq-4). The free quadratic part is Deser's spin-two starting law. The cubic part will be checked against total-current self-coupling. Neither is a condition for source admission.
+
+Projection by [(2)](/source-readout/transport-projective/01-the-gravitational-recovery-problem#eq-2) gives
+
+<a id="eq-31"></a>
+
+$$
+S_2=\int(h^{\mu\nu}D_{\mu\nu}(c)+\eta^{\mu\nu}Q_{\mu\nu}(c)),\qquad
+S_3=\lambda\int h^{\mu\nu}Q_{\mu\nu}(c).
+\tag{31}
+$$
+
+The inverse is $B=\eta+\lambda h$ and $T=\operatorname{Hol}(\lambda c)$, by the transport ODE. Every density and generator variation in the declared domain lifts through [(11)](/source-readout/transport-projective/03-regular-transport#eq-11). Thus the action's variational operations are recovered along with its values.
+
+<a id="section-5-2"></a>
+### 5.2 Construct the quotient inverse explicitly
+
+Let $c_I=c^\alpha{}_{\mu\beta}$ range over all 64 components in four dimensions. Define
+
+<a id="eq-32"></a>
+
+$$
+q_z(c)=z^{\mu\nu}Q_{\mu\nu}(c),\qquad
+(H_z)_{IJ}=\frac{\partial^2q_z}{\partial c_I\partial c_J},
+\qquad J(z)=D^*z.
+\tag{32}
+$$
+
+Compact variations fix the adjoint: $\int z^{\mu\nu}D_{\mu\nu}(u)=\int J(z)_Iu_I$ after the matched boundary integration. Explicitly,
+
+<a id="eq-33"></a>
+
+$$
+J(h)^\ell{}_{pq}=-\partial_\ell h^{qp}+\delta^\ell_p\partial_n h^{qn}.
+\tag{33}
+$$
+
+These definitions have no inverse differential operator. Let $P\omega$ have components $\delta^\alpha_\beta\omega_\mu$. In the fixed component basis $P^TP=4I$ and $\Pi=PP^T/4$ projects onto $\ker H$ with $H=H_\eta$. Theorem 4.1 makes $H+\Pi$ invertible. Set
+
+<a id="eq-34"></a>
+
+$$
+G=(H+\Pi)^{-1}-\Pi,\qquad HG=GH=I-\Pi,\qquad G^T=G.
+\tag{34}
+$$
+
+This is a coordinate inverse on the quotient. A different valid inverse changes the relevant outputs only by a projective vector, which $D$ annihilates. No physical Euclidean metric is selected by this use of component space.
+
+For symmetric $z$, $H_zP=0$ by projective invariance of $q_z$ and $P^TJ(z)=0$ by $D(P\omega)=0$. Define
+
+<a id="eq-35"></a>
+
+$$
+L(h)=-GJ(h),\qquad K(h,c)=GH_hc,\qquad
+\tau_{\mu\nu}(h,c)=Q_{\mu\nu}(c)-D_{\mu\nu}K(h,c).
+\tag{35}
+$$
+
+The free equation $Hc+J(h)=0$ gives $c=L(h)+P\omega$. The symmetric Ricci readout is independent of $\omega$. The linearized Levi–Civita connection of
+
+<a id="eq-36"></a>
+
+$$
+\varphi_{\mu\nu}=-h_{\mu\nu}+\tfrac12\eta_{\mu\nu}\operatorname{tr}_\eta h
+\tag{36}
+$$
+
+solves this equation and differs from $L(h)$ only projectively. Thus $r(h)=DL(h)$ is exactly Deser's metric spin-two operator:
+
+<a id="eq-37"></a>
+
+$$
+2r_{\mu\nu}(h)=\Box h_{\mu\nu}
+-\partial_\mu\partial^\alpha h_{\alpha\nu}
+-\partial_\nu\partial^\alpha h_{\alpha\mu}
+-\tfrac12\eta_{\mu\nu}\Box\operatorname{tr}_\eta h .
+\tag{37}
+$$
+
+Its trace-adjusted Einstein form has identically zero flat divergence. Substitution yields the linear gauge transformations
+$\delta h^{\mu\nu}=\eta^{\mu\nu}\partial_\alpha\xi^\alpha-\partial^\mu\xi^\nu-\partial^\nu\xi^\mu$ and $\delta c^\alpha{}_{\mu\nu}=\partial_\mu\partial_\nu\xi^\alpha$, together with projective freedom. The gauge identities follow from the chosen quadratic law.
+
+<a id="section-5-3"></a>
+### 5.3 Vary the auxiliary background horizontally
+
+Introduce auxiliary inverse metric density $\psi$ near $\eta$. Here $h$ is a weight-one tensor density and $c$ a general $(1,2)$ tensor. With $C(\psi)=\mathrm{LC}(g(\psi))$, covariantize
+
+<a id="eq-38"></a>
+
+$$
+S_2(\psi)=\int\left[
+h^{\mu\nu}(\nabla_\alpha c^\alpha{}_{\nu\mu}-\nabla_\nu c^\alpha{}_{\alpha\mu})
++\psi^{\mu\nu}Q_{\mu\nu}(c)\right].
+\tag{38}
+$$
+
+The auxiliary background is torsion free as part of the computation. The dynamical $c$ is unrestricted. Its direct connection variation is
+
+<a id="eq-39"></a>
+
+$$
+\begin{aligned}
+\delta_C S_{2,\mathrm{kin}}=\int h^{\mu\nu}\big[
+ &\delta C^\alpha{}_{\alpha\rho}c^\rho{}_{\nu\mu}
+ -\delta C^\rho{}_{\alpha\nu}c^\alpha{}_{\rho\mu}\\
+ &-\delta C^\rho{}_{\alpha\mu}c^\alpha{}_{\nu\rho}
+ +\delta C^\rho{}_{\nu\mu}c^\alpha{}_{\alpha\rho}\big].
+\end{aligned}
+\tag{39}
+$$
+
+It also equals $\int(H_hc)^T\delta C$. Check the equality directly, or expand $BR(A)$ around $(\psi,C(\psi))$ and take the quadratic coefficient.
+
+<a id="theorem-5-1"></a>
+**Theorem 5.1 (Off-shell source stress).** Under the auxiliary tensor/density variation,
+
+<a id="eq-40"></a>
+
+$$
+\left.\frac{\delta S_2(\psi)}{\delta\psi^{\mu\nu}}\right|_{\psi=\eta}
+=Q_{\mu\nu}(c)-D_{\mu\nu}(GH_hc)=\tau_{\mu\nu}(h,c).
+\tag{40}
+$$
+
+The identity holds off shell for all smooth $h,c$ in the domain, including unrestricted torsion components.
+
+**Proof.** The variation $\delta C$ is the linearized Levi–Civita connection of $\delta\psi$. It solves $H\delta C+J(\delta\psi)=0$, so $\delta C=-GJ(\delta\psi)+P\zeta$ for a one-form $\zeta$. Since $H_hP=0$,
+
+<a id="eq-41"></a>
+
+$$
+\int(H_hc)^T\delta C=-\int(GH_hc)^T J(\delta\psi)
+=-\int\delta\psi^{\mu\nu}D_{\mu\nu}(GH_hc).
+\tag{41}
+$$
+
+The explicit $\psi Q$ term supplies $Q$. The integration uses the same compact-variation boundary contract as [(32)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-32). This proves every component of [(40)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-40), with derivatives of both fields retained.
+
+The source operation is
+
+<a id="eq-42"></a>
+
+$$
+B(\psi)=\psi+\lambda h,\qquad
+T(\psi)=\operatorname{Hol}[C(\psi)+\lambda c],\qquad
+c_\psi=\frac{A[T]-C(\psi)}{\lambda}.
+\tag{42}
+$$
+
+Use the relative tensor generator in [(38)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-38). Holding $c_\psi$ fixed is different from freezing the physical transport. If $B$ follows [(42)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-42) while $T$ is frozen, the chain-rule defect is
+
+<a id="eq-43"></a>
+
+$$
+\tau_{\mathrm{fixed}\ T}=\tau+\lambda^{-1}D(GE_c^{(2)}),\qquad
+E_c^{(2)}=J(h)+Hc .
+\tag{43}
+$$
+
+Indeed $\delta c_\psi=-\delta C/\lambda$, and the adjoint calculation gives [(43)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-43). For $h=0$ and only $c^0{}_{11}=x^0$ nonzero, the correct $\tau_{11}$ is zero and the defect is $1/\lambda$. Dropping the kinetic covariant variation altogether is a different failure: it keeps $Q$ and loses $-DK$. Equation [(42)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-42) implements the intended operation.
+
+<a id="section-5-4"></a>
+### 5.4 The exact residual closes the current
+
+<a id="theorem-5-2"></a>
+**Theorem 5.2 (Closed bootstrap and off-shell recovery).** The first-order Euler residuals of $S_2+S_3$ are
+
+<a id="eq-44"></a>
+
+$$
+E_h=D(c)+\lambda Q(c),\qquad E_c=J(h)+Hc+\lambda H_hc .
+\tag{44}
+$$
+
+The exact identity is
+
+<a id="eq-45"></a>
+
+$$
+r(h)+\lambda\tau(h,c)=E_h-D(GE_c).
+\tag{45}
+$$
+
+On source solutions $r(h)=-\lambda\tau$. The interaction supplies no further auxiliary stress, so the self-coupling closes in one step.
+
+**Proof.** Apply $G$ to the second residual: $GE_c=-L(h)+(I-\Pi)c+\lambda K(h,c)$. Since $D\Pi c=0$, subtracting its $D$ image from $E_h$ gives [(45)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-45). On a connection solution, $c=L(h)-\lambda K(h,c)+P\omega$ exactly, and its derivative contributes the derivative stress in the $h$ equation. Holding the relative tensor $c$ fixed under [(42)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-42), $\lambda hQ$ has no explicit auxiliary-background dependence or explicit derivatives. Its auxiliary stress is zero, so the current already equals the total self-current in this prescription.
+
+Equation [(45)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-45) gives $\|r+\lambda\tau\|\le\|E_h\|+\|DGE_c\|$ in matching norms. It exposes the derivative cost of transferring an error in the connection equation. Small undifferentiated connection residuals alone do not certify a small Einstein residual.
+
+The completed action follows after the current has been verified:
+
+<a id="eq-46"></a>
+
+$$
+\lambda^{-2}B^{\mu\nu}R_{\mu\nu}(A)
+=\lambda^{-1}\eta^{\mu\nu}D_{\mu\nu}(c)+h^{\mu\nu}D_{\mu\nu}(c)
++\eta^{\mu\nu}Q_{\mu\nu}(c)+\lambda h^{\mu\nu}Q_{\mu\nu}(c).
+\tag{46}
+$$
+
+The first term is the explicit constant-density divergence. No convergence of an infinite series is assumed. The current construction and nonlinear closure recover Deser's equations throughout the declared domain.

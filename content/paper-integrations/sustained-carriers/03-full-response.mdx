@@ -1,0 +1,119 @@
+---
+title: "The driven carrier keeps two kinds of response"
+description: "Conditional phase and attenuation share a carrier, while free memory changes the static and frequency transfer."
+order: 3
+---
+
+<a id="section-7"></a>
+
+## 7 Conditional linkage and complete feedback response
+
+<a id="section-7-1"></a>
+
+### 7.1 Affine propagation and time ordering
+
+Clamp or replay $m(t)$. The driven amplitude map is affine:
+
+<a id="eq-36"></a>
+
+$$
+z(t)=U(t,0)z(0)+\int_0^t U(t,s)f\,ds,\qquad\partial_tU(t,s)=-cK(t)U(t,s),\quad U(s,s)=I.\tag{36}
+$$
+
+The homogeneous $U$ depends on the fixed history; it is not the full freely adapting derivative. The affine term is necessary to predict driven amplitude. For $A=cK$,
+
+<a id="eq-37"></a>
+
+$$
+H(t)=\tfrac12(A+A^*)=\gamma K(t),\quad C(t)=\tfrac1{2i}(A-A^*)=\alpha K(t)=\frac\alpha\gamma H(t).\tag{37}
+$$
+
+On any finite interval the carrier is bounded. The linear CSCF symbol may be continued constantly beyond its compact reachable spectral interval to satisfy boundedness. Do not fit the mobility on the same response used to test it.
+
+Let $\dot V_c=-i\alpha KV_c,V_c(0)=I$; it is unitary. With $U=V_cR$, differentiate $V_c^*U$:
+
+<a id="eq-38"></a>
+
+$$
+\dot R=-\gamma V_c^*KV_cR,\qquad R(0)=I.\tag{38}
+$$
+
+For $\dot D_c=-\gamma KD_c,D_c(0)=I$, the gap-free comparison is
+
+<a id="eq-39"></a>
+
+$$
+\|U(T)-D_c(T)V_c(T)\|\le\gamma\alpha\int_0^T\!\int_0^t\|[K(t),K(s)]\|\,ds\,dt.\tag{39}
+$$
+
+Fix $t$ and differentiate $Q_t(s)=[K(t),D_c(s)]$:
+
+<a id="eq-40"></a>
+
+$$
+\dot Q_t(s)=-\gamma K(s)Q_t(s)-\gamma[K(t),K(s)]D_c(s),\quad Q_t(0)=0.\tag{40}
+$$
+
+Contraction gives $\|Q_t(t)\|\le\gamma\int_0^t\|[K(t),K(s)]\|ds$. Now $D_cV_c$ has residual $i\alpha[K,D_c]V_c$ in the $U$ equation. Variation of constants, contraction of $U$ and unitarity give (39). Neither a gap nor eigenvector tracking is needed.
+
+For path weights $w_e=e^{m_e}$,
+
+<a id="eq-41"></a>
+
+$$
+[K(t),K(s)]=[w_1(t)w_2(s)-w_2(t)w_1(s)][B_1,B_2],\qquad \|[B_1,B_2]\|=\sqrt3.\tag{41}
+$$
+
+The symmetric contrast sector has equal moving weights and commutes. A one-port transient need not. The attracting equilibrium gives a constant carrier and exact conditional factorization. Transient noncommutation implies neither persistent motion nor a Floquet result.
+
+<a id="section-7-2"></a>
+
+### 7.2 Memory kernel and transfer operators
+
+At equilibrium, real amplitude and memory perturbations $\xi,\nu$ obey, with additive real rate probe $r(t)$,
+
+<a id="eq-42"></a>
+
+$$
+\dot\xi=-GK_R\xi-GB\nu+r(t),\qquad\dot\nu=-\eta B^\top\xi-\eta H_m\nu.\tag{42}
+$$
+
+The fixed input has no state derivative. Solve the memory block and substitute:
+
+<a id="eq-43"></a>
+
+$$
+\dot\xi(t)=-GK_R\xi(t)-GBe^{-\eta H_m t}\nu(0)+r(t)+\eta\int_0^t GBe^{-\eta H_m(t-s)}B^\top\xi(s)\,ds.\tag{43}
+$$
+
+Zero initial memory perturbation leaves the kernel. The retained amplitude alone loses predictive information without this memory term. For zero initial perturbations, on the complexification of the real amplitude space, the Laplace-domain transfers are
+
+<a id="eq-44"></a>
+
+$$
+X_{\rm full}(p)=\left[pI+GK_R-\eta GB(pI+\eta H_m)^{-1}B^\top\right]^{-1},\tag{44}
+$$
+
+<a id="eq-45"></a>
+
+$$
+X_{\rm clamp}(p)=(pI+GK_R)^{-1}.\tag{45}
+$$
+
+Under Theorem 4.2 they exist on $\Re p\ge0$. Positivity $H_m\ge\kappa I$ makes the eliminated block invertible, and Proposition 5.1 makes $pI-A_{\rm full}$ invertible. Its amplitude Schur complement is therefore invertible. For the clamp, $G$ commutes with $K_R$, with complex generator eigenvalues $-c\lambda_j(K)$ having negative real parts; the realification adds their conjugates. This covers static response and all real frequencies $p=i\omega$. Elsewhere (44) requires both inverses and makes no assertion at an eliminated memory pole.
+
+At zero frequency, use (23):
+
+<a id="eq-46"></a>
+
+$$
+X_{\rm full}(0)=S^{-1}G^{-1},\qquad X_{\rm clamp}(0)=K_R^{-1}G^{-1}.\tag{46}
+$$
+
+Order matters. Free memory changes even the static susceptibility at identical state and probe. $H$ need not commute with $\operatorname{diag}(J,0)$, so conditional complex-linearity cannot generally represent the complete feedback response.
+
+<a id="section-7-3"></a>
+
+### 7.3 Observable contract and required resources
+
+Calibrate time and the amplitude metric, independently measure mobilities, access both quadratures with phase sensitivity, and prepare enough independent columns to reconstruct the operator. Subtract the driven affine baseline. Reproduce or clamp memory across columns for conditional probes; a free-memory kick instead tests (43) or (44). Pooled magnitudes, instantaneous spectra and a common mean cannot supply this access. The full state, work record and controlled-memory probe retain different source information.

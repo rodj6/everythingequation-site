@@ -1,0 +1,176 @@
+---
+title: Preparation Selects the Airy Delay
+description: The two-thirds-power law, its proof by matching and exit bounds, and the difference between local departure and complete arrival.
+order: 3
+---
+<a id="section-5"></a>
+
+## 5. Inner scaling and preparation-dependent passage
+
+<a id="section-5-1"></a>
+
+### 5.1 Orient the Riccati equation
+
+Let $\sigma_f=\operatorname{sign}B_f$ and $b_f=|B_f|$.
+
+<a id="eq-35"></a>
+
+$$
+u=\sigma_f y,\qquad h=\sigma_f(a-a_f).\tag{35}
+$$
+
+On the outgoing leg $\dot a=\sigma_f\nu$, $\nu>0$, so $\dot h=\nu$ and
+
+<a id="eq-36"></a>
+
+$$
+\dot u=A_fh+b_fu^2+O(u^3+|uh|+h^2+\nu).\tag{36}
+$$
+
+Upper-fold delay means $a>a_{\rm up}$; lower-fold delay means $a<a_{\rm down}$. Set
+
+<a id="eq-37"></a>
+
+$$
+t_\nu=(A_fb_f\nu)^{-1/3},\qquad
+h_\nu=\frac{\nu^{2/3}}{(A_fb_f)^{1/3}},\qquad
+u_\nu=\left(\frac{A_f\nu}{b_f^2}\right)^{1/3}.\tag{37}
+$$
+
+With $T=(t-t_f)/t_\nu=h/h_\nu$ and $U=u/u_\nu$, the inner equation on bounded $(T,U)$ sets after stable transients is
+
+<a id="eq-38"></a>
+
+$$
+\frac{dU}{dT}=T+U^2+O(\nu^{1/3}).\tag{38}
+$$
+
+The identities $\nu t_\nu=h_\nu$, $b_fu_\nu h_\nu=\nu$ fix the normalization. With dimensionless $u$, restored units of $A_f,b_f$ are $1/A,1/T$, and $t_\nu,h_\nu,u_\nu$ have units time, amplitude-rate and one. Positive rescaling of $r$ changes $A_f,b_f,u$ consistently and leaves $A_fb_f$ invariant. The fixed normalization is used in the projection measurements.
+
+<a id="section-5-2"></a>
+
+### 5.2 The incoming stable branch selects the solution
+
+For $h<0$ the attracting stationary branch and restoring rate satisfy
+
+<a id="eq-39"></a>
+
+$$
+u_*(h)=-\sqrt{-A_fh/b_f}+O(h),\qquad
+\lambda_c(h)=-2\sqrt{A_fb_f(-h)}+O(h).\tag{39}
+$$
+
+Preparation on this branch at fixed input distance gives regular tracking until a shrinking fold neighborhood. After fast errors settle, the critical error obeys
+
+<a id="eq-40"></a>
+
+$$
+D^+|e_c|\le-c_0\sqrt{-h}|e_c|+C\frac\nu{\sqrt{-h}}+C|e_c|^2.\tag{40}
+$$
+
+The moving reference has derivative $O((-h)^{-1/2})$; the stable block has a uniform gap and is controlled by [Lemma 4.1](/source-readout/slow-passage/02-folds-and-critical-coordinate#lemma-4-1). A sufficiently large $C_0$ makes $|e_c|\le C_0\nu/|h|$ invariant after the initial transient while $\nu/|h|^{3/2}$ is small. On its boundary restoring loss dominates forcing and quadratic error; boundary speed $O(\nu^2/|h|^2)$ is lower order. At overlap $h=-\nu^p$, $0<p<2/3$, this gives $e_c=o(\sqrt{-h})$ and $T\to-\infty$.
+
+The limiting incoming Riccati solution is
+
+<a id="eq-41"></a>
+
+$$
+U_\infty(T)=\frac{\operatorname{Ai}'(-T)}{\operatorname{Ai}(-T)},\qquad
+U_\infty(T)\sim-\sqrt{-T}\quad(T\to-\infty).\tag{41}
+$$
+
+Indeed $U=-q'/q$ turns $U'=T+U^2$ into $q''+Tq=0$; $q(T)=\operatorname{Ai}(-T)$ has the incoming asymptotics, with the sign in [(41)](#eq-41) from differentiating $-T$. At fixed large entrance $T=-M$, [(40)](#eq-40) gives $U=-\sqrt M+O(M^{-1})+o(1)$ as $\nu\to0$. Along the negative branch sensitivity contracts by $\exp(\int 2U\,dT)$, of order $\exp(-4M^{3/2}/3)$ to a fixed inner interval. First let $\nu\to0$ on compact intervals, then $M\to\infty$. This selects [(41)](#eq-41), unlike setting $U(0)=0$.
+
+<a id="theorem-5-1"></a>
+
+**[Theorem 5.1](#theorem-5-1) (Tracked-preparation local delay).** At either complete fold, prepare on the incoming attracting branch at fixed positive input distance, or in a sufficiently small fixed attracting neighborhood there. Let $\dot a=\sigma_f\nu$ through the fold. For sufficiently small fixed outgoing level $d>0$, the first crossing at $a_d$ of
+
+<a id="eq-42"></a>
+
+$$
+u=\sigma_f l^T(x-x_f)=d\tag{42}
+$$
+
+after incoming and stable-direction transients satisfies
+
+<a id="eq-43"></a>
+
+$$
+\sigma_f(a_d-a_f)=K_f\nu^{2/3}+o(\nu^{2/3}),\quad
+K_f=\frac{\zeta_1}{(A_fb_f)^{1/3}},\quad \zeta_1=2.338107410459\ldots,\tag{43}
+$$
+
+where $\operatorname{Ai}(-\zeta_1)=0$ is the first zero in positive $T$.
+
+**Proof.** On compact intervals $T<\zeta_1$, matching and continuous dependence in [(38)](#eq-38) give $U\to U_\infty$, so $u=O(u_\nu)\to0$ cannot reach fixed positive $d$. For the upper bound choose large outgoing $M$ and $T_M<\zeta_1$ with $U_\infty(T_M)=M$. Inner convergence gives the crossing $u=Mu_\nu$ at $T\to T_M$. Bootstrap $h\le C_1h_\nu$ up to $d$. Choose $d$ small enough that the cubic term is bounded by $b_fu^2/4$. The remaining terms divided by $u^2$ are controlled by $h/u,h^2/u^2,\nu/u^2$, tending to zero at fixed $M$; $A_fh$ helps on this positive-$h$ interval. Therefore $\dot u\ge b_fu^2/2$, giving
+
+<a id="eq-44"></a>
+
+$$
+\Delta t\le\frac2{b_fMu_\nu},\qquad \frac{\Delta h}{h_\nu}\le\frac2M.\tag{44}
+$$
+
+This closes the bootstrap for fixed $C_1$. The limsup of the scaled exit is at most $T_M+2/M$. Sending $M\to\infty$ gives $\zeta_1$. This proves the smaller-order remainder, without an explicit full-source finite-rate constant. $\square$
+
+<a id="section-5-3"></a>
+
+### 5.3 Exact-fold and finite-inner preparations
+
+For finite initial $(T_0,U_0)$ the quadratic solution is
+
+<a id="eq-45"></a>
+
+$$
+U(T)=\frac{\operatorname{Ai}'(-T)+k\operatorname{Bi}'(-T)}
+{\operatorname{Ai}(-T)+k\operatorname{Bi}(-T)},\qquad
+k=\frac{\operatorname{Ai}'(-T_0)-U_0\operatorname{Ai}(-T_0)}
+{U_0\operatorname{Bi}(-T_0)-\operatorname{Bi}'(-T_0)}.\tag{45}
+$$
+
+If the ratio is not finite, use the proportional Airy combination directly. The first forward zero of its denominator determines passage when the preparation is in the outgoing class. Starting exactly at $x_f,a_f$ gives $T_0=U_0=0$, with distance $O(\nu)$ from the moving graph by [(31)](/source-readout/slow-passage/02-folds-and-critical-coordinate#eq-31), smaller than the inner critical scale. The Airy initial values give $k=1/\sqrt3$ and
+
+<a id="eq-46"></a>
+
+$$
+\operatorname{Ai}(-\zeta_0)+\operatorname{Bi}(-\zeta_0)/\sqrt3=0,\qquad
+\zeta_0=1.986352707430\ldots.\tag{46}
+$$
+
+The same compact-inner and exit bounds give
+
+<a id="eq-47"></a>
+
+$$
+\sigma_f(a_d-a_f)=\frac{\zeta_0}{(A_fb_f)^{1/3}}\nu^{2/3}+o(\nu^{2/3}).\tag{47}
+$$
+
+The coefficient is about 15 percent smaller. Neither constant is preparation-independent. Errors of order $u_\nu$ in critical preparation or $h_\nu$ in input reference can change the scaled initial state and pole. Smaller errors preserve it if stable errors settle, for instance to $O(\nu^{2/3})$ in the complement. Larger unsettled stable errors need their own induced-critical-error estimate. A small fixed perturbation before a long stable approach can decay before reaching the inner region, a different preparation tested below.
+
+<a id="section-6"></a>
+
+## 6. Which switching event is measured?
+
+The measured departure in [(42)](#eq-42) uses the same calibrated full-state projection $l,x_f,\sigma_f$ in both models. It does not use amplitude only or reconstructed stationary memory. The numerical levels are $d=0.25,0.5$. No certified chart radius containing them is claimed. The asymptotic theorem applies to sufficiently small fixed local levels; these declared levels provide finite-rate evidence.
+
+For the exactly quadratic reduction use $k=0$ for tracked preparation or $k=1/\sqrt3$ for exact-fold preparation, and choose the first outgoing root
+
+<a id="eq-48"></a>
+
+$$
+\frac{\operatorname{Ai}'(-T_d)+k\operatorname{Bi}'(-T_d)}
+{\operatorname{Ai}(-T_d)+k\operatorname{Bi}(-T_d)}=d/u_\nu.\tag{48}
+$$
+
+Then $h_d^{\rm quad}=h_\nu T_d$. Since $U(T)\sim1/(\zeta-T)$ at its simple pole, for fixed $d$
+
+<a id="eq-49"></a>
+
+$$
+h_d^{\rm quad}=\frac{\zeta\nu^{2/3}}{(A_fb_f)^{1/3}}-\frac\nu{b_fd}+o(\nu).\tag{49}
+$$
+
+The full cubic terms and stable graph need not preserve this subleading coefficient. Equation [(48)](#eq-48) is an exact quadratic comparison, not a fit or a general next-order theorem for the full source.
+
+For sufficiently small $0<d_1<d_2$, the bound in [(44)](#eq-44) gives traversal time at most $2(1/d_1-1/d_2)/b_f$, hence an $O(\nu)$ input difference. A physical-amplitude level in $R=|v_3^Tz|$ is a different surface. It inherits the leading delay only with a justified bounded-time return from the local exit or a local transverse change of observable.
+
+Once the connection is established, entry into a fixed-radius neighborhood of the other stable state adds bounded time, giving an $O(\nu)$ input correction. An $O(\nu)$ shrinking regular tracking tube must be large enough to contain the moving-reference offset. Exponential settling then adds $O(|\log\nu|)$ time and $O(\nu|\log\nu|)$ input; a smaller tube need not be entered. The calculations localize projection exits and assess complete capture at the reversal and return. They do not report first asymptotic arrival or a separate amplitude event.

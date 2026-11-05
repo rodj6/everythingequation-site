@@ -1,0 +1,892 @@
+{
+  "paperId": "spectral-ratios",
+  "title": "Cross-Domain Spectral Ratio Structure: Refined Recurrence, Robustness and Diagnostic Limits",
+  "doi": "10.5281/zenodo.23888292",
+  "source": {
+    "filename": "Cross_Domain_Spectral_Ratio_Structure(2).pdf",
+    "physicalPages": 22,
+    "sha256": "f5001285d99e8ba6933c9cc47503dad68f923e31296b00f006ce944db7be68e5",
+    "pageIndex": "One-based physical pages, including title page. Printed body page = physical page minus one."
+  },
+  "supplement": {
+    "filename": "Spectral_Ratio_Public_Verification(1).zip",
+    "sha256": "f23e7db241c4ed941fe5e7a8494d2ede6a9a4ca1d4801c4d316cc89aa5b546c0",
+    "matchingEvidence": "Release metadata matches exact title and DOI. Saved tables match 421 Table 6/7 fields at paper rounding, and quick checks reproduce reported controls. No matching LaTeX source or original photographs were supplied."
+  },
+  "adaptations": [
+    "Repeated figure and table layout text is consolidated into each accessible figure caption or table.",
+    "Cover metadata is handled by the reading hub; substantive abstract claims lead the article.",
+    "Both reproduced and unexecuted calculations retain their original status."
+  ],
+  "verification": {
+    "strictMdxKaTeXSsr": {
+      "chapters": 9,
+      "renderedMathExpressions": 193,
+      "tables": 8,
+      "figures": 5
+    },
+    "supplementQuick": {
+      "checksummed_files": 88,
+      "elapsed_seconds": 2.0749549709944404,
+      "full_numerical_regeneration_performed": false,
+      "joint_fraction_ge_target": 0.2339,
+      "kerr_U_R_P": {
+        "development_P": {
+          "ge_observed": 10,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        },
+        "development_R": {
+          "ge_observed": 20,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        },
+        "development_U": {
+          "ge_observed": 0,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        },
+        "holdout_P": {
+          "ge_observed": 22,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        },
+        "holdout_R": {
+          "ge_observed": 757,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        },
+        "holdout_U": {
+          "ge_observed": 0,
+          "recounted_vectors": 3,
+          "reference_count": 4999,
+          "retained_vectors_verified": 4999
+        }
+      },
+      "mode": "quick",
+      "new_random_draws_generated": false,
+      "observed_datasets": 17,
+      "saved_G_rows": 10000,
+      "slot_count_fixture_cells": 540
+    },
+    "claimCheck": {
+      "H30_Kerr_native_spearman_3pct": 0.5214285714285714,
+      "H30_control_abundance": [
+        {
+          "dataset": "h30_log1p",
+          "fiber_target_slot_counts_identical": true,
+          "shell_controls_ge_observed": 92,
+          "shell_draws": 99,
+          "z_descriptive": -1.5335837592544679
+        },
+        {
+          "dataset": "h30_raw_secondary",
+          "fiber_target_slot_counts_identical": true,
+          "shell_controls_ge_observed": 0,
+          "shell_draws": 99,
+          "z_descriptive": 2.8891591316000613
+        }
+      ],
+      "all99_fiber_declared_linear_constraints_checked": true,
+      "all99_shell_weight_multisets_exact": true,
+      "embryo_pearson_3pct": -0.25983726289169384,
+      "embryo_spearman_3pct": 0.23899843757764805,
+      "fiber_invariant_atol": 1e-10,
+      "fiber_invariant_rtol": 1e-09,
+      "fiber_relative_edge_displacement_range": [
+        5.776219313416696e-10,
+        1.2335510194046609e-09
+      ],
+      "five_spatial_spearman_range_3pct": [
+        0.8864052604279183,
+        0.9955321222799308
+      ],
+      "formal_pilot_tail_probability": false,
+      "independent_physical_domain_votes_from_raw_or_bright_views": false,
+      "joint_reference_fraction": 0.2339,
+      "new_random_draws_or_eigensolves": false,
+      "primary_joint_criterion_met": false
+    },
+    "logIdentityCheck": "Passed nonself correction, multiplicity, normalization and reflection symmetry.",
+    "fullNumericalRegenerationPerformed": false
+  },
+  "records": [
+    {
+      "sourceSection": "Title-page abstract and section 1: research question, contribution and positive/negative distinctions",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/01-three-different-questions",
+      "anchor": "section-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 2: inputs, operators and provenance",
+      "sourcePages": [
+        2,
+        3,
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "section-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 2.1: 540-mode development and 684-mode Kerr angular holdout",
+      "sourcePages": [
+        2,
+        3
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "section-2-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 2.2: exact squared-radial H30 graph and residuals",
+      "sourcePages": [
+        3
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "section-2-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 2.3: image centroid recipe, rights/provenance and dependent variants",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "section-2-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 3: ratio statistics and foundations",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "section-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 3.1: finite counts and dependent slots",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "section-3-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 3.2: exact log-autocorrelation with derivation and form factor",
+      "sourcePages": [
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "section-3-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 4: frozen design and definitions",
+      "sourcePages": [
+        5,
+        6,
+        7
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "section-4",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 4.1: paired G libraries and prior G/S conjunction",
+      "sourcePages": [
+        5,
+        6
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "section-4-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 4.2: U/R/P preservation, eligibility, add-one and inference",
+      "sourcePages": [
+        6,
+        7
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "section-4-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 4.3: shell and 64-step fiber pilots",
+      "sourcePages": [
+        7
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "section-4-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 5: cross-domain profile recurrence",
+      "sourcePages": [
+        7,
+        8,
+        9
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "section-5",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 5.1: eight-view primary core, embryo exception, moderate Kerr relations",
+      "sourcePages": [
+        7,
+        8
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "section-5-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 5.2: all 36 hydrogen-image descriptions and Kerr-embryo exception",
+      "sourcePages": [
+        8,
+        9
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "section-5-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 6: conditional discrimination and robustness",
+      "sourcePages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "section-6",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 6.1: strong U/P and permissive R holdout",
+      "sourcePages": [
+        10
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "section-6-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 6.1: unnumbered exact Kerr incidence calculations",
+      "sourcePages": [
+        10
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "kerr-incidences",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 6.2: retained shell-block robustness, null-moment limitation",
+      "sourcePages": [
+        10,
+        11
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "section-6-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 6.3: readout-dependent abundance and failed fiber gate",
+      "sourcePages": [
+        11,
+        12,
+        13
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "section-6-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 7: both frozen specificity failures and retained evidence",
+      "sourcePages": [
+        13,
+        14
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "section-7",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 8: local spectral statistics and covariance universality",
+      "sourcePages": [
+        14,
+        15,
+        16
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "section-8",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 8.1: consecutive-gap statistics and scope of GOE/GUE comparisons",
+      "sourcePages": [
+        14,
+        15
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "section-8-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 8.2: sample covariance, local universality and different operator classes",
+      "sourcePages": [
+        15
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "section-8-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 8.3: independent density-to-profile prediction, conditional ratio and two-point intensity",
+      "sourcePages": [
+        15,
+        16
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "section-8-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 9: interpretation, scope, unexecuted tests and independent prediction",
+      "sourcePages": [
+        16
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/08-interpretation-and-reproducibility",
+      "anchor": "section-9",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Section 10: conclusion and priorities",
+      "sourcePages": [
+        17
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/08-interpretation-and-reproducibility",
+      "anchor": "section-10",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Data and code availability, license and numerical/pixel distinction",
+      "sourcePages": [
+        17
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/08-interpretation-and-reproducibility",
+      "anchor": "data-code",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Acknowledgements and author statement",
+      "sourcePages": [
+        17
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/08-interpretation-and-reproducibility",
+      "anchor": "author-statement",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Appendix A: numerical conventions, zero modes, historical and quick verification",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "appendix-a",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Appendix B: invariances and nonidentifiability arguments",
+      "sourcePages": [
+        18
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "appendix-b",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Appendix C: closed-form truncated exponential example and its derivation",
+      "sourcePages": [
+        19
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "appendix-c",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Appendix D: complete core comparisons and native summaries",
+      "sourcePages": [
+        19,
+        20,
+        21
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "appendix-d",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Appendix E: reconstructed counts, discarded calibration and historical scope",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "appendix-e",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "All five original references",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "references",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Reference 1, Atas et al.: gap ratios",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "ref-1",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Reference 2, Levi and Oz: covariance statistics",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "ref-2",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Reference 3, Berti et al.: Kerr catalogue",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "ref-3",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Reference 4, Stein: qnm",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "ref-4",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Reference 5, Chung: spectral graph theory",
+      "sourcePages": [
+        22
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "ref-5",
+      "status": "translated and checked"
+    },
+    {
+      "sourceSection": "Equation (1): Kerr damping and Fejér readout",
+      "sourcePages": [
+        2
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "eq-1",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 1
+    },
+    {
+      "sourceSection": "Equation (2): squared radial dipole weights and hydrogen Laplacian",
+      "sourcePages": [
+        3
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "eq-2",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 2
+    },
+    {
+      "sourceSection": "Equation (3): minimum-normalized log1p hydrogen readout",
+      "sourcePages": [
+        3
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "eq-3",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 3
+    },
+    {
+      "sourceSection": "Equation (4): Gaussian image graph Laplacian and median distance",
+      "sourcePages": [
+        3
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "eq-4",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 4
+    },
+    {
+      "sourceSection": "Equation (5): all 15 window centers",
+      "sourcePages": [
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-5",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 5
+    },
+    {
+      "sourceSection": "Equation (6): window counts and normalized incidences",
+      "sourcePages": [
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-6",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 6
+    },
+    {
+      "sourceSection": "Equation (7): SUM and UNION",
+      "sourcePages": [
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-7",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 7
+    },
+    {
+      "sourceSection": "Equation (8): nonself log-autocorrelation identity and diagonal-subtraction derivation",
+      "sourcePages": [
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-8",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 8
+    },
+    {
+      "sourceSection": "Equation (9): logarithmic matching interval",
+      "sourcePages": [
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-9",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 9
+    },
+    {
+      "sourceSection": "Equation (10): conditional native statistic and pair exposure",
+      "sourcePages": [
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-10",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 10
+    },
+    {
+      "sourceSection": "Equation (11): native log form-factor identity",
+      "sourcePages": [
+        5
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+      "anchor": "eq-11",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 11
+    },
+    {
+      "sourceSection": "Equation (12): symmetric midposition",
+      "sourcePages": [
+        6
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "eq-12",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 12
+    },
+    {
+      "sourceSection": "Equation (13): joint minimum and frozen reference fraction",
+      "sourcePages": [
+        6
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "eq-13",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 13
+    },
+    {
+      "sourceSection": "Equation (14): fiber crossmoments",
+      "sourcePages": [
+        7
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+      "anchor": "eq-14",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 14
+    },
+    {
+      "sourceSection": "Equation (15): Gaussian gap-ratio surmise",
+      "sourcePages": [
+        14
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "eq-15",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 15
+    },
+    {
+      "sourceSection": "Equation (16): conditional density autocorrelation",
+      "sourcePages": [
+        15
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "eq-16",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 16
+    },
+    {
+      "sourceSection": "Equation (17): equivalent CDF integral",
+      "sourcePages": [
+        15
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "eq-17",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 17
+    },
+    {
+      "sourceSection": "Equation (18): positive Laplacian quadratic form",
+      "sourcePages": [
+        18
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "eq-18",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 18
+    },
+    {
+      "sourceSection": "Equation (19): strict Fejér derivative",
+      "sourcePages": [
+        18
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "eq-19",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 19
+    },
+    {
+      "sourceSection": "Equation (20): truncated exponential difference density",
+      "sourcePages": [
+        19
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "eq-20",
+      "status": "translated and checked",
+      "numberedItem": "equation",
+      "number": 20
+    },
+    {
+      "sourceSection": "Table 1: retained image reconstructions",
+      "sourcePages": [
+        4
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/02-native-operators",
+      "anchor": "table-1",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 1,
+      "dataRows": 7
+    },
+    {
+      "sourceSection": "Table 2: hydrogen versus six dark signatures",
+      "sourcePages": [
+        7
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "table-2",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 2,
+      "dataRows": 6
+    },
+    {
+      "sourceSection": "Table 3: Kerr reference comparisons",
+      "sourcePages": [
+        10
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "table-3",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 3,
+      "dataRows": 6
+    },
+    {
+      "sourceSection": "Table 4: primary shell robustness",
+      "sourcePages": [
+        10
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "table-4",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 4,
+      "dataRows": 7
+    },
+    {
+      "sourceSection": "Table 5: hydrogen shell abundance",
+      "sourcePages": [
+        12
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "table-5",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 5,
+      "dataRows": 4
+    },
+    {
+      "sourceSection": "Table 6: all core pairs and all tolerances",
+      "sourcePages": [
+        19,
+        20
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "table-6",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 6,
+      "dataRows": 84
+    },
+    {
+      "sourceSection": "Table 7: all native views",
+      "sourcePages": [
+        21
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "table-7",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 7,
+      "dataRows": 17
+    },
+    {
+      "sourceSection": "Table 8: material count corrections",
+      "sourcePages": [
+        21
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/09-verification-and-appendices",
+      "anchor": "table-8",
+      "status": "translated and checked",
+      "numberedItem": "table",
+      "number": 8,
+      "dataRows": 2
+    },
+    {
+      "sourceSection": "Figure 1: all primary correlations",
+      "sourcePages": [
+        8
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "figure-1",
+      "status": "translated and checked",
+      "numberedItem": "figure",
+      "number": 1,
+      "asset": "/publications/spectral/spectral-ratios/figure-1.png",
+      "provenance": "Chart cropped at 3× PDF point resolution from the authoritative source page. No source photograph reproduced."
+    },
+    {
+      "sourceSection": "Figure 2: paired-bank positions",
+      "sourcePages": [
+        9
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+      "anchor": "figure-2",
+      "status": "translated and checked",
+      "numberedItem": "figure",
+      "number": 2,
+      "asset": "/publications/spectral/spectral-ratios/figure-2.png",
+      "provenance": "Chart cropped at 3× PDF point resolution from the authoritative source page. No source photograph reproduced."
+    },
+    {
+      "sourceSection": "Figure 3: shell-block robustness",
+      "sourcePages": [
+        11
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "figure-3",
+      "status": "translated and checked",
+      "numberedItem": "figure",
+      "number": 3,
+      "asset": "/publications/spectral/spectral-ratios/figure-3.png",
+      "provenance": "Chart cropped at 3× PDF point resolution from the authoritative source page. No source photograph reproduced."
+    },
+    {
+      "sourceSection": "Figure 4: abundance and fiber informativeness",
+      "sourcePages": [
+        13
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+      "anchor": "figure-4",
+      "status": "translated and checked",
+      "numberedItem": "figure",
+      "number": 4,
+      "asset": "/publications/spectral/spectral-ratios/figure-4.png",
+      "provenance": "Chart cropped at 3× PDF point resolution from the authoritative source page. No source photograph reproduced."
+    },
+    {
+      "sourceSection": "Figure 5: conditional comparison and specificity",
+      "sourcePages": [
+        14
+      ],
+      "destinationRoute": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+      "anchor": "figure-5",
+      "status": "translated and checked",
+      "numberedItem": "figure",
+      "number": 5,
+      "asset": "/publications/spectral/spectral-ratios/figure-5.png",
+      "provenance": "Chart cropped at 3× PDF point resolution from the authoritative source page. No source photograph reproduced."
+    }
+  ]
+}

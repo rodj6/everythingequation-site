@@ -1,0 +1,172 @@
+---
+title: Sharp Curvature and Complete Dynamical Stability
+description: Stationary memory elimination yields the endpoint; the mobility–inertia theorem returns all amplitude and memory directions.
+order: 2
+---
+<a id="section-3"></a>
+
+## 3. Stationary reduction and endpoint uniqueness
+
+<a id="section-3-1"></a>
+
+### 3.1 Exact memory elimination and curvature
+
+At fixed $z$ the tilt is strictly convex in each memory:
+
+<a id="eq-10"></a>
+
+$$
+(F_{mm})_{ee}=\kappa+\tfrac12 e^{m_e}|b_e^Tz|^2\ge\kappa.\tag{10}
+$$
+
+Its minimizing value is $m_e=-s_e$, with
+
+<a id="eq-11"></a>
+
+$$
+s_ee^{s_e}=\frac{|b_e^Tz|^2}{2\kappa},\qquad s_e=W_0\!\left(\frac{|b_e^Tz|^2}{2\kappa}\right)\ge0.\tag{11}
+$$
+
+Only the real nonnegative principal Lambert branch is used (Corless et al., 1996). Substitution gives
+
+<a id="eq-12"></a>
+
+$$
+V_{\rm eff}(z)=\tfrac\mu2\lVert z\rVert^2+\sum_e\kappa(s_e+\tfrac12s_e^2)-\operatorname{Re}(\ell^*z).\tag{12}
+$$
+
+Critical points lift bijectively by [(11)](#eq-11) to complete stationary points. The elimination is stationary. The evolution of memory away from stationarity remains in the source.
+
+For the edge coordinate $d=b_e^Tz\in\mathbb R^2$ the gradient is $wd$, with $w=e^{-s}$. The tangential curvature is $w$, and the radial curvature follows by $ds/d|d|=2s/[(1+s)|d|]$, extended continuously to $d=0$:
+
+<a id="eq-13"></a>
+
+$$
+w\frac{1-s}{1+s}=-Q(s),\qquad Q(s)=e^{-s}\frac{s-1}{s+1}.\tag{13}
+$$
+
+<a id="eq-14"></a>
+
+$$
+Q'(s)=e^{-s}\frac{3-s^2}{(1+s)^2},\qquad \chi=\max_{s\ge0}Q(s)=(2-\sqrt3)e^{-\sqrt3}.\tag{14}
+$$
+
+The unique maximizer is $\sqrt3$. In real amplitude coordinates,
+
+<a id="eq-15"></a>
+
+$$
+\nabla^2V_{\rm eff}\ge\mu I-\chi L_R,\qquad L_R=\operatorname{diag}(L,L).\tag{15}
+$$
+
+<a id="theorem-3-1"></a>
+
+**[Theorem 3.1](#theorem-3-1) (Closed sufficient uniqueness condition).** For a finite real incidence network and positive $\kappa,\gamma,\alpha,\eta$, if
+
+<a id="eq-16"></a>
+
+$$
+\mu\ge\chi\lVert L\rVert,\qquad\mu>0,\tag{16}
+$$
+
+then every constant complex input gives one globally asymptotically stable complete equilibrium. At equality $V_{\rm eff}$ is strictly convex and coercive; uniform strong convexity and a general positive exponential rate do not follow.
+
+**Proof.** Strict inequality gives strong convexity by [(15)](#eq-15). At equality, with $L\ne0$, restrict to any nonconstant line $z(t)=z_0+t\xi$. Set $d_e(t)=b_e^Tz(t)$, $\delta_e=b_e^T\xi$ and let $\phi_e$ be the corresponding edge potential. Its line second derivative is
+
+<a id="eq-17"></a>
+
+$$
+\mu\lVert\xi\rVert^2-\chi\sum_e|b_e^T\xi|^2+
+\sum_e\bigl(d^2\phi_e(d_e(t))[\delta_e,\delta_e]+\chi|\delta_e|^2\bigr).\tag{17}
+$$
+
+The first group and every edge remainder are nonnegative. If the first group vanishes, some $\delta_e\ne0$ because $\mu>0$ and $\xi\ne0$. Its remainder vanishes only at $s_e=\sqrt3$ with a radial $\delta_e$. The former requires
+
+<a id="eq-18"></a>
+
+$$
+|d_e(0)+t\delta_e|^2=2\kappa\sqrt3 e^{\sqrt3}.\tag{18}
+$$
+
+This nonconstant quadratic equality holds at most twice. The line derivative is strictly increasing on every interval, which proves strict convexity. If $L=0$, the positive amplitude quadratic suffices. Bound [(9)](/source-readout/sharp-uniqueness/01-complete-driven-source#eq-9) remains coercive after minimizing in $m$. The unique critical point is the strict global minimum of $V_{\rm eff}$; it lifts to the unique strict global minimum of $V$ because the minimizing memory is unique. [Proposition 2.1](/source-readout/sharp-uniqueness/01-complete-driven-source#proposition-2-1) supplies attraction. Compact sublevels and positive definiteness of $V-V_*$ supply Lyapunov stability. $\square$
+
+The path endpoint below can have a zero Hessian direction. Failure of [(16)](#eq-16) does not determine uniqueness at a specified input. For example, $f=0$ gives only $(0,0)$ for any $\mu>0$.
+
+<a id="section-4"></a>
+
+## 4. Full stability from stationary curvature
+
+<a id="section-4-1"></a>
+
+### 4.1 Return the eliminated memory
+
+At a stationary point in coordinates $(q,m)$, the complete Hessian is
+
+<a id="eq-19"></a>
+
+$$
+H=\begin{pmatrix}K_R&B\\B^T&H_m\end{pmatrix},\quad
+B_{:e}=e^{m_e}\operatorname{diag}(B_e,B_e)q,\quad
+H_m=\operatorname{diag}_e(\kappa+\tfrac12 e^{m_e}|b_e^Tz|^2).\tag{19}
+$$
+
+<a id="eq-20"></a>
+
+$$
+S=K_R-BH_m^{-1}B^T=\nabla^2V_{\rm eff}.\tag{20}
+$$
+
+<a id="eq-21"></a>
+
+$$
+(\xi,\nu)^TH(\xi,\nu)=\xi^TS\xi+
+(\nu+H_m^{-1}B^T\xi)^TH_m(\nu+H_m^{-1}B^T\xi).\tag{21}
+$$
+
+Thus $H$ has the negative and zero counts of $S$ plus $p$ additional positive directions. Positivity of the clamped $K$ alone cannot classify the complete system.
+
+<a id="lemma-4-1"></a>
+
+**[Lemma 4.1](#lemma-4-1) (Mobility–inertia correspondence).** For real symmetric $H$ and real $D$ with $\operatorname{Sym}D>0$, the open right- and left-half-plane counts of $A=-DH$ equal the negative and positive inertia of $H$, with algebraic multiplicities over $\mathbb C$. Zero is semisimple of multiplicity $\dim\ker H$. No nonzero imaginary eigenvalue exists.
+
+**Proof.** $D$ is invertible and
+
+<a id="eq-22"></a>
+
+$$
+\operatorname{Sym}(D^{-1})=D^{-T}(\operatorname{Sym}D)D^{-1}>0.\tag{22}
+$$
+
+If $Av=i\omega v$, $v\ne0$, $\omega\in\mathbb R\setminus\{0\}$, then $Hv\ne0$ and
+
+<a id="eq-23"></a>
+
+$$
+(Hv)^*D(Hv)=-i\omega v^*Hv.\tag{23}
+$$
+
+The left has strictly positive real part and the right has zero real part, since $H$ is Hermitian. Also $\ker A=\ker H$. A zero Jordan chain $Aw=v_0\ne0$ with $Hv_0=0$ would require
+
+<a id="eq-24"></a>
+
+$$
+0=v_0^*Hw=-v_0^*D^{-1}v_0,\tag{24}
+$$
+
+contradicting [(22)](#eq-22). Now homotope $D_t=(1-t)I+tD$ for $0\le t\le1$. The symmetric part remains positive. The imaginary axis is excluded apart from zero, whose fixed algebraic multiplicity prevents any additional eigenvalue reaching it. Continuity of characteristic roots preserves both open-half-plane counts from $-H$ at $t=0$. $\square$
+
+For [(4)](/source-readout/sharp-uniqueness/01-complete-driven-source#eq-4), the full linearization is $-DH$. Positive $H_*$ gives a Hurwitz Jacobian and local nonlinear exponential stability. With $\sigma=\min(\gamma,\eta)$, $h_*=\lambda_{\min}(H_*)$ and $E=v^TH_*v/2$ for the perturbation $v$,
+
+<a id="eq-25"></a>
+
+$$
+\dot E\le-2\sigma h_*E+O(E^{3/2}).\tag{25}
+$$
+
+For every $0<r<\sigma h_*$ a sufficiently small sublevel is invariant, with $\lVert v(t)\rVert_{H_*}\le e^{-rt}\lVert v(0)\rVert_{H_*}$. The linear estimate has rate $\sigma h_*$. No positive global curvature bound is needed.
+
+<a id="section-4-2"></a>
+
+### 4.2 Varying mobility at fixed state
+
+With $H$ fixed, changes in mobilities preserving $\operatorname{Sym}D>0$ can affect transient behavior, eigenvalues and rates without changing the index, stabilizing a negative Hessian direction, or crossing through Hopf. Holding the stationary state fixed as $c$ changes requires $f=c\ell$ with fixed $\ell$. Holding physical $f$ fixed instead changes $\ell=f/c$ and generally the equilibrium and $H$.

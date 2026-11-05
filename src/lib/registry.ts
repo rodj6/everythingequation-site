@@ -196,7 +196,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
     if (integrated) {
-      metadata={id:integrated.doi,doi:integrated.doi,title:integrated.title,creators:[integrated.author],published:integrated.date,files:[{filename:'Original publication PDF',url:integrated.pdfUrl},{filename:'Complete Markdown',url:integrated.markdownUrl}]};
+      metadata={id:integrated.doi,doi:integrated.doi,title:integrated.title,creators:[integrated.author],published:integrated.date,files:[{filename:'Original publication PDF',url:integrated.pdfUrl},{filename:'Complete Markdown',url:integrated.markdownUrl},...(integrated.supplementUrl?[{filename:'Public verification archive',url:integrated.supplementUrl}]:[])]};
     } else if (continuity) {
       metadata={id:continuity.doi,doi:continuity.doi,title:continuity.title,creators:[continuity.author],published:continuity.date,files:[{filename:"Research note PDF",url:continuity.pdfUrl}]};
     } else if (relational) {
@@ -269,7 +269,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: sourceReadout?.texUrl ?? research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: sourceReadout ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
+      researchProgramme: sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

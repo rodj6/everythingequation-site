@@ -1,0 +1,149 @@
+---
+title: The Three-Node Example in Numbers
+description: Exact scalar brackets, complete stationary spectra, basin preparations, finite switching trajectories and replay.
+order: 6
+---
+<a id="section-9"></a>
+
+## 9. Fixed example and numerical evidence
+
+<a id="section-9-1"></a>
+
+### 9.1 Analytic design and stationary values
+
+<a id="eq-61"></a>
+
+$$
+(\mu,\kappa,\gamma,\alpha,\eta)=(0.1,1,0.6,1.2,0.8),\qquad f=3v_3.\tag{61}
+$$
+
+Here $\chi\simeq0.04740589436$, $\chi<\mu<3\chi$, and $\mu-3\chi<0$. The load $a^2/|c|^2$ is exactly 5 and
+
+<a id="eq-62"></a>
+
+$$
+H_3(s)=\tfrac1{75}se^s+\tfrac45s+12se^{-s}.\tag{62}
+$$
+
+Order-40 rational Taylor bounds with geometric tails show $H_3(0)<5<H_3(1)$ and $H_3(3)<5<H_3(4)$. In particular $20.08<e^3<20.09$ suffices for the comparison at 3. Together with the two-turn shape, $(0,1)$, $(1,3)$ and $(3,4)$ isolate all three roots. The exact brackets certify scalar inequalities, not complete matrix spectra or trajectory enclosures.
+
+<a id="table-2"></a>
+
+| Branch | $s$ | $R$ | $F$ | $V$ | $n_+$ |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| low | 0.811988 | 1.561583 | 2.405227 | -1.086579 | 0 |
+| middle | 2.088707 | 4.742040 | 9.664461 | -0.939063 | 1 |
+| high | 3.006220 | 9.000611 | 19.100345 | -1.025633 | 0 |
+
+**[Table 2](#table-2).** $R=\lVert z_*\rVert$, $m_1=m_2=-s$. The two outer states have eight decaying modes; the middle has seven decaying modes and one unstable eigenvalue.
+
+<a id="table-3"></a>
+
+| Branch | $e^{-s}$ | $P_*$ | $\lVert\chi_{\rm clamp}\rVert$ | $\lVert\chi_{\rm full}\rVert$ |
+| --- | ---: | ---: | ---: | ---: |
+| low | 0.443975 | 3.000000 | 7.453560 | 7.453560 |
+| middle | 0.123847 | 3.000000 | 7.453560 | 24.074130 |
+| high | 0.049478 | 3.000000 | 7.453560 | 29.039222 |
+
+**[Table 3](#table-3).** Edge weight, stationary power and static norms. All means vanish. The middle full entry is an algebraic derivative; the outer entries are stable full-feedback responses.
+
+<a id="table-4"></a>
+
+| Fold | $s$ | $a$ | $l^TX_a$ | $\tfrac12l^TX_{xx}[r,r]$ |
+| --- | ---: | ---: | ---: | ---: |
+| Upper input | 1.269082 | 3.105014 | 0.398392 | 0.133396 |
+| Lower input | 2.585036 | 2.958897 | 0.355600 | -0.072477 |
+
+**[Table 4](#table-4).** Complete dynamical coefficients with $r=x'(s)$ and $l^Tr=1$. The upper input is at the smaller $s$; both coefficients are bounded away from zero in the numerical checks.
+
+The high-amplitude branch has more negative memory, weaker edge stiffness and greater stored energy, yet its tilted minimum is not the lower one. Equal power and clamped norm coexist with distinct full responses. The base drive is strictly between the two folds.
+
+<a id="figure-1"></a>
+
+![Branch diagram with stable outer branches and unstable middle branch; six basin trajectories approach the two stable radii.](/publications/spectral/sharp-uniqueness/branches-and-basins.png)
+
+**[Figure 1](#figure-1).** Left: sampled exact branch law and proved full stability classification at the common base input. Right: full-state basin preparations. The saddle radius is a barrier only together with the tilted-energy condition.
+
+<a id="section-9-2"></a>
+
+### 9.2 Full-state preparations and controls
+
+Use real coordinate order $(\operatorname{Re}z_1,\operatorname{Re}z_2,\operatorname{Re}z_3,\operatorname{Im}z_1,\operatorname{Im}z_2,\operatorname{Im}z_3,m_1,m_2)$. Four starts add or subtract
+
+<a id="eq-63"></a>
+
+$$
+d=(0.02,-0.01,0.015,-0.015,0.01,0.005,0.01,-0.015)\tag{63}
+$$
+
+from the low or high state. Two add or subtract $0.001$ times the middle state's normalized real unstable vector, oriented toward increasing $R$. These are full-coordinate perturbations and all satisfy the proper barrier conditions.
+
+<a id="table-5"></a>
+
+| Preparation | Target | $V_M-V(0)$ | Final error | Ledger error |
+| --- | --- | ---: | ---: | ---: |
+| `low_-1` | low | 1.466e-01 | 3.48e-14 | 3.02e-11 |
+| `low_+1` | low | 1.466e-01 | 3.53e-14 | 2.89e-11 |
+| `high_-1` | high | 8.575e-02 | 1.04e-13 | 8.07e-11 |
+| `high_+1` | high | 8.574e-02 | 1.06e-13 | 4.18e-11 |
+| `saddle_-1` | low | 1.217e-08 | 2.80e-14 | 1.94e-09 |
+| `saddle_+1` | high | 1.216e-08 | 1.63e-13 | 1.11e-09 |
+
+**[Table 5](#table-5).** Six complete trajectories to $T=600$. Final error is Euclidean full-state distance to target; ledger error is the maximum sampled absolute physical balance residual. Diagnostic digits are not acceptance thresholds.
+
+The fixed-carrier control sets $m=0$, $K_0=\mu I+L$, keeps the drive, and starts from the amplitude of either unperturbed adaptive outer state. The exact matrix exponential converges in both cases to $z_{\rm fixed}^*=f/[c(\mu+3)]$, norm $\sqrt5/3.1$. The second control changes only $\mu$ to $0.4>3\chi$, starts at the main high equilibrium plus $d$, and converges to the unique state guaranteed by [Theorem 3.1](/source-readout/sharp-uniqueness/02-endpoint-and-stability#theorem-3-1).
+
+<a id="table-6"></a>
+
+| Control | Quantity | Value |
+| --- | --- | ---: |
+| Fixed carrier | Stored energy | 0.806452 |
+| Fixed carrier | Stationary power | 3 |
+| Unique adaptive | $\mu$ | 0.4 |
+| Unique adaptive | Final error | 2.75885e-15 |
+| Real-gradient RK4 | Difference | 3.41061e-13 |
+
+**[Table 6](#table-6).** The fixed-carrier power agrees with the adaptive states although energy and amplitude differ. The RK4 difference compares states and physical ledgers in the separate $T=60$ run.
+
+<a id="section-9-3"></a>
+
+### 9.3 Physical ledgers for the two switches
+
+Each 300-unit pulse precedes 600 units at the restored base input. Upward and downward terminal states enter the high and low strict barrier regions, respectively. Target errors are below $4\times10^{-13}$ and physical balance residuals below $2\times10^{-9}$. The cumulative work mostly maintains the driven state and is not the tilted barrier.
+
+<a id="table-7"></a>
+
+| Pulse | Work | Dissipation | $\Delta F$ | Final margin |
+| --- | ---: | ---: | ---: | ---: |
+| up | 2900.664693 | 2883.969575 | 16.695118 | 0.086570 |
+| down | 2520.086406 | 2536.781523 | -16.695118 | 0.147515 |
+
+**[Table 7](#table-7).** Work and dissipation at $T=900$. Final margin is $V_M-V(x(T))$ at restored drive. Opposite energy changes reflect different endpoints, while both runs require positive supplied work.
+
+<a id="figure-2"></a>
+
+![Independent up and down square-pulse trajectories and their work, dissipation and stored-energy ledgers.](/publications/spectral/sharp-uniqueness/switching-and-work.png)
+
+**[Figure 2](#figure-2).** Dashed vertical lines mark return to the same input. Cumulative work minus dissipation equals the stored-energy change within numerical tolerance. No slow sweep is executed in these experiments.
+
+<a id="section-9-4"></a>
+
+### 9.4 Methods and reproduction
+
+Primary DOP853 relative and absolute tolerances are $10^{-10}$ and $10^{-12}$, with separate solves at input jumps. Each run is repeated at $10^{-12}$ and $10^{-14}$. The maximum step follows the source scale:
+
+<a id="eq-64"></a>
+
+$$
+\Delta t_{\max}=\frac1{8|c|[\mu+e^{M_0}\lVert L\rVert]},\qquad M_0=\max(0,\max_e m_e(0)).\tag{64}
+$$
+
+When $m_e\ge0$, $\dot m_e\le-\eta\kappa m_e$, so $m_e(t)\le\max(0,m_e(0))$ and $K(t)\le\mu I+e^{M_0}L$. This caps the carrier scale, not the error by a rigorous enclosure. Basins store 1,201 times over $T=600$; pulse segments each store 601 with the common endpoint retained once. Work and dissipation are integrated as extra variables.
+
+Scalar roots are bracketed at absolute tolerance $10^{-13}$. Direct eight-coordinate stationary solves use the full Hessian, with independent scalar comparisons. Check the full Schur spectrum against [(32)](/source-readout/sharp-uniqueness/03-sharp-path-threshold#eq-32), central-difference the full vector field at step $10^{-5}$, and compute fold second differences at $10^{-4}$. Retained ceilings are $10^{-9}$ for stationary and Schur residuals, $2\times10^{-6}$ for Jacobian differences, $2\times10^{-5}$ for fold differences and $2\times10^{-7}$ for trajectory and ledger errors. Fold transversality and quadratic magnitudes must exceed $10^{-6}$; zero-eigenvalue tolerance is $10^{-7}$.
+
+Independent scalar checks use 70-digit Decimal exponentials and 220 bisections without SciPy or Lambert W. Fraction arithmetic checks order-40 scalar bounds, including the rejected low-mode candidate. Real-gradient RK4 separately integrates eight coordinates and two ledgers for $T=60$, step $0.002$, and agrees with tight DOP853 within $2\times10^{-7}$. This does not replay the full switching schedule independently. Six modal fixtures compare cubics plus collective pair to complete matrices for all branches, folds and the negative candidate. The maximum observed spectral difference is below $6\times10^{-15}$ with shared NumPy eigensolver. Fixed-H fixtures set $\alpha=0.12,1.2,12$ and adjust $f=c\ell$; the endpoint has one zero and no unstable eigenvalue.
+
+The public runner checks 114 numerical conditions, 20 arrays at relative $2\times10^{-8}$ and absolute $2\times10^{-10}$, six cubic fixtures, and tables generated in the replay. Eight checker regressions reject changed scientific thresholds, counts, labels, states and flags, while allowing sub-ceiling diagnostics and irrelevant line endings. Spectra are matched as multisets. A saved-identity audit checks fixed-carrier endpoint, physical balance and response formulas; it is a post-result algebraic audit rather than a fresh holdout.
+
+The package includes the inputs, specifications, code, dependencies, reference outputs, hashes, own-run table generation and clean-extraction instructions. Proofs establish general and complete-count statements; exact bounds certify scalar claims; floating matrices and trajectories evaluate the example. Independent formulations and same-code replay serve different verification roles. No fresh dependency installation, certified flow enclosure or physical experiment is claimed by the paper.

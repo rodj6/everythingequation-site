@@ -1,0 +1,194 @@
+---
+title: From Local Exit to a Complete Hysteresis Return
+description: Strict loss gives the outgoing connection; stable tracking gives the prepared return and separates geometric area from physical work.
+order: 4
+---
+<a id="section-7"></a>
+
+## 7. Capture and the prepared quasistatic return
+
+<a id="section-7-1"></a>
+
+### 7.1 The full outgoing connection
+
+<a id="lemma-7-1"></a>
+
+**[Lemma 7.1](#lemma-7-1) (Complete connection at a fold).** For $\chi<\mu<3\chi$, the outgoing local centre orbit at either fixed fold input tends to the other stable complete minimum.
+
+**Proof.** At $a=a_f$ the local outgoing equation is $\dot u=b_fu^2+O(u^3)>0$ for small $u>0$. The orbit has backward limit $x_f$ and lies on the complete centre graph, not the stationary memory curve. Integrating strict loss [(9)](/source-readout/slow-passage/01-source-and-energy#eq-9) at constant input from the backward limit gives $V(x,a_f)<V(x_f,a_f)$ at each nonstationary finite point. [Proposition 2.1](/source-readout/slow-passage/01-source-and-energy#proposition-2-1) bounds the orbit; [Lemma 3.1](/source-readout/slow-passage/02-folds-and-critical-coordinate#lemma-3-1) gives exactly two distinct stationary points. The finite-stationary-set argument gives convergence, and the strict tilted-value deficit precludes return to $x_f$. The other minimum is the only remaining limit. No monotone amplitude radius or planar basin boundary is assumed. $\square$
+
+At fixed small exit $u=d$, [Lemma 4.1](/source-readout/slow-passage/02-folds-and-critical-coordinate#lemma-4-1) and passage estimates give convergence of the ramped exit to the outgoing graph at $(a,\epsilon)=(a_f,0)$. Choose a finite reference segment entering a small attracting ball about the other minimum. During this segment the ramp varies by $o(1)$. Continuous dependence transfers the nearby ramped states into the ball, contained in an attracting tube of the other stationary branch. Fixed-input loss establishes the reference connection, without implying ramp monotonicity.
+
+<a id="section-7-2"></a>
+
+### 7.2 Stable tracking through reversal
+
+Away from its terminating fold a compact branch segment has uniformly Hurwitz complete Jacobian $A(a)$ and smooth state $x_*(a)$. In moving coordinates $e=x-x_*(a)$,
+
+<a id="eq-50"></a>
+
+$$
+\dot e=A(a)e-x_*'(a)\dot a+O(\lVert e\rVert^2).\tag{50}
+$$
+
+Choose smooth $P(a)>0$ satisfying
+
+<a id="eq-51"></a>
+
+$$
+A(a)^TP(a)+P(a)A(a)=-I.\tag{51}
+$$
+
+Its norm, inverse norm and derivative are bounded on the compact interval. For $E=e^TP(a)e$ and $\dot P=O(\nu)$,
+
+<a id="eq-52"></a>
+
+$$
+\dot E\le-cE+C\nu\sqrt E+O(E^{3/2}).\tag{52}
+$$
+
+A small tube is invariant for sufficiently small $\nu$, and after a decaying transient $\lVert e\rVert=O(\nu)$. At reversal the state and input remain continuous, and changing sign of $\dot a$ leaves an $O(\nu)$ forcing. Fold charts apply only on the constant-slope portions near folds; [(50)](#eq-50) tracks through reversal.
+
+<a id="theorem-7-2"></a>
+
+**[Theorem 7.2](#theorem-7-2) (Prepared triangular-cycle limit).** Fix positive parameters with $\chi<\mu<3\chi$ and
+
+<a id="eq-53"></a>
+
+$$
+0<a_\ell<a_{\rm down}<a_{\rm up}<a_h.\tag{53}
+$$
+
+Start at $x_L(a_\ell)$ and apply [(5)](/source-readout/slow-passage/01-source-and-energy#eq-5). For sufficiently small $\nu$, the complete source makes both passages of [Theorem 5.1](/source-readout/slow-passage/03-airy-delay-and-observables#theorem-5-1), enters the other attracting branch on each leg, and returns to $x_L(a_\ell)$ with error tending to zero. As functions of input, the two legs converge uniformly on compact intervals away from the respective static folds to
+
+<a id="eq-54"></a>
+
+$$
+x_0^\uparrow(a)=
+\begin{cases}x_L(a),&a<a_{\rm up},\\x_H(a),&a>a_{\rm up},\end{cases}
+\qquad
+x_0^\downarrow(a)=
+\begin{cases}x_L(a),&a<a_{\rm down},\\x_H(a),&a>a_{\rm down}.\end{cases}\tag{54}
+$$
+
+Convergence also holds in $L^p([a_\ell,a_h])$ for finite $p\ge1$. Switching inputs at sufficiently small fixed local levels obey [(43)](/source-readout/slow-passage/03-airy-delay-and-observables#eq-43). No fixed nonzero rate periodic-orbit attraction is asserted.
+
+**Proof.** Complete stability and [(50)](#eq-50) give tracking to the upper fold neighborhood. Matching selects the tracked Airy solution and delayed exit; [Lemma 4.1](/source-readout/slow-passage/02-folds-and-critical-coordinate#lemma-4-1) gives the limiting graph point. [Lemma 7.1](#lemma-7-1) and finite-time continuous dependence give capture by the high branch. Its tube tracks to $a_h$, through reversal and down to the lower fold neighborhood. Repeat the passage and capture for the low branch. A fixed positive input interval before $a_\ell$ removes the last transient. On each compact interval separated from the corresponding fold after capture, available tracking time grows like $1/\nu$, and before first passage the exact stationary preparation supplies tracking. Equations [(50)](#eq-50)–[(52)](#eq-52) prove compact uniform convergence; the bounded-input estimates give finite-$L^p$ convergence by dominated convergence. Both input offsets tend to zero by the local estimates. No global trajectory enclosure is used. $\square$
+
+A sufficiently small fixed initial full-state perturbation gives the same selection after its attracting transient. Then uniform convergence is asserted away from the initial endpoint as well as folds. The numerical transverse preparation is early, not a perturbation at a fold.
+
+<a id="section-7-3"></a>
+
+### 7.3 The geometric limit
+
+An excursion along the reference connection can overshoot. Its input interval shrinks to zero, so it does not change the integral limit. For $R=|v_3^Tz|$, define the magnitude of the oriented integral
+
+<a id="eq-55"></a>
+
+$$
+\mathcal A_\nu=\left|\int_{a_\ell}^{a_h}R_\nu^\uparrow(a)\,da-
+\int_{a_\ell}^{a_h}R_\nu^\downarrow(a)\,da\right|.\tag{55}
+$$
+
+A closing vertical segment at $a=a_\ell$ contributes zero. Thus this does not assume exact endpoint closure or measure total enclosed area of self-intersections. From [(54)](#eq-54) and uniform boundedness,
+
+<a id="eq-56"></a>
+
+$$
+\mathcal A_\nu\longrightarrow\mathcal A_0=
+\int_{a_{\rm down}}^{a_{\rm up}}[R_H(a)-R_L(a)]\,da>0.\tag{56}
+$$
+
+Positivity follows from the distinct ordered outer radii. This is a prepared quasistatic limit, not an exact vertical transient trace, monotone jump, unique attracting periodic orbit, or arbitrary finite-rate basin result.
+
+<a id="section-8"></a>
+
+## 8. The cost of deleting dynamic memory
+
+The stationary reduction [(15)](/source-readout/slow-passage/02-folds-and-critical-coordinate#eq-15) preserves branch geometry. Test the hypothetical dynamics that impose it at every time:
+
+<a id="eq-57"></a>
+
+$$
+\dot q=-G\nabla_qV_{\rm eff}(q,a).\tag{57}
+$$
+
+This is not the experimental source. With $r=(r_q,-1,-1)$ the normalization separates:
+
+<a id="eq-58"></a>
+
+$$
+d_{\rm full}=r^TD^{-1}r=d_0+2/\eta,\qquad
+d_0=r_q^TG^{-1}r_q=\frac\gamma{|c|^2}\lVert r_q\rVert^2>0.\tag{58}
+$$
+
+The reduced system uses $d_0$ with unchanged $a''(s_f)$. Hence
+
+<a id="eq-59"></a>
+
+$$
+A_{\rm inst}=A_f\frac{d_{\rm full}}{d_0},\qquad
+B_{\rm inst}=B_f\frac{d_{\rm full}}{d_0},\qquad
+K_{\rm inst}=K_f\left(\frac{d_0}{d_{\rm full}}\right)^{2/3}.\tag{59}
+$$
+
+They differ at every finite $\eta>0$. The $2/\eta$ term is the mobility-weighted contribution from both free memories to the mixed critical vector. This obstruction concerns the delay at preserved folds, without deciding a justified $\eta\to\infty$ limit.
+
+<a id="table-2"></a>
+
+| Fold | $d_0$ | $d_{\rm full}$ | $K_{\rm inst}$ | $K_{\rm full}$ |
+| --- | ---: | ---: | ---: | ---: |
+| up | 1.603701 | 4.103701 | 3.324136 | 6.218901 |
+| down | 7.327314 | 9.827314 | 6.508539 | 7.915473 |
+
+**[Table 2](#table-2).** Stationary substitution preserves the static inputs but changes the dynamic delay prefactors. The ramp uses neither substitution. The seven-direction graph retains motion and stable error from the full dynamics. The separate three-state check below is an exact symmetry restriction with evolving memory. These are distinct operations.
+
+<a id="section-9"></a>
+
+## 9. Work and the evolving carrier
+
+At stationarity $Kz=av_3/c$ and $g=0$, so the two branches have equal stationary power:
+
+<a id="eq-60"></a>
+
+$$
+P_*(a)=\gamma a^2/|c|^2.\tag{60}
+$$
+
+The amplitudes, memories, stiffnesses and responses can still differ.
+
+<a id="proposition-9-1"></a>
+
+**[Proposition 9.1](#proposition-9-1) (Slow-cycle maintenance work).** With exact stationary preparation under [Theorem 7.2](#theorem-7-2), over the full round trip
+
+<a id="eq-61"></a>
+
+$$
+\nu W_\nu\longrightarrow C_W=\frac{2\gamma}{|c|^2}\int_{a_\ell}^{a_h}a^2\,da,\qquad
+\nu Q_\nu\longrightarrow C_W,\qquad \Delta F_\nu\longrightarrow0.\tag{61}
+$$
+
+For nearby fixed preparations with the same selection the leading work and dissipation coefficient persists, but unscaled $\Delta F$ need not vanish.
+
+**Proof.** Uniform boundedness from [Proposition 2.1](/source-readout/slow-passage/01-source-and-energy#proposition-2-1) bounds $K,g,P$ independently of $\nu$. On either leg $dt=|da|/\nu$. Away from folds the state tends to the branch and power to [(60)](#eq-60), so dominated convergence gives the work coefficient with a factor of two. Exact return gives $F(2T_h)\to F(0)$ and the physical ledger [(10)](/source-readout/slow-passage/01-source-and-energy#eq-10) gives the dissipation limit. For a fixed perturbed start the final stored value instead tends to $F(x_L(a_\ell))$, so $\Delta F\to F(x_L(a_\ell))-F(x(0))$, generally nonzero. Bounded $\Delta F$ implies $\nu\Delta F\to0$. $\square$
+
+Slower traversal approaches the static switches while maintenance work grows as $C_W/\nu$. The finite oriented area [(56)](#eq-56) has different units and actuator pairing. It is neither dissipated energy nor minimum switching work. Input supplies phase, mode and traversal; reciprocal dynamics produce delay and capture without an autonomous energy source.
+
+For imposed $m(t)$ the amplitude propagator is
+
+<a id="eq-62"></a>
+
+$$
+\partial_tU(t,s)=-(\gamma+i\alpha)K(m(t))U(t,s),\qquad U(s,s)=I.\tag{62}
+$$
+
+The instantaneous coherent and dissipative generators remain $\alpha K(t)$ and $\gamma K(t)$. With free memory at a stationary source, using $B,H_m$ above,
+
+<a id="eq-63"></a>
+
+$$
+\dot\xi=-GK_R\xi-GB\omega+r_{\rm probe},\qquad
+\dot\omega=-\eta B^T\xi-\eta H_m\omega.\tag{63}
+$$
+
+Eliminating $\omega$ retains the initial condition and causal kernel $\eta GBe^{-\eta H_m(t-s)}B^T$. It is neither clamping nor a scalar function of the present carrier. The fold denominator [(58)](#eq-58) makes the retained dynamical information explicit, connecting CSCF and source-to-readout without claiming an experimental universal law.

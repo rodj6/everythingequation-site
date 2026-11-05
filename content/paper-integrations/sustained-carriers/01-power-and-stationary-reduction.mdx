@@ -1,0 +1,192 @@
+---
+title: "The power that sustains an adaptive state"
+description: "A calibrated rate port maintains nonzero amplitude and memory, with a physical energy balance distinct from the stationary Lyapunov tilt."
+order: 1
+---
+
+<a id="section-1"></a>
+
+## 1 From relaxing carriers to sustained adaptive states
+
+External input can maintain a carrier that would otherwise relax. In the fixed-carrier CSCF [Rodgers 2026a], one positive operator links coherence and dissipation. Reciprocal adaptation [Rodgers 2026b] gives this operator a memory state; positive unforced amplitudes decay and memory returns to zero. Sustaining a nonzero state requires work and an explicit account of what the actuator imposes.
+
+Prescribe a constant complex rate input. The preparation determines spatial mode and phase, while reciprocal feedback determines amplitude, memory, stiffness and response. The problem is to identify an all-input attraction regime, measure the departure from an identically driven fixed carrier, and recover which linked responses survive adaptation. The amplitude or instantaneous spectrum alone need not predict a later response after memory changes. The causal kernel below makes the missing source information explicit [Rodgers 2026c,d]. Stationary elimination determines equilibrium without replacing memory dynamics, and a three-node path provides exact collective and contrast controls, nonlinear gain and an equal-power comparison. No shared microscopic origin of earlier atomic, image or Kerr profiles follows.
+
+<a id="section-2"></a>
+
+## 2 Source state, actuator and physical energy
+
+<a id="section-2-1"></a>
+
+### 2.1 Constitutive equations and units
+
+For $z\in\mathbb C^n,m\in\mathbb R^p$ and real incidence vectors $b_e$, take
+
+<a id="eq-1"></a>
+
+$$
+B_e=b_e b_e^\top,\qquad L=\sum_{e=1}^p B_e,\qquad K(m)=\mu I+\sum_{e=1}^p e^{m_e}B_e,\quad\mu>0.\tag{1}
+$$
+
+Edge baselines are normalized to one; positive $k_e$ can instead be absorbed in $\sqrt{k_e}b_e$, with $L$ and bounds using those same scaled vectors. The metric is fixed and Euclidean, and norms are Euclidean and induced unless specified. $K\ge\mu I$, including on the collective subspace.
+
+<a id="eq-2"></a>
+
+$$
+F(z,m)=\tfrac12 z^*K(m)z+\tfrac\kappa2|m|^2,\qquad \kappa>0,\tag{2}
+$$
+
+<a id="eq-3"></a>
+
+$$
+(F_m)_e=\kappa m_e+\tfrac12 e^{m_e}|b_e^\top z|^2.\tag{3}
+$$
+
+Let $c=\gamma+i\alpha$, with $\gamma,\alpha,\eta>0$. The dynamics are
+
+<a id="eq-4"></a>
+
+$$
+\dot z=-cK(m)z+f,\qquad \dot m=-\eta F_m(z,m),\quad f\in\mathbb C^n\text{ constant}.\tag{4}
+$$
+
+No target profile adjusts $f$. Positive $\eta$ couples memory to the same energy that produces the amplitude effort. This reciprocity is constitutive. In amplitude units $A$ and energy units $E$, $m,b_e$ are dimensionless before baseline absorption, $K,\mu$ and unnormalized edge coefficients have units $E/A^2$, $\kappa$ has units $E$, $f$ has units $A/\mathrm s$, $\gamma,\alpha$ have units $A^2/(E\,\mathrm s)$, and $\eta$ has units $1/(E\,\mathrm s)$. Scales $A_0,E_0,t_0$ normalize the equations with $\tilde f=t_0f/A_0$. Joint-state norms below use these normalized coordinates; mixing units would make rate bounds arbitrary.
+
+<a id="section-2-2"></a>
+
+### 2.2 The effort–flow input contract
+
+For $q=(\Re z,\Im z)^\top$,
+
+<a id="eq-5"></a>
+
+$$
+K_R=\operatorname{diag}(K,K),\quad J=\begin{pmatrix}0&-I\\ I&0\end{pmatrix},\quad G=\gamma I+\alpha J,\quad f_R=(\Re f,\Im f)^\top.\tag{5}
+$$
+
+Each quadrature port imposes a flow $f_R$ with energy-conjugate effort $y=K_Rq$. Its supplied power is
+
+<a id="eq-6"></a>
+
+$$
+P_{\rm in}=y^\top f_R=\Re[(Kz)^*f].\tag{6}
+$$
+
+In dissipative port-Hamiltonian form [van der Schaft and Jeltsema 2014], $x=(q,m)$ satisfies
+
+<a id="eq-7"></a>
+
+$$
+\dot x=(\mathcal J-\mathcal R)\nabla F+\mathcal B f_R,\quad \mathcal J=\operatorname{diag}(-\alpha J,0),\quad
+\mathcal R=\operatorname{diag}(\gamma I,\eta I),\quad \mathcal B=\begin{pmatrix}I\\0\end{pmatrix},\quad y=\mathcal B^\top\nabla F.\tag{7}
+$$
+
+The skew part contributes zero to $\dot F$; direct differentiation gives
+
+<a id="eq-8"></a>
+
+$$
+\dot F=-\gamma\|Kz\|^2-\eta\|F_m\|^2+P_{\rm in}.\tag{8}
+$$
+
+At steady state external and internal amplitude flows cancel while input power covers dissipation. The supply is outside the modeled state, not a modeled finite reservoir; arbitrary initial data can give negative power, so the ideal actuator must absorb returned energy. A laboratory envelope requires an independent clock and phase reference, calibrated quadrature actuator, and validation of the stored energy and conjugate effort. An arbitrary optical pump need not realize this contract.
+
+<a id="section-3"></a>
+
+## 3 Global solutions and the stationary reduction
+
+<a id="section-3-1"></a>
+
+### 3.1 A mathematical tilt distinct from stored energy
+
+Set $\ell=f/c$, in units $E/A$. For constant input use
+
+<a id="eq-9"></a>
+
+$$
+V(z,m)=F(z,m)-\Re(\ell^*z).\tag{9}
+$$
+
+Because $f_R=G\ell_R$,
+
+<a id="eq-10"></a>
+
+$$
+\dot q=-GV_q,\quad \dot m=-\eta V_m,\quad\dot V=-\gamma\|Kz-\ell\|^2-\eta\|F_m\|^2.\tag{10}
+$$
+
+The tilt exists for any constant input; it does not select that input or replace the physical work balance (8).
+
+<a id="proposition-3-1"></a>
+
+**Proposition 3.1 (Global forward existence).** For all positive parameters above, finite incidence networks, constant $f$ and finite initial data, (4) has a unique bounded forward solution.
+
+**Proof.** Young's inequality gives
+
+<a id="eq-11"></a>
+
+$$
+V\ge\tfrac\mu4\|z\|^2+\tfrac\kappa2|m|^2-\|\ell\|^2/\mu.\tag{11}
+$$
+
+The smooth vector field is locally Lipschitz; (10) keeps it in a compact sublevel. Continuation there excludes finite escape and local uniqueness gives global uniqueness.
+
+The upper right Dini derivative satisfies $D^+\|z\|\le-\gamma\mu\|z\|+\|f\|$, also at $z=0$. Thus
+
+<a id="eq-12"></a>
+
+$$
+\|z(t)\|\le e^{-\gamma\mu t}\|z(0)\|+\frac{\|f\|}{\gamma\mu}(1-e^{-\gamma\mu t}).\tag{12}
+$$
+
+Also $\dot m_e<0$ for $m_e>0$ and $\dot m_e\le0$ at zero:
+
+<a id="eq-13"></a>
+
+$$
+m_e(t)\le\max\{0,m_e(0)\},\quad K(t)\le\mu I+e^{M_0}L,\qquad M_0=\max\{0,m_1(0),\ldots,m_p(0)\}.\tag{13}
+$$
+
+<a id="section-3-2"></a>
+
+### 3.2 Eliminating memory at stationarity
+
+For fixed $z$,
+
+<a id="eq-14"></a>
+
+$$
+\partial_{m_e}^2F=\kappa+\tfrac12e^{m_e}|b_e^\top z|^2\ge\kappa.\tag{14}
+$$
+
+The coercive strictly convex memory slices have unique minimizers $m_e=-s_e$:
+
+<a id="eq-15"></a>
+
+$$
+s_e e^{s_e}=\frac{|b_e^\top z|^2}{2\kappa},\qquad s_e=W_0\left(\frac{|b_e^\top z|^2}{2\kappa}\right)\ge0.\tag{15}
+$$
+
+Here $W_0$ is the nonnegative real Lambert branch [Corless et al. 1996]. Edge amplitude energy is $\kappa s_e$, and memory energy $\kappa s_e^2/2$. Hence
+
+<a id="eq-16"></a>
+
+$$
+V_{\rm eff}(z)=\tfrac\mu2\|z\|^2+\sum_e\kappa(s_e+s_e^2/2)-\Re(\ell^*z).\tag{16}
+$$
+
+Positive memory second derivatives justify implicit differentiation. The real-coordinate envelope gradient is the realification of $K(m(z))z-\ell$, so critical points correspond exactly to equilibria once memory is restored by (15). Substituting $-s(z(t))$ dynamically would remove a state and change transients and response.
+
+<a id="section-3-3"></a>
+
+### 3.3 Why global joint convexity is unavailable
+
+For the three-node path $b_1=(1,-1,0)^\top,b_2=(0,1,-1)^\top$, $\mu=2/5,\kappa=1,z=(3,0,-3)^\top$ real and $m=0$, the real-amplitude/memory Hessian has
+
+<a id="eq-17"></a>
+
+$$
+K=\mu I+L,\qquad B=3[b_1,b_2],\qquad H_m=\tfrac{11}2I.\tag{17}
+$$
+
+Its Schur complement is $\mu I-(7/11)L$. For $\xi=(1,0,-1)^\top$ and $\nu=(-6/11,-6/11)^\top$ with imaginary perturbation zero the joint quadratic form is $-26/55$. The tilt leaves the Hessian unchanged. This exact obstruction motivates stationary reduction followed by a complete local stability analysis; it supplies no global Euclidean contraction theorem.

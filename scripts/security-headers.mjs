@@ -7,6 +7,11 @@ import { isDeepStrictEqual } from 'node:util';
 import { parse } from 'parse5';
 import { browserHeaders, contentSecurityPolicy, HEADER_MARKER } from './security-policy.mjs';
 
+// Vercel documents 2,048 routes per deployment (Hobby and Pro),
+// including Build Output API rules. Retain headroom for platform routing.
+// https://vercel.com/docs/limits#routes-created-per-deployment
+export const CSP_ROUTE_RULE_BUDGET = 1900;
+
 const errorRoutes = new Set(['/404', '/500', '/_not-found', '/_global-error']);
 const isError = document => errorRoutes.has(document.route) || errorRoutes.has(document.sourcePath);
 const hashesForPolicy = (document, fallbackHashes) => isError(document) ? fallbackHashes : document.hashes;
@@ -171,6 +176,8 @@ function previouslyGeneratedPolicy(headers, value) {
 export async function verifyBuiltSecurityHeaders(root = process.cwd()) {
   const state = await discoverBuild(root);
   const { build, manifest, documents, fallbackHashes, config } = state;
+  if (manifest.headers.length > CSP_ROUTE_RULE_BUDGET) throw new Error('CSP header-route budget exceeded; review hosting limits before deploying');
+  if (config && config.routes.length > CSP_ROUTE_RULE_BUDGET) throw new Error('Vercel CSP routing budget exceeded; review hosting limits before deploying');
   const report = JSON.parse(await fs.readFile(path.join(build, 'security-headers-report.json'), 'utf8'));
   const baseline = manifest.headers.find(rule => rule.source === '/:path*');
   if (baseline?.headers.find(header => policyKey(header.key))?.value !== contentSecurityPolicy(fallbackHashes)) throw new Error('Missing or stale global fallback CSP');
@@ -208,7 +215,7 @@ export async function installSecurityHeaders(root = process.cwd()) {
   if (!baselineFound) throw new Error('Missing configured baseline CSP; refusing incomplete protection');
   const marker = { key: HEADER_MARKER, value: '1' };
   for (const document of documents) existing.push({ source: document.route, regex: regexForRoute(document.route), headers: [{ key: 'Content-Security-Policy', value: contentSecurityPolicy(hashesForPolicy(document, fallbackHashes)) }, marker] });
-  if (existing.length > 950) throw new Error('CSP header-route budget exceeded; review hosting limits before deploying');
+  if (existing.length > CSP_ROUTE_RULE_BUDGET) throw new Error('CSP header-route budget exceeded; review hosting limits before deploying');
   manifest.headers = existing;
   if (config) {
     const otherRoutes = config.routes.filter(rule => !marked(rule));
@@ -220,7 +227,7 @@ export async function installSecurityHeaders(root = process.cwd()) {
       }
     }
     config.routes = [...adapterPolicyRoutes(state), ...otherRoutes];
-    if (config.routes.length > 950) throw new Error('Vercel CSP routing budget exceeded; review hosting limits before deploying');
+    if (config.routes.length > CSP_ROUTE_RULE_BUDGET) throw new Error('Vercel CSP routing budget exceeded; review hosting limits before deploying');
     for (const document of documents.filter(document => document.kind === 'prerender')) {
       const headers = document.prerenderConfig.initialHeaders;
       const expected = contentSecurityPolicy(hashesForPolicy(document, fallbackHashes));
@@ -240,7 +247,7 @@ export async function installSecurityHeaders(root = process.cwd()) {
     for (const document of documents.filter(document => document.kind === 'prerender')) await fs.writeFile(document.configFile, JSON.stringify(document.prerenderConfig));
   }
   const routes = documents.map(document => ({ route: document.route, kind: document.kind, scriptHashes: hashesForPolicy(document, fallbackHashes).length, documentScriptHashes: document.hashes.length, policyBytes: Buffer.byteLength(contentSecurityPolicy(hashesForPolicy(document, fallbackHashes))) }));
-  const report = { generatedAt: new Date().toISOString(), nextVersion: JSON.parse(await fs.readFile(path.join(root, 'node_modules/next/package.json'), 'utf8')).version, documentCount: documents.length, maximumPolicyBytes: Math.max(...routes.map(row => row.policyBytes)), buildOutputPatched: Boolean(config), htmlLayout: config ? 'vercel-build-output' : 'legacy-next', routes };
+  const report = { generatedAt: new Date().toISOString(), nextVersion: JSON.parse(await fs.readFile(path.join(root, 'node_modules/next/package.json'), 'utf8')).version, documentCount: documents.length, headerRuleCount: existing.length, adapterRouteCount: config?.routes.length ?? null, routeRuleBudget: CSP_ROUTE_RULE_BUDGET, maximumPolicyBytes: Math.max(...routes.map(row => row.policyBytes)), buildOutputPatched: Boolean(config), htmlLayout: config ? 'vercel-build-output' : 'legacy-next', routes };
   await fs.writeFile(path.join(build, 'security-headers-report.json'), JSON.stringify(report, null, 2) + '\n');
   console.log(`Static CSP installed for ${documents.length} HTML routes (${report.htmlLayout}); largest policy ${report.maximumPolicyBytes} bytes.`);
   return report;

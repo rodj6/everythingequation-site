@@ -1,0 +1,132 @@
+---
+title: "How spatial preparation sets the spectrum"
+description: "Gaussian exchange, the degree-to-spectrum bound, preparation-dependent ratio laws and extraction uncertainty."
+order: 4
+---
+
+<a id="section-5"></a>
+
+## 5. Spatial preparation and kernel-mass heterogeneity
+
+<a id="section-5-1"></a>
+
+### 5.1 A conditional Gaussian-exchange realization
+
+Fix distinct sites $x_i\in\mathbb R^2$. A free-space heat mediator with diffusivity $D$ has kernel $H(\tau,x)=(4\pi D\tau)^{-1}\exp[-|x|^2/(4D\tau)]$. At preparation time $\tau$, sample its normalized influence:
+
+$$
+G_{ij}=H(\tau,x_i-x_j)/H(\tau,0)=e^{-|x_i-x_j|^2/(2\sigma^2)},\qquad
+\sigma^2=2D\tau.
+$$
+
+Hold the coefficients fixed during response. With $s=G\mathbf1$ and $L=\operatorname{diag}(s)-G$, diagonal self terms cancel. This is the complete Gaussian graph in the spatial analysis. Setting $\sigma$ to the median pair distance chooses $D\tau$ rather than deriving a universal diffusion time.
+
+For complex amplitudes, set $F=\kappa z^*Lz/2$ with $\kappa>0$ and scalar dissipative and reactive mobilities $\gamma>0$, $\alpha>0$. The real Hessian commutes with the complex structure, giving
+
+<a id="equation-27"></a>
+
+$$
+\dot z=-(\gamma+i\alpha)\kappa Lz,\qquad
+K_d=\gamma\kappa L,\qquad C=\alpha\kappa L.\tag{27}
+$$
+
+This realizes both CSCF faces under the declared assumptions, with $h(\lambda)=\alpha\lambda/\gamma$ on the retained spectrum and a bounded nondecreasing extension. The limit $\alpha=0$ is purely dissipative. Prepare $\sum_i z_i=0$ to remove the uniform stationary sector. If amplitudes have units A, $\kappa$ has energy/A² and the mobilities have A²/(energy × second). Amplitude decay is $\gamma\kappa\lambda$, phase frequency is $\alpha\kappa\lambda$, and energy decay is twice amplitude decay. Eliminating a live mediator requires its memory law; freezing the sampled network does not perform that elimination.
+
+<a id="section-5-2"></a>
+
+### 5.2 A finite degree-to-spectrum theorem
+
+<a id="theorem-5-1"></a>
+
+**Theorem 5.1 (Gaussian kernel mass).** Order $s_{(1)}\le\cdots\le s_{(N)}$ and the Laplacian eigenvalues $0=\lambda_1<\lambda_2\le\cdots\le\lambda_N$. Then
+
+$$
+\lambda_i\le s_{(i)},\qquad\sum_{i=1}^N(s_{(i)}-\lambda_i)=N.
+$$
+
+The equal-weight measures on $\lambda_2/N,\ldots,\lambda_N/N$ and $s_{(2)}/N,\ldots,s_{(N)}/N$ have Wasserstein distance
+
+<a id="equation-28"></a>
+
+$$
+W_1=\frac{N-s_{(1)}}{N(N-1)}\le\frac1{N-1}.\tag{28}
+$$
+
+**Proof.** The Fourier representation makes $G$ positive semidefinite: its quadratic form integrates $|\sum_jc_je^{ik\cdot x_j}|^2$ against a nonnegative Gaussian density. Thus $L\le\operatorname{diag}(s)$ and min-max gives the ordered inequalities. Since $\operatorname{tr}G=N$, trace subtraction gives the sum. Positive off-diagonal weights make the kernel exactly the constants. Removing the zero eigenvalue subtracts $s_{(1)}$ from the deficit. Sorted coupling is optimal for one-dimensional $W_1$.
+
+Kernel mass at a site controls the retained bulk. To control sharp windows, pair $a_i=\lambda_{i+1}$ with $b_i=s_{(i+1)}$ and set $e_i=|\log a_i-\log b_i|$. A pair's log-ratio error is at most $e_i+e_j$. Membership changes only if the predicted log-ratio lies within that distance of an endpoint. Counting boundary pairs bounds each incidence error. A small global distance alone controls neither discontinuous windows nor nearly zero modes. Saved-centroid calculations verify these finite inequalities for retained spatial views.
+
+<a id="section-5-3"></a>
+
+### 5.3 A preparation law generates a ratio distribution
+
+Prepare iid sites $X\sim N(0,a^2I_2)$ by harmonic confinement and quench them before measuring. Gaussian convolution gives
+
+$$
+q(x)=\mathbb E e^{-|x-X|^2/(2\sigma^2)}
+=\frac{\sigma^2}{\sigma^2+a^2}e^{-|x|^2/[2(\sigma^2+a^2)]}.
+$$
+
+The population median pair distance has $\sigma^2=4a^2\log2$. Since $|X|^2/(2a^2)$ is unit exponential,
+
+<a id="equation-29"></a>
+
+$$
+\log q(X)=\text{constant}-\beta E,\qquad
+\beta=(1+4\log2)^{-1},\quad E\sim\operatorname{Exp}(1).\tag{29}
+$$
+
+Independent differences have density $e^{-|d|/\beta}/(2\beta)$. Exponentiating gives
+
+<a id="equation-30"></a>
+
+$$
+f_R(r)=\frac{1}{2\beta r}e^{-|\log r|/\beta},\qquad r>0.\tag{30}
+$$
+
+Integrate this density over the original windows to predict limiting incidences without fitting an eigenvalue density.
+
+The transfer from preparation to spectrum is quantitative. At fixed bandwidth, conditional Hoeffding bounds and a union bound give, with probability at least $1-\delta$,
+
+$$
+\max_i|s_i/N-q(X_i)|\le N^{-1}+\sqrt{\log(2N/\delta)/[2(N-1)]}.
+$$
+
+The law of large numbers and [Theorem 5.1](/source-readout/spectral-profiles/04-gaussian-exchange#theorem-5-1) transfer the degree-law limit to $L/N$. Pair U-statistic consistency transfers the empirical distance median because the population density there is continuous and positive. The kernel derivative with respect to $\log\sigma$ is bounded by $2/e$, so using the empirical bandwidth changes all normalized degrees by a vanishing amount. Since $q(X)>0$ almost surely, continuous mapping gives the log-spectrum and product weak convergence gives the pair law. Removed diagonal mass vanishes and endpoints have zero limiting mass. Finite eigenvalues and overlapping pairs need not be independent.
+
+The isotropic curve matches H30's 3% slot ordering while differing in amplitudes. That is a mechanism for the ordering under this preparation, not an identification of Gaussian preparation in hydrogen or photographs. With $X\sim N(0,C)$,
+
+$$
+q(x)=\det(I+C/\sigma^2)^{-1/2}\exp[-\tfrac12x^*(\sigma^2I+C)^{-1}x].
+$$
+
+If $c_j$ are covariance eigenvalues and $b_j=c_j/(\sigma^2+c_j)$, then $\log q(X)=\text{constant}-\frac12\sum_j b_jZ_j^2$. Its variance is $\frac12\sum_j b_j^2$. The independent difference characteristic function is $\prod_j(1+b_j^2t^2)^{-1/2}$. Equal $b_j$ in two dimensions give the Laplace law. The three frozen 512-site examples use covariance pairs $(1,1)$, $(4,1/4)$ and $(16,1/16)$. They change amplitudes while retaining high rank agreement, as reported in [Table 3](/source-readout/spectral-profiles/08-appendices#table-3). They are synthetic preparation checks.
+
+<a id="section-5-4"></a>
+
+### 5.4 Extraction uncertainty and source-image scope
+
+<a id="proposition-5-2"></a>
+
+**Proposition 5.2 (Matched-site displacement).** If each labelled site moves by at most $\epsilon$ and the original median bandwidth satisfies $\sigma>2\epsilon$, every edge changes by at most
+
+$$
+\delta=\min\{1,2\epsilon e^{-1/2}/\sigma+(2/e)|\log(1-2\epsilon/\sigma)|\}.
+$$
+
+Consequently $\|\Delta L\|\le 2(N-1)\delta$, which also bounds the change in each ordered eigenvalue.
+
+**Proof.** Each pair distance changes by at most $2\epsilon$, as does the median by matched order statistics. The radial derivative at fixed bandwidth is at most $e^{-1/2}/\sigma$ and the derivative in $\log\sigma$ is at most $2/e$. Split the changes and use $\sigma'\ge\sigma-2\epsilon$. A signed edge-Laplacian perturbation has norm at most twice its largest absolute row-weight sum by its quadratic form. Apply Weyl's inequality.
+
+If $k$ sites are deleted at fixed bandwidth with surviving block $S$, then
+
+$$
+L_{SS}=L_{\rm deleted}+\operatorname{diag}\left(\sum_{j\notin S}W_{ij}\right),
+\qquad 0\le L_{SS}-L_{\rm deleted}\le kI.
+$$
+
+Interlacing and Weyl give $\lambda_j-k\le\mu_j\le\lambda_{j+k}$. Re-estimating bandwidth adds at most $2(N-k-1)(2/e)|\log(\sigma'/\sigma)|$ to the operator bound. Keep the changed dimension and pair exposure. A negative lower endpoint supplies no positive-ratio guarantee.
+
+Nine nominated displacement checks and three deletion checks pass for saved embryo, galaxy and leaf coordinates. Physical robustness additionally needs independent bounds on coordinate error and site disagreement. The matched-site bound does not cover births, mergers or unbounded component changes induced by thresholding.
+
+The established extraction uses EXIF orientation, at most 512 pixels on the longest side without upsampling, fixed stored-sRGB luminance, strict dark thresholds, eight-connected components, inclusive area limits and a two-pixel separation rule. Saved centroids support graph-level replay. The photographs are absent, six stable acquisition mappings remain unresolved, and redistribution permissions were not supplied. Pixel-level replay and image formation are separate. The small dark-embryo graph has different kernel mass and weaker hydrogen correlation. A uniform ring has a circulant graph whose Fourier spectrum concentrates near its common degree, making the nominated away-from-one incidences vanish with size. Preparation can therefore generate recurrence or its absence under the same kernel. Neither result establishes image origin, authenticity or semantic content.

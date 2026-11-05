@@ -1,0 +1,80 @@
+---
+title: "What ratios cannot identify, calibrated response can recover"
+description: "Homometric carriers, exact projected dynamics and finite equal-weight recovery expose what pooling removes."
+order: 6
+---
+
+<a id="section-7"></a>
+
+## What ratio profiles identify, and what response adds
+
+<a id="section-7-1"></a>
+
+### Distinct carriers can have the same complete ratio measure
+
+<a id="proposition-7-1"></a>
+
+**Proposition 7.1.** Let
+$$
+A=\{0,1,4,10,12,17\},\qquad B=\{0,1,8,11,13,17\}.
+$$
+The positive sets $\{e^{a/100}:a\in A\}$ and $\{e^{b/100}:b\in B\}$ have identical complete ordered nonself ratio measures. Neither common scaling nor reciprocal scaling relates the sets.
+
+**Proof.** Both integer sets have the same fifteen positive pair differences, namely $\{1,2,\ldots,13,16,17\}$, each once. The negative differences are their reflections. Exponentiating the differences divided by 100 gives identical 30-term ordered ratio multisets. Equal extrema force a translation to be zero and a reflected translation to be reflection about $17/2$. Neither maps $A$ to $B$. Translation and reflected translation of logarithms are precisely common scaling and reciprocal scaling of the readout values.
+
+The obstruction survives all windows and every fixed cutoff, provided exposure is positive for a conditional profile. To realize it with the hydrogen-style readout for general positive carriers, take $v_i=(\log 2)e^{a_i/100}$ and $\lambda_i=a(e^{v_i}-1)$ with $a>0$. Then $\min_i\lambda_i=a$ and $\log(1+\lambda_i/a)=v_i$. One may append a stationary zero. The carriers differ while their complete normalized ratio measures coincide. This construction does not assert ambiguity in the restricted H30 family or in actual Kerr poles. It proves that pooled ratios do not recover a general carrier.
+
+One-point density loses different information. Compare the two-value ensemble always equal to $(1,2)$ with the ensemble choosing $(1,1)$ or $(2,2)$ with equal probability. Their mean counting measure is $\delta_1+\delta_2$ in both cases. The expected ordered nonself incidence in the 3% window around two is $1/2$ for the first ensemble and zero for the second. Each realization has exposure two. The factorial pair law, rather than the mean density alone, is needed to predict correlated finite profiles.
+
+Scale loss is exact under the native normalizations. The transformation $K\mapsto cK$ leaves minimum-normalized hydrogen values and mean-normalized spatial values unchanged while changing decay times. A physical clock requires rate calibration. Kerr's fixed $T$ is a separate convention and does not inherit this invariance unless its time scale changes.
+
+<a id="section-7-2"></a>
+
+### A static reduction does not identify the time evolution
+
+The positive matrices
+$$
+K_1=\begin{pmatrix}2&1\\1&1\end{pmatrix},\qquad
+K_2=\begin{pmatrix}3/2&1\\1&2\end{pmatrix}
+$$
+have the same retained static Schur complement, one. For $\dot\Psi=-K\Psi$ with initial state $(1,0)$, their first-coordinate initial velocities are $-2$ and $-3/2$. The eliminated memory kernels are $e^{-t}$ and $e^{-2t}$. Equality of the static complement leaves time evolution undetermined.
+
+Let $G$ be a finite-dimensional generator, $P$ an orthogonal projector, and $Q=I-P$. For $\dot\Psi=G\Psi$, put $x=P\Psi$ and $z=Q\Psi$. Solving the unresolved equation by variation of constants gives
+
+<a id="equation-34"></a>
+
+$$
+\begin{aligned}
+\dot x(t)={}&PGP\,x(t)+PGQ e^{tQGQ}z(0)\\
+&+\int_0^t PGQ e^{(t-u)QGQ}QGP\,x(u)\,du .
+\end{aligned}
+\tag{34}
+$$
+
+An autonomous first-order law reproduces all projected source trajectories exactly if and only if $PGQ=0$. The displayed equation gives sufficiency. Necessity follows by comparing initial velocities with the same $x(0)$ and arbitrary different $z(0)$. This is the Shadow framework's projected-dynamics contract. The hydrogen Schur analysis controls a spectral observable and leaves these temporal terms relevant in a physical experiment.
+
+<a id="section-7-3"></a>
+
+### Calibrated response completes the finite spectral target
+
+For a known finite equally weighted positive spectrum, define $S(t)=m^{-1}\sum_i e^{-\lambda_i t}$. For the homometric carriers above, take $a=1$ and calibrated $t=1$. Their computed responses differ by approximately $0.00519145$. This time distinguishes the nominated pair. Universal recovery needs more samples and stronger access.
+
+<a id="theorem-7-2"></a>
+
+**Theorem 7.2 (Finite equal-weight response recovery).** For known $m$, known $\tau>0$, equal known modal weights and finite positive rates, the exact samples $S(k\tau)$ for $k=1,\ldots,m$ determine the rate multiset including multiplicities.
+
+**Proof.** Set $x_i=e^{-\tau\lambda_i}\in(0,1)$ and $p_k=mS(k\tau)$. Newton's identities determine the elementary symmetric polynomials recursively from $e_0=1$ and
+$$
+ke_k=\sum_{j=1}^{k}(-1)^{j-1}e_{k-j}p_j .
+$$
+Consequently the determined polynomial
+$$
+z^m-e_1z^{m-1}+\cdots+(-1)^m e_m
+$$
+has roots $x_i$ with multiplicities. Recover the rates by $\lambda_i=-\log x_i/\tau$.
+
+An exact rational fixture uses $x=(1/2,2/3,3/4,3/4)$, with a repeated mode. The recovery is exact and need not be uniformly Lipschitz stable. The pairs $a\pm\delta$ and $a,a$ have equal first power sums, and their second power sums differ only by $2\delta^2$. A clustered split can therefore require quadratically smaller response errors. Unknown count and weights pose another inverse problem. In particular, weights $(1,0)$ with rates $(1,2)$ or $(1,3)$ produce the identical entire trace $e^{-t}$. An unexcited mode is invisible.
+
+The CSCF operator recovery theorems assume stronger data: a full calibrated transmission operator at known time, for example, or an entire scale-dependent transform with compact support. They do not infer an operator from the 45 coordinates or the complete ratio measure. The counterexamples locate the information pooled ratios remove.
+
+A prospective response test needs modal preparation weights or an independent observability argument, a calibrated clock, retained detector outcomes, uncertainty and drift. Even the whole response law cannot separate source ontology from an unrestricted operational surrogate with exactly the same allowed record law. Discrimination requires named, restricted alternative physical models. These completions recover nominated spectral targets. They do not recover arbitrary eigenvectors, geometry or microscopic source identity.

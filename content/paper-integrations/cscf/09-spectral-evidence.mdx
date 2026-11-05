@@ -1,0 +1,130 @@
+---
+title: "What the measured profiles show"
+description: "Hydrogen, Kerr and image-graph recurrence with its conditional controls and diagnostic limits."
+order: 9
+---
+
+The same finite observable recurs across several constructions. The native data and conditional controls show where that recurrence is strong and where it stops supporting broader claims.
+
+<a id="sec-empirical"></a>
+
+## 10. Cross-domain spectral evidence
+
+The cross-domain investigation \[[23](/source-readout/cscf/18-references#ref-spectral)\] measures finite ordered-ratio profiles in hydrogen, Kerr and image-derived spectra. Let $p=(p_1,\ldots,p_{15})$ be the native incidence vector in Corollary [9.2](/source-readout/cscf/08-modular-ratios#cor-windows), with centers in the fixed order
+
+<a id="eq-constants"></a>
+
+$$
+\begin{aligned}
+\mathcal C={}&(\varphi,\varphi^{-1},\varphi^2,\sqrt2,\sqrt3,\sqrt5,\pi,\pi/2,\pi/10,\\
+& e,e^{-1},\log2,j_{0,1},3/13,1/7).
+\end{aligned}\tag{11}
+$$
+
+Here $\varphi=(1+\sqrt5)/2$, and $j_{0,1}$ is the first positive zero of the Bessel function $J_0$. The three relative tolerances are $0.03,0.01,0.005$. The native primary abundance statistics are Kerr $3\%$ SUM, H30 $3\%$ UNION and images $1\%$ UNION; the full slot vectors are also compared at each declared tolerance. All ordered nonself pairs and all multiplicities are retained. The fifteen dependent slots are comparison coordinates, not fifteen independent physical observations. The fine-structure constant is not a member of this library.
+
+<a id="section-10.1"></a>
+
+### 10.1 Operators and native readouts
+
+##### Hydrogen coupling graph.
+
+H30 has vertices $(n,\ell)$, $1\le n\le30$, $0\le\ell<n$: 465 states and 8,990 undirected edges. For $|\ell-k|=1$,
+
+$$
+W_{(n,\ell),(m,k)}=\left|\int_0^\infty R_{n\ell}(r)r R_{mk}(r)r^2\,dr\right|^2,
+\qquad L_H=D-W.
+$$
+
+ Here $R_{n\ell}$ are the normalized hydrogen bound-state radial functions in atomic units ($a_0=1$). Same-principal-shell edges remain. No magnetic-state expansion or angular factor is inserted. The 464 positive modes have primary readout
+
+$$
+v_i=\log(1+\lambda_i/\lambda_{\min,+}),
+$$
+
+ with raw modes secondary. The exposure is $464\cdot463=214,832$. H30 is a coupling-graph Laplacian, not the hydrogen energy Hamiltonian. The historical H12 construction has different weights, angular treatment and support; it contributes no substituted values here.
+
+##### Gravitational Kerr readout.
+
+The development set contains 540 labelled modes with spin weight $-2$, $\ell=2,\ldots,6$, all $m$, overtones $n=0,1,2,3$, and spins $a/M=0,0.5,0.9$. The rate and readout are
+
+$$
+\lambda_j=-2\operatorname{Im}(M\omega_j),\qquad V=f_T(\operatorname{diag}\lambda_j),\quad T=12.115276586285876.
+$$
+
+ Eligibility is the open cutoff $0.05<v_i/v_j<5$, giving 272,049 development pairs. The 684-mode angular holdout uses $\ell=8,9,10$ with the other selections retained. Modes and zero-spin degeneracies are not independent black-hole observations. A diagonal rate carrier is a declared positive summary; it is not the full nonselfadjoint QNM evolution operator \[[5](/source-readout/cscf/18-references#ref-berti), [25](/source-readout/cscf/18-references#ref-stein)\].
+
+##### Image graphs.
+
+Threshold-component centroids define points $x_i$. The actual complete Gaussian graph is
+
+$$
+W_{ij}=\exp[-\left\lVert x_i-x_j\right\rVert^2/(2\sigma_d^2)],\quad i\ne j,
+\quad W_{ii}=0,\quad \sigma_d=\operatorname{median}_{i<j}\left\lVert x_i-x_j\right\rVert,
+$$
+
+ with $L_I=D-W$ and positive eigenvalues divided by their mean. This normalization cancels from ratios. The extraction uses EXIF orientation, a longest side at most 512 pixels, no upsampling, stored-sRGB luminance weights $(0.2126,0.7152,0.0722)$, strict dark thresholds $(.25,.5,.75)$, eight-connected components of inclusive area 4–2,500 pixels and a two-pixel retained-centroid separation rule. There is no crop, feature truncation or post-score contrast adjustment. Bright variants are secondary dependent views. The six primary families are embryo, galaxy, pollen-like microscopy, leaf, Shroud and snowflake; the adult portrait is exploratory. The supplement specifies extraction order, numerical zero rules and source hashes.
+
+The spatial information used here is encoded by component centroids, Gaussian weights and graph-Laplacian eigenvalues. Persistent homology and directional Fourier statistics characterize different observables and do not enter these ratio profiles.
+
+The connection of these finite operators to the curvature construction is explicit. For either weighted graph, the closed form and its quadratic functional are
+
+$$
+Q_L(z)=z^*Lz=\frac12\sum_{i,j}W_{ij}|z_i-z_j|^2,
+\qquad \mathcal M_L(z)=\tfrac12 z^*Lz.
+$$
+
+ On the realification of $\mathbb C^N$, the Hessian of $\mathcal M_L$ is the complex-linear representative of $L$; equivalently use the Hermitian form directly. For Kerr’s declared rate carrier, $Q_K(z)=\sum_j\lambda_j|z_j|^2$ and $\mathcal M_K(z)=\tfrac12\sum_j\lambda_j|z_j|^2$. Thus each native readout is a specified function of an exact finite curvature-form representative. The graph energy establishes this mathematical identification; an independently derived material energy or boundary law supplies a physical curvature identification.
+
+<a id="section-10.2"></a>
+
+### 10.2 Measured recurrence and its heterogeneity
+
+Table [1](/source-readout/cscf/09-spectral-evidence#tab-correlations) reports the primary hydrogen–image comparisons from the cross-domain study \[[23](/source-readout/cscf/18-references#ref-spectral)\]. Five families have strong recurrence across all three widths. The embryo dark view is the recorded exception. Kerr’s 3% Spearman relationship to hydrogen is $0.52143$, and its image relationships are more moderate. The recurrence is broad and domain-dependent.
+
+<a id="tab-correlations"></a>
+
+**Table 1.** Primary H30 transformed profile versus dark image profiles. Spearman coefficients use all fifteen native incidence slots. Pearson correlation at 3% is secondary. Data from \[[23](/source-readout/cscf/18-references#ref-spectral)\].
+
+| Image           | $\rho_S(3\%)$ | $\rho_S(1\%)$ | $\rho_S(0.5\%)$ | $r_P(3\%)$ |
+|:----------------|--------------:|--------------:|----------------:|-----------:|
+| Embryo          |       0.23900 |       0.26856 |         0.04482 |   -0.25984 |
+| Spiral galaxy   |       0.92063 |       0.92328 |         0.96373 |    0.98928 |
+| Pollen-like SEM |       0.88641 |       0.88641 |         0.88518 |    0.95464 |
+| Leaf            |       0.99553 |       0.99463 |         0.99642 |    0.98673 |
+| Shroud          |       0.94868 |       0.94492 |         0.94765 |    0.97981 |
+| Snowflake       |       0.98743 |       0.98652 |         0.98921 |    0.99637 |
+
+<a id="fig-native-profiles"></a>
+
+![Fifteen window-incidence slots comparing the transformed H30 profile with leaf, Shroud, snowflake and galaxy dark-graph profiles. The strongest peaks appear at similar slots across these distinct constructions.](/publications/spectral/cscf/native-profiles.png)
+
+**Figure 2.** Fifteen-slot incidence profiles at $3\%$ tolerance. H30 uses its native transformed readout; the leaf, Shroud, snowflake and galaxy use their primary dark graphs. These are finite window-incidence profiles. The dark embryo results are reported in Table [1](/source-readout/cscf/09-spectral-evidence#tab-correlations).
+
+<a id="section-10.3"></a>
+
+### 10.3 Controls and robustness
+
+Kerr’s development and angular-holdout 3% SUM incidences are $0.3058052$ and $0.3180936$. Table [2](/source-readout/cscf/09-spectral-evidence#tab-kerr) reports three conditional-reference comparisons. U conditions on observed endpoints and degeneracies while drawing transformed uniform groups. P retains labelled coarse raw-log bins and within-block circular phase differences, while shifting common within-bin phases. R preserves fitted overtone trends and within-$\ell$ residual Gram structure while rotating the two-dimensional residual complement. They preserve different, nonnested information. U and P discriminate in both datasets; R is more permissive on holdout.
+
+<a id="tab-kerr"></a>
+
+**Table 2.** Kerr conditional-reference comparisons \[[23](/source-readout/cscf/18-references#ref-spectral)\]. Each row uses 4,999 controls; $k$ counts scores at least the observation. The add-one fraction is $(k+1)/5000$, a summary under the stated reference law.
+
+| Reference |  $B$ | $k_{\rm dev}$ | $k_{\rm hold}$ | $\Delta A_{\rm dev}$ | $\Delta A_{\rm hold}$ |
+|:----------|-----:|--------------:|---------------:|---------------------:|----------------------:|
+| U         | 4999 |             0 |              0 |              0.06041 |               0.07341 |
+| P         | 4999 |            10 |             22 |              0.03901 |               0.05304 |
+| R         | 4999 |            20 |            757 |              0.02518 |               0.00760 |
+
+Hydrogen shell-block permutations retain the allowed support and each block’s full weight multiset while changing placement. The primary hydrogen–Kerr Spearman coefficient $0.521429$ has shell mean $0.521370$ and sample SD $0.002551$. Hydrogen–Shroud remains close to its observed $0.94868$ under the same reference. This establishes conditional profile robustness. Raw 3% UNION abundance is $0.1215927$ versus shell mean $0.1203374$, with no exceedance among 99 endpoints; transformed abundance is $0.1019029$ versus $0.1032113$, with 92 exceedances. The abundance response therefore depends on the readout. The short finite-fiber pilot moved too little to change the statistic and supplies no mixed-reference conclusion.
+
+The original library’s three-domain paired reference fraction is $0.2339$, above the frozen $0.05$ criterion. The Kerr geometry-matched rank fractions were $0.0457$ in development and $0.0953$ on angular holdout. These library-specificity outcomes remain part of the evidence. They constrain a privilege claim for the chosen centers, while the measured recurrence and conditional-control results remain the phenomena represented by Theorem [9.1](/source-readout/cscf/08-modular-ratios#thm-modular).
+
+<a id="section-10.4"></a>
+
+### 10.4 Meaning within the common-carrier account
+
+The spectral work establishes a recurring finite structural signature in specified constructions. The present paper establishes where that signature sits: it is a pooled spectral measure of $\Delta_\rho$ and a phase-difference readout of $\mathop{\mathrm{ad}}(\log V)$, both determined by the declared carrier and response. This supplies the proposed connection between visible organization and the coherent face with exact equations and the measured native profiles.
+
+The representation holds for every admitted positive finite readout. It establishes the operator relationship independently of the recurrence’s empirical strength. The measured recurrence and its exact modular representation together support CSCF’s role as an organizing structure for source-to-readout spectral information. Selecting particular cross-domain profiles from physical realization laws is the next predictive development, addressed in Section [14](/source-readout/cscf/12-boundary-and-tests#sec-future).

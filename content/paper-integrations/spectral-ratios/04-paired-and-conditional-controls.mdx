@@ -1,0 +1,70 @@
+---
+title: "Freeze the comparisons before reading the scores"
+description: "Paired libraries, three nonnested Kerr references and two hydrogen perturbations each preserve different information."
+order: 4
+---
+
+<a id="section-4"></a>
+
+## Frozen comparison design
+
+<a id="section-4-1"></a>
+
+### Paired alternative libraries
+
+Use the target and the same 9,999 retained $G$ libraries across all domains, preserving identities and slot order. This is a Kerr-designed, development-informed reference population. It is not a universal law for sampling libraries of constants.
+
+The construction moves thirteen centers while fixing two endpoints and retaining the slot cells and order, the counts below and above one, relative widths, summed and union linear window coverage at all three tolerances, and two individual 3% overlaps. Individual log-window widths and summed log coverage are common. The 3% log-union coverage is only approximately matched: $0.846268$–$0.848952$, versus $0.847440$ for the target. No library is rejected for scoring well in a new domain.
+
+For native dataset $d$, let $s_d(b)$ be the primary abundance for library $b$. The symmetric midposition over all $M=10{,}000$ identities is
+
+<a id="eq-12"></a>
+
+$$
+P_d(b)=\frac{\#\{a:s_d(a)<s_d(b)\}+\tfrac12\#\{a:s_d(a)=s_d(b)\}}{M}. \tag{12}
+$$
+
+Average spatial positions equally within a source family and then equally over the six primary families. Rerank that aggregate by the same midposition rule to obtain $P_I$. Each primary family here contributes one dark version. Define
+
+<a id="eq-13"></a>
+
+$$
+Q(b)=\min\{P_K(b),P_H(b),P_I(b)\},\qquad
+F_Q=\frac{\#\{b:Q(b)\ge Q(\mathrm{target})\}}{M}. \tag{13}
+$$
+
+The frozen criterion is $F_Q\le0.05$, including target and ties. This is a saved-population comparison. It is neither a probability that the research is false, a fraction of explained data, nor proof that alternative libraries are equivalent coordinate projections.
+
+The earlier Kerr specificity test is separate. Development and the then-new angular holdout both had to achieve one-sided 95% upper bounds at most $0.05$ for $G$ exceedance. The secondary $S$ bank retains stated algebraic families and four fixed anchors. It cannot substitute for a failed primary $G$ conjunction. The images and the Kerr data reused later were all previously seen.
+
+<a id="section-4-2"></a>
+
+### Kerr references: three different preservation contracts
+
+Each dataset/reference combination has 4,999 eligible spectra at the frozen point. They are statistical references, not further numerical solutions of the Kerr equations.
+
+**U: conditional uniform transformed groups.** Exact zero-spin $m$ copies sharing $(\ell,n,a)$ form one group. Other modes are singleton groups. There are 380 unique centers in development and 468 in holdout. Fix the observed minimum and maximum Fejér-readout values and their group identities, draw the remaining centers independently uniformly in that transformed interval, and restore their fixed multiplicities. This preserves endpoints and physical degeneracies. It changes transformed density, overtone ordering and spin/mode correlations. It is not uniform raw-rate sampling followed by the readout.
+
+**R: raw-rate overtone residual orbit.** For fixed $(\ell,m,a)$, fit the four raw rates $\lambda_n$, $n=0,\ldots,3$, by ordinary least squares on $(1,n)$. Draw an independent common Haar $O(2)$ action for each $\ell$. It rotates or reflects the two-dimensional residual complement for all $m$ and spins in the block. Add back the raw-rate fits and apply [Equation (1)](/source-readout/spectral-ratios/02-native-operators#eq-1). This preserves each intercept, slope, row mean and sum of squares and the entire within-$\ell$ residual Gram matrix. Residual orientation in overtone coordinates and cross-$\ell$ relations change; neither every fixed-$n$ distribution nor the full empirical density is preserved.
+
+**P: common phase in labeled raw-log bins.** Write $\log\lambda_i/0.25=b_i+f_i$ with $b_i$ integer and $0\le f_i<1$. For each $\ell$, draw $\theta_\ell$ uniformly in $[0,1)$. Replace the raw log rate by $0.25[b_i+((f_i+\theta_\ell)\bmod 1)]$, exponentiate and apply the frozen readout. Every labeled bin index is fixed, preserving the associated coarse histograms, within-block circular phase differences and exact degeneracies. The fine within-bin placements and full empirical distribution change.
+
+R and P impose frozen positivity and overtone-order eligibility checks. All 29,994 proposals across the two datasets and three references passed. There was no score-based rejection. These laws preserve different information and are nonnested. For observed incidence $A$, report $k=\#\{A_b\ge A\}$ and the add-one reference fraction $(k+1)/(B+1)$. Monte Carlo intervals, where used, describe integration error under the nominated law, not variation among independent physical observations. A physical randomization interpretation additionally requires the relevant group or model symmetry.
+
+<a id="section-4-3"></a>
+
+### Hydrogen shell perturbations and the short fiber pilot
+
+Shell permutations independently rearrange weights within each unordered principal-shell pair $\{n,m\}$, including same-shell blocks. They keep allowed support and each block's complete weight multiset, retaining detailed radial information. They change $\ell$-labeled placement and generally do not keep vertex strengths fixed. The experiment retains 99 shell endpoints.
+
+The second pilot restarts from the observed nonnegative edge vector for every endpoint and takes 64 specified fiber steps. Its linear constraints preserve vertex strengths, shell-pair totals and edge-weighted crossmoments of
+
+<a id="eq-14"></a>
+
+$$
+g_1=|n-m|(\ell+k+1),\qquad g_2=nm(\ell+k+1)^2. \tag{14}
+$$
+
+These constraints are nonnested with shell permutations: they need not preserve block multisets. The 99 finite-step endpoints are diagnostic and have no certified equilibrium or mixing claim. The pilot was not automatically extended.
+
+For each pilot, the standardized difference is $\Delta/s=(A_{\mathrm{obs}}-\bar A)/s$, with sample SD using denominator 98. This is descriptive, not an extreme-tail Gaussian probability. The target, both readouts, all three tolerances and all endpoints are retained without favorable redraws.

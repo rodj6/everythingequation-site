@@ -1,0 +1,59 @@
+---
+title: "The gravitational recovery problem"
+description: "Recover the full Einstein–matter dynamics on one source realization, and identify which premises make that recovery possible."
+order: 1
+---
+
+<a id="abstract"></a>
+## From transport to Einstein gravity
+
+A source realization of gravity must recover the operations that produce the field equations. This construction does so for the complete massless spin-two bootstrap. Smooth path transport supplies the local connection. The unrestricted affine action eliminates nonprojective distortion, and a volume-restored readout removes the projective ambiguity from the transport. On the quotient, a full stress identity and an exact off-shell residual recover the nonlinear Einstein–matter system.
+
+The result separates three jobs: admit a source support, realize physical variables and operations on that support, and select a physical law for the resulting sector. The first two jobs permit the third without deciding it. Competing dimensions, signatures, actions and matter couplings expose the remaining selection problem. The exact algebra and finite numerical checks test the construction and its failure modes; the proofs establish the smooth-field results.
+
+<a id="section-1"></a>
+## 1. What a complete recovery has to include
+
+A relation between two named actions leaves open whether the source supports the current, the allowed variations, the connection equation, the matter response and the nonlinear equations on one witness. Recovery has to provide all of those together. Selection asks a further question: which of the recovered features follow from the source principles rather than from additional physical premises?
+
+Deser's [original derivation](https://doi.org/10.1007/BF00759198) and [later account](https://doi.org/10.1007/s10714-009-0912-9) start with a free massless spin-two field coupled to its total symmetric stress. Contravariant metric density and independent affinity make the interaction cubic. The derivative part of the current arises from the nonlinear density–connection relation; inserting the entire current directly into the action would miss the mechanism that closes the bootstrap in one step. The result is Einstein gravity with universal metric coupling in the stated matter class.
+
+The construction places that full chain inside the [source–readout architecture](https://doi.org/10.5281/zenodo.21366204). An admitted source, its literal finite preparation and a physical raw-sector construction have different roles. Their lift is a common-witness homotopy fibre. The [geometric descent](https://doi.org/10.5281/zenodo.21370985) and [observable quotient](https://doi.org/10.5281/zenodo.21371251) papers give related contracts.
+
+Three results control the recovery:
+
+1. Smoothness of multiplicative transport at constant paths implies a local, velocity-linear first jet and supplies finite-resolution bounds. The [connection–transport correspondence](https://arxiv.org/abs/0705.0452v5) is established mathematics; here the functional-analytic argument fixes the regularity and error conditions used by the realization.
+2. The connection need not start torsion free. The classical [Einstein–Palatini projective freedom](https://doi.org/10.1007/s10714-012-1393-9) is handled by an explicit volume-restored observable. The connection equation then recovers Levi–Civita transport on shell.
+3. The full stress and bootstrap extend to the affine quotient. The controlled kernel lets the source residuals yield the complete second-order residual off shell, as well as the Einstein–matter equations on shell.
+
+Constant-path regularity is a realization condition. The quotient requires an observable choice because bare vector transport changes under projective shifts. Minimal scalar coupling follows in a specified natural, metric-ultralocal quadratic class; common-density coupling alone permits a curvature term. The [dependency ledger](/source-readout/transport-projective/07-what-the-source-selects#table-1) traces each such premise. Target-neutral source principles by themselves do not determine dimension, signature, action or coupling.
+
+The construction is classical and local on a prepared smooth chart. It covers finite integration patches and compactly supported relative action variations. The gravitational fields, matter, path operations and boundary restrictions share one witness. Four-dimensional Lorentzian physics and the free spin-two law are declared inputs. Arbitrary source fibres, quantum measures and a global all-sector equalizer remain separate questions.
+
+<a id="section-1-1"></a>
+### 1.1 Conventions and units
+
+Use an oriented four-dimensional chart $U$, signature $(-,+,+,+)$ and natural units. The dimension $n\gt2$ will enter the affine algebra. The first lower index of the unrestricted connection is the differentiation direction.
+
+<a id="eq-1"></a>
+
+$$
+(A_\mu)^\alpha{}_\beta=\Gamma^\alpha{}_{\mu\beta},\qquad
+F_{\mu\nu}=\partial_\mu A_\nu-\partial_\nu A_\mu+[A_\mu,A_\nu],\qquad
+R_{\mu\nu}=F^\alpha{}_{\mu\alpha\nu}.
+\tag{1}
+$$
+
+The Ricci notation in [(1)](/source-readout/transport-projective/01-the-gravitational-recovery-problem#eq-1) denotes $(F_{\alpha\nu})^\alpha{}_\mu$. A symmetric density couples to $R_{(\mu\nu)}$. The extended parent has no lower-index symmetry. Contractions sum over the full index ranges, and derivatives in symmetric coordinates carry the appropriate off-diagonal multiplicities.
+
+Write $B^{\mu\nu}=vg^{\mu\nu}$, $v=\sqrt{|\det g|}$. Choose the normalized Cartesian reference density $\eta^{\mu\nu}=\operatorname{diag}(-1,1,1,1)$; its volume density is one. Raise and lower reference indices with $\eta$ and its inverse. Use a fixed induced operator norm in the prepared frames, which also bounds individual entries. In four dimensions,
+
+<a id="eq-2"></a>
+
+$$
+B=\eta+\lambda h,\qquad A=\lambda c,\qquad
+v=\sqrt{-\det B},\qquad g^{\mu\nu}=B^{\mu\nu}/v .
+\tag{2}
+$$
+
+Here $\lambda\ne0$ restores the canonical coupling. The canonical affinity $c$ has dimension $\mathrm{length}^{-2}$ and is unrelated to signal speed. The physical coupling will be $\kappa_E=\lambda^2/2$.

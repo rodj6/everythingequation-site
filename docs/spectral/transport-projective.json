@@ -1,0 +1,846 @@
+{
+  "id": "transport-projective",
+  "title": "Transport and Projective Reduction in a Source–Readout Derivation of Einstein Gravity",
+  "doi": "10.5281/zenodo.23954887",
+  "sourceDocument": "Transport_Projective_Source_Readout_v04(2).pdf",
+  "sourceSha256": "10ec9e025a96909ba0916ce75d156c4877ef68fdaee32daecc55a31bb4491270",
+  "sourcePageCount": 23,
+  "sourceFigures": 0,
+  "sourceNumberedEquations": 71,
+  "sourceTables": 3,
+  "sourceNumberedStatements": 10,
+  "referenceCount": 7,
+  "sourceMethod": "Manually transcribed mathematics and source-faithful article prose from the controlling PDF. Supplied matching verification ZIP includes generated table fragments but no manuscript TeX.",
+  "supplement": {
+    "file": "Transport_Projective_Public_Verification_v04(1).zip",
+    "sha256": "ee100cd16b949abd0454080a5109b338a52206b20d17d7aa943010622940e111",
+    "filesInManifest": 38,
+    "manifestVerified": true,
+    "replayed": true,
+    "replayReceipt": "transport-projective-replay.json"
+  },
+  "records": [
+    {
+      "sourceSection": "Abstract",
+      "sourcePages": [
+        1
+      ],
+      "destinationChapter": "01-the-gravitational-recovery-problem",
+      "destinationRoute": "/source-readout/transport-projective/01-the-gravitational-recovery-problem",
+      "anchor": "abstract",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Exact recovery; conditional physical selection"
+      ]
+    },
+    {
+      "sourceSection": "1 Problem, contribution and logical dependencies",
+      "sourcePages": [
+        1,
+        2
+      ],
+      "destinationChapter": "01-the-gravitational-recovery-problem",
+      "destinationRoute": "/source-readout/transport-projective/01-the-gravitational-recovery-problem",
+      "anchor": "section-1",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Deser bootstrap; local/classical scope"
+      ]
+    },
+    {
+      "sourceSection": "1.1 Conventions",
+      "sourcePages": [
+        2
+      ],
+      "destinationChapter": "01-the-gravitational-recovery-problem",
+      "destinationRoute": "/source-readout/transport-projective/01-the-gravitational-recovery-problem",
+      "anchor": "section-1-1",
+      "equations": [
+        1,
+        2
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Unrestricted first-lower differentiation convention; normalization and units"
+      ]
+    },
+    {
+      "sourceSection": "2.1 Native source family and admission proof",
+      "sourcePages": [
+        3
+      ],
+      "destinationChapter": "02-source-support-and-preparation",
+      "destinationRoute": "/source-readout/transport-projective/02-source-support-and-preparation",
+      "anchor": "section-2-1",
+      "equations": [],
+      "formalStatements": [
+        "proposition-2-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Finite pushout and stabilizing colimit proof"
+      ]
+    },
+    {
+      "sourceSection": "2.2 Literal preparation and raw sector",
+      "sourcePages": [
+        3,
+        4
+      ],
+      "destinationChapter": "02-source-support-and-preparation",
+      "destinationRoute": "/source-readout/transport-projective/02-source-support-and-preparation",
+      "anchor": "section-2-2",
+      "equations": [
+        3,
+        4,
+        5
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Assignment to marked occurrences; off-shell histories"
+      ]
+    },
+    {
+      "sourceSection": "2.3 Common witnesses and recovery",
+      "sourcePages": [
+        4
+      ],
+      "destinationChapter": "02-source-support-and-preparation",
+      "destinationRoute": "/source-readout/transport-projective/02-source-support-and-preparation",
+      "anchor": "section-2-3",
+      "equations": [
+        6
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Homotopy fibre; projection and domain"
+      ]
+    },
+    {
+      "sourceSection": "3.1 Regular transport theorem and proof",
+      "sourcePages": [
+        4,
+        5
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "theorem-3-1",
+      "equations": [
+        7,
+        8,
+        9
+      ],
+      "formalStatements": [
+        "theorem-3-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Banach differentiability, Picard converse and uniqueness"
+      ]
+    },
+    {
+      "sourceSection": "3.1 Regularity obstruction and proof",
+      "sourcePages": [
+        5
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "proposition-3-2",
+      "equations": [
+        10
+      ],
+      "formalStatements": [
+        "proposition-3-2"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Nonadditive directional derivatives at constant paths"
+      ]
+    },
+    {
+      "sourceSection": "3.2 Admissible variations and curvature",
+      "sourcePages": [
+        6
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "section-3-2",
+      "equations": [
+        11,
+        12
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Duhamel tangent inverse; ordered rectangle"
+      ]
+    },
+    {
+      "sourceSection": "3.3 Finite-resolution transport estimate and proof",
+      "sourcePages": [
+        6
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "proposition-3-3",
+      "equations": [
+        13,
+        14
+      ],
+      "formalStatements": [
+        "proposition-3-3"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Telescoping and controlled Euler reconstruction"
+      ]
+    },
+    {
+      "sourceSection": "3.3 Differentiation under noise",
+      "sourcePages": [
+        6
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "eq-15",
+      "equations": [
+        15
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Forward and centered optimizing rates"
+      ]
+    },
+    {
+      "sourceSection": "3.3 Spatial derivative requirement and oscillatory counterexample",
+      "sourcePages": [
+        7
+      ],
+      "destinationChapter": "03-regular-transport",
+      "destinationRoute": "/source-readout/transport-projective/03-regular-transport",
+      "anchor": "eq-16",
+      "equations": [
+        16
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Curvature and Ricci error versus bounded transport"
+      ]
+    },
+    {
+      "sourceSection": "4.1 Curvature and contraction convention",
+      "sourcePages": [
+        7
+      ],
+      "destinationChapter": "04-projective-connection",
+      "destinationRoute": "/source-readout/transport-projective/04-projective-connection",
+      "anchor": "section-4-1",
+      "equations": [
+        17,
+        18,
+        19
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Pure-projective wrong-contraction control"
+      ]
+    },
+    {
+      "sourceSection": "4.2 Bulk algebraic distortion",
+      "sourcePages": [
+        7
+      ],
+      "destinationChapter": "04-projective-connection",
+      "destinationRoute": "/source-readout/transport-projective/04-projective-connection",
+      "anchor": "section-4-2",
+      "equations": [
+        20,
+        21
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Matched boundary current; non-gauge auxiliary directions"
+      ]
+    },
+    {
+      "sourceSection": "4.2 General affine stationary connection and proof",
+      "sourcePages": [
+        7,
+        8
+      ],
+      "destinationChapter": "04-projective-connection",
+      "destinationRoute": "/source-readout/transport-projective/04-projective-connection",
+      "anchor": "theorem-4-1",
+      "equations": [
+        22,
+        23,
+        24,
+        25
+      ],
+      "formalStatements": [
+        "theorem-4-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "n³−n Hessian rank; cyclic trace proof; raw torsion"
+      ]
+    },
+    {
+      "sourceSection": "4.3 Projective shift and volume section",
+      "sourcePages": [
+        8
+      ],
+      "destinationChapter": "04-projective-connection",
+      "destinationRoute": "/source-readout/transport-projective/04-projective-connection",
+      "anchor": "section-4-3",
+      "equations": [
+        26,
+        27,
+        28
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Bare vector transport obstruction and determinant normalization"
+      ]
+    },
+    {
+      "sourceSection": "4.3 Volume-restored transport theorem and proof",
+      "sourcePages": [
+        8,
+        9
+      ],
+      "destinationChapter": "04-projective-connection",
+      "destinationRoute": "/source-readout/transport-projective/04-projective-connection",
+      "anchor": "theorem-4-2",
+      "equations": [
+        29
+      ],
+      "formalStatements": [
+        "theorem-4-2"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Coordinate naturality including orientation reversal; quotient inverse; 60 versus 40 coordinates; boundary readouts"
+      ]
+    },
+    {
+      "sourceSection": "5.1 Source action and projection",
+      "sourcePages": [
+        9
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "section-5-1",
+      "equations": [
+        30,
+        31
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Exact inverse Hol and lifted variation"
+      ]
+    },
+    {
+      "sourceSection": "5.2 Explicit quotient operators",
+      "sourcePages": [
+        10
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "section-5-2",
+      "equations": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Hessian projector, free equation, linearized LC and gauge identity"
+      ]
+    },
+    {
+      "sourceSection": "5.3 Auxiliary variation",
+      "sourcePages": [
+        10
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "section-5-3",
+      "equations": [
+        38,
+        39
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Direct covariant kinetic variation"
+      ]
+    },
+    {
+      "sourceSection": "5.3 Off-shell source stress and proof",
+      "sourcePages": [
+        11
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "theorem-5-1",
+      "equations": [
+        40,
+        41
+      ],
+      "formalStatements": [
+        "theorem-5-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Adjoint proof for general c"
+      ]
+    },
+    {
+      "sourceSection": "5.3 Horizontal operation and fixed-transport defect",
+      "sourcePages": [
+        11
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "eq-42",
+      "equations": [
+        42,
+        43
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "One-component example; distinct loss of kinetic covariant variation"
+      ]
+    },
+    {
+      "sourceSection": "5.4 Closed bootstrap and off-shell recovery proof",
+      "sourcePages": [
+        11,
+        12
+      ],
+      "destinationChapter": "05-the-cubic-bootstrap",
+      "destinationRoute": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+      "anchor": "theorem-5-2",
+      "equations": [
+        44,
+        45,
+        46
+      ],
+      "formalStatements": [
+        "theorem-5-2"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "One-step closure, differentiated residual estimate and divergence"
+      ]
+    },
+    {
+      "sourceSection": "6.1 Metric equations and normalization",
+      "sourcePages": [
+        12
+      ],
+      "destinationChapter": "06-einstein-matter",
+      "destinationRoute": "/source-readout/transport-projective/06-einstein-matter",
+      "anchor": "section-6-1",
+      "equations": [
+        47,
+        48,
+        49,
+        50
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Allowed elimination, solution coverage modulo gauge and matter residual"
+      ]
+    },
+    {
+      "sourceSection": "6.2 Common-density and scalar action",
+      "sourcePages": [
+        13
+      ],
+      "destinationChapter": "06-einstein-matter",
+      "destinationRoute": "/source-readout/transport-projective/06-einstein-matter",
+      "anchor": "section-6-2",
+      "equations": [
+        51,
+        52,
+        53,
+        54
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Fixed-density fibre connectedness; full nonlinear scalar system"
+      ]
+    },
+    {
+      "sourceSection": "6.2 Restricted scalar selection proof and competing couplings",
+      "sourcePages": [
+        13
+      ],
+      "destinationChapter": "06-einstein-matter",
+      "destinationRoute": "/source-readout/transport-projective/06-einstein-matter",
+      "anchor": "proposition-6-1",
+      "equations": [],
+      "formalStatements": [
+        "proposition-6-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Natural scalar classification; curvature coupling and projective trace obstruction"
+      ]
+    },
+    {
+      "sourceSection": "6.3 Gauge covariance and constraints",
+      "sourcePages": [
+        14
+      ],
+      "destinationChapter": "06-einstein-matter",
+      "destinationRoute": "/source-readout/transport-projective/06-einstein-matter",
+      "anchor": "section-6-3",
+      "equations": [
+        55,
+        56,
+        57
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Bianchi and matter identities; no global PDE theorem"
+      ]
+    },
+    {
+      "sourceSection": "6.4 Boundary, scale and limiting contracts",
+      "sourcePages": [
+        14
+      ],
+      "destinationChapter": "06-einstein-matter",
+      "destinationRoute": "/source-readout/transport-projective/06-einstein-matter",
+      "anchor": "section-6-4",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Collar restrictions and free limit"
+      ]
+    },
+    {
+      "sourceSection": "7.1 Dependency ledger",
+      "sourcePages": [
+        14,
+        15,
+        16
+      ],
+      "destinationChapter": "07-what-the-source-selects",
+      "destinationRoute": "/source-readout/transport-projective/07-what-the-source-selects",
+      "anchor": "section-7-1",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [
+        "table-1"
+      ],
+      "coverageNotes": [
+        "16 premises and provenance statuses"
+      ]
+    },
+    {
+      "sourceSection": "7.2 Target-neutral underdetermination proof",
+      "sourcePages": [
+        16
+      ],
+      "destinationChapter": "07-what-the-source-selects",
+      "destinationRoute": "/source-readout/transport-projective/07-what-the-source-selects",
+      "anchor": "proposition-7-1",
+      "equations": [],
+      "formalStatements": [
+        "proposition-7-1"
+      ],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Identical support with inequivalent laws; Neumann and flat-vacuum restrictions"
+      ]
+    },
+    {
+      "sourceSection": "7.2 Point response controls",
+      "sourcePages": [
+        16,
+        17
+      ],
+      "destinationChapter": "07-what-the-source-selects",
+      "destinationRoute": "/source-readout/transport-projective/07-what-the-source-selects",
+      "anchor": "eq-58",
+      "equations": [
+        58,
+        59
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Palatini R+αR² dust point and nonminimal scalar"
+      ]
+    },
+    {
+      "sourceSection": "7.3 What the architecture explains",
+      "sourcePages": [
+        17
+      ],
+      "destinationChapter": "07-what-the-source-selects",
+      "destinationRoute": "/source-readout/transport-projective/07-what-the-source-selects",
+      "anchor": "section-7-3",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Physical selection remains open"
+      ]
+    },
+    {
+      "sourceSection": "8.1 Proofs and executable evidence",
+      "sourcePages": [
+        17,
+        18
+      ],
+      "destinationChapter": "08-executable-checks",
+      "destinationRoute": "/source-readout/transport-projective/08-executable-checks",
+      "anchor": "section-8-1",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [
+        "table-2"
+      ],
+      "coverageNotes": [
+        "Reference and independent comparison methods; all check totals"
+      ]
+    },
+    {
+      "sourceSection": "8.2 Nonlinear metric and matter fixtures",
+      "sourcePages": [
+        18,
+        19
+      ],
+      "destinationChapter": "08-executable-checks",
+      "destinationRoute": "/source-readout/transport-projective/08-executable-checks",
+      "anchor": "section-8-2",
+      "equations": [
+        60,
+        61,
+        62
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Kasner finite transport; pp-wave scalar; coordinate and density controls"
+      ]
+    },
+    {
+      "sourceSection": "8.3 Finite-resolution reconstruction",
+      "sourcePages": [
+        19
+      ],
+      "destinationChapter": "08-executable-checks",
+      "destinationRoute": "/source-readout/transport-projective/08-executable-checks",
+      "anchor": "section-8-3",
+      "equations": [
+        63,
+        64
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [
+        "table-3"
+      ],
+      "coverageNotes": [
+        "All 4 rows, 3 error orders and acceptance thresholds"
+      ]
+    },
+    {
+      "sourceSection": "8.4 Reproduction contract",
+      "sourcePages": [
+        19
+      ],
+      "destinationChapter": "08-executable-checks",
+      "destinationRoute": "/source-readout/transport-projective/08-executable-checks",
+      "anchor": "section-8-4",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Pinned dependencies, tolerances, hashes, replay and portability"
+      ]
+    },
+    {
+      "sourceSection": "9 Discussion",
+      "sourcePages": [
+        20
+      ],
+      "destinationChapter": "09-conditional-recovery",
+      "destinationRoute": "/source-readout/transport-projective/09-conditional-recovery",
+      "anchor": "section-9",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Conditional achievement and open selection"
+      ]
+    },
+    {
+      "sourceSection": "A Boundary integrations and density inversion",
+      "sourcePages": [
+        20,
+        21
+      ],
+      "destinationChapter": "10-boundary-and-variation-appendices",
+      "destinationRoute": "/source-readout/transport-projective/10-boundary-and-variation-appendices",
+      "anchor": "appendix-a",
+      "equations": [
+        65,
+        66,
+        67,
+        68
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Boundary current, matching divergence, dimension two limit"
+      ]
+    },
+    {
+      "sourceSection": "B Variation domains and fixed-transport obstruction",
+      "sourcePages": [
+        21
+      ],
+      "destinationChapter": "10-boundary-and-variation-appendices",
+      "destinationRoute": "/source-readout/transport-projective/10-boundary-and-variation-appendices",
+      "anchor": "appendix-b",
+      "equations": [
+        69,
+        70
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Inverse differentials and moving projective section"
+      ]
+    },
+    {
+      "sourceSection": "C Analytic checks behind reconstruction",
+      "sourcePages": [
+        21,
+        22
+      ],
+      "destinationChapter": "11-reconstruction-and-scope-appendices",
+      "destinationRoute": "/source-readout/transport-projective/11-reconstruction-and-scope-appendices",
+      "anchor": "appendix-c",
+      "equations": [
+        71
+      ],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Triangular exact solution, Taylor bound and oscillatory example"
+      ]
+    },
+    {
+      "sourceSection": "D Scope of recovery statements",
+      "sourcePages": [
+        22
+      ],
+      "destinationChapter": "11-reconstruction-and-scope-appendices",
+      "destinationRoute": "/source-readout/transport-projective/11-reconstruction-and-scope-appendices",
+      "anchor": "appendix-d",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "Three equivalences and local/global limits"
+      ]
+    },
+    {
+      "sourceSection": "References",
+      "sourcePages": [
+        22,
+        23
+      ],
+      "destinationChapter": "12-references",
+      "destinationRoute": "/source-readout/transport-projective/12-references",
+      "anchor": "references",
+      "equations": [],
+      "formalStatements": [],
+      "figures": [],
+      "tables": [],
+      "coverageNotes": [
+        "All seven entries with DOI and archive URLs where supplied"
+      ]
+    }
+  ],
+  "verification": {
+    "mdxCompiled": 12,
+    "serverRenderedWithReact": 12,
+    "mathMlExpressions": 414,
+    "numberedDisplays": 71,
+    "tables": 3,
+    "sourceNumberedEquationsChecked": 71,
+    "crossReferences": "All intra-edition links resolve to existing source anchors.",
+    "unexecuted": "Production app route verification and browser checks are separate."
+  }
+}

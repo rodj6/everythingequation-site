@@ -1,0 +1,31 @@
+---
+title: "Appendix E: Computational verification"
+description: "Exact fixtures, numerical checks and the declared verification scope."
+order: 17
+---
+
+<a id="app-verification"></a>
+
+## E. Computational verification
+
+The accompanying supplement provides native spectra, control vectors, executable implementations, generated tables and input provenance. The empirical profiles in Section [10](/source-readout/cscf/09-spectral-evidence#sec-empirical) are those of the cross-domain study \[[23](/source-readout/cscf/18-references#ref-spectral)\]. Table [3](/source-readout/cscf/17-computational-verification#tab-checks) summarizes checks of their operator representation and the mathematical constructions developed here.
+
+<a id="tab-checks"></a>
+
+**Table 3.** Computational checks of the operator identities and closure bound. Errors are numerical residuals. The independent closure fixtures use a separate high-precision implementation.
+
+| Check                        | Cases | Maximum error or result        |
+|:-----------------------------|------:|:-------------------------------|
+| Ratio–commutator slot counts |   765 | exact integer agreement        |
+| Modular normalization        |    17 | $4.441\times10^{-16}$ relative |
+| Closure Gram identity        |    30 | $5.172\times10^{-16}$          |
+| Independent closure bound    |     8 | all satisfied (70 digits)      |
+| Independent Gram identity    |     8 | $1.803\times10^{-71}$          |
+| Exact modular fixture        |     1 | $\{3,1/3,1,1\}$                |
+| Clean-directory replay       |     7 | all exit codes zero            |
+
+For the seventeen native readouts, direct ratio counting and the log-commutator representation agree in all $17\times3\times15=765$ tolerance–constant cells. Small non-diagonal matrix fixtures check the commutator spectrum and trace-square identity. Modular normalization is checked for all seventeen readouts, and thirty cases test the closure bound. A separate implementation uses 70-digit arithmetic for eight closure fixtures and an exact non-diagonal modular fixture $\rho=\left(\begin{smallmatrix}2&1\\1&2\end{smallmatrix}\right)/4$, whose ratio spectrum is $\{3,1/3,1,1\}$.
+
+Independent symbolic calculations verify the reciprocal-storage identities, three-coordinate Hessian and susceptibility, weighted Markov carrier and collar boundary energy directly from their defining expressions. The supplement contains specifications, source code, numerical settings, dependencies, random seeds, integrity hashes and actual check outputs.
+
+The spectral arrays and control vectors are the finite inputs accompanying the cross-domain study. The computations above verify their algebraic representations and the numerical identities; they do not repeat image extraction, radial integration, catalogue acquisition or the underlying control campaigns. Execution records and clean-run instructions accompany the supplement. The physical models used in Sections [11](/source-readout/cscf/10-quotient-closure#sec-probe), [12](/source-readout/cscf/11-physical-realizations#sec-physical-realizations) and [13](/source-readout/cscf/12-boundary-and-tests#sec-realization) are defined and derived in the text, so their assessment does not require access to the unpublished reports cited for attribution.

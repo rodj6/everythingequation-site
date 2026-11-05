@@ -1,0 +1,322 @@
+---
+title: "Physical realizations and reciprocal memory"
+description: "Curvature, mobility, memory, response, detailed balance and complex-gradient examples."
+order: 11
+---
+
+A rate law requires more than curvature. Mobility, internal storage and the physical response contract determine which carrier the observer measures.
+
+<a id="sec-physical-realizations"></a>
+
+## 12. Physical realizations, reciprocal memory and response
+
+The common-carrier construction has concrete realizations in relaxation theory, reversible stochastic dynamics and aligned complex-amplitude dynamics. A physical realization specifies both the curvature functional and the metric that converts a functional derivative into a rate. It also specifies a coherence law and a probe space. These data determine which parts of the abstract spectral calculus represent measured rates, physical frequencies and observable transfer functions.
+
+<a id="section-12.1"></a>
+
+### 12.1 Mobility converts curvature into a relaxation carrier
+
+Let $q\in\mathbb R^N$ be local coordinates, let $F\in C^2$ be an energy or dimensionless thermodynamic potential, and consider
+
+<a id="eq-physical-gradient"></a>
+
+$$
+\dot q=-M(q)\nabla F(q),\qquad M(q)=M(q)^\top>0.\tag{16}
+$$
+
+The coordinates and mobility include the physical unit conversions. For example, if $F$ has energy units, the entries of $M$ convert its coordinate gradient into coordinate velocity. Throughout this subsection the metric is finite dimensional and nonsingular. Entropy-gradient constructions and detailed-balance geometries provide important physical instances of this choice \[[6](/source-readout/cscf/18-references#ref-carlenmaas)\].
+
+<a id="lem-mobility-whitened"></a>
+
+**Lemma 12.1.** *Mobility-whitened curvature*.
+
+Suppose $q_*$ is a stationary point of $F$, $M$ is continuous at $q_*$, and $H=\mathop{\mathrm{Hess}}F(q_*)$ is positive semidefinite. Set $M_*=M(q_*)$ and $y=M_*^{-1/2}(q-q_*)$. The linearization of [(16)](/source-readout/cscf/11-physical-realizations#eq-physical-gradient) is
+
+<a id="eq-mobility-carrier"></a>
+
+$$
+\dot y=-K_*y,\qquad K_*=M_*^{1/2}HM_*^{1/2}\geq0.\tag{17}
+$$
+
+Thus $K_*$ is selfadjoint in the whitened Euclidean Hilbert space, and its eigenvalues have units of inverse time. If $H>0$, all linearized modes decay strictly.
+
+*Proof.* At a stationary point $\nabla F(q_*)=0$. Continuity gives $M(q_*+\delta q)=M_*+o(1)$, while $\nabla F(q_*+\delta q)=H\delta q+o(|\delta q|)$. Their product is $M_*H\delta q+o(|\delta q|)$, so $\delta\dot q=-M_*H\delta q$. Substitution of $\delta q=M_*^{1/2}y$ gives [(17)](/source-readout/cscf/11-physical-realizations#eq-mobility-carrier). Symmetry and positivity follow from $y^\top K_*y=(M_*^{1/2}y)^\top H(M_*^{1/2}y)$. The matrices $M_*H$ and $K_*$ are similar, so this change of representation preserves the complete relaxation spectrum and its multiplicities. ◻
+
+The Hessian and the physical generator therefore coincide only after the metric has been specified. For a state-dependent mobility the lemma remains a local result at a stationary state; it does not freeze the mobility along an arbitrary nonlinear trajectory. If zero modes occur, the positive spectral subspace and any conserved coordinates must be identified before forming inverse-rate observables.
+
+<a id="section-12.2"></a>
+
+### 12.2 Reciprocal storage, the full Hessian and exact memory
+
+Consider a reciprocal-storage model \[[3](/source-readout/cscf/18-references#ref-roundtwo), Sec. 4\] with visible coordinates $x\in\mathbb R^n$ and internal coordinates $m\in\mathbb R^k$. To distinguish storage stiffness from the CSCF carrier, write its potential as
+
+<a id="eq-reciprocal-potential"></a>
+
+$$
+F(x,m)=V_0(x)+\frac12m^\top Rm-m^\top r(x),\qquad R=R^\top>0,\tag{18}
+$$
+
+where $V_0$ and $r$ are $C^2$ and all terms have the same potential units. Choose time and coordinate scales so that the mobilities are $I_n$ and $\epsilon I_k$, with $\epsilon>0$. The full deterministic dynamics is
+
+<a id="eq-reciprocal-dynamics"></a>
+
+$$
+\dot x=-\nabla_xF(x,m),\qquad
+ \dot m=-\epsilon\nabla_mF(x,m)
+       =\epsilon\{r(x)-Rm\}.\tag{19}
+$$
+
+Both directions of the interaction derive from the same potential. Its dissipation law is exact:
+
+<a id="eq-reciprocal-dissipation"></a>
+
+$$
+\frac{dF}{dt}=-|\nabla_xF|^2-\epsilon|\nabla_mF|^2\leq0.\tag{20}
+$$
+
+<a id="prop-storage-hessian"></a>
+
+**Proposition 12.2.** *Static reduction and the physical carrier*.
+
+Define
+
+<a id="eq-storage-effective-potential"></a>
+
+$$
+F_{\mathrm{eff}}(x)=V_0(x)-\frac12r(x)^\top R^{-1}r(x).\tag{21}
+$$
+
+Joint stationary points are precisely $(x_*,m_*)=(x_*,R^{-1}r(x_*))$, with $\nabla F_{\mathrm{eff}}(x_*)=0$. At such a point, write
+
+<a id="eq-storage-full-hessian"></a>
+
+$$
+H=\mathop{\mathrm{Hess}}F(x_*,m_*)=
+ \begin{pmatrix}A&-C\\-C^\top&R\end{pmatrix},\qquad
+ C=Dr(x_*)^\top.\tag{22}
+$$
+
+Then
+
+<a id="eq-storage-schur"></a>
+
+$$
+S=A-CR^{-1}C^\top=\mathop{\mathrm{Hess}}F_{\mathrm{eff}}(x_*),\qquad
+ H>0\ \Longleftrightarrow\ S>0.\tag{23}
+$$
+
+At a nondegenerate strict minimum the complete linearized relaxation carrier is
+
+<a id="eq-storage-full-carrier"></a>
+
+$$
+K_*=M^{1/2}HM^{1/2},\qquad
+ M=\operatorname{diag}(I_n,\epsilon I_k).\tag{24}
+$$
+
+This conclusion holds for every $\epsilon>0$.
+
+*Proof.* Completion of the square gives the identity
+
+<a id="eq-storage-square"></a>
+
+$$
+F(x,m)=F_{\mathrm{eff}}(x)+
+ \frac12\{m-R^{-1}r(x)\}^\top R\{m-R^{-1}r(x)\}.\tag{25}
+$$
+
+The stationary-point statement follows by differentiation. For vectors $u\in\mathbb R^n$ and $v\in\mathbb R^k$,
+
+<a id="equation-26"></a>
+
+$$
+\begin{pmatrix}u\\v\end{pmatrix}^{\!\top}
+ H\begin{pmatrix}u\\v\end{pmatrix}
+ =u^\top Su+(v-R^{-1}C^\top u)^\top R(v-R^{-1}C^\top u).\tag{26}
+$$
+
+This proves the Schur-complement criterion and identifies the reduced Hessian. Lemma [12.1](/source-readout/cscf/11-physical-realizations#lem-mobility-whitened) gives the complete carrier. ◻
+
+The same model gives a memory representation without an adiabatic approximation:
+
+<a id="eq-exact-storage-memory"></a>
+
+$$
+m(t)=e^{-\epsilon Rt}m(0)+
+       \epsilon\int_0^t e^{-\epsilon R(t-u)}r(x(u))\,du.\tag{27}
+$$
+
+Thus internal retention, static feedback and transient response are three representations of the same reciprocal interaction. The initial-condition term in [(27)](/source-readout/cscf/11-physical-realizations#eq-exact-storage-memory) remains part of the transient law.
+
+For a small force $f$ added to the $x$ equation at a stationary point, let $p$ denote the Laplace frequency, with units of inverse time. For zero perturbation initial conditions,
+
+<a id="equation-28"></a>
+
+<a id="equation-29"></a>
+
+$$
+\begin{aligned}p\delta x&=-A\delta x+C\delta m+f,\qquad\text{(28)}\\
+p\delta m&=\epsilon C^\top\delta x-\epsilon R\delta m.\qquad\text{(29)}\end{aligned}
+$$
+
+Eliminating the internal perturbation gives the inverse susceptibility
+
+<a id="eq-storage-susceptibility"></a>
+
+$$
+\chi_{xx}(p)^{-1}=pI+A-
+ \epsilon C(pI+\epsilon R)^{-1}C^\top.\tag{30}
+$$
+
+Its static limit is $S$, whereas the internal correction vanishes at large $|p|$ away from poles. The static Schur complement describes relaxed curvature. The $(n+k)$-dimensional carrier in [(24)](/source-readout/cscf/11-physical-realizations#eq-storage-full-carrier) retains the internal relaxation modes needed for the full response. This distinction prevents static elimination from changing the transient physical problem.
+
+<a id="section-12.3"></a>
+
+### 12.3 A positive carrier with hidden cross-response
+
+Consider the dimensionless reciprocal-storage potential \[[2](/source-readout/cscf/18-references#ref-roundthree), Sec. 9\],
+
+<a id="eq-three-coordinate-potential"></a>
+
+$$
+F(a,b,z)=\frac14(a^2-1)^2+\frac14(b^2-1)^2+
+          \frac12(z-ab)^2.\tag{31}
+$$
+
+Use unit mobility and the chosen dimensionless time unit. At the minimum $(a,b,z)=(1,1,1)$ the complete Hessian is
+
+<a id="eq-three-coordinate-h"></a>
+
+$$
+K=H=\begin{pmatrix}3&1&-1\\1&3&-1\\-1&-1&1\end{pmatrix}.\tag{32}
+$$
+
+Its leading principal minors are $3,8,4$, and
+
+<a id="equation-33"></a>
+
+$$
+\mathop{\mathrm{\sigma}}(K)=\left\{2,\frac{5-\sqrt{17}}2,
+                        \frac{5+\sqrt{17}}2\right\}>0.\tag{33}
+$$
+
+Consequently $e^{-tK}$ is the exact linearized relaxation semigroup. For a force in the $a$ coordinate and observation in the $b$ coordinate, the transfer function is
+
+<a id="eq-hidden-cross-response"></a>
+
+$$
+\chi_{ba}(p)=e_b^\top(pI+K)^{-1}e_a
+ =-\frac{p}{(p+2)(p^2+5p+2)}.\tag{34}
+$$
+
+To verify this expression, the antisymmetric coordinate $(a-b)/\sqrt2$ has rate $2$, while the symmetric coordinate and $z$ have the $2\times2$ block $\left(\begin{smallmatrix}4&-\sqrt2\\-\sqrt2&1\end{smallmatrix}\right)$. Hence
+
+<a id="equation-35"></a>
+
+$$
+\chi_{ba}(p)=\frac12\left\{
+ \frac{p+1}{p^2+5p+2}-\frac1{p+2}\right\},\tag{35}
+$$
+
+which reduces to [(34)](/source-readout/cscf/11-physical-realizations#eq-hidden-cross-response). The static cross-response vanishes, $\chi_{ba}(0)=0$, although the frequency-dependent cross-response is nonzero. The three poles are not cancelled by the numerator. This example makes the role of observable projection explicit: the carrier, its mode multiplicities and the probe vectors jointly determine the measured response. An eigenvalue distribution alone does not specify those probe overlaps. Once a coherence symbol is declared, the same $K$ also supplies $h(K)$ and its unitary flow; the response calculation fixes $K$, not a unique physical coherence law.
+
+<a id="section-12.4"></a>
+
+### 12.4 Detailed balance and stochastic-matrix-form carriers
+
+Let $Q$ be the row generator of a finite continuous-time Markov chain, so $Q_{ij}\geq0$ for $i\ne j$, $Q\mathbf1=0$, and the rates have units of inverse time. Suppose its strictly positive stationary distribution $\pi$ satisfies detailed balance $\pi_iQ_{ij}=\pi_jQ_{ji}$. For $D=\operatorname{diag}(\pi)$ define
+
+<a id="eq-rk-carrier"></a>
+
+$$
+K=-D^{1/2}QD^{-1/2}.\tag{36}
+$$
+
+This is the finite-dimensional stochastic-matrix-form correspondence \[[7](/source-readout/cscf/18-references#ref-rk)\]. Detailed balance makes $K$ real symmetric, and for $u=D^{1/2}f$,
+
+<a id="eq-rk-dirichlet"></a>
+
+$$
+u^\top Ku=\frac12\sum_{i,j}\pi_iQ_{ij}(f_i-f_j)^2\geq0.\tag{37}
+$$
+
+Moreover,
+
+<a id="equation-38"></a>
+
+$$
+e^{-tK}=D^{1/2}e^{tQ}D^{-1/2},\qquad K\sqrt\pi=0.\tag{38}
+$$
+
+The similarity preserves rates and multiplicities exactly. The stationary vector is retained as a zero mode, or removed by an explicit restriction to its orthogonal complement when required.
+
+For example, take
+
+<a id="equation-39"></a>
+
+$$
+\pi=\frac1{14}(1,4,9)^\top,\quad
+ Q=\begin{pmatrix}-3&2&1\\1/2&-5/4&3/4\\1/9&1/3&-4/9\end{pmatrix}.\tag{39}
+$$
+
+Then
+
+<a id="equation-40"></a>
+
+$$
+K=\begin{pmatrix}3&-1&-1/3\\-1&5/4&-1/2\\-1/3&-1/2&4/9\end{pmatrix},
+ \qquad K(1,2,3)^\top=0.\tag{40}
+$$
+
+Its off-diagonal conductances are $\pi_iQ_{ij}$, so the equilibrium weight is an essential part of the representation. An associated quantum Hamiltonian may be defined as $\hbar\alpha K$, with dimensionless conversion factor $\alpha$; its unitary evolution is $e^{-i\alpha tK}$. This construction identifies corresponding spectra after the stated unit conversion. For a finite spectral cutoff, the symbol $h(\lambda)=\alpha\lambda$ on the retained interval can be extended constantly above that interval, giving a bounded nondecreasing symbol when $\alpha\geq0$.
+
+<a id="section-12.5"></a>
+
+### 12.5 An aligned complex-gradient realization
+
+The variational complex Ginzburg–Landau equation on its parameter line $b=c$ has, after a rotating-frame change, dissipative and reactive terms generated by one real functional \[[4](/source-readout/cscf/18-references#ref-aranson), Sec. II.A\]. The pertinent finite-dimensional structure can be stated without a continuum-domain ambiguity. Let $\mathcal J$ be an orthogonal complex structure on $\mathbb R^{2N}$, so $\mathcal J^\top=-\mathcal J$ and $\mathcal J^2=-I$, and set
+
+<a id="eq-aligned-gradient"></a>
+
+$$
+\dot q=-(\gamma I+\alpha\mathcal J)\nabla F(q),\qquad\gamma>0.\tag{41}
+$$
+
+The coefficients include any factor from the convention for the Wirtinger derivative $\delta F/\delta z^*$. The exact balance is $dF/dt=-\gamma|\nabla F|^2$.
+
+<a id="prop-complex-alignment"></a>
+
+**Proposition 12.3.** *A sufficient same-carrier alignment condition*.
+
+At a stationary state let $H=\mathop{\mathrm{Hess}}F\geq0$ and assume $[H,\mathcal J]=0$. Identify $\mathcal J$ with multiplication by $i$ on $\mathbb C^N$. Then $H$ represents a complex Hermitian operator $K\geq0$, and the linearized evolution of [(41)](/source-readout/cscf/11-physical-realizations#eq-aligned-gradient) is
+
+<a id="eq-complex-aligned-factorization"></a>
+
+$$
+z(t)=e^{-\gamma tK}e^{-i\alpha tK}z(0).\tag{42}
+$$
+
+The relaxation rates and phase frequencies are respectively $\gamma\lambda_j$ and $\alpha\lambda_j$ on the same eigenspaces.
+
+*Proof.* Commutation with $\mathcal J$ makes $H$ complex linear. Its real symmetry then gives complex Hermitian symmetry, and real positivity gives $K\geq0$. The linearized generator is $-(\gamma+i\alpha)K$. Its real and imaginary parts commute, proving [(42)](/source-readout/cscf/11-physical-realizations#eq-complex-aligned-factorization); also $d|z|^2/dt=-2\gamma\langle z,Kz\rangle$. ◻
+
+For example, on a finite graph take $K=\mu I+\kappa L$ with $\mu>0$, $\kappa\geq0$ and $L$ a positive graph Laplacian. The quadratic energy $F(q)=q^\top Hq/2$ with this complex-linear $H$ has the required alignment. A quartic complex-amplitude energy has the same linearization at zero when its quadratic part is this $K$. At a general nonzero amplitude its real Hessian can couple $\delta z$ to $\delta\bar z$; the alignment must then be checked at that state. With dissipative carrier $K_d=\gamma K$, the physical coherence symbol on its finite spectrum is $h(\lambda)=(\alpha/\gamma)\lambda$. A bounded monotone extension is available for $\alpha\geq0$. For a continuum model one must additionally specify boundary conditions, the closed energy form, the operator domain and the retained cutoff; the finite-dimensional proposition does not supply those data.
+
+<a id="section-12.6"></a>
+
+### 12.6 Quantum and experimental response anchors
+
+Quantum detailed-balance generators provide a related operator-space realization \[[9](/source-readout/cscf/18-references#ref-firanko)\]. For a declared detailed-balance inner product $\langle X,Y\rangle_W=\langle X,WY\rangle_{\mathrm{HS}}$, where $W>0$ is the metric superoperator, a nonpositive selfadjoint Heisenberg generator $\mathcal L$ becomes $\mathcal K=-W^{1/2}\mathcal L W^{-1/2}\geq0$ in Hilbert–Schmidt coordinates. The stationary state, the convention for detailed balance and the chosen picture determine $W$. The cited local Hamiltonian construction supplies stronger locality conclusions under its additional term hypotheses. The corresponding Hamiltonian is the Hermitian representative of the relaxation generator; its identification with another independently specified physical Hamiltonian is an additional model equation.
+
+Fluctuation–response relations and projection methods \[[12](/source-readout/cscf/18-references#ref-kubo), [13](/source-readout/cscf/18-references#ref-mori)\] connect measured susceptibility, equilibrium correlations and memory kernels. Equation [(30)](/source-readout/cscf/11-physical-realizations#eq-storage-susceptibility) is an explicit finite model in this response programme. It preserves the internal poles instead of replacing them by a static effective stiffness. In an experiment, probe vectors, temperature, preparation and the frequency convention accompany the spectral carrier.
+
+Optical temporal coupled-mode theory offers a direct test platform \[[26](/source-readout/cscf/18-references#ref-suh)\]. With the convention $a(t)\sim e^{-i\omega t}$, write
+
+<a id="equation-43"></a>
+
+$$
+\dot a=(-i\Omega-\Gamma)a+B s_{\mathrm{in}},\qquad
+ \Omega=\Omega^*,\quad\Gamma=\Gamma^*\geq0.\tag{43}
+$$
+
+The opposite phasor convention reverses the sign of the frequency term. For amplitudes normalized so that $|a|^2$ is stored energy, passive port loss obeys $D^*D=2\Gamma$ when all decay is assigned to those ports. Here $\Gamma$ has units of inverse time and $\Omega$ of angular frequency. An exact CSCF realization requires a nominated law $\Omega=h(\Gamma)$ after any declared carrier-frequency subtraction. In particular $[\Omega,\Gamma]=0$, and $\Omega$ must be scalar on every degenerate eigenspace of $\Gamma$. Commutation alone does not impose that scalar-on-block condition. The joint measurement of decay, frequency and modal overlaps can therefore test the same-carrier law more sharply than two unrelated spectral fits. General reversible–irreversible frameworks \[[10](/source-readout/cscf/18-references#ref-generic)\] provide broader physical context; the aligned common-carrier realization is a specified subclass within that larger setting.

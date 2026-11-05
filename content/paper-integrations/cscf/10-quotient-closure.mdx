@@ -1,0 +1,125 @@
+---
+title: "What closes after projection"
+description: "Memory terms, the exact dissipative closure certificate and a bound for coherent leakage."
+order: 10
+---
+
+Projection can lose information even when the source is exactly known. In a finite positive carrier the dissipative closure defect measures that loss, and regularity of the coherence symbol turns it into a bound on coherent leakage.
+
+<a id="sec-probe"></a>
+
+## 11. Observable quotients, memory and two-face closure
+
+A field description must specify how it is accessed. Let $\mathcal X$ be a candidate state space, $\mathcal B$ a probe family and $R:\mathcal X\times\mathcal B\to\mathcal V$ its response map. Define
+
+$$
+x\sim_{\mathcal B}y\quad\Longleftrightarrow\quad R(x,b)=R(y,b)\ \text{for all }b\in\mathcal B.
+$$
+
+ The quotient retains exactly the distinctions available through those probes. Dissipative probes may sample $S_t$, $\Lambda_T$ or $\mathcal D_T$, while coherent probes may sample $U_s$, $\Gamma_T$ or $\mathfrak B_T$. Complete operator recovery, scalar-profile identifiability and finite window incidence have different information content. The factorization questions of Shadow Theory apply to each target with its declared probes \[[22](/source-readout/cscf/18-references#ref-sourcereadout), [20](/source-readout/cscf/18-references#ref-projecteddynamics)\].
+
+<a id="section-11.1"></a>
+
+### 11.1 Compression and exact projected dynamics
+
+In finite dimension let $J:\mathbb C^k\to\mathsf H$ be an isometry, $P=JJ^*$ and $Q=I-P$. For a bounded linear generator $G$, the source equation $\dot y=Gy$ has resolved component $x=Py$ and unresolved component $z=Qy$. Solving the latter by variation of constants yields
+
+<a id="eq-memory"></a>
+
+$$
+\begin{aligned}\dot x(t)={}&PGP x(t)+PGQ e^{tQGQ}z(0)\qquad\text{(12)}\\
+&+\int_0^t PGQ e^{(t-s)QGQ}QGP x(s)\,ds.\end{aligned}
+$$
+
+The restricted exponentials act on $Q\mathsf H$. This identity retains the unresolved preparation and its dynamical return. It applies to the finite combined CSCF generator $G=-K-i h(K)$ as well as to $G=-K$. Dropping the last two terms requires an invariant-subspace or approximation argument. In the general quotient formulation, an induced evolution under a surjective linear readout $R$ exists precisely when its kernel is invariant under the source evolution \[[20](/source-readout/cscf/18-references#ref-projecteddynamics), Thm. 5.2\].
+
+The response-kernel viewpoint also covers pairings such as $\mathop{\mathrm{Tr}}(\rho O)$, boundary input/output operators and scattering maps. Such a relational description is compatible with CSCF when its kernels are specified functions or compressions of $K$. A low-rank point-cloud approximation alone does not supply a physical carrier identification; its extraction and target must be independently specified. Here the empirical carriers are the actual finite operators declared in Section [10](/source-readout/cscf/09-spectral-evidence#sec-empirical).
+
+<a id="section-11.2"></a>
+
+### 11.2 An exact dissipative closure certificate
+
+Set
+
+<a id="eq-defect"></a>
+
+$$
+A(t)=J^*e^{-tK}J,\qquad B(t)=Qe^{-tK}J,\qquad
+M(t)=A(2t)-A(t)^2.\tag{13}
+$$
+
+<a id="thm-gram"></a>
+
+**Theorem 11.1.** *Gram defect and closure*.
+
+For finite selfadjoint $K\ge0$ and all $t,s\ge0$,
+
+$$
+A(t+s)-A(t)A(s)=B(t)^*B(s),\qquad M(t)=B(t)^*B(t)\ge0.
+$$
+
+ At any fixed $\tau>0$, $M(\tau)=0$ if and only if $[P,K]=0$. In that case the compressed dissipative evolution closes exactly, and the same subspace reduces $h(K)$ and every coherent flow $U_s$.
+
+*Proof.* Insert $I=P+Q$ between the commuting selfadjoint operators $e^{-tK}$ and $e^{-sK}$. The $P$ term gives $A(t)A(s)$ and the $Q$ term gives $B(t)^*B(s)$. If $M(\tau)=0$, then $B(\tau)=0$, so $P\mathsf H$ is invariant under $e^{-\tau K}$. Selfadjointness also makes its orthogonal complement invariant. Therefore $P$ commutes with that operator and with $K=-\tau^{-1}\log(e^{-\tau K})$. The converse follows directly. Functional calculus then implies $[P,h(K)]=[P,U_s]=0$. ◻
+
+For reversible finite-state Markov dynamics this is the equilibrium-weighted certificate of the effective-autonomy study \[[1](/source-readout/cscf/18-references#ref-roundfour), Sec. 6\]. Weighting is part of the correspondence: for row generator $Q_{\rm M}$, strictly positive stationary law $\pi$ and partition incidence matrix $C_{\rm part}$ with nonempty blocks,
+
+$$
+K=-D_\pi^{1/2}Q_{\rm M}D_\pi^{-1/2},\qquad
+J=D_\pi^{1/2}C_{\rm part}D_{\bar\pi}^{-1/2},\quad \bar\pi=\pi C_{\rm part}.
+$$
+
+ Here $\pi$ is written as a row vector in $\bar\pi=\pi C_{\rm part}$, and $D_\pi$ and $D_{\bar\pi}$ are diagonal probability matrices. Then $J^*J=I$. Unweighted matrices for a nonuniform equilibrium generally do not satisfy the symmetric formula. The coherent invariance statement concerns a Hilbert subspace; its reduced unitary is not thereby a stochastic transition matrix.
+
+<a id="section-11.3"></a>
+
+### 11.3 Quantitative transfer to the coherent face
+
+<a id="thm-closure-coherence"></a>
+
+**Theorem 11.2.** *Closure-to-coherence transfer*.
+
+Suppose $0\le K\le\Lambda I$ in finite dimension, and let $h$ be real and Lipschitz on $\mathop{\mathrm{\sigma}}K$, with constant $L_h$. For $\tau>0$ and $t\in\mathbb R$,
+
+<a id="eq-transfer"></a>
+
+$$
+\left\lVert Qe^{-it h(K)}J\right\rVert_F\le
+\min\left\{\sqrt{k},\ \frac{|t|L_h e^{\Lambda\tau}}{\tau}
+\sqrt{\mathop{\mathrm{Tr}}M(\tau)}\right\}.\tag{14}
+$$
+
+Here $\left\lVert\cdot\right\rVert_F$ denotes the Frobenius norm. In particular,
+
+<a id="eq-generator-transfer"></a>
+
+$$
+\left\lVert Qh(K)J\right\rVert_F\le L_h\left\lVert QKJ\right\rVert_F,
+\quad
+\tau e^{-\Lambda\tau}\left\lVert QKJ\right\rVert_F
+\le\sqrt{\mathop{\mathrm{Tr}}M(\tau)}\le\tau\left\lVert QKJ\right\rVert_F.\tag{15}
+$$
+
+*Proof.* In an orthonormal eigenbasis of $K$, the entries of $[P,f(K)]$ are $P_{ij}(f(\lambda_j)-f(\lambda_i))$. For Hermitian $F$, its two off-diagonal blocks relative to $P$ have equal Frobenius norm, giving
+
+$$
+\left\lVert[P,F]\right\rVert_F^2=2\left\lVert QFJ\right\rVert_F^2.
+$$
+
+ The same equality holds for $F=e^{-it h(K)}$: it is normal and diagonal in this eigenbasis, or directly its two block norms agree by unitarity. The scalar bounds
+
+$$
+\begin{aligned}
+|h(\lambda)-h(\mu)|&\le L_h|\lambda-\mu|,\\
+|e^{-it h(\lambda)}-e^{-it h(\mu)}|&\le |t|L_h|\lambda-\mu|,\\
+\tau e^{-\Lambda\tau}|\lambda-\mu|
+&\le |e^{-\tau\lambda}-e^{-\tau\mu}|
+\le\tau|\lambda-\mu|
+\end{aligned}
+$$
+
+ follow from Lipschitz continuity, the unit-circle chord estimate and the mean-value theorem. Summing squared commutator entries proves [(15)](/source-readout/cscf/10-quotient-closure#eq-generator-transfer) and bounds the unitary leakage by $|t|L_h\left\lVert QKJ\right\rVert_F$. Theorem [11.1](/source-readout/cscf/10-quotient-closure#thm-gram) identifies $\left\lVert Qe^{-\tau K}J\right\rVert_F^2$ with $\mathop{\mathrm{Tr}}M(\tau)$. Finally unitarity and $J^*J=I$ give the ceiling $\sqrt{k}$. ◻
+
+The proof uses a Hilbert–Schmidt estimate, not an operator-Lipschitz claim for arbitrary functions. For $h(\lambda)=(2/\pi)\arctan(\lambda/\lambda_0)$, one may take $L_h=2/(\pi\lambda_0)$. The factor $e^{\Lambda\tau}$ explains why late-time near-stationarity can yield a weak inverse estimate. A useful measurement therefore declares bandwidth and lag as well as the symbol.
+
+If an estimated Hermitian defect $\widehat M$ obeys $\left\lVert\widehat M-M\right\rVert_{\rm op}\le\delta$, then $\mathop{\mathrm{Tr}}M\le\mathop{\mathrm{Tr}}\widehat M+k\delta$. Thus replacing the square root in [(14)](/source-readout/cscf/10-quotient-closure#eq-transfer) by $\sqrt{\max\{0,\mathop{\mathrm{Tr}}\widehat M+k\delta\}}$ gives a valid conservative bound whenever the stated error certificate holds. This separates measurement precision from an exact closure identity.

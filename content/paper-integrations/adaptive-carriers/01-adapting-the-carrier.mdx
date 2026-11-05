@@ -1,0 +1,179 @@
+---
+title: "One energy drives the adaptive carrier"
+description: "Reciprocal memory changes stiffness while a shared positive carrier controls instantaneous attenuation and phase."
+order: 1
+---
+
+<a id="section-1"></a>
+
+## 1 From a fixed carrier to an adaptive source
+
+A carrier can change through the very amplitudes it governs. The Canonical Spectral-Curvature Field (CSCF) uses a positive selfadjoint carrier $K_d$ and a real symbol $C=h(K_d)$ [1]. For a fixed carrier, attenuation and phase share spectral projections and factor because the generators commute. Adaptation keeps the instantaneous relation while changing what can be inferred about the finite response.
+
+Three distinctions drive the construction. A realized memory path defines a conditional equation, while perturbing the complete source also perturbs memory. Commutation at a single time does not establish commutation across times. Eigenvalue lists omit information carried by phase-sensitive operator response in calibrated coordinates.
+
+Positive exponential edge stiffnesses depend on real memory. One energy produces both the amplitude force and reciprocal memory feedback. Scalar dissipative and reactive mobilities align instantaneous amplitude generators. This finite constitutive choice follows the variational motivation of aligned complex Ginzburg–Landau dynamics [2]. It adds the edge law, energy and mobilities as physical hypotheses. Coercivity bounds the source, variation of constants controls nonstationary propagation, and differentiation exposes the full feedback kernel. The resulting probe specifies both a linked operator residual and its reconstruction cost. Nonautonomous evolution and ordered exponentials [3,4], and projected dynamics and memory [5], supply the underlying tools; the results concern the declared finite realization.
+
+<a id="section-1-1"></a>
+
+### 1.1 Relationship to the previous programme
+
+The CSCF construction supplies the fixed-carrier calculus, mobility conversion, reciprocal storage and aligned complex-gradient realization [1]. Domain-specific profile generation and information loss [6] and measured cross-domain ratio recurrence [7] give context. This adaptive network does not identify an atomic bath, image formation or a Kerr pole problem with one microscopic interaction. Common carrier here means linked attenuation and phase in this realization.
+
+<a id="section-1-2"></a>
+
+### 1.2 Source state and observable contracts
+
+A target descends to a readout when it is constant on readout fibres [5,8]. The source is $(z,m)\in\mathbb C^n\times\mathbb R^p$ with fixed network, metric and mobility. An amplitude record retains $z$; a memory-resolved record retains both. Conditional reconstruction also requires one memory history across all preparation columns.
+
+With $K(m)=2/5+e^m$, states $(1,0)$ and $(1,\log 2)$ share the amplitude but have carriers $7/5$ and $12/5$. Their velocities differ, ruling out an autonomous first-order law for all amplitude-only records. Restricting preparations or retaining memory changes that target.
+
+<a id="section-1-3"></a>
+
+### 1.3 Conventions
+
+Use the standard complex inner product $u^*v$, linear in $v$, adjoint $*$, and real transpose $\top$. Norms are Euclidean or induced operator norms except $\|A\|_F^2=\operatorname{tr}(A^*A)$. The phase convention $z(t)\sim e^{-i\omega t}$ makes positive reactive coefficients positive phase frequencies. The finite source is deterministic; measurement error is separate.
+
+<a id="section-2"></a>
+
+## 2 A reciprocal adaptive carrier from one energy
+
+Let $b_e\in\mathbb R^n$, $1\le e\le p$, and $B_e=b_eb_e^\top$. For oriented incidence vectors $b_e^\top\mathbf 1=0$ and orientation does not change $B_e$. Take $\mu,\kappa,\gamma,\eta,\alpha>0$.
+
+<a id="eq-1"></a>
+
+$$
+K(m)=\mu I+\sum_{e=1}^p e^{m_e} B_e .\tag{1}
+$$
+
+<a id="eq-2"></a>
+
+$$
+F(z,m)=\tfrac12z^*K(m)z+\tfrac{\kappa}{2}|m|^2.\tag{2}
+$$
+
+Dimensional edge stiffness is $k_{e0}e^{m_e}$, with positive $k_{e0}$ in the same units as $\mu$. The normalized equations take $k_{e0}=1$; unequal baselines can be absorbed in $\sqrt{k_{e0}}b_e$ after fixing units. In real coordinates $q=(\Re z,\Im z)$,
+
+<a id="eq-3"></a>
+
+$$
+J=\begin{pmatrix}0&-I\\I&0\end{pmatrix},\qquad K_R=\operatorname{diag}(K,K),\qquad G=\gamma I+\alpha J.\tag{3}
+$$
+
+<a id="eq-4"></a>
+
+$$
+\dot q=-G\nabla_qF,\qquad \dot m=-\eta\nabla_mF.\tag{4}
+$$
+
+The real gradients are $K_Rq$ and $\partial_{m_e}F=\kappa m_e+\frac12e^{m_e}|b_e^\top z|^2$. Hence
+
+<a id="eq-5"></a>
+
+$$
+\dot z=-(\gamma+i\alpha)K(m)z,\tag{5}
+$$
+
+<a id="eq-6"></a>
+
+$$
+\dot m_e=-\eta\left(\kappa m_e+\tfrac12 e^{m_e}|b_e^\top z|^2\right).\tag{6}
+$$
+
+Contrasts change memory, and memory changes stiffness. The skew term does no work. The real gradient convention fixes the factor in (5) without a Wirtinger convention.
+
+<a id="section-2-1"></a>
+
+### 2.1 Units and physical assumptions
+
+If amplitude has units $A$ and energy $E$, $K,\mu$ have units $E/A^2$, $\kappa$ has units $E$, and $m$ is dimensionless. Both $\gamma,\alpha$ have units $A^2/(E\,\mathrm s)$, while $\eta$ has units $1/(E\,\mathrm s)$. Thus $\gamma K$ is an amplitude-decay generator and $\alpha K$ an angular-frequency generator. Squared amplitude decays at twice the amplitude rate on a fixed mode.
+
+With reference scales $A_0,E_0,t_0$, the normalized coefficients are $\tilde\mu=\mu A_0^2/E_0$, $\tilde\gamma=\gamma E_0t_0/A_0^2$, $\tilde\alpha=\alpha E_0t_0/A_0^2$, $\tilde\kappa=\kappa/E_0$, $\tilde\eta=\eta E_0t_0$. Normalize edge stiffness like $\mu$. The calculations suppress tildes. The fixed coordinates, Euclidean metric, quadratic memory energy, positive exponential stiffness and constant mobilities define this finite model. They do not specify a material, thermal bath, stochastic detailed balance or measured fluctuation–dissipation law.
+
+<a id="theorem-2-1"></a>
+
+**Theorem 2.1 (Global evolution and dissipation).** Every initial state has a unique smooth forward solution. It satisfies
+
+<a id="eq-7"></a>
+
+$$
+K(m)\ge\mu I,\tag{7}
+$$
+
+<a id="eq-8"></a>
+
+$$
+\frac{dF}{dt}=-\gamma\|K(m)z\|^2-\eta\|\nabla_mF\|^2,\tag{8}
+$$
+
+<a id="eq-9"></a>
+
+$$
+\|z(t)\|\le\|z_0\|e^{-\gamma\mu t}.\tag{9}
+$$
+
+If $F_0=F(z_0,m_0)$ and $R=\sqrt{2F_0/\kappa}$, then $|m(t)|\le R$ and
+
+<a id="eq-10"></a>
+
+$$
+\|K(m(t))\|\le M:=\mu+e^R\sum_e\|B_e\|.\tag{10}
+$$
+
+**Proof.** Nonnegative $B_e$ give (7). The chain rule and $(\nabla_qF)^\top J\nabla_qF=0$ give (8). Direct differentiation yields
+
+$$
+\frac d{dt}\|z\|^2=-2\gamma z^*K(m)z\le-2\gamma\mu\|z\|^2.
+$$
+
+This proves (9). Smooth local dynamics stay in a compact energy sublevel since $F\ge\mu\|z\|^2/2+\kappa|m|^2/2$; local continuation excludes finite escape. The memory bound and triangle inequality give (10).
+
+<a id="proposition-2-2"></a>
+
+**Proposition 2.2 (Relaxation of memory).** Put $Z=\|z_0\|$. Then
+
+<a id="eq-11"></a>
+
+$$
+|m_e(t)|\le |m_e(0)|e^{-\eta\kappa t}+\frac{\eta}{2}e^R\|b_e\|^2Z^2I(t),\tag{11}
+$$
+
+<a id="eq-12"></a>
+
+$$
+I(t)=\begin{cases}(e^{-2\gamma\mu t}-e^{-\eta\kappa t})/(\eta\kappa-2\gamma\mu),&\eta\kappa\ne2\gamma\mu,\\ te^{-\eta\kappa t},&\eta\kappa=2\gamma\mu.\end{cases}\tag{12}
+$$
+
+**Proof.** Variation of constants gives
+
+$$
+m_e(t)=e^{-\eta\kappa t}m_e(0)-\frac\eta2\int_0^t e^{-\eta\kappa(t-s)}e^{m_e(s)}|b_e^\top z(s)|^2\,ds.
+$$
+
+Use (9) and $e^{m_e(s)}\le e^R$. The convolution in (12) tends to zero in both cases. Therefore $m\to0$, $z\to0$, and $K\to K(0)$. The unforced equilibrium is uniquely $(0,0)$. Adaptation changes transients but does not sustain organization without a drive. No positive joint Hessian is assumed.
+
+<a id="proposition-2-3"></a>
+
+**Proposition 2.3 (Collective calibration mode).** For incidence vectors,
+
+<a id="eq-13"></a>
+
+$$
+\bar z(t):=\frac1n\mathbf1^\top z(t)=\bar z(0)e^{-(\gamma+i\alpha)\mu t}.\tag{13}
+$$
+
+**Proof.** Project (5) with $\mathbf1^\top/n$ using $\mathbf1^\top K=\mu\mathbf1^\top$, and solve the scalar equation. Along any conditional history the amplitude propagator norm is exactly $e^{-\gamma\mu t}$ from time zero, attained on $\mathbf1$. This control cannot identify adaptation of the edges.
+
+<a id="section-2-2"></a>
+
+### 2.2 Instantaneous CSCF realization
+
+The partial amplitude Hessian $K_R$ commutes with $J$. In complex coordinates,
+
+<a id="eq-14"></a>
+
+$$
+K_d(m)=\gamma K(m),\qquad C(m)=\alpha K(m)=h(K_d(m)).\tag{14}
+$$
+
+On the reachable interval $h(\lambda)=(\alpha/\gamma)\lambda$. The bounded nondecreasing extension $(\alpha/\gamma)\min\{\lambda,\gamma M\}$ preserves the actual calculus, is nonzero on the positive spectrum and vanishes at zero. Its cutoff depends on the energy class, and does not select a unique physical symbol beyond it.

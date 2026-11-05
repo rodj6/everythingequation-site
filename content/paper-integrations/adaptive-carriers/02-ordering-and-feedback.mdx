@@ -1,0 +1,289 @@
+---
+title: "Time ordering and the complete memory response"
+description: "An interaction picture and a commutator bound replace fixed-carrier factorization; the full tangent retains a causal memory kernel."
+order: 2
+---
+
+<a id="section-3"></a>
+
+## 3 Conditional evolution and time ordering
+
+Fix a realized $m(t)$ and put $c=\gamma+i\alpha$. The analysis here needs only bounded piecewise-continuous $K(t)\ge0$; the source supplies smoothness and $\mu I$ as a lower bound.
+
+<a id="eq-15"></a>
+
+$$
+\partial_t U(t,s)=-cK(t)U(t,s),\quad U(s,s)=I,\tag{15}
+$$
+
+<a id="eq-16"></a>
+
+$$
+\partial_t D(t,s)=-\gamma K(t)D(t,s),\quad D(s,s)=I,\tag{16}
+$$
+
+<a id="eq-17"></a>
+
+$$
+\partial_t V(t,s)=-i\alpha K(t)V(t,s),\quad V(s,s)=I.\tag{17}
+$$
+
+Evolution-family composition holds. Differentiating squared norms gives contraction of $U,D$ and unitarity of $V$. With $K\ge\mu I$ the first two norms are bounded by $e^{-\gamma\mu(t-s)}$. Shifting initial time changes the history, so the propagators need not be one-parameter semigroups or groups. Write $U(t)=U(t,0)$, and likewise $D,V$.
+
+<a id="theorem-3-1"></a>
+
+**Theorem 3.1 (Exact interaction picture).**
+
+<a id="eq-18"></a>
+
+$$
+U(t)=V(t)R(t),\qquad \dot R=-\gamma V^*KV R,\qquad R(0)=I.\tag{18}
+$$
+
+**Proof.** Set $R=V^*U$. Unitarity and $\partial_tV^*=i\alpha V^*K$ cancel the reactive term, giving the equation. The rotated carrier remains positive by unitary congruence. Generally $R\ne D$. Instantaneous commutation $[\gamma K(t),\alpha K(t)]=0$ leaves cross-time commutators intact.
+
+<a id="theorem-3-2"></a>
+
+**Theorem 3.2 (Gap-free factorization estimate).**
+
+<a id="eq-19"></a>
+
+$$
+\|U(T)-D(T)V(T)\|\le\gamma|\alpha|\int_0^T\!\int_0^t\|[K(t),K(s)]\|\,ds\,dt.\tag{19}
+$$
+
+For continuously differentiable $K$ with $\|K\|\le M,\|\dot K\|\le L$, the bound is at most $\gamma|\alpha|MLT^3/3$. For $K=K_0+tA$ it is $\gamma|\alpha|\|[A,K_0]\|T^3/6$.
+
+**Proof.** Fix $t$, differentiate $D(t,s)K(t)D(s,0)$ in $s$, and integrate:
+
+<a id="eq-20"></a>
+
+$$
+[K(t),D(t)]=-\gamma\int_0^t D(t,s)[K(t),K(s)]D(s,0)\,ds.\tag{20}
+$$
+
+With $W=DV$, differentiation in that order gives
+
+<a id="eq-21"></a>
+
+$$
+\dot W+cK(t)W=i\alpha[K(t),D(t)]V(t).\tag{21}
+$$
+
+The difference $U-W$ starts at zero. Variation of constants with the contractive $U(T,t)$, both contractive $D$ factors and unitary $V$ gives (19). In the differentiable case $\|[K(t),K(s)]\|=\|[K(t)-K(s),K(s)]\|\le2ML(t-s)$; the double integral of $t-s$ is $T^3/6$. In the affine case the commutator is $(t-s)[A,K_0]$.
+
+No gap is needed at a degeneracy or crossing. Pairwise commuting histories factor through exponentials of the integrated generators; one endpoint equality alone does not establish commutation. If a differentiable unitary basis $Q$ diagonalizes $K$, $u=Q^*z$ satisfies
+
+<a id="eq-22"></a>
+
+$$
+\dot u=-c\Lambda(t)u-Q^*\dot Q\,u.\tag{22}
+$$
+
+The skew-Hermitian connection can mix modes. A unique smooth eigenvalue-ordered basis need not exist at crossings, and fixed physical coordinates avoid that hypothesis.
+
+<a id="section-3-1"></a>
+
+### 3.1 Two pulses and asymptotic sharpness
+
+Apply $K_1$ then $K_2$ for duration $\tau$ each:
+
+<a id="eq-23"></a>
+
+$$
+U=e^{-c\tau K_2}e^{-c\tau K_1},\quad D=e^{-\gamma\tau K_2}e^{-\gamma\tau K_1},\quad V=e^{-i\alpha\tau K_2}e^{-i\alpha\tau K_1}.\tag{23}
+$$
+
+<a id="eq-24"></a>
+
+$$
+U-DV=i\gamma\alpha\tau^2[K_2,K_1]+O(\tau^3),\tag{24}
+$$
+
+<a id="eq-25"></a>
+
+$$
+U-U_{\rm rev}=c^2\tau^2[K_2,K_1]+O(\tau^3),\quad U_{\rm rev}=e^{-c\tau K_1}e^{-c\tau K_2}.\tag{25}
+$$
+
+The operator-norm remainders hold for fixed matrices and coefficients as $\tau\downarrow0$. In $U$ the ordered mixed term is $c^2K_2K_1$ times $\tau^2$; subtract the mixed terms in $DV$ to obtain (24). Subtracting the reverse order yields (25). Here (19) becomes
+
+<a id="eq-26"></a>
+
+$$
+\|U-DV\|\le\gamma|\alpha|\tau^2\|[K_2,K_1]\|.\tag{26}
+$$
+
+The leading constant is attained asymptotically for nonzero commutator. Reversal preserves the pulse spectra and $\int_0^{2\tau}K(t)\,dt$ but changes the response. The naive integrated exponential differs from $U$ by the ordered correction $U-e^{-c\tau(K_1+K_2)}=(c^2\tau^2/2)[K_2,K_1]+O(\tau^3)$.
+
+<a id="section-3-2"></a>
+
+### 3.2 A moving but commuting control
+
+For the three-node path $b_1=(1,-1,0)^\top,b_2=(0,1,-1)^\top$, write $w_e=e^{m_e}$.
+
+<a id="eq-27"></a>
+
+$$
+[K(t),K(s)]=[w_1(t)w_2(s)-w_2(t)w_1(s)][B_1,B_2].\tag{27}
+$$
+
+Multiplying the rank-one edge matrices gives a real skew commutator with singular values $\sqrt3,\sqrt3,0$. Reflection swaps nodes one and three and swaps memories; equivariance and uniqueness preserve symmetric data $z_1=z_3,m_1=m_2$. In that sector,
+
+<a id="eq-28"></a>
+
+$$
+K(t)=\mu I+w(t)(B_1+B_2).\tag{28}
+$$
+
+This moving history commutes exactly. More generally, a constant ratio $w_1/w_2$ is sufficient; the asymmetric comparison below changes the preparation, not the mobility law.
+
+<a id="section-4"></a>
+
+## 4 Full feedback, memory and changing coordinates
+
+Along a trajectory let $B$ be a $2n\times p$ matrix with columns distinct from edge matrices $B_e=b_eb_e^\top$.
+
+<a id="eq-29"></a>
+
+$$
+B_e^{\rm col}=(\partial_{m_e}K_R)q,\qquad H_m=\kappa I+\operatorname{diag}\big(\tfrac12e^{m_e}|b_e^\top z|^2\big).\tag{29}
+$$
+
+<a id="eq-30"></a>
+
+$$
+H(t)=\begin{pmatrix}K_R&B\\B^\top&H_m\end{pmatrix}.\tag{30}
+$$
+
+Its positive diagonal blocks do not guarantee nonnegative $H$.
+
+<a id="proposition-4-1"></a>
+
+**Proposition 4.1 (Complete tangent and exact memory).** For $(\xi,\nu)=(\delta q,\delta m)$,
+
+<a id="eq-31"></a>
+
+$$
+\dot\xi=-GK_R\xi-GB\nu,\tag{31}
+$$
+
+<a id="eq-32"></a>
+
+$$
+\dot\nu=-\eta B^\top\xi-\eta H_m\nu.\tag{32}
+$$
+
+Let $\partial_tR_m(t,s)=-\eta H_m(t)R_m(t,s)$, $R_m(s,s)=I$. Then
+
+<a id="eq-33"></a>
+
+$$
+\dot\xi(t)=-GK_R(t)\xi(t)-GB(t)R_m(t,0)\nu(0)+\eta\int_0^t GB(t)R_m(t,s)B(s)^\top\xi(s)\,ds.\tag{33}
+$$
+
+**Proof.** Constant mobilities make the derivative of (4) the displayed Hessian-block system. Variation of constants gives
+
+$$
+\nu(t)=R_m(t,0)\nu(0)-\eta\int_0^t R_m(t,s)B(s)^\top\xi(s)\,ds.
+$$
+
+Substitute to obtain the positive kernel and negative initial-memory term. No adiabatic or Markov approximation enters.
+
+Here diagonal $H_m$ gives an exponential of its time integral and $\|R_m(t,s)\|\le e^{-\eta\kappa(t-s)}$. The full product need not be symmetric, a scalar function of the amplitude carrier, or a stationary convolution. A clamp constrains $\nu=0$ throughout and gives the realification of $U$. Free memory with $\nu(0)=0$ still responds through $B^\top\xi$. They coincide under decoupling, such as $B=0$ on the trajectory. A physical clamp is an additional apparatus resource.
+
+<a id="section-4-1"></a>
+
+### 4.1 Exact transient expansion despite partial positivity
+
+Take a scalar complex amplitude, one memory, $\mu=2/5,\kappa=1,m=0,z=3$ real. The $(\Re z,m)$ block and its determinant are
+
+<a id="eq-34"></a>
+
+$$
+\begin{pmatrix}7/5&3\\3&11/2\end{pmatrix},\qquad\det=-13/10.\tag{34}
+$$
+
+The imaginary diagonal is $7/5$, with no memory cross term. For $v=(1,0,-1/2)$, $\gamma=\eta=1$, any $\alpha$,
+
+<a id="eq-35"></a>
+
+$$
+v^\top Hv=-9/40,\qquad\left.\frac{d}{dt}(|\xi|^2+|\nu|^2)\right|_{t=0}=9/20.\tag{35}
+$$
+
+The reactive norm derivative vanishes on this perturbation; the dissipative contribution is $-2v^\top Hv$. Positive partial curvature therefore permits full tangent expansion. Sensitivity between nonstationary trajectories is compatible with energy decrease and global relaxation.
+
+Even joint positivity does not restore complex alignment. At $z=1/10,m=0$,
+
+<a id="eq-36"></a>
+
+$$
+H=\begin{pmatrix}7/5&0&1/10\\0&7/5&0\\1/10&0&201/200\end{pmatrix}>0.\tag{36}
+$$
+
+Its commutator with $\operatorname{diag}(J,0)$ has nonzero entries of magnitude $1/10$. This skew operator is degenerate on real memory and is not a complex structure for the entire state. Exact rational checks accompany both examples.
+
+<a id="section-4-2"></a>
+
+### 4.2 The connection for a changing mobility metric
+
+For $C^1$ positive $M(t)$, continuous Hermitian $H(t)$, consider the separate prescribed-path model
+
+<a id="eq-37"></a>
+
+$$
+\dot x=-cM(t)H(t)x.\tag{37}
+$$
+
+Put $S=M^{1/2}, y=S^{-1}x$. Differentiating $x=Sy$ gives
+
+<a id="eq-38"></a>
+
+$$
+\dot y=-c\underbrace{SHS}_{K_y(t)}y-\underbrace{S^{-1}\dot S}_{A_{\rm conn}(t)}y.\tag{38}
+$$
+
+<a id="eq-39"></a>
+
+$$
+\frac{d}{dt}\|y\|^2=-2\gamma y^*K_y y-y^*(A_{\rm conn}+A_{\rm conn}^*)y.\tag{39}
+$$
+
+Positive $H$ gives positive-semidefinite $K_y$, but neither positivity nor whitening removes the connection. It need not be skew-Hermitian or a function of $K_y$. State-dependent metrics may contribute further tangent derivatives; (38) concerns a prescribed path. With $M=\operatorname{diag}(e^{2rt},e^{-2rt})$, $H=\operatorname{diag}(1,2)$, $r=1,\gamma=0.2,\alpha=0.4,x(0)=(0,1)^\top$,
+
+<a id="eq-40"></a>
+
+$$
+x_2(t)=\exp[-c(1-e^{-2rt})/r],\qquad y_2(t)=e^{rt}x_2(t).\tag{40}
+$$
+
+At $t=0.1$ the respective norms are $0.964395$ and $1.065822$; omitting the connection changes the result by $0.101426$. A moving coordinate norm is not physical active gain. The original network has fixed metric.
+
+<a id="section-4-3"></a>
+
+### 4.3 Why the autonomous closure certificate changes
+
+For fixed selfadjoint $K\ge0$ and retained isometry $I$, the Gram defect is
+
+$$
+I^*e^{-2tK}I-(I^*e^{-tK}I)^2=(Qe^{-tK}I)^*(Qe^{-tK}I),\quad Q=1-II^*.
+$$
+
+For nonautonomous $D$, insert $1=II^*+Q$ in evolution-family composition:
+
+<a id="eq-41"></a>
+
+$$
+A(t,r)-A(t,s)A(s,r)=I^*D(t,s)QD(s,r)I,\qquad A(t,s)=I^*D(t,s)I.\tag{41}
+$$
+
+The product need not be a Gram matrix. With scalar $\gamma=1,K=1$ on $[0,1]$, $K=2$ on $(1,2]$, $D(2,0)-D(1,0)^2=e^{-3}-e^{-2}<0$ despite no hidden sector. For a distinct fixture take
+
+<a id="eq-42"></a>
+
+$$
+K_1=\begin{pmatrix}2&1\\1&2\end{pmatrix},\quad K_2=\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\quad P=\operatorname{diag}(1,0).\tag{42}
+$$
+
+The positive matrices commute and sum to $4I$, so unit-duration pulses give $D(2,0)=e^{-4}I$ and zero endpoint leakage $(I-P)D(2,0)P$, while $[P,K_1]\ne0$. Endpoint invariance fails to imply invariance through the history, even here. Both examples preserve the autonomous certificate within its hypotheses.

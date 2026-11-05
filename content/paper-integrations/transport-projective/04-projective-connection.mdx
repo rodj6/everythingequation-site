@@ -1,0 +1,175 @@
+---
+title: "Projective reduction recovers metric transport"
+description: "Allow every affine component, derive the precise stationary kernel, and construct the observable that removes it."
+order: 4
+---
+
+<a id="section-4"></a>
+## 4. The unrestricted affine connection
+
+<a id="section-4-1"></a>
+### 4.1 Fix the curvature convention before varying
+
+For unrestricted $\Gamma^\alpha{}_{\mu\beta}$, equation [(1)](/source-readout/transport-projective/01-the-gravitational-recovery-problem#eq-1) gives
+
+<a id="eq-17"></a>
+
+$$
+R_{\mu\nu}(A)=
+\partial_\alpha\Gamma^\alpha{}_{\nu\mu}-\partial_\nu\Gamma^\alpha{}_{\alpha\mu}
++\Gamma^\alpha{}_{\alpha\rho}\Gamma^\rho{}_{\nu\mu}
+-\Gamma^\alpha{}_{\nu\rho}\Gamma^\rho{}_{\alpha\mu}.
+\tag{17}
+$$
+
+Order matters. Extending the familiar symmetric-affinity contraction
+$\Gamma^\alpha{}_{\mu\nu}\Gamma^\beta{}_{\alpha\beta}-\Gamma^\alpha{}_{\beta\mu}\Gamma^\beta{}_{\alpha\nu}$
+without its lower-index symmetry gives a different polynomial. For $\Gamma^\alpha{}_{\mu\beta}=\delta^\alpha_\beta\omega_\mu$ that polynomial is $(n-1)\omega_\mu\omega_\nu$, whereas the quadratic term of [(17)](/source-readout/transport-projective/04-projective-connection#eq-17) vanishes.
+
+Define the symmetric operators
+
+<a id="eq-18"></a>
+
+$$
+D_{\mu\nu}(c)=\operatorname{Sym}_{\mu\nu}
+(\partial_\alpha c^\alpha{}_{\nu\mu}-\partial_\nu c^\alpha{}_{\alpha\mu}),
+\tag{18}
+$$
+
+<a id="eq-19"></a>
+
+$$
+Q_{\mu\nu}(c)=\operatorname{Sym}_{\mu\nu}
+(c^\alpha{}_{\alpha\rho}c^\rho{}_{\nu\mu}-c^\alpha{}_{\nu\rho}c^\rho{}_{\alpha\mu}).
+\tag{19}
+$$
+
+Then $R_{(\mu\nu)}(\lambda c)=\lambda D_{\mu\nu}(c)+\lambda^2Q_{\mu\nu}(c)$. With symmetric lower indices these reduce to Deser's contractions.
+
+<a id="section-4-2"></a>
+### 4.2 The full affine Hessian has just the projective kernel
+
+Take $\int B^{\mu\nu}R_{\mu\nu}(A)$ with nondegenerate metric density and matter independent of $A$. Write
+
+<a id="eq-20"></a>
+
+$$
+A=\mathrm{LC}(g)+C,\qquad
+C\in\Gamma(TU\otimes T^*U\otimes T^*U).
+\tag{20}
+$$
+
+Since $\nabla^g B=0$, the linear terms in $\nabla^g C$ integrate to the matched boundary current. The bulk distortion action is
+
+<a id="eq-21"></a>
+
+$$
+q_B(C)=B^{\mu\nu}
+\left(C^\alpha{}_{\alpha\rho}C^\rho{}_{\nu\mu}
+-C^\alpha{}_{\nu\rho}C^\rho{}_{\alpha\mu}\right).
+\tag{21}
+$$
+
+All non-gauge distortions are auxiliary variables. There is no new connection wave.
+
+<a id="theorem-4-1"></a>
+**Theorem 4.1 (General affine stationary connection).** For smooth nondegenerate metric density in dimension $n\gt2$, the stationary points of [(21)](/source-readout/transport-projective/04-projective-connection#eq-21) are exactly
+
+<a id="eq-22"></a>
+
+$$
+C^\alpha{}_{\mu\beta}=\delta^\alpha_\beta\omega_\mu.
+\tag{22}
+$$
+
+The Hessian has rank $n^3-n$ independently of signature. With metric matter the connection equation gives $A=\mathrm{LC}(g)+I\omega$.
+
+**Proof.** At a point divide by $v$ and vary the independent component $C^\ell{}_{pq}$. The equation is
+
+<a id="eq-23"></a>
+
+$$
+\delta^p_\ell g^{mn}C^q{}_{nm}+g^{pq}C^a{}_{a\ell}
+-g^{mp}C^q{}_{\ell m}-g^{qn}C^p{}_{n\ell}=0.
+\tag{23}
+$$
+
+Lower the first index of $C$, and put $U_a=g^{bc}C_{abc}$ and $V_b=g^{ac}C_{cab}$. Lowering $p,q$ gives
+
+<a id="eq-24"></a>
+
+$$
+C_{abc}+C_{cab}=g_{bc}U_a+g_{ca}V_b.
+\tag{24}
+$$
+
+Combine the three cyclic equations to obtain
+
+<a id="eq-25"></a>
+
+$$
+2C_{abc}=g_{bc}(U_a-V_a)+g_{ca}(U_b+V_b)+g_{ab}(V_c-U_c).
+\tag{25}
+$$
+
+Its $b,c$ trace gives $(n-2)(U_a-V_a)=0$. Thus $U=V$ and $C_{abc}=g_{ac}V_b$, which is [(22)](/source-readout/transport-projective/04-projective-connection#eq-22). Conversely direct substitution satisfies each equation. The kernel of the quadratic form has exactly the $n$ projective directions, which proves the rank. No definiteness enters the argument.
+
+The [classical projective equivalence](https://doi.org/10.1007/s10714-012-1393-9) leaves raw torsion $\delta^\alpha_\nu\omega_\mu-\delta^\alpha_\mu\omega_\nu$ and permits a non-metric-compatible raw connection. It does not say the unrestricted stationary connection is uniquely Levi–Civita.
+
+<a id="section-4-3"></a>
+### 4.3 Restore volume in the transport readout
+
+Under a projective shift,
+
+<a id="eq-26"></a>
+
+$$
+A_\mu\mapsto A_\mu+\omega_\mu I,\qquad
+F_{\mu\nu}\mapsto F_{\mu\nu}+(\partial_\mu\omega_\nu-\partial_\nu\omega_\mu)I .
+\tag{26}
+$$
+
+Ricci changes by an antisymmetric tensor, so the symmetric-density action is invariant. The transport changes by
+
+<a id="eq-27"></a>
+
+$$
+T_\gamma\mapsto e^{-\int_\gamma\omega}T_\gamma .
+\tag{27}
+$$
+
+Bare open-vector transport therefore does not descend. A concrete observable is needed. Set $v_B=|\det B|^{1/(n-2)}$ and, in the prepared endpoint frames, define
+
+<a id="eq-28"></a>
+
+$$
+T_\gamma^B=
+\left[\frac{v_B(x)}{v_B(y)\det T_\gamma}\right]^{1/n}T_\gamma ,
+\qquad \gamma:x\to y .
+\tag{28}
+$$
+
+Transports generated continuously from identity have positive determinant, so the positive root is unambiguous. In four physical dimensions $v_B=\sqrt{-\det B}$.
+
+<a id="theorem-4-2"></a>
+**Theorem 4.2 (Volume-restored transport).** On connected coordinate patches the map $(B,T)\mapsto(B,T^B)$ is projectively invariant, multiplicative and natural under diffeomorphic coordinate changes, including orientation reversal. Its infinitesimal connection is
+
+<a id="eq-29"></a>
+
+$$
+A^B_\mu=A_\mu-\frac{\operatorname{tr}A_\mu}{n}I
++\frac{\partial_\mu\log v_B}{n}I .
+\tag{29}
+$$
+
+The readout identifies the projective quotient with the regular families satisfying $\det T_\gamma^B=v_B(x)/v_B(y)$. On the connection equations $A^B=\mathrm{LC}(g_B)$, and $T^B$ is exactly metric parallel transport.
+
+**Proof.** The scalar in [(27)](/source-readout/transport-projective/04-projective-connection#eq-27) cancels its $n$th power in the determinant in [(28)](/source-readout/transport-projective/04-projective-connection#eq-28). Intermediate volumes and determinants cancel for successive paths. Under a pullback with endpoint Jacobians $J_x,J_y$, $T'=J_y^{-1}TJ_x$ and $v'(x)=|\det J_x|v(\Phi x)$. The sign of $\det J$ is constant along the path, giving $\det J_x/\det J_y=|\det J_x|/|\det J_y|$. The multiplier is invariant and $T^B$ transforms as a tangent map.
+
+Differentiate [(28)](/source-readout/transport-projective/04-projective-connection#eq-28) on a short path, using $d\log\det T/ds=-\operatorname{tr}(A_\mu)\dot\gamma^\mu$. This gives [(29)](/source-readout/transport-projective/04-projective-connection#eq-29), with trace $\partial_\mu\log v_B$. Each projective class has this unique representative, obtained by subtracting $(\operatorname{tr}A-d\log v_B)/n$. The inverse transport theorem gives the quotient and volume-family inverse identities. On the connection equation $A=\mathrm{LC}(g_B)+I\omega$ and $\operatorname{tr}\mathrm{LC}(g_B)=d\log v_B$, so [(29)](/source-readout/transport-projective/04-projective-connection#eq-29) removes exactly $\omega$.
+
+Equation [(29)](/source-readout/transport-projective/04-projective-connection#eq-29) fixes trace, not off-shell torsion. The unrestricted quotient has 60 connection coordinates in four dimensions; the torsion-free parent has 40. The extra twenty coordinates disappear through the algebraic equations. The two parents agree at the on-shell metric endpoint but have different off-shell field spaces.
+
+The readouts are $B,T^B$ and metric matter. Retaining bare transport or a projectively sensitive boundary norm prevents this quotient. A trace-fixed boundary collar is an alternative with transformations restricted to those preserving it. These are observable and boundary contracts, not consequences of admission.
+
+The normalization uses endpoint densities and the determinant of the supplied transport. It does not insert a Levi–Civita formula into the source kinematics. Variation may occur before quotienting. If the volume section moves during variation, its trace contributes a projective tangent, whose contraction with the connection Euler derivative vanishes by the trace identity below.

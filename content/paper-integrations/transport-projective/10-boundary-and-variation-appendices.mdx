@@ -1,0 +1,85 @@
+---
+title: "Appendices A and B: boundaries and variations"
+description: "The exact boundary current, density inversion and fixed-transport obstruction."
+order: 10
+---
+
+<a id="appendix-a"></a>
+## A. Boundary integrations and density inversion
+
+With the convention [(17)](/source-readout/transport-projective/04-projective-connection#eq-17) the affine derivative variation is
+
+<a id="eq-65"></a>
+
+$$
+\delta R_{\mu\nu}=\partial_\alpha\delta A^\alpha{}_{\nu\mu}
+-\partial_\nu\delta A^\alpha{}_{\alpha\mu}
++\delta\left(A^\alpha{}_{\alpha\rho}A^\rho{}_{\nu\mu}
+-A^\alpha{}_{\nu\rho}A^\rho{}_{\alpha\mu}\right).
+\tag{65}
+$$
+
+Integration against the symmetric density yields
+
+<a id="eq-66"></a>
+
+$$
+\Theta^\rho=B^{\mu\nu}\delta A^\rho{}_{\nu\mu}
+-B^{\mu\rho}\delta A^\alpha{}_{\alpha\mu}.
+\tag{66}
+$$
+
+The bulk derivative coefficient is $J(B)$ in [(33)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-33). The constant-density divergence in the source action is
+
+<a id="eq-67"></a>
+
+$$
+\lambda^{-1}\eta^{\mu\nu}D_{\mu\nu}(c)=
+\partial_\rho\!\left[\lambda^{-1}
+\left(\eta^{\mu\nu}c^\rho{}_{\nu\mu}
+-\eta^{\mu\rho}c^\alpha{}_{\alpha\mu}\right)\right].
+\tag{67}
+$$
+
+Without lower-index symmetry, $c^\alpha{}_{\alpha\mu}$ cannot be exchanged for a different trace. Equations [(66)](/source-readout/transport-projective/10-boundary-and-variation-appendices#eq-66) and [(67)](/source-readout/transport-projective/10-boundary-and-variation-appendices#eq-67) give the matched boundary integrations in stress and recovery. A different boundary functional changes the variational problem and must be stated explicitly.
+
+In dimension $n\gt2$, $B=vg^{-1}$ implies $|\det B|=v^{n-2}$, giving
+
+<a id="eq-68"></a>
+
+$$
+v=|\det B|^{1/(n-2)},\qquad g^{-1}=B/v .
+\tag{68}
+$$
+
+The determinant identity uses $|\det g|=v^2$. Its derivative gives $\delta v=(n-2)^{-1}g_{\mu\nu}\delta B^{\mu\nu}$ and reduces to [(48)](/source-readout/transport-projective/06-einstein-matter#eq-48) for $n=4$. In dimension two the determinant does not recover the conformal scale. The connected nondegenerate component fixes signature, not the absolute determinant.
+
+<a id="appendix-b"></a>
+## B. Variation domains and the fixed-transport obstruction
+
+Work locally on a smooth patch, with finite regularity high enough for all displayed derivatives or in the smooth category. The differentiability-at-constants theorem uses the $C^1$ Banach topology. The reconstruction bound uses controlled $C^2$ paths and bounded second derivatives. Joint differentiability in base point and path perturbation is part of the realization. Ordinary finite jets cannot replace the domain hypotheses.
+
+$A$ and regular transport are inverse by uniqueness for the Volterra equation. Their differentials are inverse by [(11)](/source-readout/transport-projective/03-regular-transport#eq-11) and its short-path derivative. The density map is a smooth local diffeomorphism on the nondegenerate branch by determinant inversion. Together these cover compactly supported affine, density and matter variations. The projective quotient removes exactly the directions $P\omega$ and $P^TE_c=0$ identically. A moving volume section contributes no additional connection Euler term. Other distortions are eliminated only on shell.
+
+The fixed-transport error can be derived before using any field equation. In the auxiliary metric-density variation,
+
+<a id="eq-69"></a>
+
+$$
+\delta C=-GJ(\delta\psi)+P\zeta,\qquad
+\left.\delta c_\psi\right|_T=-\lambda^{-1}\delta C .
+\tag{69}
+$$
+
+Contract the latter with $E_c^{(2)}$ and integrate the adjoint:
+
+<a id="eq-70"></a>
+
+$$
+\left.\delta S_2\right|_{T,B=\psi+\lambda h}
+=\int\delta\psi^{\mu\nu}\left[\tau_{\mu\nu}+
+\lambda^{-1}D_{\mu\nu}(GE_c^{(2)})\right].
+\tag{70}
+$$
+
+The projective term vanishes since $P^TE_c^{(2)}=0$. If $B$ is frozen too, relative $h$ varies by $-\delta\psi/\lambda$ and gives the additional term $-E_h^{(2)}/\lambda$. Neither fixed-source operation gives the horizontal stress off shell, even though the defects can vanish on special solutions.

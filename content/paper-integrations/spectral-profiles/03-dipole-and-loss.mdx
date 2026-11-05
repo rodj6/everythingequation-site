@@ -1,0 +1,102 @@
+---
+title: "From a dipole bath to the measured loss"
+description: "The equilibrium metric, the frequency-only obstruction and an operational realization of the logarithmic readout."
+order: 3
+---
+
+<a id="section-4"></a>
+
+## 4. A physical dipole carrier and an operational loss readout
+
+<a id="section-4-1"></a>
+
+### 4.1 Angular factors and the equilibrium metric
+
+An electric dipole acts on $|n,\ell,m\rangle$. Consider spinless nonrelativistic hydrogen on the finite manifold $n\le30$, with isotropic preparation within each magnetic multiplet and a weak stationary isotropic field. The interaction is $e\sum_a E_a(t)r_a$. In a weak-noise Markov and secular population approximation, the rate is proportional to the field spectral density at the Bohr frequency times the squared dipole matrix element. This approximation requires a specified bath and limiting regime; see [Davies](/source-readout/spectral-profiles/09-references#ref-6).
+
+The angular identity in standard [Wigner 3j normalization](/source-readout/spectral-profiles/09-references#ref-7) is
+
+$$
+\langle\ell'm'|C_{1q}|\ell m\rangle=
+(-1)^{m'}\sqrt{(2\ell+1)(2\ell'+1)}
+\begin{pmatrix}\ell&1&\ell'\\0&0&0\end{pmatrix}
+\begin{pmatrix}\ell&1&\ell'\\m&q&-m'\end{pmatrix}.
+$$
+
+Summing final magnetic states and polarization gives $A_{\ell,\ell+1}=(\ell+1)/(2\ell+1)$ and $A_{\ell,\ell-1}=\ell/(2\ell+1)$. The lumped rates are
+
+<a id="equation-23"></a>
+
+$$
+q_{n\ell\to n'\ell'}=\kappa J(\omega_{n'n})W_{n\ell,n'\ell'}A_{\ell,\ell'}.\tag{23}
+$$
+
+Here $\kappa J$ accounts for field strength and conversion of squared radial length to inverse seconds. Equal populations within multiplets, valid population reduction and finite-manifold filtering are constitutive assumptions. The flat model keeps same-shell zero-frequency noise. A vacuum spontaneous-emission bath would be different.
+
+For flat symmetric effective spectrum $J=1$, set $g_i=2\ell_i+1$ and $c_{ij}=\max(\ell_i,\ell_j)W_{ij}$. Then $q_{ij}=\kappa c_{ij}/g_i$ and $g_iq_{ij}=g_jq_{ji}$. There are $\sum_{n=1}^{30}n^2=9455$ spinless magnetic states. The row generator has stationary law proportional to $g$, and its selfadjoint relaxation carrier is
+
+<a id="equation-24"></a>
+
+$$
+K_{\rm phys}=\kappa D_g^{-1/2}L_cD_g^{-1/2},\qquad
+K_{\rm phys}\sqrt g=0.\tag{24}
+$$
+
+A thermal bath retains frequency asymmetry and the Boltzmann factor, with stationary weights proportional to $(2\ell+1)e^{-\beta E_n}$. The equilibrium metric is part of the representation, and neither change removes within-shell degeneracy.
+
+<a id="proposition-4-1"></a>
+
+**Proposition 4.1 (Frequency-only bath obstruction).** With the population lumping in [(23)](/source-readout/spectral-profiles/03-dipole-and-loss#equation-23), no positive frequency-only isotropic bath spectrum makes the rates a common positive multiple of the unweighted radial graph over the whole retained manifold.
+
+**Proof.** The allowed transitions $2s\to3p$ and $2p\to3d$ have the same Bohr frequency and nonzero radial weights. After division by those weights their rates are $\kappa J$ and $2\kappa J/3$. A common positive rate $c$ would require both $\kappa J=c$ and $\kappa J=3c/2$. The radial formula verifies the positive weights, approximately 9.39309 and 22.54342. Temperature or frequency dependence cannot separate two transitions at the same frequency.
+
+Define $d_{\uparrow,i}=\sum_{j:\ell_j=\ell_i+1} W_{ij}$ and $d_{\downarrow,i}=\sum_{j:\ell_j=\ell_i-1}W_{ij}$. These are the radial strengths of the two channels. The corrected carrier at $\kappa=1$ obeys
+
+$$
+K_{\rm phys}=\tfrac12 L+E,\qquad E_{ii}=\frac{d_{\uparrow,i}-d_{\downarrow,i}}{2(2\ell_i+1)}.
+$$
+
+For angular labels $\ell,\ell+1$, its negative off-diagonal coefficient relative to $W_{ij}$ is
+
+$$
+\frac{\ell+1}{\sqrt{(2\ell+1)(2\ell+3)}}
+=\frac12\left(1-\frac1{4(\ell+1)^2}\right)^{-1/2}.
+$$
+
+The high-angular correction is $O(\ell^{-2})$. Low angular states and different stationary vectors prevent a globally small relative perturbation. The untransported inequalities $cL\le K_{\rm phys}\le CL$ would force equal kernels, which these operators do not have. A positive-sector comparison needs transport of the stationary direction or the equilibrium quotient metric. The native-style corrected-carrier profile differs from H30 by RMS about $2.90337\times10^{-4}$. That compares distinct mathematical operators.
+
+Population relaxation supplies no nontrivial atomic coherent face. The Hamiltonian commutator vanishes on energy-diagonal populations, and the ordinary atomic Hamiltonian does not commute with edges joining different $n$. An aligned complex-amplitude realization could supply a reactive symbol, as the spatial example shows. That would add a physical law beyond the Pauli equation.
+
+<a id="section-4-2"></a>
+
+### 4.2 Loss mixtures realize the logarithmic readout
+
+<a id="proposition-4-2"></a>
+
+**Proposition 4.2 (Operational logarithm).** A finite positive carrier $K$ and calibrated $a>0$ give
+
+<a id="equation-25"></a>
+
+$$
+\log(I+K/a)=\int_0^\infty\frac{e^{-s}}{s}(I-e^{-sK/a})\,ds.\tag{25}
+$$
+
+For $0<s_0<s_1$, sample $s$ with density $e^{-s}/(sZ)$, where $Z=\int_{s_0}^{s_1}e^{-s}\,ds/s$. Multiply the mean modal loss by $Z$. For $x=\lambda/a\ge0$, the omitted contribution is nonnegative and bounded by
+
+<a id="equation-26"></a>
+
+$$
+xs_0+e^{-s_1}/s_1.\tag{26}
+$$
+
+**Proof.** Differentiate the scalar integral in $x$. Dominated integration on compact $x$ intervals gives $\int_0^\infty e^{-(1+x)s}\,ds=1/(1+x)$. Its value at zero is zero, proving $\log(1+x)$. Apply finite spectral calculus for [(25)](/source-readout/spectral-profiles/03-dipole-and-loss#equation-25). On the omitted lower interval use $1-e^{-sx}\le sx$. On the upper interval use $1-e^{-sx}\le1$ and $1/s\le1/s_1$. Integration gives [(26)](/source-readout/spectral-profiles/03-dipole-and-loss#equation-26).
+
+Form the loss difference before integration: $e^{-s}/s$ on the entire positive line is not a probability density. The choice $(s_0,s_1)=(10^{-12},30)$ yields $Z\simeq27.053805451$ and age range ratio $3\times10^{13}$. Physical time is $t=s/a$, with longest age $30/a$ seconds for $a$ in inverse seconds. Numerical quadrature preserves all original counts for the 464 positive modes of each nominated carrier. That deterministic check is distinct from finite-shot counting.
+
+If a prepared mode yields independent bounded losses $Y\in[0,1]$ at sampled ages, [Hoeffding's inequality](/source-readout/spectral-profiles/09-references#ref-8) bounds the empirical mean $\bar Y$ over $M$ trials:
+
+$$
+\Pr\{|Z\bar Y-\mathbb E(ZY)|\ge\epsilon\}\le2e^{-2M\epsilon^2/Z^2}.
+$$
+
+For $m$ separately accessible modes, $M\ge Z^2\log(2m/\delta)/(2\epsilon^2)$ trials per mode suffice simultaneously with failure probability at most $\delta$. Charge truncation, gap calibration, preparation and detector bias to the readout intervals before counting sharp memberships. Uniform modal access, independent trials, recorded losses and a calibrated clock are physical resources. The construction gives a possible operational readout, without establishing that the historical graph was prepared this way.

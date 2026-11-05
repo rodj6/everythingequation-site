@@ -1,0 +1,259 @@
+---
+title: "The coherent face and its budget"
+description: "Reversible flow, resonant compression and the stability of declared coherence symbols."
+order: 5
+---
+
+Coherence keeps the modes of the carrier and changes how they evolve. The choice of symbol controls the phase rates, the resonances and the stability of the resulting budget.
+
+<a id="sec-coh"></a>
+
+## 6. The Coherent / Reversible Face
+
+The coherent face uses a bounded real symbol $h$ of $K$.
+
+<a id="section-6.1"></a>
+
+### 6.1 Admissible coherence symbols
+
+<a id="def-hadm"></a>
+
+**Definition 6.1.** *Admissible coherence symbol*.
+
+An admissible coherence symbol is a Borel $h:[0,\infty)\to\mathbb R$ with: $h$ real-valued; $h$ bounded; $h(0)=0$; $h$ nondecreasing; if $K\ne0$, the coherent response is required to be nontrivial, $h(K)\ne0$. The zero carrier is admitted as a degenerate case.
+
+<a id="ex-default"></a>
+
+**Example 6.2.** *Default symbol*.
+
+For $\lambda_0>0$, $h_{\lambda_0}(\lambda) = \tfrac{2}{\pi}\arctan(\lambda/\lambda_0)$ is real, bounded by $1$, satisfies $h(0)=0$, and is strictly increasing.
+
+<a id="section-6.2"></a>
+
+### 6.2 The coherence generator and unitary flow
+
+<a id="def-c"></a>
+
+**Definition 6.3.** *Coherence generator*.
+
+$C := h(K)$. Bounded selfadjoint with $\|C\|\le\|h\|_\infty$ and $C \in W^*(K)$.
+
+<a id="def-ut"></a>
+
+**Definition 6.4.** *Reversible flow*.
+
+$U_t := e^{-itC} = e^{-it\,h(K)}$, $t \in \mathbb R$. A strongly continuous one-parameter unitary group.
+
+<a id="proposition-6.5"></a>
+
+**Proposition 6.5.** *Mode preservation*.
+
+If $K e_j = \lambda_j e_j$, then $C e_j = h(\lambda_j) e_j$ and $U_t e_j = e^{-it h(\lambda_j)} e_j$. Every spectral subspace of $K$ is $U_t$-invariant.
+
+<a id="section-6.3"></a>
+
+### 6.3 The reversible Fejér compression
+
+<a id="def-gamma"></a>
+
+**Definition 6.6.** *Coherence Fejér operator*.
+
+$\Gamma_T(C) := (1 - e^{-iTC})/(iTC) = \tfrac{1}{T}\int_0^T e^{-itC}\,dt$, identity on $\ker C$.
+
+<a id="def-ct"></a>
+
+**Definition 6.7.** *Coherent compression*.
+
+$\mathbf C_T := \Gamma_T^*\Gamma_T = \tfrac{2(1-\cos(TC))}{T^2 C^2}$, with eigenvalues $\mathop{\mathrm{sinc}}^2(T\mu/2)$ on $(\ker C)^\perp$. Here $\mathop{\mathrm{sinc}}x := \sin x / x$, with $\mathop{\mathrm{sinc}}0 := 1$.
+
+<a id="section-6.4"></a>
+
+### 6.4 The coherence budget
+
+<a id="def-bbudget"></a>
+
+**Definition 6.8.** *Coherence compression budget: full convention*.
+
+Let
+
+$$
+q_T(\mu) \;:=\; \mathop{\mathrm{sinc}}^2(T\mu/2),\qquad \mathop{\mathrm{sinc}}x := \tfrac{\sin x}{x},\quad \mathop{\mathrm{sinc}}0 := 1.
+$$
+
+ For $C = h(K)$, define the *resonant zero-mode subspace*
+
+$$
+\mathcal R_T(C) \;:=\; E_C\!\left(\left\{\mu\in\mathop{\mathrm{\sigma}}(C)\setminus\{0\}:\tfrac{T\mu}{2}\in\pi\mathbb Z\setminus\{0\}\right\}\right)\mathsf H.
+$$
+
+ Equivalently, $\mathcal R_T(C)$ is the part of $(\ker C)^\perp$ annihilated by $\mathbf C_T = \Gamma_T(C)^*\Gamma_T(C)$.
+
+Under (D3), the *full coherence budget* convention used in this paper is
+
+$$
+\mathfrak B_T(C) \;:=\;
+\begin{cases}
+-\log\det\nolimits_*\!\big(\mathbf C_T\big|_{(\ker C)^\perp}\big), & \mathcal R_T(C) = \{0\},\\[0.3em]
++\infty, & \mathcal R_T(C)\ne\{0\}.
+\end{cases}
+$$
+
+ Thus any nonzero coherence mode annihilated by $\mathbf C_T$ produces infinite full compression loss. If $(\ker C)^\perp = \{0\}$, we set $\mathfrak B_T(C) = 0$.
+
+In finite rank, with nonzero coherence eigenvalues $\mu_j$, this reads
+
+$$
+\mathfrak B_T(C) \;=\;
+\begin{cases}
+-\displaystyle\sum_j \log\mathop{\mathrm{sinc}}^2(T\mu_j/2), & \mathop{\mathrm{sinc}}(T\mu_j/2)\ne 0\text{ for every }j,\\[0.6em]
++\infty, & \mathop{\mathrm{sinc}}(T\mu_j/2) = 0\text{ for at least one }j.
+\end{cases}
+$$
+
+ When no confusion is possible we write $\mathfrak B_T(K)$ for $\mathfrak B_T(h(K))$.
+
+<a id="rem-resonant"></a>
+
+**Remark 6.9.** *Full versus reduced resonant convention*.
+
+The coherent Fejér compression differs from the dissipative Fejér transmission in one essential respect. The dissipative eigenvalues
+
+$$
+f_T(\lambda) \;=\; \frac{1-e^{-T\lambda}}{T\lambda}
+$$
+
+ are strictly positive for $\lambda>0$, whereas the coherent compression eigenvalues
+
+$$
+q_T(\mu) \;=\; \mathop{\mathrm{sinc}}^2(T\mu/2)
+$$
+
+ vanish at the resonant values $T\mu/2 \in \pi\mathbb Z\setminus\{0\}$. There are therefore two distinct conventions.
+
+1.  **Full determinant convention.** The convention used in the paper unless explicitly stated otherwise. The kernel of $C$ is ignored because $\Gamma_T(C)$ is the identity there and contributes no loss. Any resonant zero mode inside $(\ker C)^\perp$ is *not* ignored: it makes the full budget equal to $+\infty$.
+
+2.  **Reduced resonant pseudodeterminant convention.** One may instead remove both $\ker C$ and the resonant zero modes:
+
+    $$
+    \mathsf H_{T,\mathrm{red}} \;:=\; \big(\ker C \oplus \mathcal R_T(C)\big)^\perp,
+    $$
+
+     and define
+
+    $$
+    \mathfrak B_{T,\mathrm{red}}(C) \;:=\; -\log\det\nolimits_*\!\big(\mathbf C_T\big|_{\mathsf H_{T,\mathrm{red}}}\big),
+    $$
+
+     when the determinant on the reduced subspace is defined. In finite rank this is the product over the remaining strictly positive compression eigenvalues only:
+
+    $$
+    \mathfrak B_{T,\mathrm{red}}(C) \;=\; -\sum_{\substack{\mu_j\ne 0\\ \mathop{\mathrm{sinc}}(T\mu_j/2)\ne 0}} \log\mathop{\mathrm{sinc}}^2(T\mu_j/2).
+    $$
+
+On nonresonant scale windows, $\mathcal R_T(C) = \{0\}$, so the full and reduced conventions agree up to the harmless omission of $\ker C$, where the compression is the identity. At resonant scales they do not agree: the reduced budget is a pseudodeterminant after deleting total-loss modes, and is therefore not the full compression-loss budget.
+
+<a id="prop-bprops"></a>
+
+**Proposition 6.10.** *Properties of $\mathfrak B_T$*.
+
+For $T>0$ the full budget satisfies $\mathfrak B_T(K)\ge0$, with equality if and only if $C=0$ on the retained space. The compression $\mathbf C_T$ is a Borel function of $K$, and $\mathfrak B_T(UKU^*)=\mathfrak B_T(K)$ whenever the determinant convention is transported by $U$. Hence the budget is basis-independent.
+
+*Proof.* For real $\mu$, $0\le q_T(\mu)\le1$, with $q_T(\mu)=1$ exactly when $\mu=0$, since $|\sin x|<|x|$ for $x\ne0$. Each nonzero retained mode therefore contributes a strictly positive loss, or infinite loss at resonance. In the Fredholm case, the positive compact operator $I-\mathbf C_T$ has a spectral product with the same conclusion: zero loss forces every factor to be one. Functional calculus and unitary invariance of the determinant prove the remaining assertions. ◻
+
+<a id="sec-symbol-stability"></a>
+
+### 6.5 Symbol-class stability
+
+<a id="prop-symbol-stability"></a>
+
+**Proposition 6.11.** *Borel-symbol stability*.
+
+Let $K\ge 0$ be selfadjoint, and let $h_1, h_2 : [0,\infty)\to\mathbb R$ be bounded Borel symbols. Then
+
+$$
+\|h_1(K) - h_2(K)\| \;\le\; \sup_{\lambda\in\mathop{\mathrm{\sigma}}(K)}|h_1(\lambda)-h_2(\lambda)|.
+$$
+
+ For a spectral window $[0,R]$,
+
+$$
+\big\|(h_1(K) - h_2(K))\,E_K([0,R])\big\| \;\le\; \|h_1 - h_2\|_{\infty,[0,R]},
+$$
+
+ where the right-hand side denotes the supremum over $[0,R]\cap\mathop{\mathrm{\sigma}}(K)$, or over $[0,R]$ if the symbols are declared on the whole interval.
+
+*Proof.* Let $\varphi = h_1 - h_2$. By the bounded Borel functional calculus, $h_1(K) - h_2(K) = \varphi(K)$ and $\|\varphi(K)\| \le \|\varphi\|_{L^\infty(\mathop{\mathrm{\sigma}}(K))}$. Moreover, $(h_1(K) - h_2(K))\,E_K([0,R]) = (\varphi\,\mathbf 1_{[0,R]})(K)$, so the same functional-calculus norm bound gives the windowed estimate. ◻
+
+<a id="lem-finite-rank-budget-stability"></a>
+
+**Lemma 6.12.** *Finite-rank nonresonant determinant-budget stability*.
+
+Let $P_R := E_K([0,R])$ have finite rank $r < \infty$. Fix $T>0$ and define $q_T(u) := \mathop{\mathrm{sinc}}^2(Tu/2)$. For a real bounded Borel symbol $h$, define the finite-window coherence budget
+
+$$
+\mathcal B_{T,R}(h) \;:=\; -\sum_{\lambda\in\mathop{\mathrm{\sigma}}(K|_{P_R\mathsf H})}^{m(\lambda)}\log q_T(h(\lambda)),
+$$
+
+ whenever all terms are positive. Here eigenvalues are counted with multiplicity, and modes with $h(\lambda) = 0$ contribute $-\log q_T(0) = 0$.
+
+Let $h_1, h_2$ be real bounded Borel symbols. Set
+
+$$
+M \;:=\; \max\{\|h_1\|_{\infty,[0,R]}, \|h_2\|_{\infty,[0,R]}\},\qquad L_{T,M} \;:=\; \sup_{|u|\le M}|q_T'(u)|.
+$$
+
+ Assume there is $\delta > 0$ such that $q_T(h_\ell(\lambda)) \in [\delta,1]$ for every $\lambda\in\mathop{\mathrm{\sigma}}(K|_{P_R\mathsf H})$ and for $\ell = 1,2$. Then both finite-window budgets are full-convention nonresonant budgets on $P_R\mathsf H$, and
+
+$$
+\big|\mathcal B_{T,R}(h_1) - \mathcal B_{T,R}(h_2)\big| \;\le\; \frac{r\,L_{T,M}}{\delta}\,\|h_1 - h_2\|_{\infty,[0,R]}.
+$$
+
+*Proof.* For each eigenvalue $\lambda$ in the finite window, put $a_\ell(\lambda) := q_T(h_\ell(\lambda))$ for $\ell = 1,2$. By hypothesis $a_\ell(\lambda)\in[\delta,1]$. Since $x\mapsto \log x$ has derivative bounded by $\delta^{-1}$ on $[\delta,1]$,
+
+$$
+|\log a_1(\lambda) - \log a_2(\lambda)| \;\le\; \delta^{-1}|a_1(\lambda) - a_2(\lambda)|.
+$$
+
+ The function $q_T$ is smooth, hence Lipschitz on $[-M,M]$ with Lipschitz constant $L_{T,M}$. Therefore
+
+$$
+|a_1(\lambda) - a_2(\lambda)| \;\le\; L_{T,M}|h_1(\lambda) - h_2(\lambda)| \;\le\; L_{T,M}\|h_1 - h_2\|_{\infty,[0,R]}.
+$$
+
+ Summing over the $r$ eigenvalues in the finite window gives the stated estimate. ◻
+
+<a id="cor-small-symbol-perturbation"></a>
+
+**Corollary 6.13.** *Small perturbations stay nonresonant*.
+
+In the setting of Lemma [6.12](/source-readout/cscf/05-coherent-face#lem-finite-rank-budget-stability), suppose $h$ satisfies $q_T(h(\lambda)) \ge \delta$ for every $\lambda\in\mathop{\mathrm{\sigma}}(K|_{P_R\mathsf H})$, and let $k$ be another real bounded Borel symbol with $\varepsilon := \|h - k\|_{\infty,[0,R]} \le 1$. Put $M_h := \|h\|_{\infty,[0,R]}$ and $L_{T,M_h+1} := \sup_{|u|\le M_h+1}|q_T'(u)|$. If $L_{T,M_h+1}\,\varepsilon \le \delta/2$, then
+
+$$
+q_T(k(\lambda)) \;\ge\; \tfrac{\delta}{2} \qquad \text{on }\mathop{\mathrm{\sigma}}(K|_{P_R\mathsf H}),
+$$
+
+ and
+
+$$
+\big|\mathcal B_{T,R}(k) - \mathcal B_{T,R}(h)\big| \;\le\; \frac{2r\,L_{T,M_h+1}}{\delta}\,\varepsilon.
+$$
+
+<a id="remark-6.14"></a>
+
+**Remark 6.14.** *Scope of the stability statement*.
+
+Proposition [6.11](/source-readout/cscf/05-coherent-face#prop-symbol-stability) is a general bounded-functional-calculus estimate. Lemma [6.12](/source-readout/cscf/05-coherent-face#lem-finite-rank-budget-stability) and Corollary [6.13](/source-readout/cscf/05-coherent-face#cor-small-symbol-perturbation) are deliberately finite-rank, nonresonant determinant statements. They do not assert an infinite-dimensional determinant-continuity theorem without additional Fredholm, heat-kernel, zeta, or finite-volume hypotheses.
+
+<a id="section-6.6"></a>
+
+### 6.6 Properties shared by the two faces
+
+<a id="lem-commute"></a>
+
+**Lemma 6.15.**
+
+$C\mathop{\mathrm{dom}}(K)\subseteq\mathop{\mathrm{dom}}(K)$ and $KC=CK$ on $\mathop{\mathrm{dom}}(K)$; likewise $KU_t=U_tK$ on $\mathop{\mathrm{dom}}(K)$, $[\Lambda_T(K), U_s]=0$ for all $s,t,T$. Both $\{e^{-tK}\}_{t\ge 0}$ and $\{U_s\}_{s\in\mathbb R}$ lie in $W^*(K)$ and commute with each other.
+
+*Proof.* All bounded members are Borel functions of $K$; their commutation with $K$ includes preservation of its operator domain. The algebra $W^*(K)$ is abelian. ◻
+
+The carrier is canonical given its closed form and Hilbert metric. The coherent face is uniquely determined once the specific symbol $h$ is fixed; the admissible symbol class permits multiple choices.

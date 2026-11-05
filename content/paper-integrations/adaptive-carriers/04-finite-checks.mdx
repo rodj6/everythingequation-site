@@ -1,0 +1,176 @@
+---
+title: "The finite adaptive tests and what they establish"
+description: "Deterministic trajectories, pulses, symmetry controls and calibrated reconstruction test distinct consequences of the carrier law."
+order: 4
+---
+
+<a id="section-6"></a>
+
+## 6 Executed finite calculations
+
+These are synthetic calculations on the declared model, with deterministic preparations, parameters and acceptance criteria in the public package. No seed is needed. Pulse, feedback, response and symmetry criteria preceded their outcomes, while the response probes used a previously inspected path. This is not untouched empirical validation.
+
+<a id="section-6-1"></a>
+
+### 6.1 Feedback trajectory and independent formulation
+
+Use the three-node path (27) with
+
+<a id="eq-52"></a>
+
+$$
+\mu=0.4,\quad\kappa=1,\quad\gamma=0.6,\quad\alpha=1.2,\quad\eta=0.8,\quad T=2,\tag{52}
+$$
+
+<a id="eq-53"></a>
+
+$$
+z_0=(1+0.2i,-0.4+0.7i,0.2-0.3i)^\top,\quad m_0=(0.15,-0.1)^\top.\tag{53}
+$$
+
+DOP853 integrates source and accumulated dissipation with relative tolerance $10^{-11}$, absolute tolerance $10^{-13}$, and 401 equally spaced samples. A separate edgewise real-gradient RK4 implementation uses 4,000 fixed steps; it compares eight state coordinates and accumulated loss without calling the complex source right-hand side. This is independent numerical formulation, not physical evidence.
+
+Integrate the full $8\times8$ tangent and the conditional $6\times6$ real amplitude propagator along the same path. Probe the first real amplitude by a unit perturbation with zero initial memory change. Central differences at $10^{-5}$ check the tangent. Integrate complex $U,D,V,R$ separately to check the interaction picture and static-factorization error.
+
+<a id="table-1"></a>
+
+**Table 1. Feedback and propagation in normalized units.** Scalar residuals use the stated norms. These floating evaluations are not interval enclosures.
+
+| Quantity | Value |
+| --- | ---: |
+| Initial energy | 2.279 |
+| Final energy | $4.157\times10^{-2}$ |
+| DOP853 energy-balance residual | $1.046\times10^{-11}$ |
+| RK4 energy-balance residual | $1.076\times10^{-12}$ |
+| Independent endpoint maximum error | $9.766\times10^{-13}$ |
+| Norm-bound maximum excess | 0 |
+| Full versus clamped response difference | $2.379\times10^{-2}$ |
+| Central-difference tangent error | $2.947\times10^{-11}$ |
+| Static factorization error | $7.322\times10^{-3}$ |
+| Interaction-picture residual | $1.236\times10^{-12}$ |
+| Coherent unitarity defect | $4.706\times10^{-12}$ |
+
+<a id="figure-1"></a>
+
+![Four normalized-time panels show declining energy and squared amplitude below the analytic envelope, distinct memories, and corresponding evolving edge stiffnesses.](/publications/spectral/adaptive-carriers/figure-1.png)
+
+**Figure 1. The asymmetric trajectory.** Energy and squared amplitude decrease while edge memories and stiffnesses evolve differently. The amplitude envelope is the theorem's bound, without fitting. Units are those of Section 2.
+
+The feedback difference $0.02379$ is distinct from the conditional factorization error and far larger than the $2.95\times10^{-11}$ tangent-check error. The saved collective-mode error is $2.83\times10^{-16}$. The norm of $U$ agrees with $e^{-0.48}$ and is insensitive to the adapting contrasts.
+
+<a id="section-6-2"></a>
+
+### 6.2 Pulse ordering and the symmetric control
+
+<a id="eq-54"></a>
+
+$$
+K_1=\operatorname{diag}(1,2),\qquad K_2=\begin{pmatrix}2&1\\1&2\end{pmatrix},\qquad\gamma=0.7,\quad\alpha=1.1.\tag{54}
+$$
+
+Both are positive and $\|[K_2,K_1]\|=1$. For $N=X-(\operatorname{tr}X)I/2$ and $d^2=-\det N$, $N^2=d^2I$ yields an independent $2\times2$ exponential:
+
+<a id="eq-55"></a>
+
+$$
+e^X=e^{\operatorname{tr}X/2}\left(\cosh d\,I+\frac{\sinh d}{d}N\right).\tag{55}
+$$
+
+Use the continuous value at $d=0$. The largest difference from the matrix-exponential implementation is $3.34\times10^{-16}$. The analytic bound uses individual $\tau$, not total $2\tau$.
+
+<a id="table-2"></a>
+
+**Table 2. Two-pulse propagation.** The final column is the relative discrepancy of the scaled matrix in (24) from its leading commutator.
+
+| $\tau$ | $\lVert U-DV\rVert$ | Bound | Leading discrepancy |
+| ---: | ---: | ---: | ---: |
+| 0.04 | $1.148\times10^{-3}$ | $1.232\times10^{-3}$ | 0.19671 |
+| 0.02 | $2.974\times10^{-4}$ | $3.080\times10^{-4}$ | 0.10122 |
+| 0.01 | $7.566\times10^{-5}$ | $7.700\times10^{-5}$ | 0.05134 |
+| 0.005 | $1.908\times10^{-5}$ | $1.925\times10^{-5}$ | 0.02585 |
+
+<a id="figure-2"></a>
+
+![On log scales, pulse error approaches the quadratic commutator bound at shorter duration; linked response residuals are far smaller than the same-history rotated alternative.](/publications/spectral/adaptive-carriers/figure-2.png)
+
+**Figure 2. Ordering and response.** Left: factorization error and commutator bound against individual pulse duration. Right: $\|\widetilde C-2\widetilde H\|_F/\|\widetilde C\|_F$ along the same recorded memory history for the linked and coherent-eigenvector-rotated responses. Connecting lines are not statistical uncertainties.
+
+For the symmetric source control replace $z_0$ by $(1+0.2i,-0.4+0.7i,1+0.2i)^\top$ and $m_0$ by $(0.15,0.15)^\top$, retaining parameters and duration. Maximum memory displacement is $0.202353$, with $m_1-m_2$ numerically zero. Factorization residual is $4.34\times10^{-13}$, versus $0.007322$ asymmetrically. The asymmetric trapezoidal commutator diagnostic $0.0903793$ approximates the bound's integral; it is not a certified upper enclosure.
+
+<a id="section-6-3"></a>
+
+### 6.3 Response reconstruction and exact fixtures
+
+Use times $0.3,0.9,1.7$ and $h=5\times10^{-4}$. A cubic spline through the 401 memory samples defines both replayed histories. DOP853 uses relative tolerance $10^{-12}$, absolute tolerance $10^{-14}$. Spline mismatch in hardware would belong to drift and reconstruction budgets. Rotate with the cyclic permutation
+
+<a id="eq-56"></a>
+
+$$
+S=\begin{pmatrix}0&1&0\\0&0&1\\1&0&0\end{pmatrix}.\tag{56}
+$$
+
+<a id="table-3"></a>
+
+**Table 3. Same-history reconstruction.** The residual uses stipulated $r=2$; the fitted ratio is diagnostic.
+
+| Time | Model | Relative residual | Fitted ratio |
+| ---: | --- | ---: | ---: |
+| 0.3 | Linked | $7.630\times10^{-7}$ | 1.9999986 |
+| 0.3 | Rotated | $6.590\times10^{-1}$ | 1.5656839 |
+| 0.9 | Linked | $6.558\times10^{-7}$ | 1.9999988 |
+| 0.9 | Rotated | $6.572\times10^{-1}$ | 1.5681140 |
+| 1.7 | Linked | $6.982\times10^{-7}$ | 1.9999987 |
+| 1.7 | Rotated | $6.578\times10^{-1}$ | 1.5672790 |
+
+Linked residuals below $8\times10^{-7}$ separate from alternative residuals above $0.65$ despite identical coherent eigenvalue multisets. Frozen criteria are $10^{-4}$ and $0.01$, respectively. Solver tolerances are not apparatus noise.
+
+Diagonal fixtures use $A(t)=c\operatorname{diag}(1+t,2+t/2)$, $\gamma=0.7,\alpha=1.1$, durations $0.04,0.02,0.01$, and operator perturbations of size $10^{-10}$. Exact scalar exponentials independently check extrapolation and $5\varepsilon/h$ noise amplification. A $10^{-12}$ floating allowance does not make near-saturation directed arithmetic. Rational checks cover (34)–(36); integer identities and elementary exponentials cover nonautonomous closure; (40) gives the moving-metric fixture directly.
+
+<a id="section-6-4"></a>
+
+### 6.4 Public verification and evidence classes
+
+The public package contains seven scientific scripts, specifications, saved outputs, asset generator, dependencies, provenance, hashes, and a runner that writes into a fresh directory. Editable manuscript source is separate. With Python 3.12 and the listed dependencies, use ordinary Python (without optimization) to run `python run_all.py --output-dir ../adaptive_verified_results` from the extracted package. The output directory must be new and outside the package. Cryptographic checks preserve reference files. Discrete results, labels, table structure and acceptance definitions are exact; scientific quantities and trajectories use specified tolerances. Small solver and finite-difference residuals are tested against scientific ceilings.
+
+The reference run used Python 3.12.14, NumPy 2.3.5 and SciPy 1.18.1. Regenerated values must match their own underlying results at printed precision while those results meet scientific criteria. Line endings are normalized. Regressions accept line-ending and admissible diagnostic changes and reject changed science, labels, structure or acceptance conditions. Analytic proofs, rational fixtures, independent DOP853/RK4/closed-form evaluations and same-environment replay establish different things. None substitutes for physical implementation, empirical validation or interval certification. The package excludes unrelated radial, image and Kerr data.
+
+<a id="section-7"></a>
+
+## 7 Consequences and focused extensions
+
+One energy supplies the adaptive carrier and reciprocal feedback. Conditional contraction and unitarity persist, with the symbol fixed on the reachable range by the mobility ratio. Exact interaction-picture propagation and the commutator bound replace the generally lost one-parameter stationarity and static factorization.
+
+The amplitude alone does not determine its velocity on all source states. Linearization makes the lost source information explicit in the initial-memory term and causal kernel. A conditional history and a free feedback probe are different experiments. Independent calibrated operator response adds information that eigenvalue fits discard: the linked law predicts common eigenspaces and scalar action in degenerate blocks, even against the eigenvalue-preserving rotated comparison.
+
+<a id="section-7-1"></a>
+
+### 7.1 Physical implementation and driven organization
+
+A three-node network with independent mobility calibration, known metric and phase-sensitive detectors offers a direct test. Compare a repeated clamped or replayed path with an unclamped kick. The former tests the conditional law; the latter tests the kernel. Fix alternative, initialization, probe durations, drift and detector bounds in advance. The computed contrasts suggest observables and scales, not hardware feasibility or device noise.
+
+The unforced model relaxes to $(0,0)$. An imposed amplitude force $f(t)$ contributes supplied power $\Re[(Kz)^*f]$; driven attraction, stability and response require separate analysis.
+
+<a id="section-7-2"></a>
+
+### 7.2 Continuum domains and renormalization
+
+A continuum model needs a closed energy form, boundary conditions, nonlinear well-posedness, and evolution-family hypotheses for time-dependent domains or a common form domain. Unbounded commutators need controlled graph bounds or bounded extensions and integral convergence; crossings are not the domain obstacle. A finite functional calculus does not define an infinite determinant budget. Cutoff removal needs trace ideals or another declared determinant convention, counterterms and convergence. Renormalization, continuum universality and a shared microscopic explanation remain separate questions.
+
+<a id="section-8"></a>
+
+## 8 Conclusion
+
+The aligned finite energy and mobility law retains linked instantaneous phase and attenuation as the carrier evolves. Cross-time commutators control finite propagation; initial memory and a causal kernel control free feedback. Calibrated probes distinguish a specified eigenvalue-preserving rival under explicit preparation and error bounds. These are operational conditions for recovering the linked law from source readout.
+
+<a id="section-references"></a>
+
+## References
+
+1. Jeremy Rodgers. *The Canonical Spectral-Curvature Field: A Unified Operator Origin for Coherence, Dissipation, and Spectral Budgets*. 2026 preprint, issued 3 November. [DOI](https://doi.org/10.5281/zenodo.23899458).
+2. Igor S. Aranson and Lorenz Kramer. The world of the complex Ginzburg–Landau equation. *Reviews of Modern Physics* 74:99–143, 2002. [DOI](https://doi.org/10.1103/RevModPhys.74.99) · [arXiv](https://arxiv.org/abs/cond-mat/0106115).
+3. Tosio Kato. Integration of the equation of evolution in a Banach space. *Journal of the Mathematical Society of Japan* 5(2):208–234, 1953. [DOI](https://doi.org/10.2969/jmsj/00520208) · [Journal](https://www.jstage.jst.go.jp/article/jmath1948/5/2/5_2_208/_article/-char/en).
+4. S. Blanes, F. Casas, J. A. Oteo, and J. Ros. The Magnus expansion and some of its applications. *Physics Reports* 470:151–238, 2009. [DOI](https://doi.org/10.1016/j.physrep.2008.11.001) · [arXiv](https://arxiv.org/abs/0810.5488).
+5. Jeremy Rodgers. *Observable Quotients and Exact Projected Dynamics: Closure, Memory, Minimal Dynamical Completion, and Effective Field Operators*. 2026 preprint, issued 15 July. [DOI](https://doi.org/10.5281/zenodo.21371251).
+6. Jeremy Rodgers. *From Source Structure to Spectral Profiles: Generation Mechanisms and Observable Readouts in the Canonical Spectral-Curvature Framework*. 2026 preprint, issued 3 November. [DOI](https://doi.org/10.5281/zenodo.23912447).
+7. Jeremy Rodgers. *Cross-Domain Spectral Ratio Structure: Refined Recurrence, Robustness and Diagnostic Limits*. 2026 preprint, issued 2 November. [DOI](https://doi.org/10.5281/zenodo.23888292).
+8. Jeremy Rodgers. *Source Readout Non-Equivalence: Descent and Equivariant Reconstruction Obstructions*. 2026 preprint, issued 15 July. [DOI](https://doi.org/10.5281/zenodo.21369967).

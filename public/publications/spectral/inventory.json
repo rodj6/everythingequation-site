@@ -1,0 +1,3243 @@
+[
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "cscf",
+      "title": "The Canonical Spectral-Curvature Field: A Unified Operator Origin for Coherence, Dissipation, and Spectral Budgets",
+      "subtitle": "A Unified Operator Origin for Coherence, Dissipation, and Spectral Budgets",
+      "description": "A positive selfadjoint carrier generates coherent evolution and dissipative relaxation through its functional calculus. The modular spectral measure identifies precisely what the ordered ratio readout retains.",
+      "doi": "10.5281/zenodo.23899458",
+      "date": "2026-11-03",
+      "url": "/source-readout/cscf",
+      "pdfUrl": "/publications/spectral/cscf/paper.pdf",
+      "markdownUrl": "/publications/spectral/cscf/complete.md",
+      "manifestUrl": "/source-readout/cscf/manifest.json",
+      "paperSlug": "cscf",
+      "headline": "One carrier. Two linked responses.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "cscf",
+        "slug": "01-common-carrier",
+        "title": "One carrier, two responses",
+        "description": "The common spectral calculus and the place of CSCF between the aperture and physical readout.",
+        "order": 1,
+        "url": "/source-readout/cscf/01-common-carrier",
+        "sourcePath": "content/paper-integrations/cscf/01-common-carrier.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1. One carrier, two responses, and a measurable signature"
+          },
+          {
+            "id": "section-1.1",
+            "title": "1.1 Historical development"
+          },
+          {
+            "id": "sec-framework",
+            "title": "2. Placement in Shadow Theory’s source-to-readout architecture"
+          },
+          {
+            "id": "section-2.1",
+            "title": "2.1 The spectral spine and realization data"
+          }
+        ],
+        "anchors": [
+          "section-1",
+          "eq-opening",
+          "section-1.1",
+          "sec-framework",
+          "fig-architecture",
+          "section-2.1"
+        ],
+        "words": 1223
+      },
+      {
+        "paperId": "cscf",
+        "slug": "02-operator-preliminaries",
+        "title": "The operator foundations",
+        "description": "Closed forms, positive extraction, Fejér averaging and determinant assumptions.",
+        "order": 2,
+        "url": "/source-readout/cscf/02-operator-preliminaries",
+        "sourcePath": "content/paper-integrations/cscf/02-operator-preliminaries.mdx",
+        "sections": [
+          {
+            "id": "sec-prelim",
+            "title": "3. Mathematical Preliminaries"
+          },
+          {
+            "id": "section-3.1",
+            "title": "3.1 Closed nonnegative quadratic forms and Friedrichs representation"
+          },
+          {
+            "id": "section-3.2",
+            "title": "3.2 Spectral theorem and Borel functional calculus"
+          },
+          {
+            "id": "sec-positive-extraction",
+            "title": "3.3 Positivity extraction from raw selfadjoint operators"
+          },
+          {
+            "id": "section-3.4",
+            "title": "3.4 The Fejér average symbol"
+          },
+          {
+            "id": "section-3.5",
+            "title": "3.5 Determinant-class assumptions"
+          },
+          {
+            "id": "section-3.6",
+            "title": "3.6 Notation summary"
+          }
+        ],
+        "anchors": [
+          "sec-prelim",
+          "section-3.1",
+          "thm-friedrichs",
+          "section-3.2",
+          "sec-positive-extraction",
+          "prop-positive-extraction",
+          "ex-positive-extractions",
+          "section-3.4",
+          "section-3.5",
+          "section-3.6"
+        ],
+        "words": 1093
+      },
+      {
+        "paperId": "cscf",
+        "slug": "03-curvature-generator",
+        "title": "How curvature determines the carrier",
+        "description": "Admissible curvature systems, Friedrichs representation and the invariants of the resulting carrier.",
+        "order": 3,
+        "url": "/source-readout/cscf/03-curvature-generator",
+        "sourcePath": "content/paper-integrations/cscf/03-curvature-generator.mdx",
+        "sections": [
+          {
+            "id": "sec-k",
+            "title": "4. The Canonical Spectral-Curvature Generator $K$"
+          },
+          {
+            "id": "section-4.1",
+            "title": "4.1 Admissible monotone curvature systems"
+          },
+          {
+            "id": "section-4.2",
+            "title": "4.2 The canonical generator"
+          },
+          {
+            "id": "section-4.3",
+            "title": "4.3 Functional dependence and base data"
+          }
+        ],
+        "anchors": [
+          "sec-k",
+          "section-4.1",
+          "def-admmono",
+          "section-4.2",
+          "thm-k",
+          "section-4.3",
+          "lemma-4.3",
+          "lem-directsum"
+        ],
+        "words": 417
+      },
+      {
+        "paperId": "cscf",
+        "slug": "04-lambda-face",
+        "title": "The dissipative face and exact recovery",
+        "description": "Contractions, Fejér transmission, exact carrier recovery, spectral budgets and Lambda profiles.",
+        "order": 4,
+        "url": "/source-readout/cscf/04-lambda-face",
+        "sourcePath": "content/paper-integrations/cscf/04-lambda-face.mdx",
+        "sections": [
+          {
+            "id": "sec-diss",
+            "title": "5. The Dissipative / Lambda Face"
+          },
+          {
+            "id": "section-5.1",
+            "title": "5.1 Contraction semigroup and Fejér transmission"
+          },
+          {
+            "id": "section-5.2",
+            "title": "5.2 Exact recovery of the generator from the Lambda face"
+          },
+          {
+            "id": "section-5.3",
+            "title": "5.3 The dissipative budget"
+          },
+          {
+            "id": "section-5.4",
+            "title": "5.4 Asymptotic expansions"
+          },
+          {
+            "id": "section-5.5",
+            "title": "5.5 Structural properties"
+          },
+          {
+            "id": "section-5.6",
+            "title": "5.6 The lambda profile"
+          },
+          {
+            "id": "sec-ldist",
+            "title": "5.7 Empirical spectral measures and Lambda distances"
+          }
+        ],
+        "anchors": [
+          "sec-diss",
+          "section-5.1",
+          "definition-5.1",
+          "def-lambda",
+          "prop-lambda",
+          "section-5.2",
+          "thm-lambda-exact-generator-recovery",
+          "cor-coherence-from-lambda",
+          "section-5.3",
+          "def-dbudget",
+          "lem-traceclass-lambda-det",
+          "section-5.4",
+          "prop-smallt",
+          "prop-larget",
+          "section-5.5",
+          "prop-dprops",
+          "section-5.6",
+          "sec-ldist",
+          "thm-profile"
+        ],
+        "words": 1807
+      },
+      {
+        "paperId": "cscf",
+        "slug": "05-coherent-face",
+        "title": "The coherent face and its budget",
+        "description": "Reversible flow, resonant compression and the stability of declared coherence symbols.",
+        "order": 5,
+        "url": "/source-readout/cscf/05-coherent-face",
+        "sourcePath": "content/paper-integrations/cscf/05-coherent-face.mdx",
+        "sections": [
+          {
+            "id": "sec-coh",
+            "title": "6. The Coherent / Reversible Face"
+          },
+          {
+            "id": "section-6.1",
+            "title": "6.1 Admissible coherence symbols"
+          },
+          {
+            "id": "section-6.2",
+            "title": "6.2 The coherence generator and unitary flow"
+          },
+          {
+            "id": "section-6.3",
+            "title": "6.3 The reversible Fejér compression"
+          },
+          {
+            "id": "section-6.4",
+            "title": "6.4 The coherence budget"
+          },
+          {
+            "id": "sec-symbol-stability",
+            "title": "6.5 Symbol-class stability"
+          },
+          {
+            "id": "section-6.6",
+            "title": "6.6 Properties shared by the two faces"
+          }
+        ],
+        "anchors": [
+          "sec-coh",
+          "section-6.1",
+          "def-hadm",
+          "ex-default",
+          "section-6.2",
+          "def-c",
+          "def-ut",
+          "proposition-6.5",
+          "section-6.3",
+          "def-gamma",
+          "def-ct",
+          "section-6.4",
+          "def-bbudget",
+          "rem-resonant",
+          "prop-bprops",
+          "sec-symbol-stability",
+          "prop-symbol-stability",
+          "lem-finite-rank-budget-stability",
+          "cor-small-symbol-perturbation",
+          "remark-6.14",
+          "section-6.6",
+          "lem-commute"
+        ],
+        "words": 1320
+      },
+      {
+        "paperId": "cscf",
+        "slug": "06-unified-field",
+        "title": "The unified field theorem",
+        "description": "The joint operator calculus and recovery of spectral algebras from readouts.",
+        "order": 6,
+        "url": "/source-readout/cscf/06-unified-field",
+        "sourcePath": "content/paper-integrations/cscf/06-unified-field.mdx",
+        "sections": [
+          {
+            "id": "sec-unified",
+            "title": "7. The Unified Field Theorem"
+          },
+          {
+            "id": "sec-algebra-recovery",
+            "title": "7.1 Recovery of the spectral algebra from readouts"
+          },
+          {
+            "id": "section-7.2",
+            "title": "7.2 The common spectral calculus"
+          }
+        ],
+        "anchors": [
+          "sec-unified",
+          "def-cscf",
+          "thm-unified",
+          "cor-combined",
+          "sec-algebra-recovery",
+          "thm-spectral-algebra-recovery",
+          "cor-cscf-algebra-recovery",
+          "section-7.2"
+        ],
+        "words": 1132
+      },
+      {
+        "paperId": "cscf",
+        "slug": "07-classification",
+        "title": "Classification under explicit axioms",
+        "description": "The dissipative uniqueness result and the limits of reversible symbol selection.",
+        "order": 7,
+        "url": "/source-readout/cscf/07-classification",
+        "sourcePath": "content/paper-integrations/cscf/07-classification.mdx",
+        "sections": [
+          {
+            "id": "sec-class",
+            "title": "8. Classification and Uniqueness"
+          },
+          {
+            "id": "section-8.1",
+            "title": "8.1 Dissipative classification"
+          },
+          {
+            "id": "section-8.2",
+            "title": "8.2 Coherent classification"
+          },
+          {
+            "id": "section-8.3",
+            "title": "8.3 Unified classification"
+          }
+        ],
+        "anchors": [
+          "sec-class",
+          "section-8.1",
+          "ax-diss",
+          "thm-dclass",
+          "section-8.2",
+          "ax-coh",
+          "thm-cclass",
+          "corollary-8.5",
+          "section-8.3",
+          "thm-unifclass"
+        ],
+        "words": 762
+      },
+      {
+        "paperId": "cscf",
+        "slug": "08-modular-ratios",
+        "title": "The modular carrier of spectral ratios",
+        "description": "The exact finite-window observable, conjugation flow and what its transformations retain.",
+        "order": 8,
+        "url": "/source-readout/cscf/08-modular-ratios",
+        "sourcePath": "content/paper-integrations/cscf/08-modular-ratios.mdx",
+        "sections": [
+          {
+            "id": "sec-ratios",
+            "title": "9. Spectral ratios as coherent and modular readouts"
+          },
+          {
+            "id": "section-9.1",
+            "title": "9.1 The exact operator representation"
+          },
+          {
+            "id": "section-9.2",
+            "title": "9.2 Phase flow and the form factor"
+          },
+          {
+            "id": "section-9.3",
+            "title": "9.3 Connection to the CSCF coherence symbol"
+          },
+          {
+            "id": "section-9.4",
+            "title": "9.4 What the transformations preserve"
+          }
+        ],
+        "anchors": [
+          "sec-ratios",
+          "eq-v",
+          "section-9.1",
+          "thm-modular",
+          "eq-matrixunits",
+          "eq-eta",
+          "eq-nu",
+          "cor-windows",
+          "eq-native",
+          "section-9.2",
+          "prop-formfactor",
+          "eq-conjugation",
+          "eq-characteristic",
+          "section-9.3",
+          "eq-cohrecovery",
+          "eq-adapted",
+          "section-9.4"
+        ],
+        "words": 1060
+      },
+      {
+        "paperId": "cscf",
+        "slug": "09-spectral-evidence",
+        "title": "What the measured profiles show",
+        "description": "Hydrogen, Kerr and image-graph recurrence with its conditional controls and diagnostic limits.",
+        "order": 9,
+        "url": "/source-readout/cscf/09-spectral-evidence",
+        "sourcePath": "content/paper-integrations/cscf/09-spectral-evidence.mdx",
+        "sections": [
+          {
+            "id": "sec-empirical",
+            "title": "10. Cross-domain spectral evidence"
+          },
+          {
+            "id": "section-10.1",
+            "title": "10.1 Operators and native readouts"
+          },
+          {
+            "id": "section-10.2",
+            "title": "10.2 Measured recurrence and its heterogeneity"
+          },
+          {
+            "id": "section-10.3",
+            "title": "10.3 Controls and robustness"
+          },
+          {
+            "id": "section-10.4",
+            "title": "10.4 Meaning within the common-carrier account"
+          }
+        ],
+        "anchors": [
+          "sec-empirical",
+          "eq-constants",
+          "section-10.1",
+          "section-10.2",
+          "tab-correlations",
+          "fig-native-profiles",
+          "section-10.3",
+          "tab-kerr",
+          "section-10.4"
+        ],
+        "words": 1281
+      },
+      {
+        "paperId": "cscf",
+        "slug": "10-quotient-closure",
+        "title": "What closes after projection",
+        "description": "Memory terms, the exact dissipative closure certificate and a bound for coherent leakage.",
+        "order": 10,
+        "url": "/source-readout/cscf/10-quotient-closure",
+        "sourcePath": "content/paper-integrations/cscf/10-quotient-closure.mdx",
+        "sections": [
+          {
+            "id": "sec-probe",
+            "title": "11. Observable quotients, memory and two-face closure"
+          },
+          {
+            "id": "section-11.1",
+            "title": "11.1 Compression and exact projected dynamics"
+          },
+          {
+            "id": "section-11.2",
+            "title": "11.2 An exact dissipative closure certificate"
+          },
+          {
+            "id": "section-11.3",
+            "title": "11.3 Quantitative transfer to the coherent face"
+          }
+        ],
+        "anchors": [
+          "sec-probe",
+          "section-11.1",
+          "eq-memory",
+          "section-11.2",
+          "eq-defect",
+          "thm-gram",
+          "section-11.3",
+          "thm-closure-coherence",
+          "eq-transfer",
+          "eq-generator-transfer"
+        ],
+        "words": 855
+      },
+      {
+        "paperId": "cscf",
+        "slug": "11-physical-realizations",
+        "title": "Physical realizations and reciprocal memory",
+        "description": "Curvature, mobility, memory, response, detailed balance and complex-gradient examples.",
+        "order": 11,
+        "url": "/source-readout/cscf/11-physical-realizations",
+        "sourcePath": "content/paper-integrations/cscf/11-physical-realizations.mdx",
+        "sections": [
+          {
+            "id": "sec-physical-realizations",
+            "title": "12. Physical realizations, reciprocal memory and response"
+          },
+          {
+            "id": "section-12.1",
+            "title": "12.1 Mobility converts curvature into a relaxation carrier"
+          },
+          {
+            "id": "section-12.2",
+            "title": "12.2 Reciprocal storage, the full Hessian and exact memory"
+          },
+          {
+            "id": "section-12.3",
+            "title": "12.3 A positive carrier with hidden cross-response"
+          },
+          {
+            "id": "section-12.4",
+            "title": "12.4 Detailed balance and stochastic-matrix-form carriers"
+          },
+          {
+            "id": "section-12.5",
+            "title": "12.5 An aligned complex-gradient realization"
+          },
+          {
+            "id": "section-12.6",
+            "title": "12.6 Quantum and experimental response anchors"
+          }
+        ],
+        "anchors": [
+          "sec-physical-realizations",
+          "section-12.1",
+          "eq-physical-gradient",
+          "lem-mobility-whitened",
+          "eq-mobility-carrier",
+          "section-12.2",
+          "eq-reciprocal-potential",
+          "eq-reciprocal-dynamics",
+          "eq-reciprocal-dissipation",
+          "prop-storage-hessian",
+          "eq-storage-effective-potential",
+          "eq-storage-full-hessian",
+          "eq-storage-schur",
+          "eq-storage-full-carrier",
+          "eq-storage-square",
+          "equation-26",
+          "eq-exact-storage-memory",
+          "equation-28",
+          "equation-29",
+          "eq-storage-susceptibility",
+          "section-12.3",
+          "eq-three-coordinate-potential",
+          "eq-three-coordinate-h",
+          "equation-33",
+          "eq-hidden-cross-response",
+          "equation-35",
+          "section-12.4",
+          "eq-rk-carrier",
+          "eq-rk-dirichlet",
+          "equation-38",
+          "equation-39",
+          "equation-40",
+          "section-12.5",
+          "eq-aligned-gradient",
+          "prop-complex-alignment",
+          "eq-complex-aligned-factorization",
+          "section-12.6",
+          "equation-43"
+        ],
+        "words": 1800
+      },
+      {
+        "paperId": "cscf",
+        "slug": "12-boundary-and-tests",
+        "title": "Boundary carriers and discriminating tests",
+        "description": "The collar realization, physical observables, selection obligations and the resulting account.",
+        "order": 12,
+        "url": "/source-readout/cscf/12-boundary-and-tests",
+        "sourcePath": "content/paper-integrations/cscf/12-boundary-and-tests.mdx",
+        "sections": [
+          {
+            "id": "sec-realization",
+            "title": "13. Boundary realization and physical discrimination"
+          },
+          {
+            "id": "section-13.1",
+            "title": "13.1 An explicit curvature-to-boundary carrier"
+          },
+          {
+            "id": "section-13.2",
+            "title": "13.2 What a joint physical test measures"
+          },
+          {
+            "id": "sec-future",
+            "title": "14. Future work: selection of profiles by physical realization laws"
+          },
+          {
+            "id": "section-15",
+            "title": "15. Conclusion"
+          }
+        ],
+        "anchors": [
+          "sec-realization",
+          "section-13.1",
+          "prop-collar",
+          "section-13.2",
+          "sec-future",
+          "section-15"
+        ],
+        "words": 897
+      },
+      {
+        "paperId": "cscf",
+        "slug": "13-functional-calculus",
+        "title": "Appendix A: Functional calculus details",
+        "description": "Projection-valued measure and the common functional calculus.",
+        "order": 13,
+        "url": "/source-readout/cscf/13-functional-calculus",
+        "sourcePath": "content/paper-integrations/cscf/13-functional-calculus.mdx",
+        "sections": [
+          {
+            "id": "app-fc",
+            "title": "A. Functional Calculus Details"
+          }
+        ],
+        "anchors": [
+          "app-fc"
+        ],
+        "words": 92
+      },
+      {
+        "paperId": "cscf",
+        "slug": "14-profile-injectivity",
+        "title": "Appendix B: When the Lambda profile is injective",
+        "description": "The compact-positive-support proof and finite-rank corollary.",
+        "order": 14,
+        "url": "/source-readout/cscf/14-profile-injectivity",
+        "sourcePath": "content/paper-integrations/cscf/14-profile-injectivity.mdx",
+        "sections": [
+          {
+            "id": "app-profile-inj",
+            "title": "B. Lambda-Profile Injectivity on Compact Positive Supports"
+          }
+        ],
+        "anchors": [
+          "app-profile-inj",
+          "thm-lambda-profile-injectivity",
+          "cor-finite-rank-profile"
+        ],
+        "words": 545
+      },
+      {
+        "paperId": "cscf",
+        "slug": "15-determinant-scope",
+        "title": "Appendix C: Determinant scope",
+        "description": "Trace class and finite spectral regularization.",
+        "order": 15,
+        "url": "/source-readout/cscf/15-determinant-scope",
+        "sourcePath": "content/paper-integrations/cscf/15-determinant-scope.mdx",
+        "sections": [
+          {
+            "id": "app-det",
+            "title": "C. Determinant scope and finite spectral regularization"
+          }
+        ],
+        "anchors": [
+          "app-det"
+        ],
+        "words": 130
+      },
+      {
+        "paperId": "cscf",
+        "slug": "16-fejer-uniqueness",
+        "title": "Appendix D: Fejér uniqueness",
+        "description": "Full proof of the dissipative classification theorem.",
+        "order": 16,
+        "url": "/source-readout/cscf/16-fejer-uniqueness",
+        "sourcePath": "content/paper-integrations/cscf/16-fejer-uniqueness.mdx",
+        "sections": [
+          {
+            "id": "app-diss-class",
+            "title": "D. Fejér Uniqueness: Proof of Theorem [8.2](/source-readout/cscf/07-classification#thm-dclass)"
+          }
+        ],
+        "anchors": [
+          "app-diss-class"
+        ],
+        "words": 333
+      },
+      {
+        "paperId": "cscf",
+        "slug": "17-computational-verification",
+        "title": "Appendix E: Computational verification",
+        "description": "Exact fixtures, numerical checks and the declared verification scope.",
+        "order": 17,
+        "url": "/source-readout/cscf/17-computational-verification",
+        "sourcePath": "content/paper-integrations/cscf/17-computational-verification.mdx",
+        "sections": [
+          {
+            "id": "app-verification",
+            "title": "E. Computational verification"
+          }
+        ],
+        "anchors": [
+          "app-verification",
+          "tab-checks"
+        ],
+        "words": 341
+      },
+      {
+        "paperId": "cscf",
+        "slug": "18-references",
+        "title": "References",
+        "description": "The operator, physical and computational sources used in the reading edition.",
+        "order": 18,
+        "url": "/source-readout/cscf/18-references",
+        "sourcePath": "content/paper-integrations/cscf/18-references.mdx",
+        "sections": [
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "references",
+          "ref-roundfour",
+          "ref-roundthree",
+          "ref-roundtwo",
+          "ref-aranson",
+          "ref-berti",
+          "ref-carlenmaas",
+          "ref-rk",
+          "ref-dong",
+          "ref-firanko",
+          "ref-generic",
+          "ref-kato",
+          "ref-kubo",
+          "ref-mori",
+          "ref-reedsimoni",
+          "ref-lambdahistory",
+          "ref-profileshistory",
+          "ref-atlas",
+          "ref-coherencehistory",
+          "ref-framework",
+          "ref-projecteddynamics",
+          "ref-shadowmonograph",
+          "ref-sourcereadout",
+          "ref-spectral",
+          "ref-simontraceideals",
+          "ref-stein",
+          "ref-suh",
+          "ref-witten"
+        ],
+        "words": 699
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/cscf/complete.md",
+    "originalPdf": "/publications/spectral/cscf/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "spectral-ratios",
+      "title": "Cross-Domain Spectral Ratio Structure: Refined Recurrence, Robustness and Diagnostic Limits",
+      "subtitle": "Refined Recurrence, Robustness and Diagnostic Limits",
+      "description": "Ordered spectral-ratio profiles recur across several hydrogen and image readouts, with more moderate Kerr comparisons. The full controls distinguish reproducible structure from exclusive privilege of the original library.",
+      "doi": "10.5281/zenodo.23888292",
+      "date": "2026-11-02",
+      "url": "/source-readout/spectral-ratios",
+      "pdfUrl": "/publications/spectral/spectral-ratios/paper.pdf",
+      "markdownUrl": "/publications/spectral/spectral-ratios/complete.md",
+      "manifestUrl": "/source-readout/spectral-ratios/manifest.json",
+      "paperSlug": "spectral-ratios",
+      "headline": "The recurrence is measurable. Its limits are measurable too.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "https://zenodo.org/api/records/23888292/files/Spectral_Ratio_Public_Verification.zip/content"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "spectral-ratios",
+        "slug": "01-three-different-questions",
+        "title": "One signature, three different questions",
+        "description": "Strong recurrence, conditional discrimination and library specificity are separate claims. The finite results distinguish them.",
+        "order": 1,
+        "url": "/source-readout/spectral-ratios/01-three-different-questions",
+        "sourcePath": "content/paper-integrations/spectral-ratios/01-three-different-questions.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "A signature that travels across constructions"
+          }
+        ],
+        "anchors": [
+          "section-1"
+        ],
+        "words": 282
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "02-native-operators",
+        "title": "Three native operators and their evidence",
+        "description": "The frozen Kerr rates, exact 465-state hydrogen graph and Gaussian image graphs each retain different source information.",
+        "order": 2,
+        "url": "/source-readout/spectral-ratios/02-native-operators",
+        "sourcePath": "content/paper-integrations/spectral-ratios/02-native-operators.mdx",
+        "sections": [
+          {
+            "id": "section-2",
+            "title": "Inputs, operators and provenance"
+          },
+          {
+            "id": "section-2-1",
+            "title": "Kerr: retain the rates and the native transmission"
+          },
+          {
+            "id": "section-2-2",
+            "title": "Hydrogen: build the coupling graph, not the energy spectrum"
+          },
+          {
+            "id": "section-2-3",
+            "title": "Spatial graphs: keep the extraction contract visible"
+          }
+        ],
+        "anchors": [
+          "section-2",
+          "section-2-1",
+          "eq-1",
+          "section-2-2",
+          "eq-2",
+          "eq-3",
+          "section-2-3",
+          "eq-4",
+          "table-1"
+        ],
+        "words": 842
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "03-exact-ratio-statistics",
+        "title": "What a ratio profile measures exactly",
+        "description": "Finite window counts become exact masses of the log-spectrum autocorrelation after self-pair subtraction and native conditioning.",
+        "order": 3,
+        "url": "/source-readout/spectral-ratios/03-exact-ratio-statistics",
+        "sourcePath": "content/paper-integrations/spectral-ratios/03-exact-ratio-statistics.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "Ratio statistics and mathematical foundations"
+          },
+          {
+            "id": "section-3-1",
+            "title": "Count ordered pairs on their native support"
+          },
+          {
+            "id": "section-3-2",
+            "title": "The exact log-autocorrelation identity"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "section-3-1",
+          "eq-5",
+          "eq-6",
+          "eq-7",
+          "section-3-2",
+          "eq-8",
+          "eq-9",
+          "eq-10",
+          "eq-11"
+        ],
+        "words": 466
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "04-paired-and-conditional-controls",
+        "title": "Freeze the comparisons before reading the scores",
+        "description": "Paired libraries, three nonnested Kerr references and two hydrogen perturbations each preserve different information.",
+        "order": 4,
+        "url": "/source-readout/spectral-ratios/04-paired-and-conditional-controls",
+        "sourcePath": "content/paper-integrations/spectral-ratios/04-paired-and-conditional-controls.mdx",
+        "sections": [
+          {
+            "id": "section-4",
+            "title": "Frozen comparison design"
+          },
+          {
+            "id": "section-4-1",
+            "title": "Paired alternative libraries"
+          },
+          {
+            "id": "section-4-2",
+            "title": "Kerr references: three different preservation contracts"
+          },
+          {
+            "id": "section-4-3",
+            "title": "Hydrogen shell perturbations and the short fiber pilot"
+          }
+        ],
+        "anchors": [
+          "section-4",
+          "section-4-1",
+          "eq-12",
+          "eq-13",
+          "section-4-2",
+          "section-4-3",
+          "eq-14"
+        ],
+        "words": 806
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "05-recurrence-and-paired-specificity",
+        "title": "Strong recurrence, limited library specificity",
+        "description": "Five primary image graphs track the hydrogen profile, while the embryo and paired-library controls show exactly where that agreement stops.",
+        "order": 5,
+        "url": "/source-readout/spectral-ratios/05-recurrence-and-paired-specificity",
+        "sourcePath": "content/paper-integrations/spectral-ratios/05-recurrence-and-paired-specificity.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "Native profile recurrence"
+          },
+          {
+            "id": "section-5-1",
+            "title": "The common shape and the embryo exception"
+          },
+          {
+            "id": "section-5-2",
+            "title": "Similar profiles also occur under alternative libraries"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "section-5-1",
+          "table-2",
+          "figure-1",
+          "section-5-2",
+          "figure-2"
+        ],
+        "words": 606
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "06-discrimination-and-robustness",
+        "title": "Where conditional discrimination survives",
+        "description": "Kerr discriminates against U and P, R is more permissive on holdout, and hydrogen shape survives detailed shell-block permutation.",
+        "order": 6,
+        "url": "/source-readout/spectral-ratios/06-discrimination-and-robustness",
+        "sourcePath": "content/paper-integrations/spectral-ratios/06-discrimination-and-robustness.mdx",
+        "sections": [
+          {
+            "id": "section-6",
+            "title": "Conditional discrimination and profile robustness"
+          },
+          {
+            "id": "section-6-1",
+            "title": "Kerr's successes and the holdout boundary"
+          },
+          {
+            "id": "section-6-2",
+            "title": "Hydrogen shape withstands shell-block permutation"
+          },
+          {
+            "id": "section-6-3",
+            "title": "Hydrogen abundance changes with the readout"
+          }
+        ],
+        "anchors": [
+          "section-6",
+          "section-6-1",
+          "kerr-incidences",
+          "table-3",
+          "section-6-2",
+          "table-4",
+          "figure-3",
+          "section-6-3",
+          "table-5",
+          "figure-4"
+        ],
+        "words": 1010
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "07-specificity-and-explanatory-tests",
+        "title": "What the recurrence does and does not explain",
+        "description": "The frozen portability criterion fails. Gap statistics and a density-to-profile prediction answer separate mathematical questions.",
+        "order": 7,
+        "url": "/source-readout/spectral-ratios/07-specificity-and-explanatory-tests",
+        "sourcePath": "content/paper-integrations/spectral-ratios/07-specificity-and-explanatory-tests.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "Library specificity fails its frozen test"
+          },
+          {
+            "id": "section-8",
+            "title": "Which spectral theories could explain this profile?"
+          },
+          {
+            "id": "section-8-1",
+            "title": "Consecutive gaps are a complementary observable"
+          },
+          {
+            "id": "section-8-2",
+            "title": "Global density and local universality can vary independently"
+          },
+          {
+            "id": "section-8-3",
+            "title": "A density explanation needs independent window predictions"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "figure-5",
+          "section-8",
+          "section-8-1",
+          "eq-15",
+          "section-8-2",
+          "section-8-3",
+          "eq-16",
+          "eq-17"
+        ],
+        "words": 935
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "08-interpretation-and-reproducibility",
+        "title": "A reproducible diagnostic and the next test",
+        "description": "Finite recurrence and robustness survive the specificity failure. Independent operator predictions remain the route to a physical explanation.",
+        "order": 8,
+        "url": "/source-readout/spectral-ratios/08-interpretation-and-reproducibility",
+        "sourcePath": "content/paper-integrations/spectral-ratios/08-interpretation-and-reproducibility.mdx",
+        "sections": [
+          {
+            "id": "section-9",
+            "title": "What the experiment establishes"
+          },
+          {
+            "id": "section-10",
+            "title": "The result in full scope"
+          },
+          {
+            "id": "data-code",
+            "title": "Data and code availability"
+          },
+          {
+            "id": "author-statement",
+            "title": "Author statement"
+          }
+        ],
+        "anchors": [
+          "section-9",
+          "section-10",
+          "data-code",
+          "author-statement"
+        ],
+        "words": 682
+      },
+      {
+        "paperId": "spectral-ratios",
+        "slug": "09-verification-and-appendices",
+        "title": "Verification, invariances and the complete comparison data",
+        "description": "All five appendices, the exact invariances, density illustration, complete comparison tables, historical corrections, and references.",
+        "order": 9,
+        "url": "/source-readout/spectral-ratios/09-verification-and-appendices",
+        "sourcePath": "content/paper-integrations/spectral-ratios/09-verification-and-appendices.mdx",
+        "sections": [
+          {
+            "id": "appendix-a",
+            "title": "Appendix A. Numerical conventions and verification"
+          },
+          {
+            "id": "appendix-b",
+            "title": "Appendix B. Invariances and nonidentifiability"
+          },
+          {
+            "id": "appendix-c",
+            "title": "Appendix C. A closed-form density illustration"
+          },
+          {
+            "id": "appendix-d",
+            "title": "Appendix D. All primary-core comparisons and native summaries"
+          },
+          {
+            "id": "appendix-e",
+            "title": "Appendix E. Material reconstruction corrections"
+          },
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "appendix-a",
+          "appendix-b",
+          "eq-18",
+          "eq-19",
+          "appendix-c",
+          "eq-20",
+          "appendix-d",
+          "table-6",
+          "table-7",
+          "appendix-e",
+          "table-8",
+          "references",
+          "ref-1",
+          "ref-2",
+          "ref-3",
+          "ref-4",
+          "ref-5"
+        ],
+        "words": 2909
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/spectral-ratios/complete.md",
+    "originalPdf": "/publications/spectral/spectral-ratios/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "spectral-profiles",
+      "title": "From Source Structure to Spectral Profiles: Generation Mechanisms and Observable Readouts in the Canonical Spectral-Curvature Framework",
+      "subtitle": "Generation Mechanisms and Observable Readouts in the Canonical Spectral-Curvature Framework",
+      "description": "Hydrogen radial shells, Gaussian exchange and Kerr resonance boundary conditions generate spectral profiles by distinct mechanisms. Exact counterexamples and calibrated responses show what pooled ratios lose and what observations recover.",
+      "doi": "10.5281/zenodo.23912447",
+      "date": "2026-11-03",
+      "url": "/source-readout/spectral-profiles",
+      "pdfUrl": "/publications/spectral/spectral-profiles/paper.pdf",
+      "markdownUrl": "/publications/spectral/spectral-profiles/complete.md",
+      "manifestUrl": "/source-readout/spectral-profiles/manifest.json",
+      "paperSlug": "spectral-profiles",
+      "headline": "Follow the profile back to its source.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/spectral-profiles/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "spectral-profiles",
+        "slug": "01-sources-and-readouts",
+        "title": "Three ways to generate a spectral profile",
+        "description": "The data and observation contract shared by the hydrogen, spatial and Kerr constructions.",
+        "order": 1,
+        "url": "/source-readout/spectral-profiles/01-sources-and-readouts",
+        "sourcePath": "content/paper-integrations/spectral-profiles/01-sources-and-readouts.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1. The source-selection problem"
+          },
+          {
+            "id": "section-2",
+            "title": "2. Realizations, readouts and retained information"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 The mathematical interface to CSCF and Shadow Theory"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 The original finite observable"
+          }
+        ],
+        "anchors": [
+          "abstract",
+          "section-1",
+          "section-2",
+          "section-2-1",
+          "equation-1",
+          "equation-2",
+          "equation-3",
+          "equation-4",
+          "section-2-2",
+          "equation-5",
+          "equation-6",
+          "equation-7",
+          "equation-8"
+        ],
+        "words": 874
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "02-radial-shells",
+        "title": "Hydrogen from radial shells to finite counts",
+        "description": "Exact shell modes, source normalization, signed corrections and all 45 original coordinates.",
+        "order": 2,
+        "url": "/source-readout/spectral-profiles/02-radial-shells",
+        "sourcePath": "content/paper-integrations/spectral-profiles/02-radial-shells.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "3. Hydrogen: radial shells, normalization and finite profile control"
+          },
+          {
+            "id": "section-3-1",
+            "title": "3.1 The finite source and its exact radial data"
+          },
+          {
+            "id": "section-3-2",
+            "title": "3.2 An exact same-shell spectrum"
+          },
+          {
+            "id": "section-3-3",
+            "title": "3.3 Adjacent shells, the minimum and signed cancellation"
+          },
+          {
+            "id": "section-3-4",
+            "title": "3.4 Signed shell self-energies and a radial convergence bound"
+          },
+          {
+            "id": "section-3-5",
+            "title": "3.5 Returning the bound to all original counts"
+          },
+          {
+            "id": "section-3-6",
+            "title": "3.6 Cutoff concentration and the informative finite tail"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "section-3-1",
+          "equation-9",
+          "equation-10",
+          "section-3-2",
+          "equation-11",
+          "proposition-3-1",
+          "equation-12",
+          "section-3-3",
+          "equation-13",
+          "equation-14",
+          "equation-15",
+          "equation-16",
+          "equation-17",
+          "table-1",
+          "figure-1",
+          "section-3-4",
+          "equation-18",
+          "theorem-3-2",
+          "equation-19",
+          "equation-20",
+          "equation-21",
+          "equation-22",
+          "section-3-5",
+          "section-3-6",
+          "theorem-3-3"
+        ],
+        "words": 2291
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "03-dipole-and-loss",
+        "title": "From a dipole bath to the measured loss",
+        "description": "The equilibrium metric, the frequency-only obstruction and an operational realization of the logarithmic readout.",
+        "order": 3,
+        "url": "/source-readout/spectral-profiles/03-dipole-and-loss",
+        "sourcePath": "content/paper-integrations/spectral-profiles/03-dipole-and-loss.mdx",
+        "sections": [
+          {
+            "id": "section-4",
+            "title": "4. A physical dipole carrier and an operational loss readout"
+          },
+          {
+            "id": "section-4-1",
+            "title": "4.1 Angular factors and the equilibrium metric"
+          },
+          {
+            "id": "section-4-2",
+            "title": "4.2 Loss mixtures realize the logarithmic readout"
+          }
+        ],
+        "anchors": [
+          "section-4",
+          "section-4-1",
+          "equation-23",
+          "equation-24",
+          "proposition-4-1",
+          "section-4-2",
+          "proposition-4-2",
+          "equation-25",
+          "equation-26"
+        ],
+        "words": 779
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "04-gaussian-exchange",
+        "title": "How spatial preparation sets the spectrum",
+        "description": "Gaussian exchange, the degree-to-spectrum bound, preparation-dependent ratio laws and extraction uncertainty.",
+        "order": 4,
+        "url": "/source-readout/spectral-profiles/04-gaussian-exchange",
+        "sourcePath": "content/paper-integrations/spectral-profiles/04-gaussian-exchange.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "5. Spatial preparation and kernel-mass heterogeneity"
+          },
+          {
+            "id": "section-5-1",
+            "title": "5.1 A conditional Gaussian-exchange realization"
+          },
+          {
+            "id": "section-5-2",
+            "title": "5.2 A finite degree-to-spectrum theorem"
+          },
+          {
+            "id": "section-5-3",
+            "title": "5.3 A preparation law generates a ratio distribution"
+          },
+          {
+            "id": "section-5-4",
+            "title": "5.4 Extraction uncertainty and source-image scope"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "section-5-1",
+          "equation-27",
+          "section-5-2",
+          "theorem-5-1",
+          "equation-28",
+          "section-5-3",
+          "equation-29",
+          "equation-30",
+          "section-5-4",
+          "proposition-5-2"
+        ],
+        "words": 1013
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "05-outgoing-poles",
+        "title": "Kerr requires the joint outgoing problem",
+        "description": "The native damping readout, angular and radial source equations, branch repair and the boundary-pole extension.",
+        "order": 5,
+        "url": "/source-readout/spectral-profiles/05-outgoing-poles",
+        "sourcePath": "content/paper-integrations/spectral-profiles/05-outgoing-poles.mdx",
+        "sections": [
+          {
+            "id": "section-6",
+            "title": "6. Kerr: joint angular and outgoing radial dynamics"
+          },
+          {
+            "id": "section-6-1",
+            "title": "6.1 The native selection and the source boundary problem"
+          },
+          {
+            "id": "section-6-2",
+            "title": "6.2 Finite angular control and barrier shape"
+          },
+          {
+            "id": "section-6-3",
+            "title": "6.3 Branch identity and the complete numerical return"
+          },
+          {
+            "id": "section-6-4",
+            "title": "6.4 The boundary-pole extension of the carrier picture"
+          }
+        ],
+        "anchors": [
+          "section-6",
+          "section-6-1",
+          "equation-31",
+          "equation-32",
+          "section-6-2",
+          "equation-33",
+          "section-6-3",
+          "section-6-4"
+        ],
+        "words": 733
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "06-inverse-response",
+        "title": "What ratios cannot identify, calibrated response can recover",
+        "description": "Homometric carriers, exact projected dynamics and finite equal-weight recovery expose what pooling removes.",
+        "order": 6,
+        "url": "/source-readout/spectral-profiles/06-inverse-response",
+        "sourcePath": "content/paper-integrations/spectral-profiles/06-inverse-response.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "What ratio profiles identify, and what response adds"
+          },
+          {
+            "id": "section-7-1",
+            "title": "Distinct carriers can have the same complete ratio measure"
+          },
+          {
+            "id": "section-7-2",
+            "title": "A static reduction does not identify the time evolution"
+          },
+          {
+            "id": "section-7-3",
+            "title": "Calibrated response completes the finite spectral target"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "section-7-1",
+          "proposition-7-1",
+          "section-7-2",
+          "equation-34",
+          "section-7-3",
+          "theorem-7-2"
+        ],
+        "words": 813
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "07-tests-and-conclusion",
+        "title": "A connected source-to-readout account",
+        "description": "The three generation routes lead to concrete comparisons while preserving the boundary between construction, reproduction and physical evidence.",
+        "order": 7,
+        "url": "/source-readout/spectral-profiles/07-tests-and-conclusion",
+        "sourcePath": "content/paper-integrations/spectral-profiles/07-tests-and-conclusion.mdx",
+        "sections": [
+          {
+            "id": "section-8",
+            "title": "Three generation routes, one explicit observation contract"
+          },
+          {
+            "id": "section-8-1",
+            "title": "Discriminating observations"
+          },
+          {
+            "id": "section-8-2",
+            "title": "Keep the evidence classes separate"
+          },
+          {
+            "id": "section-9",
+            "title": "The result"
+          }
+        ],
+        "anchors": [
+          "section-8",
+          "section-8-1",
+          "section-8-2",
+          "section-9"
+        ],
+        "words": 679
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "08-appendices",
+        "title": "Radial formula, homogeneous preparation and verification",
+        "description": "The full exact radial sum, error bounds, circle control and all published return-count tables.",
+        "order": 8,
+        "url": "/source-readout/spectral-profiles/08-appendices",
+        "sourcePath": "content/paper-integrations/spectral-profiles/08-appendices.mdx",
+        "sections": [
+          {
+            "id": "appendix-a",
+            "title": "Appendix A. Exact radial evaluation and numerical conventions"
+          },
+          {
+            "id": "appendix-b",
+            "title": "Appendix B. Homogeneous ring preparation"
+          },
+          {
+            "id": "appendix-c",
+            "title": "Appendix C. Verification scope and numerical tables"
+          }
+        ],
+        "anchors": [
+          "appendix-a",
+          "equation-35",
+          "appendix-b",
+          "appendix-c",
+          "table-2",
+          "table-3"
+        ],
+        "words": 814
+      },
+      {
+        "paperId": "spectral-profiles",
+        "slug": "09-references",
+        "title": "References and source connections",
+        "description": "All twelve references with links to related web editions and original bibliographic records.",
+        "order": 9,
+        "url": "/source-readout/spectral-profiles/09-references",
+        "sourcePath": "content/paper-integrations/spectral-profiles/09-references.mdx",
+        "sections": [
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "references",
+          "ref-1",
+          "ref-2",
+          "ref-3",
+          "ref-4",
+          "ref-5",
+          "ref-6",
+          "ref-7",
+          "ref-8",
+          "ref-9",
+          "ref-10",
+          "ref-11",
+          "ref-12"
+        ],
+        "words": 304
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/spectral-profiles/complete.md",
+    "originalPdf": "/publications/spectral/spectral-profiles/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "adaptive-carriers",
+      "title": "Adaptive Spectral Carriers: Time Ordering, Reciprocal Memory, and Linked Coherent–Dissipative Response",
+      "subtitle": "Time Ordering, Reciprocal Memory, and Linked Coherent–Dissipative Response",
+      "description": "Reciprocal memory changes the carrier along the trajectory. Instantaneous alignment survives along realized histories, while time ordering and full feedback change the response.",
+      "doi": "10.5281/zenodo.23924603",
+      "date": "2026-11-03",
+      "url": "/source-readout/adaptive-carriers",
+      "pdfUrl": "/publications/spectral/adaptive-carriers/paper.pdf",
+      "markdownUrl": "/publications/spectral/adaptive-carriers/complete.md",
+      "manifestUrl": "/source-readout/adaptive-carriers/manifest.json",
+      "paperSlug": "adaptive-carriers",
+      "headline": "The carrier changes with the state it governs.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/adaptive-carriers/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "adaptive-carriers",
+        "slug": "01-adapting-the-carrier",
+        "title": "One energy drives the adaptive carrier",
+        "description": "Reciprocal memory changes stiffness while a shared positive carrier controls instantaneous attenuation and phase.",
+        "order": 1,
+        "url": "/source-readout/adaptive-carriers/01-adapting-the-carrier",
+        "sourcePath": "content/paper-integrations/adaptive-carriers/01-adapting-the-carrier.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1 From a fixed carrier to an adaptive source"
+          },
+          {
+            "id": "section-1-1",
+            "title": "1.1 Relationship to the previous programme"
+          },
+          {
+            "id": "section-1-2",
+            "title": "1.2 Source state and observable contracts"
+          },
+          {
+            "id": "section-1-3",
+            "title": "1.3 Conventions"
+          },
+          {
+            "id": "section-2",
+            "title": "2 A reciprocal adaptive carrier from one energy"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 Units and physical assumptions"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 Instantaneous CSCF realization"
+          }
+        ],
+        "anchors": [
+          "section-1",
+          "section-1-1",
+          "section-1-2",
+          "section-1-3",
+          "section-2",
+          "eq-1",
+          "eq-2",
+          "eq-3",
+          "eq-4",
+          "eq-5",
+          "eq-6",
+          "section-2-1",
+          "theorem-2-1",
+          "eq-7",
+          "eq-8",
+          "eq-9",
+          "eq-10",
+          "proposition-2-2",
+          "eq-11",
+          "eq-12",
+          "proposition-2-3",
+          "eq-13",
+          "section-2-2",
+          "eq-14"
+        ],
+        "words": 1016
+      },
+      {
+        "paperId": "adaptive-carriers",
+        "slug": "02-ordering-and-feedback",
+        "title": "Time ordering and the complete memory response",
+        "description": "An interaction picture and a commutator bound replace fixed-carrier factorization; the full tangent retains a causal memory kernel.",
+        "order": 2,
+        "url": "/source-readout/adaptive-carriers/02-ordering-and-feedback",
+        "sourcePath": "content/paper-integrations/adaptive-carriers/02-ordering-and-feedback.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "3 Conditional evolution and time ordering"
+          },
+          {
+            "id": "section-3-1",
+            "title": "3.1 Two pulses and asymptotic sharpness"
+          },
+          {
+            "id": "section-3-2",
+            "title": "3.2 A moving but commuting control"
+          },
+          {
+            "id": "section-4",
+            "title": "4 Full feedback, memory and changing coordinates"
+          },
+          {
+            "id": "section-4-1",
+            "title": "4.1 Exact transient expansion despite partial positivity"
+          },
+          {
+            "id": "section-4-2",
+            "title": "4.2 The connection for a changing mobility metric"
+          },
+          {
+            "id": "section-4-3",
+            "title": "4.3 Why the autonomous closure certificate changes"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "eq-15",
+          "eq-16",
+          "eq-17",
+          "theorem-3-1",
+          "eq-18",
+          "theorem-3-2",
+          "eq-19",
+          "eq-20",
+          "eq-21",
+          "eq-22",
+          "section-3-1",
+          "eq-23",
+          "eq-24",
+          "eq-25",
+          "eq-26",
+          "section-3-2",
+          "eq-27",
+          "eq-28",
+          "section-4",
+          "eq-29",
+          "eq-30",
+          "proposition-4-1",
+          "eq-31",
+          "eq-32",
+          "eq-33",
+          "section-4-1",
+          "eq-34",
+          "eq-35",
+          "eq-36",
+          "section-4-2",
+          "eq-37",
+          "eq-38",
+          "eq-39",
+          "eq-40",
+          "section-4-3",
+          "eq-41",
+          "eq-42"
+        ],
+        "words": 1098
+      },
+      {
+        "paperId": "adaptive-carriers",
+        "slug": "03-testing-the-linked-law",
+        "title": "Calibrating the linked operator response",
+        "description": "Short-time propagation recovers calibrated generators with explicit bias, noise and mobility-ratio bounds.",
+        "order": 3,
+        "url": "/source-readout/adaptive-carriers/03-testing-the-linked-law",
+        "sourcePath": "content/paper-integrations/adaptive-carriers/03-testing-the-linked-law.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "5 A calibrated test of linked operator response"
+          },
+          {
+            "id": "section-5-1",
+            "title": "5.1 Short-time reconstruction and a controlled remainder"
+          },
+          {
+            "id": "section-5-2",
+            "title": "5.2 Preparation, metric and access"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "eq-43",
+          "eq-44",
+          "eq-45",
+          "section-5-1",
+          "eq-46",
+          "theorem-5-1",
+          "eq-47",
+          "eq-48",
+          "eq-49",
+          "eq-50",
+          "eq-51",
+          "section-5-2"
+        ],
+        "words": 615
+      },
+      {
+        "paperId": "adaptive-carriers",
+        "slug": "04-finite-checks",
+        "title": "The finite adaptive tests and what they establish",
+        "description": "Deterministic trajectories, pulses, symmetry controls and calibrated reconstruction test distinct consequences of the carrier law.",
+        "order": 4,
+        "url": "/source-readout/adaptive-carriers/04-finite-checks",
+        "sourcePath": "content/paper-integrations/adaptive-carriers/04-finite-checks.mdx",
+        "sections": [
+          {
+            "id": "section-6",
+            "title": "6 Executed finite calculations"
+          },
+          {
+            "id": "section-6-1",
+            "title": "6.1 Feedback trajectory and independent formulation"
+          },
+          {
+            "id": "section-6-2",
+            "title": "6.2 Pulse ordering and the symmetric control"
+          },
+          {
+            "id": "section-6-3",
+            "title": "6.3 Response reconstruction and exact fixtures"
+          },
+          {
+            "id": "section-6-4",
+            "title": "6.4 Public verification and evidence classes"
+          },
+          {
+            "id": "section-7",
+            "title": "7 Consequences and focused extensions"
+          },
+          {
+            "id": "section-7-1",
+            "title": "7.1 Physical implementation and driven organization"
+          },
+          {
+            "id": "section-7-2",
+            "title": "7.2 Continuum domains and renormalization"
+          },
+          {
+            "id": "section-8",
+            "title": "8 Conclusion"
+          },
+          {
+            "id": "section-references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "section-6",
+          "section-6-1",
+          "eq-52",
+          "eq-53",
+          "table-1",
+          "figure-1",
+          "section-6-2",
+          "eq-54",
+          "eq-55",
+          "table-2",
+          "figure-2",
+          "section-6-3",
+          "eq-56",
+          "table-3",
+          "section-6-4",
+          "section-7",
+          "section-7-1",
+          "section-7-2",
+          "section-8",
+          "section-references"
+        ],
+        "words": 1587
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/adaptive-carriers/complete.md",
+    "originalPdf": "/publications/spectral/adaptive-carriers/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "sustained-carriers",
+      "title": "Sustained Adaptive Spectral States: Global Attraction, Nonlinear Gain, and Linked Coherent–Dissipative Response",
+      "subtitle": "Global Attraction, Nonlinear Gain, and Linked Coherent–Dissipative Response",
+      "description": "A declared rate port sustains nonzero states, with global attraction under a strict curvature condition. Nonlinear gain and freely responding memory distinguish the adaptive system from a matched fixed carrier.",
+      "doi": "10.5281/zenodo.23927855",
+      "date": "2026-11-03",
+      "url": "/source-readout/sustained-carriers",
+      "pdfUrl": "/publications/spectral/sustained-carriers/paper.pdf",
+      "markdownUrl": "/publications/spectral/sustained-carriers/complete.md",
+      "manifestUrl": "/source-readout/sustained-carriers/manifest.json",
+      "paperSlug": "sustained-carriers",
+      "headline": "External power sustains an adaptive response.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/sustained-carriers/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "sustained-carriers",
+        "slug": "01-power-and-stationary-reduction",
+        "title": "The power that sustains an adaptive state",
+        "description": "A calibrated rate port maintains nonzero amplitude and memory, with a physical energy balance distinct from the stationary Lyapunov tilt.",
+        "order": 1,
+        "url": "/source-readout/sustained-carriers/01-power-and-stationary-reduction",
+        "sourcePath": "content/paper-integrations/sustained-carriers/01-power-and-stationary-reduction.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1 From relaxing carriers to sustained adaptive states"
+          },
+          {
+            "id": "section-2",
+            "title": "2 Source state, actuator and physical energy"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 Constitutive equations and units"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 The effort–flow input contract"
+          },
+          {
+            "id": "section-3",
+            "title": "3 Global solutions and the stationary reduction"
+          },
+          {
+            "id": "section-3-1",
+            "title": "3.1 A mathematical tilt distinct from stored energy"
+          },
+          {
+            "id": "section-3-2",
+            "title": "3.2 Eliminating memory at stationarity"
+          },
+          {
+            "id": "section-3-3",
+            "title": "3.3 Why global joint convexity is unavailable"
+          }
+        ],
+        "anchors": [
+          "section-1",
+          "section-2",
+          "section-2-1",
+          "eq-1",
+          "eq-2",
+          "eq-3",
+          "eq-4",
+          "section-2-2",
+          "eq-5",
+          "eq-6",
+          "eq-7",
+          "eq-8",
+          "section-3",
+          "section-3-1",
+          "eq-9",
+          "eq-10",
+          "proposition-3-1",
+          "eq-11",
+          "eq-12",
+          "eq-13",
+          "section-3-2",
+          "eq-14",
+          "eq-15",
+          "eq-16",
+          "section-3-3",
+          "eq-17"
+        ],
+        "words": 904
+      },
+      {
+        "paperId": "sustained-carriers",
+        "slug": "02-global-attraction-and-gain",
+        "title": "Global attraction and nonlinear gain",
+        "description": "A sharp scalar curvature estimate yields a strict sufficient all-input stability regime and a controlled contrast gain.",
+        "order": 2,
+        "url": "/source-readout/sustained-carriers/02-global-attraction-and-gain",
+        "sourcePath": "content/paper-integrations/sustained-carriers/02-global-attraction-and-gain.mdx",
+        "sections": [
+          {
+            "id": "section-4",
+            "title": "4 Sharp curvature and global attraction"
+          },
+          {
+            "id": "section-5",
+            "title": "5 Complete local stability and a parameter bound"
+          },
+          {
+            "id": "section-6",
+            "title": "6 What the drive imposes and feedback changes"
+          },
+          {
+            "id": "section-6-1",
+            "title": "6.1 Collective control and symmetric contrast gain"
+          },
+          {
+            "id": "section-6-2",
+            "title": "6.2 Equal stationary power and continuing work"
+          }
+        ],
+        "anchors": [
+          "section-4",
+          "lemma-4-1",
+          "eq-18",
+          "eq-19",
+          "eq-20",
+          "eq-21",
+          "theorem-4-2",
+          "section-5",
+          "eq-22",
+          "eq-23",
+          "eq-24",
+          "proposition-5-1",
+          "eq-25",
+          "eq-26",
+          "eq-27",
+          "eq-28",
+          "eq-29",
+          "section-6",
+          "section-6-1",
+          "eq-30",
+          "eq-31",
+          "eq-32",
+          "eq-33",
+          "section-6-2",
+          "eq-34",
+          "corollary-6-1",
+          "eq-35"
+        ],
+        "words": 1042
+      },
+      {
+        "paperId": "sustained-carriers",
+        "slug": "03-full-response",
+        "title": "The driven carrier keeps two kinds of response",
+        "description": "Conditional phase and attenuation share a carrier, while free memory changes the static and frequency transfer.",
+        "order": 3,
+        "url": "/source-readout/sustained-carriers/03-full-response",
+        "sourcePath": "content/paper-integrations/sustained-carriers/03-full-response.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "7 Conditional linkage and complete feedback response"
+          },
+          {
+            "id": "section-7-1",
+            "title": "7.1 Affine propagation and time ordering"
+          },
+          {
+            "id": "section-7-2",
+            "title": "7.2 Memory kernel and transfer operators"
+          },
+          {
+            "id": "section-7-3",
+            "title": "7.3 Observable contract and required resources"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "section-7-1",
+          "eq-36",
+          "eq-37",
+          "eq-38",
+          "eq-39",
+          "eq-40",
+          "eq-41",
+          "section-7-2",
+          "eq-42",
+          "eq-43",
+          "eq-44",
+          "eq-45",
+          "eq-46",
+          "section-7-3"
+        ],
+        "words": 529
+      },
+      {
+        "paperId": "sustained-carriers",
+        "slug": "04-driven-controls",
+        "title": "The driven tests separate power, organization and response",
+        "description": "Matched three-node controls retain the complete stability spectrum and show that equal supplied power can sustain different states.",
+        "order": 4,
+        "url": "/source-readout/sustained-carriers/04-driven-controls",
+        "sourcePath": "content/paper-integrations/sustained-carriers/04-driven-controls.mdx",
+        "sections": [
+          {
+            "id": "section-8",
+            "title": "8 Executed finite calculations and matched controls"
+          },
+          {
+            "id": "section-8-1",
+            "title": "8.1 Fixed preparations and numerical methods"
+          },
+          {
+            "id": "section-8-2",
+            "title": "8.2 Stationary organization, power and stability"
+          },
+          {
+            "id": "section-8-3",
+            "title": "8.3 Conditional ordering and full response"
+          },
+          {
+            "id": "section-8-4",
+            "title": "8.4 Reproducibility and evidence scope"
+          },
+          {
+            "id": "section-9",
+            "title": "9 Consequences and focused extensions"
+          },
+          {
+            "id": "section-references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "section-8",
+          "section-8-1",
+          "eq-47",
+          "eq-48",
+          "table-1",
+          "table-2",
+          "section-8-2",
+          "section-8-3",
+          "figure-1",
+          "section-8-4",
+          "table-3",
+          "table-4",
+          "section-9",
+          "figure-2",
+          "section-references"
+        ],
+        "words": 1502
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/sustained-carriers/complete.md",
+    "originalPdf": "/publications/spectral/sustained-carriers/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "sharp-uniqueness",
+      "title": "Sharp Uniqueness and Bistability in Driven Adaptive Spectral Carriers",
+      "subtitle": "A sharp curvature threshold gives uniqueness even at equality. Below it, the three-node realization exhibits bistability, with a complete stationary count in the stated transverse-convexity regime.",
+      "description": "A sharp curvature threshold gives uniqueness even at equality. Below it, the three-node realization exhibits bistability, with a complete stationary count in the stated transverse-convexity regime.",
+      "doi": "10.5281/zenodo.23932350",
+      "date": "2026-11-03",
+      "url": "/source-readout/sharp-uniqueness",
+      "pdfUrl": "/publications/spectral/sharp-uniqueness/paper.pdf",
+      "markdownUrl": "/publications/spectral/sharp-uniqueness/complete.md",
+      "manifestUrl": "/source-readout/sharp-uniqueness/manifest.json",
+      "paperSlug": "sharp-uniqueness",
+      "headline": "One input can sustain two stable states.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/sharp-uniqueness/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "01-complete-driven-source",
+        "title": "The Same Drive Can Sustain Two Stable States",
+        "description": "The complete reciprocal source, its physical rate port, and the strict tilted-energy argument.",
+        "order": 1,
+        "url": "/source-readout/sharp-uniqueness/01-complete-driven-source",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/01-complete-driven-source.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1. The uniqueness boundary"
+          },
+          {
+            "id": "section-2",
+            "title": "2. The complete source and external energy contract"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 Constitutive equations and units"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 Power and the constant-input tilt"
+          }
+        ],
+        "anchors": [
+          "abstract",
+          "section-1",
+          "section-2",
+          "section-2-1",
+          "eq-1",
+          "eq-2",
+          "eq-3",
+          "eq-4",
+          "section-2-2",
+          "eq-5",
+          "eq-6",
+          "eq-7",
+          "eq-8",
+          "proposition-2-1",
+          "eq-9"
+        ],
+        "words": 858
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "02-endpoint-and-stability",
+        "title": "Sharp Curvature and Complete Dynamical Stability",
+        "description": "Stationary memory elimination yields the endpoint; the mobility–inertia theorem returns all amplitude and memory directions.",
+        "order": 2,
+        "url": "/source-readout/sharp-uniqueness/02-endpoint-and-stability",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/02-endpoint-and-stability.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "3. Stationary reduction and endpoint uniqueness"
+          },
+          {
+            "id": "section-3-1",
+            "title": "3.1 Exact memory elimination and curvature"
+          },
+          {
+            "id": "section-4",
+            "title": "4. Full stability from stationary curvature"
+          },
+          {
+            "id": "section-4-1",
+            "title": "4.1 Return the eliminated memory"
+          },
+          {
+            "id": "section-4-2",
+            "title": "4.2 Varying mobility at fixed state"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "section-3-1",
+          "eq-10",
+          "eq-11",
+          "eq-12",
+          "eq-13",
+          "eq-14",
+          "eq-15",
+          "theorem-3-1",
+          "eq-16",
+          "eq-17",
+          "eq-18",
+          "section-4",
+          "section-4-1",
+          "eq-19",
+          "eq-20",
+          "eq-21",
+          "lemma-4-1",
+          "eq-22",
+          "eq-23",
+          "eq-24",
+          "eq-25",
+          "section-4-2"
+        ],
+        "words": 752
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "03-sharp-path-threshold",
+        "title": "An Exact Bistability Threshold on Three Nodes",
+        "description": "A transverse convexity argument counts the complete stationary set and exposes a misleading sector-stable candidate.",
+        "order": 3,
+        "url": "/source-readout/sharp-uniqueness/03-sharp-path-threshold",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/03-sharp-path-threshold.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "5. Three-node path: exact count and threshold"
+          },
+          {
+            "id": "section-5-1",
+            "title": "5.1 Modes and scalar stationary law"
+          },
+          {
+            "id": "section-5-2",
+            "title": "5.2 Sector stability can miss a full instability"
+          },
+          {
+            "id": "section-5-3",
+            "title": "5.3 Complete count for highest-mode preparation"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "section-5-1",
+          "eq-26",
+          "eq-27",
+          "eq-28",
+          "eq-29",
+          "eq-30",
+          "eq-31",
+          "eq-32",
+          "eq-33",
+          "section-5-2",
+          "section-5-3",
+          "theorem-5-1",
+          "eq-34",
+          "corollary-5-2",
+          "eq-35"
+        ],
+        "words": 764
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "04-complete-folds",
+        "title": "Both Folds Are Full Dynamical Saddle-Nodes",
+        "description": "The complete left and right null vectors establish nondegeneracy and two independent cubics retain all eight modes.",
+        "order": 4,
+        "url": "/source-readout/sharp-uniqueness/04-complete-folds",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/04-complete-folds.mdx",
+        "sections": [
+          {
+            "id": "section-6",
+            "title": "6. Saddle-nodes and complete modal cubics"
+          },
+          {
+            "id": "section-6-1",
+            "title": "6.1 Full dynamical nondegeneracy"
+          },
+          {
+            "id": "section-6-2",
+            "title": "6.2 Independent all-coordinate blocks"
+          }
+        ],
+        "anchors": [
+          "section-6",
+          "section-6-1",
+          "eq-36",
+          "eq-37",
+          "eq-38",
+          "eq-39",
+          "eq-40",
+          "eq-41",
+          "section-6-2",
+          "eq-42",
+          "eq-43",
+          "eq-44",
+          "eq-45",
+          "eq-46",
+          "eq-47"
+        ],
+        "words": 544
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "05-basin-and-observation",
+        "title": "Full-State Basins, Powered Switches and Lost Readout Information",
+        "description": "A tilted barrier controls basin membership while two equally powered sources retain distinct full-feedback responses.",
+        "order": 5,
+        "url": "/source-readout/sharp-uniqueness/05-basin-and-observation",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/05-basin-and-observation.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "7. Full-state basin regions and powered switching"
+          },
+          {
+            "id": "section-7-1",
+            "title": "7.1 A cylinder barrier"
+          },
+          {
+            "id": "section-7-2",
+            "title": "7.2 Finite pulse experiments and resources"
+          },
+          {
+            "id": "section-8",
+            "title": "8. Observable response and source-to-readout information"
+          },
+          {
+            "id": "section-8-1",
+            "title": "8.1 Conditional versus free memory"
+          },
+          {
+            "id": "section-8-2",
+            "title": "8.2 What the coarse summary loses"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "section-7-1",
+          "theorem-7-1",
+          "eq-48",
+          "eq-49",
+          "eq-50",
+          "eq-51",
+          "section-7-2",
+          "table-1",
+          "eq-52",
+          "eq-53",
+          "section-8",
+          "section-8-1",
+          "eq-54",
+          "eq-55",
+          "eq-56",
+          "eq-57",
+          "eq-58",
+          "section-8-2",
+          "eq-59",
+          "eq-60"
+        ],
+        "words": 923
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "06-reproducible-path-example",
+        "title": "The Three-Node Example in Numbers",
+        "description": "Exact scalar brackets, complete stationary spectra, basin preparations, finite switching trajectories and replay.",
+        "order": 6,
+        "url": "/source-readout/sharp-uniqueness/06-reproducible-path-example",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/06-reproducible-path-example.mdx",
+        "sections": [
+          {
+            "id": "section-9",
+            "title": "9. Fixed example and numerical evidence"
+          },
+          {
+            "id": "section-9-1",
+            "title": "9.1 Analytic design and stationary values"
+          },
+          {
+            "id": "section-9-2",
+            "title": "9.2 Full-state preparations and controls"
+          },
+          {
+            "id": "section-9-3",
+            "title": "9.3 Physical ledgers for the two switches"
+          },
+          {
+            "id": "section-9-4",
+            "title": "9.4 Methods and reproduction"
+          }
+        ],
+        "anchors": [
+          "section-9",
+          "section-9-1",
+          "eq-61",
+          "eq-62",
+          "table-2",
+          "table-3",
+          "table-4",
+          "figure-1",
+          "section-9-2",
+          "eq-63",
+          "table-5",
+          "table-6",
+          "section-9-3",
+          "table-7",
+          "figure-2",
+          "section-9-4",
+          "eq-64"
+        ],
+        "words": 1346
+      },
+      {
+        "paperId": "sharp-uniqueness",
+        "slug": "07-scope-and-references",
+        "title": "What the Threshold and Readout Obstruction Establish",
+        "description": "The exact scope of the counted regime, physical realization requirements, and bibliography.",
+        "order": 7,
+        "url": "/source-readout/sharp-uniqueness/07-scope-and-references",
+        "sourcePath": "content/paper-integrations/sharp-uniqueness/07-scope-and-references.mdx",
+        "sections": [
+          {
+            "id": "section-10",
+            "title": "10. Discussion and limits"
+          },
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "section-10",
+          "references",
+          "reference-1",
+          "reference-2",
+          "reference-3",
+          "reference-4",
+          "reference-5",
+          "reference-6",
+          "reference-7",
+          "reference-8",
+          "reference-9"
+        ],
+        "words": 510
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/sharp-uniqueness/complete.md",
+    "originalPdf": "/publications/spectral/sharp-uniqueness/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "slow-passage",
+      "title": "Slow Passage and Prepared Hysteresis in Adaptive Spectral Carriers",
+      "subtitle": "A slow sweep delays switching past the static fold by a preparation-dependent amount. The prepared cycle has a nonzero geometric loop limit, while physical maintenance work grows as the sweep slows.",
+      "description": "A slow sweep delays switching past the static fold by a preparation-dependent amount. The prepared cycle has a nonzero geometric loop limit, while physical maintenance work grows as the sweep slows.",
+      "doi": "10.5281/zenodo.23935694",
+      "date": "2026-11-04",
+      "url": "/source-readout/slow-passage",
+      "pdfUrl": "/publications/spectral/slow-passage/paper.pdf",
+      "markdownUrl": "/publications/spectral/slow-passage/complete.md",
+      "manifestUrl": "/source-readout/slow-passage/manifest.json",
+      "paperSlug": "slow-passage",
+      "headline": "Switching remembers how the state was prepared.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/slow-passage/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "slow-passage",
+        "slug": "01-source-and-energy",
+        "title": "A Slow Sweep Passes the Stationary Fold",
+        "description": "The complete reciprocal source, uninterrupted triangular input and bounded-input energy estimates.",
+        "order": 1,
+        "url": "/source-readout/slow-passage/01-source-and-energy",
+        "sourcePath": "content/paper-integrations/slow-passage/01-source-and-energy.mdx",
+        "sections": [
+          {
+            "id": "section-1",
+            "title": "1. Where switching happens"
+          },
+          {
+            "id": "section-2",
+            "title": "2. Time-dependent source, energy and boundedness"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 Complete state and prescribed input"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 Physical balance and the varying tilt"
+          }
+        ],
+        "anchors": [
+          "abstract",
+          "section-1",
+          "section-2",
+          "section-2-1",
+          "eq-1",
+          "eq-2",
+          "eq-3",
+          "eq-4",
+          "eq-5",
+          "eq-6",
+          "section-2-2",
+          "eq-7",
+          "eq-8",
+          "eq-9",
+          "eq-10",
+          "proposition-2-1",
+          "eq-11",
+          "eq-12",
+          "eq-13"
+        ],
+        "words": 891
+      },
+      {
+        "paperId": "slow-passage",
+        "slug": "02-folds-and-critical-coordinate",
+        "title": "Complete Folds and the Mixed Critical Coordinate",
+        "description": "The stationary count, full saddle-node coefficients and a passing-trajectory estimate in the fixed-fold chart.",
+        "order": 2,
+        "url": "/source-readout/slow-passage/02-folds-and-critical-coordinate",
+        "sourcePath": "content/paper-integrations/slow-passage/02-folds-and-critical-coordinate.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "3. Stationary geometry and complete fold data"
+          },
+          {
+            "id": "section-4",
+            "title": "4. Fixed-fold reduction with dynamic memory"
+          },
+          {
+            "id": "section-4-1",
+            "title": "4.1 Projection and extended nilpotent structure"
+          },
+          {
+            "id": "section-4-2",
+            "title": "4.2 Attraction during passage"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "eq-14",
+          "eq-15",
+          "eq-16",
+          "eq-17",
+          "lemma-3-1",
+          "eq-18",
+          "eq-19",
+          "eq-20",
+          "eq-21",
+          "eq-22",
+          "eq-23",
+          "eq-24",
+          "eq-25",
+          "eq-26",
+          "table-1",
+          "section-4",
+          "section-4-1",
+          "eq-27",
+          "eq-28",
+          "eq-29",
+          "eq-30",
+          "eq-31",
+          "eq-32",
+          "section-4-2",
+          "lemma-4-1",
+          "eq-33",
+          "eq-34"
+        ],
+        "words": 902
+      },
+      {
+        "paperId": "slow-passage",
+        "slug": "03-airy-delay-and-observables",
+        "title": "Preparation Selects the Airy Delay",
+        "description": "The two-thirds-power law, its proof by matching and exit bounds, and the difference between local departure and complete arrival.",
+        "order": 3,
+        "url": "/source-readout/slow-passage/03-airy-delay-and-observables",
+        "sourcePath": "content/paper-integrations/slow-passage/03-airy-delay-and-observables.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "5. Inner scaling and preparation-dependent passage"
+          },
+          {
+            "id": "section-5-1",
+            "title": "5.1 Orient the Riccati equation"
+          },
+          {
+            "id": "section-5-2",
+            "title": "5.2 The incoming stable branch selects the solution"
+          },
+          {
+            "id": "section-5-3",
+            "title": "5.3 Exact-fold and finite-inner preparations"
+          },
+          {
+            "id": "section-6",
+            "title": "6. Which switching event is measured?"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "section-5-1",
+          "eq-35",
+          "eq-36",
+          "eq-37",
+          "eq-38",
+          "section-5-2",
+          "eq-39",
+          "eq-40",
+          "eq-41",
+          "theorem-5-1",
+          "eq-42",
+          "eq-43",
+          "eq-44",
+          "section-5-3",
+          "eq-45",
+          "eq-46",
+          "eq-47",
+          "section-6",
+          "eq-48",
+          "eq-49"
+        ],
+        "words": 971
+      },
+      {
+        "paperId": "slow-passage",
+        "slug": "04-capture-hysteresis-and-work",
+        "title": "From Local Exit to a Complete Hysteresis Return",
+        "description": "Strict loss gives the outgoing connection; stable tracking gives the prepared return and separates geometric area from physical work.",
+        "order": 4,
+        "url": "/source-readout/slow-passage/04-capture-hysteresis-and-work",
+        "sourcePath": "content/paper-integrations/slow-passage/04-capture-hysteresis-and-work.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "7. Capture and the prepared quasistatic return"
+          },
+          {
+            "id": "section-7-1",
+            "title": "7.1 The full outgoing connection"
+          },
+          {
+            "id": "section-7-2",
+            "title": "7.2 Stable tracking through reversal"
+          },
+          {
+            "id": "section-7-3",
+            "title": "7.3 The geometric limit"
+          },
+          {
+            "id": "section-8",
+            "title": "8. The cost of deleting dynamic memory"
+          },
+          {
+            "id": "section-9",
+            "title": "9. Work and the evolving carrier"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "section-7-1",
+          "lemma-7-1",
+          "section-7-2",
+          "eq-50",
+          "eq-51",
+          "eq-52",
+          "theorem-7-2",
+          "eq-53",
+          "eq-54",
+          "section-7-3",
+          "eq-55",
+          "eq-56",
+          "section-8",
+          "eq-57",
+          "eq-58",
+          "eq-59",
+          "table-2",
+          "section-9",
+          "eq-60",
+          "proposition-9-1",
+          "eq-61",
+          "eq-62",
+          "eq-63"
+        ],
+        "words": 1253
+      },
+      {
+        "paperId": "slow-passage",
+        "slug": "05-executed-cycles",
+        "title": "Four complete cycles test delay, capture and work",
+        "description": "Compare event-localized switching with unfit Airy laws, test preparation controls, and separate the geometric loop from the energy ledger.",
+        "order": 5,
+        "url": "/source-readout/slow-passage/05-executed-cycles",
+        "sourcePath": "content/paper-integrations/slow-passage/05-executed-cycles.mdx",
+        "sections": [
+          {
+            "id": "section-10",
+            "title": "10 Executed numerical tests and reproducibility"
+          },
+          {
+            "id": "section-10-1",
+            "title": "10.1 Frozen experiment and actual event locations"
+          },
+          {
+            "id": "section-10-2",
+            "title": "10.2 Preparation, complete-state controls and independent formulation"
+          },
+          {
+            "id": "section-10-3",
+            "title": "10.3 Continuous cycles, capture and work"
+          },
+          {
+            "id": "section-10-4",
+            "title": "10.4 Verification and correction traceability"
+          }
+        ],
+        "anchors": [
+          "section-10",
+          "section-10-1",
+          "eq-64",
+          "eq-65",
+          "table-3",
+          "table-4",
+          "figure-1",
+          "section-10-2",
+          "table-5",
+          "eq-66",
+          "eq-67",
+          "eq-68",
+          "table-6",
+          "section-10-3",
+          "figure-2",
+          "table-7",
+          "table-8",
+          "figure-3",
+          "section-10-4"
+        ],
+        "words": 2009
+      },
+      {
+        "paperId": "slow-passage",
+        "slug": "06-scope-residuals-and-references",
+        "title": "What the Prepared Return Proves",
+        "description": "The limits of the hysteresis result and the complete finite-preparation residual audit.",
+        "order": 6,
+        "url": "/source-readout/slow-passage/06-scope-residuals-and-references",
+        "sourcePath": "content/paper-integrations/slow-passage/06-scope-residuals-and-references.mdx",
+        "sections": [
+          {
+            "id": "section-11",
+            "title": "11. Discussion"
+          },
+          {
+            "id": "appendix-a",
+            "title": "Appendix A. Finite-preparation residual audit"
+          },
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "section-11",
+          "appendix-a",
+          "eq-69",
+          "table-9",
+          "references",
+          "reference-1",
+          "reference-2",
+          "reference-3",
+          "reference-4",
+          "reference-5",
+          "reference-6",
+          "reference-7",
+          "reference-8",
+          "reference-9",
+          "reference-10",
+          "reference-11",
+          "reference-12"
+        ],
+        "words": 696
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/slow-passage/complete.md",
+    "originalPdf": "/publications/spectral/slow-passage/paper.pdf"
+  },
+  {
+    "schemaVersion": 1,
+    "publication": {
+      "id": "transport-projective",
+      "title": "Transport and Projective Reduction in a Source–Readout Derivation of Einstein Gravity",
+      "subtitle": "Reconstruct the affine connection from smooth transport, remove the projective ambiguity with a volume-restored observable, and follow the complete off-shell spin-two bootstrap to Einstein–matter dynamics within the admitted realization.",
+      "description": "Reconstruct the affine connection from smooth transport, remove the projective ambiguity with a volume-restored observable, and follow the complete off-shell spin-two bootstrap to Einstein–matter dynamics within the admitted realization.",
+      "doi": "10.5281/zenodo.23954887",
+      "date": "2026-11-04",
+      "url": "/source-readout/transport-projective",
+      "pdfUrl": "/publications/spectral/transport-projective/paper.pdf",
+      "markdownUrl": "/publications/spectral/transport-projective/complete.md",
+      "manifestUrl": "/source-readout/transport-projective/manifest.json",
+      "paperSlug": "transport-projective",
+      "headline": "Transport recovers the connection used by Einstein gravity.",
+      "author": "Jeremy Rodgers",
+      "programme": "source-readout",
+      "supplementUrl": "/publications/spectral/transport-projective/verification.zip"
+    },
+    "kind": "complete-translated-web-edition",
+    "updated": "2026-11-05",
+    "chapters": [
+      {
+        "paperId": "transport-projective",
+        "slug": "01-the-gravitational-recovery-problem",
+        "title": "The gravitational recovery problem",
+        "description": "Recover the full Einstein–matter dynamics on one source realization, and identify which premises make that recovery possible.",
+        "order": 1,
+        "url": "/source-readout/transport-projective/01-the-gravitational-recovery-problem",
+        "sourcePath": "content/paper-integrations/transport-projective/01-the-gravitational-recovery-problem.mdx",
+        "sections": [
+          {
+            "id": "abstract",
+            "title": "From transport to Einstein gravity"
+          },
+          {
+            "id": "section-1",
+            "title": "1. What a complete recovery has to include"
+          },
+          {
+            "id": "section-1-1",
+            "title": "1.1 Conventions and units"
+          }
+        ],
+        "anchors": [
+          "abstract",
+          "section-1",
+          "section-1-1",
+          "eq-1",
+          "eq-2"
+        ],
+        "words": 717
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "02-source-support-and-preparation",
+        "title": "Source support, preparation and common witnesses",
+        "description": "Construct the admitted fan and separate its literal finite support from the off-shell gravitational sector.",
+        "order": 2,
+        "url": "/source-readout/transport-projective/02-source-support-and-preparation",
+        "sourcePath": "content/paper-integrations/transport-projective/02-source-support-and-preparation.mdx",
+        "sections": [
+          {
+            "id": "section-2",
+            "title": "2. Admitted support and realized variables"
+          },
+          {
+            "id": "section-2-1",
+            "title": "2.1 A native source family"
+          },
+          {
+            "id": "section-2-2",
+            "title": "2.2 What the literal preparation contains"
+          },
+          {
+            "id": "section-2-3",
+            "title": "2.3 Recover operations on one common witness"
+          }
+        ],
+        "anchors": [
+          "section-2",
+          "section-2-1",
+          "proposition-2-1",
+          "section-2-2",
+          "eq-3",
+          "eq-4",
+          "eq-5",
+          "section-2-3",
+          "eq-6"
+        ],
+        "words": 724
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "03-regular-transport",
+        "title": "Regular transport reconstructs a connection",
+        "description": "Derive the local velocity-linear jet, lift all variations and bound finite-resolution errors.",
+        "order": 3,
+        "url": "/source-readout/transport-projective/03-regular-transport",
+        "sourcePath": "content/paper-integrations/transport-projective/03-regular-transport.mdx",
+        "sections": [
+          {
+            "id": "section-3",
+            "title": "3. Transport regularity and resolution"
+          },
+          {
+            "id": "section-3-1",
+            "title": "3.1 Smoothness at constant paths forces the first jet"
+          },
+          {
+            "id": "section-3-2",
+            "title": "3.2 The variations and curvature also descend"
+          },
+          {
+            "id": "section-3-3",
+            "title": "3.3 Transport error and curvature error need different control"
+          }
+        ],
+        "anchors": [
+          "section-3",
+          "section-3-1",
+          "theorem-3-1",
+          "eq-7",
+          "eq-8",
+          "eq-9",
+          "proposition-3-2",
+          "eq-10",
+          "section-3-2",
+          "eq-11",
+          "eq-12",
+          "section-3-3",
+          "proposition-3-3",
+          "eq-13",
+          "eq-14",
+          "eq-15",
+          "eq-16"
+        ],
+        "words": 972
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "04-projective-connection",
+        "title": "Projective reduction recovers metric transport",
+        "description": "Allow every affine component, derive the precise stationary kernel, and construct the observable that removes it.",
+        "order": 4,
+        "url": "/source-readout/transport-projective/04-projective-connection",
+        "sourcePath": "content/paper-integrations/transport-projective/04-projective-connection.mdx",
+        "sections": [
+          {
+            "id": "section-4",
+            "title": "4. The unrestricted affine connection"
+          },
+          {
+            "id": "section-4-1",
+            "title": "4.1 Fix the curvature convention before varying"
+          },
+          {
+            "id": "section-4-2",
+            "title": "4.2 The full affine Hessian has just the projective kernel"
+          },
+          {
+            "id": "section-4-3",
+            "title": "4.3 Restore volume in the transport readout"
+          }
+        ],
+        "anchors": [
+          "section-4",
+          "section-4-1",
+          "eq-17",
+          "eq-18",
+          "eq-19",
+          "section-4-2",
+          "eq-20",
+          "eq-21",
+          "theorem-4-1",
+          "eq-22",
+          "eq-23",
+          "eq-24",
+          "eq-25",
+          "section-4-3",
+          "eq-26",
+          "eq-27",
+          "eq-28",
+          "theorem-4-2",
+          "eq-29"
+        ],
+        "words": 762
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "05-the-cubic-bootstrap",
+        "title": "The full source stress closes the cubic bootstrap",
+        "description": "Lift the action and horizontal variation, compute the quotient inverse, and derive the exact off-shell residual.",
+        "order": 5,
+        "url": "/source-readout/transport-projective/05-the-cubic-bootstrap",
+        "sourcePath": "content/paper-integrations/transport-projective/05-the-cubic-bootstrap.mdx",
+        "sections": [
+          {
+            "id": "section-5",
+            "title": "5. The bootstrap on the projective quotient"
+          },
+          {
+            "id": "section-5-1",
+            "title": "5.1 Recover the action and its variation domain"
+          },
+          {
+            "id": "section-5-2",
+            "title": "5.2 Construct the quotient inverse explicitly"
+          },
+          {
+            "id": "section-5-3",
+            "title": "5.3 Vary the auxiliary background horizontally"
+          },
+          {
+            "id": "section-5-4",
+            "title": "5.4 The exact residual closes the current"
+          }
+        ],
+        "anchors": [
+          "section-5",
+          "section-5-1",
+          "eq-30",
+          "eq-31",
+          "section-5-2",
+          "eq-32",
+          "eq-33",
+          "eq-34",
+          "eq-35",
+          "eq-36",
+          "eq-37",
+          "section-5-3",
+          "eq-38",
+          "eq-39",
+          "theorem-5-1",
+          "eq-40",
+          "eq-41",
+          "eq-42",
+          "eq-43",
+          "section-5-4",
+          "theorem-5-2",
+          "eq-44",
+          "eq-45",
+          "eq-46"
+        ],
+        "words": 886
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "06-einstein-matter",
+        "title": "The Einstein–matter endpoint",
+        "description": "Recover normalized nonlinear metric and matter equations, with the correct gauge, scalar, and boundary contracts.",
+        "order": 6,
+        "url": "/source-readout/transport-projective/06-einstein-matter",
+        "sourcePath": "content/paper-integrations/transport-projective/06-einstein-matter.mdx",
+        "sections": [
+          {
+            "id": "section-6",
+            "title": "6. Einstein–matter recovery, symmetry and boundary data"
+          },
+          {
+            "id": "section-6-1",
+            "title": "6.1 Recover the nonlinear metric equations and their normalization"
+          },
+          {
+            "id": "section-6-2",
+            "title": "6.2 Common-density coupling and its precise scalar consequence"
+          },
+          {
+            "id": "section-6-3",
+            "title": "6.3 Covariance and constraints follow from the recovered law"
+          },
+          {
+            "id": "section-6-4",
+            "title": "6.4 The boundary, scale and free limit"
+          }
+        ],
+        "anchors": [
+          "section-6",
+          "section-6-1",
+          "eq-47",
+          "eq-48",
+          "eq-49",
+          "eq-50",
+          "section-6-2",
+          "eq-51",
+          "eq-52",
+          "eq-53",
+          "eq-54",
+          "proposition-6-1",
+          "section-6-3",
+          "eq-55",
+          "eq-56",
+          "eq-57",
+          "section-6-4"
+        ],
+        "words": 980
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "07-what-the-source-selects",
+        "title": "What the source architecture selects",
+        "description": "Separate derived reductions from physical premises and test the remaining freedom with explicit competing realizations.",
+        "order": 7,
+        "url": "/source-readout/transport-projective/07-what-the-source-selects",
+        "sourcePath": "content/paper-integrations/transport-projective/07-what-the-source-selects.mdx",
+        "sections": [
+          {
+            "id": "section-7",
+            "title": "7. Dependency reduction and physical selection"
+          },
+          {
+            "id": "section-7-1",
+            "title": "7.1 Trace every consequential premise"
+          },
+          {
+            "id": "section-7-2",
+            "title": "7.2 Competing realizations expose sharp obstructions"
+          },
+          {
+            "id": "section-7-3",
+            "title": "7.3 What the architecture explains and what comes next"
+          }
+        ],
+        "anchors": [
+          "section-7",
+          "section-7-1",
+          "table-1",
+          "section-7-2",
+          "proposition-7-1",
+          "eq-58",
+          "eq-59",
+          "section-7-3"
+        ],
+        "words": 1087
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "08-executable-checks",
+        "title": "Exact controls and finite transport reconstruction",
+        "description": "Inspect the complete verification contract, the nonlinear metric and matter fixtures, and the quantitative reconstruction table.",
+        "order": 8,
+        "url": "/source-readout/transport-projective/08-executable-checks",
+        "sourcePath": "content/paper-integrations/transport-projective/08-executable-checks.mdx",
+        "sections": [
+          {
+            "id": "section-8",
+            "title": "8. Verification and discriminating controls"
+          },
+          {
+            "id": "section-8-1",
+            "title": "8.1 Test the implementations against independent routes"
+          },
+          {
+            "id": "section-8-2",
+            "title": "8.2 Nonlinear metric and matter fixtures"
+          },
+          {
+            "id": "section-8-3",
+            "title": "8.3 Finite-resolution reconstruction"
+          },
+          {
+            "id": "section-8-4",
+            "title": "8.4 Reproduce the reported finite comparisons"
+          }
+        ],
+        "anchors": [
+          "section-8",
+          "section-8-1",
+          "table-2",
+          "section-8-2",
+          "eq-60",
+          "eq-61",
+          "eq-62",
+          "section-8-3",
+          "eq-63",
+          "eq-64",
+          "table-3",
+          "section-8-4"
+        ],
+        "words": 998
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "09-conditional-recovery",
+        "title": "A complete conditional recovery of gravity",
+        "description": "See what has been recovered and formulate the remaining selection problem without inserting the Einstein endpoint.",
+        "order": 9,
+        "url": "/source-readout/transport-projective/09-conditional-recovery",
+        "sourcePath": "content/paper-integrations/transport-projective/09-conditional-recovery.mdx",
+        "sections": [
+          {
+            "id": "section-9",
+            "title": "9. What the complete construction establishes"
+          }
+        ],
+        "anchors": [
+          "section-9"
+        ],
+        "words": 307
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "10-boundary-and-variation-appendices",
+        "title": "Appendices A and B: boundaries and variations",
+        "description": "The exact boundary current, density inversion and fixed-transport obstruction.",
+        "order": 10,
+        "url": "/source-readout/transport-projective/10-boundary-and-variation-appendices",
+        "sourcePath": "content/paper-integrations/transport-projective/10-boundary-and-variation-appendices.mdx",
+        "sections": [
+          {
+            "id": "appendix-a",
+            "title": "A. Boundary integrations and density inversion"
+          },
+          {
+            "id": "appendix-b",
+            "title": "B. Variation domains and the fixed-transport obstruction"
+          }
+        ],
+        "anchors": [
+          "appendix-a",
+          "eq-65",
+          "eq-66",
+          "eq-67",
+          "eq-68",
+          "appendix-b",
+          "eq-69",
+          "eq-70"
+        ],
+        "words": 395
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "11-reconstruction-and-scope-appendices",
+        "title": "Appendices C and D: reconstruction and scope",
+        "description": "Derive the reconstruction fixture and distinguish three different equivalences.",
+        "order": 11,
+        "url": "/source-readout/transport-projective/11-reconstruction-and-scope-appendices",
+        "sourcePath": "content/paper-integrations/transport-projective/11-reconstruction-and-scope-appendices.mdx",
+        "sections": [
+          {
+            "id": "appendix-c",
+            "title": "C. Analytic checks behind the reconstruction table"
+          },
+          {
+            "id": "appendix-d",
+            "title": "D. Scope of the recovery statements"
+          }
+        ],
+        "anchors": [
+          "appendix-c",
+          "eq-71",
+          "appendix-d"
+        ],
+        "words": 322
+      },
+      {
+        "paperId": "transport-projective",
+        "slug": "12-references",
+        "title": "References",
+        "description": "The mathematical and source-architecture references for the transport and gravity construction.",
+        "order": 12,
+        "url": "/source-readout/transport-projective/12-references",
+        "sourcePath": "content/paper-integrations/transport-projective/12-references.mdx",
+        "sections": [
+          {
+            "id": "references",
+            "title": "References"
+          }
+        ],
+        "anchors": [
+          "references",
+          "ref-dadhich-pons",
+          "ref-deser-1970",
+          "ref-deser-2010",
+          "ref-rodgers-2026a",
+          "ref-rodgers-2026b",
+          "ref-rodgers-2026c",
+          "ref-schreiber-waldorf"
+        ],
+        "words": 165
+      }
+    ],
+    "completeMarkdown": "/publications/spectral/transport-projective/complete.md",
+    "originalPdf": "/publications/spectral/transport-projective/paper.pdf"
+  }
+]

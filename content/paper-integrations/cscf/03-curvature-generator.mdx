@@ -1,0 +1,72 @@
+---
+title: "How curvature determines the carrier"
+description: "Admissible curvature systems, Friedrichs representation and the invariants of the resulting carrier."
+order: 3
+---
+
+Specify the metric, the reference configuration and the closed curvature form. Together they determine the positive carrier used throughout the field.
+
+<a id="sec-k"></a>
+
+## 4. The Canonical Spectral-Curvature Generator $K$
+
+<a id="section-4.1"></a>
+
+### 4.1 Admissible monotone curvature systems
+
+<a id="def-admmono"></a>
+
+**Definition 4.1.** *Admissible monotone curvature system*.
+
+An admissible monotone curvature system is a triple $(X, \mathcal M, x_*)$ consisting of:
+
+1.  A local state space $X$ with reference point $x_*$, a complex Hilbert tangent carrier $\mathsf H_*$, and a dense Hilbert form domain $V\hookrightarrow\mathsf H_*$ continuously embedded in that carrier. Local perturbations $x_*+u$, $u\in V$, are described in a chart.
+
+2.  A real functional $\mathcal M$ of class $C^2$ near $x_*$ in the $V$ topology, normalized by $\mathcal M(x_*) = 0$ and $d\mathcal M(x_*) = 0$.
+
+3.  A densely defined, closed, Hermitian, nonnegative form $Q_{\mathcal M}$ on $\mathsf H_*$, with domain $V$, whose real part is the real second variation: $D^2\mathcal M(x_*)[u,v]=\operatorname{Re}Q_{\mathcal M}(u,v)$.
+
+For an ordinary bounded Hessian one may take $V=\mathsf H_*$. The form-domain formulation also includes unbounded curvature representatives. For example, on $\ell^2(\mathbb N)$ let
+
+$$
+V=\left\{u:\sum_{j\ge1}(1+j^2)|u_j|^2<\infty\right\},\qquad
+\mathcal M(u)=\tfrac12\sum_{j\ge1}j^2|u_j|^2.
+$$
+
+ Weighted $\ell^2$ completeness makes $Q(u,v)=\sum_j j^2\bar u_jv_j$ closed, and $\mathcal M$ is $C^2$ on $V$. Its representative is $Ku=(j^2u_j)_j$, with $\mathop{\mathrm{dom}}K=\{u:\sum_j j^4|u_j|^2<\infty\}$. Thus smoothness in the form topology is compatible with an unbounded $K$; Fréchet $C^2$ smoothness in the carrier norm would instead give a bounded Hessian.
+
+<a id="section-4.2"></a>
+
+### 4.2 The canonical generator
+
+<a id="thm-k"></a>
+
+**Theorem 4.2.** *Canonical spectral-curvature generator*.
+
+Let $(X,\mathcal M, x_*)$ be an admissible monotone curvature system with curvature form $Q_{\mathcal M}$. There exists a unique positive selfadjoint operator $K_{\mathcal M}$ on $\mathsf H_*$ such that
+
+$$
+Q_{\mathcal M}(u,v) \;=\; \langle K_{\mathcal M}^{1/2}u,\, K_{\mathcal M}^{1/2}v \rangle\qquad \text{for } u,v \in \mathop{\mathrm{dom}}(Q_{\mathcal M}).
+$$
+
+*Proof.* Direct application of Theorem [3.1](/source-readout/cscf/02-operator-preliminaries#thm-friedrichs) (Friedrichs representation) to $Q_{\mathcal M}$. ◻
+
+We write $K := K_{\mathcal M}$ and call it the *canonical spectral-curvature generator*.
+
+$K$ is canonical *given an admissible monotone curvature system*. The CSCF does not claim to construct $K$ from bare lawhood. Where physical or lawful realization supplies an admissible monotone (or a Tier-$0.5$ carrier with explicit generator), $K$ is forced.
+
+<a id="section-4.3"></a>
+
+### 4.3 Functional dependence and base data
+
+<a id="lemma-4.3"></a>
+
+**Lemma 4.3.** *Spectral data invariance*.
+
+The spectral measure $E_K$, spectrum $\mathop{\mathrm{\sigma}}(K)$, and $W^*(K)$ depend only on $Q_{\mathcal M}$ and $\mathsf H_*$.
+
+<a id="lem-directsum"></a>
+
+**Lemma 4.4.** *Direct sum compatibility*.
+
+If $(X_i,\mathcal M_i,x_*^{(i)})$, $i=1,2$, are admissible monotone curvature systems with generators $K_1, K_2$, then $(X_1\times X_2, \mathcal M_1\oplus\mathcal M_2)$ has generator $K_1 \oplus K_2$.

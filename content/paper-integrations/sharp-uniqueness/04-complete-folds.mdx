@@ -1,0 +1,126 @@
+---
+title: Both Folds Are Full Dynamical Saddle-Nodes
+description: The complete left and right null vectors establish nondegeneracy and two independent cubics retain all eight modes.
+order: 4
+---
+<a id="section-6"></a>
+
+## 6. Saddle-nodes and complete modal cubics
+
+<a id="section-6-1"></a>
+
+### 6.1 Full dynamical nondegeneracy
+
+A stationary turning point does not by itself establish a dynamical saddle-node. In the range of [Theorem 5.1](/source-readout/sharp-uniqueness/03-sharp-path-threshold#theorem-5-1) fix $c$ and write the stationary curve as
+
+<a id="eq-36"></a>
+
+$$
+R(s)=\sqrt{\tfrac{4\kappa}{3}se^s},\quad z(s)=\frac{|c|}{c}R(s)v_3,\quad
+m(s)=(-s,-s),\quad a(s)=|c|\sqrt{H_3(s)}.\tag{36}
+$$
+
+In real coordinates $x(s)$ the stationary map and vector field are
+
+<a id="eq-37"></a>
+
+$$
+Y(x,a)=\nabla F(x)-ah,\quad h=(\operatorname{Re}(v_3/c),\operatorname{Im}(v_3/c),0,0),\quad X(x,a)=-DY(x,a).\tag{37}
+$$
+
+The order of $-D$ on the left matters. At a fold $a'=0$, differentiate $Y(x(s),a(s))=0$. Then $r=x'(s)$ spans $\ker H$ by [Theorem 5.1](/source-readout/sharp-uniqueness/03-sharp-path-threshold#theorem-5-1), and
+
+<a id="eq-38"></a>
+
+$$
+r^Th=R'(s)/|c|>0,\qquad d=r^TD^{-1}r>0.\tag{38}
+$$
+
+Thus $l^T=r^TD^{-1}/d$ is a normalized left null vector of $A=-DH$, with $l^Tr=1$. The normalization uses the actual derivative $r$, not a unit vector. The load coefficient is
+
+<a id="eq-39"></a>
+
+$$
+l^TX_a=\frac{r^Th}{d}>0.\tag{39}
+$$
+
+Differentiate the stationary identity twice and multiply by $r^T$ to obtain
+
+<a id="eq-40"></a>
+
+$$
+r^TY_{xx}[r,r]=(r^Th)a'',\qquad
+\tfrac12 l^TX_{xx}[r,r]=-\frac{(r^Th)a''}{2d}.\tag{40}
+$$
+
+At a fold $a''=|c|H_3''/(2\sqrt{H_3})$ and
+
+<a id="eq-41"></a>
+
+$$
+H_3''(s)=\tfrac{4\kappa}{3}\bigl[\mu^2e^s(s+2)+9e^{-s}(s-2)\bigr].\tag{41}
+$$
+
+Equation [(29)](/source-readout/sharp-uniqueness/03-sharp-path-threshold#eq-29) shows the sign is opposite to $Q'$. Thus $a''<0$ at $s_-$ and $a''>0$ at $s_+$, with neither zero. The one simple zero, seven decaying modes, and nonzero load and quadratic terms give both full saddle-nodes by the usual conditions (Kuznetsov, 2004). The quadratic coefficient is positive at the upper-input fold and negative at the lower one.
+
+At $\mu=3\chi$, $s=\sqrt3$, the scalar folds meet. Strict convexity still gives a unique equilibrium at the critical input, but the Jacobian has a zero eigenvalue. Neither linear exponential stability nor a general positive local exponential estimate follows there. A cusp claim would require additional higher-order and unfolding conditions.
+
+<a id="section-6-2"></a>
+
+### 6.2 Independent all-coordinate blocks
+
+Rotate the common equilibrium phase to make $z$ real. The three orthonormal node modes and the memories $(\delta m_1\pm\delta m_2)/\sqrt2$ give an orthogonal transform of the eight-dimensional source. The collective pair is
+
+<a id="eq-42"></a>
+
+$$
+p=-\mu(\gamma\pm i\alpha).\tag{42}
+$$
+
+For $\lambda=1,3$ the Hessian and mobility blocks, with a chosen memory sign, are
+
+<a id="eq-43"></a>
+
+$$
+H_\lambda=\begin{pmatrix}k&0&\beta\\0&k&0\\\beta&0&h\end{pmatrix},\qquad
+D_\lambda=\begin{pmatrix}\gamma&-\alpha&0\\\alpha&\gamma&0\\0&0&\eta\end{pmatrix}.\tag{43}
+$$
+
+<a id="eq-44"></a>
+
+$$
+k=\mu+\lambda w,\quad h=\kappa(1+s),\quad \beta^2=2\kappa\lambda sw,\quad w=e^{-s}.\tag{44}
+$$
+
+For source mode $v_j$, $j\in\{1,3\}$, the coupling squared is $w^2R^2\sum_e(b_e^Tv_j)^2(b_e^Tv_\lambda)^2$. The sum is $j\lambda/2$ and $R^2=(4\kappa/j)se^s$, giving [(44)](#eq-44). Highest-mode drive pairs $\lambda=3$ with even memory and $\lambda=1$ with odd memory; low-mode drive reverses that assignment. Each block keeps radial and phase amplitude and one memory coordinate.
+
+<a id="eq-45"></a>
+
+$$
+\begin{aligned}
+P_\lambda(p)&=(p^2+2\gamma kp+|c|^2k^2)(p+\eta h)-\eta\beta^2(\gamma p+|c|^2k)\\
+&=p^3+A_2p^2+A_1p+A_0,\\
+A_2&=2\gamma k+\eta h,\\
+A_1&=|c|^2k^2+\eta\gamma(2hk-\beta^2),\\
+A_0&=\eta|c|^2k(hk-\beta^2).
+\end{aligned}\tag{45}
+$$
+
+<a id="eq-46"></a>
+
+$$
+\rho=k-\beta^2/h=\mu-\lambda Q(s).\tag{46}
+$$
+
+Also $2hk-\beta^2=2\kappa[(1+s)\mu+\lambda w]>0$ and
+
+<a id="eq-47"></a>
+
+$$
+A_2A_1-A_0=2\gamma|c|^2k^3+\eta|c|^2k\beta^2+
+\eta\gamma(2\gamma k+\eta h)(2hk-\beta^2)>0.\tag{47}
+$$
+
+Hence $A_2,A_1>0$. When $\rho>0$, vary $A_0$ from zero through $0<A_0<A_2A_1$ with $A_2,A_1$ held fixed. At zero there is a simple zero root and a stable quadratic. The zero moves left with derivative $-1/A_1$. A nonzero imaginary root would require $p=i\omega$, $\omega^2=A_1$, $A_0=A_2A_1$, excluded. All roots are strictly left. When $\rho=0$, zero is simple and the other two decay. When $\rho<0$, $P_\lambda(0)<0$ and $P_\lambda'(p)>0$ for $p\ge0$ give exactly one positive real root. The remaining roots have positive product and negative sum, hence negative real parts. This elementary argument is independent of the general inertia proof.
+
+The two cubics and the collective pair count all eight eigenvalues with multiplicity. Numerical roots of the cubics and direct matrix spectra test different formulations with a shared numerical eigensolver backend.

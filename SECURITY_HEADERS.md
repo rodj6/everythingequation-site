@@ -73,7 +73,10 @@ PDFs can still be opened directly; embedding them in a frame is not enabled.
 Hash policies are specific to a build. The step fails on unsupported manifest
 schemas, missing homepage/error HTML, ambiguous or unsafe route mappings,
 missing fallbacks, ISR or partial HTML, a new non-static literal page, more than
-950 header rules or a policy above the conservative 12 KiB per-header budget.
+1,900 local header or Vercel output route rules, or a policy above the conservative
+12 KiB per-header budget. The rule ceiling leaves 148 rules of headroom below
+[Vercel’s documented 2,048-route limit](https://vercel.com/docs/limits#routes-created-per-deployment)
+for Hobby and Pro. Per-document hash policies and error coverage remain intact.
 Verification checks exact generated rule ordering, competing CSP rules, cached
 prerender response policies and changed HTML, rather than merely finding hashes
 somewhere in the route table. Its report is

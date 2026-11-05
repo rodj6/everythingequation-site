@@ -1,0 +1,125 @@
+---
+title: "Appendix B: When the Lambda profile is injective"
+description: "The compact-positive-support proof and finite-rank corollary."
+order: 14
+---
+
+<a id="app-profile-inj"></a>
+
+## B. Lambda-Profile Injectivity on Compact Positive Supports
+
+<a id="thm-lambda-profile-injectivity"></a>
+
+**Theorem B.1.** *Lambda-profile injectivity*.
+
+Let $\mu$ be a finite positive Borel measure supported on a compact interval $[a,b]\subset(0,\infty)$, and define
+
+$$
+F_\mu(T) \;=\; \int_{[a,b]} -\log(1-e^{-T\lambda})\,d\mu(\lambda),\qquad T>0.
+$$
+
+ If $\mu_1,\mu_2$ are finite positive Borel measures supported in $[a,b]$ and $F_{\mu_1}(T) = F_{\mu_2}(T)$ for all $T>0$, then $\mu_1 = \mu_2$.
+
+*Proof.* Write $\phi(x) := -\log(1-e^{-x})$ for $x>0$. We first establish a Mellin representation, then deduce $\mu_1 = \mu_2$ from equality of moments after a change of variable.
+
+*Step 1: Mellin representation.* For $\Re s = \sigma > 0$ we show
+
+$$
+\int_0^\infty T^{s-1} F_\mu(T)\,dT \;=\; \Gamma(s)\,\zeta(s+1)\int_{[a,b]}\lambda^{-s}\,d\mu(\lambda).
+$$
+
+ For $0<T\le 1$ and $\lambda\in[a,b]$,
+
+$$
+1 - e^{-T\lambda} \;=\; T\lambda\int_0^1 e^{-\theta T\lambda}\,d\theta \;\ge\; T a\, e^{-b},
+$$
+
+ so
+
+$$
+\phi(T\lambda) \;\le\; b - \log a - \log T,
+$$
+
+ which is integrable against $T^{\sigma-1}$ at $T=0$. For $T\ge 1$,
+
+$$
+\phi(T\lambda) \;=\; -\log(1-e^{-T\lambda}) \;\le\; \frac{e^{-T\lambda}}{1-e^{-T\lambda}} \;\le\; \frac{e^{-aT}}{1-e^{-a}},
+$$
+
+ which is integrable against $T^{\sigma-1}$ at $T=\infty$. Since $\mu$ is finite, the same bounds justify integrating against $d\mu(\lambda)$.
+
+For fixed $\lambda>0$,
+
+$$
+-\log(1-e^{-T\lambda}) \;=\; \sum_{n\ge 1}\frac{e^{-nT\lambda}}{n}.
+$$
+
+ For $\sigma>0$,
+
+$$
+\sum_{n\ge 1}\frac{1}{n}\int_0^\infty T^{\sigma-1} e^{-nT\lambda}\,dT \;=\; \Gamma(\sigma)\,\lambda^{-\sigma}\sum_{n\ge 1} n^{-(\sigma+1)} \;<\;\infty,
+$$
+
+ so termwise integration is justified and
+
+$$
+\int_0^\infty T^{s-1}\big[-\log(1-e^{-T\lambda})\big]\,dT \;=\; \Gamma(s)\,\zeta(s+1)\,\lambda^{-s},\qquad \Re s>0.
+$$
+
+ Since $\int_{[a,b]} \lambda^{-\sigma}\,d\mu(\lambda) < \infty$ on the compact interval $[a,b]\subset(0,\infty)$, Fubini–Tonelli applies, yielding the displayed identity.
+
+*Step 2: From profile equality to moment equality.* Assume $F_{\mu_1}(T) = F_{\mu_2}(T)$ for all $T>0$. Taking the Mellin transform on $\Re s>0$ (real $s>0$ suffices),
+
+$$
+\Gamma(s)\,\zeta(s+1)\int_{[a,b]} \lambda^{-s}\,d\mu_1(\lambda) \;=\; \Gamma(s)\,\zeta(s+1)\int_{[a,b]} \lambda^{-s}\,d\mu_2(\lambda).
+$$
+
+ For real $s>0$, $\Gamma(s)>0$ and $\zeta(s+1)>1$, so
+
+$$
+\int_{[a,b]} \lambda^{-s}\,d\mu_1(\lambda) \;=\; \int_{[a,b]} \lambda^{-s}\,d\mu_2(\lambda),\qquad s>0.
+$$
+
+*Step 3: Recovery of total mass and Weierstrass closure.* Let $\eta_i$ be the pushforward of $\mu_i$ under the homeomorphism
+
+$$
+[a,b] \to [1/b,1/a],\qquad \lambda \mapsto x = \lambda^{-1}.
+$$
+
+ Then
+
+$$
+\int_{[1/b,1/a]} x^s\,d\eta_1(x) \;=\; \int_{[1/b,1/a]} x^s\,d\eta_2(x),\qquad s>0.
+$$
+
+ Taking $s\downarrow 0$, $x^s \to 1$ uniformly on $[1/b,1/a]$, so the total masses agree:
+
+$$
+\eta_1([1/b,1/a]) \;=\; \eta_2([1/b,1/a]).
+$$
+
+ For $s = n \in \mathbb N$ this gives equality of all positive integer moments. Combined with the zeroth moment, all polynomial moments agree:
+
+$$
+\int p(x)\,d\eta_1(x) \;=\; \int p(x)\,d\eta_2(x) \qquad \text{for every polynomial } p.
+$$
+
+ By Weierstrass approximation, polynomials are uniformly dense in $C([1/b,1/a])$, so
+
+$$
+\int f(x)\,d\eta_1(x) \;=\; \int f(x)\,d\eta_2(x)\qquad \text{for every } f\in C([1/b,1/a]).
+$$
+
+ By the uniqueness clause of the Riesz representation theorem, $\eta_1 = \eta_2$. Pulling back along the homeomorphism $\lambda \mapsto 1/\lambda$ yields $\mu_1 = \mu_2$. ◻
+
+<a id="cor-finite-rank-profile"></a>
+
+**Corollary B.2.** *Finite-rank spectra*.
+
+Let $K_1, K_2$ have finite positive spectra contained in $[a,b]\subset(0,\infty)$.
+
+1.  If the unnormalized counting measures $\nu_{K_i} = \sum_{\lambda\in\mathop{\mathrm{\sigma}}(K_i)\cap(0,\infty)} m_i(\lambda)\,\delta_\lambda$ have equal Lambda profiles $F_{\nu_{K_1}}(T) = F_{\nu_{K_2}}(T)$ for all $T>0$, then $\nu_{K_1} = \nu_{K_2}$. Hence the positive eigenvalue multisets, including multiplicities, agree.
+
+2.  If the empirical probability measures $\mu_{K_i} = r_i^{-1}\sum_\lambda m_i(\lambda)\,\delta_\lambda$ have equal rank-normalized profiles for all $T>0$, then $\mu_{K_1} = \mu_{K_2}$. If the ranks $r_i$ are also known and equal, this recovers the positive eigenvalue multiset with multiplicity.
+
+3.  If the dimensionless profiles $\widehat{\mathcal N}_{K_1}, \widehat{\mathcal N}_{K_2}$ agree for all $\tau>0$, then the mean-normalized empirical measures agree, $\widetilde\mu_{K_1} = \widetilde\mu_{K_2}$. This identifies the spectrum only up to the declared mean normalization; the absolute scale is recovered only if $\bar\lambda_{K_i}$ is additionally supplied.

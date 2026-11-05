@@ -1,0 +1,79 @@
+---
+title: "Appendix D: Fejér uniqueness"
+description: "Full proof of the dissipative classification theorem."
+order: 16
+---
+
+<a id="app-diss-class"></a>
+
+## D. Fejér Uniqueness: Proof of Theorem [8.2](/source-readout/cscf/07-classification#thm-dclass)
+
+*Proof of Theorem [8.2](/source-readout/cscf/07-classification#thm-dclass).* Fix a determinant-admissible spectral class and a positive selfadjoint $K$ in that class. Put
+
+$$
+\mathsf H_{\mathrm{diss}}= (\ker K)^\perp,\qquad \Lambda_{T,d} := \Lambda_T(K)\big|_{\mathsf H_{\mathrm{diss}}}.
+$$
+
+ By (A4), an admissible scalar has determinant/log-volume form
+
+$$
+F(K,T) \;=\; -\log\det\nolimits_*\!\big(\Phi_T(K)\big|_{\mathsf H_{\mathrm{diss}}}\big).
+$$
+
+ By the Fejér calibration axiom (A5),
+
+$$
+\Phi_T(K)\big|_{\mathsf H_{\mathrm{diss}}} \;=\; c(T)\Lambda_T(K)\big|_{\mathsf H_{\mathrm{diss}}} \;=\; c(T)\Lambda_{T,d},
+$$
+
+ where $c(T)>0$ and $\log c$ is bounded on the admissible scale range.
+
+The determinant convention is part of the declared admissible class. Thus, in finite rank, in the ordinary Fredholm class when the scalar factor is admissible, the determinant factorizes as
+
+$$
+\det\nolimits_*\!\big(c(T)\Lambda_{T,d}\big) \;=\; \det\nolimits_*\!\big(c(T)I_{\mathsf H_{\mathrm{diss}}}\big)\,\det\nolimits_*\!\big(\Lambda_{T,d}\big).
+$$
+
+ Using the definition of $\mathcal D_T(K)$,
+
+$$
+\begin{aligned}
+F(K,T) &= -\log\det\nolimits_*\!\big(\Lambda_{T,d}\big) - \log\det\nolimits_*\!\big(c(T)I_{\mathsf H_{\mathrm{diss}}}\big) \\
+&= \mathcal D_T(K) + B_c(K,T),
+\end{aligned}
+$$
+
+ where
+
+$$
+B_c(K,T) \;:=\; -\log\det\nolimits_*\!\big(c(T)I_{\mathsf H_{\mathrm{diss}}}\big).
+$$
+
+ By (A5), this modulation counterterm is bounded in $T$ on the fixed spectral class.
+
+In the finite-rank case, if $r = \dim\mathsf H_{\mathrm{diss}}< \infty$, the formula is explicit:
+
+$$
+\det\nolimits_*\!\big(c(T)\Lambda_{T,d}\big) \;=\; c(T)^r\det\nolimits_*\!\big(\Lambda_{T,d}\big),
+$$
+
+ and therefore
+
+$$
+B_c(K,T) \;=\; -r\log c(T).
+$$
+
+ Since $\log c \in L^\infty$, $B_c(K,T)$ is bounded in $T$ for fixed $r$.
+
+In the ordinary infinite-dimensional Fredholm determinant class, a nontrivial scalar multiple $c(T)I_{\mathsf H_{\mathrm{diss}}}$ is not of the form $I + \mathcal L^1$ unless $c(T) = 1$. Hence the Fredholm-admissible infinite-dimensional case has $B_c(K,T) = 0$. Other determinant regularizations are outside this theorem.
+
+Thus every admissible scalar in the declared Fejér-calibrated determinant class has the form
+
+$$
+F(K,T) \;=\; \mathcal D_T(K) + B(K,T),\qquad B(K,T) := B_c(K,T),
+$$
+
+ with $B$ bounded in $T$ on each fixed spectral class. Axiom (A6) then says that the admissible scalar has genuine unbounded scale dependence as $T \to \infty$ on the fixed nonzero dissipative sector. Since $B$ is bounded, the unbounded part is precisely the Fejér determinant budget $\mathcal D_T(K)$, up to bounded modulation.
+
+No statement is made about dissipative spectral scalars outside (A1)–(A6) or outside the determinant conventions (D1)–(D2). ◻
+

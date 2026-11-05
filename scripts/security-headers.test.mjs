@@ -4,7 +4,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { inlineScriptHashes, installSecurityHeaders, verifyBuiltSecurityHeaders } from './security-headers.mjs';
+import { CSP_ROUTE_RULE_BUDGET, inlineScriptHashes, installSecurityHeaders, verifyBuiltSecurityHeaders } from './security-headers.mjs';
 import { browserHeaders, contentSecurityPolicy, HEADER_MARKER } from './security-policy.mjs';
 
 test('script hashes cover exact bytes, deduplicate and exclude external script bodies', () => {
@@ -367,7 +367,7 @@ test('adapter routing budget failure leaves routing and cached-header inputs unc
   const root = await adapterFixture();
   try {
     const config = await jsonAt(root, '.next/output/config.json');
-    while (config.routes.length < 947) config.routes.push({ src: `^/fixture-${config.routes.length}$`, continue: true });
+    while (config.routes.length < CSP_ROUTE_RULE_BUDGET - 3) config.routes.push({ src: `^/fixture-${config.routes.length}$`, continue: true });
     await writeJsonAt(root, '.next/output/config.json', config);
     const paths = ['.next/routes-manifest.json', '.next/output/config.json', '.next/output/functions/index.prerender-config.json'];
     const before = await Promise.all(paths.map(relative => fs.readFile(path.join(root, relative), 'utf8')));
@@ -433,4 +433,21 @@ test('adapter rebuild refuses a marked relaxed cached policy or an unmarked stal
       await assert.rejects(installSecurityHeaders(root), /Unexpected prerender CSP|CSP|policy/i);
     } finally { await fs.rm(root, { recursive: true, force: true }); }
   }
+});
+
+
+test('adapter accepts the exact reviewed budget and verifies above the former 950-rule ceiling', async () => {
+  const root = await adapterFixture();
+  try {
+    const config = await jsonAt(root, '.next/output/config.json');
+    while (config.routes.length < CSP_ROUTE_RULE_BUDGET - 4) config.routes.push({ src: `^/fixture-${config.routes.length}$`, continue: true });
+    await writeJsonAt(root, '.next/output/config.json', config);
+    const report = await installSecurityHeaders(root);
+    assert.equal(report.adapterRouteCount, CSP_ROUTE_RULE_BUDGET);
+    assert.equal(await verifyBuiltSecurityHeaders(root), 3);
+    const finalConfig = await jsonAt(root, '.next/output/config.json');
+    finalConfig.routes.push({ src: '^/overflow$', continue: true });
+    await writeJsonAt(root, '.next/output/config.json', finalConfig);
+    await assert.rejects(verifyBuiltSecurityHeaders(root), /Vercel CSP routing budget/);
+  } finally { await fs.rm(root, { recursive: true, force: true }); }
 });

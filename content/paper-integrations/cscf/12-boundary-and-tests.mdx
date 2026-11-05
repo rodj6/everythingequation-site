@@ -1,0 +1,82 @@
+---
+title: "Boundary carriers and discriminating tests"
+description: "The collar realization, physical observables, selection obligations and the resulting account."
+order: 12
+---
+
+A boundary carrier gives a concrete place to test the two faces together. The same geometry must supply the form, mobility, time scale and retained observables before a response comparison becomes a physical test.
+
+<a id="sec-realization"></a>
+
+## 13. Boundary realization and physical discrimination
+
+The form construction can also arise after a boundary reduction. The correct object is then the boundary energy induced by a specified bulk problem, including its boundary conditions and boundary Hilbert metric. A positive bulk differential expression alone does not select that energy or its Dirichlet-to-Neumann operator.
+
+<a id="section-13.1"></a>
+
+### 13.1 An explicit curvature-to-boundary carrier
+
+The following finite-mode collar construction supplies an exact example. Let $H_b=\mathbb C^N$, let $B\geq0$ be Hermitian with eigenvalues $m_j$, and let $\beta>0$. For $u\in H^1([0,\beta];H_b)$ consider the bulk energy
+
+$$
+\mathcal E(u)=\int_0^\beta\big(\left\lVert u'(x)\right\rVert^2+\left\lVert Bu(x)\right\rVert^2\big)\,dx.
+$$
+
+ Fix $u(0)=f$ and leave the other boundary free. The resulting natural condition is $u'(\beta)=0$.
+
+<a id="prop-collar"></a>
+
+**Proposition 13.1.** *Collar boundary carrier*.
+
+The minimum boundary energy is the closed nonnegative form
+
+$$
+Q_\partial(f)=\min_{u(0)=f}\mathcal E(u)
+=\langle f,K_\partial f\rangle,\qquad
+K_\partial=B\tanh(\beta B).
+$$
+
+ In the $j$th mode its unique minimizing extension and outward derivative are
+
+$$
+u_j(x)=f_j\frac{\cosh[m_j(\beta-x)]}{\cosh(m_j\beta)},\qquad
+-u_j'(0)=m_j\tanh(m_j\beta)f_j.
+$$
+
+ At $m_j=0$ the extension is constant and the boundary rate is zero.
+
+*Proof.* Modewise variation gives $-u_j''+m_j^2u_j=0$ with the stated mixed boundary data, solved by the displayed formula. Its energy is
+
+$$
+\int_0^\beta(|u_j'|^2+m_j^2|u_j|^2)\,dx
+=[\overline{u_j}u_j']_0^\beta
+=m_j\tanh(m_j\beta)|f_j|^2.
+$$
+
+ The integration by parts uses the mode equation and the zero derivative at $\beta$. If $v$ has $v(0)=0$, the cross term between the solution and $v$ vanishes by the same identity; hence $\mathcal E(u+v)=\mathcal E(u)+\mathcal E(v)$. The latter is strictly positive for nonzero such $v$, including the zero-mass sector. This proves minimality and uniqueness. Summing modes gives $K_\partial$ and its nonnegative form. ◻
+
+The construction preserves the boundary amplitudes, their multiplicities and the bulk boundary conditions. Replacing the free endpoint by another condition would define another carrier. A physical boundary mobility converts this curvature to rates as in Lemma [12.1](/source-readout/cscf/11-physical-realizations#lem-mobility-whitened). An independently specified $h$ then yields the coherent face of that same boundary carrier. In an infinite-dimensional extension, trace spaces, closedness and operator domains must be supplied; finite retained-mode budgets already obey the results proved here.
+
+<a id="section-13.2"></a>
+
+### 13.2 What a joint physical test measures
+
+A paired physical realization supplies more information than separate lists of decay rates and frequencies. It specifies an isometry or metric conversion, a retained subspace, physical time and a law $C=h(K)$ in those coordinates. With preparation $b$ and observation $a$, its dissipative transfer is $\langle a,(p+K)^{-1}b\rangle$, while the nominated coherent response is $\langle a,e^{-it h(K)}b\rangle$. These contain probe overlaps as well as eigenvalues. Optical mode measurements can test the common eigenspaces and the scalar-on-degenerate-block condition directly. Projected measurements can test $M(\tau)$ and the bandwidth-dependent bound of Theorem [11.2](/source-readout/cscf/10-quotient-closure#thm-closure-coherence).
+
+This provides three connected levels of evidence. Native spectral profiles describe measured organization in a declared carrier. Operator identities locate those profiles in its coherent and modular calculus. Joint physical response measurements test a specified realization of the paired faces. Keeping these levels explicit allows the mathematical results to be used firmly at their actual strength.
+
+<a id="sec-future"></a>
+
+## 14. Future work: selection of profiles by physical realization laws
+
+The next theoretical task is to derive particular recurring profiles from physical realization laws. Such a result would begin with an admitted source branch, its functional, metric, boundary data and preparation, and predict the resulting $K$, native $g$ and spectral-window profile before comparison. The present paper establishes the operator location of the profile and its response architecture. The selection problem asks why the resulting measure has one distribution rather than another.
+
+Several tractable developments follow from this foundation. First, paired-response systems can nominate $h$ from physical units and a constitutive law, then compare frequency and attenuation responses in a common modal basis. Second, retained internal variables produce families of local curvature carriers through the full potential and mobility. A nonautonomous $K(t)$ need not commute with $K(s)$, so extending the fixed-carrier theory requires an evolution-family construction rather than substitution into a constant-generator exponential. Third, boundary and continuum realizations can extend the finite budgets only after a determinant convention and its renormalization laws have been fixed. Finally, new spectral measurements can test profile predictions with frozen readouts, structured controls and independently acquired data. These are subsequent physical and predictive developments of the architecture derived here.
+
+<a id="section-15"></a>
+
+## 15. Conclusion
+
+CSCF combines the historical Lambda and coherence constructions into one spectral field. A closed curvature form and Hilbert metric determine $K$; a declared coherence symbol determines its reversible face, while the same carrier supplies contraction, averaged transmission and spectral budgets. Exact transmission recovery, profile identifiability and observable closure make this architecture accessible through defined readouts.
+
+The recurring structures of the completed spectral investigation now have an explicit mathematical place in that account. Their ordered ratios are the modular spectrum of the retained positive readout, and their log differences are a coherent commutator spectrum. The exact connection preserves the native measurements and all their recorded heterogeneity. The closure-to-coherence theorem further transfers a quantitative observable constraint between the two faces. Worked relaxation, storage, detailed-balance, complex-gradient and boundary realizations show how the same architecture enters physical response. Within Shadow Theory, this is the field layer through which an admitted spectral realization is organized into coherent and dissipative readouts. Deriving the particular cross-domain profiles from physical realization laws is the next stage of the programme.

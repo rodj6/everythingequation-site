@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "checks": 99,
+  "exact_finite_checks": 91,
+  "numerical_estimates": 8,
+  "suites": [
+    {
+      "suite": "reference/verify_stress.py",
+      "checks": 6,
+      "saved_result_match": true
+    },
+    {
+      "suite": "reference/verify_endpoint.py",
+      "checks": 16,
+      "saved_result_match": true
+    },
+    {
+      "suite": "reference/verify_transport.py",
+      "checks": 14,
+      "saved_result_match": true
+    },
+    {
+      "suite": "reference/verify_controls.py",
+      "checks": 7,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_projective.py",
+      "checks": 20,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_general_stress.py",
+      "checks": 9,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_transport_selection.py",
+      "checks": 18,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_residual.py",
+      "checks": 3,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_assumption_controls.py",
+      "checks": 3,
+      "saved_result_match": true
+    },
+    {
+      "suite": "verify_publication_controls.py",
+      "checks": 3,
+      "saved_result_match": true
+    }
+  ],
+  "portability_regressions": 3,
+  "total_checks_including_portability": 102,
+  "payload_sha256": "35fd7d9118fd87428ce50717e8fe704bbc1dd7ce274f72314a22653d2d0a23ea",
+  "manifest_sha256": "08d4141c96a83d32433cdc9a6ae93a21321746b98218ebf8308cea64de8217b5",
+  "environment": {
+    "python": "3.12.14",
+    "system": "Linux",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "scope": "Finite exact-algebra and numerical replay. Universal proofs are in the manuscript; no empirical validation or formal PDE certificate."
+}

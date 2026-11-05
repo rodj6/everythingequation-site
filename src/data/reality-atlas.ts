@@ -879,6 +879,11 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     summary: "The common field whose coherent and dissipative responses are functions of the same spectral carrier.",
     description:
       "Coherence and dissipation are not separate substances. The aperture-selected positive carrier K produces a contraction semigroup; the selected real symbol h produces a unitary group; together they form one normal accretive evolution with a shared spectral fingerprint.",
+    atlasNote: "For a fixed carrier, both faces commute. In the reciprocal-memory realization, the carrier evolves with the state. Conditional alignment holds along a realized history, while time ordering and full feedback can alter the measured response.",
+    readingLinks: [
+      { label: "The complete CSCF operator argument", href: "/source-readout/cscf" },
+      { label: "Spectral origins and adaptive carrier dynamics", href: "/source-readout/spectral-carriers" },
+    ],
     mathematicalType: "Operator field affiliated with the abelian von Neumann algebra W*(K)",
     domain: "CSCF-eligible weighted spectral spine",
     codomain: "Coherent, dissipative, response, quantum and local-field realizations",
@@ -987,6 +992,11 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     summary: "The paired decay and phase spectra that must be explainable by one carrier measure.",
     description:
       "A genuine common-carrier realization requires the coherent frequency h(λ) and dissipative rate γλ to be jointly indexed by the same spectral modes and weights. Failure of that joint representation falsifies the single-field branch.",
+    atlasNote: "The ordered ratio statistic has a precise operator representation. For a positive finite readout V, its normalized density has modular eigenvalues vᵢ/vⱼ. Pooling those ratios retains a signature while discarding source distinctions that calibrated responses can recover.",
+    readingLinks: [
+      { label: "Measured spectral recurrence and its controls", href: "/source-readout/spectral-ratios" },
+      { label: "Generation mechanisms and observable readouts", href: "/source-readout/spectral-profiles" },
+    ],
     mathematicalType: "Joint spectral pushforward and cross-sector compatibility criterion",
     domain: "Measured or simulated coherent and dissipative spectra",
     codomain: "Common-carrier reconstruction or falsification residue",
@@ -1231,6 +1241,10 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     summary: "Einstein gravity as the leading covariant stationary condition of the reconstructed metric branch.",
     description:
       "The order-volume continuum fixes Lorentzian kinematics. Diffeomorphism invariance and a controlled local derivative expansion select Einstein–Hilbert as the leading metric action. The exact branch includes curvature corrections, causal nonlocal response, stochastic stress and record exchange.",
+    atlasNote: "A separate admitted spin-two realization reconstructs an affine connection from smooth transport. The parent action leaves a projective one-form ambiguity; a volume-restored readout recovers Levi–Civita transport on the connection equations. The off-shell bootstrap then yields Einstein–matter dynamics. Physical selection of this realization remains open.",
+    readingLinks: [
+      { label: "Transport, projective reduction and Einstein gravity", href: "/source-readout/transport-projective" },
+    ],
     mathematicalType: "Gauge-fixed Lorentzian EFT fixed point with causal CTP response",
     domain: "Reconstructed geometry, completed QFT/matter stress and selected gravitational coefficients",
     codomain: "Metric solution, gravitational response and controlled correction tensors",

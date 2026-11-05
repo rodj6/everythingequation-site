@@ -1,0 +1,80 @@
+---
+title: "What the recurrence does and does not explain"
+description: "The frozen portability criterion fails. Gap statistics and a density-to-profile prediction answer separate mathematical questions."
+order: 7
+---
+
+<a id="section-7"></a>
+
+## Library specificity fails its frozen test
+
+The target midpositions are $P_K=0.95435$, $P_H=0.44780$ and $P_I=0.56665$. Their minimum is $Q=0.44780$. In the target-plus-$G$ population, 23.39% reach or exceed this minimum. That is above the frozen $F_Q\le0.05$ criterion. The original fifteen centers do not demonstrate an unusual simultaneous advantage across all three native domains.
+
+The earlier Kerr-only test also misses its frozen conjunction. The $G$ ranks were 457/10,000 in development and 953/10,000 on angular holdout, with add-one fractions 0.0457 and 0.0953. One-sided 95% upper bounds were approximately 0.04919 and 0.10018. Both had to meet the 5% criterion. The target still exceeds the $G$ means by 0.03141 and 0.03323 incidence units respectively. Higher absolute incidence on holdout does not rescue the rank prediction. The secondary $S$ ranks, 135 and 743, also miss top-5% holdout performance.
+
+The failed tests limit a library advantage. They do not negate the measured recurrence or the U/P discrimination. Conversely, those positive results do not establish a universal replacement. The alternative library was mechanically matched in Kerr, and its density-weighted effects on another operator remain empirical comparisons rather than a derived coordinate mapping.
+
+<a id="figure-5"></a>
+
+<figure>
+<img src="/publications/spectral/spectral-ratios/figure-5.png" alt="The Kerr reference test succeeds against U and P but is weaker against R on holdout. The earlier two-dataset and later three-domain library criteria both fail." />
+<figcaption>Figure 5. Panel (a) compares the U/P/R reference fractions. Panel (b) shows earlier G-bank add-one rank fractions and one-sided 95% Clopper–Pearson upper bounds against the 5% line. Panels (c,d) show the paired-G minimum and target component positions using development Kerr and six previously seen image families. Conditional discrimination and frozen library specificity are distinct tests.</figcaption>
+</figure>
+
+<a id="section-8"></a>
+
+## Which spectral theories could explain this profile?
+
+<a id="section-8-1"></a>
+
+### Consecutive gaps are a complementary observable
+
+For ordered levels $E_1<\cdots<E_n$, Atas et al. [\[1\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-1) use gaps $s_i=E_{i+1}-E_i$, consecutive ratios $r_i=s_i/s_{i-1}$, and folded ratios $\widetilde r_i=\min(r_i,r_i^{-1})$. A gap ratio uses three adjacent levels. With 464 distinct levels it yields 462 overlapping observations, instead of the 214,832 ordered value ratios here. Positive affine changes $E\mapsto aE+b$ leave the gap ratios unchanged. All-pair value ratios are scale-invariant and generally shift-sensitive.
+
+A common local spacing scale cancels, allowing useful comparisons without explicit unfolding. Arbitrary nonlinear transforms are not exactly invisible: this cancellation is local when the density or transformation changes slowly across neighboring gaps. Symmetry sectors, unresolved degeneracies, spectral edges and finite-size effects require separate treatment. Atas et al. resolve translation sectors in the Ising example. The mere real symmetry of a structured graph does not establish GOE statistics.
+
+The Gaussian-ensemble three-level surmise is
+
+<a id="eq-15"></a>
+
+$$
+P_\beta(r)=\frac{(r+r^2)^\beta}{Z_\beta(1+r+r^2)^{1+3\beta/2}},\qquad \beta=1,2,4. \tag{15}
+$$
+
+A stationary Poisson level process gives $P(r)=(1+r)^{-2}$. The GOE folded-mean surmise $4-2\sqrt 3\simeq0.53590$ differs from the reported large-matrix numerical mean near 0.5307. The paper gives an exact limiting GUE comparison via the sine-kernel process and documents finite-size corrections. These are gap-ratio laws, not predictions for arbitrary all-pair value-ratio window masses. This investigation ran no gap-statistics experiment on the present spectra.
+
+<a id="section-8-2"></a>
+
+### Global density and local universality can vary independently
+
+Levi and Oz [\[2\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-2) study feature-feature sample covariance $\Sigma_M=XX^\top/M$ with columns of $X\in\mathbb R^{d\times M}$ representing centered, normalized samples. Natural-image datasets show the bulk rank law $\lambda_i\propto i^{-1-\alpha}$, separate from leading outliers and small-eigenvalue tails. Their correlated Gaussian model takes a positive diagonal population covariance from the singular values of the Toeplitz construction $T_{ij}=I_{ij}+c|i-j|^\alpha$. Its sample covariance is Wishart. Generalized Marchenko–Pastur theory models density conditional on the population covariance and aspect ratio $d/M$.
+
+Correlated and uncorrelated Gaussian samples can share GOE gap statistics while exhibiting different global densities. Appendix C of their paper shows that a deterministic population spectrum can reproduce broad scaling and miss local sample-covariance spacings. Appendix D finds scaling changes under augmentation while local gaps are comparatively stable. Appendix E separates eigenvector localization and alignment from density. Appendix F uses the model predictively for learning curves with bulk, sampling and basis assumptions.
+
+The operators here are single-image distance-graph Laplacians, a radial coupling graph and a transformed damping spectrum. The graph identity $L=B\operatorname{diag}(w)B^\top$ is a Gram factorization, but incidence columns are constrained, sparse and dependent; weights encode declared structure; and $L\mathbf 1=0$. The factorization supplies neither independent Gaussian samples nor a Wishart asymptotic regime. A bulk covariance law also does not cover the entire retained positive spectrum or its nonlinear minimum-dependent readout automatically. Neither cited work validates a quantitative prediction for these profiles.
+
+<a id="section-8-3"></a>
+
+### A density explanation needs independent window predictions
+
+An independently specified smooth log-native density $f$ under an additional iid distinct-value approximation gives
+
+<a id="eq-16"></a>
+
+$$
+g(t)=\int f(u)f(u-t)\,du,\qquad q_j=\frac{\int_{I_j\cap B}g(t)\,dt}{\int_B g(t)\,dt}. \tag{16}
+$$
+
+For uncut positive values with density $p$ and CDF $F$, this is equivalently
+
+<a id="eq-17"></a>
+
+$$
+q_j=\int_0^\infty p(y)\left\{F[c_j(1+\epsilon)y]-F[c_j(1-\epsilon)y]\right\}\,dy. \tag{17}
+$$
+
+For fixed unfiltered $n$, the iid expected hit count is $n(n-1)q_j$. With random filtered exposure, [Equation (16)](/source-readout/spectral-ratios/07-specificity-and-explanatory-tests#eq-16) gives a population conditional-pair probability or ratio of expected counts, not generally $\mathbb E[h_j/N_R]$.
+
+Constrained finite ensembles can have the same mean one-point counting density $\rho_1$ and different factorial two-point intensity $\rho_2$. Exact expected nonself counts integrate $\rho_2$. Even fixed-$n$ iid values give $\rho_2(x,y)=(n-1)\rho_1(x)\rho_1(y)/n$. Dropping the factor corresponds to Poisson-number or asymptotic factorization. Connected correlations, variation between realization densities and extrema constraints can matter. In particular, hydrogen's [Equation (3)](/source-readout/spectral-ratios/02-native-operators#eq-3) fixes $v_{\min}=\ln 2$ and $u_{\min}=\ln\ln 2$; retain the anchor and its finite pair weights.
+
+Global density is a candidate explanation once a model and quantitative window predictions are specified. Local gap correlations supply different information. Replaying the measured spectrum by the exact autocorrelation identity is not an independent prediction. Appendix C gives a closed-form illustration without claiming a fit or test on these spectra.

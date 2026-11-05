@@ -1,0 +1,146 @@
+---
+title: "The operator foundations"
+description: "Closed forms, positive extraction, Fejér averaging and determinant assumptions."
+order: 2
+---
+
+The carrier is built from a closed form. These are the hypotheses that make the construction work in finite dimensions and on an unbounded operator domain.
+
+<a id="sec-prelim"></a>
+
+## 3. Mathematical Preliminaries
+
+We work throughout with a separable complex Hilbert space $\mathsf H$ (the *carrier*), inner product $\langle\cdot,\cdot\rangle$ linear in the second argument, and norm $\|\cdot\|$. Unless explicitly specified otherwise, operators are complex linear; selfadjointness is in the $C^*$ sense; positivity $K \ge 0$ means $\langle u, Ku\rangle \ge 0$ for $u \in \mathop{\mathrm{dom}}(K)$.
+
+<a id="section-3.1"></a>
+
+### 3.1 Closed nonnegative quadratic forms and Friedrichs representation
+
+Let $Q : \mathop{\mathrm{dom}}(Q) \times \mathop{\mathrm{dom}}(Q) \to \mathbb C$ be a sesquilinear form on a dense subspace $\mathop{\mathrm{dom}}(Q) \subseteq \mathsf H$. We say $Q$ is *nonnegative* if $Q(u,u) \ge 0$, *Hermitian* if $Q(u,v) = \overline{Q(v,u)}$, and *closed* if $\mathop{\mathrm{dom}}(Q)$ is complete in the form norm $\|u\|_Q^2 := Q(u,u) + \|u\|^2$.
+
+<a id="thm-friedrichs"></a>
+
+**Theorem 3.1.** *Friedrichs / form representation*.
+
+Let $Q$ be a densely defined, closed, Hermitian, nonnegative form on $\mathsf H$. Then there exists a unique selfadjoint operator $K \ge 0$ with
+
+$$
+\mathop{\mathrm{dom}}(K^{1/2}) = \mathop{\mathrm{dom}}(Q),\qquad Q(u,v) = \langle K^{1/2}u, K^{1/2}v\rangle \quad \text{for all } u,v \in \mathop{\mathrm{dom}}(Q).
+$$
+
+This is the closed-form representation theorem; see \[[11](/source-readout/cscf/18-references#ref-kato), Ch. VI\] and \[[14](/source-readout/cscf/18-references#ref-reedsimoni), Ch. VIII\].
+
+<a id="section-3.2"></a>
+
+### 3.2 Spectral theorem and Borel functional calculus
+
+For any selfadjoint $K$ on $\mathsf H$ there is a unique projection-valued spectral measure $E_K$ on $\mathbb R$ with $K = \int \lambda \, dE_K(\lambda)$. For any Borel $\phi : \mathop{\mathrm{\sigma}}(K) \to \mathbb C$ the operator $\phi(K) := \int \phi \, dE_K$ is well-defined; bounded iff $\phi$ is $E_K$-essentially bounded, selfadjoint iff $\phi$ is real $E_K$-almost everywhere, and unitary iff $|\phi|=1$ $E_K$-almost everywhere. In particular, for $K \ge 0$ and $t \ge 0$,
+
+$$
+e^{-tK} \;=\; \int_0^\infty e^{-t\lambda}\, dE_K(\lambda)
+$$
+
+ is a strongly continuous contraction semigroup. We write $W^*(K):=W^*(E_K(B):B\in\mathfrak B(\mathbb R))$. Its elements are bounded operators. If $K$ is unbounded, $K$ is *affiliated* with this algebra: all its spectral projections belong to the algebra. Bounded functional-calculus operators belong to $W^*(K)$, while determinant budgets below are scalar spectral functionals, not additional operator generators.
+
+<a id="sec-positive-extraction"></a>
+
+### 3.3 Positivity extraction from raw selfadjoint operators
+
+<a id="prop-positive-extraction"></a>
+
+**Proposition 3.2.** *Positive extraction by Borel functional calculus*.
+
+Let $H = H^*$ be selfadjoint on a Hilbert space with spectral measure $E_H$, and let $\chi:\mathbb R\to[0,\infty)$ be a real-valued, nonnegative Borel measurable function. Then
+
+$$
+K \;:=\; \chi(H) \;=\; \int_{\mathbb R}\chi(x)\,dE_H(x)
+$$
+
+ is a positive selfadjoint operator. If $\chi$ is bounded, then $K$ is bounded with
+
+$$
+\|K\| \;\le\; \|\chi\|_{L^\infty(\mathop{\mathrm{\sigma}}(H))}.
+$$
+
+ If $\chi$ is unbounded, then $K$ is the positive selfadjoint operator supplied by the spectral theorem, with domain
+
+$$
+\mathop{\mathrm{dom}}(K) \;=\; \left\{u\in\mathsf H:\int_{\mathbb R}\chi(x)^2\,d\|E_H(x)u\|^2 < \infty\right\}.
+$$
+
+ If this extracted $K$ satisfies the determinant-class hypotheses required for the dissipative and coherent budgets, and if an admissible coherence symbol $h$ is declared, then $K$ defines a CSCF realization in the operator-theoretic sense of Definition [7.1](/source-readout/cscf/06-unified-field#def-cscf).
+
+*Proof.* The spectral theorem gives a selfadjoint operator $\chi(H)$ for every real Borel $\chi$, bounded exactly when $\chi$ is essentially bounded on $\mathop{\mathrm{\sigma}}(H)$. Since $\chi\ge 0$, for $u\in\mathop{\mathrm{dom}}(K)$,
+
+$$
+\langle u, Ku\rangle \;=\; \int_{\mathbb R}\chi(x)\,d\|E_H(x)u\|^2 \;\ge\; 0,
+$$
+
+ so $K$ is positive. The boundedness and domain formulas are the standard bounded and unbounded Borel functional-calculus conclusions. Once $K\ge 0$ is obtained, the CSCF constructions are precisely the functional calculi of $K$ used in Theorem [7.2](/source-readout/cscf/06-unified-field#thm-unified), provided the determinant-class assumptions and the chosen symbol hypotheses hold. ◻
+
+<a id="ex-positive-extractions"></a>
+
+**Example 3.3.** *Standard positive extractions*.
+
+The positivity extraction is not unique and must be declared as part of the realization data.
+
+1.  If $H$ is bounded below with $E_0 = \inf\mathop{\mathrm{\sigma}}(H)$, then on $\mathop{\mathrm{\sigma}}(H)$ the spectral-support formula $\chi(x) = x - E_0$, equivalently the nonnegative Borel extension $\chi(x) = (x - E_0)_+$, gives $K = H - E_0\,I$.
+
+2.  For a general selfadjoint $H$, one may use $\chi(x) = x_+$, $\chi(x) = |x|$, or another explicitly declared nonnegative Borel extraction, depending on which positive carrier is intended.
+
+3.  These extractions are operator-theoretic only. They do not prove that a given physical, modular, QFT, or empirical sector realizes the CSCF. Such a realization still requires the relevant domain, spectral, determinant-class, and interpretation hypotheses.
+
+<a id="section-3.4"></a>
+
+### 3.4 The Fejér average symbol
+
+The function
+
+$$
+f_T(\lambda) \;=\; \begin{cases} \dfrac{1-e^{-T\lambda}}{T\lambda}, & \lambda > 0,\\[0.4em] 1, & \lambda = 0,\end{cases}
+$$
+
+ is bounded, continuous, and decreasing on $[0,\infty)$, with $f_T(\lambda)\in(0,1]$ for $\lambda>0$ and $f_T(\lambda)=\tfrac1T\int_0^T e^{-t\lambda}\,dt$. It satisfies
+
+$$
+f_T(\lambda) = 1 - \tfrac{T\lambda}{2} + \tfrac{(T\lambda)^2}{6} + O((T\lambda)^3) \;\;(T\lambda \to 0),\qquad f_T(\lambda) \sim \tfrac{1}{T\lambda} \;\; (T\lambda \to \infty).
+$$
+
+The uniform time averages used here are Cesàro averages. The historical Lambda terminology calls $f_T$ the Fejér-averaged transmission; the associated coherent compression has the Fejér-type multiplier $\mathop{\mathrm{sinc}}^2(T\mu/2)$. All results use the explicit multipliers stated here.
+
+<a id="section-3.5"></a>
+
+### 3.5 Determinant-class assumptions
+
+The flows are defined for every nonnegative selfadjoint $K$. Determinant budgets use one of two explicit settings:
+
+- **(D1)** The retained dissipative space $\mathsf H_{\mathrm{diss}}=(\ker K)^\perp$ is finite dimensional, or $I_{\mathsf H_{\mathrm{diss}}}-f_T(K)|_{\mathsf H_{\mathrm{diss}}}\in\mathcal L^1(\mathsf H_{\mathrm{diss}})$ at the scale in question. The latter Fredholm condition is characterized in Lemma [5.7](/source-readout/cscf/04-lambda-face#lem-traceclass-lambda-det).
+
+- **(D2)** $\det_*$ means the ordinary finite product, or the Fredholm determinant on $I+\mathcal L^1$. Multiplicities are retained. On the stationary space the transmission is the identity and contributes a factor one.
+
+- **(D3)** For the coherent compression $\mathbf C_T=\Gamma_T^*\Gamma_T$, assume $I-\mathbf C_T\in\mathcal L^1$ on $(\ker C)^\perp$, or work on a finite-dimensional retained space. A nonzero kernel of $\mathbf C_T$ gives an infinite full budget.
+
+No heat-kernel or zeta counterterm is implicit in these conventions. Such extensions require their own definitions and transformation laws. In particular, a spectral cutoff of an unbounded elliptic carrier gives a finite budget even when the uncut operator is not Fredholm-admissible.
+
+<a id="section-3.6"></a>
+
+### 3.6 Notation summary
+
+| Symbol                                         | Meaning                                                     |
+|:-----------------------------------------------|:------------------------------------------------------------|
+| $\mathsf H$                                    | separable Hilbert carrier                                   |
+| $K$                                            | canonical positive selfadjoint spectral-curvature generator |
+| $E_K$                                          | spectral measure of $K$                                     |
+| $\mathsf H_0= \ker K$                          | stationary sector                                           |
+| $\mathsf H_{\mathrm{diss}}= \mathsf H_0^\perp$ | dissipative sector                                          |
+| $S_t = e^{-tK}$                                | contraction semigroup                                       |
+| $\Lambda_T(K)$                                 | Fejér-averaged transmission operator                        |
+| $\mathcal D_T(K)$                              | dissipative determinant budget                              |
+| $h$                                            | admissible coherence symbol                                 |
+| $C = h(K)$                                     | bounded coherence generator                                 |
+| $U_t = e^{-itC}$                               | reversible unitary flow                                     |
+| $\Gamma_T(C)$                                  | reversible Fejér compression operator                       |
+| $\mathfrak B_T(K)$                             | coherent compression budget                                 |
+| $W^*(K)$                                       | von Neumann algebra generated by $K$                        |
+| $\det_*$                                       | finite-product or Fredholm determinant                      |
+

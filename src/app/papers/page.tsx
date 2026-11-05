@@ -1,3 +1,4 @@
+import {spectralEditions,spectralHub} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
@@ -51,6 +52,8 @@ export default async function PapersPage() {
         <p className="mt-3 max-w-3xl leading-relaxed text-mute">Complete technical articles for the seven foundational papers and five constructive studies, with three technical companions. Follow definitions, equations, proofs and references directly on site.</p>
         <Link href="/source-readout" className="mt-4 inline-block text-glow">Explore the complete programme →</Link>
         <ul className="mt-5 grid gap-3 md:grid-cols-2">{sourcePapers().filter(p=>p.series==='constructive'&&!p.parentId).map(p=><li key={p.id}><Link className="text-glow" href={paperUrl(p)}>{p.title} →</Link></li>)}</ul>
+        <h3 className="mt-6 text-lg font-semibold"><Link href={spectralHub}>CSCF and spectral carriers →</Link></h3>
+        <ul className="mt-3 grid gap-3 md:grid-cols-2">{spectralEditions.map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
       </section>
       <SealedLeakyFeature />
 

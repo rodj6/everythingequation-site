@@ -1,0 +1,151 @@
+---
+title: A Slow Sweep Passes the Stationary Fold
+description: The complete reciprocal source, uninterrupted triangular input and bounded-input energy estimates.
+order: 1
+---
+<a id="abstract"></a>
+
+<a id="section-1"></a>
+
+## 1. Where switching happens
+
+A stationary fold fixes the input at which an equilibrium ends. It does not fix the input at which a driven carrier leaves. As the restoring rate vanishes, the complete amplitude and memory can remain near the vanished state. The delay depends on the source dynamics, the incoming preparation and the observed exit surface. A full return requires capture by the other stable state after each local exit.
+
+This is the same reciprocal carrier and external rate port as in the [sharp bistability analysis](/source-readout/sharp-uniqueness). Only the prescribed scalar input varies. The drive fixes spatial mode, phase and sweep; the reciprocal memory evolves the carrier. The analysis starts with an eight-coordinate source and separates one mixed critical coordinate from seven stable directions. It retains parameter motion and controls the stable error of a passing trajectory rather than assuming an attracting centre equilibrium.
+
+Tracking the stable branch from a fixed distance selects an Airy solution and an oriented delay $K_f\nu^{2/3}+o(\nu^{2/3})$ at sufficiently small fixed exit levels. The example's unfitted prefactors are approximately 6.21890 and 7.91547. Starting exactly at the fold selects a different Airy mixture, with pole constant 1.98635 instead of 2.33811. Stationary memory substitution preserves folds yet changes dynamical coefficients. The proof then uses strict loss at fixed input for the connecting orbit, finite-time continuity for capture, and complete stable tracking through reversal. The resulting branch limit is uniform on compact input intervals away from switching and holds in finite-$L^p$ norms. It does not identify an exact vertical trace, a monotone amplitude jump or a finite-rate attracting periodic orbit. The oriented geometric loop has a positive limiting magnitude while physical maintenance work grows as $1/\nu$.
+
+Four uninterrupted numerical cycles and preparation, uniqueness and modal controls evaluate this construction. The numerical thresholds are not assigned an analytically certified chart radius. The standard centre and Airy tools follow Carr (1981, 2006) and NIST (2026). The source contribution is a finite powered mechanism and explicit observation contracts. It does not establish a common microscopic law across atomic, image and Kerr readouts.
+
+<a id="section-2"></a>
+
+## 2. Time-dependent source, energy and boundedness
+
+<a id="section-2-1"></a>
+
+### 2.1 Complete state and prescribed input
+
+Let $z\in\mathbb C^3$, $m\in\mathbb R^2$ and set
+
+<a id="eq-1"></a>
+
+$$
+b_1=(1,-1,0)^T,\quad b_2=(0,1,-1)^T,\quad B_e=b_eb_e^T,\quad L=B_1+B_2,\quad
+K(m)=\mu I+\sum_{e=1}^2e^{m_e}B_e.\tag{1}
+$$
+
+<a id="eq-2"></a>
+
+$$
+F(z,m)=\tfrac12z^*K(m)z+\tfrac\kappa2|m|^2,\qquad
+g_e=\kappa m_e+\tfrac12e^{m_e}|b_e^Tz|^2.\tag{2}
+$$
+
+The positive parameters $\mu,\kappa,\gamma,\alpha,\eta$ stay fixed. Define $c=\gamma+i\alpha$ and the normalized highest path mode
+
+<a id="eq-3"></a>
+
+$$
+v_3=(1,-2,1)^T/\sqrt6.\tag{3}
+$$
+
+<a id="eq-4"></a>
+
+$$
+\dot z=-cK(m)z+a(t)v_3,\qquad \dot m=-\eta g(z,m).\tag{4}
+$$
+
+Here $a(t)$ is real in the fixed phase reference. Both efforts derive from $F$, so memory is a free reciprocal source coordinate; $K(m)\ge\mu I$ at any finite state. Norms and joint Hessians use fixed Euclidean coordinates in amplitude, energy and time scales $A_0,E_0,T_0$. Before normalization, amplitude has units $A$, energy $E$, time $T$, $K$ has $E/A^2$, $\kappa$ has $E$, and $m$ is dimensionless. Both $\gamma,\alpha$ have $A^2/(ET)$ and $\eta$ has $1/(ET)$. Input and ramp rate have $A/T$ and $A/T^2$. Baseline edge weights equal one.
+
+For $0<a_\ell<a_h$ the uninterrupted triangle is
+
+<a id="eq-5"></a>
+
+$$
+a_\nu(t)=
+\begin{cases}
+a_\ell+\nu t,&0\le t\le T_h,\\
+a_h-\nu(t-T_h),&T_h\le t\le2T_h,
+\end{cases}\qquad T_h=(a_h-a_\ell)/\nu.\tag{5}
+$$
+
+Only the slope changes at reversal. There are no holds. Principal preparation is the low stationary state at $a_\ell$; perturbed preparations are identified separately. The experiment uses
+
+<a id="eq-6"></a>
+
+$$
+(\mu,\kappa,\gamma,\alpha,\eta)=(0.1,1,0.6,1.2,0.8),\qquad(a_\ell,a_h)=(2.9,3.17).\tag{6}
+$$
+
+<a id="section-2-2"></a>
+
+### 2.2 Physical balance and the varying tilt
+
+The rate $f=a(t)v_3$ pairs with conjugate effort $Kz$ (van der Schaft and Jeltsema, 2014). The external actuator can supply or absorb power; no finite reservoir is included.
+
+<a id="eq-7"></a>
+
+$$
+P(t)=\operatorname{Re}[(Kz)^*f(t)],\qquad \dot F=-\gamma\lVert Kz\rVert^2-\eta|g|^2+P.\tag{7}
+$$
+
+Put $\ell(t)=f(t)/c$ and $V(x,a)=F(z,m)-\operatorname{Re}[\ell(t)^*z]$. With
+
+<a id="eq-8"></a>
+
+$$
+q=(\operatorname{Re}z,\operatorname{Im}z),\quad x=(q,m),\quad
+J=\begin{pmatrix}0&-I\\ I&0\end{pmatrix},\quad G=\gamma I+\alpha J,\quad
+D=\operatorname{diag}(G,\eta I_2),\tag{8}
+$$
+
+the source is $\dot x=-D\nabla_x V(x,a(t))$. Both explicit parameter and state derivatives contribute almost everywhere:
+
+<a id="eq-9"></a>
+
+$$
+\dot V=-\gamma\lVert Kz-\ell\rVert^2-\eta|g|^2-\operatorname{Re}[\dot\ell^*z].\tag{9}
+$$
+
+At reversal $x,F,V$ remain continuous; [(9)](#eq-9) holds on each adjacent segment. The last term precludes assuming constant-input monotonicity along a ramp. Physical work obeys
+
+<a id="eq-10"></a>
+
+$$
+W(t)=\int_0^tP\,ds,\qquad
+Q(t)=\int_0^t(\gamma\lVert Kz\rVert^2+\eta|g|^2)\,ds,\qquad
+F(t)-F(0)=W(t)-Q(t).\tag{10}
+$$
+
+The tilted potential is not the stored energy of source or actuator.
+
+<a id="proposition-2-1"></a>
+
+**[Proposition 2.1](#proposition-2-1) (Bounded-input continuation).** Bounded piecewise continuous $f$ gives global forward evolution. At fixed initial state and $\lVert f\rVert\le f_{\max}$ the state bounds do not depend on ramp speed.
+
+**Proof.** For $r_z=\lVert z\rVert$, Hermiticity and positivity give
+
+<a id="eq-11"></a>
+
+$$
+\tfrac12\frac d{dt}\lVert z\rVert^2\le-\gamma\mu\lVert z\rVert^2+f_{\max}\lVert z\rVert,\qquad
+r_z(t)\le r_z(0)e^{-\gamma\mu t}+\frac{f_{\max}}{\gamma\mu}(1-e^{-\gamma\mu t}).\tag{11}
+$$
+
+The scalar bound holds in the upper Dini sense at zero. Set $Z=\max(r_z(0),f_{\max}/(\gamma\mu))$ and $M_e=\max(0,m_e(0))$. At zero memory its derivative is nonpositive; for positive memory $\dot m_e\le-\eta\kappa m_e$, so $m_e\le M_e$. Conversely,
+
+<a id="eq-12"></a>
+
+$$
+\dot m_e\ge-\eta\kappa m_e-\tfrac\eta2e^{M_e}\lVert b_e\rVert^2Z^2.\tag{12}
+$$
+
+<a id="eq-13"></a>
+
+$$
+m_e(t)\ge m_e(0)e^{-\eta\kappa t}-\frac{e^{M_e}\lVert b_e\rVert^2Z^2}{2\kappa}(1-e^{-\eta\kappa t}).\tag{13}
+$$
+
+State smoothness and local Lipschitz continuity uniformly on compacts with bounded input, together with these bounds, exclude finite escape. Piecewise classical or absolutely continuous Carathéodory solutions continue through reversals. $\square$
+
+At fixed drive [(9)](#eq-9) has strict loss except at equilibria. A nonstationary omega-limit point would imply a neighborhood of uniformly positive loss and infinitely many visits of uniformly positive duration, by bounded velocity, contradicting convergence of the tilt. The omega-limit set is connected by nested compact connected closures of forward tails. If stationary points are finite, each trajectory converges to one. This fixed-input invariance argument (LaSalle, 1976) will be used for a reference connection, not for ramp monotonicity.

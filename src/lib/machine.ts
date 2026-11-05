@@ -1,5 +1,6 @@
+import {paperIntegrations,spectralEditions,spectralHub} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl,chapterUrl} from '@/lib/source-readout';
-import {paperIntegrations,integrationChapters} from '@/lib/paper-integrations';
+import {integrationChapters} from '@/lib/paper-integrations';
 import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
 import {relationalAwareness, listRelationalDocuments, relationalDocumentUrl} from '@/lib/relational-awareness';
 import { development, listDevelopmentDocuments } from '@/lib/development';
@@ -70,9 +71,10 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
     {loc:'/source-readout/origins',lastmod:'2026-10-28',priority:'0.8'},
+    {loc:spectralHub,lastmod:'2026-11-05',priority:'0.9'},
     ...sourcePapers().flatMap(p=>[{loc:paperUrl(p),lastmod:'2026-10-28',priority:'0.9'},...p.chapters.map(c=>({loc:chapterUrl(p,c),lastmod:'2026-10-28',priority:'0.8'}))]),
-    ...paperIntegrations.map(p=>({loc:p.url,lastmod:'2026-10-23',priority:'0.9'})),
-    ...integrationChapters.map(c=>({loc:c.url,lastmod:'2026-10-23',priority:'0.8'})),
+    ...paperIntegrations.map(p=>({loc:p.url,lastmod:p.programme?'2026-11-05':'2026-10-23',priority:'0.9'})),
+    ...integrationChapters.map(c=>({loc:c.url,lastmod:c.url.startsWith('/source-readout/')?'2026-11-05':'2026-10-23',priority:'0.8'})),
     {loc:continuityNote.url,lastmod:editorialUpdateDate,priority:'0.9'},
     {loc:relationalAwareness.url,lastmod:editorialUpdateDate,priority:'0.9'},
     ...listRelationalDocuments().map(d=>({loc:relationalDocumentUrl(d),lastmod:d.kind === 'main' ? editorialUpdateDate : relationalAwareness.date,priority:'0.8'})),
@@ -145,8 +147,10 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:'CSCF and spectral carriers',url:`${canonicalBase}${spectralHub}`,date:'2026-11-05',summary:'Seven complete web editions connect the common spectral carrier to profile generation, reciprocal memory, forcing, bistability and slow passage.'},
+    ...spectralEditions.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:'2026-11-05',summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
     ...sourcePapers().filter(p=>!p.parentId&&!p.parentSlug).map(p=>({title:p.title,url:`${canonicalBase}${paperUrl(p)}`,date:'2026-10-28',summary:`${p.description} Complete web-edition release; the original publication date and DOI remain on its article page.`})),
-    ...integrationChapters.map(c=>({title:c.title,url:`${canonicalBase}${c.url}`,date:'2026-10-23',summary:c.description})),
+    ...integrationChapters.map(c=>({title:c.title,url:`${canonicalBase}${c.url}`,date:c.url.startsWith('/source-readout/')?'2026-11-05':'2026-10-23',summary:c.description})),
     {title:'What Shadow Theory holds fundamental: authorial clarification',url:`${canonicalBase}/consciousness#what-shadow-theory-holds-fundamental`,date:editorialUpdateDate,summary:'The unknown ground is fundamental throughout reality in the author’s philosophical account. Awareness provisionally names an attributed quality, not knowing or universal conscious subjects. The dated A0 note distinguishes this clarified position from the unchanged publication; no new constitutive law or publication version is issued.'},
     {title:continuityNote.fullTitle,url:`${canonicalBase}${continuityNote.url}`,date:continuityNote.date,summary:`${continuityNote.description} Philosophical research note accompanying Reflective Alignment and AI Consciousness. DOI ${continuityNote.doi}.`},
     {title:relationalAwareness.fullTitle,url:`${canonicalBase}${relationalAwareness.url}`,date:relationalAwareness.date,summary:`${relationalAwareness.description} Main paper and ten-module technical companion share DOI ${relationalAwareness.doi}.`},
@@ -258,8 +262,9 @@ export async function generateLlmsTxt(): Promise<string> {
     'The seven foundations use source-derived HTML and MathML. PDF-only constructive articles preserve exact vector mathematics with accessible linear transcriptions; these transcriptions are not semantic MathML.',
     ...sourcePapers().flatMap(p=>[`- [${p.title}](${baseUrl}${paperUrl(p)}): ${p.description}${p.doi?` DOI https://doi.org/${p.doi}`:''}; [PDF](${baseUrl}${p.pdfUrl})`,...p.chapters.map(c=>`  - [${c.title}](${baseUrl}${chapterUrl(p,c)})`)]),
     '',
-    '## Complete October paper articles',
-    ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
+    '## Complete paper articles',
+    `- [CSCF and spectral carriers](${baseUrl}${spectralHub}): the shared operator, spectral profile generation, reciprocal memory, forcing, bistability and prepared hysteresis.`,
+    ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})${p.supplementUrl?`; [verification archive](${p.supplementUrl.startsWith('/')?baseUrl:''}${p.supplementUrl})`:''}`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
     '',
     '## Conscious scaffolding and the preference for continuity',
     '',
@@ -483,6 +488,7 @@ export async function generateGraph() {
     {id:'source-readout',type:'research-programme',title:'Source and Readout',url:`${baseUrl}/source-readout`,manifest:`${baseUrl}/source-readout/manifest.json`},
     {id:'source-readout:origins',type:'programme-development',title:'From the Everything Equation to Source–Readout Theory',url:`${baseUrl}/source-readout/origins`},
     ...sourcePapers().flatMap(p=>[{id:`source-readout:${p.id}`,type:p.parentId?'technical-companion':'complete-technical-edition',title:p.title,url:`${baseUrl}${paperUrl(p)}`,doi:p.doi,series:p.series},...p.chapters.map(c=>({id:`source-readout:${p.id}:${c.slug}`,type:'technical-section',title:c.title,url:`${baseUrl}${chapterUrl(p,c)}`}))]),
+    {id:'series:spectral-carriers',type:'research-series',title:'CSCF and spectral carriers',url:`${baseUrl}${spectralHub}`},
     ...paperIntegrations.map(p=>({id:`integrated:${p.id}`,type:'complete-paper-article',title:p.title,url:`${baseUrl}${p.url}`,doi:p.doi,manifest:`${baseUrl}${p.manifestUrl}`})),
     ...integrationChapters.map(c=>({id:`integrated:${c.paperId}:${c.slug}`,type:'complete-article-chapter',title:c.title,url:`${baseUrl}${c.url}`,order:c.order,sections:c.sections})),
     ...papers.map((p) => ({
@@ -641,6 +647,7 @@ export async function generateGraph() {
       levelOfDetail: node.lod,
       title: node.label,
       summary: node.summary,
+      ...(node.atlasNote ? {atlasNote:node.atlasNote} : {}),
       chapter: node.chapter,
       section: node.section,
       mathematicalType: node.mathematicalType,
@@ -684,8 +691,14 @@ export async function generateGraph() {
     if(!p.parentId)edges.push({from:`source-readout:${p.id}`,to:`paper:${p.slug}`,relation:'published-as'});
     p.chapters.forEach((c,i)=>{edges.push({from:`source-readout:${p.id}`,to:`source-readout:${p.id}:${c.slug}`,relation:'contains-complete-section'});if(p.chapters[i+1])edges.push({from:`source-readout:${p.id}:${c.slug}`,to:`source-readout:${p.id}:${p.chapters[i+1].slug}`,relation:'reading-order'});});
   }
-  for(const p of paperIntegrations){edges.push({from:'consciousness',to:`integrated:${p.id}`,relation:'contains-complete-article'});edges.push({from:`integrated:${p.id}`,to:`paper:${p.paperSlug}`,relation:'published-as'});const chapters=integrationChapters.filter(c=>c.paperId===p.id);chapters.forEach((c,i)=>{edges.push({from:`integrated:${p.id}`,to:`integrated:${p.id}:${c.slug}`,relation:'contains-complete-chapter'});if(chapters[i+1])edges.push({from:`integrated:${p.id}:${c.slug}`,to:`integrated:${p.id}:${chapters[i+1].slug}`,relation:'reading-order'});});}
-  for(const [from,to,relation] of [['whole-field','temporal-passage','constitutive-foundation-for'],['whole-field','constituted-agency','related-within-unit-account'],['temporal-passage','block-universe','temporal-application-in'],['constituted-agency','misleading-ai','authority-revision-context-for']])edges.push({from:`integrated:${from}`,to:`integrated:${to}`,relation});
+  edges.push({from:'source-readout',to:'series:spectral-carriers',relation:'has-reading-series'});
+  edges.push({from:'atlas:canonical-field',to:'integrated:cscf',relation:'complete-operator-argument'});
+  edges.push({from:'atlas:field-fingerprint',to:'integrated:spectral-ratios',relation:'measured-spectral-signature'});
+  edges.push({from:'atlas:field-fingerprint',to:'integrated:spectral-profiles',relation:'source-generation-and-response'});
+  edges.push({from:'atlas:gravity',to:'integrated:transport-projective',relation:'admitted-gravity-realization'});
+  for(const p of spectralEditions.filter(p=>p.id!=='transport-projective'))edges.push({from:'series:spectral-carriers',to:`integrated:${p.id}`,relation:'contains-complete-article'});
+  for(const p of paperIntegrations){edges.push({from:p.programme??'consciousness',to:`integrated:${p.id}`,relation:'contains-complete-article'});edges.push({from:`integrated:${p.id}`,to:`paper:${p.paperSlug}`,relation:'published-as'});const chapters=integrationChapters.filter(c=>c.paperId===p.id);chapters.forEach((c,i)=>{edges.push({from:`integrated:${p.id}`,to:`integrated:${p.id}:${c.slug}`,relation:'contains-complete-chapter'});if(chapters[i+1])edges.push({from:`integrated:${p.id}:${c.slug}`,to:`integrated:${p.id}:${chapters[i+1].slug}`,relation:'reading-order'});});}
+  for(const [from,to,relation] of [['whole-field','temporal-passage','constitutive-foundation-for'],['whole-field','constituted-agency','related-within-unit-account'],['temporal-passage','block-universe','temporal-application-in'],['constituted-agency','misleading-ai','authority-revision-context-for'],['cscf','spectral-ratios','interprets-spectral-signature-in'],['spectral-ratios','spectral-profiles','generation-mechanisms-in'],['cscf','adaptive-carriers','adaptive-extension-in'],['adaptive-carriers','sustained-carriers','externally-sustained-extension-in'],['sustained-carriers','sharp-uniqueness','sharp-stability-boundary-in'],['sharp-uniqueness','slow-passage','dynamical-passage-extension-in']])edges.push({from:`integrated:${from}`,to:`integrated:${to}`,relation});
   edges.push({from:'consciousness',to:'consciousness:continuity-note',relation:'contains-research-note'});
   edges.push({from:'consciousness:research',to:'consciousness:continuity-note',relation:'contains-research-note'});
   edges.push({from:'consciousness:alignment',to:'consciousness:continuity-note',relation:'extended-by-research-note'});

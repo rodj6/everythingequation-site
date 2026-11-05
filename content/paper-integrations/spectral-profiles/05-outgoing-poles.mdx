@@ -1,0 +1,77 @@
+---
+title: "Kerr requires the joint outgoing problem"
+description: "The native damping readout, angular and radial source equations, branch repair and the boundary-pole extension."
+order: 5
+---
+
+<a id="section-6"></a>
+
+## 6. Kerr: joint angular and outgoing radial dynamics
+
+<a id="section-6-1"></a>
+
+### 6.1 The native selection and the source boundary problem
+
+The gravitational selection keeps spin weight $s=-2$, $\ell=2,\ldots,6$, every $m=-\ell,\ldots,\ell$, physical overtones $n=0,1,2,3$, and $a/M=0,0.5,0.9$. This is $3\cdot4\sum_{\ell=2}^{6}(2\ell+1)=540$ labels, retaining zero-spin magnetic degeneracies. With $e^{-i\omega t}$, dimensionless energy-decay rate is $\lambda=-2\operatorname{Im}(M\omega)$ and amplitude-decay rate is half. Multiply by $c^3/(GM)$ for inverse seconds. The original readout is
+
+<a id="equation-31"></a>
+
+$$
+v=f_T(\lambda)=\frac{1-e^{-T\lambda}}{T\lambda},\qquad T=12.115276586285876.\tag{31}
+$$
+
+Time $T$ is in $GM/c^3$ units. The strict eligibility $0.05<v_i/v_j<5$ gives 272,049 ordered nonself pairs. There is no new mean normalization. Closed comparison windows remain distinct from the open exposure cutoff.
+
+At $M=1$, put $\Delta=r^2-2r+a^2$, $K_r=(r^2+a^2)\omega-am$, and $\Lambda=A+a^2\omega^2-2am\omega$. The separated [Teukolsky equation](/source-readout/spectral-profiles/09-references#ref-9) is
+
+<a id="equation-32"></a>
+
+$$
+\Delta^{-s}\frac{d}{dr}\left(\Delta^{s+1}\frac{dR}{dr}\right)
++\left[\frac{K_r^2-2is(r-1)K_r}{\Delta}+4is\omega r-\Lambda\right]R=0.\tag{32}
+$$
+
+Regular angular solutions determine $A(\omega)$. Ingoing horizon and outgoing infinity conditions select discrete complex poles. [Leaver's continued fraction](/source-readout/spectral-profiles/09-references#ref-10) enforces these conditions. The radial evaluation uses the published [qnm implementation](/source-readout/spectral-profiles/09-references#ref-11); angular assembly and root continuation are evaluated explicitly in the supplement. The joint boundary law gives both pole parts without fitting frequency to damping.
+
+In the spin-weighted spherical basis let $X$ multiply by $\cos\theta$. Its diagonal is $-ms/[\ell(\ell+1)]$ and its adjacent entry is
+
+$$
+X_{\ell,\ell+1}=
+\sqrt{\frac{(\ell+1)^2-m^2}{(2\ell+3)(2\ell+1)}}
+\sqrt{\frac{(\ell+1)^2-s^2}{(\ell+1)^2}}.
+$$
+
+Set $M_c=D-c^2X^2+2csX$, where $D_{\ell\ell}=\ell(\ell+1)-s(s+1)$ and $c=a\omega$. Include one extra row before forming $X^2$ and compressing to retain the last diagonal contribution. Complex $c$ makes the angular problem nonselfadjoint.
+
+<a id="section-6-2"></a>
+
+### 6.2 Finite angular control and barrier shape
+
+Multiplication by $\cos\theta$ has norm at most one. The angular perturbation is bounded by $v=|c|^2+4|c|$. For the tail projector $Q$ on $\ell\ge L+1$, restrict inverses to its range:
+
+<a id="equation-33"></a>
+
+$$
+d=(L+1)(L+2)-2-|A|-v>0\quad\Longrightarrow\quad
+\|[Q(M_c-A)Q]^{-1}\|\le d^{-1}.\tag{33}
+$$
+
+The diagonal tail inverse has norm at most $[(L+1)(L+2)-2-|A|]^{-1}$; a Neumann series absorbs the perturbation. Schur elimination bounds the retained correction by $v^2/d$. A contour certificate also needs the product of this bound and the retained resolvent norm below one on the contour. The cutoff and sensitivity checks support numerical truncation and the conditional tail theorem. They do not establish that stronger enclosure of infinite-dimensional poles.
+
+The Schwarzschild limit makes the barrier visible. The Regge–Wheeler potential is $V=(1-2/r)[\ell(\ell+1)/r^2-6/r^3]$. With tortoise derivatives $V_j$ at the maximum and $\nu=n+1/2$, the leading approximation is $\omega^2=V_0-i\nu\sqrt{-2V_2}$. Higher-order [WKB](/source-readout/spectral-profiles/09-references#ref-12) uses derivatives beyond the quadratic barrier, retaining asymmetry and anharmonicity. The third-order calculation improves both frequency and damping and supplies the source-only Schwarzschild seeds. It remains a finite-order large-$\ell$, fixed-$n$ approximation, limited at low $\ell$ and high overtones. The rotating calculation imposes the full outgoing radial law.
+
+<a id="section-6-3"></a>
+
+### 6.3 Branch identity and the complete numerical return
+
+Start from source-derived Schwarzschild seeds, rather than rotating catalogue poles or a cache lookup. At angular cutoff 20 and radial depth 1200, spin steps of 0.05 produce 540 locally accepted roots, yet 14 labels disagree materially with the retained catalogue and all 45 profile counts differ. One $n=2$ root duplicates an $n=3$ root to about $2.5\times10^{-15}$. A small local residual does not preserve overtone identity.
+
+The repair continues all families in the group $\ell=3,\ldots,6$, positive $m$, $n=2,3$ from the computed spin-0.5 roots to 0.9 with 0.01 steps and secant prediction. It does not target only failed labels using catalogue seeds. The repaired selection recovers all 45 counts, all three UNION counts and exposure. A further audit solves each of the 45 highest-overtone spin-0.9 labels at depths 2400 and 4800, giving 90 checks. Maximum successive shifts are about $4.54\times10^{-8}$ and $9.69\times10^{-11}$. The full depth-refined profile still agrees exactly, with maximum catalogue pole discrepancy about $5.07\times10^{-12}$. These are reconstruction and convergence checks, distinct from global branch uniqueness, radial-tail enclosure or physical validation. The failed fixed-step profile remains a public diagnostic.
+
+<a id="section-6-4"></a>
+
+### 6.4 The boundary-pole extension of the carrier picture
+
+At fixed $(\ell,m,a)$, overtone damping grows while real frequency can fall. All 114 nominated adjacent-overtone comparisons on the rotating families show the inversion. If $\lambda_j>\lambda_i$ and $\operatorname{Re}\omega_j<\operatorname{Re}\omega_i$, a nondecreasing $h$ cannot map that damping carrier to those frequencies. A positive time-unit change or common frequency subtraction preserves the obstruction.
+
+The enlarged object is the joint angular/radial outgoing problem or a response operator retaining the frequency-dependent boundary self-energy and poles. It supplies $(\operatorname{Re}\omega,-2\operatorname{Im}\omega)$ together. Its diagonal damping summary supports [(31)](/source-readout/spectral-profiles/05-outgoing-poles#equation-31) and the modular ratio representation; full nonnormal wave evolution requires the enlarged source. Kerr shares the source-to-readout architecture and extends the commuting positive-carrier subclass. The 540 catalogue labels are numerical development data, rather than independent black-hole experiments.

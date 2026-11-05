@@ -1,0 +1,32 @@
+---
+title: "Appendices C and D: reconstruction and scope"
+description: "Derive the reconstruction fixture and distinguish three different equivalences."
+order: 11
+---
+
+<a id="appendix-c"></a>
+## C. Analytic checks behind the reconstruction table
+
+For the triangular matrix in §8, the diagonal entries solve $u'_{22}=-2tu_{22}$ and $u'_{11}=-tu_{11}$. Variation of constants gives
+
+<a id="eq-71"></a>
+
+$$
+u_{12}(t)=-e^{-t^2/2}\int_0^t e^{-s^2/2}\,ds .
+\tag{71}
+$$
+
+This yields [(64)](/source-readout/transport-projective/08-executable-checks#eq-64) without a numerical differential-equation solver. The induced infinity norms satisfy $\|A\|\le2$ and $\|A'\|\le2$. Over length $h$ the fundamental solution has norm at most $e^{2h}$ and second derivative $(-A'+A^2)U$. Taylor's integral remainder bounds the Euler defect by $3h^2e^{2h}$. The other exact and Euler factors in the telescoping product contribute at most $e^{2(1-h)}$. Summing over $N$ equal intervals gives a global bound $3e^2/N$, already smaller than the declared $3e^{2.2}/N$ used in the saved comparison. No contractivity assumption is used.
+
+For the oscillatory curvature control, take $A_1=(\sin(kx^0)/k)E_{01}$ and all other $A_\mu=0$. Since $E_{01}^2=0$, the exact path exponential is $I-E_{01}\int \sin(kx^0)\,dx^1/k$. The error from identity is $O(k^{-1})$ on bounded-length path families. Along $x^0=x^1=s$ the integral is $(1-\cos k)/k^2$, but $\partial_0(A_1)^0{}_1=\cos(kx^0)$ gives $R_{11}(0)=1$. This explicit limit distinguishes transport and curvature reconstruction, explaining the derivative norms in [(16)](/source-readout/transport-projective/03-regular-transport#eq-16).
+
+<a id="appendix-d"></a>
+## D. Scope of the recovery statements
+
+There are three equivalences with different meanings.
+
+1. Regular source transports and affine generators are off-shell inverse representations, including their allowed variations.
+2. At fixed nondegenerate density, projective classes of generators and volume-restored transports are off-shell inverse representations.
+3. The unrestricted affine action reduces to the metric Einstein–matter equations **after** its algebraic field equation eliminates nonprojective distortion. This is where the original torsion-free parent and the unrestricted quotient agree. Their off-shell connection dimensions, 40 and 60 respectively, exhibit the difference.
+
+The results are local in the declared smooth sector, or apply to global histories with patching and boundary data obeying these contracts. A nontrivial tangent bundle requires compatible local frames and transport descent. The finite fan does not determine arbitrary global topology, singular extension or an all-sector Shadow equalizer. None of those enlargements is needed for the full local nonlinear Einstein–matter result.

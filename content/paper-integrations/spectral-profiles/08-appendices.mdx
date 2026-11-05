@@ -1,0 +1,94 @@
+---
+title: "Radial formula, homogeneous preparation and verification"
+description: "The full exact radial sum, error bounds, circle control and all published return-count tables."
+order: 8
+---
+
+<a id="appendix-a"></a>
+
+## Appendix A. Exact radial evaluation and numerical conventions
+
+Put $q=n-\ell-1$, $p=m-k-1$ and $s=1/n+1/m$. Expanding the terminating Laguerre polynomials gives
+
+<a id="equation-35"></a>
+
+$$
+\begin{aligned}
+I_{n\ell,mk}
+={}&\frac{4}{n^2m^2}\sqrt{\frac{q!\,p!}{(n+\ell)!\,(m+k)!}}\,(2/n)^\ell(2/m)^k\\
+&{}\times\sum_{i=0}^q\sum_{j=0}^p\frac{(-1)^{i+j}}{i!\,j!}
+\binom{n+\ell}{q-i}\binom{m+k}{p-j}
+(2/n)^i(2/m)^j\frac{(\ell+k+3+i+j)!}{s^{\ell+k+4+i+j}} .
+\end{aligned}
+\tag{35}
+$$
+
+Collect integer coefficients before rational evaluation to avoid catastrophic floating-point cancellation. Exact squaring gives rational edge weights. The moment in Equation [(20)](/source-readout/spectral-profiles/02-radial-shells#equation-20) follows from Laguerre orthogonality and the recurrence
+$$
+x L_q^\alpha=(2q+\alpha+1)L_q^\alpha-(q+1)L_{q+1}^\alpha-(q+\alpha)L_{q-1}^\alpha.
+$$
+Writing $b=2q+\alpha+1$, the $L_q^\alpha$ coefficient in $x^3L_q^\alpha$ is
+$$
+b^3+(q+1)(q+\alpha+1)(3b+2)+q(q+\alpha)(3b-2).
+$$
+Divide by the normalization coefficient $b$, multiply by $n^2/4$, and substitute $q=n-\ell-1$, $\alpha=2\ell+1$ to obtain Equation [(20)](/source-readout/spectral-profiles/02-radial-shells#equation-20).
+
+All numerical spectra retain multiplicity and exactly one stationary graph mode. The hydrogen zero threshold is $50\epsilon_{\mathrm{mach}}N\max_i|\lambda_i|$. Spatial graphs use $\max(10^{-12},10^{-12}\max_i|\lambda_i|)$. Negative values below the negative threshold or an unexpected stationary count are failures. Counting introduces no histogram or ratio rounding. Direct Boolean fixtures check inclusive endpoints, open eligibility boundaries, diagonal subtraction and overlapping windows.
+
+For a computed eigenvector matrix $Q$, suppose $\|Q^*Q-I\|\le\eta<1/2$ and $\|AQ-Q\Lambda\|\le r$. Its orthogonal polar factor $O$ obeys $\|Q-O\|\le\eta$. Consequently
+$$
+\|A-O\Lambda O^*\|\le r+(\|A\|+\|\Lambda\|)\eta .
+$$
+Charge assembly allowances and inverse residuals separately. For an approximate inverse $X$ with $\|I-HX\|\le\theta<1$, the bound is $\|H^{-1}\|\le\|X\|/(1-\theta)$. These inequalities justify the error model without making ordinary binary64 calculations directed-rounding certificates.
+
+<a id="appendix-b"></a>
+
+## Appendix B. Homogeneous ring preparation
+
+For equally spaced sites on a circle the Gaussian Gram matrix is circulant. With first row $g_j$ and $s=\sum_j g_j$, the Fourier eigenvalues of $L$ are $s-\widehat g_k$. Gaussian positivity yields $0\le\lambda_k\le s$; [Theorem 5.1](/source-readout/spectral-profiles/04-gaussian-exchange#theorem-5-1) gives total positive-mode deficit $N-s$. Choose $\epsilon>0$ so $[1-\epsilon,(1-\epsilon)^{-1}]$ misses all retained matching windows. At most $(N-s)/(\epsilon s)$ positive modes lie below $(1-\epsilon)s$. Every counted pair must include such a mode. Each window incidence and UNION are therefore bounded by
+$$
+\min\left\{1,\frac{2(N-s)}{\epsilon s(N-1)}\right\}.
+$$
+
+At median chord bandwidth, $s/N$ tends to a positive kernel integral and the bound is $O(N^{-1})$. This homogeneous preparation removes kernel-mass heterogeneity and retains the same Gaussian interaction. It need not produce the nonzero limiting law of isotropic Gaussian positions.
+
+<a id="appendix-c"></a>
+
+## Appendix C. Verification scope and numerical tables
+
+The public supplement describes dependencies, input hashes, provenance, commands, numerical parameters and fresh output directories. Fast replay evaluates supplied finite inputs and checks scientific fixtures. Full regeneration reconstructs the nominated radial, spatial and Kerr stages. External limits on photograph acquisition keep saved-centroid reproduction distinct from pixel-level replay. The manuscript identifies its editable source and bibliography as separate from the public numerical package.
+
+The final generated tables and executed verification records accompany the appendix. Their values come from machine-readable outputs. Finite numerical reconstruction, exact arithmetic fixtures and empirical observations retain distinct evidence status.
+
+<a id="table-2"></a>
+
+**Table 2. Recovered native counts from retained outputs.** Hydrogen exposure is 214832 and Kerr exposure is 272049. The widths and labeled multiplicities are unchanged.
+
+| Center | Hydrogen 3% | Hydrogen 1% | Hydrogen 0.5% | Kerr 3% | Kerr 1% | Kerr 0.5% |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| $\phi$ | 2717 | 906 | 444 | 4523 | 1587 | 792 |
+| $\phi^{-1}$ | 2709 | 904 | 444 | 4679 | 1606 | 791 |
+| $\phi^2$ | 390 | 122 | 65 | 6430 | 2002 | 1016 |
+| $\sqrt2$ | 5433 | 1792 | 894 | 9622 | 4313 | 2403 |
+| $\sqrt3$ | 1967 | 658 | 338 | 7413 | 2457 | 1210 |
+| $\sqrt5$ | 657 | 212 | 107 | 2763 | 813 | 337 |
+| $\pi$ | 213 | 73 | 33 | 1724 | 577 | 263 |
+| $\pi/2$ | 3158 | 1051 | 524 | 2572 | 606 | 298 |
+| $\pi/10$ | 201 | 66 | 35 | 2014 | 658 | 343 |
+| $e$ | 315 | 104 | 51 | 9312 | 3757 | 1981 |
+| $e^{-1}$ | 314 | 105 | 52 | 9286 | 3731 | 1970 |
+| $\log 2$ | 4858 | 1621 | 821 | 9483 | 2891 | 1652 |
+| $j_{0,1}$ | 512 | 168 | 78 | 8528 | 3460 | 1651 |
+| $3/13$ | 51 | 18 | 9 | 2894 | 781 | 362 |
+| $1/7$ | 0 | 0 | 0 | 1951 | 522 | 295 |
+| SUM | 23495 | 7800 | 3895 | 83194 | 29761 | 15364 |
+
+<a id="table-3"></a>
+
+**Table 3. Frozen anisotropic Gaussian examples, 512 sites.** Variance error uses the population-kernel-mass plug-in diagnostic. Profile RMS and rank are relative to the isotropic example.
+
+| Covariance | Variance error | RMS45 | 3% rank |
+| --- | ---: | ---: | ---: |
+| $(1,1)$ | 0.01750 | 0.0000000 | 1.000000 |
+| $(4,0.25)$ | 0.01741 | 0.0012105 | 0.992857 |
+| $(16,0.0625)$ | 0.02207 | 0.0013673 | 0.978571 |

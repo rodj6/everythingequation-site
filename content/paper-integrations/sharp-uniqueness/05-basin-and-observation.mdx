@@ -1,0 +1,158 @@
+---
+title: Full-State Basins, Powered Switches and Lost Readout Information
+description: A tilted barrier controls basin membership while two equally powered sources retain distinct full-feedback responses.
+order: 5
+---
+<a id="section-7"></a>
+
+## 7. Full-state basin regions and powered switching
+
+<a id="section-7-1"></a>
+
+### 7.1 A cylinder barrier
+
+In the three-equilibrium regime write $x_L,x_M,x_H$ for low, middle and high, $V_M=V(x_M)$, $R_M=|v_3^Tz_M|$.
+
+<a id="theorem-7-1"></a>
+
+**[Theorem 7.1](#theorem-7-1) (Sufficient complete basin criterion).** Each complete initial state satisfying [(48)](#eq-48) converges to $x_L$; each satisfying [(49)](#eq-49) converges to $x_H$. The criteria allow arbitrary collective, odd, phase and memory disturbances within the stated inequalities.
+
+<a id="eq-48"></a>
+
+$$
+V(x)<V_M,\qquad |v_3^Tz|<R_M.\tag{48}
+$$
+
+<a id="eq-49"></a>
+
+$$
+V(x)<V_M,\qquad |v_3^Tz|>R_M.\tag{49}
+$$
+
+**Proof.** On any full state $V(z,m)\ge V_{\rm eff}(z)$. For fixed highest-mode coordinate $u$, the collective quadratic is minimized at $t=0$ and the strictly convex reflection-even odd slice at $h=0$. With $\theta=|c|/c$, the forcing term at fixed radius is minimized by phase alignment with $a/c$. On the cylinder $|v_3^Tz|=R_M$,
+
+<a id="eq-50"></a>
+
+$$
+V(z,m)\ge V_{\rm eff}(uv_3)\ge V_{\rm eff}(\theta R_Mv_3)=V_M.\tag{50}
+$$
+
+The first effective term uses the actual phase; the second minimizes it. The full strict sublevel is invariant, and continuity prevents crossing the cylinder. [Proposition 2.1](/source-readout/sharp-uniqueness/01-complete-driven-source#proposition-2-1) gives convergence to one of the three equilibria. The strict loss bound excludes the middle state, and only the target has radius on the correct side. $\square$
+
+Both minima are below $V_M$. On the aligned ray write the potential as $W(R)$:
+
+<a id="eq-51"></a>
+
+$$
+W'(R)=(\mu+3e^{-s(R)})R-a/|c|.\tag{51}
+$$
+
+The derivative signs through the three simple roots are negative, positive, negative, positive. Integrating between roots gives $V_L,V_H<V_M$, so the sufficient regions include neighborhoods of each minimum. The two open attraction basins and the global stable set of the saddle partition state space. The inequalities do not characterize that stable set or decide all states above $V_M$.
+
+<a id="section-7-2"></a>
+
+### 7.2 Finite pulse experiments and resources
+
+A pulse across a fold, followed by restoration of the same base drive, can move a complete source into the other attraction basin. This is an executed numerical schedule, not a conclusion from the stationary diagram alone. The two directions were run independently, not as one cycle.
+
+<a id="table-1"></a>
+
+| Pulse | Initial state | $a_{\rm pulse}$ | $T_{\rm pulse}$ | $a_{\rm return}$ | $T_{\rm return}$ |
+| --- | --- | ---: | ---: | ---: | ---: |
+| up | low | 3.3 | 300 | 3.0 | 600 |
+| down | high | 2.7 | 300 | 3.0 | 600 |
+
+**[Table 1](#table-1).** Prescribed square pulses return to the identical $f=3v_3$. Times and amplitudes are normalized as in [Section 2](/source-readout/sharp-uniqueness/01-complete-driven-source#section-2).
+
+<a id="eq-52"></a>
+
+$$
+W_{\rm in}(T)=\int_0^T P\,dt,\qquad Q_{\rm diss}(T)=\int_0^T(\gamma\lVert Kz\rVert^2+\eta|g|^2)\,dt,\qquad \Delta F=W_{\rm in}-Q_{\rm diss}.\tag{52}
+$$
+
+At jumps the state and $F$ are continuous; $V$ changes by the input-dependent tilt. Monotonicity is used only within each constant segment. Each terminal state lies in the strict target barrier region at the restored input, with small numerical target-state error. These convergence-checked floating trajectories are not interval-flow certificates, minimum switching work, or a dynamic quasistatic limit.
+
+At stationarity $Kz=f/c$ and $g=0$, so
+
+<a id="eq-53"></a>
+
+$$
+P_*=\gamma\frac{\lVert f\rVert^2}{|c|^2}>0\quad(f\ne0).\tag{53}
+$$
+
+Under convergence at fixed input $P(t)\to P_*$ and $W_{\rm in}(T)=P_*T+o(T)$. Stored energy converges and accumulated dissipation has the same leading growth. Both stable memories are powered open-system states. An unreplenished finite source cannot sustain either indefinitely under this contract.
+
+<a id="section-8"></a>
+
+## 8. Observable response and source-to-readout information
+
+<a id="section-8-1"></a>
+
+### 8.1 Conditional versus free memory
+
+On an imposed memory history,
+
+<a id="eq-54"></a>
+
+$$
+\partial_tU(t,s)=-cK(m(t))U(t,s),\qquad U(s,s)=I,\qquad
+z(t)=U(t,0)z(0)+\int_0^tU(t,s)f(s)\,ds.\tag{54}
+$$
+
+Instantaneous dissipative and coherent generators are $\gamma K$ and $\alpha K$, with fixed ratio $\alpha/\gamma$. The freely adapting Jacobian adds memory. For a small real amplitude-rate probe $r(t)$ at a stationary source,
+
+<a id="eq-55"></a>
+
+$$
+\dot\xi=-GK_R\xi-GB\nu+r,\qquad \dot\nu=-\eta B^T\xi-\eta H_m\nu.\tag{55}
+$$
+
+Exact dynamical elimination keeps both initial memory and causal history:
+
+<a id="eq-56"></a>
+
+$$
+\dot\xi(t)=-GK_R\xi(t)-GBe^{-\eta H_mt}\nu(0)+r(t)
++\eta\int_0^tGBe^{-\eta H_m(t-s)}B^T\xi(s)\,ds.\tag{56}
+$$
+
+The factors cannot be commuted. With zero initial perturbation,
+
+<a id="eq-57"></a>
+
+$$
+\chi_{\rm full}(p)^{-1}=pI+GK_R-\eta GB(pI+\eta H_m)^{-1}B^T.\tag{57}
+$$
+
+Clamping gives $\chi_{\rm clamp}(p)=(pI+GK_R)^{-1}$. At the minima $A$ is Hurwitz and $H_m>0$, so block Schur inversion of $pI-A$ gives invertibility of [(57)](#eq-57) for $\operatorname{Re}p\ge0$ and a stable causal response. The static equation is $GS\xi=r$:
+
+<a id="eq-58"></a>
+
+$$
+\chi_{\rm full}(0)=S^{-1}G^{-1},\qquad \chi_{\rm clamp}(0)=K_R^{-1}G^{-1}.\tag{58}
+$$
+
+At the saddle the full static formula is an algebraic derivative, not a stable susceptibility. The simple positive eigenvalue is visible in the amplitude transfer: either its right or its left eigenvector having zero amplitude component would force the eigenvalue to belong to $-\eta H_m$, which is negative definite. At folds $S$ is singular so even the algebraic inverse fails. The clamped amplitude remains stable everywhere here because $K>0$; this says nothing about full source stability.
+
+<a id="section-8-2"></a>
+
+### 8.2 What the coarse summary loses
+
+With a collective mode the smallest eigenvalue of $K$ is $\mu$; $|c|G^{-1}$ is orthogonal. Therefore, for nonsingular $S$,
+
+<a id="eq-59"></a>
+
+$$
+\lVert\chi_{\rm clamp}(0)\rVert=\frac1{|c|\mu},\qquad
+\lVert S^{-1}G^{-1}\rVert=\frac1{|c|\min_j|\lambda_j(S)|}.\tag{59}
+$$
+
+<a id="eq-60"></a>
+
+$$
+O(x_*)=(\bar z_*,P_*,\lVert\chi_{\rm clamp}(0)\rVert).\tag{60}
+$$
+
+Both stable states of the worked example share $O=(0,3,1/(|c|\mu))$, but their full static norms differ. The full operators differ, so some common small phase-sensitive amplitude-rate probe has different stationary linear responses under free memory. The coarse summary cannot predict every such continuation. That claim uses calibrated additive probes, phase-sensitive access, and a distinction between free and clamped memory; it does not extend to arbitrary unadmitted operations.
+
+The loss is readout-specific (Rodgers, 2026c,d). Full calibrated stationary $z$ determines each memory by [(11)](/source-readout/sharp-uniqueness/02-endpoint-and-stability#eq-11), whereas instantaneous nonstationary $z(t)$ does not determine independent $m(t)$. Stationary reconstruction does not erase the kernel in [(56)](#eq-56). The two maintained states differ in amplitude, stored energy, memory, edge weight and free response. Their conditional coherent and dissipative edge stiffnesses change together. Equal supplied power reflects equal actuator norm, not equality of state or response.

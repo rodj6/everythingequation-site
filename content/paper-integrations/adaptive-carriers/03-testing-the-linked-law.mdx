@@ -1,0 +1,109 @@
+---
+title: "Calibrating the linked operator response"
+description: "Short-time propagation recovers calibrated generators with explicit bias, noise and mobility-ratio bounds."
+order: 3
+---
+
+<a id="section-5"></a>
+
+## 5 A calibrated test of linked operator response
+
+In fixed calibrated coordinates write $\dot z=-A(t)z$. Separate the Hermitian operators
+
+<a id="eq-43"></a>
+
+$$
+H_A=\tfrac12(A+A^*),\qquad C_A=\tfrac1{2i}(A-A^*).\tag{43}
+$$
+
+For one common memory history, the linked law predicts
+
+<a id="eq-44"></a>
+
+$$
+H_A=\gamma K,\qquad C_A=\alpha K=rH_A,\qquad r=\alpha/\gamma.\tag{44}
+$$
+
+This fixes common eigenvectors and the scalar action inside every degenerate eigenspace. Commutation or proportional eigenvalue multisets alone are weaker. A restricted comparison replays the same history with a fixed unitary $S$:
+
+<a id="eq-45"></a>
+
+$$
+A_{\rm alt}(t)=\gamma K(t)+i\alpha SK(t)S^*.\tag{45}
+$$
+
+It retains accretivity, contraction and the coherent eigenvalues, but rotates their eigenvectors. Its exact linked-law residual is $\alpha(SKS^*-K)$, nonzero if $S$ does not preserve $K$. This is a clamp/replay comparison, not a claim that the alternative freely generates the original memory history.
+
+<a id="section-5-1"></a>
+
+### 5.1 Short-time reconstruction and a controlled remainder
+
+Let $\partial_u\Phi(t+u,t)=-A(t+u)\Phi(t+u,t)$, $\Phi(t,t)=I$. At known time $t$, estimate without selecting a matrix-logarithm branch:
+
+<a id="eq-46"></a>
+
+$$
+L_h=\frac{I-\Phi(t+h,t)}h,\qquad \widehat A_h=2L_{h/2}-L_h.\tag{46}
+$$
+
+<a id="theorem-5-1"></a>
+
+**Theorem 5.1 (Bias, operator noise and calibration).** Assume $A\in C^2[t,t+h]$ with nonnegative Hermitian part, $\|A\|\le a_0$, $\|A'\|\le a_1$, $\|A''\|\le a_2$. Put $B_3=a_2+3a_0a_1+a_0^3$. Then
+
+<a id="eq-47"></a>
+
+$$
+\|\widehat A_h-A(t)\|\le h^2B_3/4.\tag{47}
+$$
+
+With reconstructed propagator errors at most $\varepsilon$ each at $h$ and $h/2$,
+
+<a id="eq-48"></a>
+
+$$
+\|\widetilde A_h-A(t)\|\le e_h:=h^2B_3/4+5\varepsilon/h.\tag{48}
+$$
+
+For the measured parts $\widetilde H,\widetilde C$ and independent ratio calibration $|r-r_0|\le\delta_r$, the linked law implies
+
+<a id="eq-49"></a>
+
+$$
+\|\widetilde C-r_0\widetilde H\|\le(1+|r_0|)e_h+\delta_r(\|\widetilde H\|+e_h).\tag{49}
+$$
+
+**Proof.** Differentiate the propagator:
+
+<a id="eq-50"></a>
+
+$$
+\Phi''=(-A'+A^2)\Phi,\tag{50}
+$$
+
+<a id="eq-51"></a>
+
+$$
+\Phi'''=(-A''+2A'A+AA'-A^3)\Phi.\tag{51}
+$$
+
+Accretivity bounds $\|\Phi\|\le1$ and $\|\Phi'''\|\le B_3$. Taylor expansion with integral remainder bounds the quadratic propagator remainder by $u^3 B_3/6$. Hence $L_u=A(t)-u\Phi''(0)/2+E_u$, $\|E_u\|\le u^2 B_3/6$. The extrapolation cancels linear bias, and $2\|E_{h/2}\|+\|E_h\|\le h^2 B_3/4$. The propagator error coefficients are $-4/h,1/h$. Both Hermitian extraction maps are contractive in operator norm. Expand
+
+$$
+\widetilde C-r_0\widetilde H=(\widetilde C-C_A)-r_0(\widetilde H-H_A)+(r-r_0)H_A
+$$
+
+and use $\|H_A\|\le\|\widetilde H\|+e_h$.
+
+Smoothness of the source alone supplies no apparatus error certificate. With fixed $B_3,\varepsilon$, optimizing the displayed bias–noise bound gives $h^3=10\varepsilon/B_3$ if within the calibrated window. Dependence of $B_3$ on duration or additional errors can change the optimum.
+
+With exact ratio calibration, set $b=(1+|r|)e_h$. A linked model's measured residual is at most $b$, while an alternative's exact residual $\Delta>2b$ gives measured residual above $b$ if both hypotheses satisfy the same bound. More generally let $b_L$ bound the linked measured residual and $b_A$ bound reconstruction error under the alternative, both at nominal $r_0$. An exact nominal alternative bound $\Delta_0>b_L+b_A$ separates the bands. Include ratio uncertainty in $b_L$ via (49), and in $\Delta_0$ when that prediction uses the uncertain ratio. Different hypotheses can require different derivative bounds. These are deterministic separation conditions, not significance tests.
+
+<a id="section-5-2"></a>
+
+### 5.2 Preparation, metric and access
+
+Recovering a complex $n\times n$ propagator requires $n$ independent complex preparation columns and phase-sensitive output in common coordinates. Small probes around a prepared baseline need a controlled linearization remainder. Preparation conditioning, detector gain and phase, baseline subtraction and drift belong in the error budget. Columns require identical histories via reinitialization, clamping or faithful replay; recording alone does not impose a history.
+
+Time and amplitude metric must be calibrated. Nonunitary basis changes alter adjoints, and a moving metric adds (38). Fit $r$ on the tested data and one merely tests whether some proportionality fits. Independently stipulate or calibrate it; here $r=2$. The reported fitted ratios are diagnostics.
+
+The numerical report uses relative Frobenius residuals. Absolute operator error $e_h$ gives Frobenius error at most $\sqrt n e_h$; division by small $\|C_A\|_F$ raises a separate conditioning issue. The numeric relative residual is not instrument-certified. The restricted alternative is distinguished only under the declared resource contract. Sources with identical allowed response records remain indistinguishable; more pooled eigenvalues cannot repair that limit.

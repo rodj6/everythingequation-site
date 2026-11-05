@@ -145,3 +145,19 @@ The five connected articles added in October 2026 use `src/config/paper-integrat
 Run `node scripts/generate-content-maps.mjs` to generate the import inventory, chapter metadata and complete Markdown downloads. Do not edit `src/generated/paper-integrations.ts` or the generated complete Markdown directly. The shared reader is `src/components/integrated-paper-reader.tsx`. Routes remain explicit wrappers for discoverability and static generation.
 
 After an edit, run `node scripts/verify-paper-integration.mjs --source-only --require-coverage`, `npm run typecheck`, `npm run build`, `node scripts/verify-paper-integration.mjs --require-coverage` and `npm run verify:security`. Update the review-only coverage records when the source mapping changes. Mathematical rendering and accessible figures require inspection in the production reader as well.
+
+## Source–Readout reading editions
+
+The CSCF series and transport derivation reuse the integrated MDX reader with
+`programme: "source-readout"` in `src/config/paper-integrations.json`. Keep
+chapter front matter and explicit section/equation anchors in
+`content/paper-integrations/<id>/`. Run the normal prebuild generator to update
+chapter imports, complete Markdown and the publication inventory. The programme
+manifest and search endpoint combine these editions with the existing HTML
+editions. Do not add the spectral editions to the consciousness programme.
+
+Keep original PDFs and public supplements separate from the web reading text.
+Record source locations in `docs/spectral/coverage.json`, and check the rendered
+edition with `node scripts/verify-spectral-editions.mjs` after the production
+build. Use `--source-only` to check the input and compile the mathematics
+without a production build.

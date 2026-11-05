@@ -1,0 +1,117 @@
+---
+title: "Three ways to generate a spectral profile"
+description: "The data and observation contract shared by the hydrogen, spatial and Kerr constructions."
+order: 1
+---
+
+<a id="abstract"></a>
+
+**Three different source constructions generate the measured spectral profiles.** Radial-shell coupling and signed corrections recover all 45 hydrogen counts. Gaussian exchange transfers a spatial preparation law to a limiting ratio distribution. The angular and outgoing radial equations jointly recover the 540 Kerr labels. The same observable can compare these distinct mechanisms without identifying their microscopic laws.
+
+<a id="section-1"></a>
+
+## 1. The source-selection problem
+
+A spectral comparison comes at the end of a chain of choices. A source law supplies an operator or boundary problem, preparation selects accessible states, a readout transforms the retained spectrum, and a pair statistic pools the values. Similarity at the last stage can reflect structure at any of these stages. An explanation must start from specified source data and reach the original statistic with control of what each transformation does.
+
+The [spectral-ratio investigation](/source-readout/spectral-ratios) records recurrence, discrimination against conditional references, robustness and diagnostic limits for the hydrogen radial graph, gravitational Kerr damping and image-derived Gaussian graphs. The [Canonical Spectral-Curvature Field](/source-readout/cscf) gives the common-carrier architecture and locates the finite ratio observable in the modular calculus. The present development supplies generation mechanisms and quantitative controls, reaching the retained finite profiles from radial rules, spatial preparation and outgoing boundary conditions.
+
+Hydrogen has an explicit finite source. Normalized Coulomb radial functions determine every squared edge weight rationally, same-shell chains have a closed spectrum, and omitted shells affect the minimum and bulk differently. In Gaussian spatial networks, the Laplacian spectrum follows the distribution of kernel mass at prepared sites. In Kerr, the open boundary problem generates frequency and damping together. Its poles cannot generally be represented by a nondecreasing frequency symbol on a damping-only carrier.
+
+The evidence is layered. Finite identities and conditional theorems are proved here. Exact rational arithmetic checks scalar radial budgets, stored edges and independent finite fixtures. Matrix inverses, gaps, eigenvalues, inertia and resonance continuation use disclosed numerical arithmetic. Same-code repeatability, independent eigensolvers and separately formulated fixtures answer different questions. None is an atomic or image-formation experiment.
+
+<a id="section-2"></a>
+
+## 2. Realizations, readouts and retained information
+
+<a id="section-2-1"></a>
+
+### 2.1 The mathematical interface to CSCF and Shadow Theory
+
+<a id="equation-1"></a>
+
+$$
+\begin{gathered}
+\text{source law and preparation}\
+\longrightarrow\text{metric, carrier or boundary poles}\
+\longrightarrow\text{retained readout}\
+\longrightarrow\text{pair profile}.
+\end{gathered}\tag{1}
+$$
+
+Each arrow requires data. Geometry alone supplies neither mobility nor a physical clock, energy form or detector. In the [source–readout foundations](/source-readout), descent is target-relative: exact recovery requires a target constant on each readout fibre. Geometric realization requires compatible metric, domain and boundary data. Exact projected dynamics retain unresolved preparation and memory unless an invariance condition removes them. These constraints organize the arrows in [(1)](/source-readout/spectral-profiles/01-sources-and-readouts#equation-1), while the Coulomb, Gaussian and Kerr laws supply their mechanisms.
+
+In a finite CSCF realization, a declared Hermitian nonnegative form $Q$ has representative $K\ge0$ on the Hilbert carrier. With nonnegative symmetric graph weights $W$,
+
+<a id="equation-2"></a>
+
+$$
+Q(z)=z^*Lz=\sum_{i<j}W_{ij}|z_i-z_j|^2,\qquad L=\operatorname{diag}(W\mathbf 1)-W.
+\tag{2}
+$$
+
+The potential $Q/2$ has this Hessian in its declared metric. For an admissible bounded, real, nondecreasing symbol $h$ vanishing at zero with $h(K)\ne0$ when $K\ne0$, the two responses are
+
+<a id="equation-3"></a>
+
+$$
+S_t=e^{-tK},\qquad C=h(K),\qquad U_s=e^{-isC}.\tag{3}
+$$
+
+The faces share a carrier within a realization. Different domains can have different operators and dimensions. A physical identification of $K$ needs energy and mobility, or an equivalent kinetic derivation; a physical identification of $C$ needs a reactive law in the same modal coordinates.
+
+For example, linearize $\dot q=-M(q)\nabla F(q)$ at a stationary point $q_*$, with $M_*>0$ and $H=\operatorname{Hess}F\ge0$. The coordinate $y=M_*^{-1/2}(q-q_*)$ obeys
+
+<a id="equation-4"></a>
+
+$$
+\dot y=-Ky,\qquad K=M_*^{1/2}HM_*^{1/2}.\tag{4}
+$$
+
+The product of mobility and curvature has inverse-time units; curvature alone need not. A reversible population generator $Q_M$ with stationary probability $\pi$ instead gives $K=-D_\pi^{1/2}Q_MD_\pi^{-1/2}$. Detailed balance makes it selfadjoint with stationary vector $\sqrt\pi$. These metric distinctions determine the dipole-bath construction below.
+
+<a id="section-2-2"></a>
+
+### 2.2 The original finite observable
+
+Retain labelled positive readouts $v_1,\ldots,v_m$, $m\ge2$, including multiplicities. Given the eligible set $B_r$ with nonzero exposure, define
+
+<a id="equation-5"></a>
+
+$$
+E=\{(i,j):i\ne j,\ v_i/v_j\in B_r\},\qquad N_R=|E|.\tag{5}
+$$
+
+The fifteen coordinates, in their original order, are
+
+<a id="equation-6"></a>
+
+$$
+(\phi,\phi^{-1},\phi^2,\sqrt2,\sqrt3,\sqrt5,\pi,\pi/2,\pi/10,e,e^{-1},\log 2,j_{0,1},3/13,1/7),
+\tag{6}
+$$
+
+where $\phi=(1+\sqrt5)/2$ and $j_{0,1}$ is the first positive zero of $J_0$. For each $\epsilon\in\{0.03,0.01,0.005\}$ and center $c_k$,
+
+<a id="equation-7"></a>
+
+$$
+h_k=\sum_{(i,j)\in E}\mathbf 1_{[c_k(1-\epsilon),c_k(1+\epsilon)]}(v_i/v_j),\qquad
+p_k=h_k/N_R.\tag{7}
+$$
+
+The windows are closed. Hydrogen and spatial networks retain all $m(m-1)$ ordered nonself pairs. Kerr uses $B_r=(0.05,5)$, which is open. SUM adds the counts and includes overlap multiplicity; UNION counts each pair in the union once.
+
+Set $u_i=\log v_i$. The complete nonself log-ratio measure is
+
+<a id="equation-8"></a>
+
+$$
+\nu=\frac1{m(m-1)}\sum_{i\ne j}\delta_{u_i-u_j}
+=\frac{m}{m-1}\mu*\check\mu-\frac1{m-1}\delta_0,\qquad
+\mu=\frac1m\sum_i\delta_{u_i}.\tag{8}
+$$
+
+Reflection $u\mapsto-u$ gives $\check\mu$. Self-pair removal is labelled, so equal values from distinct modes still contribute. On the Hilbert–Schmidt space of the positive retained operator $V$, the normalized state $\rho=V/\operatorname{tr}V$ has eigenvalues $v_i/\sum_jv_j$. Its modular action $X\mapsto\rho X\rho^{-1}$ has eigenvalues $v_i/v_j$, with logarithm $[\log V,\cdot]$. This gives an exact spectral-calculus interpretation. It does not establish a quantum preparation of an image graph or calibrate a physical clock for the log-difference conjugate variable.
+
+The centers in [(6)](/source-readout/spectral-profiles/01-sources-and-readouts#equation-6) remain comparison coordinates. The prior paired-library fraction $0.2339$ failed the frozen $0.05$ criterion. Generating the vector supplies no new evidence for exclusive library privilege. The 45 coordinates, a full ratio measure, scalar spectrum, operator readout and calibrated temporal response are distinct inputs to an inverse problem.

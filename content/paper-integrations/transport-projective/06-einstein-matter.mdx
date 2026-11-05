@@ -1,0 +1,149 @@
+---
+title: "The Einstein–matter endpoint"
+description: "Recover normalized nonlinear metric and matter equations, with the correct gauge, scalar, and boundary contracts."
+order: 6
+---
+
+<a id="section-6"></a>
+## 6. Einstein–matter recovery, symmetry and boundary data
+
+<a id="section-6-1"></a>
+### 6.1 Recover the nonlinear metric equations and their normalization
+
+Take a connected nondegenerate Lorentzian density domain containing $\eta$. Let $S_m$ depend on $B$ and $\chi$, independently of $A$. Up to the divergence in [(46)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-46), the completed action is
+
+<a id="eq-47"></a>
+
+$$
+S=\lambda^{-2}\int_U B^{\mu\nu}R_{\mu\nu}(A)\,d^4x+S_m[B,\chi].
+\tag{47}
+$$
+
+Its connection equation gives $A=\mathrm{LC}(g)+I\omega$. Substitution is legitimate for the bulk equations because the eliminated connection Euler derivative is zero, including its projective directions. The chain-rule contribution vanishes. On this family $B^{\mu\nu}R_{\mu\nu}(A)=vR(g)$, so the reduced action is precisely Einstein–Hilbert with $1/(2\kappa_E)=\lambda^{-2}$.
+
+Define the Hilbert tensor by $\delta S_m=-\tfrac12\int vT_{\mu\nu}\delta g^{\mu\nu}$, with matter variations separate. Because $B^{\mu\nu}=vg^{\mu\nu}$,
+
+<a id="eq-48"></a>
+
+$$
+\delta v=\tfrac12g_{\rho\sigma}\delta B^{\rho\sigma},\qquad
+\delta g^{\mu\nu}=v^{-1}\left(\delta B^{\mu\nu}
+-\tfrac12g^{\mu\nu}g_{\rho\sigma}\delta B^{\rho\sigma}\right),
+\tag{48}
+$$
+
+<a id="eq-49"></a>
+
+$$
+M_{\mu\nu}:=\frac{\delta S_m}{\delta B^{\mu\nu}}
+=-\tfrac12\left(T_{\mu\nu}-\tfrac12g_{\mu\nu}T\right).
+\tag{49}
+$$
+
+The density equation is therefore
+
+<a id="eq-50"></a>
+
+$$
+R_{\mu\nu}(g)=\kappa_E\left(T_{\mu\nu}-\tfrac12g_{\mu\nu}T\right),\qquad
+G_{\mu\nu}(g)=\kappa_E T_{\mu\nu},\qquad \kappa_E=\lambda^2/2 .
+\tag{50}
+$$
+
+These are the full nonlinear equations. Their solutions lift by any smooth projective one-form $\omega$ with $T=\operatorname{Hol}(\mathrm{LC}(g)+I\omega)$. The invariant transport is $T^B=\operatorname{Hol}(\mathrm{LC}(g))$. Conversely, every source solution in the sector projects to [(50)](/source-readout/transport-projective/06-einstein-matter#eq-50) and the matter equations. The statement concerns solution coverage modulo the gauge symmetries; it does not equate all off-shell affine configurations with metric connections.
+
+Matter adds $\lambda M$ to both $E_h$ and $r+\lambda\tau$ in the bootstrap readout. The residual identity persists with these additions, and matter independence of $A$ leaves the connection equation intact.
+
+<a id="section-6-2"></a>
+### 6.2 Common-density coupling and its precise scalar consequence
+
+Extend $\eta$ to an auxiliary smooth field. For arbitrary compactly supported auxiliary and field variations require
+
+<a id="eq-51"></a>
+
+$$
+\frac{\delta S_m}{\delta\eta^{\mu\nu}}
+=\lambda^{-1}\frac{\delta S_m}{\delta h^{\mu\nu}}.
+\tag{51}
+$$
+
+At fixed $B=\eta+\lambda h$ and fixed matter, $\delta h=-\delta\eta/\lambda$, so [(51)](/source-readout/transport-projective/06-einstein-matter#eq-51) makes the action derivative zero. Integrating along a path in the fixed-$B$ fibre proves local factorization through $B$ on neighborhoods with path-connected fibres, modulo the boundary equivalence. Connectedness of the full domain does not imply this property for every fibre. Common-density response selects common metric-density dependence; it does not decide every matter interaction.
+
+For a real scalar choose
+
+<a id="eq-52"></a>
+
+$$
+S_m=-\tfrac12\int\left(B^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi
++vm^2\phi^2\right)\,d^4x .
+\tag{52}
+$$
+
+The matter equation and stress are
+
+<a id="eq-53"></a>
+
+$$
+v^{-1}\partial_\mu(B^{\mu\nu}\partial_\nu\phi)-m^2\phi=0,
+\tag{53}
+$$
+
+<a id="eq-54"></a>
+
+$$
+T_{\mu\nu}=\partial_\mu\phi\,\partial_\nu\phi
+-\tfrac12g_{\mu\nu}\left(g^{\rho\sigma}\partial_\rho\phi\,\partial_\sigma\phi+m^2\phi^2\right).
+\tag{54}
+$$
+
+This is the full nonlinear scalar system with its trace and normalization, beyond vacuum or a linearized source.
+
+<a id="proposition-6-1"></a>
+**Proposition 6.1 (Restricted scalar selection).** Let the scalar Lagrangian be a natural scalar density polynomial of degree at most two in a real scalar and its first derivatives. Allow neither metric derivatives nor additional fields or prescribed tensors. Flat-space matching fixes [(52)](/source-readout/transport-projective/06-einstein-matter#eq-52) up to a vacuum constant and matched divergences.
+
+**Proof.** At a point a linear frame change takes the metric to its canonical inertia form. The orthogonal stabilizer fixes no nonzero vector, and the only invariant symmetric contravariant rank-two tensors are multiples of the inverse metric. The quadratic derivative term is therefore a constant multiple of $vg^{\mu\nu}\partial_\mu\phi\,\partial_\nu\phi$. There is no invariant vector coefficient for a term linear in $\partial\phi$. The algebraic terms are $v(a\phi^2+b\phi+c)$ because there is no zeroth-jet metric scalar other than a constant on the fixed-signature orbit. Flat matching fixes the kinetic coefficient and $a,b$. The remaining $c$ is a vacuum term. This argument is pointwise and fixes the natural density throughout the patch.
+
+Excluding metric derivatives adds a realization hypothesis. Without it, $\xi vR(g)\phi^2$ retains common-density dependence and agrees with the minimal law in flat space, yet changes the curved-space equations.
+
+Connection-dependent matter is separate. The covariant term $\int j^\mu\operatorname{tr}[A_\mu-\mathrm{LC}(g)_\mu]$ uses a vector density $j$ and the trace of the tensorial difference. A projective variation gives $n\int j^\mu\omega_\mu$. The gravitational Euler derivative has identically zero projective trace, so unrestricted stationarity would require $j^\mu=0$ for this term. Choosing a representative of $\omega$ cannot repair it. Additional hypermomentum or spinor couplings need a consistent connection action of their own.
+
+<a id="section-6-3"></a>
+### 6.3 Covariance and constraints follow from the recovered law
+
+For a diffeomorphism $\Phi$ with Jacobian $J$, the pulled-back history has
+
+<a id="eq-55"></a>
+
+$$
+B'(x)=|\det J_x|J_x^{-1}B(\Phi x)J_x^{-T},
+\tag{55}
+$$
+
+<a id="eq-56"></a>
+
+$$
+T'_\gamma=J_y^{-1}T_{\Phi\circ\gamma}J_x,\qquad \gamma:x\to y .
+\tag{56}
+$$
+
+The transport composition and inverse identities survive. Differentiating [(56)](/source-readout/transport-projective/06-einstein-matter#eq-56) gives the affine connection transformation including the inhomogeneous Jacobian derivative. The determinant and volume factors in [(28)](/source-readout/transport-projective/04-projective-connection#eq-28) transform together, making restored transport natural. The symmetric-curvature density and metric-matter action are invariant. Projective shifts supply the additional redundancy with invariant $(B,T^B)$.
+
+Noether's identity for the reduced action gives $\nabla^\mu G_{\mu\nu}=0$. For scalar matter it gives
+
+<a id="eq-57"></a>
+
+$$
+\nabla^\mu T_{\mu\nu}=(\Box_g\phi-m^2\phi)\partial_\nu\phi .
+\tag{57}
+$$
+
+Stress conservation follows on the matter equation. The normal Einstein equations on a spacelike hypersurface are the usual constraints because the full equations and admissible metric variations are recovered. Propagation follows from the same Bianchi and matter identities under the regularity and evolution assumptions of the chosen initial-value formulation. The construction adds no global existence theorem or new canonical constraint algebra.
+
+<a id="section-6-4"></a>
+### 6.4 The boundary, scale and free limit
+
+Use smooth compactly supported variations or variations vanishing with the required derivatives in a fixed boundary collar. For other boundary problems the explicit divergence between the actions must be retained. Fixing transports on paths entirely in the collar gives the local restriction. Fixing every path with endpoints on the boundary would constrain interior transport and is a different variational domain. Projective transformations must preserve the chosen boundary readouts.
+
+With $\hbar=c=1$ in physical units the metric is dimensionless, $A$ has inverse-length dimension and $\lambda$ has length dimension. Thus $h=(B-\eta)/\lambda$ and the canonical affinity $c=A/\lambda$ have dimensions $L^{-1}$ and $L^{-2}$, respectively. Both $hDc$ and $\eta Q(c)$ have dimension $L^{-4}$; the normalization [(50)](/source-readout/transport-projective/06-einstein-matter#eq-50) is dimensionally consistent.
+
+The free limit $\lambda\to0$ takes $B=\eta+\lambda h$, $A=\lambda c$ with bounded $h,c$, rather than keeping an arbitrary finite curved metric fixed. Nondegeneracy and connected signature remain necessary. Dimension two, degenerate densities and nonregular transport are excluded for their explicit inversion and regularity obstructions.

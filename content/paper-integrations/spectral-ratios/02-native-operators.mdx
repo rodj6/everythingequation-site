@@ -1,0 +1,90 @@
+---
+title: "Three native operators and their evidence"
+description: "The frozen Kerr rates, exact 465-state hydrogen graph and Gaussian image graphs each retain different source information."
+order: 2
+---
+
+<a id="section-2"></a>
+
+## Inputs, operators and provenance
+
+<a id="section-2-1"></a>
+
+### Kerr: retain the rates and the native transmission
+
+The development input has 540 labeled gravitational modes. The spin weight is $s=-2$; angular orders are $\ell=2,\ldots,6$ with every $m=-\ell,\ldots,\ell$; physical overtones are $n=0,1,2,3$; dimensionless spins are $a/M=0,0.5,0.9$.
+
+<a id="eq-1"></a>
+
+$$
+\begin{gathered}
+\lambda_j=-2\operatorname{Im}(M\omega_j),\qquad D_K=\operatorname{diag}(\lambda_j),\\
+v_j=f_T(\lambda_j)=\frac{1-e^{-T\lambda_j}}{T\lambda_j},\qquad T=12.115276586285876.
+\end{gathered}\tag{1}
+$$
+
+Use the archived positive rate units and this readout, without mean or range renormalization. The stable numerical evaluation is $-\operatorname{expm1}(-T\lambda)/(T\lambda)$. The development modes come from the Kerr catalogue associated with Berti et al. [\[3\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-3). The independently acquired angular holdout uses the qnm implementation [\[4\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-4).
+
+The earlier prospective holdout changes the angular orders to $\ell=8,9,10$, retaining the same overtone and spin grids. Its 684 labeled modes, in 228 related mode families, test generalization across angular families after the specificity freeze. They do not test a new spin range. The maximum root residual was $2.81\times 10^{-12}$. Exact Schwarzschild $m$ degeneracies at zero spin remain in the readout. Neither 540 nor 684 counts independent black-hole observations. The subsequent cross-domain experiment uses the development spectrum and the existing library bank, with no further Kerr holdout.
+
+The historical approximately 12.3 standardized effect at width 2.33 belongs to an electromagnetic run. For this gravitational selection use the reproduced incidence and the stated 4,999-reference comparisons. The material corrections at the end of the edition distinguish these calibrations.
+
+<a id="section-2-2"></a>
+
+### Hydrogen: build the coupling graph, not the energy spectrum
+
+The graph has 465 states $(n,\ell)$, with $1\le n\le 30$ and $0\le\ell<n$. For $\lvert\ell-k\rvert=1$, use symmetric squared radial dipole weights in atomic units:
+
+<a id="eq-2"></a>
+
+$$
+W_{(n,\ell),(m,k)}=\left(\int_0^\infty R_{n\ell}(r)\,r\,R_{mk}(r)\,r^2\,dr\right)^2,\qquad
+L_H=D-W,\quad D_{ii}=\sum_j W_{ij},\quad W_{ii}=0. \tag{2}
+$$
+
+There are 8,990 allowed undirected edges, including 435 same-$n$ edges. The exact rational squared weights and retained state order define the finite operator. There are no added angular factors or expanded magnetic-state basis. The 464 positive eigenvalues give the primary readout
+
+<a id="eq-3"></a>
+
+$$
+v_i=\log\!\left(1+\frac{\lambda_i}{\lambda_{\min,+}}\right). \tag{3}
+$$
+
+The raw positive eigenvalues are a named secondary view. A coupling-graph Laplacian is a different operator from hydrogen's energy Hamiltonian. Its mode statistics cannot by themselves diagnose atomic energy-level chaos or integrability.
+
+Exact same-$n$ identities, independent radial fixtures, a separate eigenspectrum calculation and full eigenpair residuals check the native construction. The relative eigenpair residual was approximately $1.16\times 10^{-15}$. These checks validate the stated finite operator. They do not reconstruct an unavailable historical run with different reported totals.
+
+<a id="section-2-3"></a>
+
+### Spatial graphs: keep the extraction contract visible
+
+Threshold-component centroids $x_i$ form the point cloud for each image. The complete Gaussian graph is
+
+<a id="eq-4"></a>
+
+$$
+W_{ij}=\exp\!\left[-\frac{\lVert x_i-x_j\rVert^2}{2\sigma_d^2}\right]\quad(i\ne j),\qquad
+W_{ii}=0,\quad \sigma_d=\operatorname{median}_{i<j}\lVert x_i-x_j\rVert,\quad L_I=D-W. \tag{4}
+$$
+
+Divide positive modes by their mean before counting. This common factor cancels in ratios. The operator is the weighted combinatorial Laplacian [\[5\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-5), neither the normalized graph Laplacian nor an image Fourier transform.
+
+Apply EXIF orientation. Resize the longest side to at most 512 pixels with Lanczos and no upsampling, composite transparency on white, and use stored-sRGB luminance weights $(0.2126,0.7152,0.0722)$. Dark masks use strict $g<0.25,0.5,0.75$; the bright sensitivity variants use $g>0.25,0.5,0.75$. Eight-connected components with inclusive areas 4–2,500 pixels yield unweighted pixel-center centroids. Retain threshold and scan order. Keep a candidate only when its distance from every already retained centroid exceeds two pixels. Do not crop, retune after scoring, adjust contrast, or truncate features. Fewer than three points or more than 2,000 nodes triggers the fixed failure or resource gate. Appendix A gives the zero rule.
+
+The six dark primary families are embryo, galaxy, pollen-like microscopy, leaf, Shroud and snowflake. The adult portrait is exploratory. All seven bright variants are dependent sensitivity views. Independent extraction, eigenpair and bounded counting checks passed for all 14 variants; the largest relative eigenpair residual was $1.39\times10^{-15}$.
+
+<a id="table-1"></a>
+
+**Table 1. Retained image reconstructions.** The names label supplied subjects, not independently validated landmarks. Every input was previously seen. The portrait is exploratory; bright variants remain secondary.
+
+| Source | Dark points | Bright points | Dark modes | Dark ordered nonself pairs |
+| --- | ---: | ---: | ---: | ---: |
+| Embryo | 31 | 36 | 30 | 870 |
+| Galaxy | 111 | 307 | 110 | 11,990 |
+| Pollen-like microscopy | 1,000 | 1,134 | 999 | 997,002 |
+| Leaf | 572 | 383 | 571 | 325,470 |
+| Shroud | 393 | 287 | 392 | 153,272 |
+| Snowflake | 704 | 631 | 703 | 493,506 |
+| Adult portrait (exploratory) | 53 | 71 | 52 | 2,652 |
+
+These documented reconstructions use the main Gaussian-Laplacian method. They are neither exact reproductions of an earlier image table nor unseen holdouts. Components can include backgrounds, membranes, stars, watermarks and cloth damage. The pollen-like file matches Dartmouth's microscopy gallery byte for byte. Six exact acquisition mappings and photographic redistribution permission for all seven sources remain unresolved. The supplement provides numerical coordinates, source hashes and extraction specifications without redistributing photographs. Graph-level numerical regeneration and independent pixel-level acquisition and replay are therefore different checks. No image profile establishes authenticity, formation, age or intentional encoding.

@@ -1,0 +1,160 @@
+---
+title: "The modular carrier of spectral ratios"
+description: "The exact finite-window observable, conjugation flow and what its transformations retain."
+order: 8
+---
+
+An ordered pair of retained spectral values is an eigenvalue direction of a modular operator. The exact count keeps multiplicities and removes the original self-pairs.
+
+<a id="sec-ratios"></a>
+
+## 9. Spectral ratios as coherent and modular readouts
+
+The field becomes accessible through a declared response. Fix a finite spectral subspace $\mathsf H_+$ of dimension $n\ge2$, retain all multiplicities, and let
+
+<a id="eq-v"></a>
+
+$$
+V=g(K)|_{\mathsf H_+}>0,\qquad V e_i=v_i e_i.\tag{2}
+$$
+
+Here the subspace reduces $K$. It is part of the empirical specification, not a post-score selection. The function $g$ is the native readout, and need not equal either $h$ or $f_T$. Section [10](/source-readout/cscf/09-spectral-evidence#sec-empirical) states the actual functions used in the completed study. We work on the complex Hilbert space $\mathcal{HS}=B(\mathsf H_+)$ with $\langle X,Y\rangle_{HS}=\mathop{\mathrm{Tr}}(X^*Y)$ and with the full matrix algebra acting by left multiplication.
+
+<a id="section-9.1"></a>
+
+### 9.1 The exact operator representation
+
+<a id="thm-modular"></a>
+
+**Theorem 9.1.** *Ratio and log-ratio carriers*.
+
+Let $\rho=V/\mathop{\mathrm{Tr}}V$ and define
+
+$$
+\Delta_\rho(X)=\rho X\rho^{-1},\qquad
+A=\log V,\qquad \mathcal D(X)=AX-XA.
+$$
+
+ Then $\Delta_\rho$ is positive selfadjoint on $\mathcal{HS}$, $\mathcal D$ is selfadjoint, and
+
+<a id="eq-matrixunits"></a>
+
+$$
+\Delta_\rho(e_i e_j^*)=\frac{v_i}{v_j}e_i e_j^*,\qquad
+\mathcal D(e_i e_j^*)=(\log v_i-\log v_j)e_i e_j^*,\qquad
+\log\Delta_\rho=\mathcal D.\tag{3}
+$$
+
+The ordered nonself ratio measure and its logarithmic pushforward are
+
+<a id="eq-eta"></a>
+
+<a id="eq-nu"></a>
+
+$$
+\begin{aligned}\eta(J)&=\frac{\mathop{\mathrm{Tr}}_{HS}{\bf1}_J(\Delta_\rho)-n{\bf1}_J(1)}{n(n-1)},\qquad\text{(4)}\\
+\nu(I)&=\frac{\mathop{\mathrm{Tr}}_{HS}{\bf1}_I(\mathcal D)-n{\bf1}_I(0)}{n(n-1)}.\qquad\text{(5)}\end{aligned}
+$$
+
+Both are positive probability measures. These formulas are independent of basis choices inside degenerate eigenspaces.
+
+*Proof.* The matrix units $e_i e_j^*$ form an orthonormal basis of $\mathcal{HS}$. Left multiplication by $\rho$ and right multiplication by $\rho^{-1}$ are commuting positive selfadjoint operators, so their product is positive selfadjoint. Applying them to the matrix units gives the first formula. Applying left minus right multiplication by $A$ gives the second. Taking the scalar logarithm of the first eigenvalue proves the operator identity. Of the $n^2$ labelled pairs, exactly $n$ are self pairs; subtracting those terms leaves the $n(n-1)$ nonself terms. When $v_i=v_j$ for $i\ne j$, the corresponding mass at $1$ or $0$ remains. Changing a basis inside a degenerate eigenspace changes matrix units but not their eigenvalue multiplicities or the trace formulas. ◻
+
+This is the standard finite-dimensional modular operator in the Hilbert–Schmidt representation with cyclic separating vector $\rho^{1/2}$ \[[27](/source-readout/cscf/18-references#ref-witten), Sec. 4\]. The application in Theorem [9.1](/source-readout/cscf/08-modular-ratios#thm-modular) fixes its state from the existing spectral readout. It does not require that an image or coupling graph have been measured as a quantum density matrix. The declared algebra is essential: the diagonal abelian algebra alone would have trivial modular action and would not retain the off-diagonal ratio directions.
+
+<a id="cor-windows"></a>
+
+**Corollary 9.2.** *The unchanged finite-window statistic*.
+
+For original centers $c_j>0$ and relative tolerance $\epsilon\in(0,1)$ let
+
+$$
+W_j=[c_j(1-\epsilon),c_j(1+\epsilon)],\qquad
+I_j=[\log c_j+\log(1-\epsilon),\log c_j+\log(1+\epsilon)].
+$$
+
+ Let $B_r$ be the native eligible-ratio set, $B=\log B_r$, and assume $\eta(B_r)>0$. Then
+
+<a id="eq-native"></a>
+
+$$
+p_j=\frac{\eta(W_j\cap B_r)}{\eta(B_r)}
+=\frac{\nu(I_j\cap B)}{\nu(B)},\qquad N_R=n(n-1)\eta(B_r).\tag{6}
+$$
+
+SUM adds the $p_j$ with overlap multiplicity. UNION is $\eta((\cup_jW_j)\cap B_r)/\eta(B_r)$, so each eligible pair is counted once.
+
+*Proof.* Equation [(4)](/source-readout/cscf/08-modular-ratios#eq-eta) counts precisely the original ordered nonself ratios. The logarithm is strictly increasing, transporting each closed window and each native open cutoff with its endpoint conventions unchanged. Summing indicators gives SUM, while taking their union gives UNION. ◻
+
+Thus the ratio signature is an exact spectral observable of an operator built from the CSCF carrier. Its interpretation as a readout is established independently of which numerical profile occurs.
+
+<a id="section-9.2"></a>
+
+### 9.2 Phase flow and the form factor
+
+<a id="prop-formfactor"></a>
+
+**Proposition 9.3.** *Coherent conjugation identity*.
+
+For $W_t=e^{-itA}$,
+
+<a id="eq-conjugation"></a>
+
+$$
+e^{-it\mathcal D}(X)=W_tXW_t^*,\qquad
+\mathop{\mathrm{Tr}}_{HS}e^{-it\mathcal D}=|\mathop{\mathrm{Tr}}W_t|^2,\tag{7}
+$$
+
+and
+
+<a id="eq-characteristic"></a>
+
+$$
+\widehat\nu(t)=\int e^{-itx}\nu(dx)=\frac{|\mathop{\mathrm{Tr}}e^{-it\log V}|^2-n}{n(n-1)}.\tag{8}
+$$
+
+*Proof.* Left and right multiplication by $A$ commute, so their exponentials factor and give conjugation. Alternatively, apply both sides to every matrix unit in [(3)](/source-readout/cscf/08-modular-ratios#eq-matrixunits). The trace is $\sum_{i,j}e^{-it(\log v_i-\log v_j)}=|\sum_i e^{-it\log v_i}|^2$. Remove the $n$ self terms to obtain [(8)](/source-readout/cscf/08-modular-ratios#eq-characteristic). ◻
+
+This recovers the completed spectral study’s log-autocorrelation identity \[[23](/source-readout/cscf/18-references#ref-spectral), Sec. 3.2\] and places it on an explicit operator space. Spectral form factors of the trace-square type are physically measurable, including on superconducting quantum processors \[[8](/source-readout/cscf/18-references#ref-dong)\]. In the present construction the generator is $\log V$ and the parameter is the corresponding spectral conjugate variable; identifying it with a physical clock requires a realization law. No GOE unfolding or spectral-chaos classification is implicit in [(8)](/source-readout/cscf/08-modular-ratios#eq-characteristic).
+
+<a id="section-9.3"></a>
+
+### 9.3 Connection to the CSCF coherence symbol
+
+There are two compatible ways to relate this flow to $C=h(K)$. If the declared $h$ is injective on the retained spectrum, then
+
+<a id="eq-cohrecovery"></a>
+
+$$
+A=\psi(C|_{\mathsf H_+}),\qquad \psi=\log g\circ\big(h|_{\mathop{\mathrm{\sigma}}(K|_{\mathsf H_+})}\big)^{-1}.\tag{9}
+$$
+
+This keeps the original symbol fixed: the log-readout conjugation belongs to its spectral calculus, although its frequencies are $\psi(h(\lambda_i))$ rather than generally $h(\lambda_i)$.
+
+A second construction selects a readout-adapted admissible symbol. Suppose the retained readout has at least two distinct eigenvalues, $\mathop{\mathrm{\sigma}}(K|_{\mathsf H_+})\subset[\lambda_-,\lambda_+]\subset(0,\infty)$, and $g$ is continuous, strictly monotone and positive on this interval. Set $s=1$ for increasing $g$, $s=-1$ for decreasing $g$, and $r(\lambda)=s\log g(\lambda)$. Define
+
+<a id="eq-adapted"></a>
+
+$$
+h_g(\lambda)=\begin{cases}
+0,&0\le\lambda\le\lambda_-,\\
+r(\lambda)-r(\lambda_-),&\lambda_-\le\lambda\le\lambda_+,\\
+r(\lambda_+)-r(\lambda_-),&\lambda\ge\lambda_+.
+\end{cases}\tag{10}
+$$
+
+It is bounded, real, nondecreasing and zero at $0$. When the retained readout has two distinct values it is nontrivial there. On the retained space,
+
+$$
+C_g=h_g(K)=s\log V-r(\lambda_-)I,\qquad \mathop{\mathrm{ad}}(C_g)=s\mathcal D.
+$$
+
+ Hence [(8)](/source-readout/cscf/08-modular-ratios#eq-characteristic) is a quadratic trace readout of a coherent face in the admitted symbol class. The scalar shift changes only a common phase, which cancels in conjugation. Kerr’s decreasing transmission requires $s=-1$; ordered windows and the asymmetric native cutoff must retain that reversal. The symbol in [(10)](/source-readout/cscf/08-modular-ratios#eq-adapted) is a mathematical readout choice, not a fitted or independently measured physical coherence law.
+
+These results give a precise meaning to approaching recurring spectral organization through the coherent face: it is encoded in mode-preserving phase differences and their quadratic trace readouts. The eigenvalue information is inherited from the same $K$ that supports dissipation. A geometric/irrational versus exponential/rational division of the constant library is not needed for this connection and is not an established sector classifier.
+
+<a id="section-9.4"></a>
+
+### 9.4 What the transformations preserve
+
+Normalization $V\mapsto aV$, $a>0$, leaves $\Delta_\rho$, $\mathcal D$, all ratio windows and conjugation unchanged. It discards the absolute scale of $V$, which must be retained separately for absolute-scale recovery. Taking the trace on operator space removes eigenbasis information. This is licensed for the nominated pooled spectral statistic but not for spatial directionality, physical probe placement or persistent-homology features. In particular, the two operator-space actions in a modular representation are not two physical field sectors. The coherent and dissipative faces remain functions of the one-sided carrier specified in [(2)](/source-readout/cscf/08-modular-ratios#eq-v).

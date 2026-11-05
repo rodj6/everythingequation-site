@@ -1,0 +1,145 @@
+---
+title: "Regular transport reconstructs a connection"
+description: "Derive the local velocity-linear jet, lift all variations and bound finite-resolution errors."
+order: 3
+---
+
+<a id="section-3"></a>
+## 3. Transport regularity and resolution
+
+<a id="section-3-1"></a>
+### 3.1 Smoothness at constant paths forces the first jet
+
+Use the prepared trivialization to represent transports as matrices. Around a constant path, $C^1([0,1],U)$ is an open part of a Banach space. The differentiability in the next statement is in its $C^1$ norm and includes constant paths. Smoothness restricted to immersed paths is weaker.
+
+<a id="theorem-3-1"></a>
+**Theorem 3.1 (Regular transport reconstruction).** Suppose $T$ is multiplicative on successive subarcs, the identity on constants and invariant under orientation-preserving reparameterization. Suppose $T$ is continuously Fréchet differentiable on open $C^1$ neighborhoods of the constants, with $x\mapsto DT_{\mathrm{const}(x)}$ smooth as a map into bounded linear operators. Assume the corresponding joint higher differentiability for the parameterized variations and derivatives below. Then a smooth matrix-valued one-form $A$ generates the transport:
+
+<a id="eq-7"></a>
+
+$$
+\frac{d}{ds}T_{\gamma|_{[0,s]}}
+=-A_{\gamma(s)}(\dot\gamma(s))T_{\gamma|_{[0,s]}},
+\qquad T_{\gamma|_{[0,0]}}=I.
+\tag{7}
+$$
+
+The first jet depends only on the current point and velocity and is linear in velocity. Conversely a smooth $A$ defines a smooth transport family of this kind. These constructions are inverse on the regular class.
+
+**Proof.** At the constant path at $x$ set
+
+<a id="eq-8"></a>
+
+$$
+A_x(v)=-DT_{\mathrm{const}(x)}[t\mapsto tv].
+\tag{8}
+$$
+
+The Fréchet derivative is linear on the tangent space, so this is linear in $v$. For a $C^2$ curve its actual short subarc satisfies
+
+<a id="eq-9"></a>
+
+$$
+\gamma(s+\epsilon t)=\gamma(s)+\epsilon t\dot\gamma(s)+O(\epsilon^2)
+\qquad\text{in } C^1([0,1]).
+\tag{9}
+$$
+
+Differentiability gives $T_{\gamma|_{[s,s+\epsilon]}}=I-\epsilon A_{\gamma(s)}(\dot\gamma(s))+o(\epsilon)$. Continuity of the derivative makes the remainder uniform on compact short-path families. Composition gives continuity of $s\mapsto T_{\gamma|_{[0,s]}}$ and the right derivative [(7)](/source-readout/transport-projective/03-regular-transport#eq-7), whose right-hand side is continuous. The integral equation follows and gives the ordinary derivative. Compose across pieces for piecewise smooth paths.
+
+Conversely solve the matrix integral equation of [(7)](/source-readout/transport-projective/03-regular-transport#eq-7). Its Picard series converges uniformly on compact path images, with its $j$th iterated integral bounded by $M^j/j!$ for a suitable integrated generator bound. Uniqueness gives composition, reversal and reparameterization invariance. In a compact controlled path neighborhood, the Nemytskii map $\gamma\mapsto A(\gamma)\dot\gamma$ has the regularity of $A$. Differentiating the integral equation or its uniformly bounded series gives the required path-space smoothness. The generator is [(8)](/source-readout/transport-projective/03-regular-transport#eq-8), and uniqueness gives the inverse identity for every family in the class.
+
+This local sufficient condition realizes the established connection–transport correspondence [Schreiber and Waldorf, 2009](https://arxiv.org/abs/0705.0452v5). It removes a separate first-jet postulate within the regular model. The smoothness remains raw-sector data.
+
+<a id="proposition-3-2"></a>
+**Proposition 3.2 (Regularity obstruction).** Composition, reversal and reparameterization invariance alone admit a nonlinear velocity law. In two coordinate directions take
+
+<a id="eq-10"></a>
+
+$$
+F(v,w)=\frac{v^3}{v^2+w^2}\quad((v,w)\ne0),\qquad F(0,0)=0,\qquad
+T_\gamma=\exp\left[-\int F(\dot\gamma^1,\dot\gamma^2)\,ds\right]I.
+\tag{10}
+$$
+
+The family has all three algebraic properties and is smooth on controlled immersed-path neighborhoods, but fails the required Fréchet differentiability at constants.
+
+**Proof.** $F$ is odd and positively homogeneous of degree one, giving reversal and reparameterization invariance. Additivity of the integral gives composition. At a constant path, the straight variation $t\mapsto t(v,w)$ would have directional derivative $-F(v,w)I$. Since $F(1,1)=1/2$ and $F(1,0)+F(0,1)=1$, these values cannot come from a linear Fréchet derivative.
+
+<a id="section-3-2"></a>
+### 3.2 The variations and curvature also descend
+
+For compactly supported $\delta A$, differentiating [(7)](/source-readout/transport-projective/03-regular-transport#eq-7) gives
+
+<a id="eq-11"></a>
+
+$$
+\delta T_\gamma(1)=-\int_0^1 T_\gamma(1,s)
+\,\delta A_\mu(\gamma(s))\dot\gamma^\mu(s)\,T_\gamma(s,0)\,ds.
+\tag{11}
+$$
+
+Its infinitesimal readout is $\delta A$. Conversely, differentiate the reconstructed transport equation in a jointly smooth one-parameter family. The tangent satisfies the inhomogeneous equation with zero initial value, whose unique solution is [(11)](/source-readout/transport-projective/03-regular-transport#eq-11). Every regular tangent transport variation comes from its generator variation. Commuting the parameter derivative with the short-path derivative uses the stipulated joint second differentiability.
+
+Compose the four transports around a positively oriented small coordinate rectangle. Expansion of the two-parameter integral equations gives
+
+<a id="eq-12"></a>
+
+$$
+T_{\square_{\mu\nu}}=I-F_{\mu\nu}\Delta x^\mu\Delta x^\nu
++O\left((\Delta x^\mu)^2\Delta x^\nu+\Delta x^\mu(\Delta x^\nu)^2\right).
+\tag{12}
+$$
+
+The ordered products generate the commutator. For constant matrices the loop order is $e^{A_\nu t}e^{A_\mu s}e^{-A_\nu t}e^{-A_\mu s}$, whose mixed coefficient is $-[A_\mu,A_\nu]$. This fixes the sign. Endpoint derivatives and small-loop limits recover the differential and nonlinear connection operations.
+
+<a id="section-3-3"></a>
+### 3.3 Transport error and curvature error need different control
+
+<a id="proposition-3-3"></a>
+**Proposition 3.3 (Finite-resolution transport).** With bounded second path derivatives on the relevant neighborhood and a $C^2$ path $\gamma$, the subarc defect obeys
+
+<a id="eq-13"></a>
+
+$$
+\left\|T_{\gamma|_{[s,s+h]}}-I+hA(\gamma(s))\dot\gamma(s)\right\|\le Ch^2 .
+\tag{13}
+$$
+
+The first two derivatives of $T$ and $\gamma$ control $C$. If the generator along an interval of length $L$ has norm at most $M$, the left-endpoint product on a partition of mesh $h_{\max}$ satisfies
+
+<a id="eq-14"></a>
+
+$$
+\left\|T_\gamma-\overset{\leftarrow}{\prod}_j
+[I-h_jA(\gamma(s_j))\dot\gamma(s_j)]\right\|
+\le CLh_{\max}e^{ML}.
+\tag{14}
+$$
+
+**Proof.** Apply Taylor expansion to the Fréchet map using [(9)](/source-readout/transport-projective/03-regular-transport#eq-9). This gives [(13)](/source-readout/transport-projective/03-regular-transport#eq-13). Each exact subarc transport and Euler factor has norm at most $e^{Mh_j}$. Telescope the ordered products. The factors surrounding each local defect contribute at most $e^{ML}$ and $\sum_j h_j^2\le Lh_{\max}$.
+
+With measured short-transport error at most $\epsilon$ and forward first-jet remainder at most $Kh^2$, the estimated generator satisfies
+
+<a id="eq-15"></a>
+
+$$
+\|\widetilde A_h-A\|\le \epsilon/h+Kh.
+\tag{15}
+$$
+
+At an admissible optimizing scale the bound is $2\sqrt{K\epsilon}$. With a controlled third derivative, a centered difference gives $\epsilon/h+K_3 h^2$ and optimized order $\epsilon^{2/3}$. These bounds price differentiation. They do not assume exact finite localization or an available instrument.
+
+Curvature also needs spatial derivative control. Let $E=\widetilde A-A$, with $\max_\mu\|A_\mu\|\le M$, $\max_\mu\|E_\mu\|\le\delta_0$ and $\max_{\mu,\nu}\|\partial_\mu E_\nu\|\le\delta_1$. Then
+
+<a id="eq-16"></a>
+
+$$
+\|F_{\mu\nu}(\widetilde A)-F_{\mu\nu}(A)\|
+\le2\delta_1+4M\delta_0+2\delta_0^2.
+\tag{16}
+$$
+
+Expand the derivative and the three commutator differences and use submultiplicativity. Component Ricci errors introduce at most the additional contraction factor $n$. This is a local residual estimate; the nonlinear Einstein initial-value problem has a different stability question.
+
+The derivative hypothesis cannot be dropped. In a flat chart choose only $\Gamma^0{}_{11}=\sin(kx^0)/k$ nonzero. It is torsion free and its generator tends uniformly to zero. Transports approach identity on bounded-length path families, but $R_{11}(0)=1$ for every $k$. Along $x^0=x^1=s$, $0\le s\le1$, the transport error is at most $2/k^2$ because the generator is a fixed nilpotent matrix times $\sin(ks)/k$. Small uniform transport errors therefore do not certify small gravitational residuals.

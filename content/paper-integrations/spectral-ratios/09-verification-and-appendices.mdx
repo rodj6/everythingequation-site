@@ -1,0 +1,223 @@
+---
+title: "Verification, invariances and the complete comparison data"
+description: "All five appendices, the exact invariances, density illustration, complete comparison tables, historical corrections, and references."
+order: 9
+---
+
+<a id="appendix-a"></a>
+
+## Appendix A. Numerical conventions and verification
+
+The cross-domain execution used Python 3.12.14, NumPy 2.3.5, SciPy 1.17.0 and Pillow 12.2.0. The earlier 4,999-control Kerr execution used NumPy 2.5.4. Keeping the actual control values distinguishes exact input preservation from a generator rerun whose results can vary by platform. The supplement records versions for the executable subset and plotting workflow.
+
+Floating arrays use double precision and source hashes preserve state, point and library order. Counting uses eligible sorted ordered ratios and inclusive matching endpoints, without histogram binning or ratio rounding. Independent direct Boolean counters check selected complete fifteen-slot cases. The prepared-window acceleration matched every field in four complete 10,000-library reference cases at all widths, including overlap and boundary fixtures.
+
+For spatial eigenvalues the zero threshold is $\max(10^{-12},10^{-12}\max_i|\lambda_i|)$. Hydrogen uses $50\epsilon_{\rm mach}N\max_i|\lambda_i|$ on the full $N=465$ spectrum. Each construction requires exactly one eigenvalue within its threshold and no eigenvalue below the negative threshold. Retained positive modes preserve multiplicity. Independent checks covered eigenpair residuals, orthogonality, centroid identities and counts.
+
+The source software suite passed 118 tests. Final integrity checks authenticated 413 score datasets, 41,300 batches and 185,850,000 slot counts. Stored observed and conditional representations account for 401 full or losslessly reconstructable matrix stores. These are execution-coverage counts, not independent sample sizes. The public quick check is narrower than a clean rerun: it checks stored tables, definitions, counts, pairings, selected independent numerical reconstructions and the manuscript claim index. Full-regeneration commands are given separately, and source image acquisition remains gated. Platform and BLAS differences can alter last-bit eigenvalues, so use declared tolerances rather than bitwise equality for regenerated eigenspectra.
+
+<a id="appendix-b"></a>
+
+## Appendix B. Invariances and nonidentifiability
+
+For symmetric nonnegative weights,
+
+<a id="eq-18"></a>
+
+$$
+x^\top Lx=\frac12\sum_{i,j}W_{ij}(x_i-x_j)^2\ge0. \tag{18}
+$$
+
+Every connected support has the constant vector as its one-dimensional kernel. Multiplying all weights by a common positive factor scales positive eigenvalues and leaves raw and minimum-normalized log1p ratios unchanged. When the numerical protocol uses an absolute zero threshold, assume the same positive-mode set is retained. This invariance explains cancellation of a uniform coupling scale without deriving the coupling constant.
+
+The complete Fejér readout is injective on positive scalar eigenvalues:
+
+<a id="eq-19"></a>
+
+$$
+f_T'(\lambda)=\frac{(T\lambda+1)e^{-T\lambda}-1}{T\lambda^2}<0. \tag{19}
+$$
+
+For known $T$, the complete unnormalized values determine the positive eigenvalues. The operator-valued readout determines the operator by inverse functional calculus under the same spectral hypotheses. Pooling ratios or windowing removes some of this information. Survival-readout ratios $e^{-T\lambda_i}/e^{-T\lambda_j}$ instead encode differences and lose a common additive shift. These conditional inversion statements do not establish physical transport between systems.
+
+The ordered ratio multiset is invariant under common positive scaling and $v_i\mapsto a/v_i$ for $a>0$: inversion exchanges pair orientations. The whole-multiset ambiguity survives any fixed cutoff even though an asymmetric cutoff breaks reciprocal balance of the conditioned distribution. More general log-autocorrelation ambiguities and coarse windows obstruct unique inversion further. A label permutation alone preserves the spectrum and ratios and is no substantive control for the pooled observable.
+
+<a id="appendix-c"></a>
+
+## Appendix C. A closed-form density illustration
+
+Let a hypothetical continuous rank model be $v(k)=Ak^{-p}$ with $p>0$ and $k$ uniform on $[k_{\min},k_{\max}]$. After translation, the log-density is a truncated exponential with $a=1/p$ and $L=p\log(k_{\max}/k_{\min})$. Integrating the product of densities gives
+
+<a id="eq-20"></a>
+
+$$
+g(t)=
+\begin{cases}
+\dfrac{a\left(e^{-a|t|}-e^{-2aL}e^{a|t|}\right)}{2(1-e^{-aL})^2}, & |t|\le L,\\
+0, & |t|>L.
+\end{cases}\tag{20}
+$$
+
+For $t\ge0$ the integral is proportional to $e^{-at}\int_0^{L-t}e^{-2au}\,du$. Symmetry supplies the negative half. Holding $L$ fixed, the $a\to0$ limit is $(L-|t|)/L^2$ on the interval. With rank bounds fixed, $p$ and $L$ are not independent. Integrate over [Equation (9)](/source-readout/spectral-ratios/03-exact-ratio-statistics#eq-9), including the actual cutoff, to predict window masses once a model is independently supplied. This illustrates a bridge from a broad rank law such as that in Levi and Oz [\[2\]](/source-readout/spectral-ratios/09-verification-and-appendices#ref-2); it was not fitted or numerically tested here. Using the observed spectrum instead returns the identity in [Equation (8)](/source-readout/spectral-ratios/03-exact-ratio-statistics#eq-8).
+
+<a id="appendix-d"></a>
+
+## Appendix D. All primary-core comparisons and native summaries
+
+The 28 unique core pairs are retained at each of three tolerances. Table 6 includes both coefficient types and conservative paired-bank fractions. The full 17-view table, symmetric entries, statuses, conditional profile summaries and sensitivity results are supplied electronically. Table 7 gives native target incidence and bank midposition for all observed views. Native spatial abundance uses 1% UNION even when the shape comparison uses 3%.
+
+<a id="table-6"></a>
+
+**Table 6. Complete primary-core pair comparisons.** Spearman is primary descriptive and Pearson secondary. Fractions count all target-plus-G coefficients at least the corresponding target, with ties retained.
+
+| Left | Right | Tolerance | Spearman | Spearman fraction | Pearson | Pearson fraction |
+| --- | --- | --- | --- | --- | --- | --- |
+| Kerr | H30 log 1p | 3% | 0.52143 | 0.60200 | 0.38983 | 0.50530 |
+| Kerr | Embryo | 3% | 0.66848 | 0.00860 | 0.54929 | 0.01900 |
+| Kerr | Galaxy | 3% | 0.65708 | 0.31630 | 0.34932 | 0.62020 |
+| Kerr | Pollen | 3% | 0.38277 | 0.54830 | 0.43262 | 0.40290 |
+| Kerr | Leaf | 3% | 0.52189 | 0.61290 | 0.40281 | 0.45970 |
+| Kerr | Shroud | 3% | 0.38399 | 0.60770 | 0.38992 | 0.45810 |
+| Kerr | Snowflake | 3% | 0.53335 | 0.64320 | 0.35456 | 0.55530 |
+| H30 log 1p | Embryo | 3% | 0.23900 | 0.54060 | -0.25984 | 0.85300 |
+| H30 log 1p | Galaxy | 3% | 0.92063 | 0.97900 | 0.98928 | 0.49600 |
+| H30 log 1p | Pollen | 3% | 0.88641 | 0.86000 | 0.95464 | 0.61710 |
+| H30 log 1p | Leaf | 3% | 0.99553 | 0.16900 | 0.98673 | 0.69500 |
+| H30 log 1p | Shroud | 3% | 0.94868 | 0.71350 | 0.97981 | 0.46000 |
+| H30 log 1p | Snowflake | 3% | 0.98743 | 0.44180 | 0.99637 | 0.10530 |
+| Embryo | Galaxy | 3% | 0.26522 | 0.31930 | -0.30299 | 0.82760 |
+| Embryo | Pollen | 3% | -0.13177 | 0.55510 | -0.23573 | 0.82000 |
+| Embryo | Leaf | 3% | 0.22123 | 0.56050 | -0.25919 | 0.81670 |
+| Embryo | Shroud | 3% | 0.01326 | 0.63510 | -0.26397 | 0.82550 |
+| Embryo | Snowflake | 3% | 0.22484 | 0.57220 | -0.30057 | 0.83800 |
+| Galaxy | Pollen | 3% | 0.89402 | 0.70270 | 0.91855 | 0.67060 |
+| Galaxy | Leaf | 3% | 0.92145 | 0.85170 | 0.96477 | 0.81530 |
+| Galaxy | Shroud | 3% | 0.85055 | 0.93580 | 0.95719 | 0.64790 |
+| Galaxy | Snowflake | 3% | 0.92896 | 0.98590 | 0.99235 | 0.33340 |
+| Pollen | Leaf | 3% | 0.88720 | 0.77980 | 0.98754 | 0.24830 |
+| Pollen | Shroud | 3% | 0.93435 | 0.72360 | 0.98982 | 0.31790 |
+| Pollen | Snowflake | 3% | 0.89443 | 0.63730 | 0.95739 | 0.78900 |
+| Leaf | Shroud | 3% | 0.94953 | 0.69710 | 0.99863 | 0.04760 |
+| Leaf | Snowflake | 3% | 0.98831 | 0.29460 | 0.98911 | 0.95950 |
+| Shroud | Snowflake | 3% | 0.95727 | 0.23330 | 0.98489 | 0.78600 |
+| Kerr | H30 log 1p | 1% | 0.43571 | 0.81390 | 0.34661 | 0.47240 |
+| Kerr | Embryo | 1% | 0.62299 | 0.09380 | 0.62517 | 0.04940 |
+| Kerr | Galaxy | 1% | 0.54927 | 0.64320 | 0.31747 | 0.56500 |
+| Kerr | Pollen | 1% | 0.24175 | 0.82110 | 0.41242 | 0.32030 |
+| Kerr | Leaf | 1% | 0.43828 | 0.81640 | 0.37102 | 0.41220 |
+| Kerr | Shroud | 1% | 0.27482 | 0.78150 | 0.35665 | 0.41810 |
+| Kerr | Snowflake | 1% | 0.45796 | 0.77810 | 0.31555 | 0.50690 |
+| H30 log 1p | Embryo | 1% | 0.26856 | 0.39160 | -0.18999 | 0.65770 |
+| H30 log 1p | Galaxy | 1% | 0.92328 | 0.87620 | 0.98887 | 0.32180 |
+| H30 log 1p | Pollen | 1% | 0.88641 | 0.77540 | 0.95350 | 0.63680 |
+| H30 log 1p | Leaf | 1% | 0.99463 | 0.28980 | 0.98493 | 0.77460 |
+| H30 log 1p | Shroud | 1% | 0.94492 | 0.64310 | 0.97916 | 0.42810 |
+| H30 log 1p | Snowflake | 1% | 0.98652 | 0.51560 | 0.99645 | 0.07060 |
+| Embryo | Galaxy | 1% | 0.31795 | 0.22260 | -0.19019 | 0.53490 |
+| Embryo | Pollen | 1% | -0.07420 | 0.35640 | -0.17174 | 0.61250 |
+| Embryo | Leaf | 1% | 0.26904 | 0.37480 | -0.18236 | 0.59490 |
+| Embryo | Shroud | 1% | 0.06933 | 0.45930 | -0.18215 | 0.58350 |
+| Embryo | Snowflake | 1% | 0.28890 | 0.37400 | -0.20790 | 0.58520 |
+| Galaxy | Pollen | 1% | 0.89484 | 0.23500 | 0.92326 | 0.39380 |
+| Galaxy | Leaf | 1% | 0.92493 | 0.62390 | 0.96373 | 0.62700 |
+| Galaxy | Shroud | 1% | 0.85324 | 0.84130 | 0.95848 | 0.43300 |
+| Galaxy | Snowflake | 1% | 0.94139 | 0.83010 | 0.99261 | 0.22110 |
+| Pollen | Leaf | 1% | 0.88799 | 0.25230 | 0.98970 | 0.17290 |
+| Pollen | Shroud | 1% | 0.93011 | 0.96500 | 0.99050 | 0.29080 |
+| Pollen | Snowflake | 1% | 0.89648 | 0.00960 | 0.95751 | 0.70830 |
+| Leaf | Shroud | 1% | 0.94661 | 0.69210 | 0.99860 | 0.03340 |
+| Leaf | Snowflake | 1% | 0.98828 | 0.09740 | 0.98733 | 0.97290 |
+| Shroud | Snowflake | 1% | 0.95974 | 0.00370 | 0.98448 | 0.69800 |
+| Kerr | H30 log 1p | 0.5% | 0.41644 | 0.74510 | 0.39744 | 0.33290 |
+| Kerr | Embryo | 0.5% | 0.34075 | 0.54540 | 0.42209 | 0.29020 |
+| Kerr | Galaxy | 0.5% | 0.48599 | 0.75700 | 0.38599 | 0.37830 |
+| Kerr | Pollen | 0.5% | 0.28204 | 0.64100 | 0.47416 | 0.19790 |
+| Kerr | Leaf | 0.5% | 0.40645 | 0.79230 | 0.43228 | 0.26110 |
+| Kerr | Shroud | 0.5% | 0.25976 | 0.75470 | 0.41679 | 0.26570 |
+| Kerr | Snowflake | 0.5% | 0.41300 | 0.80120 | 0.36863 | 0.36280 |
+| H30 log 1p | Embryo | 0.5% | 0.04482 | 0.81960 | -0.28975 | 0.87260 |
+| H30 log 1p | Galaxy | 0.5% | 0.96373 | 0.16670 | 0.99273 | 0.05980 |
+| H30 log 1p | Pollen | 0.5% | 0.88518 | 0.93970 | 0.95481 | 0.51960 |
+| H30 log 1p | Leaf | 0.5% | 0.99642 | 0.07010 | 0.98330 | 0.82800 |
+| H30 log 1p | Shroud | 0.5% | 0.94765 | 0.55880 | 0.97940 | 0.39140 |
+| H30 log 1p | Snowflake | 0.5% | 0.98921 | 0.24550 | 0.99552 | 0.20500 |
+| Embryo | Galaxy | 0.5% | 0.05359 | 0.76390 | -0.27392 | 0.76320 |
+| Embryo | Pollen | 0.5% | -0.28557 | 0.79360 | -0.27104 | 0.84700 |
+| Embryo | Leaf | 0.5% | 0.04490 | 0.79960 | -0.28458 | 0.82850 |
+| Embryo | Shroud | 0.5% | -0.15599 | 0.85300 | -0.27543 | 0.80080 |
+| Embryo | Snowflake | 0.5% | 0.04523 | 0.81330 | -0.30535 | 0.82210 |
+| Galaxy | Pollen | 0.5% | 0.90145 | 0.02900 | 0.95245 | 0.02970 |
+| Galaxy | Leaf | 0.5% | 0.96546 | 0.06620 | 0.97699 | 0.18390 |
+| Galaxy | Shroud | 0.5% | 0.89408 | 0.43940 | 0.97801 | 0.08500 |
+| Galaxy | Snowflake | 0.5% | 0.97247 | 0.32650 | 0.99579 | 0.02540 |
+| Pollen | Leaf | 0.5% | 0.88879 | 0.03490 | 0.99074 | 0.13160 |
+| Pollen | Shroud | 0.5% | 0.93435 | 0.92280 | 0.99040 | 0.29580 |
+| Pollen | Snowflake | 0.5% | 0.89117 | 0.75990 | 0.95625 | 0.74100 |
+| Leaf | Shroud | 0.5% | 0.95123 | 0.02430 | 0.99855 | 0.03290 |
+| Leaf | Snowflake | 0.5% | 0.98918 | 0.04960 | 0.98396 | 0.99540 |
+| Shroud | Snowflake | 0.5% | 0.95434 | 0.32170 | 0.98285 | 0.76280 |
+
+<a id="table-7"></a>
+
+**Table 7. Native target views.** Midpositions refer to the same target plus 9,999 alternatives. The raw hydrogen readout, bright variants and adult portrait remain secondary.
+
+| View | Eligible pairs | Window | Count | Incidence | Midposition |
+| --- | --- | --- | --- | --- | --- |
+| Kerr | 272049 | 3% | SUM | 0.30581 | 0.95435 |
+| H30 log 1p | 214832 | 3% | UNION | 0.10190 | 0.44780 |
+| H30 raw | 214832 | 3% | UNION | 0.12159 | 0.07820 |
+| embryo | 870 | 1% | UNION | 0.05517 | 0.43155 |
+| embryo bright | 1190 | 1% | UNION | 0.05042 | 0.95330 |
+| galaxy | 11990 | 1% | UNION | 0.04370 | 0.55115 |
+| galaxy bright | 93330 | 1% | UNION | 0.02674 | 0.50220 |
+| pollen | 997002 | 1% | UNION | 0.02529 | 0.35660 |
+| pollen bright | 1282556 | 1% | UNION | 0.03149 | 0.51300 |
+| adult human | 2652 | 1% | UNION | 0.01357 | 0.17185 |
+| adult human bright | 4830 | 1% | UNION | 0.05404 | 0.58295 |
+| leaf | 325470 | 1% | UNION | 0.04696 | 0.60690 |
+| leaf bright | 145542 | 1% | UNION | 0.02020 | 0.35485 |
+| shroud | 153272 | 1% | UNION | 0.03982 | 0.69565 |
+| shroud bright | 81510 | 1% | UNION | 0.04368 | 0.83610 |
+| snowflake | 493506 | 1% | UNION | 0.03931 | 0.64350 |
+| snowflake bright | 396270 | 1% | UNION | 0.04596 | 0.52875 |
+
+<a id="appendix-e"></a>
+
+## Appendix E. Material reconstruction corrections
+
+<a id="table-8"></a>
+
+**Table 8. Reconstructed H30 counts.** Exposure is 214,832 eligible ordered nonself ratios. The values replace earlier totals that were not recovered.
+
+| Readout | 3% SUM | 3% UNION | 1% SUM | 1% UNION | 0.5% SUM | 0.5% UNION |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Raw | 27,853 | 26,122 | 9,186 | 9,186 | 4,563 | 4,563 |
+| log1p | 23,495 | 21,892 | 7,800 | 7,800 | 3,895 | 3,895 |
+
+The 465-state graph retains 464 positive modes and hence $464\times463=214{,}832$ ordered nonself pairs. The earlier 28,941/31,204 totals and denominator 214,576 do not reproduce under the declared minimum-normalized relative-window construction. The earlier fifteen marginals add to 30,264, below the purported 31,204 UNION, contrary to [Equation (7)](/source-readout/spectral-ratios/03-exact-ratio-statistics#eq-7). These numbers do not survive as established results. Minimum versus median normalization and log-distance versus relative windows explain some archived differences, but do not identify the lost 31,204 run. A common eigenvalue scale cannot change raw or own-minimum-normalized ratios.
+
+Null-stage choices also matter. Retained raw-uniform controls gave raw UNION standardized difference approximately $-13.286$. Drawing uniform raw values then applying the primary transform gave about $+0.456$, whereas uniform sampling in the transformed range gave about $-21.562$. They are distinct reference laws. The unsupported historical H30 $+7.7$ claim is not used; shell preservation answers a separate question.
+
+H12 is a separate 78-state construction with no same-$n$ links. It uses absolute radial amplitudes and an $m=0$ angular factor rather than squared radial weights. Its 506 edges, 77 positive modes, filtered exposures and counts cannot substitute for H30. Deterministic H12 count checks remain valid for H12. Missing random streams and phase conventions prevent transfer of stochastic or synthetic-generator claims. The present reconstruction likewise does not represent unrecovered historical image feature maps, sphere/speckle inputs or separate direct-distance protocols. It implies neither a universal physical/nonphysical boundary nor a synthetic-impossibility claim.
+
+The electromagnetic Kerr local Fejér row has archived effect 12.2713 and width 2.3290. The gravitational row has archived effect 11.3464 and width 2.5887. A retained 100-draw plug-in uniform-Fejér bank at the same gravitational point gives 10.6137. These are distinct realizations. The local-scan original streams are unavailable, so the archived values are not represented as newly reproduced tail calibrations. The grouped-endpoint U reference with 4,999 draws and the R/P comparisons provide the explicit current conditional results.
+
+<a id="references"></a>
+
+## References
+
+<a id="ref-1"></a>
+
+**[1]** Y. Y. Atas, E. Bogomolny, O. Giraud, and G. Roux. “Distribution of the ratio of consecutive level spacings in random matrix ensembles.” Physical Review Letters 110, 084101 (2013). [DOI](https://doi.org/10.1103/PhysRevLett.110.084101).
+<a id="ref-2"></a>
+
+**[2]** Noam Itzhak Levi and Yaron Oz. “The underlying universal statistical structure of natural datasets.” Proceedings of the 42nd International Conference on Machine Learning, Proceedings of Machine Learning Research 267, pp. 34020–34043 (2025). [Article](https://proceedings.mlr.press/v267/levi25c.html).
+<a id="ref-3"></a>
+
+**[3]** Emanuele Berti, Vitor Cardoso, and Andrei O. Starinets. “Quasinormal modes of black holes and black branes.” Classical and Quantum Gravity 26(16), 163001 (2009). [DOI](https://doi.org/10.1088/0264-9381/26/16/163001).
+<a id="ref-4"></a>
+
+**[4]** Leo C. Stein. “qnm: A Python package for calculating Kerr quasinormal modes, separation constants, and spherical-spheroidal mixing coefficients.” Journal of Open Source Software 4(42), 1683 (2019). [DOI](https://doi.org/10.21105/joss.01683).
+<a id="ref-5"></a>
+
+**[5]** Fan R. K. Chung. Spectral Graph Theory. CBMS Regional Conference Series in Mathematics, vol. 92. American Mathematical Society, Providence, RI (1997). [DOI](https://doi.org/10.1090/cbms/092).

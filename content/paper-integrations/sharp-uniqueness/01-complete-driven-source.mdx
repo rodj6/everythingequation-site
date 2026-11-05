@@ -1,0 +1,113 @@
+---
+title: The Same Drive Can Sustain Two Stable States
+description: The complete reciprocal source, its physical rate port, and the strict tilted-energy argument.
+order: 1
+---
+<a id="abstract"></a>
+
+<a id="section-1"></a>
+
+## 1. The uniqueness boundary
+
+One constant input can sustain two different stable amplitudes, memories and probe responses in the same finite reciprocal carrier. No change of constitutive law, controller, reservoir, saturation, or external power contract is required. The sharp curvature constant is $\chi=(2-\sqrt3)e^{-\sqrt3}$. For any finite incidence network, $\mu\ge\chi\lVert L\rVert$ guarantees one globally attracting equilibrium for every constant complex input, including equality. On a three-node path the threshold $3\chi$ is exact. For $0<\mu<3\chi$ suitable highest-mode inputs give two fully stable states. In the counted range $\chi<\mu<3\chi$ and inside the fold interval, there are exactly two minima and one index-one saddle.
+
+The programme advances from one positive operator for coherent and dissipative evolution, through reciprocal adaptive memory, to externally sustained states. The present result closes the endpoint of the preceding strict sufficient condition. The proof proceeds through four bridges: stationary memory elimination and a strict line-convexity argument at zero minimum curvature; complete stationary-state counting beyond a scalar symmetry sector; the full dynamical index from stationary curvature; and a full-state tilted barrier whose membership test is separate from physical supplied work. Both folds are nondegenerate saddle-nodes in the counted regime. Independent modal cubics retain all eight eigenvalues.
+
+Two stable states can have identical mean, stationary power and clamped static norm while responding differently to a later probe. That obstruction applies to the declared coarse summary and probe class. Calibrated complete stationary amplitude can instead reconstruct memory, without permitting dynamical memory elimination away from stationarity. Exact scalar certificates and reproducible finite numerical experiments support the worked example. The finite pulse switches are not evidence of a physical implementation or a quasistatic hysteresis limit. Atomic, image and Kerr signatures are not new tests of this model.
+
+<a id="section-2"></a>
+
+## 2. The complete source and external energy contract
+
+<a id="section-2-1"></a>
+
+### 2.1 Constitutive equations and units
+
+Take $z\in\mathbb C^n$ and dimensionless edge memories $m\in\mathbb R^p$, with real incidence vectors $b_e\in\mathbb R^n$:
+
+<a id="eq-1"></a>
+
+$$
+B_e=b_eb_e^T,\quad L=\sum_e B_e,\quad K(m)=\mu I+\sum_e e^{m_e}B_e,\qquad \mu>0.\tag{1}
+$$
+
+Use the fixed Euclidean amplitude metric and its realification for all vector and induced operator norms. Edge stiffness is normalized to one. Positive baseline weights $k_e$ are incorporated by replacing each $b_e$ by $\sqrt{k_e}b_e$ everywhere, including $L$ and the curvature bound. In particular $K(m)\ge\mu I$ even in collective modes.
+
+<a id="eq-2"></a>
+
+$$
+F(z,m)=\frac12z^*K(m)z+\frac{\kappa}{2}|m|^2,\qquad \kappa>0.\tag{2}
+$$
+
+<a id="eq-3"></a>
+
+$$
+g_e=(F_m)_e=\kappa m_e+\frac12 e^{m_e}|b_e^Tz|^2.\tag{3}
+$$
+
+With $c=\gamma+i\alpha$ and $\gamma,\alpha,\eta>0$, the reciprocal source is
+
+<a id="eq-4"></a>
+
+$$
+\dot z=-cK(m)z+f,\qquad \dot m=-\eta g(z,m).\tag{4}
+$$
+
+Except in the declared pulse experiments, $f\in\mathbb C^n$ is constant. The same stored energy generates the amplitude and memory efforts. This is a constitutive assumption of the finite realization. For amplitude, energy and time units $A,E,T$, respectively, the units of $K,\kappa,f,\gamma$ and $\alpha$, and $\eta$ are $E/A^2,E,A/T,A^2/(ET)$, and $1/(ET)$, respectively. Reference scales $A_0,E_0,T_0$ define the dimensionless coordinates used in Hessian and numerical comparisons.
+
+<a id="section-2-2"></a>
+
+### 2.2 Power and the constant-input tilt
+
+The rate flow $f$ pairs with effort $Kz$. The signed power and physical balance are
+
+<a id="eq-5"></a>
+
+$$
+P=\operatorname{Re}[(Kz)^*f],\qquad \dot F=-\gamma\lVert Kz\rVert^2-\eta |g|^2+P.\tag{5}
+$$
+
+The ideal actuator can supply or absorb power and lies outside the modeled source state; no finite actuator energy store is included. The reactive term contributes no work since $\operatorname{Re}[i\alpha\lVert Kz\rVert^2]=0$. This is the effort–flow convention of van der Schaft and Jeltsema (2014).
+
+For constant input let $\ell=f/c$ and introduce a tilted potential:
+
+<a id="eq-6"></a>
+
+$$
+V(z,m)=F(z,m)-\operatorname{Re}(\ell^*z).\tag{6}
+$$
+
+Write $q=(\operatorname{Re}z,\operatorname{Im}z)$, $K_R=\operatorname{diag}(K,K)$, and
+
+<a id="eq-7"></a>
+
+$$
+J=\begin{pmatrix}0&-I\\ I&0\end{pmatrix},\quad G=\gamma I+\alpha J,\quad
+D=\operatorname{diag}(G,\eta I_p),\quad x=(q,m).\tag{7}
+$$
+
+Then $\dot x=-D\nabla V$, $\operatorname{Sym}D=\operatorname{diag}(\gamma I,\eta I)>0$, and
+
+<a id="eq-8"></a>
+
+$$
+\dot V=-\gamma\lVert Kz-\ell\rVert^2-\eta|g|^2.\tag{8}
+$$
+
+The tilt is a Lyapunov function. Physical supplied work is given by [(5)](#eq-5), not by the difference of tilted barriers.
+
+<a id="proposition-2-1"></a>
+
+**[Proposition 2.1](#proposition-2-1) (Boundedness and stationary limit sets).** Every initial state at constant $f$ gives a bounded global forward solution. Its omega-limit set is stationary. If the stationary set is finite, each solution converges to one point. No nonstationary trajectory is recurrent at fixed input.
+
+**Proof.** Young's inequality and $K\ge\mu I$ give
+
+<a id="eq-9"></a>
+
+$$
+V\ge\frac\mu4\lVert z\rVert^2+\frac\kappa2|m|^2-\frac{\lVert\ell\rVert^2}{\mu}.\tag{9}
+$$
+
+The initial $V$ sublevel is compact and invariant by [(8)](#eq-8). The smooth vector field is locally Lipschitz, so continuation on this compact set rules out finite-time escape. If an omega-limit point were nonstationary, the loss in [(8)](#eq-8) would be bounded below on a small ball around it. Bounded velocity on the compact set implies infinitely many visits to a smaller ball entail infinitely many disjoint positive-duration intervals in the larger ball, with a common lower bound on duration. Their cumulative loss contradicts the finite limit of $V$. The omega-limit set is the nonempty compact connected intersection of the nested compact connected closures of continuous forward tails. A connected subset of a finite stationary set is a single point. Recurrence to a nonstationary point would require recovering its initial $V$ after strict decrease, contrary to monotonicity. This is the finite-dimensional strict-dissipation argument behind the invariance principle (LaSalle, 1976). $\square$
+
+A finite pulse schedule concatenates globally defined constant-input segments. State and physical $F$ are continuous at each jump; $V$ changes by $-\operatorname{Re}[(\ell_{\rm new}-\ell_{\rm old})^*z]$. There is no single fixed tilt for such a schedule.

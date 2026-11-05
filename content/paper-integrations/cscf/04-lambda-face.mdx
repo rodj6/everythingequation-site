@@ -1,0 +1,357 @@
+---
+title: "The dissipative face and exact recovery"
+description: "Contractions, Fejér transmission, exact carrier recovery, spectral budgets and Lambda profiles."
+order: 4
+---
+
+A full Fejér transmission at one positive time determines the dissipative generator exactly. A scalar budget or a compressed measurement supplies different information; this chapter tracks those distinctions.
+
+<a id="sec-diss"></a>
+
+## 5. The Dissipative / Lambda Face
+
+We develop the first canonical functional-calculus face of $K$. All objects are functions of $K$ alone.
+
+<a id="section-5.1"></a>
+
+### 5.1 Contraction semigroup and Fejér transmission
+
+<a id="definition-5.1"></a>
+
+**Definition 5.1.** *Contraction semigroup*.
+
+For $K \ge 0$ selfadjoint, $S_t := e^{-tK} = \int_0^\infty e^{-t\lambda}\, dE_K(\lambda)$, $t \ge 0$. $(S_t)$ is a strongly continuous semigroup of contractions, $S_t = I$ on $\ker K$.
+
+<a id="def-lambda"></a>
+
+**Definition 5.2.** *Lambda / Fejér-averaged transmission*.
+
+For $T > 0$,
+
+$$
+\Lambda_T(K) \;:=\; f_T(K) \;=\; \frac{1-e^{-TK}}{TK} \;=\; \frac{1}{T}\int_0^T e^{-tK}\, dt.
+$$
+
+ On $\ker K$, $\Lambda_T(K)$ is the identity. On $\mathsf H_{\mathrm{diss}}= (\ker K)^\perp$, nonzero point modes of $K$ are mapped into $(0,1)$. In general,
+
+$$
+0 \le \Lambda_T(K) \le I,\qquad \ker\Lambda_T(K) = \{0\},
+$$
+
+ but $0$ or $1$ may occur in the spectrum as non-eigen spectral/accumulation points when $K$ is unbounded or when $0$ lies in the continuous spectrum of $K|_{\mathsf H_{\mathrm{diss}}}$.
+
+<a id="prop-lambda"></a>
+
+**Proposition 5.3.** *Properties of $\Lambda_T$*.
+
+1.  $\Lambda_T(K)$ is bounded selfadjoint with $0 \le \Lambda_T(K) \le I$, and $\ker\Lambda_T(K) = \{0\}$. It need not be bounded below when $K$ is unbounded.
+
+2.  $\Lambda_T(K) \in W^*(K)$; commutes with $K$.
+
+3.  $\Lambda_T(K) \to I$ strongly as $T \downarrow 0$.
+
+4.  $\Lambda_T(K) \to P_{\ker K}$ strongly as $T \to \infty$.
+
+<a id="section-5.2"></a>
+
+### 5.2 Exact recovery of the generator from the Lambda face
+
+<a id="thm-lambda-exact-generator-recovery"></a>
+
+**Theorem 5.4.** *Exact Fejér/Lambda recovery of the generator*.
+
+Fix $T>0$ and define
+
+$$
+f_T(\lambda) \;=\; \frac{1-e^{-T\lambda}}{T\lambda},\qquad f_T(0):=1.
+$$
+
+ Then $f_T:[0,\infty)\to(0,1]$ is continuous, strictly decreasing, and Borel-invertible. Equivalently, it is a homeomorphism from $[0,\infty)$ onto $(0,1]$ with the subspace topology.
+
+Let $K\ge 0$ be selfadjoint and set $A := \Lambda_T(K) = f_T(K)$. Let $\ell_T:(0,1]\to[0,\infty)$ denote the inverse function of $f_T$, and extend it to a Borel function $\psi_T:[0,1]\to[0,\infty)$ by assigning an arbitrary finite value at $0$, e.g. $\psi_T(0) = 0$, and setting $\psi_T(y) = \ell_T(y)$ for $0 < y \le 1$. Then
+
+$$
+K \;=\; \psi_T(A).
+$$
+
+ Thus, with this harmless spectral convention at $0$,
+
+$$
+K \;=\; f_T^{-1}(\Lambda_T(K)).
+$$
+
+Moreover,
+
+$$
+\ker K \;=\; \ker(I - \Lambda_T(K)).
+$$
+
+ Consequently the stationary/dissipative splitting is recovered from the Lambda face alone:
+
+$$
+\mathsf H_0\;=\; \ker K \;=\; E_A(\{1\})\mathsf H,\qquad \mathsf H_{\mathrm{diss}}\;=\; (\ker K)^\perp \;=\; E_A([0,1))\mathsf H,
+$$
+
+ where $E_A$ is the spectral measure of $A = \Lambda_T(K)$.
+
+*Proof.* The integral formula
+
+$$
+f_T(\lambda) \;=\; \frac{1}{T}\int_0^T e^{-t\lambda}\,dt
+$$
+
+ holds for all $\lambda \ge 0$, including $\lambda = 0$. Continuity follows from dominated convergence. If $0 \le \lambda_1 < \lambda_2$, then $e^{-t\lambda_2} < e^{-t\lambda_1}$ for every $t \in (0,T]$, hence
+
+$$
+f_T(\lambda_2) \;=\; \frac{1}{T}\int_0^T e^{-t\lambda_2}\,dt \;<\; \frac{1}{T}\int_0^T e^{-t\lambda_1}\,dt \;=\; f_T(\lambda_1).
+$$
+
+ Thus $f_T$ is strictly decreasing. Also $f_T(0) = 1$, $f_T(\lambda) > 0$ for every finite $\lambda \ge 0$, and $\lim_{\lambda\to\infty}f_T(\lambda) = 0$. Therefore $f_T$ maps $[0,\infty)$ bijectively onto $(0,1]$. Since it is continuous and strictly monotone, its inverse $\ell_T = f_T^{-1}:(0,1]\to[0,\infty)$ is continuous, hence Borel.
+
+Now let $K \ge 0$ be selfadjoint and let $A = f_T(K)$. By the spectral mapping and composition rules for the Borel functional calculus,
+
+$$
+E_A(B) \;=\; E_K(f_T^{-1}(B))
+$$
+
+ for Borel sets $B \subseteq [0,1]$. In particular,
+
+$$
+E_A(\{0\}) \;=\; E_K(f_T^{-1}(\{0\})) \;=\; E_K(\varnothing) \;=\; 0.
+$$
+
+ Thus the assigned value of $\psi_T$ at $0$ is invisible to the functional calculus. Since $(\psi_T \circ f_T)(\lambda) = \lambda$ for $\lambda \ge 0$, the unbounded Borel functional calculus gives
+
+$$
+\psi_T(A) \;=\; \psi_T(f_T(K)) \;=\; (\psi_T \circ f_T)(K) \;=\; K,
+$$
+
+ with equality of selfadjoint operators, including equality of domains.
+
+For the kernel statement, since $f_T^{-1}(\{1\}) = \{0\}$, we have $E_A(\{1\}) = E_K(\{0\})$. For a selfadjoint contraction $A$, $\ker(I-A) = E_A(\{1\})\mathsf H$, while $\ker K = E_K(\{0\})\mathsf H$. Hence $\ker(I - \Lambda_T(K)) = \ker K$. The dissipative sector is the orthogonal complement of this stationary sector, equivalently
+
+$$
+\mathsf H_{\mathrm{diss}}\;=\; (\ker K)^\perp \;=\; (I - E_A(\{1\}))\mathsf H\;=\; E_A([0,1))\mathsf H. \quad\square
+$$
+
+ ◻
+
+<a id="cor-coherence-from-lambda"></a>
+
+**Corollary 5.5.** *Coherence recovery from the Lambda face*.
+
+Let $K \ge 0$ be selfadjoint, fix $T > 0$, and set $A := \Lambda_T(K)$. Let $h : [0,\infty)\to\mathbb R$ be a declared admissible coherence symbol. Then the coherent generator $C = h(K)$ is determined by the Lambda face $A$ through
+
+$$
+C \;=\; h\big(\psi_T(A)\big) \;=\; (h \circ \psi_T)(A),
+$$
+
+ where $\psi_T$ is the Borel inverse convention from Theorem [5.4](/source-readout/cscf/04-lambda-face#thm-lambda-exact-generator-recovery). In particular, once $h$ is declared, the exact Lambda operator at one fixed scale determines the coherent functional-calculus face generated by $h(K)$.
+
+*Proof.* By Theorem [5.4](/source-readout/cscf/04-lambda-face#thm-lambda-exact-generator-recovery), $K = \psi_T(A)$. Applying the Borel functional calculus to the declared symbol $h$ gives $h(K) = h(\psi_T(A)) = (h \circ \psi_T)(A)$. The value of $\psi_T$ at $0$ is again immaterial because $E_A(\{0\}) = 0$. ◻
+
+Theorem [5.4](/source-readout/cscf/04-lambda-face#thm-lambda-exact-generator-recovery) is an *exact operator-recovery* statement from the full bounded operator $\Lambda_T(K)$ at a fixed scale. It is not a noisy finite empirical recovery theorem: finite samples, scalar determinants, matrix elements, or approximate readouts require separate inverse-problem and stability hypotheses. In particular, the inverse $\psi_T$ is unbounded near $0$, so high-spectral recovery may be ill-conditioned without additional quantitative control.
+
+<a id="section-5.3"></a>
+
+### 5.3 The dissipative budget
+
+<a id="def-dbudget"></a>
+
+**Definition 5.6.** *Dissipative / lambda budget*.
+
+Under (D1)–(D2),
+
+$$
+\mathcal D_T(K) \;:=\; -\log\det\nolimits_*\!\big(\Lambda_T(K)\big|_{\mathsf H_{\mathrm{diss}}}\big).
+$$
+
+ If $\mathsf H_{\mathrm{diss}}= \{0\}$, we set $\mathcal D_T(K) = 0$. For finite-rank $K$ with positive eigenvalues $\lambda_1,\dots,\lambda_r$,
+
+$$
+\mathcal D_T(K) \;=\; -\sum_{j=1}^r \log f_T(\lambda_j) \;=\; \sum_{j=1}^r g(T\lambda_j),
+\quad g(s) = -\log\!\Big(\tfrac{1-e^{-s}}{s}\Big).
+$$
+
+<a id="lem-traceclass-lambda-det"></a>
+
+**Lemma 5.7.** *Fredholm determinant criterion and trace-log identity*.
+
+Let $K\ge0$ be selfadjoint, $K_d=K|_{\mathsf H_{\mathrm{diss}}}$, and $T>0$. Then
+
+$$
+I-f_T(K_d)\in\mathcal L^1(\mathsf H_{\mathrm{diss}})
+\quad\Longleftrightarrow\quad K_d\in\mathcal L^1(\mathsf H_{\mathrm{diss}}).
+$$
+
+ In either case $K_d$ is bounded, $f_T(K_d)$ is bounded below by a positive constant, and
+
+$$
+0\le I-f_T(K_d)\le \frac T2K_d,
+\qquad
+\mathcal D_T(K)=\mathop{\mathrm{Tr}}_{\mathsf H_{\mathrm{diss}}}[-\log f_T(K_d)]<\infty.
+$$
+
+ The Fredholm condition at one positive scale therefore implies it at every positive scale.
+
+*Proof.* Write $r_T(\lambda)=1-f_T(\lambda)$. From the time average,
+
+$$
+r_T(\lambda)=\frac1T\int_0^T(1-e^{-t\lambda})\,dt
+\le\frac{T\lambda}{2}.
+$$
+
+ If $K_d$ is trace class, positivity and heredity of the trace ideal show that $r_T(K_d)$ is trace class. Moreover $K_d$ is bounded, and $[-\log f_T(\lambda)]/\lambda$ extends continuously at zero with value $T/2$. It is bounded on $[0,\|K_d\|]$, so $-\log f_T(K_d)$ is trace class as well.
+
+Conversely suppose $R=r_T(K_d)$ is trace class. It is a positive compact contraction. Since $\ker f_T(K_d)=0$, the number one is not an eigenvalue of $R$. Compactness implies $\|R\|<1$: otherwise the compact positive operator would have eigenvalue one. Hence $f_T(K_d)=I-R\ge(1-\|R\|)I$. As $f_T(\lambda)\to0$ at infinity, the spectral measure of $K_d$ is supported in a bounded interval $[0,M]$. The function $\lambda/r_T(\lambda)$ extends continuously at zero with value $2/T$, so $K_d\le cR$ on this interval for a finite constant $c$. Thus $K_d$ is trace class. Also
+
+$$
+0\le-\log(I-R)\le\frac{R}{1-\|R\|},
+$$
+
+ which gives trace class directly. The Fredholm determinant product for $I-R$ and the absolutely convergent sum of its logarithms yield
+
+$$
+-\log\det_*(I-R)=\sum_j-\log f_T(\lambda_j)
+=\mathop{\mathrm{Tr}}[-\log f_T(K_d)].
+$$
+
+ See \[[24](/source-readout/cscf/18-references#ref-simontraceideals)\] for the determinant identities used here. ◻
+
+<a id="section-5.4"></a>
+
+### 5.4 Asymptotic expansions
+
+<a id="prop-smallt"></a>
+
+**Proposition 5.8.** *Small-$T$ expansion*.
+
+Under (D1) with $K\,\mathbf 1_{K>0}$ trace-class on $\mathsf H_{\mathrm{diss}}$,
+
+$$
+\mathcal D_T(K) \;=\; \frac{T}{2}\,\mathop{\mathrm{Tr}}(K\,\mathbf 1_{K>0}) \;-\; \frac{T^2}{24}\,\mathop{\mathrm{Tr}}(K^2\,\mathbf 1_{K>0}) \;+\; O(T^3),\quad T\downarrow 0.
+$$
+
+*Proof.* The scalar expansion is $g(s)=s/2-s^2/24+O(s^3)$ near zero. Trace-class positivity implies that $K_d$ is bounded and $K_d^3$ is trace class. On $0\le\lambda\le\|K_d\|$, the scalar remainder is bounded by a constant times $T^3\lambda^3$ for all sufficiently small $T$. Summing the remainder proves the formula. ◻
+
+<a id="prop-larget"></a>
+
+**Proposition 5.9.** *Large-$T$ expansion, finite rank*.
+
+For finite-rank $K$ with positive eigenvalues $\lambda_1,\dots,\lambda_r$,
+
+$$
+\mathcal D_T(K) \;=\; r\log T \;+\; \sum_{j=1}^r \log\lambda_j \;+\; o(1),\quad T\to\infty.
+$$
+
+*Proof.* For every positive eigenvalue, $g(T\lambda)=\log T+\log\lambda-\log(1-e^{-T\lambda})$. The last term tends to zero, and the sum is finite. ◻
+
+<a id="section-5.5"></a>
+
+### 5.5 Structural properties
+
+<a id="prop-dprops"></a>
+
+**Proposition 5.10.** *Structural properties of $\mathcal D_T$*.
+
+1.  Unitary invariance: $\mathcal D_T(UKU^*) = \mathcal D_T(K)$.
+
+2.  Direct-sum additivity: $\mathcal D_T(K_1\oplus K_2) = \mathcal D_T(K_1) + \mathcal D_T(K_2)$.
+
+3.  Spectral-measure dependence only.
+
+4.  Strict monotonicity in $T$ when $\mathsf H_{\mathrm{diss}}\ne\{0\}$ (since $g$ is strictly increasing).
+
+5.  Spectral determinant form on finite rank.
+
+*Proof.* Unitary covariance of the functional calculus gives invariance; Fredholm determinants multiply under direct sums, giving additivity. The spectral product gives the remaining dependence. Finally $g'(s)=1/s-1/(e^s-1)>0$ for $s>0$, since $e^s>1+s$. Every nonzero positive mode therefore increases its contribution with $T$. ◻
+
+<a id="section-5.6"></a>
+
+### 5.6 The lambda profile
+
+For a finite positive sector of rank $r\ge1$, define
+
+$$
+\bar\lambda_K := \tfrac{1}{r}\sum_j \lambda_j,\qquad
+\mathcal N_K(T) = \tfrac{1}{r}\sum_{j=1}^r [g(T\lambda_j) - \log(T\lambda_j)],\qquad
+\widehat{\mathcal N}_K(\tau) = \mathcal N_K(\tau/\bar\lambda_K).
+$$
+
+<a id="sec-ldist"></a>
+
+### 5.7 Empirical spectral measures and Lambda distances
+
+For finite-rank dissipative sector $\mathsf H_{\mathrm{diss}}$ with positive eigenvalues $\lambda_1,\dots,\lambda_r$, define the empirical spectral measure
+
+$$
+\mu_K := \frac{1}{r}\sum_{j=1}^r \delta_{\lambda_j}.
+$$
+
+ The rank-normalized Lambda profile may then be written as
+
+$$
+\mathcal N_K(T) = \int [g(T\lambda) - \log(T\lambda)]\,d\mu_K(\lambda).
+$$
+
+ Let $\bar\lambda_K = \int\lambda\,d\mu_K(\lambda)$ and $\widetilde\mu_K := (\lambda\mapsto\lambda/\bar\lambda_K)_\#\mu_K$. The dimensionless profile is
+
+$$
+\widehat{\mathcal N}_K(\tau) = \int [g(\tau x) - \log(\tau x)]\,d\widetilde\mu_K(x).
+$$
+
+ For a declared scale window $I = [\tau_-,\tau_+]\subset(0,\infty)$, define the *Lambda-profile distance*
+
+$$
+d_\Lambda(K_1,K_2;I) := \sup_{\tau\in I}\big|\widehat{\mathcal N}_{K_1}(\tau) - \widehat{\mathcal N}_{K_2}(\tau)\big|.
+$$
+
+ On compact spectral classes bounded away from $0$, $d_\Lambda$ is Lipschitz controlled by Wasserstein-type distances between the normalized empirical spectral measures:
+
+$$
+d_\Lambda(K_1,K_2;I) \le C_I\, W_1(\widetilde\mu_{K_1},\widetilde\mu_{K_2}),
+$$
+
+ where $C_I$ depends on the declared spectral window and compact class. In fact, if both normalized measures are supported in $[a,b]\subset(0,\infty)$, one may take $C_I=1/a$. To see this, put $F_\tau(x)=-\log(1-e^{-\tau x})$. Then
+
+$$
+|F_\tau'(x)|=\frac{\tau}{e^{\tau x}-1}\le\frac1x\le\frac1a.
+$$
+
+ For any coupling $\gamma$ of the two measures, their profile difference is $\int(F_\tau(x)-F_\tau(y))\,d\gamma(x,y)$, whose absolute value is at most $a^{-1}\int|x-y|\,d\gamma$. Taking the infimum over couplings and the supremum over $\tau\in I$ proves the bound. Thus small Wasserstein perturbations of the normalized spectrum give small profile perturbations.
+
+<a id="thm-profile"></a>
+
+**Proposition 5.11.** *Profile injectivity on compact positive spectral classes*.
+
+Let $0<a<b<\infty$, and let $\mu_1,\mu_2$ be finite positive Borel measures supported in $[a,b]$. If
+
+$$
+\int_{[a,b]} -\log(1-e^{-T\lambda})\,d\mu_1(\lambda) \;=\; \int_{[a,b]} -\log(1-e^{-T\lambda})\,d\mu_2(\lambda) \qquad \text{for all }T>0,
+$$
+
+ then $\mu_1 = \mu_2$.
+
+Consequently, on compact positive spectral classes, the rank-normalized Lambda profile
+
+$$
+\mathcal N_K(T) \;=\; \int [g(T\lambda) - \log(T\lambda)]\,d\mu_K(\lambda) \;=\; \int -\log(1-e^{-T\lambda})\,d\mu_K(\lambda)
+$$
+
+ determines the empirical spectral measure $\mu_K$. The dimensionless profile
+
+$$
+\widehat{\mathcal N}_K(\tau) \;=\; \int -\log(1-e^{-\tau x})\,d\widetilde\mu_K(x)
+$$
+
+ determines the mean-normalized measure $\widetilde\mu_K$; it does not determine the absolute spectral scale unless $\bar\lambda_K$ is also supplied.
+
+*Proof.* This is Theorem [B.1](/source-readout/cscf/14-profile-injectivity#thm-lambda-profile-injectivity) in Appendix [B](/source-readout/cscf/14-profile-injectivity#app-profile-inj). The identity
+
+$$
+g(s) - \log s \;=\; -\log\!\Big(\tfrac{1-e^{-s}}{s}\Big) - \log s \;=\; -\log(1-e^{-s})
+$$
+
+ identifies the profile used here with the transform treated there. ◻
+
+Proposition [5.11](/source-readout/cscf/04-lambda-face#thm-profile) is a compact-positive-support identifiability theorem. It applies to the declared finite-rank / compact-spectral setting and to compact spectral windows bounded away from $0$. It does not assert that finitely many empirical samples of the profile determine an infinite-dimensional carrier, and it does not recover the absolute scale from the dimensionless profile without the mean scale $\bar\lambda_K$.

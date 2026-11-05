@@ -1,0 +1,206 @@
+---
+title: "Four complete cycles test delay, capture and work"
+description: "Compare event-localized switching with unfit Airy laws, test preparation controls, and separate the geometric loop from the energy ledger."
+order: 5
+---
+
+<a id="section-10"></a>
+
+## 10 Executed numerical tests and reproducibility
+
+The complete source gives two different limiting quantities: a finite geometric loop and a continuing physical cost that grows as the ramp slows. Four uninterrupted cycles test both. Event localization also lets the finite calculations test the preparation-sensitive switching prediction independently of the display grid. All experiments in this chapter are synthetic.
+
+<a id="section-10-1"></a>
+
+### 10.1 Frozen experiment and actual event locations
+
+Use the example in [(6)](/source-readout/slow-passage/01-source-and-energy#eq-6), prepared exactly on the low branch at $a_\ell=2.9$. The four declared rates are
+
+<a id="eq-64"></a>
+
+$$
+\nu\in\{10^{-4},\,3\times10^{-5},\,10^{-5},\,3\times10^{-6}\}.
+\tag{64}
+$$
+
+Every run follows $2.9\to3.17\to2.9$, reversing immediately without a hold. The model, rates, preparations, thresholds, coefficient formulas, comparison rules and solver settings were fixed before the ramp outputs. Earlier stationary and square-pulse results were development data.
+
+Radau integrates eight real source coordinates and four accumulated ledgers: dissipation, supplied work, tilted loss and $\int\Re(\dot\ell^*z)\,dt$. It uses the analytic twelve-state Jacobian, relative tolerance $10^{-10}$ and absolute tolerance $10^{-12}$. Each leg is repeated with tolerances $10^{-12}$ and $10^{-14}$ and half the primary maximum step. The primary step cap is
+
+<a id="eq-65"></a>
+
+$$
+\Delta t_{\max}=\min(50,\,2\times10^{-4}/\nu).
+\tag{65}
+$$
+
+The cap limits the input increment while the implicit solver controls fast stable modes. It is a numerical choice, not a certified step theorem. Locate the surfaces in [(42)](/source-readout/slow-passage/03-airy-delay-and-observables#eq-42) through dense-output event roots with positive crossing direction. The 501 samples per leg serve display and ledger reconstruction, not event detection.
+
+<a id="table-3"></a>
+
+**[Table 3](#table-3). Upward input delays at both declared projection levels.** Ratio means the actual delay divided by the unfitted leading prediction. The quadratic exit uses [(48)](/source-readout/slow-passage/03-airy-delay-and-observables#eq-48), a finite-threshold prediction of the quadratic equation rather than a universal full-source next-order law.
+
+| Rate $\nu$ | $d$ | $\Delta a$ | $K_f\nu^{2/3}$ | Ratio | Quadratic exit |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| $1\times10^{-4}$ | 0.25 | 0.010801 | 0.013398 | 0.80616 | 0.010817 |
+| $1\times10^{-4}$ | 0.50 | 0.012224 | 0.013398 | 0.91235 | 0.011967 |
+| $3\times10^{-5}$ | 0.25 | 0.005203 | 0.006004 | 0.86659 | 0.005172 |
+| $3\times10^{-5}$ | 0.50 | 0.005709 | 0.006004 | 0.95080 | 0.005564 |
+| $1\times10^{-5}$ | 0.25 | 0.002625 | 0.002887 | 0.90942 | 0.002599 |
+| $1\times10^{-5}$ | 0.50 | 0.002809 | 0.002887 | 0.97323 | 0.002738 |
+| $3\times10^{-6}$ | 0.25 | 0.001220 | 0.001294 | 0.94290 | 0.001205 |
+| $3\times10^{-6}$ | 0.50 | 0.001278 | 0.001294 | 0.98788 | 0.001249 |
+
+<a id="table-4"></a>
+
+**[Table 4](#table-4). Downward oriented delays $a_{\rm down}-a_d$.** Every rate and threshold is shown. All events occur below the static lower fold.
+
+| Rate $\nu$ | $d$ | $\Delta a$ | $K_f\nu^{2/3}$ | Ratio | Quadratic exit |
+| ---: | ---: | ---: | ---: | ---: | ---: |
+| $1\times10^{-4}$ | 0.25 | 0.012916 | 0.017053 | 0.75738 | 0.012789 |
+| $1\times10^{-4}$ | 0.50 | 0.014924 | 0.017053 | 0.87513 | 0.014527 |
+| $3\times10^{-5}$ | 0.25 | 0.006289 | 0.007642 | 0.82295 | 0.006207 |
+| $3\times10^{-5}$ | 0.50 | 0.007031 | 0.007642 | 0.91996 | 0.006850 |
+| $1\times10^{-5}$ | 0.25 | 0.003208 | 0.003674 | 0.87316 | 0.003163 |
+| $1\times10^{-5}$ | 0.50 | 0.003485 | 0.003674 | 0.94860 | 0.003404 |
+| $3\times10^{-6}$ | 0.25 | 0.001507 | 0.001646 | 0.91525 | 0.001487 |
+| $3\times10^{-6}$ | 0.50 | 0.001596 | 0.001646 | 0.96939 | 0.001565 |
+
+<a id="figure-1"></a>
+
+![Log-scale upward and downward switching delays for four rates. At both projection levels the points approach the dashed unfitted two-thirds-power curves as the rate falls.](/publications/spectral/slow-passage/figure-1.png)
+
+**[Figure 1](#figure-1). Source-derived delay scaling.** The two finite projection thresholds differ at each rate. Dashed curves use the fixed coefficients of [Table 1](/source-readout/slow-passage/02-folds-and-critical-coordinate#table-1) and are not fitted to the events.
+
+The delay has the predicted orientation at both folds. At the slowest rate the actual-to-leading ratios for $d=0.25$ are about 0.943 upward and 0.915 downward. For $d=0.50$ they are about 0.988 and 0.969. The discrepancies decrease as the rate falls in the declared set. Log-delay fits against log rate give exponents between about 0.613 and 0.644, depending on fold and threshold. These finite-regime diagnostics retain subleading effects; the exponent and prefactor come from [Theorem 5.1](/source-readout/slow-passage/03-airy-delay-and-observables#theorem-5-1), not those fits.
+
+<a id="section-10-2"></a>
+
+### 10.2 Preparation, complete-state controls and independent formulation
+
+At $\nu=3\times10^{-6}$, two additional outward runs start at the exact complete fold states and move outward through input distance $0.035$. Compare their events with [(47)](/source-readout/slow-passage/03-airy-delay-and-observables#eq-47) and the tracked-branch prediction. A smaller delay here comes from preparation, with no change to the fold location or memory law.
+
+<a id="table-5"></a>
+
+**[Table 5](#table-5). Exact-fold preparation at the slowest rate.** Ratio uses the preparation-specific leading coefficient with $\zeta_0$. The final column uses the tracked-branch coefficient with $\zeta_1$. Both are predictions from the source, without fitting.
+
+| Fold | $d$ | $\Delta a$ | Fold-start lead | Ratio | Tracked lead |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Up | 0.25 | 0.0010298 | 0.0010990 | 0.93703 | 0.0012936 |
+| Up | 0.50 | 0.0010884 | 0.0010990 | 0.99035 | 0.0012936 |
+| Down | 0.25 | 0.0012635 | 0.0013988 | 0.90331 | 0.0016465 |
+| Down | 0.50 | 0.0013536 | 0.0013988 | 0.96768 | 0.0016465 |
+
+The transverse-preparation control adds all of the following to the initial low state of the slowest full cycle:
+
+<a id="eq-66"></a>
+
+$$
+\begin{aligned}
+\delta(\Re z)&=(0.002,-0.001,0.0015),\\
+\delta(\Im z)&=(-0.0015,0.001,0.0005),\\
+\delta m&=(0.001,-0.0015).
+\end{aligned}
+\tag{66}
+$$
+
+This perturbs collective, reflection-odd, phase and memory directions before the long stable approach. Event changes are unresolved at the demonstrated integration accuracy. It does not test immunity to kicks inside the fold layer or to noise.
+
+The uniqueness control changes only $\mu$ to 0.4 on the fastest identical triangle. Because $\mu>3\chi$, $\nabla^2V_{\rm eff}\ge(\mu-3\chi)I$ and strict stationary-memory convexity give a single equilibrium. Both memories still evolve in this adaptive control. The fixed-carrier control instead holds $K_0=\mu I+L$ and solves the same driven linear amplitude equation exactly. On each affine input segment, $k=\mu+3$, the slope is $v=\dot a$, and the initial modal amplitude is $u_0$:
+
+<a id="eq-67"></a>
+
+$$
+u(t)=\frac{a(t)}{ck}-\frac{v}{(ck)^2}+
+\left(u_0-\frac{a(0)}{ck}+\frac{v}{(ck)^2}\right)e^{-ckt}.
+\tag{67}
+$$
+
+The two control areas in [Table 6](#table-6) distinguish ordinary finite-rate lag in linear or single-state cases from the bistable cycle.
+
+For an exactly symmetric preparation, ordinary reflection and zero collective amplitude give the invariant subspace $z=uv_3,\ m_1=m_2=m$. Its exact dynamical equations are
+
+<a id="eq-68"></a>
+
+$$
+\dot u=-c(\mu+3e^m)u+a(t),\qquad
+\dot m=-\eta\left[\kappa m+\tfrac34e^m|u|^2\right].
+\tag{68}
+$$
+
+A separately coded three-real-coordinate BDF integration of [(68)](#eq-68) uses relative tolerance $10^{-11}$, absolute tolerance $10^{-13}$ and half the primary step cap. It retains dynamic memory and compares all four slowest-cycle events with the complete Radau run. The symmetry restriction is exact for the symmetric preparation only. The complete-coordinate perturbation is a different experiment. Both solvers use SciPy; this is an independent formulation, not a second-platform replay.
+
+<a id="table-6"></a>
+
+**[Table 6](#table-6). Quality and control diagnostics.** The fixed and uniqueness-control areas are magnitudes of sampled oriented integrals. Event refinement, the modal comparison, and perturbation comparisons test different things. Small discrepancies do not give directed-arithmetic trajectory certificates.
+
+| Check | Value |
+| --- | ---: |
+| Maximum event refinement difference | $3.730\times10^{-14}$ |
+| Independent modal BDF difference | $3.840\times10^{-12}$ |
+| Full Jacobian finite-difference error | $1.042\times10^{-9}$ |
+| Initial perturbation event difference | $3.109\times10^{-15}$ |
+| Fixed-carrier sampled area | $1.394\times10^{-6}$ |
+| Unique adaptive sampled area | $4.569\times10^{-5}$ |
+
+<a id="section-10-3"></a>
+
+### 10.3 Continuous cycles, capture and work
+
+The complete-state turn and return errors in [Table 7](#table-7) compare with the high stationary state at the reversal and the low stationary state at the return. These quantify capture and finite-rate lag. No finite-rate cycle is claimed to close exactly.
+
+<a id="figure-2"></a>
+
+![Highest-mode radius against prescribed input for all four uninterrupted triangular cycles. The traces follow different stable branches and switch near two dotted fold inputs.](/publications/spectral/slow-passage/figure-2.png)
+
+**[Figure 2](#figure-2). Complete-source trajectories at every declared rate.** Dotted lines mark static folds. Radius is sampled for display; switching inputs in Tables 3–4 come from independent event localization. Transient overshoot is allowed.
+
+<a id="table-7"></a>
+
+**[Table 7](#table-7). Capture, geometry and scaled work.** Turn and return errors are against $x_H(3.17)$ and $x_L(2.9)$. The sampled area evaluates [(55)](/source-readout/slow-passage/04-capture-hysteresis-and-work#eq-55) by trapezoids on the declared grid.
+
+| Rate $\nu$ | Turn error | Return error | Sampled area | $\nu W$ |
+| ---: | ---: | ---: | ---: | ---: |
+| $1\times10^{-4}$ | $1.296\times10^{-2}$ | $8.541\times10^{-4}$ | 1.376522 | 1.65917591 |
+| $3\times10^{-5}$ | $3.880\times10^{-3}$ | $2.557\times10^{-4}$ | 1.255423 | 1.65913088 |
+| $1\times10^{-5}$ | $1.293\times10^{-3}$ | $8.520\times10^{-5}$ | 1.204922 | 1.65911939 |
+| $3\times10^{-6}$ | $3.877\times10^{-4}$ | $2.556\times10^{-5}$ | 1.180157 | 1.65911558 |
+
+<a id="table-8"></a>
+
+**[Table 8](#table-8). Physical balances for each round trip.** $W$ is supplied work, $Q$ is dissipation and $\Delta F$ is the stored-energy change. The ledger ratio is the maximum per-leg physical or tilted residual normalized by $1+|W(t)|+|Q(t)|$.
+
+| Rate $\nu$ | $W$ | $Q$ | $\Delta F$ | Ledger ratio |
+| ---: | ---: | ---: | ---: | ---: |
+| $1\times10^{-4}$ | 16591.75915 | 16591.75789 | $1.260\times10^{-3}$ | $1.48\times10^{-15}$ |
+| $3\times10^{-5}$ | 55304.36251 | 55304.36213 | $3.772\times10^{-4}$ | $2.62\times10^{-15}$ |
+| $1\times10^{-5}$ | 165911.93921 | 165911.93909 | $1.257\times10^{-4}$ | $2.65\times10^{-15}$ |
+| $3\times10^{-6}$ | 553038.52752 | 553038.52749 | $3.769\times10^{-5}$ | $1.23\times10^{-15}$ |
+
+Stationary-root quadrature gives $A_0\simeq1.15880536$ for [(56)](/source-readout/slow-passage/04-capture-hysteresis-and-work#eq-56). Finite-rate areas approach this value, without a certified trapezoidal area enclosure. The work coefficient from [(61)](/source-readout/slow-passage/04-capture-hysteresis-and-work#eq-61) is $C_W=1.659114$ in normalized units. The slowest computed $\nu W$ differs by less than $10^{-6}$ relative to that coefficient.
+
+<a id="figure-3"></a>
+
+![The sampled geometric area tends toward a finite stationary-branch area, while the rate-scaled work tends toward its distinct source-derived coefficient.](/publications/spectral/slow-passage/figure-3.png)
+
+**[Figure 3](#figure-3). Geometry and energy have different limits.** Left: magnitude of the sampled oriented loop integral and the stationary-branch limit. Right: $\nu W$ and the source-derived work coefficient. The area remains finite while maintenance work grows like $1/\nu$. Neither panel claims a minimum switching work or identifies geometric area with physical energy.
+
+<a id="section-10-4"></a>
+
+### 10.4 Verification and correction traceability
+
+The frozen criteria are $2\times10^{-8}$ for switching-input refinement and independent modal event differences, $2\times10^{-6}$ for refined endpoint differences, $2\times10^{-9}$ for scaled ledger errors, and $2\times10^{-7}$ for the early-preparation event comparison. Relative errors against the leading law have thresholds 0.35 at larger rates and 0.20 at the smallest rate. These finite-regime criteria were set before the ramp outputs. They are not constants in the asymptotic theorem.
+
+All 113 frozen comparisons passed in the reported execution. Each fold has one zero mode and seven stable modes. Central finite differences at step $10^{-6}$ check the analytic Jacobian for the source and ledgers. Reflection equivariance is checked separately.
+
+The public verification archive supplies code, settings, raw and checked outputs, correction records and generated assets. From the extracted archive, run the following with a new empty output directory:
+
+~~~sh
+python run_all.py --output ../new_replay
+~~~
+
+The runner repeats the full source, refinements, separate modal BDF calculation, local Jacobian checks and asset generation. It compares all 24 trajectory arrays with relative tolerance $2\times10^{-7}$ and absolute tolerance $2\times10^{-9}$. It reconstructs physical and tilted balances over whole cycles and validates the tables against the output of the same run. Eight checker regressions reject mutations of thresholds, event values, stable counts, labels and pass flags. They accept scientifically admissible diagnostic differences and irrelevant CSV line endings. Adaptive-step counts are incidental. Generated tables and figures are bound to that run's checked data and inputs.
+
+Four archived raw exact-fold residuals require the reporting correction in Appendix A. The primary output formed those differences before replacing the tracked-initialization reference with the exact-fold reference. The correction recomputes only the four derived differences. It leaves switching inputs, prediction fields, leading ratios and all 113 comparison outcomes unchanged. The raw output is retained, each replay applies the correction, and the publication tables use checked values.
+
+The documented run used Windows, Python 3.12.14, NumPy 2.3.5 and SciPy 1.18.1. The archive README provides dependency and execution instructions; VERIFICATION_RESULTS.json records the executed checks. Proofs establish the existence and asymptotic results under their hypotheses. Computation tests the finite-rate events and energy balances.

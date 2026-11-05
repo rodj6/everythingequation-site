@@ -1,0 +1,125 @@
+---
+title: "Exact controls and finite transport reconstruction"
+description: "Inspect the complete verification contract, the nonlinear metric and matter fixtures, and the quantitative reconstruction table."
+order: 8
+---
+
+<a id="section-8"></a>
+## 8. Verification and discriminating controls
+
+<a id="section-8-1"></a>
+### 8.1 Test the implementations against independent routes
+
+The proofs in §§2–7 establish the universal statements. The finite tests check their implementation, conventions and failure modes: 43 reference checks, 53 extended affine and transport checks, and three coordinate and density controls, totaling 91 exact finite-algebra checks and eight numerical estimates. Replay tests reproducibility; the independent implementations and variational routes supply comparisons. The checks are not substitutes for the smooth-field proofs.
+
+The reference suite checks torsion-free stress, the nonlinear endpoint, transport reconstruction, the source fan and gauge and boundary controls. The extended suite compares an unrestricted Hessian to a separately assembled Euler matrix, a direct covariant kinetic variation to the quotient-adjoint formula, matrix commutator curvature to the component-action equation, and the full off-shell residual to an explicit metric spin-two operator. Exact rational jets avoid floating-point cancellation. The stress and residual fixtures use different rational data from seeds 271049 and 271050. The scripts retain their coefficients and component results.
+
+<a id="table-2"></a>
+**Table 2. Executable checks by scope**
+
+| Suite | Exact | Numerical | Total |
+| --- | ---: | ---: | ---: |
+| Reference source realization | 40 | 3 | 43 |
+| General affine/projective algebra | 20 | 0 | 20 |
+| General horizontal stress | 9 | 0 | 9 |
+| Transport, matter and competitors | 13 | 5 | 18 |
+| Independent off-shell residual | 3 | 0 | 3 |
+| Regularity and scalar controls | 3 | 0 | 3 |
+| Coordinate and density controls | 3 | 0 | 3 |
+| Total | 91 | 8 | 99 |
+
+One check may compare several components; these counts are not counts of independent theorems.
+
+The unrestricted Hessian ranks are 24 in dimension three and 60 in dimension four, including both Lorentzian and Euclidean four-dimensional representatives. In dimension two the rank is four out of eight components, a control against extending $n^3-n$ to the excluded dimension. Restricting to symmetric lower indices recovers the original 40-component law and invertible four-dimensional Hessian. The pure-projective control catches the incorrect extension of the symmetric-affinity contraction.
+
+The stress comparison evaluates the direct kinetic variation componentwise before comparing with $-DGH_hc$. Twenty component and fixture comparisons, including derivatives of both fields, are retained inside the nine checks. The residual fixture has quadratic $h$, affine unrestricted $c$ and nonzero Euler residuals. It verifies all ten independent components of [(45)](/source-readout/transport-projective/05-the-cubic-bootstrap#eq-45). An exact vacuum fixture alone would not test that identity.
+
+<a id="section-8-2"></a>
+### 8.2 Nonlinear metric and matter fixtures
+
+The exact Kasner fixture is
+
+<a id="eq-60"></a>
+
+$$
+g=\operatorname{diag}(-1,t^{-2/3},t^{4/3},t^{4/3}),\qquad
+t\gt0,\qquad A=\mathrm{LC}(g)+I(t\,dt+t\,dx).
+\tag{60}
+$$
+
+Raw projective torsion is present and $R_{01}=1$, $R_{10}=-1$, but symmetric Ricci vanishes. Along $t:1\to2$ at fixed spatial coordinates,
+
+<a id="eq-61"></a>
+
+$$
+T^{\mathrm{LC}}=\operatorname{diag}(1,2^{1/3},2^{-2/3},2^{-2/3}),\qquad
+T=e^{-3/2}T^{\mathrm{LC}},\qquad v(1)/v(2)=1/2 .
+\tag{61}
+$$
+
+Equation [(28)](/source-readout/transport-projective/04-projective-connection#eq-28) restores the exact $T^{\mathrm{LC}}$. This tests finite transport, beyond its infinitesimal projective cancellation.
+
+A nonvacuum example uses null coordinates $(u,v,y,z)$:
+
+<a id="eq-62"></a>
+
+$$
+ds^2=-2\,du\,dv+H\,du^2+dy^2+dz^2,\qquad
+H=-\tfrac12\kappa_Ea^2(y^2+z^2),\qquad \phi=au .
+\tag{62}
+$$
+
+The volume density is one, $R_{uu}=\kappa_Ea^2$ and the scalar gradient is null. The code adds a nonclosed projective one-form and builds curvature independently from connection matrices. All ten symmetric density equations and the scalar equation hold with $\kappa_E=\lambda^2/2$. Retaining the antisymmetric curvature means the test would detect accidental imposition of raw metric compatibility.
+
+The competing-law tests include the nonminimal residual [(59)](/source-readout/transport-projective/07-what-the-source-selects#eq-59), the higher-curvature response [(58)](/source-readout/transport-projective/07-what-the-source-selects#eq-58), the flat vacuum restriction on $\Lambda$, the projective trace Ward identity and degeneration of $B/\sqrt{-\det B}$. The constant-path control checks the nonadditive derivative of [(10)](/source-readout/transport-projective/03-regular-transport#eq-10). Independent Lorentz-stabilizer linear systems leave one symmetric rank-two invariant direction and no invariant vector, supporting the restricted scalar classification. Three additional exact controls check finite restored transport in both coordinate orientations, generator naturality under $\Phi(t,x,y,z)=(t^2,x,y,z)$ for $t\gt0$, and direct determinant, metric and scalar-density derivatives along all ten symmetric directions at a nonunit-density Lorentz point. The generator control includes the inhomogeneous Jacobian derivative.
+
+<a id="section-8-3"></a>
+### 8.3 Finite-resolution reconstruction
+
+Use a separate two-component generator:
+
+<a id="eq-63"></a>
+
+$$
+A(t)=\begin{pmatrix}t&1\\0&2t\end{pmatrix},\qquad 0\le t\le1 .
+\tag{63}
+$$
+
+The exact endpoint is
+
+<a id="eq-64"></a>
+
+$$
+U(1)=\begin{pmatrix}
+e^{-1/2}&-e^{-1/2}\sqrt{\pi/2}\,\operatorname{erf}(1/\sqrt2)\\
+0&e^{-1}
+\end{pmatrix}.
+\tag{64}
+$$
+
+The numerical check compares this independent solution to left-endpoint Euler products at 60-digit precision in the induced infinity norm, with meshes $N=10,20,40,80$. The conservative bound is $3e^{2.2}/N$, an instance of Proposition 3.3.
+
+<a id="table-3"></a>
+**Table 3. Finite transport reconstruction**
+
+| $N$ | Transport error | Analytic upper bound |
+| ---: | ---: | ---: |
+| 10 | 0.08414675745 | 2.70750405 |
+| 20 | 0.04097061846 | 1.35375202 |
+| 40 | 0.02021324661 | 0.67687601 |
+| 80 | 0.01003910875 | 0.33843801 |
+
+The successive error orders are 1.038318, 1.019289 and 1.009670. The declared acceptance window is 0.85 to 1.15 for the final two orders and below 0.03 for the finest-mesh error. All bounds and criteria pass. The oscillatory connection in §3 separately shows why uniform transport convergence cannot replace derivative control of curvature.
+
+<a id="section-8-4"></a>
+### 8.4 Reproduce the reported finite comparisons
+
+The public verification package includes reference and extended implementations, settings, saved outputs, pinned dependencies, a SHA-256 manifest and a claim-to-evidence index. Use Python with SymPy 1.14.0 and mpmath 1.3.0. After extraction, run with a new empty output directory:
+
+~~~sh
+python run_all.py --output ../new_replay
+~~~
+
+The runner verifies package hashes, executes the suites, checks pass flags and counts and compares the entire saved scientific result objects. It regenerates the verification tables and compares them to the tables used in the manuscript. Tables are UTF-8 with LF line endings; comparison ignores only CRLF versus LF. Three additional portability regressions check line-ending equivalence, rejection of altered content and deterministic generation. They are separate from the 99 scientific checks.
+
+Exact symbolic strings must match; floats use relative tolerance $10^{-10}$ and absolute tolerance $10^{-12}$. Environment metadata is separate and output logs preserve failures. Hashes identify the exact files used; they do not validate the physics. The manuscript is separately compilable and its mathematical arguments do not depend on executing the scripts.

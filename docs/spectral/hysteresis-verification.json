@@ -1,0 +1,96 @@
+{
+  "sharp-uniqueness": {
+    "source": "Sharp_Uniqueness_and_Bistability(3).pdf",
+    "sourcePages": 20,
+    "authoritativeSource": "PDF",
+    "sourceMethod": "Manual semantic web transcription with all numbered equations and proofs, matched public table TeX and figure assets",
+    "actualMdxSsr": {
+      "chapters": 7,
+      "numberedEquations": 64,
+      "mathMLExpressions": 412,
+      "tables": 7,
+      "figures": 2,
+      "coverageAnchors": 118,
+      "checkedInternalLinks": 50,
+      "errors": 0
+    },
+    "executedPublicSupplementChecks": {
+      "crcAndManifest": {
+        "status": "passed",
+        "manifestEntries": 44
+      },
+      "verifierRegressions": {
+        "status": "passed",
+        "checks": 8
+      },
+      "savedIdentities": {
+        "status": "passed",
+        "finiteTrajectoryArrays": 20,
+        "closedEnergyIdentityMax": 3.552713678800501e-15,
+        "closedStaticNormIdentityMax": 1.2079226507921703e-13
+      },
+      "independentScalar": {
+        "status": "passed",
+        "exactScalarInequalities": "passed"
+      },
+      "independentCubicFixtures": {
+        "status": "passed",
+        "cases": 6,
+        "completeSpectrumComparison": true
+      }
+    },
+    "notRun": [
+      "Full DOP853 schedule replay in this website integration"
+    ],
+    "publicTableBodyComparison": {
+      "status": "passed",
+      "matchedCells": 110,
+      "normalization": "case and whitespace, escaped underscore, inline code and Unicode minus"
+    }
+  },
+  "slow-passage": {
+    "source": "Slow_Passage_and_Prepared_Hysteresis(2).pdf",
+    "sourcePages": 22,
+    "authoritativeSource": "PDF",
+    "sourceMethod": "Manual semantic web transcription with all numbered equations and proofs, matched public table TeX and figure assets",
+    "actualMdxSsr": {
+      "chapters": 6,
+      "numberedEquations": 69,
+      "mathMLExpressions": 471,
+      "tables": 9,
+      "figures": 3,
+      "coverageAnchors": 128,
+      "checkedInternalLinks": 71,
+      "errors": 0
+    },
+    "executedPublicSupplementChecks": {
+      "crcAndManifest": {
+        "status": "passed",
+        "manifestEntries": 50
+      },
+      "verifierRegressions": {
+        "status": "passed",
+        "checks": 8
+      },
+      "localJacobian": {
+        "status": "passed",
+        "completeFoldCases": 2,
+        "fullJacobianFiniteDifferenceMaximum": 1.0061642322555906e-09
+      },
+      "independentModalBdf": {
+        "status": "passed",
+        "events": 4,
+        "maximumInputDifferenceFromArchivedCompleteRadau": 2.6476598691260733e-12,
+        "criterion": 2e-08
+      }
+    },
+    "notRun": [
+      "Full eight-real-coordinate and four-ledger Radau cycle replay in this website integration"
+    ],
+    "publicTableBodyComparison": {
+      "status": "passed",
+      "matchedCells": 208,
+      "normalization": "case and whitespace, escaped underscore, inline code and Unicode minus"
+    }
+  }
+}
