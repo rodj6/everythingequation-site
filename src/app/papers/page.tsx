@@ -1,4 +1,4 @@
-import {spectralEditions,spectralHub} from '@/config/paper-integrations';
+import {spectralEditions,spectralHub,gravityEditions,gravityHub} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
 import type { Metadata } from "next";
@@ -53,7 +53,9 @@ export default async function PapersPage() {
         <Link href="/source-readout" className="mt-4 inline-block text-glow">Explore the complete programme →</Link>
         <ul className="mt-5 grid gap-3 md:grid-cols-2">{sourcePapers().filter(p=>p.series==='constructive'&&!p.parentId).map(p=><li key={p.id}><Link className="text-glow" href={paperUrl(p)}>{p.title} →</Link></li>)}</ul>
         <h3 className="mt-6 text-lg font-semibold"><Link href={spectralHub}>CSCF and spectral carriers →</Link></h3>
-        <ul className="mt-3 grid gap-3 md:grid-cols-2">{spectralEditions.map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
+        <ul className="mt-3 grid gap-3 md:grid-cols-2">{spectralEditions.filter(p=>p.id!=='transport-projective').map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
+        <h3 className="mt-6 text-lg font-semibold"><Link href={gravityHub}>Gravity and holography →</Link></h3>
+        <ul className="mt-3 grid gap-3 md:grid-cols-2">{gravityEditions.map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
       </section>
       <SealedLeakyFeature />
 

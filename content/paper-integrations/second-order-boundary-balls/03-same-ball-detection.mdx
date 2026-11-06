@@ -1,0 +1,103 @@
+---
+title: "The same-ball detection theorem"
+description: "An explicit transverse AdS perturbation has zero first variations and positive canonical energy at every radius."
+order: 3
+---
+
+<a id="section-4"></a>
+## 4. Detection at every radius
+
+<a id="all-radii-canonical-energy"></a>
+**Theorem 4.1 (All-radii same-ball detection).** In AdS$_4$ with $G=\ell=1$, take $h_{xy}=h_{yx}=z(t^2+z^2/5+1/3)$ and set the other components to zero. For every rest-frame ball at $t=0$, both first-order readouts vanish. Its wedge canonical energy is
+
+<a id="eq-14"></a>
+
+$$
+\mathcal E_B(h)=\frac{\pi R^6}{138600}(29R^4+110R^2+165)>0,\qquad R>0.
+\tag{14}
+$$
+
+The result is wedge-local. If an admissible vacuum family has this tangent on the wedge, (14) gives its $F_B''(0)$.
+
+<a id="proof-4-1"></a>
+**Proof: the first-order cancellation.** Write $h_{xy}=zH(t,z)$. The linearized vacuum equation reduces to $H_{tt}-H_{zz}-4H_z/z=0$. For the polynomial, both $H_{tt}$ and $H_{zz}+4H_z/z$ equal $2$. Its boundary normalizable coefficient has no $tt$ component, so the energy variation is zero. In the area variation the hemisphere projector contracts with the shear to give $(x-x_0)(y-y_0)$ times an axially symmetric factor. Reflect either coordinate about its central diameter and the integral changes sign on the same hemisphere. It vanishes. The companion edition derives the more general [fixed-frame linear kernel](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel).
+
+<a id="polynomial-surface"></a>
+**Proof: the extremal-surface response.** The tangent is translation invariant, so compute at the centred ball. In spherical coordinates $(\varrho,\theta,\varphi)$ on the slice, $z=\varrho\cos\theta$. Write the radial graph as $\varrho=R+\lambda w+O(\lambda^2)$ and set $s=\sin\theta$, $c=\cos\theta$. The minimizing first-order displacement is
+
+<a id="eq-15"></a>
+
+$$
+w_*=f(\theta)\sin(2\varphi),\qquad f=-\frac{R^4}{120}s^2c^3(2R^2c^2+R^2+5).
+\tag{15}
+$$
+
+After integrating out the azimuthal dependence, the forced sector satisfies
+
+<a id="eq-16"></a>
+
+$$
+R^4(21R^2c^2+25)s^4c^4-30(s^3+s)f'+120cf-30s^2cf''=0.
+\tag{16}
+$$
+
+Substituting (15) gives zero. Its $O(s^2)$ behaviour at the pole is regular; its $O(c^3)$ behaviour at the anchor keeps the anchors fixed. The positive shape Hessian gives uniqueness in the admissible space.
+
+<a id="polynomial-bulk-and-area"></a>
+**Proof: evaluate the bulk and surface terms.** The bulk term in the [second-order charge–area identity](/source-readout/second-order-boundary-balls/02-second-order-identity#eq-12) uses
+
+<a id="eq-17"></a>
+
+$$
+\left.D^2\mathcal F_{tt}[h,h]\right|_{t=0}=\frac{z^4}{30}(69z^4+130z^2+45).
+\tag{17}
+$$
+
+To see the bulk coefficient, use time symmetry: the extrinsic curvature of the slice vanishes along the affine metric path, so the varying part of $\mathcal F_{tt}$ is $z^{-2}\mathcal R^{(3)}/2$, with $\mathcal R^{(3)}$ the scalar curvature of the spatial metric. Rotate $x,y$ by $45^\circ$ to diagonalize the shear. In proper radial coordinate $\sigma=-\log z$, the two transverse scale factors are $a_\pm=z^{-1}\sqrt{1\pm\lambda z^3(z^2/5+1/3)}$. Differentiate the spatial scalar curvature $-2(a_+''/a_++a_-''/a_-+a_+'a_-'/(a_+a_-))$ twice in $\lambda$, with primes here denoting $\sigma$ derivatives, to obtain (17).
+
+At fixed $z$ the transverse disk has radius $\sqrt{R^2-z^2}$. On it $\xi_B^t=\pi(R^2-z^2-r^2)/R$; integrating over the disk gives $\pi^2(R^2-z^2)^2/(2R)$. The fixed-surface term comes from differentiating the induced area density $\sqrt{q_{\theta\theta}q_{\varphi\varphi}-q_{\theta\varphi}^2}$ of the radial graph. With $X=q_0^{-1}\delta q$ on the fixed hemisphere, its second derivative is the reference density times $(\operatorname{tr}X)^2/4-\operatorname{tr}(X^2)/2$. For the shape term, insert the proper normal displacement $w_* /(R c)$ in the [shape Hessian](/source-readout/second-order-boundary-balls/02-second-order-identity#shape-hessian). Denote the bulk integral including its $1/(8\pi)$ prefactor by $I$. The three terms are
+
+<a id="eq-18"></a>
+
+$$
+A_{gg}=-\frac{4\pi R^6}{2027025}(3717R^4+15210R^2+16445),
+\tag{18}
+$$
+
+<a id="eq-19"></a>
+
+$$
+Q[w_*]=\frac{\pi R^6}{4054050}(567R^4+2730R^2+3575),
+\tag{19}
+$$
+
+<a id="eq-20"></a>
+
+$$
+I=\frac{\pi R^6}{41580}(69R^4+286R^2+297).
+\tag{20}
+$$
+
+Then $-A_{gg}/4+Q[w_*]/4-I$ simplifies to (14). $\square$
+
+<a id="fixed-surface-bound"></a>
+### Positivity without solving for the surface
+
+Set the trial displacement to zero in [the shape minimization](/source-readout/second-order-boundary-balls/02-second-order-identity#eq-13). This gives a lower bound directly:
+
+<a id="eq-21"></a>
+
+$$
+\mathcal E_B(h)\ge -\frac{A_{gg}}4-I
+=\frac{\pi R^6}{8108100}(1413R^4+5070R^2+7865)>0.
+\tag{21}
+$$
+
+The bound holds at every $R>0$. The fixed-surface value is already positive, and allowing the surface to relax adds $Q[w_*]/4$.
+
+<a id="independent-evaluations"></a>
+### Independent symplectic evaluations
+
+The direct symplectic calculation uses (15) as the normal gauge data at $\widetilde B$. The mixed and normal-block Hollands–Wald conditions give the required first normal derivatives of the other components. Integrate the current and the [surface correction](/source-readout/second-order-boundary-balls/02-second-order-identity#eq-9). The totals are $38\pi/17325$ at $R=1$ and $8552\pi/17325$ at $R=2$, agreeing with (14). At $R=1$ the bulk and surface split is $\pi/675+37\pi/51975$. Varying the free gauge data leaves the sum unchanged.
+
+For the AdS$_3$ black-brane benchmark from [[1]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-1), the split in units $G=\ell=1$ is $-2R^4/15+7R^4/45=R^4/45$. This is also the second derivative of the leading relative entropy $\lambda^2R^4/90$ for the exact family. Dropping the surface correction would reverse the benchmark's sign. The vacuum and a boundary-trivial pure-gauge tangent both give zero. The controls check the orientation, the Hessian normalization and cancellation of the gauge-dependent terms.

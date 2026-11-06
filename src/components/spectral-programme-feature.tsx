@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { spectralHub } from '@/config/paper-integrations';
+import { gravityHub, spectralHub } from '@/config/paper-integrations';
 
 export default function SpectralProgrammeFeature() {
   return (
@@ -7,7 +7,7 @@ export default function SpectralProgrammeFeature() {
       <div className="pi-feature-heading">
         <p className="section-label">New research · November 2026</p>
         <h2 id="spectral-programme-heading">From carrier dynamics to Einstein gravity.</h2>
-        <p>Two reading paths develop distinct parts of the source-to-readout architecture. Follow the operator that links coherence to dissipation, or the transport construction that recovers Einstein–matter dynamics.</p>
+        <p>Two reading paths develop distinct parts of the source-to-readout architecture. Follow the operator that links coherence to dissipation, or five gravity and holography studies that show what specific preparations and readouts recover.</p>
       </div>
       <div className="pi-cards">
         <Link className="pi-card" href={spectralHub} prefetch={false}>
@@ -16,11 +16,11 @@ export default function SpectralProgrammeFeature() {
           <p>Start with the Canonical Spectral-Curvature Field. Trace the spectral signatures back to their sources, then follow a carrier through adaptation, sustained forcing, bistability and delayed switching.</p>
           <span className="pi-card-action">Explore CSCF and spectral carriers →</span>
         </Link>
-        <Link className="pi-card" href="/source-readout/transport-projective" prefetch={false}>
-          <span className="section-label">The Atlas gravity sector · Complete derivation</span>
-          <h3>From transport to Einstein–matter dynamics.</h3>
-          <p>Read the connection reconstruction, projective reduction and spin-two bootstrap within the admitted realization. See precisely where physical selection remains open.</p>
-          <span className="pi-card-action">Read the transport derivation →</span>
+        <Link className="pi-card" href={gravityHub} prefetch={false}>
+          <span className="section-label">The Atlas gravity sector · Five full articles</span>
+          <h3>From transport to holographic readouts.</h3>
+          <p>Follow the transport, thermodynamic and holographic results. See why a perturbation invisible to fixed-slice balls at first order registers at second order.</p>
+          <span className="pi-card-action">Explore gravity and holography →</span>
         </Link>
       </div>
     </section>

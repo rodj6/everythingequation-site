@@ -1,0 +1,80 @@
+---
+title: "Which entropy coefficients survive a cutoff change?"
+description: "Derive the spherical logarithm and constant, and calculate exactly when a change of counting cutoff moves either result."
+order: 4
+---
+
+<a id="section-6"></a>
+
+## 6. Universal coefficients and a finite-jet criterion
+
+<a id="entropy-integral"></a>
+
+The stationary Wald density is constant on the hyperbolic horizon. Multiplying it by the regulated horizon volume and changing variables to $x=\sinh u$ gives
+
+$$
+\begin{aligned}
+S&=P_d I_d(X),\
+P_d&=\frac{2\pi a_d^*}{\pi^{d/2}}\,\Gamma(d/2)\operatorname{Vol}(S^{d-2}),\
+I_d(X)&=\int_0^X\frac{x^{d-2}}{\sqrt{1+x^2}}\,dx.
+\end{aligned}
+$$
+
+In Einstein gravity $P_d=L^{d-1}\operatorname{Vol}(S^{d-2})/(4G)$. For $d>2$ the leading term is $P_d X^{d-2}/(d-2)$, the regulated area law.
+
+<a id="universal-log-and-constant"></a>
+
+### The even logarithm and the odd constant
+
+For even $d=2m$, expand the integrand at large $x$. The coefficient of $x^{-1}$ is $(-1)^{m-1}\binom{2m-2}{m-1}/4^{m-1}$. Multiplying by $P_d$ and using gamma duplication reduces this to $(-1)^{m-1}4a_d^*$. This is the coefficient of the logarithm, including $d=2$ where $a_2^*=c/12$.
+
+For odd $d=2n+3$, take $y=\sqrt{1+x^2}$. Then
+
+$$
+I_d(X)=\int_1^{\sqrt{1+X^2}}(y^2-1)^n\,dy.
+$$
+
+The antiderivative has only odd powers of $y$. At the upper endpoint each such power expands in odd powers and inverse odd powers of $X$, so that endpoint contributes no constant. The lower endpoint gives $-(-1)^n\int_0^1(1-y^2)^n\,dy$. Evaluating this beta integral and multiplying by $P_d$ gives $(-1)^{(d-1)/2}2\pi a_d^*$.
+
+<a id="theorem-6-1"></a>
+
+### Theorem 6.1: What survives a cutoff substitution
+
+Let $X=g(\varepsilon)/\varepsilon$, with $g$ analytic at zero and $g(0)=1$. In even dimension the logarithmic coefficient of $P_d I_d(X)$ is invariant. In odd dimension the change in the constant relative to $g=1$ is
+
+$$
+\begin{aligned}
+\Delta S_0
+&= P_d\sum_{k=0}^{(d-3)/2}
+\frac{b_k}{d-2-2k}[\varepsilon^{d-2-2k}]\,g(\varepsilon)^{d-2-2k},\\
+b_k&=(-1)^k\binom{2k}{k}4^{-k}.
+\end{aligned}
+$$
+
+Here $[\varepsilon^p]$ extracts the coefficient of $\varepsilon^p$ in the analytic series that follows it.
+
+<a id="proof-6-1"></a>
+
+**Proof.** Integrating the large-$x$ expansion gives divergent powers $X^p$ with $p=d-2-2k>0$ and coefficients $b_k/p$. In even dimension, $\log X=\log(1/\varepsilon)+\log g$. The second term is analytic at zero and the power terms have Laurent expansions. Neither can shift the logarithmic coefficient. In odd dimension, $X^p=\varepsilon^{-p}g^p$ contributes precisely $[\varepsilon^p]g^p$ to the constant. The remainder vanishes at large $X$, so contributes no shift.
+
+<a id="cutoff-cancellation-examples"></a>
+
+### What the criterion permits
+
+At a fixed odd dimension the constant survives exactly when the sum vanishes. An even $g$ is sufficient because every positive $p$ in the sum is odd. Evenness is stronger than necessary for one dimension. For example, $g=1+\varepsilon^3$ preserves the constant in $d=3$. In $d=5$ write
+
+$$
+g(\varepsilon)=1+a_1\varepsilon+a_2\varepsilon^2+a_3\varepsilon^3+O(\varepsilon^4).
+$$
+
+The shift in units of $P_5$ is $a_3+2a_1a_2+a_1^3/3-a_1/2$, which vanishes for $g=1+\varepsilon+\varepsilon^3/6$. Only the Taylor coefficients through order $d-2$ matter.
+
+If a single analytic $g$ must preserve the constants in every odd dimension with nonzero $a_d^*$, evenness is necessary as well. If the first nonzero odd Taylor coefficient has order $j$, choose $d=j+2$. Every term with $p<j$ asks for an odd coefficient that vanishes. The term $p=j$ contributes exactly $P_d[\varepsilon^j]g$, which is nonzero. This proves necessity across those dimensions.
+
+<a id="three-dimensional-substitution"></a>
+
+### The two sharp cutoffs in three dimensions
+
+For the sharp CFT map in [the cutoff comparison](/source-readout/modular-transport/03-bulk-and-cutoffs#bulk-and-cft-cutoffs), $g'(0)=-1/2$. The bulk map is even. In $d=3$, the bulk prescription gives $-2\pi a_3^*$, while inserting the sharp CFT cutoff into the same horizon integral gives $-3\pi a_3^*$.
+
+These are two substitutions into one fixed functional. An independent field-theory calculation would also have to specify the regulated observable and its boundary contributions. The shifted number does not identify a universal CFT entropy.

@@ -1,0 +1,73 @@
+---
+title: "One prepared horizon, three readouts"
+description: "Put heat, temperature and entropy on the same null pencil, and normalize the boost before comparing them."
+order: 1
+---
+
+<a id="overview"></a>
+
+**A local horizon puts three quantities on the same preparation.** The boost defines a heat flux, its Unruh normalization fixes a temperature, and null focusing changes the cross-sectional area. When the leading Clausius residual vanishes on enough null directions, those readouts recover the Einstein equation under the stated temperature, entropy and conservation laws.
+
+The construction gives an exact test of which directions suffice. Nine suitably chosen directions recover the trace-free tensor in four dimensions. A nondegenerate circle leaves a four-dimensional kernel. At the next order, the plain area law acquires a curvature-gradient residual along the equilibrium generator. Passing from that generator to a pencil of finite width needs its own estimate. A separate boost-weighted expansion functional cancels the cubic term and gives a signed remainder for the prescribed readouts.
+
+<a id="introduction"></a>
+
+## 1. Where the field equation enters
+
+Jacobson's derivation imposes a local Clausius relation on Rindler horizons through each spacetime point [\[1\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-1). Heat is the boost-energy flux through a null pencil. Temperature uses the Unruh normalization. Entropy change is proportional to the pencil's area change. Null focusing supplies the geometric response. The field equation comes from requiring these three quantities, evaluated on one local preparation, to agree in the leading Clausius law.
+
+Treating them as readouts of one source makes the leading condition a tensor reconstruction problem. Restricted directions can leave an explicit kernel. Using the same preparation also shows why a leading law need not extend unchanged to finite affine length or transverse width. We establish the leading equivalence in both directions, restore units in the coupling and calculate the first controlled correction.
+
+This is a realization of the Shadow Theory source-readout architecture [\[2\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-2). It shares the distinction between source data and observable projections with the [transport realization of the spin-two route](/source-readout/transport-projective) [\[3\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-3). Its local boost normalization is compatible with the modular convention in the [spherical entanglement realization](/source-readout/modular-transport) [\[4\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-4), [\[5\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-5). Work in four dimensions with signature $(-,+,+,+)$ and $c=k_B=1$ until units are restored. Retain $\hbar$ throughout.
+
+<a id="common-source"></a>
+
+## 2. Prepare the null pencil
+
+Let $U$ be a connected spacetime region. An aperture is indexed by $(p,[k])$, with $p\in U$ and $[k]$ a future null ray at $p$. It selects a marked local preparation. Its physical realization uses the common history
+
+$$
+z=(g,T,\omega,\eta,\mathcal P).
+$$
+
+Here $g$ is a smooth Lorentzian metric, $T$ a symmetric stress tensor, $\omega$ the field state used for the local thermal limit, $\eta>0$ a constant entropy per unit area, and $\mathcal P$ an assignment of horizon data to the apertures. The metric data may be off shell. The matter tensor is prescribed as a classical tensor or expectation value. Its fluctuations lie outside the calculation.
+
+Choose a representative $k$ and a spacelike screen complementary to $k$ in $k^\perp$. Take a spacelike two-surface $P$ through $p$ whose tangent plane is that screen. Extend the null normal on the selected side by affinely parametrized null geodesics from $P$. Use affine parameter $\lambda=0$ on $P$ and the segment $-h\leq\lambda\leq0$, $h>0$. Before caustics this gives a local twist-free null hypersurface. With future-oriented measure $d\Sigma^b=k^b\,d\lambda\,dA_\lambda$, prescribe the boost on the hypersurface by
+
+$$
+\chi=-\kappa\lambda k,\qquad \kappa>0.
+$$
+
+In flat spacetime choose $k=\partial_t-\partial_x$ on the past horizon of the right wedge, $t=-x$ with $x>0$. The restriction of the exact Killing boost is $\chi=\kappa(x\partial_t+t\partial_x)$. In the curved construction, the boost on the pencil inherits its tangent-space normalization from this model.
+
+The initial expansion and shear vanish at the central point. A local planar embedding to second order in Riemann normal coordinates has vanishing null second fundamental form at $p$, so the pointwise preparation exists. This condition suffices for the leading law with centered shrinking transverse domains. Stronger uniform equilibrium conditions can alter the higher-order analysis.
+
+<a id="three-readouts"></a>
+
+### Three projections of one preparation
+
+At the chosen aperture the three projections of $z$ are
+
+$$
+\pi_Q=\int T_{ab}\chi^a\,d\Sigma^b,\qquad
+\pi_T=\frac{\hbar\kappa}{2\pi},\qquad
+\pi_S=\eta\,[A(0)-A(-h)].
+$$
+
+Every aperture uses the same $g$, $T$ and $\eta$. The heat and temperature use the same boost. Evaluating these projections on the realized pencil gives Jacobson's heat, temperature and entropy expressions [\[1\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-1). This is recovery at the level of observables. The leading coefficient of $\pi_Q-\pi_T\pi_S$ is the joint readout that selects histories. Its zero set is imposed as a physical law.
+
+<a id="boost-temperature"></a>
+
+## 3. Fix the boost and temperature together
+
+The Minkowski vacuum restricted to a wedge is thermal in the Kubo-Martin-Schwinger sense for the future boost at inverse rapidity temperature $2\pi$ [\[6\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-6). In the convention $\alpha_s(A)=e^{isH}Ae^{-isH}$, the modular group is the future boost at rapidity $-2\pi s$. The $\chi$-flow advances rapidity at rate $\kappa$, so its thermal energy scale is $\hbar\kappa/(2\pi)$. The curved-space calculation takes this as a local scaling-limit premise. It needs neither a global boost Killing field nor a finite-length correction to temperature.
+
+A flat boost orbit at distance $\rho$ has proper acceleration $1/\rho$ and $|\chi|=\kappa\rho$. Multiplying its proper temperature by $|\chi|$ gives the boost temperature above. The resulting flux-to-temperature ratio is
+
+$$
+\frac{\pi_Q}{\pi_T}
+=\frac{2\pi}{\hbar}\int_{-h}^{0}(-\lambda)T_{kk}\,d\lambda\,dA_\lambda,
+\qquad T_{kk}=T_{ab}k^ak^b.
+$$
+
+A positive rescaling of $\chi$ multiplies both readouts by the same factor. The affine rescaling $\lambda\mapsto a\lambda$, $k\mapsto k/a$ for $a>0$ leaves the integral unchanged. If heat and temperature use separate positive normalizations $\kappa_Q$ and $\kappa_T$, the inferred coupling is multiplied by $\kappa_Q/\kappa_T$. Reversing the heat boost while retaining the original positive temperature reverses the sign of the inferred coupling. Both changes mismatch the readouts. A direction-dependent mismatch can produce angular data of degree greater than two, so a symmetric tensor need not represent those data.

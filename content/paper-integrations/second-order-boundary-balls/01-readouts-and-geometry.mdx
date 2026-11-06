@@ -1,0 +1,69 @@
+---
+title: "Same balls, different response orders"
+description: "Fix a family of boundary balls and a single metric tangent, then ask what changes when the readout is taken to second order."
+order: 1
+---
+
+<a id="abstract"></a>
+## A perturbation the same balls can detect
+
+Every rest-frame ball on one boundary time slice can miss a nonzero metric perturbation at first order. The same balls can detect it at second order. In Poincaré AdS$_4$, an explicit transverse vacuum tangent has zero linear area and energy variations for every such ball, but [strictly positive wedge canonical energy at every radius](/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy). A fixed-surface estimate proves positivity even without solving for the surface displacement. An independent symplectic calculation checks the exact expression at two radii, and a bounded oscillatory tangent gives a second comparison.
+
+Read this edition alongside [Boundary Ball Readouts and Linearized Einstein Gravity](/source-readout/boundary-ball-readouts), particularly its [fixed-frame kernel](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel). The two results isolate the effect of changing the order of response while holding the regions fixed. The positive response here is a result in classical gravity. Identifying it with a boundary relative-entropy Hessian also requires the holographic dictionary and an admissible state family.
+
+<a id="section-1"></a>
+## 1. Fix the regions before changing the question
+
+The entanglement first law relates the first variations of modular energy and area to the bulk linearized Einstein equations [[2]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-2). That relation does not by itself reconstruct a metric. All centres and radii on one boundary time slice test the Hamiltonian constraint on the associated bulk slice; a nonzero on-shell mode can nevertheless give zero for each readout individually [[3]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-3). Lashkari and Van Raamsdonk relate a ball's relative-entropy Hessian to the canonical energy of its AdS-Rindler wedge [[1]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-1). Here the comparison uses two orders of response on the same family of wedges in the classical vacuum Einstein branch. The first tangent has normalizable falloff on each wedge and gives an exact polynomial response in the radius. The oscillatory tangent tests whether detection persists beyond that polynomial preparation.
+
+In source–readout terms, the reference solution and metric tangent are common source data. For a nonlinear family derivative, the preparation must also supply an admissible completion. The ball selects a wedge, boundary port and extremal surface. Charge and area variations are the readouts. Holding the tangent and balls fixed puts the first-order kernel and the quadratic response on a common domain. The Einstein dynamics and the holographic identification enter separately as physical premises.
+
+<a id="section-2"></a>
+## 2. Geometry, preparation and readouts
+
+Take signature $(-,+,\ldots,+)$ and cosmological constant $\Lambda=-d(d-1)/(2\ell^2)$, with $d$ the boundary spacetime dimension. The reference metric and vacuum Einstein residual are
+
+<a id="eq-1"></a>
+
+$$
+\bar g=\frac{\ell^2}{z^2}(-dt^2+dz^2+d\mathbf{x}^2),\qquad
+\mathcal F_{ab}(g)=G_{ab}(g)+\Lambda g_{ab}.
+\tag{1}
+$$
+
+Let $B$ have radius $R$ and centre $\mathbf{x}_0$ at $t=0$. Write $r=|\mathbf{x}-\mathbf{x}_0|$. Its bifurcation surface $\widetilde B$ is the hemisphere $z^2+r^2=R^2$ and $\Sigma_B$ is the enclosed bulk half-ball. Its reference Killing field is
+
+<a id="eq-2"></a>
+
+$$
+\xi_B=\frac{\pi}{R}\big[(R^2-t^2-z^2-r^2)\partial_t
+-2t(z\partial_z+(\mathbf{x}-\mathbf{x}_0)\cdot\nabla_{\mathbf{x}})\big].
+\tag{2}
+$$
+
+The surface gravity is $2\pi$. In this normalization, the regulated CFT vacuum has one-sided modular charge
+
+<a id="eq-3"></a>
+
+$$
+K_B=2\pi\int_{r<R}\frac{R^2-r^2}{2R}\,T_{tt}\,d^{d-1}x+\text{constant}.
+\tag{3}
+$$
+
+The conformal vacuum ball construction behind this formula is described in [[4]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-4). The full modular generator also acts on the complementary region.
+
+<a id="family-conditions"></a>
+### Conditions for a family derivative
+
+Write $g_\lambda=\bar g+\lambda h+\tfrac12\lambda^2 k+o(\lambda^2)$. The conformal boundary metric is fixed. The variations have source-free Fefferman–Graham falloff, enough differentiability and regularity up to the wedge boundaries in their respective gauges, and convergent regulated boundary expressions. Keep the perturbed extremal surface anchored at the same entangling sphere. The gauge shift must give no term at the conformal boundary. The examples use explicit first-order displacement falloffs: $O(z^3)$ in AdS$_4$ and $O(z^2)$ in the AdS$_3$ benchmark.
+
+Set $F_B=E_B^{\mathrm{grav}}-A_B/(4G)$ with vacuum constants subtracted, taking $A_B$ on the extremal surface. A classical vacuum family through second order must satisfy
+
+<a id="eq-4"></a>
+
+$$
+D\mathcal F[h]=0,\qquad D\mathcal F[k]+D^2\mathcal F[h,h]=0.
+\tag{4}
+$$
+
+The quadratic form is evaluated on a linearized solution. Calling it the derivative of an actual vacuum family additionally requires a completion satisfying (4) on the relevant domain. Background divergence-freeness of the quadratic source checks compatibility. It does not establish global existence of the completion.

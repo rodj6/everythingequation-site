@@ -1,0 +1,92 @@
+---
+title: "From vacuum restriction to thermal time"
+description: "Construct the wedge, diamond and cylinder maps and derive the physical KMS temperature without a continuum density matrix."
+order: 2
+---
+
+<a id="section-3"></a>
+
+## 3. Vacuum restriction and geometric thermality
+
+Let $D=\{(t,x):|t|+r\lt R\}$ with $r=|x|$. Assume the vacuum is cyclic and separating for the relevant local von Neumann algebras, the net admits the conformal wedge-to-diamond map, and the vacuum wedge satisfies Bisognano–Wichmann [5](/source-readout/modular-transport/05-geometric-checks-and-references#ref-bw), [6](/source-readout/modular-transport/05-geometric-checks-and-references#ref-hl). On the right wedge $X^1>|X^0|$, a future boost sends $X^1\pm X^0$ to $e^{\pm\eta}(X^1\pm X^0)$. With Heisenberg evolution $\alpha_t(A)=e^{itH}Ae^{-itH}$ and modular convention $\sigma_s=\operatorname{Ad}\Delta^{is}$, the wedge modular group is the boost at rapidity $-2\pi s$.
+
+<a id="wedge-to-diamond"></a>
+
+### The wedge-to-diamond map
+
+Set $b=-e_1/(2R)$ and $D_b=1-2b\cdot X+b^2X^2$, using the Lorentzian inner product. The explicit map is
+
+$$
+x=\frac{X-bX^2}{D_b}+2R^2b.
+$$
+
+On the wedge, $4R^2D_b=4R^2+4RX^1+X^2>0$. The null-tip identities are
+
+$$
+(R\pm t)^2-r^2=\frac{2R(X^1\pm X^0)}{D_b}.
+$$
+
+The connected wedge contains $X=2Re_1$, which maps to the center, so the image lies in $D$. To invert, set $Y=x-2R^2b$ and use
+
+$$
+X=\frac{Y+bY^2}{1+2b\cdot Y+b^2Y^2}.
+$$
+
+The inverse denominator is $((R-x^1)^2+|x_\perp|^2-t^2)/(4R^2)>0$ on $D$. The null-tip identities imply $X^1\pm X^0>0$. Differentiation gives the metric pullback $D_b^{-2}\eta$.
+
+<a id="diamond-to-hyperbolic-cylinder"></a>
+
+### The hyperbolic cylinder
+
+On $\mathbb R\times H^{d-1}$ put $v=\tau/R$. Use the map
+
+$$
+t=\frac{R\sinh v}{\cosh u+\cosh v},\qquad
+r=\frac{R\sinh u}{\cosh u+\cosh v},\qquad
+r\pm t=R\tanh\!\left(\frac{u\pm v}{2}\right).
+$$
+
+The angular coordinates are unchanged. The inverse takes $\operatorname{artanh}((r\pm t)/R)$ and adds or subtracts the results. The Minkowski metric pulls back to
+
+$$
+(\cosh u+\cosh v)^{-2}
+\left[-d\tau^2+R^2\left(du^2+\sinh^2u\,d\Omega_{d-2}^2\right)\right].
+$$
+
+For $d=2$, two radial directions from the center give the full hyperbolic line. Conformal covariance supplies the net isomorphism, including Weyl weights in a field description. Transporting the state then gives the smeared correlation functions.
+
+<a id="geometric-flow"></a>
+
+### The modular flow and charge
+
+The unit future boost pushes forward to $R\partial_\tau$. In Minkowski coordinates,
+
+$$
+\partial_\tau=\frac{1}{2R^2}\left[(R^2-t^2-r^2)\partial_t-2tr\partial_r\right].
+$$
+
+This follows by differentiating the wedge map or the diamond null-coordinate flow. On $t=0$, it fixes the formal one-sided dimensionless stress-tensor generator, up to scalar and regulator-dependent terms:
+
+$$
+2\pi\int_{r\lt R}\frac{R^2-r^2}{2R}\,T_{00}(0,x)\,d^{d-1}x.
+$$
+
+The continuum modular implementer is the two-sided operator on the vacuum representation.
+
+<a id="theorem-3-1"></a>
+
+### Theorem 3.1. Physical inverse temperature
+
+With these hypotheses, the transported state on the hyperbolic cylinder is Kubo–Martin–Schwinger (KMS) at $\beta=2\pi R$ for future $\tau$-translations.
+
+<a id="proof-3-1"></a>
+
+**Proof.** The two algebra transports give $\sigma_s=\alpha_{-2\pi Rs}$. For analytic elements, the modular boundary identity is $\omega(A\sigma_{-i}(B))=\omega(BA)$. Rescaling the modular strip gives a KMS strip of width $2\pi R$ for $\omega(A\alpha_\tau(B))$, with the reversed product on the upper edge. The algebraic proof controls the combined boundary values. It requires no separate analytic continuation of individual Weyl factors in field coordinates.
+
+<a id="type-iii-and-split"></a>
+
+### What thermality does not supply
+
+If the diamond algebra is type III, it has no intrinsic density matrix defined with a normal semifinite trace. A split inclusion, where available, can supply a type I intermediate algebra for a separated inner diamond. On a type I factor with a faithful reduced density matrix $\rho$, modular action reduces to $\rho^{is}A\rho^{-is}$. In a cyclic and separating purification with nonzero Schmidt weights $p_i$, the modular eigenvalues in the Schmidt matrix-unit basis are $p_i/p_j$. This gives the precise link to finite modular readouts in the Canonical Spectral-Curvature Field [4](/source-readout/modular-transport/05-geometric-checks-and-references#ref-cscf).
+
+The choice of type I factor and finiteness of its entropy require separate control. The continuum KMS result alone supplies neither a thermal trace nor a finite partition function on the infinite hyperbolic volume.

@@ -443,7 +443,11 @@ async function main() {
     check(feed.includes(origin + paper.route + '"') || feed.includes(origin + paper.route + '<'), `Feed missing ${paper.route}`);
     check(llms.includes(origin + paper.route + ')'), `llms.txt missing ${paper.route}`);
   }
-  check(programme.dom.links.includes('/source-readout/transport-projective'), 'Source–Readout landing lacks gravity feature');
+  const gravityHub = '/source-readout/gravity-and-holography';
+  const directTransport = programme.dom.links.includes('/source-readout/transport-projective');
+  const connectedTransport = programme.dom.links.includes(gravityHub)
+    && (await page(gravityHub)).dom.links.includes('/source-readout/transport-projective');
+  check(directTransport || connectedTransport, 'Source–Readout landing lacks a path to the transport edition');
   check(programme.dom.links.includes('/source-readout/cscf') || programme.dom.links.includes('/source-readout/spectral-carriers'), 'Source–Readout landing lacks CSCF series entrance');
   for (const [id, route] of [['canonical-field', '/source-readout/cscf'], ['gravity', '/source-readout/transport-projective']]) {
     const node = graph.nodes.find(node => node.id === 'atlas:' + id);

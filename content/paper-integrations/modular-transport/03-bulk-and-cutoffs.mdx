@@ -1,0 +1,81 @@
+---
+title: "Bulk horizon geometry and the counting cutoff"
+description: "Recover the same time normalization in the AdS wedge, then distinguish the stationary entropy density and regulator from the algebraic aperture."
+order: 3
+---
+
+<a id="section-4"></a>
+
+## 4. Bulk realization and horizon entropy
+
+Assume a classical AdS dual of radius $L$ for the boundary vacuum. Choose the boundary frame through the bulk defining function, and assume the thermal entropy of the dual saddle is its stationary horizon entropy at leading bulk semiclassical order. Write $h=\sqrt{\rho^2-L^2}$ for $\rho>L$.
+
+<a id="bulk-coordinate-map"></a>
+
+The hyperbolic chart maps to Poincaré coordinates by
+
+$$
+Q=\rho\cosh u+h\cosh(\tau/R),\qquad z_P=\frac{RL}{Q},\qquad
+t=\frac{Rh\sinh(\tau/R)}{Q},\qquad r=\frac{R\rho\sinh u}{Q}.
+$$
+
+Substitution into $L^2z_P^{-2}(dz_P^2-dt^2+dr^2+r^2d\Omega_{d-2}^2)$ gives
+
+$$
+ds^2=\frac{d\rho^2}{f(\rho)}-f(\rho)\,d\widetilde{\tau}^{\,2}+\rho^2dH_{d-1}^2,\qquad
+f(\rho)=\frac{\rho^2}{L^2}-1,\qquad \widetilde{\tau}=\frac{L\tau}{R}.
+$$
+
+As $\rho\to\infty$ the map recovers the boundary conformal map. The inverse radial relation is
+
+$$
+\rho^2-L^2=\frac{L^2}{4R^2z_P^2}
+\left[(R-t)^2-r^2-z_P^2\right]\left[(R+t)^2-r^2-z_P^2\right].
+$$
+
+Both factors are positive on the exterior connected to the boundary diamond. Its null boundaries meet on $t=0,\ r^2+z_P^2=R^2$. The chart therefore reads a wedge of the same pure AdS geometry. The bulk Killing generator restricts to the same future boundary flow, with the $z_P\partial_{z_P}$ term included before restriction. Euclidean smoothness requires period $4\pi/f'(L)=2\pi L$ in $\widetilde{\tau}$, giving $2\pi R$ in $\tau$. Independently, the surface gravity for $\partial_\tau$ is $1/R$.
+
+<a id="wald-density"></a>
+
+### Stationary entropy density
+
+For a local Lagrangian scalar $\mathcal L(g,R_{abcd})$, the stationary prescription is [8](/source-readout/modular-transport/05-geometric-checks-and-references#ref-wald)
+
+$$
+S=-2\pi\int_\Sigma\sqrt{\gamma}\,\frac{\partial\mathcal L}{\partial R_{abcd}}\epsilon_{ab}\epsilon_{cd},
+\qquad \epsilon_{ab}\epsilon^{ab}=-2.
+$$
+
+In Einstein gravity the contraction is $-1/(8\pi G)$, giving area divided by $4G$, in agreement with the spherical Ryu–Takayanagi surface [9](/source-readout/modular-transport/05-geometric-checks-and-references#ref-rt). In Gauss–Bonnet gravity with coefficient $\lambda L_0^2/[(d-2)(d-3)]$ inside the Einstein normalization, take $d\ge4$, $f_\infty=L_0^2/L^2$ and $1-f_\infty+\lambda f_\infty^2=0$. The induced section has scalar curvature $-(d-1)(d-2)/L^2$. The stationary entropy density is $1/(4G)$ times $1+2\lambda L_0^2\mathcal R_\Sigma/[(d-2)(d-3)]$ [10](/source-readout/modular-transport/05-geometric-checks-and-references#ref-jm). Hence
+
+$$
+a_d^*=\frac{\pi^{d/2}L^{d-1}}{8\pi G\Gamma(d/2)}
+\left(1-\frac{2(d-1)\lambda f_\infty}{d-3}\right).
+$$
+
+The independent curvature contraction agrees with this density. Identifying it with the definition through the on-shell AdS Lagrangian uses the vacuum equation. The calculation concerns stationary spherical horizons. It makes no general claim about entropy functionals on arbitrary entangling surfaces.
+
+<a id="section-5"></a>
+
+## 5. Counting and matching the cutoffs
+
+<a id="bulk-and-cft-cutoffs"></a>
+
+At the bifurcation surface, $z_P=R/\cosh u$. Thus $z_P=\delta$ gives $\cosh u_{\mathrm{bulk}}=R/\delta$. At boundary time $\tau=0$, the map gives $r=R\tanh(u/2)$, so the sharp radius $r=R-\delta$ gives $e^{-u_{\mathrm{CFT}}}=\delta/(2R-\delta)$. Write $\varepsilon=\delta/R$. In the common variable $X=\sinh u_{\max}$,
+
+$$
+X_{\mathrm{bulk}}=\varepsilon^{-1}\sqrt{1-\varepsilon^2},\qquad
+X_{\mathrm{CFT}}=\varepsilon^{-1}\frac{2(1-\varepsilon)}{2-\varepsilon}.
+$$
+
+Both give $e^{-u_{\max}}\sim\varepsilon/2$. In that variable the bulk prescription minus the CFT prescription is $-\varepsilon^2/4+O(\varepsilon^4)$.
+
+<a id="tube-and-aperture"></a>
+
+### The tube and the algebra it generates
+
+The spatial cutoff applied for every $\tau$ defines a timelike tube $U$ in the diamond. It contains the entire open axis segment $r=0,\ |t|<R$. A point $(t_0,r_0)$ is spacelike to that segment precisely when $r_0\ge R+|t_0|$, with the usual open-region convention for causal complements. By inclusion, the double causal complement of the tube has interior $D$.
+
+The timelike envelope can also be found directly. For each $p=(t,x)\in D$, take two axis points in $U$, one strictly to its timelike past and one strictly to its timelike future. The line segments through $p$ give a piecewise timelike curve. Contracting the spatial component linearly to the axis keeps the endpoints fixed and preserves timelikeness. Smooth the corners within the open timelike cones. This puts $p$ in the timelike envelope of $U$. Conversely, a future timelike curve between points of $U$ remains in the causally convex diamond.
+
+Under the hypotheses of the applicable timelike-tube theorem [7](/source-readout/modular-transport/05-geometric-checks-and-references#ref-tube), this gives $\mathcal A(U)=\mathcal A(D)$. The smaller diamond of radius $R-\delta$ shares the tube's spatial section at $\tau=0$, but its full image under conformal transport has finite time extent. The shared section does not identify their spacetime apertures or specify regulated traces. Even the smaller diamond's algebra remains type III under the same net hypothesis.

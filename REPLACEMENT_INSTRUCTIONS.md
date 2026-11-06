@@ -1,16 +1,18 @@
-# Replace the existing website source on Windows
+# Replace the website source on Windows
 
-1. Back up your checkout and run `git status` before copying. This update starts
-   from `everythingequation-site(20261105-065334).zip`. If your checkout has moved
-   on, reconcile the changed files in `SPECTRAL_FILE_CHANGES.json` with your work.
-2. Extract the replacement ZIP somewhere separate. Copy the **contents** of its
-   `everythingequation-site` folder into your current website folder. Include
-   source control configuration such as `.github` and `.gitignore`.
-3. Keep your existing **.git**, local environment files, Vercel linkage, and
-   machine settings. Keep any populated local Zenodo cache. Never mirror-delete
-   files that are absent from the archive. The replacement has no Git history
-   or installed dependencies.
-4. Open PowerShell in the website folder and use Node 24. Run:
+1. Open PowerShell in your existing checkout. Run `git status --short` and back
+   up the folder or save any work in progress. This package starts from
+   `everythingequation-site-eight-paper-update.zip`. If you have newer edits,
+   compare them with `GRAVITY_FILE_CHANGES.json` before overwriting files.
+2. Extract this ZIP into a separate folder. Copy the **contents** of its
+   `everythingequation-site` folder into your existing website folder. Include
+   `.github`, `.gitignore` and other supplied repository configuration. The ZIP
+   contains no `.git` folder; keep the one in your checkout.
+3. Keep your local environment files, Vercel linkage, settings and any populated
+   Zenodo cache. Do not delete files just because they are absent from the ZIP
+   or use a mirror-copy command. Review the changed-file inventory and keep
+   newer work that is specific to your checkout.
+4. Use Node 24 in PowerShell, then run:
 
    ```powershell
    npm ci
@@ -18,14 +20,18 @@
    npm run build
    npm run typecheck
    npm run verify:security
-   node scripts/verify-spectral-editions.mjs
+   node scripts/verify-gravity-editions.mjs
+   Remove-Item Env:SKIP_ZENODO
    ```
 
-   Use `npm run build` so that content generation and CSP postbuild both run.
-5. Review `git status --short` and `git diff`. Commit and push through your own
-   workflow when satisfied. This package has not been pushed or deployed.
-6. On your deployment, check both Atlas links, search, reading navigation and
-   publication downloads. Local checks and Vercel adapter artifacts do not
-   certify a live deployment.
+   Run the full `npm run build`. It generates content inventories and installs
+   the route-specific CSP after Next.js completes.
+5. Review `git status --short`, `git diff` and the new files before committing.
+   Push through your existing workflow when satisfied. This package has not
+   been pushed or deployed.
+6. After your deployment, check the published CSP response headers, the two
+   Atlas proof links, Source–Readout search, chapter navigation and downloads.
+   A local adapter build does not test your live deployment.
 
-See `SPECTRAL_INTEGRATION_REPORT.md` and `SPECTRAL_VERIFICATION.md` for details.
+See `GRAVITY_INTEGRATION_REPORT.md`, `GRAVITY_COVERAGE.md` and
+`GRAVITY_VERIFICATION.md` for the release details.

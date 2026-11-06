@@ -1,0 +1,80 @@
+---
+title: "Two proofs of the off-shell charge identity"
+description: "Compute the same weighted Einstein residual from covariant phase space and directly from the scalar-curvature variation."
+order: 2
+---
+
+<a id="off-shell-charge-identity"></a>
+
+## 3. The off-shell charge identity
+
+For arbitrary admissible geometric tangents define the asymptotic spatial charge
+
+$$
+\delta E_B^{\mathrm{sp}}=
+\frac{dL^{d-3}}{16\pi G}\frac{\pi}{R}
+\int_B(R^2-r^2)\sum_i H^{(0)}_{ii}\,d^{d-1}y.
+$$
+
+The difference between this charge and the holographic energy is the weighted boundary trace. The trace Ward identity suffices to make the energies equal. Conversely, equality for all balls on a slice implies pointwise vanishing of the trace there: divide by the integral of the weight and take the small-radius limit. Boundary conservation enters later.
+
+<a id="theorem-3-1"></a>
+
+### Theorem 3.1. Defect as a weighted residual
+
+For the stated geometric class, $D_B=\delta S_B-\delta E_B^{\mathrm{sp}}$ obeys
+
+<a id="eq-3"></a>
+
+$$
+D_B=-\frac{1}{8\pi G}\int_{\Sigma_B}\xi_B^t E_{tt}(L/z)^{d-1}\,dz\,d^{d-1}y
+=-\frac{1}{16\pi G}\int_{\Sigma_B}V\,\delta R[q]\,dv_{\bar q}.
+\tag{3}
+$$
+
+Here $q$ is the spatial metric variation on $\Sigma_B$ and $\delta R[q]$ is the scalar-curvature variation about $\bar q$ in direction $q$. In another frame the same formula uses the time-time contraction in that frame.
+
+<a id="phase-space-proof"></a>
+
+### Covariant phase-space proof
+
+The Einstein Lagrangian has presymplectic potential $\Theta$ and Noether charge $Q_\xi$:
+
+$$
+\Theta=\frac{\epsilon_a}{16\pi G}\left(\bar\nabla_b h^{ab}-\bar\nabla^a h^b{}_b\right),
+\qquad Q_\xi=-\frac{\epsilon_{ab}}{16\pi G}\nabla^a\xi^b.
+$$
+
+The contracted volume forms and index raising in the displayed background expressions use $\bar g$; the variation of $Q_\xi$ includes its full metric dependence. Define $\chi=\delta Q_\xi-\xi\cdot\Theta$ at fixed $\xi$. The linearized Noether identity about an on-shell background gives
+
+$$
+d\chi=-\frac{1}{8\pi G}\xi^a E_{ab}\epsilon^b.
+$$
+
+This is the Einstein specialization of the covariant phase-space identity [\[7\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-7), [\[1\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-1). Vary the Noether current and subtract the derivative of $\xi\cdot\Theta$. The symplectic current drops out because $\mathcal L_\xi\bar g=0$.
+
+At the bifurcation surface the pullback gives $\delta A/(4G)$: $\xi=0$ there and its normal boost has surface gravity $2\pi$. At the boundary the limiting pullback density is $\xi_B^t dL^{d-3}\operatorname{tr}_{\mathrm{sp}}H^{(0)}/(16\pi G)$, where $\operatorname{tr}_{\mathrm{sp}}H^{(0)}=\sum_i H^{(0)}_{ii}$. Both the radial derivative of $h$ and the variation of the volume form contribute. Stokes' theorem with charge orientation $\widetilde B-B$ gives the first equality in (3).
+
+<a id="slice-proof"></a>
+
+### Independent slice proof
+
+The spatial metric $\bar q=L^2z^{-2}(dz^2+dy^2)$ is time symmetric. Its Gauss constraint gives $E_{tt}=(L/z)^2\delta R/2$, so the slice constraint depends only on $q$. Let $D$ be the connection of $\bar q$ and define
+
+$$
+U^A=V\left(D_Bq^{AB}-D^A\operatorname{tr}q\right)
+-q^{AB}D_BV+(\operatorname{tr}q)D^AV.
+$$
+
+Integration by parts at the differential level yields
+
+$$
+V\delta R-D_AU^A
+=q^{AB}\left(D_AD_BV-\bar q_{AB}\Delta V-V\operatorname{Ric}_{AB}\right).
+$$
+
+Direct differentiation of $V=(\pi L/Rz)(R^2-r^2-z^2)$ gives $D_AD_BV=V\bar q_{AB}/L^2$. Since $\operatorname{Ric}_{AB}=-(d-1)\bar q_{AB}/L^2$, the right side vanishes. On the hemisphere $V=0$, and its outward derivative is $-2\pi$, so $U\cdot\nu=-2\pi\operatorname{tr}_{\widetilde B}q$.
+
+On the face $z=\varepsilon$ the outward normal is $-z\partial_z/L$. The flux density tends to $dL^{d-3}\xi^t\sum_i H^{(0)}_{ii}$. To see the coefficient, write $\operatorname{tr}q=L^{-2}z^d\sum_i H_{ii}$. Radial gauge gives $D_Bq^{zB}=(z/L^2)\operatorname{tr}q$. The two leading $V$ terms in the flux contribute $d-1$ and $1$ times the same boundary density. The sum of the two surface fluxes is $16\pi G(\delta E_B^{\mathrm{sp}}-\delta S_B)$, proving the second equality in (3) independently of the spacetime form calculation.
+
+The two routes give the same numerical normalization for the same tangent. The slice coefficient depends on the Einstein action normalization and the ball's surface gravity. Substituting the unit hyperbolic-time generator in only one of the charges changes the balance.

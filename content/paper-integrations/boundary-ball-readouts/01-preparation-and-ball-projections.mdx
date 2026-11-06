@@ -1,0 +1,94 @@
+---
+title: "One perturbation, two ball readouts"
+description: "Define the common off-shell source, fix the ball boost normalization, and derive the boundary energy and extremal-area projections."
+order: 1
+---
+
+<a id="abstract"></a>
+
+One bulk perturbation supplies both a first area variation and an asymptotic charge for each boundary ball. Their difference integrates the linearized Einstein residual against the ball's Killing weight. Two independent calculations give that identity: one from covariant phase space, one from scalar-curvature variation on the bulk slice. All centers and radii on one slice recover its Hamiltonian constraint. A finite determining family of Lorentz frames, with all slices in each frame, recovers the boundary-index contractions. The Bianchi and Ward identities then complete the local equation. The explicit non-gauge examples below show why recovery of that equation and reconstruction of the metric are different questions.
+
+**Read this edition with [Second-Order Detection by Boundary Balls](/source-readout/second-order-boundary-balls).** Here the [fixed-frame kernel](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel) exhibits what first variations can miss. The companion's [all-radii canonical-energy result](/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy) shows how the same family of balls can detect a transverse AdS perturbation at second order.
+
+<a id="introduction"></a>
+
+## 1. What the ball first law can recover
+
+Faulkner, Guica, Hartman, Myers and Van Raamsdonk showed that the complete family of ball first laws recovers the linearized gravitational equations about pure AdS for first variations around the vacuum [\[1\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-1). The key identity turns the difference between the two ball readouts into an integral of a local bulk residual. The converse depends on which balls are available and on the conditions at the conformal boundary.
+
+This edition reconstructs the Einstein branch within the source–readout architecture [\[2\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-2). The vacuum ball and its bulk Killing wedge use the normalization from the [spherical modular-transport construction](/source-readout/modular-transport) [\[3\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-3), [\[4\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-4). The family of balls plays a role analogous to the determining null directions of the [local horizon construction](/source-readout/local-horizon-thermodynamics) [\[5\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-5), with spatial inversion as an additional step. The nonlinear spin-two bootstrap through [transport and projective reduction](/source-readout/transport-projective) [\[6\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-6) starts from different input laws and reaches a different endpoint.
+
+The calculation starts with one common off-shell metric tangent. An elementary local inversion shows what the defects recover, and metric-level examples show what restricted ball families miss. The holographic dictionary, the Einstein area prescription and the boundary first law are inputs. We first calculate the charge defect as a geometric observable and then use the dictionary to identify it with the first-law defect. The reconstruction is at first order about pure AdS and at classical bulk order.
+
+<a id="common-source"></a>
+
+## 2. Common source and the ball projections
+
+Use boundary dimension $d\geq 2$, $c=\hbar=1$, and Poincaré coordinates:
+
+$$
+\bar g=\frac{L^2}{z^2}(dz^2+\eta_{\mu\nu}\,dx^\mu dx^\nu),
+\qquad \Lambda=-\frac{d(d-1)}{2L^2}.
+$$
+
+Write $E_{ab}=\delta(G_{ab}+\Lambda g_{ab})$ for the unscaled Einstein residual. The metric tangent $h$ has radial gauge $h_{za}=0$, with $h_{\mu\nu}=z^{d-2}H_{\mu\nu}$ and $H$ locally $C^2$ up to $z=0$. Its boundary value is $H^{(0)}$. The balls are bounded, so this geometric class imposes no global spatial decay. The geometric tests accept arbitrary tangents in that class. To compare a tangent with a CFT state, add the state–geometry dictionary and the flat-space Ward conditions:
+
+<a id="eq-1"></a>
+
+$$
+\eta^{\mu\nu}H^{(0)}_{\mu\nu}=0,
+\qquad \partial^\mu H^{(0)}_{\mu\nu}=0.
+\tag{1}
+$$
+
+Those conditions alone do not supply a CFT state for every off-shell test.
+
+<a id="ball-boost"></a>
+
+### One tangent, many apertures
+
+The source history contains the reference state and geometry and their first variations. An aperture is a ball $B$ in a chosen boundary frame together with its background bulk wedge. Each aperture evaluates the same $h$. Set $s=t-t_0$, $y=x-x_0$, and $r=|y|$ in the rest coordinates of $B$. The bulk Killing field is
+
+$$
+\xi_B=\frac{\pi}{R}\left[(R^2-s^2-r^2-z^2)\partial_t-2s(y^i\partial_i+z\partial_z)\right].
+$$
+
+Its boundary limit is the ball conformal Killing field. It vanishes at the bifurcation hemisphere $\widetilde B$, given by $s=0$ and $r^2+z^2=R^2$. The upper half-ball $\Sigma_B$ is bounded by $B$ and $\widetilde B$. The factor $2\pi R$ relative to hyperbolic time gives surface gravity $2\pi$, the normalization appropriate to the dimensionless modular energy. On the slice the positive lapse is $V=(L/z)\xi_B^t$.
+
+<a id="energy-projection"></a>
+
+### The one-sided energy projection
+
+For a CFT perturbation the energy projection is
+
+$$
+\delta E_B^{\mathrm{hol}}=\frac{\pi}{R}\int_B(R^2-r^2)\,\delta\langle T_{tt}\rangle\,d^{d-1}y,
+\qquad
+\delta\langle T_{\mu\nu}\rangle=\frac{dL^{d-3}}{16\pi G}H^{(0)}_{\mu\nu}.
+$$
+
+The weight comes from vacuum ball modular flow. The full vacuum modular implementer includes a complementary action, whereas the first law uses the one-sided variation. With a regulator it is the variation in the expectation of the reference modular Hamiltonian. In the continuum the first law applies to perturbations admitting the relevant first variations, with the relative-entropy derivative vanishing at the reference state. A density matrix for the diamond algebra is unnecessary.
+
+<a id="area-projection"></a>
+
+### The area projection and its cutoff endpoint
+
+At Einstein order the entropy projection is $\delta S_B=\delta A(\widetilde B)/(4G)$. Varying the metric at fixed embedding gives
+
+<a id="eq-2"></a>
+
+$$
+\delta A(\widetilde B)=\frac{RL^{d-3}}{2}\int_B z^{2-d}
+\left(\delta^{ij}-\frac{y^iy^j}{R^2}\right)h_{ij}\,d^{d-1}y,
+\qquad z=\sqrt{R^2-r^2}.
+\tag{2}
+$$
+
+In the $y$ chart the induced metric is $L^2z^{-2}(\delta_{ij}+y_i y_j/z^2)$. Its inverse is $z^2L^{-2}(\delta^{ij}-y^iy^j/R^2)$ and the volume density is $RL^{d-1}z^{-d}$. The hemisphere is extremal and the time-slice extrinsic curvature vanishes. To apply the same formula to the perturbed extremal surface, the cutoff endpoint term must also vanish. In the $z$ chart the background radius is $r(z)=\sqrt{R^2-z^2}$, giving radial canonical momentum
+
+$$
+L^{d-1}z^{1-d}r^{d-2}\frac{r'}{\sqrt{1+(r')^2}}
+=-\frac{L^{d-1}}{R}r^{d-2}z^{2-d}.
+$$
+
+The time momentum vanishes on the background. At fixed $z$ cutoff with regular angular parametrization, a uniform radial coordinate displacement $o(z^{d-2})$ suffices for the endpoint term to vanish. Assume that falloff for the anchored first variation. It includes the stronger $O(z^{d+1})$ condition used in the construction. For $d=3$ the sufficient criterion is $o(z)$. It does not exclude other ways for the integrated endpoint to vanish, such as cancellations.

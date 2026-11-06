@@ -1034,6 +1034,198 @@ export const integrationChapters = [
     "words": 1317
   },
   {
+    "paperId": "boundary-ball-readouts",
+    "slug": "01-preparation-and-ball-projections",
+    "title": "One perturbation, two ball readouts",
+    "description": "Define the common off-shell source, fix the ball boost normalization, and derive the boundary energy and extremal-area projections.",
+    "order": 1,
+    "url": "/source-readout/boundary-ball-readouts/01-preparation-and-ball-projections",
+    "sourcePath": "content/paper-integrations/boundary-ball-readouts/01-preparation-and-ball-projections.mdx",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "1. What the ball first law can recover"
+      },
+      {
+        "id": "common-source",
+        "title": "2. Common source and the ball projections"
+      },
+      {
+        "id": "ball-boost",
+        "title": "One tangent, many apertures"
+      },
+      {
+        "id": "energy-projection",
+        "title": "The one-sided energy projection"
+      },
+      {
+        "id": "area-projection",
+        "title": "The area projection and its cutoff endpoint"
+      }
+    ],
+    "anchors": [
+      "abstract",
+      "introduction",
+      "common-source",
+      "eq-1",
+      "ball-boost",
+      "energy-projection",
+      "area-projection",
+      "eq-2"
+    ],
+    "words": 885
+  },
+  {
+    "paperId": "boundary-ball-readouts",
+    "slug": "02-two-proofs-of-the-charge-identity",
+    "title": "Two proofs of the off-shell charge identity",
+    "description": "Compute the same weighted Einstein residual from covariant phase space and directly from the scalar-curvature variation.",
+    "order": 2,
+    "url": "/source-readout/boundary-ball-readouts/02-two-proofs-of-the-charge-identity",
+    "sourcePath": "content/paper-integrations/boundary-ball-readouts/02-two-proofs-of-the-charge-identity.mdx",
+    "sections": [
+      {
+        "id": "off-shell-charge-identity",
+        "title": "3. The off-shell charge identity"
+      },
+      {
+        "id": "theorem-3-1",
+        "title": "Theorem 3.1. Defect as a weighted residual"
+      },
+      {
+        "id": "phase-space-proof",
+        "title": "Covariant phase-space proof"
+      },
+      {
+        "id": "slice-proof",
+        "title": "Independent slice proof"
+      }
+    ],
+    "anchors": [
+      "off-shell-charge-identity",
+      "theorem-3-1",
+      "eq-3",
+      "phase-space-proof",
+      "slice-proof"
+    ],
+    "words": 502
+  },
+  {
+    "paperId": "boundary-ball-readouts",
+    "slug": "03-recovering-the-local-equation",
+    "title": "Recovering the local equation",
+    "description": "Invert the half-ball integrals, polarize over a finite family of frames, and impose the radial Ward data.",
+    "order": 3,
+    "url": "/source-readout/boundary-ball-readouts/03-recovering-the-local-equation",
+    "sourcePath": "content/paper-integrations/boundary-ball-readouts/03-recovering-the-local-equation.mdx",
+    "sections": [
+      {
+        "id": "recovering-the-local-equation",
+        "title": "4. From readout data to the local equation"
+      },
+      {
+        "id": "half-ball-inversion",
+        "title": "Recover the slice constraint"
+      },
+      {
+        "id": "theorem-4-1",
+        "title": "Theorem 4.1. Recover the Einstein residual"
+      },
+      {
+        "id": "determining-frames",
+        "title": "Proof: span the boundary contractions"
+      },
+      {
+        "id": "radial-ward-data",
+        "title": "Proof: complete the radial equations"
+      },
+      {
+        "id": "return-maps",
+        "title": "What the return map returns"
+      }
+    ],
+    "anchors": [
+      "recovering-the-local-equation",
+      "half-ball-inversion",
+      "theorem-4-1",
+      "determining-frames",
+      "radial-ward-data",
+      "return-maps"
+    ],
+    "words": 703
+  },
+  {
+    "paperId": "boundary-ball-readouts",
+    "slug": "04-what-fixed-slice-balls-miss",
+    "title": "What fixed-slice balls miss",
+    "description": "Construct non-gauge lapse and cross-mode perturbations that evade all rest-frame balls, and isolate the effects of fixing a radius or center.",
+    "order": 4,
+    "url": "/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss",
+    "sourcePath": "content/paper-integrations/boundary-ball-readouts/04-what-fixed-slice-balls-miss.mdx",
+    "sections": [
+      {
+        "id": "fixed-frame-kernel",
+        "title": "5. Metric perturbations invisible to restricted families"
+      },
+      {
+        "id": "compact-lapse",
+        "title": "A compactly supported lapse perturbation"
+      },
+      {
+        "id": "ward-compatible-cross-mode",
+        "title": "A nonzero Ward-compatible boundary tensor"
+      },
+      {
+        "id": "fixed-radius-and-center",
+        "title": "Fixing the radius or the center"
+      }
+    ],
+    "anchors": [
+      "fixed-frame-kernel",
+      "compact-lapse",
+      "ward-compatible-cross-mode",
+      "fixed-radius-and-center"
+    ],
+    "words": 623
+  },
+  {
+    "paperId": "boundary-ball-readouts",
+    "slug": "05-verification-and-references",
+    "title": "Verification, scope and references",
+    "description": "Separate the reproduced checks from the analytic additions and state precisely what first-order ball data recover.",
+    "order": 5,
+    "url": "/source-readout/boundary-ball-readouts/05-verification-and-references",
+    "sourcePath": "content/paper-integrations/boundary-ball-readouts/05-verification-and-references.mdx",
+    "sections": [
+      {
+        "id": "verification-and-scope",
+        "title": "6. Verification and scope"
+      },
+      {
+        "id": "funding",
+        "title": "Funding"
+      },
+      {
+        "id": "references",
+        "title": "References"
+      }
+    ],
+    "anchors": [
+      "verification-and-scope",
+      "funding",
+      "references",
+      "ref-1",
+      "ref-2",
+      "ref-3",
+      "ref-4",
+      "ref-5",
+      "ref-6",
+      "ref-7",
+      "ref-8"
+    ],
+    "words": 367
+  },
+  {
     "paperId": "constituted-agency",
     "slug": "01-constituted-participation",
     "title": "Agency as constituted participation",
@@ -2624,6 +2816,169 @@ export const integrationChapters = [
     "words": 699
   },
   {
+    "paperId": "local-horizon-thermodynamics",
+    "slug": "01-common-preparation",
+    "title": "One prepared horizon, three readouts",
+    "description": "Put heat, temperature and entropy on the same null pencil, and normalize the boost before comparing them.",
+    "order": 1,
+    "url": "/source-readout/local-horizon-thermodynamics/01-common-preparation",
+    "sourcePath": "content/paper-integrations/local-horizon-thermodynamics/01-common-preparation.mdx",
+    "sections": [
+      {
+        "id": "introduction",
+        "title": "1. Where the field equation enters"
+      },
+      {
+        "id": "common-source",
+        "title": "2. Prepare the null pencil"
+      },
+      {
+        "id": "three-readouts",
+        "title": "Three projections of one preparation"
+      },
+      {
+        "id": "boost-temperature",
+        "title": "3. Fix the boost and temperature together"
+      }
+    ],
+    "anchors": [
+      "overview",
+      "introduction",
+      "common-source",
+      "three-readouts",
+      "boost-temperature"
+    ],
+    "words": 910
+  },
+  {
+    "paperId": "local-horizon-thermodynamics",
+    "slug": "02-clausius-and-directions",
+    "title": "The Clausius coefficient and the directions that determine it",
+    "description": "Derive the leading field equation in both directions, reconstruct its trace-free part from nine null directions, and exhibit the kernel of a circle.",
+    "order": 2,
+    "url": "/source-readout/local-horizon-thermodynamics/02-clausius-and-directions",
+    "sourcePath": "content/paper-integrations/local-horizon-thermodynamics/02-clausius-and-directions.mdx",
+    "sections": [
+      {
+        "id": "leading-coefficient",
+        "title": "4. Extract the leading Clausius coefficient"
+      },
+      {
+        "id": "theorem-4-1",
+        "title": "Theorem 4.1. Leading equivalence"
+      },
+      {
+        "id": "determining-directions",
+        "title": "5. Determine the tensor from null directions"
+      },
+      {
+        "id": "nine-direction-inversion",
+        "title": "Reconstruct from nine evaluations"
+      },
+      {
+        "id": "circle-kernel",
+        "title": "What a circle misses"
+      }
+    ],
+    "anchors": [
+      "leading-coefficient",
+      "eq-1",
+      "theorem-4-1",
+      "coupling-and-units",
+      "determining-directions",
+      "nine-direction-inversion",
+      "circle-kernel"
+    ],
+    "words": 684
+  },
+  {
+    "paperId": "local-horizon-thermodynamics",
+    "slug": "03-finite-length",
+    "title": "The first finite-length correction",
+    "description": "Track the cubic residual along one generator, the width estimate needed to transfer it, and the separate weighted expansion prescription.",
+    "order": 3,
+    "url": "/source-readout/local-horizon-thermodynamics/03-finite-length",
+    "sourcePath": "content/paper-integrations/local-horizon-thermodynamics/03-finite-length.mdx",
+    "sections": [
+      {
+        "id": "finite-length",
+        "title": "6. Follow the residual beyond leading order"
+      },
+      {
+        "id": "finite-width",
+        "title": "Transfer to a pencil of finite transverse width"
+      },
+      {
+        "id": "weighted-prescription",
+        "title": "A separate weighted expansion prescription"
+      }
+    ],
+    "anchors": [
+      "finite-length",
+      "eq-2",
+      "flrw-example",
+      "finite-width",
+      "weighted-prescription"
+    ],
+    "words": 475
+  },
+  {
+    "paperId": "local-horizon-thermodynamics",
+    "slug": "04-assumptions-and-references",
+    "title": "Preparation, assumptions and verification",
+    "description": "Separate pointwise equilibrium from stronger screen conditions, state the physical inputs, and check what the construction establishes.",
+    "order": 4,
+    "url": "/source-readout/local-horizon-thermodynamics/04-assumptions-and-references",
+    "sourcePath": "content/paper-integrations/local-horizon-thermodynamics/04-assumptions-and-references.mdx",
+    "sections": [
+      {
+        "id": "preparation-assumptions",
+        "title": "7. Preparation, assumptions and verification"
+      },
+      {
+        "id": "codazzi-obstruction",
+        "title": "When the Codazzi obstruction vanishes"
+      },
+      {
+        "id": "physical-inputs",
+        "title": "What the derivation assumes"
+      },
+      {
+        "id": "verification",
+        "title": "What the research calculations checked"
+      },
+      {
+        "id": "conclusion",
+        "title": "8. What the construction establishes"
+      },
+      {
+        "id": "funding",
+        "title": "Funding"
+      },
+      {
+        "id": "references",
+        "title": "References"
+      }
+    ],
+    "anchors": [
+      "preparation-assumptions",
+      "codazzi-obstruction",
+      "physical-inputs",
+      "verification",
+      "conclusion",
+      "funding",
+      "references",
+      "ref-1",
+      "ref-2",
+      "ref-3",
+      "ref-4",
+      "ref-5",
+      "ref-6",
+      "ref-7"
+    ],
+    "words": 625
+  },
+  {
     "paperId": "misleading-ai",
     "slug": "01-development-before-diagnosis",
     "title": "Development before diagnosis",
@@ -3164,6 +3519,406 @@ export const integrationChapters = [
       "reference-34"
     ],
     "words": 993
+  },
+  {
+    "paperId": "modular-transport",
+    "slug": "01-vacuum-and-apertures",
+    "title": "One vacuum, two local descriptions",
+    "description": "Set up the common source, the algebraic aperture and the transport that relates vacuum restriction to hyperbolic thermality.",
+    "order": 1,
+    "url": "/source-readout/modular-transport/01-vacuum-and-apertures",
+    "sourcePath": "content/paper-integrations/modular-transport/01-vacuum-and-apertures.mdx",
+    "sections": [
+      {
+        "id": "section-1",
+        "title": "1. The question and the assumptions"
+      },
+      {
+        "id": "section-2",
+        "title": "2. Source data, apertures and return maps"
+      }
+    ],
+    "anchors": [
+      "abstract",
+      "section-1",
+      "section-2",
+      "source-datum",
+      "aperture-and-return",
+      "modular-commuting-diagram"
+    ],
+    "words": 530
+  },
+  {
+    "paperId": "modular-transport",
+    "slug": "02-modular-thermality",
+    "title": "From vacuum restriction to thermal time",
+    "description": "Construct the wedge, diamond and cylinder maps and derive the physical KMS temperature without a continuum density matrix.",
+    "order": 2,
+    "url": "/source-readout/modular-transport/02-modular-thermality",
+    "sourcePath": "content/paper-integrations/modular-transport/02-modular-thermality.mdx",
+    "sections": [
+      {
+        "id": "section-3",
+        "title": "3. Vacuum restriction and geometric thermality"
+      },
+      {
+        "id": "wedge-to-diamond",
+        "title": "The wedge-to-diamond map"
+      },
+      {
+        "id": "diamond-to-hyperbolic-cylinder",
+        "title": "The hyperbolic cylinder"
+      },
+      {
+        "id": "geometric-flow",
+        "title": "The modular flow and charge"
+      },
+      {
+        "id": "theorem-3-1",
+        "title": "Theorem 3.1. Physical inverse temperature"
+      },
+      {
+        "id": "type-iii-and-split",
+        "title": "What thermality does not supply"
+      }
+    ],
+    "anchors": [
+      "section-3",
+      "wedge-to-diamond",
+      "diamond-to-hyperbolic-cylinder",
+      "geometric-flow",
+      "theorem-3-1",
+      "proof-3-1",
+      "type-iii-and-split"
+    ],
+    "words": 535
+  },
+  {
+    "paperId": "modular-transport",
+    "slug": "03-bulk-and-cutoffs",
+    "title": "Bulk horizon geometry and the counting cutoff",
+    "description": "Recover the same time normalization in the AdS wedge, then distinguish the stationary entropy density and regulator from the algebraic aperture.",
+    "order": 3,
+    "url": "/source-readout/modular-transport/03-bulk-and-cutoffs",
+    "sourcePath": "content/paper-integrations/modular-transport/03-bulk-and-cutoffs.mdx",
+    "sections": [
+      {
+        "id": "section-4",
+        "title": "4. Bulk realization and horizon entropy"
+      },
+      {
+        "id": "wald-density",
+        "title": "Stationary entropy density"
+      },
+      {
+        "id": "section-5",
+        "title": "5. Counting and matching the cutoffs"
+      },
+      {
+        "id": "tube-and-aperture",
+        "title": "The tube and the algebra it generates"
+      }
+    ],
+    "anchors": [
+      "section-4",
+      "bulk-coordinate-map",
+      "wald-density",
+      "section-5",
+      "bulk-and-cft-cutoffs",
+      "tube-and-aperture"
+    ],
+    "words": 579
+  },
+  {
+    "paperId": "modular-transport",
+    "slug": "04-entropy-coefficients",
+    "title": "Which entropy coefficients survive a cutoff change?",
+    "description": "Derive the spherical logarithm and constant, and calculate exactly when a change of counting cutoff moves either result.",
+    "order": 4,
+    "url": "/source-readout/modular-transport/04-entropy-coefficients",
+    "sourcePath": "content/paper-integrations/modular-transport/04-entropy-coefficients.mdx",
+    "sections": [
+      {
+        "id": "section-6",
+        "title": "6. Universal coefficients and a finite-jet criterion"
+      },
+      {
+        "id": "universal-log-and-constant",
+        "title": "The even logarithm and the odd constant"
+      },
+      {
+        "id": "theorem-6-1",
+        "title": "Theorem 6.1: What survives a cutoff substitution"
+      },
+      {
+        "id": "cutoff-cancellation-examples",
+        "title": "What the criterion permits"
+      },
+      {
+        "id": "three-dimensional-substitution",
+        "title": "The two sharp cutoffs in three dimensions"
+      }
+    ],
+    "anchors": [
+      "section-6",
+      "entropy-integral",
+      "universal-log-and-constant",
+      "theorem-6-1",
+      "proof-6-1",
+      "cutoff-cancellation-examples",
+      "three-dimensional-substitution"
+    ],
+    "words": 509
+  },
+  {
+    "paperId": "modular-transport",
+    "slug": "05-geometric-checks-and-references",
+    "title": "Anomaly check, geometric appendix and references",
+    "description": "Check the logarithm independently on the sphere, recover the bulk and boundary flows directly, and trace the assumptions and references.",
+    "order": 5,
+    "url": "/source-readout/modular-transport/05-geometric-checks-and-references",
+    "sourcePath": "content/paper-integrations/modular-transport/05-geometric-checks-and-references.mdx",
+    "sections": [
+      {
+        "id": "section-7",
+        "title": "7. The anomaly check and verification"
+      },
+      {
+        "id": "archived-verification",
+        "title": "What the paper checks independently"
+      },
+      {
+        "id": "section-8",
+        "title": "8. What the construction recovers"
+      },
+      {
+        "id": "appendix-a",
+        "title": "Appendix A. Geometric checks and normalization"
+      },
+      {
+        "id": "chm-cylinder-conventions",
+        "title": "Conventions for the maps"
+      },
+      {
+        "id": "references",
+        "title": "References"
+      }
+    ],
+    "anchors": [
+      "section-7",
+      "sphere-anomaly-check",
+      "four-dimensional-boundary-term",
+      "archived-verification",
+      "section-8",
+      "appendix-a",
+      "null-coordinate-flow",
+      "bulk-killing-and-period",
+      "chm-cylinder-conventions",
+      "references",
+      "ref-chm",
+      "ref-architecture",
+      "ref-transport",
+      "ref-cscf",
+      "ref-bw",
+      "ref-hl",
+      "ref-tube",
+      "ref-wald",
+      "ref-rt",
+      "ref-jm",
+      "ref-ms"
+    ],
+    "words": 824
+  },
+  {
+    "paperId": "second-order-boundary-balls",
+    "slug": "01-readouts-and-geometry",
+    "title": "Same balls, different response orders",
+    "description": "Fix a family of boundary balls and a single metric tangent, then ask what changes when the readout is taken to second order.",
+    "order": 1,
+    "url": "/source-readout/second-order-boundary-balls/01-readouts-and-geometry",
+    "sourcePath": "content/paper-integrations/second-order-boundary-balls/01-readouts-and-geometry.mdx",
+    "sections": [
+      {
+        "id": "abstract",
+        "title": "A perturbation the same balls can detect"
+      },
+      {
+        "id": "section-1",
+        "title": "1. Fix the regions before changing the question"
+      },
+      {
+        "id": "section-2",
+        "title": "2. Geometry, preparation and readouts"
+      },
+      {
+        "id": "family-conditions",
+        "title": "Conditions for a family derivative"
+      }
+    ],
+    "anchors": [
+      "abstract",
+      "section-1",
+      "section-2",
+      "eq-1",
+      "eq-2",
+      "eq-3",
+      "family-conditions",
+      "eq-4"
+    ],
+    "words": 647
+  },
+  {
+    "paperId": "second-order-boundary-balls",
+    "slug": "02-second-order-identity",
+    "title": "Two evaluations of the gravitational Hessian",
+    "description": "Derive canonical energy with its surface correction, then eliminate the unknown second-order metric using the linear charge–area identity.",
+    "order": 2,
+    "url": "/source-readout/second-order-boundary-balls/02-second-order-identity",
+    "sourcePath": "content/paper-integrations/second-order-boundary-balls/02-second-order-identity.mdx",
+    "sections": [
+      {
+        "id": "section-3",
+        "title": "3. The second-order identity"
+      },
+      {
+        "id": "section-3-1",
+        "title": "3.1 Covariant phase space"
+      },
+      {
+        "id": "relative-entropy",
+        "title": "The conditional boundary interpretation"
+      },
+      {
+        "id": "section-3-2",
+        "title": "3.2 Remove the second-order metric"
+      },
+      {
+        "id": "shape-hessian",
+        "title": "The fixed-anchor shape problem"
+      }
+    ],
+    "anchors": [
+      "section-3",
+      "section-3-1",
+      "eq-5",
+      "eq-6",
+      "eq-7",
+      "theorem-3-1",
+      "eq-8",
+      "eq-9",
+      "proof-3-1",
+      "relative-entropy",
+      "eq-10",
+      "section-3-2",
+      "eq-11",
+      "eq-12",
+      "shape-hessian",
+      "eq-13"
+    ],
+    "words": 793
+  },
+  {
+    "paperId": "second-order-boundary-balls",
+    "slug": "03-same-ball-detection",
+    "title": "The same-ball detection theorem",
+    "description": "An explicit transverse AdS perturbation has zero first variations and positive canonical energy at every radius.",
+    "order": 3,
+    "url": "/source-readout/second-order-boundary-balls/03-same-ball-detection",
+    "sourcePath": "content/paper-integrations/second-order-boundary-balls/03-same-ball-detection.mdx",
+    "sections": [
+      {
+        "id": "section-4",
+        "title": "4. Detection at every radius"
+      },
+      {
+        "id": "fixed-surface-bound",
+        "title": "Positivity without solving for the surface"
+      },
+      {
+        "id": "independent-evaluations",
+        "title": "Independent symplectic evaluations"
+      }
+    ],
+    "anchors": [
+      "section-4",
+      "all-radii-canonical-energy",
+      "eq-14",
+      "proof-4-1",
+      "polynomial-surface",
+      "eq-15",
+      "eq-16",
+      "polynomial-bulk-and-area",
+      "eq-17",
+      "eq-18",
+      "eq-19",
+      "eq-20",
+      "fixed-surface-bound",
+      "eq-21",
+      "independent-evaluations"
+    ],
+    "words": 656
+  },
+  {
+    "paperId": "second-order-boundary-balls",
+    "slug": "04-oscillatory-comparison",
+    "title": "Oscillatory shear and the limits of recovery",
+    "description": "Compare a bounded oscillatory mode, then distinguish gravitational detection from reconstruction and the conditional boundary interpretation.",
+    "order": 4,
+    "url": "/source-readout/second-order-boundary-balls/04-oscillatory-comparison",
+    "sourcePath": "content/paper-integrations/second-order-boundary-balls/04-oscillatory-comparison.mdx",
+    "sections": [
+      {
+        "id": "section-5",
+        "title": "5. A bounded oscillatory comparison"
+      },
+      {
+        "id": "trial-spaces",
+        "title": "Lower bounds from nested trial spaces"
+      },
+      {
+        "id": "oscillatory-lower-bounds",
+        "title": "Numerical lower-bound evaluations"
+      },
+      {
+        "id": "section-6",
+        "title": "6. What the readouts recover"
+      },
+      {
+        "id": "boundary-limitations",
+        "title": "Gravitational data and boundary states"
+      },
+      {
+        "id": "section-7",
+        "title": "7. What the same balls can see"
+      },
+      {
+        "id": "verification",
+        "title": "Verification used in the paper"
+      },
+      {
+        "id": "references",
+        "title": "References"
+      }
+    ],
+    "anchors": [
+      "section-5",
+      "eq-22",
+      "trial-spaces",
+      "oscillatory-lower-bounds",
+      "section-6",
+      "kernel-comparison",
+      "boundary-limitations",
+      "section-7",
+      "verification",
+      "references",
+      "ref-1",
+      "ref-2",
+      "ref-3",
+      "ref-4",
+      "ref-5",
+      "ref-6"
+    ],
+    "words": 816
   },
   {
     "paperId": "sharp-uniqueness",
@@ -6050,5 +6805,23 @@ export const integrationImports = {
  "transport-projective/09-conditional-recovery": () => import("../../content/paper-integrations/transport-projective/09-conditional-recovery.mdx"),
  "transport-projective/10-boundary-and-variation-appendices": () => import("../../content/paper-integrations/transport-projective/10-boundary-and-variation-appendices.mdx"),
  "transport-projective/11-reconstruction-and-scope-appendices": () => import("../../content/paper-integrations/transport-projective/11-reconstruction-and-scope-appendices.mdx"),
- "transport-projective/12-references": () => import("../../content/paper-integrations/transport-projective/12-references.mdx")
+ "transport-projective/12-references": () => import("../../content/paper-integrations/transport-projective/12-references.mdx"),
+ "modular-transport/01-vacuum-and-apertures": () => import("../../content/paper-integrations/modular-transport/01-vacuum-and-apertures.mdx"),
+ "modular-transport/02-modular-thermality": () => import("../../content/paper-integrations/modular-transport/02-modular-thermality.mdx"),
+ "modular-transport/03-bulk-and-cutoffs": () => import("../../content/paper-integrations/modular-transport/03-bulk-and-cutoffs.mdx"),
+ "modular-transport/04-entropy-coefficients": () => import("../../content/paper-integrations/modular-transport/04-entropy-coefficients.mdx"),
+ "modular-transport/05-geometric-checks-and-references": () => import("../../content/paper-integrations/modular-transport/05-geometric-checks-and-references.mdx"),
+ "local-horizon-thermodynamics/01-common-preparation": () => import("../../content/paper-integrations/local-horizon-thermodynamics/01-common-preparation.mdx"),
+ "local-horizon-thermodynamics/02-clausius-and-directions": () => import("../../content/paper-integrations/local-horizon-thermodynamics/02-clausius-and-directions.mdx"),
+ "local-horizon-thermodynamics/03-finite-length": () => import("../../content/paper-integrations/local-horizon-thermodynamics/03-finite-length.mdx"),
+ "local-horizon-thermodynamics/04-assumptions-and-references": () => import("../../content/paper-integrations/local-horizon-thermodynamics/04-assumptions-and-references.mdx"),
+ "boundary-ball-readouts/01-preparation-and-ball-projections": () => import("../../content/paper-integrations/boundary-ball-readouts/01-preparation-and-ball-projections.mdx"),
+ "boundary-ball-readouts/02-two-proofs-of-the-charge-identity": () => import("../../content/paper-integrations/boundary-ball-readouts/02-two-proofs-of-the-charge-identity.mdx"),
+ "boundary-ball-readouts/03-recovering-the-local-equation": () => import("../../content/paper-integrations/boundary-ball-readouts/03-recovering-the-local-equation.mdx"),
+ "boundary-ball-readouts/04-what-fixed-slice-balls-miss": () => import("../../content/paper-integrations/boundary-ball-readouts/04-what-fixed-slice-balls-miss.mdx"),
+ "boundary-ball-readouts/05-verification-and-references": () => import("../../content/paper-integrations/boundary-ball-readouts/05-verification-and-references.mdx"),
+ "second-order-boundary-balls/01-readouts-and-geometry": () => import("../../content/paper-integrations/second-order-boundary-balls/01-readouts-and-geometry.mdx"),
+ "second-order-boundary-balls/02-second-order-identity": () => import("../../content/paper-integrations/second-order-boundary-balls/02-second-order-identity.mdx"),
+ "second-order-boundary-balls/03-same-ball-detection": () => import("../../content/paper-integrations/second-order-boundary-balls/03-same-ball-detection.mdx"),
+ "second-order-boundary-balls/04-oscillatory-comparison": () => import("../../content/paper-integrations/second-order-boundary-balls/04-oscillatory-comparison.mdx")
 };

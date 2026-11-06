@@ -1,0 +1,135 @@
+---
+title: "Anomaly check, geometric appendix and references"
+description: "Check the logarithm independently on the sphere, recover the bulk and boundary flows directly, and trace the assumptions and references."
+order: 5
+---
+
+<a id="section-7"></a>
+
+## 7. The anomaly check and verification
+
+<a id="sphere-anomaly-check"></a>
+
+For even $d$, CHM's separate CFT calculation maps the diamond to the static de Sitter patch and continues it to the round Euclidean sphere. One form of the map is
+
+$$
+t=\frac{R\cos\theta\sinh(\tau/R)}{1+\cos\theta\cosh(\tau/R)},\qquad
+r=\frac{R\sin\theta}{1+\cos\theta\cosh(\tau/R)}.
+$$
+
+Regularity gives Euclidean period $2\pi R$. The integrated Killing energy is finite, since its radial integral is proportional to
+
+$$
+\int_0^{\pi/2}\cos\theta\sin^{d-2}\theta\,d\theta=\frac{1}{d-1}.
+$$
+
+The round sphere is conformally flat and its normalized Euler integral is two. In CHM's anomaly convention, the scale derivative of $\log Z$ is $4(-1)^{d/2-1}A$. With $a_d^*=A$, this recovers the same logarithmic coefficient as the horizon calculation, independently of the bulk cutoff substitution [1](#ref-chm), [11](#ref-ms).
+
+<a id="four-dimensional-boundary-term"></a>
+
+In $d=4$, the hyperbolic energy term alone has coefficient $-(3a+c)/2$ in front of $\log(R/\delta)$. The full $-4a$ therefore requires an additional $(c-5a)/2$ in the same convention. A sharp volume truncation alone does not supply that boundary contribution.
+
+<a id="archived-verification"></a>
+
+### What the paper checks independently
+
+The verification recorded in the paper checks the conformal maps and inverses, boost orientation, cutoff relations, bulk Killing generator, surface gravity, Einstein and Gauss–Bonnet densities, entropy coefficients and anomaly arithmetic. It keeps deliberate failure controls, including comparisons of off-shell actions and cutoff substitutions that move the odd-dimensional constant.
+
+The paper reports that a fresh extraction reproduced all 130 recorded outcomes: 106 exact symbolic checks, 13 numerical diagnostics and 11 expected failures. These finite checks supplement the dimension-independent proofs. Necessity across odd dimensions follows from the first nonzero odd Taylor coefficient argument, and exact expansion of the original integral also checks the fixed-dimension cancellation example.
+
+<a id="section-8"></a>
+
+## 8. What the construction recovers
+
+Under the declared CFT and holographic hypotheses, the spherical CHM chain is a concrete example of the source–readout architecture. At the continuum level the local vacuum and hyperbolic thermal state agree through their observable algebras and geometric evolutions. The bulk chart recovers the time normalization. The horizon entropy enters once the classical dual and counting prescription are supplied.
+
+An algebraic aperture determines which observables are read. A counting regulator specifies a separate operation on the entropy calculation. The finite-jet criterion says exactly which coefficient survives a change of cutoff and which can move. A further test is to compare a regulated observable defined by mutual information against the horizon prescription, including its finite odd-dimensional term.
+
+<a id="appendix-a"></a>
+
+## Appendix A. Geometric checks and normalization
+
+<a id="null-coordinate-flow"></a>
+
+Set $x_\pm=r\pm t$. Translating hyperbolic cylinder time by $R\eta$ induces
+
+$$
+x_\pm\longmapsto R\frac{x_\pm/R\pm\tanh(\eta/2)}
+{1\pm(x_\pm/R)\tanh(\eta/2)}.
+$$
+
+The inverse takes $\eta$ to $-\eta$, and the composition law follows by adding rapidities. Interpret the radial expression with angular continuation through the origin.
+
+<a id="bulk-killing-and-period"></a>
+
+The corresponding forward bulk generator is
+
+$$
+\zeta=\frac{(R^2-t^2-r^2-z_P^2)\partial_t-2t(x\cdot\nabla_x+z_P\partial_{z_P})}{2R^2}.
+$$
+
+Its Lie derivative of the flat metric in Poincaré coordinates is $-2t/R^2$ times that metric. Its derivative of the warp factor is $2t/R^2$ times the warp factor, so the terms cancel and $\zeta$ is Killing.
+
+Near the horizon put $\rho=L+\xi^2/(2L)$. The leading Euclidean radial and time metric is $d\xi^2+\xi^2d\widetilde{\tau}_E^2/L^2$, fixing the smooth period.
+
+<a id="chm-cylinder-conventions"></a>
+
+### Conventions for the maps
+
+In the wedge map used here, the conformal parameter sends the right wedge to the diamond. The parameter of $\Delta^{is}$ runs opposite to forward geometrical time in the declared Heisenberg convention, and the bulk time is $\widetilde{\tau}=L\tau/R$. For cap opening $\theta_0$, the first form of equation (2.36) in the cylinder variant of CHM [1](#ref-chm) reads
+
+$$
+\Omega^2=\frac{\sin^2\theta_0}
+{(\cosh u+\cos\theta_0\cosh v)^2+\sin^2\theta_0\sinh^2v},
+\qquad v=\frac{\tau}{R_{\mathrm{hyp}}}.
+$$
+
+Here $R_{\mathrm{hyp}}$ is the hyperbolic time scale of that map. These choices preserve the physical temperature and the entropy coefficients.
+
+<a id="references"></a>
+
+## References
+
+<a id="ref-chm"></a>
+
+**[1]** H. Casini, M. Huerta and R. C. Myers, *Towards a derivation of holographic entanglement entropy*, JHEP 05 (2011) 036. [10.1007/JHEP05(2011)036](https://doi.org/10.1007/JHEP05%282011%29036).
+
+<a id="ref-architecture"></a>
+
+**[2]** J. Rodgers, *A Source-to-Readout Architecture for a Theory of Everything*. [10.5281/zenodo.21366204](https://doi.org/10.5281/zenodo.21366204).
+
+<a id="ref-transport"></a>
+
+**[3]** J. Rodgers, *Transport and Projective Reduction in a Source–Readout Derivation of Einstein Gravity*. [Web reading edition](/source-readout/transport-projective) · [10.5281/zenodo.23954887](https://doi.org/10.5281/zenodo.23954887).
+
+<a id="ref-cscf"></a>
+
+**[4]** J. Rodgers, *The Canonical Spectral-Curvature Field: A Unified Operator Origin for Coherence, Dissipation, and Spectral Budgets*. [10.5281/zenodo.23899458](https://doi.org/10.5281/zenodo.23899458).
+
+<a id="ref-bw"></a>
+
+**[5]** J. J. Bisognano and E. H. Wichmann, J. Math. Phys. 16 (1975) 985 and 17 (1976) 303.
+
+<a id="ref-hl"></a>
+
+**[6]** P. D. Hislop and R. Longo, *Modular structure of the local algebras associated with the free massless scalar field theory*, Commun. Math. Phys. 84 (1982) 71.
+
+<a id="ref-tube"></a>
+
+**[7]** A. Strohmaier and E. Witten, *The timelike tube theorem in curved spacetime*, [arXiv:2303.16380](https://arxiv.org/abs/2303.16380).
+
+<a id="ref-wald"></a>
+
+**[8]** R. M. Wald, *Black hole entropy is the Noether charge*, Phys. Rev. D 48 (1993) R3427.
+
+<a id="ref-rt"></a>
+
+**[9]** S. Ryu and T. Takayanagi, *Holographic derivation of entanglement entropy from the anti-de Sitter space/conformal field theory correspondence*, Phys. Rev. Lett. 96 (2006) 181602.
+
+<a id="ref-jm"></a>
+
+**[10]** T. Jacobson and R. C. Myers, *Black hole entropy and higher curvature interactions*, Phys. Rev. Lett. 70 (1993) 3684.
+
+<a id="ref-ms"></a>
+
+**[11]** R. C. Myers and A. Sinha, *Holographic c-theorems in arbitrary dimensions*, JHEP 01 (2011) 125.

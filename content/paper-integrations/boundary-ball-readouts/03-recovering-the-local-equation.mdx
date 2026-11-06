@@ -1,0 +1,92 @@
+---
+title: "Recovering the local equation"
+description: "Invert the half-ball integrals, polarize over a finite family of frames, and impose the radial Ward data."
+order: 3
+---
+
+<a id="recovering-the-local-equation"></a>
+
+## 4. From readout data to the local equation
+
+<a id="half-ball-inversion"></a>
+
+### Recover the slice constraint
+
+On a fixed slice put $f=(L/z)^{d-1}E_{tt}$. The radial-gauge falloff makes $f$ continuous up to $z=0$. The Gauss constraint, for example, gives
+
+$$
+f=-\frac{L^{d-3}}{2}
+\left[z\partial_z^2H_{ii}+(d+1)\partial_zH_{ii}
++z(\partial_i\partial_iH_{jj}-\partial_i\partial_jH_{ij})\right].
+$$
+
+In the charge identity, differentiate $R D_B$ with respect to $R$. The boundary contribution at the hemisphere vanishes because $R\xi^t=\pi(R^2-r^2-z^2)$ vanishes there. The derivative removes the nonconstant weight. Zero defect for every center and radius therefore gives zero unweighted integral of $f$ over every half-ball.
+
+A local polynomial argument proves injectivity on the stated class. Suppose the half-ball integrals of $x^\alpha f$ vanish for $|\alpha|\leq n$. Radius differentiation gives the zero hemisphere integrals of the same moments. Differentiating with respect to the center in direction $i$ gives zero hemisphere integrals with an extra factor $(x_i-x_{i0})/R$, the normal velocity of the moving hemisphere. Neither differentiation gets a contribution from the flat face. Combining the two derivatives gives the zero hemisphere moments with the factor $x_i$. Integrating over concentric radii gives the half-ball moments at degree $n+1$. Degree zero starts the induction.
+
+On the closed upper hemisphere, horizontal polynomials separate points because $z=\sqrt{R^2-r^2}$. The polynomials are dense in its continuous functions, so the finite signed measure $f\,dA$ vanishes. Continuity gives pointwise vanishing in the interior. Only bounded domains enter. If balls must have closures in an open boundary region, recovery holds on the union of their half-balls: center differentiation and shrinking radii remain in the available family. This proves the scalar recovery used in [\[1\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-1) directly; [\[8\]](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-8) uses related hyperbolic integral geometry.
+
+<a id="theorem-4-1"></a>
+
+### Theorem 4.1. Recover the Einstein residual
+
+In the geometric class with the Ward conditions [(1)](/source-readout/boundary-ball-readouts/01-preparation-and-ball-projections#eq-1), the ball first law for all balls in all frames is equivalent to $E_{ab}=0$. It suffices to use all slices and balls in $d(d+1)/2$ frames whose time-vector outer squares span the symmetric boundary tensors.
+
+<a id="determining-frames"></a>
+
+### Proof: span the boundary contractions
+
+In each frame the scalar recovery gives $E_{\mu\nu}u^\mu u^\nu=0$ on every slice of that frame. The slices must cover the common bulk region where the contractions are compared. Polarization then gives $E_{\mu\nu}=0$.
+
+For an explicit spanning set, take an inertial basis and unnormalized future timelike vectors
+
+$$
+e_0,\qquad e_0\pm v e_i,\qquad e_0+v(e_i+e_j)\quad(i<j),
+\qquad 0<v<1/\sqrt 2.
+$$
+
+The pair differences give the time-space entries; the pair sums give the spatial diagonals after subtracting the time entry; and the last set gives the spatial cross entries. Normalization does not change the span of the outer squares. The determinant is nonzero at this example, so generic tuples also span.
+
+<a id="radial-ward-data"></a>
+
+### Proof: complete the radial equations
+
+Varying the exact Bianchi identity at a background with zero residual gives $\bar\nabla^aE_{ab}=0$. For $C^2$ perturbations the differential identity holds weakly by local smooth approximation. The radial equations integrate in distributions, and continuity of the residual fixes their pointwise values. With $E_{\mu\nu}=0$ they give
+
+$$
+E_{z\mu}=z^{d-1}C_\mu,
+\qquad E_{zz}=z^{d-2}C_z-\tfrac12 z^d\partial_\mu C^\mu.
+$$
+
+The equations being integrated are
+
+$$
+\partial_z E_{z\mu}-\frac{d-1}{z}E_{z\mu}=0,
+\qquad
+\partial_z E_{zz}-\frac{d-2}{z}E_{zz}=-\partial^\mu E_{z\mu}.
+$$
+
+Expanding the linearized curvature at the boundary determines the coefficients in the unscaled Einstein normalization:
+
+$$
+C_z=-\frac{d(d-1)}{2L^2}\operatorname{tr}_{\eta}H^{(0)},
+\qquad
+C_\mu=\frac{d}{2L^2}
+\left(\partial^\nu H_{\nu\mu}^{(0)}-\partial_\mu\operatorname{tr}_\eta H^{(0)}\right).
+$$
+
+The Ward conditions set both coefficients to zero. Conversely, $E=0$ sets the leading radial coefficients to zero, so the two energies agree and [(3)](/source-readout/boundary-ball-readouts/02-two-proofs-of-the-charge-identity#eq-3) gives every ball first law.
+
+<a id="return-maps"></a>
+
+### What the return map returns
+
+For the fixed background and admissible class, the joint map factors as
+
+$$
+h\longmapsto E[h]\longmapsto (D_B)_B.
+$$
+
+For the complete family the second arrow is injective on the image of Ward-compatible perturbations. Apply the theorem to a difference to see this. The second arrow therefore has a return map on its realized data range even if the first arrow has a kernel. For balls on one slice the return map recovers only the time-time residual there. This is the quotient determined by the chosen apertures.
+
+The frame count is sufficient for polarization. With fewer frames a general symmetric tensor can have an algebraic evaluation kernel at a point. Whether every such tensor kernel is realized by an admissible metric tangent is a separate question. The theorem determines the equation residual, and distinct on-shell metrics can have the same zero defects.

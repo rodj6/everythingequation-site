@@ -1,0 +1,120 @@
+---
+title: "Two evaluations of the gravitational Hessian"
+description: "Derive canonical energy with its surface correction, then eliminate the unknown second-order metric using the linear charge–area identity."
+order: 2
+---
+
+<a id="section-3"></a>
+## 3. The second-order identity
+
+<a id="section-3-1"></a>
+### 3.1 Covariant phase space
+
+For the Einstein Lagrangian $L=(\mathcal R-2\Lambda)\epsilon/(16\pi G)$, let $\epsilon$ denote the metric volume form. Its index contractions are $\epsilon_a$ and $\epsilon_{ab}$. The phase-space potential, Noether charge and symplectic current are
+
+<a id="eq-5"></a>
+
+$$
+\Theta(g;v)=\frac{1}{16\pi G}(\nabla_b v^{ab}-\nabla^a v^b{}_b)\epsilon_a.
+\tag{5}
+$$
+
+<a id="eq-6"></a>
+
+$$
+Q_X=-\frac{1}{16\pi G}\nabla^a X^b\epsilon_{ab},\qquad
+\chi(v;X)=\delta_v Q_X-\iota_X\Theta(g;v).
+\tag{6}
+$$
+
+<a id="eq-7"></a>
+
+$$
+\omega(g;v,w)=\delta_v\Theta(g;w)-\delta_w\Theta(g;v).
+\tag{7}
+$$
+
+These conventions follow [[6]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-6), [[1]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-1). Orient $W_{\Sigma_B}$ to agree with the charge: in coordinates the bulk term on the future slice integrates the densitized time component of the symplectic current. This pairing induces the boundary orientations.
+
+<a id="theorem-3-1"></a>
+**Theorem 3.1 (Gravitational Hessian).** For a family satisfying the [boundary, regularity and vacuum conditions](/source-readout/second-order-boundary-balls/01-readouts-and-geometry#family-conditions), the Hessian is
+
+<a id="eq-8"></a>
+
+$$
+F_B''(0)=\mathcal E_B(h)=W_{\Sigma_B}(\gamma,\mathcal L_{\xi_B}\gamma).
+\tag{8}
+$$
+
+Here $\gamma=h+\mathcal L_V\bar g$ keeps the extremal surface fixed and satisfies the linearized Hollands–Wald conditions there. In a boundary-preserving representative $h$, add to the bulk symplectic pairing the oriented integral over $\widetilde B$ of
+
+<a id="eq-9"></a>
+
+$$
+\rho(h,V)=\chi(h+\mathcal L_V\bar g;[\xi_B,V])-\chi(\mathcal L_{\xi_B}h;V).
+\tag{9}
+$$
+
+<a id="proof-3-1"></a>
+**Proof.** Vary the Noether current holding $\xi_B$ fixed. On shell the charge variation is the boundary integral of $\chi$ and the bulk variation is $\omega(g_\lambda;\partial_\lambda g_\lambda,\mathcal L_{\xi_B}g_\lambda)$. The outer term varies $E_B^{\mathrm{grav}}$. At the inner surface, $\xi_B$ vanishes and its normal boost has surface gravity $2\pi$; in surface-fixed gauge this term varies the area divided by $4G$. Off shell there are also Einstein and constraint residuals. [Equation (4)](/source-readout/second-order-boundary-balls/01-readouts-and-geometry#eq-4) removes those residuals to the required order. When the resulting identity is differentiated at $\bar g$, every term containing $\mathcal L_{\xi_B}\bar g$ vanishes, leaving the pairing of two first variations.
+
+To recover the expression in $h$, commute Lie derivatives using $\mathcal L_{\xi_B}\bar g=0$: $\mathcal L_{\xi_B}\mathcal L_V\bar g=\mathcal L_{[\xi_B,V]}\bar g$. For an on-shell tangent $v$ and general $X$, $\omega(\bar g;v,\mathcal L_X\bar g)=d\chi(v;X)$. Use this identity on the gauge terms in the expanded pairing, and use antisymmetry when a gauge term occupies the first slot. The difference of the pairings is the integral of $d\rho$. The boundary condition on $V$ kills its contribution at $z=0$; the term at $\widetilde B$ is the integral of (9). In surface-fixed gauge the mixed normal–tangential metric variations vanish and the normal block is boost invariant. Together with the first variation of extremality, which determines the normal displacement, these conditions supply the surface data in (9). $\square$
+
+<a id="relative-entropy"></a>
+### The conditional boundary interpretation
+
+The stress-tensor and HRT dictionary [[5]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-5), [[1]](/source-readout/second-order-boundary-balls/04-oscillatory-comparison#ref-1) identifies $F_B$ to this order with $D(\rho_B(\lambda)\|\rho_B(0))$ for a state family with twice differentiable relative entropy. Use the second derivative as the convention for Fisher information. At a faithful regulated density matrix $\sigma$, let $u$ be a trace-zero tangent. Differentiating the logarithm gives
+
+<a id="eq-10"></a>
+
+$$
+I_\sigma(u)=\int_0^\infty\operatorname{Tr}
+\big[u(\sigma+s)^{-1}u(\sigma+s)^{-1}\big]\,ds.
+\tag{10}
+$$
+
+The quadratic Taylor coefficient is $I_\sigma(u)/2$. The relative entropy has vanishing first derivative at the reference state, so the second-order state correction drops out of the Hessian. The continuum version needs the corresponding dictionary and a well-defined Hessian of relative entropy for states on the local algebra.
+
+<a id="section-3-2"></a>
+### 3.2 Remove the second-order metric
+
+In the same orientation, the linear charge–area identity is
+
+<a id="eq-11"></a>
+
+$$
+DF_B[v]=\frac{1}{8\pi G}\int_{\Sigma_B}\xi_B^t\,D\mathcal F_{tt}[v]\,(\ell/z)^{d-1}\,dz\,d^{d-1}x.
+\tag{11}
+$$
+
+This identity is off shell. The first shape derivative of the reference hemisphere vanishes for fixed anchors, so the area variation uses the reference surface. For the fixed flat boundary the charge depends linearly on the normalizable coefficient. Apply (11) to $k$ and replace $D\mathcal F[k]$ using [the second-order vacuum condition](/source-readout/second-order-boundary-balls/01-readouts-and-geometry#eq-4). The result is
+
+<a id="eq-12"></a>
+
+$$
+\mathcal E_B(h)=-\frac{1}{4G}A''_{\mathrm{ext}}[h]
+-\frac{1}{8\pi G}\int_{\Sigma_B}\xi_B^t\,D^2\mathcal F_{tt}[h,h]\,(\ell/z)^{d-1}\,dz\,d^{d-1}x.
+\tag{12}
+$$
+
+$A''_{\mathrm{ext}}[h]$ is evaluated on the affine path $\bar g+\lambda h$ with the first-order motion of the extremal surface included. One can obtain (12) on that path directly: the differentiated Noether identity expresses the charge–area Hessian as canonical energy plus the curvature integral in (12) with a positive prefactor. The sign follows from (11), and terms proportional to the background or first-order residual vanish. So (12) computes the wedge quadratic form on a linearized solution without constructing $k$ or computing a second-order symplectic current. The interpretation as an actual vacuum family derivative still needs a completion.
+
+<a id="shape-hessian"></a>
+### The fixed-anchor shape problem
+
+On a reflection-symmetric slice let $w$ be the spatial displacement, $A_{gg}$ the fixed-surface metric Hessian, $M[w]$ the mixed metric–shape derivative and $Q[w]$ the shape Hessian. The linearized extremality solution $w_*$ gives
+
+<a id="eq-13"></a>
+
+$$
+A''_{\mathrm{ext}}[h]=A_{gg}+\min_w\{2M[w]+Q[w]\}=A_{gg}-Q[w_*].
+\tag{13}
+$$
+
+The hemisphere is totally geodesic in the hyperbolic slice. For proper normal displacement $u$ in the fixed-anchor domain its shape Hessian is
+
+$$
+\int_{\widetilde B}\left(|\nabla u|^2+\frac{d-1}{\ell^2}u^2\right)dA.
+$$
+
+This is nonnegative, and any admissible trial displacement yields a lower bound on (12). The minimization is on the time-reflection slice. A general Lorentzian extremal-area problem also has a timelike variation.

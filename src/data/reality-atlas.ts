@@ -1,3 +1,5 @@
+import {firstOrderKernel,gravityHub,sameBallTakeaway,secondOrderDetection} from '@/config/paper-integrations';
+
 export type AtlasTier =
   | "source"
   | "tier0"
@@ -1241,9 +1243,11 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     summary: "Einstein gravity as the leading covariant stationary condition of the reconstructed metric branch.",
     description:
       "The order-volume continuum fixes Lorentzian kinematics. Diffeomorphism invariance and a controlled local derivative expansion select Einstein–Hilbert as the leading metric action. The exact branch includes curvature corrections, causal nonlocal response, stochastic stress and record exchange.",
-    atlasNote: "A separate admitted spin-two realization reconstructs an affine connection from smooth transport. The parent action leaves a projective one-form ambiguity; a volume-restored readout recovers Levi–Civita transport on the connection equations. The off-shell bootstrap then yields Einstein–matter dynamics. Physical selection of this realization remains open.",
+    atlasNote: "A separate admitted spin-two realization reconstructs an affine connection from smooth transport. The parent action leaves a projective one-form ambiguity; a volume-restored readout recovers Levi–Civita transport on the connection equations. The off-shell bootstrap then yields Einstein–matter dynamics. Physical selection of this realization remains open. The local horizon route separately uses Clausius balance, area entropy and conservation on a shrinking null pencil.",
     readingLinks: [
       { label: "Transport, projective reduction and Einstein gravity", href: "/source-readout/transport-projective" },
+      { label: "Local horizon thermodynamics and Einstein gravity", href: "/source-readout/local-horizon-thermodynamics" },
+      { label: "Five gravity and holography reading editions", href: gravityHub },
     ],
     mathematicalType: "Gauge-fixed Lorentzian EFT fixed point with causal CTP response",
     domain: "Reconstructed geometry, completed QFT/matter stress and selected gravitational coefficients",
@@ -2022,6 +2026,13 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     summary: "Hawking temperature, Wald entropy and generalized entropy from the same renormalized gravitational/QFT branch.",
     description:
       "The area term, higher-curvature Wald term and outside entropy share one matched renormalization. A horizon branch requires its regular state and generalized-second-law hypotheses; a QES branch instead requires anchoring, homology, extremality and minimality.",
+    atlasNote: sameBallTakeaway + " On one fixed AdS boundary slice, first-order ball readouts leave a non-gauge kernel. The same balls detect an explicit transverse mode through positive bulk canonical energy at second order. A boundary relative-entropy interpretation also needs the holographic dictionary and an admissible state family.",
+    readingLinks: [
+      { label: "First order: the fixed-slice kernel", href: firstOrderKernel },
+      { label: "Second order: positive canonical energy for the same balls", href: secondOrderDetection },
+      { label: "Modular transport: diamond, thermal cylinder and regulated area", href: "/source-readout/modular-transport" },
+      { label: "Local heat, temperature and area on a shrinking null pencil", href: "/source-readout/local-horizon-thermodynamics" },
+    ],
     mathematicalType: "Renormalized horizon/QES entropy observable",
     domain: "Solved gravitational background, admissible QFT state and selected horizon or QES boundary-value problem",
     codomain: "TH, SWald and Sgen on the admitted surface or horizon cuts",

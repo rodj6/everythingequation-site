@@ -1,0 +1,65 @@
+---
+title: "What fixed-slice balls miss"
+description: "Construct non-gauge lapse and cross-mode perturbations that evade all rest-frame balls, and isolate the effects of fixing a radius or center."
+order: 4
+---
+
+<a id="fixed-frame-kernel"></a>
+
+## 5. Metric perturbations invisible to restricted families
+
+All radii and centers on one slice give $D_B=0$ exactly when $\delta R[q]=0$ there. The slice proof shows why this condition does not control time derivatives or the other components of $h$. For example, a spatial perturbation proportional to $(t-t_0)^2$ can vanish with its first time derivative at $t_0$ and still change the spatial evolution equations. The next two constructions are invisible to a larger family.
+
+**Keep the same regions and change the order of response.** [Second-Order Detection by Boundary Balls](/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy) constructs a transverse AdS solution whose first-order area and energy both vanish on these fixed-slice balls, but whose bulk canonical energy is positive at every radius. The boundary relative-entropy interpretation of that energy needs the holographic dictionary and an admissible state family.
+
+<a id="compact-lapse"></a>
+
+### A compactly supported lapse perturbation
+
+For $d\geq3$ fix a spatial point $p$ strictly inside the bulk slice. In the static metric $-N^2dt^2+\bar q$ with $N=L/z$, vary only $N$ by a smooth compactly supported $n$. Choose $n(p)=Dn(p)=0$ and $D_1D_2 n(p)\ne0$ in an orthonormal horizontal frame. A mixed quadratic multiplied by a bump equal to one near $p$ gives such an $n$. The tangent $h_{tt}=-2Nn$ has radial gauge and vanishes near the conformal boundary. The spatial metric is unchanged at every time. Consequently every rest-frame ball has zero area variation and zero boundary charge.
+
+The spatial Ricci tensor of the static spacetime is
+
+$$
+\operatorname{Ric}_{AB}[\bar q]-N^{-1}D_AD_BN,
+$$
+
+as follows from substituting the mixed time connection coefficients. Its off-diagonal variation at $p$ is $-N^{-1}D_1D_2n$. The trace and cosmological terms contribute zero to that component, so $E_{12}\ne 0$. A linearized diffeomorphism of an on-shell background has zero residual by covariance. This compactly supported example is therefore non-gauge, with vanishing boundary stress variation. It remains invisible under time translations in the same frame.
+
+<a id="ward-compatible-cross-mode"></a>
+
+### A nonzero Ward-compatible boundary tensor
+
+In boundary dimension three, use the symmetric off-diagonal perturbation
+
+$$
+h_{12}=z(t^2+z^2/7+1/3)
+$$
+
+with other independent components zero. The boundary tensor is nonzero, traceless and conserved: its only entries are spatial cross components independent of the spatial coordinates. On a rest slice the induced perturbation is trace free and divergence free in the hyperbolic background, hence $\delta R=0$. In [(2)](/source-readout/boundary-ball-readouts/01-preparation-and-ball-projections#eq-2) the area integrand is odd separately in $y^1$ and $y^2$, so the area variation vanishes directly. The boundary time-time charge also vanishes.
+
+The transverse tensor equation is
+
+$$
+(\partial_z^2-2z^{-1}\partial_z-\partial_t^2)H_{12}=0.
+$$
+
+The profile above instead gives residual $-16/7$. Substituting $h$ into the linearized Ricci tensor in radial gauge gives the same test. The perturbation is off shell and non-gauge. A boost with velocity components along both spatial directions couples to the spatial cross residual and can detect it. Ward compatibility here is a property of the geometric boundary data; no corresponding CFT state is asserted.
+
+<a id="fixed-radius-and-center"></a>
+
+### Fixing the radius or the center
+
+In three bulk dimensions take $h_{xx}=z^4\cos(kx)$, $k>0$. Its asymptotic charge vanishes. Formula [(2)](/source-readout/boundary-ball-readouts/01-preparation-and-ball-projections#eq-2) gives
+
+$$
+\begin{aligned}
+GD(R,x_0)
+&=\frac{\cos(kx_0)}{8LR}\int_{-R}^R(R^2-y^2)^3\cos(ky)\,dy\\
+&=\frac{\cos(kx_0)}{8LR}\sqrt\pi\,\Gamma(4)(2R/k)^{7/2}J_{7/2}(kR).
+\end{aligned}
+$$
+
+Integrating the cosine series against the polynomial weight proves the second equality; the standard integral representation of $J_\nu$ gives it as well. Any positive zero at $kR_0$ gives a nonzero perturbation invisible to every center at the one radius $R_0$. This uses the admissible class with no horizontal decay condition. Replacing the cosine by $\sin(k(x-x_0))$ gives an odd integrand and a fixed-center kernel for every radius.
+
+These examples concern the defect. Even on shell, the separate entropy data in one frame can miss components. In the spatial cross profile above, replace $z^2/7$ by $-z^2$. The resulting profile solves the wave equation, has the same boundary cross stress, and gives zero area variation for every rest-frame ball. Its nonzero boundary stress distinguishes it from a boundary-trivial gauge transformation.

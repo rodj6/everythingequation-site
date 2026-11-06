@@ -1,0 +1,84 @@
+---
+title: "Preparation, assumptions and verification"
+description: "Separate pointwise equilibrium from stronger screen conditions, state the physical inputs, and check what the construction establishes."
+order: 4
+---
+
+<a id="preparation-assumptions"></a>
+
+## 7. Preparation, assumptions and verification
+
+Pointwise equilibrium differs from requiring the entire null second fundamental form to vanish through first transverse order. In normal coordinates at $p$, cubic changes of the surface embedding vary the first transverse derivative of that form by a totally symmetric three-tensor. Its trace can be prescribed, so one can make the first derivative of the initial expansion vanish. Codazzi constrains the antisymmetric derivative instead.
+
+<a id="codazzi-obstruction"></a>
+
+### When the Codazzi obstruction vanishes
+
+For a screen basis $e_2,e_3$, define
+
+$$
+C_j=R(k,e_j,e_2,e_3),\qquad
+\Phi_{ij}=R(k,e_i,k,e_j).
+$$
+
+When the second fundamental form vanishes at $p$, the Codazzi obstruction is $C$, up to the overall convention for the curvature tensor. Under a screen change $e_i\mapsto e_i+c_i k$, multilinearity and the curvature symmetries change $C$ by $\Phi(c_3,-c_2)^\top$. A screen with zero Codazzi obstruction exists exactly when $C$ belongs to the range of $\Phi$. Once the obstruction vanishes, the last-two-index symmetry of the differentiated second fundamental form and the Codazzi symmetry make it totally symmetric. The cubic embedding freedom can then cancel it.
+
+Invertible $\Phi$ suffices. For a conformally flat algebraic curvature with $R_{kk}=0$ but nonzero transverse $R(k,e_i)$, one has $\Phi=0$ and $C\neq0$. That is an obstruction. The leading proof uses the weaker pointwise preparation and a centered average, so it applies even in this degenerate case.
+
+<a id="physical-inputs"></a>
+
+### What the derivation assumes
+
+The inputs are local Lorentzian geometry and its optical identities, the boost-energy definition of heat, tangent-space thermal normalization, the area-entropy relation, the leading Clausius condition and local stress-energy conservation. The source-readout construction identifies the inputs that must be shared between apertures and the residual they constrain. The entropy coefficient need not come from spherical holographic entropy. The [transport derivation](/source-readout/transport-projective) uses different physical premises; its coupling and field equations do not supply the thermodynamic inputs here.
+
+<a id="verification"></a>
+
+### What the research calculations checked
+
+The paper reports replaying the companion research calculations from a fresh extraction. All 59 results matched the archived reference: 43 exact symbolic checks, 14 controls reproducing expected failures, and two numerical diagnostics. They include Raychaudhuri for explicit metrics, affine and boost normalizations, the FLRW residual, Codazzi controls, null-direction ranks, the contracted Bianchi identity for explicit metrics, and restoration of units. The shrinking-width estimate and explicit nine-direction inversion are analytic results alongside those checks.
+
+<a id="conclusion"></a>
+
+## 8. What the construction establishes
+
+The leading Clausius residual compares heat, temperature and area on a prepared local horizon. Its vanishing determines the trace-free curvature response from a sufficient family of null directions. Conservation and the Bianchi identity complete the tensor equation up to the cosmological constant. The finite-direction reconstruction identifies which apertures suffice and which leave a kernel.
+
+At the next order the plain area prescription produces a curvature-gradient residual for the fixed boost and temperature. Transverse averaging and thermal corrections must be controlled before that residual can be interpreted beyond the generator limit.
+
+<a id="funding"></a>
+
+### Funding
+
+This work received no external funding.
+
+<a id="references"></a>
+
+## References
+
+<a id="ref-1"></a>
+
+1. T. Jacobson, *Thermodynamics of spacetime: The Einstein equation of state*, Phys. Rev. Lett. 75 (1995) 1260–1263. [doi:10.1103/PhysRevLett.75.1260](https://doi.org/10.1103/PhysRevLett.75.1260).
+
+<a id="ref-2"></a>
+
+2. J. Rodgers, *A Source-to-Readout Architecture for a Theory of Everything*. [doi:10.5281/zenodo.21366204](https://doi.org/10.5281/zenodo.21366204).
+
+<a id="ref-3"></a>
+
+3. J. Rodgers, *Transport and Projective Reduction in a Source–Readout Derivation of Einstein Gravity*. [doi:10.5281/zenodo.23954887](https://doi.org/10.5281/zenodo.23954887).
+
+<a id="ref-4"></a>
+
+4. H. Casini, M. Huerta and R. C. Myers, *Towards a derivation of holographic entanglement entropy*, JHEP 05 (2011) 036. [doi:10.1007/JHEP05(2011)036](https://doi.org/10.1007/JHEP05(2011)036).
+
+<a id="ref-5"></a>
+
+5. J. Rodgers, *Modular Transport and Spherical Holographic Entanglement Entropy in a Source–Readout Architecture*. [doi:10.5281/zenodo.24013975](https://doi.org/10.5281/zenodo.24013975).
+
+<a id="ref-6"></a>
+
+6. J. J. Bisognano and E. H. Wichmann, J. Math. Phys. 16 (1975) 985 and 17 (1976) 303.
+
+<a id="ref-7"></a>
+
+7. C. Eling, R. Guedens and T. Jacobson, *Non-equilibrium thermodynamics of spacetime*, Phys. Rev. Lett. 96 (2006) 121301. [arXiv:gr-qc/0602001](https://arxiv.org/abs/gr-qc/0602001).

@@ -1,0 +1,86 @@
+---
+title: "Oscillatory shear and the limits of recovery"
+description: "Compare a bounded oscillatory mode, then distinguish gravitational detection from reconstruction and the conditional boundary interpretation."
+order: 4
+---
+
+<a id="section-5"></a>
+## 5. A bounded oscillatory comparison
+
+The polynomial theorem gives exact positivity for all radii. To test a bounded boundary shear, take the time-even solution
+
+<a id="eq-22"></a>
+
+$$
+h_{xy}=z\cos(\omega t)j(\omega z),\qquad
+j(u)=3\frac{\sin u-u\cos u}{u^3},\qquad j(0)=1.
+\tag{22}
+$$
+
+The regular solution satisfies $j''+4j'/u+j=0$. It is smooth for finite $z>0$, and the same energy and area cancellation applies at first order. The shear is bounded at the boundary. Spatial homogeneity and wedge regularity do not by themselves produce a global finite-norm CFT state family.
+
+<a id="trial-spaces"></a>
+### Lower bounds from nested trial spaces
+
+For the evaluation of [canonical energy](/source-readout/second-order-boundary-balls/02-second-order-identity#eq-12), restrict trial displacements to the span of
+
+$$
+b_m(\theta,\varphi)=\sin(2\varphi)\sin^2\theta\cos^3\theta(\cos^2\theta)^m,
+\qquad 0\le m<N.
+$$
+
+Minimizing $2M+Q$ on a subspace bounds its unrestricted minimum from above and hence bounds the response from below. Write $Q_{ij}=Q(b_i,b_j)$ for the bilinear shape form and $M_i=M[b_i]$. The trial contribution to the response is $M^\mathsf{T}Q^{-1}M/(4G)$. As a check, the first two basis functions contain the exact polynomial displacement and give (14) at $R=1$.
+
+<a id="oscillatory-lower-bounds"></a>
+### Numerical lower-bound evaluations
+
+The following evaluations use $R=1$ and high-precision quadrature. The formula gives a lower bound, but these numerical values do not come with certified quadrature intervals.
+
+| Frequency–radius product $\omega R$ | Bound, $N=1$ | Bound, $N=3$ |
+| ---: | ---: | ---: |
+| $1/2$ | 0.032740 | 0.032740 |
+| $1$ | 0.030157 | 0.030159 |
+| $2$ | 0.022065 | 0.022090 |
+| $4$ | 0.009119 | 0.009254 |
+
+Translation invariance extends each entry to all centres for the corresponding parameter choice. The values support detection at the four tested frequency–radius products. The analytic all-radii theorem applies to the polynomial tangent.
+
+<a id="section-6"></a>
+## 6. What the readouts recover
+
+Let $M_1$ send a tangent to the collection of pairs $(DE_B,DA_B/(4G))$ on the fixed-slice family, and let $M_2$ assign its canonical energy on those same wedges. The polynomial solution proves
+
+<a id="kernel-comparison"></a>
+
+$$
+\ker M_1\not\subset\{h:M_2(h)=0\}.
+$$
+
+Its positive response distinguishes it from a boundary-trivial pure-gauge tangent. It does not distinguish $h$ from $-h$ because the response is quadratic. The example detects a transverse component; reconstruction would require more information. There is no general kernel or stability theorem here for $M_2$ restricted to $\ker M_1$.
+
+This is the link between the [first-order kernel](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel) and [second-order detection](/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy). Where you look matters: selecting more regions, times or frames can change the linear map. The response order matters too: holding the regions and reference state fixed still leaves room for detection through higher variations. Here the charge couples at first order to energy density, and reflection cancels the linear area change. At second order the bulk curvature and surface deformation both contribute to canonical energy.
+
+<a id="boundary-limitations"></a>
+### Gravitational data and boundary states
+
+The boundary interpretation requires a compatible CFT state family, differentiable relative entropy and the second-order area and stress-tensor dictionary. The polynomial mode has acceptable near-boundary falloff on each wedge, but grows in the bulk and has unbounded boundary shear in time. The oscillatory mode is bounded at the boundary, but spatially homogeneous. These are gravitational tangents with computed wedge responses. Finite-norm preparations with controlled second-order completion, and the residual kernel of the quadratic map, remain open.
+
+<a id="section-7"></a>
+## 7. What the same balls can see
+
+The same balls have zero first-order area and energy variations and positive second-order gravitational response. The exact polynomial calculation proves positivity at every radius, with a fixed-surface lower bound and independent phase-space checks at two radii. The oscillatory comparison preserves the first-order cancellation and gives positive numerical lower-bound evaluations at four parameter values. Where the state and completion hypotheses hold, the boundary observable is the relative-entropy Hessian. The gravitational example shows concretely that a fixed readout can reveal new information when measured at a higher order.
+
+<a id="verification"></a>
+## Verification used in the paper
+
+The polynomial calculation uses symbolic curvature, surface differentiation and exact integration. A separate symplectic-current implementation checks the two radii, the black-brane benchmark and gauge controls. The oscillatory calculation uses high-precision quadrature in nested trial spaces. The paper identifies the derivative convention as E1, the symplectic and gauge identities as E2, the benchmark as E3, the controls as E4, the polynomial checks as E5 and E5b–c, and the oscillatory comparison as E6.
+
+<a id="references"></a>
+## References
+
+1. <a id="ref-1"></a>N. Lashkari and M. Van Raamsdonk, *Canonical Energy is Quantum Fisher Information*, [arXiv:1508.00897v2](https://arxiv.org/abs/1508.00897v2).
+2. <a id="ref-2"></a>T. Faulkner, M. Guica, T. Hartman, R. C. Myers and M. Van Raamsdonk, *Gravitation from Entanglement in Holographic CFTs*, [arXiv:1312.7856v2](https://arxiv.org/abs/1312.7856v2).
+3. <a id="ref-3"></a>J. Rodgers, *Boundary Ball Readouts and Linearized Einstein Gravity in a Source–Readout Architecture*, [DOI: 10.5281/zenodo.24019669](https://doi.org/10.5281/zenodo.24019669) · [Reading edition](/source-readout/boundary-ball-readouts).
+4. <a id="ref-4"></a>H. Casini, M. Huerta and R. C. Myers, *Towards a derivation of holographic entanglement entropy*, [arXiv:1102.0440](https://arxiv.org/abs/1102.0440).
+5. <a id="ref-5"></a>V. E. Hubeny, M. Rangamani and T. Takayanagi, *A covariant holographic entanglement entropy proposal*, [arXiv:0705.0016](https://arxiv.org/abs/0705.0016).
+6. <a id="ref-6"></a>S. Hollands and R. M. Wald, *Stability of black holes and black branes*, [arXiv:1201.0463](https://arxiv.org/abs/1201.0463).

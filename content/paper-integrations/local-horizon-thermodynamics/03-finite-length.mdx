@@ -1,0 +1,75 @@
+---
+title: "The first finite-length correction"
+description: "Track the cubic residual along one generator, the width estimate needed to transfer it, and the separate weighted expansion prescription."
+order: 3
+---
+
+<a id="finite-length"></a>
+
+## 6. Follow the residual beyond leading order
+
+Hold the boost and leading temperature $\hbar\kappa/(2\pi)$ fixed as readouts. Start with densities per unit initial area along a central generator. Write $R_j$ and $T_j$ for the zeroth and first Taylor coefficients of $R_{kk}$ and $T_{kk}$ in $\lambda$, with data smooth enough for the following remainders. At equilibrium, $\theta(0)=\sigma(0)=0$, and Raychaudhuri gives
+
+$$
+\theta=-R_0\lambda-\tfrac12R_1\lambda^2+O(\lambda^3).
+$$
+
+The area Jacobian $J(\lambda)=dA_\lambda/dA_0$ has $J(0)=1$ and $\dot J=\theta J$. Integrating gives
+
+$$
+\frac{d(\delta A)}{dA_0}
+=\frac{R_0h^2}{2}-\frac{R_1h^3}{6}+O(h^4),
+\qquad
+\frac{d(\delta Q)}{dA_0}
+=\kappa\left(\frac{T_0h^2}{2}-\frac{T_1h^3}{3}\right)+O(h^4).
+$$
+
+The heat flux uses $J=1+O(\lambda^2)$, so its area-factor correction first appears at fourth order. On an Einstein solution, $T_j=\hbar\eta R_j/(2\pi)$ for $j=0,1$. Therefore the leading terms cancel and the cubic terms leave
+
+<a id="eq-2"></a>
+
+$$
+\frac{d(\delta Q-\pi_T\eta\delta A)}{dA_0}
+=-\frac{\hbar\kappa\eta}{12\pi}h^3\nabla_k R_{kk}(p)+O(h^4).\tag{2}
+$$
+
+<a id="flrw-example"></a>
+
+For a concrete example, take spatially flat FLRW with scale factor $a(t)=t$, $t>0$, and an affine radial null generator with $k^t=1/t$. Then $H=1/t$ and $R_{kk}=-2\dot H(k^t)^2=2/t^4$. At $t=1$, $\nabla_kR_{kk}=-8$. The conserved Einstein stress tensor gives a nonzero coefficient in [equation (2)](#eq-2). Even on shell, cancellation beyond leading order is not automatic.
+
+<a id="finite-width"></a>
+
+### Transfer to a pencil of finite transverse width
+
+For a smooth centered family the initial expansion contributes $O(h\ell^2)$ per unit initial area. Taylor coefficients smooth in transverse coordinates have averages that differ from their central values by $O(\ell^2)$, under the same centering and smoothness assumptions. Expand the heat and area expressions in $h$ before averaging. Centering replaces each coefficient by its central value plus $O(\ell^2)$, including the coefficient of $h$ in the area change. The residual divided by $A_0$ therefore has the central expansion in [equation (2)](#eq-2) with an additional $O(h\ell^2)$ error.
+
+Consequently $\ell=o(h)$ suffices to preserve the cubic coefficient. The leading-order scaling $\ell=O(h)$ can carry an extra cubic term. The quartic remainder is retained if $h\ell^2=O(h^4)$ in fixed local units. These statements use the same readout prescription. A relative temperature correction of order $h$, or a quadratic correction to the boost on the horizon, can also change the cubic coefficient.
+
+<a id="weighted-prescription"></a>
+
+### A separate weighted expansion prescription
+
+Define a boost-weighted functional on the pencil $H$:
+
+$$
+\delta S_w=\eta\int_{H}(-\lambda)(-\dot\theta)\,d\lambda\,dA_\lambda.
+$$
+
+It agrees at leading order with plain area entropy on an equilibrium generator. Substitution of the Raychaudhuri equation gives the exact identity for these prescribed readouts:
+
+$$
+\delta Q-\pi_T\delta S_w
+=\kappa\int_{H}(-\lambda)
+\left[T_{kk}-\frac{\hbar\eta}{2\pi}
+\left(R_{kk}+\frac{\theta^2}{2}+\sigma_{ab}\sigma^{ab}\right)\right]
+\,d\lambda\,dA_\lambda.
+$$
+
+On shell, the remaining terms are nonpositive in this residual convention. Along the central equilibrium generator the density starts at order $h^4$. With $S_1=(\nabla_k\sigma)|_p$ in a parallel screen frame, the leading term is
+
+$$
+-\frac{\hbar\kappa\eta}{8\pi}h^4
+\left(\frac{R_0^2}{2}+S_{1\,ab}S_1^{ab}\right).
+$$
+
+The quadratic optical terms have the displayed coefficient of $\lambda^2$ before integration against $-\lambda$. The area Jacobian is $1+O(\lambda^2)$. This establishes the signed remainder for a weighted expansion functional. A physical entropy interpretation requires additional input, and the identity is separate from entropy-production laws in nonequilibrium generalizations [\[7\]](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-7).

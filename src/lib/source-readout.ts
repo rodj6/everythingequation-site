@@ -1,4 +1,4 @@
-import {spectralEditions,spectralHub} from '@/config/paper-integrations';
+import {sourceReadoutEditions,spectralHub,gravityHub,gravityReleaseDate} from '@/config/paper-integrations';
 import {integratedSearchRecords,integratedManifest} from '@/lib/paper-integrations';
 import fs from 'node:fs';
 import {parseFragment} from 'parse5';
@@ -47,5 +47,5 @@ export function sourceSearchRecords() {
   return [...sourcePapers().flatMap(p => [{title:p.title,context:p.series,url:paperUrl(p),text:p.description}, ...p.chapters.map(c => ({title:c.title,context:p.title,url:chapterUrl(p,c),text:sourcePlainText(readSourceHtml(c))}))]), ...integratedSearchRecords('source-readout')];
 }
 export function sourceManifest() {
-  return {schemaVersion:1,title:'Shadow Theory: Source and Readout',url:'/source-readout',origins:'/source-readout/origins',search:'/source-readout/search.json',updated:'2026-11-05',spectralProgramme:spectralHub,readingEditions:spectralEditions.map(p=>integratedManifest(p.id)),papers:sourcePapers().map(p=>({...p,url:paperUrl(p),doiUrl:p.doi?`https://doi.org/${p.doi}`:undefined,chapters:p.chapters.map(c=>({...c,url:chapterUrl(p,c)}))}))};
+  return {schemaVersion:1,title:'Shadow Theory: Source and Readout',url:'/source-readout',origins:'/source-readout/origins',search:'/source-readout/search.json',updated:gravityReleaseDate,spectralProgramme:spectralHub,gravityProgramme:gravityHub,readingEditions:sourceReadoutEditions.map(p=>integratedManifest(p.id)),papers:sourcePapers().map(p=>({...p,url:paperUrl(p),doiUrl:p.doi?`https://doi.org/${p.doi}`:undefined,chapters:p.chapters.map(c=>({...c,url:chapterUrl(p,c)}))}))};
 }

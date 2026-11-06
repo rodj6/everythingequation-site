@@ -1,0 +1,57 @@
+---
+title: "One vacuum, two local descriptions"
+description: "Set up the common source, the algebraic aperture and the transport that relates vacuum restriction to hyperbolic thermality."
+order: 1
+---
+
+<a id="abstract"></a>
+
+**One vacuum preparation supplies both descriptions.** Restrict it to a causal diamond and the result is a local vacuum state. Transport its algebra and dynamics to the hyperbolic cylinder and the same state data satisfy the thermal condition at inverse temperature $2\pi R$. This part requires no continuum density matrix.
+
+The entropy calculation has further inputs. With the classical holographic dictionary and a regulated counting prescription, the bulk chart recovers the same time normalization and supplies a stationary horizon entropy. An exact coefficient test identifies which analytic changes of cutoff preserve the odd-dimensional constant. Within the stated class, the even-dimensional logarithmic coefficient is invariant.
+
+<a id="section-1"></a>
+
+## 1. The question and the assumptions
+
+A global vacuum and a thermal state can describe the same local observables once the algebra and its evolution are specified. Casini, Huerta and Myers (CHM) map the vacuum on a ball's causal development to a thermal conformal field theory on hyperbolic space and, under holographic assumptions, compute its entropy from a Killing horizon [1](/source-readout/modular-transport/05-geometric-checks-and-references#ref-chm).
+
+Three operations enter with different domains: restriction of a state, transport of its dynamics, and regulated counting. The first two operate on continuum algebras. The third requires additional data. In the Shadow Theory source–readout architecture [2](/source-readout/modular-transport/05-geometric-checks-and-references#ref-architecture), [3](/source-readout/modular-transport/05-geometric-checks-and-references#ref-transport), one preparation supports the local and thermal descriptions. The bulk extension realizes the same boundary transport, while two regulators that agree at leading order can differ at the order relevant to entropy.
+
+The conformal field theory, modular-theoretic and gravitational inputs are hypotheses of the construction. Use units $\hbar=c=k_B=1$, boundary spacetime dimension $d\ge2$, ball radius $R>0$, and Lorentzian signature $(-+\cdots+)$.
+
+<a id="section-2"></a>
+
+## 2. Source data, apertures and return maps
+
+<a id="source-datum"></a>
+
+The prepared source datum is
+
+$$
+z=(\mathcal A,U,\Omega;\,g_{\mathrm{bulk}},L;\,r).
+$$
+
+The first entries give a conformally covariant local net, its vacuum representation and its vacuum vector. The bulk entries enter only for theories with the stipulated classical AdS dual. The separately specified datum $r$ gives the counting prescription, including cutoffs and any boundary data needed to define the regulated functional. Admission of these data is an assumption. The abstract architecture does not select a unique net, action or counting prescription.
+
+<a id="aperture-and-return"></a>
+
+For a region $O$, the aperture is the inclusion $i_O:\mathcal A(O)\hookrightarrow\mathcal A_{\mathrm{global}}$ in the vacuum representation. Its state readout is $\omega_O=\omega\circ i_O$, where $\omega(A)=\langle\Omega,A\Omega\rangle$. Given a conformal identification $\chi:O\to O'$, let $j_\chi$ be the induced algebra isomorphism. The destination state is $\omega_{O'}=\omega_O\circ j_\chi^{-1}$. Thus for every finite product,
+
+$$
+\omega_{O'}\!\left(j_\chi(A_1)\cdots j_\chi(A_n)\right)=\omega_O(A_1\cdots A_n).
+$$
+
+The return map $j_\chi^{-1}$ acts on the image of the localized algebra, so the identity recovers local correlation data. A global extension of the restricted state is separate data.
+
+<a id="modular-commuting-diagram"></a>
+
+Conjugation by $j_\chi$ transports the dynamical readout. For the modular groups,
+
+$$
+j_\chi\circ\sigma_s^{\omega_O}=\sigma_s^{\omega_{O'}}\circ j_\chi.
+$$
+
+To prove this, work in the Gelfand–Naimark–Segal (GNS) representations of the two states. Map the cyclic vectors by $A\Omega\mapsto j_\chi(A)\Omega'$. This preserves their inner products and extends to a unitary. It intertwines the densely defined Tomita maps $A\Omega\mapsto A^*\Omega$. Taking their closures and polar decompositions intertwines the modular operators.
+
+The entropy readout takes a regulated realization as input. Commutativity of the continuum transport diagram does not identify independently regulated entropy functionals.
