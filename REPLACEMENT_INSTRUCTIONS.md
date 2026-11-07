@@ -2,7 +2,7 @@
 
 1. Open PowerShell in your existing checkout. Run `git status --short` and back
    up the folder or save any work in progress. This package starts from
-   `everythingequation-site-eight-paper-update.zip`. If you have newer edits,
+   `everythingequation-site-gravity-holography-update.zip`. If you have newer edits,
    compare them with `GRAVITY_FILE_CHANGES.json` before overwriting files.
 2. Extract this ZIP into a separate folder. Copy the **contents** of its
    `everythingequation-site` folder into your existing website folder. Include
@@ -33,5 +33,5 @@
    Atlas proof links, Source–Readout search, chapter navigation and downloads.
    A local adapter build does not test your live deployment.
 
-See `GRAVITY_INTEGRATION_REPORT.md`, `GRAVITY_COVERAGE.md` and
-`GRAVITY_VERIFICATION.md` for the release details.
+See `GRAVITY_ERRATA_REPORT.md` for the correction list, `GRAVITY_COVERAGE.md`
+for source-to-web mapping, and `GRAVITY_VERIFICATION.md` for the test results.

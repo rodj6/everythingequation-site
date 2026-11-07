@@ -21,7 +21,16 @@ C_j=R(k,e_j,e_2,e_3),\qquad
 \Phi_{ij}=R(k,e_i,k,e_j).
 $$
 
-When the second fundamental form vanishes at $p$, the Codazzi obstruction is $C$, up to the overall convention for the curvature tensor. Under a screen change $e_i\mapsto e_i+c_i k$, multilinearity and the curvature symmetries change $C$ by $\Phi(c_3,-c_2)^\top$. A screen with zero Codazzi obstruction exists exactly when $C$ belongs to the range of $\Phi$. Once the obstruction vanishes, the last-two-index symmetry of the differentiated second fundamental form and the Codazzi symmetry make it totally symmetric. The cubic embedding freedom can then cancel it.
+When the second fundamental form vanishes at $p$, the Codazzi obstruction is $C$, up to the overall convention for the curvature tensor. Under the screen change $e_i\mapsto e_i+c_i k$, shifting the second slot gives zero by antisymmetry in the first pair. Shifting both of the last two slots also gives zero, by antisymmetry in that pair. The two single shifts give
+
+$$
+\Delta C_j
+=c_2 R(k,e_j,k,e_3)+c_3 R(k,e_j,e_2,k)
+=c_2\Phi_{j3}-c_3\Phi_{j2},
+\qquad \Delta C=\Phi(-c_3,c_2)^\top.
+$$
+
+A screen with zero Codazzi obstruction exists exactly when $C$ belongs to the range of $\Phi$. Once the obstruction vanishes, the last-two-index symmetry of the differentiated second fundamental form and the Codazzi symmetry make it totally symmetric. The cubic embedding freedom can then cancel it.
 
 Invertible $\Phi$ suffices. For a conformally flat algebraic curvature with $R_{kk}=0$ but nonzero transverse $R(k,e_i)$, one has $\Phi=0$ and $C\neq0$. That is an obstruction. The leading proof uses the weaker pointwise preparation and a centered average, so it applies even in this degenerate case.
 
@@ -51,6 +60,12 @@ At the next order the plain area prescription produces a curvature-gradient resi
 
 This work received no external funding.
 
+<a id="verification-materials"></a>
+
+### Verification materials for this edition
+
+The [matching verification archive](/publications/gravity/local-horizon-thermodynamics/Jacobson_Verification_24029166.zip) supplies the scripts and reference outputs, targeted checks of the corrected Codazzi transformation, and instructions for replaying the original suites. It is also available from the [Zenodo record for this edition](https://doi.org/10.5281/zenodo.24029166).
+
 <a id="references"></a>
 
 ## References
@@ -77,7 +92,7 @@ This work received no external funding.
 
 <a id="ref-6"></a>
 
-6. J. J. Bisognano and E. H. Wichmann, J. Math. Phys. 16 (1975) 985 and 17 (1976) 303.
+6. J. J. Bisognano and E. H. Wichmann, *On the duality condition for a Hermitian scalar field*, J. Math. Phys. 16 (1975) 985–1007. See also *On the duality condition for quantum fields*, J. Math. Phys. 17 (1976) 303–321.
 
 <a id="ref-7"></a>
 

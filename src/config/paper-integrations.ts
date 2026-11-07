@@ -17,6 +17,8 @@ export interface IntegratedPaper {
   programme?: 'source-readout';
   series?: 'gravity-holography';
   supplementUrl?: string;
+  supplementDescription?: string;
+  previousDoi?: string;
 }
 
 export const paperIntegrations = publications as IntegratedPaper[];
@@ -24,7 +26,8 @@ export const sourceReadoutEditions = paperIntegrations.filter(p => p.programme =
 export const spectralEditions = sourceReadoutEditions.filter(p => !p.series);
 export const gravityEditions = sourceReadoutEditions.filter(p => p.id === 'transport-projective' || p.series === 'gravity-holography');
 export const gravityHub = '/source-readout/gravity-and-holography';
-export const gravityReleaseDate = '2026-11-06';
+export const gravityReleaseDate = gravityEditions.reduce((latest, paper) => paper.date > latest ? paper.date : latest, '2026-11-06');
+export const gravityErrataSupplement = '/publications/gravity/Gravity_Errata_Verification.zip';
 export const firstOrderKernel = '/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel';
 export const secondOrderDetection = '/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy';
 export const holographyAtlas = '/atlas?focus=observable-horizon-entropy';

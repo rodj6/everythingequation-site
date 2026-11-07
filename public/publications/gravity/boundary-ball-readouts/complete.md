@@ -2,9 +2,9 @@
 
 First-order ball data on a fixed boundary slice recover a projected Einstein constraint. The fixed-frame kernel shows why recovering the full field equation needs more frame data and boundary assumptions, and why that recovery is distinct from reconstructing the metric.
 
-Jeremy Rodgers · 2026-11-06
+Jeremy Rodgers · 2026-11-07
 
-DOI: https://doi.org/10.5281/zenodo.24019669
+DOI: https://doi.org/10.5281/zenodo.24029188
 
 
 
@@ -299,7 +299,7 @@ as follows from substituting the mixed time connection coefficients. Its off-dia
 
 ### A nonzero Ward-compatible boundary tensor
 
-In boundary dimension three, use the symmetric off-diagonal perturbation
+In boundary dimension three, set $h_{12}=zH_{12}$ and use the symmetric off-diagonal perturbation
 
 $$
 h_{12}=z(t^2+z^2/7+1/3)
@@ -307,13 +307,25 @@ $$
 
 with other independent components zero. The boundary tensor is nonzero, traceless and conserved: its only entries are spatial cross components independent of the spatial coordinates. On a rest slice the induced perturbation is trace free and divergence free in the hyperbolic background, hence $\delta R=0$. In [(2)](/source-readout/boundary-ball-readouts/01-preparation-and-ball-projections#eq-2) the area integrand is odd separately in $y^1$ and $y^2$, so the area variation vanishes directly. The boundary time-time charge also vanishes.
 
-The transverse tensor equation is
+Inside the Fefferman–Graham conformal factor, the dimensionless perturbation is
 
 $$
-(\partial_z^2-2z^{-1}\partial_z-\partial_t^2)H_{12}=0.
+\gamma_{12}=\frac{z^2h_{12}}{L^2}=\frac{z^3H_{12}}{L^2}.
 $$
 
-The profile above instead gives residual $-16/7$. Substituting $h$ into the linearized Ricci tensor in radial gauge gives the same test. The perturbation is off shell and non-gauge. A boost with velocity components along both spatial directions couples to the spatial cross residual and can detect it. Ward compatibility here is a property of the geometric boundary data; no corresponding CFT state is asserted.
+The transverse, trace-free equation for $\gamma_{12}$ is
+
+$$
+(\partial_z^2-2z^{-1}\partial_z-\partial_t^2)\gamma_{12}=0.
+$$
+
+Substitution cancels the term with no derivatives on $H_{12}$. After removing the common factor $z^3/L^2$, the transverse equation for the profile becomes
+
+$$
+(\partial_z^2+4z^{-1}\partial_z-\partial_t^2)H_{12}=0.
+$$
+
+The profile above instead gives residual $-4/7$. The perturbation is off shell and non-gauge. A boost with velocity components along both spatial directions couples to the spatial cross residual and can detect it. Ward compatibility here is a property of the geometric boundary data; no corresponding CFT state is asserted.
 
 <a id="fixed-radius-and-center"></a>
 
@@ -331,7 +343,7 @@ $$
 
 Integrating the cosine series against the polynomial weight proves the second equality; the standard integral representation of $J_\nu$ gives it as well. Any positive zero at $kR_0$ gives a nonzero perturbation invisible to every center at the one radius $R_0$. This uses the admissible class with no horizontal decay condition. Replacing the cosine by $\sin(k(x-x_0))$ gives an odd integrand and a fixed-center kernel for every radius.
 
-These examples concern the defect. Even on shell, the separate entropy data in one frame can miss components. In the spatial cross profile above, replace $z^2/7$ by $-z^2$. The resulting profile solves the wave equation, has the same boundary cross stress, and gives zero area variation for every rest-frame ball. Its nonzero boundary stress distinguishes it from a boundary-trivial gauge transformation.
+These examples concern the defect. Even on shell, the separate entropy data in one frame can miss components. The spatial cross profile $H_{12}=t^2+z^2/5+1/3$ solves the equation for $H_{12}$ above, has the same boundary cross stress, and gives zero area variation for every rest-frame ball. Its nonzero boundary stress distinguishes it from a boundary-trivial gauge transformation.
 
 
 
@@ -350,6 +362,12 @@ The equivalence is first order and concerns the Einstein residual in the stated 
 ## Funding
 
 This work received no external funding.
+
+<a id="verification-materials"></a>
+
+## Verification materials
+
+The [verification package for this edition](/publications/gravity/boundary-ball-readouts/Faulkner_Verification_24029188.zip) includes targeted checks of the corrected transverse profile and instructions for replaying the original suites. Scripts and reference outputs are also available from the [Zenodo record](https://doi.org/10.5281/zenodo.24029188).
 
 <a id="references"></a>
 
@@ -373,7 +391,7 @@ This work received no external funding.
 
 <a id="ref-5"></a>
 
-5. J. Rodgers, *Local Horizon Thermodynamics and Einstein Gravity in a Source–Readout Architecture*. [DOI 10.5281/zenodo.24016009](https://doi.org/10.5281/zenodo.24016009). [Read the web edition](/source-readout/local-horizon-thermodynamics).
+5. J. Rodgers, *Local Horizon Thermodynamics and Einstein Gravity in a Source–Readout Architecture*. [DOI 10.5281/zenodo.24029166](https://doi.org/10.5281/zenodo.24029166). [Read the web edition](/source-readout/local-horizon-thermodynamics).
 
 <a id="ref-6"></a>
 

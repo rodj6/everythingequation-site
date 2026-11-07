@@ -64,8 +64,8 @@ function atomTimestamp(value: string): string {
 // ---------------------------------------------------------------------------
 
 const gravityNew = gravityEditions.filter(p => p.series === 'gravity-holography');
-const newGravityIds = new Set(gravityNew.map(p => p.id));
-const editionDate = (id: string, sourceReadout: boolean) => newGravityIds.has(id) ? gravityReleaseDate : sourceReadout ? '2026-11-05' : '2026-10-23';
+const gravityEditionDates = new Map(gravityNew.map(p => [p.id, p.date]));
+const editionDate = (id: string, sourceReadout: boolean) => gravityEditionDates.get(id) ?? (sourceReadout ? '2026-11-05' : '2026-10-23');
 
 export async function generateSitemap(baseUrl: string): Promise<string> {
   const canonicalBase = normalizeBaseUrl(baseUrl);
@@ -153,7 +153,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
 
   const entries = [
     {title:'Gravity and holography',url:`${canonicalBase}${gravityHub}`,date:gravityReleaseDate,summary:sameBallTakeaway+' Five complete editions trace connections, horizons, and boundary balls.'},
-    ...gravityNew.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:gravityReleaseDate,summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
+    ...gravityNew.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:p.date,summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
     {title:'CSCF and spectral carriers',url:`${canonicalBase}${spectralHub}`,date:'2026-11-05',summary:'Seven complete web editions connect the common spectral carrier to profile generation, reciprocal memory, forcing, bistability and slow passage.'},
     ...spectralEditions.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:'2026-11-05',summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
     ...sourcePapers().filter(p=>!p.parentId&&!p.parentSlug).map(p=>({title:p.title,url:`${canonicalBase}${paperUrl(p)}`,date:'2026-10-28',summary:`${p.description} Complete web-edition release; the original publication date and DOI remain on its article page.`})),
@@ -273,7 +273,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- [Gravity and holography: five-paper reading path](${baseUrl}${gravityHub}): ${sameBallTakeaway}`,
     `  - [First-order fixed-slice kernel](${baseUrl}${firstOrderKernel}) · [Second-order canonical-energy detection](${baseUrl}${secondOrderDetection})`,
     `- [CSCF and spectral carriers](${baseUrl}${spectralHub}): the shared operator, spectral profile generation, reciprocal memory, forcing, bistability and prepared hysteresis.`,
-    ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})${p.supplementUrl?`; [verification archive](${p.supplementUrl.startsWith('/')?baseUrl:''}${p.supplementUrl})`:''}`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
+    ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})${p.supplementUrl?`; [${p.supplementDescription??'verification archive'}](${p.supplementUrl.startsWith('/')?baseUrl:''}${p.supplementUrl})`:''}`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
     '',
     '## Conscious scaffolding and the preference for continuity',
     '',

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type {Metadata} from 'next';
-import {firstOrderKernel, gravityAtlas, gravityEditions, gravityHub, holographyAtlas, sameBallTakeaway, secondOrderDetection} from '@/config/paper-integrations';
+import {firstOrderKernel, gravityAtlas, gravityErrataSupplement, gravityEditions, gravityHub, holographyAtlas, sameBallTakeaway, secondOrderDetection} from '@/config/paper-integrations';
 
 export const dynamic = 'force-static';
 export const metadata: Metadata = {
@@ -36,6 +36,7 @@ export default function GravityAndHolography() {
         <h2>Follow the complete arguments</h2>
         <p>Read the transport reconstruction first, then follow the modular and local horizon results into the boundary-ball pair. The five papers share the source–readout question. Each derives its result from its own preparation, readout and physical assumptions.</p>
         <ol className="pi-chapter-list">{gravityEditions.map(p => <li key={p.id}><Link href={p.url} prefetch={false}><h3>{p.title}</h3><p>{p.description}</p><span>Read the full edition →</span></Link></li>)}</ol>
+        <p><a href={gravityErrataSupplement}>Download the targeted checks for both corrections ↓</a> The individual editions link their full verification suites.</p>
         <p><Link href="/source-readout#sr-search-title">Search the Source–Readout programme →</Link> · <a href="/source-readout/manifest.json">Machine-readable chapter inventory ↗</a></p>
       </div>
     </article>

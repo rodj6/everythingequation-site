@@ -1,43 +1,341 @@
 {
   "title": "Local Horizon Thermodynamics and Einstein Gravity in a Source–Readout Architecture",
-  "doi": "10.5281/zenodo.24016009",
+  "doi": "10.5281/zenodo.24029166",
   "source": {
-    "file": "Jacobson_Source_Readout(2).pdf",
+    "file": "Jacobson_Source_Readout(4)(2).pdf",
     "pages": 7,
-    "sha256": "1bb7e85de87f8096cb35e93465a1495288ceb0e328e8d170e9b30d1406237136"
+    "sha256": "91ce0f9c0465bd968e37b7eae984d7a26bb5d30f677581572fb6c7f58de20589"
   },
   "route": "/source-readout/local-horizon-thermodynamics",
   "chapters": [
-    {"slug": "01-common-preparation", "file": "01-common-preparation.mdx"},
-    {"slug": "02-clausius-and-directions", "file": "02-clausius-and-directions.mdx"},
-    {"slug": "03-finite-length", "file": "03-finite-length.mdx"},
-    {"slug": "04-assumptions-and-references", "file": "04-assumptions-and-references.mdx"}
+    {
+      "slug": "01-common-preparation",
+      "file": "01-common-preparation.mdx"
+    },
+    {
+      "slug": "02-clausius-and-directions",
+      "file": "02-clausius-and-directions.mdx"
+    },
+    {
+      "slug": "03-finite-length",
+      "file": "03-finite-length.mdx"
+    },
+    {
+      "slug": "04-assumptions-and-references",
+      "file": "04-assumptions-and-references.mdx"
+    }
   ],
   "coverage": [
-    {"sourceSection": "Abstract", "sourcePages": "1", "chapter": "01-common-preparation", "anchor": "overview", "items": ["Common heat, temperature and area", "Shrinking-pencil equivalence", "Finite-direction reconstruction and circle kernel", "Cubic area residual, transverse limit and weighted prescription"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "1 Introduction", "sourcePages": "1", "chapter": "01-common-preparation", "anchor": "introduction", "items": ["Jacobson construction and contribution of shared source", "Relation to transport and spherical entanglement, with separate premises", "Dimension, metric signature and unit conventions"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "2 Common source and local preparation", "sourcePages": "2", "chapter": "01-common-preparation", "anchor": "common-source", "items": ["Aperture index and source tuple", "Off-shell metric sector and classical or expected stress tensor", "Screen, initial two-surface, affine parameter, measure and twist-free pencil", "Prescribed boost and flat exact restriction", "Existence of pointwise expansion and shear equilibrium"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "2 Common source and local preparation", "sourcePages": "2", "chapter": "01-common-preparation", "anchor": "three-readouts", "items": ["Heat, temperature and area-entropy equations", "Shared g, T, eta and boost", "Recovery map and constitutive residual zero set"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "3 Boost normalization and temperature", "sourcePages": "2–3", "chapter": "01-common-preparation", "anchor": "boost-temperature", "items": ["Wedge KMS inverse rapidity temperature and modular flow convention", "Local scaling-limit premise", "Acceleration and boost redshift", "Flux-to-temperature equation", "Affine and positive boost rescaling", "Coupling rescaling, sign mismatch and angular failure mode"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "4 Leading Clausius coefficient", "sourcePages": "3", "chapter": "02-clausius-and-directions", "anchor": "leading-coefficient", "items": ["Raychaudhuri and area equations", "Central expansion and centered initial average", "Controlled leading area and heat densities", "Uncentered failure mode"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "4 Leading Clausius coefficient", "sourcePages": "3", "chapter": "02-clausius-and-directions", "anchor": "eq-1", "items": ["Equation (1), normalized residual and its null contraction", "Thermal error tolerance", "Entropy law and vanishing residual as constitutive inputs"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "4 Theorem 4.1 and proof", "sourcePages": "3–4", "chapter": "02-clausius-and-directions", "anchor": "theorem-4-1", "items": ["Exact regularity and conservation hypotheses", "Einstein equation and constant Lambda", "Null-cone tensor lemma, parity argument, divergence, Bianchi and connectedness", "Converse", "No-conservation and vacuum-energy qualifications"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "4 Units", "sourcePages": "4", "chapter": "02-clausius-and-directions", "anchor": "coupling-and-units", "items": ["Restored temperature and curvature coupling", "Newton and Planck unit formulas"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "5 Determining sets of null directions", "sourcePages": "4", "chapter": "02-clausius-and-directions", "anchor": "determining-directions", "items": ["Angular decomposition and trace-free spatial block", "Metric-direction kernel, nine-dimensional quotient and injectivity", "Open sets and observer invariance"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "5 Nine-direction inversion", "sourcePages": "4", "chapter": "02-clausius-and-directions", "anchor": "nine-direction-inversion", "items": ["Six axial and three pair directions", "Explicit diagonal, linear and off-diagonal inversion formulas", "Analytic generic-rank argument and eight-evaluation limit"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "5 Circle restriction", "sourcePages": "4", "chapter": "02-clausius-and-directions", "anchor": "circle-kernel", "items": ["Fourier image of nondegenerate circle", "Five-dimensional image and explicit four-dimensional kernel", "Pointwise scope and conditioning"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "6 The first finite-length correction", "sourcePages": "4–5", "chapter": "03-finite-length", "anchor": "finite-length", "items": ["Fixed boost and temperature premise", "Taylor expansion, area Jacobian and order of flux correction", "Area and heat density formulas", "On-shell Taylor relations"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "6 On-shell residual", "sourcePages": "5", "chapter": "03-finite-length", "anchor": "eq-2", "items": ["Equation (2), exact cubic coefficient and quartic remainder"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "6 FLRW example", "sourcePages": "5", "chapter": "03-finite-length", "anchor": "flrw-example", "items": ["Scale factor, affine tangent, Hubble rate and Ricci contraction", "Explicit nonzero curvature derivative and on-shell residual"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "6 Transfer to a transverse pencil", "sourcePages": "5", "chapter": "03-finite-length", "anchor": "finite-width", "items": ["Centered average and O(hℓ²) estimate", "Shrinking-width regimes for cubic and quartic control", "Temperature and boost correction dependence"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "6 A distinct weighted prescription", "sourcePages": "5", "chapter": "03-finite-length", "anchor": "weighted-prescription", "items": ["Definition and exact Raychaudhuri identity", "On-shell sign and leading quartic coefficient", "Area Jacobian estimate", "Difference from a physical entropy interpretation and nonequilibrium laws"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "7 Preparation, assumptions and verification", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "preparation-assumptions", "items": ["Pointwise versus first transverse order equilibrium", "Cubic embeddings and trace derivative freedom"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "7 Codazzi and screen preparation", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "codazzi-obstruction", "items": ["C and Phi equations, screen-change formula", "Necessary and sufficient range condition and cancellation proof", "Invertible case and conformally flat degenerate counterexample", "Applicability of weaker pointwise preparation"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "7 Physical assumptions", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "physical-inputs", "items": ["Geometry, optical identities, heat, temperature, entropy, Clausius and conservation", "Holographic entropy and transport premises do not supply thermodynamic inputs"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "7 Verification", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "verification", "items": ["Reported replay: 59 results, 43 symbolic checks, 14 expected-failure controls, two diagnostics", "Check categories and distinction from analytic width and inversion results"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "8 Conclusion", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "conclusion", "items": ["Leading tensor and conservation conclusions", "Restricted data kernel", "Finite generator residual and control requirements"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "Funding", "sourcePages": "6", "chapter": "04-assumptions-and-references", "anchor": "funding", "items": ["No external funding"], "status": "transcribed-and-source-reviewed"},
-    {"sourceSection": "References [1]–[7]", "sourcePages": "7", "chapter": "04-assumptions-and-references", "anchor": "references", "items": ["Jacobson; Rodgers architecture; Rodgers transport; Casini, Huerta and Myers; Rodgers modular transport; Bisognano and Wichmann; Eling, Guedens and Jacobson", "Individual anchors ref-1 through ref-7 and supplied DOI/arXiv links"], "status": "transcribed-and-source-reviewed"}
+    {
+      "sourceSection": "Abstract",
+      "sourcePages": "1",
+      "chapter": "01-common-preparation",
+      "anchor": "overview",
+      "items": [
+        "Common heat, temperature and area",
+        "Shrinking-pencil equivalence",
+        "Finite-direction reconstruction and circle kernel",
+        "Cubic area residual, transverse limit and weighted prescription"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "1 Introduction",
+      "sourcePages": "1",
+      "chapter": "01-common-preparation",
+      "anchor": "introduction",
+      "items": [
+        "Jacobson construction and contribution of shared source",
+        "Relation to transport and spherical entanglement, with separate premises",
+        "Dimension, metric signature and unit conventions"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "2 Common source and local preparation",
+      "sourcePages": "2",
+      "chapter": "01-common-preparation",
+      "anchor": "common-source",
+      "items": [
+        "Aperture index and source tuple",
+        "Off-shell metric sector and classical or expected stress tensor",
+        "Screen, initial two-surface, affine parameter, measure and twist-free pencil",
+        "Prescribed boost and flat exact restriction",
+        "Existence of pointwise expansion and shear equilibrium"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "2 Common source and local preparation",
+      "sourcePages": "2",
+      "chapter": "01-common-preparation",
+      "anchor": "three-readouts",
+      "items": [
+        "Heat, temperature and area-entropy equations",
+        "Shared g, T, eta and boost",
+        "Recovery map and constitutive residual zero set"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "3 Boost normalization and temperature",
+      "sourcePages": "2–3",
+      "chapter": "01-common-preparation",
+      "anchor": "boost-temperature",
+      "items": [
+        "Wedge KMS inverse rapidity temperature and modular flow convention",
+        "Local scaling-limit premise",
+        "Acceleration and boost redshift",
+        "Flux-to-temperature equation",
+        "Affine and positive boost rescaling",
+        "Coupling rescaling, sign mismatch and angular failure mode"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "4 Leading Clausius coefficient",
+      "sourcePages": "3",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "leading-coefficient",
+      "items": [
+        "Raychaudhuri and area equations",
+        "Central expansion and centered initial average",
+        "Controlled leading area and heat densities",
+        "Uncentered failure mode"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "4 Leading Clausius coefficient",
+      "sourcePages": "3",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "eq-1",
+      "items": [
+        "Equation (1), normalized residual and its null contraction",
+        "Thermal error tolerance",
+        "Entropy law and vanishing residual as constitutive inputs"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "4 Theorem 4.1 and proof",
+      "sourcePages": "3–4",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "theorem-4-1",
+      "items": [
+        "Exact regularity and conservation hypotheses",
+        "Einstein equation and constant Lambda",
+        "Null-cone tensor lemma, parity argument, divergence, Bianchi and connectedness",
+        "Converse",
+        "No-conservation and vacuum-energy qualifications"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "4 Units",
+      "sourcePages": "4",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "coupling-and-units",
+      "items": [
+        "Restored temperature and curvature coupling",
+        "Newton and Planck unit formulas"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "5 Determining sets of null directions",
+      "sourcePages": "4",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "determining-directions",
+      "items": [
+        "Angular decomposition and trace-free spatial block",
+        "Metric-direction kernel, nine-dimensional quotient and injectivity",
+        "Open sets and observer invariance"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "5 Nine-direction inversion",
+      "sourcePages": "4",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "nine-direction-inversion",
+      "items": [
+        "Six axial and three pair directions",
+        "Explicit diagonal, linear and off-diagonal inversion formulas",
+        "Analytic generic-rank argument and eight-evaluation limit"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "5 Circle restriction",
+      "sourcePages": "4",
+      "chapter": "02-clausius-and-directions",
+      "anchor": "circle-kernel",
+      "items": [
+        "Fourier image of nondegenerate circle",
+        "Five-dimensional image and explicit four-dimensional kernel",
+        "Pointwise scope and conditioning"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "6 The first finite-length correction",
+      "sourcePages": "4–5",
+      "chapter": "03-finite-length",
+      "anchor": "finite-length",
+      "items": [
+        "Fixed boost and temperature premise",
+        "Taylor expansion, area Jacobian and order of flux correction",
+        "Area and heat density formulas",
+        "On-shell Taylor relations"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "6 On-shell residual",
+      "sourcePages": "5",
+      "chapter": "03-finite-length",
+      "anchor": "eq-2",
+      "items": [
+        "Equation (2), exact cubic coefficient and quartic remainder"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "6 FLRW example",
+      "sourcePages": "5",
+      "chapter": "03-finite-length",
+      "anchor": "flrw-example",
+      "items": [
+        "Scale factor, affine tangent, Hubble rate and Ricci contraction",
+        "Explicit nonzero curvature derivative and on-shell residual"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "6 Transfer to a transverse pencil",
+      "sourcePages": "5",
+      "chapter": "03-finite-length",
+      "anchor": "finite-width",
+      "items": [
+        "Centered average and O(hℓ²) estimate",
+        "Shrinking-width regimes for cubic and quartic control",
+        "Temperature and boost correction dependence"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "6 A distinct weighted prescription",
+      "sourcePages": "5",
+      "chapter": "03-finite-length",
+      "anchor": "weighted-prescription",
+      "items": [
+        "Definition and exact Raychaudhuri identity",
+        "On-shell sign and leading quartic coefficient",
+        "Area Jacobian estimate",
+        "Difference from a physical entropy interpretation and nonequilibrium laws"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "7 Preparation, assumptions and verification",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "preparation-assumptions",
+      "items": [
+        "Pointwise versus first transverse order equilibrium",
+        "Cubic embeddings and trace derivative freedom"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "7 Codazzi and screen preparation",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "codazzi-obstruction",
+      "items": [
+        "C and Phi equations, corrected screen-change formula, and full slot expansion with vanishing terms.",
+        "Necessary and sufficient range condition and cancellation proof",
+        "Invertible case and conformally flat degenerate counterexample",
+        "Applicability of weaker pointwise preparation"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "7 Physical assumptions",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "physical-inputs",
+      "items": [
+        "Geometry, optical identities, heat, temperature, entropy, Clausius and conservation",
+        "Holographic entropy and transport premises do not supply thermodynamic inputs"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "7 Verification",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "verification",
+      "items": [
+        "Reported replay: 59 results, 43 symbolic checks, 14 expected-failure controls, two diagnostics",
+        "Check categories and distinction from analytic width and inversion results"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "8 Conclusion",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "conclusion",
+      "items": [
+        "Leading tensor and conservation conclusions",
+        "Restricted data kernel",
+        "Finite generator residual and control requirements"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "Verification materials",
+      "sourcePages": "7",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "verification-materials",
+      "items": [
+        "Original verification suite and targeted Codazzi sign check, available as the corrected edition companion."
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "Funding",
+      "sourcePages": "6",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "funding",
+      "items": [
+        "No external funding"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "References [1]–[7]",
+      "sourcePages": "7",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "references",
+      "items": [
+        "Jacobson; Rodgers architecture; Rodgers transport; Casini, Huerta and Myers; Rodgers modular transport; Bisognano and Wichmann; Eling, Guedens and Jacobson",
+        "Individual anchors ref-1 through ref-7 and supplied DOI/arXiv links"
+      ],
+      "status": "transcribed-and-source-reviewed"
+    },
+    {
+      "sourceSection": "References [6]",
+      "sourcePages": "7",
+      "chapter": "04-assumptions-and-references",
+      "anchor": "ref-6",
+      "items": [
+        "Both expanded Bisognano–Wichmann bibliographic entries from the corrected paper."
+      ],
+      "status": "transcribed-and-source-reviewed"
+    }
   ],
   "administrativeNotes": [
     "Front-matter affiliation and website label are not repeated in the chapter prose; title, author and DOI belong to the edition metadata.",

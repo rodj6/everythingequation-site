@@ -26,14 +26,14 @@ const expected = {
     formal: ['3.1', '6.1'], sha256: 'c787312c0cba48a7eda05abc83609b44d8a4efec2e5c23c125b16ae9bf7c84d3',
   },
   'local-horizon-thermodynamics': {
-    recordId: '24016009', sourcePdf: 'Jacobson_Source_Readout(2).pdf', equations: 2, figures: 0, tables: 0, references: 7,
+    recordId: '24029166', sourcePdf: 'Jacobson_Source_Readout(4)(2).pdf', equations: 2, figures: 0, tables: 0, references: 7,
     sections: ['1', '2', '3', '4', '5', '6', '7', '8'],
-    formal: ['4.1'], sha256: '1bb7e85de87f8096cb35e93465a1495288ceb0e328e8d170e9b30d1406237136',
+    formal: ['4.1'], sha256: '91ce0f9c0465bd968e37b7eae984d7a26bb5d30f677581572fb6c7f58de20589',
   },
   'boundary-ball-readouts': {
-    recordId: '24019669', sourcePdf: 'Faulkner_Source_Readout(2).pdf', equations: 3, figures: 0, tables: 0, references: 8,
+    recordId: '24029188', sourcePdf: 'Faulkner_Source_Readout(4)(2).pdf', equations: 3, figures: 0, tables: 0, references: 8,
     sections: ['1', '2', '3', '4', '5', '6'],
-    formal: ['3.1', '4.1'], sha256: '49c4b6c38368f89d15ec4e885f2ca74484aa8dcb5926626841d131103b0f84df',
+    formal: ['3.1', '4.1'], sha256: 'bbab22a59865d6098d0b5043da4aa117f65fe181a31644a8caeb00fb5bcfeaff',
   },
   'second-order-boundary-balls': {
     recordId: '24021664', sourcePdf: 'Same_Ball_Canonical_Energy(4).pdf', equations: 22, figures: 0, tables: 1, references: 6,
@@ -239,6 +239,7 @@ async function verifyAsset(item, label) {
     const hash = createHash('sha256');
     if (response.body) for await (const part of response.body) hash.update(part);
     if (item.path.endsWith('.pdf')) check(response.headers.get('content-type')?.includes('application/pdf'), `${label}: wrong download content type`);
+    if (item.path.endsWith('.zip')) check(response.headers.get('content-type')?.includes('application/zip'), `${label}: wrong archive content type`);
     check(hash.digest('hex') === item.sha256, `${label}: downloaded bytes differ`);
   }
 }
@@ -336,7 +337,10 @@ async function main() {
     if (!artifactMap.has('/')) throw new Error('No stable production HTML inventory; wait for npm run build to finish.');
   }
   if (!sourceOnly && base) report.layout = 'served production';
-  if (checksums && !only) await checkPreservation(checksums);
+  if (checksums && !only) {
+    await checkPreservation(checksums);
+    await verifyAsset(checksums.sharedErrataSupplement, 'Shared targeted errata archive');
+  }
   const targets = new Set();
   function internal(href, current) {
     const u = new URL(href, origin + current);
@@ -354,6 +358,14 @@ async function main() {
       check(asset?.pdf?.sourceName === spec.sourcePdf && asset?.pdf?.sha256 === spec.sha256, `${id}: PDF record doesn't match the originally supplied file`);
       check(/^[a-f0-9]{32}$/i.test(asset?.pdf?.remoteMd5 ?? ''), `${id}: published-file MD5 evidence missing`);
       await verifyAsset(asset?.pdf, id + ' original PDF');
+      if (paper?.previousDoi) {
+        check(paper.previousDoi === asset?.previousDoi && paper.date === asset?.publicationDate, `${id}: corrected edition version metadata mismatch`);
+        check(asset?.pdf?.zenodoName && asset.pdf.zenodoName !== asset.pdf.sourceName, `${id}: attachment and record filenames must be distinguished`);
+        check(asset?.supplement?.url === paper.supplementUrl && asset?.supplement?.path === 'public' + paper.supplementUrl, `${id}: wrong local verification suite`);
+        check(asset?.supplement?.description === paper.supplementDescription && Boolean(paper.supplementDescription), `${id}: wrong verification suite description`);
+        check(asset?.remoteSupplement?.checksum === 'md5:' + asset?.supplement?.remoteMd5, `${id}: verification suite remote checksum evidence missing`);
+        await verifyAsset(asset?.supplement, id + ' corrected verification suite');
+      }
     }
     const files = (await walk('content/paper-integrations/' + id)).filter(p => p.endsWith('.mdx'));
     check(files.length > 0, `${id}: no chapter source`);
@@ -369,6 +381,10 @@ async function main() {
       check(opening.available && opening.dom.h1 === 1 && opening.dom.canonical === origin + root, `${root}: opening HTML or canonical is missing`);
       for (const href of ['https://doi.org/' + doi, paper?.pdfUrl, paper?.markdownUrl, paper?.manifestUrl].filter(Boolean))
         check(opening.dom.links.includes(href), `${root}: required link missing ${href}`);
+      if (paper?.previousDoi) {
+        check(opening.dom.links.includes('https://doi.org/' + paper.previousDoi), `${root}: earlier version link missing`);
+        check(opening.dom.links.includes(paper.supplementUrl), `${root}: corrected verification suite link missing`);
+      }
       for (const href of opening.dom.links) internal(href, root);
       verifyHeaders(opening, root);
     }
@@ -457,6 +473,11 @@ async function main() {
   check(programmePage.available && programmePage.dom.links.includes(hubRoute), 'Source–Readout landing lacks new reading path');
   check(hub.available && hub.dom.h1 === 1 && hub.dom.canonical === origin + hubRoute, 'Five-paper entrance missing or malformed');
   check(hub.dom.links.includes(deser), 'Five-paper entrance does not reuse the existing Deser opening');
+  check(hub.dom.links.includes(checksums.sharedErrataSupplement.url), 'Five-paper entrance lacks shared targeted errata archive');
+  for (const [route, doi] of [[first + '/05-verification-and-references', '24029166'], [second + '/04-oscillatory-comparison', '24029188']]) {
+    const chapter = await page(route);
+    check(chapter.dom.links.includes('https://doi.org/10.5281/zenodo.' + doi), `${route}: corrected companion citation missing`);
+  }
   check(deserOpening.available && deserOpening.dom.links.includes('https://doi.org/10.5281/zenodo.23954887'), 'Existing Deser opening or DOI link missing');
   check(deserOpening.dom.links.includes(hubRoute), 'Existing Deser edition lacks link back to five-paper path');
   const deserChapters = generated.filter(c => c.paperId === 'transport-projective');
@@ -496,6 +517,10 @@ async function main() {
     check(articles.dom.links.includes(article.route), `Articles listing missing ${article.route}`);
     const record = await page('/papers/' + meta.paperSlug);
     check(record.available && record.dom.links.includes(article.route), `Publication detail missing complete reading link for ${article.route}`);
+    if (meta.previousDoi) {
+      check(record.dom.links.includes('https://doi.org/' + meta.doi), `Publication detail missing corrected DOI for ${article.route}`);
+      check(record.dom.links.includes(meta.supplementUrl), `Publication detail missing corrected verification suite for ${article.route}`);
+    }
     for (const route of [article.route, ...article.chapters]) {
       check(sitemap.includes(origin + route + '</loc>'), `Sitemap missing ${route}`);
       check(hasRoute(graphValues, route), `Graph missing ${route}`);

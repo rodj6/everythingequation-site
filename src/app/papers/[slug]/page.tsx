@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { loadPapers, loadProblems, getPaper } from "@/lib/registry";
 import { site } from "@/config/site";
+import { gravityEditions } from "@/config/paper-integrations";
 import { Badge } from "@/components/cards";
 import MdxContent from "@/components/mdx-content";
 import { manualPapers } from "@/generated/manualPapers";
@@ -53,6 +54,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const paper = await getPaper(slug);
   if (!paper || paper.status !== "public") notFound();
+  const correctedEdition = gravityEditions.find(edition => edition.paperSlug === slug && edition.previousDoi);
 
   const problems = await loadProblems();
   const supported = problems.filter((p) => paper.supports.includes(p.slug));
@@ -213,6 +215,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         {paper.pdfUrl ? (
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm text-glow">
             <a href={paper.pdfUrl} download className="hover:text-glow-strong">Download PDF ↓</a>
+            {correctedEdition?.supplementUrl && <a href={correctedEdition.supplementUrl} download className="hover:text-glow-strong">{correctedEdition.supplementDescription} ↓</a>}
             {paper.supplementPdfUrl ? <a href={paper.supplementPdfUrl} download className="hover:text-glow-strong">Technical supplement PDF ↓</a> : null}
             {paper.texUrl ? <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a> : null}
             {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a> : null}

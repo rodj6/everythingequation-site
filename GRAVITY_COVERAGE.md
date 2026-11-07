@@ -58,9 +58,9 @@ CHM_Source_Readout(4).pdf · [DOI 10.5281/zenodo.24013975](https://doi.org/10.52
 
 ## Local Horizon Thermodynamics and Einstein Gravity in a Source–Readout Architecture
 
-Jacobson_Source_Readout(2).pdf · [DOI 10.5281/zenodo.24016009](https://doi.org/10.5281/zenodo.24016009) · [Edition](/source-readout/local-horizon-thermodynamics) · [Original coverage notes](docs/gravity/local-horizon-thermodynamics.json)
+Jacobson_Source_Readout(4)(2).pdf · [DOI 10.5281/zenodo.24029166](https://doi.org/10.5281/zenodo.24029166) · [Edition](/source-readout/local-horizon-thermodynamics) · [Original coverage notes](docs/gravity/local-horizon-thermodynamics.json)
 
-7 PDF pages; 4 chapters; 31 coverage rows; 2 numbered equations; 1 numbered theorems; 0 tables; 7 references.
+7 PDF pages; 4 chapters; 32 coverage rows; 2 numbered equations; 1 numbered theorems; 0 tables; 7 references.
 
 | Source section or item | PDF page(s) | Web destination | Material accounted for |
 | --- | --- | --- | --- |
@@ -82,18 +82,19 @@ Jacobson_Source_Readout(2).pdf · [DOI 10.5281/zenodo.24016009](https://doi.org/
 | 6 Transfer to a transverse pencil | 5 | [finite-width](/source-readout/local-horizon-thermodynamics/03-finite-length#finite-width) | Centered average and O(hℓ²) estimate; Shrinking-width regimes for cubic and quartic control; Temperature and boost correction dependence |
 | 6 A distinct weighted prescription | 5 | [weighted-prescription](/source-readout/local-horizon-thermodynamics/03-finite-length#weighted-prescription) | Definition and exact Raychaudhuri identity; On-shell sign and leading quartic coefficient; Area Jacobian estimate; Difference from a physical entropy interpretation and nonequilibrium laws |
 | 7 Preparation, assumptions and verification | 6 | [preparation-assumptions](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#preparation-assumptions) | Pointwise versus first transverse order equilibrium; Cubic embeddings and trace derivative freedom |
-| 7 Codazzi and screen preparation | 6 | [codazzi-obstruction](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#codazzi-obstruction) | C and Phi equations, screen-change formula; Necessary and sufficient range condition and cancellation proof; Invertible case and conformally flat degenerate counterexample; Applicability of weaker pointwise preparation |
+| 7 Codazzi and screen preparation | 6 | [codazzi-obstruction](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#codazzi-obstruction) | C and Phi equations, corrected screen-change formula, and full slot expansion with vanishing terms.; Necessary and sufficient range condition and cancellation proof; Invertible case and conformally flat degenerate counterexample; Applicability of weaker pointwise preparation |
 | 7 Physical assumptions | 6 | [physical-inputs](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#physical-inputs) | Geometry, optical identities, heat, temperature, entropy, Clausius and conservation; Holographic entropy and transport premises do not supply thermodynamic inputs |
 | 7 Verification | 6 | [verification](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#verification) | Reported replay: 59 results, 43 symbolic checks, 14 expected-failure controls, two diagnostics; Check categories and distinction from analytic width and inversion results |
 | 8 Conclusion | 6 | [conclusion](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#conclusion) | Leading tensor and conservation conclusions; Restricted data kernel; Finite generator residual and control requirements |
+| Verification materials | 7 | [verification-materials](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#verification-materials) | Original verification suite and targeted Codazzi sign check, available as the corrected edition companion. |
 | Funding | 6 | [funding](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#funding) | No external funding |
 | References [1]–[7] | 7 | [references](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#references) | Jacobson; Rodgers architecture; Rodgers transport; Casini, Huerta and Myers; Rodgers modular transport; Bisognano and Wichmann; Eling, Guedens and Jacobson; Individual anchors ref-1 through ref-7 and supplied DOI/arXiv links |
+| References [6] | 7 | [ref-6](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-6) | Both expanded Bisognano–Wichmann bibliographic entries from the corrected paper. |
 | References [1] | 7 | [ref-1](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-1) | Individual scholarly reference [1]. |
 | References [2] | 7 | [ref-2](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-2) | Individual scholarly reference [2]. |
 | References [3] | 7 | [ref-3](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-3) | Individual scholarly reference [3]. |
 | References [4] | 7 | [ref-4](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-4) | Individual scholarly reference [4]. |
 | References [5] | 7 | [ref-5](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-5) | Individual scholarly reference [5]. |
-| References [6] | 7 | [ref-6](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-6) | Individual scholarly reference [6]. |
 | References [7] | 7 | [ref-7](/source-readout/local-horizon-thermodynamics/04-assumptions-and-references#ref-7) | Individual scholarly reference [7]. |
 
 Administrative treatment and verification notes:
@@ -104,9 +105,9 @@ Administrative treatment and verification notes:
 
 ## Boundary Ball Readouts and Linearized Einstein Gravity in a Source–Readout Architecture
 
-Faulkner_Source_Readout(2).pdf · [DOI 10.5281/zenodo.24019669](https://doi.org/10.5281/zenodo.24019669) · [Edition](/source-readout/boundary-ball-readouts) · [Original coverage notes](docs/gravity/boundary-ball-readouts.json)
+Faulkner_Source_Readout(4)(2).pdf · [DOI 10.5281/zenodo.24029188](https://doi.org/10.5281/zenodo.24029188) · [Edition](/source-readout/boundary-ball-readouts) · [Original coverage notes](docs/gravity/boundary-ball-readouts.json)
 
-7 PDF pages; 5 chapters; 32 coverage rows; 3 numbered equations; 2 numbered theorems; 0 tables; 8 references.
+7 PDF pages; 5 chapters; 33 coverage rows; 3 numbered equations; 2 numbered theorems; 0 tables; 8 references.
 
 | Source section or item | PDF page(s) | Web destination | Material accounted for |
 | --- | --- | --- | --- |
@@ -127,15 +128,16 @@ Faulkner_Source_Readout(2).pdf · [DOI 10.5281/zenodo.24019669](https://doi.org/
 | 4 From readout data to the local equation: return maps | 5 | [return-maps](/source-readout/boundary-ball-readouts/03-recovering-the-local-equation#return-maps) | Factorization, injectivity on realized Ward-compatible residuals, one-slice quotient, limited frame-count claim and distinct on-shell metrics with zero defects. |
 | 5 Metric perturbations invisible to restricted families: fixed-frame kernel | 5 | [fixed-frame-kernel](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel) | Equivalence with vanishing scalar-curvature variation; unconstrained temporal derivatives and quadratic-in-time example. Editorial link to the companion second-order theorem. |
 | 5 Metric perturbations invisible to restricted families: compact lapse | 5 | [compact-lapse](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#compact-lapse) | Explicit bump construction, zero charges, static Ricci formula, nonzero mixed residual, covariance-based non-gauge proof and all rest-frame times. |
-| 5 Metric perturbations invisible to restricted families: Ward-compatible nonzero data | 6 | [ward-compatible-cross-mode](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#ward-compatible-cross-mode) | Explicit off-diagonal profile, conserved/traceless boundary data, vanishing area and time charge, transverse equation and numerical residual, boosted detection and CFT admissibility limit. |
-| 5 Metric perturbations invisible to restricted families: fixed radius and center | 6 | [fixed-radius-and-center](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-radius-and-center) | Exact Bessel identity and both proofs cited in source; positive zero and sine oddness examples; allowed nondecay; on-shell cross example with same stress and zero area, and distinction from boundary-trivial gauge. |
+| 5 Metric perturbations invisible to restricted families: Ward-compatible nonzero data | 6 | [ward-compatible-cross-mode](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#ward-compatible-cross-mode) | Off-diagonal profile, Ward-compatible boundary data, vanishing first-order area and time charge, Fefferman–Graham rescaling, corrected +4/z operator and −4/7 residual, boosted detection and CFT scope. |
+| 5 Metric perturbations invisible to restricted families: fixed radius and center | 6 | [fixed-radius-and-center](/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-radius-and-center) | Exact Bessel identity and both proofs cited in source; positive zero and sine oddness examples; allowed nondecay; on-shell cross example with same stress and zero area, and distinction from boundary-trivial gauge.; Corrected on-shell cross profile H12 = t² + z²/5 + 1/3, vanishing fixed-slice area variation, nonzero boundary stress and the non-gauge distinction. |
 | 6 Verification and scope | 6 | [verification-and-scope](/source-readout/boundary-ball-readouts/05-verification-and-references#verification-and-scope) | Paper’s 149 results categorized into symbolic, negative-control and numerical checks; analytic additions and numerical Bessel illustration; aperture/Ward/first-order scope and infinite-dimensional kernel. No independent replay is claimed. |
 | Funding | 7 | [funding](/source-readout/boundary-ball-readouts/05-verification-and-references#funding) | No external funding declaration retained. |
+| Verification materials | 7 | [verification-materials](/source-readout/boundary-ball-readouts/05-verification-and-references#verification-materials) | Original verification suite and independent geometry check of the corrected restricted-family example. |
 | References [1] Faulkner et al. | 7 | [ref-1](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-1) | Full bibliographic record as given in source. |
 | References [2] Rodgers, A Source-to-Readout Architecture | 7 | [ref-2](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-2) | Full bibliographic record as given in source. |
 | References [3] Casini, Huerta and Myers | 7 | [ref-3](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-3) | Full bibliographic record as given in source. |
 | References [4] Rodgers, Modular Transport | 7 | [ref-4](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-4) | Full bibliographic record as given in source. |
-| References [5] Rodgers, Local Horizon Thermodynamics | 7 | [ref-5](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-5) | Full bibliographic record as given in source. |
+| References [5] Rodgers, Local Horizon Thermodynamics | 7 | [ref-5](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-5) | Updated DOI for the corrected local horizon thermodynamics edition. |
 | References [6] Rodgers, Transport and Projective Reduction | 7 | [ref-6](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-6) | Full bibliographic record as given in source. |
 | References [7] Iyer and Wald | 7 | [ref-7](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-7) | Full bibliographic record as given in source. |
 | References [8] Lin et al. | 7 | [ref-8](/source-readout/boundary-ball-readouts/05-verification-and-references#ref-8) | Full bibliographic record as given in source. |

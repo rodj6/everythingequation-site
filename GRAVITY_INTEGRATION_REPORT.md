@@ -1,5 +1,10 @@
 # Gravity and holography integration
 
+This report describes the five-paper site integration, with its publication
+identifiers updated for the subsequent gravity errata. See
+[GRAVITY_ERRATA_REPORT.md](GRAVITY_ERRATA_REPORT.md) for the changes to the
+mathematics, editions and downloads.
+
 Baseline: the complete source recovered from
 `everythingequation-site-eight-paper-update.zip` (SHA-256
 `8cb65b12d52db673300a84022b33fe6313c4ad39d09c665aaa0bdd9ff636bdb2`).
@@ -16,8 +21,8 @@ through these complete editions in order:
 | --- | --- | --- | ---: |
 | Transport and Projective Reduction | 10.5281/zenodo.23954887 | `/source-readout/transport-projective` | 12 (preserved) |
 | Modular Transport and Spherical Holographic Entanglement Entropy | 10.5281/zenodo.24013975 | `/source-readout/modular-transport` | 5 |
-| Local Horizon Thermodynamics and Einstein Gravity | 10.5281/zenodo.24016009 | `/source-readout/local-horizon-thermodynamics` | 4 |
-| Boundary Ball Readouts and Linearized Einstein Gravity | 10.5281/zenodo.24019669 | `/source-readout/boundary-ball-readouts` | 5 |
+| Local Horizon Thermodynamics and Einstein Gravity | 10.5281/zenodo.24029166 | `/source-readout/local-horizon-thermodynamics` | 4 |
+| Boundary Ball Readouts and Linearized Einstein Gravity | 10.5281/zenodo.24029188 | `/source-readout/boundary-ball-readouts` | 5 |
 | Second-Order Detection by Boundary Balls | 10.5281/zenodo.24021664 | `/source-readout/second-order-boundary-balls` | 4 |
 
 The two ball editions have reciprocal opening and technical links. The Atlas
@@ -41,11 +46,12 @@ automatically supplied by another paper.
 The registry and generated MDX inventory feed the article and publication
 indexes, chapter manifests, complete Markdown, Source–Readout full-text
 search, sitemap, Atom feed, `llms.txt` and research graph. The supplied PDFs
-are copied without rewriting. The four public Zenodo records were read on
-6 November 2026 and the supplied files match the records' PDF checksums.
-The three public verification ZIPs listed on the same records are linked
-as companions; their calculations were not replayed in this website update.
-No remote records or settings were changed.
+are copied without rewriting. The two corrected PDFs and their dedicated
+verification archives match the current Zenodo records byte for byte. The
+editions retain links to the earlier DOI versions. The shared errata archive
+contains targeted checks for the two corrections; the dedicated archives
+contain the full verification suites. No remote records or settings were
+changed.
 
 `GRAVITY_COVERAGE.md` and `docs/gravity/coverage.json` map the source
 material to web anchors. `docs/gravity/publication-checksums.json` records

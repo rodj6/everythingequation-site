@@ -1186,7 +1186,7 @@ export const integrationChapters = [
       "ward-compatible-cross-mode",
       "fixed-radius-and-center"
     ],
-    "words": 623
+    "words": 645
   },
   {
     "paperId": "boundary-ball-readouts",
@@ -1206,6 +1206,10 @@ export const integrationChapters = [
         "title": "Funding"
       },
       {
+        "id": "verification-materials",
+        "title": "Verification materials"
+      },
+      {
         "id": "references",
         "title": "References"
       }
@@ -1213,6 +1217,7 @@ export const integrationChapters = [
     "anchors": [
       "verification-and-scope",
       "funding",
+      "verification-materials",
       "references",
       "ref-1",
       "ref-2",
@@ -1223,7 +1228,7 @@ export const integrationChapters = [
       "ref-7",
       "ref-8"
     ],
-    "words": 367
+    "words": 404
   },
   {
     "paperId": "constituted-agency",
@@ -2956,6 +2961,10 @@ export const integrationChapters = [
         "title": "Funding"
       },
       {
+        "id": "verification-materials",
+        "title": "Verification materials for this edition"
+      },
+      {
         "id": "references",
         "title": "References"
       }
@@ -2967,6 +2976,7 @@ export const integrationChapters = [
       "verification",
       "conclusion",
       "funding",
+      "verification-materials",
       "references",
       "ref-1",
       "ref-2",
@@ -2976,7 +2986,7 @@ export const integrationChapters = [
       "ref-6",
       "ref-7"
     ],
-    "words": 625
+    "words": 722
   },
   {
     "paperId": "misleading-ai",
@@ -3918,7 +3928,7 @@ export const integrationChapters = [
       "ref-5",
       "ref-6"
     ],
-    "words": 816
+    "words": 818
   },
   {
     "paperId": "sharp-uniqueness",
