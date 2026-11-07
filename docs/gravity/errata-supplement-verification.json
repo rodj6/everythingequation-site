@@ -1,0 +1,91 @@
+{
+  "checkedAtUtc": "2026-11-07T06:40:11.510020+00:00",
+  "publications": [
+    {
+      "id": "local-horizon-thermodynamics",
+      "status": "published",
+      "recordUrl": "https://zenodo.org/records/24029166",
+      "doi": "10.5281/zenodo.24029166",
+      "publicationDate": "2026-11-07",
+      "files": [
+        {
+          "recordFilename": "Jacobson_Source_Readout(4).pdf",
+          "downloadUrl": "https://zenodo.org/api/records/24029166/files/Jacobson_Source_Readout(4).pdf/content",
+          "localFilename": "Jacobson_Source_Readout(4)(2).pdf",
+          "bytes": 263927,
+          "officialMd5": "786858218e742196e8909f32a4d3b673",
+          "sha256": "91ce0f9c0465bd968e37b7eae984d7a26bb5d30f677581572fb6c7f58de20589",
+          "downloadedBytesMatch": true
+        },
+        {
+          "recordFilename": "Jacobson_Verification_24029166.zip",
+          "downloadUrl": "https://zenodo.org/api/records/24029166/files/Jacobson_Verification_24029166.zip/content",
+          "localFilename": "Jacobson_Verification_24029166.zip",
+          "bytes": 38261,
+          "officialMd5": "c7ba5a9386bd250df749166878f2df02",
+          "sha256": "594641733d173639aa7ce66bccd7d3c18d915c15923c4914ceb02c43ec8f483f",
+          "downloadedBytesMatch": true
+        }
+      ]
+    },
+    {
+      "id": "boundary-ball-readouts",
+      "status": "published",
+      "recordUrl": "https://zenodo.org/records/24029188",
+      "doi": "10.5281/zenodo.24029188",
+      "publicationDate": "2026-11-07",
+      "files": [
+        {
+          "recordFilename": "Faulkner_Source_Readout(4).pdf",
+          "downloadUrl": "https://zenodo.org/api/records/24029188/files/Faulkner_Source_Readout(4).pdf/content",
+          "localFilename": "Faulkner_Source_Readout(4)(2).pdf",
+          "bytes": 276450,
+          "officialMd5": "cb94f9d52cbe7eca7da28493a0c795af",
+          "sha256": "bbab22a59865d6098d0b5043da4aa117f65fe181a31644a8caeb00fb5bcfeaff",
+          "downloadedBytesMatch": true
+        },
+        {
+          "recordFilename": "Faulkner_Verification_24029188.zip",
+          "downloadUrl": "https://zenodo.org/api/records/24029188/files/Faulkner_Verification_24029188.zip/content",
+          "localFilename": "Faulkner_Verification_24029188.zip",
+          "bytes": 48613,
+          "officialMd5": "09fdf889e9ee2da3c5f6c257d0cad59b",
+          "sha256": "5f82bd8d959063cf48fd03fb0115829bb6f6adb4c08899af178c1bfc09c2d98a",
+          "downloadedBytesMatch": true
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "targetedErrataScripts": [
+      "Jacobson dedicated archive",
+      "Faulkner dedicated archive",
+      "combined errata archive"
+    ],
+    "targetsPassed": [
+      "screen rotation sign and invertible parameter map",
+      "independent curvature, rescaled operator, both corrected examples and old-profile negative control"
+    ],
+    "affectedSuiteReplays": [
+      {
+        "suite": "j03_codazzi_equilibrium",
+        "passed": 9,
+        "failed": 0,
+        "matchesAllArchivedResultRows": true
+      },
+      {
+        "suite": "f08_restricted_family",
+        "passed": 7,
+        "failed": 0,
+        "matchesAllArchivedResultRows": true
+      }
+    ],
+    "environment": {
+      "python": "3.12.14",
+      "numpy": "2.3.5",
+      "mpmath": "1.3.0",
+      "sympy": "1.14.0"
+    }
+  },
+  "limits": "Replayed the two suites affected by the printed errata, not all original suites. The shared errata ZIP is site-supplied and not part of the Zenodo files."
+}
