@@ -1,0 +1,151 @@
+---
+title: "Recover the fluid equations"
+description: "A constitutive stress readout turns matter primitives into the coupled stress. Its conservation law yields the fluid equations only with the normalization and constitutive inputs that make those operations valid."
+order: 11
+---
+
+**A constitutive stress readout turns matter primitives into the coupled stress. Its conservation law yields the fluid equations only with the normalization and constitutive inputs that make those operations valid.**
+
+<a id="sec-fluid"></a>
+
+## 11. Fluid constitutive readouts and Euler equations
+
+Part D supplies constitutive information that a generic stress tensor cannot recover by itself. In §19 Einstein introduces pressure $p$, a density variable $\rho$, a relation between them and a normalized four-velocity. His footnote defines the comoving energy density as $\epsilon=\rho-p$. Thus his $\rho$ is not the variable often called energy density in modern notation. We preserve this convention.
+
+On the existing realization add smooth $p,\rho$ and a calibrated vector $v$, initially retaining the discrepancies $n-1=\eta(v,v)-1$ and $\Phi(p,\rho)$ for the supplied equation-of-state relation. Define <a id="eq-11-1"></a><a id="eq-fluid-source"></a>
+
+$$
+\Sigma^{\rm fl}_{ab}=-p\eta_{ab}+\rho v_av_b,\qquad
+ v_a=\eta_{ab}v^b,\qquad u=E^{-1}v.
+\tag{11.1}
+$$
+
+ The physical constitutive form is inherited. Its forward operation gives <a id="eq-11-2"></a><a id="eq-11-3"></a><a id="eq-fluid-stress"></a><a id="eq-fluid-mixed"></a>
+
+$$
+\begin{aligned}
+ T^{\rm fl}_{\mu\nu}&=-pg_{\mu\nu}+\rho u_\mu u_\nu,\qquad
+ T^{\mu\nu}_{\rm fl}=-pq^{\mu\nu}+\rho u^\mu u^\nu,&&\text{(11.2)}\\
+ T^\mu{}_{\nu,\rm fl}&=-p\delta^\mu_\nu+\rho u^\mu u_\nu,
+ \qquad g(u,u)=\eta(v,v).
+&&\text{(11.3)}\end{aligned}
+$$
+
+ Indeed $E^{\mathsf T}v_{\rm lower}=gu$, and the tensor operations already proved recover the remaining forms. These are Einstein <span className="upright">(58)</span>, Einstein <span className="upright">(58a)</span>, Einstein <span className="upright">(58b)</span>. On $n=1$, <a id="eq-11-4"></a><a id="eq-fluid-epsilon"></a>
+
+$$
+\Sigma^{\rm fl}_{ab}v^av^b=\rho-p=\epsilon,
+ \quad \operatorname{tr}_\eta\Sigma^{\rm fl}=\rho-4p,
+ \quad \Sigma^{\rm fl}_{\rm comoving}=\operatorname{diag}(p,p,p,\rho-p).
+\tag{11.4}
+$$
+
+ No extra thermodynamic or particle-number law is inferred from that definition.
+
+Define, for a scalar $s$, <a id="eq-11-5"></a><a id="eq-fluid-kinematics"></a>
+
+$$
+\dot s=v^aD_as,\qquad \vartheta=D_av^a,\qquad a_b=v^aD_av_b.
+\tag{11.5}
+$$
+
+ The product rule and $D\eta=0$ give the full raw divergence <a id="eq-11-6"></a><a id="eq-fluid-divergence"></a>
+
+$$
+\mathscr R_b^{\rm fl}:=D_a\Sigma^a{}_{b,\rm fl}
+ =v_b(\dot\rho+\rho\vartheta)+\rho a_b-D_bp.
+\tag{11.6}
+$$
+
+ Its coordinate readout is <a id="eq-11-7"></a><a id="eq-fluid-div-readout"></a>
+
+$$
+E^b{}_{\mu}\mathscr R_b^{\rm fl}
+ =\nabla_\alpha T^\alpha{}_{\mu,\rm fl}
+ =\nu^{-1}\partial_\alpha(\nu T^\alpha{}_{\mu,\rm fl})
+ -\tfrac12\partial_\mu g_{\alpha\beta}T^{\alpha\beta}_{\rm fl}.
+\tag{11.7}
+$$
+
+ Substitution into the recovered Einstein <span className="upright">(57a)</span> is therefore exactly the source equation $\mathscr R^{\rm fl}=0$, with the same comparison connection as gravity.
+
+<a id="thm-fluid"></a>
+
+### Theorem 11.1 (Reversible energy and Euler decomposition)
+
+On $\eta(v,v)=1$, put <a id="eq-11-8"></a><a id="eq-fluid-projections"></a>
+
+$$
+\Pi_b{}^c=\delta_b^c-v_bv^c,\qquad
+ \mathscr E=\dot{(\rho-p)}+\rho\vartheta,\qquad
+ \mathscr P_b=\rho a_b-\Pi_b{}^cD_cp.
+\tag{11.8}
+$$
+
+ Then <a id="eq-11-9"></a><a id="eq-fluid-split"></a>
+
+$$
+\mathscr R_b^{\rm fl}=v_b\mathscr E+\mathscr P_b,
+ \qquad v^b\mathscr R_b^{\rm fl}=\mathscr E,
+ \qquad v^b\mathscr P_b=0.
+\tag{11.9}
+$$
+
+ Consequently the four conservation equations are equivalent to <a id="eq-11-10"></a><a id="eq-euler"></a>
+
+$$
+\boxed{\dot\epsilon+(\epsilon+p)\vartheta=0,\qquad
+ \rho a_b=(\delta_b^c-v_bv^c)D_cp.}
+\tag{11.10}
+$$
+
+ The second equation has three independent components in this normalized sector.
+
+<a id="proof-thm-fluid"></a>
+
+### Proof.
+
+Differentiating $\eta(v,v)=1$ gives $v^ba_b=0$. Contract [(11.6)](/source-readout/einstein-1916/11-fluids#eq-fluid-divergence) with $v^b$ to obtain $\mathscr E$, then subtract $v_b\mathscr E$ to obtain $\mathscr P$. Conversely the first equality in [(11.9)](/source-readout/einstein-1916/11-fluids#eq-fluid-split) reconstructs the original divergence from the scalar and orthogonal covector. The inverse map is $(e,p_b)\mapsto v_be+p_b$, with $v^bp_b=0$. No division by $\rho$ is used.
+
+$\square$
+
+The coordinate Euler equation is <a id="eq-11-11"></a><a id="eq-coordinate-euler"></a>
+
+$$
+\rho u^\alpha\nabla_\alpha u_\mu
+ =(\delta_\mu^\nu-u_\mu u^\nu)\partial_\nu p.
+\tag{11.11}
+$$
+
+ This expands Einstein’s substitution, rather than adding a distinct material law.
+
+The algebraic decomposition $\mathscr R=v_{\rm lower}\mathscr E+\mathscr P$ remains true for unnormalized $v$ under the same definitions, but its projection interpretation does not. The exact omitted terms are <a id="eq-11-12"></a><a id="eq-11-13"></a><a id="eq-fluid-norm-defect"></a>
+
+$$
+\begin{aligned}
+ v^b\mathscr R_b&=\mathscr E+(n-1)(\dot\rho+\rho\vartheta)+\tfrac\rho2\dot n,
+ &&\text{(11.12)}\\
+ v^b\mathscr P_b&=\tfrac\rho2\dot n+(n-1)\dot p.
+&&\text{(11.13)}\end{aligned}
+$$
+
+ This distinction is included in the public controls. One earlier test wrongly expected the algebraic decomposition itself to fail off normalization; the corrected test checks the actual projection and orthogonality assertions, with that development correction documented in the audit.
+
+<a id="closure-degeneracy-and-verification-examples"></a>
+
+### Closure, degeneracy and verification examples
+
+The primitive reverse $v=Eu$ preserves the normalization, equation-of-state relation and target boundary data. The six listed functions $p,\rho,u^\mu$ and the four divergence equations recover the original system. Their count is not a general well-posedness proof. On $\rho=0$ and constant $p$, the stress is $-p\eta$ and its divergence vanishes for any normalized $v$; the velocity is not determined. The gravitational conservation identities also prevent counting the material divergence equations as independent additional metric equations. Einstein’s residual coordinate-function count after volume specialization is retained as bookkeeping, not a global gauge-fixing theorem.
+
+The earlier pressureless coupled fixture [(10.22)](/source-readout/einstein-1916/10-conservation-and-flux#eq-dust-fixture) now has its constitutive data: $v=(0,0,0,1)$, $p=0$, $\rho=\epsilon_d$. For an independent radiation-fluid fixture, take <a id="eq-11-14"></a><a id="eq-radiation-fixture"></a>
+
+$$
+E_r=\operatorname{diag}(r^{1/5},r^{1/5},r^{1/5},r^{-3/5}),\quad
+ \epsilon_r=\frac3{25\kappa}r^{-4/5},\quad
+ p=\frac{\epsilon_r}{3},\quad \rho=\frac{4\epsilon_r}{3}.
+\tag{11.14}
+$$
+
+ The constitutive operation gives $\Sigma=\operatorname{diag}(\epsilon_r/3,\epsilon_r/3,\epsilon_r/3,\epsilon_r)$, with zero trace. Both projected fluid equations and $\mathscr G=\kappa\Sigma$ hold in the same geometry. Substituting $\epsilon_r$ for Einstein’s $\rho$ would change both the stress and the equations.
+
+A separate fixed-background test exercises a nonzero pressure gradient and acceleration: with $N=1+x$, $E=\operatorname{diag}(1,1,1,N)$, $v=(0,0,0,1)$, choose $p=2/N-1$ and $\rho=2/N$ on $0<x<1$. Then $\epsilon=1$, $a_1=-1/N$, and $\partial_1p=-2/N^2$, so [(11.10)](/source-readout/einstein-1916/11-fluids#eq-euler) holds. This is a fluid calculation on a prescribed flat accelerated geometry, not a coupled solution with that geometry and nonzero stress. The classification prevents a successful matter example from being joined to a different gravitational preparation.

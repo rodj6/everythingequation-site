@@ -746,6 +746,128 @@ entries:
       - { to: observable-horizon-entropy, label: bears on, type: conceptual, note: "Positive bulk canonical energy registered by the same balls." }
     added: "2026-11-10"
 
+  - id: gravity-einstein-1916
+    tier: tier1
+    group: gravity
+    paper: einstein-1916
+    label: Einstein’s 1916 theory as source and readout
+    shortLabel: Einstein 1916
+    eyebrow: Source–readout reconstruction · November 2026
+    status: conditional
+    statusNote: >-
+      Recovers Einstein’s chain on smooth local geometric and matter realizations with the stated
+      interval, comparison, coupling, boundary and approximation premises. Source admission does
+      not select those physical laws.
+    summary: One realization carries the metric, curvature, matter and observable consequences of the 1916 theory.
+    description: >-
+      Jeremy Rodgers’s source–readout reconstruction starts with calibrated intervals and develops
+      the compatible comparison rule, curvature, variation, field dynamics and matter on the same
+      realization. Explicit reverse sections prove local coverage; residual identities retain the
+      conditions under which each operation descends. The Newtonian, optical and orbital
+      calculations keep their approximation domains and the separately stated spherical completion.
+    note: >-
+      Recovering the whole classical chain is more than matching a final field equation. Local
+      coverage does not identify arbitrary boundary charges or prove a global reconstruction from
+      observations. The metric and coframe mathematics remain standard.
+    equations:
+      - tag: "Einstein reconstruction · (3.1)"
+        title: The calibrated metric readout
+        tex: 'Q_E(p,v)=\eta(E_pv,E_pv),\qquad g=\pi(E)=E^{T}\eta E'
+        interpretation: >-
+          The local calibration maps coordinate tangent components to measured components. The
+          Lorentz interval premise is supplied; its metric readout has explicit local reverse sections
+          and a complete local frame fibre.
+    read:
+      - { label: "Complete Einstein reconstruction", href: "/source-readout/einstein-1916" }
+      - { label: "Paper record and DOI", href: "/papers/einstein-1916" }
+      - { label: "Gravity and holography reading series", href: "/source-readout/gravity-and-holography" }
+    relations:
+      - { to: gravity, label: reconstructs a classical realization of, type: conceptual, note: "The 1916 interval and coupling premises remain inputs; this is not physical selection from native admission." }
+      - { to: gravity-transport-projective, label: a distinct reconstruction beside, type: conceptual, note: "The 1916 paper uses a dependent compatible comparison connection. It does not replace the independently varied transport/projective construction." }
+      - { to: gravity-local-horizon, label: compares with the thermodynamic route, type: conceptual, note: "The two recoveries retain different starting premises and do not transfer their assumptions." }
+      - { to: foundation-geometric-realization, label: develops the realization question, type: conceptual, note: "Explicit reverse sections, fibres and residuals make operation recovery inspectable in classical gravity." }
+      - { to: yang-mills-source-readout, label: shares the Source Lift method with, type: conceptual, note: "The Yang–Mills application follows the same recovery discipline; gravitational equations are not its premises." }
+    added: "2026-11-12"
+
+  # ───────────────────── Readout · source–readout reconstructions ─────────────────────
+
+  - id: yang-mills-source-readout
+    tier: tier1
+    group: source-lift
+    paper: yang-mills
+    label: Yang–Mills through Shadow Theory
+    shortLabel: Yang–Mills reconstruction
+    eyebrow: Source–readout reconstruction · 12 November 2026
+    status: conditional
+    statusNote: >-
+      Recovers the supplied Wilson construction on its declared gauge group, representation,
+      four-dimensional law and analytic domains. Full fixed-period mesh limits precede the
+      permitted outer volume extraction; no positive mass gap is asserted.
+    summary: Shadow Theory constructs the readouts and recovery maps that keep a complete Wilson Yang–Mills derivation on one compatible family.
+    description: >-
+      Jeremy Rodgers’s Shadow Theory and Source Lift method distinguish native support, literal
+      preparation, realized histories and the readers that recover configurations, effective actions,
+      physical labels and field correlations. Reverse sections establish coverage, frame fibres
+      identify redundancy, operation identities carry the derivation, and residuals measure departures
+      from exact recovery. The full construction runs through nonlinear integration, calibrated
+      histories, continuum and phase reconstruction, operator products and the stress–trace calculation.
+    note: >-
+      Rodgers originated Shadow Theory, the source–readout architecture and Source Lift, and directed
+      this research with AI assistance. OpenAI is credited for the underlying Lean construction. The
+      public formal source is context for that attribution, not certification of this reconstruction.
+    read:
+      - { label: "Source–readout flagship: the full reconstruction", href: "/source-readout/yang-mills-reconstruction" }
+      - { label: "Yang–Mills: both complete reading editions", href: "/source-readout/yang-mills" }
+      - { label: "Standalone mathematical companion", href: "/source-readout/yang-mills-companion" }
+      - { label: "Shared publication record and DOI", href: "/papers/yang-mills" }
+    relations:
+      - { to: yang-mills-mathematical-companion, label: reconstructs the development presented in, type: conceptual, note: "Two full expositions of one construction, with distinct source–readout and conventional mathematical purposes." }
+      - { to: qft, label: a concrete Wilson realization beside, type: conceptual, note: "This application retains its own physical and analytic inputs; it does not discharge every gate of the TOE sector." }
+      - { to: matter, label: connects to gauge-field structure in, type: conceptual, note: "The gauge group and faithful representation are given, not a selection of the Standard Model." }
+      - { to: foundation-geometric-realization, label: develops explicit recovery interfaces for, type: conceptual, note: "Sections, fibres, operations and residuals organize the particular Yang–Mills realization." }
+      - { to: gravity-einstein-1916, label: extends the reconstruction method used in, type: conceptual, note: "A common language of realization and recovery connects the applications without asserting a gravity–quantum bridge." }
+    added: "2026-11-12"
+
+  - id: yang-mills-mathematical-companion
+    tier: tier1
+    group: source-lift
+    paper: yang-mills
+    label: The Wilson Yang–Mills mathematical construction
+    shortLabel: Yang–Mills companion
+    eyebrow: Mathematical companion · 12 November 2026
+    status: theorem
+    statusNote: >-
+      Presents the supplied construction with its hypotheses, common-family quantifiers and formula
+      amendments. The infinite-volume limit uses an allowed extraction; uniqueness of that limit
+      and a positive mass gap are not conclusions.
+    summary: A complete conventional exposition of the Wilson construction underlying the flagship reconstruction.
+    description: >-
+      Start with finite group-valued link configurations and the normalized Wilson law. Follow
+      positivity, quadratic kernels, nonlinear charts and marked integration into calibrated scale
+      histories, physical labels, the common continuum hierarchy, phases and local Wightman fields.
+      The same development includes separated and nested products, collision extensions, Gaussian
+      comparisons, and the centered trace with its precise comparison exclusions.
+    note: >-
+      This companion is independently readable and belongs to the same Zenodo publication as the
+      flagship. Jeremy Rodgers prepared the exposition with AI assistance; the underlying Lean work
+      is credited to OpenAI. The website does not claim a fresh formal replay of that work.
+    equations:
+      - tag: "Yang–Mills companion · centered trace"
+        title: The selected short-distance trace limit
+        tex: '\lim_{r\downarrow0}r^{8}\log^{2}(1/r)G_{\Theta}(r)=\frac{3\dim_{\mathbb R}\mathfrak g}{\pi^{4}}>0'
+        interpretation: >-
+          The selected centered trace on the common construction has this full positive-distance
+          asymptotic, under the paper’s stated normalization and hypotheses. Its finite mass-shell
+          and Maxwell comparison exclusions are not a positive mass-gap theorem.
+    read:
+      - { label: "Complete mathematical companion", href: "/source-readout/yang-mills-companion" }
+      - { label: "Shadow Theory source–readout flagship", href: "/source-readout/yang-mills-reconstruction" }
+      - { label: "Both editions and their shared record", href: "/source-readout/yang-mills" }
+    relations:
+      - { to: yang-mills-source-readout, label: the construction reconstructed by, type: conceptual, note: "The companion develops the mathematics conventionally; the flagship constructs and proves its source–readout interfaces." }
+      - { to: qft, label: supplies a concrete field construction related to, type: conceptual, note: "Wightman reconstruction is obtained within the supplied Wilson family and analytic premises." }
+    added: "2026-11-12"
+
   # ─────────────────────── Readout · readers and access ───────────────────────
 
   - id: reader-source-completions

@@ -1,0 +1,145 @@
+---
+title: "From stationary intervals to differential identities"
+description: "The same calibrated interval supplies geodesic motion, Hessians, volume derivatives and divergence identities. Boundary terms and tensor symmetries identify where each recovered operation applies."
+order: 5
+---
+
+**The same calibrated interval supplies geodesic motion, Hessians, volume derivatives and divergence identities. Boundary terms and tensor symmetries identify where each recovered operation applies.**
+
+<a id="sec-geodesic"></a>
+
+## 5. Geodesic variation and differential identities
+
+<a id="fixed-endpoint-interval-variation"></a>
+
+### Fixed-endpoint interval variation
+
+For a regular timelike curve $\gamma(\lambda)$ set <a id="eq-5-1"></a><a id="eq-length-action"></a>
+
+$$
+L=\sqrt{\eta(E\dot\gamma,E\dot\gamma)}
+ =\sqrt{g_{\mu\nu}\dot x^\mu\dot x^\nu},\qquad S[\gamma]=\int L\mathrm{d}\lambda.
+\tag{5.1}
+$$
+
+ Here $E$ is a background during curve variation. Stationarity of the interval is Einstein’s inherited premise Einstein <span className="upright">(20)</span>, not a native-source theorem. For variation $\xi$, <a id="eq-5-2"></a><a id="eq-length-variation"></a>
+
+$$
+\delta S=\left[\frac{g_{\sigma\nu}\dot x^\nu}{L}\xi^\sigma\right]_{\lambda_1}^{\lambda_2}
+ -\int r_\sigma\xi^\sigma\mathrm{d}\lambda,
+ \qquad
+ r_\sigma=\frac{\mathrm{d}}{\mathrm{d}\lambda}\frac{g_{\sigma\nu}\dot x^\nu}{L}
+ -\frac{\partial_\sigma g_{\mu\nu}\dot x^\mu\dot x^\nu}{2L}.
+\tag{5.2}
+$$
+
+ The displayed boundary term vanishes for fixed endpoints, not automatically for moving endpoints. Substituting [(4.10)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-christoffel) gives <a id="eq-5-3"></a><a id="eq-geodesic-residual"></a>
+
+$$
+r_\sigma=\frac{g_{\sigma\rho}}L
+ \left(\ddot x^\rho+C^\rho{}_{\mu\nu}\dot x^\mu\dot x^\nu
+ -\frac{\dot L}{L}\dot x^\rho\right).
+\tag{5.3}
+$$
+
+ All curve variations lift as the same event-curve variations. With proper-time parameter $s$, $L=1$, and the equivalent source equation is <a id="eq-5-4"></a><a id="eq-source-geodesic"></a>
+
+$$
+\boxed{D_su=0,\qquad u=E\frac{\mathrm{d}x}{\mathrm{d}s},\qquad
+ \frac{\mathrm{d}^2x^\rho}{\mathrm{d}s^2}+C^\rho{}_{\mu\nu}
+ \frac{\mathrm{d}x^\mu}{\mathrm{d}s}\frac{\mathrm{d}x^\nu}{\mathrm{d}s}=0.}
+\tag{5.4}
+$$
+
+ This recovers Einstein <span className="upright">(20a)</span>–Einstein <span className="upright">(22)</span>. Metric compatibility preserves $\eta(u,u)$ along the source equation. Spacelike curves can be treated with the explicit real convention $L=\sqrt{|g(\dot\gamma,\dot\gamma)|}$ and a fixed sign; the same unparameterized equation follows. The division by $L$ excludes null curves. A separate optical or Hamiltonian operation is used in Section [16](/source-readout/einstein-1916/16-light-and-bending#sec-light).
+
+<a id="the-original-scalar-to-tensor-progression"></a>
+
+### The original scalar-to-tensor progression
+
+For a scalar $\phi$, $a_b=e_b\phi$ reads out as $\partial_\mu\phi$, recovering Einstein <span className="upright">(24)</span>. On an affine geodesic, <a id="eq-5-5"></a><a id="eq-hessian"></a>
+
+$$
+\frac{\mathrm{d}^2\phi}{\mathrm{d}s^2}
+ =\left(\partial_\mu\partial_\nu\phi-C^\rho{}_{\mu\nu}\partial_\rho\phi\right)
+ \frac{\mathrm{d}x^\mu}{\mathrm{d}s}\frac{\mathrm{d}x^\nu}{\mathrm{d}s}.
+\tag{5.5}
+$$
+
+ The Hessian is the readout of $D(\mathrm{d}\phi)$ and is symmetric on the torsion-free sector, recovering Einstein <span className="upright">(25)</span>. Timelike probes already form an open set, so a polynomial identity verified for all such probes determines its coefficients without an improper null normalization.
+
+Locally every covector is $\sum_i f_i\mathrm{d}h_i$ by taking fixed coordinate functions $h_i$ and coefficient functions $f_i$. Under subsequent redescription they remain the same scalar functions. The product rule therefore extends the derivative from gradients to all covectors, recovering Einstein <span className="upright">(26)</span>. Expanding a rank-two tensor in covector products gives <a id="eq-5-6"></a><a id="eq-ranktwo-derivative"></a>
+
+$$
+\nabla_\sigma A_{\mu\nu}=\partial_\sigma A_{\mu\nu}
+ -C^\rho{}_{\sigma\mu}A_{\rho\nu}-C^\rho{}_{\sigma\nu}A_{\mu\rho},
+\tag{5.6}
+$$
+
+ which is Einstein <span className="upright">(27)</span>. Contravariant slots contribute plus signs and covariant slots minus signs, giving Einstein <span className="upright">(38)</span> and Einstein <span className="upright">(39)</span>. This reproduces the original dependency argument, not only an isolated coordinate formula.
+
+<a id="determinants-divergences-and-antisymmetric-derivatives"></a>
+
+### Determinants, divergences and antisymmetric derivatives
+
+Differentiation of $qg=I$ and the determinant cofactor formula give <a id="eq-5-7"></a><a id="eq-5-8"></a><a id="eq-inverse-det"></a><a id="eq-volume-trace"></a>
+
+$$
+\begin{aligned}
+ \partial_\lambda q&=-q(\partial_\lambda g)q,\qquad
+ \partial_\lambda\det g=(\det g)q^{\mu\nu}\partial_\lambda g_{\mu\nu},&&\text{(5.7)}\\
+ c_\lambda:=\partial_\lambda\log\nu
+ &=\tfrac12q^{\mu\nu}\partial_\lambda g_{\mu\nu}
+ =-\tfrac12g_{\mu\nu}\partial_\lambda q^{\mu\nu}
+ =C^\rho{}_{\lambda\rho}.
+&&\text{(5.8)}\end{aligned}
+$$
+
+ The last equality also follows from [(4.7)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-C-map), because $\operatorname{tr}\omega=0$. Expanding compatibility yields <a id="eq-5-9"></a><a id="eq-metriccompatcomponents"></a>
+
+$$
+\partial_\lambda g_{\mu\nu}
+ =C^\rho{}_{\lambda\mu}g_{\rho\nu}+C^\rho{}_{\lambda\nu}g_{\mu\rho},
+ \qquad
+ \partial_\lambda q^{\mu\nu}
+ =-C^\mu{}_{\lambda\rho}q^{\rho\nu}-C^\nu{}_{\lambda\rho}q^{\mu\rho}.
+\tag{5.9}
+$$
+
+ These supply Einstein <span className="upright">(28)</span>–Einstein <span className="upright">(34)</span>, including Einstein <span className="upright">(29a)</span>.
+
+The corresponding contractions and antisymmetrizations are <a id="eq-5-10"></a><a id="eq-5-11"></a><a id="eq-5-12"></a><a id="eq-5-13"></a><a id="eq-vector-div"></a><a id="eq-curl"></a><a id="eq-cyclic"></a><a id="eq-antisym-div"></a>
+
+$$
+\begin{aligned}
+ \nabla_\mu V^\mu&=\nu^{-1}\partial_\mu(\nu V^\mu),&&\text{(5.10)}\\
+ A_{\mu;\nu}-A_{\nu;\mu}&=\partial_\nu A_\mu-\partial_\mu A_\nu,&&\text{(5.11)}\\
+ A_{\mu\nu;\sigma}+A_{\nu\sigma;\mu}+A_{\sigma\mu;\nu}
+ &=\partial_\sigma A_{\mu\nu}+\partial_\mu A_{\nu\sigma}+\partial_\nu A_{\sigma\mu},&&\text{(5.12)}\\
+ \nabla_\nu A^{\mu\nu}&=\nu^{-1}\partial_\nu(\nu A^{\mu\nu})
+ \quad(A^{\mu\nu}=-A^{\nu\mu}).
+&&\text{(5.13)}\end{aligned}
+$$
+
+ Equation [(5.12)](/source-readout/einstein-1916/05-geodesics-and-divergences#eq-cyclic) assumes antisymmetric $A$ as well. Symmetric connection terms cancel pairwise, and their remaining trace becomes [(5.8)](/source-readout/einstein-1916/05-geodesics-and-divergences#eq-volume-trace). These recover Einstein <span className="upright">(35)</span>–Einstein <span className="upright">(37)</span> and Einstein <span className="upright">(40)</span>; Einstein’s curl in [(5.11)](/source-readout/einstein-1916/05-geodesics-and-divergences#eq-curl) is minus the usual exterior-derivative component in the order $(\mu,\nu)$.
+
+For a mixed tensor the full identity is <a id="eq-5-14"></a><a id="eq-mixed-div"></a>
+
+$$
+\nabla_\nu T^\nu{}_{\mu}=\nu^{-1}\partial_\nu(\nu T^\nu{}_{\mu})
+ -C^\rho{}_{\nu\mu}T^\nu{}_{\rho}.
+\tag{5.14}
+$$
+
+ Only when $T^{\alpha\beta}$ is symmetric does it reduce to <a id="eq-5-15"></a><a id="eq-symmetric-div"></a>
+
+$$
+\nabla_\nu T^\nu{}_{\mu}
+ =\nu^{-1}\partial_\nu(\nu T^\nu{}_{\mu})
+ -\tfrac12\partial_\mu g_{\alpha\beta}T^{\alpha\beta}
+ =\nu^{-1}\partial_\nu(\nu T^\nu{}_{\mu})
+ +\tfrac12\partial_\mu q^{\alpha\beta}T_{\alpha\beta}.
+\tag{5.15}
+$$
+
+ To prove it, lower the upper index of [(4.10)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-christoffel), contract with symmetric $T$, and exchange the two summed indices in its first and third terms. They cancel; the remaining term is the half metric derivative. Differentiating $qg=I$ supplies the last form. This retains the hypotheses of Einstein <span className="upright">(41)</span>, Einstein <span className="upright">(41a)</span> and Einstein <span className="upright">(41b)</span>.

@@ -1,3 +1,4 @@
+import SourceLiftFeature from '@/components/source-lift-feature';
 import SpectralProgrammeFeature from '@/components/spectral-programme-feature';
 import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
@@ -169,7 +170,8 @@ export default async function HomePage() {
         </div>
         <p className="mt-5 text-sm text-mute">The equations, proofs, appendices and references are available in the web editions. <Link href="/source-readout/origins" className="font-medium text-glow">See how the Everything Equation led to this programme →</Link></p>
       </section>
-      <SpectralProgrammeFeature/>
+      <SourceLiftFeature/>
+<SpectralProgrammeFeature/>
       <RelationalAwarenessFeature/>
       <AlignmentFeature home />
       <PaperIntegrationFeature/>

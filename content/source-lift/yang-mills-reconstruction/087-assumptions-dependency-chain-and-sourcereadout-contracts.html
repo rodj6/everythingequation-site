@@ -1,0 +1,760 @@
+<a id="section-g"></a><h2 id="p515-block-009" data-source-page="515">Assumptions, dependency chain and source–readout contracts</h2>
+<p id="p515-block-010" data-source-page="515">Three registers collect what the reconstruction must preserve and how the conclusion depends on it. Table 3 lists the assumptions and scope controls of the supplied construction, with the lines of the supplied text at which each is stated; rows A19–A27 are those of the constructions of <a href="/source-readout/yang-mills-reconstruction/010-activity-domains-ordered-derivatives-and-absolute-budgets#section-9">Sections 9</a>, 14 and 16 and of the rotation and trace arguments. Table 4 is the chain of stages through which the public conclusion of <a href="/source-readout/yang-mills-reconstruction/005-the-supplied-public-conclusion-and-its-recovery-target#section-4">Section 4</a> is reached, each with its input contract, the operations that are lifted, and the recovered output. Table 5 lists the source–readout contracts of the general transport statements, with what each readout fails to invert and what is therefore retained. Together with Table 2 they are the summary form of the hypotheses under which every recovery statement of this paper holds; none of them adds a hypothesis to the supplied construction.</p>
+<a id="source-page-516"></a>
+<p id="p516-block-001" data-source-page="516">Table 3: Assumptions and scope controls of the supplied construction, as preserved in this paper.</p>
+<figure id="p516-block-002" class="sr-formula sr-source-table" data-source-page="516"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p516-012138.svg" alt="Assumption
+Input lines
+Preserved condition
+Scope control
+A01
+Group and
+representation
+9
+Closed faithful matrix subgroup
+of U(m); specified exponential
+real Lie algebra is nonabelian
+simple.
+No connectedness hypothesis
+is added.
+A02
+Finite prior and
+Wilson order
+11–26
+Independent normalized Haar
+link prior and literal ordered
+Wilson plaquette; insertion
+support offsets depend only on
+token.
+Gauge invariance/continuity
+and uniform-period slope
+refer to one family.
+A03
+Volume and
+mesh quantifiers
+26–28
+Every increasing period
+sequence admits common
+refinement; suitable fixed
+periods have full inner mesh
+limit before outer period limit.
+Auxiliary compact selections
+do not weaken full inner
+limit.
+A04
+Field domain
+and spectrum
+30
+Common dense invariant cyclic
+word domain, Schwartz
+continuity, adjoints/locality,
+proper orthochronous
+covariance and forward-cone
+PVM.
+Unique invariant vacuum is
+not a positive-gap claim.
+A05
+OPE parameters
+32–45
+Fixed finite words/degrees,
+M≥0, η&gt;0, ε&gt;0; separated
+cluster and spectators; same
+phase/truncation-independent
+channels.
+Radius threshold may
+depend on fixed words/
+parameters; uniformity is in
+phases and stated
+configurations.
+A06
+Public
+comparison class
+47–60
+Centered degree-four trace and
+finite complex combinations/
+products of stated fixed
+mass-shell integrals.
+Does not enlarge exclusion
+to every generalized-free
+comparison; penalty is one.
+A07
+Analytic
+conventions
+64–108
+Four dimensions; physical
+metric/chord/color factors; odd
+block ratios ≥3;
+connected-union cover; absolute
+weighted bounds.
+Rate-zero is subpower, not
+boundedness; thresholds
+independent of period.
+A08
+Contact
+continuation
+12526–
+12543
+Tested rate inequality on every
+allowed logarithmic path;
+palette continuity and
+constancy in assigned normals;
+common detector collar.
+Remaining branch retains
+support t≤s, full finite
+remainder; projected gain is
+actual degree.
+A09
+Weak-sequence
+Gaussian
+comparison
+12755–
+12767
+Same weak scaling sequence/
+frames and compact distinct
+configurations with each fixed
+derivative order.
+No interpolation to every
+positive real scale; Ward
+sign remains fixed.
+A10
+Private Gaussian
+marks
+12945–
+12973
+Finite regulated potential law,
+positive semidefinite
+infinite-lattice subtraction
+matrix; independent private
+marks by insertion.
+Covariance is bilinear;
+same-slot value need not
+vanish at finite regulator; no
+subtraction inverse required." width="474.60" height="599.29" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 516.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 516</caption><tbody><tr><th>Assumption</th><th>Input lines</th><th>Preserved condition</th><th>Scope control</th></tr><tr><td>A01Group and</td><td>9</td><td>Closed faithful matrix subgroup</td><td>No connectedness hypothesis</td></tr><tr><td>representation</td><td></td><td>of U(m); specified exponential</td><td>is added.</td></tr><tr><td></td><td></td><td>real Lie algebra is nonabelian</td><td></td></tr><tr><td></td><td></td><td>simple.</td><td></td></tr><tr><td>A02Finite prior and</td><td>11–26</td><td>Independent normalized Haar</td><td>Gauge invariance/continuity</td></tr><tr><td>Wilson order</td><td></td><td>link prior and literal ordered</td><td>and uniform-period slope</td></tr><tr><td></td><td></td><td>Wilson plaquette; insertion</td><td>refer to one family.</td></tr><tr><td></td><td></td><td>support offsets depend only on</td><td></td></tr><tr><td></td><td></td><td>token.</td><td></td></tr><tr><td>A03Volume and</td><td>26–28</td><td>Every increasing period</td><td>Auxiliary compact selections</td></tr><tr><td>mesh quantifiers</td><td></td><td>sequence admits common</td><td>do not weaken full inner</td></tr><tr><td></td><td></td><td>refinement; suitable fixed</td><td>limit.</td></tr><tr><td></td><td></td><td>periods have full inner mesh</td><td></td></tr><tr><td></td><td></td><td>limit before outer period limit.</td><td></td></tr><tr><td>A04Field domain</td><td>30</td><td>Common dense invariant cyclic</td><td>Unique invariant vacuum is</td></tr><tr><td>and spectrum</td><td></td><td>word domain, Schwartz</td><td>not a positive-gap claim.</td></tr><tr><td></td><td></td><td>continuity, adjoints/locality,</td><td></td></tr><tr><td></td><td></td><td>proper orthochronous</td><td></td></tr><tr><td></td><td></td><td>covariance and forward-cone</td><td></td></tr><tr><td></td><td></td><td>PVM.</td><td></td></tr><tr><td>A05OPE parameters</td><td>32–45</td><td>Fixed finite words/degrees,</td><td>Radius threshold may</td></tr><tr><td></td><td></td><td>M≥0, η&gt;0, ε&gt;0; separated</td><td>depend on fixed words/</td></tr><tr><td></td><td></td><td>cluster and spectators; same</td><td>parameters; uniformity is in</td></tr><tr><td></td><td></td><td>phase/truncation-independent</td><td>phases and stated</td></tr><tr><td></td><td></td><td>channels.</td><td>configurations.</td></tr><tr><td>A06Public</td><td>47–60</td><td>Centered degree-four trace and</td><td>Does not enlarge exclusion</td></tr><tr><td>comparison class</td><td></td><td>finite complex combinations/</td><td>to every generalized-free</td></tr><tr><td></td><td></td><td>products of stated fixed</td><td>comparison; penalty is one.</td></tr><tr><td></td><td></td><td>mass-shell integrals.</td><td></td></tr><tr><td>A07Analytic</td><td>64–108</td><td>Four dimensions; physical</td><td>Rate-zero is subpower, not</td></tr><tr><td>conventions</td><td></td><td>metric/chord/color factors; odd</td><td>boundedness; thresholds</td></tr><tr><td></td><td></td><td>block ratios ≥3;</td><td>independent of period.</td></tr><tr><td></td><td></td><td>connected-union cover; absolute</td><td></td></tr><tr><td></td><td></td><td>weighted bounds.</td><td></td></tr><tr><td>A08Contact</td><td>12526–</td><td>Tested rate inequality on every</td><td>Remaining branch retains</td></tr><tr><td>continuation</td><td>12543</td><td>allowed logarithmic path;</td><td>support t≤s, full finite</td></tr><tr><td></td><td></td><td>palette continuity and</td><td>remainder; projected gain is</td></tr><tr><td></td><td></td><td>constancy in assigned normals;</td><td>actual degree.</td></tr><tr><td></td><td></td><td>common detector collar.</td><td></td></tr><tr><td>A09Weak-sequence</td><td>12755–</td><td>Same weak scaling sequence/</td><td>No interpolation to every</td></tr><tr><td>Gaussian</td><td>12767</td><td>frames and compact distinct</td><td>positive real scale; Ward</td></tr><tr><td>comparison</td><td></td><td>configurations with each fixed</td><td>sign remains fixed.</td></tr><tr><td></td><td></td><td>derivative order.</td><td></td></tr><tr><td>A10Private Gaussian</td><td>12945–</td><td>Finite regulated potential law,</td><td>Covariance is bilinear;</td></tr><tr><td>marks</td><td>12973</td><td>positive semidefinite</td><td>same-slot value need not</td></tr><tr><td></td><td></td><td>infinite-lattice subtraction</td><td>vanish at finite regulator; no</td></tr><tr><td></td><td></td><td>matrix; independent private</td><td>subtraction inverse required.</td></tr><tr><td></td><td></td><td>marks by insertion.</td><td></td></tr></tbody></table></details></figure>
+<a id="source-page-517"></a>
+<figure id="p517-block-001" class="sr-formula sr-source-table" data-source-page="517"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p517-012139.svg" alt="Assumption
+Input lines
+Preserved condition
+Scope control
+A11
+Laplace
+continuity
+14113–
+14136
+Positive future-cone measures
+with finite transforms on full
+open dual cone; common
+polynomial budget for Schwartz
+passage.
+No arbitrary signed-measure
+convergence assertion.
+A12
+Maxwell
+isometry
+countertest
+14220–
+14252
+Complex-linear isometry with
+physical image, vacuum/
+translation intertwining, and
+precise local coherent matrix
+identity.
+Neither surjectivity nor
+identification of every field
+required; fixed-ball variant
+retained.
+A13
+Projected and
+averaged
+variants
+14326–
+14329
+Bounded self-adjoint
+fixed-image map for projected
+variant; physical inner-product
+preserving pointwise
+fixed-image maps for
+probability average.
+Individual averaged maps
+need no extra linearity,
+boundedness or projection
+property.
+A14
+Near-kernel
+repair
+14648–
+14674
+Finite real onto map with
+nonzero one-dimensional kernel,
+exact convergent right inverses
+and both weighted near-kernel
+errors.
+No prior uniform
+convergence on near-kernel
+direction assumed; precision
+paid before correction.
+A15
+Mass and
+volume order
+14890–
+14982
+Strictly positive mass through
+volume estimates; moving
+masses confined to a fixed
+positive interval after tolerance
+choice.
+Separate eventual endpoint
+estimates suffice; no uniform
+mass convergence is inserted.
+A16
+Position
+normalization
+branch
+Real fourth-order remainder
+belongs to normalized frame;
+weaker positive-ray norm
+alignment transfers leading
+coefficient only.
+A17
+Marker and
+threshold order
+15556–
+15647
+Finite surgery order fixed
+before eventual thresholds;
+common windows, two marker
+slots and positive weights, exact
+common Wilson partition.
+15317–
+15408
+Complementary scalar/stress/
+unit projections and positive
+adjustment factors; independent
+Wilson calibration of measured
+charge.
+Uniformity in finer cutoff/
+volume follows retained
+threshold order; no
+chamber-count tarifffactor.
+A18
+Local lens
+admissibility
+15686–
+15766
+Fixed read support, measurable
+equivariant displacement,
+health threshold θ/4, chord D
+with 8D≤θ, finite stocks and
+nonwrapping.
+Flag equality is branchwise
+exact; absent insertion
+requires no exponent
+estimate or hard-mask
+differentiation.
+A19
+Activity domains
+and budgets
+110–226
+Threshold 0 &lt; θ ≤1 with
+equality healthy; ordered left
+derivatives on healthy domains
+only; budgets at a fixed finite
+torus; early reserve s + 3.
+Masks are never
+differentiated; no
+volume-independent bound
+on the total scalar action is
+asserted.
+A20
+Stationary
+corridor
+5515–5709
+Fixed derivative order n ≥2;
+counting gap and exponential
+weights; contraction on
+∥x∥&lt; RX, ∥v∥≤RV .
+Uniqueness of the stationary
+point only inside the
+corridor; off-shell values and
+the residual are retained." width="474.60" height="623.20" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 517.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 517</caption><tbody><tr><th>Assumption</th><th>Input lines</th><th>Preserved condition</th><th>Scope control</th></tr><tr><td>A11Laplace</td><td>14113–</td><td>Positive future-cone measures</td><td>No arbitrary signed-measure</td></tr><tr><td>continuity</td><td>14136</td><td>with finite transforms on full</td><td>convergence assertion.</td></tr><tr><td></td><td></td><td>open dual cone; common</td><td></td></tr><tr><td></td><td></td><td>polynomial budget for Schwartz</td><td></td></tr><tr><td></td><td></td><td>passage.</td><td></td></tr><tr><td>A12Maxwell</td><td>14220–</td><td>Complex-linear isometry with</td><td>Neither surjectivity nor</td></tr><tr><td>isometry</td><td>14252</td><td>physical image, vacuum/</td><td>identification of every field</td></tr><tr><td>countertest</td><td></td><td>translation intertwining, and</td><td>required; fixed-ball variant</td></tr><tr><td></td><td></td><td>precise local coherent matrix</td><td>retained.</td></tr><tr><td></td><td></td><td>identity.</td><td></td></tr><tr><td>A13Projected and</td><td>14326–</td><td>Bounded self-adjoint</td><td>Individual averaged maps</td></tr><tr><td>averaged</td><td>14329</td><td>fixed-image map for projected</td><td>need no extra linearity,</td></tr><tr><td>variants</td><td></td><td>variant; physical inner-product</td><td>boundedness or projection</td></tr><tr><td></td><td></td><td>preserving pointwise</td><td>property.</td></tr><tr><td></td><td></td><td>fixed-image maps for</td><td></td></tr><tr><td></td><td></td><td>probability average.</td><td></td></tr><tr><td>A14Near-kernel</td><td>14648–</td><td>Finite real onto map with</td><td>No prior uniform</td></tr><tr><td>repair</td><td>14674</td><td>nonzero one-dimensional kernel,</td><td>convergence on near-kernel</td></tr><tr><td></td><td></td><td>exact convergent right inverses</td><td>direction assumed; precision</td></tr><tr><td></td><td></td><td>and both weighted near-kernel</td><td>paid before correction.</td></tr><tr><td></td><td></td><td>errors.</td><td></td></tr><tr><td>A15Mass and</td><td>14890–</td><td>Strictly positive mass through</td><td>Separate eventual endpoint</td></tr><tr><td>volume order</td><td>14982</td><td>volume estimates; moving</td><td>estimates suffice; no uniform</td></tr><tr><td></td><td></td><td>masses confined to a fixed</td><td>mass convergence is inserted.</td></tr><tr><td></td><td></td><td>positive interval after tolerance</td><td></td></tr><tr><td></td><td></td><td>choice.</td><td></td></tr><tr><td>A16Position</td><td>15317–</td><td>Complementary scalar/stress/</td><td>Real fourth-order remainder</td></tr><tr><td>normalization</td><td>15408</td><td>unit projections and positive</td><td>belongs to normalized frame;</td></tr><tr><td>branch</td><td></td><td>adjustment factors; independent</td><td>weaker positive-ray norm</td></tr><tr><td></td><td></td><td>Wilson calibration of measured</td><td>alignment transfers leading</td></tr><tr><td></td><td></td><td>charge.</td><td>coefficient only.</td></tr><tr><td>A17Marker and</td><td>15556–</td><td>Finite surgery order fixed</td><td>Uniformity in finer cutoff/</td></tr><tr><td>threshold order</td><td>15647</td><td>before eventual thresholds;</td><td>volume follows retained</td></tr><tr><td></td><td></td><td>common windows, two marker</td><td>threshold order; no</td></tr><tr><td></td><td></td><td>slots and positive weights, exact</td><td>chamber-count tarifffactor.</td></tr><tr><td></td><td></td><td>common Wilson partition.</td><td></td></tr><tr><td>A18Local lens</td><td>15686–</td><td>Fixed read support, measurable</td><td>Flag equality is branchwise</td></tr><tr><td>admissibility</td><td>15766</td><td>equivariant displacement,</td><td>exact; absent insertion</td></tr><tr><td></td><td></td><td>health threshold θ/4, chord D</td><td>requires no exponent</td></tr><tr><td></td><td></td><td>with 8D≤θ, finite stocks and</td><td>estimate or hard-mask</td></tr><tr><td></td><td></td><td>nonwrapping.</td><td>differentiation.</td></tr><tr><td>A19Activity domains</td><td>110–226</td><td>Threshold 0 &lt; θ ≤1 with</td><td>Masks are never</td></tr><tr><td>and budgets</td><td></td><td>equality healthy; ordered left</td><td>differentiated; no</td></tr><tr><td></td><td></td><td>derivatives on healthy domains</td><td>volume-independent bound</td></tr><tr><td></td><td></td><td>only; budgets at a fixed finite</td><td>on the total scalar action is</td></tr><tr><td></td><td></td><td>torus; early reserve s + 3.</td><td>asserted.</td></tr><tr><td>A20Stationary</td><td>5515–5709</td><td>Fixed derivative order n ≥2;</td><td>Uniqueness of the stationary</td></tr><tr><td>corridor</td><td></td><td>counting gap and exponential</td><td>point only inside the</td></tr><tr><td></td><td></td><td>weights; contraction on</td><td>corridor; off-shell values and</td></tr><tr><td></td><td></td><td>∥x∥&lt; RX, ∥v∥≤RV .</td><td>the residual are retained.</td></tr></tbody></table></details></figure>
+<a id="source-page-518"></a>
+<figure id="p518-block-001" class="sr-formula sr-source-table" data-source-page="518"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p518-012140.svg" alt="Assumption
+Input lines
+Preserved condition
+Scope control
+A21
+Calendar and
+order of choices
+6226–6430
+Stage data and length floors,
+then lengths, then entry delays;
+one calendar chosen before
+every history, cutoff, period and
+observable.
+Later enlargements are
+monotone and preserve
+earlier payments; estimates
+on different calendars are
+not combined.
+A22
+Calibration of
+finite histories
+6617–6819,
+7504–7575
+Bare parameter in a closed
+interval; bottom coupling  ̄β at
+level zero; deterministic forward
+recipe with continuous
+admissible levels.
+Existence by the
+intermediate value theorem
+only; uniqueness within the
+retained recipe; no inverse
+shooting map is assumed.
+A23
+Reference tori
+and beacons
+6843–7259
+Read radius r with 2r ≤w; five
+folded reference views; compact
+coupling band; orders and stage
+parameters, then block length,
+then delay.
+Constants are tied to fixed
+reference tori and are not
+uniform in the physical
+period.
+A24
+Labels and
+calibrated
+readers
+8399–8753
+Simple color Lie algebra, with
+no connectedness of the group;
+finite slot family; degree and
+level fixed before the eventual
+threshold.
+The label reader is inverted
+at each fixed level; its
+inverse bound is not uniform
+in the level.
+A25
+Free comparison
+hierarchy
+8754–9247
+Explicit Gaussian kernel on the
+fixed real symbol space; one
+exterior degree bound for all
+weights in detection.
+Statements are exact in the
+free comparison theory; they
+pass to the interacting
+hierarchy only by rank
+transfer along convergent
+readings.
+A26
+Euclidean
+rotations
+10373–
+10674
+Bands, window and tolerance
+fixed before the limit removing
+the outer flux; three response
+signs f ≥0, g ≤0, h ≥0;
+contact subtraction.
+No positivity is claimed for
+the six individual band
+readings; the unsubtracted
+stress pair is not asserted
+conserved at coincident
+points.
+A27
+Scaling
+comparison and
+trace limit
+13237–
+13994
+Selected radii rk ↓0 and scaling
+maps; for every sequence sn ↓0
+a subsequence with a scaling
+family on the same table and
+phase; monotonicity from the
+positive-time spectral measure.
+No uniformity in the degree
+and no bound on the scaling
+maps or their inverses; the
+interacting theory is not
+asserted to be free." width="474.60" height="479.73" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 518.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 518</caption><tbody><tr><th>Assumption</th><th>Input lines</th><th>Preserved condition</th><th>Scope control</th></tr><tr><td>A21Calendar and</td><td>6226–6430</td><td>Stage data and length floors,</td><td>Later enlargements are</td></tr><tr><td>order of choices</td><td></td><td>then lengths, then entry delays;</td><td>monotone and preserve</td></tr><tr><td></td><td></td><td>one calendar chosen before</td><td>earlier payments; estimates</td></tr><tr><td></td><td></td><td>every history, cutoff, period and</td><td>on different calendars are</td></tr><tr><td></td><td></td><td>observable.</td><td>not combined.</td></tr><tr><td>A22Calibration of</td><td>6617–6819,</td><td>Bare parameter in a closed</td><td>Existence by the</td></tr><tr><td>finite histories</td><td>7504–7575</td><td>interval; bottom coupling  ̄β at</td><td>intermediate value theorem</td></tr><tr><td></td><td></td><td>level zero; deterministic forward</td><td>only; uniqueness within the</td></tr><tr><td></td><td></td><td>recipe with continuous</td><td>retained recipe; no inverse</td></tr><tr><td></td><td></td><td>admissible levels.</td><td>shooting map is assumed.</td></tr><tr><td>A23Reference tori</td><td>6843–7259</td><td>Read radius r with 2r ≤w; five</td><td>Constants are tied to fixed</td></tr><tr><td>and beacons</td><td></td><td>folded reference views; compact</td><td>reference tori and are not</td></tr><tr><td></td><td></td><td>coupling band; orders and stage</td><td>uniform in the physical</td></tr><tr><td></td><td></td><td>parameters, then block length,</td><td>period.</td></tr><tr><td></td><td></td><td>then delay.</td><td></td></tr><tr><td>A24Labels and</td><td>8399–8753</td><td>Simple color Lie algebra, with</td><td>The label reader is inverted</td></tr><tr><td>calibrated</td><td></td><td>no connectedness of the group;</td><td>at each fixed level; its</td></tr><tr><td>readers</td><td></td><td>finite slot family; degree and</td><td>inverse bound is not uniform</td></tr><tr><td></td><td></td><td>level fixed before the eventual</td><td>in the level.</td></tr><tr><td></td><td></td><td>threshold.</td><td></td></tr><tr><td>A25Free comparison</td><td>8754–9247</td><td>Explicit Gaussian kernel on the</td><td>Statements are exact in the</td></tr><tr><td>hierarchy</td><td></td><td>fixed real symbol space; one</td><td>free comparison theory; they</td></tr><tr><td></td><td></td><td>exterior degree bound for all</td><td>pass to the interacting</td></tr><tr><td></td><td></td><td>weights in detection.</td><td>hierarchy only by rank</td></tr><tr><td></td><td></td><td></td><td>transfer along convergent</td></tr><tr><td></td><td></td><td></td><td>readings.</td></tr><tr><td>A26Euclidean</td><td>10373–</td><td>Bands, window and tolerance</td><td>No positivity is claimed for</td></tr><tr><td>rotations</td><td>10674</td><td>fixed before the limit removing</td><td>the six individual band</td></tr><tr><td></td><td></td><td>the outer flux; three response</td><td>readings; the unsubtracted</td></tr><tr><td></td><td></td><td>signs f ≥0, g ≤0, h ≥0;</td><td>stress pair is not asserted</td></tr><tr><td></td><td></td><td>contact subtraction.</td><td>conserved at coincident</td></tr><tr><td></td><td></td><td></td><td>points.</td></tr><tr><td>A27Scaling</td><td>13237–</td><td>Selected radii r0 and scaling</td><td>No uniformity in the degree</td></tr><tr><td></td><td></td><td>k ↓</td><td></td></tr><tr><td>comparison and</td><td>13994</td><td>maps; for every sequence s0</td><td>and no bound on the scaling</td></tr><tr><td></td><td></td><td>n ↓</td><td></td></tr><tr><td>trace limit</td><td></td><td>a subsequence with a scaling</td><td>maps or their inverses; the</td></tr><tr><td></td><td></td><td>family on the same table and</td><td>interacting theory is not</td></tr><tr><td></td><td></td><td>phase; monotonicity from the</td><td>asserted to be free.</td></tr><tr><td></td><td></td><td>positive-time spectral measure.</td><td></td></tr></tbody></table></details></figure>
+<p id="p518-block-014" data-source-page="518">Table 4: Dependency chain of the supplied conclusion: each stage with its input contract, the operations lifted, and its recovered output.</p>
+<figure id="p518-block-015" class="sr-formula sr-source-table" data-source-page="518"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p518-012141.svg" alt="Stage (parents)
+Input contract
+Operation
+Recovered output
+D01
+Finite Wilson
+realization
+fixed group/
+representation, finite
+lattice, normalized Haar
+frame realization and
+section; Wilson density
+pushforward
+physical
+finite-lattice law
+D02
+Multiscale
+calibrated family
+(D01)
+positive widths,
+prescribed stage ordering,
+banked histories
+exact one-step identities
+and common
+insertion-token transport
+one Wilson family
+before volume
+subsequence" width="474.60" height="97.17" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 518.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 518</caption><tbody><tr><th>Stage (parents)</th><th>Input contract</th><th>Operation</th><th>Recovered output</th></tr><tr><td>D01Finite Wilson</td><td>fixed group/</td><td>frame realization and</td><td>physical</td></tr><tr><td>realization</td><td>representation, finite</td><td>section; Wilson density</td><td>finite-lattice law</td></tr><tr><td></td><td>lattice, normalized Haar</td><td>pushforward</td><td></td></tr><tr><td>D02Multiscale</td><td>positive widths,</td><td>exact one-step identities</td><td>one Wilson family</td></tr><tr><td>calibrated family</td><td>prescribed stage ordering,</td><td>and common</td><td>before volume</td></tr><tr><td>(D01)</td><td>banked histories</td><td>insertion-token transport</td><td>subsequence</td></tr></tbody></table></details></figure>
+<a id="source-page-519"></a>
+<figure id="p519-block-001" class="sr-formula sr-source-table" data-source-page="519"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p519-012142.svg" alt="Stage (parents)
+Input contract
+Operation
+Recovered output
+D03
+Common
+continuum table
+(D02)
+requested increasing
+period sequence;
+fixed-period Cauchy
+bounds
+full mesh limit then outer
+refined-period limit
+common hierarchy,
+coefficients and
+finite field filtration
+D04
+Phases and
+Hilbert
+reconstruction
+(D03)
+common-domain
+fields, cone
+momentum measure
+and unique vacuum
+D05
+Fixed OPE and
+contact extension
+(D03, D04)
+compression algebra,
+character hierarchy,
+positive Gram/heat data
+phase readout and same
+heat/tube/boundary
+construction
+same finite homogeneous
+reader, basis and
+projections
+nested replacement,
+tested integration and
+combined contact
+resolution
+same public
+channels across
+finite truncations/
+collisions
+D06
+Gaussian
+comparison (D03)
+same weak sequence, free
+frames and moving
+covariance limits
+private marks, corrected
+covariance, Wick
+recursion and profile
+sums
+mean Gaussian
+comparison with
+mixed stress jets
+D07
+Local equation
+sensor (D02, D03)
+same served coefficient
+difference, chart/coupling
+and retained scale
+finite marker estimates
+and weighted degree-four
+spectator detection
+both paid
+near-kernel leaks
+D08
+Physical stress
+amplitude (D06,
+D07)
+Ward-normalized
+stress and scalar
+coefficient −b0/2
+D09
+Selected trace
+ultraviolet
+measure (D04,
+D08)
+exact divergence detector;
+same nonzero Ward shell
+test
+finite correction inverse
+and near-kernel
+functional repair
+selected stress, exact unit
+centering, positive
+spectral measure
+all-distance sandwich;
+dilation/Laplace/
+Schwartz recovery
+trace amplitude and
+normalized cone
+measure
+D10
+Specified finite
+polynomial
+exclusion (D09)
+finite mass-shell tracks
+with fixed finite data
+damped radial expansions
+and product-test recovery
+source-specified
+comparison
+exclusion
+D11
+Specified Maxwell
+countertests
+(D09)
+physical-image
+translation isometry and
+precise local coherent
+identity
+common amplitudes;
+local dilation polynomial;
+finite sector growth
+source-specified
+Maxwell/projected/
+averaged exclusions
+D12
+Normalized
+position
+diagnostic (D08,
+D09)
+positive frame branch;
+separated Ward columns
+measured
+Wilson-calibrated charge
+and exact rational
+residual
+normalized-frame
+real fourth-order
+remainder; weaker
+leading transfer" width="474.60" height="467.78" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 519.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 519</caption><tbody><tr><th>Stage (parents)</th><th>Input contract</th><th>Operation</th><th>Recovered output</th></tr><tr><td>D03Common</td><td>requested increasing</td><td>full mesh limit then outer</td><td>common hierarchy,</td></tr><tr><td>continuum table</td><td>period sequence;</td><td>refined-period limit</td><td>coefficients and</td></tr><tr><td>(D02)</td><td>fixed-period Cauchy</td><td></td><td>finite field filtration</td></tr><tr><td></td><td>bounds</td><td></td><td></td></tr><tr><td>D04Phases and</td><td>compression algebra,</td><td>phase readout and same</td><td>common-domain</td></tr><tr><td>Hilbert</td><td>character hierarchy,</td><td>heat/tube/boundary</td><td>fields, cone</td></tr><tr><td>reconstruction</td><td>positive Gram/heat data</td><td>construction</td><td>momentum measure</td></tr><tr><td>(D03)</td><td></td><td></td><td>and unique vacuum</td></tr><tr><td>D05Fixed OPE and</td><td>same finite homogeneous</td><td>nested replacement,</td><td>same public</td></tr><tr><td>contact extension</td><td>reader, basis and</td><td>tested integration and</td><td>channels across</td></tr><tr><td>(D03, D04)</td><td>projections</td><td>combined contact</td><td>finite truncations/</td></tr><tr><td></td><td></td><td>resolution</td><td>collisions</td></tr><tr><td>D06Gaussian</td><td>same weak sequence, free</td><td>private marks, corrected</td><td>mean Gaussian</td></tr><tr><td>comparison (D03)</td><td>frames and moving</td><td>covariance, Wick</td><td>comparison with</td></tr><tr><td></td><td>covariance limits</td><td>recursion and profile</td><td>mixed stress jets</td></tr><tr><td></td><td></td><td>sums</td><td></td></tr><tr><td>D07Local equation</td><td>same served coefficient</td><td>finite marker estimates</td><td>both paid</td></tr><tr><td>sensor (D02, D03)</td><td>difference, chart/coupling</td><td>and weighted degree-four</td><td>near-kernel leaks</td></tr><tr><td></td><td>and retained scale</td><td>spectator detection</td><td></td></tr><tr><td>D08Physical stress</td><td>exact divergence detector;</td><td>finite correction inverse</td><td>Ward-normalized</td></tr><tr><td>amplitude (D06,</td><td>same nonzero Ward shell</td><td>and near-kernel</td><td>stress and scalar</td></tr><tr><td>D07)</td><td>test</td><td>functional repair</td><td>coefficient −b/2</td></tr><tr><td></td><td></td><td></td><td>0</td></tr><tr><td>D09Selected trace</td><td>selected stress, exact unit</td><td>all-distance sandwich;</td><td>trace amplitude and</td></tr><tr><td>ultraviolet</td><td>centering, positive</td><td>dilation/Laplace/</td><td>normalized cone</td></tr><tr><td>measure (D04,</td><td>spectral measure</td><td>Schwartz recovery</td><td>measure</td></tr><tr><td>D08)</td><td></td><td></td><td></td></tr><tr><td>D10Specified finite</td><td>finite mass-shell tracks</td><td>damped radial expansions</td><td>source-specified</td></tr><tr><td>polynomial</td><td>with fixed finite data</td><td>and product-test recovery</td><td>comparison</td></tr><tr><td>exclusion (D09)</td><td></td><td></td><td>exclusion</td></tr><tr><td>D11Specified Maxwell</td><td>physical-image</td><td>common amplitudes;</td><td>source-specified</td></tr><tr><td>countertests</td><td>translation isometry and</td><td>local dilation polynomial;</td><td>Maxwell/projected/</td></tr><tr><td>(D09)</td><td>precise local coherent</td><td>finite sector growth</td><td>averaged exclusions</td></tr><tr><td></td><td>identity</td><td></td><td></td></tr><tr><td>D12Normalized</td><td>positive frame branch;</td><td>measured</td><td>normalized-frame</td></tr><tr><td>position</td><td>separated Ward columns</td><td>Wilson-calibrated charge</td><td>real fourth-order</td></tr><tr><td>diagnostic (D08,</td><td></td><td>and exact rational</td><td>remainder; weaker</td></tr><tr><td>D09)</td><td></td><td>residual</td><td>leading transfer</td></tr></tbody></table></details></figure>
+<p id="p519-block-032" data-source-page="519">Table 5: Source–readout contracts of the general transport statements.</p>
+<figure id="p519-block-033" class="sr-formula sr-source-table" data-source-page="519"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p519-012143.svg" alt="Contract
+Readout
+Non-invertibility and
+retained data
+Where
+M01
+Native admission
+and literal
+preparation
+The realized branch supplies
+physical configuration/history
+readouts only after group,
+lattice, law and analytic data
+are specified.
+Does not recover or
+classify all possible native
+antecedents; admission
+does not select Wilson law
+or identify abstract
+vertices with physical
+sites.
+Prop. 6.1" width="474.60" height="121.08" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 519.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 519</caption><tbody><tr><th>Contract</th><th>Readout</th><th>Non-invertibility and</th><th>Where</th></tr><tr><td></td><td></td><td>retained data</td><td></td></tr><tr><td>M01Native admission</td><td>The realized branch supplies</td><td>Does not recover or</td><td>Prop. 6.1</td></tr><tr><td>and literal</td><td>physical configuration/history</td><td>classify all possible native</td><td></td></tr><tr><td>preparation</td><td>readouts only after group,</td><td>antecedents; admission</td><td></td></tr><tr><td></td><td>lattice, law and analytic data</td><td>does not select Wilson law</td><td></td></tr><tr><td></td><td>are specified.</td><td>or identify abstract</td><td></td></tr><tr><td></td><td></td><td>vertices with physical</td><td></td></tr><tr><td></td><td></td><td>sites.</td><td></td></tr></tbody></table></details></figure>
+<a id="source-page-520"></a>
+<figure id="p520-block-001" class="sr-formula sr-source-table" data-source-page="520"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p520-012144.svg" alt="Contract
+Readout
+Non-invertibility and
+retained data
+Where
+M02
+Finite frame fibre
+and section
+π(r, A)e = r−1
+x Aery; reverse
+links are inverses.
+Readout forgets frame
+representatives; it does not
+quotient physical gauge
+equivalence. Physical
+gauge acts by r 7→rg−1, A
+fixed.
+Thm. 7.1
+M03
+Paths and physical
+gauge action
+Interior frames cancel; open
+paths transform at endpoints
+and loop traces read
+unchanged.
+A trace alone discards
+conjugacy and other
+matrix information; full
+link history remains
+retained.
+§7
+M04
+Normalized Wilson
+measure and
+insertions
+π∗eμ = μW ; insertion F reads
+F ◦π.
+No unnormalized gauge
+volume; normalization and
+integrability remain part
+of the contract.
+Thm. 7.2
+M05
+Tangent operators
+and quadratic forms
+p2TZ = Tp1 and TZj1 = j2T;
+compositions insert piji = I.
+Vertical frame directions
+remain null. Operator
+transport differs from
+adjoint form pullback. No
+ambient vertical coercivity
+follows.
+Thm. A.1
+M06
+Actual nonlinear
+predictors and
+horizontal
+derivatives
+Coarse π(s, B) = P(π(r, A));
+differentiated frame terms
+cancel in the coarse readout.
+Multivalued branches
+remain tagged relations;
+no invented selection or
+bound on arbitrary
+unbounded frame rates.
+§A
+M07
+Tested limits and
+quantitative
+estimates
+Exact scalar identity IZ
+λ = Iλ
+at every tag.
+No exchange of limits,
+stronger test class,
+derivative of hard masks,
+new compactness or
+mixing of unrelated
+partition functions.
+Thm. B.1
+M08
+Operations,
+relations and
+residual histories
+πσ = id at every composable
+intermediate stage.
+No discard of branch tags
+or auxiliary histories
+merely because functions
+coincide.
+§B
+M09
+Reflection quotient,
+fields and spectrum
+Unitary U : [v] 7→[pv] between
+completed reflection spaces.
+Null histories are
+quotiented; an unbounded
+field is not promoted to a
+bounded whole-space
+operator. Rank-one
+vacuum is not a positive
+spectral gap.
+Thm. C.1
+M10
+Compression
+algebra and phase
+measure
+Whole-word character
+evaluation; ρZ = h∗ρ.
+Factors cannot be read
+separately without a
+proved product identity.
+Almost-everywhere
+statements require the
+original continuity/
+full-support upgrade.
+Thm. D.1" width="474.60" height="635.16" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 520.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 520</caption><tbody><tr><th>Contract</th><th>Readout</th><th>Non-invertibility and</th><th>Where</th></tr><tr><td></td><td></td><td>retained data</td><td></td></tr><tr><td></td><td>−1</td><td></td><td></td></tr><tr><td>M02Finite frame fibre</td><td>π(r, A)e = rx Aery; reverse</td><td>Readout forgets frame</td><td>Thm. 7.1</td></tr><tr><td>and section</td><td>links are inverses.</td><td>representatives; it does not</td><td></td></tr><tr><td></td><td></td><td>quotient physical gauge</td><td></td></tr><tr><td></td><td></td><td>equivalence. Physical</td><td></td></tr><tr><td></td><td></td><td>−1</td><td></td></tr><tr><td></td><td></td><td>gauge acts by r 7→rg, A</td><td></td></tr><tr><td></td><td></td><td>fixed.</td><td></td></tr><tr><td>M03Paths and physical</td><td>Interior frames cancel; open</td><td>A trace alone discards</td><td>§7</td></tr><tr><td>gauge action</td><td>paths transform at endpoints</td><td>conjugacy and other</td><td></td></tr><tr><td></td><td>and loop traces read</td><td>matrix information; full</td><td></td></tr><tr><td></td><td>unchanged.</td><td>link history remains</td><td></td></tr><tr><td></td><td></td><td>retained.</td><td></td></tr><tr><td>M04Normalized Wilson</td><td>πeμ = μ</td><td>No unnormalized gauge</td><td>Thm. 7.2</td></tr><tr><td></td><td>∗W ; insertion F reads</td><td></td><td></td></tr><tr><td>measure and</td><td>F ◦π.</td><td>volume; normalization and</td><td></td></tr><tr><td>insertions</td><td></td><td>integrability remain part</td><td></td></tr><tr><td></td><td></td><td>of the contract.</td><td></td></tr><tr><td>M05Tangent operators</td><td>pT Tp Tj jT;</td><td>Vertical frame directions</td><td>Thm. A.1</td></tr><tr><td></td><td>2Z =1 andZ1 =2</td><td></td><td></td></tr><tr><td>and quadratic forms</td><td>compositions insert pj I.</td><td>remain null. Operator</td><td></td></tr><tr><td></td><td>ii =</td><td></td><td></td></tr><tr><td></td><td></td><td>transport differs from</td><td></td></tr><tr><td></td><td></td><td>adjoint form pullback. No</td><td></td></tr><tr><td></td><td></td><td>ambient vertical coercivity</td><td></td></tr><tr><td></td><td></td><td>follows.</td><td></td></tr><tr><td>M06Actual nonlinear</td><td>Coarse π(s, B) = P(π(r, A));</td><td>Multivalued branches</td><td>§A</td></tr><tr><td>predictors and</td><td>differentiated frame terms</td><td>remain tagged relations;</td><td></td></tr><tr><td>horizontal</td><td>cancel in the coarse readout.</td><td>no invented selection or</td><td></td></tr><tr><td>derivatives</td><td></td><td>bound on arbitrary</td><td></td></tr><tr><td></td><td></td><td>unbounded frame rates.</td><td></td></tr><tr><td></td><td>Z</td><td></td><td></td></tr><tr><td>M07Tested limits and</td><td>Exact scalar identity I= I</td><td>No exchange of limits,</td><td>Thm. B.1</td></tr><tr><td></td><td>λ λ</td><td></td><td></td></tr><tr><td>quantitative</td><td>at every tag.</td><td>stronger test class,</td><td></td></tr><tr><td>estimates</td><td></td><td>derivative of hard masks,</td><td></td></tr><tr><td></td><td></td><td>new compactness or</td><td></td></tr><tr><td></td><td></td><td>mixing of unrelated</td><td></td></tr><tr><td></td><td></td><td>partition functions.</td><td></td></tr><tr><td>M08Operations,</td><td>πσ = id at every composable</td><td>No discard of branch tags</td><td>§B</td></tr><tr><td>relations and</td><td>intermediate stage.</td><td>or auxiliary histories</td><td></td></tr><tr><td>residual histories</td><td></td><td>merely because functions</td><td></td></tr><tr><td></td><td></td><td>coincide.</td><td></td></tr><tr><td>M09Reflection quotient,</td><td>Unitary U : [v] 7→[pv] between</td><td>Null histories are</td><td>Thm. C.1</td></tr><tr><td>fields and spectrum</td><td>completed reflection spaces.</td><td>quotiented; an unbounded</td><td></td></tr><tr><td></td><td></td><td>field is not promoted to a</td><td></td></tr><tr><td></td><td></td><td>bounded whole-space</td><td></td></tr><tr><td></td><td></td><td>operator. Rank-one</td><td></td></tr><tr><td></td><td></td><td>vacuum is not a positive</td><td></td></tr><tr><td></td><td></td><td>spectral gap.</td><td></td></tr><tr><td>M10Compression</td><td>Whole-word character</td><td>Factors cannot be read</td><td>Thm. D.1</td></tr><tr><td>algebra and phase</td><td>evaluation; ρZ = h∗ρ.</td><td>separately without a</td><td></td></tr><tr><td>measure</td><td></td><td>proved product identity.</td><td></td></tr><tr><td></td><td></td><td>Almost-everywhere</td><td></td></tr><tr><td></td><td></td><td>statements require the</td><td></td></tr><tr><td></td><td></td><td>original continuity/</td><td></td></tr><tr><td></td><td></td><td>full-support upgrade.</td><td></td></tr></tbody></table></details></figure>
+<a id="source-page-521"></a>
+<figure id="p521-block-001" class="sr-formula sr-source-table" data-source-page="521"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p521-012145.svg" alt="Contract
+Readout
+Non-invertibility and
+retained data
+Where
+M11
+Fixed OPE reader
+and retained
+remainder
+Applying q recovers the same
+channel reader and finite
+projections.
+Projection Πm is not
+inverted; discarded tails
+are retained as residuals.
+Label inverse is not an
+inverse on unreduced
+histories.
+Prop. E.1
+M12
+Contact extensions
+with subtraction
+data
+TZ(g) = T(Lg) on the stated
+combined integrability domain.
+Punctured restriction loses
+diagonal-supported
+contact information;
+separately nonsummable
+pieces are not assigned
+integrals.
+§E
+M13
+Gaussian means,
+covariances and
+residuals
+Normalized Gaussian integrals
+and μ −v = E∗v −P ∗(Av + b),
+E = AP −I, A = A∗.
+Replacing μ by −Cb loses
+the specified mean identity.
+No probability covariance
+is assigned to
+nonsymmetric P.
+§F
+M14
+Ordered inverse,
+determinant and
+quiet-coordinate
+data
+C−1 −A = P
+k≥1(−S)kA on
+the original norm-convergence
+domain.
+Terminal A cannot be
+removed/commuted;
+determinant diagnostic
+alone is not full log
+determinant. Orthogonal
+norm invariance does not
+preserve coordinate boxes.
+§F" width="474.60" height="324.41" style="width:43.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 521.</figcaption><details class="sr-formula-transcript"><summary>Accessible table transcription</summary><table><caption>Table transcription, source page 521</caption><tbody><tr><th>Contract</th><th>Readout</th><th>Non-invertibility and</th><th>Where</th></tr><tr><td></td><td></td><td>retained data</td><td></td></tr><tr><td>M11Fixed OPE reader</td><td>Applying q recovers the same</td><td>Projection Πm is not</td><td>Prop. E.1</td></tr><tr><td>and retained</td><td>channel reader and finite</td><td>inverted; discarded tails</td><td></td></tr><tr><td>remainder</td><td>projections.</td><td>are retained as residuals.</td><td></td></tr><tr><td></td><td></td><td>Label inverse is not an</td><td></td></tr><tr><td></td><td></td><td>inverse on unreduced</td><td></td></tr><tr><td></td><td></td><td>histories.</td><td></td></tr><tr><td>M12Contact extensions</td><td>T(g) = T(Lg) on the stated</td><td>Punctured restriction loses</td><td>§E</td></tr><tr><td></td><td>Z</td><td></td><td></td></tr><tr><td>with subtraction</td><td>combined integrability domain.</td><td>diagonal-supported</td><td></td></tr><tr><td>data</td><td></td><td>contact information;</td><td></td></tr><tr><td></td><td></td><td>separately nonsummable</td><td></td></tr><tr><td></td><td></td><td>pieces are not assigned</td><td></td></tr><tr><td></td><td></td><td>integrals.</td><td></td></tr><tr><td>M13Gaussian means,</td><td>Normalized Gaussian integrals</td><td>Replacing μ by −Cb loses</td><td>§F</td></tr><tr><td></td><td>∗∗</td><td></td><td></td></tr><tr><td>covariances and</td><td>and μ −v = Ev −P (Av + b),</td><td>the specified mean identity.</td><td></td></tr><tr><td></td><td>∗</td><td></td><td></td></tr><tr><td>residuals</td><td>E = AP −I, A = A.</td><td>No probability covariance</td><td></td></tr><tr><td></td><td></td><td>is assigned to</td><td></td></tr><tr><td></td><td></td><td>nonsymmetric P.</td><td></td></tr><tr><td></td><td>P</td><td></td><td></td></tr><tr><td></td><td>−1 k</td><td></td><td></td></tr><tr><td>M14Ordered inverse,</td><td>C−A = (−S)A on</td><td>Terminal A cannot be</td><td>§F</td></tr><tr><td></td><td>k≥1</td><td></td><td></td></tr><tr><td>determinant and</td><td>the original norm-convergence</td><td>removed/commuted;</td><td></td></tr><tr><td>quiet-coordinate</td><td>domain.</td><td>determinant diagnostic</td><td></td></tr><tr><td>data</td><td></td><td>alone is not full log</td><td></td></tr><tr><td></td><td></td><td>determinant. Orthogonal</td><td></td></tr><tr><td></td><td></td><td>norm invariance does not</td><td></td></tr><tr><td></td><td></td><td>preserve coordinate boxes.</td><td></td></tr></tbody></table></details></figure>

@@ -1,0 +1,436 @@
+<a id="source-page-121"></a>
+<p id="p121-block-001" data-source-page="121">One direction follows from shortest-path distances and the least-parent choice. Conversely, containing the stem gives a path of assigned length from the root to every vertex, while the upper constraint prevents any shorter path; hence these are the graph’s actual distances. The second constraint and injectivity of the order give the same least preceding-level neighbor. Thus the breadth-first parent is again<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002960.svg" alt=" p" style="width:1.0518em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. These intervals partition all connected subgraphs of the original graph. If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002961.svg" alt=" Up \" style="width:2.3944em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> stem(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002962.svg" alt="p" style="width:0.6497em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) contains an edge, toggling it pairs every graph in the interval with one of opposite parity. The interval sum vanishes. If there is no such edge, its sum has absolute value one. Summing interval bounds proves precisely the rooted spanning-tree bound on the absolute connected coefficient.</p>
+<a id="section-7-5"></a><h3 id="p121-block-002" data-source-page="121">Passing from numbered trees to distinct connected sets</h3>
+<p id="p121-block-003" data-source-page="121">The same forest estimates also bound distinct-set expansions. For a distinct label set<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019723.svg" alt=" D" style="width:1.2530em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> of size<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019724.svg" alt=" m, a" style="width:2.3690em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> parent map on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019725.svg" alt=" D" style="width:1.2951em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and each bijection<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019726.svg" alt=" {1, . . . , m} →D" style="width:7.4506em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, relabel the parent map and its activities by that bijection. The resulting numbered forest determines all three objects: its label range is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019727.svg" alt=" D" style="width:1.2923em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, its label assignment determines the bijection, and transport back through that bijection recovers the parent map. This assignment is injective. There are exactly<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019728.svg" alt=" m" style="width:1.2669em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>! bijections; all have the same product weight divided by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019729.svg" alt=" m" style="width:1.4171em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>!. Their sum is therefore the unnumbered product weight, with no factorial left. Restricting the numbered forest sum to this injective image proves the distinct-parent-map estimate and its geometric size tail.</p>
+<p id="p121-block-003-paragraph-2" data-source-page="121">A finite overlap-connected set whose union meets<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019730.svg" alt=" x" style="width:1.0729em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> can be rooted at the external support (x). Connect the root to labels whose supports contain<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019731.svg" alt=" x" style="width:1.0654em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and use a breadth-first spanning tree of the resulting connected graph. The sum over all parent maps includes this one, so it dominates that set’s nonnegative product weight. For the stronger sitewise prefactor<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019732.svg" alt=" γ" style="width:1.0442em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, instead choose one label containing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019733.svg" alt=" x" style="width:1.0671em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> as an internal root, charge its activity to the site’s budget, and use the internal-root forest estimate for the other labels. Summing over all possible roots only increases the bound. Numbering the distinct nonroot labels cancels their factorial exactly as above; allowing the root label once more among nonroots in the majorant is harmless. Consequently the distinct connected-set sum rooted at<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019734.svg" alt=" x" style="width:1.1465em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, with the actual union support weight, is bounded by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-019735.svg" alt=" γ/(1 −q" style="width:4.3198em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>) under the readiness assumptions. This is the distinct-set input used in the positive-multiplicity restoration argument.</p>
+<a id="section-7-6"></a><h3 id="p121-block-004" data-source-page="121">Cluster logarithms with repeated occurrences</h3>
+<p id="p121-block-005" data-source-page="121">Let (R(i,j)) be a symmetric incompatibility relation with (R(i,i)) for every label. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002976.svg" alt=" Xi ̸= ∅" style="width:3.6844em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>be its support, with incompatibility implying intersecting supports. For real activities<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002977.svg" alt=" wi" style="width:1.4710em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, the hard-core gas is</p>
+<figure class="sr-formula" id="p121-block-006" data-source-page="121"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p121-002978.svg" alt="Z(w) =
+X
+Y
+i∈A
+wi.
+A compatible" width="124.13" height="33.41" style="width:11.388em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 121.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Z(w) =
+X
+Y
+i∈A
+wi.
+A compatible</pre></details></figure>
+<p id="p121-block-010" data-source-page="121">The empty subset contributes one. In contrast, its logarithm uses ordered occurrence tuples <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p121-002979.svg" alt="z = (i1, . . . , in" style="width:6.2414em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>), permitting repeated labels. Form the graph of incompatible occurrence pairs and define</p>
+<figure class="sr-formula" id="p121-block-018" data-source-page="121"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p121-002980.svg" alt="n
+Y
+φ(z) =
+X
+(−1)|E(H)|,
+L(w) =
+X
+X
+1
+n!
+z∈In
+φ(z)
+j=1
+wij.
+H connected
+H⊆incompatibility graph
+n≥1" width="356.32" height="41.43" style="width:32.690em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 121.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n
+Y
+φ(z) =
+X
+(−1)|E(H)|,
+L(w) =
+X
+X
+1
+n!
+z∈In
+φ(z)
+j=1
+wij.
+H connected
+H⊆incompatibility graph
+n≥1</pre></details></figure>
+<a id="source-page-122"></a>
+<p id="p122-block-001" data-source-page="122">For one occurrence the connected graph has no edges and coefficient one. Equal labels at distinct occurrence positions are incompatible. This is essential to the logarithmic identity even though the gas itself is indexed by distinct-label subsets.</p>
+<p id="p122-block-001-paragraph-2" data-source-page="122">The absolute estimate uses cancellation inside<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-019736.svg" alt=" φ" style="width:1.0718em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Breadth-first exploration partitions connected subgraphs into intervals with one fixed spanning tree as lower endpoint and an allowed edge set as upper endpoint. In each interval, if an optional edge exists, toggling that edge is a sign-reversing involution, so the alternating sum is zero. Otherwise the interval contains only its tree and its absolute contribution is one. Hence<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-019737.svg" alt=" |φ(z)|" style="width:2.9076em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> is bounded by the number of compatible rooted spanning trees. Opening the absolute value before the connected-graph sum would lose this estimate.</p>
+<p id="p122-block-001-paragraph-3" data-source-page="122">Here is the resulting root accounting. Put<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-019738.svg" alt=" cB(S" style="width:2.5736em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>) = coverNumber<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-019739.svg" alt="B(S" style="width:1.8158em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>), take<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-019740.svg" alt=" a ≥0, δ &gt; 0, γ &gt; 0," style="width:8.7242em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> and suppose</p>
+<figure class="sr-formula" id="p122-block-003" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002986.svg" alt="X
+i:x∈Xi
+|wi|e(a+δ)cB(Xi) ≤γ,
+0 &lt; q &lt; 1,
+4(2B + 1)4γ
+δ
+≤q.
+sup
+x" width="321.29" height="34.14" style="width:29.476em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+i:x∈Xi
+|wi|e(a+δ)cB(Xi) ≤γ,
+0 &lt; q &lt; 1,
+4(2B + 1)4γ
+δ
+≤q.
+sup
+x</pre></details></figure>
+<figure id="p122-block-006" class="sr-formula sr-source-panel" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002987.svg" alt="The rooted-tree estimate bounds the size-n cluster sum with a designated root-activity budget
+b by bqn−1, using the normalization (1/(n-1)!). In an unrooted cluster that contains a label with a
+chosen property, sum over all possible marked root positions and divide by n. Its (1/n!) normal-
+ization is then bounded by the same rooted expression. Relabeling tuple positions preserves the
+graph coefficient and product weights, so the estimate holds for each possible position, including
+repeated labels.
+If x ∈S
+j Xij, at least one occurrence has support containing x. Use that property for the root,
+with b = γ. A nonzero connected coefficient gives an overlap-connected support union. As in the
+cover argument above," width="471.82" height="120.90" style="width:43.286em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The rooted-tree estimate bounds the size-n cluster sum with a designated root-activity budget
+b by bqn−1, using the normalization (1/(n-1)!). In an unrooted cluster that contains a label with a
+chosen property, sum over all possible marked root positions and divide by n. Its (1/n!) normal-
+ization is then bounded by the same rooted expression. Relabeling tuple positions preserves the
+graph coefficient and product weights, so the estimate holds for each possible position, including
+repeated labels.
+If x ∈S
+j Xij, at least one occurrence has support containing x. Use that property for the root,
+with b = γ. A nonzero connected coefficient gives an overlap-connected support union. As in the
+cover argument above,</pre></details></figure>
+<figure class="sr-formula" id="p122-block-007" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002988.svg" alt="eacB(∪jXij ) ≤
+Y
+j
+eacB(Xij )." width="124.64" height="33.18" style="width:11.435em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eacB(∪jXij ) ≤
+Y
+j
+eacB(Xij ).</pre></details></figure>
+<p id="p122-block-009" data-source-page="122">Thus, summing sizes<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-002989.svg" alt=" n ≥m" style="width:3.7745em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> + 1, the absolute logarithmic terms whose support contains<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-002990.svg" alt=" x," style="width:1.4383em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> including their actual union support weight, have total at most</p>
+<figure class="sr-formula" id="p122-block-010" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002991.svg" alt="γqm
+1 −q." width="29.88" height="29.03" style="width:2.741em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>γqm
+1 −q.</pre></details></figure>
+<figure id="p122-block-012" class="sr-formula sr-source-panel" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002992.svg" alt="Summing root bounds over all sites gives absolute convergence of L at fixed torus, with total
+at most |Λ|γ/(1 −q). The rooted-tree estimate and its breadth-first interval construction are the
+remaining combinatorial ingredients behind this bound; the occurrence/root normalization and
+transfer to the union support have been made explicit here.
+The real logarithmic identity follows without assuming Z(w) &gt; 0. First restrict to a finite
+alphabet of s labels.
+Let P(t) = Z(tw), a polynomial of degree at most s, and write L(t) =
+P
+n≥1 lntn for the connected series. The finite graph decomposition into connected components
+gives the coefficient recurrence" width="469.70" height="107.35" style="width:43.092em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Summing root bounds over all sites gives absolute convergence of L at fixed torus, with total
+at most |Λ|γ/(1 −q). The rooted-tree estimate and its breadth-first interval construction are the
+remaining combinatorial ingredients behind this bound; the occurrence/root normalization and
+transfer to the union support have been made explicit here.
+The real logarithmic identity follows without assuming Z(w) &gt; 0. First restrict to a finite
+alphabet of s labels.
+Let P(t) = Z(tw), a polynomial of degree at most s, and write L(t) =
+P
+n≥1 lntn for the connected series. The finite graph decomposition into connected components
+gives the coefficient recurrence</pre></details></figure>
+<figure class="sr-formula" id="p122-block-014" data-source-page="122"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p122-002993.svg" alt="n
+X
+n[P]n =
+k=1
+klk[P]n−k," width="110.42" height="34.70" style="width:10.131em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 122.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>n
+X
+n[P]n =
+k=1
+klk[P]n−k,</pre></details></figure>
+<p id="p122-block-016" data-source-page="122">obtained by designating one occurrence, choosing its connected component and then the remaining graph. The binomial choices of positions and the component factorials give precisely these coefficients. The absolute cluster bound gives<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-002994.svg" alt=" |ln| ≤Cqn−1" style="width:5.9902em;height:1.4036em;vertical-align:-0.23em" loading="lazy"/>. Choose<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-002995.svg" alt=" u &gt;" style="width:2.0658em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1 with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p122-002996.svg" alt=" qu &lt;" style="width:2.5460em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1; both (L(t)) and its differentiated series converge uniformly on compact subsets of ((-u,u)), by the summable</p>
+<a id="source-page-123"></a>
+<figure id="p123-block-001" class="sr-formula sr-source-panel" data-source-page="123"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p123-016594.svg" alt="majorant Cn(qu)n−1. The recurrence implies P ′ = L′P. Therefore (Pe−L)′ = 0 on this interval.
+Its value at zero is one, so P(1) = eL(1).
+For an arbitrary alphabet, restrict to finite subsets directed by inclusion. Every fixed gas subset
+and every fixed occurrence tuple eventually occurs unchanged. The gas has an absolute majorant
+obtained by dropping exclusions, bounded by Q
+i(1 + |wi|) ≤e
+P
+i |wi|; the sitewise budgets make
+that sum finite at fixed torus. The connected series has the absolute majorant above. Dominated
+convergence passes both finite-alphabet sides to their full sums. Thus" width="471.75" height="98.97" style="width:43.279em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 123.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>majorant Cn(qu)n−1. The recurrence implies P ′ = L′P. Therefore (Pe−L)′ = 0 on this interval.
+Its value at zero is one, so P(1) = eL(1).
+For an arbitrary alphabet, restrict to finite subsets directed by inclusion. Every fixed gas subset
+and every fixed occurrence tuple eventually occurs unchanged. The gas has an absolute majorant
+obtained by dropping exclusions, bounded by Q
+i(1 + |wi|) ≤e
+P
+i |wi|; the sitewise budgets make
+that sum finite at fixed torus. The connected series has the absolute majorant above. Dominated
+convergence passes both finite-alphabet sides to their full sums. Thus</pre></details></figure>
+<figure class="sr-formula" id="p123-block-003" data-source-page="123"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p123-002999.svg" alt="Z(w) = eL(w) &gt; 0,
+log Z(w) = L(w)." width="194.15" height="17.01" style="width:17.812em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 123.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Z(w) = eL(w) &gt; 0,
+log Z(w) = L(w).</pre></details></figure>
+<p id="p123-block-004" data-source-page="123">This also applies after removing all labels incompatible with a specified forced set: the absolute activity budgets only decrease.</p>
+<a id="section-7-7"></a><h3 id="p123-block-005" data-source-page="123">Primitive marked integrals and averaging over local tree choices</h3>
+<p id="p123-block-006" data-source-page="123">The primitive activity attached to a marked team is an actual integral. A team is a finite collection of real local leaves with distinct dictionary keys; its weight is the product of their bounds and its ingredient the product of their functions. For a fixed coarse configuration and local tree choice, first choose a permitted flag sector, a local block layout, and a finite list of warning and regularexponential selections. Their union is the molecule address<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-019741.svg" alt=" p" style="width:0.9314em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. The marked integrand is the product of the team’s paid ingredients and the selected local vertex factors; it is set to zero unless all of the team’s keys occur in<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-019742.svg" alt=" p" style="width:0.9710em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Its primitive coefficient is its integral over the tree-gauge variables and the Gaussian fluctuation variables. The Gaussian measure has the covariance and density already attached to that same local tree choice. Sector selectors and all eligibility tests stay inside this integral.</p>
+<p id="p123-block-006-paragraph-2" data-source-page="123">More explicitly, if<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-019743.svg" alt=" X" style="width:1.2532em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> denotes that local data,<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-019744.svg" alt=" k" style="width:0.9576em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> the sector, and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-019745.svg" alt=" IX,k,p(h, z" style="width:4.6834em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>) its selected integrand, set</p>
+<figure class="sr-formula" id="p123-block-008" data-source-page="123"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p123-003005.svg" alt="Z
+IX,k,p(h, z) dνX(h) dγX(z).
+aX,k(p) = 1approved(X,k)" width="250.38" height="27.33" style="width:22.970em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 123.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Z
+IX,k,p(h, z) dνX(h) dγX(z).
+aX,k(p) = 1approved(X,k)</pre></details></figure>
+<section class="sr-derivation" id="p123-block-009" data-source-page="123"><p data-source-page="123">The full primitive coefficient averages these values over the finite boundary choices for the layout of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-017104.svg" alt=" p" style="width:0.9427em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; it is zero for a disallowed layout. Its scalar prefactor is the original local overhead. The local vertex and integral estimates are developed in the packet, non-packet and warning arguments below.</p><figure class="sr-formula" data-source-page="123"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p123-017105.svg" alt="The expansion into molecule addresses is justified before the cluster expansion. In a permitted
+layout, warning factors are expanded by the finite identity Q
+j(1 + dj) = P
+Q
+j∈D dj. The regular
+D
+exponential factors use their absolutely convergent subset expansion.
+Marked regular keys are
+dormant in the unmarked density: their original regular coefficient is zero, so their unmarked
+exponential increment e−0 −1 is zero. Consequently one may insert those marked keys into every
+selected list and delete them again uniquely; they are supplied by the team ingredient rather than
+by an unmarked exponential increment. Forced marked keys must likewise be present in the sector.
+If they are absent, both the selected expansion and its marked integrand vanish." width="471.74" height="107.35" style="width:43.279em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The expansion into molecule addresses is justified before the cluster expansion. In a permitted
+layout, warning factors are expanded by the finite identity Q
+j(1 + dj) = P
+Q
+j∈D dj. The regular
+D
+exponential factors use their absolutely convergent subset expansion.
+Marked regular keys are
+dormant in the unmarked density: their original regular coefficient is zero, so their unmarked
+exponential increment e−0 −1 is zero. Consequently one may insert those marked keys into every
+selected list and delete them again uniquely; they are supplied by the team ingredient rather than
+by an unmarked exponential increment. Forced marked keys must likewise be present in the sector.
+If they are absent, both the selected expansion and its marked integrand vanish.</pre></details></figure><p data-source-page="123">The resulting address assignment records the layout, sector, warning list and regular list. It is injective on permitted data and has an explicit inverse obtained by reading these pieces from<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p123-017106.svg" alt=" p" style="width:0.9270em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Thus each nonzero molecule occurs with exactly the specified coefficient, and disallowed molecule addresses contribute zero. The summable activity majorant bounds the integral norms of these terms by the team’s weight times the product of the unselected primitive tariffs. This gives a summable series of integrable terms. Fubini and the theorem on integration of a series with summable integral norms therefore give</p></section>
+<a id="source-page-124"></a>
+<figure class="sr-formula" id="p124-block-001" data-source-page="124"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p124-003007.svg" alt="X
+p
+overheadX aX(p) = P(team density)(U)." width="212.62" height="32.23" style="width:19.506em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 124.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+p
+overheadX aX(p) = P(team density)(U).</pre></details></figure>
+<p id="p124-block-003" data-source-page="124">This is the primitive team expansion. In Gaussian coordinates the change of measure is explicit: <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-019746.svg" alt="dγX(z) = θX(z) dz" style="width:8.4178em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>. The transformed integrand contains that same<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-019747.svg" alt=" θX" style="width:1.6524em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> and its tribute prefactor, so the Gaussian integral agrees with the original local fluctuation integral by substitution of the density. No independent Gaussian approximation is made in this identity.</p>
+<p id="p124-block-003-paragraph-2" data-source-page="124">To obtain compatible products of primitive coefficients, average over independent local tree choices at coarse sites. A molecule’s integral depends only on the tree choices in its enlarged ground support. To prove this locality, project the fluctuations to the finite coordinates needed by that ground. Two local data sets agreeing there have the same projected covariance. Their Gaussian pushforwards under the coordinate projection are therefore the same measure. The integrands depend only on those projected coordinates and agree on each fiber, by their local footprint formulas. Their integrals coincide. The same argument applies to the gauge variables through their local measure-preserving coordinate maps. Thus changing exterior tree choices leaves the molecule coefficient unchanged.</p>
+<p id="p124-block-003-paragraph-3" data-source-page="124">Compatible molecule grounds are disjoint. For functions<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-019748.svg" alt=" fp" style="width:1.3680em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> of independent finite choices, each depending only on its ground, finite product averaging gives</p>
+<figure class="sr-formula" id="p124-block-004" data-source-page="124"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p124-003011.svg" alt="Av
+Y
+p∈A
+fp =
+Y
+p∈A
+Av fp." width="104.79" height="33.36" style="width:9.613em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 124.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Av
+Y
+p∈A
+fp =
+Y
+p∈A
+Av fp.</pre></details></figure>
+<p id="p124-block-007" data-source-page="124">This follows by factoring the finite sum over assignments on disjoint coordinate sets; unused coordinates contribute one. The local scalar overhead is invariant under the tree choice. Averaging the team expansion consequently yields the product of the averaged molecule coefficients with the original compatibility and inventory conditions.</p>
+<p id="p124-block-007-paragraph-2" data-source-page="124">Finally expand a finite leaf inventory into tickets with distinct keys. On a compatible set of molecules, every chosen leaf key lies in exactly one molecule; selecting it there gives a unique global ticket, and conversely a global ticket restricts uniquely to each molecule. Multiplication of the leaf amplitudes factors over this partition. Hence the product of primitive marked molecule sums is exactly the ticket sum of the team’s compatible product. Finite linearity of the Mark integral then proves</p>
+<figure class="sr-formula" id="p124-block-011" data-source-page="124"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p124-003012.svg" alt="X
+!
+X
+!
+X
+A compatible,permitted
+overhead
+Y
+Y
+Y
+i∈D
+vi aD(p)
+= P
+i∈D
+vi teamDensityD
+(U).
+p∈A
+D ticket
+D" width="435.35" height="40.98" style="width:39.940em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 124.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+!
+X
+!
+X
+A compatible,permitted
+overhead
+Y
+Y
+Y
+i∈D
+vi aD(p)
+= P
+i∈D
+vi teamDensityD
+(U).
+p∈A
+D ticket
+D</pre></details></figure>
+<p id="p124-block-023" data-source-page="124">The primitive-integral bounds and support-hit estimates in the nonlinear and marked-integration chapters give these summable integral-norm and footprint bounds. The address regrouping, Gaussian marginal comparison, independent tree averaging and ticket factorization show how they produce the literal Mark expansion used in the gas/log argument.</p>
+<a id="section-7-8"></a><h3 id="p124-block-024" data-source-page="124">Fusing attached logarithms into the forced dictionary</h3>
+<p id="p124-block-025" data-source-page="124">The dictionary fusion used twice in the coarse construction has an explicit formula. Let the old forced labels be<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003013.svg" alt=" i ∈N" style="width:2.7491em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, with supports<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003014.svg" alt=" Si" style="width:1.3360em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, nonempty inventories<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003015.svg" alt=" Ii ⊆Si" style="width:3.4179em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>, and coefficients<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003016.svg" alt=" Ki(U" style="width:2.6910em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>). Let attached logarithms<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003017.svg" alt=" lj(U" style="width:2.4474em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) have nonempty supports<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003018.svg" alt=" Tj" style="width:1.4542em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, and suppose<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003019.svg" alt=" lj(U) ̸" style="width:3.3505em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>= 0 only if<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p124-003020.svg" alt=" Tj" style="width:1.4547em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> meets the configuration’s flagged set. Both families have summable uniform envelopes. Form the disjoint atom alphabet of old forced labels and attachments, with factors</p>
+<a id="source-page-125"></a>
+<figure class="sr-formula" id="p125-block-001" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-003021.svg" alt="hf,i = Ki(U),
+ha,j = elj(U) −1." width="167.63" height="18.95" style="width:15.379em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 125.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>hf,i = Ki(U),
+ha,j = elj(U) −1.</pre></details></figure>
+<section class="sr-derivation" id="p125-block-002" data-source-page="125"><figure class="sr-formula" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-017107.svg" alt="A new label is a finite overlap-connected atom set containing at least one old forced label, with
+the old forced supports mutually disjoint. Its new support is the union of all atom supports, its
+inventory the union of the old forced inventories, and its coefficient the product of its atom factors,
+restricted to its exact inventory and original eligibility conditions. These labels form a countable
+set; it is infinite since each singleton old forced label is one. Choose an enumeration by N. This
+choice only names the labels and does not change their functions or bounds.
+Expand the old forced gas times exp P
+jlj using Q
+j(1 + (elj −1)).
+Absolute summability" width="471.18" height="95.91" style="width:43.228em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>A new label is a finite overlap-connected atom set containing at least one old forced label, with
+the old forced supports mutually disjoint. Its new support is the union of all atom supports, its
+inventory the union of the old forced inventories, and its coefficient the product of its atom factors,
+restricted to its exact inventory and original eligibility conditions. These labels form a countable
+set; it is infinite since each singleton old forced label is one. Choose an enumeration by N. This
+choice only names the labels and does not change their functions or bounds.
+Expand the old forced gas times exp P
+jlj using Q
+j(1 + (elj −1)).
+Absolute summability</pre></details></figure><figure class="sr-formula" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-017108.svg" alt="follows from the uniform logarithm envelopes and the old forced envelopes. In a nonzero term,
+every attachment meets a flagged site. The exact inventory coverage of its old forced set puts that
+site in an old forced inventory, hence also in its support. Therefore each connected component
+of the selected atom supports contains an old forced label; no free attachment component occurs.
+Components are precisely the new labels, with disjoint supports and inventories covering the original
+flagged set. Conversely a permitted set of new labels has disjoint atom sets, since every atom
+support is nonempty; their union recovers the original old forced set and attachment subset. The
+exact inventory condition also implies the original local inventory conditions: another disjoint forced
+support cannot supply a flag within the given support. Thus decomposition and union are inverse
+on all nonzero terms, with identical products. This proves" width="471.74" height="134.45" style="width:43.279em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>follows from the uniform logarithm envelopes and the old forced envelopes. In a nonzero term,
+every attachment meets a flagged site. The exact inventory coverage of its old forced set puts that
+site in an old forced inventory, hence also in its support. Therefore each connected component
+of the selected atom supports contains an old forced label; no free attachment component occurs.
+Components are precisely the new labels, with disjoint supports and inventories covering the original
+flagged set. Conversely a permitted set of new labels has disjoint atom sets, since every atom
+support is nonempty; their union recovers the original old forced set and attachment subset. The
+exact inventory condition also implies the original local inventory conditions: another disjoint forced
+support cannot supply a flag within the given support. Thus decomposition and union are inverse
+on all nonzero terms, with identical products. This proves</pre></details></figure></section>
+<figure class="sr-formula" id="p125-block-003" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-003023.svg" alt="Gasnew(U) = Gasold(U) exp
+X
+j
+lj(U)." width="179.54" height="33.18" style="width:16.471em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 125.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Gasnew(U) = Gasold(U) exp
+X
+j
+lj(U).</pre></details></figure>
+<p id="p125-block-005" data-source-page="125">The regular dictionary and its original coefficients remain the regular part of the fused representation. The attached logarithm is consumed only through the displayed exponential and the new forced factors. Gauge invariance and measurability pass to finite products and measurable eligibility indicators. Locality uses the union support. Widening a dictionary beforehand is simply an injective placement of its old labels in a universal dictionary with zero coefficients at all unused indices. It preserves the gas and the regular-log sum by reindexing the absolutely convergent families.</p>
+<p id="p125-block-005-paragraph-2" data-source-page="125">The fusion estimate for switched coefficients follows from the distinct-component forest bound already proved. Suppose the old switched forced coefficients have paid sitewise budget<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019749.svg" alt=" B0" style="width:1.7820em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> at support exponent (s+1), and the fixed attached logarithms have envelope budget<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019750.svg" alt=" w0" style="width:1.5322em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> there. Choose <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019751.svg" alt="κ ≥" style="width:1.7786em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>0. Assign inflated envelope<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019752.svg" alt=" eκbi" style="width:2.1120em;height:1.3902em;vertical-align:-0.23em" loading="lazy"/> to an old forced label and envelope 2<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019753.svg" alt="cj" style="width:0.8936em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> to an attachment with <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-019754.svg" alt="|lj| ≤cj ≤" style="width:4.7441em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>1. The latter bound is justified by</p>
+<figure class="sr-formula" id="p125-block-006" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-003030.svg" alt="|ex −1| ≤2|x|
+(|x| ≤1)," width="123.81" height="17.21" style="width:11.359em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 125.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|ex −1| ≤2|x|
+(|x| ≤1),</pre></details></figure>
+<p id="p125-block-007" data-source-page="125">which is used on the source’s smaller admitted logarithm range. The combined sitewise budget is</p>
+<figure class="sr-formula" id="p125-block-008" data-source-page="125"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p125-003031.svg" alt="γ = eκB0 + 2w0." width="80.23" height="16.35" style="width:7.360em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 125.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>γ = eκB0 + 2w0.</pre></details></figure>
+<p id="p125-block-009" data-source-page="125">Each new connected label contains an old forced atom. Undoing its inflation supplies at least <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-003032.svg" alt="e−κ" style="width:1.6632em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>; every other undone factor is at most one. Thus its paid envelope is bounded by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-003033.svg" alt=" e−κ" style="width:1.9650em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/> times the product of the inflated atom envelopes. Its eligibility indicator is independent of the switches and does not increase the price. If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-003034.svg" alt=" VBγ ≤" style="width:3.3400em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>1, the earlier connected-component forest estimate, spending one supportexponent unit, bounds the new sitewise paid budget at exponent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p125-003035.svg" alt=" s" style="width:0.9429em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by</p>
+<a id="source-page-126"></a>
+<figure class="sr-formula" id="p126-block-001" data-source-page="126"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p126-003036.svg" alt="e−κ(eγ −1)." width="59.36" height="17.21" style="width:5.446em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 126.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e−κ(eγ −1).</pre></details></figure>
+<p id="p126-block-002" data-source-page="126">The selected payment inequalities require this quantity to fit the requested output allowance. This proves transfer of the paid switching family through each fusion. The family’s unmarked value is the fused unmarked coefficient by the same formula. An exterior-switch silence identity passes through fusion term by term: if an atom’s union support omits the required parent site of a switch, each factor is unchanged on erasing that switch; so is their product and its eligibility indicator. These facts supply the value, price and scope properties needed after the two actual coarse dictionary changes.</p>
+<p id="p126-block-002-paragraph-2" data-source-page="126">The scalar normalization needed after these fusions is an equality of exponents, not a comparison of partition functions. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019755.svg" alt=" E0(U" style="width:2.7498em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) be the intermediate frozen exponent, let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019756.svg" alt=" R(U" style="width:2.4270em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>) be the coupling-reset receipt, let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019757.svg" alt=" α" style="width:1.1452em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be its coefficient, and let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019758.svg" alt=" L1(U), L2(U" style="width:5.8187em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) be the attached-log sums consumed by the two fusions. The path reset gives</p>
+<figure class="sr-formula" id="p126-block-003" data-source-page="126"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p126-003041.svg" alt="Efinal(U) + L2(U) = E0(U) −αR(U)." width="180.09" height="13.80" style="width:16.522em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 126.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Efinal(U) + L2(U) = E0(U) −αR(U).</pre></details></figure>
+<p id="p126-block-004" data-source-page="126">The unmarked local integral normalization gives</p>
+<figure class="sr-formula" id="p126-block-005" data-source-page="126"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p126-003042.svg" alt="exp{E0(U) + L1(U) −αR(U)} = overhead(U)Z0(U)." width="254.57" height="13.70" style="width:23.355em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 126.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>exp{E0(U) + L1(U) −αR(U)} = overhead(U)Z0(U).</pre></details></figure>
+<p id="p126-block-006" data-source-page="126">Combining these equations and the exponential addition law proves</p>
+<figure class="sr-formula" id="p126-block-007" data-source-page="126"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p126-003043.svg" alt="eEfinal(U)eL1(U)eL2(U) = overhead(U)Z0(U)." width="204.51" height="18.01" style="width:18.762em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 126.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eEfinal(U)eL1(U)eL2(U) = overhead(U)Z0(U).</pre></details></figure>
+<p id="p126-block-008" data-source-page="126">In particular both sides use the same unmarked local gas<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-003044.svg" alt=" Z0" style="width:1.4426em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> that appears in the switched formula. Subtracting its logarithm in the switched regular increment cancels precisely this normalizer. The path-reset identity and unmarked local normalization proved in this chapter retain the stationary path and vacuum choices used here.</p>
+<a id="section-7-9"></a><h3 id="p126-block-009" data-source-page="126">The coupling-reset exponent identity</h3>
+<p id="p126-block-010" data-source-page="126">The reset changes the represented coupling and compensates that change by explicit local counterterms. The total density is preserved by the displayed exponent identity. Its projected coefficient is read from the affine Hessian with the source’s chosen normalization. A probe value is a different operation and is not silently identified with that projection.</p>
+<p id="p126-block-010-paragraph-2" data-source-page="126">We now specify the reset in the scalar identity. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019759.svg" alt=" v" style="width:0.9422em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be the source on a listing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019760.svg" alt=" X" style="width:1.2858em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019761.svg" alt=" R" style="width:1.2168em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be the same path family used in the kinetic energy, and let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019762.svg" alt=" p" style="width:0.9988em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> fix the threshold, support scale and Taylor order. All masks below are the actual healthy-field masks at that threshold. Write ∆=<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019763.svg" alt=" δ" style="width:0.8693em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(read<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019764.svg" alt="X(v))," style="width:2.8531em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> and let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-019765.svg" alt=" α" style="width:1.1196em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be the already committed loop coefficient. The new coupling and vacuum scalar are</p>
+<figure class="sr-formula" id="p126-block-012" data-source-page="126"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p126-003052.svg" alt="X
+β′ = β + α + ∆,
+τ ′ = τ −
+1
+|Site|
+i
+logReadi(v; 1)." width="258.43" height="33.18" style="width:23.709em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 126.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+β′ = β + α + ∆,
+τ ′ = τ −
+1
+|Site|
+i
+logReadi(v; 1).</pre></details></figure>
+<p id="p126-block-014" data-source-page="126">The receipt<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p126-003053.svg" alt=" R(U" style="width:2.3394em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>) is the averaged sum of the masked plain low path terms, with their original paths. It is not obtained by changing paths to match a later choice. The regular-source decomposition separates each log read into its value at the identity, a local projected payout, a fault, and a masked rebate. Absolute summability of the original paid activities bounds these four series respectively by the original total bill and fixed multiples of it. Summing</p>
+<a id="source-page-127"></a>
+<figure id="p127-block-001" class="sr-formula sr-source-panel" data-source-page="127"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p127-003054.svg" alt="the payouts first at their anchor sites gives ∆P
+o headsp(o, U), by the calibrated projection identity.
+Consequently" width="471.78" height="33.21" style="width:43.282em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 127.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>the payouts first at their anchor sites gives ∆P
+o headsp(o, U), by the calibrated projection identity.
+Consequently</pre></details></figure>
+<figure class="sr-formula" id="p127-block-002" data-source-page="127"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p127-003055.svg" alt="additivep(readX(v); U) =
+X
+i
+logReadi(v; 1) + ∆
+X
+o
+headsp(o, U)
+−
+X
+i
+dusti(U) +
+X
+i
+untaggedi(U)." width="307.35" height="61.04" style="width:28.198em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 127.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>additivep(readX(v); U) =
+X
+i
+logReadi(v; 1) + ∆
+X
+o
+headsp(o, U)
+−
+X
+i
+dusti(U) +
+X
+i
+untaggedi(U).</pre></details></figure>
+<figure id="p127-block-008" class="sr-formula sr-source-panel" data-source-page="127"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p127-003056.svg" alt="The projected-payout identity uses the simple-group projection hypothesis and the stipulated period
+n &gt; 20.
+There are also low and high path corrections. Denote their averaged sums by F∆and Hα,∆,
+and the low loan sum by Lα,∆. Their defining termwise identities, summed with the same masks,
+are
+(α + ∆)KR + F∆+ Hα,∆= αR + ∆
+X
+o
+headsp(o, ·) + Lα,∆." width="471.51" height="90.83" style="width:43.258em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 127.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The projected-payout identity uses the simple-group projection hypothesis and the stipulated period
+n &gt; 20.
+There are also low and high path corrections. Denote their averaged sums by F∆and Hα,∆,
+and the low loan sum by Lα,∆. Their defining termwise identities, summed with the same masks,
+are
+(α + ∆)KR + F∆+ Hα,∆= αR + ∆
+X
+o
+headsp(o, ·) + Lα,∆.</pre></details></figure>
+<p id="p127-block-010" data-source-page="127">Indeed the true kinetic base is the sum of live low terms and high summits. The high correction is minus<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-003057.svg" alt=" α" style="width:1.1049em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + ∆times the summit, so those terms cancel. For each low term its defining loan identity reads <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-003058.svg" alt="(α" style="width:1.1756em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + ∆) live + fade<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-003059.svg" alt="∆= α" style="width:2.8126em;height:1.2650em;vertical-align:-0.23em" loading="lazy"/> maskedPlain + ∆sketch + loan<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-003060.svg" alt="α,∆." style="width:1.8314em;height:1.2650em;vertical-align:-0.23em" loading="lazy"/></p>
+<p id="p127-block-011" data-source-page="127">The sketch sum is the head sum. The low live, masked plain, proxy and fade series are absolutely summable by the path bounds; this identity then also proves summability of the loans. The high summit series is absolutely summable as well. Averaging over the finitely many seats preserves these properties. Hence the cancellations are valid equalities of convergent sums.</p>
+<p id="p127-block-011-paragraph-2" data-source-page="127">The reset dictionary’s additive sum is the untagged sum plus<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019766.svg" alt=" F∆+Hα,∆" style="width:4.9714em;height:1.2650em;vertical-align:-0.23em" loading="lazy"/>; its attached logarithm is the dust sum plus<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019767.svg" alt=" Lα,∆" style="width:2.4499em;height:1.2650em;vertical-align:-0.23em" loading="lazy"/>. Substitution into the representation exponent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019768.svg" alt=" τ ′|" style="width:1.4880em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>Site<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019769.svg" alt="|−" style="width:1.2817em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>inChannels(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019770.svg" alt="β′)−" style="width:2.2680em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/> additive, followed by the two displayed identities and the channel decomposition, gives</p>
+<figure class="sr-formula" id="p127-block-012" data-source-page="127"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p127-003066.svg" alt="Ereset(U) +
+X
+i
+logi(U) = Efrozen(U) −αR(U)." width="221.19" height="33.18" style="width:20.293em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 127.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ereset(U) +
+X
+i
+logi(U) = Efrozen(U) −αR(U).</pre></details></figure>
+<p id="p127-block-014" data-source-page="127">This is the path-reset identity used above, including its constant term and signs. Exponentiation gives the same identity for unnormalized evaluators. It holds even when the activity gas vanishes, since the gas multiplies both sides and is never divided out. The subsequent dictionary fusion absorbs the attached-log exponential by the already established fusion identity. The lower-level projection, live-base and loan formulas supply the mathematical content of this reset decomposition and must retain the same threshold and paths.</p>
+<a id="section-7-10"></a><h3 id="p127-block-015" data-source-page="127">Gauge invariance at the flat germ</h3>
+<p id="p127-block-016" data-source-page="127">Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019771.svg" alt=" F(u) = f" style="width:4.4688em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(increment(1<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019772.svg" alt=", u" style="width:1.1637em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>)). Regularity gives a twice continuously differentiable germ at<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019773.svg" alt=" u = 0." style="width:3.1948em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> Constant gauge transformations act there by the linear map<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019774.svg" alt=" ue 7→" style="width:2.7381em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>Ad<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019775.svg" alt="g ue" style="width:1.6873em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>, because exponentiation commutes with conjugation. Hence<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019776.svg" alt=" DF" style="width:1.9584em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(0), restricted to a single edge’s color space, is an invariant linear form. Such a form vanishes. Indeed differentiating invariance along exp(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019777.svg" alt="tx" style="width:1.0797em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) shows it kills every bracket [<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019778.svg" alt="x, y" style="width:1.6527em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>]. Its kernel is an ideal; simplicity makes this kernel zero or the whole algebra. The zero case would make the form injective and force all brackets to vanish, contradicting non-abelianness. Summing single-edge directions proves<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019779.svg" alt=" DF" style="width:2.0633em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(0) = 0. Twice differentiating the same constant-gauge identity proves adjoint invariance of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019780.svg" alt=" D2F(0)." style="width:4.1035em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/></p>
+<p id="p127-block-016-paragraph-2" data-source-page="127">For a color-valued site field<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019781.svg" alt=" φ" style="width:1.0875em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, let (<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019782.svg" alt="∇φ)x,i = φ(x + ei) −φ(x" style="width:11.0549em;height:1.3151em;vertical-align:-0.23em" loading="lazy"/>). Gauge the link exponential of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019783.svg" alt=" u" style="width:1.0619em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by the site elements exp(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019784.svg" alt="−tφ(x" style="width:2.8423em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>)), and take its local logarithm. This defines a smooth chart<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019785.svg" alt=" C(u, t)" style="width:3.3986em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> near zero with <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019786.svg" alt="C(0, 0) = 0," style="width:5.2665em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p127-019787.svg" alt="DC(0, 0)[u, t] = u + t∇φ." style="width:11.1464em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/></p>
+<a id="source-page-128"></a>
+<p id="p128-block-001" data-source-page="128">The derivative follows by differentiating the three factors on each link: the contributions are <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003084.svg" alt="−tφ(x), ux,i, +tφ(x + ei)." style="width:11.1825em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/> The local logarithm recovers the gauged configuration near the identity. Gauge invariance gives<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003085.svg" alt=" F(C(u, t)) = F(u" style="width:8.1287em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). Differentiate this equality in directions (0<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003086.svg" alt="," style="width:0.4247em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1) and <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003087.svg" alt="(u," style="width:1.3866em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0). In the second chain rule the term involving<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003088.svg" alt=" D2C" style="width:2.4449em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> is multiplied by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003089.svg" alt=" DF" style="width:1.9402em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(0) = 0, while the right side has no<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003090.svg" alt=" t" style="width:0.8414em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-dependence. Thus <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003091.svg" alt="D2F(0)[∇φ, u] = 0." style="width:8.6139em;height:1.3490em;vertical-align:-0.23em" loading="lazy"/></p>
+<p id="p128-block-002" data-source-page="128">Its symmetric counterpart follows from symmetry of the second derivative. Locality implies that Hessians agree when the tested direction fields agree on the support: first compare their diagonal exponential lines, then polarize. These arguments concern smooth unmasked germs throughout.</p>
+<p id="p128-block-002-paragraph-2" data-source-page="128">The color-bilinear assertion used below also admits a direct finite-dimensional proof. If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019788.svg" alt=" B" style="width:1.3088em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is adjoint invariant, differentiation gives<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019789.svg" alt=" B([x, y], z) = −B(y, [x, z])." style="width:12.7185em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> Its antisymmetric part<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019790.svg" alt=" A =" style="width:2.6361em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019791.svg" alt="B −BT" style="width:3.5929em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> satisfies<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019792.svg" alt=" A([x, y], z) = A([x, z], y" style="width:10.8044em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). Cycling this relation and using bracket antisymmetry makes this value equal to its negative, so it is zero. For fixed<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019793.svg" alt=" z" style="width:0.8905em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, the linear form<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019794.svg" alt=" A(·, z" style="width:2.7511em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>) kills brackets, and the kernel argument above makes it zero. Hence<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019795.svg" alt=" B" style="width:1.2395em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is symmetric.</p>
+<p id="p128-block-002-paragraph-3" data-source-page="128">Represent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019796.svg" alt=" B(x, y) = ⟨Tx, y⟩" style="width:8.0030em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>by a self-adjoint real operator<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019797.svg" alt=" T" style="width:1.0656em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Invariance and skew-adjointness of the adjoint action give<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019798.svg" alt=" T[x, y] = [x, Ty" style="width:7.5271em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>]. A nonzero real eigenspace of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019799.svg" alt=" T" style="width:1.1523em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> exists by the finite-dimensional spectral theorem and is an ideal by this commutation identity. Simplicity makes it the whole color space. Thus<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019800.svg" alt=" T = cI" style="width:3.8102em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019801.svg" alt=" B = c⟨·, ·⟩" style="width:5.2328em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>. Skew-adjointness here follows directly by writing the color inner product as the real matrix trace and cyclically moving the commutator factors. This proves the invariant-bilinear-form input without an assumption about a complex or infinite-dimensional color representation.</p>
+<a id="section-7-11"></a><h3 id="p128-block-003" data-source-page="128">Reduction of affine tests to constant curl</h3>
+<p id="p128-block-004" data-source-page="128">Use centered lifted coordinates<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003106.svg" alt=" zi(x" style="width:2.2171em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) = lift(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003107.svg" alt="x −o)i" style="width:3.0785em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>. A linear jet is</p>
+<figure class="sr-formula" id="p128-block-005" data-source-page="128"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p128-003108.svg" alt="Ai(x) = ai +
+X
+j
+zj(x)bij,
+Fij = bji −bij." width="212.99" height="33.18" style="width:19.541em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 128.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Ai(x) = ai +
+X
+j
+zj(x)bij,
+Fij = bji −bij.</pre></details></figure>
+<p id="p128-block-007" data-source-page="128">On a support satisfying 10 dist(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003109.svg" alt="x, o) &lt; n" style="width:4.0309em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003110.svg" alt=" n ≥" style="width:2.1850em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>4, the centered lift has its ordinary increment under one positive or negative lattice step. This follows from uniqueness of the centered representative: both the old lift plus that step and the new lift wrap to the same site and stay within the centered coordinate range. Thus the discrete curl of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003111.svg" alt=" A" style="width:1.2293em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> on this support is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003112.svg" alt=" F." style="width:1.5388em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-003113.svg" alt=" F" style="width:1.1226em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 0, the slope matrix is symmetric. The color-valued polynomial</p>
+<figure class="sr-formula" id="p128-block-008" data-source-page="128"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p128-003114.svg" alt="φ(x) =
+X
+i
+zi(x)(ai −1
+2bii) + 1
+2
+X
+i,j
+zi(x)zj(x)bij" width="221.62" height="33.18" style="width:20.332em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 128.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>φ(x) =
+X
+i
+zi(x)(ai −1
+2bii) + 1
+2
+X
+i,j
+zi(x)zj(x)bij</pre></details></figure>
+<p id="p128-block-013" data-source-page="128">has forward difference<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019802.svg" alt=" φ(x+ei)−φ(x) = Ai(x" style="width:10.0512em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>) there. The diagonal correction removes the extra halfdiagonal term in the quadratic difference; symmetry combines the remaining cross terms. Hence every curl-free affine field agrees on the tested support with a gauge gradient. Locality of the germ transfers its Hessian to agreeing directions, and gauge invariance annihilates its pairing with that gradient. Two affine fields with equal curls differ by this construction, so the Hessian depends only on the two curls.</p>
+<p id="p128-block-013-paragraph-2" data-source-page="128">An explicit primitive for a flux is obtained by adding the wedge fields: for a positive plane <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019803.svg" alt="a = (i, j" style="width:3.8325em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>), its wedge has only component<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019804.svg" alt=" j" style="width:0.9610em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, equal to<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019805.svg" alt=" ziwa" style="width:2.4530em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. Its curl is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019806.svg" alt=" wa" style="width:1.6781em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> in plane<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019807.svg" alt=" a" style="width:1.0784em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and zero in every other positive plane. Summing therefore gives a primitive with exactly the prescribed flux. Its threshold-scaled unit-color wedge is an admissible paid direction, since<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019808.svg" alt=" |zi(x)| ≤" style="width:4.2750em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>dist(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019809.svg" alt="x, o" style="width:1.6477em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) and the permitted direction growth dominates 1 + dist(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p128-019810.svg" alt="x, o" style="width:1.6477em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). The average of two such scaled wedges is admissible by the triangle inequality.</p>

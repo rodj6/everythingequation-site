@@ -1,0 +1,497 @@
+<a id="section-7"></a><h2 id="p113-block-007" data-source-page="113">Marked integration and the coupling reset</h2>
+<p id="p113-block-008" data-source-page="113">A marker is a finite algebraic label used to keep track of an insertion in a product. Distinct markers multiply only when their modes are allowed and disjoint. This nilpotent algebra makes the insertion bookkeeping finite, while the underlying scalar activity gas still requires absolute summability. The construction below first restores the actual insertions, then performs a coupling reset as an exact exponent identity, and finally integrates the primitive density with all its marked and forced terms.</p>
+<a id="section-7-1"></a><h3 id="p113-block-009" data-source-page="113">The insertion algebra and its local prices</h3>
+<p id="p113-block-010" data-source-page="113"><strong>Modes and repeated occurrences</strong> The marker algebra keeps track of which insertions occur in the integrand. Its nilpotence is a finite algebraic convention, not a statement about the physical fields. Repeated occurrences of one insertion are assigned distinct occurrence marks when the corresponding product is formed. Their lattice variables can still coincide and remain the same integration variables. This is why disjointness of marker modes does not justify treating the associated scalar factors as probabilistically independent.</p>
+<p id="p113-block-010-paragraph-2" data-source-page="113">Fix a finite marker set<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p113-019648.svg" alt=" V" style="width:1.0497em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and the finite census of allowed marker modes. A mode is an allowed subset<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p113-019649.svg" alt=" A ⊆V" style="width:3.0974em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> ; multiplication joins disjoint subsets and discards products outside the census. Write</p>
+<a id="source-page-114"></a>
+<p id="p114-block-001" data-source-page="114"><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002805.svg" alt="[P]A" style="width:2.0697em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> for the coefficient of a polynomial in this algebra, and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002806.svg" alt=" eA" style="width:1.6046em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> for the corresponding monomial. The empty mode is the scalar mode and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002807.svg" alt=" e{v}" style="width:2.1268em;height:1.2913em;vertical-align:-0.23em" loading="lazy"/> is a singleton mode. For positive marker weights<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002808.svg" alt=" wv," style="width:1.9221em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> put</p>
+<figure class="sr-formula" id="p114-block-002" data-source-page="114"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p114-002809.svg" alt="tw(A) =
+Y
+v∈A
+wv,
+∥P∥w =
+X
+A
+tw(A)|[P]A|." width="216.08" height="33.36" style="width:19.824em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 114.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>tw(A) =
+Y
+v∈A
+wv,
+∥P∥w =
+X
+A
+tw(A)|[P]A|.</pre></details></figure>
+<p id="p114-block-005" data-source-page="114">This norm is subadditive and submultiplicative: expand each product coefficient into disjoint pairs, apply the triangle inequality, and use<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019650.svg" alt=" tw(A ⊔B) = tw(A)tw(B" style="width:10.9852em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>). The truncated exponential Exp<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019651.svg" alt=" P" style="width:0.9542em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, for<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019652.svg" alt=" P" style="width:1.1398em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> with zero scalar coefficient, is the finite exponential series in the nilpotent ideal. Its norm is bounded by exp<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019653.svg" alt=" ∥P∥w" style="width:2.6515em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/>. It obeys the exponential addition law for commuting zero-scalar arguments.</p>
+<p id="p114-block-005-paragraph-2" data-source-page="114">An insertion representation consists of a density exponent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019654.svg" alt=" E(U" style="width:2.4922em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>), primary functions Φ<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019655.svg" alt="v(U)," style="width:2.4441em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> forced profiles<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019656.svg" alt=" ωv(q, U" style="width:3.5826em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>), and higher-degree corrections<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019657.svg" alt=" H(S, U), K(q, U" style="width:7.4171em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). Here<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019658.svg" alt=" S" style="width:1.1267em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is a support and <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019659.svg" alt="q = (Sq, Iq" style="width:4.6132em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) is a support together with its flagged inventory. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019660.svg" alt=" bq(U" style="width:2.3547em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) be the scalar activity profile, regarded as a polynomial in the empty mode, and let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019661.svg" alt=" F(U" style="width:2.4659em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) be the configuration’s flagged set. Restoration means the following literal finite expression:</p>
+<figure class="sr-formula" id="p114-block-007" data-source-page="114"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p114-002822.svg" alt="X
+!
+v
+e{v}Φv(U) +
+X
+S
+H(S, U)
+X(U) = eE(U) Exp
+!
+×
+X
+Y
+bq(U) +
+X
+v
+e{v}ωv(q, U) + K(q, U)
+.
+P: Pattern(F(U),P)
+q∈P" width="345.56" height="76.47" style="width:31.703em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 114.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+!
+v
+e{v}Φv(U) +
+X
+S
+H(S, U)
+X(U) = eE(U) Exp
+!
+×
+X
+Y
+bq(U) +
+X
+v
+e{v}ωv(q, U) + K(q, U)
+.
+P: Pattern(F(U),P)
+q∈P</pre></details></figure>
+<p id="p114-block-020" data-source-page="114">The pattern condition says the supports<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019662.svg" alt=" Sq" style="width:1.5139em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> are pairwise disjoint and the inventories<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019663.svg" alt=" Iq" style="width:1.3387em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> have union<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019664.svg" alt=" F(U" style="width:2.2894em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). All sums here are finite at fixed torus and census. The corrections have only modes of cardinality at least two. They are gauge invariant, measurable, supported on their stated regions and scoped to markers whose pins lie in those regions. Exponential corrections vanish offthe healthy region and have zero scalar coefficient. A flagged correction can be nonzero only when <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019665.svg" alt="Sq ∩F(U) = Iq ̸= ∅" style="width:9.5582em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>, with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019666.svg" alt=" Iq ⊆Sq" style="width:3.9640em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>. These support and permission conditions are preserved by scalar multiplication.</p>
+<p id="p114-block-020-paragraph-2" data-source-page="114">The price of a correction family<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019667.svg" alt=" Yi(U" style="width:2.4018em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>), with supports<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019668.svg" alt=" Si" style="width:1.3164em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, is controlled by nonnegative envelopes <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019669.svg" alt="ai" style="width:0.9397em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> satisfying<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-019670.svg" alt=" |Yi(U)|w ≤ai" style="width:6.2437em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> and the sitewise bound</p>
+<figure class="sr-formula" id="p114-block-022" data-source-page="114"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p114-002832.svg" alt="X
+i:x∈Si
+aiee cB(Si) ≤f.
+sup
+x" width="114.07" height="34.14" style="width:10.465em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 114.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+i:x∈Si
+aiee cB(Si) ≤f.
+sup
+x</pre></details></figure>
+<p id="p114-block-024" data-source-page="114">Here<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002833.svg" alt=" cB(S" style="width:2.6326em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>) is the minimizing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002834.svg" alt=" B" style="width:1.2895em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-cover number and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002835.svg" alt=" e" style="width:0.9957em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is the support exponent. The definition also includes summability of the envelopes. If every nonzero<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002836.svg" alt=" Yi(U" style="width:2.4849em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) has some marker pin<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002837.svg" alt=" ov ∈Si," style="width:4.0271em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p114-002838.svg" alt=" e ≥" style="width:2.0005em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>0, then</p>
+<figure class="sr-formula" id="p114-block-025" data-source-page="114"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p114-002839.svg" alt="X
+i
+∥Yi(U)∥w ≤|V |f." width="100.68" height="33.18" style="width:9.237em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 114.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+i
+∥Yi(U)∥w ≤|V |f.</pre></details></figure>
+<figure id="p114-block-027" class="sr-formula sr-source-panel" data-source-page="114"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p114-002840.svg" alt="Indeed charge a nonzero term to all marker pins in its support. At least one is present. Since
+eecB(Si) ≥1, summing the sitewise bound over the |V | pins dominates the desired sum. The scope
+and positive degree conditions ensure the required pin is present. For the unmarked background
+profiles the same argument charges to all sites, giving P
+q ∥bq(U)∥w ≤|Λ|u, where u is their sitewise
+activity budget.
+Suppose also" width="469.69" height="80.26" style="width:43.091em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 114.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Indeed charge a nonzero term to all marker pins in its support. At least one is present. Since
+eecB(Si) ≥1, summing the sitewise bound over the |V | pins dominates the desired sum. The scope
+and positive degree conditions ensure the required pin is present. For the unmarked background
+profiles the same argument charges to all sites, giving P
+q ∥bq(U)∥w ≤|Λ|u, where u is their sitewise
+activity budget.
+Suppose also</pre></details></figure>
+<a id="source-page-115"></a>
+<figure class="sr-formula" id="p115-block-001" data-source-page="115"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p115-002841.svg" alt="wv|Φv(U)| ≤x,
+X
+q
+wv|ωv(q, U)| ≤y." width="194.96" height="32.23" style="width:17.886em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 115.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>wv|Φv(U)| ≤x,
+X
+q
+wv|ωv(q, U)| ≤y.</pre></details></figure>
+<p id="p115-block-003" data-source-page="115">The exponential argument then has norm at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002842.svg" alt=" |V |(x + f" style="width:4.4300em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>), and the sum of norms of all field factors is at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002843.svg" alt=" |" style="width:0.7478em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>Λ<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002844.svg" alt="|u + |V |(y + f" style="width:6.1196em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>). Dropping pattern restrictions increases the nonnegative norm bound for the field polynomial to</p>
+<figure class="sr-formula" id="p115-block-004" data-source-page="115"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p115-002845.svg" alt="X
+Y
+q∈P
+∥Tq∥w =
+Y
+q
+(1 + ∥Tq∥w) ≤exp
+X
+q
+∥Tq∥w.
+P" width="228.66" height="33.36" style="width:20.978em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 115.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+Y
+q∈P
+∥Tq∥w =
+Y
+q
+(1 + ∥Tq∥w) ≤exp
+X
+q
+∥Tq∥w.
+P</pre></details></figure>
+<p id="p115-block-010" data-source-page="115">Multiplication with the exponential bound proves</p>
+<figure class="sr-formula" id="p115-block-011" data-source-page="115"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p115-002846.svg" alt="∥X(U)∥w ≤exp{E(U) + |V |(x + y + 2f) + |Λ|u}." width="237.77" height="14.15" style="width:21.814em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 115.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>∥X(U)∥w ≤exp{E(U) + |V |(x + y + 2f) + |Λ|u}.</pre></details></figure>
+<p id="p115-block-012" data-source-page="115">The lawful-density bound on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002847.svg" alt=" E(U" style="width:2.2979em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) gives the uniform majorant used above. To bound a normalized mode integral, use<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002848.svg" alt=" tw(A)|[X(U)]A| ≤∥X(U)∥w" style="width:12.8572em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>, integrate against the probability prior, and divide by the positive density integral. The denominator lower bound yields the final insertion bill; the history treasury bounds that bill by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002849.svg" alt=" |" style="width:0.7918em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>Λ<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002850.svg" alt="k|τk + |V |(x + y + 2f" style="width:9.4647em;height:1.3280em;vertical-align:-0.23em" loading="lazy"/>). This separates the elementary polynomial estimate from the vacuum estimates required to control its density and denominator.</p>
+<a id="section-7-2"></a><h3 id="p115-block-013" data-source-page="115">Restoring the prescribed singleton insertions</h3>
+<p id="p115-block-014" data-source-page="115">The correction representation must preserve the actual singleton insertions after every step. The following algebra explains that requirement. Given a represented density<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002851.svg" alt=" R" style="width:1.2252em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, a primary function Φ, and a summable forced family<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-002852.svg" alt=" gi" style="width:1.2201em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, its singleton density is</p>
+<figure class="sr-formula" id="p115-block-015" data-source-page="115"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p115-002853.svg" alt="coinR(Φ, g)(U) = R(U)Φ(U) + eER(U) X
+i
+nickelR,i(U; g)." width="269.09" height="33.18" style="width:24.687em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 115.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>coinR(Φ, g)(U) = R(U)Φ(U) + eER(U) X
+i
+nickelR,i(U; g).</pre></details></figure>
+<p id="p115-block-017" data-source-page="115">The second term is the first variation of the activity gas in the forced direction. Grouping the summable family by its support-and-inventory barcode gives its profile; this grouping preserves the gas variation. In the restored polynomial, the scalar mode is exactly<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019671.svg" alt=" R(U" style="width:2.3980em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>). The coefficient of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019672.svg" alt=" e{v}" style="width:2.1980em;height:1.2913em;vertical-align:-0.23em" loading="lazy"/> is exactly this singleton density: in a product contributing to a singleton mode, at most one factor can supply a singleton and every other factor supplies its scalar mode. The exponential contributes its linear coefficient and scalar coefficient one. Higher corrections contribute neither. These observations prove the scalar and singleton relay identities by finite polynomial expansion and the absolutely convergent grouping of activity coefficients.</p>
+<p id="p115-block-017-paragraph-2" data-source-page="115">There is a useful converse. Suppose a polynomial has the form</p>
+<figure class="sr-formula" id="p115-block-018" data-source-page="115"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p115-002856.svg" alt="eER(U) Exp(F(U)) Field(K(U), FR(U))," width="188.29" height="18.06" style="width:17.274em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 115.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eER(U) Exp(F(U)) Field(K(U), FR(U)),</pre></details></figure>
+<p id="p115-block-019" data-source-page="115">where<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019673.svg" alt=" F" style="width:1.2339em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has zero scalar coefficient, the scalar coefficients of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019674.svg" alt=" K" style="width:1.4439em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are the original background profiles, and its singleton coefficients are the prescribed forced profiles<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019675.svg" alt=" gv" style="width:1.2253em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. If the singleton coefficients of the whole expression are coin<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019676.svg" alt="R(Φv, gv" style="width:3.6416em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>), then the singleton coefficients of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019677.svg" alt=" F" style="width:1.2500em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are precisely Φ<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019678.svg" alt="v." style="width:0.8745em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> Subtract the two singleton formulas: their gas-variation terms cancel, leaving<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019679.svg" alt=" R(U)([F(U)]{v} −" style="width:8.4600em;height:1.3502em;vertical-align:-0.23em" loading="lazy"/> Φ<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019680.svg" alt="v(U" style="width:1.6684em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>)) = 0. The nonvanishing of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019681.svg" alt=" R(U" style="width:2.3047em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) permits cancellation. Projection onto modes of cardinality at least two now splits<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019682.svg" alt=" F" style="width:1.1409em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> into its prescribed singleton part plus the higher exponential correction, and splits every<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019683.svg" alt=" Kq" style="width:1.7952em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> into background, prescribed singleton profile and higher flagged correction. This proves the desired restored representation, preserving the original density pointwise.</p>
+<p id="p115-block-019-paragraph-2" data-source-page="115">To adjust an incorrectly placed forced singleton, use attached local responses<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019684.svg" alt=" ψv(S, U" style="width:3.6132em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) supported on regions containing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p115-019685.svg" alt=" ov" style="width:1.3403em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, vanishing whenever that region is healthy. Set</p>
+<a id="source-page-116"></a>
+<figure class="sr-formula" id="p116-block-001" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002870.svg" alt="J(U) =
+X
+v,S
+e{v}ψv(S, U)." width="118.76" height="33.36" style="width:10.896em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>J(U) =
+X
+v,S
+e{v}ψv(S, U).</pre></details></figure>
+<p id="p116-block-003" data-source-page="116">The closure operation on field factors joins overlapping background factors and attached responses into their connected components, with the resulting support and flagged inventory recorded. Expansion into connected components gives the exact identity</p>
+<figure class="sr-formula" id="p116-block-004" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002871.svg" alt="Field(Closure(K, ψ)) = Field(K) Exp J." width="189.28" height="12.51" style="width:17.365em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Field(Closure(K, ψ)) = Field(K) Exp J.</pre></details></figure>
+<p id="p116-block-005" data-source-page="116">Consequently replacing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019686.svg" alt=" K" style="width:1.4323em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by its closure and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019687.svg" alt=" F" style="width:1.2273em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019688.svg" alt=" F −J" style="width:3.2817em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> preserves the full polynomial. In the closure expansion, terms containing no response reproduce<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019689.svg" alt=" K" style="width:1.3664em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Terms containing at least one response have zero scalar coefficient. Terms containing at least two responses have zero singleton coefficient. The contribution containing just one response equals that response multiplied by the background portion attached to its support. Thus closure leaves the background scalar profile fixed and adds exactly the hook of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019690.svg" alt=" ψv" style="width:1.5948em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> to its singleton profile. It introduces no unspecified change of singleton field.</p>
+<p id="p116-block-005-paragraph-2" data-source-page="116">After this identity, the preceding converse identifies the required primary functions from the known singleton densities. Keeping only higher modes produces the two higher correction families with their locality and permission conditions. Projection to higher modes decreases their weighted prices. The price of closure is controlled by the connected-component estimate: from a field budget <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019691.svg" alt="W" style="width:1.0907em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, response budget<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019692.svg" alt=" c" style="width:0.9128em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and pin occupancy<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-019693.svg" alt=" M" style="width:1.4483em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, its higher part has budget at most</p>
+<figure class="sr-formula" id="p116-block-006" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002880.svg" alt="exp{W + M siteFactor(B)c} −1," width="158.68" height="12.71" style="width:14.558em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>exp{W + M siteFactor(B)c} −1,</pre></details></figure>
+<p id="p116-block-007" data-source-page="116">provided the supportexponent loss pays</p>
+<figure class="sr-formula" id="p116-block-008" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002881.svg" alt="(2B + 1)4{W + M siteFactor(B)c}." width="169.51" height="14.72" style="width:15.551em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>(2B + 1)4{W + M siteFactor(B)c}.</pre></details></figure>
+<p id="p116-block-009" data-source-page="116">The connected-component forest-price argument below supplies this estimate. A reweighting bound on marker monomials then transfers both higher families to the requested weights. These are the algebraic and numerical operations used in the one-step retained-insertion estimate. The connected-component price estimate follows from a recursion on distinct labels. Here are its details. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-002882.svg" alt=" Xi" style="width:1.5739em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> be supports and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-002883.svg" alt=" fi ≥" style="width:2.3337em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>0, with</p>
+<figure class="sr-formula" id="p116-block-011" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002884.svg" alt="X
+i:x∈Xi
+fie(a+w)cB(Xi) ≤γ,
+a ≥0,
+(2B + 1)4γ ≤w.
+sup
+x" width="279.60" height="34.14" style="width:25.651em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+i:x∈Xi
+fie(a+w)cB(Xi) ≤γ,
+a ≥0,
+(2B + 1)4γ ≤w.
+sup
+x</pre></details></figure>
+<figure id="p116-block-013" class="sr-formula sr-source-panel" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002885.svg" alt="For a finite label set D and root region Y , let FD(Y ) be the sum of Q
+i∈A pi, pi = fieacB(Xi), over
+subsets A ⊆D every overlap-connected component of which meets Y . Include the empty subset
+with weight one. For each component choose one label whose support meets Y , and remove that
+label from the component. Every component of the remainder meets the removed label’s support.
+Different original components choose different labels. The chosen labels and the corresponding
+remainders reconstruct the original subset, so this assignment is injective. Allowing all choices of
+remainders, including incompatible ones, only increases the sum of nonnegative weights. Therefore" width="472.14" height="100.96" style="width:43.316em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For a finite label set D and root region Y , let FD(Y ) be the sum of Q
+i∈A pi, pi = fieacB(Xi), over
+subsets A ⊆D every overlap-connected component of which meets Y . Include the empty subset
+with weight one. For each component choose one label whose support meets Y , and remove that
+label from the component. Every component of the remainder meets the removed label’s support.
+Different original components choose different labels. The chosen labels and the corresponding
+remainders reconstruct the original subset, so this assignment is injective. Allowing all choices of
+remainders, including incompatible ones, only increases the sum of nonnegative weights. Therefore</pre></details></figure>
+<figure class="sr-formula" id="p116-block-014" data-source-page="116"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p116-002886.svg" alt="FD(Y ) ≤
+Y
+i∈D:Xi∩Y ̸=∅
+{1 + piFD\{i}(Xi)}." width="194.28" height="34.23" style="width:17.824em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 116.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>FD(Y ) ≤
+Y
+i∈D:Xi∩Y ̸=∅
+{1 + piFD\{i}(Xi)}.</pre></details></figure>
+<p id="p116-block-016" data-source-page="116">Strong induction on (|D|) proves<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-002887.svg" alt=" FD(Y ) ≤ewcB(Y )" style="width:8.3548em;height:1.3949em;vertical-align:-0.23em" loading="lazy"/>. Indeed the induction hypothesis makes each factor at most exp<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-002888.svg" alt="{fie(a+w)cB(Xi)}" style="width:7.1019em;height:1.3901em;vertical-align:-0.23em" loading="lazy"/>. The sum of these exponents over supports meeting<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p116-002889.svg" alt=" Y" style="width:1.0934em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is</p>
+<a id="source-page-117"></a>
+<p id="p117-block-001" data-source-page="117">at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002890.svg" alt=" |Y |γ" style="width:2.3978em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, by summing the sitewise hypothesis over<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002891.svg" alt=" Y" style="width:1.1012em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> . Finally the cover-volume bound gives <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002892.svg" alt="|Y | ≤(2B + 1)4cB(Y" style="width:9.5482em;height:1.3949em;vertical-align:-0.23em" loading="lazy"/> ), hence<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002893.svg" alt=" |Y |γ ≤wcB(Y" style="width:6.9278em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/> ). The same product estimate, with this inductive bound for the smaller label sets, also gives the sharper root-region bound<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002894.svg" alt=" FD(Y ) ≤e|Y |γ." style="width:7.0235em;height:1.4084em;vertical-align:-0.23em" loading="lazy"/> If a nonempty overlap-connected subset<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002895.svg" alt=" A" style="width:1.2586em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has union containing a fixed site<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002896.svg" alt=" x" style="width:1.0781em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, it is one of the nonempty terms counted by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002897.svg" alt=" FD({x}" style="width:3.7859em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>). For such a subset,</p>
+<figure class="sr-formula" id="p117-block-003" data-source-page="117"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p117-002898.svg" alt="[
+!
+≤
+X
+i∈A
+cB(Xi).
+cB
+i∈A
+Xi" width="127.47" height="40.93" style="width:11.695em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 117.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>[
+!
+≤
+X
+i∈A
+cB(Xi).
+cB
+i∈A
+Xi</pre></details></figure>
+<p id="p117-block-008" data-source-page="117">To prove this cover inequality, start with one support and add supports in an order with each new support meeting the preceding union; connectedness supplies such an order. The cover number of two meeting supports is at most the sum of their cover numbers. Induction gives the claim. Since <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-002899.svg" alt="a ≥" style="width:1.7310em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>0, its consequence for products and the preceding singleton-root bound imply</p>
+<figure class="sr-formula" id="p117-block-009" data-source-page="117"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p117-002900.svg" alt="X
+eacB(∪i∈AXi) Y
+i∈A
+fi ≤eγ −1.
+A̸=∅connected
+x∈∪i∈AXi" width="192.98" height="42.54" style="width:17.704em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 117.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+eacB(∪i∈AXi) Y
+i∈A
+fi ≤eγ −1.
+A̸=∅connected
+x∈∪i∈AXi</pre></details></figure>
+<section class="sr-derivation" id="p117-block-013" data-source-page="117"><p data-source-page="117">For countably many labels, first bound every finite subsum by taking<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-017094.svg" alt=" D" style="width:1.4521em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> to contain all its labels. Nonnegativity then proves summability and the same bound. No repeated-label expansion or logarithmic series is involved.</p><p data-source-page="117">Apply this estimate to the disjoint union of background-factor labels and response labels, with their respective envelopes. Their sitewise budgets add, so<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-017095.svg" alt=" γ = W + M" style="width:6.1787em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> siteFactor(<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p117-017096.svg" alt="B)c" style="width:1.7772em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. The envelope of a connected component is the product of its label envelopes, by submultiplicativity of the weighted polynomial norm. Selecting only the permitted components can only decrease the nonnegative sum. Grouping them by their resulting support and inventory preserves the sitewise bound. This proves the closure price and exponent loss stated above.</p><figure class="sr-formula" data-source-page="117"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p117-017097.svg" alt="The exact closure identity also has a direct inverse to its component decomposition. Expand the
+original field polynomial and Q
+j(1+uj), choosing background factors and a subset of responses. Join
+labels whose supports intersect. A nonzero chosen response lies offits healthy region, so its support
+meets a flagged site.
+That site belongs to a chosen background inventory; thus the response’s
+component contains a background factor. Background supports in the original pattern are pairwise
+disjoint. Each resulting component consequently has a nonempty inventory, and the components’
+inventories partition the original flagged set. Conversely, a permitted disjoint collection of such
+connected components recovers the unique original set of background and response labels by union.
+The coefficients are unchanged products of the same factors. This bijection proves the identity
+j = 0; hence Q
+j(1 + uj) = Exp P
+term by term. For the singleton responses used here, u2
+j uj. This
+completes both the algebraic identity and its connected-component price estimate." width="472.16" height="148.00" style="width:43.318em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The exact closure identity also has a direct inverse to its component decomposition. Expand the
+original field polynomial and Q
+j(1+uj), choosing background factors and a subset of responses. Join
+labels whose supports intersect. A nonzero chosen response lies offits healthy region, so its support
+meets a flagged site.
+That site belongs to a chosen background inventory; thus the response’s
+component contains a background factor. Background supports in the original pattern are pairwise
+disjoint. Each resulting component consequently has a nonempty inventory, and the components’
+inventories partition the original flagged set. Conversely, a permitted disjoint collection of such
+connected components recovers the unique original set of background and response labels by union.
+The coefficients are unchanged products of the same factors. This bijection proves the identity
+j = 0; hence Q
+j(1 + uj) = Exp P
+term by term. For the singleton responses used here, u2
+j uj. This
+completes both the algebraic identity and its connected-component price estimate.</pre></details></figure></section>
+<a id="section-7-3"></a><h3 id="p117-block-014" data-source-page="117">Finite transport inventory without changing the insertion</h3>
+<figure id="p117-block-015" class="sr-formula sr-source-panel" data-source-page="117"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p117-002902.svg" alt="The passage to a finite transport inventory uses two different reductions. First, a countable family
+of local leaves with one fixed dictionary key can be summed in that key. Suppose its complex
+coefficients are ri, its nonnegative leaf bounds are bi, and P
+i |ri|biescB(S) &lt; ∞, where all leaves
+have the same support S. Sum the real and imaginary coefficient families separately. Each real sum
+is a real leaf with bound at most P
+i |ri|bi; locality, gauge invariance, measurability and its eligibility
+condition pass to the absolutely convergent sum. The transported quote also passes to the sum by
+the sound and tuned transport identities. Use charges (1) and i for the two resulting real leaves.
+They reproduce the original complex family both before transport and in every transported profile,
+at total marker price at most" width="472.13" height="120.90" style="width:43.314em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 117.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The passage to a finite transport inventory uses two different reductions. First, a countable family
+of local leaves with one fixed dictionary key can be summed in that key. Suppose its complex
+coefficients are ri, its nonnegative leaf bounds are bi, and P
+i |ri|biescB(S) &lt; ∞, where all leaves
+have the same support S. Sum the real and imaginary coefficient families separately. Each real sum
+is a real leaf with bound at most P
+i |ri|bi; locality, gauge invariance, measurability and its eligibility
+condition pass to the absolutely convergent sum. The transported quote also passes to the sum by
+the sound and tuned transport identities. Use charges (1) and i for the two resulting real leaves.
+They reproduce the original complex family both before transport and in every transported profile,
+at total marker price at most</pre></details></figure>
+<a id="source-page-118"></a>
+<figure class="sr-formula" id="p118-block-001" data-source-page="118"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p118-002903.svg" alt="2wv
+X
+i
+|ri|bi." width="63.26" height="33.18" style="width:5.804em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 118.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2wv
+X
+i
+|ri|bi.</pre></details></figure>
+<p id="p118-block-003" data-source-page="118">An insertion tale uses only finitely many keys. Group its countable leaves by key, apply this construction within each group, and sum over the finite set of keys. The support weight is constant on each group, so this regrouping preserves the summed support budget. It gives finitely many singleton leaves reproducing the primary function minus its scalar displacement, the original forced profiles, and the coarse forced profiles minus their attached response hooks. A tale with price<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019694.svg" alt=" Av" style="width:1.6306em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> yields total support-weighted singleton price at most 2<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019695.svg" alt="wvAv." style="width:2.7903em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/></p>
+<p id="p118-block-003-paragraph-2" data-source-page="118">Second, higher polynomial corrections can be placed in blank dictionary slots. For a nonzero coefficient function (h(U)) in mode<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019696.svg" alt=" A" style="width:1.2565em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, write<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019697.svg" alt=" h = Rh + iIh" style="width:6.7102em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, using two real leaves with that mode and charges (1,i). If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019698.svg" alt=" |h(U)| ≤bA" style="width:5.8940em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>, their combined price is 2<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019699.svg" alt="tw(A)bA" style="width:3.6687em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/>. The locality, scope, gauge invariance and permission conditions are inherited coefficientwise. Only modes that are nonzero somewhere need be included. Summing their prices proves that a higher correction family of budget <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p118-019700.svg" alt="f" style="width:0.6367em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> becomes a finite leaf family of budget at most (2f).</p>
+<p id="p118-block-003-paragraph-3" data-source-page="118">The dictionary contains a dormant regular slot of zero original coefficient for every nonempty support, and a forced slot of every admissible nonempty inventory with its exact eligibility condition. Place an exponential correction in the first kind of slot, and a flagged correction in the second. A nonzero higher correction has at least two scoped markers, so its support is nonempty. These placements preserve the original correction functions exactly, while the two families together cost at most (4f). Their modes all have degree at least two. The existence of these dormant dictionary slots is part of the history construction; this reduction uses that property explicitly.</p>
+<p id="p118-block-003-paragraph-4" data-source-page="118">Combine the singleton leaves from the tales with these higher leaves. Their primary contributions sum to</p>
+<figure class="sr-formula" id="p118-block-004" data-source-page="118"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p118-002911.svg" alt="X
+v
+e{v}(Φv −νv) +
+X
+S
+HS,
+and their forced contributions to" width="282.32" height="49.99" style="width:25.901em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 118.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+v
+e{v}(Φv −νv) +
+X
+S
+HS,
+and their forced contributions to</pre></details></figure>
+<figure class="sr-formula" id="p118-block-008" data-source-page="118"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p118-002912.svg" alt="X
+v
+e{v}ωv(q) + Kq." width="91.90" height="32.23" style="width:8.432em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 118.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+v
+e{v}ωv(q) + Kq.</pre></details></figure>
+<figure id="p118-block-010" class="sr-formula sr-source-panel" data-source-page="118"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p118-002913.svg" alt="The singleton transported quotes reproduce the prescribed coarse forced profile minus its re-
+sponse hook. Higher leaves have no singleton quote, since their modes have degree at least two.
+Occupancy converts the singleton root budgets into a sitewise budget M siteFactor(B)d. Together
+with the (4f) correction budget this is the quantity T used in the numerical step.
+The exponential at a regular dictionary key must still be represented exactly. If ui are its finitely
+many tagged monomials, each has nonempty marker mode and u2
+i = 0. Consequently" width="472.12" height="83.16" style="width:43.314em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 118.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The singleton transported quotes reproduce the prescribed coarse forced profile minus its re-
+sponse hook. Higher leaves have no singleton quote, since their modes have degree at least two.
+Occupancy converts the singleton root budgets into a sitewise budget M siteFactor(B)d. Together
+with the (4f) correction budget this is the quantity T used in the numerical step.
+The exponential at a regular dictionary key must still be represented exactly. If ui are its finitely
+many tagged monomials, each has nonempty marker mode and u2
+i = 0. Consequently</pre></details></figure>
+<figure class="sr-formula" id="p118-block-012" data-source-page="118"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p118-002914.svg" alt="X
+!
+=
+Y
+i
+(1 + ui) = 1 +
+X
+i
+ui +
+X
+Y
+Exp
+i
+ui
+i∈A
+ui.
+A: |A|≥2
+disjoint allowed marker modes" width="344.43" height="50.14" style="width:31.599em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 118.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+!
+=
+Y
+i
+(1 + ui) = 1 +
+X
+i
+ui +
+X
+Y
+Exp
+i
+ui
+i∈A
+ui.
+A: |A|≥2
+disjoint allowed marker modes</pre></details></figure>
+<p id="p118-block-021" data-source-page="118">Products with overlapping marker modes vanish, and products outside the census vanish. Each remaining product is a real product leaf at the same dictionary key, charged by the product of charges and carrying the union mode. Its price is the product of the original prices. These extra composite leaves have degree at least two; they do not change any singleton quote. They are added only at regular keys, so forced-slot contributions are untouched. This finite enlargement replaces the exponential by (1+) the enlarged key sum without changing its value.</p>
+<a id="source-page-119"></a>
+<section class="sr-derivation" id="p119-block-001" data-source-page="119"><figure class="sr-formula" data-source-page="119"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p119-017098.svg" alt="Expanding the represented activity gas now gives the finite transport expression.
+At each
+dictionary key choose either its old scalar contribution or one marked leaf; the ticket condition
+is that no two chosen leaves use the same key. Each term is the old unselected activity product
+multiplied by the chosen marked ingredients. The polynomial normalization of each marked leaf
+is exact: its positive fee times its normalized monomial is its original charge times its marker
+monomial and leaf bound. Thus no division by a zero total coefficient occurs. The original activity
+series is absolutely summable under the lawful-activity bounds; only finitely many keys receive
+marked perturbations.
+Their sum is still absolutely summable, so regrouping by barcodes and
+interchanging the finite ticket sum with the activity series are legitimate. The result is exactly the
+restored fine density with the scalar displacement factored out as Exp P
+ve{v}νv." width="470.08" height="136.56" style="width:43.127em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Expanding the represented activity gas now gives the finite transport expression.
+At each
+dictionary key choose either its old scalar contribution or one marked leaf; the ticket condition
+is that no two chosen leaves use the same key. Each term is the old unselected activity product
+multiplied by the chosen marked ingredients. The polynomial normalization of each marked leaf
+is exact: its positive fee times its normalized monomial is its original charge times its marker
+monomial and leaf bound. Thus no division by a zero total coefficient occurs. The original activity
+series is absolutely summable under the lawful-activity bounds; only finitely many keys receive
+marked perturbations.
+Their sum is still absolutely summable, so regrouping by barcodes and
+interchanging the finite ticket sum with the activity series are legitimate. The result is exactly the
+restored fine density with the scalar displacement factored out as Exp P
+ve{v}νv.</pre></details></figure><p data-source-page="119">The additional composite-leaf price is bounded as follows. For a key<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-017099.svg" alt=" k" style="width:0.9869em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-017100.svg" alt=" pk" style="width:1.3771em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> be the sum of its unweighted leaf prices. The common support contains a marker pin, so the sitewise budget implies <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-017101.svg" alt="0 ≤pk ≤T" style="width:5.0490em;height:1.3096em;vertical-align:-0.23em" loading="lazy"/>. The sum of all compatible composite prices at that key is bounded by the sum over all nonempty subsets:</p></section>
+<figure class="sr-formula" id="p119-block-002" data-source-page="119"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p119-002916.svg" alt="X
+composites at k
+price ≤
+Y
+i at k
+(1 + fi) −1 ≤epk −1 ≤epkpk ≤eT pk." width="305.04" height="33.45" style="width:27.985em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 119.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+composites at k
+price ≤
+Y
+i at k
+(1 + fi) −1 ≤epk −1 ≤epkpk ≤eT pk.</pre></details></figure>
+<p id="p119-block-005" data-source-page="119">The penultimate inequality follows by integrating<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019701.svg" alt=" et ≤epk" style="width:4.0736em;height:1.5280em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019702.svg" alt="on 0 ≤t ≤pk" style="width:6.4215em;height:1.2692em;vertical-align:-0.23em" loading="lazy"/>. All composites at this key have the same support as their factors. Multiplying by its support weight and summing over distinct regular keys therefore gives a sitewise composite budget at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019703.svg" alt=" eT T" style="width:2.0983em;height:1.5096em;vertical-align:-0.23em" loading="lazy"/>: the disjoint key classes use disjoint sets of original leaf labels. Adding the original budget yields<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019704.svg" alt=" T + eT T" style="width:4.2299em;height:1.5096em;vertical-align:-0.23em" loading="lazy"/>. This proves the inventory bound with its stated constant.</p>
+<p id="p119-block-005-paragraph-2" data-source-page="119">The normalized monomial used in the ticket expansion has fee<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019705.svg" alt=" c = tw(A)|q|" style="width:5.8326em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/> and value<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019706.svg" alt=" eA(q/c)." style="width:4.0506em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019707.svg" alt=" c &gt;" style="width:1.9103em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0, cancellation gives<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019708.svg" alt=" c eA(q/c) = eAq. If c" style="width:9.2944em;height:1.2426em;vertical-align:-0.23em" loading="lazy"/> = 0, positivity of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019709.svg" alt=" tw(A" style="width:2.5435em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>) implies<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019710.svg" alt=" q" style="width:0.8687em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 0, so both sides vanish under the source’s zero-inverse convention. Its weighted norm is at most one in either case. This explicitly handles zero charges. Each such monomial squares to zero because<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019711.svg" alt=" A ̸= ∅" style="width:3.5118em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, which also justifies its exponential expansion above. The remaining input at this point is the Mark-step reserve acting on this finite, fully priced inventory.</p>
+<a id="section-7-4"></a><h3 id="p119-block-006" data-source-page="119">The repeated-occurrence rooted-tree bound</h3>
+<p id="p119-block-007" data-source-page="119">Repeated occurrences matter in the rooted-tree estimate: two vertices may carry the same activity label and still be distinct vertices of the expansion. Summing over distinct supports too early would omit those terms or lose their factorials. The parent-map proof below keeps occurrences numbered until its nonnegative sums and factorial estimates have been completed; only then is the passage to connected sets made.</p>
+<p id="p119-block-007-paragraph-2" data-source-page="119">Here is the tree estimate used in the cluster argument. Set<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019712.svg" alt=" VB = (2B + 1)4, t = VBγ/δ &gt; 0," style="width:15.2464em;height:1.4538em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019713.svg" alt=" F(Y" style="width:2.2882em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> ) = max<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019714.svg" alt="{δcB(Y ), 1}" style="width:5.2539em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>. For nonnegative vertex weights<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019715.svg" alt=" wi" style="width:1.5156em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> obeying the sitewise budget at exponent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019716.svg" alt=" a + δ, define" style="width:5.8794em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="p119-block-008" data-source-page="119"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p119-002933.svg" alt="K(Y, i) = 1Xi∩Y ̸=∅wie(a+δ)cB(Xi)
+tF(Y )
+." width="162.95" height="29.10" style="width:14.950em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 119.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>K(Y, i) = 1Xi∩Y ̸=∅wie(a+δ)cB(Xi)
+tF(Y )
+.</pre></details></figure>
+<p id="p119-block-010" data-source-page="119">Every finite row sum of this kernel is at most one: sum the sitewise bound over sites of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019717.svg" alt=" Y" style="width:1.1001em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> to bound its numerator by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019718.svg" alt=" |Y |γ ≤VBcB(Y )γ = tδcB(Y ) ≤tF(Y" style="width:16.5488em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/> ). Its entries are nonnegative.</p>
+<p id="p119-block-010-paragraph-2" data-source-page="119">Represent a forest on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019719.svg" alt=" m" style="width:1.4749em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> numbered internal occurrences by a parent map<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019720.svg" alt=" p : {1, . . . , m} →" style="width:8.3918em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019721.svg" alt="{0, 1, . . . , m}" style="width:5.6913em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>, where (0) is an external root with support<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p119-019722.svg" alt=" Y" style="width:1.1274em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> . Only parent maps admitting ranks strictly decreasing toward each internal parent are allowed. The support of every child must meet that of its parent. No condition prevents repeated activity labels at different occurrences. For a</p>
+<a id="source-page-120"></a>
+<p id="p120-block-001" data-source-page="120">fixed allowed parent map, the sum over all label assignments of the product of the corresponding <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002940.svg" alt="K" style="width:0.9957em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-entries is at most one. To prove it, sum a vertex of maximal rank first. It has no remaining children, so its label occurs only in its own row factor. Its row sum is at most one. Remove it and repeat. Finite label restrictions suffice; arbitrary label sets follow by nonnegative summation. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002941.svg" alt=" kj" style="width:1.3496em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> be the number of children of vertex<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002942.svg" alt=" j" style="width:0.9228em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, including the root. The elementary exponential estimate gives</p>
+<figure class="sr-formula" id="p120-block-002" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002943.svg" alt="F(S)kj ≤kj!eδcB(S)." width="97.21" height="16.99" style="width:8.918em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>F(S)kj ≤kj!eδcB(S).</pre></details></figure>
+<p id="p120-block-003" data-source-page="120">For<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002944.svg" alt=" δcB(S) ≥" style="width:4.5207em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>1, this is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002945.svg" alt=" xkj/kj" style="width:3.1491em;height:1.3902em;vertical-align:-0.23em" loading="lazy"/>!<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002946.svg" alt=" ≤ex" style="width:2.3823em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/>; for<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002947.svg" alt=" x ≤" style="width:2.0616em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>1, use<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002948.svg" alt=" F(S) = 1, kj" style="width:5.9092em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>!<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002949.svg" alt=" ≥" style="width:1.2022em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>1 and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002950.svg" alt=" ex ≥" style="width:2.4381em;height:1.5280em;vertical-align:-0.23em" loading="lazy"/>1. Multiply over parents. Each internal vertex’s extra factor<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002951.svg" alt=" eδcB(Xi)" style="width:3.8144em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> cancels the extra support weight introduced into<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002952.svg" alt=" K" style="width:1.4456em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; only the root factor remains. Thus the original overlap-constrained weight product at exponent<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p120-002953.svg" alt=" a" style="width:1.0082em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is at most</p>
+<figure class="sr-formula" id="p120-block-005" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002954.svg" alt="
+
+
+m
+Y
+j=0
+kj!
+
+m
+Y
+i=1
+K(Sp(i), i).
+eδcB(Y )tm" width="163.82" height="43.75" style="width:15.029em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>
+
+
+m
+Y
+j=0
+kj!
+
+m
+Y
+i=1
+K(Sp(i), i).
+eδcB(Y )tm</pre></details></figure>
+<figure id="p120-block-011" class="sr-formula sr-source-panel" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002955.svg" alt="After summing labels and dividing by the occurrence factorial (m!), its contribution is at most
+eδcB(Y )tm Q
+j kj!/m!.
+All child factorials are paid together by an exact parent-map count. For maps from m numbered
+objects into r bins, let Am(r) be the sum of the products of their bin-size factorials. Appending one
+object to bin j multiplies the weight by kj + 1; summing over bins gives (m+r). Hence A0(r) = 1
+and Am+1(r) = (m + r)Am(r). With r = m + 1," width="470.69" height="81.25" style="width:43.183em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>After summing labels and dividing by the occurrence factorial (m!), its contribution is at most
+eδcB(Y )tm Q
+j kj!/m!.
+All child factorials are paid together by an exact parent-map count. For maps from m numbered
+objects into r bins, let Am(r) be the sum of the products of their bin-size factorials. Appending one
+object to bin j multiplies the weight by kj + 1; summing over bins gives (m+r). Hence A0(r) = 1
+and Am+1(r) = (m + r)Am(r). With r = m + 1,</pre></details></figure>
+<figure class="sr-formula" id="p120-block-016" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002956.svg" alt="2m
+m
+!
+m
+Y
+X
+m! ≤4mm!.
+j=0
+kj! =
+p" width="149.01" height="40.76" style="width:13.671em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2m
+m
+!
+m
+Y
+X
+m! ≤4mm!.
+j=0
+kj! =
+p</pre></details></figure>
+<p id="p120-block-019" data-source-page="120">This upper bound sums all parent maps, so it also bounds the allowed ones. The total forest weight is therefore at most</p>
+<figure class="sr-formula" id="p120-block-020" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002957.svg" alt="eδcB(Y )(4t)m ≤eδcB(Y )qm." width="124.28" height="17.21" style="width:11.402em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eδcB(Y )(4t)m ≤eδcB(Y )qm.</pre></details></figure>
+<section class="sr-derivation" id="p120-block-021" data-source-page="120"><figure class="sr-formula" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-017102.svg" alt="The root may instead be an internal occurrence with nonnegative weight ui.
+Suppose
+P
+i uie(a+δ)cB(Xi) ≤b. Multiply the forest bound rooted at Xi by uieacB(Xi) and sum i. The result
+is bqm, with factorial (m!) for the other m occurrences. This proves the designated-root estimate
+used for size m + 1 clusters. Summing the geometric size tail gives bqm/(1 −q). The argument
+covers m = 0, empty external root and arbitrary branching without changing the normalization." width="469.91" height="66.71" style="width:43.111em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The root may instead be an internal occurrence with nonnegative weight ui.
+Suppose
+P
+i uie(a+δ)cB(Xi) ≤b. Multiply the forest bound rooted at Xi by uieacB(Xi) and sum i. The result
+is bqm, with factorial (m!) for the other m occurrences. This proves the designated-root estimate
+used for size m + 1 clusters. Summing the geometric size tail gives bqm/(1 −q). The argument
+covers m = 0, empty external root and arbitrary branching without changing the normalization.</pre></details></figure><figure class="sr-formula" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-017103.svg" alt="The graph interval construction used to pass from connected graphs to these trees is explicit.
+Fix an injective numerical ordering of the occurrence vertices and a root (0). For a connected
+graph H, let (d(v)) be shortest-path distance from (0). For every v ̸= 0, choose as parent the least
+ordered neighbor at distance (d(v)-1). The resulting parent edges form a ranked spanning tree. Its
+depth function is uniquely determined by its parent map: it is zero at the root and increases by
+one at every child. More generally any graph with this breadth-first parent has that same depth
+function, since every edge changes depth by at most one and the tree realizes the assigned depths.
+For a fixed tree p arising in this way, let Up be the subset of original graph edges satisfying
+both of the following requirements. Their endpoint depths differ by at most one. If an edge joins
+a vertex v ̸= 0 to a preceding-level vertex u, the order of u is no smaller than the order of (p(v)).
+Then the graphs whose breadth-first parent is p are exactly" width="472.14" height="148.00" style="width:43.315em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The graph interval construction used to pass from connected graphs to these trees is explicit.
+Fix an injective numerical ordering of the occurrence vertices and a root (0). For a connected
+graph H, let (d(v)) be shortest-path distance from (0). For every v ̸= 0, choose as parent the least
+ordered neighbor at distance (d(v)-1). The resulting parent edges form a ranked spanning tree. Its
+depth function is uniquely determined by its parent map: it is zero at the root and increases by
+one at every child. More generally any graph with this breadth-first parent has that same depth
+function, since every edge changes depth by at most one and the tree realizes the assigned depths.
+For a fixed tree p arising in this way, let Up be the subset of original graph edges satisfying
+both of the following requirements. Their endpoint depths differ by at most one. If an edge joins
+a vertex v ̸= 0 to a preceding-level vertex u, the order of u is no smaller than the order of (p(v)).
+Then the graphs whose breadth-first parent is p are exactly</pre></details></figure></section>
+<figure class="sr-formula" id="p120-block-022" data-source-page="120"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p120-002959.svg" alt="stem(p) ⊆H ⊆Up." width="92.43" height="13.70" style="width:8.480em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 120.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>stem(p) ⊆H ⊆Up.</pre></details></figure>

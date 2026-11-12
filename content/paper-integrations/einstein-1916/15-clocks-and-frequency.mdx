@@ -1,0 +1,67 @@
+---
+title: "Read clocks and frequency transfer"
+description: "Static observers read proper time and compare frequencies through the same interval law. Exact lapse factors and explicit remainder estimates show what the leading redshift formula retains."
+order: 15
+---
+
+**Static observers read proper time and compare frequencies through the same interval law. Exact lapse factors and explicit remainder estimates show what the leading redshift formula retains.**
+
+<a id="sec-measurements"></a>
+
+## 15. Rods, clocks and static frequency transfer
+
+The observational readouts retain their measuring protocol: a specified observer, spatial direction, chart, local standard and endpoint or asymptotic condition. A coordinate-length statement is not promoted to an invariant deformation of a material body. The exterior geometry is vacuum; rods, massive particles and light are probes whose backreaction is neglected.
+
+For a radial unit proper rod at fixed static time, the interval readout gives <a id="eq-15-1"></a><a id="eq-radial-rod"></a>
+
+$$
+\mathrm{d}\ell^2=A^{-1}\mathrm{d}r^2,
+ \qquad \boxed{\mathrm{d}r_{\rm unit}=\sqrt A
+ =1-\frac\alpha{2r}+O((\alpha/r)^2),}
+\tag{15.1}
+$$
+
+ recovering Einstein <span className="upright">(71)</span>. Using the truncated first-order spatial metric as exact would instead give $(1+\alpha/r)^{-1/2}$; its first coefficient agrees and its second coefficient differs. For a tangent direction orthogonal to $n$, [(14.8)](/source-readout/einstein-1916/14-spherical-exterior#eq-cartesian-exterior) has unit eigenvalue, recovering Einstein <span className="upright">(71a)</span> in that local coordinate arrangement. It does not remove spatial curvature or make arbitrary global distance comparisons Euclidean.
+
+A static clock obeys <a id="eq-15-2"></a><a id="eq-clock"></a>
+
+$$
+\boxed{\frac{\mathrm{d}s}{\mathrm{d}t}=\sqrt A,\qquad
+ \frac{\mathrm{d}t}{\mathrm{d}s}=A^{-1/2}
+ =1+\frac\alpha{2r}+O((\alpha/r)^2).}
+\tag{15.2}
+$$
+
+ The second expression is the coordinate duration of one unit proper clock period, which is the quantity in Einstein <span className="upright">(72)</span>; the first is its reciprocal rate. For the general weak potential, <a id="eq-15-3"></a><a id="eq-clock-potential"></a>
+
+$$
+\frac{\mathrm{d}t}{\mathrm{d}s}=1-\phi+O(\phi^2)
+ =1+\frac\kappa{8\pi}\int\frac{\rho(\mathbf y)}{|\mathbf x-\mathbf y|}\mathrm{d}^3y
+ +O(\phi^2).
+\tag{15.3}
+$$
+
+ It agrees with [(15.2)](/source-readout/einstein-1916/15-clocks-and-frequency#eq-clock) under the same mass normalization [(14.2)](/source-readout/einstein-1916/14-spherical-exterior#eq-mass-alpha).
+
+For $0\le x=\alpha/r\le q_0<1$, Taylor’s theorem supplies explicit same-family bounds: <a id="eq-15-4"></a><a id="eq-clock-bounds"></a>
+
+$$
+\begin{aligned}
+ |\sqrt{1-x}-(1-x/2)|&\le\frac{x^2}{8(1-q_0)^{3/2}},&&\text{(15.4)}\\
+ |(1-x)^{-1/2}-(1+x/2)|&\le\frac{3x^2}{8(1-q_0)^{5/2}}.
+\end{aligned}
+$$
+
+ These control the derived exact exterior, not arbitrary unspecified higher-order completions of a truncated metric.
+
+The original paper states the redshift consequence. Its endpoint operation follows explicitly from the same geometry. Staticity conserves the time component $k_t$ of a light covector along its Hamiltonian trajectory, because $q^{\mu\nu}k_\mu k_\nu/2$ has no explicit time dependence. A static unit observer has $U^t=1/\sqrt{g_{44}}$, so measured frequency is proportional to $k(U)=k_t/\sqrt{g_{44}}$. Therefore <a id="eq-15-5"></a><a id="eq-redshift"></a>
+
+$$
+\boxed{\frac{f_{\rm obs}}{f_{\rm emit}}
+ =\sqrt{\frac{A(r_{\rm emit})}{A(r_{\rm obs})}},\qquad
+ z=\frac{\lambda_{\rm obs}}{\lambda_{\rm emit}}-1
+ =\sqrt{\frac{A(r_{\rm obs})}{A(r_{\rm emit})}}-1.}
+\tag{15.5}
+$$
+
+ At first order, $z=\alpha(1/r_{\rm emit}-1/r_{\rm obs})/2+O(\alpha^2)$. Ratios compose through an intermediate static observer because its lapse cancels. Stationary source and receiver, positive lapse and the same normalization are essential; additional Doppler motion and time-dependent backgrounds are not included.

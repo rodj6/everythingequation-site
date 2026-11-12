@@ -15,7 +15,7 @@ export interface IntegratedPaper {
   headline: string;
   author: string;
   programme?: 'source-readout';
-  series?: 'gravity-holography';
+  series?: 'gravity-holography' | 'source-lift';
   supplementUrl?: string;
   supplementDescription?: string;
   previousDoi?: string;

@@ -1,0 +1,180 @@
+---
+title: "Comparison recovers covariant differentiation"
+description: "Tensor slots can be read out reversibly. Differentiation needs more: a compatible comparison rule. Its construction recovers the full metric connection while keeping raw torsion and nonmetricity visible."
+order: 4
+---
+
+**Tensor slots can be read out reversibly. Differentiation needs more: a compatible comparison rule. Its construction recovers the full metric connection while keeping raw torsion and nonmetricity visible.**
+
+<a id="sec-calculus"></a>
+
+## 4. Tensor operations and compatible comparison
+
+<a id="tensor-readouts-and-their-inverses"></a>
+
+### Tensor readouts and their inverses
+
+For a calibrated tensor $U$ of type $(r,s)$ define <a id="eq-4-1"></a><a id="eq-tensor-map"></a>
+
+$$
+(\Pi_EU)^{\mu_1\cdots\mu_r}{}_{\nu_1\cdots\nu_s}
+ =(E^{-1})^{\mu_1}{}_{a_1}\cdots(E^{-1})^{\mu_r}{}_{a_r}
+ E^{b_1}{}_{\nu_1}\cdots E^{b_s}{}_{\nu_s}
+ U^{a_1\cdots a_r}{}_{b_1\cdots b_s}.
+\tag{4.1}
+$$
+
+ Its inverse inserts $E$ in every upper coordinate slot and $E^{-1}$ in every lower coordinate slot. In particular $v=E^{-1}u$ and $\alpha=E^{\mathsf T}a$ for calibrated vector $u$ and covector $a$.
+
+<a id="thm-tensor"></a>
+
+### Proposition 4.1 (Tensor-algebra recovery)
+
+The maps [(4.1)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-tensor-map) are smooth fibrewise linear isomorphisms. They preserve sums, products, index permutations, symmetrization, antisymmetrization and contraction. Raising or lowering with $\eta$ before readout agrees with raising or lowering with $g$ afterward.
+
+<a id="proof-thm-tensor"></a>
+
+### Proof.
+
+Inverse factors cancel in each slot. A product adds slots, a permutation reorders factors, and a contraction cancels one $E$ with one $E^{-1}$. For the metric operations, $gE^{-1}u=E^{\mathsf T}\eta u$ and $qE^{\mathsf T}a=E^{-1}\eta^{-1}a$. Tensor products extend these identities to all ranks. Every tensor is a finite sum of elementary tensor products in a local basis, so the proof is not restricted to decomposable tensors.
+
+$\square$
+
+This recovers the transformations and algebra in Einstein <span className="upright">(5)</span>–Einstein <span className="upright">(17)</span>. The invariant-pairing test for tensor character follows from nondegeneracy of evaluation on arbitrary basis tuples. For symmetric bilinear arrays, polarization permits diagonal probes; without symmetry they miss the antisymmetric part. Completely antisymmetric tensors in four dimensions have dimensions $\binom4k$, in particular $6,4,1$ at ranks $2,3,4$, and vanish above rank four. Symmetric tensors do not have that cutoff; the printed qualification is discussed in Appendix [A](/source-readout/einstein-1916/22-printed-source-register#app-source).
+
+The volume density transforms as $\nu_y=|\det J|\nu_x$, so $\nu|\mathrm{d}^4x|$ is invariant. This recovers Einstein <span className="upright">(18)</span> and Einstein <span className="upright">(18a)</span> without assuming an orientation. Signed integration uses an orientation chosen in addition.
+
+<a id="why-a-comparison-connection-is-necessary"></a>
+
+### Why a comparison connection is necessary
+
+An arbitrary matrix-valued one-form $\omega$ defines <a id="eq-4-2"></a><a id="eq-raw-D"></a>
+
+$$
+D_\mu u=\partial_\mu u+\omega_\mu u,\qquad
+ D_\mu a=\partial_\mu a-\omega_\mu^{\mathsf T}a.
+\tag{4.2}
+$$
+
+ The product rule and contraction extend it to tensors. Since $u'=\Lambda u$, ordinary differentiation produces the unwanted term $(\mathrm{d}\Lambda)u$. Requiring $D'(\Lambda u)=\Lambda Du$ for every $u$ forces <a id="eq-4-3"></a><a id="eq-omega-transform"></a>
+
+$$
+\omega'=\Lambda\omega\Lambda^{-1}-\mathrm{d}\Lambda\Lambda^{-1}.
+\tag{4.3}
+$$
+
+ The raw discrepancies are <a id="eq-4-4"></a><a id="eq-MT"></a>
+
+$$
+M_\mu=\omega_\mu^{\mathsf T}\eta+\eta\omega_\mu,
+ \qquad \Theta^a=\mathrm{d}\theta^a+\omega^a{}_b\wedge\theta^b.
+\tag{4.4}
+$$
+
+ They transform as $M'=\Lambda^{-\mathsf T}M\Lambda^{-1}$ and $\Theta'=\Lambda\Theta$. Their zero sector preserves the interval pairing and is torsion-free. This is the realization law corresponding to Einstein’s metric differential calculus, not a consequence of native admission.
+
+Let $e_b=(E^{-1})^\mu{}_b\partial_\mu$ and define structure coefficients by <a id="eq-4-5"></a><a id="eq-structure"></a>
+
+$$
+\mathrm{d}\theta^a=-\tfrac12c^a{}_{bc}\theta^b\wedge\theta^c,
+ \qquad
+ c^a{}_{bc}=-(E^{-1})^\mu{}_b(E^{-1})^\nu{}_c
+ (\partial_\mu E^a{}_{\nu}-\partial_\nu E^a{}_{\mu}).
+\tag{4.5}
+$$
+
+ Lower the first index with $\eta$, and write $\omega^a{}_b=\omega^a{}_{bc}\theta^c$.
+
+<a id="thm-omega"></a>
+
+### Theorem 4.2 (Unique compatible comparison)
+
+For every smooth invertible calibration, the unique connection with $M=0$ and $\Theta=0$ is <a id="eq-4-6"></a><a id="eq-omega-formula"></a>
+
+$$
+\boxed{\omega_{abc}=\tfrac12(c_{cab}-c_{abc}-c_{bca}),\qquad
+ \omega^a{}_{bc}=\eta^{ad}\omega_{dbc}.}
+\tag{4.6}
+$$
+
+ The last index is the differentiating frame direction.
+
+<a id="proof-thm-omega"></a>
+
+### Proof.
+
+Antisymmetry of the final two $c$ indices gives $\omega_{abc}=-\omega_{bac}$ and $\omega_{acb}-\omega_{abc}=c_{abc}$. These are respectively $M=0$ and $\Theta=0$, because $\Theta^a(e_b,e_c)=-c^a{}_{bc}+\omega^a{}_{cb}-\omega^a{}_{bc}$. The difference $K$ of two solutions is antisymmetric in its first two indices and symmetric in its last two. Thus 
+
+$$
+K_{abc}=K_{acb}=-K_{cab}=-K_{cba}=K_{bca}=K_{bac}=-K_{abc},
+$$
+
+ so $K=0$. The displayed formula uses only $E,E^{-1}$ and first derivatives, and is smooth on the declared domain.
+
+$\square$
+
+<a id="connection-readout-and-complete-defects"></a>
+
+### Connection readout and complete defects
+
+For arbitrary raw $\omega$, define <a id="eq-4-7"></a><a id="eq-C-map"></a>
+
+$$
+C_\mu=E^{-1}(\partial_\mu E+\omega_\mu E),\qquad
+ \omega_\mu=EC_\mu E^{-1}-(\partial_\mu E)E^{-1}.
+\tag{4.7}
+$$
+
+ Direct substitution, without imposing compatibility, gives <a id="eq-4-8"></a><a id="eq-4-9"></a><a id="eq-nonmetricity"></a><a id="eq-torsion"></a>
+
+$$
+\begin{aligned}
+ \nabla^C_\mu g&=\partial_\mu g-C_\mu^{\mathsf T}g-gC_\mu
+ =-E^{\mathsf T}M_\mu E,&&\text{(4.8)}\\
+ C^\rho{}_{\mu\nu}-C^\rho{}_{\nu\mu}
+ &=(E^{-1})^\rho{}_a\Theta^a{}_{\mu\nu}.
+&&\text{(4.9)}\end{aligned}
+$$
+
+ The two zero conditions are therefore equivalent to metric compatibility and lower-index symmetry of $C$. Writing metric compatibility for three cyclic placements of indices, adding two equations and subtracting the third, yields <a id="eq-4-10"></a><a id="eq-christoffel"></a>
+
+$$
+\boxed{C^\rho{}_{\mu\nu}=\tfrac12q^{\rho\lambda}
+ (\partial_\mu g_{\lambda\nu}+\partial_\nu g_{\lambda\mu}
+ -\partial_\lambda g_{\mu\nu}).}
+\tag{4.10}
+$$
+
+ This recovers Einstein’s brackets and braces in Einstein <span className="upright">(21)</span> and Einstein <span className="upright">(23)</span> from the source comparison, rather than using the completed Christoffel formula as its forward definition.
+
+Internal frame changes leave $C$ fixed. Coordinate changes instead give <a id="eq-4-11"></a><a id="eq-C-coordinate"></a>
+
+$$
+C^{(y)}_\alpha=J^{-1}\!\left(\sum_\mu J^\mu{}_{\alpha}C^{(x)}_\mu\right)J
+ +J^{-1}\partial_\alpha J.
+\tag{4.11}
+$$
+
+ This follows by differentiating $E_xJ$. Equal metric readouts imply frame-related calibrations; the transformed $\omega$ satisfies the same zero conditions, so uniqueness in Theorem [4.2](/source-readout/einstein-1916/04-comparison-and-tensors#thm-omega) implies equal coordinate differential operations. The same proof on overlaps gives compatible connection gluing without a global coframe.
+
+<a id="thm-derivative"></a>
+
+### Theorem 4.3 (Differentiation intertwines with readout)
+
+Define the appended calibrated derivative slot by $D_b=(E^{-1})^\mu{}_bD_\mu$. For every tensor type, after reading out that slot as well, <a id="eq-4-12"></a><a id="eq-D-intertwine"></a>
+
+$$
+\boxed{\Pi_E(DU)=\nabla^C(\Pi_EU).}
+\tag{4.12}
+$$
+
+ The identity holds on the raw comparison domain. On $M=\Theta=0$, the right side is Einstein’s metric covariant derivative.
+
+<a id="proof-thm-derivative"></a>
+
+### Proof.
+
+For vectors, $u=Ev$ gives $D_\mu(Ev)=E(\partial_\mu v+C_\mu v)$ by [(4.7)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-C-map). For covectors, $\alpha=E^{\mathsf T}a$ gives $\partial_\mu\alpha-C_\mu^{\mathsf T}\alpha
+=E^{\mathsf T}(\partial_\mu a-\omega_\mu^{\mathsf T}a)$. The extra $E$ on the derivative slot cancels its $E^{-1}$. Scalars, products and contractions give all ranks by Proposition [4.1](/source-readout/einstein-1916/04-comparison-and-tensors#thm-tensor).
+
+$\square$

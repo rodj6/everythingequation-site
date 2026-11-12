@@ -1,0 +1,143 @@
+---
+title: "Read null rays and optical bending"
+description: "Null propagation requires an operation separate from normalized timelike length. Optical variation and regularized endpoint integrals recover bending with the boundary geometry and error bounds stated explicitly."
+order: 16
+---
+
+**Null propagation requires an operation separate from normalized timelike length. Optical variation and regularized endpoint integrals recover bending with the boundary geometry and error bounds stated explicitly.**
+
+<a id="sec-light"></a>
+
+## 16. Null rays, optical variation and bending
+
+The calibrated null constraint is <a id="eq-16-1"></a><a id="eq-null"></a>
+
+$$
+\eta(E\mathrm{d}x,E\mathrm{d}x)=0\quad\Longleftrightarrow\quad
+ g_{\mu\nu}\mathrm{d}x^\mu\mathrm{d}x^\nu=0,
+\tag{16.1}
+$$
+
+ recovering Einstein <span className="upright">(73)</span>. It specifies local allowed directions, not a complete ray path. Einstein adds Huygens reasoning. We retain the direction-dependent static optical operation so that variation is performed before a propagation direction is fixed.
+
+For $\mathrm{d}s^2=N^2\mathrm{d}t^2-s_{ij}\mathrm{d}x^i\mathrm{d}x^j$, $N>0$, the elapsed coordinate time along a future null path is <a id="eq-16-2"></a><a id="eq-optical-functional"></a>
+
+$$
+\mathcal T[\gamma]=\int\frac{\sqrt{s_{ij}x'^ix'^j}}{N}\mathrm{d}\lambda.
+\tag{16.2}
+$$
+
+ Its fixed-spatial-endpoint stationary paths agree with spatial projections of null geodesics. To see the equivalence, keep the conserved $k_t$ in the static null Hamiltonian. The constraint is $s^{ij}k_ik_j=k_t^2/N^2$; the reduced fixed-energy line functional is $|k_t|\mathcal T$. Variation gives the optical metric $s_{ij}/N^2$, and choosing affine scale with $\mathrm{d}t/\mathrm{d}\lambda=k_t/N^2$ restores the spacetime geodesic. This is a classical geometrical-optics/test-ray operation, not a finite-wavelength Maxwell error estimate.
+
+<a id="the-original-asymptotic-integral-and-its-finite-endpoint-qualification"></a>
+
+### The original asymptotic integral and its finite-endpoint qualification
+
+Take the first-order central metric and the straight reference ray $x=b>0$, $z=0$, with $y$ increasing along the ray; set $r=\sqrt{b^2+y^2}$. Its coordinate speed in that direction is <a id="eq-16-3"></a><a id="eq-light-speed"></a>
+
+$$
+\gamma=\sqrt{\frac{1-\alpha/r}{1+\alpha y^2/r^3}}
+ =1-\frac\alpha{2r}\left(1+\frac{y^2}{r^2}\right)+O(\alpha^2).
+\tag{16.3}
+$$
+
+ The supplied scan prints a positive correction on p. 822. Insertion into the preceding null equation gives a nonzero first-order residual. The negative sign is fixed by [(16.1)](/source-readout/einstein-1916/16-light-and-bending#eq-null), not selected to fit a desired bending angle.
+
+The inward-positive integrand of the displayed original asymptotic calculation is <a id="eq-16-4"></a><a id="eq-bending-integrand"></a>
+
+$$
+I(y)=\partial_b\gamma^{(1)}
+ =\frac{\alpha b}{2r^3}\left(1+\frac{3y^2}{r^2}\right),\qquad
+ \mathcal B_I(y)=\frac\alpha{2b}\left(\frac yr+\frac{y^3}{r^3}\right).
+\tag{16.4}
+$$
+
+ Differentiation verifies the primitive. Its infinite endpoint values give <a id="eq-16-5"></a><a id="eq-bending-leading"></a>
+
+$$
+\boxed{B=\int_{-\infty}^{\infty}I(y)\mathrm{d}y
+ =\frac{2\alpha}{b}=\frac{\kappa M}{2\pi b}=\frac{4KM}{c^2b}.}
+\tag{16.5}
+$$
+
+ The parameter form is Einstein <span className="upright">(74)</span>. The mass expression printed there propagates the inconsistent factor from Einstein <span className="upright">(70a)</span>; the same-mass join is [(14.2)](/source-readout/einstein-1916/14-spherical-exterior#eq-mass-alpha).
+
+<a id="thm-optical"></a>
+
+### Theorem 16.1 (Boundary-sensitive optical recovery)
+
+Let $p=\mathrm{d}x/\mathrm{d}y$ and retain the full first-order optical integrand <a id="eq-16-6"></a><a id="eq-optical-L"></a>
+
+$$
+L(x,y,p)=\sqrt{1+p^2}
+ +\frac{\alpha\sqrt{1+p^2}}{2r}
+ +\frac{\alpha(xp+y)^2}{2r^3\sqrt{1+p^2}}+O(\alpha^2),
+ \quad r=\sqrt{x^2+y^2}.
+\tag{16.6}
+$$
+
+ On the straight reference path its first-order ray equation is <a id="eq-16-7"></a><a id="eq-optical-boundary"></a>
+
+$$
+x''=-\frac{3\alpha b^3}{2r^5},\qquad
+ -x''=I(y)+\frac{\mathrm{d}}{\mathrm{d}y}P_{\rm end}(y),\qquad
+ P_{\rm end}=\frac{\alpha b y}{r^3}.
+\tag{16.7}
+$$
+
+ Thus the inward coordinate-direction change on a finite segment is <a id="eq-16-8"></a><a id="eq-finite-deflection"></a>
+
+$$
+B_{[y_1,y_2]}=\int_{y_1}^{y_2}I(y)\mathrm{d}y
+ +[P_{\rm end}(y)]_{y_1}^{y_2}
+\tag{16.8}
+$$
+
+ at the retained order. The endpoint term vanishes at asymptotic endpoints.
+
+<a id="proof-thm-optical"></a>
+
+### Proof.
+
+At $p=0$ the zeroth-order integrand has $L_{pp}=1$. The linearized Euler–Lagrange equation is $x''=\partial_xL^{(1)}-\mathrm{d}(\partial_pL^{(1)})/\mathrm{d}y$, evaluated at $x=b,p=0$. There $L^{(1)}=-\gamma^{(1)}$ and $\partial_pL^{(1)}=P_{\rm end}$. Differentiation gives [(16.7)](/source-readout/einstein-1916/16-light-and-bending#eq-optical-boundary). Independently inserting the first-order metric and $v=(0,1,0)$ in [(13.2)](/source-readout/einstein-1916/13-newtonian-limit#eq-coordinate-time) gives the same transverse acceleration. The actual curvature primitive is $\mathcal B_{\rm ray}=\alpha(3y/r-y^3/r^3)/(2b)$, and $\mathcal B_{\rm ray}-\mathcal B_I=P_{\rm end}$, proving the endpoint relation directly.
+
+$\square$
+
+The finite quantity in [(16.8)](/source-readout/einstein-1916/16-light-and-bending#eq-finite-deflection) is explicitly a coordinate-direction change in the stated chart. A finite observer-measured angle also requires local observer frames at the endpoints; that additional identification is not asserted. At infinity the stated asymptotic normalization makes the comparison used by the original calculation. The two integrands are not pointwise identical. Deleting the spatial metric perturbation while retaining $g_{44}$ instead gives $\alpha/b$, half the full result, illustrating the information missing from the Newtonian force readout alone.
+
+<a id="a-controlled-infinite-path-comparison"></a>
+
+### A controlled infinite-path comparison
+
+Pointwise truncation by itself does not justify an integral over an infinite path. The derived exact radial family provides a controlled comparison. Let $r_m$ be closest areal approach and $d=\alpha/r_m$. Null energy and angular momentum give the asymptotic impact parameter <a id="eq-16-9"></a><a id="eq-null-impact"></a>
+
+$$
+b=\frac{r_m}{\sqrt{1-d}}.
+\tag{16.9}
+$$
+
+ With $u=r_m/r$, the half-angle denominator factors as <a id="eq-16-10"></a><a id="eq-null-factor"></a>
+
+$$
+(1-d)-u^2+du^3=(1-u^2)\left[1-d\left(u+\frac1{1+u}\right)\right].
+\tag{16.10}
+$$
+
+ The substitution $u=\sin\theta$ removes the turning-point singularity and gives <a id="eq-16-11"></a><a id="eq-exact-bending"></a>
+
+$$
+B_{\rm exact}=2\int_0^{\pi/2}[1-dQ(\theta)]^{-1/2}\mathrm{d}\theta-\pi,
+ \qquad Q(\theta)=\sin\theta+\frac1{1+\sin\theta}.
+\tag{16.11}
+$$
+
+ For $0<d<2/3$ this is the outer turning branch. On the interval, $1\le Q\le3/2$ and $\int Q\mathrm{d}\theta=2$. Taylor’s theorem for $(1-x)^{-1/2}$ has nonnegative remainder bounded by $3x^2/[8(1-q)^{5/2}]$ on $0\le x\le q<1$. Since $\int Q^2\mathrm{d}\theta\le9\pi/8$, <a id="eq-16-12"></a><a id="eq-light-bound"></a>
+
+$$
+\boxed{0\le B_{\rm exact}-\frac{2\alpha}{b}
+ \le\frac{27\pi d^2}{32(1-3d/2)^{5/2}}
+ +\frac{2d^2}{1+\sqrt{1-d}}.}
+\tag{16.12}
+$$
+
+ The first term bounds $B_{\rm exact}-2d$; the second is exactly $2d-2d\sqrt{1-d}$. This is a sufficient bound within the static spherical family, not an uncertainty estimate for a star with unspecified multipoles or surroundings.

@@ -1,0 +1,221 @@
+---
+title: "Recover the action and its variation"
+description: "Recovering the value of a gravitational action is only the beginning. The construction also covers its test directions and boundary response, exposing why coordinate gauge and constrained variation cannot be interchanged."
+order: 7
+---
+
+**Recovering the value of a gravitational action is only the beginning. The construction also covers its test directions and boundary response, exposing why coordinate gauge and constrained variation cannot be interchanged.**
+
+<a id="sec-vacuum"></a>
+
+## 7. Vacuum dynamics and the variational operation
+
+Einstein’s §13 identifies freely moving massive test particles with the geodesics constructed earlier. This physical extension from locally inertial motion is inherited here. The source law $D_s(E\dot x)=0$ reads to <a id="eq-7-1"></a><a id="eq-physical-geodesic"></a>
+
+$$
+\frac{\mathrm{d}^2x^\rho}{\mathrm{d}s^2}=\Gamma_{\!\mathrm E}^\rho{}_{\mu\nu}
+ \frac{\mathrm{d}x^\mu}{\mathrm{d}s}\frac{\mathrm{d}x^\nu}{\mathrm{d}s},
+\tag{7.1}
+$$
+
+ recovering Einstein <span className="upright">(45)</span>–Einstein <span className="upright">(46)</span>. It is a test-body law, not a backreaction theorem for a finite body.
+
+Contract the source curvature by <a id="eq-7-2"></a><a id="eq-source-ricci"></a>
+
+$$
+\mathscr R_{ab}=\sum_c\mathcal F^c{}_a(e_c,e_b),\qquad
+ \operatorname{Ric}=E^{\mathsf T}\mathscr R E.
+\tag{7.2}
+$$
+
+ The second identity follows by inserting [(6.2)](/source-readout/einstein-1916/06-curvature-and-variations#eq-curvature-intertwine) and cancelling calibration factors in the contracted slot. The chosen source vacuum law $\mathscr R=0$ is therefore equivalent to $\operatorname{Ric}=0$, or $B=0$ in Einstein’s convention. His §14 chooses this contracted equation, not full vanishing of curvature. In a unit-volume chart it is <a id="eq-7-3"></a><a id="eq-vacuum-W"></a>
+
+$$
+W_{\mu\nu}=\partial_\alpha\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}
+ +\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta}\Gamma_{\!\mathrm E}^\beta{}_{\nu\alpha}=0,
+ \qquad \nu=1,
+\tag{7.3}
+$$
+
+ which is Einstein <span className="upright">(47)</span>. This physical law is realized, not selected solely by the native support.
+
+<a id="a-source-comparison-action"></a>
+
+### A source comparison action
+
+Retain the coordinate column labels of $E$ and let $D$ act on its calibrated row index. Define <a id="eq-7-4"></a><a id="eq-source-action"></a>
+
+$$
+\mathcal A_\mu=(\partial_\mu E+\omega_\mu E)E^{-1},\quad
+ \mathcal P_a=(E^{-1})^\mu{}_a\mathcal A_\mu,\quad
+ \mathcal H_Z=\eta^{ab}\operatorname{tr}(\mathcal P_a\mathcal P_b),\quad
+ \mathcal S_Z=\int_\Omega\mathcal H_Z\mathrm{d}^4x.
+\tag{7.4}
+$$
+
+ Here $\omega=\omega(E)$, and its derivative dependence is varied with $E$. This $D E$ is not the full covariant derivative acting on both coframe indices. The comparison missing on the coordinate column is exactly what $C$ records. Since $\mathcal A_\mu=EC_\mu E^{-1}$, <a id="eq-7-5"></a><a id="eq-H"></a>
+
+$$
+\boxed{\mathcal H_Z=H(q,\partial q)
+ =q^{\mu\nu}\operatorname{tr}(C_\mu C_\nu)
+ =q^{\mu\nu}\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta}\Gamma_{\!\mathrm E}^\beta{}_{\nu\alpha}.}
+\tag{7.5}
+$$
+
+ Conjugation invariance of trace and the calibrated pairing prove the equality, and invariance under internal Lorentz changes. General coordinate covariance of this density is not asserted. The chart-tagged right side is Einstein’s Hamiltonian function in Einstein <span className="upright">(47a)</span>, extended to an open set of invertible metrics in that chart for taking unrestricted derivatives. The term “Hamiltonian function” is historical; no canonical constraint algebra or phase-space equivalence is claimed.
+
+<a id="thm-action"></a>
+
+### Theorem 7.1 (Complete action-variation recovery)
+
+For every symmetric inverse-metric variation $k^{\mu\nu}=\delta q^{\mu\nu}$, define $A_{\mu\nu}=\operatorname{tr}(C_\mu C_\nu)$. On the full compatible metric-calculus domain, <a id="eq-7-6"></a><a id="eq-H-variation"></a>
+
+$$
+\boxed{\delta H=-A_{\mu\nu}k^{\mu\nu}
+ +\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}\partial_\alpha k^{\mu\nu}.}
+\tag{7.6}
+$$
+
+ Every such variation lifts to the calibration. On a bounded patch region with piecewise smooth boundary, <a id="eq-7-7"></a><a id="eq-S-variation"></a>
+
+$$
+\delta\mathcal S_Z=-\int_\Omega W_{\mu\nu}k^{\mu\nu}\mathrm{d}^4x
+ +\int_{\partial\Omega}\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}k^{\mu\nu}\mathrm{d}\Sigma_\alpha.
+\tag{7.7}
+$$
+
+
+
+<a id="proof-thm-action"></a>
+
+### Proof.
+
+Vary [(7.5)](/source-readout/einstein-1916/07-vacuum-and-action#eq-H), combine the two equal connection variations and rearrange: 
+
+$$
+\delta H=-A_{\mu\nu}\delta q^{\mu\nu}
+ +2\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta}\,
+ \delta(q^{\mu\nu}\Gamma_{\!\mathrm E}^\beta{}_{\nu\alpha}).
+$$
+
+ Inverse-metric compatibility is 
+
+$$
+\partial_\alpha q^{\mu\beta}
+ =q^{\mu\nu}\Gamma_{\!\mathrm E}^\beta{}_{\nu\alpha}
+ +q^{\beta\nu}\Gamma_{\!\mathrm E}^\mu{}_{\nu\alpha}.
+$$
+
+ The multiplying $\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta}$ is symmetric in $\mu,\beta$, so it selects exactly half this sum. This proves the positive derivative term in [(7.6)](/source-readout/einstein-1916/07-vacuum-and-action#eq-H-variation), without a determinant constraint. Integration by parts gives [(7.7)](/source-readout/einstein-1916/07-vacuum-and-action#eq-S-variation).
+
+For arbitrary $k$ set <a id="eq-7-8"></a><a id="eq-inverse-variation-lift"></a>
+
+$$
+\delta E=-\tfrac12Ekg.
+\tag{7.8}
+$$
+
+ Then $\delta g=-gkg$ and $\delta q=-q\delta gq=k$. Equation [(6.7)](/source-readout/einstein-1916/06-curvature-and-variations#eq-omega-variation) supplies the dependent comparison variation. Support and fixed-boundary values are preserved. Hence the source action has every relevant target test direction, not merely the same value on fixed configurations.
+
+$\square$
+
+All-index sums use symmetric coefficients. Derivatives with respect to ten independent matrix entries have the corresponding factor of two on off-diagonal entries. The recovered partial derivatives are <a id="eq-7-9"></a><a id="eq-H-partials"></a>
+
+$$
+H_{q^{\mu\nu}}=-A_{\mu\nu},\qquad
+ H_{\partial_\alpha q^{\mu\nu}}=\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}.
+\tag{7.9}
+$$
+
+ These agree with numbered Einstein <span className="upright">(48)</span>; the inconsistent preceding printed sign is recorded in Appendix [A](/source-readout/einstein-1916/22-printed-source-register#app-source). With compact-interior variations or $k=0$ on the boundary, the Euler equation is $W=0$, recovering Einstein <span className="upright">(47b)</span>. The calibration bulk coefficient is <a id="eq-7-10"></a><a id="eq-source-EL"></a>
+
+$$
+\mathcal E_a{}^\mu=2\eta_{ab}E^b{}_{\nu}
+ q^{\nu\rho}q^{\mu\sigma}W_{\rho\sigma}.
+\tag{7.10}
+$$
+
+ Invertibility makes $\mathcal E=0$ equivalent to $W=0$. The six Lorentz variations are vertical and give $\delta q=0$, rather than six additional physical equations.
+
+<a id="coordinate-gauge-versus-a-constrained-variational-domain"></a>
+
+### Coordinate gauge versus a constrained variational domain
+
+The order of operations is essential. We define $H$ on the unrestricted invertible domain, take all symmetric variations with the stated boundary contract, and evaluate the resulting equations on configurations expressed in a unit-volume chart. Outside that chart its Euler derivative is $-W=\operatorname{Ric}+S$, not the unrestricted generally covariant vacuum law. Einstein writes the volume condition alongside the action and then uses independent component derivatives. The preceding construction is an explicit mathematical interpretation of that operation, not a claim that his text separately formalizes the order.
+
+If instead every varied field is constrained to $\nu=1$, then $g_{\mu\nu}k^{\mu\nu}=0$. Such variations detect only <a id="eq-7-11"></a><a id="eq-trace-loss"></a>
+
+$$
+W_{\mu\nu}-\tfrac14g_{\mu\nu}q^{\rho\sigma}W_{\rho\sigma}=0.
+\tag{7.11}
+$$
+
+ Indeed the annihilator of the trace-free symmetric variation subspace is spanned by $g$; compactly supported tests prove the pointwise statement. This is weaker than [(7.3)](/source-readout/einstein-1916/07-vacuum-and-action#eq-vacuum-W).
+
+A smooth witness is $E=\operatorname{diag}(r^{1/3},r^{1/3},r^{1/3},r^{-1})$, with $x^4=r>0$. Directly from [(4.6)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-omega-formula) and curvature, <a id="eq-7-12"></a><a id="eq-trace-witness"></a>
+
+$$
+\nu=1,\quad \operatorname{Ric}=-\tfrac13g,\quad \mathcal R=-\tfrac43,
+ \quad W=\tfrac13g.
+\tag{7.12}
+$$
+
+ It satisfies [(7.11)](/source-readout/einstein-1916/07-vacuum-and-action#eq-trace-loss) and fails the vacuum equation. The same witness exposes the exceptional value in Einstein’s footnote: from $B+\lambda g\operatorname{tr}_q B=0$ one obtains $(1+4\lambda)\operatorname{tr}_qB=0$. Equivalence to $B=0$ requires $\lambda\ne-1/4$. No universal uniqueness theorem for gravitational actions is inferred from that footnote.
+
+<a id="sec-boundary-action"></a>
+
+### A boundary-complete covariant comparison
+
+For comparison with the standard curvature action, let $\mathcal R=q^{\mu\nu}\operatorname{Ric}_{\mu\nu}$ and define <a id="eq-7-13"></a><a id="eq-7-14"></a><a id="eq-L1"></a>
+
+$$
+\begin{aligned}
+ \mathcal L_1&=\nu q^{\mu\nu}
+ \left(C^\alpha{}_{\mu\beta}C^\beta{}_{\nu\alpha}
+ -C^\alpha{}_{\mu\nu}c_\alpha\right),&&\text{(7.13)}\\
+ V^\alpha&=\nu\left(q^{\mu\nu}C^\alpha{}_{\mu\nu}-q^{\alpha\mu}c_\mu\right).
+&&\text{(7.14)}\end{aligned}
+$$
+
+ Expansion of Ricci and a product differentiation give <a id="eq-7-15"></a><a id="eq-boundary-identity"></a>
+
+$$
+\boxed{\nu\mathcal R=\mathcal L_1+\partial_\alpha V^\alpha.}
+\tag{7.15}
+$$
+
+ For clarity, the simplifying identities are $(\partial_\alpha q^{\mu\nu})C^\alpha{}_{\mu\nu}=-2H$ and $\partial_\alpha q^{\alpha\mu}=-c_\lambda q^{\lambda\mu}
+-q^{\alpha\lambda}C^\mu{}_{\alpha\lambda}$. Move the two derivatives in Ricci into $\partial V$, insert these identities and $\partial_\alpha\nu=\nu c_\alpha$; the terms quadratic in $c$ cancel and the remainder is exactly [(7.13)](/source-readout/einstein-1916/07-vacuum-and-action#eq-L1).
+
+The source curvature action is $S_R[E]=\int\nu\eta^{ab}\mathscr R_{ab}\mathrm{d}^4x$. Varying the inverse metric and using $\delta\operatorname{Ric}_{\mu\nu}=\nabla_\alpha\delta C^\alpha{}_{\mu\nu}
+-\nabla_\nu\delta C^\alpha{}_{\alpha\mu}$ gives <a id="eq-7-16"></a><a id="eq-7-17"></a><a id="eq-EHvariation"></a>
+
+$$
+\begin{aligned}
+ \delta S_R&=\int_\Omega\nu G_{\mu\nu}k^{\mu\nu}\mathrm{d}^4x
+ +\int_{\partial\Omega}\Upsilon^\alpha\mathrm{d}\Sigma_\alpha,&&\text{(7.16)}\\
+ G_{\mu\nu}&=\operatorname{Ric}_{\mu\nu}-\tfrac12g_{\mu\nu}\mathcal R,\qquad
+ \Upsilon^\alpha=\nu\left(q^{\mu\nu}\delta C^\alpha{}_{\mu\nu}
+ -q^{\alpha\mu}\delta C^\nu{}_{\nu\mu}\right).
+&&\text{(7.17)}\end{aligned}
+$$
+
+ This is an additional covariant comparison, not a substitution for Einstein’s displayed $H$. In four dimensions $G=0$ is equivalent to $\operatorname{Ric}=0$ by its trace, but the unrestricted first-variation covectors differ. At a unit-volume background, set $f=\delta\log\nu=-g_{\mu\nu}k^{\mu\nu}/2$ and $a^\alpha=q^{\mu\nu}C^\alpha{}_{\mu\nu}$. Although $\mathcal L_1=H$ at that background, <a id="eq-7-18"></a><a id="eq-transverse-action"></a>
+
+$$
+\delta\mathcal L_1-\delta H=fH-a^\alpha\partial_\alpha f
+ =f\mathcal R-\partial_\alpha(a^\alpha f).
+\tag{7.18}
+$$
+
+ Equality of values on a gauge slice is not equality of transverse derivatives.
+
+Nor does fixed boundary metric imply $\delta C=0$. On the Minkowski unit four-cube, vary only the lapse by $\delta N=x(1-x)y(1-y)z(1-z)t(1-t)$. The variation vanishes on every boundary face, yet <a id="eq-7-19"></a><a id="eq-boundary-witness"></a>
+
+$$
+\delta(\nu\mathcal R)=2(\partial_x^2+\partial_y^2+\partial_z^2)\delta N,
+ \qquad \delta S_R=-\frac1{18},\qquad \delta\!\int\mathcal L_1=0.
+\tag{7.19}
+$$
+
+ For each spatial derivative the integral is $2(-2)(1/6)^3=-1/54$; three such terms give the displayed result. The difference is precisely the boundary response. This licenses bulk comparison for compact-interior variations or an explicitly subtracted boundary term, not arbitrary equality of finite-boundary ensembles or charges.

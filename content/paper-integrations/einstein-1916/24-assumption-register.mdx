@@ -1,0 +1,68 @@
+---
+title: "Inspect the assumptions and theorem status"
+description: "Every reconstruction rests on a declared target domain and physical inputs. This register separates those inputs, mathematical consequences, approximation statements and unresolved global questions."
+order: 24
+---
+
+**Every reconstruction rests on a declared target domain and physical inputs. This register separates those inputs, mathematical consequences, approximation statements and unresolved global questions.**
+
+<a id="app-assumptions"></a>
+
+## C. Assumption and theorem-status register
+
+The following inventory separates input premises from reconstructed consequences. IDs are shared with the machine-readable public registers. The presence of an assumption does not imply that the corresponding source residual vanishes before that sector is selected.
+
+<a id="table-1"></a>
+
+| ID  | Component                    | Assumption or domain                                                                                                                       |
+|:----|:-----------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------|
+| A01 | Native support               | The walking marked dependency is in the supplied initial witness class; literal preparation contains no physical field.                    |
+| A02 | Event and measurement domain | Smooth four-dimensional event manifold; nondegenerate local calibrations; Lorentz form (-,-,-,+); fixed units.                             |
+| A03 | Local and global scope       | Local sections use sufficiently small charts; global geometric descriptions use compatible overlaps, not a global coframe.                 |
+| A04 | Differential calculus        | Metric-compatible, torsion-free comparison is the selected realization sector; raw defects remain retained.                                |
+| A05 | Curve dynamics               | Regular non-null length stationarity with fixed endpoints; free massive test-particle interpretation; negligible backreaction.             |
+| A06 | Field variation              | Dependent omega(E); unrestricted symmetric variations before unit-volume specialization; compact support or the specified boundary values. |
+| A07 | Gravity coupling             | Selected vacuum contraction and total-energy matter coupling; fixed nonzero kappa; no cosmological term added to the target.               |
+| A08 | Matter symmetry and join     | Symmetric covariant stress and simultaneous calibration/stress transformations; same geometry and units across joins.                      |
+| A09 | Fluid constitution           | Original rho convention, normalized timelike velocity and supplied equation-of-state relation; no general IVP theorem.                     |
+| A10 | Electromagnetic law          | Potential convention F=-d phi, metric raising, prescribed current and second-index Maxwell divergence; local potential/gauge scope.        |
+| A11 | Charge and transfer          | Zero transfer is a restricted branch; general material carrier requires its own current law; primitive fields are retained beyond stress.  |
+| A12 | Weak-field approximation     | Uniform derivative control and bounded inverse; slow motion, quasi-static source and negligible leading pressure supplied separately.      |
+| A13 | Exterior completion          | Additional static spherical positive-lapse ansatz and asymptotic clock normalization; no arbitrary-vacuum or horizon classification.       |
+| A14 | Observations                 | Specified observer, direction and endpoint protocol; classical test-ray optics; finite deflection remains coordinate-tagged.               |
+| A15 | Orbit and integral domains   | Positive-mass exterior; nonradial bound branch 0\<e\<1, delta(3+e)\<1; optical closest approach d\<2/3.                                    |
+| A16 | Empirical interpretation     | Historical quoted astronomical numbers not independently remeasured; diagnostics use declared dimensionless values.                        |
+
+<a id="evidence-and-theorem-status"></a>
+
+### Evidence and theorem status
+
+Every theorem and proposition in the following register has its proof in the manuscript. Computational tests check implementations, fixtures and invalid alternatives; they are not used as a substitute for the stated general proof. Neither a complete baseline replay nor a matching hash provides independent external review.
+
+<a id="table-2"></a>
+
+| Result                                                                         | Claim                                             | Scope limitation                                                  |
+|:-------------------------------------------------------------------------------|:--------------------------------------------------|:------------------------------------------------------------------|
+| [2.1](/source-readout/einstein-1916/02-source-and-recovery#thm-composition)    | Composition and information-loss criterion        | Set-level factorization is not a regularity theorem.              |
+| [3.1](/source-readout/einstein-1916/03-calibrated-spacetime#thm-metric)        | Local metric section and complete fibre           | No unique native antecedent or global frame.                      |
+| [4.1](/source-readout/einstein-1916/04-comparison-and-tensors#thm-tensor)      | Tensor algebra recovery                           | No restriction to decomposable tensors.                           |
+| [4.2](/source-readout/einstein-1916/04-comparison-and-tensors#thm-omega)       | Compatible comparison existence and uniqueness    | Physical compatibility is selected at realization layer.          |
+| [4.3](/source-readout/einstein-1916/04-comparison-and-tensors#thm-derivative)  | Derivative operation recovery                     | Appended derivative slot is included.                             |
+| [6.1](/source-readout/einstein-1916/06-curvature-and-variations#thm-curvature) | Full curvature recovery                           | Einstein short covector form also needs zero torsion.             |
+| [7.1](/source-readout/einstein-1916/07-vacuum-and-action#thm-action)           | Field action and variation recovery               | Not off-gauge covariant action equivalence.                       |
+| [10.1](/source-readout/einstein-1916/10-conservation-and-flux#thm-doublediv)   | Original conservation identity with volume defect | Zero only after stated volume specialization.                     |
+| [11.1](/source-readout/einstein-1916/11-fluids#thm-fluid)                      | Reversible energy/Euler split                     | No arbitrary EOS well-posedness or division by rho.               |
+| [12.1](/source-readout/einstein-1916/12-electromagnetism#thm-potential)        | Local potential section and gauge fibre           | No global exactness or arbitrary boundary quotient.               |
+| [12.2](/source-readout/einstein-1916/12-electromagnetism#thm-em-energy)        | Complete electromagnetic transfer residual        | Zero-transfer conservation is conditional.                        |
+| [13.1](/source-readout/einstein-1916/13-newtonian-limit#thm-jets)              | Finite-jet operation recovery                     | Not long-time uniform Newtonian convergence.                      |
+| [16.1](/source-readout/einstein-1916/16-light-and-bending#thm-optical)         | Boundary-sensitive optical comparison             | Finite coordinate direction change, not observer-invariant angle. |
+| [17.1](/source-readout/einstein-1916/17-perihelion#thm-perihelion)             | Perihelion coefficient and error bound            | Leading Kepler conversion; no fitted-element error bound.         |
+| [18.1](/source-readout/einstein-1916/18-cumulative-recovery#thm-main)          | Cumulative conditional reconstruction             | No native law selection, new dynamics or independent peer review. |
+
+<a id="what-the-public-verification-binds"></a>
+
+### What the public verification binds
+
+The checks bind explicit algebraic inputs, scripted operations and recorded outputs. The six stage suites use preserved code; the final cross-convention audit is separately written. The release manifest binds the exact files supplied, and the clean replay receipt identifies the fresh extraction on which all suites were executed. The complete equation correspondence has 101 rows. The archive intentionally omits private research instructions and third-party scans. Original source access is bibliographic rather than a hidden runtime dependency: all fixtures needed by the verification are included.
+
+The numerical diagnostics test dimensionless turning integrals, not solar-system measurements. Their arithmetic precision is 65 decimal digits. Each checks a strict error-bound inequality, not approximate equality at an unstated tolerance. No probabilistic significance, unseen holdout validation, interval certification or proof-assistant verification is claimed.

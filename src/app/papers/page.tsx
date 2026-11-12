@@ -1,3 +1,4 @@
+import SourceLiftFeature from '@/components/source-lift-feature';
 import {spectralEditions,spectralHub,gravityEditions,gravityHub} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl} from '@/lib/source-readout';
 import SealedLeakyFeature from '@/components/sealed-leaky-feature';
@@ -46,6 +47,7 @@ export default async function PapersPage() {
           authority.
         </p>
       </header>
+      <SourceLiftFeature/>
       <section aria-labelledby="source-readout-heading" className="card-surface p-6">
         <p className="section-label">Mathematical foundations and constructive development</p>
         <h2 id="source-readout-heading" className="mt-2 text-2xl font-bold">Source and readout</h2>

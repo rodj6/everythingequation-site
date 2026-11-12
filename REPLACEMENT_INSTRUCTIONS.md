@@ -1,18 +1,17 @@
-# Replace the website source on Windows
+# Apply the Einstein and Yang–Mills update on Windows
 
-1. Open PowerShell in your existing checkout. Run `git status --short` and back
-   up the folder or save any work in progress. This package starts from
-   `everythingequation-site-gravity-holography-update.zip`. If you have newer edits,
-   compare them with `GRAVITY_FILE_CHANGES.json` before overwriting files.
-2. Extract this ZIP into a separate folder. Copy the **contents** of its
-   `everythingequation-site` folder into your existing website folder. Include
-   `.github`, `.gitignore` and other supplied repository configuration. The ZIP
-   contains no `.git` folder; keep the one in your checkout.
-3. Keep your local environment files, Vercel linkage, settings and any populated
-   Zenodo cache. Do not delete files just because they are absent from the ZIP
-   or use a mirror-copy command. Review the changed-file inventory and keep
-   newer work that is specific to your checkout.
-4. Use Node 24 in PowerShell, then run:
+1. Back up your existing checkout. In PowerShell, run `git status --short`
+   and save any uncommitted work. This replacement starts from the redesigned
+   `everythingequation-site.zip` supplied on 12 November 2026.
+2. Extract `everythingequation-site-einstein-yang-mills-update.zip` into a
+   separate folder. Copy the **contents** of its `everythingequation-site`
+   folder into your existing website folder and replace matching files.
+   Include the supplied `.github` and `.gitignore` configuration.
+3. Keep your existing `.git`, local environment files, populated local cache,
+   Vercel linkage and machine settings. The replacement ZIP has no Git history.
+   Do not mirror-delete files that are absent from the ZIP. Reconcile any work
+   newer than the supplied baseline using `EINSTEIN_YM_FILE_CHANGES.json`.
+4. Use Node 24, then run:
 
    ```powershell
    npm ci
@@ -20,18 +19,16 @@
    npm run build
    npm run typecheck
    npm run verify:security
-   node scripts/verify-gravity-editions.mjs
+   node scripts/verify-einstein-ym.mjs
    Remove-Item Env:SKIP_ZENODO
    ```
 
-   Run the full `npm run build`. It generates content inventories and installs
-   the route-specific CSP after Next.js completes.
-5. Review `git status --short`, `git diff` and the new files before committing.
-   Push through your existing workflow when satisfied. This package has not
-   been pushed or deployed.
-6. After your deployment, check the published CSP response headers, the two
-   Atlas proof links, Source–Readout search, chapter navigation and downloads.
-   A local adapter build does not test your live deployment.
+   Use the full `npm run build`, which runs content generation and CSP
+   postbuild. Do not run only `next build`.
+5. Review `git status --short`, `git diff` and all added files, then commit
+   and push through your existing workflow when satisfied.
+6. After your Vercel deployment, check the three reading paths, their PDFs,
+   search, Atlas entries/tour, navigation and actual response CSP headers.
 
-See `GRAVITY_ERRATA_REPORT.md` for the correction list, `GRAVITY_COVERAGE.md`
-for source-to-web mapping, and `GRAVITY_VERIFICATION.md` for the test results.
+Nothing in this package was pushed or deployed. Local adapter artifacts and
+browser checks do not certify the live deployment.

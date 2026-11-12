@@ -1,3 +1,4 @@
+import {liftEditions,liftChapters,yangMillsHub} from '@/lib/source-lift';
 import {paperIntegrations,spectralEditions,spectralHub,gravityEditions,gravityHub,gravityReleaseDate,firstOrderKernel,secondOrderDetection,sameBallTakeaway} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl,chapterUrl} from '@/lib/source-readout';
 import {integrationChapters} from '@/lib/paper-integrations';
@@ -65,7 +66,7 @@ function atomTimestamp(value: string): string {
 
 const gravityNew = gravityEditions.filter(p => p.series === 'gravity-holography');
 const gravityEditionDates = new Map(gravityNew.map(p => [p.id, p.date]));
-const editionDate = (id: string, sourceReadout: boolean) => gravityEditionDates.get(id) ?? (sourceReadout ? '2026-11-05' : '2026-10-23');
+const editionDate = (id: string, sourceReadout: boolean) => paperIntegrations.find(p=>p.id===id&&p.series==='source-lift')?.date ?? gravityEditionDates.get(id) ?? (sourceReadout ? '2026-11-05' : '2026-10-23');
 
 export async function generateSitemap(baseUrl: string): Promise<string> {
   const canonicalBase = normalizeBaseUrl(baseUrl);
@@ -74,6 +75,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    {loc:yangMillsHub,lastmod:'2026-11-12',priority:'0.9'},
+    ...liftEditions.flatMap(p=>[{loc:p.url,lastmod:p.date,priority:'0.9'},...liftChapters(p.id).map(c=>({loc:p.url+'/'+c.slug,lastmod:p.date,priority:'0.8'}))]),
     {loc:'/source-readout/origins',lastmod:'2026-10-28',priority:'0.8'},
     {loc:spectralHub,lastmod:'2026-11-05',priority:'0.9'},
     {loc:gravityHub,lastmod:gravityReleaseDate,priority:'0.9'},
@@ -152,6 +155,9 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    {title:'Recovering Yang–Mills through Shadow Theory',url:canonicalBase+yangMillsHub,date:'2026-11-12',summary:'The complete source–readout reconstruction and its standalone mathematical companion.'},
+    ...[...liftEditions,...paperIntegrations.filter(p=>p.series==='source-lift')].map(p=>({title:p.title,url:canonicalBase+p.url,date:p.date,summary:p.description})),
+    ...liftEditions.flatMap(p=>liftChapters(p.id).map(c=>({title:c.title,url:canonicalBase+p.url+'/'+c.slug,date:p.date,summary:p.title}))),
     {title:'Gravity and holography',url:`${canonicalBase}${gravityHub}`,date:gravityReleaseDate,summary:sameBallTakeaway+' Five complete editions trace connections, horizons, and boundary balls.'},
     ...gravityNew.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:p.date,summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
     {title:'CSCF and spectral carriers',url:`${canonicalBase}${spectralHub}`,date:'2026-11-05',summary:'Seven complete web editions connect the common spectral carrier to profile generation, reciprocal memory, forcing, bistability and slow passage.'},
@@ -270,6 +276,8 @@ export async function generateLlmsTxt(): Promise<string> {
     ...sourcePapers().flatMap(p=>[`- [${p.title}](${baseUrl}${paperUrl(p)}): ${p.description}${p.doi?` DOI https://doi.org/${p.doi}`:''}; [PDF](${baseUrl}${p.pdfUrl})`,...p.chapters.map(c=>`  - [${c.title}](${baseUrl}${chapterUrl(p,c)})`)]),
     '',
     '## Complete paper articles',
+    `- [Yang–Mills through Shadow Theory](${baseUrl}${yangMillsHub}): two independently complete reading editions under one publication record.`,
+    ...liftEditions.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [manifest](${baseUrl}${p.manifestUrl})`,...liftChapters(p.id).map(c=>`  - [${c.title}](${baseUrl}${p.url}/${c.slug})`)]),
     `- [Gravity and holography: five-paper reading path](${baseUrl}${gravityHub}): ${sameBallTakeaway}`,
     `  - [First-order fixed-slice kernel](${baseUrl}${firstOrderKernel}) · [Second-order canonical-energy detection](${baseUrl}${secondOrderDetection})`,
     `- [CSCF and spectral carriers](${baseUrl}${spectralHub}): the shared operator, spectral profile generation, reciprocal memory, forcing, bistability and prepared hysteresis.`,
@@ -497,6 +505,8 @@ export async function generateGraph() {
     {id:'source-readout',type:'research-programme',title:'Source and Readout',url:`${baseUrl}/source-readout`,manifest:`${baseUrl}/source-readout/manifest.json`},
     {id:'source-readout:origins',type:'programme-development',title:'From the Everything Equation to Source–Readout Theory',url:`${baseUrl}/source-readout/origins`},
     ...sourcePapers().flatMap(p=>[{id:`source-readout:${p.id}`,type:p.parentId?'technical-companion':'complete-technical-edition',title:p.title,url:`${baseUrl}${paperUrl(p)}`,doi:p.doi,series:p.series},...p.chapters.map(c=>({id:`source-readout:${p.id}:${c.slug}`,type:'technical-section',title:c.title,url:`${baseUrl}${chapterUrl(p,c)}`}))]),
+    {id:'series:yang-mills',type:'shared-publication',title:'Yang–Mills through Shadow Theory',url:baseUrl+yangMillsHub,doi:'10.5281/zenodo.24173681'},
+    ...liftEditions.flatMap(p=>[{id:'lift:'+p.id,type:'complete-reading-edition',title:p.title,url:baseUrl+p.url,publication:'paper:yang-mills',manifest:baseUrl+p.manifestUrl},...liftChapters(p.id).map(c=>({id:'lift:'+p.id+':'+c.slug,type:'complete-reading-chapter',title:c.title,url:baseUrl+p.url+'/'+c.slug,sections:c.sections}))]),
     {id:'series:gravity-and-holography',type:'research-series',title:'Gravity and holography',url:`${baseUrl}${gravityHub}`},
     {id:'series:spectral-carriers',type:'research-series',title:'CSCF and spectral carriers',url:`${baseUrl}${spectralHub}`},
     ...paperIntegrations.map(p=>({id:`integrated:${p.id}`,type:'complete-paper-article',title:p.title,url:`${baseUrl}${p.url}`,doi:p.doi,manifest:`${baseUrl}${p.manifestUrl}`})),
@@ -700,6 +710,9 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  edges.push({from:'source-readout',to:'series:yang-mills',relation:'has-reading-series'});
+  for(const p of liftEditions){edges.push({from:'series:yang-mills',to:'lift:'+p.id,relation:'contains-complete-edition'},{from:'lift:'+p.id,to:'paper:yang-mills',relation:'published-in-shared-record'});const cc=liftChapters(p.id);cc.forEach((c,i)=>{edges.push({from:'lift:'+p.id,to:'lift:'+p.id+':'+c.slug,relation:'contains-complete-chapter'});if(cc[i+1])edges.push({from:'lift:'+p.id+':'+c.slug,to:'lift:'+p.id+':'+cc[i+1].slug,relation:'reading-order'});});}
+  edges.push({from:'atlas:yang-mills-source-readout',to:'lift:yang-mills-reconstruction',relation:'complete-reading-edition'},{from:'atlas:yang-mills-mathematical-companion',to:'lift:yang-mills-companion',relation:'complete-reading-edition'},{from:'atlas:gravity-einstein-1916',to:'integrated:einstein-1916',relation:'complete-reading-edition'});
   edges.push({from:'source-readout',to:'source-readout:origins',relation:'developed-from'});
   for(const p of sourcePapers()){
     edges.push({from:p.parentId?`source-readout:${p.parentId}`:'source-readout',to:`source-readout:${p.id}`,relation:p.parentId?'has-technical-companion':'contains-complete-article'});

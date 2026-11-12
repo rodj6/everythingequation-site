@@ -1,0 +1,114 @@
+---
+title: "Complete the central exterior"
+description: "The leading weak-field data do not supply every higher-order orbital term. A separately identified static spherical completion provides that missing dependency and the exact family used in the optical and orbital estimates."
+order: 14
+---
+
+**The leading weak-field data do not supply every higher-order orbital term. A separately identified static spherical completion provides that missing dependency and the exact family used in the optical and orbital estimates.**
+
+<a id="sec-exterior"></a>
+
+## 14. The central exterior and its higher-order completion
+
+Let $r=|\mathbf x|$, $n=\mathbf x/r$, $P=nn^{\mathsf T}$. Einstein’s first-order exterior Einstein <span className="upright">(70)</span> is <a id="eq-14-1"></a><a id="eq-central-first"></a>
+
+$$
+g_{ij}=-\delta_{ij}-\frac\alpha rP_{ij},\qquad
+ g_{i4}=0,\qquad g_{44}=1-\frac\alpha r.
+\tag{14.1}
+$$
+
+ A calibration is $E=I+\operatorname{diag}(\alpha P/(2r),-\alpha/(2r))+O_{C^2}(\alpha^2)$ on a compact region away from $r=0$. Its first metric variation has zero $\eta$-trace, so unit volume holds to this order. Substitution into the complete linearized Ricci tensor gives zero on $r>0$; the check includes all components, not just $44$.
+
+The force is $\mathrm{d}^2\mathbf x/\mathrm{d}t^2=-\alpha\mathbf x/(2r^3)$. Joining it to [(13.7)](/source-readout/einstein-1916/13-newtonian-limit#eq-green-potential) with the same mass and asymptotic clock gives <a id="eq-14-2"></a><a id="eq-mass-alpha"></a>
+
+$$
+1-\frac\alpha r=1+2\phi=1-\frac{\kappa M}{4\pi r},
+ \qquad
+ \boxed{\alpha=\frac{\kappa M}{4\pi}=\frac{2KM}{c^2}.}
+\tag{14.2}
+$$
+
+ The supplied Einstein <span className="upright">(70a)</span> prints $\kappa M/(8\pi)$; the factor-of-two inconsistency is documented rather than absorbed by changing the meaning of $M$.
+
+Treating [(14.1)](/source-readout/einstein-1916/14-spherical-exterior#eq-central-first) as exact is a different and invalid recovery step: its Cartesian determinant is $-1+\alpha^2/r^2$ and its higher-order Ricci tensor is nonzero. Keeping only $g_{44}$ likewise preserves the Newtonian force but fails the full linear vacuum equation and halves the leading light deflection. The field retained for later operations must contain the required spatial information.
+
+<a id="a-labelled-static-spherical-completion"></a>
+
+### A labelled static spherical completion
+
+The perihelion paragraph explicitly requires a more accurate field and cites earlier work. We now derive the needed exterior within the same source calculus, imposing an additional static spherical ansatz and asymptotic normalization. It is not a classification of all vacuum geometries or an exact metric claimed to appear in Einstein <span className="upright">(70)</span>.
+
+Take coordinates $(r,\theta,\varphi,t)$ on $r>0$, $0<\theta<\pi$ and the unrestricted positive calibration <a id="eq-14-3"></a><a id="eq-raw-radial"></a>
+
+$$
+E_{\rm rad}=\operatorname{diag}(b(r),r,r\sin\theta,a(r)),\qquad a,b>0.
+\tag{14.3}
+$$
+
+ Compute its comparison by [(4.6)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-omega-formula). Equivalently, its nonzero independent frame connections are <a id="eq-14-4"></a><a id="eq-radial-omega"></a>
+
+$$
+\omega^2{}_1=\frac{\theta^2}{br},\qquad
+ \omega^3{}_1=\frac{\theta^3}{br},\qquad
+ \omega^3{}_2=\frac{\cot\theta}{r}\theta^3,\qquad
+ \omega^4{}_1=\frac{a'}{ab}\theta^4,
+\tag{14.4}
+$$
+
+ with $\omega^1{}_2=-\omega^2{}_1$, $\omega^1{}_3=-\omega^3{}_1$, $\omega^2{}_3=-\omega^3{}_2$ and $\omega^1{}_4=\omega^4{}_1$. Exterior differentiation and the matrix products in [(6.1)](/source-readout/einstein-1916/06-curvature-and-variations#eq-framecurvature) give <a id="eq-14-5"></a><a id="eq-radial-Ricci"></a>
+
+$$
+\begin{aligned}
+ \operatorname{Ric}_{rr}&=-\frac{rba''-ra'b'-2ab'}{rab},&&\text{(14.5)}\\
+ \operatorname{Ric}_{tt}&=\frac{a(rba''-ra'b'+2ba')}{rb^3},\\
+ \operatorname{Ric}_{\theta\theta}&=1-\frac1{b^2}+\frac{rb'}{b^3}-\frac{ra'}{ab^2},
+ \qquad \operatorname{Ric}_{\varphi\varphi}=\sin^2\theta\operatorname{Ric}_{\theta\theta},
+\end{aligned}
+$$
+
+ with off-diagonal components zero. The combination <a id="eq-14-6"></a><a id="eq-radial-reduction"></a>
+
+$$
+\frac{\operatorname{Ric}_{tt}}{a^2}+\frac{\operatorname{Ric}_{rr}}{b^2}
+ =\frac{2(ab)'}{rab^3}
+\tag{14.6}
+$$
+
+ shows that vacuum requires $ab$ constant. The asymptotic calibration $a,b\to1$ makes it one. The angular equation becomes $1-a^2-r(a^2)'=0$, whose integral gives <a id="eq-14-7"></a><a id="eq-exterior-calibration"></a>
+
+$$
+\boxed{A(r)=1-\frac\alpha r,\qquad
+ E_{\rm ext}=\operatorname{diag}(A^{-1/2},r,r\sin\theta,A^{1/2}),
+ \qquad
+ \mathrm{d}s^2=A\mathrm{d}t^2-A^{-1}\mathrm{d}r^2-r^2\mathrm{d}\Omega^2.}
+\tag{14.7}
+$$
+
+ Substitution into every component of [(14.5)](/source-readout/einstein-1916/14-spherical-exterior#eq-radial-Ricci) gives zero. The curvature itself is nonzero. We use the static positive-mass domain $r>\alpha>0$, not a global horizon extension or a material interior.
+
+An equivalent Cartesian calibration is <a id="eq-14-8"></a><a id="eq-cartesian-exterior"></a>
+
+$$
+E_{\rm cart}=\begin{pmatrix}
+ I_3+(A^{-1/2}-1)P&0\\0&A^{1/2}
+ \end{pmatrix},\qquad \det E_{\rm cart}=1.
+\tag{14.8}
+$$
+
+ Its spatial radial eigenvalue is $A^{-1/2}$ and both transverse eigenvalues are one. Its metric expands to [(14.1)](/source-readout/einstein-1916/14-spherical-exterior#eq-central-first). In ordinary spherical coordinates, however, $\nu=r^2\sin\theta$, not one. The two descriptions are related by their actual coordinate Jacobian and local spatial-frame rotation.
+
+Schwarzschild’s cited mathematical expression uses areal radius $R=(r_0^3+\alpha^3)^{1/3}$ [\[12\]](/source-readout/einstein-1916/25-references#ref-12); our $r$ in [(14.7)](/source-readout/einstein-1916/14-spherical-exterior#eq-exterior-calibration) is that $R$, not his original $r_0$. The identity $R^2\mathrm{d}R=r_0^2\mathrm{d}r_0$ verifies the volume comparison, and $R-r_0$ begins at order $\alpha^3$ for fixed positive $r_0$. Only the translated mathematical equations are used from that source, not its translators’ introductory interpretation.
+
+<a id="information-needed-beyond-a-first-order-metric"></a>
+
+### Information needed beyond a first-order metric
+
+The raw alternative <a id="eq-14-9"></a><a id="eq-Alambda"></a>
+
+$$
+A_\lambda=1-\frac\alpha r+\lambda\frac{\alpha^2}{r^2},\qquad b^2=A_\lambda^{-1}
+\tag{14.9}
+$$
+
+ agrees with Einstein <span className="upright">(70)</span> to first order but gives angular vacuum residual $1-A_\lambda-rA_\lambda'=\lambda\alpha^2/r^2$. Its orbit polynomial differs from the vacuum result below by $-\lambda\alpha^2(w^2/\ell^2+w^4)$. For weak bound orbits $\ell^2$ is of order $\alpha p$, so this changes the leading relativistic orbital correction. A first-order metric alone does not determine the perihelion advance. The higher-order field law and asymptotic normalization are essential information, supplied by the explicitly labelled completion above.

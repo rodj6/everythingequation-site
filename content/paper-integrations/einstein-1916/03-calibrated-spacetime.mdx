@@ -1,0 +1,166 @@
+---
+title: "Intervals determine the metric"
+description: "A calibration turns coordinate directions into measured components. Its quadratic readout recovers every local Lorentz metric, and its complete fibre identifies precisely the frame freedom left unresolved."
+order: 3
+---
+
+**A calibration turns coordinate directions into measured components. Its quadratic readout recovers every local Lorentz metric, and its complete fibre identifies precisely the frame freedom left unresolved.**
+
+<a id="sec-metric"></a>
+
+## 3. Local measurements and metric recovery
+
+Einstein’s Part A motivates a generally covariant description through local rods and clocks, universal free fall and the invariance of event coincidences. His Machian discussion is motivation, not a theorem establishing that distant matter determines every inertial property. The mathematical starting premise in §4 is local special relativity: the measured infinitesimal interval has form $\eta$, and local measured differentials depend linearly on general coordinate differentials. We inherit that premise and make its representation explicit.
+
+On a patch $U\subset M$, let $E_p:T_pU\to\mathbb R^{3,1}$ be a smooth linear isomorphism. Set <a id="eq-3-1"></a><a id="eq-calibration"></a>
+
+$$
+\theta^a=E^a{}_{\mu}\mathrm{d}x^\mu,\qquad
+ Q_E(p,v)=\eta(E_pv,E_pv),\qquad g=\pi(E)=E^{\mathsf T}\eta E.
+\tag{3.1}
+$$
+
+ Polarization gives $g(u,v)=[Q_E(u+v)-Q_E(u)-Q_E(v)]/2$. Symmetry and nondegeneracy follow immediately, and the invertible change $v\mapsto Ev$ proves the signature. In particular, <a id="eq-3-2"></a><a id="eq-metricdet"></a>
+
+$$
+\det g=-(\det E)^2<0,\qquad
+ q=E^{-1}\eta^{-1}E^{-\mathsf T},\qquad \nu=|\det E|.
+\tag{3.2}
+$$
+
+ Negativity of the determinant alone would not identify the chosen inertia. Equations [(3.1)](/source-readout/einstein-1916/03-calibrated-spacetime#eq-calibration)–[(3.2)](/source-readout/einstein-1916/03-calibrated-spacetime#eq-metricdet) recover Einstein <span className="upright">(1)</span>–Einstein <span className="upright">(4)</span>; $E=I$ gives the special-relativistic coordinate case. The one-forms $\theta^a$ need not be simultaneously exact on an open region.
+
+At one event the ten independent metric components are recovered from four diagonal and six pair evaluations: <a id="eq-3-3"></a><a id="eq-polarization"></a>
+
+$$
+g_{\mu\mu}=Q_E(\partial_\mu),\qquad
+ g_{\mu\nu}=\frac{Q_E(\partial_\mu+\partial_\nu)-Q_E(\partial_\mu)-Q_E(\partial_\nu)}2
+ \quad(\mu<\nu).
+\tag{3.3}
+$$
+
+ This is algebraic coverage of a mathematical readout, not a claim that a laboratory protocol implementing these ten probes has been supplied.
+
+<a id="thm-metric"></a>
+
+### Theorem 3.1 (Local section and complete frame fibre)
+
+Every smooth Lorentz metric of signature [(2.5)](/source-readout/einstein-1916/02-source-and-recovery#eq-conventions) has local calibration preimages. At fixed event coordinates two calibrations $E,\widetilde E$ have the same metric exactly when <a id="eq-3-4"></a><a id="eq-lorentz-fibre"></a>
+
+$$
+\widetilde E=\Lambda E,\qquad \Lambda^{\mathsf T}\eta\Lambda=\eta.
+\tag{3.4}
+$$
+
+ Thus the fibre is precisely the smooth local $O(3,1)$ frame orbit. This is not a quotient by coordinate transformations or a uniqueness theorem for the native source.
+
+<a id="proof-thm-metric"></a>
+
+### Proof.
+
+Choose a sufficiently small chart whose fourth coordinate vector is timelike, and write <a id="eq-3-5"></a><a id="eq-metric-section"></a>
+
+$$
+g=\begin{pmatrix} C&b\\b^{\mathsf T}&a\end{pmatrix},\quad a>0,
+ \qquad S=\frac{bb^{\mathsf T}}a-C,\quad R^{\mathsf T}R=S,
+ \qquad
+ \iota(g)=\begin{pmatrix}R&0\\b^{\mathsf T}/\sqrt a&\sqrt a\end{pmatrix}.
+\tag{3.5}
+$$
+
+ Completion of squares shows $S$ is positive definite: $a$ accounts for the sole positive direction of $g$. Its upper triangular Cholesky factor $R$ with positive diagonal is smooth. Explicitly $R_{11}=\sqrt{S_{11}}$, $R_{1j}=S_{1j}/R_{11}$, $R_{22}=\sqrt{S_{22}-R_{12}^2}$, $R_{23}=(S_{23}-R_{12}R_{13})/R_{22}$ and $R_{33}=\sqrt{S_{33}-R_{13}^2-R_{23}^2}$. All radicands are positive. Multiplication yields $\iota(g)^{\mathsf T}\eta\iota(g)=g$. Every Lorentz metric admits a timelike coordinate direction near any point, so this covers every target locally, not just metrics already in this chart form.
+
+If the two metric readouts agree, put $\Lambda=\widetilde E E^{-1}$. Then $\Lambda^{\mathsf T}\eta\Lambda=E^{-\mathsf T}\widetilde E^{\mathsf T}\eta\widetilde E E^{-1}=\eta$. Conversely [(3.4)](/source-readout/einstein-1916/03-calibrated-spacetime#eq-lorentz-fibre) preserves $g$. Smoothness follows from smooth matrix inversion. Generally $\iota\pi(E)\ne E$, but it is frame equivalent to $E$.
+
+$\square$
+
+<a id="variations-coordinate-changes-and-compatible-patches"></a>
+
+### Variations, coordinate changes and compatible patches
+
+For an arbitrary calibration variation $H$, <a id="eq-3-6"></a><a id="eq-metric-variation"></a>
+
+$$
+D\pi_E[H]=H^{\mathsf T}\eta E+E^{\mathsf T}\eta H,
+ \qquad H=\tfrac12E qh\quad\Longrightarrow\quad D\pi_E[H]=h
+\tag{3.6}
+$$
+
+ for every symmetric metric variation $h$. The kernel consists of $H=AE$ with $A^{\mathsf T}\eta+\eta A=0$, as follows by multiplying $D\pi_E[H]=0$ by $E^{-\mathsf T}$ and $E^{-1}$. Compact support is preserved, and sufficiently small compactly supported variations preserve invertibility. Six vertical frame directions account for the difference between sixteen calibration components and ten metric components; this is not a count of propagating gravitational degrees of freedom.
+
+For $x=x(y)$, let $J=\partial x/\partial y$. Coordinate and frame operations obey <a id="eq-3-7"></a><a id="eq-coordinate-metric"></a>
+
+$$
+E_y=E_xJ,\qquad g_y=J^{\mathsf T}g_xJ,\qquad
+ Q_{E_y}(v_y)=Q_{E_x}(Jv_y),\qquad E'=\Lambda E.
+\tag{3.7}
+$$
+
+ Jacobians compose in chain-rule order. Coordinate injectivity preserves event coincidences. Left frame multiplication and right coordinate multiplication commute with the necessary pullback of their coefficient fields, but are conceptually different operations.
+
+On an atlas retain independent $E_i$ and overlap comparisons $L_{ji}$. Their raw discrepancies include <a id="eq-3-8"></a><a id="eq-overlap-defects"></a>
+
+$$
+E_j-L_{ji}E_iJ_{ij},\qquad L_{ji}^{\mathsf T}\eta L_{ji}-\eta,
+ \qquad L_{ki}-L_{kj}L_{ji},
+ \quad J_{ij}=\frac{\partial x_i}{\partial x_j}.
+\tag{3.8}
+$$
+
+ All values refer to the same event, and reciprocal and identity transition rules are retained. Zero discrepancies give a smooth metric by [(3.7)](/source-readout/einstein-1916/03-calibrated-spacetime#eq-coordinate-metric). Conversely local sections of any smooth global Lorentz metric induce $L_{ji}=E_j(E_iJ_{ij})^{-1}$. Theorem [3.1](/source-readout/einstein-1916/03-calibrated-spacetime#thm-metric) makes these matrices Lorentz; the Jacobian chain rule proves their cocycle identity. This supplies atlas coverage without requiring a global coframe or a trivial frame bundle.
+
+<a id="what-a-coarser-readout-would-lose"></a>
+
+### What a coarser readout would lose
+
+The same event and null-direction records can fail to determine calibrated intervals. On one event domain take $E_1=I$ and $E_2=\Omega I$, $\Omega=1+(x^1)^2$. The null sets agree, but <a id="eq-3-9"></a><a id="eq-conformal-control"></a>
+
+$$
+Q_{E_2}=\Omega^2Q_{E_1},\qquad Q_{E_1}(\partial_4)=1,
+ \qquad Q_{E_2}(\partial_4)=\Omega^2.
+\tag{3.9}
+$$
+
+ Fixed units prevent erasing this nonconstant difference by one unit conversion. Einstein’s measurement coincidences include rods and clock readings; they must not be reduced to an uncalibrated equality relation on events.
+
+At the other extreme, demanding $\theta^a=\mathrm{d}X^a$ simultaneously throughout a neighborhood gives, by invertibility, coordinates $X$ with $g=\eta_{ab}\mathrm{d}X^a\mathrm{d}X^b$. This restricts the geometry to local flatness. Nonclosed calibration forms, however, do not themselves prove curvature.
+
+For an explicit flat counterexample, set $N=1+ax>0$, $a\ne0$, and $E=\operatorname{diag}(1,1,1,N)$. The transformation <a id="eq-3-10"></a><a id="eq-rindler"></a>
+
+$$
+X=(x+a^{-1})\cosh(at)-a^{-1},\qquad
+ T=(x+a^{-1})\sinh(at)
+\tag{3.10}
+$$
+
+ gives $-\mathrm{d}X^2+\mathrm{d}T^2=-\mathrm{d}x^2+N^2\mathrm{d}t^2$. The same interval readout gives $\mathrm{d}\tau=N\mathrm{d}t$ for stationary clocks and $\mathrm{d}x/\mathrm{d}t=\pm N$ for coordinate light speeds, while the local calibrated speed is one. Yet $\mathrm{d}\theta^4=a\mathrm{d}x\wedge\mathrm{d}t\ne0$. Connection and curvature, rather than this frame-dependent nonclosure alone, are needed to distinguish genuine curvature.
+
+<a id="the-rotating-measurement-example"></a>
+
+### The rotating measurement example
+
+Einstein’s rotating-clock and rod argument in §3 is recovered by <a id="eq-3-11"></a><a id="eq-rotation"></a>
+
+$$
+(\theta^1,\theta^2,\theta^3,\theta^4)
+ =(\mathrm{d}r,r(\mathrm{d}\varphi+\Omega\mathrm{d}t),\mathrm{d}z,\mathrm{d}t),
+\tag{3.11}
+$$
+
+ whose metric is <a id="eq-3-12"></a><a id="eq-rotmetric"></a>
+
+$$
+\mathrm{d}s^2=(1-\Omega^2r^2)\mathrm{d}t^2-2\Omega r^2\mathrm{d}\varphi\mathrm{d}t
+ -\mathrm{d}r^2-r^2\mathrm{d}\varphi^2-\mathrm{d}z^2.
+\tag{3.12}
+$$
+
+ The Cartesian map $X=r\cos(\varphi+\Omega t)$, $Y=r\sin(\varphi+\Omega t)$, $Z=z$, $T=t$ independently produces this metric. At fixed rotating spatial coordinates and $|\Omega r|<1$, $\mathrm{d}\tau=\sqrt{1-\Omega^2r^2}\mathrm{d}t$. For a local rest-space rod, orthogonality to that observer gives $g_{44}\mathrm{d}t+g_{4i}\mathrm{d}x^i=0$. Only after retaining the mixed term may one eliminate $\mathrm{d}t$, obtaining <a id="eq-3-13"></a><a id="eq-rotrest"></a>
+
+$$
+\mathrm{d}\ell^2=\left(-g_{ij}+\frac{g_{i4}g_{j4}}{g_{44}}\right)\mathrm{d}x^i\mathrm{d}x^j
+ =\mathrm{d}r^2+\mathrm{d}z^2+\frac{r^2}{1-\Omega^2r^2}\mathrm{d}\varphi^2.
+\tag{3.13}
+$$
+
+ Thus $C(R)=2\pi R/\sqrt{1-\Omega^2R^2}$ and $D(R)=2R$, giving $C/D>\pi$ for a nonzero subluminal rim speed. This is a sum of infinitesimal comoving rod comparisons, not a globally synchronized rotating hypersurface. The center uses a Cartesian patch; the polar frame is not assumed nonsingular at $r=0$.

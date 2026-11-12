@@ -1,0 +1,319 @@
+---
+title: "Recover Maxwell operations and stress"
+description: "The electromagnetic potential, field, current and stress occupy distinct levels. The same geometry carries their derivative operations, gauge fibre and transfer identities, including the information that stress alone cannot recover."
+order: 12
+---
+
+**The electromagnetic potential, field, current and stress occupy distinct levels. The same geometry carries their derivative operations, gauge fibre and transfer identities, including the information that stress alone cannot recover.**
+
+<a id="sec-em"></a>
+
+## 12. Electromagnetic fields, Maxwell operations and stress
+
+Einstein’s §20 starts with a potential, constructs its antisymmetric derivative, raises indices with the metric, supplies a current and derives the electromagnetic stress through a transfer identity. Its heading refers to vacuum, but its displayed sourced equation includes a current. We retain that current as an independent input and keep the original signs and index order.
+
+<a id="primitive-coverage-and-potential-contact"></a>
+
+### Primitive coverage and potential contact
+
+Add a calibrated covector $\alpha$, an independent antisymmetric array $f_{ab}$ and a calibrated current $j^a$. Define <a id="eq-12-1"></a><a id="eq-em-readouts"></a>
+
+$$
+\varphi=E^{\mathsf T}\alpha,\qquad \mathsf F=E^{\mathsf T}fE,\qquad J=E^{-1}j.
+\tag{12.1}
+$$
+
+ The reverse maps are $\alpha=E^{-\mathsf T}\varphi$, $f=E^{-\mathsf T}\mathsf FE^{-1}$ and $j=EJ$. Together with the local metric section they cover every local target primitive tuple. Under a frame change transform $\alpha'=\Lambda^{-\mathsf T}\alpha$, $f'=\Lambda^{-\mathsf T}f\Lambda^{-1}$ and $j'=\Lambda j$ so that all readouts are preserved.
+
+Initially retain the contact and Maxwell residuals <a id="eq-12-2"></a><a id="eq-em-residuals"></a>
+
+$$
+k_{ab}=f_{ab}-(D_b\alpha_a-D_a\alpha_b),\quad
+ h_{abc}=D_af_{bc}+D_bf_{ca}+D_cf_{ab},\quad
+ m^a=D_bf^{ab}-j^a.
+\tag{12.2}
+$$
+
+ The derivative intertwiner gives <a id="eq-12-3"></a><a id="eq-potential-operation"></a>
+
+$$
+E^a{}_{\mu}E^b{}_{\nu}(D_b\alpha_a-D_a\alpha_b)
+ =\partial_\nu\varphi_\mu-\partial_\mu\varphi_\nu.
+\tag{12.3}
+$$
+
+ Coordinate connection terms cancel by symmetry. Equivalently, using the frame structure coefficients, $D_b\alpha_a-D_a\alpha_b=e_b\alpha_a-e_a\alpha_b+c^c{}_{ab}\alpha_c$. This recovers Einstein <span className="upright">(59)</span>, with $\mathsf F=-\mathrm{d}\varphi$ when contact holds. On the raw domain, <a id="eq-12-4"></a><a id="eq-contact-full"></a>
+
+$$
+\mathsf F=-\mathrm{d}\varphi+K,\qquad \mathrm{d}\mathsf F=\mathrm{d}K,
+ \qquad K=\tfrac12k_{ab}\theta^a\wedge\theta^b.
+\tag{12.4}
+$$
+
+ Thus zero contact gives the homogeneous equations $h=0$, or <a id="eq-12-5"></a><a id="eq-homogeneous-maxwell"></a>
+
+$$
+\partial_\tau\mathsf F_{\rho\sigma}
+ +\partial_\rho\mathsf F_{\sigma\tau}
+ +\partial_\sigma\mathsf F_{\tau\rho}=0,
+\tag{12.5}
+$$
+
+ recovering Einstein <span className="upright">(60)</span>. Bare frame-component derivatives are insufficient: a position-dependent Lorentz boost of rapidity $x^1$ with constant coordinate potential $\mathrm{d}x^1$ has actual field zero, but bare antisymmetrized calibrated derivatives give a nonzero $14$ component.
+
+<a id="thm-potential"></a>
+
+### Proposition 12.1 (Local potential section and gauge fibre)
+
+On a star-shaped coordinate neighborhood centered at zero, every smooth closed two-form has an Einstein-convention potential <a id="eq-12-6"></a><a id="eq-potential-section"></a>
+
+$$
+\varphi_\mu(x)=-\int_0^1s\,x^\nu\mathsf F_{\nu\mu}(sx)\mathrm{d}s,
+ \qquad \mathsf F=-\mathrm{d}\varphi.
+\tag{12.6}
+$$
+
+ Locally two potentials with the same field differ by $\mathrm{d}\chi$.
+
+<a id="proof-thm-potential"></a>
+
+### Proof.
+
+Differentiate under the finite integral and use the cyclic identity. The antisymmetric derivative becomes the integral of $\mathrm{d}[s^2\mathsf F_{\mu\nu}(sx)]/\mathrm{d}s$ with the sign specified in [(12.3)](/source-readout/einstein-1916/12-electromagnetism#eq-potential-operation). Smoothness makes the lower endpoint zero; the upper endpoint gives the field. A difference of potentials is a closed one-form, whose radial integral supplies a scalar primitive. In calibrated variables the gauge change is $\alpha_a\mapsto\alpha_a+e_a\chi$.
+
+$\square$
+
+This reconstructs the field, not necessarily the original potential representative. It is a local result; global topology, flux sectors and fixed boundary potential data require additional specifications. Gauge comparisons are allowed only when the retained observables and boundary data agree. The primitive target in the original already contains a potential, so target-potential coverage does not require assuming global exactness for every closed field.
+
+<a id="index-raising-sourced-divergence-and-charge-conservation"></a>
+
+### Index raising, sourced divergence and charge conservation
+
+The raising operation is <a id="eq-12-7"></a><a id="eq-em-raising"></a>
+
+$$
+f^{ab}=\eta^{ac}\eta^{bd}f_{cd},\qquad
+ \mathsf F^{\mu\nu}=(E^{-1})^\mu{}_a(E^{-1})^\nu{}_bf^{ab}
+ =q^{\mu\alpha}q^{\nu\beta}\mathsf F_{\alpha\beta},
+\tag{12.7}
+$$
+
+ recovering Einstein <span className="upright">(62)</span>. Contracting the derivative slot with the second upper field slot gives the exact residual map <a id="eq-12-8"></a><a id="eq-maxwell-divergence"></a>
+
+$$
+\boxed{(E^{-1})^\mu{}_am^a
+ =\nabla_\nu\mathsf F^{\mu\nu}-J^\mu
+ =\nu^{-1}\partial_\nu(\nu\mathsf F^{\mu\nu})-J^\mu.}
+\tag{12.8}
+$$
+
+ The connection acting on the first field index contracts a symmetric pair against antisymmetry and vanishes; the remaining trace supplies $\partial\log\nu$. At $m=0,\nu=1$ this is precisely Einstein <span className="upright">(63)</span>. It differentiates the *second* index, in accordance with the original convention.
+
+Multiply [(12.8)](/source-readout/einstein-1916/12-electromagnetism#eq-maxwell-divergence) by $\nu$, differentiate in $\mu$, and commute partial derivatives. Antisymmetry cancels the double derivative, proving <a id="eq-12-9"></a><a id="eq-charge-residual"></a>
+
+$$
+\nabla_\mu(J^\mu+m^\mu)=0,
+ \qquad m^\mu=(E^{-1})^\mu{}_am^a.
+\tag{12.9}
+$$
+
+ On Maxwell’s equation this is $D_aj^a=0$, equivalently $\partial_\mu(\nu J^\mu)=0$. A nonconserved prescribed current is a failed candidate, not permission to redefine the source after calculating a field.
+
+<a id="the-original-electric-and-magnetic-component-systems"></a>
+
+### The original electric and magnetic component systems
+
+In the unit-volume chart use Einstein’s definitions <a id="eq-12-10"></a><a id="eq-em-components"></a>
+
+$$
+(\mathsf F_{23},\mathsf F_{31},\mathsf F_{12})=\mathbf h,\quad \mathsf F_{i4}=e_i,
+ \qquad (\mathsf F^{23},\mathsf F^{31},\mathsf F^{12})=\mathbf h',\quad \mathsf F^{i4}=-e'_i.
+\tag{12.10}
+$$
+
+ Expand [(12.5)](/source-readout/einstein-1916/12-electromagnetism#eq-homogeneous-maxwell) and [(12.8)](/source-readout/einstein-1916/12-electromagnetism#eq-maxwell-divergence), with $J^i=i_i$ and $J^4=\rho_{\rm el}$: <a id="eq-12-11"></a><a id="eq-12-12"></a><a id="eq-maxwell-vector-hom"></a><a id="eq-maxwell-vector-src"></a>
+
+$$
+\begin{aligned}
+ \partial_t\mathbf h+\operatorname{curl}\mathbf e&=0,&
+ \operatorname{div}\mathbf h&=0,&&\text{(12.11)}\\
+ \operatorname{curl}\mathbf h'-\partial_t\mathbf e'&=\mathbf i,&
+ \operatorname{div}\mathbf e'&=\rho_{\rm el}.
+&&\text{(12.12)}\end{aligned}
+$$
+
+ These recover Einstein <span className="upright">(60a)</span>, Einstein <span className="upright">(60b)</span>, Einstein <span className="upright">(61)</span>, Einstein <span className="upright">(63a)</span> and Einstein <span className="upright">(64)</span>. No extra $4\pi$ or unit coefficient has been inserted. The primed and unprimed arrays need not coincide: even the constant unit-volume calibration $E=\operatorname{diag}(2,3,1,1/6)$ gives <a id="eq-12-13"></a><a id="eq-em-component-control"></a>
+
+$$
+\mathbf e'=(9e_1,4e_2,36e_3),\qquad
+ \mathbf h'=(h_1/9,h_2/4,h_3/36).
+\tag{12.13}
+$$
+
+ The geometry is flat in rescaled coordinates, but its coordinate constitutive relation is not the Cartesian one.
+
+<a id="transfer-and-the-electromagnetic-stress-calculation"></a>
+
+### Transfer and the electromagnetic stress calculation
+
+Define <a id="eq-12-14"></a><a id="eq-em-transfer"></a>
+
+$$
+\xi_b=f_{ba}j^a,\qquad I=f_{ab}f^{ab},
+ \qquad \xi_\mu=E^b{}_{\mu}\xi_b=\mathsf F_{\mu\alpha}J^\alpha.
+\tag{12.14}
+$$
+
+ The symbol $\xi$ avoids confusion with the gravitational coupling $\kappa$. The product/cyclic differentiation in Einstein’s §20 leads to <a id="eq-12-15"></a><a id="eq-12-16"></a><a id="eq-12-17"></a><a id="eq-em-stress-source"></a><a id="eq-em-stress-cov"></a><a id="eq-em-stress-target"></a>
+
+$$
+\begin{aligned}
+ \Sigma^a{}_{b,\rm em}&=-f_{bc}f^{ac}+\tfrac14\delta^a_b I,&&\text{(12.15)}\\
+ \Sigma^{\rm em}_{ab}&=-f_{ac}\eta^{cd}f_{bd}+\tfrac14\eta_{ab}I,&&\text{(12.16)}\\
+ T^\nu{}_{\sigma,\rm em}
+ &=-\mathsf F_{\sigma\alpha}\mathsf F^{\nu\alpha}
+ +\tfrac14\delta^\nu_\sigma\mathsf F_{\alpha\beta}\mathsf F^{\alpha\beta}.
+&&\text{(12.17)}\end{aligned}
+$$
+
+ Symmetry and zero trace follow algebraically. The tensor multiplication and contraction maps prove the last equality from the first two. It is Einstein <span className="upright">(66a)</span>.
+
+<a id="thm-em-energy"></a>
+
+### Theorem 12.2 (Complete electromagnetic transfer identity)
+
+For any smooth antisymmetric raw field and prescribed current in the compatible calculus, <a id="eq-12-18"></a><a id="eq-em-full-residual"></a>
+
+$$
+\boxed{D_a\Sigma^a{}_{b,\rm em}
+ =\xi_b+f_{bc}m^c+\tfrac12f^{cd}h_{bcd}.}
+\tag{12.18}
+$$
+
+
+
+<a id="proof-thm-em-energy"></a>
+
+### Proof.
+
+Use coordinate slots through the proved intertwiner. Set $H_{\sigma\alpha\beta}=\nabla_\sigma\mathsf F_{\alpha\beta}
++\nabla_\alpha\mathsf F_{\beta\sigma}+\nabla_\beta\mathsf F_{\sigma\alpha}$. Contract with $\mathsf F^{\alpha\beta}$. Compatibility makes the first term $\partial_\sigma I/2$, and relabelling shows that the other two terms are equal. Hence <a id="eq-12-19"></a><a id="eq-em-cyclic-product"></a>
+
+$$
+\mathsf F^{\alpha\beta}\nabla_\beta\mathsf F_{\sigma\alpha}
+ =-\tfrac14\partial_\sigma I
+ +\tfrac12\mathsf F^{\alpha\beta}H_{\sigma\alpha\beta}.
+\tag{12.19}
+$$
+
+ The product rule gives 
+
+$$
+\mathsf F_{\sigma\alpha}(J^\alpha+m^\alpha)
+ =\nabla_\beta(\mathsf F_{\sigma\alpha}\mathsf F^{\alpha\beta})
+ -\mathsf F^{\alpha\beta}\nabla_\beta\mathsf F_{\sigma\alpha}.
+$$
+
+ Insert [(12.19)](/source-readout/einstein-1916/12-electromagnetism#eq-em-cyclic-product). Antisymmetry combines the first two divergence terms into [(12.17)](/source-readout/einstein-1916/12-electromagnetism#eq-em-stress-target); moving the homogeneous defect gives the plus sign and one-half coefficient in [(12.18)](/source-readout/einstein-1916/12-electromagnetism#eq-em-full-residual). Read out the remaining calibrated slot in reverse. No Maxwell equation was assumed in this calculation.
+
+$\square$
+
+On $m=h=0$, <a id="eq-12-20"></a><a id="eq-em-transfer-on-shell"></a>
+
+$$
+D_a\Sigma^a{}_{b,\rm em}=\xi_b,\qquad
+ \nabla_\nu T^\nu{}_{\sigma,\rm em}=\xi_\sigma
+ =\nu^{-1}\partial_\nu(\nu T^\nu{}_{\sigma,\rm em})
+ -\tfrac12\partial_\sigma g_{\alpha\beta}T^{\alpha\beta}_{\rm em}.
+\tag{12.20}
+$$
+
+ The unit-volume form is Einstein <span className="upright">(66)</span>; the metric derivative is essential. The raw example $E=I$, $\mathsf F_{12}=z$ with other independent components zero and $J=0$ satisfies the sourced divergence but has $H_{312}=1$ and $\nabla_\nu T^\nu{}_{\sigma}=(0,0,z,0)_\sigma$. Omitting the final term in [(12.18)](/source-readout/einstein-1916/12-electromagnetism#eq-em-full-residual) would wrongly make this nonclosed field conserved.
+
+In a Cartesian calibrated frame the formulas reduce to <a id="eq-12-21"></a><a id="eq-12-22"></a><a id="eq-poynting"></a><a id="eq-force-components"></a>
+
+$$
+\begin{aligned}
+ I&=2(|\mathbf h|^2-|\mathbf e|^2),&
+ T^4{}_4&=\tfrac12(|\mathbf e|^2+|\mathbf h|^2),&
+ T^i{}_4&=(\mathbf e\times\mathbf h)_i,&&\text{(12.21)}\\
+ T_{ij}&=\tfrac12(|\mathbf e|^2+|\mathbf h|^2)\delta_{ij}-e_ie_j-h_ih_j,
+ &&&\\
+ (\xi_i)_{i=1}^3&=\rho_{\rm el}\mathbf e+\mathbf i\times\mathbf h,&
+ \xi_4&=-\mathbf i\cdot\mathbf e.&&
+&&\text{(12.22)}\end{aligned}
+$$
+
+ This verifies Einstein <span className="upright">(65)</span>, Einstein <span className="upright">(65a)</span> and the original Maxwell–Poynting specialization. The time sign describes loss of field energy when $\mathbf i\cdot\mathbf e>0$; spatial covariant and contravariant components must not be identified in this signature.
+
+<a id="the-zero-transfer-branch-and-material-joins"></a>
+
+### The zero-transfer branch and material joins
+
+The original text asserts zero transfer for “free” electric masses and then explicitly uses $\xi=0$ when identifying Einstein <span className="upright">(66)</span> with the earlier matter-conservation law. The displayed Maxwell equations do not by themselves prove $\mathsf F_{\sigma\mu}J^\mu=0$. We therefore retain the zero-transfer restriction without promoting that prose to a general charge-motion theorem.
+
+For an exact equation-level control, take $E=I$, $\varphi_4=-x^2/2$, $\varphi_i=0$, $\mathsf F_{14}=x$, and $J=(0,0,0,1)$. Both Maxwell systems hold, but $\xi=(x,0,0,0)\ne0$. This is a Maxwell solution on a fixed background, not a coupled gravitational solution or a model of freely moving charges.
+
+If fluid and electromagnetic stress are joined to an independently supplied stress, retain the interface residual $\Delta\Sigma=\Sigma-\Sigma^{\rm fl}-\Sigma^{\rm em}$. On zero interface discrepancy, define $\mathscr K=\mathscr G-\kappa(\Sigma^{\rm fl}+\Sigma^{\rm em})$. The source Bianchi identity and Theorem [12.2](/source-readout/einstein-1916/12-electromagnetism#thm-em-energy) give <a id="eq-12-23"></a><a id="eq-joined-matter-residual"></a>
+
+$$
+D_a\mathscr K^a{}_b=-\kappa\left(
+ \mathscr R_b^{\rm fl}+\xi_b+f_{bc}m^c+\tfrac12f^{cd}h_{bcd}\right).
+\tag{12.23}
+$$
+
+ For nonzero interface discrepancy add $-\kappa D_a\Delta\Sigma^a{}_b$. On the fully coupled Maxwell sector the fluid equation is $\mathscr R_b^{\rm fl}=-\xi_b$; its energy and orthogonal force projections are $-v^b\xi_b$ and $-\Pi_b{}^c\xi_c$. The transfer cancels in the same-realization sum. A law linking charge current to fluid variables is additional information not supplied by these sections. For pure electromagnetic stress as the entire material source, the coupled equations require $\xi=0$, automatically satisfied when $J=0$.
+
+Stress alone cannot replace the primitive electromagnetic state: $\Sigma^{\rm em}(f)=\Sigma^{\rm em}(-f)$, although a potential gauge transformation does not reverse the field. By Lemma [2.1](/source-readout/einstein-1916/02-source-and-recovery#thm-composition), a gravitational stress readout cannot be used to recover every subsequent electromagnetic operation. The field, current and retained potential/boundary records must remain available.
+
+<a id="sec-em-example"></a>
+
+### A complete same-realization Einstein–Maxwell check
+
+Let $u=t-z$, $v_0=(t+z)/2$, choose a smooth amplitude $A(u)$ and a local primitive $B'=A$. Specify <a id="eq-12-24"></a><a id="eq-em-wave"></a>
+
+$$
+\varphi=B(u)\mathrm{d}x,\quad \mathsf F=A(u)\mathrm{d}x\wedge\mathrm{d}u,\quad J=0,
+ \qquad H=\frac\kappa2 A(u)^2(x^2+y^2).
+\tag{12.24}
+$$
+
+ The metric and explicit unit-volume calibration are <a id="eq-12-25"></a><a id="eq-wave-calibration"></a>
+
+$$
+\mathrm{d}s^2=-\mathrm{d}x^2-\mathrm{d}y^2+2\mathrm{d}u\mathrm{d}v_0+H\mathrm{d}u^2,
+ \qquad E_w=\begin{pmatrix}
+ 1&0&0&0\\0&1&0&0\\0&0&1-H/2&H/2\\0&0&-H/2&1+H/2
+ \end{pmatrix}.
+\tag{12.25}
+$$
+
+ Its determinant is one and $\theta^4-\theta^3=\mathrm{d}u$, so the calibrated field has $f_{14}=A$ and $f_{13}=-A$. In null coordinates the only nonzero connection types are <a id="eq-12-26"></a><a id="eq-wave-connection"></a>
+
+$$
+C^i{}_{uu}=\tfrac12\partial_iH\ (i=x,y),\quad
+ C^{v_0}{}_{ui}=C^{v_0}{}_{iu}=\tfrac12\partial_iH,\quad
+ C^{v_0}{}_{uu}=\tfrac12\partial_uH.
+\tag{12.26}
+$$
+
+ They give <a id="eq-12-27"></a><a id="eq-wave-field-equation"></a>
+
+$$
+\operatorname{Ric}_{uu}=\tfrac12(H_{xx}+H_{yy})=\kappa A^2,
+ \quad \mathcal R=0,\quad T_{\rm em}=A^2\mathrm{d}u\otimes\mathrm{d}u,
+ \quad G=\kappa T_{\rm em}.
+\tag{12.27}
+$$
+
+ All other Ricci components vanish. The field is closed since $\mathrm{d}A$ is proportional to $\mathrm{d}u$. Its only independent raised null-coordinate component is $\mathsf F^{xv_0}=-A(u)$, whose second-index divergence vanishes. Thus the primitive field, its stress and the gravitational equation hold jointly. The transverse curvature equation determines $H$ from the chosen amplitude; the stress was not defined after computing $G$.
+
+For the executed profile $A=1+u$, $\kappa=2$, direct evaluation of the chart-tagged gravitational current gives $t=0$, while $T^4{}_4=T^3{}_4=(1+t-z)^2$. On the unit spatial cube, <a id="eq-12-28"></a><a id="eq-wave-flux"></a>
+
+$$
+Q_4=\frac{(1+t)^3-t^3}{3},\qquad
+ \Phi_4^{\rm out}=t^2-(1+t)^2,\qquad Q_4'+\Phi_4^{\rm out}=0.
+\tag{12.28}
+$$
+
+ This is a nonzero finite-flux check, not a claim that gravitational energy universally vanishes. Doubling the electromagnetic field while retaining the geometry still solves source-free Maxwell but quadruples the stress and violates the gravitational equation, explicitly rejecting an incompatible join.

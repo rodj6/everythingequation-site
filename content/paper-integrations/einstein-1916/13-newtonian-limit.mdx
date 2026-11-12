@@ -1,0 +1,136 @@
+---
+title: "Fix the Newtonian normalization"
+description: "Controlled weak-field and slow-motion reductions connect the covariant theory to Newtonian acceleration. Derivative norms, matter scaling and the chosen quasi-static regime keep the approximation quantitative."
+order: 13
+---
+
+**Controlled weak-field and slow-motion reductions connect the covariant theory to Newtonian acceleration. Derivative norms, matter scaling and the chosen quasi-static regime keep the approximation quantitative.**
+
+<a id="sec-newton"></a>
+
+## 13. Finite-order reconstruction and the Newtonian limit
+
+Einstein’s §21 introduces weak metric departures from special relativity, normalization at spatial infinity, slow test motion and quasi-static source variation as distinct restrictions. We preserve their order. The approximation operation acts on the existing realization rather than defining a new source by its successful limiting answer.
+
+<a id="thm-jets"></a>
+
+### Theorem 13.1 (Finite-jet recovery)
+
+Let $E(\varepsilon,x)$ be sufficiently smooth in $\varepsilon$ and spacetime variables on a fixed patch, with uniformly bounded inverse on the compact domain used. Finite Taylor coefficients in $\varepsilon$ commute with the recovered algebraic and differential operations, using truncated products and inverses and the derivative-norm remainder bounds required by each operation. In particular, with uniform $C^2$ control, <a id="eq-13-1"></a><a id="eq-linear-calibration"></a>
+
+$$
+E=I+\varepsilon H+O_{C^2}(\varepsilon^2)
+ \quad\Longrightarrow\quad
+ g=\eta+\varepsilon h+O_{C^2}(\varepsilon^2),\quad
+ h=H^{\mathsf T}\eta+\eta H.
+\tag{13.1}
+$$
+
+ Every symmetric coefficient $h$ has a lift $H=\eta h/2$.
+
+<a id="proof-thm-jets"></a>
+
+### Proof.
+
+All readouts are finite products, contractions or inverses on the nondegenerate domain. The comparison uses first derivatives and curvature uses second derivatives. Taylor’s theorem, Leibniz’ rule and differentiation of $E^{-1}E=I$ determine the coefficient operations. The bounded inverse prevents denominator singularities; uniform derivative remainders justify differentiating before truncation. Differentiating the exact intertwining identities then proves coefficient equality. At second order, 
+
+$$
+h_2=H_2^{\mathsf T}\eta+\eta H_2+H_1^{\mathsf T}\eta H_1,
+ \qquad H_2=\tfrac12\eta(h_2-H_1^{\mathsf T}\eta H_1),
+$$
+
+ showing constructive next-coefficient coverage. The smooth local section also lifts full nearby metric families.
+
+$\square$
+
+This is finite-order operation recovery, not a long-time Newtonian-limit theorem for arbitrary Einstein–matter solutions. Weak amplitude alone is insufficient: $h_{44}=\varepsilon^2\sin(x/\varepsilon)$ tends uniformly to zero but $\partial_x^2h_{44}=-\sin(x/\varepsilon)$ need not. The derivative control is a stated mathematical refinement of the approximation, not a rigor claim attributed to Einstein’s prose.
+
+<a id="coordinate-time-and-the-slow-motion-operation"></a>
+
+### Coordinate time and the slow-motion operation
+
+For $v^i=\mathrm{d}x^i/\mathrm{d}t$, write $w^\mu=(v^1,v^2,v^3,1)$. Dividing the affine geodesic equation by $(\mathrm{d}t/\mathrm{d}s)^2$ and eliminating $\mathrm{d}^2t/\mathrm{d}s^2$ through its fourth component gives <a id="eq-13-2"></a><a id="eq-coordinate-time"></a>
+
+$$
+\boxed{\frac{\mathrm{d}^2x^i}{\mathrm{d}t^2}
+ =-C^i{}_{\mu\nu}w^\mu w^\nu
+ +C^4{}_{\mu\nu}w^\mu w^\nu v^i.}
+\tag{13.2}
+$$
+
+ Its source form is $D_t(Ew)=C^4{}_{\mu\nu}w^\mu w^\nu Ew$. Coordinate time is generally nonaffine, so the final term cannot be discarded merely by choosing $t$ as parameter.
+
+For $g=\eta+h$ to first order, $C^{i(1)}{}_{44}=-\partial_4h_{i4}+\partial_i h_{44}/2$. Taking slow motion and quasi-static variation in addition to weak field yields <a id="eq-13-3"></a><a id="eq-newton-motion"></a>
+
+$$
+\boxed{\frac{\mathrm{d}^2x^i}{\mathrm{d}t^2}=-\frac12\partial_i g_{44}}
+\tag{13.3}
+$$
+
+ at the retained order, which is Einstein <span className="upright">(67)</span>. A sufficient local bound makes the discarded terms explicit. Let $\delta=\|h\|_\infty<1$ in maximum absolute row-sum norm, $M=\max|\partial_\lambda h_{\mu\nu}|$, $b=\sum_i|v^i|$ and $A_t=\max_i|\partial_4h_{i4}|$. Neumann inversion gives $\|q\|_\infty\le(1-\delta)^{-1}$, so connection components and their nonlinear corrections are bounded by $3M/[2(1-\delta)]$ and $3\delta M/[2(1-\delta)]$. Expanding [(13.2)](/source-readout/einstein-1916/13-newtonian-limit#eq-coordinate-time) then gives <a id="eq-13-4"></a><a id="eq-newton-error"></a>
+
+$$
+\left|\frac{\mathrm{d}^2x^i}{\mathrm{d}t^2}+\frac12\partial_i h_{44}\right|
+ \le A_t+\frac{3M}{2(1-\delta)}
+ [\delta+2b+b^2+b(1+b)^2].
+\tag{13.4}
+$$
+
+ This is a chart-specific sufficient bound with fixed derivative units, not an optimal invariant trajectory estimate.
+
+<a id="the-field-reduction-and-material-assumptions"></a>
+
+### The field reduction and material assumptions
+
+Expansion of the full curvature gives <a id="eq-13-5"></a><a id="eq-linear-Ric44"></a>
+
+$$
+\boxed{\operatorname{Ric}^{(1)}_{44}
+ =\tfrac12\Delta h_{44}-\sum_i\partial_i\partial_4h_{i4}
+ +\tfrac12\sum_i\partial_4^2h_{ii}.}
+\tag{13.5}
+$$
+
+ It follows by inserting the linear Christoffel expression into [(2.6)](/source-readout/einstein-1916/02-source-and-recovery#eq-signs); Theorem [13.1](/source-readout/einstein-1916/13-newtonian-limit#thm-jets) supplies the same source response. The quasi-static approximation removes the last two terms. Pressure and spatial motion are separately negligible in Einstein’s material approximation, giving $T_{44}\simeq\rho$, $\tau\simeq\rho$ and a trace-reversed $44$ component $\rho/2$. Thus <a id="eq-13-6"></a><a id="eq-poisson-g44"></a>
+
+$$
+\tfrac12\Delta h_{44}=\tfrac12\kappa\rho,
+ \qquad \boxed{\Delta g_{44}=\kappa\rho,}
+\tag{13.6}
+$$
+
+ recovering Einstein <span className="upright">(68)</span>. Weak metric amplitude alone would not remove pressure: the exact comoving fluid form gives trace-reversed $44$ component $\rho/2+p$.
+
+Define $\phi=(g_{44}-1)/2$. Subtracting the constant fixes $\phi\to0$ at infinity without changing the force. For smooth compactly supported density on Euclidean three-space, <a id="eq-13-7"></a><a id="eq-green-potential"></a>
+
+$$
+\Delta\phi=\tfrac12\kappa\rho,
+ \qquad
+ \boxed{\phi(\mathbf x)=-\frac\kappa{8\pi}
+ \int\frac{\rho(\mathbf y)}{|\mathbf x-\mathbf y|}\mathrm{d}^3y.}
+\tag{13.7}
+$$
+
+ This is Einstein <span className="upright">(68a)</span>. The coefficient follows from the outward flux of $\nabla(1/r)$, equal to $-4\pi$, and hence $\Delta(1/r)=-4\pi\delta$ distributionally. The difference of two globally regular decaying solutions is harmonic; the maximum principle on expanding balls proves uniqueness. On an exterior domain alone, decay does not eliminate all harmonic multipoles: inner boundary or flux data remain necessary.
+
+A joined scalar check for a uniform ball of radius $R$ is <a id="eq-13-8"></a><a id="eq-poisson-ball"></a>
+
+$$
+\phi_{\rm in}=\frac{\kappa\rho}{12}(r^2-3R^2),\qquad
+ \phi_{\rm out}=-\frac{\kappa\rho R^3}{6r},\qquad
+ M=\frac{4\pi\rho R^3}{3}.
+\tag{13.8}
+$$
+
+ Potential and radial derivative match at $R$, so no spurious surface source appears. This verifies a Poisson boundary operation, not an exact relativistic interior fluid solution.
+
+Restoring physical time by $x^4=ct_{\rm phys}$ gives physical potential $U=c^2\phi$. Comparison with $U=-K\int\rho/r$ in Einstein’s mass-equivalent density convention yields <a id="eq-13-9"></a><a id="eq-kappa-units"></a>
+
+$$
+\boxed{\kappa_{\rm mass}=\frac{8\pi K}{c^2},\qquad
+ T_{\rm energy}=c^2T_{\rm mass},\qquad
+ \kappa_{\rm energy}=\frac{8\pi K}{c^4}.}
+\tag{13.9}
+$$
+
+ The first is Einstein <span className="upright">(69)</span>; the second normalization is the same equation expressed with energy-density stress. No present-day numerical gravitational constant is inferred from the original historical estimate.

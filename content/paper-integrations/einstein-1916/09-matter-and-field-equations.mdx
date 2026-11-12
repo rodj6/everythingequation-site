@@ -1,0 +1,107 @@
+---
+title: "Put matter on the same realization"
+description: "Geometry and stress must share one calibration, comparison and normalization. Joint sections and variations recover their coupling, with trace reversal preserving information that trace deletion would lose."
+order: 9
+---
+
+**Geometry and stress must share one calibration, comparison and normalization. Joint sections and variations recover their coupling, with trace reversal preserving information that trace deletion would lose.**
+
+<a id="sec-matter"></a>
+
+## 9. Matter on the same realization and the general field equation
+
+Einstein’s §16 introduces a matter energy array whose covariant form is symmetric and replaces the gravitational energy by gravitational plus matter energy in Einstein <span className="upright">(51)</span>. He explicitly acknowledges that the relativity postulate alone does not justify this coupling. We inherit that premise and construct its operations on the same calibration, connection, coordinate domain and normalization.
+
+Add a raw calibrated two-array $\Sigma$, retaining its antisymmetric part as a discrepancy until the symmetric sector is selected. Define <a id="eq-9-1"></a><a id="eq-stress-map"></a>
+
+$$
+T=E^{\mathsf T}\Sigma E,\qquad
+ T^\mu{}_{\nu}=(E^{-1}\eta^{-1}\Sigma E)^\mu{}_{\nu},\qquad
+ \tau=\operatorname{tr}(qT)=\operatorname{tr}(\eta^{-1}\Sigma).
+\tag{9.1}
+$$
+
+ For a fixed $E$, the reverse is $\Sigma=E^{-\mathsf T}TE^{-1}$. Hence every smooth local metric and symmetric-stress pair has a joint realization. Equal pairs are represented precisely by <a id="eq-9-2"></a><a id="eq-joint-frame"></a>
+
+$$
+E'=\Lambda E,\qquad \Sigma'=\Lambda^{-\mathsf T}\Sigma\Lambda^{-1},
+ \qquad \Lambda^{\mathsf T}\eta\Lambda=\eta,
+\tag{9.2}
+$$
+
+ with the previously determined comparison transformation. This follows from Theorem [3.1](/source-readout/einstein-1916/03-calibrated-spacetime#thm-metric) and cancellation of $E$ in the equal stress readouts. Changing only the calibration or only the stress is generally a different physical preparation.
+
+Joint tangent coverage is equally explicit. For desired $h=\delta g$ and $K_T=\delta T$, let $H=\delta E=Eqh/2$ and $A=HE^{-1}$. Then <a id="eq-9-3"></a><a id="eq-stress-variation"></a>
+
+$$
+\delta\Sigma=E^{-\mathsf T}K_TE^{-1}-A^{\mathsf T}\Sigma-\Sigma A.
+\tag{9.3}
+$$
+
+ Differentiating [(9.1)](/source-readout/einstein-1916/09-matter-and-field-equations#eq-stress-map) proves both prescribed responses. Holding the coordinate stress fixed corresponds to $K_T=0$, not generally to $\delta\Sigma=0$. This is a readout-response identity, not an assumed universal matter action.
+
+<a id="trace-reversal-not-trace-deletion"></a>
+
+### Trace reversal, not trace deletion
+
+For any covariant two-array define <a id="eq-9-4"></a><a id="eq-trace-reversal"></a>
+
+$$
+\mathsf J_g(A)=A-\tfrac12g\operatorname{tr}(qA),\qquad
+ \mathsf J_\eta(S)=S-\tfrac12\eta\operatorname{tr}(\eta^{-1}S).
+\tag{9.4}
+$$
+
+ In four dimensions, $\operatorname{tr}_q\mathsf J_g(A)=-\operatorname{tr}_q A$ and $\mathsf J_g^2(A)=A$. Substitution gives <a id="eq-9-5"></a><a id="eq-trace-intertwiner"></a>
+
+$$
+E^{\mathsf T}\mathsf J_\eta(\Sigma)E=\mathsf J_g(T).
+\tag{9.5}
+$$
+
+ It is an invertible operation, unlike the trace-free projection $A-g\operatorname{tr}(qA)/4$.
+
+Retain the source-action current $t$ of [(8.4)](/source-readout/einstein-1916/08-gravitational-energy#eq-tquad); it is not separately fitted to matter. Set <a id="eq-9-6"></a><a id="eq-total-current"></a>
+
+$$
+\mathcal J^\sigma{}_{\mu}=t^\sigma{}_{\mu}+T^\sigma{}_{\mu},
+\tag{9.6}
+$$
+
+ and retain the off-shell coupled residuals <a id="eq-9-7"></a><a id="eq-coupled-residuals"></a>
+
+$$
+U=W+\kappa\mathsf J_g(T),\quad
+ Z=\operatorname{Ric}-\kappa\mathsf J_g(T),\quad
+ \mathcal K=\mathsf J_g(Z)=G-\kappa T,
+ \qquad U=-Z-S.
+\tag{9.7}
+$$
+
+ Adding the same stress to [(8.5)](/source-readout/einstein-1916/08-gravitational-energy#eq-mixed-vacuum) proves, on the unrestricted chart domain, <a id="eq-9-8"></a><a id="eq-mixed-coupled"></a>
+
+$$
+\boxed{\partial_\alpha(q^{\sigma\beta}\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta})
+ +\kappa\left(\mathcal J^\sigma{}_{\mu}
+ -\tfrac12\delta^\sigma_\mu\operatorname{tr}\mathcal J\right)
+ =q^{\sigma\beta}U_{\mu\beta}.}
+\tag{9.8}
+$$
+
+ Einstein’s total-energy replacement selects the zero of the left side in a unit-volume chart. Invertibility of $q$ gives $U=0$, recovering Einstein <span className="upright">(52)</span> and Einstein <span className="upright">(53)</span>. Since $S=0$ there, the equivalent generally covariant equation is <a id="eq-9-9"></a><a id="eq-einstein-equation"></a>
+
+$$
+\boxed{\operatorname{Ric}_{\mu\nu}=\kappa(T_{\mu\nu}-\tfrac12g_{\mu\nu}\tau)
+ \quad\Longleftrightarrow\quad G_{\mu\nu}=\kappa T_{\mu\nu}.}
+\tag{9.9}
+$$
+
+ The scalar equation is $\mathcal R=-\kappa\tau$, so no trace component has been lost. In the calibrated representation, <a id="eq-9-10"></a><a id="eq-source-einstein"></a>
+
+$$
+\boxed{\mathscr G_{ab}=\kappa\Sigma_{ab},\qquad
+ \mathscr G=\mathscr R-\tfrac12\eta\operatorname{tr}(\eta^{-1}\mathscr R).}
+\tag{9.10}
+$$
+
+ Equations [(7.2)](/source-readout/einstein-1916/07-vacuum-and-action#eq-source-ricci) and [(9.5)](/source-readout/einstein-1916/09-matter-and-field-equations#eq-trace-intertwiner) prove both directions. Every target solution pair lifts using the local metric section and the stress inverse; every source solution reads to such a pair. This is conditional solution-set recovery, not independent selection of the action or matter coupling.

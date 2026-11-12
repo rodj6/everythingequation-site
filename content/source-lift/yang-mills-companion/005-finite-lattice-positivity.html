@@ -1,0 +1,142 @@
+<a id="section-4"></a><h2 id="p011-block-004" data-source-page="11">Finite-lattice positivity</h2>
+<p id="p011-block-005" data-source-page="11">Reflection positivity starts at the finite Wilson law. Cutting a torus into two reflected halves rewrites each seam contribution as a positive kernel, so that a future observable paired with its reflected conjugate has nonnegative expectation. The finite-dimensional statement gives the null-space quotient used later to build a Hilbert space. It is also the input to the chessboard bounds: positivity converts a product of separated chamber observables into a product of individual rooted bounds. The details below retain the seam and orientation conventions needed for both uses.</p>
+<p id="p011-block-005-paragraph-2" data-source-page="11">First the finite Wilson law is an actual probability measure. Every unitary matrix<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018559.svg" alt=" V" style="width:1.2064em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> has <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018560.svg" alt="−m ≤" style="width:2.8582em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>Re tr<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018561.svg" alt=" V ≤m" style="width:3.3311em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>: each diagonal entry has modulus at most one. Thus every plaquette price lies <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018562.svg" alt="in [0," style="width:2.4027em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 2]. If there are<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018563.svg" alt=" F" style="width:1.1513em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> plaquettes and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018564.svg" alt=" β ≥" style="width:2.2303em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>0, its continuous density relative to the product Haar probability measure obeys</p>
+<figure class="sr-formula" id="p011-block-006" data-source-page="11"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p011-000158.svg" alt="e−2βF ≤e−βS(U) ≤1,
+e−2βF ≤Z ≤1." width="200.89" height="17.21" style="width:18.431em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 11.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>e−2βF ≤e−βS(U) ≤1,
+e−2βF ≤Z ≤1.</pre></details></figure>
+<p id="p011-block-007" data-source-page="11">In particular normalization is legitimate and bounded measurable cylinders are integrable. A site gauge change multiplies a link on its two ends; by Haar invariance its change of variables preserves the product prior. Its plaquette holonomy is conjugated at the base site, so the trace and the action are unchanged. The normalized law is consequently gauge invariant. A signed lattice permutation merely reindexes plaquettes, possibly reversing their holonomies; inversion preserves their real traces. It too preserves both the prior and the law. The local representatives in <a href="/source-readout/yang-mills-companion/037-physical-labels-and-their-detection#equation-pf12">(PF12)</a>, and their finite products, therefore have precisely the finite-lattice expectations used below.</p>
+<p id="p011-block-007-paragraph-2" data-source-page="11">Reflection positivity is the nonnegativity of the expectation of a future observable times its reflected complex conjugate. It is a property of this finite law, before any quotient or completion. The Wilson measures used throughout have that property at every nonnegative coupling. We give the finite-dimensional argument, since it also supplies the rooted bounds used in extraction.</p>
+<p id="p011-block-007-paragraph-3" data-source-page="11">First, the kernel <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-018565.svg" alt="K(g, h) = Re tr(gh∗)" style="width:9.1407em;height:1.3625em;vertical-align:-0.23em" loading="lazy"/></p>
+<p id="p011-block-008" data-source-page="11">on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p011-000160.svg" alt=" G" style="width:1.3891em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is positive semidefinite: it is the real Euclidean inner product of the real and imaginary matrix entries. Finite sums, pullbacks, nonnegative multiples and pointwise products of positive</p>
+<a id="source-page-12"></a>
+<p id="p012-block-001" data-source-page="12">semidefinite kernels are positive semidefinite. For the product assertion, express each finite positive semidefinite matrix as a Gram matrix and tensor its Gram vectors. The exponential of such a kernel is positive semidefinite as well, by its power series with nonnegative coefficients and entrywise limits of the resulting finite matrices.</p>
+<p id="p012-block-001-paragraph-2" data-source-page="12">Cut the periodic lattice perpendicular to a coordinate axis. A leaf<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p012-018566.svg" alt=" X" style="width:1.4372em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> consists of the links tangent to one slice, and a thread consists of the links joining successive slices. With the thread fixed at the identity, the factor joining two leaves has the form</p>
+<a id="equation-rp1"></a><figure class="sr-formula" id="p012-block-003" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p012-000162.svg" alt="&quot;
+β
+m
+#
+X
+Wβ(X, Y ; 1) = e−βq Eβ(X)Eβ(Y ) exp
+l
+Re tr(XlY ∗
+l)
+,
+(RP1)" width="377.67" height="41.02" style="width:34.649em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>&quot;
+β
+m
+#
+X
+Wβ(X, Y ; 1) = e−βq Eβ(X)Eβ(Y ) exp
+l
+Re tr(XlY ∗
+l)
+,
+(RP1)</pre></details></figure>
+<a id="equation-rp2"></a><figure id="p012-block-008" class="sr-formula sr-source-panel" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p012-000163.svg" alt="where q counts the crossing plaquettes and Eβ is the positive factor from the allocated half of the
+tangential action. Thus (RP1) is a continuous positive semidefinite kernel for β ≥0.
+For general threads, use their endpoint gauge action on the leaf links. Haar invariance gives the
+identity
+Z
+Wβ(X, Y ; u) du =
+ZZ
+Wβ(u · X, v · Y ; 1) du dv.
+(RP2)" width="471.27" height="71.21" style="width:43.236em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>where q counts the crossing plaquettes and Eβ is the positive factor from the allocated half of the
+tangential action. Thus (RP1) is a continuous positive semidefinite kernel for β ≥0.
+For general threads, use their endpoint gauge action on the leaf links. Haar invariance gives the
+identity
+Z
+Wβ(X, Y ; u) du =
+ZZ
+Wβ(u · X, v · Y ; 1) du dv.
+(RP2)</pre></details></figure>
+<section class="sr-derivation" id="p012-block-009" data-source-page="12"><p data-source-page="12">Both integrations use the product normalized Haar measure on the thread variables. The identity follows by replacing one thread variable by its left translate and combining the two endpoint gauge actions. The right side is positive semidefinite: apply the positive-kernel quadratic inequality to finite linear combinations of the averaged feature vectors, or approximate the integrals by simple functions in the same Gram identity. All integrands are continuous and bounded on compact spaces, so this passage and Fubini are justified. The averaged kernel in <a href="/source-readout/yang-mills-companion/005-finite-lattice-positivity#equation-rp2">(RP2)</a> is continuous by dominated convergence.</p><p data-source-page="12">Now split the lattice into the two halves of the reflection. For a reflection through sites, the two halves share the seam-site variables, and after fixing them the cross kernel is the constant kernel 1. For a reflection through links, there are two seam threads on the periodic lattice. They are distinct even at the shortest allowed half-length. Their joint Haar law is the product thread law. After integration, the cross kernel is the product of the two kernels <a href="/source-readout/yang-mills-companion/005-finite-lattice-positivity#equation-rp2">(RP2)</a>, one with its leaf arguments reversed. It is again positive semidefinite.</p><figure class="sr-formula" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p012-016814.svg" alt="To make the splitting precise, list the seam variables, the two seam threads when present, and
+the open variables on the two halves. Assemble the original link configuration by their coordinate
+assignments and the endpoint gauge multiplications along the cut direction. Each change of coor-
+dinates multiplies a Haar link variable on the left or right by fixed already listed group elements,
+or inverts that variable. Iterated Haar invariance shows that this assembly preserves the product
+prior. Reading each plaquette shows that the action splits into the two half factors and the seam
+factor just described. A probe F supported strictly in one half reads only that half and the shared
+seam variables; its gauge invariance permits the endpoint gauge changes. Its reflected conjugate
+reads the other half." width="471.48" height="120.90" style="width:43.255em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>To make the splitting precise, list the seam variables, the two seam threads when present, and
+the open variables on the two halves. Assemble the original link configuration by their coordinate
+assignments and the endpoint gauge multiplications along the cut direction. Each change of coor-
+dinates multiplies a Haar link variable on the left or right by fixed already listed group elements,
+or inverts that variable. Iterated Haar invariance shows that this assembly preserves the product
+prior. Reading each plaquette shows that the action splits into the two half factors and the seam
+factor just described. A probe F supported strictly in one half reads only that half and the shared
+seam variables; its gauge invariance permits the endpoint gauge changes. Its reflected conjugate
+reads the other half.</pre></details></figure><figure class="sr-formula" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p012-016815.svg" alt="Consequently, conditional on the seam variables, the unnormalized reflected pairing has the
+form
+ZZ
+f(X)f(Y ) Kseam(X, Y ) dX dY," width="469.65" height="41.85" style="width:43.087em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Consequently, conditional on the seam variables, the unnormalized reflected pairing has the
+form
+ZZ
+f(X)f(Y ) Kseam(X, Y ) dX dY,</pre></details></figure></section>
+<p id="p012-block-010" data-source-page="12">with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p012-000165.svg" alt=" Kseam" style="width:3.0607em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> positive semidefinite. This integral is nonnegative by the integrated Gram inequality. The half-action factors have been included in<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p012-000166.svg" alt=" f" style="width:1.0827em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Bounded measurable probes are allowed: the Wilson density is bounded on the compact finite configuration space, and their reflected products are bounded and measurable, so all integrations are absolutely integrable. Integrating the conditional nonnegative quantities and dividing by the strictly positive Wilson partition function proves</p>
+<a id="equation-rp3"></a><figure class="sr-formula" id="p012-block-011" data-source-page="12"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p012-000167.svg" alt="⟨F F ◦θ⟩β ≥0.
+(RP3)" width="273.29" height="14.29" style="width:25.072em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 12.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>⟨F F ◦θ⟩β ≥0.
+(RP3)</pre></details></figure>
+<a id="source-page-13"></a>
+<p id="p013-block-001" data-source-page="13">Here<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000168.svg" alt=" θ" style="width:1.0487em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is the actual geometric link reflection, including inverse links. In particular no crossing link has been replaced inside the probe. We next derive the chessboard inequality on an admissible rectangular tiling. Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000169.svg" alt=" v &gt; 0 be" style="width:4.6514em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> its number of cells. For a function<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000170.svg" alt=" F" style="width:1.1572em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> in its strict reference chamber, write<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000171.svg" alt=" F (c)" style="width:2.2384em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> for its translated, reflected and, where prescribed, conjugated copy in cell<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000172.svg" alt=" c. Define" style="width:4.3967em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure class="sr-formula" id="p013-block-004" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-000173.svg" alt="*Y
+c
+F (c)
++
+1/v
+R(F) =
+.
+β" width="122.82" height="41.30" style="width:11.268em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>*Y
+c
+F (c)
++
+1/v
+R(F) =
+.
+β</pre></details></figure>
+<figure id="p013-block-010" class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-000174.svg" alt="For different chamber functions Fc, let V (F•) = |⟨Q
+c F (c)
+c ⟩β|. The Cauchy–Schwarz inequality from
+(RP3), applied across any translated cell seam, gives" width="470.90" height="33.21" style="width:43.202em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For different chamber functions Fc, let V (F•) = |⟨Q
+c F (c)
+c ⟩β|. The Cauchy–Schwarz inequality from
+(RP3), applied across any translated cell seam, gives</pre></details></figure>
+<a id="equation-rp4"></a><figure class="sr-formula" id="p013-block-011" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-000175.svg" alt="V (A)2 ≤V (A+)V (A−),
+(RP4)" width="293.30" height="18.21" style="width:26.908em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>V (A)2 ≤V (A+)V (A−),
+(RP4)</pre></details></figure>
+<p id="p013-block-012" data-source-page="13">where<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-018567.svg" alt=" A+" style="width:1.9130em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-018568.svg" alt=" A−" style="width:1.9118em;height:1.2243em;vertical-align:-0.23em" loading="lazy"/>are the assignments obtained by reflecting the corresponding half-assignment into the other half.</p>
+<p id="p013-block-012-paragraph-2" data-source-page="13">For a finite alphabet of functions, choose a cell assignment maximizing<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-018569.svg" alt=" V" style="width:1.0830em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> . Both folded values in <a href="/source-readout/yang-mills-companion/005-finite-lattice-positivity#equation-rp4">(RP4)</a> are at most this maximum. If the maximum is positive, <a href="/source-readout/yang-mills-companion/005-finite-lattice-positivity#equation-rp4">(RP4)</a> forces both folded values to equal it; if it is zero this is immediate. Hence the property of being a maximizing assignment is preserved by every fold. Such a fold-closed property has a constant assignment: in one coordinate start with a one-cell-wide strip of identical slices and fold at its preceding boundary. This extends the strip by one slice while preserving the property. Continue until a half-period is filled, then reflect it to fill that coordinate. A fold in another coordinate preserves equality along the coordinates already filled. Repeat in all four coordinates. This is a finite construction and needs no power-of-two restriction on the number of slices.</p>
+<p id="p013-block-012-paragraph-3" data-source-page="13">For arbitrary<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-018570.svg" alt=" Fc" style="width:1.4576em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, apply this maximum principle to the finite alphabet</p>
+<figure class="sr-formula" id="p013-block-013" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-000180.svg" alt="eFc = Fc/(R(Fc) + ε),
+ε &gt; 0." width="153.25" height="16.75" style="width:14.059em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>eFc = Fc/(R(Fc) + ε),
+ε &gt; 0.</pre></details></figure>
+<figure id="p013-block-014" class="sr-formula sr-source-panel" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-016556.svg" alt="Every constant assignment of a normalized function has value at most 1, because its value is
+[R(Fc)/(R(Fc) + ε)]v. The maximum principle bounds their mixed assignment by 1. Rescale each
+cell and then let ε ↓0 to obtain
+
+*Y
++" width="469.59" height="72.22" style="width:43.081em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Every constant assignment of a normalized function has value at most 1, because its value is
+[R(Fc)/(R(Fc) + ε)]v. The maximum principle bounds their mixed assignment by 1. Rescale each
+cell and then let ε ↓0 to obtain
+
+*Y
++</pre></details></figure>
+<a id="equation-rp5"></a><figure class="sr-formula" id="p013-block-019" data-source-page="13"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-companion/math/p013-016557.svg" alt="
+≤
+Y
+c
+R(Fc).
+(RP5)
+c
+F (c)
+c
+β" width="282.61" height="44.69" style="width:25.928em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 13.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>
+≤
+Y
+c
+R(Fc).
+(RP5)
+c
+F (c)
+c
+β</pre></details></figure>
+<p id="p013-block-021" data-source-page="13">The same root is a seminorm on the chamber functions. Complex homogeneity follows because a copied scalar is either<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000183.svg" alt=" z" style="width:1.0760em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> or  ̄<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000184.svg" alt="z" style="width:0.6117em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and the absolute value of their full product is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000185.svg" alt=" |z|v." style="width:2.3977em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> To prove subadditivity, expand the full copied product of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000186.svg" alt=" F + H" style="width:3.6474em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> into its 2<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000187.svg" alt="v" style="width:0.5244em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/> assignments of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000188.svg" alt=" F, H." style="width:2.9318em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> The triangle inequality and <a href="/source-readout/yang-mills-companion/005-finite-lattice-positivity#equation-rp5">(RP5)</a> bound its expectation by (<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000189.svg" alt="R(F) + R(H))v" style="width:7.1336em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/>. Take the positive<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-companion/math/p013-000190.svg" alt=" v" style="width:1.0043em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>-th root. This proves all the rooted homogeneity, subadditivity and mixed-product estimates used below directly for the Wilson law.</p>

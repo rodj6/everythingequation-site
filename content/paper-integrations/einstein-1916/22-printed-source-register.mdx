@@ -1,0 +1,104 @@
+---
+title: "Read the printed-source corrections"
+description: "The supplied historical copy contains expressions that cannot all hold with their surrounding equations. This register preserves the literal forms and the separately derived consistent replacements."
+order: 22
+---
+
+**The supplied historical copy contains expressions that cannot all hold with their surrounding equations. This register preserves the literal forms and the separately derived consistent replacements.**
+
+<a id="app-source"></a>
+
+## A. Printed-source qualifications and correction register
+
+This appendix concerns the supplied copy of [\[5\]](/source-readout/einstein-1916/25-references#ref-5), checked against its page images and the publisher-hosted PDF. Printed page numbers, not PDF offsets, are used. The correction decisions follow direct algebra or explicit witnesses. No assertion is made about authorship of a typographical error, priority of its detection, editorial history, or later editions. The source’s valid equations are retained, and the inconsistent branch is identified rather than silently replaced.
+
+<a id="the-rank-statement-on-page-784"></a>
+
+### The rank statement on page 784
+
+After discussing completely antisymmetric tensors, the copy prints “Symmetrische Tensoren” in the sentence denying existence above rank four. Taken literally for symmetric tensors, it is false: for a nonzero covector $a$, $a^{\otimes5}$ is a nonzero symmetric tensor. The valid statement in the surrounding discussion is that a completely antisymmetric tensor above rank four vanishes because every component repeats an index. Proposition [4.1](/source-readout/einstein-1916/04-comparison-and-tensors#thm-tensor) retains the arbitrary-rank symmetric tensor algebra and the correct exterior-algebra cutoff. This is a qualification of the printed word, not a modification of the transformation formulas Einstein <span className="upright">(14)</span>–Einstein <span className="upright">(15a)</span>.
+
+<a id="the-trace-shift-footnote-on-page-804"></a>
+
+### The trace-shift footnote on page 804
+
+The footnote considers $B_{\mu\nu}+\lambda g_{\mu\nu}\operatorname{tr}_qB$ and states that setting it to zero returns $B=0$. In four dimensions its trace is $(1+4\lambda)\operatorname{tr}_qB=0$, so the reduction requires $\lambda\ne-1/4$. At the exceptional value, [(7.12)](/source-readout/einstein-1916/07-vacuum-and-action#eq-trace-witness) gives a nonzero $B=g/3$ satisfying the trace-free equation. The reconstruction retains the selected vacuum law and does not use the footnote as an unrestricted uniqueness theorem.
+
+<a id="the-unnumbered-variation-sign-on-page-805"></a>
+
+### The unnumbered variation sign on page 805
+
+The line immediately before Einstein <span className="upright">(48)</span> prints a negative coefficient of $\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}\delta(\partial_\alpha q^{\mu\nu})$, whereas numbered Einstein <span className="upright">(48)</span> gives the positive coefficient. Theorem [7.1](/source-readout/einstein-1916/07-vacuum-and-action#thm-action) proves <a id="eq-A-1"></a><a id="eq-printed-action-comparison"></a>
+
+$$
+\delta H=-\operatorname{tr}(C_\mu C_\nu)\delta q^{\mu\nu}
+ +\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}\delta(\partial_\alpha q^{\mu\nu}).
+\tag{A.1}
+$$
+
+ It agrees with numbered Einstein <span className="upright">(48)</span> and the ensuing field equation. The final publication audit also differentiates $H$ directly for $g=\operatorname{diag}(-1,-1,-1,N^2-\varepsilon N^4K)$, $N=1+x^2$, $K=1+x+x^2$. At $\varepsilon=0$, $\delta q^{44}=K$ and $\delta H=-2(N')^2K-NN'K'$, which rejects the opposite derivative sign without using a vacuum or unit-volume restriction.
+
+<a id="the-gravitational-exchange-line-on-page-809"></a>
+
+### The gravitational exchange line on page 809
+
+Immediately before Einstein <span className="upright">(57)</span>, the copy prints 
+
+$$
+\partial_\alpha t^\alpha{}_{\sigma}
+ +\tfrac12\partial_\sigma q^{\mu\nu}T_{\mu\nu}=0.
+$$
+
+ Numbered Einstein <span className="upright">(57)</span> uses that plus sign for the matter array $T$. Taken together with total conservation, the two plus signs would force all exchange to vanish. The action and field equation instead give <a id="eq-A-2"></a><a id="eq-exchange-print-correction"></a>
+
+$$
+\partial_\alpha t^\alpha{}_{\sigma}-e_\sigma=0,
+ \qquad \partial_\alpha T^\alpha{}_{\sigma}+e_\sigma=0.
+\tag{A.2}
+$$
+
+ The same-realization dust witness [(10.22)](/source-readout/einstein-1916/10-conservation-and-flux#eq-dust-fixture) has nonzero $e_4$ in [(10.23)](/source-readout/einstein-1916/10-conservation-and-flux#eq-dust-exchange). The printed gravitational residual is $16r^{-5/3}/(81\kappa)$, whereas both corrected relations and the full coupled field equation vanish. Numbered Einstein <span className="upright">(57)</span> and Einstein <span className="upright">(57a)</span> are retained unchanged.
+
+<a id="the-mass-coefficient-on-page-819-and-its-propagation"></a>
+
+### The mass coefficient on page 819 and its propagation
+
+The supplied Einstein <span className="upright">(70a)</span> prints $\alpha=\kappa M/(8\pi)$. Yet the preceding Einstein <span className="upright">(68a)</span> and the displayed $g_{44}=1-\alpha/r$ imply <a id="eq-A-3"></a><a id="eq-printed-mass-comparison"></a>
+
+$$
+\phi=-\frac{\kappa M}{8\pi r},\qquad
+ g_{44}=1+2\phi=1-\frac{\kappa M}{4\pi r},\qquad
+ \alpha=\frac{\kappa M}{4\pi}.
+\tag{A.3}
+$$
+
+ The latter agrees with the Newtonian force and general clock-period expression. The same $M$ and asymptotic time normalization are used throughout. The mass expression $\kappa M/(4\pi b)$ printed in Einstein <span className="upright">(74)</span> propagates this half-normalization; its parameter expression $2\alpha/b$ is correct. This is one inconsistency carried into a later expression, not two independent physical errors.
+
+<a id="the-coordinate-light-speed-sign-on-page-822"></a>
+
+### The coordinate light-speed sign on page 822
+
+The copy prints a positive first-order correction to $\gamma=\sqrt{-g_{44}/g_{22}}$. In the stated ray direction, the displayed metric gives <a id="eq-A-4"></a><a id="eq-printed-light-comparison"></a>
+
+$$
+(1-\alpha/r)-(1+\alpha y^2/r^3)\gamma^2=0,
+ \qquad
+ \gamma=1-\frac\alpha{2r}\left(1+\frac{y^2}{r^2}\right)+O(\alpha^2).
+\tag{A.4}
+$$
+
+ The printed positive choice leaves a nonzero first-order residual and reverses the inward-positive derivative integral. The reconstruction uses the root fixed by the null condition and retains the correct parameter bending result, with the mass correction above.
+
+<a id="statements-requiring-hypotheses-rather-than-typographical-correction"></a>
+
+### Statements requiring hypotheses rather than typographical correction
+
+Several source statements are retained with explicit logical scope, not labelled transcription errors. The coordinate condition beside Einstein <span className="upright">(47a)</span> does not specify a constrained variational problem; the unrestricted-variation interpretation and the failure of early trace restriction are established in Section [7](/source-readout/einstein-1916/07-vacuum-and-action#sec-vacuum). The discussion of four material equations and the fluid variable count does not prove general initial-value well-posedness. The free-charge prose on p. 814 does not follow from the displayed Maxwell equations alone; the actual algebraic conservation conclusion uses $\xi=0$. Local flatness and local potential statements are not global topology theorems.
+
+The original optical integral concerns asymptotic endpoints. The finite-endpoint term in Theorem [16.1](/source-readout/einstein-1916/16-light-and-bending#thm-optical) qualifies an extension of that operation; it does not invalidate the asymptotic result. Its finite output is a coordinate-direction change until observer frames are specified. Finally, Einstein <span className="upright">(75)</span> is a stated result with external dependencies. The exact spherical and orbit calculation here is identified as a completion of that dependency, not falsely attributed to intervening derivations in the 1916 article itself.
+
+<a id="consolidation-changes-relative-to-the-checkpoints"></a>
+
+### Consolidation changes relative to the checkpoints
+
+The final audit introduced no alteration to the six retained scientific checkers. Their complete result objects reproduce. The publication adds a separately written forty-group audit and tightens two descriptions: finite optical bending is explicitly chart-dependent at finite endpoints, and the bound-orbit domain is accompanied by the positive factorization of $\mathcal E^2$. It also supplies the radial comparison one-forms explicitly, separates all theorem assumptions in a public register, and expands the equation correspondence to every numbered and lettered target. These are consolidation proofs and scope clarifications, not a claim that replay alone validates every theorem.

@@ -1,0 +1,499 @@
+<a id="section-16"></a><h2 id="p252-block-005" data-source-page="252">Radial jets, calibrated labels and the free Maxwell comparison hierarchy</h2>
+<p id="p252-block-006" data-source-page="252"><strong>From local coefficients to usable field labels.</strong> The first objects are finite Taylor coefficient spaces. Curl reads their linearized curvature, and radial reconstruction provides an explicit section on closed homogeneous two-forms. The Maxwell equation imposes a further condition on that curvature. Polynomial labels are then sampled by finite local cylinders, with calibrated coefficient maps and a free comparison hierarchy. Keeping polynomial position degree, engineering weight and field count distinct is necessary for the later detector and scaling arguments. The free hierarchy is a supplied comparison sector; its presence does not assert that the interacting hierarchy is free.</p>
+<p id="p252-block-006-paragraph-2" data-source-page="252">Before the detector on physical coefficient space can be constructed, the supplied construction builds the label algebra, its local lattice representatives, the calibrated coefficient changes and the complete free comparison hierarchy with its shell charges. This section gives that construction in full, from the radial Taylor variables to the elimination of higher-degree vector and angular defects; each subsection is followed by its source–readout formulation. The labels are the first place where the recovery problem is posed for<em> fields</em> and not only for measures: a label is a source record, its lattice cylinder is a realization, and its Taylor readings are the readout.</p>
+<a id="section-16-1"></a><h3 id="p252-block-007" data-source-page="252">16.1 Radial Taylor variables and the free equation space</h3>
+<figure id="p252-block-008" class="sr-formula sr-source-panel" data-source-page="252"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p252-006264.svg" alt="The jet variables in this chapter are Taylor coefficients, with the factorial already divided out. At
+order j ≥0, a radial potential coefficient is a family Ai of symmetric (j + 1)-linear maps from
+R4 to the real color space. Its associated homogeneous potential is ai(x) = Ai(x, . . . , x), and the
+constraint is
+X" width="470.35" height="56.61" style="width:43.152em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 252.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The jet variables in this chapter are Taylor coefficients, with the factorial already divided out. At
+order j ≥0, a radial potential coefficient is a family Ai of symmetric (j + 1)-linear maps from
+R4 to the real color space. Its associated homogeneous potential is ai(x) = Ai(x, . . . , x), and the
+constraint is
+X</pre></details></figure>
+<a id="equation-rj1"></a><figure class="sr-formula" id="p252-block-009" data-source-page="252"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p252-006265.svg" alt="i
+xiai(x) = 0
+for every x.
+(RJ1)" width="298.82" height="24.04" style="width:27.414em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 252.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>i
+xiai(x) = 0
+for every x.
+(RJ1)</pre></details></figure>
+<p id="p252-block-010" data-source-page="252">This finite-dimensional real space is the space called Taylor in Labels/Jet. Its polynomial-position degree is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p252-006266.svg" alt=" j" style="width:0.8939em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + 1, its engineering weight is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p252-006267.svg" alt=" j" style="width:0.8926em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + 2, and its field-count degree is one. Polynomial labels inherit their weight and field count by addition over their factors; constants have both degrees zero. Complex labels are obtained by complexification. No field equation has yet been imposed on these radial variables.</p>
+<a id="source-page-253"></a>
+<p id="p253-block-001" data-source-page="253">Define the curvature coefficient by the homogeneous polynomial</p>
+<a id="equation-rj2"></a><figure class="sr-formula" id="p253-block-002" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006268.svg" alt="Qil(x) = ∂ial(x) −∂lai(x).
+(RJ2)" width="299.79" height="13.85" style="width:27.503em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Qil(x) = ∂ial(x) −∂lai(x).
+(RJ2)</pre></details></figure>
+<p id="p253-block-003" data-source-page="253">On symmetric tensors this means freezing one input at<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-006269.svg" alt=" ei" style="width:1.1753em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, subtracting the reversed expression, and multiplying by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-006270.svg" alt=" j" style="width:0.8889em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + 1. The curvature is antisymmetric and satisfies</p>
+<a id="equation-rj3"></a><figure class="sr-formula" id="p253-block-004" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006271.svg" alt="∂aQbc + ∂bQca + ∂cQab = 0,
+(RJ3)" width="302.53" height="14.29" style="width:27.755em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>∂aQbc + ∂bQca + ∂cQab = 0,
+(RJ3)</pre></details></figure>
+<p id="p253-block-005" data-source-page="253">since the second derivatives commute. Conversely let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-006272.svg" alt=" Q" style="width:1.2499em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> be a homogeneous degree-<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-006273.svg" alt="j" style="width:0.5587em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> antisymmetric two-form satisfying <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj3">(RJ3)</a>. Set</p>
+<a id="equation-rj4"></a><figure class="sr-formula" id="p253-block-007" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006274.svg" alt="X
+ai(x) =
+1
+j + 2
+k
+xkQki(x).
+(RJ4)" width="301.11" height="33.45" style="width:27.625em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>X
+ai(x) =
+1
+j + 2
+k
+xkQki(x).
+(RJ4)</pre></details></figure>
+<p id="p253-block-009" data-source-page="253">Antisymmetry proves <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj1">(RJ1)</a>. Differentiating <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a>, subtracting the reversed derivatives, and using <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj3">(RJ3)</a> gives</p>
+<figure class="sr-formula" id="p253-block-010" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006275.svg" alt="∂ial −∂lai = 2Qil + P
+k xk∂kQil
+j + 2
+= Qil," width="187.96" height="34.53" style="width:17.244em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>∂ial −∂lai = 2Qil + P
+k xk∂kQil
+j + 2
+= Qil,</pre></details></figure>
+<figure id="p253-block-011" class="sr-formula sr-source-panel" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006276.svg" alt="where the last equality is Euler’s identity for degree j. Conversely, for a radial potential, differen-
+tiation of P
+k xkak = 0 gives P
+k xk∂iak = −ai. Hence P
+k xkQki = (j + 1)ai + ai = (j + 2)ai. Thus
+curl and (RJ4) are inverse linear maps. Equality of homogeneous diagonal polynomials implies
+equality of their symmetric tensors by polarization, so these are identities of the coefficient spaces
+themselves. These are the maps and inverse identities in Maxwell/Exterior.
+The free solution space consists of those Q which additionally satisfy
+X" width="471.84" height="94.67" style="width:43.289em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>where the last equality is Euler’s identity for degree j. Conversely, for a radial potential, differen-
+tiation of P
+k xkak = 0 gives P
+k xk∂iak = −ai. Hence P
+k xkQki = (j + 1)ai + ai = (j + 2)ai. Thus
+curl and (RJ4) are inverse linear maps. Equality of homogeneous diagonal polynomials implies
+equality of their symmetric tensors by polarization, so these are identities of the coefficient spaces
+themselves. These are the maps and inverse identities in Maxwell/Exterior.
+The free solution space consists of those Q which additionally satisfy
+X</pre></details></figure>
+<a id="equation-rj5"></a><figure class="sr-formula" id="p253-block-012" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006277.svg" alt="a
+∂aQab = 0
+for every b.
+(RJ5)" width="296.12" height="23.09" style="width:27.167em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>a
+∂aQab = 0
+for every b.
+(RJ5)</pre></details></figure>
+<p id="p253-block-013" data-source-page="253">The free gauge-jet map sends this subspace to radial potentials by <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a>. It is injective because curl is its left inverse. In particular, saying that a radial coefficient is in its range is exactly saying that its curvature satisfies the free equation <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj5">(RJ5)</a>; Bianchi is already built in by <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj2">(RJ2)</a>. Taking normalized Taylor coefficients of a smooth Maxwell solution on an open set preserves <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj3">(RJ3)</a> and <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj5">(RJ5)</a>: differentiate these equations at the point, commute the derivatives, and divide by the Taylor factorial. Conversely the polynomial attached to an element of the solution space obeys these equations everywhere. This justifies the solution-jet substitutions used in the equation-ideal argument below.</p>
+<p id="p253-block-013-paragraph-2" data-source-page="253">Color conjugation acts on these coefficients by the adjoint action. A rotation<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-021152.svg" alt=" g" style="width:0.9539em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> acts by</p>
+<figure class="sr-formula" id="p253-block-014" data-source-page="253"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p253-006279.svg" alt="ai(x) 7−→
+X
+k
+gikak(g−1x)." width="124.07" height="33.45" style="width:11.383em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 253.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ai(x) 7−→
+X
+k
+gikak(g−1x).</pre></details></figure>
+<p id="p253-block-016" data-source-page="253">The radial constraint, curl, Bianchi and <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj5">(RJ5)</a> are preserved, directly by orthogonality and the chain rule. Thus the reconstruction <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a> intertwines both actions. The polynomial ideal is the kernel of restriction from radial coefficients to this free solution range, taken at each finite degree horizon. A choice of projection onto that range is a finite-dimensional linear choice; the polynomial telescoping argument below shows explicitly how its kernel is generated by the linear equation coordinates. This explains both the projection<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p253-006280.svg" alt=" Pj" style="width:1.4206em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> used there and the radial reconstruction used in the Gaussian covariance comparison.</p>
+<a id="source-page-254"></a>
+<p id="p254-block-001" data-source-page="254"><strong>Source–readout formulation.</strong> The radial Taylor variables are a normal form for a quotient, and the source–readout content of the subsection is the identification of that quotient with a concrete section. The source object is a homogeneous potential; the readout is its linearized curvature <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj2">(RJ2)</a>; the fibre of the readout is the space of linearized gauge transformations; and the radial reconstruction <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a> is a section whose image is the radial gauge. The following theorem states this with the gauge parameter written explicitly; the explicit parameter is not printed in the supplied text and is verified in the proof.</p>
+<a id="theorem-16-1"></a><p id="p254-block-002" data-source-page="254"><strong><a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#theorem-16-1">Theorem 16.1</a></strong> (Radial section of the curl readout)<strong>.</strong><em> Let</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006281.svg" alt=" Aj" style="width:1.5699em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/><em> be all homogeneous</em> g<em>-valued potentials</em> <em>of degree</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006282.svg" alt=" j +1" style="width:2.4312em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> (no radial constraint),</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006283.svg" alt=" Qj" style="width:1.5948em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/><em> the closed homogeneous two-forms of degree</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006284.svg" alt=" j," style="width:1.2294em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> curl :<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006285.svg" alt=" Aj →" style="width:2.9024em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006286.svg" alt="Qj" style="width:1.2775em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/><em> the map</em> <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj2">(RJ2)</a><em> and</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006287.svg" alt=" ρ : Qj →Vj" style="width:5.5266em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/><em> the map</em> <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a><em>. Then</em></p>
+<p id="p254-block-003" data-source-page="254"><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006288.svg" alt="1. ρ" style="width:1.9814em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> takes values in</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006289.svg" alt=" Vj," style="width:1.7963em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> curl<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006290.svg" alt=" ρ = id" style="width:3.0016em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em> on</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006291.svg" alt=" Qj" style="width:1.6356em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/><em> and</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006292.svg" alt=" ρ" style="width:1.0218em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> curl = id<em> on</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006293.svg" alt=" Vj;" style="width:1.7968em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/></p>
+<figure id="p254-block-004" class="sr-formula sr-source-panel" data-source-page="254"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p254-006294.svg" alt="2. for arbitrary a′ ∈Aj, ρ(curl a′) = a′ −∂λ with λ = (j + 2)−1 P
+k xka′
+k, a homogeneous scalar
+of degree j + 2;" width="456.53" height="33.21" style="width:41.884em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 254.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>2. for arbitrary a′ ∈Aj, ρ(curl a′) = a′ −∂λ with λ = (j + 2)−1 P
+k xka′
+k, a homogeneous scalar
+of degree j + 2;</pre></details></figure>
+<p id="p254-block-005" data-source-page="254"><em>3. hence</em> curl<em> is onto, its fibres are the orbits of</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006295.svg" alt=" a′ 7→a′" style="width:3.7496em;height:1.5280em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006296.svg" alt="+ ∂λ" style="width:2.3418em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/><em>, and</em><img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006297.svg" alt=" Vj" style="width:1.4388em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/><em> meets each orbit exactly</em> <em>once.</em></p>
+<figure id="p254-block-006" class="sr-formula sr-source-panel" data-source-page="254"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p254-006298.svg" alt="Proof. Antisymmetry of Q gives (RJ1) for ρQ.
+Differentiating (RJ4), subtracting the reversed
+derivative and using (RJ3), ∂ial −∂lai = [2Qil + P
+k xk∂kQil]/(j + 2) = Qil by Euler’s identity in
+degree j. For (2), P
+k xk(∂ka′
+i −∂ia′
+k) = (j + 1)a′
+i −∂i(P
+k xka′
+k) + a′
+i, again by Euler’s identity,
+which is (j + 2)(a′
+i −∂iλ). If a′ is radial then λ = 0, which is the second half of (1). (3) follows:
+two potentials with the same curl have the same image under ρ curl, so they differ by a gradient,
+and a radial gradient ∂μ has x · ∂μ = (j + 2)μ = 0. Equality of homogeneous diagonal polynomials
+is equality of symmetric tensors by polarization." width="471.56" height="93.80" style="width:43.262em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 254.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. Antisymmetry of Q gives (RJ1) for ρQ.
+Differentiating (RJ4), subtracting the reversed
+derivative and using (RJ3), ∂ial −∂lai = [2Qil + P
+k xk∂kQil]/(j + 2) = Qil by Euler’s identity in
+degree j. For (2), P
+k xk(∂ka′
+i −∂ia′
+k) = (j + 1)a′
+i −∂i(P
+k xka′
+k) + a′
+i, again by Euler’s identity,
+which is (j + 2)(a′
+i −∂iλ). If a′ is radial then λ = 0, which is the second half of (1). (3) follows:
+two potentials with the same curl have the same image under ρ curl, so they differ by a gradient,
+and a radial gradient ∂μ has x · ∂μ = (j + 2)μ = 0. Equality of homogeneous diagonal polynomials
+is equality of symmetric tensors by polarization.</pre></details></figure>
+<p id="p254-block-007" data-source-page="254">The exactness class is quotient equivalence: potentials modulo the fibre are in bijection with closed two-forms, with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006299.svg" alt=" ρ" style="width:0.9627em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> as inverse on the radial slice. The free equation space of the title is then a subspace of the readout space, and membership in it is a property of the curvature jet, independent of the potential chosen over it.</p>
+<a id="section-16-2"></a><h3 id="p254-block-008" data-source-page="254">16.2 Polynomial labels, coherent frames and local sections</h3>
+<p id="p254-block-009" data-source-page="254">The polynomial variables in this construction are coordinates of real radial jets, rather than coordinates of arbitrary connections. Write<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006300.svg" alt=" Vj" style="width:1.4225em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> for the real space of radial homogeneous potentials of polynomial degree<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006301.svg" alt=" j" style="width:0.9158em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> + 1, described in <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj1">(RJ1)</a>–<a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a>, and choose a real basis of each<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006302.svg" alt=" Vj. If zj,a" style="width:4.7141em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> are its coordinate functions, the algebra of labels before imposing gauge invariance is</p>
+<a id="equation-pf1"></a><figure class="sr-formula" id="p254-block-010" data-source-page="254"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p254-006303.svg" alt="P = C[zj,a : j ≥0, 1 ≤a ≤dimR Vj].
+(PF1)" width="324.87" height="14.44" style="width:29.805em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 254.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>P = C[zj,a : j ≥0, 1 ≤a ≤dimR Vj].
+(PF1)</pre></details></figure>
+<p id="p254-block-011" data-source-page="254">Each polynomial uses finitely many variables. Its evaluation on a real jet<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006304.svg" alt=" J = (Jj)j≥0" style="width:5.6350em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> substitutes the real coordinates of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006305.svg" alt=" Jj" style="width:1.3898em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, regarded as complex numbers. Such evaluations separate polynomials: reduce to the finitely many variables present, and successively use the fact that a nonzero one-variable polynomial cannot vanish at every real number. Give<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006306.svg" alt=" zj,a" style="width:1.8850em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> the bidegree (<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006307.svg" alt="j + 2," style="width:2.6160em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 1). Thus the bidegree of a monomial<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p254-006308.svg" alt=" zm" style="width:1.6747em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> is</p>
+<a id="equation-pf2"></a><figure class="sr-formula" id="p254-block-012" data-source-page="254"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p254-006309.svg" alt="
+
+X
+j,a
+(j + 2)mj,a,
+X
+j,a
+mj,a
+= (r, f).
+(PF2)" width="322.70" height="43.75" style="width:29.606em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 254.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>
+
+X
+j,a
+(j + 2)mj,a,
+X
+j,a
+mj,a
+= (r, f).
+(PF2)</pre></details></figure>
+<a id="source-page-255"></a>
+<section class="sr-derivation" id="p255-block-001" data-source-page="255"><p data-source-page="255">The first entry is engineering degree and the second is number of fields. The horizon-<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018572.svg" alt="d" style="width:0.6677em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> label space consists of the adjoint-invariant polynomials whose monomials have<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018573.svg" alt=" r ≤d" style="width:2.8042em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>. It is finite dimensional: only variables of weight at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018574.svg" alt=" d" style="width:0.9819em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> occur and every exponent is at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018575.svg" alt=" d" style="width:0.9835em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Adjoint transformations and orthogonal transformations mix coordinates within a fixed<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018576.svg" alt=" Vj" style="width:1.4618em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>; therefore they preserve both entries of <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf2">(PF2)</a>. Taking a homogeneous component preserves adjoint invariance and the horizon. Conjugation of coefficients preserves these spaces as well, because evaluation takes place on real jets.</p><figure class="sr-formula" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-018577.svg" alt="There is a basis bi, with b0 = 1, consisting of real polynomials of individual bidegrees (ri, fi).
+Indeed decompose into the finitely many bidegrees, and then into real and imaginary parts. The
+resulting real homogeneous elements span the complex space; choose an independent spanning
+subfamily containing 1. At successive horizons extend the previous independent family inside the
+same spanning set. This gives coherent frames: previous basis elements remain present as elements,
+although their nonzero index numbers need not remain fixed. The only elements with field number
+zero are constants. Hence fi &gt; 0 for i ̸= 0.
+Coefficients c = (ci) mean the polynomial P
+i cibi; use P
+i |ci| as a coefficient norm. There are
+two different scaling operations:" width="471.72" height="120.90" style="width:43.277em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>There is a basis bi, with b0 = 1, consisting of real polynomials of individual bidegrees (ri, fi).
+Indeed decompose into the finitely many bidegrees, and then into real and imaginary parts. The
+resulting real homogeneous elements span the complex space; choose an independent spanning
+subfamily containing 1. At successive horizons extend the previous independent family inside the
+same spanning set. This gives coherent frames: previous basis elements remain present as elements,
+although their nonzero index numbers need not remain fixed. The only elements with field number
+zero are constants. Hence fi &gt; 0 for i ̸= 0.
+Coefficients c = (ci) mean the polynomial P
+i cibi; use P
+i |ci| as a coefficient norm. There are
+two different scaling operations:</pre></details></figure></section>
+<a id="equation-pf3"></a><figure class="sr-formula" id="p255-block-002" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-006311.svg" alt="Jj 7→hj+2Jj,
+Jj 7→tJj.
+(PF3)" width="302.28" height="16.15" style="width:27.732em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 255.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Jj 7→hj+2Jj,
+Jj 7→tJj.
+(PF3)</pre></details></figure>
+<figure id="p255-block-003" class="sr-formula sr-source-panel" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-006312.svg" alt="On bi these multiply the reading by hri and tfi, respectively. In particular coefficient scaling by
+field number is the diagonal map ci 7→tfici, invertible for t ̸= 0, and fixes the unit. The coefficient
+action of s ∈O(4) is obtained by applying the tensor action to P
+i cibi and taking its coordinates.
+This action is an action on the polynomial label space. Its compatibility with the physical quotient
+requires the separate rotation argument below; it does not follow merely from this definition.
+Here is the actual construction of a local lattice representative of each label. At horizon d put" width="472.13" height="83.00" style="width:43.314em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 255.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>On bi these multiply the reading by hri and tfi, respectively. In particular coefficient scaling by
+field number is the diagonal map ci 7→tfici, invertible for t ̸= 0, and fixes the unit. The coefficient
+action of s ∈O(4) is obtained by applying the tensor action to P
+i cibi and taking its coordinates.
+This action is an action on the polynomial label space. Its compatibility with the physical quotient
+requires the separate rotation argument below; it does not follow merely from this definition.
+Here is the actual construction of a local lattice representative of each label. At horizon d put</pre></details></figure>
+<a id="equation-pf4"></a><figure class="sr-formula" id="p255-block-004" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-006313.svg" alt="AJ
+i (x) =
+X
+j&lt;d−1
+Jji(x),
+aJ,h
+x,i (t) = hAJ
+i (h(x + tei)).
+(PF4)" width="361.62" height="33.45" style="width:33.177em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 255.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>AJ
+i (x) =
+X
+j&lt;d−1
+Jji(x),
+aJ,h
+x,i (t) = hAJ
+i (h(x + tei)).
+(PF4)</pre></details></figure>
+<p id="p255-block-006" data-source-page="255">An empty sum is zero. Along this edge solve the matrix group equation</p>
+<a id="equation-pf5"></a><figure class="sr-formula" id="p255-block-007" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-006314.svg" alt="u(0) = 1,
+u′(t) = u(t)aJ,h
+x,i (t),
+(PF5)" width="314.34" height="18.62" style="width:28.839em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 255.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>u(0) = 1,
+u′(t) = u(t)aJ,h
+x,i (t),
+(PF5)</pre></details></figure>
+<section class="sr-derivation" id="p255-block-008" data-source-page="255"><p data-source-page="255">where the color is embedded in the skew-adjoint matrix Lie algebra. Set the link equal to<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018578.svg" alt=" u(1). Ex-" style="width:4.5421em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> istence does not assume a global logarithm. In an exponential chart, differentiating log(exp<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018579.svg" alt=" b" style="width:0.7426em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> exp<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018580.svg" alt=" v)" style="width:1.2227em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> at<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018581.svg" alt=" v" style="width:0.9317em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 0 converts <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf5">(PF5)</a> to a smooth ordinary differential equation in<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018582.svg" alt=" b" style="width:0.8722em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Solve locally, left translate to any initial value, and glue. Solutions agreeing once agree throughout an overlapping interval: the derivative of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p255-018583.svg" alt=" uv∗" style="width:1.9806em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>is zero. The times reachable from zero form an open set with open complement, by the same local extension and gluing argument; connectedness of the real line gives the solution at every time. This also proves uniqueness.</p><figure class="sr-formula" data-source-page="255"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p255-018584.svg" alt="For a finite collection of edges these links depend analytically on the finite jet J near zero. One
+can see this without differentiating an infinite configuration map. The integral equation in matrix
+path space is u = 1 + VJu, where VJ is integration followed by multiplication by the connection.
+Near J = 0 its norm is less than one, so (1 −VJ)−1 = P
+n≥0 Vn
+J is analytic. Uniqueness identifies it
+R 1
+0 AJ
+with (PF5). Differentiating at zero gives the edge tangent
+i (x + tei) dt. Products and inverse
+links therefore have tangents equal to their signed edge sums." width="472.17" height="82.04" style="width:43.318em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>For a finite collection of edges these links depend analytically on the finite jet J near zero. One
+can see this without differentiating an infinite configuration map. The integral equation in matrix
+path space is u = 1 + VJu, where VJ is integration followed by multiplication by the connection.
+Near J = 0 its norm is less than one, so (1 −VJ)−1 = P
+n≥0 Vn
+J is analytic. Uniqueness identifies it
+R 1
+0 AJ
+with (PF5). Differentiating at zero gives the edge tangent
+i (x + tei) dt. Products and inverse
+links therefore have tangents equal to their signed edge sums.</pre></details></figure><p data-source-page="255">A sampling slot consists of an oriented elementary plaquette based at an integer point and a finite path from the origin to that point. Evaluate its curvature and transport the color back along that path. A gauge transformation changes every slot by the same adjoint transformation at the</p></section>
+<a id="source-page-256"></a>
+<p id="p256-block-001" data-source-page="256">origin. At the identity configuration, the connector derivatives cancel: differentiating<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021153.svg" alt=" ZPZ−1" style="width:3.7009em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>, with <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021154.svg" alt="Z = P" style="width:3.2220em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 1, leaves just<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021155.svg" alt=" P ′" style="width:1.5758em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>. Consequently the linearization of the slot is the circulation of the integrated polynomial potential around the plaquette.</p>
+<p id="p256-block-001-paragraph-2" data-source-page="256">These linear samples separate the truncated radial jets. For one homogeneous component <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021156.svg" alt="A ∈Vk, define" style="width:6.3385em;height:1.2692em;vertical-align:-0.23em" loading="lazy"/></p>
+<a id="equation-pf6"></a><figure class="sr-formula" id="p256-block-002" data-source-page="256"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p256-006320.svg" alt="Nij(x, t) =
+Z 1
+Z 1
+0
+∂iAj(x + tsej + trei) dr ds −
+Z 1
+Z 1
+0
+∂jAi(x + tsei + trej) dr ds.
+(PF6)
+0
+0" width="439.06" height="33.95" style="width:40.281em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 256.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Nij(x, t) =
+Z 1
+Z 1
+0
+∂iAj(x + tsej + trei) dr ds −
+Z 1
+Z 1
+0
+∂jAi(x + tsei + trej) dr ds.
+(PF6)
+0
+0</pre></details></figure>
+<section class="sr-derivation" id="p256-block-009" data-source-page="256"><p data-source-page="256">At<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018585.svg" alt=" t" style="width:0.8579em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 1 the fundamental theorem of calculus identifies this with the square circulation. At<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018586.svg" alt=" t = 0" style="width:2.7462em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> it is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018587.svg" alt=" ∂iAj −∂jAi" style="width:5.8269em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>. Homogeneity gives<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018588.svg" alt=" Nij(tx, t) = tkNij(x," style="width:9.6809em;height:1.3902em;vertical-align:-0.23em" loading="lazy"/> 1). If all integer square samples of a sum of components through<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018589.svg" alt=" k" style="width:0.9623em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> vanish, multiply the rescaled component of degree<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018590.svg" alt=" l" style="width:0.8581em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018591.svg" alt=" tk−l" style="width:2.1472em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/>. Choose integer<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018592.svg" alt=" xt" style="width:1.3678em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018593.svg" alt=" txt →x" style="width:4.0246em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/>. The resulting finite sum is zero for<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018594.svg" alt=" t &gt;" style="width:1.9929em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0; continuity at zero leaves only <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018595.svg" alt="N(k)" style="width:2.0864em;height:1.4632em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018596.svg" alt="ij" style="width:0.7253em;height:0.8773em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018597.svg" alt="(x," style="width:1.3856em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> 0). Thus the top curl vanishes. Radial reconstruction <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-rj4">(RJ4)</a> makes the top potential zero. Descending induction eliminates all components. No interchange of the two iterated integrals in <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf6">(PF6)</a> is required.</p><figure class="sr-formula" data-source-page="256"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p256-018598.svg" alt="Only finitely many slots are needed. Among kernels of finite sampling families choose one of
+minimal dimension. Appending any further slot cannot lower that dimension, hence cannot lower
+the kernel. A vector in this kernel is therefore killed by every slot and, by the preceding argument,
+is zero. Write X = Q
+j&lt;d−1Vj, Y = gm, and T : X →Y for the resulting injective linearization." width="471.19" height="55.27" style="width:43.229em;height:auto;max-width:none" loading="lazy"/></div><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Only finitely many slots are needed. Among kernels of finite sampling families choose one of
+minimal dimension. Appending any further slot cannot lower that dimension, hence cannot lower
+the kernel. A vector in this kernel is therefore killed by every slot and, by the preceding argument,
+is zero. Write X = Q
+j&lt;d−1Vj, Y = gm, and T : X →Y for the resulting injective linearization.</pre></details></figure><p data-source-page="256">There is an adjoint-equivariant left inverse<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018599.svg" alt=" C : Y →X" style="width:5.2771em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>. Equip<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018600.svg" alt=" Y" style="width:1.0537em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> with the sum of the invariant color inner products. The range of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018601.svg" alt=" T" style="width:1.0349em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is invariant under the adjoint action in both directions, so its orthogonal projection commutes with that action. Compose this projection with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018602.svg" alt=" T −1" style="width:2.1933em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/> on its range. This proves the equivariance of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018603.svg" alt=" C" style="width:1.1938em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> without needing an invariant inner product on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018604.svg" alt=" X." style="width:1.6586em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> Let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018605.svg" alt=" B : X →Y" style="width:5.1610em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> denote the nonlinear slot readings of the links <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf5">(PF5)</a> at<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018606.svg" alt=" h" style="width:1.0515em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> = 1. Then<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018607.svg" alt=" B(0) = 0," style="width:4.6734em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018608.svg" alt="DB(0) = T" style="width:5.0062em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018609.svg" alt=" D(CB" style="width:3.2420em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>)(0) = 1. The finite-dimensional analytic inverse function theorem supplies a local inverse<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018610.svg" alt=" g−1" style="width:1.9846em;height:1.3125em;vertical-align:-0.23em" loading="lazy"/> of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-018611.svg" alt=" g = CB. Define" style="width:7.4067em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/></p></section>
+<a id="equation-pf7"></a><figure class="sr-formula" id="p256-block-010" data-source-page="256"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p256-006322.svg" alt="R(y) = g−1(Cy).
+(PF7)" width="276.83" height="14.86" style="width:25.397em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 256.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>R(y) = g−1(Cy).
+(PF7)</pre></details></figure>
+<p id="p256-block-011" data-source-page="256">It is analytic near zero,<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-006323.svg" alt=" R" style="width:1.2084em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>(0) = 0, and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-006324.svg" alt=" R(B(x)) = x" style="width:6.0500em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> near zero. For each fixed gauge transformation its equivariance follows by applying<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-006325.svg" alt=" g" style="width:1.0214em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> to both candidate expressions, using equivariance of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-006326.svg" alt=" B, C," style="width:2.8619em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and using injectivity on a sufficiently small common neighborhood. The neighborhood is allowed to depend on that transformation. Replace this shared recovery map by its Taylor polynomial</p>
+<a id="equation-pf8"></a><figure class="sr-formula" id="p256-block-013" data-source-page="256"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p256-006327.svg" alt="d
+X
+1
+q!DqR(0)[y, . . . , y],
+Pi(y) = bi(R≤d(y)).
+(PF8)
+R≤d(y) =
+q=0" width="373.52" height="34.30" style="width:34.268em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 256.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>d
+X
+1
+q!DqR(0)[y, . . . , y],
+Pi(y) = bi(R≤d(y)).
+(PF8)
+R≤d(y) =
+q=0</pre></details></figure>
+<p id="p256-block-016" data-source-page="256">All derivatives through order<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021157.svg" alt=" d" style="width:1.0170em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> of the first expression equal those of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021158.svg" alt=" R" style="width:1.2578em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; differentiating each homogeneous term proves this directly, including its factorial. Expanding multilinear forms in real panel coordinates makes<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021159.svg" alt=" Pi" style="width:1.3802em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> an actual complex polynomial. Its evaluation on real panels is real, and it is adjoint invariant. Because<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021160.svg" alt=" R≤d" style="width:2.2775em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>(0) = 0, each substituted coordinate has no constant term. Every monomial of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021161.svg" alt=" bi" style="width:1.1537em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> has exactly<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021162.svg" alt=" fi" style="width:1.2151em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> factors. Hence every monomial of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021163.svg" alt=" Pi" style="width:1.3679em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> has at least<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021164.svg" alt=" fi" style="width:1.2155em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> slot factors. The substitution is not truncated again: terms of degree greater than<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p256-021165.svg" alt=" d" style="width:0.9973em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are retained.</p>
+<p id="p256-block-016-paragraph-2" data-source-page="256">The geometric scaling identity for <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf5">(PF5)</a> is</p>
+<a id="equation-pf9"></a><figure class="sr-formula" id="p256-block-017" data-source-page="256"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p256-006337.svg" alt="U(J, h) = U(trunkd(hj+2Jj), 1).
+(PF9)" width="312.34" height="15.85" style="width:28.655em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 256.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>U(J, h) = U(trunkd(hj+2Jj), 1).
+(PF9)</pre></details></figure>
+<a id="source-page-257"></a>
+<a id="equation-pf10"></a><figure id="p257-block-001" class="sr-formula sr-source-panel" data-source-page="257"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p257-006338.svg" alt="It follows from homogeneity in (PF4) and uniqueness of the edge equation. Along this curve the slot
+panel is B(trunkd(hj+2Jj)). Equations (PF7)–(PF8), and the chain rule through order d, therefore
+give
+dq
+dhq Pi(slots of U(J, h))
+
+h=0
+= dq
+dhq bi((hj+2Jj)j)
+
+h=0
+,
+0 ≤q ≤d.
+(PF10)" width="470.88" height="66.76" style="width:43.200em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 257.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>It follows from homogeneity in (PF4) and uniqueness of the edge equation. Along this curve the slot
+panel is B(trunkd(hj+2Jj)). Equations (PF7)–(PF8), and the chain rule through order d, therefore
+give
+dq
+dhq Pi(slots of U(J, h))
+
+h=0
+= dq
+dhq bi((hj+2Jj)j)
+
+h=0
+,
+0 ≤q ≤d.
+(PF10)</pre></details></figure>
+<a id="equation-pf11"></a><p id="p257-block-004" data-source-page="257">This is equality of finite Taylor readings, not equality at nonzero mesh.</p>
+<p id="p257-block-004-paragraph-2" data-source-page="257">To impose the signed lattice symmetries, extend<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021166.svg" alt=" Pi" style="width:1.3155em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> linearly in the coefficient vector, precompose configurations by each signed coordinate permutation, apply the inverse tensor action to the coefficient input, and average over this finite group. Equation <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf10">(PF10)</a> is preserved: the holonomy of the transformed connection is the transformed holonomy, including reversal and inversion of negatively oriented edges, by <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf5">(PF5)</a> and uniqueness. The tensor action preserves field number. A transformed slot is a signed slot; combining all these finite slot families into one list and substituting signed variables therefore preserves the lower bound<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021167.svg" alt=" fi" style="width:1.2843em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> on monomial degree. The averaged section fixes the unit and obeys the exact signed symmetry and reality laws.</p>
+<p id="p257-block-004-paragraph-3" data-source-page="257">All paths and squares used are finite. Enclose them and their signed images in one origincontaining symmetric integer box. Each transported curvature slot is a polynomial in matrix entries of its links and their conjugates: inverse unitary links use conjugate transpose, and curvature uses its fixed linear projection of the skew part. Thus the section is a finite polynomial cylinder, gauge invariant, continuous everywhere and smooth along link variations. On a torus it is placed by translating and reducing this finite stencil. Formula <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf10">(PF10)</a> is used when the stencil does not wrap; the cylinder itself is defined even when it wraps.</p>
+<p id="p257-block-004-paragraph-4" data-source-page="257">Finally fix a derivative order and the direction power of <a href="/source-readout/yang-mills-reconstruction/010-activity-domains-ordered-derivatives-and-absolute-budgets#equation-ab4">(AB4)</a>. On this fixed stencil each transported curvature slot, including its normalized ordered left derivatives, has an envelope bounded by <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021168.svg" alt="Cθ" style="width:1.4017em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> on the healthy domain. The zeroth estimate is the healthy plaquette bound and adjoint isometry; differentiated plaquettes and connector products have bounded coefficients on the compact group and each allowed direction contributes<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021169.svg" alt=" θ" style="width:0.9596em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> times a fixed stencil constant. For a differentiated product of at least<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021170.svg" alt=" fi" style="width:1.1920em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> slots the Leibniz rule distributes the derivatives; an undifferentiated slot pays <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021171.svg" alt="θ" style="width:0.6157em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, and a differentiated slot pays at least one<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021172.svg" alt=" θ" style="width:0.9763em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. Further derivatives only improve this power since <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021173.svg" alt="θ ≤" style="width:1.7589em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>1. Finite sums and a maximum over the finite basis give a constant<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021174.svg" alt=" A" style="width:1.2631em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, independent of torus size, placement and the remaining budget parameters, such that the section of<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021175.svg" alt=" bi" style="width:1.2131em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> has normalized envelope <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021176.svg" alt="Aθfi." style="width:2.3803em;height:1.3490em;vertical-align:-0.23em" loading="lazy"/> <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf11">(PF11)</a></p>
+<p id="p257-block-005" data-source-page="257">This is the local section estimate used in training and reset budgets. It includes nonlinear terms of <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf8">(PF8)</a>; it is not an estimate only of the linearized sampler.</p>
+<p id="p257-block-005-paragraph-2" data-source-page="257">The actual finest-lattice insertion includes two coefficient changes in a specified order. Let <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021177.svg" alt="θN &gt;" style="width:2.4115em;height:1.3015em;vertical-align:-0.23em" loading="lazy"/> 0 be the healthy-field threshold at level<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021178.svg" alt=" N" style="width:1.2398em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021179.svg" alt=" Sd(c; o, U" style="width:4.3756em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>) be the section just constructed, and let<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021180.svg" alt=" Td,N,p" style="width:2.8966em;height:1.2692em;vertical-align:-0.23em" loading="lazy"/> be the terminal coefficient isomorphism of the selected history. Put</p>
+<a id="equation-pf12"></a><figure class="sr-formula" id="p257-block-006" data-source-page="257"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p257-006354.svg" alt="Id,N,p(v; o, U) = a−d
+N Sd
+ θ−fi
+N (T −1
+d,N,pv)i
+
+i; o, U
+
+.
+(PF12)" width="348.80" height="26.92" style="width:32.000em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 257.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Id,N,p(v; o, U) = a−d
+N Sd
+ θ−fi
+N (T −1
+d,N,pv)i
+
+i; o, U
+
+.
+(PF12)</pre></details></figure>
+<p id="p257-block-008" data-source-page="257">Thus calibration is applied first, threshold scaling second, and engineering normalization last. The exponent in the threshold scaling is the field number<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021181.svg" alt=" fi" style="width:1.2580em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>, not the engineering degree<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021182.svg" alt=" ri" style="width:1.2227em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/>. A general horizon label contains several bidegrees, so neither diagonal scaling may be replaced by one scalar on that entire space.</p>
+<p id="p257-block-008-paragraph-2" data-source-page="257">Although the coefficient vector in <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a> depends on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021183.svg" alt=" N, p" style="width:2.3702em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, its stencil is the single stencil of <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p257-021184.svg" alt="Sd" style="width:1.1595em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>. Linear combination and multiplication by constants do not enlarge it. Consequently <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a> is continuous, gauge invariant and supported on that translated stencil for every cutoff, including</p>
+<a id="source-page-258"></a>
+<a id="equation-pf13"></a><section class="sr-derivation" id="p258-block-001" data-source-page="258"><p data-source-page="258">cutoffs at which it wraps around the torus. The finite-Taylor normalization and the calibrated symmetry statements are used only after the reference level fits below<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018612.svg" alt=" N" style="width:1.2535em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>; this distinction is needed when constructing a family defined at every cutoff.</p><p data-source-page="258">At such a cutoffthe terminal map commutes with conjugation and signed orthogonal actions. Its inverse does too, by applying the terminal map to the two candidate values. Threshold scaling commutes with those actions because they preserve field number. Together with the corresponding identities for<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018613.svg" alt=" Sd" style="width:1.5354em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>, these facts prove the reality and signed covariance of <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a>. If<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018614.svg" alt=" e0" style="width:1.3769em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> denotes the coefficient vector of the constant polynomial, the physical unit at level<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018615.svg" alt=" m" style="width:1.2686em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018616.svg" alt=" ad" style="width:1.3223em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018617.svg" alt="me0" style="width:1.7325em;height:1.3350em;vertical-align:-0.23em" loading="lazy"/>. The based-history identity is <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018618.svg" alt="Td,N,p(ad" style="width:3.9264em;height:1.4531em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018619.svg" alt="Ne0) = ad" style="width:4.4362em;height:1.5374em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-018620.svg" alt="kde0." style="width:2.1716em;height:1.4239em;vertical-align:-0.23em" loading="lazy"/> <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf13">(PF13)</a></p></section>
+<p id="p258-block-002" data-source-page="258">Substituting its inverse in <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a>, using<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006360.svg" alt=" f0" style="width:1.3595em;height:1.2378em;vertical-align:-0.23em" loading="lazy"/> = 0 and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006361.svg" alt=" Sd(e0" style="width:2.7823em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>) = 1, proves that the reference physical unit gives the constant cylinder one. Translating the placement translates precisely the same coefficient vector; no new history or new calibration is chosen at the new site.</p>
+<p id="p258-block-003" data-source-page="258"><strong>Source–readout formulation.</strong> The chain is</p>
+<figure class="sr-formula" id="p258-block-004" data-source-page="258"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p258-006362.svg" alt="J
+realize (PF5)
+−−−−−−−−−→U(J, h)
+slots
+−−−−→B
+R
+−−→J," width="213.62" height="17.31" style="width:19.598em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 258.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>J
+realize (PF5)
+−−−−−−−−−→U(J, h)
+slots
+−−−−→B
+R
+−−→J,</pre></details></figure>
+<p id="p258-block-005" data-source-page="258">with<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006363.svg" alt=" R ◦B" style="width:3.0876em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> = id near zero <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf7">(PF7)</a>: on the image of the realization the slot panel recovers the jet exactly, as analytic germs. The polynomial section replaces<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006364.svg" alt=" R" style="width:1.3141em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> by<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006365.svg" alt=" R≤d" style="width:2.3151em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> and thereby recovers the label reading only through Taylor order<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006366.svg" alt=" d" style="width:1.1037em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> in the mesh <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf10">(PF10)</a>; the loss is everything of higher order, and it is intended (those terms have engineering weight above the horizon). The realization map<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006367.svg" alt=" J 7→U(J, h" style="width:5.6381em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>) is not onto configurations and is not gauge invariant; the readout<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006368.svg" alt=" B" style="width:1.2815em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is adjoint covariant at the origin and the labels are adjoint-invariant polynomials, so<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006369.svg" alt=" Pi ◦B" style="width:2.9003em;height:1.2967em;vertical-align:-0.23em" loading="lazy"/> is gauge invariant. In the frame realization of <a href="/source-readout/yang-mills-reconstruction/008-finite-lattice-realization-and-exact-recovery#theorem-7-1">Theorem 7.1</a>,<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006370.svg" alt=" Sd(c; o, π(r, A)) = Sd(c; o, A" style="width:12.6001em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/>) (<a href="/source-readout/yang-mills-reconstruction/010-activity-domains-ordered-derivatives-and-absolute-budgets#proposition-9-1">Proposition 9.1</a> and gauge invariance), the envelope <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf11">(PF11)</a> is a fibre constant (<a href="/source-readout/yang-mills-reconstruction/010-activity-domains-ordered-derivatives-and-absolute-budgets#proposition-9-3">Proposition 9.3</a>) and the insertion <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a> lifts as<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006371.svg" alt=" IZ" style="width:1.5531em;height:1.2990em;vertical-align:-0.23em" loading="lazy"/> <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006372.svg" alt="= I ◦π" style="width:3.3214em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/> with the same stencil. The three coefficient operations of <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pf12">(PF12)</a> are recorded separately in the realized tuple, in their order.</p>
+<a id="lemma-16-2"></a><figure id="p258-block-006" class="sr-formula sr-source-panel" data-source-page="258"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p258-006373.svg" alt="Lemma 16.2 (Finitely many slots separate truncated radial jets). There is a finite slot family
+whose linearization T : X = Q
+j&lt;d−1 Vj →Y = gm is injective, and an adjoint-equivariant left
+inverse C : Y →X." width="470.30" height="39.61" style="width:43.147em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 258.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Lemma 16.2 (Finitely many slots separate truncated radial jets). There is a finite slot family
+whose linearization T : X = Q
+j&lt;d−1 Vj →Y = gm is injective, and an adjoint-equivariant left
+inverse C : Y →X.</pre></details></figure>
+<figure id="p258-block-007" class="sr-formula sr-source-panel" data-source-page="258"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p258-006374.svg" alt="Proof. If all integer square samples of a sum of components through degree k vanish, multiply the
+rescaled component of degree lby tk−land choose integer xt with txt →x; the finite sum is zero
+for t &gt; 0, and continuity at t = 0 leaves only N(k)
+ij (x, 0). The top curl vanishes, so by Theorem 16.1
+the top potential vanishes, and descending induction removes all components. Among kernels of
+finite sampling families choose one of minimal dimension; appending any slot cannot lower it, so
+a vector in it is killed by every slot and is zero. For C, equip Y with the sum of invariant color
+inner products; the range of T is invariant, its orthogonal projection commutes with the adjoint
+action, and C is that projection followed by T −1 on the range. No invariant inner product on X is
+needed." width="469.97" height="122.20" style="width:43.116em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 258.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Proof. If all integer square samples of a sum of components through degree k vanish, multiply the
+rescaled component of degree lby tk−land choose integer xt with txt →x; the finite sum is zero
+for t &gt; 0, and continuity at t = 0 leaves only N(k)
+ij (x, 0). The top curl vanishes, so by Theorem 16.1
+the top potential vanishes, and descending induction removes all components. Among kernels of
+finite sampling families choose one of minimal dimension; appending any slot cannot lower it, so
+a vector in it is killed by every slot and is zero. For C, equip Y with the sum of invariant color
+inner products; the range of T is invariant, its orthogonal projection commutes with the adjoint
+action, and C is that projection followed by T −1 on the range. No invariant inner product on X is
+needed.</pre></details></figure>
+<p id="p258-block-008" data-source-page="258">The lemma is the finite-dimensional separation statement on which the chain rests: finitely many lattice slots already determine a truncated radial jet, and the left inverse can be chosen compatibly with the adjoint action, so that the gauge covariance of the readout is not broken by the choice of slots. The exactness class of the label reading is controlled approximation in the mesh (exact through Taylor order<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p258-006375.svg" alt=" d" style="width:0.9994em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>), built on an exact local section.</p>
+<a id="source-page-259"></a>
+<a id="section-16-3"></a><h3 id="p259-block-001" data-source-page="259">16.3 Calibrated coefficient changes and exact solutions</h3>
+<figure id="p259-block-002" class="sr-formula sr-source-panel" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006376.svg" alt="The inverse of the local slot sampler in (PF8) is an inverse on truncated radial jets. The coefficient
+inverse required for a physical insertion is a different map. We construct it in the norms and units
+in which it is used. Fix a degree horizon d, its coherent frame, and a reporting level k ≥kd, where
+kd is the reference level for that frame. All assertions in this paragraph are uniform in N ≥k and
+the period p, with k fixed.
+Let Td,N,p be the calibrated terminal coefficient isomorphism of the insertion history. If v is
+its reference coefficient, transport T −1
+d,N,pv along that same history to level k and take its primary
+coefficient. Denote the result by" width="470.41" height="107.35" style="width:43.157em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>The inverse of the local slot sampler in (PF8) is an inverse on truncated radial jets. The coefficient
+inverse required for a physical insertion is a different map. We construct it in the norms and units
+in which it is used. Fix a degree horizon d, its coherent frame, and a reporting level k ≥kd, where
+kd is the reference level for that frame. All assertions in this paragraph are uniform in N ≥k and
+the period p, with k fixed.
+Let Td,N,p be the calibrated terminal coefficient isomorphism of the insertion history. If v is
+its reference coefficient, transport T −1
+d,N,pv along that same history to level k and take its primary
+coefficient. Denote the result by</pre></details></figure>
+<a id="equation-pc1"></a><figure class="sr-formula" id="p259-block-003" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006377.svg" alt="Cd,k,N,pv,
+Ad,k,N,pv = a−d
+k Cd,k,N,pv.
+(PC1)" width="329.86" height="18.32" style="width:30.262em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>Cd,k,N,pv,
+Ad,k,N,pv = a−d
+k Cd,k,N,pv.
+(PC1)</pre></details></figure>
+<p id="p259-block-004" data-source-page="259">At the reference level<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-006378.svg" alt=" Cd,kd,N,pv = v" style="width:6.6092em;height:1.3396em;vertical-align:-0.23em" loading="lazy"/>, by the normalization of the history. At an adjacent step its coefficient estimates give, in the frame norm<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-006379.svg" alt=" | · |1," style="width:2.4713em;height:1.2563em;vertical-align:-0.23em" loading="lazy"/></p>
+<a id="equation-pc2"></a><figure class="sr-formula" id="p259-block-005" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006380.svg" alt="|Civ|1 ≤Ri+1Ld
+i |Ci+1v|1,
+|Ci+1v|1 ≤Ri+1|Civ|1,
+(PC2)" width="361.02" height="17.21" style="width:33.121em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|Civ|1 ≤Ri+1Ld
+i |Ci+1v|1,
+|Ci+1v|1 ≤Ri+1|Civ|1,
+(PC2)</pre></details></figure>
+<a id="equation-pc3"></a><figure id="p259-block-006" class="sr-formula sr-source-panel" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006381.svg" alt="where Ri+1 ≥1 is the actual column allowance and Li ≥1 the block side. These are bounds on the
+primary coefficients of the original transported entries. They do not replace the primary coefficient
+by its class in the physical quotient.
+Define the finite number
+Od,k =
+Y
+i&lt;k
+Ri+1Ld
+i ≥1.
+(PC3)" width="471.27" height="78.70" style="width:43.236em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>where Ri+1 ≥1 is the actual column allowance and Li ≥1 the block side. These are bounds on the
+primary coefficients of the original transported entries. They do not replace the primary coefficient
+by its class in the physical quotient.
+Define the finite number
+Od,k =
+Y
+i&lt;k
+Ri+1Ld
+i ≥1.
+(PC3)</pre></details></figure>
+<p id="p259-block-008" data-source-page="259">Iterating the first inequality of <a href="/source-readout/yang-mills-reconstruction/042-radial-jets-calibrated-labels-and-the-free-maxwell-comparison-hierarchy#equation-pc2">(PC2)</a>, starting at the reference level, and enlarging the product by its factors before that level, proves</p>
+<a id="equation-pc4"></a><figure class="sr-formula" id="p259-block-009" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006382.svg" alt="|v|1 ≤Od,k|Cd,k,N,pv|1 = Od,kad
+k|Ad,k,N,pv|1.
+(PC4)" width="339.13" height="16.77" style="width:31.113em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>|v|1 ≤Od,k|Cd,k,N,pv|1 = Od,kad
+k|Ad,k,N,pv|1.
+(PC4)</pre></details></figure>
+<p id="p259-block-010" data-source-page="259">Iterating the second inequality gives a finite upper bound as well. Thus<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021185.svg" alt=" C" style="width:1.1771em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> and<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021186.svg" alt=" A" style="width:1.2172em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> are injective and hence bijective on the finite coefficient space, with both bounds uniform in the remaining cutoff and period at this fixed level. No bound on<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021187.svg" alt=" Od,k" style="width:2.2571em;height:1.2507em;vertical-align:-0.23em" loading="lazy"/> as<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021188.svg" alt=" k →∞" style="width:3.5873em;height:1.1651em;vertical-align:-0.23em" loading="lazy"/>is asserted.</p>
+<p id="p259-block-010-paragraph-2" data-source-page="259">The readout map is constructed by polynomial substitution followed by Gaussian contraction. Start with the linear map sending a reference coefficient<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021189.svg" alt=" v" style="width:1.0062em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> to the local polynomial representative of its transported insertion. Rename its finitely many slot variables as the actual link-coordinate variables, multiply each by the threshold factor, and embed them in the one common stencil. Let <img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021190.svg" alt="M(v" style="width:2.0997em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>) denote the resulting polynomial. For its actual symmetric covariance<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021191.svg" alt=" Q" style="width:1.1837em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>, Gaussian contraction means the finite linear operator</p>
+<a id="equation-pc5"></a><figure class="sr-formula" id="p259-block-012" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006390.svg" alt="
+
+X
+1
+.
+(PC5)
+WQ = exp
+α,β
+Qαβ∂α∂β
+2" width="306.98" height="44.01" style="width:28.164em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>
+
+X
+1
+.
+(PC5)
+WQ = exp
+α,β
+Qαβ∂α∂β
+2</pre></details></figure>
+<p id="p259-block-019" data-source-page="259">The exponential terminates on each polynomial. Apply<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021192.svg" alt=" WQ" style="width:2.1036em;height:1.2611em;vertical-align:-0.23em" loading="lazy"/>, substitute the linearized slot expressions in the radial-jet variables, and retain monomials of engineering weight at most<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021193.svg" alt=" d" style="width:0.9009em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/>. The resulting polynomial is invariant and real when<img class="sr-vector-inline" src="/publications/source-lift/yang-mills-reconstruction/math/p259-021194.svg" alt=" v" style="width:1.0146em;height:1.1467em;vertical-align:-0.23em" loading="lazy"/> is real: substitution intertwines the color action, the covariance is invariant, and real coefficients and real covariance commute with coefficient conjugation. It therefore has a unique coefficient vector in the coherent frame.</p>
+<p id="p259-block-019-paragraph-2" data-source-page="259">There is a last field-number rescaling in this definition. Put</p>
+<a id="equation-pc6"></a><figure class="sr-formula" id="p259-block-020" data-source-page="259"><div class="sr-formula-scroll"><img src="/publications/source-lift/yang-mills-reconstruction/math/p259-006394.svg" alt="ξk,N,p =
+β−1/2
+N,p,k
+θk
+&gt; 0,
+(Dξz)i = ξfizi,
+(PC6)" width="330.35" height="33.77" style="width:30.307em;height:auto;max-width:none" loading="lazy"/></div><figcaption class="sr-only">Source page 259.</figcaption><details class="sr-formula-transcript"><summary>Searchable transcription</summary><pre>ξk,N,p =
+β−1/2
+N,p,k
+θk
+&gt; 0,
+(Dξz)i = ξfizi,
+(PC6)</pre></details></figure>

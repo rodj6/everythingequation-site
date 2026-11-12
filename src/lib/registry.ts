@@ -269,7 +269,7 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: sourceReadout?.texUrl ?? research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
       markdownUrl: sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
+      researchProgramme: slug==='yang-mills'||sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

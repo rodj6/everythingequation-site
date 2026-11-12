@@ -31,6 +31,15 @@ export interface Thread {
 
 export const threads: Thread[] = [
   {
+    id: "source-lift",
+    question: "How does Shadow Theory recover a physical construction?",
+    teaser: "Reverse sections show what is covered, fibres identify what a readout discards, and operation identities carry a derivation. The Einstein and Yang–Mills reconstructions put that method to work.",
+    see: { label: "Classical and quantum fields in the Atlas", href: "/atlas?mode=guided&tour=source-lift" },
+    explain: { label: "Yang–Mills through Shadow Theory", href: "/source-readout/yang-mills" },
+    prove: { label: "The complete source–readout reconstruction", href: "/source-readout/yang-mills-reconstruction" },
+    near: ["/source-readout/yang-mills", "/source-readout/yang-mills-reconstruction", "/source-readout/yang-mills-companion", "/source-readout/einstein-1916", "/papers/yang-mills", "/papers/einstein-1916"],
+  },
+  {
     id: "readout",
     question: "What can a readout tell us about its source?",
     teaser: "Two different sources can leave the same mark. The foundation papers say exactly when that matters, and what further reading settles it.",

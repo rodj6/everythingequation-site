@@ -1,0 +1,110 @@
+---
+title: "What source–readout recovery requires"
+description: "A source support, a realized physical sector and an observable output play different roles. Here are the exact maps and the composition result that let the subsequent derivation pass through those layers."
+order: 2
+---
+
+**A source support, a realized physical sector and an observable output play different roles. Here are the exact maps and the composition result that let the subsequent derivation pass through those layers.**
+
+<a id="sec-architecture"></a>
+
+## 2. Source architecture and the reconstruction problem
+
+<a id="an-admitted-support-and-its-literal-preparation"></a>
+
+### An admitted support and its literal preparation
+
+The native source language in [\[10\]](/source-readout/einstein-1916/25-references#ref-10) (Chs. 2–3) consists of a dependency preorder, marked deposition-potential tokens with nonempty finite support, inherited lineage, invariant data and intrinsic boundary data. A marked support contains a strict pair: $a\preceq b$ and not $b\preceq a$. Strong comparisons preserve this structure and are injective on marked supports. The admitted class is the least isomorphism-saturated closure of the specified initial witnesses under the allowed strong images, finite attachments, presentation-preserving retracts and stabilizing directed colimits. No spacetime coordinate, metric, action or desired physical outcome is a primitive native label.
+
+Only one initial witness is needed here. Let <a id="eq-2-1"></a><a id="eq-native"></a>
+
+$$
+X_\star=(\{0,1\},0\prec1,\{m_\star\},\operatorname{Supp}(m_\star)=\{0,1\},
+ \ell_\star,\operatorname{Inv}_\star,\varnothing).
+\tag{2.1}
+$$
+
+ Its lineage and invariant data are those of the walking marked dependency in the initial witness class. Hence it is admitted without any new attachment or physical test. Its literal preparation is <a id="eq-2-2"></a><a id="eq-preparation"></a>
+
+$$
+Y_\star=J_{\rm real}(X_\star,m_\star)
+ =(X_\star,m_\star,\{0,1\},\preceq_\star,\ell_\star,
+ \operatorname{Inv}_\star,\varnothing).
+\tag{2.2}
+$$
+
+ The two vertices are not physical spacetime events, and their order is not the time coordinate. This admission argument uses only membership in the initial class; it does not require a claim about arbitrary source graphs.
+
+A sector relation has the type <a id="eq-2-3"></a><a id="eq-sector"></a>
+
+$$
+\mathscr K_s(Y_\star)\subseteq\mathsf O_s^{\rm raw}\times\mathsf D_s,\qquad
+ y_s=(z_s,\delta_s)\in\mathscr K_s(Y_\star),
+\tag{2.3}
+$$
+
+ where $z_s$ is a realization and $\delta_s$ its discrepancy data. For interfaces, differences $d_e(L_ez_s,R_ez_t)$ are evaluated in a specified common space. The common witness retains the same $Y_\star$, calibration, laws, units, preparation and boundary convention. A product of successful but incompatible sector solutions is not a common witness.
+
+For this application the geometric realization supplies a smooth four-manifold $M$, local coordinate patches, a Lorentzian measurement space, invertible calibrations, comparison connections, tensor fields, curves and boundaries. Fluid variables, potentials and currents are added when needed. The raw domain retains nonzero torsion, nonmetricity, field, normalization and interface residuals. These data are supplied over [(2.2)](/source-readout/einstein-1916/02-source-and-recovery#eq-preparation); no construction in this paper claims to generate the continuum or the action from that finite tuple alone.
+
+<a id="what-recovery-means"></a>
+
+### What recovery means
+
+Let $Q$ denote a declared target domain, $Z$ a realization domain, and $\pi:Z\to Q$ a readout. For a target operation $O$, an operation lift $O_Z$ must satisfy <a id="eq-2-4"></a><a id="eq-intertwiner"></a>
+
+$$
+\pi_{\rm out}O_Z(z,u)=O(\pi_{\rm in}z,u)
+\tag{2.4}
+$$
+
+ on its actual domain and with the same auxiliary inputs $u$. When exact equality requires a condition, the complete defect is displayed before setting that condition to zero. A reverse section $\iota$ satisfies $\pi\iota=\mathrm{id}$ on the specified local target class. It need not satisfy $\iota\pi=\mathrm{id}$ on raw presentations.
+
+<a id="thm-composition"></a>
+
+### Lemma 2.1 (Composition and legitimate information loss)
+
+Suppose a finite derivation is a directed acyclic sequence of operations satisfying [(2.4)](/source-readout/einstein-1916/02-source-and-recovery#eq-intertwiner), with the hypotheses and target objects needed at every step covered by their source preimages. Then each composite operation in that derivation is recovered. A coarser readout $q:Z\to B$ supports a required output $f:Z\to C$ exactly when $f$ is constant on the fibres of $q$, restricted to $\operatorname{im}q$. For future operations this fibre relation must also be a congruence for those operations.
+
+<a id="proof-thm-composition"></a>
+
+### Proof.
+
+Order the finite dependency graph so every input precedes its consumer. Substitution of [(2.4)](/source-readout/einstein-1916/02-source-and-recovery#eq-intertwiner) at each node proves the composite identity inductively. If $f=\bar f\circ q$, equal $q$ values give equal $f$ values. Conversely define $\bar f(qz)=f(z)$; fibre constancy makes this definition independent of the preimage. An operation descends only if applying it to equal-readout states with the same allowed inputs again gives equal required readouts. No continuity, convergence or differential regularity follows from this set-level argument; those properties are established separately below.
+
+$\square$
+
+For an action, matching values is insufficient. We require coverage of admitted test variations and retain the boundary functional. For a nonlinear field equation we prove a correspondence of local solution sets, not a general initial-value uniqueness theorem. For an approximation we state the topology controlling differentiated remainders or the exact integral and its remainder bound. These distinctions determine the scope of the final theorem.
+
+<a id="sec-conventions"></a>
+
+### Conventions
+
+Throughout, <a id="eq-2-5"></a><a id="eq-conventions"></a>
+
+$$
+\eta=\operatorname{diag}(-1,-1,-1,+1),\qquad x^4=t,\qquad c=1,
+ \qquad q=g^{-1},\qquad \nu=\sqrt{-\det g}.
+\tag{2.5}
+$$
+
+ Greek indices are coordinate slots; Latin indices are calibrated slots. $C^\rho{}_{\mu\nu}$ denotes the Christoffel connection, with the first lower slot the differentiation direction. Einstein’s later field symbol has the opposite sign: <a id="eq-2-6"></a><a id="eq-signs"></a>
+
+$$
+\Gamma_{\!\mathrm E}^\rho{}_{\mu\nu}=-C^\rho{}_{\mu\nu},\qquad
+ R^\rho{}_{\sigma\mu\nu}=
+ \partial_\mu C^\rho{}_{\nu\sigma}-\partial_\nu C^\rho{}_{\mu\sigma}
+ +C^\rho{}_{\mu\lambda}C^\lambda{}_{\nu\sigma}
+ -C^\rho{}_{\nu\lambda}C^\lambda{}_{\mu\sigma},
+\tag{2.6}
+$$
+
+ <a id="eq-2-7"></a><a id="eq-ricci-sign"></a>
+
+$$
+\operatorname{Ric}_{\mu\nu}=R^\rho{}_{\mu\rho\nu},\qquad
+ B_{\mu\nu}^{\rm Einstein}=-\operatorname{Ric}_{\mu\nu}.
+\tag{2.7}
+$$
+
+ Gravitational comparison curvature is $\mathcal F$; electromagnetic field is $\mathsf F$, with calibrated components $f$. The inverse calibration is always $E^{-1}$. All general statements use smooth fields on nondegenerate patches. Absolute determinant gives a density; orientation is chosen separately for signed integrals. Time orientation, when needed for observers, is likewise separate. The constants and observer data are not changed between joined readouts.

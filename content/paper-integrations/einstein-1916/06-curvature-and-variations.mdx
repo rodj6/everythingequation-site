@@ -1,0 +1,130 @@
+---
+title: "Keep the nonlinear curvature"
+description: "The comparison commutator recovers both derivative and quadratic curvature terms. Local flatness, coordinate-volume choices and variation coverage are then different consequences of that complete operation."
+order: 6
+---
+
+**The comparison commutator recovers both derivative and quadratic curvature terms. Local flatness, coordinate-volume choices and variation coverage are then different consequences of that complete operation.**
+
+<a id="sec-curvature"></a>
+
+## 6. Curvature, local flatness and variation coverage
+
+The comparison curvature is defined by the commutator of the source derivatives: <a id="eq-6-1"></a><a id="eq-framecurvature"></a>
+
+$$
+\mathcal F=\mathrm{d}\omega+\omega\wedge\omega,\qquad
+ \mathcal F_{\mu\nu}=\partial_\mu\omega_\nu-\partial_\nu\omega_\mu
+ +[\omega_\mu,\omega_\nu].
+\tag{6.1}
+$$
+
+ The ordered matrix product cannot be discarded.
+
+<a id="thm-curvature"></a>
+
+### Theorem 6.1 (Curvature recovery on the raw domain)
+
+For every raw comparison pair $(E,\omega)$ and its readout [(4.7)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-C-map), <a id="eq-6-2"></a><a id="eq-curvature-intertwine"></a>
+
+$$
+\boxed{R_{\mu\nu}[C]=E^{-1}\mathcal F_{\mu\nu}[\omega]E.}
+\tag{6.2}
+$$
+
+ On the compatible torsion-free sector this is the Riemann tensor of the recovered metric.
+
+<a id="proof-thm-curvature"></a>
+
+### Proof.
+
+The vector derivative identity is the operator equality $(\partial_\mu+\omega_\mu)E=E(\partial_\mu+C_\mu)$. Take its commutator in $\mu,\nu$. Derivatives of the arbitrary test vector cancel, leaving $\mathcal F_{\mu\nu}E=ER_{\mu\nu}$. Expansion yields all four terms in [(2.6)](/source-readout/einstein-1916/02-source-and-recovery#eq-signs), including both quadratic products. No zero residual or field equation has been used.
+
+$\square$
+
+Under a frame change $\mathcal F'=\Lambda\mathcal F\Lambda^{-1}$, so its coordinate readout is fixed. Coordinate changes act on the two direction slots and the vector/covector slots, proving tensor character. Einstein appends derivative indices, so his $A_{\mu\sigma\tau}$ means $\nabla_\tau\nabla_\sigma A_\mu$, including the derivative-slot connection. Subtraction gives <a id="eq-6-3"></a><a id="eq-einstein-commutator"></a>
+
+$$
+A_{\mu\sigma\tau}-A_{\mu\tau\sigma}
+ =R^\rho{}_{\mu\sigma\tau}A_\rho
+ +T^\lambda{}_{\sigma\tau}\nabla_\lambda A_\mu.
+\tag{6.3}
+$$
+
+ On zero torsion this is Einstein <span className="upright">(42)</span>–Einstein <span className="upright">(43)</span>. Einstein contracts the upper index with the final lower index, giving $B_{\mu\nu}=R^\rho{}_{\mu\nu\rho}=-\operatorname{Ric}_{\mu\nu}$. In particular, <a id="eq-6-4"></a><a id="eq-6-5"></a><a id="eq-WS"></a><a id="eq-W-S-def"></a>
+
+$$
+\begin{aligned}
+ B_{\mu\nu}&=W_{\mu\nu}+S_{\mu\nu},&&\text{(6.4)}\\
+ W_{\mu\nu}&=-\partial_\alpha C^\alpha{}_{\mu\nu}
+ +\operatorname{tr}(C_\mu C_\nu),\qquad
+ S_{\mu\nu}=\partial_\mu c_\nu-C^\alpha{}_{\mu\nu}c_\alpha.
+&&\text{(6.5)}\end{aligned}
+$$
+
+ This is Einstein <span className="upright">(44)</span>, including its original two-part decomposition. The first term $W$ is not the unrestricted Ricci tensor; the volume defect $S$ is part of the identity.
+
+<a id="flatness-and-coordinate-volume-specialization"></a>
+
+### Flatness and coordinate-volume specialization
+
+If a metric is constant on a chart, $C=0$ there, so $R=0$. Conversely, on a sufficiently small simply connected neighborhood, $\mathcal F=0$ is the integrability condition for $\mathrm{d}\Lambda=\Lambda\omega$ with $\Lambda(p)=I$. One may solve along paths by the linear transport ODE. Differentiating the transport with respect to an endpoint-fixed path deformation gives an integral of conjugated curvature, hence zero. The local simply connected domain makes the result path independent. Interval compatibility keeps $\Lambda$ Lorentz. Equation [(4.3)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-omega-transform) gives $\omega'=0$, and zero torsion then gives $\mathrm{d}(\Lambda\theta)=0$. On a star-shaped subpatch, integration of closed one-forms gives $\Lambda\theta=\mathrm{d}X$; invertibility makes $X$ coordinates. This proves the local flatness converse mentioned in Einstein’s footnote, not global constant coordinates or trivial holonomy on an arbitrary manifold.
+
+Likewise, any positive smooth coordinate density can be made one locally. Set <a id="eq-6-6"></a><a id="eq-volume-chart"></a>
+
+$$
+y^1=\int_{x_0^1}^{x^1}\nu(s,x^2,x^3,x^4)\mathrm{d}s,
+ \qquad y^j=x^j\quad(j=2,3,4).
+\tag{6.6}
+$$
+
+ Its Jacobian determinant is $\nu>0$, so the inverse function theorem gives $\nu_y=1$. Orientation-preserving transitions between such charts have determinant one, recovering Einstein <span className="upright">(19)</span>. This coordinate choice makes $S=0$ in [(6.4)](/source-readout/einstein-1916/06-curvature-and-variations#eq-WS); it is neither a restriction to flat geometry nor an internal Lorentz-frame change.
+
+<a id="variations-of-the-differential-operation"></a>
+
+### Variations of the differential operation
+
+A smooth metric family lifts through the local section of Theorem [3.1](/source-readout/einstein-1916/03-calibrated-spacetime#thm-metric), and its connection is then constructed by [(4.6)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-omega-formula). Differentiating the two comparison conditions gives <a id="eq-6-7"></a><a id="eq-omega-variation"></a>
+
+$$
+\delta\omega^{\mathsf T}\eta+\eta\delta\omega=0,\qquad
+ \mathrm{d}(\delta\theta)+\delta\omega\wedge\theta+\omega\wedge\delta\theta=0.
+\tag{6.7}
+$$
+
+ The algebraic operator on $\delta\omega$ is the same invertible torsion system used in Theorem [4.2](/source-readout/einstein-1916/04-comparison-and-tensors#thm-omega). Every $\delta E$ therefore induces a unique comparison response. Projecting the differentiated compatibility and symmetry identities gives <a id="eq-6-8"></a><a id="eq-C-variation"></a>
+
+$$
+\boxed{\delta C^\rho{}_{\mu\nu}
+ =\tfrac12q^{\rho\lambda}
+ (\nabla_\mu h_{\lambda\nu}+\nabla_\nu h_{\lambda\mu}
+ -\nabla_\lambda h_{\mu\nu}),\qquad h=\delta g.}
+\tag{6.8}
+$$
+
+ The proof is the same three-index addition and subtraction that gave [(4.10)](/source-readout/einstein-1916/04-comparison-and-tensors#eq-christoffel), now linearized. Compact support is preserved because the construction uses only finitely many derivatives. This is variation coverage, not a separate independent-connection action principle.
+
+<a id="controls-on-the-nonlinear-comparison"></a>
+
+### Controls on the nonlinear comparison
+
+For $E=\operatorname{diag}(1,1,1,N(x))$, setting $\omega=0$ preserves $M=0$ but gives $\Theta\ne0$ when $N'\ne0$. The bare connection has $C^4{}_{14}=N'/N$, $C^4{}_{41}=0$ and zero matrix curvature. The compatible construction instead gives <a id="eq-6-9"></a><a id="eq-lapse-control"></a>
+
+$$
+\omega^1{}_4=\omega^4{}_1=N'\mathrm{d}t,\quad
+ C^1{}_{44}=NN',\quad C^4{}_{14}=C^4{}_{41}=N'/N,
+ \quad R^1{}_{414}=NN''.
+\tag{6.9}
+$$
+
+ Linear $N$ gives the flat example [(3.10)](/source-readout/einstein-1916/03-calibrated-spacetime#eq-rindler); $N=e^{kx}$ gives nonzero curvature. Matching the metric alone does not license an arbitrary comparison derivative.
+
+A lapse-only example does not test every quadratic term. With $E=\operatorname{diag}(a,a,a,1)$, $a=e^{Ht}$ and $H\ne0$, the compatible connection satisfies $\omega^i{}_4=\omega^4{}_i=H\theta^i$. Then <a id="eq-6-10"></a><a id="eq-quadratic-control"></a>
+
+$$
+\mathcal F^1{}_2=H^2\theta^1\wedge\theta^2=H^2a^2\mathrm{d}x\wedge\mathrm{d}y,
+ \qquad \mathrm{d}\omega^1{}_2=0.
+\tag{6.10}
+$$
+
+ Deleting $\omega\wedge\omega$ loses this component. The full calculation gives $\operatorname{Ric}=-3H^2g$ and $\mathcal R=-12H^2$ in the declared convention. This is a designed test geometry, not a vacuum solution or a new spacetime discovery.

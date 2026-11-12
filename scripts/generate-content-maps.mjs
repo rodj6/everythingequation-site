@@ -201,7 +201,7 @@ ${imports.join(',\n')}
  */
 const ATLAS_TIERS = ['frame', 'foundation', 'source', 'tier0', 'aperture', 'field', 'tier1', 'observable', 'recovery'];
 const ATLAS_STATUSES = ['theorem', 'conditional', 'construction', 'measured', 'interpretation', 'open', 'historical'];
-const ATLAS_GROUPS = ['frame', 'foundation', 'source', 'law', 'aperture-core', 'aperture-faces', 'field', 'spectral', 'sectors', 'measurement', 'gravity', 'perspective', 'readers', 'observables', 'limits', 'numerics'];
+const ATLAS_GROUPS = ['frame', 'foundation', 'source', 'law', 'aperture-core', 'aperture-faces', 'field', 'spectral', 'sectors', 'measurement', 'gravity', 'source-lift', 'perspective', 'readers', 'observables', 'limits', 'numerics'];
 
 async function generateAtlasResearch() {
   const file = path.join(baseDir, 'content', 'atlas', 'research.yaml');

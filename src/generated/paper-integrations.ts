@@ -2821,6 +2821,1368 @@ export const integrationChapters = [
     "words": 699
   },
   {
+    "paperId": "einstein-1916",
+    "slug": "01-the-reconstruction",
+    "title": "Recover the complete gravitational chain",
+    "description": "Shadow Theory makes the path from local measurements to gravitational dynamics explicit. This edition follows the full construction: the supporting preparation, the geometric and matter realization, the readouts, and the operations that connect them.",
+    "order": 1,
+    "url": "/source-readout/einstein-1916/01-the-reconstruction",
+    "sourcePath": "content/paper-integrations/einstein-1916/01-the-reconstruction.mdx",
+    "sections": [
+      {
+        "id": "sec-intro",
+        "title": "1. Introduction"
+      },
+      {
+        "id": "organization-and-source-fidelity",
+        "title": "Organization and source fidelity"
+      }
+    ],
+    "anchors": [
+      "sec-intro",
+      "organization-and-source-fidelity"
+    ],
+    "words": 622
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "02-source-and-recovery",
+    "title": "What source–readout recovery requires",
+    "description": "A source support, a realized physical sector and an observable output play different roles. Here are the exact maps and the composition result that let the subsequent derivation pass through those layers.",
+    "order": 2,
+    "url": "/source-readout/einstein-1916/02-source-and-recovery",
+    "sourcePath": "content/paper-integrations/einstein-1916/02-source-and-recovery.mdx",
+    "sections": [
+      {
+        "id": "sec-architecture",
+        "title": "2. Source architecture and the reconstruction problem"
+      },
+      {
+        "id": "an-admitted-support-and-its-literal-preparation",
+        "title": "An admitted support and its literal preparation"
+      },
+      {
+        "id": "what-recovery-means",
+        "title": "What recovery means"
+      },
+      {
+        "id": "thm-composition",
+        "title": "Lemma 2.1 (Composition and legitimate information loss)"
+      },
+      {
+        "id": "proof-thm-composition",
+        "title": "Proof."
+      },
+      {
+        "id": "sec-conventions",
+        "title": "Conventions"
+      }
+    ],
+    "anchors": [
+      "sec-architecture",
+      "an-admitted-support-and-its-literal-preparation",
+      "eq-2-1",
+      "eq-native",
+      "eq-2-2",
+      "eq-preparation",
+      "eq-2-3",
+      "eq-sector",
+      "what-recovery-means",
+      "eq-2-4",
+      "eq-intertwiner",
+      "thm-composition",
+      "proof-thm-composition",
+      "sec-conventions",
+      "eq-2-5",
+      "eq-conventions",
+      "eq-2-6",
+      "eq-signs",
+      "eq-2-7",
+      "eq-ricci-sign"
+    ],
+    "words": 840
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "03-calibrated-spacetime",
+    "title": "Intervals determine the metric",
+    "description": "A calibration turns coordinate directions into measured components. Its quadratic readout recovers every local Lorentz metric, and its complete fibre identifies precisely the frame freedom left unresolved.",
+    "order": 3,
+    "url": "/source-readout/einstein-1916/03-calibrated-spacetime",
+    "sourcePath": "content/paper-integrations/einstein-1916/03-calibrated-spacetime.mdx",
+    "sections": [
+      {
+        "id": "sec-metric",
+        "title": "3. Local measurements and metric recovery"
+      },
+      {
+        "id": "thm-metric",
+        "title": "Theorem 3.1 (Local section and complete frame fibre)"
+      },
+      {
+        "id": "proof-thm-metric",
+        "title": "Proof."
+      },
+      {
+        "id": "variations-coordinate-changes-and-compatible-patches",
+        "title": "Variations, coordinate changes and compatible patches"
+      },
+      {
+        "id": "what-a-coarser-readout-would-lose",
+        "title": "What a coarser readout would lose"
+      },
+      {
+        "id": "the-rotating-measurement-example",
+        "title": "The rotating measurement example"
+      }
+    ],
+    "anchors": [
+      "sec-metric",
+      "eq-3-1",
+      "eq-calibration",
+      "eq-3-2",
+      "eq-metricdet",
+      "eq-3-3",
+      "eq-polarization",
+      "thm-metric",
+      "eq-3-4",
+      "eq-lorentz-fibre",
+      "proof-thm-metric",
+      "eq-3-5",
+      "eq-metric-section",
+      "variations-coordinate-changes-and-compatible-patches",
+      "eq-3-6",
+      "eq-metric-variation",
+      "eq-3-7",
+      "eq-coordinate-metric",
+      "eq-3-8",
+      "eq-overlap-defects",
+      "what-a-coarser-readout-would-lose",
+      "eq-3-9",
+      "eq-conformal-control",
+      "eq-3-10",
+      "eq-rindler",
+      "the-rotating-measurement-example",
+      "eq-3-11",
+      "eq-rotation",
+      "eq-3-12",
+      "eq-rotmetric",
+      "eq-3-13",
+      "eq-rotrest"
+    ],
+    "words": 1015
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "04-comparison-and-tensors",
+    "title": "Comparison recovers covariant differentiation",
+    "description": "Tensor slots can be read out reversibly. Differentiation needs more: a compatible comparison rule. Its construction recovers the full metric connection while keeping raw torsion and nonmetricity visible.",
+    "order": 4,
+    "url": "/source-readout/einstein-1916/04-comparison-and-tensors",
+    "sourcePath": "content/paper-integrations/einstein-1916/04-comparison-and-tensors.mdx",
+    "sections": [
+      {
+        "id": "sec-calculus",
+        "title": "4. Tensor operations and compatible comparison"
+      },
+      {
+        "id": "tensor-readouts-and-their-inverses",
+        "title": "Tensor readouts and their inverses"
+      },
+      {
+        "id": "thm-tensor",
+        "title": "Proposition 4.1 (Tensor-algebra recovery)"
+      },
+      {
+        "id": "proof-thm-tensor",
+        "title": "Proof."
+      },
+      {
+        "id": "why-a-comparison-connection-is-necessary",
+        "title": "Why a comparison connection is necessary"
+      },
+      {
+        "id": "thm-omega",
+        "title": "Theorem 4.2 (Unique compatible comparison)"
+      },
+      {
+        "id": "proof-thm-omega",
+        "title": "Proof."
+      },
+      {
+        "id": "connection-readout-and-complete-defects",
+        "title": "Connection readout and complete defects"
+      },
+      {
+        "id": "thm-derivative",
+        "title": "Theorem 4.3 (Differentiation intertwines with readout)"
+      },
+      {
+        "id": "proof-thm-derivative",
+        "title": "Proof."
+      }
+    ],
+    "anchors": [
+      "sec-calculus",
+      "tensor-readouts-and-their-inverses",
+      "eq-4-1",
+      "eq-tensor-map",
+      "thm-tensor",
+      "proof-thm-tensor",
+      "why-a-comparison-connection-is-necessary",
+      "eq-4-2",
+      "eq-raw-D",
+      "eq-4-3",
+      "eq-omega-transform",
+      "eq-4-4",
+      "eq-MT",
+      "eq-4-5",
+      "eq-structure",
+      "thm-omega",
+      "eq-4-6",
+      "eq-omega-formula",
+      "proof-thm-omega",
+      "connection-readout-and-complete-defects",
+      "eq-4-7",
+      "eq-C-map",
+      "eq-4-8",
+      "eq-4-9",
+      "eq-nonmetricity",
+      "eq-torsion",
+      "eq-4-10",
+      "eq-christoffel",
+      "eq-4-11",
+      "eq-C-coordinate",
+      "thm-derivative",
+      "eq-4-12",
+      "eq-D-intertwine",
+      "proof-thm-derivative"
+    ],
+    "words": 838
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "05-geodesics-and-divergences",
+    "title": "From stationary intervals to differential identities",
+    "description": "The same calibrated interval supplies geodesic motion, Hessians, volume derivatives and divergence identities. Boundary terms and tensor symmetries identify where each recovered operation applies.",
+    "order": 5,
+    "url": "/source-readout/einstein-1916/05-geodesics-and-divergences",
+    "sourcePath": "content/paper-integrations/einstein-1916/05-geodesics-and-divergences.mdx",
+    "sections": [
+      {
+        "id": "sec-geodesic",
+        "title": "5. Geodesic variation and differential identities"
+      },
+      {
+        "id": "fixed-endpoint-interval-variation",
+        "title": "Fixed-endpoint interval variation"
+      },
+      {
+        "id": "the-original-scalar-to-tensor-progression",
+        "title": "The original scalar-to-tensor progression"
+      },
+      {
+        "id": "determinants-divergences-and-antisymmetric-derivatives",
+        "title": "Determinants, divergences and antisymmetric derivatives"
+      }
+    ],
+    "anchors": [
+      "sec-geodesic",
+      "fixed-endpoint-interval-variation",
+      "eq-5-1",
+      "eq-length-action",
+      "eq-5-2",
+      "eq-length-variation",
+      "eq-5-3",
+      "eq-geodesic-residual",
+      "eq-5-4",
+      "eq-source-geodesic",
+      "the-original-scalar-to-tensor-progression",
+      "eq-5-5",
+      "eq-hessian",
+      "eq-5-6",
+      "eq-ranktwo-derivative",
+      "determinants-divergences-and-antisymmetric-derivatives",
+      "eq-5-7",
+      "eq-5-8",
+      "eq-inverse-det",
+      "eq-volume-trace",
+      "eq-5-9",
+      "eq-metriccompatcomponents",
+      "eq-5-10",
+      "eq-5-11",
+      "eq-5-12",
+      "eq-5-13",
+      "eq-vector-div",
+      "eq-curl",
+      "eq-cyclic",
+      "eq-antisym-div",
+      "eq-5-14",
+      "eq-mixed-div",
+      "eq-5-15",
+      "eq-symmetric-div"
+    ],
+    "words": 636
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "06-curvature-and-variations",
+    "title": "Keep the nonlinear curvature",
+    "description": "The comparison commutator recovers both derivative and quadratic curvature terms. Local flatness, coordinate-volume choices and variation coverage are then different consequences of that complete operation.",
+    "order": 6,
+    "url": "/source-readout/einstein-1916/06-curvature-and-variations",
+    "sourcePath": "content/paper-integrations/einstein-1916/06-curvature-and-variations.mdx",
+    "sections": [
+      {
+        "id": "sec-curvature",
+        "title": "6. Curvature, local flatness and variation coverage"
+      },
+      {
+        "id": "thm-curvature",
+        "title": "Theorem 6.1 (Curvature recovery on the raw domain)"
+      },
+      {
+        "id": "proof-thm-curvature",
+        "title": "Proof."
+      },
+      {
+        "id": "flatness-and-coordinate-volume-specialization",
+        "title": "Flatness and coordinate-volume specialization"
+      },
+      {
+        "id": "variations-of-the-differential-operation",
+        "title": "Variations of the differential operation"
+      },
+      {
+        "id": "controls-on-the-nonlinear-comparison",
+        "title": "Controls on the nonlinear comparison"
+      }
+    ],
+    "anchors": [
+      "sec-curvature",
+      "eq-6-1",
+      "eq-framecurvature",
+      "thm-curvature",
+      "eq-6-2",
+      "eq-curvature-intertwine",
+      "proof-thm-curvature",
+      "eq-6-3",
+      "eq-einstein-commutator",
+      "eq-6-4",
+      "eq-6-5",
+      "eq-WS",
+      "eq-W-S-def",
+      "flatness-and-coordinate-volume-specialization",
+      "eq-6-6",
+      "eq-volume-chart",
+      "variations-of-the-differential-operation",
+      "eq-6-7",
+      "eq-omega-variation",
+      "eq-6-8",
+      "eq-C-variation",
+      "controls-on-the-nonlinear-comparison",
+      "eq-6-9",
+      "eq-lapse-control",
+      "eq-6-10",
+      "eq-quadratic-control"
+    ],
+    "words": 727
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "07-vacuum-and-action",
+    "title": "Recover the action and its variation",
+    "description": "Recovering the value of a gravitational action is only the beginning. The construction also covers its test directions and boundary response, exposing why coordinate gauge and constrained variation cannot be interchanged.",
+    "order": 7,
+    "url": "/source-readout/einstein-1916/07-vacuum-and-action",
+    "sourcePath": "content/paper-integrations/einstein-1916/07-vacuum-and-action.mdx",
+    "sections": [
+      {
+        "id": "sec-vacuum",
+        "title": "7. Vacuum dynamics and the variational operation"
+      },
+      {
+        "id": "a-source-comparison-action",
+        "title": "A source comparison action"
+      },
+      {
+        "id": "thm-action",
+        "title": "Theorem 7.1 (Complete action-variation recovery)"
+      },
+      {
+        "id": "proof-thm-action",
+        "title": "Proof."
+      },
+      {
+        "id": "coordinate-gauge-versus-a-constrained-variational-domain",
+        "title": "Coordinate gauge versus a constrained variational domain"
+      },
+      {
+        "id": "sec-boundary-action",
+        "title": "A boundary-complete covariant comparison"
+      }
+    ],
+    "anchors": [
+      "sec-vacuum",
+      "eq-7-1",
+      "eq-physical-geodesic",
+      "eq-7-2",
+      "eq-source-ricci",
+      "eq-7-3",
+      "eq-vacuum-W",
+      "a-source-comparison-action",
+      "eq-7-4",
+      "eq-source-action",
+      "eq-7-5",
+      "eq-H",
+      "thm-action",
+      "eq-7-6",
+      "eq-H-variation",
+      "eq-7-7",
+      "eq-S-variation",
+      "proof-thm-action",
+      "eq-7-8",
+      "eq-inverse-variation-lift",
+      "eq-7-9",
+      "eq-H-partials",
+      "eq-7-10",
+      "eq-source-EL",
+      "coordinate-gauge-versus-a-constrained-variational-domain",
+      "eq-7-11",
+      "eq-trace-loss",
+      "eq-7-12",
+      "eq-trace-witness",
+      "sec-boundary-action",
+      "eq-7-13",
+      "eq-7-14",
+      "eq-L1",
+      "eq-7-15",
+      "eq-boundary-identity",
+      "eq-7-16",
+      "eq-7-17",
+      "eq-EHvariation",
+      "eq-7-18",
+      "eq-transverse-action",
+      "eq-7-19",
+      "eq-boundary-witness"
+    ],
+    "words": 1140
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "08-gravitational-energy",
+    "title": "The gravitational current keeps its coordinate tag",
+    "description": "The action supplies Einstein’s canonical gravitational current and its exact off-shell divergence. An explicit flat example shows why internal frame invariance does not make that current a coordinate tensor.",
+    "order": 8,
+    "url": "/source-readout/einstein-1916/08-gravitational-energy",
+    "sourcePath": "content/paper-integrations/einstein-1916/08-gravitational-energy.mdx",
+    "sections": [
+      {
+        "id": "sec-gravenergy",
+        "title": "8. Gravitational energy and coordinate dependence"
+      },
+      {
+        "id": "a-retained-non-tensor-readout",
+        "title": "A retained non-tensor readout"
+      }
+    ],
+    "anchors": [
+      "sec-gravenergy",
+      "eq-8-1",
+      "eq-canonical-source-current",
+      "eq-8-2",
+      "eq-tcanonical",
+      "eq-8-3",
+      "eq-energy-offshell",
+      "eq-8-4",
+      "eq-tquad",
+      "eq-8-5",
+      "eq-mixed-vacuum",
+      "eq-8-6",
+      "eq-vacuum-flux",
+      "a-retained-non-tensor-readout",
+      "eq-8-7",
+      "eq-energy-chart",
+      "eq-8-8",
+      "eq-nontensor-witness",
+      "eq-8-9",
+      "eq-nonflatvacuum"
+    ],
+    "words": 469
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "09-matter-and-field-equations",
+    "title": "Put matter on the same realization",
+    "description": "Geometry and stress must share one calibration, comparison and normalization. Joint sections and variations recover their coupling, with trace reversal preserving information that trace deletion would lose.",
+    "order": 9,
+    "url": "/source-readout/einstein-1916/09-matter-and-field-equations",
+    "sourcePath": "content/paper-integrations/einstein-1916/09-matter-and-field-equations.mdx",
+    "sections": [
+      {
+        "id": "sec-matter",
+        "title": "9. Matter on the same realization and the general field equation"
+      },
+      {
+        "id": "trace-reversal-not-trace-deletion",
+        "title": "Trace reversal, not trace deletion"
+      }
+    ],
+    "anchors": [
+      "sec-matter",
+      "eq-9-1",
+      "eq-stress-map",
+      "eq-9-2",
+      "eq-joint-frame",
+      "eq-9-3",
+      "eq-stress-variation",
+      "trace-reversal-not-trace-deletion",
+      "eq-9-4",
+      "eq-trace-reversal",
+      "eq-9-5",
+      "eq-trace-intertwiner",
+      "eq-9-6",
+      "eq-total-current",
+      "eq-9-7",
+      "eq-coupled-residuals",
+      "eq-9-8",
+      "eq-mixed-coupled",
+      "eq-9-9",
+      "eq-einstein-equation",
+      "eq-9-10",
+      "eq-source-einstein"
+    ],
+    "words": 504
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "10-conservation-and-flux",
+    "title": "Follow exchange and boundary flux",
+    "description": "Conservation follows through an explicit double-divergence chain, with its volume defect retained. Matter and gravitational contributions exchange equal and opposite amounts on the selected sector.",
+    "order": 10,
+    "url": "/source-readout/einstein-1916/10-conservation-and-flux",
+    "sourcePath": "content/paper-integrations/einstein-1916/10-conservation-and-flux.mdx",
+    "sections": [
+      {
+        "id": "sec-conservation",
+        "title": "10. Total conservation, exchange and boundary flux"
+      },
+      {
+        "id": "the-original-double-divergence-chain",
+        "title": "The original double-divergence chain"
+      },
+      {
+        "id": "thm-doublediv",
+        "title": "Theorem 10.1 (Double divergence with its volume defect)"
+      },
+      {
+        "id": "proof-thm-doublediv",
+        "title": "Proof."
+      },
+      {
+        "id": "opposite-matter-and-gravitational-exchange",
+        "title": "Opposite matter and gravitational exchange"
+      },
+      {
+        "id": "a-separate-curvature-identity-proof",
+        "title": "A separate curvature-identity proof"
+      },
+      {
+        "id": "finite-regions-and-explicit-coupled-checks",
+        "title": "Finite regions and explicit coupled checks"
+      }
+    ],
+    "anchors": [
+      "sec-conservation",
+      "the-original-double-divergence-chain",
+      "eq-10-1",
+      "eq-P-potential",
+      "eq-10-2",
+      "eq-P-residual",
+      "thm-doublediv",
+      "eq-10-3",
+      "eq-10-4",
+      "eq-double-first",
+      "eq-double-full",
+      "proof-thm-doublediv",
+      "eq-10-5",
+      "eq-antisymmetric-L",
+      "eq-10-6",
+      "eq-total-offshell",
+      "eq-10-7",
+      "eq-total-conservation",
+      "eq-10-8",
+      "eq-antisymmetric-potential",
+      "eq-10-9",
+      "eq-potential-divergence",
+      "opposite-matter-and-gravitational-exchange",
+      "eq-10-10",
+      "eq-exchange",
+      "eq-10-11",
+      "eq-gravexchange-residual",
+      "eq-10-12",
+      "eq-opposite-exchange",
+      "eq-10-13",
+      "eq-einstein57a",
+      "eq-10-14",
+      "eq-source-stress-div",
+      "eq-10-15",
+      "eq-matter-divergence",
+      "a-separate-curvature-identity-proof",
+      "eq-10-16",
+      "eq-bianchi-source",
+      "eq-10-17",
+      "eq-contracted-bianchi",
+      "eq-10-18",
+      "eq-bianchi-residual",
+      "finite-regions-and-explicit-coupled-checks",
+      "eq-10-19",
+      "eq-10-20",
+      "eq-10-21",
+      "eq-total-flux",
+      "eq-matter-flux",
+      "eq-10-22",
+      "eq-dust-fixture",
+      "eq-10-23",
+      "eq-dust-exchange",
+      "eq-10-24",
+      "eq-dust-finite-flux"
+    ],
+    "words": 1021
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "11-fluids",
+    "title": "Recover the fluid equations",
+    "description": "A constitutive stress readout turns matter primitives into the coupled stress. Its conservation law yields the fluid equations only with the normalization and constitutive inputs that make those operations valid.",
+    "order": 11,
+    "url": "/source-readout/einstein-1916/11-fluids",
+    "sourcePath": "content/paper-integrations/einstein-1916/11-fluids.mdx",
+    "sections": [
+      {
+        "id": "sec-fluid",
+        "title": "11. Fluid constitutive readouts and Euler equations"
+      },
+      {
+        "id": "thm-fluid",
+        "title": "Theorem 11.1 (Reversible energy and Euler decomposition)"
+      },
+      {
+        "id": "proof-thm-fluid",
+        "title": "Proof."
+      },
+      {
+        "id": "closure-degeneracy-and-verification-examples",
+        "title": "Closure, degeneracy and verification examples"
+      }
+    ],
+    "anchors": [
+      "sec-fluid",
+      "eq-11-1",
+      "eq-fluid-source",
+      "eq-11-2",
+      "eq-11-3",
+      "eq-fluid-stress",
+      "eq-fluid-mixed",
+      "eq-11-4",
+      "eq-fluid-epsilon",
+      "eq-11-5",
+      "eq-fluid-kinematics",
+      "eq-11-6",
+      "eq-fluid-divergence",
+      "eq-11-7",
+      "eq-fluid-div-readout",
+      "thm-fluid",
+      "eq-11-8",
+      "eq-fluid-projections",
+      "eq-11-9",
+      "eq-fluid-split",
+      "eq-11-10",
+      "eq-euler",
+      "proof-thm-fluid",
+      "eq-11-11",
+      "eq-coordinate-euler",
+      "eq-11-12",
+      "eq-11-13",
+      "eq-fluid-norm-defect",
+      "closure-degeneracy-and-verification-examples",
+      "eq-11-14",
+      "eq-radiation-fixture"
+    ],
+    "words": 769
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "12-electromagnetism",
+    "title": "Recover Maxwell operations and stress",
+    "description": "The electromagnetic potential, field, current and stress occupy distinct levels. The same geometry carries their derivative operations, gauge fibre and transfer identities, including the information that stress alone cannot recover.",
+    "order": 12,
+    "url": "/source-readout/einstein-1916/12-electromagnetism",
+    "sourcePath": "content/paper-integrations/einstein-1916/12-electromagnetism.mdx",
+    "sections": [
+      {
+        "id": "sec-em",
+        "title": "12. Electromagnetic fields, Maxwell operations and stress"
+      },
+      {
+        "id": "primitive-coverage-and-potential-contact",
+        "title": "Primitive coverage and potential contact"
+      },
+      {
+        "id": "thm-potential",
+        "title": "Proposition 12.1 (Local potential section and gauge fibre)"
+      },
+      {
+        "id": "proof-thm-potential",
+        "title": "Proof."
+      },
+      {
+        "id": "index-raising-sourced-divergence-and-charge-conservation",
+        "title": "Index raising, sourced divergence and charge conservation"
+      },
+      {
+        "id": "the-original-electric-and-magnetic-component-systems",
+        "title": "The original electric and magnetic component systems"
+      },
+      {
+        "id": "transfer-and-the-electromagnetic-stress-calculation",
+        "title": "Transfer and the electromagnetic stress calculation"
+      },
+      {
+        "id": "thm-em-energy",
+        "title": "Theorem 12.2 (Complete electromagnetic transfer identity)"
+      },
+      {
+        "id": "proof-thm-em-energy",
+        "title": "Proof."
+      },
+      {
+        "id": "the-zero-transfer-branch-and-material-joins",
+        "title": "The zero-transfer branch and material joins"
+      },
+      {
+        "id": "sec-em-example",
+        "title": "A complete same-realization Einstein–Maxwell check"
+      }
+    ],
+    "anchors": [
+      "sec-em",
+      "primitive-coverage-and-potential-contact",
+      "eq-12-1",
+      "eq-em-readouts",
+      "eq-12-2",
+      "eq-em-residuals",
+      "eq-12-3",
+      "eq-potential-operation",
+      "eq-12-4",
+      "eq-contact-full",
+      "eq-12-5",
+      "eq-homogeneous-maxwell",
+      "thm-potential",
+      "eq-12-6",
+      "eq-potential-section",
+      "proof-thm-potential",
+      "index-raising-sourced-divergence-and-charge-conservation",
+      "eq-12-7",
+      "eq-em-raising",
+      "eq-12-8",
+      "eq-maxwell-divergence",
+      "eq-12-9",
+      "eq-charge-residual",
+      "the-original-electric-and-magnetic-component-systems",
+      "eq-12-10",
+      "eq-em-components",
+      "eq-12-11",
+      "eq-12-12",
+      "eq-maxwell-vector-hom",
+      "eq-maxwell-vector-src",
+      "eq-12-13",
+      "eq-em-component-control",
+      "transfer-and-the-electromagnetic-stress-calculation",
+      "eq-12-14",
+      "eq-em-transfer",
+      "eq-12-15",
+      "eq-12-16",
+      "eq-12-17",
+      "eq-em-stress-source",
+      "eq-em-stress-cov",
+      "eq-em-stress-target",
+      "thm-em-energy",
+      "eq-12-18",
+      "eq-em-full-residual",
+      "proof-thm-em-energy",
+      "eq-12-19",
+      "eq-em-cyclic-product",
+      "eq-12-20",
+      "eq-em-transfer-on-shell",
+      "eq-12-21",
+      "eq-12-22",
+      "eq-poynting",
+      "eq-force-components",
+      "the-zero-transfer-branch-and-material-joins",
+      "eq-12-23",
+      "eq-joined-matter-residual",
+      "sec-em-example",
+      "eq-12-24",
+      "eq-em-wave",
+      "eq-12-25",
+      "eq-wave-calibration",
+      "eq-12-26",
+      "eq-wave-connection",
+      "eq-12-27",
+      "eq-wave-field-equation",
+      "eq-12-28",
+      "eq-wave-flux"
+    ],
+    "words": 1631
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "13-newtonian-limit",
+    "title": "Fix the Newtonian normalization",
+    "description": "Controlled weak-field and slow-motion reductions connect the covariant theory to Newtonian acceleration. Derivative norms, matter scaling and the chosen quasi-static regime keep the approximation quantitative.",
+    "order": 13,
+    "url": "/source-readout/einstein-1916/13-newtonian-limit",
+    "sourcePath": "content/paper-integrations/einstein-1916/13-newtonian-limit.mdx",
+    "sections": [
+      {
+        "id": "sec-newton",
+        "title": "13. Finite-order reconstruction and the Newtonian limit"
+      },
+      {
+        "id": "thm-jets",
+        "title": "Theorem 13.1 (Finite-jet recovery)"
+      },
+      {
+        "id": "proof-thm-jets",
+        "title": "Proof."
+      },
+      {
+        "id": "coordinate-time-and-the-slow-motion-operation",
+        "title": "Coordinate time and the slow-motion operation"
+      },
+      {
+        "id": "the-field-reduction-and-material-assumptions",
+        "title": "The field reduction and material assumptions"
+      }
+    ],
+    "anchors": [
+      "sec-newton",
+      "thm-jets",
+      "eq-13-1",
+      "eq-linear-calibration",
+      "proof-thm-jets",
+      "coordinate-time-and-the-slow-motion-operation",
+      "eq-13-2",
+      "eq-coordinate-time",
+      "eq-13-3",
+      "eq-newton-motion",
+      "eq-13-4",
+      "eq-newton-error",
+      "the-field-reduction-and-material-assumptions",
+      "eq-13-5",
+      "eq-linear-Ric44",
+      "eq-13-6",
+      "eq-poisson-g44",
+      "eq-13-7",
+      "eq-green-potential",
+      "eq-13-8",
+      "eq-poisson-ball",
+      "eq-13-9",
+      "eq-kappa-units"
+    ],
+    "words": 786
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "14-spherical-exterior",
+    "title": "Complete the central exterior",
+    "description": "The leading weak-field data do not supply every higher-order orbital term. A separately identified static spherical completion provides that missing dependency and the exact family used in the optical and orbital estimates.",
+    "order": 14,
+    "url": "/source-readout/einstein-1916/14-spherical-exterior",
+    "sourcePath": "content/paper-integrations/einstein-1916/14-spherical-exterior.mdx",
+    "sections": [
+      {
+        "id": "sec-exterior",
+        "title": "14. The central exterior and its higher-order completion"
+      },
+      {
+        "id": "a-labelled-static-spherical-completion",
+        "title": "A labelled static spherical completion"
+      },
+      {
+        "id": "information-needed-beyond-a-first-order-metric",
+        "title": "Information needed beyond a first-order metric"
+      }
+    ],
+    "anchors": [
+      "sec-exterior",
+      "eq-14-1",
+      "eq-central-first",
+      "eq-14-2",
+      "eq-mass-alpha",
+      "a-labelled-static-spherical-completion",
+      "eq-14-3",
+      "eq-raw-radial",
+      "eq-14-4",
+      "eq-radial-omega",
+      "eq-14-5",
+      "eq-radial-Ricci",
+      "eq-14-6",
+      "eq-radial-reduction",
+      "eq-14-7",
+      "eq-exterior-calibration",
+      "eq-14-8",
+      "eq-cartesian-exterior",
+      "information-needed-beyond-a-first-order-metric",
+      "eq-14-9",
+      "eq-Alambda"
+    ],
+    "words": 629
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "15-clocks-and-frequency",
+    "title": "Read clocks and frequency transfer",
+    "description": "Static observers read proper time and compare frequencies through the same interval law. Exact lapse factors and explicit remainder estimates show what the leading redshift formula retains.",
+    "order": 15,
+    "url": "/source-readout/einstein-1916/15-clocks-and-frequency",
+    "sourcePath": "content/paper-integrations/einstein-1916/15-clocks-and-frequency.mdx",
+    "sections": [
+      {
+        "id": "sec-measurements",
+        "title": "15. Rods, clocks and static frequency transfer"
+      }
+    ],
+    "anchors": [
+      "sec-measurements",
+      "eq-15-1",
+      "eq-radial-rod",
+      "eq-15-2",
+      "eq-clock",
+      "eq-15-3",
+      "eq-clock-potential",
+      "eq-15-4",
+      "eq-clock-bounds",
+      "eq-15-5",
+      "eq-redshift"
+    ],
+    "words": 382
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "16-light-and-bending",
+    "title": "Read null rays and optical bending",
+    "description": "Null propagation requires an operation separate from normalized timelike length. Optical variation and regularized endpoint integrals recover bending with the boundary geometry and error bounds stated explicitly.",
+    "order": 16,
+    "url": "/source-readout/einstein-1916/16-light-and-bending",
+    "sourcePath": "content/paper-integrations/einstein-1916/16-light-and-bending.mdx",
+    "sections": [
+      {
+        "id": "sec-light",
+        "title": "16. Null rays, optical variation and bending"
+      },
+      {
+        "id": "the-original-asymptotic-integral-and-its-finite-endpoint-qualification",
+        "title": "The original asymptotic integral and its finite-endpoint qualification"
+      },
+      {
+        "id": "thm-optical",
+        "title": "Theorem 16.1 (Boundary-sensitive optical recovery)"
+      },
+      {
+        "id": "proof-thm-optical",
+        "title": "Proof."
+      },
+      {
+        "id": "a-controlled-infinite-path-comparison",
+        "title": "A controlled infinite-path comparison"
+      }
+    ],
+    "anchors": [
+      "sec-light",
+      "eq-16-1",
+      "eq-null",
+      "eq-16-2",
+      "eq-optical-functional",
+      "the-original-asymptotic-integral-and-its-finite-endpoint-qualification",
+      "eq-16-3",
+      "eq-light-speed",
+      "eq-16-4",
+      "eq-bending-integrand",
+      "eq-16-5",
+      "eq-bending-leading",
+      "thm-optical",
+      "eq-16-6",
+      "eq-optical-L",
+      "eq-16-7",
+      "eq-optical-boundary",
+      "eq-16-8",
+      "eq-finite-deflection",
+      "proof-thm-optical",
+      "a-controlled-infinite-path-comparison",
+      "eq-16-9",
+      "eq-null-impact",
+      "eq-16-10",
+      "eq-null-factor",
+      "eq-16-11",
+      "eq-exact-bending",
+      "eq-16-12",
+      "eq-light-bound"
+    ],
+    "words": 708
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "17-perihelion",
+    "title": "Recover the perihelion dependency",
+    "description": "The orbit calculation uses the declared higher-order static completion and the cited orbital dependency. Its controlled expansion makes the perihelion result part of the complete recovered chain.",
+    "order": 17,
+    "url": "/source-readout/einstein-1916/17-perihelion",
+    "sourcePath": "content/paper-integrations/einstein-1916/17-perihelion.mdx",
+    "sections": [
+      {
+        "id": "sec-orbit",
+        "title": "17. Perihelion advance and the cited dependency"
+      },
+      {
+        "id": "turning-roots-before-expansion",
+        "title": "Turning roots before expansion"
+      },
+      {
+        "id": "thm-perihelion",
+        "title": "Theorem 17.1 (Perihelion coefficient and remainder)"
+      },
+      {
+        "id": "proof-thm-perihelion",
+        "title": "Proof."
+      },
+      {
+        "id": "scope-of-the-numerical-statements",
+        "title": "Scope of the numerical statements"
+      }
+    ],
+    "anchors": [
+      "sec-orbit",
+      "eq-17-1",
+      "eq-orbit-constants",
+      "eq-17-2",
+      "eq-radial-orbit",
+      "eq-17-3",
+      "eq-cubic-orbit",
+      "eq-17-4",
+      "eq-binnet",
+      "turning-roots-before-expansion",
+      "eq-17-5",
+      "eq-orbit-root-constants",
+      "eq-17-6",
+      "eq-orbit-factor",
+      "eq-17-7",
+      "eq-orbit-elements",
+      "eq-17-8",
+      "eq-orbit-integral",
+      "thm-perihelion",
+      "eq-17-9",
+      "eq-perihelion-leading",
+      "eq-17-10",
+      "eq-perihelion-bound",
+      "proof-thm-perihelion",
+      "eq-17-11",
+      "eq-einstein75",
+      "scope-of-the-numerical-statements"
+    ],
+    "words": 651
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "18-cumulative-recovery",
+    "title": "Assemble the recovery theorem",
+    "description": "The local sections, comparison identities, matter maps and observational reductions now form one compatible reconstruction. The cumulative theorem states exactly which operations and target classes are covered.",
+    "order": 18,
+    "url": "/source-readout/einstein-1916/18-cumulative-recovery",
+    "sourcePath": "content/paper-integrations/einstein-1916/18-cumulative-recovery.mdx",
+    "sections": [
+      {
+        "id": "sec-recovery",
+        "title": "18. The cumulative reconstruction theorem"
+      },
+      {
+        "id": "thm-main",
+        "title": "Theorem 18.1 (Conditional source–readout recovery of the 1916 chain)"
+      },
+      {
+        "id": "proof-thm-main",
+        "title": "Proof."
+      }
+    ],
+    "anchors": [
+      "sec-recovery",
+      "thm-main",
+      "proof-thm-main"
+    ],
+    "words": 737
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "19-relation-and-contribution",
+    "title": "What the reconstruction adds",
+    "description": "The construction uses established coframe and connection mathematics. Its distinctive result is the integrated source–readout account of the historical chain, with explicit coverage, discarded information and boundary-sensitive contracts.",
+    "order": 19,
+    "url": "/source-readout/einstein-1916/19-relation-and-contribution",
+    "sourcePath": "content/paper-integrations/einstein-1916/19-relation-and-contribution.mdx",
+    "sections": [
+      {
+        "id": "sec-comparison",
+        "title": "19. Relation to established formulations and contribution"
+      }
+    ],
+    "anchors": [
+      "sec-comparison"
+    ],
+    "words": 499
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "20-verification-and-limits",
+    "title": "Inspect the verification and its domain",
+    "description": "Executable checks accompany the proofs. Their exact, numerical and negative-control roles remain separate, as do the local reconstruction theorem and questions about global geometry or physical selection.",
+    "order": 20,
+    "url": "/source-readout/einstein-1916/20-verification-and-limits",
+    "sourcePath": "content/paper-integrations/einstein-1916/20-verification-and-limits.mdx",
+    "sections": [
+      {
+        "id": "sec-verification",
+        "title": "20. Verification, limitations and reproducibility"
+      },
+      {
+        "id": "limits-of-the-reconstruction",
+        "title": "Limits of the reconstruction"
+      }
+    ],
+    "anchors": [
+      "sec-verification",
+      "table-1",
+      "limits-of-the-reconstruction"
+    ],
+    "words": 738
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "21-conclusion",
+    "title": "One connected reconstruction",
+    "description": "The result is a complete conditional realization of Einstein’s chain: preparation, joint geometry and matter, recovered operations, and measured consequences. Its equations and qualification registers remain available in the following chapters.",
+    "order": 21,
+    "url": "/source-readout/einstein-1916/21-conclusion",
+    "sourcePath": "content/paper-integrations/einstein-1916/21-conclusion.mdx",
+    "sections": [
+      {
+        "id": "sec-conclusion",
+        "title": "21. Conclusion"
+      },
+      {
+        "id": "declarations",
+        "title": "Declarations"
+      }
+    ],
+    "anchors": [
+      "sec-conclusion",
+      "declarations"
+    ],
+    "words": 280
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "22-printed-source-register",
+    "title": "Read the printed-source corrections",
+    "description": "The supplied historical copy contains expressions that cannot all hold with their surrounding equations. This register preserves the literal forms and the separately derived consistent replacements.",
+    "order": 22,
+    "url": "/source-readout/einstein-1916/22-printed-source-register",
+    "sourcePath": "content/paper-integrations/einstein-1916/22-printed-source-register.mdx",
+    "sections": [
+      {
+        "id": "app-source",
+        "title": "A. Printed-source qualifications and correction register"
+      },
+      {
+        "id": "the-rank-statement-on-page-784",
+        "title": "The rank statement on page 784"
+      },
+      {
+        "id": "the-trace-shift-footnote-on-page-804",
+        "title": "The trace-shift footnote on page 804"
+      },
+      {
+        "id": "the-unnumbered-variation-sign-on-page-805",
+        "title": "The unnumbered variation sign on page 805"
+      },
+      {
+        "id": "the-gravitational-exchange-line-on-page-809",
+        "title": "The gravitational exchange line on page 809"
+      },
+      {
+        "id": "the-mass-coefficient-on-page-819-and-its-propagation",
+        "title": "The mass coefficient on page 819 and its propagation"
+      },
+      {
+        "id": "the-coordinate-light-speed-sign-on-page-822",
+        "title": "The coordinate light-speed sign on page 822"
+      },
+      {
+        "id": "statements-requiring-hypotheses-rather-than-typographical-correction",
+        "title": "Statements requiring hypotheses rather than typographical correction"
+      },
+      {
+        "id": "consolidation-changes-relative-to-the-checkpoints",
+        "title": "Consolidation changes relative to the checkpoints"
+      }
+    ],
+    "anchors": [
+      "app-source",
+      "the-rank-statement-on-page-784",
+      "the-trace-shift-footnote-on-page-804",
+      "the-unnumbered-variation-sign-on-page-805",
+      "eq-A-1",
+      "eq-printed-action-comparison",
+      "the-gravitational-exchange-line-on-page-809",
+      "eq-A-2",
+      "eq-exchange-print-correction",
+      "the-mass-coefficient-on-page-819-and-its-propagation",
+      "eq-A-3",
+      "eq-printed-mass-comparison",
+      "the-coordinate-light-speed-sign-on-page-822",
+      "eq-A-4",
+      "eq-printed-light-comparison",
+      "statements-requiring-hypotheses-rather-than-typographical-correction",
+      "consolidation-changes-relative-to-the-checkpoints"
+    ],
+    "words": 931
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "23-equation-correspondence",
+    "title": "Trace every original equation",
+    "description": "The correspondence register maps all 75 principal numbers and 26 lettered variants to their recovered operations. It preserves the original pagination and the exact scope of each correspondence.",
+    "order": 23,
+    "url": "/source-readout/einstein-1916/23-equation-correspondence",
+    "sourcePath": "content/paper-integrations/einstein-1916/23-equation-correspondence.mdx",
+    "sections": [
+      {
+        "id": "app-correspondence",
+        "title": "B. Complete original-equation correspondence"
+      }
+    ],
+    "anchors": [
+      "app-correspondence",
+      "table-1"
+    ],
+    "words": 1488
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "24-assumption-register",
+    "title": "Inspect the assumptions and theorem status",
+    "description": "Every reconstruction rests on a declared target domain and physical inputs. This register separates those inputs, mathematical consequences, approximation statements and unresolved global questions.",
+    "order": 24,
+    "url": "/source-readout/einstein-1916/24-assumption-register",
+    "sourcePath": "content/paper-integrations/einstein-1916/24-assumption-register.mdx",
+    "sections": [
+      {
+        "id": "app-assumptions",
+        "title": "C. Assumption and theorem-status register"
+      },
+      {
+        "id": "evidence-and-theorem-status",
+        "title": "Evidence and theorem status"
+      },
+      {
+        "id": "what-the-public-verification-binds",
+        "title": "What the public verification binds"
+      }
+    ],
+    "anchors": [
+      "app-assumptions",
+      "table-1",
+      "evidence-and-theorem-status",
+      "table-2",
+      "what-the-public-verification-binds"
+    ],
+    "words": 866
+  },
+  {
+    "paperId": "einstein-1916",
+    "slug": "25-references",
+    "title": "References and publication source",
+    "description": "The complete bibliography of the Einstein source–readout reconstruction, with original publication and DOI links.",
+    "order": 25,
+    "url": "/source-readout/einstein-1916/25-references",
+    "sourcePath": "content/paper-integrations/einstein-1916/25-references.mdx",
+    "sections": [
+      {
+        "id": "ref-1",
+        "title": "[1]"
+      },
+      {
+        "id": "ref-2",
+        "title": "[2]"
+      },
+      {
+        "id": "ref-3",
+        "title": "[3]"
+      },
+      {
+        "id": "ref-4",
+        "title": "[4]"
+      },
+      {
+        "id": "ref-5",
+        "title": "[5]"
+      },
+      {
+        "id": "ref-6",
+        "title": "[6]"
+      },
+      {
+        "id": "ref-7",
+        "title": "[7]"
+      },
+      {
+        "id": "ref-8",
+        "title": "[8]"
+      },
+      {
+        "id": "ref-9",
+        "title": "[9]"
+      },
+      {
+        "id": "ref-10",
+        "title": "[10]"
+      },
+      {
+        "id": "ref-11",
+        "title": "[11]"
+      },
+      {
+        "id": "ref-12",
+        "title": "[12]"
+      }
+    ],
+    "anchors": [
+      "ref-1",
+      "ref-2",
+      "ref-3",
+      "ref-4",
+      "ref-5",
+      "ref-6",
+      "ref-7",
+      "ref-8",
+      "ref-9",
+      "ref-10",
+      "ref-11",
+      "ref-12"
+    ],
+    "words": 371
+  },
+  {
     "paperId": "local-horizon-thermodynamics",
     "slug": "01-common-preparation",
     "title": "One prepared horizon, three readouts",
@@ -6833,5 +8195,30 @@ export const integrationImports = {
  "second-order-boundary-balls/01-readouts-and-geometry": () => import("../../content/paper-integrations/second-order-boundary-balls/01-readouts-and-geometry.mdx"),
  "second-order-boundary-balls/02-second-order-identity": () => import("../../content/paper-integrations/second-order-boundary-balls/02-second-order-identity.mdx"),
  "second-order-boundary-balls/03-same-ball-detection": () => import("../../content/paper-integrations/second-order-boundary-balls/03-same-ball-detection.mdx"),
- "second-order-boundary-balls/04-oscillatory-comparison": () => import("../../content/paper-integrations/second-order-boundary-balls/04-oscillatory-comparison.mdx")
+ "second-order-boundary-balls/04-oscillatory-comparison": () => import("../../content/paper-integrations/second-order-boundary-balls/04-oscillatory-comparison.mdx"),
+ "einstein-1916/01-the-reconstruction": () => import("../../content/paper-integrations/einstein-1916/01-the-reconstruction.mdx"),
+ "einstein-1916/02-source-and-recovery": () => import("../../content/paper-integrations/einstein-1916/02-source-and-recovery.mdx"),
+ "einstein-1916/03-calibrated-spacetime": () => import("../../content/paper-integrations/einstein-1916/03-calibrated-spacetime.mdx"),
+ "einstein-1916/04-comparison-and-tensors": () => import("../../content/paper-integrations/einstein-1916/04-comparison-and-tensors.mdx"),
+ "einstein-1916/05-geodesics-and-divergences": () => import("../../content/paper-integrations/einstein-1916/05-geodesics-and-divergences.mdx"),
+ "einstein-1916/06-curvature-and-variations": () => import("../../content/paper-integrations/einstein-1916/06-curvature-and-variations.mdx"),
+ "einstein-1916/07-vacuum-and-action": () => import("../../content/paper-integrations/einstein-1916/07-vacuum-and-action.mdx"),
+ "einstein-1916/08-gravitational-energy": () => import("../../content/paper-integrations/einstein-1916/08-gravitational-energy.mdx"),
+ "einstein-1916/09-matter-and-field-equations": () => import("../../content/paper-integrations/einstein-1916/09-matter-and-field-equations.mdx"),
+ "einstein-1916/10-conservation-and-flux": () => import("../../content/paper-integrations/einstein-1916/10-conservation-and-flux.mdx"),
+ "einstein-1916/11-fluids": () => import("../../content/paper-integrations/einstein-1916/11-fluids.mdx"),
+ "einstein-1916/12-electromagnetism": () => import("../../content/paper-integrations/einstein-1916/12-electromagnetism.mdx"),
+ "einstein-1916/13-newtonian-limit": () => import("../../content/paper-integrations/einstein-1916/13-newtonian-limit.mdx"),
+ "einstein-1916/14-spherical-exterior": () => import("../../content/paper-integrations/einstein-1916/14-spherical-exterior.mdx"),
+ "einstein-1916/15-clocks-and-frequency": () => import("../../content/paper-integrations/einstein-1916/15-clocks-and-frequency.mdx"),
+ "einstein-1916/16-light-and-bending": () => import("../../content/paper-integrations/einstein-1916/16-light-and-bending.mdx"),
+ "einstein-1916/17-perihelion": () => import("../../content/paper-integrations/einstein-1916/17-perihelion.mdx"),
+ "einstein-1916/18-cumulative-recovery": () => import("../../content/paper-integrations/einstein-1916/18-cumulative-recovery.mdx"),
+ "einstein-1916/19-relation-and-contribution": () => import("../../content/paper-integrations/einstein-1916/19-relation-and-contribution.mdx"),
+ "einstein-1916/20-verification-and-limits": () => import("../../content/paper-integrations/einstein-1916/20-verification-and-limits.mdx"),
+ "einstein-1916/21-conclusion": () => import("../../content/paper-integrations/einstein-1916/21-conclusion.mdx"),
+ "einstein-1916/22-printed-source-register": () => import("../../content/paper-integrations/einstein-1916/22-printed-source-register.mdx"),
+ "einstein-1916/23-equation-correspondence": () => import("../../content/paper-integrations/einstein-1916/23-equation-correspondence.mdx"),
+ "einstein-1916/24-assumption-register": () => import("../../content/paper-integrations/einstein-1916/24-assumption-register.mdx"),
+ "einstein-1916/25-references": () => import("../../content/paper-integrations/einstein-1916/25-references.mdx")
 };

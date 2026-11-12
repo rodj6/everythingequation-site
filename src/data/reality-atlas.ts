@@ -2669,8 +2669,17 @@ export const atlasTours: AtlasTour[] = [
     label: "Gravity: reading the boundary",
     description: "The gravitational readouts, ending with what boundary balls see at first and at second order.",
     nodeIds: [
-      "gravity", "gravity-modular-transport", "gravity-transport-projective", "gravity-local-horizon",
+      "gravity", "gravity-einstein-1916", "gravity-modular-transport", "gravity-transport-projective", "gravity-local-horizon",
       "gravity-boundary-balls", "gravity-second-order", "observable-horizon-entropy",
+    ],
+  },
+  {
+    id: "source-lift",
+    label: "Recovering classical and quantum fields",
+    description: "Shadow Theory’s source–readout recovery method, from Einstein’s classical chain to the Wilson Yang–Mills construction.",
+    nodeIds: [
+      "foundation-geometric-realization", "gravity-einstein-1916", "yang-mills-source-readout",
+      "yang-mills-mathematical-companion", "qft",
     ],
   },
   {

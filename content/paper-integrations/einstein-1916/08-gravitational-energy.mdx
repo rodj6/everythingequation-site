@@ -1,0 +1,100 @@
+---
+title: "The gravitational current keeps its coordinate tag"
+description: "The action supplies Einstein’s canonical gravitational current and its exact off-shell divergence. An explicit flat example shows why internal frame invariance does not make that current a coordinate tensor."
+order: 8
+---
+
+**The action supplies Einstein’s canonical gravitational current and its exact off-shell divergence. An explicit flat example shows why internal frame invariance does not make that current a coordinate tensor.**
+
+<a id="sec-gravenergy"></a>
+
+## 8. Gravitational energy and coordinate dependence
+
+The action determines a canonical coordinate-translation current. Because $q(E)$ is pointwise, the chain rule gives <a id="eq-8-1"></a><a id="eq-canonical-source-current"></a>
+
+$$
+\frac{\partial\mathcal H_Z}{\partial(\partial_\alpha E^a{}_{\lambda})}
+ \partial_\sigma E^a{}_{\lambda}
+ =H_{\partial_\alpha q^{\mu\nu}}\partial_\sigma q^{\mu\nu}.
+\tag{8.1}
+$$
+
+ The dependence of $\omega(E)$ is already included in [(7.5)](/source-readout/einstein-1916/07-vacuum-and-action#eq-H) and its variation. With Einstein’s normalization define <a id="eq-8-2"></a><a id="eq-tcanonical"></a>
+
+$$
+-2\kappa t^\alpha{}_{\sigma}
+ =\Gamma_{\!\mathrm E}^\alpha{}_{\mu\nu}\partial_\sigma q^{\mu\nu}
+ -\delta^\alpha_\sigma H.
+\tag{8.2}
+$$
+
+ The fixed nonzero $\kappa$ is normalized later by the Newtonian comparison. From the product and chain rules, <a id="eq-8-3"></a><a id="eq-energy-offshell"></a>
+
+$$
+\boxed{-2\kappa\partial_\alpha t^\alpha{}_{\sigma}
+ =W_{\mu\nu}\partial_\sigma q^{\mu\nu}.}
+\tag{8.3}
+$$
+
+ Second derivatives of $q$ cancel in the canonical divergence; the remaining coefficient is its Euler residual. Thus vacuum gives Einstein <span className="upright">(49)</span>.
+
+Substituting inverse-metric compatibility into [(8.2)](/source-readout/einstein-1916/08-gravitational-energy#eq-tcanonical) yields <a id="eq-8-4"></a><a id="eq-tquad"></a>
+
+$$
+\boxed{\kappa t^\alpha{}_{\sigma}
+ =\tfrac12\delta^\alpha_\sigma H
+ -q^{\mu\nu}C^\alpha{}_{\mu\beta}C^\beta{}_{\nu\sigma}.}
+\tag{8.4}
+$$
+
+ The two differentiated metric terms are equal after index relabelling. Calling the final product $K^\alpha{}_{\sigma}$ gives $\operatorname{tr}K=H$ and $\kappa\operatorname{tr}t=H$, which establish Einstein <span className="upright">(50)</span> and the mixed identity <a id="eq-8-5"></a><a id="eq-mixed-vacuum"></a>
+
+$$
+\boxed{\partial_\alpha(q^{\sigma\beta}\Gamma_{\!\mathrm E}^\alpha{}_{\mu\beta})
+ +\kappa(t^\sigma{}_{\mu}-\tfrac12\delta^\sigma_\mu\operatorname{tr}t)
+ =q^{\sigma\beta}W_{\mu\beta}.}
+\tag{8.5}
+$$
+
+ To prove it, expand the derivative, replace $\partial\Gamma_{\!\mathrm E}$ with $W-A$, and use inverse compatibility to split $(\partial q)\Gamma_{\!\mathrm E}$ into $qA+K$. The $qA$ terms cancel, and [(8.4)](/source-readout/einstein-1916/08-gravitational-energy#eq-tquad) cancels $K$. On the unit-volume vacuum sector this is Einstein <span className="upright">(51)</span>; conversely invertibility of $q$ recovers $W=0$. Four conservation equations alone are weaker: the witness [(7.12)](/source-readout/einstein-1916/07-vacuum-and-action#eq-trace-witness) has $W\ne0$ but $W_{\mu\nu}\partial_\sigma q^{\mu\nu}=0$ since $\nu=1$.
+
+For a fixed spatial coordinate region $V$, vacuum conservation gives <a id="eq-8-6"></a><a id="eq-vacuum-flux"></a>
+
+$$
+\frac{\mathrm{d}}{\mathrm{d}t}\int_Vt^4{}_{\sigma}\mathrm{d}^3x
+ =-\int_{\partial V}t^i{}_{\sigma}n_i^{\rm out}\mathrm{d}S
+ =\int_{\partial V}t^i{}_{\sigma}n_i^{\rm in}\mathrm{d}S,
+\tag{8.6}
+$$
+
+ recovering the inward-normal convention of Einstein <span className="upright">(49a)</span>. Moving boundaries require an additional transport term.
+
+<a id="a-retained-non-tensor-readout"></a>
+
+### A retained non-tensor readout
+
+Einstein explicitly states that $t$ is not a tensor. A determinant-one nonlinear chart change makes this limitation concrete: <a id="eq-8-7"></a><a id="eq-energy-chart"></a>
+
+$$
+X=e^x,\quad Y=y,\quad Z=z,\quad T=te^{-x}.
+\tag{8.7}
+$$
+
+ Take $E$ to be its Jacobian, the pullback of a Cartesian calibration. Its coframe is exact, $\omega=0$, and $C=E^{-1}\mathrm{d}E$. Direct calculation gives <a id="eq-8-8"></a><a id="eq-nontensor-witness"></a>
+
+$$
+R=0,\quad \nu=1,\quad W=0,\quad H=-2e^{-2x},\qquad
+ \kappa(t^\alpha{}_{\sigma})=\operatorname{diag}(0,-e^{-2x},-e^{-2x},0).
+\tag{8.8}
+$$
+
+ The array is zero in the original Cartesian coordinates. A tensor cannot change from zero to nonzero by a coordinate transformation. Its divergence nevertheless vanishes, as [(8.3)](/source-readout/einstein-1916/08-gravitational-energy#eq-energy-offshell) requires. Internal frame invariance is not coordinate tensoriality; the chart remains an essential tag on this energy readout. No positive local energy density or globally invariant charge is inferred.
+
+Finally, vacuum is not flatness. The independent calibration <a id="eq-8-9"></a><a id="eq-nonflatvacuum"></a>
+
+$$
+E=\operatorname{diag}(r^{1/3},r^{1/3},r^{-1/6},r^{-1/2}),\qquad x^4=r>0
+\tag{8.9}
+$$
+
+ has $\nu=1$, $\operatorname{Ric}=W=0$ but $R^1{}_{414}=1/(18r^2)$. Both curvature implementations and the current identities agree on this fixture. It verifies the distinction motivating §14 without introducing a different vacuum law.

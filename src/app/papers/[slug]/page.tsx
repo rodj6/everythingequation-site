@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { loadPapers, loadProblems, getPaper } from "@/lib/registry";
 import { site } from "@/config/site";
+import {liftEditions} from "@/lib/source-lift";
 import { gravityEditions } from "@/config/paper-integrations";
 import { Badge } from "@/components/cards";
 import MdxContent from "@/components/mdx-content";
@@ -45,7 +46,7 @@ export async function generateMetadata({
       citation_author: site.author.name,
       ...(paper.date ? { citation_publication_date: paper.date } : {}),
       ...(paper.doi ? { citation_doi: paper.doi } : {}),
-      ...(paper.pdfUrl ? { citation_pdf_url: `${site.url}${paper.pdfUrl}` } : {}),
+      ...(paper.pdfUrl && paper.slug !== "yang-mills" ? { citation_pdf_url: `${site.url}${paper.pdfUrl}` } : {}),
     },
   };
 }
@@ -62,7 +63,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": paper.slug === "quantum-measurement-monograph" || paper.slug === consciousnessPublication.paperSlug ? "Book" : "ScholarlyArticle",
+    "@type": paper.slug === "yang-mills" ? "Collection" : paper.slug === "quantum-measurement-monograph" || paper.slug === consciousnessPublication.paperSlug ? "Book" : "ScholarlyArticle",
+    ...(paper.slug === "yang-mills" ? {"@id":site.url+"/papers/yang-mills#publication",hasPart:liftEditions.map(p=>({"@type":"Book","@id":site.url+p.url,name:p.title,url:site.url+p.url,encoding:{"@type":"MediaObject",encodingFormat:"application/pdf",contentUrl:site.url+p.pdfUrl}}))} : {}),
     headline: paper.displayTitle,
     name: paper.displayTitle,
     author: {
@@ -221,6 +223,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
             {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a> : null}
           </div>
         ) : null}
+        {paper.slug === 'yang-mills' && <section className="mt-6" aria-labelledby="shared-reading-editions"><h2 id="shared-reading-editions">Two complete works in this record</h2><ul>{liftEditions.map(p=><li className="mt-4" key={p.id}><Link href={p.url}>{p.title} →</Link><br/><a href={p.pdfUrl}>Original PDF ↓</a> · <a href={p.markdownUrl}>Complete Markdown ↓</a></li>)}</ul></section>}
       </header>
 
       {paper.researchProgramme === "quantum-measurement" ? (

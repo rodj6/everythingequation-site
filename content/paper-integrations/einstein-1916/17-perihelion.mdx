@@ -1,0 +1,138 @@
+---
+title: "Recover the perihelion dependency"
+description: "The orbit calculation uses the declared higher-order static completion and the cited orbital dependency. Its controlled expansion makes the perihelion result part of the complete recovered chain."
+order: 17
+---
+
+**The orbit calculation uses the declared higher-order static completion and the cited orbital dependency. Its controlled expansion makes the perihelion result part of the complete recovered chain.**
+
+<a id="sec-orbit"></a>
+
+## 17. Perihelion advance and the cited dependency
+
+The 1916 article states Einstein <span className="upright">(75)</span> and refers the calculation to Einstein’s 1915 perihelion paper and Schwarzschild’s 1916 solution. The dependency used here is the cubic orbit polynomial and turning-point operation, not a source lift of every line of those separate papers [\[4\]](/source-readout/einstein-1916/25-references#ref-4), [\[12\]](/source-readout/einstein-1916/25-references#ref-12). The radial completion in Section [14](/source-readout/einstein-1916/14-spherical-exterior#sec-exterior) supplies the higher-order field information that Einstein <span className="upright">(70)</span> alone lacks.
+
+On an equatorial timelike geodesic of [(14.7)](/source-readout/einstein-1916/14-spherical-exterior#eq-exterior-calibration), the time and angular source equations yield constants <a id="eq-17-1"></a><a id="eq-orbit-constants"></a>
+
+$$
+\mathcal E=A\frac{\mathrm{d}t}{\mathrm{d}s},\qquad
+ \ell=r^2\frac{\mathrm{d}\varphi}{\mathrm{d}s}.
+\tag{17.1}
+$$
+
+ The equatorial plane is preserved. Combining the constants with the calibrated norm one gives <a id="eq-17-2"></a><a id="eq-radial-orbit"></a>
+
+$$
+\left(\frac{\mathrm{d}r}{\mathrm{d}s}\right)^2
+ =\mathcal E^2-A\left(1+\frac{\ell^2}{r^2}\right).
+\tag{17.2}
+$$
+
+ For $w=1/r$ and $\ell\ne0$, $\mathrm{d}r/\mathrm{d}s=-\ell\,\mathrm{d}w/\mathrm{d}\varphi$, so <a id="eq-17-3"></a><a id="eq-cubic-orbit"></a>
+
+$$
+\boxed{(w')^2=\frac{\mathcal E^2-1}{\ell^2}
+ +\frac\alpha{\ell^2}w-w^2+\alpha w^3.}
+\tag{17.3}
+$$
+
+ This is Einstein 1915 equation (11), with the polynomial dictionary $B_{1915}^2=\ell^2$ and $2A_{1915}=\mathcal E^2-1$. It does not identify every earlier approximation-dependent parameter in that paper. Schwarzschild’s equation (18) gives the same cubic after its stated radial-variable transformation. Differentiating away from a turning point and continuing smoothly gives <a id="eq-17-4"></a><a id="eq-binnet"></a>
+
+$$
+w''+w=\frac\alpha{2\ell^2}+\frac{3\alpha}{2}w^2.
+\tag{17.4}
+$$
+
+ No division by $w'=0$ at the turning point is required to assert the continued equation.
+
+<a id="turning-roots-before-expansion"></a>
+
+### Turning roots before expansion
+
+Let the two positive turning values be $w_-<w_+$, and put $S=w_-+w_+$, $P=w_-w_+$. Requiring these roots in [(17.3)](/source-readout/einstein-1916/17-perihelion#eq-cubic-orbit) gives <a id="eq-17-5"></a><a id="eq-orbit-root-constants"></a>
+
+$$
+\ell^2=\frac\alpha{S-\alpha(S^2-P)},\qquad
+ \mathcal E^2=1-\ell^2P(1-\alpha S).
+\tag{17.5}
+$$
+
+ Expansion verifies the exact factorization <a id="eq-17-6"></a><a id="eq-orbit-factor"></a>
+
+$$
+(w-w_-)(w_+-w)[1-\alpha(S+w)].
+\tag{17.6}
+$$
+
+ Define turning-radius elements <a id="eq-17-7"></a><a id="eq-orbit-elements"></a>
+
+$$
+a_o=\frac{r_{\max}+r_{\min}}2,\quad
+ e=\frac{r_{\max}-r_{\min}}{r_{\max}+r_{\min}},\quad
+ p=a_o(1-e^2),\quad \delta=\frac\alpha p.
+\tag{17.7}
+$$
+
+ Then $w_\pm=(1\pm e)/p$. Substitution $w=(1+e\cos\chi)/p$ regularizes the integral before any expansion: <a id="eq-17-8"></a><a id="eq-orbit-integral"></a>
+
+$$
+\boxed{\Delta\varphi_{\rm radial}
+ =2\int_0^\pi[1-\delta(3+e\cos\chi)]^{-1/2}\mathrm{d}\chi.}
+\tag{17.8}
+$$
+
+ For $0<e<1$, $\delta>0$ and $q_*=\delta(3+e)<1$, the final factor in [(17.6)](/source-readout/einstein-1916/17-perihelion#eq-orbit-factor) is positive across the interval. The denominator of $\ell^2$ is positive because $2-\delta(3+e^2)>0$ on this domain. Moreover 
+
+$$
+\mathcal E^2=\frac{2[1-\delta(1+e)][1-\delta(1-e)]}
+ {2-\delta(3+e^2)}>0,
+$$
+
+ and $\mathcal E^2<1$ follows from [(17.5)](/source-readout/einstein-1916/17-perihelion#eq-orbit-root-constants) since $1-2\delta>0$. The turning radii lie in the static exterior. This specifies a regular outer bound branch; radial orbits and a weak expansion at the separatrix are not included. An exactly circular curve has no distinguished perihelion direction, although a circular limit exists.
+
+<a id="thm-perihelion"></a>
+
+### Theorem 17.1 (Perihelion coefficient and remainder)
+
+For the branch just specified, let $\Delta\varpi=\Delta\varphi_{\rm radial}-2\pi$. Then <a id="eq-17-9"></a><a id="eq-perihelion-leading"></a>
+
+$$
+\boxed{\Delta\varpi=3\pi\delta+O(\delta^2),}
+\tag{17.9}
+$$
+
+ with the explicit bound <a id="eq-17-10"></a><a id="eq-perihelion-bound"></a>
+
+$$
+\boxed{0\le\Delta\varpi-3\pi\delta
+ \le\frac{3\pi\delta^2(9+e^2/2)}{4(1-q_*)^{5/2}}.}
+\tag{17.10}
+$$
+
+
+
+<a id="proof-thm-perihelion"></a>
+
+### Proof.
+
+Expand the regular integrand in [(17.8)](/source-readout/einstein-1916/17-perihelion#eq-orbit-integral), not the original singular turning-point expression. Its linear term is $\delta(3+e\cos\chi)/2$. Multiplication by two and integration gives $3\pi\delta$. Convexity makes the remainder nonnegative. The Taylor bound is $3\delta^2(3+e\cos\chi)^2/[8(1-q_*)^{5/2}]$. Use the exact integral $\int_0^\pi(3+e\cos\chi)^2\mathrm{d}\chi=\pi(9+e^2/2)$ and the factor two in [(17.8)](/source-readout/einstein-1916/17-perihelion#eq-orbit-integral) to obtain [(17.10)](/source-readout/einstein-1916/17-perihelion#eq-perihelion-bound).
+
+$\square$
+
+The same-mass normalization [(14.2)](/source-readout/einstein-1916/14-spherical-exterior#eq-mass-alpha) and the leading Kepler relation $T^2=4\pi^2a_o^3/(KM)$ yield <a id="eq-17-11"></a><a id="eq-einstein75"></a>
+
+$$
+\boxed{\Delta\varpi_{\rm leading}
+ =\frac{3\pi\alpha}{a_o(1-e^2)}
+ =\frac{6\pi KM}{a_o(1-e^2)c^2}
+ =\frac{24\pi^3a_o^2}{T^2c^2(1-e^2)}.}
+\tag{17.11}
+$$
+
+ This recovers the expression in Einstein <span className="upright">(75)</span>. The Kepler substitution is a leading-order conversion, not an exact relativistic period identity. The bound [(17.10)](/source-readout/einstein-1916/17-perihelion#eq-perihelion-bound) applies to the turning-radius elements defined here. Applying it to a differently fitted observational element set requires the corresponding conversion analysis.
+
+<a id="scope-of-the-numerical-statements"></a>
+
+### Scope of the numerical statements
+
+The original last page reports approximately $1.7$ arcseconds for a solar-grazing ray, $0.02$ arcseconds for Jupiter and $43$ arcseconds per century for Mercury [\[5\]](/source-readout/einstein-1916/25-references#ref-5) (p. 822). They are retained as historical source-reported numbers. The article does not give a complete numerical input table sufficient for an independent audit of those values. No current astronomical data have been substituted, no mass or radius fitted to reproduce them, and no present-day observational claim is made. The verification below uses declared dimensionless diagnostic parameters to check the regularized integrals and bounds, not astronomical observations.

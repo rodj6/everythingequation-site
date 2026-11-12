@@ -1,3 +1,4 @@
+import SourceLiftFeature from '@/components/source-lift-feature';
 import Link from 'next/link';
 import type {Metadata} from 'next';
 import {firstOrderKernel, gravityAtlas, gravityErrataSupplement, gravityEditions, gravityHub, holographyAtlas, sameBallTakeaway, secondOrderDetection} from '@/config/paper-integrations';
@@ -23,6 +24,7 @@ export default function GravityAndHolography() {
           <Link href={holographyAtlas}>Atlas horizon and entropy readouts →</Link>
         </div>
       </header>
+      <SourceLiftFeature/>
       <div className="sr-publication-body">
         <section id="same-balls" aria-labelledby="same-balls-heading">
           <h2 id="same-balls-heading">Same balls. Different orders.</h2>
