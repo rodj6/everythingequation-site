@@ -1,0 +1,52 @@
+Files that differ between the refined site (commit 44fbb98) and this pass.
+A = added, M = changed, D = removed.
+
+Documents and guides
+M	ATLAS-UPDATING.md
+M	DESIGN.md
+M	SITE_MAINTENANCE_MANUAL.md
+A	docs/atlas-views-20261111/REPRESENTATION_AND_SOURCES.md
+A	docs/atlas-views-20261111/README.md
+A	docs/atlas-views-20261111/TEST_REPORT.md
+A	docs/atlas-views-20261111/CHANGED_FILES.txt
+
+Content and data
+M	content/atlas/research.yaml
+A	src/data/atlas/views.ts
+M	src/data/reality-atlas.ts
+M	src/generated/atlas-research.ts
+
+The two plate views (drawing, no 3D)
+A	src/atlas/lenses/boundary.ts
+A	src/atlas/lenses/history.ts
+A	src/atlas/lenses/plate-frames.json
+A	src/atlas/lenses/plate.ts
+
+Pages, interface and styles
+M	src/app/atlas/atlas.css
+M	src/app/atlas/page.tsx
+M	src/app/page.tsx
+M	src/atlas/model.ts
+M	src/components/atlas/atlas-experience.tsx
+M	src/components/atlas/atlas-panel.tsx
+M	src/components/atlas/atlas-picture-note.tsx
+A	src/components/atlas/atlas-plate-layer.tsx
+M	src/components/atlas/atlas-stage.tsx
+A	src/components/atlas/atlas-view-sections.tsx
+A	src/components/atlas/atlas-views.tsx
+
+3D engine
+M	src/atlas/engine/cosmos.ts
+M	src/atlas/engine/engine.ts
+M	src/atlas/engine/readout.ts
+M	src/atlas/engine/rig.ts
+
+Tools
+A	tools/atlas-checks/README.md
+A	tools/atlas-checks/atlas-test.mjs
+M	tools/atlas-stills/bake.mjs
+M	tools/atlas-stills/page.ts
+
+Prepared pictures
+D	public/atlas-stills/v2/ (37 pictures, replaced)
+A	public/atlas-stills/v3/ (39 pictures: all re-baked, plus plate-wide and plate-tall)

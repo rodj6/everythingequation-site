@@ -53,7 +53,7 @@ export function PaperCard({ paper }: { paper: LoadedPaper }) {
         ) : null}
         <Badge kind={paper.category} />
         {paper.version ? (
-          <span className="font-mono text-[0.68rem] text-faint">{paper.version}</span>
+          <span className="min-w-0 font-mono text-[0.68rem] text-faint">{paper.version}</span>
         ) : null}
       </div>
       <h3 className="mt-3 text-[1.02rem] font-semibold leading-snug text-fg">

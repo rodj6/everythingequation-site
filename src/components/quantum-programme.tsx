@@ -28,14 +28,14 @@ const paths = {
 };
 
 function MechanismDrawing({ mode, stage }: { mode: Completion; stage: number }) {
-  const color = mode === "pilot" ? "#6fe0ea" : "#bca3ff";
+  const color = mode === "pilot" ? "#80cfd9" : "#c5b8ea";
   return (
     <svg viewBox="0 0 880 270" role="img" aria-labelledby="mechanism-title mechanism-desc" className="qm-mechanism-drawing">
       <title id="mechanism-title">{mode === "pilot" ? "Pilot packets, candidate contacts and a retained archive" : "Guided massive pointer and retained apparatus"}</title>
       <desc id="mechanism-desc">{mode === "pilot" ? "Illustrative positive and negative packets pass through a recombination region. A tagged carrier follows a discrete path into a material archive." : "Illustrative continuous pointer paths separate into outcome regions. A retained archive persists while the working display resets and a receiving system keeps the transferred state."} This is a schematic, with no simulated data or quantitative scale.</desc>
       <defs>
         <linearGradient id="qm-line" x1="0" x2="1"><stop stopColor={color} stopOpacity=".08"/><stop offset=".5" stopColor={color}/><stop offset="1" stopColor={color} stopOpacity=".25"/></linearGradient>
-        <pattern id="qm-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M 28 0 L 0 0 0 28" fill="none" stroke="#8ba4c2" strokeOpacity=".07"/></pattern>
+        <pattern id="qm-grid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M 28 0 L 0 0 0 28" fill="none" stroke="#9fa3ae" strokeOpacity=".07"/></pattern>
       </defs>
       <rect width="880" height="270" fill="url(#qm-grid)"/>
       {mode === "pilot" ? <>
@@ -45,14 +45,14 @@ function MechanismDrawing({ mode, stage }: { mode: Completion; stage: number }) 
         <path d="M30 133 C50 63 70 63 90 133 S130 203 150 133 S190 63 210 133" fill="none" stroke={color} strokeWidth="2"/>
         <line x1="220" x2="520" y1="103" y2="103" stroke="url(#qm-line)"/>
         <line x1="220" x2="520" y1="163" y2="163" stroke="url(#qm-line)"/>
-        {[245,290,335,430,475].map((x,i)=><g key={x}><circle cx={x} cy="103" r="12" fill="#102930" stroke={color} opacity={stage >= 1 ? 1 : .4}/><text x={x} y="108" textAnchor="middle" fill={color} fontSize="17">+</text>{i<3 && <><circle cx={x} cy="163" r="12" fill="#222039" stroke="#bca3ff"/><text x={x} y="168" textAnchor="middle" fill="#bca3ff" fontSize="17">−</text></>}</g>)}
-        <path d="M340 103 Q385 103 386 133 Q385 163 340 163" fill="none" stroke="#9fadc3" strokeDasharray="3 5"/>
-        <rect x="370" y="117" width="32" height="32" rx="8" fill="#111e30" stroke="#526176" transform="rotate(45 386 133)"/>
+        {[245,290,335,430,475].map((x,i)=><g key={x}><circle cx={x} cy="103" r="12" fill="#1c2124" stroke={color} opacity={stage >= 1 ? 1 : .4}/><text x={x} y="108" textAnchor="middle" fill={color} fontSize="17">+</text>{i<3 && <><circle cx={x} cy="163" r="12" fill="#282b31" stroke="#c5b8ea"/><text x={x} y="168" textAnchor="middle" fill="#c5b8ea" fontSize="17">−</text></>}</g>)}
+        <path d="M340 103 Q385 103 386 133 Q385 163 340 163" fill="none" stroke="#aaaeb8" strokeDasharray="3 5"/>
+        <rect x="370" y="117" width="32" height="32" rx="8" fill="#1d1f24" stroke="#5b606d" transform="rotate(45 386 133)"/>
         <text x="386" y="210" textAnchor="middle" className="qm-svg-small">retained products</text>
-        <line x1="386" x2="386" y1="156" y2="187" stroke="#526176" strokeDasharray="3 4"/>
+        <line x1="386" x2="386" y1="156" y2="187" stroke="#5b606d" strokeDasharray="3 4"/>
         <path d="M535 177 H577 V133 H625 V89 H671 H731" fill="none" stroke={color} strokeWidth="2.5" opacity={stage >= 3 ? 1 : .4}/>
         {[535,577,625,671].map((x,i)=><circle key={x} cx={x} cy={[177,133,89,89][i]} r="5" fill={color}/>)}
-        <rect x="748" y="69" width="78" height="115" rx="7" fill="#112530" stroke={color} opacity={stage === 4 ? 1 : .65}/>
+        <rect x="748" y="69" width="78" height="115" rx="7" fill="#1d1f24" stroke={color} opacity={stage === 4 ? 1 : .65}/>
         <path d="M766 93 H808 M766 111 H808 M766 129 H794" stroke={color} strokeOpacity=".65"/>
         <text x="787" y="164" textAnchor="middle" fill={color} fontSize="17">A</text>
         <text x="139" y="243" textAnchor="middle" className="qm-svg-small">individual bond currents</text>
@@ -68,8 +68,8 @@ function MechanismDrawing({ mode, stage }: { mode: Completion; stage: number }) 
         <path d="M583 65 V106 M583 128 V164 M583 191 V227" stroke={color} strokeWidth="3"/>
         <text x="465" y="66" className="qm-svg-small">outcome region</text>
         <text x="468" y="174" className="qm-svg-small">retained null</text>
-        <path d="M605 91 H650 M605 146 H630 V191 H650" fill="none" stroke="#63718c" strokeDasharray="4 5"/>
-        {[{y:62,label:"ARCHIVE A",sub:"earlier declaration"},{y:157,label:"RESET RECEIVER",sub:"reset retained"}].map(({y,label,sub})=><g key={label}><rect x="654" y={y} width="179" height="66" rx="7" fill="#19172c" stroke={color} opacity={stage>=3?1:.55}/><text x="674" y={y+25} fill={color} fontSize="12" letterSpacing="1.5">{label}</text><text x="674" y={y+46} className="qm-svg-small">{sub}</text></g>)}
+        <path d="M605 91 H650 M605 146 H630 V191 H650" fill="none" stroke="#6d7382" strokeDasharray="4 5"/>
+        {[{y:62,label:"ARCHIVE A",sub:"earlier declaration"},{y:157,label:"RESET RECEIVER",sub:"reset retained"}].map(({y,label,sub})=><g key={label}><rect x="654" y={y} width="179" height="66" rx="7" fill="#1e2025" stroke={color} opacity={stage>=3?1:.55}/><text x="674" y={y+25} fill={color} fontSize="12" letterSpacing="1.5">{label}</text><text x="674" y={y+46} className="qm-svg-small">{sub}</text></g>)}
         <text x="115" y="243" textAnchor="middle" className="qm-svg-small">initial equilibrium</text>
         <text x="381" y="243" textAnchor="middle" className="qm-svg-small">physical time →</text>
       </>}
@@ -78,7 +78,7 @@ function MechanismDrawing({ mode, stage }: { mode: Completion; stage: number }) 
 }
 
 function MobileMechanism({ mode, stage }: { mode: Completion; stage: number }) {
-  const color = mode === "pilot" ? "#79e2ec" : "#bca3ff";
+  const color = mode === "pilot" ? "#89d2dc" : "#c5b8ea";
   const nodes = mode === "pilot"
     ? [{ title: "SOURCE ACTION", symbol: "J", detail: "individual currents" }, { title: "SPATIAL CONTACTS", symbol: "±", detail: "prepared gas" }, { title: "RECOMBINATION", symbol: "± → +", detail: "surplus suppressed" }, { title: "TAGGED BELL PATH", symbol: "λ = [J]₊ / w", detail: "controlled limit" }, { title: "PHYSICAL ARCHIVE", symbol: "A", detail: "first-pass actual copy" }]
     : [{ title: "COMPLETE WAVE", symbol: "Ψ", detail: "initial equilibrium" }, { title: "GUIDED MOTION", symbol: "Q̇ = j / ρ", detail: "continuous positions" }, { title: "MASSIVE POINTER", symbol: "q(t)", detail: "physical writing" }, { title: "PROTECTED ARCHIVE", symbol: "A", detail: "earlier declaration" }, { title: "CONTINUATION", symbol: "U", detail: "reset receiver retained" }];
@@ -87,10 +87,10 @@ function MobileMechanism({ mode, stage }: { mode: Completion; stage: number }) {
     <path d="M146 53 H177 M246 97 V120 M177 163 H146 M77 207 V273 H92" fill="none" stroke={color} strokeOpacity=".45" strokeDasharray="3 4"/>
     <path d="m170 49 7 4-7 4 M242 113l4 7 4-7 M153 159l-7 4 7 4 M85 269l7 4-7 4" fill="none" stroke={color} strokeOpacity=".8"/>
     {nodes.map((node,index)=>{const [x,y]=positions[index];return <g key={node.title}>
-      <rect x={x} y={y} width="139" height="87" rx="6" fill={stage===index?"#1a2a3f":"#0d1727"} stroke={color} strokeOpacity={stage===index?1:.25}/>
+      <rect x={x} y={y} width="139" height="87" rx="6" fill={stage===index?"#282b31":"#17191d"} stroke={color} strokeOpacity={stage===index?1:.25}/>
       <text x={x+12} y={y+18} fill={color} fontSize="9" letterSpacing=".5" fontFamily="ui-monospace, monospace">{node.title}</text>
       <text x={x+69.5} y={y+49} textAnchor="middle" fill={color} fontSize={node.symbol.length>5?19:27} fontFamily="Georgia, serif">{node.symbol}</text>
-      <text x={x+69.5} y={y+71} textAnchor="middle" fill="#a9b8cd" fontSize="9" fontFamily="ui-monospace, monospace">{node.detail}</text>
+      <text x={x+69.5} y={y+71} textAnchor="middle" fill="#b5b9c1" fontSize="9" fontFamily="ui-monospace, monospace">{node.detail}</text>
     </g>})}
   </svg>;
 }

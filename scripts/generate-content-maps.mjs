@@ -11,6 +11,8 @@ import { generatePaperIntegrations } from './generate-paper-integrations.mjs';
  *   src/generated/manualPapers.ts: map of content/manual/papers/*.mdx
  *   src/generated/manualPages.ts: map of content/manual/pages/*.mdx
  *   src/generated/articles.ts: metadata + import map of content/articles/*.mdx
+ *   src/generated/atlas-research.ts: Reality Atlas entries from content/atlas/research.yaml,
+ *     joined with content/papers.yaml, plus counts taken from content/reality-model/
  */
 import { promises as fs } from 'fs';
 import path from 'path';
@@ -188,6 +190,115 @@ ${imports.join(',\n')}
   await fs.writeFile(path.join(outDir, 'monograph.ts'), body);
 }
 
+/**
+ * REALITY ATLAS · RESEARCH ENTRIES (content/atlas/research.yaml)
+ *
+ * Joins each entry with its paper record in content/papers.yaml so titles,
+ * DOIs, dates and summaries are never typed twice, counts the chapters and
+ * equation tags of the reality model from the shipped text, and fails with a
+ * plain message when an entry is malformed. The interface and the rendering
+ * read only the generated file.
+ */
+const ATLAS_TIERS = ['frame', 'foundation', 'source', 'tier0', 'aperture', 'field', 'tier1', 'observable', 'recovery'];
+const ATLAS_STATUSES = ['theorem', 'conditional', 'construction', 'measured', 'interpretation', 'open', 'historical'];
+const ATLAS_GROUPS = ['frame', 'foundation', 'source', 'law', 'aperture-core', 'aperture-faces', 'field', 'spectral', 'sectors', 'measurement', 'gravity', 'perspective', 'readers', 'observables', 'limits', 'numerics'];
+
+async function generateAtlasResearch() {
+  const file = path.join(baseDir, 'content', 'atlas', 'research.yaml');
+  const fail = (id, message) => {
+    throw new Error(`content/atlas/research.yaml · entry "${id}": ${message}`);
+  };
+  const document = yaml.load(await fs.readFile(file, 'utf8'));
+  if (!document || !Array.isArray(document.entries)) throw new Error('content/atlas/research.yaml must contain an "entries" list.');
+  const registry = yaml.load(await fs.readFile(path.join(baseDir, 'content', 'papers.yaml'), 'utf8'));
+  const papers = new Map((registry.papers ?? []).filter((paper) => paper.slug).map((paper) => [paper.slug, paper]));
+  const text = (value) => (value === undefined || value === null ? '' : String(value).replace(/\s+/g, ' ').trim());
+  const ids = new Set();
+  const entries = document.entries.map((raw, index) => {
+    const id = text(raw.id) || `#${index + 1}`;
+    if (!/^[a-z0-9][a-z0-9-]*$/.test(id)) fail(id, 'id must be lower-case letters, digits and hyphens.');
+    if (ids.has(id)) fail(id, 'id is used twice. Ids are permanent addresses and must be unique.');
+    ids.add(id);
+    if (!ATLAS_TIERS.includes(raw.tier)) fail(id, `tier must be one of: ${ATLAS_TIERS.join(', ')}.`);
+    if (!ATLAS_GROUPS.includes(raw.group)) fail(id, `group must be one of: ${ATLAS_GROUPS.join(', ')}.`);
+    if (!ATLAS_STATUSES.includes(raw.status)) fail(id, `status must be one of: ${ATLAS_STATUSES.join(', ')}.`);
+    if (!text(raw.statusNote)) fail(id, 'statusNote is required: one sentence saying what the status rests on.');
+    if (!text(raw.label)) fail(id, 'label is required.');
+    if (!text(raw.eyebrow)) fail(id, 'eyebrow is required.');
+    let paper;
+    if (raw.paper) {
+      const record = papers.get(raw.paper);
+      if (!record) fail(id, `paper "${raw.paper}" is not a slug in content/papers.yaml.`);
+      paper = {
+        slug: record.slug,
+        title: text(record.title) || text(raw.label),
+        ...(record.doi ? { doi: text(record.doi) } : {}),
+        ...(record.date ? { date: text(record.date) } : {}),
+        url: `/papers/${record.slug}`,
+      };
+      raw = { ...raw, summary: raw.summary ?? record.role, description: raw.description ?? record.summary };
+      if (!raw.read && record.webUrl) raw = { ...raw, read: [{ label: 'Complete web edition', href: record.webUrl }] };
+    }
+    if (!text(raw.summary)) fail(id, 'summary is required (or give a paper whose record has a role).');
+    if (!text(raw.description)) fail(id, 'description is required (or give a paper whose record has a summary).');
+    const read = (raw.read ?? []).map((link) => ({ label: text(link.label), href: text(link.href) }));
+    if (!read.length) fail(id, 'at least one reading link is required.');
+    for (const link of read) {
+      if (!link.label || !link.href.startsWith('/')) fail(id, `reading link "${link.label}" needs a label and a site path starting with "/".`);
+    }
+    if (paper && !read.some((link) => link.href === paper.url)) read.push({ label: 'Paper record and DOI', href: paper.url });
+    const relations = (raw.relations ?? []).map((relation) => {
+      if (!text(relation.to) || !text(relation.label) || !text(relation.note)) fail(id, 'each relation needs "to", "label" and "note".');
+      if (relation.type !== 'mathematical' && relation.type !== 'conceptual') fail(id, `relation to "${relation.to}" needs type mathematical or conceptual.`);
+      return { to: text(relation.to), label: text(relation.label), type: relation.type, note: text(relation.note) };
+    });
+    const equations = (raw.equations ?? []).map((equation) => {
+      if (!text(equation.tag) || !text(equation.title) || !String(equation.tex ?? '').trim() || !text(equation.interpretation)) {
+        fail(id, 'each equation needs tag, title, tex and interpretation.');
+      }
+      return { tag: text(equation.tag), title: text(equation.title), tex: String(equation.tex).trim(), interpretation: text(equation.interpretation) };
+    });
+    return {
+      id,
+      tier: raw.tier,
+      group: raw.group,
+      label: text(raw.label),
+      ...(raw.shortLabel ? { shortLabel: text(raw.shortLabel) } : {}),
+      eyebrow: text(raw.eyebrow),
+      status: raw.status,
+      statusNote: text(raw.statusNote),
+      summary: text(raw.summary),
+      description: text(raw.description),
+      ...(raw.note ? { note: text(raw.note) } : {}),
+      read,
+      relations,
+      equations,
+      ...(paper ? { paper } : {}),
+      ...(raw.added ? { added: text(raw.added) } : {}),
+    };
+  });
+
+  // Counts shown in the Atlas come from the shipped reality-model text.
+  const modelDir = path.join(baseDir, 'content', 'reality-model');
+  const chapters = (await fs.readdir(modelDir)).filter((name) => name.endsWith('.md')).sort();
+  let equationTags = 0;
+  for (const name of chapters) {
+    const source = await fs.readFile(path.join(modelDir, name), 'utf8');
+    equationTags += (source.match(/\\tag\{[^}]+\}/g) || []).length;
+  }
+
+  const body = `// AUTO-GENERATED by scripts/generate-content-maps.mjs: do not edit.
+// Sources: content/atlas/research.yaml, content/papers.yaml, content/reality-model/*.md
+import type { AtlasResearchEntry } from "@/data/atlas/schema";
+
+export const atlasResearchEntries: AtlasResearchEntry[] = ${JSON.stringify(entries, null, 2)};
+
+/** Counted from the reality-model chapters at build time. */
+export const atlasSourceStats = ${JSON.stringify({ chapters: chapters.length, equationTags }, null, 2)} as const;
+`;
+  await fs.writeFile(path.join(outDir, 'atlas-research.ts'), body);
+}
+
 async function main() {
   await generatePaperIntegrations();
   // Consciousness is maintained by its source converter and editorial inventory,
@@ -201,6 +312,7 @@ async function main() {
     generateManualMap('pages', 'manualPages', 'manualPages.ts'),
     generateArticles(),
     generateMonograph(),
+    generateAtlasResearch(),
   ]);
   console.log('Content maps generated.');
 }

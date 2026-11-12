@@ -40,7 +40,7 @@ content/                      ← YOUR CONTENT LIVES HERE
 
 src/config/
   site.ts                     ← site name, tagline, URL, author, research position
-  navigation.ts               ← top navigation tabs (one list)
+  navigation.ts               ← top navigation tabs (one list, with groups)
 
 src/app/                      ← pages (App Router)
   page.tsx                    ← homepage
@@ -54,12 +54,23 @@ src/app/                      ← pages (App Router)
   legacy/[slug]/page.tsx      ← historical pages with banner
   sitemap.xml|feed.xml|llms.txt|graph.json|robots.txt/route.ts
   layout.tsx                  ← global shell, metadata, JSON-LD
-  globals.css                 ← design system (CSS variables), KaTeX rules
+  globals.css                 ← design system (fonts, CSS variables, header/footer), KaTeX rules
+  home.css                    ← homepage frame (hero, statement, section bands)
+  atlas/                      ← the Reality Atlas page, its stylesheet and field guide
 
 src/components/               ← header, footer, cards, paper-chain,
                                 mdx-components (Theorem, ResultScope, …),
                                 mdx-content (server MDX renderer)
 src/mdx-components.tsx        ← Next.js MDX convention file (do not move)
+src/atlas/                    ← the Atlas instrument: engine/ (3D, plain three.js),
+                                model.ts (content → instrument, address state), quality.ts
+src/data/reality-atlas.ts     ← Atlas architecture entries, tours, traces (content)
+src/data/atlas/schema.ts      ← Atlas vocabulary: tiers, stages, groups, statuses
+content/atlas/research.yaml   ← Atlas entries drawn from papers (content)
+public/fonts/v1/              ← self-hosted typefaces (versioned folder, cached for a year)
+public/atlas-stills/v3/       ← prepared pictures of the Atlas instrument (baked)
+tools/atlas-stills/           ← bakes those pictures (not part of the build)
+
 src/lib/
   registry.ts                 ← loads papers.yaml / problems.yaml + Zenodo cache
   articles.ts                 ← article index accessors
@@ -336,11 +347,40 @@ of published results with retained historical notes.
 2. Add one line to `src/config/navigation.ts`:
 
 ```ts
-  { href: "/updates", label: "Updates" },
+  { href: "/updates", label: "Updates", group: "library", description: "What changed and when." },
 ```
 
-Desktop and mobile menus both update automatically. To include the new page in
-the sitemap it must be in `navigation` (it is, once you add the line above).
+`group` is one of `theory`, `programmes`, `library`, `about` and decides where
+the tab sits: the desktop header separates groups with a hairline, and the
+mobile menu and footer list tabs under their group heading with the one-line
+`description`. Both are optional (a tab without a group is placed with
+"library"). Desktop and mobile menus and the footer update automatically. To
+include the new page in the sitemap it must be in `navigation` (it is, once
+you add the line above).
+
+The desktop row holds eleven tabs at 1280px. If you add more, shorten a label
+or move a tab into the footer only (`footerLinks`), otherwise the row will
+wrap.
+
+## 10b. The Reality Atlas
+
+The Atlas (`/atlas`) is an interactive instrument plus a reading panel. Its
+content and its graphics are separate:
+
+- **To add a paper, edit an entry, add a tour or a trace:** follow
+  [`ATLAS-UPDATING.md`](ATLAS-UPDATING.md). You edit
+  `content/atlas/research.yaml` (entries from papers) or
+  `src/data/reality-atlas.ts` (the typed architecture). No graphics code is
+  involved, and the build checks ids, statuses, links, tours and traces.
+- **To change how it looks or behaves:** see [`DESIGN.md`](DESIGN.md),
+  sections 6 and 7.
+- **Addresses:** `/atlas?focus=<id>` opens an entry. Ids are permanent: never
+  rename or reuse one. The full list of supported addresses is at the end of
+  `ATLAS-UPDATING.md`.
+- **Still pictures:** the page shows a prepared picture first and on devices
+  that cannot run 3D. They are in `public/atlas-stills/v3/` and are re-baked
+  only when the look of the instrument or the list of sectors changes
+  (`tools/atlas-stills/README.md`).
 
 ## 11. How math rendering works
 
@@ -533,13 +573,23 @@ Flat Connections on Higher-Genus Surfaces", to Zenodo and it gets record ID
 
 ## Appendix: design system quick reference
 
-- Colors/typography are CSS variables in `src/app/globals.css` (`:root`).
-  Changing `--accent` retunes the entire luminous cyan accent.
-- Tailwind aliases for them are in `tailwind.config.js`
-  (`fg`, `mute`, `edge`, `glow`, `vio`, `amberc`, `greenc`, …).
-- Reusable card styles: `.card-surface`, `.card-surface-hover`,
-  `.section-label`, `.text-luminous` (defined in globals.css).
-- All animation respects `prefers-reduced-motion`.
+The full guide is [`DESIGN.md`](DESIGN.md). In brief:
+
+- Colours, typefaces and reading sizes are CSS variables in
+  `src/app/globals.css` (`:root`). Tailwind uses the same variables
+  (`ink`, `surface`, `raised`, `edge`, `fg`, `mute`, `faint`, `glow`, `brass`,
+  `lamp`, `vio`, `amberc`, `greenc`). Do not add literal hex colours.
+- Typefaces: Source Serif 4 (headings and long-form reading), IBM Plex Sans
+  (interface), IBM Plex Mono (labels, data). Self-hosted in
+  `public/fonts/v1/`.
+- Brass marks structure (labels, rules, numerals); the cool accent marks
+  anything you can act on (links, focus, active controls).
+- Reusable classes: `.card-surface`, `.card-surface-hover`, `.section-label`,
+  `.text-luminous` (defined in globals.css). A page that needs the full window
+  puts `page-bleed` on its outermost element.
+- Long-form text gets its type from the MDX components
+  (`src/components/mdx-components.tsx`) and the shared reading rules in
+  globals.css; change `--reading-size` there to adjust every reader at once.
 
 ### Production verification and historical typesetting
 

@@ -26,6 +26,7 @@ export default function ArticlesPage() {
         </p>
       </header>
 
+      <h2 className="sr-only">All articles</h2>
       {articles.length > 0 ? (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {articles.map((a) => (

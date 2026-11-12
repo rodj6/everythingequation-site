@@ -32,24 +32,24 @@ function CompletionPortrait() {
     <svg viewBox="0 0 410 400" role="img" aria-labelledby="qm-portrait-title qm-portrait-desc">
       <title id="qm-portrait-title">Two constitutive routes from a source to physical records</title>
       <desc id="qm-portrait-desc">A shared source/readout question branches into a cyan pilot-medium route with discrete events and a violet massive-configuration route with continuous positions. Both routes have their own material records. The connecting lines show the programme structure, not a mathematical derivation between theories.</desc>
-      <defs><radialGradient id="qm-portrait-glow"><stop stopColor="#4f9bbf" stopOpacity=".18"/><stop offset="1" stopColor="#4f9bbf" stopOpacity="0"/></radialGradient><linearGradient id="qm-cyan-trace" x2="0" y2="1"><stop stopColor="#73e4ed" stopOpacity=".12"/><stop offset="1" stopColor="#73e4ed"/></linearGradient></defs>
+      <defs><radialGradient id="qm-portrait-glow"><stop stopColor="#7c8392" stopOpacity=".18"/><stop offset="1" stopColor="#7c8392" stopOpacity="0"/></radialGradient><linearGradient id="qm-cyan-trace" x2="0" y2="1"><stop stopColor="#85d1db" stopOpacity=".12"/><stop offset="1" stopColor="#85d1db"/></linearGradient></defs>
       <circle cx="205" cy="200" r="183" fill="url(#qm-portrait-glow)"/>
-      {[82,135,182].map(r=><circle key={r} cx="205" cy="197" r={r} fill="none" stroke="#6b8aad" strokeOpacity=".15" strokeDasharray={r===135?"2 7":undefined}/>)}
-      <path d="M25 197 H385 M205 15 V378" stroke="#6b8aad" strokeOpacity=".12"/>
-      <text x="205" y="44" textAnchor="middle" fill="#a7b9d2" fontSize="10" letterSpacing="2.3">SOURCE / READOUT</text>
-      <circle cx="205" cy="91" r="24" fill="#101f30" stroke="#9ebed6" strokeOpacity=".5"/><text x="205" y="101" fill="#d9e6f7" textAnchor="middle" fontFamily="Georgia,serif" fontSize="31">Ψ</text>
-      <path d="M193 114 C183 154 101 127 92 183 M217 114 C229 154 309 127 318 183" fill="none" stroke="#7b90af" strokeWidth="1.2" strokeDasharray="3 5"/>
-      <text x="92" y="176" textAnchor="middle" fill="#73e4ed" fontSize="9" letterSpacing="1.3">PILOT MEDIUM</text>
-      <text x="317" y="176" textAnchor="middle" fill="#bca3ff" fontSize="9" letterSpacing="1.2">MASSIVE CONFIGURATION</text>
-      <path d="M62 252 H82 V227 H101 V206 H122 V230 H143" fill="none" stroke="#73e4ed" strokeWidth="2"/>
-      {[{x:62,y:252},{x:82,y:227},{x:101,y:206},{x:122,y:230}].map(({x,y})=><circle key={x} cx={x} cy={y} r="4" fill="#73e4ed"/>)}
-      <path d="M269 254 C284 256 279 201 298 205 S305 247 328 229 S348 219 358 223" fill="none" stroke="#bca3ff" strokeWidth="2"/>
-      <circle cx="328" cy="229" r="4" fill="#bca3ff"/>
-      <text x="101" y="286" textAnchor="middle" fill="#9cb2c9" fontFamily="Georgia,serif" fontSize="15">λ = [J]₊ / w</text>
-      <text x="312" y="286" textAnchor="middle" fill="#ad9fd0" fontFamily="Georgia,serif" fontSize="15">Q̇ = j / ρ</text>
-      <path d="M102 300 V322 M313 300 V322" stroke="#73859f" strokeDasharray="2 5"/>
-      <rect x="54" y="327" width="99" height="32" rx="4" fill="#0c2832" stroke="#73e4ed" strokeOpacity=".4"/><text x="104" y="347" textAnchor="middle" fill="#73e4ed" fontSize="9" letterSpacing="1.3">ACTUAL COPIES</text>
-      <rect x="264" y="327" width="99" height="32" rx="4" fill="#211b36" stroke="#bca3ff" strokeOpacity=".4"/><text x="314" y="347" textAnchor="middle" fill="#bca3ff" fontSize="9" letterSpacing="1.3">FIXED ARCHIVES</text>
+      {[82,135,182].map(r=><circle key={r} cx="205" cy="197" r={r} fill="none" stroke="#828896" strokeOpacity=".15" strokeDasharray={r===135?"2 7":undefined}/>)}
+      <path d="M25 197 H385 M205 15 V378" stroke="#828896" strokeOpacity=".12"/>
+      <text x="205" y="44" textAnchor="middle" fill="#b7bac2" fontSize="10" letterSpacing="2.3">SOURCE / READOUT</text>
+      <circle cx="205" cy="91" r="24" fill="#1c1f24" stroke="#b4b8c0" strokeOpacity=".5"/><text x="205" y="101" fill="#edeae3" textAnchor="middle" fontFamily="Georgia,serif" fontSize="31">Ψ</text>
+      <path d="M193 114 C183 154 101 127 92 183 M217 114 C229 154 309 127 318 183" fill="none" stroke="#8b919f" strokeWidth="1.2" strokeDasharray="3 5"/>
+      <text x="92" y="176" textAnchor="middle" fill="#85d1db" fontSize="9" letterSpacing="1.3">PILOT MEDIUM</text>
+      <text x="317" y="176" textAnchor="middle" fill="#c5b8ea" fontSize="9" letterSpacing="1.2">MASSIVE CONFIGURATION</text>
+      <path d="M62 252 H82 V227 H101 V206 H122 V230 H143" fill="none" stroke="#85d1db" strokeWidth="2"/>
+      {[{x:62,y:252},{x:82,y:227},{x:101,y:206},{x:122,y:230}].map(({x,y})=><circle key={x} cx={x} cy={y} r="4" fill="#85d1db"/>)}
+      <path d="M269 254 C284 256 279 201 298 205 S305 247 328 229 S348 219 358 223" fill="none" stroke="#c5b8ea" strokeWidth="2"/>
+      <circle cx="328" cy="229" r="4" fill="#c5b8ea"/>
+      <text x="101" y="286" textAnchor="middle" fill="#acb0b9" fontFamily="Georgia,serif" fontSize="15">λ = [J]₊ / w</text>
+      <text x="312" y="286" textAnchor="middle" fill="#ac9fd0" fontFamily="Georgia,serif" fontSize="15">Q̇ = j / ρ</text>
+      <path d="M102 300 V322 M313 300 V322" stroke="#7e8594" strokeDasharray="2 5"/>
+      <rect x="54" y="327" width="99" height="32" rx="4" fill="#1c1e22" stroke="#85d1db" strokeOpacity=".4"/><text x="104" y="347" textAnchor="middle" fill="#85d1db" fontSize="9" letterSpacing="1.3">ACTUAL COPIES</text>
+      <rect x="264" y="327" width="99" height="32" rx="4" fill="#25232e" stroke="#c5b8ea" strokeOpacity=".4"/><text x="314" y="347" textAnchor="middle" fill="#c5b8ea" fontSize="9" letterSpacing="1.3">FIXED ARCHIVES</text>
     </svg>
     <figcaption>Two constitutions · distinct paths · physical records</figcaption>
   </figure>;

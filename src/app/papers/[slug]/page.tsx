@@ -103,7 +103,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
   }`;
 
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-[43rem]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdText(jsonLd) }}
@@ -307,7 +307,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
       {/* Citation */}
       <section className="mt-10">
         <h2 className="text-xl font-semibold">Cite this paper</h2>
-        <pre className="mt-3 overflow-auto rounded-lg border border-edge bg-surface p-4 font-mono text-xs leading-relaxed text-fg/90">
+        <pre tabIndex={0} className="mt-3 overflow-auto rounded-lg border border-edge bg-surface p-4 font-mono text-xs leading-relaxed text-fg/90">
           {citation}
         </pre>
       </section>

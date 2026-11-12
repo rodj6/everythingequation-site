@@ -20,27 +20,14 @@ module.exports = {
         vio: 'hsl(var(--violet))',
         amberc: 'hsl(var(--amber))',
         greenc: 'hsl(var(--green))',
+        brass: 'hsl(var(--brass))',
+        lamp: 'hsl(var(--lamp))',
       },
       fontFamily: {
-        sans: [
-          'Inter',
-          'ui-sans-serif',
-          'system-ui',
-          '-apple-system',
-          'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
-          'Arial',
-          'sans-serif',
-        ],
-        mono: [
-          'ui-monospace',
-          'SFMono-Regular',
-          'Menlo',
-          'Consolas',
-          'Liberation Mono',
-          'monospace',
-        ],
+        // Families are defined once, in src/app/globals.css (:root).
+        sans: ['var(--font-sans)'],
+        serif: ['var(--font-serif)'],
+        mono: ['var(--font-mono)'],
       },
       maxWidth: {
         content: '72rem',

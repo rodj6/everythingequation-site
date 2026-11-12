@@ -56,26 +56,26 @@ export default function ConsciousnessNetwork() {
   return <figure ref={ref} className="c-network" data-motion={running ? "running" : "paused"} aria-label="Conceptual comparison of a biological brain and an artificial network">
     <div className="c-network-art" aria-hidden="true">
       <div className="c-network-vessel c-network-biological">
-        <svg viewBox="0 0 480 310" fill="none"><defs><radialGradient id="brain-haze"><stop stopColor="#52dccf" stopOpacity=".12"/><stop offset="1" stopColor="#52dccf" stopOpacity="0"/></radialGradient><linearGradient id="brain-stroke" x1="50" y1="50" x2="420" y2="280" gradientUnits="userSpaceOnUse"><stop stopColor="#73eedb"/><stop offset="1" stopColor="#228999"/></linearGradient><filter id="brain-glow"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
+        <svg viewBox="0 0 480 310" fill="none"><defs><radialGradient id="brain-haze"><stop stopColor="#5fc2cf" stopOpacity=".12"/><stop offset="1" stopColor="#5fc2cf" stopOpacity="0"/></radialGradient><linearGradient id="brain-stroke" x1="50" y1="50" x2="420" y2="280" gradientUnits="userSpaceOnUse"><stop stopColor="#86d1db"/><stop offset="1" stopColor="#2b8490"/></linearGradient><filter id="brain-glow"><feGaussianBlur stdDeviation="2.5"/></filter></defs>
           <ellipse cx="235" cy="154" rx="235" ry="145" fill="url(#brain-haze)" />
-          <path d={outline} stroke="#65e1d1" strokeWidth="5" opacity=".12" filter="url(#brain-glow)"/>
-          <path d={outline} stroke="url(#brain-stroke)" strokeWidth="1.65" fill="#0b2830" fillOpacity=".22"/>
+          <path d={outline} stroke="#71c9d5" strokeWidth="5" opacity=".12" filter="url(#brain-glow)"/>
+          <path d={outline} stroke="url(#brain-stroke)" strokeWidth="1.65" fill="#191f22" fillOpacity=".22"/>
           <g stroke="url(#brain-stroke)" strokeWidth="1.35" strokeLinecap="round">{folds.map((d,i)=><path d={d} key={i} opacity={i%3===0 ? .85 : .5}/>)}</g>
-          <g stroke="#80f4e4" strokeWidth=".5" opacity=".13">{brainNodes.slice(0,-1).map((a,i)=><path key={i} d={`M${a} Q230 158 ${brainNodes[(i+7)%brainNodes.length]}`}/>)}</g>
-          <g fill="#91fff0">{brainNodes.map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r={i%3===0?2.2:1.5} opacity={i%3===0?.85:.4}/>)}</g>
-          <g fill="#b1fff4">{brainNodes.filter((_,i)=>i%4===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="3.4" className="c-junction" style={{animationDelay:`-${i*1.3}s`}}/>)}</g>
-          <g stroke="#b1fff4" strokeWidth="2.5" strokeLinecap="round">{[0,2,4,8,9,12,13].map((i,n)=><path key={i} d={folds[i]} pathLength="100" className="c-impulse" style={{animationDelay:`-${n*1.3}s`,animationDuration:`${5+n%3}s`}}/>)}</g>
+          <g stroke="#95d7df" strokeWidth=".5" opacity=".13">{brainNodes.slice(0,-1).map((a,i)=><path key={i} d={`M${a} Q230 158 ${brainNodes[(i+7)%brainNodes.length]}`}/>)}</g>
+          <g fill="#aadfe6">{brainNodes.map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r={i%3===0?2.2:1.5} opacity={i%3===0?.85:.4}/>)}</g>
+          <g fill="#c3e8ed">{brainNodes.filter((_,i)=>i%4===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="3.4" className="c-junction" style={{animationDelay:`-${i*1.3}s`}}/>)}</g>
+          <g stroke="#c3e8ed" strokeWidth="2.5" strokeLinecap="round">{[0,2,4,8,9,12,13].map((i,n)=><path key={i} d={folds[i]} pathLength="100" className="c-impulse" style={{animationDelay:`-${n*1.3}s`,animationDuration:`${5+n%3}s`}}/>)}</g>
         </svg>
       </div>
       <div className="c-network-vessel c-network-artificial">
-        <svg viewBox="0 0 480 310" fill="none"><defs><radialGradient id="network-haze"><stop stopColor="#9d8dff" stopOpacity=".14"/><stop offset="1" stopColor="#9d8dff" stopOpacity="0"/></radialGradient><linearGradient id="network-stroke" x1="60" y1="60" x2="420" y2="270" gradientUnits="userSpaceOnUse"><stop stopColor="#739eea"/><stop offset="1" stopColor="#ba8afd"/></linearGradient></defs>
+        <svg viewBox="0 0 480 310" fill="none"><defs><radialGradient id="network-haze"><stop stopColor="#c1c4cb" stopOpacity=".14"/><stop offset="1" stopColor="#c1c4cb" stopOpacity="0"/></radialGradient><linearGradient id="network-stroke" x1="60" y1="60" x2="420" y2="270" gradientUnits="userSpaceOnUse"><stop stopColor="#a7acb6"/><stop offset="1" stopColor="#b5a3e4"/></linearGradient></defs>
           <ellipse cx="250" cy="155" rx="228" ry="150" fill="url(#network-haze)"/>
           <g stroke="url(#network-stroke)" strokeWidth=".85">{artificialEdges.map(({a,b},i)=><path key={i} d={`M${a}L${b}`} opacity={i%4===0?.6:.26}/>)}</g>
-          <g stroke="#a3a4ff" fill="#0d1731">{artificialNodes.map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r={i===0?6:i%3===0?4:2.5} strokeWidth={i===0?1.3:.8}/>)}</g>
-          <g fill="#c8b6ff">{artificialNodes.filter((_,i)=>i%3===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="1.7"/>)}</g>
-          <g fill="#dfd2ff">{artificialNodes.filter((_,i)=>i%7===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="3.3" className="c-junction" style={{animationDelay:`-${i*1.4}s`}}/>)}</g>
-          <g stroke="#d2c4ff" strokeWidth="2.2" strokeLinecap="round">{artificialEdges.filter((_,i)=>i%12===0).map(({a,b},i)=><path key={i} d={`M${a}L${b}`} pathLength="100" className="c-impulse" style={{animationDelay:`-${i*1.4}s`,animationDuration:`${4+i%4}s`}}/>)}</g>
-          <circle cx="250" cy="153" r="140" stroke="#9791e0" strokeOpacity=".12" strokeDasharray="1 10"/>
+          <g stroke="#cdcfd5" fill="#1c1e22">{artificialNodes.map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r={i===0?6:i%3===0?4:2.5} strokeWidth={i===0?1.3:.8}/>)}</g>
+          <g fill="#d1c7ee">{artificialNodes.filter((_,i)=>i%3===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="1.7"/>)}</g>
+          <g fill="#e3dcf5">{artificialNodes.filter((_,i)=>i%7===0).map(([cx,cy],i)=><circle key={i} cx={cx} cy={cy} r="3.3" className="c-junction" style={{animationDelay:`-${i*1.4}s`}}/>)}</g>
+          <g stroke="#dad2f1" strokeWidth="2.2" strokeLinecap="round">{artificialEdges.filter((_,i)=>i%12===0).map(({a,b},i)=><path key={i} d={`M${a}L${b}`} pathLength="100" className="c-impulse" style={{animationDelay:`-${i*1.4}s`,animationDuration:`${4+i%4}s`}}/>)}</g>
+          <circle cx="250" cy="153" r="140" stroke="#b2b6bf" strokeOpacity=".12" strokeDasharray="1 10"/>
         </svg>
       </div>
     </div>

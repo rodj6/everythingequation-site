@@ -1,55 +1,49 @@
 import Link from "next/link";
-import { navigation, footerLinks } from "@/config/navigation";
+import { footerLinks, groupedNavigation } from "@/config/navigation";
 import { site } from "@/config/site";
+
+const groups = groupedNavigation();
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-edge">
-      <div className="mx-auto w-full max-w-content px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid gap-10 sm:grid-cols-3">
-          <div>
-            <p className="font-semibold text-fg">{site.name}</p>
-            <p className="mt-2 max-w-xs text-sm leading-relaxed text-mute">
-              {site.tagline}
-            </p>
-          </div>
+    <footer className="site-footer">
+      <div className="site-footer-inner">
+        <div className="site-footer-lead">
+          <p className="site-footer-name">{site.name}</p>
+          <p className="site-footer-tagline">{site.tagline}</p>
+        </div>
 
-          <nav aria-label="Footer">
-            <p className="section-label">Explore</p>
-            <ul className="mt-3 space-y-2">
-              {navigation
-                .filter((n) => n.href !== "/")
-                .map((n) => (
-                  <li key={n.href}>
-                    <Link href={n.href} className="text-sm text-mute hover:text-fg">
-                      {n.label}
-                    </Link>
+        <nav aria-label="Footer" className="site-footer-nav">
+          {groups.map((group) => (
+            <div key={group.id}>
+              <p className="section-label">{group.label}</p>
+              <ul>
+                {group.items.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.label}</Link>
                   </li>
                 ))}
-            </ul>
-          </nav>
+              </ul>
+            </div>
+          ))}
+        </nav>
 
-          <nav aria-label="Machine-readable endpoints">
-            <p className="section-label">Machine-readable</p>
-            <ul className="mt-3 space-y-2">
-              {footerLinks.map((n) => (
-                <li key={n.href}>
-                  <a href={n.href} className="text-sm text-mute hover:text-fg">
-                    {n.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+        <nav aria-label="Machine-readable endpoints" className="site-footer-machine">
+          <p className="section-label">Machine-readable</p>
+          <ul>
+            {footerLinks.map((n) => (
+              <li key={n.href}>
+                <a href={n.href}>{n.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <div className="mt-10 border-t border-edge pt-6">
-          <p className="text-xs leading-relaxed text-faint">
-            © {new Date().getFullYear()} {site.author.name}. {site.name} publishes a
-            seven-paper mathematical foundation, an RS2 physical witness, complete
-            TOE, quantum measurement and SPC-2 consciousness web editions, and research results with explicit domains.
-          </p>
-        </div>
+        <p className="site-footer-colophon">
+          © {new Date().getFullYear()} {site.author.name}. {site.name} publishes a
+          seven-paper mathematical foundation, an RS2 physical witness, complete
+          TOE, quantum measurement and SPC-2 consciousness web editions, and research results with explicit domains.
+        </p>
       </div>
     </footer>
   );

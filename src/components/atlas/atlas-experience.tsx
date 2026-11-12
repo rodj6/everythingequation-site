@@ -1,978 +1,580 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { CSSProperties, KeyboardEvent as ReactKeyboardEvent, ReactNode } from "react";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-import AtlasSceneBoundary, { AtlasSceneFallback } from "@/components/atlas/atlas-scene-boundary";
-import AtlasEquationCard from "@/components/atlas/atlas-equation";
+/**
+ * THE REALITY ATLAS: the interactive instrument and its reading panel.
+ *
+ * This component holds the state of the page (which stage, which entry, which
+ * mode) and keeps it in the address, so every view can be linked to. The
+ * picture is drawn by AtlasStage; the text comes from src/data/reality-atlas.ts.
+ *
+ * Addresses: /atlas?focus=<entry> · ?stage=<stage> · ?mode=guided&tour=<tour>
+ *            ?mode=trace&trace=<trace> · ?tab=equations|connections
+ *            ?aperture=0..1 · ?view=2d (still picture) · ?quality=high|medium|low
+ */
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { ApertureControl, ProbeControl, StageRail, TourBar, TraceBar, apertureWords, probeWords } from "@/components/atlas/atlas-dock";
+import { EntryView, StageView, TourContext, TraceChooser, TraceContext } from "@/components/atlas/atlas-panel";
+import AtlasPictureNote from "@/components/atlas/atlas-picture-note";
+import AtlasPlateLayer from "@/components/atlas/atlas-plate-layer";
+import { BoundaryControls, BoundaryPanel, HistoryControls, HistoryPanel, ViewSwitch } from "@/components/atlas/atlas-views";
+import AtlasSearch from "@/components/atlas/atlas-search";
+import AtlasStage from "@/components/atlas/atlas-stage";
 import {
-  atlasEdges,
-  atlasNodeMap,
-  atlasStats,
-  getAtlasNode,
-  guidedTour,
-  observableRoutes,
-  searchAtlas,
-  stageRail,
-  tierMeta,
-  type AtlasNode,
-} from "@/data/reality-atlas";
+  DEFAULT_TOUR,
+  STILL_APERTURES,
+  findRoute,
+  findTour,
+  partOfEntry,
+  readAddress,
+  readoutGroups,
+  routeSector,
+  sectorFor,
+  sectorLabels,
+  viewForEntry,
+  writeAddress,
+  type AtlasAddress,
+  type AtlasMode,
+  type PanelTab,
+} from "@/atlas/model";
+import { stillReasonText, type AtlasPicture, type StillReason } from "@/atlas/quality";
+import { evaluateBoundary, type BoundaryState } from "@/atlas/lenses/boundary";
+import { evaluateHistory, type HistoryState } from "@/atlas/lenses/history";
+import { PlateBus } from "@/atlas/lenses/plate";
+import { boundaryView, entryViews, historyView, type AtlasViewId } from "@/data/atlas/views";
+import { atlasNodeMap, stageMeta, stageOrder, type AtlasStage as AtlasStageId, type ObservableRoute } from "@/data/reality-atlas";
 
-type AtlasMode = "explore" | "guided" | "trace";
-type InspectorTab = "overview" | "equations" | "interfaces";
+const INITIAL_ADDRESS = readAddress("");
+const useIsomorphicLayoutEffect = typeof window === "undefined" ? useEffect : useLayoutEffect;
 
-const AtlasScene = dynamic(() => import("@/components/atlas/atlas-scene"), { ssr: false });
-const INSPECTOR_TABS: InspectorTab[] = ["overview", "equations", "interfaces"];
-const SUGGESTED_NODE_IDS = ["measurement-programme", "pilot-medium", "massive-configuration", "born-statistics", "omega", "aperture", "canonical-field", "quantum-records", "gravity", "matter"];
-const EMPTY_TRACE_IDS: string[] = [];
-const FOCUSABLE_SELECTOR = "button:not(:disabled), a[href], input:not(:disabled), select:not(:disabled), textarea:not(:disabled), [tabindex]:not([tabindex='-1'])";
+const MODES: Array<{ id: AtlasMode; label: string; hint: string }> = [
+  { id: "explore", label: "Explore", hint: "Move freely between stages and entries" },
+  { id: "guided", label: "Guided", hint: "Follow a tour, one stop at a time" },
+  { id: "trace", label: "Trace", hint: "Follow one observable back toward the source" },
+];
 
-function isTextEntryTarget(target: EventTarget | null) {
-  if (!(target instanceof HTMLElement)) return false;
-  return target.matches("input, textarea, select, [contenteditable='true']");
-}
-
-function isNavigationControlTarget(target: EventTarget | null) {
-  if (!(target instanceof HTMLElement)) return false;
-  return Boolean(target.closest("button, a[href], [role='tabpanel']"));
-}
-
-function Icon({ name }: { name: "search" | "expand" | "reset" | "close" | "info" | "arrow" | "layers" | "share" }) {
-  const paths: Record<typeof name, ReactNode> = {
-    search: <><circle cx="10.5" cy="10.5" r="5.5" /><path d="m15 15 4.5 4.5" /></>,
-    expand: <><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5" /></>,
-    reset: <><path d="M4 11a8 8 0 1 1 2.2 6" /><path d="M4 5v6h6" /></>,
-    close: <path d="m6 6 12 12M18 6 6 18" />,
-    info: <><circle cx="12" cy="12" r="9" /><path d="M12 11v6M12 7.5h.01" /></>,
-    arrow: <path d="m9 18 6-6-6-6" />,
-    layers: <><path d="m12 3 9 5-9 5-9-5 9-5Z" /><path d="m3 12 9 5 9-5M3 16l9 5 9-5" /></>,
-    share: <><circle cx="18" cy="5" r="2" /><circle cx="6" cy="12" r="2" /><circle cx="18" cy="19" r="2" /><path d="m8 11 8-5M8 13l8 5" /></>,
-  };
-  return (
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      {paths[name]}
-    </svg>
-  );
-}
-
-function TypeRow({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="atlas-type-row">
-      <dt>{label}</dt>
-      <dd>{value}</dd>
-    </div>
-  );
-}
-
-function ConnectionButton({
-  id,
-  direction,
-  currentId,
-  onSelect,
-}: {
-  id: string;
-  direction: "upstream" | "downstream";
-  currentId: string;
-  onSelect: (id: string) => void;
-}) {
-  const node = atlasNodeMap.get(id);
-  if (!node) return null;
-  const edge = atlasEdges.find((candidate) => direction === "upstream"
-    ? candidate.from === id && candidate.to === currentId
-    : candidate.from === currentId && candidate.to === id);
-  const contract = edge
-    ? [
-        `${edge.label}: ${edge.map}`,
-        `Relationship: ${edge.relationship}`,
-        `Linearization: ${edge.linearization}`,
-        `Adjoint: ${edge.adjoint}`,
-        `Validity: ${edge.validityDomain}`,
-        `Error model: ${edge.errorModel}`,
-        `Map class: ${edge.partial ? "partial" : "total"}`,
-      ].join("\n")
-    : undefined;
-  return (
-    <div className="atlas-connection-wrap">
-    <button
-      type="button"
-      className="atlas-connection"
-      data-relationship={edge?.relationship ?? "conceptual"}
-      onClick={() => onSelect(id)}
-      style={{ "--connection-color": node.color } as CSSProperties}
-      title={contract}
-      aria-label={`${node.label}: ${edge?.relationship === "mathematical" ? "mathematical dependence" : "conceptual relationship"}${edge ? `; ${edge.label}` : ""}`}
-    >
-      {direction === "upstream" ? <Icon name="arrow" /> : null}
-      <span>
-        <small>{edge?.relationship === "mathematical" ? "Mathematical dependence" : "Conceptual relationship"}</small>
-        {node.shortLabel}
-        {edge ? <em>{edge.label}</em> : null}
-      </span>
-      {direction === "downstream" ? <Icon name="arrow" /> : null}
-    </button>
-    {edge ? <p className="atlas-connection-condition">{edge.validityDomain}</p> : null}
-    </div>
-  );
-}
-
-function Inspector({
-  node,
-  tab,
-  traceIds,
-  onTab,
-  onClose,
-  onSelect,
-  onShare,
-}: {
-  node: AtlasNode;
-  tab: InspectorTab;
-  traceIds: string[];
-  onTab: (tab: InspectorTab) => void;
-  onClose: () => void;
-  onSelect: (id: string) => void;
-  onShare: () => void;
-}) {
-  const traceIndex = traceIds.indexOf(node.id);
-  return (
-    <aside className="atlas-inspector" aria-label={`Details for ${node.label}`}>
-      <div className="atlas-inspector-head">
-        <div>
-          <p style={{ color: node.color }}>{node.eyebrow}</p>
-          <h2>{node.label}</h2>
-        </div>
-        <div className="atlas-inspector-actions">
-          <button type="button" onClick={onShare} aria-label="Copy a link to this atlas location" title="Copy link">
-            <Icon name="share" />
-          </button>
-          <button type="button" onClick={onClose} aria-label="Close details" title="Close details">
-            <Icon name="close" />
-          </button>
-        </div>
-      </div>
-
-      {traceIndex >= 0 ? (
-        <div className="atlas-trace-position">
-          <span style={{ width: `${((traceIndex + 1) / traceIds.length) * 100}%`, background: node.color }} />
-          <small>Trace step {traceIndex + 1} of {traceIds.length}</small>
-        </div>
-      ) : null}
-
-      <nav className="atlas-inspector-tabs" aria-label="Inspector sections" role="tablist">
-        {INSPECTOR_TABS.map((item, index) => (
-          <button
-            type="button"
-            key={item}
-            onClick={() => onTab(item)}
-            onKeyDown={(event) => {
-              let nextIndex = index;
-              if (event.key === "ArrowRight") nextIndex = (index + 1) % INSPECTOR_TABS.length;
-              else if (event.key === "ArrowLeft") nextIndex = (index - 1 + INSPECTOR_TABS.length) % INSPECTOR_TABS.length;
-              else if (event.key === "Home") nextIndex = 0;
-              else if (event.key === "End") nextIndex = INSPECTOR_TABS.length - 1;
-              else return;
-              event.preventDefault();
-              event.stopPropagation();
-              const nextTab = INSPECTOR_TABS[nextIndex];
-              onTab(nextTab);
-              document.getElementById(`atlas-inspector-tab-${nextTab}`)?.focus();
-            }}
-            id={`atlas-inspector-tab-${item}`}
-            role="tab"
-            aria-controls="atlas-inspector-panel"
-            aria-selected={tab === item}
-            aria-current={tab === item ? "page" : undefined}
-            tabIndex={tab === item ? 0 : -1}
-          >
-            {item}
-            {item === "equations" && node.equations.length ? <b>{node.equations.length}</b> : null}
-          </button>
-        ))}
-      </nav>
-
-      <div
-        className="atlas-inspector-body"
-        id="atlas-inspector-panel"
-        role="tabpanel"
-        aria-labelledby={`atlas-inspector-tab-${tab}`}
-        tabIndex={0}
-      >
-        {tab === "overview" ? (
-          <>
-            <p className="atlas-inspector-summary">{node.summary}</p>
-            <p className="atlas-inspector-description">{node.description}</p>
-            {node.gate ? (
-              <div className="atlas-gate">
-                <span>Mathematical gate</span>
-                <p>{node.gate}</p>
-              </div>
-            ) : null}
-            <dl className="atlas-type-list">
-              <TypeRow label="Mathematical type" value={node.mathematicalType} />
-              <TypeRow label="Chapter" value={`${node.chapter} · ${node.section}`} />
-              <TypeRow label="Units" value={node.units} />
-            </dl>
-            {node.atlasNote ? <p className="atlas-note">{node.atlasNote}</p> : null}
-            {node.provenance ? <p className="atlas-provenance">{node.provenance}</p> : null}
-            {node.readingLinks?.length ? (
-              <nav className="atlas-reading-links" aria-label={`Read the sources for ${node.label}`}>
-                <h3>Read the work</h3>
-                {node.readingLinks.map((link) => <Link key={link.href} href={link.href}>{link.label}<Icon name="arrow" /></Link>)}
-              </nav>
-            ) : null}
-          </>
-        ) : null}
-
-        {tab === "equations" ? (
-          <div className="atlas-equation-stack">
-            {node.equations.length ? (
-              node.equations.map((equation) => (
-                <AtlasEquationCard key={`${node.id}-${equation.tag}`} equation={equation} />
-              ))
-            ) : (
-              <div className="atlas-empty-state">
-                <Icon name="layers" />
-                <p>This node is a structural route. Its controlling equations are carried by the adjacent operator and gate nodes.</p>
-              </div>
-            )}
-          </div>
-        ) : null}
-
-        {tab === "interfaces" ? (
-          <>
-            <p className="atlas-relationship-note">Solid connections carry mathematical dependence under the stated conditions. Dashed connections show conceptual relationships and transfer no theorem.</p>
-            <dl className="atlas-type-list">
-              <TypeRow label="Domain" value={node.domain} />
-              <TypeRow label="Codomain" value={node.codomain} />
-              <TypeRow label="Regularity" value={node.regularity} />
-              <TypeRow label="Covariance" value={node.covariance} />
-              <TypeRow label="State variables" value={node.stateVariables} />
-              <TypeRow label="Boundary class" value={node.boundaryClass} />
-              <TypeRow label="Branch domain" value={node.branchDomain} />
-              <TypeRow label="Approximation order" value={node.approximationOrder} />
-              <TypeRow label="Error norm" value={node.errorNorm} />
-            </dl>
-            {node.upstream.length ? (
-              <section className="atlas-connections">
-                <h3>Incoming connections</h3>
-                <div>
-                  {node.upstream.map((id) => (
-                    <ConnectionButton key={id} id={id} currentId={node.id} direction="upstream" onSelect={onSelect} />
-                  ))}
-                </div>
-              </section>
-            ) : null}
-            {node.downstream.length ? (
-              <section className="atlas-connections">
-                <h3>Outgoing connections</h3>
-                <div>
-                  {node.downstream.map((id) => (
-                    <ConnectionButton key={id} id={id} currentId={node.id} direction="downstream" onSelect={onSelect} />
-                  ))}
-                </div>
-              </section>
-            ) : null}
-          </>
-        ) : null}
-      </div>
-    </aside>
-  );
-}
-
-function SearchPanel({
-  query,
-  onQuery,
-  onClose,
-  onSelect,
-}: {
-  query: string;
-  onQuery: (value: string) => void;
-  onClose: () => void;
-  onSelect: (id: string) => void;
-}) {
-  const input = useRef<HTMLInputElement | null>(null);
-  const panel = useRef<HTMLDivElement | null>(null);
-  const results = useMemo(
-    () => query.trim() ? searchAtlas(query) : SUGGESTED_NODE_IDS.map(getAtlasNode),
-    [query],
-  );
-
-  useEffect(() => {
-    const previouslyFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
-    input.current?.focus();
-    return () => {
-      window.requestAnimationFrame(() => {
-        if (previouslyFocused?.isConnected) previouslyFocused.focus();
-      });
-    };
-  }, []);
-
-  const handleDialogKey = (event: ReactKeyboardEvent<HTMLDivElement>) => {
-    if (event.key === "Escape") {
-      event.preventDefault();
-      event.stopPropagation();
-      onClose();
-      return;
-    }
-    if (event.key !== "Tab" || !panel.current) return;
-    const focusable = [...panel.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)];
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
-    if (!first || !last) return;
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  };
-
-  return (
-    <div
-      ref={panel}
-      className="atlas-search-panel"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Search the reality atlas"
-      aria-describedby="atlas-search-status"
-      onKeyDown={handleDialogKey}
-    >
-      <div className="atlas-search-input">
-        <Icon name="search" />
-        <input
-          ref={input}
-          value={query}
-          onChange={(event) => onQuery(event.target.value)}
-          placeholder="Search gravity, aperture, α, Born rule, equation tag…"
-          aria-label="Search atlas nodes and equations"
-        />
-        <button type="button" onClick={onClose} aria-label="Close search"><Icon name="close" /></button>
-      </div>
-      <p className="atlas-search-hint" id="atlas-search-status" aria-live="polite">
-        {query ? `${results.length} matching locations` : "Suggested atlas locations"}
-      </p>
-      <div className="atlas-search-results">
-        {results.map((node) => (
-          <button
-            key={node.id}
-            type="button"
-            onClick={() => onSelect(node.id)}
-            style={{ "--result-color": node.color } as CSSProperties}
-          >
-            <i />
-            <span>
-              <small>{node.eyebrow}</small>
-              <strong>{node.label}</strong>
-              <em>{node.summary}</em>
-            </span>
-            <Icon name="arrow" />
-          </button>
-        ))}
-        {!results.length ? (
-          <div className="atlas-empty-state">
-            <p>No location matches that search. Try a sector, observable, equation tag or physical concept.</p>
-          </div>
-        ) : null}
-      </div>
-    </div>
-  );
-}
+const PICTURE_CHOICES: Array<{ value: AtlasPicture | null; label: string; hint: string }> = [
+  { value: null, label: "Automatic", hint: "Let this device choose" },
+  { value: "high", label: "Live 3D, full", hint: "Refraction, reflections and soft shadows" },
+  { value: "low", label: "Live 3D, light", hint: "Simpler glass and lighting" },
+  { value: "still", label: "Still picture", hint: "No 3D; everything else works the same" },
+];
 
 export default function AtlasExperience() {
-  const root = useRef<HTMLElement | null>(null);
-  const mainUi = useRef<HTMLDivElement | null>(null);
-  const intro = useRef<HTMLDivElement | null>(null);
-  const copyTimer = useRef<number | null>(null);
-  const [selectedId, setSelectedId] = useState("omega");
-  const [hoveredId, setHoveredId] = useState<string | null>(null);
-  const [mode, setMode] = useState<AtlasMode>("explore");
-  const [lod, setLod] = useState(1);
-  const [focusNonce, setFocusNonce] = useState(0);
-  const [tourIndex, setTourIndex] = useState(0);
-  const [traceId, setTraceId] = useState<string | null>(null);
-  const [inspectorOpen, setInspectorOpen] = useState(false);
-  const [inspectorTab, setInspectorTab] = useState<InspectorTab>("overview");
-  const [introOpen, setIntroOpen] = useState(true);
+  const [address, setAddress] = useState<AtlasAddress>(INITIAL_ADDRESS);
+  const [hydrated, setHydrated] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sceneReady, setSceneReady] = useState(false);
-  const [webglAvailable, setWebglAvailable] = useState<boolean | null>(null);
-  const [copied, setCopied] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [panelOpen, setPanelOpen] = useState(true);
+  const [hoverEntry, setHoverEntry] = useState<string | null>(null);
+  const [hoverRoute, setHoverRoute] = useState<ObservableRoute | null>(null);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [picture, setPicture] = useState<{ live: boolean; tier: AtlasPicture; reason: StillReason | null } | null>(null);
+  const [shared, setShared] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const [fullscreenSupported, setFullscreenSupported] = useState(false);
-  const [urlHydrated, setUrlHydrated] = useState(false);
+  const [canFullscreen, setCanFullscreen] = useState(false);
+  /** Share of the picture's height that the controls at its foot cover (0 where they sit below it). */
+  const [coveredBelow, setCoveredBelow] = useState(0);
+  const [clearTop, setClearTop] = useState(0);
 
-  const selectedNode = getAtlasNode(selectedId);
-  const activeTrace = observableRoutes.find((route) => route.id === traceId) ?? null;
-  const traceIds = activeTrace?.nodeIds ?? EMPTY_TRACE_IDS;
+  const frame = useRef<HTMLElement>(null);
+  const panel = useRef<HTMLElement>(null);
+  const heading = useRef<HTMLHeadingElement>(null);
+  const aboutDialog = useRef<HTMLDialogElement>(null);
+  const dock = useRef<HTMLDivElement>(null);
+  const topbar = useRef<HTMLDivElement>(null);
+  const wantsFocus = useRef(false);
+  const plateBus = useMemo(() => new PlateBus(), []);
+  const shareTimer = useRef<number | null>(null);
 
-  const selectNode = useCallback((id: string, focus = true) => {
-    const node = atlasNodeMap.get(id);
-    if (!node) return;
-    setSelectedId(id);
-    setLod((current) => Math.max(current, node.lod));
-    setInspectorOpen(true);
-    setInspectorTab("overview");
-    if (focus) setFocusNonce((value) => value + 1);
+  // ── Address in, address out.
+  useIsomorphicLayoutEffect(() => {
+    setAddress(readAddress(window.location.search));
+    setHydrated(true);
+    const onPop = () => setAddress(readAddress(window.location.search));
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
   }, []);
 
-  const applyUrlState = useCallback(() => {
-    const params = new URL(window.location.href).searchParams;
-    const focusParam = params.get("focus");
-    const modeParam = params.get("mode");
-    const traceParam = params.get("trace");
-    const lodParam = params.get("lod");
-    const tabParam = params.get("tab");
-    const matchedTrace = observableRoutes.find((route) => route.id === traceParam) ?? null;
-    const validMode: AtlasMode = modeParam === "guided" || modeParam === "trace" || modeParam === "explore"
-      ? modeParam
-      : matchedTrace
-        ? "trace"
-        : "explore";
-    const nextTrace = validMode === "trace" ? matchedTrace ?? observableRoutes[0] : null;
-    const validFocus = focusParam && atlasNodeMap.has(focusParam) ? focusParam : null;
-    const nextSelected = validFocus
-      ?? (validMode === "guided"
-        ? guidedTour[0]
-        : nextTrace?.nodeIds[nextTrace.nodeIds.length - 1] ?? "omega");
-    const parsedLod = Number(lodParam);
-    const requestedLod = lodParam !== null && Number.isInteger(parsedLod) && parsedLod >= 0 && parsedLod <= 4
-      ? parsedLod
-      : 1;
-    const nextTab: InspectorTab = tabParam === "equations" || tabParam === "interfaces" ? tabParam : "overview";
-    const hasAtlasState = Boolean(focusParam || modeParam || traceParam || lodParam || tabParam);
-    const selected = getAtlasNode(nextSelected);
-
-    setSelectedId(nextSelected);
-    setMode(validMode);
-    setTraceId(nextTrace?.id ?? null);
-    setLod(Math.max(requestedLod, selected.lod));
-    setInspectorTab(nextTab);
-    setInspectorOpen(hasAtlasState);
-    setIntroOpen(!hasAtlasState);
-    if (validMode === "guided") {
-      const matchedStep = guidedTour.findIndex((id) => id === nextSelected);
-      setTourIndex(matchedStep >= 0 ? matchedStep : 0);
-    } else {
-      setTourIndex(0);
-    }
-    if (hasAtlasState) setFocusNonce((value) => value + 1);
-    setUrlHydrated(true);
-  }, []);
+  useEffect(() => {
+    if (!hydrated) return;
+    const url = writeAddress(new URL(window.location.href), address);
+    if (url.toString() !== window.location.href) window.history.replaceState(window.history.state, "", url);
+  }, [address, hydrated]);
 
   useEffect(() => {
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     const update = () => setReducedMotion(media.matches);
     update();
     media.addEventListener("change", update);
-    applyUrlState();
-    setFullscreenSupported(Boolean(root.current?.requestFullscreen && document.exitFullscreen));
-    const onFullscreen = () => setIsFullscreen(document.fullscreenElement === root.current);
-    const onPopState = () => applyUrlState();
+    setCanFullscreen(Boolean(document.fullscreenEnabled && frame.current?.requestFullscreen));
+    const onFullscreen = () => setIsFullscreen(document.fullscreenElement === frame.current);
     document.addEventListener("fullscreenchange", onFullscreen);
-    window.addEventListener("popstate", onPopState);
     return () => {
       media.removeEventListener("change", update);
       document.removeEventListener("fullscreenchange", onFullscreen);
-      window.removeEventListener("popstate", onPopState);
+      if (shareTimer.current !== null) window.clearTimeout(shareTimer.current);
     };
-  }, [applyUrlState]);
+  }, []);
 
+  // ── On wide screens the controls lie over the foot of the picture; tell the picture how much to clear.
   useEffect(() => {
-    if (!urlHydrated) return;
-    const url = new URL(window.location.href);
-    if (introOpen) url.searchParams.delete("focus");
-    else url.searchParams.set("focus", selectedId);
-    if (mode === "explore") url.searchParams.delete("mode");
-    else url.searchParams.set("mode", mode);
-    if (mode === "trace" && traceId) url.searchParams.set("trace", traceId);
-    else url.searchParams.delete("trace");
-    if (lod === 1) url.searchParams.delete("lod");
-    else url.searchParams.set("lod", String(lod));
-    if (inspectorTab === "overview") url.searchParams.delete("tab");
-    else url.searchParams.set("tab", inspectorTab);
-    window.history.replaceState(window.history.state, "", url);
-  }, [inspectorTab, introOpen, lod, mode, selectedId, traceId, urlHydrated]);
+    const element = dock.current;
+    const stage = element?.parentElement;
+    if (!element || !stage) return;
+    const measure = () => {
+      const overlaid = getComputedStyle(element).position === "absolute";
+      const height = stage.getBoundingClientRect().height;
+      // The top of the dock is a soft gradient; only the solid part counts.
+      const covered = overlaid && height > 0 ? Math.max(0, element.getBoundingClientRect().height - 44) / height : 0;
+      setCoveredBelow((current) => (Math.abs(current - covered) < 0.015 ? current : Math.min(0.4, covered)));
+      const bar = topbar.current;
+      // The controls in the top bar end about 40px above the foot of its gradient.
+      const top = bar && getComputedStyle(bar).position === "absolute" ? Math.max(0, bar.getBoundingClientRect().height - 36) : 0;
+      setClearTop((current) => (Math.abs(current - top) < 4 ? current : top));
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    observer.observe(stage);
+    return () => observer.disconnect();
+  }, []);
 
+  // ── What is showing.
+  const node = address.focus ? atlasNodeMap.get(address.focus) ?? null : null;
+  const tour = findTour(address.tour);
+  const route = address.mode === "trace" ? findRoute(address.trace) : null;
+  const tourIndex = address.mode === "guided" && address.focus ? tour.nodeIds.indexOf(address.focus) : -1;
+  const routeIndex = route && address.focus ? route.nodeIds.indexOf(address.focus) : -1;
+  // A trace is watched from the overview, so the whole bundle of rays stays in sight.
+  const onPlate = address.view !== "instrument";
+  const cameraStage: AtlasStageId = onPlate ? "readout" : address.mode === "trace" ? "overview" : address.stage;
+
+  const trace = useMemo(() => {
+    if (route) return { groupId: routeSector(route), at: partOfEntry(address.focus) ?? ("readout" as const) };
+    if (hoverRoute) return { groupId: routeSector(hoverRoute), at: "readout" as const };
+    return null;
+  }, [route, hoverRoute, address.focus]);
+
+  const highlightGroup = hoverEntry ? sectorFor(hoverEntry) : route ? routeSector(route) : hoverRoute ? routeSector(hoverRoute) : sectorFor(address.focus);
+
+  // ── Actions.
+  const update = useCallback((change: (current: AtlasAddress) => AtlasAddress, focusPanel = true) => {
+    wantsFocus.current = focusPanel;
+    setAddress(change);
+  }, []);
+
+  const goStage = useCallback((stage: AtlasStageId) => {
+    update((current) => ({ ...current, mode: "explore", trace: null, stage, focus: null, tab: "overview", view: "instrument" }));
+  }, [update]);
+
+  const openEntry = useCallback((id: string) => {
+    const target = atlasNodeMap.get(id);
+    if (!target) return;
+    setPanelOpen(true);
+    update((current) => {
+      const inTour = current.mode === "guided" && findTour(current.tour).nodeIds.includes(id);
+      const inTrace = current.mode === "trace" && Boolean(findRoute(current.trace)?.nodeIds.includes(id));
+      const mode: AtlasMode = inTour ? "guided" : inTrace ? "trace" : "explore";
+      // An entry about the readout can be read beside a plate view; any other returns to the whole instrument.
+      const view: AtlasViewId = inTour ? viewForEntry(id, current).view : target.stage === "readout" && !inTrace ? current.view : "instrument";
+      return { ...current, ...(inTour ? viewForEntry(id, current) : {}), view, mode, trace: inTrace ? current.trace : null, focus: id, stage: target.stage, tab: "overview" };
+    });
+  }, [update]);
+
+  const closeEntry = useCallback(() => {
+    update((current) => ({ ...current, mode: "explore", trace: null, focus: null, tab: "overview" }));
+  }, [update]);
+
+  const startTour = useCallback((id: string) => {
+    const next = findTour(id);
+    const first = next.nodeIds[0];
+    setPanelOpen(true);
+    update((current) => ({
+      ...current, ...viewForEntry(first ?? null, current), mode: "guided", tour: next.id, trace: null, focus: first ?? null,
+      stage: first ? atlasNodeMap.get(first)!.stage : current.stage, tab: "overview",
+    }));
+  }, [update]);
+
+  const stepTour = useCallback((delta: number) => {
+    update((current) => {
+      const ids = findTour(current.tour).nodeIds;
+      const index = Math.max(0, ids.indexOf(current.focus ?? ""));
+      const id = ids[Math.min(ids.length - 1, Math.max(0, index + delta))];
+      return id ? { ...current, ...viewForEntry(id, current), focus: id, stage: atlasNodeMap.get(id)!.stage, tab: "overview" } : current;
+    });
+  }, [update]);
+
+  const chooseTrace = useCallback(() => {
+    setPanelOpen(true);
+    update((current) => ({ ...current, mode: "trace", trace: null, focus: null, stage: "overview", tab: "overview", view: "instrument" }));
+  }, [update]);
+
+  const startTrace = useCallback((id: string) => {
+    const next = findRoute(id);
+    if (!next) return;
+    setHoverRoute(null);
+    const last = next.nodeIds[next.nodeIds.length - 1];
+    update((current) => ({ ...current, mode: "trace", trace: next.id, focus: last, stage: atlasNodeMap.get(last)!.stage, tab: "overview", view: "instrument" }));
+  }, [update]);
+
+  const stepTrace = useCallback((delta: number) => {
+    update((current) => {
+      const ids = findRoute(current.trace)?.nodeIds ?? [];
+      const at = ids.indexOf(current.focus ?? "");
+      const index = at < 0 ? ids.length - 1 : at;
+      const id = ids[Math.min(ids.length - 1, Math.max(0, index + delta))];
+      return id ? { ...current, focus: id, stage: atlasNodeMap.get(id)!.stage, tab: "overview" } : current;
+    });
+  }, [update]);
+
+  const setMode = useCallback((mode: AtlasMode) => {
+    if (mode === "guided") startTour(address.mode === "guided" ? address.tour : DEFAULT_TOUR);
+    else if (mode === "trace") chooseTrace();
+    else update((current) => ({ ...current, mode: "explore", trace: null }), false);
+  }, [address.mode, address.tour, chooseTrace, startTour, update]);
+
+  /** Change the view. From a plate view's own button the panel shows that view; from an entry the entry stays open beside it. */
+  const setView = useCallback((view: AtlasViewId, keepEntry = false) => {
+    setPanelOpen(true);
+    update((current) => ({
+      ...current,
+      view,
+      mode: current.mode === "trace" || !keepEntry ? "explore" : current.mode,
+      trace: null,
+      focus: keepEntry ? current.focus : null,
+      stage: view === "instrument" ? (keepEntry ? current.stage : "overview") : "readout",
+      tab: "overview",
+    }), !keepEntry);
+  }, [update]);
+
+  const showEntryOnPlate = useCallback((id: string) => {
+    update((current) => ({ ...current, ...viewForEntry(id, current) }), false);
+  }, [update]);
+
+  const setBoundary = useCallback((next: BoundaryState) => setAddress((current) => ({ ...current, boundary: next })), []);
+  const setHistory = useCallback((next: HistoryState) => setAddress((current) => ({ ...current, history: next })), []);
+  const setBearing = useCallback((degrees: number) => {
+    setAddress((current) => (current.boundary.at === degrees ? current : { ...current, boundary: { ...current.boundary, at: degrees } }));
+  }, []);
+
+  const setProbe = useCallback((on: boolean) => {
+    setAddress((current) => (current.probe === on ? current : { ...current, probe: on }));
+  }, []);
+
+  const setAperture = useCallback((value: number) => {
+    setAddress((current) => (Math.abs(current.aperture - value) < 0.002 ? current : { ...current, aperture: Math.min(1, Math.max(0, value)) }));
+  }, []);
+
+  const setTab = useCallback((tab: PanelTab) => setAddress((current) => ({ ...current, tab })), []);
+
+  const choosePicture = useCallback((value: AtlasPicture | null) => {
+    setAddress((current) => ({ ...current, picture: value }));
+  }, []);
+
+  const share = useCallback(async () => {
+    const url = writeAddress(new URL(window.location.href), address).toString();
+    try {
+      await navigator.clipboard.writeText(url);
+      setShared(true);
+      if (shareTimer.current !== null) window.clearTimeout(shareTimer.current);
+      shareTimer.current = window.setTimeout(() => setShared(false), 2000);
+    } catch {
+      // Without clipboard access the address bar already holds the link.
+      window.prompt("Copy this link", url);
+    }
+  }, [address]);
+
+  const toggleFullscreen = useCallback(async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await frame.current?.requestFullscreen();
+    } catch {
+      setIsFullscreen(document.fullscreenElement === frame.current);
+    }
+  }, []);
+
+  // ── Move focus to the new heading after a deliberate change, so the text is announced.
   useEffect(() => {
-    const frame = window.requestAnimationFrame(() => {
-      if (introOpen) {
-        intro.current?.querySelector<HTMLButtonElement>("button")?.focus();
+    if (!wantsFocus.current) return;
+    wantsFocus.current = false;
+    heading.current?.focus({ preventScroll: true });
+    if (panel.current) panel.current.scrollTop = 0;
+  }, [address.focus, address.stage, address.mode, address.trace, address.view]);
+
+  // ── Links in the page below the instrument open their entry up here.
+  useEffect(() => {
+    const onClick = (event: MouseEvent) => {
+      if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
+      const link = (event.target as HTMLElement | null)?.closest<HTMLAnchorElement>("a[data-atlas-entry], a[data-atlas-stage], a[data-atlas-view]");
+      if (!link) return;
+      const wantedView = link.dataset.atlasView;
+      if (wantedView === "boundary" || wantedView === "history" || wantedView === "instrument") {
+        event.preventDefault();
+        setView(wantedView);
+        frame.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
         return;
       }
-      if (document.activeElement === document.body) {
-        root.current?.querySelector<HTMLButtonElement>(".atlas-mode-switch button[aria-pressed='true']")?.focus();
-      }
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, [introOpen]);
+      const entry = link.dataset.atlasEntry;
+      const stage = link.dataset.atlasStage as AtlasStageId | undefined;
+      if (entry && atlasNodeMap.has(entry)) {
+        event.preventDefault();
+        openEntry(entry);
+      } else if (stage && (stageOrder as string[]).includes(stage)) {
+        event.preventDefault();
+        goStage(stage);
+      } else return;
+      frame.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, [goStage, openEntry, reducedMotion, setView]);
 
-  useEffect(() => {
-    if (new URL(window.location.href).searchParams.get("view") === "2d") {
-      setWebglAvailable(false);
-      setSceneReady(true);
-      return;
-    }
-    const canvas = document.createElement("canvas");
-    let available = false;
-    let context: WebGLRenderingContext | WebGL2RenderingContext | null = null;
-    try {
-      context = canvas.getContext("webgl2") || canvas.getContext("webgl");
-      available = Boolean(context);
-    } catch {
-      available = false;
-    } finally {
-      context?.getExtension("WEBGL_lose_context")?.loseContext();
-    }
-    setWebglAvailable(available);
-    if (!available) setSceneReady(true);
-  }, []);
-
-  const stepTrace = useCallback((delta: -1 | 1) => {
-    if (!activeTrace) return;
-    const current = activeTrace.nodeIds.indexOf(selectedId);
-    const base = current >= 0 ? current : activeTrace.nodeIds.length - 1;
-    const next = Math.max(0, Math.min(activeTrace.nodeIds.length - 1, base + delta));
-    selectNode(activeTrace.nodeIds[next]);
-  }, [activeTrace, selectNode, selectedId]);
-
-  const closeInspector = useCallback(() => {
-    setInspectorOpen(false);
-    window.requestAnimationFrame(() => {
-      root.current?.querySelector<HTMLButtonElement>(".atlas-info-trigger")?.focus();
-    });
-  }, []);
-
+  // ── Keyboard.
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
-      if (introOpen && event.key === "Tab" && intro.current) {
-        const focusable = [...intro.current.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)];
-        const first = focusable[0];
-        const last = focusable[focusable.length - 1];
-        if (!intro.current.contains(document.activeElement)) {
-          event.preventDefault();
-          (event.shiftKey ? last : first)?.focus();
-        } else if (event.shiftKey && document.activeElement === first) {
-          event.preventDefault();
-          last?.focus();
-        } else if (!event.shiftKey && document.activeElement === last) {
-          event.preventDefault();
-          first?.focus();
-        }
-      }
-      if (event.key === "Escape") {
-        if (searchOpen) setSearchOpen(false);
-        else if (introOpen) setIntroOpen(false);
-        else if (inspectorOpen) closeInspector();
-        else return;
-        event.preventDefault();
-        return;
-      }
-      if (introOpen || searchOpen) return;
-      if (event.metaKey || event.ctrlKey || event.altKey) return;
-      if (event.key === "/" && !isTextEntryTarget(event.target)) {
+      if (event.defaultPrevented || event.altKey || event.metaKey || event.ctrlKey) return;
+      const target = event.target as HTMLElement | null;
+      const typing = Boolean(target && (target.isContentEditable || /^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName)));
+      if (event.key === "/" && !typing) {
         event.preventDefault();
         setSearchOpen(true);
         return;
       }
-      if (isTextEntryTarget(event.target)) return;
-      const navigationControlFocused = isNavigationControlTarget(event.target);
-      if (mode === "guided" && !navigationControlFocused) {
-        if (event.key === "ArrowRight") {
-          event.preventDefault();
-          setTourIndex((current) => Math.min(guidedTour.length - 1, current + 1));
+      if (typing || searchOpen || aboutOpen || target?.closest('[role="tablist"]')) return;
+      // Only while the instrument is in view; further down the page the keys belong to the page.
+      const box = frame.current?.getBoundingClientRect();
+      if (!box || box.bottom < 160 || box.top > window.innerHeight - 160) return;
+
+      if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        const delta = event.key === "ArrowRight" ? 1 : -1;
+        event.preventDefault();
+        if (address.mode === "guided") stepTour(delta);
+        else if (address.mode === "trace" && route) stepTrace(delta);
+        else if (address.view === "boundary") setBearing((address.boundary.at - delta * boundaryView.at.step + 360) % 360);
+        else if (address.view === "history") setHistory({ ...address.history, occasion: Math.min(historyView.occasions.length - 1, Math.max(0, address.history.occasion + delta)) });
+        else {
+          const index = stageOrder.indexOf(address.stage);
+          const next = stageOrder[Math.min(stageOrder.length - 1, Math.max(0, index + delta))];
+          if (next !== address.stage || address.focus) goStage(next);
         }
-        if (event.key === "ArrowLeft") {
-          event.preventDefault();
-          setTourIndex((current) => Math.max(0, current - 1));
-        }
-      }
-      if (mode === "trace" && !navigationControlFocused && event.key === "ArrowRight") {
-        event.preventDefault();
-        stepTrace(1);
-      }
-      if (mode === "trace" && !navigationControlFocused && event.key === "ArrowLeft") {
-        event.preventDefault();
-        stepTrace(-1);
-      }
-      if (event.key === "]") {
-        event.preventDefault();
-        setLod((value) => Math.min(4, value + 1));
-      }
-      if (event.key === "[") {
-        event.preventDefault();
-        setLod((value) => Math.max(0, value - 1));
+      } else if (event.key === "Escape") {
+        if (address.mode !== "explore") update((current) => ({ ...current, mode: "explore", trace: null }));
+        else if (address.focus) closeEntry();
+        else if (address.view !== "instrument") setView("instrument");
+        else if (address.stage !== "overview") goStage("overview");
+      } else if (event.key === "]" || event.key === "[") {
+        setAperture(address.aperture + (event.key === "]" ? 0.1 : -0.1));
+      } else if (event.key === "p" || event.key === "P") {
+        setProbe(!address.probe);
       }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [closeInspector, inspectorOpen, introOpen, mode, searchOpen, stepTrace]);
+  }, [aboutOpen, address, closeEntry, goStage, route, searchOpen, setAperture, setBearing, setHistory, setProbe, setView, stepTour, stepTrace, update]);
 
+  // ── The "About this picture" dialog.
   useEffect(() => {
-    if (mode !== "guided") return;
-    const target = guidedTour[tourIndex];
-    if (selectedId !== target) selectNode(target);
-  }, [mode, selectNode, selectedId, tourIndex]);
+    const element = aboutDialog.current;
+    if (!element) return;
+    if (aboutOpen && !element.open) element.showModal();
+    else if (!aboutOpen && element.open) element.close();
+  }, [aboutOpen]);
 
-  const startGuided = () => {
-    setIntroOpen(false);
-    setMode("guided");
-    setTraceId(null);
-    setTourIndex(0);
-    setLod(1);
-    selectNode(guidedTour[0]);
-  };
-
-  const startTrace = (id: string) => {
-    const route = observableRoutes.find((item) => item.id === id);
-    if (!route) return;
-    setIntroOpen(false);
-    setMode("trace");
-    setTraceId(id);
-    setLod(2);
-    selectNode(route.nodeIds[route.nodeIds.length - 1]);
-  };
-
-  const setAtlasMode = (next: AtlasMode) => {
-    setMode(next);
-    if (next !== "trace") setTraceId(null);
-    if (next === "guided") {
-      setTourIndex(0);
-      selectNode(guidedTour[0]);
-    }
-  };
-
-  const resetView = () => {
-    setMode("explore");
-    setTraceId(null);
-    setLod(1);
-    selectNode("global-closure");
-    setInspectorOpen(false);
-  };
-
-  const toggleFullscreen = async () => {
-    if (!root.current || !fullscreenSupported) return;
-    try {
-      if (document.fullscreenElement) await document.exitFullscreen();
-      else await root.current.requestFullscreen();
-    } catch {
-      setIsFullscreen(document.fullscreenElement === root.current);
-    }
-  };
-
-  const shareSelected = async () => {
-    const url = new URL(window.location.href);
-    url.searchParams.set("focus", selectedId);
-    try {
-      await navigator.clipboard.writeText(url.toString());
-      setCopied(true);
-      if (copyTimer.current !== null) window.clearTimeout(copyTimer.current);
-      copyTimer.current = window.setTimeout(() => {
-        setCopied(false);
-        copyTimer.current = null;
-      }, 1800);
-    } catch {
-      window.history.replaceState(window.history.state, "", url);
-    }
-  };
-
-  useEffect(() => () => {
-    if (copyTimer.current !== null) window.clearTimeout(copyTimer.current);
-  }, []);
-
-  const searchSelect = (id: string) => {
-    setSearchOpen(false);
-    setSearchQuery("");
-    selectNode(id);
-  };
-
-  const handleSceneReady = useCallback(() => setSceneReady(true), []);
-  const handleSceneUnavailable = useCallback(() => {
-    setWebglAvailable(false);
-    setSceneReady(true);
-    setHoveredId(null);
-  }, []);
-
-  const traceProgress = useMemo(() => {
-    if (!activeTrace) return null;
-    const index = activeTrace.nodeIds.indexOf(selectedId);
-    return index >= 0 ? { index, total: activeTrace.nodeIds.length } : null;
-  }, [activeTrace, selectedId]);
-  const modalOpen = introOpen || searchOpen;
-
-  useEffect(() => {
-    if (mainUi.current) mainUi.current.inert = modalOpen;
-  }, [modalOpen]);
+  const percent = Math.round(address.aperture * 100);
+  const plateSummary = address.view === "boundary" ? evaluateBoundary(address.boundary).summary : address.view === "history" ? evaluateHistory(address.history).summary : "";
+  const instrumentDescription = `Shadow Theory drawn as one instrument: a source lamp, the law optics, an iris, a glass field cell and a round readout plate, in a row on a rail, with a spiral galaxy beyond the plate. Showing ${stageMeta[address.mode === "trace" ? "overview" : address.stage].title}. The iris is ${percent} percent open. ${apertureWords(address.aperture)}. Second probe: ${probeWords(address.probe)}.`;
+  const description = address.view === "boundary"
+    ? `The readout plate, faced, with a spiral galaxy seen through its glass. Its rim stands for boundary data and its interior for what those readings reach. ${plateSummary}`
+    : address.view === "history"
+      ? `The readout plate, faced, with a small history drawn on its glass: a source sounds three notes and a listener receives each a little later. ${plateSummary}`
+      : instrumentDescription;
+  const stillNote = picture && !picture.live && picture.tier === "still" && picture.reason && picture.reason !== "requested" ? stillReasonText[picture.reason] : null;
+  const isStill = picture ? picture.tier === "still" : address.picture === "still";
 
   return (
-    <section ref={root} className="atlas-experience" aria-label="Interactive Reality Atlas">
-      <div
-        ref={mainUi}
-        className="atlas-main-ui"
-        aria-hidden={modalOpen ? true : undefined}
-        aria-busy={!sceneReady}
-      >
-      <div className="atlas-scene-layer" aria-hidden={introOpen ? "true" : undefined}>
-        {webglAvailable ? (
-          <AtlasSceneBoundary onUnavailable={handleSceneUnavailable}>
-            <AtlasScene
-              selectedId={selectedId}
-              hoveredId={hoveredId}
-              lod={lod}
-              traceIds={traceIds}
-              focusNonce={focusNonce}
-              reducedMotion={reducedMotion}
-              onSelect={selectNode}
-              onHover={setHoveredId}
-              onReady={handleSceneReady}
-              onUnavailable={handleSceneUnavailable}
-            />
-          </AtlasSceneBoundary>
-        ) : webglAvailable === false ? <AtlasSceneFallback /> : null}
-      </div>
-      <div className="atlas-vignette" aria-hidden="true" />
-      <div className="atlas-grid-overlay" aria-hidden="true" />
-
-      {!sceneReady ? (
-        <div className="atlas-loading" role="status">
-          <i aria-hidden="true" />
-          <span>Constructing the source-to-readout field…</span>
-        </div>
-      ) : null}
-
-      <header className="atlas-toolbar">
-        <div className="atlas-toolbar-title">
-          <span className="atlas-live-dot" aria-hidden="true" />
-          <div>
-            <p>The Reality Atlas</p>
-            <small>{atlasStats.representedNodes} structures · {atlasStats.representedEdges} typed connections</small>
+    <section
+      ref={frame}
+      className="atlas-frame"
+      data-panel={panelOpen ? "open" : "closed"}
+      data-mode={address.mode}
+      data-view={address.view}
+      data-picture={isStill ? "still" : "live"}
+      data-ready={hydrated ? "true" : undefined}
+      aria-label="The Reality Atlas, interactive"
+    >
+      <div className="atlas-stage">
+        <div ref={topbar} className="atlas-topbar">
+          <div className="atlas-heading">
+            <h1 className="atlas-title">The Reality Atlas</h1>
+            <p className="atlas-subtitle">Shadow Theory as one instrument, from source to readout.</p>
+          </div>
+          <div className="atlas-modes" role="group" aria-label="Mode">
+            {MODES.map((mode) => (
+              <button key={mode.id} type="button" aria-pressed={address.mode === mode.id} title={mode.hint} onClick={() => setMode(mode.id)}>
+                {mode.label}
+              </button>
+            ))}
+          </div>
+          <div className="atlas-tools">
+            <button type="button" className="atlas-tool is-search" onClick={() => setSearchOpen(true)} aria-keyshortcuts="/">
+              <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <circle cx="8" cy="8" r="5.25" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M12 12l4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+              <span>Search</span>
+              <kbd aria-hidden="true">/</kbd>
+            </button>
+            {canFullscreen ? (
+              <button type="button" className="atlas-tool is-icon" onClick={toggleFullscreen} aria-label={isFullscreen ? "Leave full screen" : "Full screen"} title={isFullscreen ? "Leave full screen" : "Full screen"}>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                  <path d={isFullscreen ? "M6 2v4H2M10 2v4h4M6 14v-4H2M10 14v-4h4" : "M2 6V2h4M14 6V2h-4M2 10v4h4M14 10v4h-4"} stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            ) : null}
+            <button type="button" className="atlas-tool is-icon is-panel-toggle" onClick={() => setPanelOpen((value) => !value)} aria-expanded={panelOpen} aria-controls="atlas-panel" aria-label={panelOpen ? "Hide the reading panel" : "Show the reading panel"} title={panelOpen ? "Hide the reading panel" : "Show the reading panel"}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect x="1.75" y="2.75" width="12.5" height="10.5" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+                <path d="M10 3v10" stroke="currentColor" strokeWidth="1.5" />
+              </svg>
+            </button>
           </div>
         </div>
 
-        <nav className="atlas-mode-switch" aria-label="Atlas mode">
-          {(["explore", "guided", "trace"] as const).map((item) => (
-            <button
-              type="button"
-              key={item}
-              onClick={() => item === "trace" ? startTrace(traceId ?? "gravity") : setAtlasMode(item)}
-              aria-current={mode === item ? "page" : undefined}
-              aria-pressed={mode === item}
-            >
-              {item}
-            </button>
-          ))}
-        </nav>
-
-        <div className="atlas-toolbar-actions">
-          <button type="button" onClick={() => setSearchOpen(true)} aria-label="Search the atlas" title="Search (/)" className="atlas-search-trigger">
-            <Icon name="search" /><span>Search</span><kbd>/</kbd>
-          </button>
-          <button type="button" onClick={resetView} aria-label="Reset atlas view" title="Reset view"><Icon name="reset" /></button>
-          <button
-            type="button"
-            onClick={toggleFullscreen}
-            disabled={!fullscreenSupported}
-            aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
-            title={fullscreenSupported ? (isFullscreen ? "Exit fullscreen" : "Enter fullscreen") : "Fullscreen is not supported by this browser"}
-          >
-            <Icon name="expand" />
-          </button>
-          <Link href="/" aria-label="Return to the Shadow Theory homepage" title="Return to site"><Icon name="close" /></Link>
-        </div>
-      </header>
-
-      <nav className="atlas-stage-rail" aria-label="Primary reality stages">
-        <span className="atlas-stage-line" aria-hidden="true" />
-        {stageRail.map((stage, index) => {
-          const node = getAtlasNode(stage.id);
-          const active = selectedId === stage.id || (stage.id === "global-closure" && selectedNode.tier === "observable");
-          return (
-            <button
-              type="button"
-              key={stage.id}
-              onClick={() => selectNode(stage.id)}
-              className={active ? "is-active" : ""}
-              style={{ "--stage-color": node.color } as CSSProperties}
-              aria-current={active ? "location" : undefined}
-            >
-              <i>{index + 1}</i>
-              <span>{stage.label}<small>{stage.sublabel}</small></span>
-            </button>
-          );
-        })}
-      </nav>
-
-      <div className="atlas-edge-legend" aria-label="Connection legend">
-        <span><i aria-hidden="true" />Mathematical dependence</span>
-        <span><i className="is-conceptual" aria-hidden="true" />Conceptual relationship</span>
-        <Link href="/atlas/quantum-measurement">Measurement guide ↗</Link>
-      </div>
-
-      <div className="atlas-breadcrumb" aria-live="polite">
-        <span style={{ color: selectedNode.color }}>{tierMeta[selectedNode.tier].label}</span>
-        <Icon name="arrow" />
-        <strong>{selectedNode.shortLabel}</strong>
-        {hoveredId && hoveredId !== selectedId ? (
-          <em aria-hidden="true">Hovering: {getAtlasNode(hoveredId).label}</em>
-        ) : null}
-      </div>
-
-      {!inspectorOpen ? (
-        <button
-          type="button"
-          className="atlas-info-trigger"
-          onClick={() => {
-            setInspectorOpen(true);
-            window.requestAnimationFrame(() => {
-              document.getElementById(`atlas-inspector-tab-${inspectorTab}`)?.focus();
-            });
-          }}
-          aria-label={`Open details for ${selectedNode.label}`}
+        <AtlasStage
+          stage={cameraStage}
+          aperture={address.aperture}
+          onApertureChange={setAperture}
+          probe={address.probe}
+          plateView={onPlate}
+          plateBus={plateBus}
+          highlightGroup={highlightGroup}
+          trace={trace}
+          groups={readoutGroups}
+          groupLabels={sectorLabels}
+          requestedPicture={address.picture}
+          reducedMotion={reducedMotion}
+          onStage={goStage}
+          onGroup={openEntry}
+          onPicture={setPicture}
+          coveredBelow={coveredBelow}
+          clearTop={clearTop}
+          description={description}
         >
-          <Icon name="info" />
-          <span>{selectedNode.shortLabel}</span>
-        </button>
-      ) : (
-        <Inspector
-          node={selectedNode}
-          tab={inspectorTab}
-          traceIds={traceIds}
-          onTab={setInspectorTab}
-          onClose={closeInspector}
-          onSelect={selectNode}
-          onShare={shareSelected}
-        />
-      )}
+          <AtlasPlateLayer bus={plateBus} view={address.view} boundary={address.boundary} history={address.history} reducedMotion={reducedMotion} onBearing={setBearing} />
+        </AtlasStage>
 
-      <footer className="atlas-control-deck">
-        <div className="atlas-lod-control">
-          <span><Icon name="layers" /> Detail</span>
-          <input
-            id="atlas-lod"
-            type="range"
-            min="0"
-            max="4"
-            step="1"
-            value={lod}
-            onChange={(event) => setLod(Number(event.target.value))}
-            aria-label="Atlas level of detail"
-            aria-valuetext={`Level of detail ${lod}`}
+        <div ref={dock} className="atlas-dock">
+          {address.mode === "guided" ? (
+            <TourBar tour={tour} index={tourIndex} onStep={stepTour} onTour={startTour} onExit={() => setMode("explore")} />
+          ) : null}
+          {route ? (
+            <TraceBar route={route} index={routeIndex} onStep={stepTrace} onSelect={openEntry} onExit={chooseTrace} />
+          ) : null}
+          <div className="atlas-dock-row">
+            <div className="atlas-dock-left">
+              <ViewSwitch view={address.view} onView={(view) => setView(view)} />
+              <div className="atlas-dock-links">
+                <button type="button" className="atlas-about-button" onClick={() => setAboutOpen(true)}>
+                  <span aria-hidden="true">i</span>
+                  {stillNote ? "Still picture: why?" : "About this picture"}
+                </button>
+                {address.mode === "explore" && !address.focus && address.view === "instrument" ? (
+                  <button type="button" className="atlas-start-button" onClick={() => startTour(DEFAULT_TOUR)}>Take the tour →</button>
+                ) : null}
+              </div>
+            </div>
+            {address.view === "boundary" ? (
+              <BoundaryControls state={address.boundary} onChange={setBoundary} />
+            ) : address.view === "history" ? (
+              <HistoryControls state={address.history} onChange={setHistory} />
+            ) : (
+              <>
+                <StageRail stage={address.stage} onStage={goStage} />
+                <div className="atlas-controls">
+                  <ApertureControl aperture={address.aperture} onChange={setAperture} steps={isStill ? STILL_APERTURES : undefined} />
+                  <ProbeControl on={address.probe} onChange={setProbe} />
+                </div>
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* In a plate view the panel announces what the readings settle; here only the change of picture is said. */}
+        <p className="sr-only" aria-live="polite">{onPlate ? `${address.view === "boundary" ? "Boundary" : "History"} view: the readout plate, faced.` : description}</p>
+      </div>
+
+      <aside ref={panel} id="atlas-panel" className="atlas-panel" aria-label="Reading panel" hidden={!panelOpen}>
+        {address.mode === "trace" && !route ? (
+          <TraceChooser onStart={startTrace} onHover={setHoverRoute} headingRef={heading} />
+        ) : node ? (
+          <EntryView
+            key={node.id}
+            node={node}
+            tab={address.tab}
+            onTab={setTab}
+            onOpen={openEntry}
+            onBack={closeEntry}
+            onShare={share}
+            shared={shared}
+            headingRef={heading}
+            plate={entryViews[node.id] ? { label: entryViews[node.id].label, shown: address.view === entryViews[node.id].view, onShow: () => showEntryOnPlate(node.id) } : undefined}
+            context={
+              route ? <TraceContext route={route} /> : address.mode === "guided" ? <TourContext label={tour.label} description={tour.description} /> : undefined
+            }
           />
-          <output htmlFor="atlas-lod">LOD {lod}</output>
+        ) : address.view === "boundary" ? (
+          <BoundaryPanel state={address.boundary} onChange={setBoundary} headingRef={heading} onOpen={openEntry} onBack={() => setView("instrument")} onStartTour={startTour} />
+        ) : address.view === "history" ? (
+          <HistoryPanel state={address.history} onChange={setHistory} headingRef={heading} onOpen={openEntry} onBack={() => setView("instrument")} onStartTour={startTour} />
+        ) : (
+          <StageView
+            stage={address.stage}
+            onView={(view) => setView(view)}
+            onOpen={openEntry}
+            onStage={goStage}
+            onHover={setHoverEntry}
+            onStartTour={startTour}
+            onChooseTrace={chooseTrace}
+            onSearch={() => setSearchOpen(true)}
+            onAboutPicture={() => setAboutOpen(true)}
+            probe={address.probe}
+            onProbe={setProbe}
+            headingRef={heading}
+          />
+        )}
+      </aside>
+
+      <AtlasSearch open={searchOpen} onClose={() => setSearchOpen(false)} onSelect={openEntry} />
+
+      <dialog
+        ref={aboutDialog}
+        className="atlas-dialog atlas-about"
+        aria-labelledby="atlas-about-title"
+        onClose={() => setAboutOpen(false)}
+        onClick={(event) => { if (event.target === aboutDialog.current) setAboutOpen(false); }}
+      >
+        <div className="atlas-about-head">
+          <h2 id="atlas-about-title">About this picture</h2>
+          <button type="button" className="atlas-dialog-close" onClick={() => setAboutOpen(false)}>Close</button>
         </div>
-        <div className="atlas-route-list" aria-label="Observable traces">
-          {observableRoutes.map((route) => (
-            <button
-              type="button"
-              key={route.id}
-              onClick={() => startTrace(route.id)}
-              className={traceId === route.id ? "is-active" : ""}
-              style={{ "--route-color": route.color } as CSSProperties}
-              title={route.label}
-              aria-pressed={traceId === route.id}
-            >
-              <i />{route.shortLabel}
-            </button>
-          ))}
+        <div className="atlas-about-body">
+          <AtlasPictureNote />
+          <fieldset className="atlas-picture-choice">
+            <legend>How the picture is drawn</legend>
+            {stillNote ? <p className="atlas-picture-reason">{stillNote}</p> : null}
+            {PICTURE_CHOICES.map((choice) => (
+              <label key={choice.label}>
+                <input type="radio" name="atlas-picture" checked={address.picture === choice.value} onChange={() => choosePicture(choice.value)} />
+                <span><strong>{choice.label}</strong><em>{choice.hint}</em></span>
+              </label>
+            ))}
+            <p className="atlas-picture-foot">
+              Motion follows your system setting: with reduced motion on, the camera moves at once and nothing drifts.
+              There is no sound.
+            </p>
+          </fieldset>
         </div>
-        <p className="atlas-control-help">Drag or swipe to orbit · Scroll or pinch to zoom · Select any structure</p>
-      </footer>
-
-      {mode === "guided" && !introOpen ? (
-        <div className="atlas-guided-controls">
-          <button
-            type="button"
-            onClick={() => setTourIndex((value) => Math.max(0, value - 1))}
-            disabled={tourIndex === 0}
-          >
-            Previous
-          </button>
-          <div>
-            <small>Guided descent · {tourIndex + 1}/{guidedTour.length}</small>
-            <strong>{selectedNode.label}</strong>
-          </div>
-          <button
-            type="button"
-            onClick={() => setTourIndex((value) => Math.min(guidedTour.length - 1, value + 1))}
-            disabled={tourIndex === guidedTour.length - 1}
-          >
-            Next <Icon name="arrow" />
-          </button>
-        </div>
-      ) : null}
-
-      {mode === "trace" && activeTrace ? (
-        <div className="atlas-active-trace" style={{ "--trace-color": activeTrace.color } as CSSProperties}>
-          <i aria-hidden="true" />
-          <div>
-            <small>Reading path · solid / dashed meanings retained</small>
-            <strong>{activeTrace.label}</strong>
-          </div>
-          <button
-            type="button"
-            onClick={() => stepTrace(-1)}
-            disabled={!traceProgress || traceProgress.index === 0}
-            aria-label="Previous stage in active trace"
-            title="Previous trace stage (Left arrow)"
-          >
-            ‹
-          </button>
-          {traceProgress ? <span>{traceProgress.index + 1}/{traceProgress.total}</span> : <span>{activeTrace.nodeIds.length} stages</span>}
-          <button
-            type="button"
-            onClick={() => stepTrace(1)}
-            disabled={!traceProgress || traceProgress.index === traceProgress.total - 1}
-            aria-label="Next stage in active trace"
-            title="Next trace stage (Right arrow)"
-          >
-            ›
-          </button>
-          <button type="button" onClick={() => { setMode("explore"); setTraceId(null); }} aria-label="Close active trace"><Icon name="close" /></button>
-        </div>
-      ) : null}
-
-      <div className="sr-only" aria-live="polite">
-        Selected {selectedNode.label}. {selectedNode.summary}
-      </div>
-      </div>
-
-      {introOpen ? (
-        <div ref={intro} className="atlas-intro" role="dialog" aria-modal="true" aria-labelledby="atlas-intro-title">
-          <div className="atlas-intro-orbit" aria-hidden="true"><i /><i /><i /></div>
-          <p className="section-label">The complete source-to-readout construction</p>
-          <h1 id="atlas-intro-title">Reality, from <span>Ω</span> to observation</h1>
-          <p>
-            Enter a navigable model of source reality, fixed law, recursive aperture,
-            the coherent–dissipative field and the complete Tier-1 physical readout.
-            Every visible structure carries its equations, type, interfaces and reverse lineage.
-          </p>
-          <div className="atlas-intro-actions">
-            <button type="button" onClick={startGuided}>Begin the guided descent <Icon name="arrow" /></button>
-            <button type="button" onClick={() => { setIntroOpen(false); setMode("explore"); selectNode("global-closure"); }}>Explore freely</button>
-          </div>
-          <button className="atlas-measurement-entry" type="button" onClick={() => { setIntroOpen(false); setMode("explore"); selectNode("measurement-programme"); }}>New · Quantum Measurement: two constitutive completions <Icon name="arrow" /></button>
-          <dl>
-            <div><dt>{atlasStats.chapters}</dt><dd>canonical chapters</dd></div>
-            <div><dt>{atlasStats.equationTags.toLocaleString()}</dt><dd>equation tags</dd></div>
-            <div><dt>{atlasStats.sectors}</dt><dd>coupled sectors</dd></div>
-            <div><dt>2-way</dt><dd>source tracing</dd></div>
-          </dl>
-          <small>Designed for orbit, zoom, touch and keyboard navigation</small>
-        </div>
-      ) : null}
-
-      {searchOpen ? (
-        <SearchPanel
-          query={searchQuery}
-          onQuery={setSearchQuery}
-          onClose={() => setSearchOpen(false)}
-          onSelect={searchSelect}
-        />
-      ) : null}
-
-      {copied ? <div className="atlas-toast" role="status">Atlas link copied</div> : null}
+      </dialog>
     </section>
   );
 }

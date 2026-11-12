@@ -77,7 +77,7 @@ export default async function MonographItemPage({
   };
 
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-[43rem]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -157,7 +157,7 @@ export default async function MonographItemPage({
           <ol className="mt-3 grid gap-x-6 gap-y-1 text-[0.85rem] leading-snug text-mute sm:grid-cols-2">
             {item.sections.map((s) => (
               <li key={s.anchor}>
-                <a href={`#${s.anchor}`} className="hover:text-fg">
+                <a href={`#${s.anchor}`} className="inline-block py-[3px] hover:text-fg">
                   <span className="font-mono text-faint">{s.number}</span> {s.title}
                 </a>
               </li>

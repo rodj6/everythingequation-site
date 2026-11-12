@@ -1,0 +1,248 @@
+/* ============================================================
+   HOMEPAGE
+   The hero shows the Atlas instrument; everything after it sits
+   in the usual centred column. Section blocks further down are
+   separate components with their own styles; this file only sets
+   the frame they sit in.
+   ============================================================ */
+
+.home { --home-pad: 1rem; }
+
+/* ---------- Hero ---------- */
+
+.home-hero {
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  border-bottom: 1px solid hsl(var(--border));
+  background: #08090b;
+}
+.home-hero-picture { display: block; aspect-ratio: 1 / 0.86; }
+.home-hero-picture img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
+.home-hero-inner { display: grid; gap: 2rem; padding: 0.5rem var(--home-pad) 2.75rem; }
+.home-hero-copy h1 {
+  margin-top: 0.9rem;
+  font-size: clamp(2.4rem, 13vw, 5.9rem);
+  font-weight: 480;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: hsl(var(--foreground));
+}
+.home-hero-lead {
+  margin-top: 1.4rem;
+  max-width: 34rem;
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.5rem);
+  line-height: 1.45;
+  color: hsl(var(--foreground) / 0.92);
+}
+.home-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.9rem; }
+.home-button {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  padding: 0 1.3rem;
+  border: 1px solid hsl(var(--border-strong));
+  border-radius: 0.55rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  transition: background-color 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+.home-button:hover { border-color: hsl(var(--muted-foreground) / 0.7); background: hsl(var(--surface-raised)); }
+.home-button.is-primary { border-color: hsl(var(--foreground)); background: hsl(var(--foreground)); color: hsl(var(--background)); }
+.home-button.is-primary:hover { border-color: hsl(var(--lamp)); background: hsl(var(--lamp)); }
+
+/* The Atlas caption: an engraved line along the foot of the picture. */
+.home-hero-atlas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid hsl(var(--border-strong) / 0.7);
+}
+.home-hero-atlas em { font-size: 0.9375rem; font-style: normal; font-weight: 500; color: hsl(var(--accent)); transition: color 0.2s ease; }
+.home-hero-atlas:hover em { color: hsl(var(--accent-strong)); }
+.home-hero-atlas b,
+.home-atlas a b { display: inline-block; font-weight: 400; transition: transform 0.2s var(--ease-out); }
+.home-hero-atlas:hover b,
+.home-atlas a:hover b { transform: translateX(4px); }
+
+/* ---------- Body ---------- */
+
+.home-body {
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  max-width: 72rem;
+  gap: 5.5rem;
+  padding: 4rem var(--home-pad) 2rem;
+}
+.home-body > * { min-width: 0; }
+
+.home-statement { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
+.home-statement-text { display: grid; gap: 1.2rem; max-width: 42rem; }
+.home-statement-text p { font-family: var(--font-serif); font-size: clamp(1.125rem, 1.05rem + 0.35vw, 1.3rem); line-height: 1.62; color: hsl(var(--foreground) / 0.9); }
+
+.home-start ul { margin-top: 0.75rem; border-top: 1px solid hsl(var(--border-strong)); }
+.home-start a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 0.1rem 1rem;
+  padding: 0.85rem 0.15rem;
+  border-bottom: 1px solid hsl(var(--border));
+  transition: background-color 0.15s ease;
+}
+.home-start a::after { content: "→"; grid-column: 2; grid-row: 1 / span 2; align-self: center; color: hsl(var(--faint-foreground)); transition: transform 0.2s var(--ease-out), color 0.2s ease; }
+.home-start a:hover { background: hsl(var(--surface)); }
+.home-start a:hover::after { color: hsl(var(--accent)); transform: translateX(3px); }
+.home-start strong { font-family: var(--font-serif); font-size: 1.125rem; font-weight: 560; color: hsl(var(--foreground)); }
+.home-start span { grid-column: 1; font-size: 0.875rem; line-height: 1.5; color: hsl(var(--muted-foreground)); }
+
+.home-atlas { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding: 1.6rem 0 1.7rem 1.4rem; border-left: 2px solid hsl(var(--brass)); }
+.home-atlas h2 { margin-top: 0.6rem; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem); font-weight: 560; line-height: 1.14; letter-spacing: -0.018em; }
+.home-atlas p:not(.section-label) { max-width: 38rem; font-size: 1rem; line-height: 1.7; color: hsl(var(--muted-foreground)); }
+.home-atlas a { display: inline-block; margin-top: 1rem; font-size: 0.9375rem; font-weight: 500; color: hsl(var(--accent)); }
+.home-atlas a:hover { color: hsl(var(--accent-strong)); }
+
+.home-spine { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem; padding-top: 2.5rem; border-top: 1px solid hsl(var(--border-strong)); }
+.home-spine-head { display: grid; gap: 1.25rem; align-content: start; align-self: start; }
+.home-spine ol { counter-reset: spine; display: grid; gap: 0; }
+.home-spine li {
+  counter-increment: spine;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  gap: 0.5rem;
+  padding: 0.95rem 0;
+  border-bottom: 1px solid hsl(var(--border));
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  color: hsl(var(--foreground) / 0.92);
+}
+.home-spine li:first-child { padding-top: 0; }
+.home-spine li::before { content: counter(spine); font-size: 1.05rem; font-variant-numeric: tabular-nums; color: hsl(var(--brass)); }
+
+.home-contents ol { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+.home-contents a {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  padding: 0 0.95rem;
+  border: 1px solid hsl(var(--border-strong));
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.home-contents a:hover { border-color: hsl(var(--muted-foreground)); color: hsl(var(--foreground)); }
+
+/* Band marker: a hairline with an engraved label, between groups of sections. */
+.home-band {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: -2.75rem;
+  scroll-margin-top: calc(var(--header-height) + 1.5rem);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: hsl(var(--brass));
+}
+.home-band::after { content: ""; height: 1px; flex: 1; background: hsl(var(--border-strong)); }
+.home-band span { flex: 0 1 auto; min-width: 0; overflow-wrap: break-word; }
+
+@media (min-width: 40em) {
+  .home { --home-pad: 1.5rem; }
+  .home-body { gap: 7rem; padding-top: 5rem; }
+}
+
+@media (min-width: 56.25em) {
+  .home { --home-pad: 2rem; }
+  .home-hero { min-height: min(46rem, calc(100svh - var(--header-height) - 2rem)); }
+  .home-hero-picture { position: absolute; inset: 0; aspect-ratio: auto; }
+  .home-hero-picture img { object-position: 88% 50%; }
+  /* Darken the side the words sit on; the instrument keeps its own light. */
+  .home-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgb(8 9 11 / 0.95) 0%, rgb(8 9 11 / 0.88) 30%, rgb(8 9 11 / 0.4) 45%, rgb(8 9 11 / 0) 60%), linear-gradient(0deg, rgb(8 9 11 / 0.7), rgb(8 9 11 / 0) 30%);
+    pointer-events: none;
+  }
+  .home-hero-inner {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 88rem;
+    grid-template-rows: 1fr auto;
+    gap: 2.5rem;
+    padding: 4.5rem var(--home-pad) 1.5rem;
+  }
+  .home-hero-copy { align-self: center; max-width: 33rem; }
+  .home-atlas { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 3.5rem; align-items: end; padding-left: 2rem; }
+  .home-spine-head { position: sticky; top: calc(var(--header-height) + 2rem); }
+  .home-statement { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 4.5rem; align-items: start; }
+  .home-spine { grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 4.5rem; }
+}
+
+@media (min-width: 80em) {
+  .home-hero-copy h1 { font-size: 6.4rem; }
+}
+
+/* ---------- The central question: the one place the cool light is turned up ---------- */
+.home-question { margin-top: 0.6rem; }
+.home-statement-text p.home-question span {
+  display: inline;
+  font-family: var(--font-serif);
+  font-size: clamp(1.7rem, 1.2rem + 2.4vw, 2.75rem);
+  font-weight: 560;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: hsl(var(--foreground));
+  background: linear-gradient(96deg, hsl(var(--glow) / 0.98) 0%, hsl(188 60% 86%) 46%, hsl(var(--lamp)) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 18px hsl(var(--glow) / 0.28));
+}
+
+/* ---------- Four ways in ---------- */
+.home-doors ul { display: grid; gap: 0.75rem; margin-top: 0.9rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+.home-doors a {
+  position: relative;
+  display: grid;
+  height: 100%;
+  align-content: start;
+  gap: 0.35rem;
+  padding: 1.2rem 1.25rem 1.3rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border-strong));
+  border-radius: 0.75rem;
+  background: hsl(var(--surface) / 0.85);
+  transition: border-color var(--dur) ease, box-shadow var(--dur) ease, transform var(--dur) var(--ease-out), background-color var(--dur) ease;
+}
+.home-doors a::after {
+  content: "→";
+  position: absolute;
+  top: 1.05rem;
+  right: 1.1rem;
+  color: hsl(var(--faint-foreground));
+  transition: transform var(--dur) var(--ease-out), color var(--dur) ease;
+}
+.home-doors a:hover { border-color: hsl(var(--glow) / 0.5); background: hsl(var(--surface-raised)); box-shadow: 0 0 0 1px hsl(var(--glow) / 0.16), 0 22px 50px -28px hsl(var(--glow) / 0.6); transform: translateY(-2px); }
+.home-doors a:hover::after { color: hsl(var(--accent-strong)); transform: translateX(3px); }
+.home-doors em { font-family: var(--font-mono); font-size: 0.6875rem; font-style: normal; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: hsl(var(--brass)); }
+.home-doors strong { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 580; letter-spacing: -0.01em; color: hsl(var(--foreground)); }
+.home-doors span { font-size: 0.9375rem; line-height: 1.55; color: hsl(var(--muted-foreground)); }
+
+/* ---------- Questions ---------- */
+.home-threads-head { max-width: 44rem; margin-bottom: 1.4rem; }
+.home-threads-head h2 { margin-top: 0.5rem; font-size: clamp(1.6rem, 1.3rem + 1.4vw, 2.3rem); font-weight: 600; letter-spacing: -0.015em; line-height: 1.15; color: hsl(var(--foreground)); }
+.home-threads-head > p:last-child { margin-top: 0.7rem; font-size: 1.0625rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }

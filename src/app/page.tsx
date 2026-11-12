@@ -14,6 +14,10 @@ import { ProblemCard, ArticleCard } from "@/components/cards";
 import ProjectionField from "@/components/projection-field";
 import QuantumProgrammeFeature from "@/components/quantum-programme-feature";
 import ConsciousnessProgrammeFeature from "@/components/consciousness-programme-feature";
+import { atlasStats } from "@/data/reality-atlas";
+import { threads } from "@/data/threads";
+import { ThreadCard } from "@/components/threads";
+import "./home.css";
 
 export const dynamic = "force-static";
 
@@ -31,130 +35,130 @@ export default async function HomePage() {
     (p) => p.status === "public" && p.programme === "featured"
   );
   const articles = listArticles().slice(0, 3);
+  const statement = site.heroStatement.split(/\n{2,}/).map((paragraph) => paragraph.trim()).filter(Boolean);
 
   return (
-    <div className="space-y-24 sm:space-y-32">
+    <div className="page-bleed home">
       {/* ================= HERO ================= */}
-      <section className="relative pt-6 sm:pt-12">
-        <div
-          aria-hidden="true"
-          className="bg-observatory-grid absolute inset-x-0 -top-14 -z-10 h-[520px]"
-        />
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="section-label animate-rise">
-            Source structure, observable laws and physical readers
-          </p>
-          <h1 className="animate-rise-1 mt-4 text-4xl font-bold leading-[1.08] tracking-tight sm:text-6xl">
-            <span className="text-luminous">Shadow Theory</span>
-          </h1>
-          <p className="animate-rise-2 mx-auto mt-5 max-w-3xl whitespace-pre-line text-lg leading-relaxed text-mute sm:text-xl">
-            {site.heroStatement}
-          </p>
-
-          <div className="animate-rise-3 mt-8 flex flex-wrap items-center justify-center gap-3">
-            <Link href="/source-readout" className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]">
-              Read Source–Readout Theory
-            </Link>
-            <Link
-              href="/atlas"
-              className="rounded-lg bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
-            >
-              Enter the Reality Atlas
-            </Link>
-            <Link
-              href="/quantum-measurement"
-              className="rounded-lg border border-[hsl(var(--violet)/0.5)] px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--violet))] hover:text-vio"
-            >
-              Quantum Measurement &amp; Born Rule
-            </Link>
-            <Link href="/consciousness/ai-alignment" className="rounded-lg border border-[hsl(var(--violet)/0.5)] px-5 py-2.5 text-sm font-semibold text-fg transition hover:text-vio">AI Alignment &amp; Consciousness</Link>
-            <Link
-              href="/monograph"
-              className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
-            >
-              Read the TOE monograph
-            </Link>
-            <Link
-              href="/framework"
-              className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
-            >
-              Explore the framework
-            </Link>
-            <Link
-              href="/papers"
-              className="rounded-lg border border-edge-strong px-5 py-2.5 text-sm font-semibold text-fg transition hover:border-[hsl(var(--accent)/0.5)] hover:text-glow-strong"
-            >
-              Read the papers
-            </Link>
+      <section className="home-hero" aria-labelledby="home-title">
+        <picture className="home-hero-picture">
+          <source media="(max-width: 56.24em)" srcSet="/atlas-stills/v3/overview-38-tall.webp" />
+          <img
+            src="/atlas-stills/v3/hero-wide.webp"
+            alt="A brass and black instrument on a dark plinth in space: a lamp, a lens, an iris, a glass cell holding rings of light, and a round glass plate marked with points of light. A spiral galaxy lies beyond the plate."
+            fetchPriority="high"
+            decoding="async"
+          />
+        </picture>
+        <div className="home-hero-inner">
+          <div className="home-hero-copy">
+            <p className="section-label">Source structure, observable laws and physical readers</p>
+            <h1 id="home-title">Shadow Theory</h1>
+            <p className="home-hero-lead">{statement[0]}</p>
+            <div className="home-actions">
+              <Link href="/atlas" className="home-button is-primary">Enter the Reality Atlas</Link>
+              <Link href="/source-readout" className="home-button">Read Source–Readout Theory</Link>
+            </div>
           </div>
-        </div>
-
-        <div className="animate-rise-3 mx-auto mt-10 max-w-5xl">
-          <ProjectionField />
-        </div>
-
-        <Link href="/atlas" className="atlas-home-portal animate-rise-3 mx-auto mt-10 block max-w-5xl">
-          <div className="atlas-home-portal-visual" aria-hidden="true">
-            <span className="atlas-home-orbit atlas-home-orbit-a" />
-            <span className="atlas-home-orbit atlas-home-orbit-b" />
-            <span className="atlas-home-core">Ω</span>
-            <span className="atlas-home-aperture">Δ</span>
-            <span className="atlas-home-field">Ψ</span>
-            <span className="atlas-home-readout">T1</span>
-          </div>
-          <div className="atlas-home-portal-copy">
-            <p className="section-label">Interactive model · 12 canonical chapters</p>
-            <h2>Explore the mathematical realization architecture</h2>
-            <p>
-              Orbit the full Ω-to-Tier-1 construction, zoom into the recursive aperture,
-              inspect the coherent–dissipative field, and trace gravity, matter, constants,
-              quantum records, cosmology and time back to their source-producing structures.
-            </p>
-            <span>Open the Reality Atlas <b>→</b></span>
-          </div>
-        </Link>
-
-        {/* Interpretive spine */}
-        <div className="animate-rise-3 mx-auto mt-14 max-w-3xl">
-          <div className="card-surface relative overflow-hidden px-6 py-6 sm:px-8">
-            <div
-              aria-hidden="true"
-              className="glow-cyan pointer-events-none absolute -top-20 left-1/2 h-40 w-3/4 -translate-x-1/2"
-            />
-            <p className="section-label relative">The theory in plain English</p>
-            <ol className="relative mt-4 space-y-2.5 text-left text-[0.95rem] leading-relaxed text-fg/90">
-              <li>
-                <span className="font-mono text-glow">1 · </span>
-                The observed world and its complementary source belong to one whole. We observe from within the readout.
-              </li>
-              <li>
-                <span className="font-mono text-glow">2 · </span>
-                The broader model begins with unconditioned ground and unsplit unity; reciprocal differentiation introduces structure and records.
-              </li>
-              <li>
-                <span className="font-mono text-glow">3 · </span>
-                Observation can preserve some structure while losing other structure.
-              </li>
-              <li>
-                <span className="font-mono text-glow">4 · </span>
-                Whether lost structure matters depends on the question being asked. Loss obstructs exactly the questions whose answers it changes.
-              </li>
-              <li>
-                <span className="font-mono text-glow">5 · </span>
-                Shadow Theory develops exact rules for when missing structure can be completed, what any completion must retain, and when the observable level obeys its own laws.
-              </li>
-              <li>
-                <span className="font-mono text-glow">6 · </span>
-                Randall–Sundrum braneworld gravity realizes the architecture physically: identical instantaneous brane readouts can evolve into different futures.
-              </li>
-              <li>
-                <span className="font-mono text-glow">7 · </span>
-                The seven foundational papers establish the mathematics. Five constructive papers develop quantum sources, physical readers, feedback, certification and minimum-cost readout design.
-              </li>
-            </ol>
-          </div>
+          <Link href="/atlas" className="home-hero-atlas">
+            <span className="section-label">
+              The Reality Atlas · {atlasStats.representedNodes} entries · {atlasStats.papersLinked} papers and articles
+            </span>
+            <em>Open the Reality Atlas <b aria-hidden="true">→</b></em>
+          </Link>
         </div>
       </section>
+
+      <div className="home-body">
+        {/* ================= STATEMENT ================= */}
+        <section className="home-statement" aria-label="What Shadow Theory is">
+          <div className="home-statement-text">
+            {statement.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+            <p className="home-question"><span>{site.centralQuestion}</span></p>
+          </div>
+          <nav className="home-start" aria-label="Where to start">
+            <p className="section-label">Where to start</p>
+            <ul>
+              <li><Link href="/quantum-measurement"><strong>Quantum Measurement &amp; Born Rule</strong><span>Events, statistics and physical records.</span></Link></li>
+              <li><Link href="/consciousness/ai-alignment"><strong>AI Alignment &amp; Consciousness</strong><span>Cooperation grounded in understanding.</span></Link></li>
+              <li><Link href="/monograph"><strong>Read the TOE monograph</strong><span>The complete Version {site.monograph.version} web edition.</span></Link></li>
+              <li><Link href="/framework"><strong>Explore the framework</strong><span>The full model in plain language.</span></Link></li>
+              <li><Link href="/papers"><strong>Read the papers</strong><span>Every publication, with DOI and status.</span></Link></li>
+            </ul>
+          </nav>
+        </section>
+
+        {/* ================= FOUR WAYS IN ================= */}
+        <nav className="home-doors" aria-labelledby="home-doors-heading">
+          <p className="section-label" id="home-doors-heading">Four ways in</p>
+          <ul>
+            <li><Link href="/atlas"><em>See it</em><strong>The Reality Atlas</strong><span>The whole theory as one instrument you can operate, from source to readout.</span></Link></li>
+            <li><Link href="/framework"><em>Understand it</em><strong>The framework</strong><span>The model in plain language, from the ground to the physical world.</span></Link></li>
+            <li><Link href="/source-readout"><em>Check it</em><strong>Source–Readout Theory</strong><span>The mathematics: theorems, proofs and worked models.</span></Link></li>
+            <li><Link href="/papers"><em>Cite it</em><strong>The papers</strong><span>Every publication, with its DOI and its status.</span></Link></li>
+          </ul>
+        </nav>
+
+        {/* ================= QUESTIONS ================= */}
+        <section className="home-threads" aria-labelledby="home-threads-heading">
+          <div className="home-threads-head">
+            <p className="section-label">Start from a question</p>
+            <h2 id="home-threads-heading">Questions, and where each one leads</h2>
+            <p>Each has something to see, an explanation in prose, and the place where it is worked out in full.</p>
+          </div>
+          <div className="thread-grid">
+            {threads.map((thread) => <ThreadCard key={thread.id} thread={thread} />)}
+          </div>
+        </section>
+
+        {/* ================= THE ATLAS ================= */}
+        <section className="home-atlas" aria-labelledby="home-atlas-heading">
+          <div>
+            <p className="section-label">Interactive model</p>
+            <h2 id="home-atlas-heading">Explore the mathematical realization architecture</h2>
+          </div>
+          <div>
+            <p>
+              Shadow Theory as one working instrument. Read it from the source Ω through law, aperture and field to
+              the plate where the physical world is read out, with a galaxy beyond it. Close the iris to resolve the
+              marks, swing in a second probe to split the ones that hide two sources, then turn to the plate itself:
+              read its rim as a boundary, or watch a listener inside a history. Trace gravity, matter, constants,
+              quantum records, cosmology and time back toward the source. Every entry carries its status and its
+              paper.
+            </p>
+            <Link href="/atlas">Open the Reality Atlas <b aria-hidden="true">→</b></Link>
+          </div>
+        </section>
+
+        {/* ================= INTERPRETIVE SPINE ================= */}
+        <section className="home-spine" aria-labelledby="home-spine-heading">
+          <div className="home-spine-head">
+            <p className="section-label" id="home-spine-heading">The theory in plain English</p>
+            <ProjectionField />
+          </div>
+          <ol>
+            <li>The observed world and its complementary source belong to one whole. We observe from within the readout.</li>
+            <li>The broader model begins with unconditioned ground and unsplit unity; reciprocal differentiation introduces structure and records.</li>
+            <li>Observation can preserve some structure while losing other structure.</li>
+            <li>Whether lost structure matters depends on the question being asked. Loss obstructs exactly the questions whose answers it changes.</li>
+            <li>Shadow Theory develops exact rules for when missing structure can be completed, what any completion must retain, and when the observable level obeys its own laws.</li>
+            <li>Randall–Sundrum braneworld gravity realizes the architecture physically: identical instantaneous brane readouts can evolve into different futures.</li>
+            <li>The seven foundational papers establish the mathematics. Five constructive papers develop quantum sources, physical readers, feedback, certification and minimum-cost readout design.</li>
+          </ol>
+        </section>
+
+        <nav className="home-contents" aria-label="On this page">
+          <p className="section-label">On this page</p>
+          <ol>
+            <li><a href="#home-research">New research</a></li>
+            <li><a href="#home-model">The complete model</a></li>
+            <li><a href="#home-programmes">Programmes</a></li>
+            <li><a href="#home-library">Monograph and foundation</a></li>
+            <li><a href="#home-status">Status and articles</a></li>
+          </ol>
+        </nav>
+
+        <p className="home-band" id="home-research"><span>New research</span></p>
       <section aria-labelledby="source-readout-heading" className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
         <p className="section-label">Source–Readout Theory · Complete technical articles</p>
         <h2 id="source-readout-heading" className="mt-3 max-w-3xl text-2xl font-bold tracking-tight sm:text-4xl">What a shadow preserves. What a reader can reveal.</h2>
@@ -169,13 +173,16 @@ export default async function HomePage() {
       <RelationalAwarenessFeature/>
       <AlignmentFeature home />
       <PaperIntegrationFeature/>
+        <p className="home-band" id="home-model"><span>The complete model</span></p>
       <ShadowModelOverview />
       <SealedLeakyFeature />
 
 
+        <p className="home-band" id="home-programmes"><span>Programmes</span></p>
       <QuantumProgrammeFeature />
       <ConsciousnessProgrammeFeature />
 
+        <p className="home-band" id="home-library"><span>Monograph and foundation</span></p>
       {/* ================= THE MONOGRAPH ================= */}
       <section aria-labelledby="monograph-heading">
         <div className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
@@ -245,7 +252,7 @@ export default async function HomePage() {
       </section>
 
       {/* ================= SYNTHESIS SCHEMA ================= */}
-      <section aria-labelledby="schema-heading" className="mx-auto max-w-3xl">
+      <section aria-labelledby="schema-heading" className="mx-auto max-w-[min(48rem,100%)]">
         <div className="card-surface relative overflow-hidden px-6 py-8 text-center sm:px-10">
           <div
             aria-hidden="true"
@@ -300,6 +307,7 @@ export default async function HomePage() {
         </div>
       </section>
 
+        <p className="home-band" id="home-status"><span>Status and articles</span></p>
       {/* ================= RESEARCH POSITION ================= */}
       <section aria-labelledby="position-heading" className="mx-auto max-w-3xl">
         <p className="section-label text-center">Framework position</p>
@@ -400,6 +408,7 @@ export default async function HomePage() {
           </Link>
         </div>
       </section>
+      </div>
     </div>
   );
 }

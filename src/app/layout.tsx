@@ -1,3 +1,4 @@
+import KeepExploring from "@/components/threads";
 import {continuityNote} from '@/lib/continuity-note';
 import "./globals.css";
 import "katex/dist/katex.min.css";
@@ -63,17 +64,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        {/* The two faces every page needs first; the rest load on demand. */}
+        <link rel="preload" href="/fonts/v1/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/v1/source-serif-4-latin-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </head>
       <body className="flex min-h-screen flex-col font-sans">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-
-        {/* Ambient background */}
-        <div aria-hidden="true" className="fixed inset-0 -z-10 overflow-hidden">
-          <div className="glow-cyan animate-drift absolute -left-[15%] -top-[25%] h-[720px] w-[720px] rounded-full" />
-          <div className="glow-violet animate-drift-reverse absolute -right-[18%] top-[10%] h-[640px] w-[640px] rounded-full" />
-        </div>
 
         <a
           href="#main"
@@ -82,10 +82,14 @@ export default function RootLayout({
           Skip to content
         </a>
 
+        {/* Depth behind every page: two soft lights and a few fixed stars. Decoration only. */}
+        <div className="site-atmosphere" aria-hidden="true" />
+
         <Header />
         <main id="main" className="mx-auto w-full max-w-content flex-1 px-4 pb-8 pt-10 sm:px-6 sm:pt-14 lg:px-8">
           {children}
         </main>
+        <KeepExploring />
         <Footer />
       </body>
     </html>

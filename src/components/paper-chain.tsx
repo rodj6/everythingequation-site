@@ -59,7 +59,7 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
         </p>
       </div>
       <ol
-        className="paper-chain-grid grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        className="paper-chain-grid grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         aria-label="Papers 1–6: the mathematical foundation"
       >
         {foundation.map((p, i) => (
@@ -68,7 +68,7 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
               href={`/papers/${p.slug}`}
               className="card-surface card-surface-hover paper-stage group flex h-full flex-col p-5"
             >
-              <div className="flex items-baseline justify-between">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                 <span className="font-mono text-2xl font-bold text-glow/90">
                   {String(stageOf(p, i)).padStart(2, "0")}
                 </span>
@@ -103,9 +103,8 @@ export default function PaperChain({ papers }: { papers: LoadedPaper[] }) {
         <Link
           href={`/papers/${witness.slug}`}
           className="card-surface card-surface-hover paper-witness group mt-4 flex flex-col border-l-4 border-l-[hsl(var(--green))] p-5 sm:p-6"
-          aria-label="Paper 7: the physical witness"
         >
-          <div className="flex items-baseline justify-between">
+          <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
             <span className="font-mono text-2xl font-bold text-greenc">07</span>
             <span className="font-mono text-[0.68rem] uppercase tracking-[0.18em] text-greenc">
               {stageWord[7]}

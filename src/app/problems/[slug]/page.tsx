@@ -45,7 +45,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ slug: 
   const historicalPapers = supporting.filter((paper) => paper.category === "historical" || paper.category === "superseded");
 
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-[43rem]">
       <header>
         <div className="flex flex-wrap items-center gap-2">
           <span className="inline-block rounded-full border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.07)] px-2.5 py-0.5 font-mono text-[0.68rem] font-medium uppercase tracking-wider text-amberc">

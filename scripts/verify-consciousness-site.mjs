@@ -168,7 +168,8 @@ const hero = source => source.match(/heroStatement: `([\s\S]*?)`,/)[1];
 // Preserve the historical baseline record; check the requested current content instead.
 const currentHero = hero(siteAfter);
 const homeHtml = (await read('/')).text;
-for (const phrase of ['unconditioned ground', 'unsplit unity', 'complementary aspects', 'Sealed or Leaky']) {
+// November 2026: the homepage statement was rewritten at the author's request and no longer names Sealed or Leaky.
+for (const phrase of ['unconditioned ground', 'unsplit unity', 'complementary aspects', 'consciousness, time and agency']) {
   check(currentHero.includes(phrase) && homeHtml.includes(phrase), `Current homepage model missing: ${phrase}`);
 }
 check(sha256(fs.readFileSync('content/manual/problems/consciousness-field-theorem.mdx')) === baseline.historicalNotesSha256, 'Original historical note source changed');

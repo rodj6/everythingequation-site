@@ -31,10 +31,16 @@ const nextConfig = {
   images: { unoptimized: true },
 
   async headers() {
-    return [{
-      source: "/:path*",
-      headers: browserHeaders({ development: process.env.NODE_ENV === "development" }),
-    }];
+    // Versioned folders: a changed file gets a new folder name, so these can be cached for a year.
+    const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }];
+    return [
+      {
+        source: "/:path*",
+        headers: browserHeaders({ development: process.env.NODE_ENV === "development" }),
+      },
+      { source: "/fonts/:version/:file*", headers: immutable },
+      { source: "/atlas-stills/:version/:file*", headers: immutable },
+    ];
   },
 
   // Legacy routes from the Everything Equation era. Old URLs keep working

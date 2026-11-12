@@ -1,0 +1,68 @@
+/* Field guide: Quantum Measurement in the Atlas (/atlas/quantum-measurement).
+   A reading page, styled with the site tokens. The two construction routes
+   keep their own colours so the lanes can be told apart. */
+
+.atlas-field-guide { max-width: 72rem; margin-inline: auto; }
+.atlas-guide-head { max-width: 50rem; margin-bottom: 3.5rem; }
+.atlas-guide-head h1 { margin: 1.1rem 0; font-size: clamp(2.4rem, 5.4vw, 4.4rem); font-weight: 520; line-height: 1.05; letter-spacing: -0.028em; }
+.atlas-guide-head > p:not(.section-label) { max-width: 44rem; font-family: var(--font-serif); font-size: 1.1875rem; line-height: 1.7; color: hsl(var(--foreground) / 0.86); }
+.atlas-guide-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.6rem; }
+.atlas-guide-actions a { display: inline-flex; min-height: 2.75rem; align-items: center; padding: 0 1.1rem; border: 1px solid hsl(var(--border-strong)); border-radius: 0.5rem; font-size: 0.875rem; color: hsl(var(--foreground)); transition: background-color 0.15s ease, border-color 0.15s ease; }
+.atlas-guide-actions a:hover { background: hsl(var(--surface-raised)); }
+.atlas-guide-actions a:first-child { border-color: hsl(var(--foreground)); background: hsl(var(--foreground)); color: hsl(var(--background)); font-weight: 500; }
+.atlas-guide-actions a:first-child:hover { border-color: hsl(var(--lamp)); background: hsl(var(--lamp)); }
+
+.atlas-guide-map { padding: clamp(1.25rem, 5vw, 3rem); border: 1px solid hsl(var(--border)); border-radius: 0.9rem; background: hsl(var(--surface)); }
+.atlas-guide-context { max-width: 40rem; margin: auto; padding: 1.05rem 1.5rem; border: 1px dashed hsl(var(--border-strong)); border-radius: 0.6rem; text-align: center; color: hsl(var(--muted-foreground)); }
+.atlas-guide-context strong { display: block; margin-bottom: 0.4rem; font-family: var(--font-serif); font-size: 1.0625rem; font-weight: 560; color: hsl(var(--foreground)); }
+.atlas-guide-context p { font-size: 0.8125rem; line-height: 1.65; }
+.atlas-guide-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.1rem; }
+.atlas-guide-lane { --lane: hsl(var(--accent)); min-width: 0; }
+.atlas-guide-lane.is-massive { --lane: hsl(var(--violet)); }
+.atlas-guide-lane > p { margin: 0 0 1rem; text-align: center; font-family: var(--font-mono); font-size: 0.6875rem; line-height: 1.6; letter-spacing: 0.13em; text-transform: uppercase; color: var(--lane); }
+.atlas-guide-lane ol { margin: 0; padding: 0; list-style: none; }
+.atlas-guide-lane li { position: relative; }
+.atlas-guide-lane li + li { margin-top: 1.7rem; }
+.atlas-guide-lane li + li::before { content: ""; position: absolute; top: -1.7rem; left: 50%; height: 1.7rem; border-left: 1px solid var(--lane); }
+.atlas-guide-lane a { display: block; padding: 1rem 1.25rem; border: 1px solid color-mix(in srgb, var(--lane) 38%, transparent); border-radius: 0.6rem; background: hsl(var(--background) / 0.7); text-align: center; transition: border-color 0.15s ease; }
+.atlas-guide-lane a:hover { border-color: var(--lane); }
+.atlas-guide-lane a strong { display: block; font-family: var(--font-serif); font-size: 1.0625rem; font-weight: 560; color: var(--lane); }
+.atlas-guide-lane a small { display: block; margin-top: 0.35rem; font-size: 0.8125rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+.atlas-guide-map figcaption { margin-top: 1.75rem; font-size: 0.8125rem; line-height: 1.75; color: hsl(var(--muted-foreground)); }
+
+.atlas-guide-relations { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0 4rem; }
+.atlas-guide-relations > div { padding: 1.15rem 1.4rem; border: 1px solid hsl(var(--border)); border-radius: 0.6rem; }
+.atlas-guide-relations > div:last-child { border-style: dashed; }
+.atlas-guide-relations h2 { margin-bottom: 0.5rem; font-size: 1.0625rem; color: hsl(var(--foreground)); }
+.atlas-guide-relations p { font-size: 0.875rem; line-height: 1.75; color: hsl(var(--muted-foreground)); }
+.atlas-guide-relations a { color: hsl(var(--accent)); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
+
+.atlas-guide-index { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.25rem 0 2.6rem; }
+.atlas-guide-index a { display: inline-flex; min-height: 2.5rem; align-items: center; padding: 0 0.85rem; border: 1px solid hsl(var(--border-strong)); border-radius: 0.4rem; font-size: 0.8125rem; color: hsl(var(--muted-foreground)); }
+.atlas-guide-index a:hover { color: hsl(var(--foreground)); }
+
+.atlas-guide-node { display: grid; grid-template-columns: minmax(13rem, 0.65fr) minmax(0, 1.6fr); gap: 2.5rem; padding: 2.25rem 0; border-top: 1px solid hsl(var(--border)); scroll-margin-top: 6.25rem; }
+.atlas-guide-node h2 { margin: 0.55rem 0 1.25rem; font-size: 1.6rem; line-height: 1.22; letter-spacing: -0.015em; }
+.atlas-guide-node header > a { font-size: 0.8125rem; color: hsl(var(--accent)); }
+.atlas-guide-node .atlas-guide-summary { font-family: var(--font-serif); font-size: 1.125rem; line-height: 1.65; color: hsl(var(--foreground) / 0.92); }
+.atlas-guide-node p { margin-bottom: 1.1rem; font-size: 0.9375rem; line-height: 1.75; color: hsl(var(--muted-foreground)); }
+.atlas-guide-node dl { padding: 0 1.1rem; border-left: 2px solid hsl(var(--border-strong)); }
+.atlas-guide-node dt { margin-top: 1rem; font-family: var(--font-mono); font-size: 0.625rem; letter-spacing: 0.12em; text-transform: uppercase; color: hsl(var(--brass)); }
+.atlas-guide-node dt:first-child { margin-top: 0; }
+.atlas-guide-node dd { margin: 0.4rem 0 0; font-size: 0.875rem; line-height: 1.75; color: hsl(var(--muted-foreground)); }
+.atlas-reading-links { margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid hsl(var(--border)); }
+.atlas-reading-links h3 { margin-bottom: 0.5rem; font-family: var(--font-mono); font-size: 0.625rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: hsl(var(--brass)); }
+.atlas-reading-links a { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.6rem 0; font-size: 0.875rem; line-height: 1.5; color: hsl(var(--accent)); }
+.atlas-reading-links a:hover { color: hsl(var(--accent-strong)); }
+.atlas-guide-links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin: 1rem 0 0; }
+.atlas-guide-links a { font-size: 0.8125rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+.atlas-guide-links a:hover { color: hsl(var(--foreground)); }
+
+@media (max-width: 760px) {
+  .atlas-guide-head { margin-bottom: 2rem; }
+  .atlas-guide-head > p:not(.section-label) { font-size: 1.0625rem; }
+  .atlas-guide-lanes { grid-template-columns: minmax(0, 1fr); gap: 1.9rem; }
+  .atlas-guide-relations { grid-template-columns: minmax(0, 1fr); margin-bottom: 2.5rem; }
+  .atlas-guide-node { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; }
+  .atlas-guide-node h2 { margin-bottom: 0.75rem; }
+}

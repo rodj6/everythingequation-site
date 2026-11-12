@@ -12,18 +12,24 @@ Statically generated; deployed via GitHub → Vercel.
 
 ## The Reality Atlas
 
-`/atlas` is the interactive source-to-observable model. It combines a procedural
-WebGL architecture with a complete two-dimensional fallback, guided descent,
-free orbit/zoom exploration, equation inspectors, typed interfaces, search, and
-forward/reverse observable traces. Its scientific content is defined in
-`src/data/reality-atlas.ts`; the definitive twelve-chapter mathematical source is
-preserved under `content/reality-model/`.
+`/atlas` is the interactive source-to-readout model, drawn as an optical
+instrument: source, law, aperture, canonical field and readout on one bench,
+with a reading panel, guided tours, observable traces, search and a complete
+server-rendered index. Every entry states what kind of claim it makes (proved,
+conditional, construction, measured, interpretation, open or historical).
 
-The main atlas interface lives in `src/components/atlas/`. Every atlas node has a
-stable identifier, mathematical type, domain, codomain, regularity, covariance,
-units, equations, and explicit upstream/downstream interfaces. Topology is
-certified during compilation, so broken node, route, tour, or edge references
-fail the build rather than silently producing an incomplete map.
+Content and graphics are separate. Entries drawn from papers live in
+`content/atlas/research.yaml`; the typed architecture, tours and traces live in
+`src/data/reality-atlas.ts`; the definitive twelve-chapter mathematical source
+is preserved under `content/reality-model/`. The instrument itself is
+`src/atlas/engine/` (plain three.js, procedural, no image or model assets) and
+the interface is `src/components/atlas/`. Topology is certified during
+compilation, so a broken id, status, link, tour or trace fails the build rather
+than silently producing an incomplete Atlas.
+
+- Add or change Atlas content: [`ATLAS-UPDATING.md`](ATLAS-UPDATING.md)
+- Design rules for the Atlas and the whole site: [`DESIGN.md`](DESIGN.md)
+- What the November 2026 redesign changed: [`docs/redesign-20261110/`](docs/redesign-20261110/)
 
 ## Quick start
 

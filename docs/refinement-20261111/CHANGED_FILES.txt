@@ -1,0 +1,54 @@
+Files that differ between the first redesign (commit 3550631) and the refined site.
+A = added, M = changed, D = removed.
+
+Documents
+M	ATLAS-UPDATING.md
+M	DESIGN.md
+M	SITE_MAINTENANCE_MANUAL.md
+A	docs/refinement-20261111/CONTENT_AND_TERMINOLOGY.md
+M	tools/atlas-stills/README.md
+A	docs/refinement-20261111/README.md
+A	docs/refinement-20261111/TEST_REPORT.md
+A	docs/refinement-20261111/CHANGED_FILES.txt
+
+Content and data
+M	content/atlas/research.yaml
+M	src/data/atlas/schema.ts
+M	src/data/reality-atlas.ts
+M	src/generated/atlas-research.ts
+
+Pages, interface and styles
+M	src/app/atlas/atlas.css
+M	src/app/atlas/page.tsx
+M	src/app/framework/page.tsx
+M	src/app/home.css
+M	src/app/legacy/[slug]/page.tsx
+M	src/app/page.tsx
+M	src/atlas/model.ts
+M	src/components/atlas/atlas-dock.tsx
+M	src/components/atlas/atlas-experience.tsx
+M	src/components/atlas/atlas-panel.tsx
+M	src/components/atlas/atlas-picture-note.tsx
+M	src/components/atlas/atlas-stage.tsx
+
+3D engine
+M	src/atlas/engine/config.ts
+A	src/atlas/engine/cosmos.ts
+M	src/atlas/engine/engine.ts
+M	src/atlas/engine/environment.ts
+M	src/atlas/engine/materials.ts
+M	src/atlas/engine/parts/bench.ts
+M	src/atlas/engine/parts/lamp.ts
+A	src/atlas/engine/parts/probe.ts
+M	src/atlas/engine/parts/screen.ts
+M	src/atlas/engine/readout.ts
+M	src/atlas/engine/reflection.ts
+M	src/atlas/engine/rig.ts
+
+Picture tool
+M	tools/atlas-stills/bake.mjs
+M	tools/atlas-stills/page.ts
+
+Prepared pictures
+D	public/atlas-stills/v1/ (25 pictures, replaced)
+A	public/atlas-stills/v2/ (37 pictures)

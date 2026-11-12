@@ -34,7 +34,7 @@ export default async function LegacyPage({ params }: { params: Promise<{ slug: s
   if (!loader) notFound();
 
   return (
-    <article className="mx-auto max-w-3xl">
+    <article className="mx-auto max-w-[43rem]">
       <header>
         <p className="section-label">Legacy archive</p>
         <h1 className="mt-3 text-2xl font-bold tracking-tight sm:text-4xl">
@@ -52,7 +52,10 @@ export default async function LegacyPage({ params }: { params: Promise<{ slug: s
         <Link href="/framework" className="text-glow hover:text-glow-strong">
           Shadow Theory canonical stack
         </Link>
-        .
+        .{" "}
+        <Link href="/source-readout/origins" className="text-glow hover:text-glow-strong">
+          How its fixed-point idea continues in the current mathematics →
+        </Link>
       </aside>
 
       <div className="mt-4">

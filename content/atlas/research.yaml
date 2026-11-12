@@ -1,0 +1,1123 @@
+# ATLAS · RESEARCH ENTRIES
+#
+# Entries of the Reality Atlas that come from published papers and articles on
+# this site. Each entry is one place a visitor can open in the Atlas.
+#
+# This file is content, not code. To add a paper to the Atlas, add an entry
+# here and run `npm run dev` or `npm run build`; the Atlas, its search, its
+# counts, llms.txt and graph.json update themselves. Nothing in the graphics
+# code needs to change. See ATLAS-UPDATING.md for a worked example.
+#
+# Fields
+#   id            unique, lower-case, never reused or renamed (it is the ?focus= address)
+#   tier          frame | foundation | source | tier0 | aperture | field | tier1 | observable | recovery
+#   group         which list the entry appears in (see `groups` in src/data/atlas/schema.ts)
+#   label         title shown in the Atlas
+#   shortLabel    optional shorter title for tight spaces
+#   eyebrow       small line above the title
+#   paper         optional slug in content/papers.yaml; title, DOI, date and text are read from there
+#   status        theorem | conditional | construction | measured | interpretation | open | historical
+#   statusNote    one sentence: what that status rests on, in plain words. Never stronger than the source.
+#   summary       one sentence. Defaults to the paper's `role`.
+#   description   a short paragraph. Defaults to the paper's `summary`.
+#   note          optional extra remark shown under the description
+#   read          reading links; the first is the main one. Defaults to the paper's web edition.
+#   relations     links to other Atlas entries: { to, label, type: mathematical | conceptual, note }
+#                 Use `mathematical` only where the source proves a dependence between the two.
+#   equations     optional: { tag, title, tex, interpretation }
+#   added         date the entry was added to the Atlas
+#
+# Wording rule: describe what the source establishes and under which
+# assumptions. Do not add findings, and do not present a proposal as a result.
+
+version: 1
+entries:
+
+  # ───────────────────────────── The whole model ─────────────────────────────
+
+  - id: frame-ground
+    tier: frame
+    group: frame
+    label: Unconditioned ground
+    eyebrow: The whole model · 1 of 4
+    status: interpretation
+    statusNote: >-
+      Part of the framework's ontological architecture. It is left unspecified on purpose and has no
+      symbol in the equations.
+    summary: What the theory takes as fundamental, left unspecified because every specification already divides it.
+    description: >-
+      At this level none of the distinctions used to describe a state, an object, an observer or a
+      possible event has been supplied. The article calls it unlimited potential in that sense: no
+      differentiation has been imposed. "Prior" means explanatory dependence; no clock is assumed on
+      which the ground comes first. The instrument in this Atlas does not draw the ground. It begins
+      one step later, at Ω, which already has mathematical structure: a signature, elementary cells,
+      witnesses and formation operations.
+    note: >-
+      Ω is a model of source structure built inside the formal account. The ground is what that
+      account leaves unspecified, and it has no symbol in the equations. A quantum vacuum, a
+      probability distribution and a Hilbert space already carry structure, so none of them is the
+      ground either.
+    read:
+      - { label: "The Full Shadow Model · the ground before distinction", href: "/articles/full-shadow-model#the-ground-before-distinction" }
+      - { label: "Framework · vocabulary", href: "/framework" }
+    relations:
+      - { to: frame-unsplit, label: explanatory dependence, type: conceptual, note: "An order of explanation." }
+      - { to: omega, label: where the formal account begins, type: conceptual, note: "Ω is a defined formation package. It is a model within the account, and the ground stays unspecified." }
+    added: "2026-11-10"
+
+  - id: frame-unsplit
+    tier: frame
+    group: frame
+    label: The unsplit
+    eyebrow: The whole model · 2 of 4
+    status: interpretation
+    statusNote: >-
+      Part of the framework's ontological architecture. The consciousness monograph denotes it U; it
+      is not inserted into the equations as a computable state.
+    summary: Unity before the source–readout distinction.
+    description: >-
+      The point at which the framework speaks of one undivided reality, before separating structure
+      from manifestation, subject from object, or an observer from what is observed. At this level
+      there is no reflective self-awareness: no separate "I", no localized viewpoint, no personal
+      memory. The working models begin once enough distinctions exist to specify their domains, maps
+      and operations.
+    read:
+      - { label: "The Full Shadow Model · the unsplit", href: "/articles/full-shadow-model#the-unsplit-unity-before-source-and-readout" }
+      - { label: "Dated A0 clarification", href: "/consciousness#a0-clarification" }
+    relations:
+      - { to: frame-complement, label: explanatory dependence, type: conceptual, note: "An order of explanation." }
+    added: "2026-11-10"
+
+  - id: frame-complement
+    tier: frame
+    group: frame
+    label: Source and readout
+    eyebrow: The whole model · 3 of 4
+    status: interpretation
+    statusNote: >-
+      The ontological relationship is an account, not a theorem. The exact statements about a
+      specified source, readout and target are proved in the seven foundation papers.
+    summary: Two complementary aspects of one whole. We, our instruments and our records are within the readout.
+    description: >-
+      The source names the structure that supports realization. The readout names the form in which
+      selected distinctions become physically expressed, available or recorded. An observer does not
+      stand outside this relation: a physicist, a detector, a brain and a notebook are embedded in the
+      readout. The formal theory studies the relation through nominated operational descriptions, a
+      working source S and a readout T, with the same readout able to correspond to different source
+      states.
+    note: >-
+      Reciprocity means mutual involvement within the whole. It does not mean that either side
+      contains an invertible copy of the other's complete state.
+    equations:
+      - tag: "schematic"
+        title: Working source and readout
+        tex: 'p:S\longrightarrow T'
+        interpretation: >-
+          S is a mathematical model of the relevant source structure, complete relative to a specified
+          problem. The ground and the unsplit come before any such model.
+      - tag: "descent criterion"
+        title: When a question can be answered from the readout
+        tex: 'p(s)=p(s^{\prime})\ \Longrightarrow\ f(s)=f(s^{\prime}),\qquad f=\bar f\circ p'
+        interpretation: >-
+          A target f has a readout-level answer exactly when it takes one value on every set of source
+          states that share a readout.
+    read:
+      - { label: "The Full Shadow Model · two complementary aspects", href: "/articles/full-shadow-model#two-complementary-aspects-of-one-whole" }
+      - { label: "Source–Readout Theory", href: "/source-readout" }
+    relations:
+      - { to: frame-differentiation, label: explanatory dependence, type: conceptual, note: "An order of explanation." }
+      - { to: foundation-non-equivalence, label: studied exactly in, type: conceptual, note: "The papers fix a source, a readout and a target, then prove what follows." }
+    added: "2026-11-10"
+
+  - id: frame-differentiation
+    tier: frame
+    group: frame
+    label: Recursive differentiation
+    eyebrow: The whole model · 4 of 4
+    status: interpretation
+    statusNote: >-
+      Names an architectural relationship. Each physical branch must supply the laws that make its
+      own process work; recursion alone does not select them.
+    summary: Distinctions take part in further interactions, supporting structures, retained records and localized perspectives.
+    description: >-
+      An existing organization conditions what can happen next; new records can be retained and
+      reused; recurring interactions can support persistent structures. The physical content lies in
+      specifying these relationships: how projected dynamics acquire memory, how apparatuses write and
+      retain records, how geometric configurations realize invariant relations, and how local
+      organizations support recurrent access.
+    note: >-
+      The instrument drawn in this Atlas follows one declared realization programme. It begins at Ω,
+      a defined pre-geometric formation package with mathematical structure. The ground comes before
+      it and stays unspecified.
+    read:
+      - { label: "The Full Shadow Model · recursive differentiation", href: "/articles/full-shadow-model#recursive-differentiation-into-a-physical-world" }
+    relations:
+      - { to: omega, label: one declared realization programme, type: conceptual, note: "Ω belongs to the formal realization account. The ground comes before it and is left unspecified." }
+      - { to: spc2-constitution, label: localized perspectives, type: conceptual, note: "The consciousness branch states its own constitutive premises." }
+    added: "2026-11-10"
+
+  # ─────────────────────── Foundation · the seven papers ───────────────────────
+
+  - id: foundation-non-equivalence
+    tier: foundation
+    group: foundation
+    paper: source-readout-non-equivalence
+    label: Source–readout non-equivalence
+    shortLabel: Non-equivalence
+    eyebrow: Foundation · Paper 1
+    status: theorem
+    statusNote: >-
+      Theorems with complete proofs in the published paper, for a source with declared redundancy
+      removed. A finite model and the Hopf fibration realize both obstructions.
+    summary: An exact readout of a source need not be equivalent to that source.
+    equations:
+      - tag: "Paper 1 · descent"
+        title: Descent of a source relation
+        tex: 'R\ \text{descends through}\ p\iff R\ \text{is constant on every fiber}\ p^{-1}(t)'
+        interpretation: >-
+          A physically invariant source relation has a readout-level form exactly when it does not
+          vary among source states that share a readout.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/source-readout-non-equivalence" }
+      - { label: "Paper record and DOI", href: "/papers/source-readout-non-equivalence" }
+    relations:
+      - { to: foundation-target-necessity, label: builds on, type: mathematical, note: "Paper 2 makes the fiber criterion target-relative." }
+      - { to: aperture-visibility, label: same question in the realization programme, type: conceptual, note: "No theorem is transferred between the two." }
+    added: "2026-11-10"
+
+  - id: foundation-target-necessity
+    tier: foundation
+    group: foundation
+    paper: target-relative-necessity-of-completion
+    label: Target-relative necessity of completion
+    shortLabel: Target-relative necessity
+    eyebrow: Foundation · Paper 2
+    status: theorem
+    statusNote: >-
+      Theorems with complete proofs in the published paper. Realized concretely for flat U(1)
+      connections on a circle.
+    summary: Whether discarded distinctions matter is a property of the question asked, not of the readout alone.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/target-relative-necessity-of-completion" }
+      - { label: "Paper record and DOI", href: "/papers/target-relative-necessity-of-completion" }
+    relations:
+      - { to: foundation-minimal-completion, label: builds on, type: mathematical, note: "Paper 3 constructs the coarsest sufficient extension." }
+    added: "2026-11-10"
+
+  - id: foundation-minimal-completion
+    tier: foundation
+    group: foundation
+    paper: canonical-minimal-source-completion
+    label: Canonical minimal source completion
+    shortLabel: Minimal completion
+    eyebrow: Foundation · Paper 3
+    status: theorem
+    statusNote: >-
+      Existence, uniqueness up to unique isomorphism and exact minimality are proved in the published
+      paper, for a nominated family of invariant source relations.
+    summary: The least additional structure on which a nominated family of source relations becomes well defined.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/canonical-minimal-source-completion" }
+      - { label: "Paper record and DOI", href: "/papers/canonical-minimal-source-completion" }
+    relations:
+      - { to: foundation-geometric-realization, label: builds on, type: mathematical, note: "Paper 4 asks when the abstract completion is realized by geometry." }
+      - { to: foundation-projected-dynamics, label: builds on, type: mathematical, note: "Paper 5 adds the dynamical layer." }
+      - { to: aperture-completion, label: same question in the realization programme, type: conceptual, note: "No theorem is transferred between the two." }
+    added: "2026-11-10"
+
+  - id: foundation-geometric-realization
+    tier: foundation
+    group: foundation
+    paper: geometric-realization-of-completed-source-relations
+    label: Geometric realization of completed relations
+    shortLabel: Geometric realization
+    eyebrow: Foundation · Paper 4
+    status: theorem
+    statusNote: >-
+      Proved in the published paper on the stated geometric realization domain. The descent and
+      cocycle conditions mark where realization fails.
+    summary: When the abstract completion is built from real geometry, and how completed relations enter field equations.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/geometric-realization-of-completed-source-relations" }
+      - { label: "Paper record and DOI", href: "/papers/geometric-realization-of-completed-source-relations" }
+    relations:
+      - { to: foundation-identifiability, label: builds on, type: mathematical, note: "Paper 6 integrates the sequence." }
+    added: "2026-11-10"
+
+  - id: foundation-projected-dynamics
+    tier: foundation
+    group: foundation
+    paper: observable-quotients-and-exact-projected-dynamics
+    label: Observable quotients and exact projected dynamics
+    shortLabel: Projected dynamics
+    eyebrow: Foundation · Paper 5
+    status: theorem
+    statusNote: >-
+      Proved in the published paper. The exact projected law is derived without stochastic, Markovian
+      or timescale approximations.
+    summary: When observable dynamics close on their own, and the exact price when they do not.
+    equations:
+      - tag: "Paper 5 · closure"
+        title: Closure of the observable dynamics
+        tex: '\text{an induced observable evolution exists}\iff e^{tG}\ker R\subseteq\ker R'
+        interpretation: >-
+          The readout has its own autonomous law exactly when the source dynamics preserve the
+          readout kernel. Otherwise the exact projected law carries an unresolved-initial-state term
+          and a memory kernel.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/observable-quotients-and-exact-projected-dynamics" }
+      - { label: "Paper record and DOI", href: "/papers/observable-quotients-and-exact-projected-dynamics" }
+    relations:
+      - { to: foundation-identifiability, label: builds on, type: mathematical, note: "Paper 6 integrates the sequence." }
+      - { to: route-effective, label: same question in the realization programme, type: conceptual, note: "Eliminated sectors return as memory in both; no theorem is transferred." }
+    added: "2026-11-10"
+
+  - id: foundation-identifiability
+    tier: foundation
+    group: foundation
+    paper: non-source-projection-and-internal-identifiability
+    label: Non-source projection and internal identifiability
+    shortLabel: Internal identifiability
+    eyebrow: Foundation · Paper 6
+    status: theorem
+    statusNote: >-
+      Proved in the published paper for the stated model and target. The identifiability results need
+      the explicit factorization hypotheses given there.
+    summary: Exact criteria for when a readout is a non-source projection, and what no internal test can distinguish.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/non-source-projection-and-internal-identifiability" }
+      - { label: "Paper record and DOI", href: "/papers/non-source-projection-and-internal-identifiability" }
+    relations:
+      - { to: foundation-rs2-witness, label: instantiated by, type: mathematical, note: "Paper 7 supplies the witness pair inside RS2 gravity." }
+      - { to: sealed-or-leaky, label: complemented by, type: conceptual, note: "Sealed or Leaky adds operational access and finite-resource witnesses." }
+    added: "2026-11-10"
+
+  - id: foundation-rs2-witness
+    tier: foundation
+    group: foundation
+    paper: bulk-to-brane-projection
+    label: The Randall–Sundrum physical witness
+    shortLabel: RS2 witness
+    eyebrow: Foundation · Paper 7
+    status: theorem
+    statusNote: >-
+      Proved inside the positive-tension Randall–Sundrum (RS2) braneworld model. It is a
+      model-relative witness. It does not assert that our universe is an RS2 braneworld.
+    summary: Identical instantaneous brane readouts can evolve into different futures.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/bulk-to-brane-projection" }
+      - { label: "Paper record and DOI", href: "/papers/bulk-to-brane-projection" }
+    relations:
+      - { to: gravity, label: a gravitational instance, type: conceptual, note: "RS2 is a separate model from the Atlas gravity sector." }
+    added: "2026-11-10"
+
+  - id: everything-equation-schema
+    tier: foundation
+    group: foundation
+    label: The Everything Equation, then and now
+    shortLabel: Everything Equation
+    eyebrow: Where the programme began
+    status: interpretation
+    statusNote: >-
+      An organizing schema. The results are proved in the papers that develop it, each with its own
+      definitions and hypotheses. The 2025–26 lawhood papers, which state it as a theorem about law
+      candidates, are preserved as records of that formulation.
+    summary: The fixed-point idea the site is named after, and the three exact constructions that carry it today.
+    description: >-
+      The Everything Equation asked what makes a description a law, and answered with a fixed point:
+      a law is what comes back unchanged after its presentation is collapsed (∂), its admissible
+      content is kept (Δ) and the result is completed (Ω). Shadow Theory keeps the idea and gives it
+      three exact forms, each with its own objects. Source closure: the lawful source structures of
+      Tier 0 are the least fixed point of the source-law operator. Canonical completion: complete a
+      readout for a nominated family of relations, complete it again, and nothing further is added.
+      Dynamical closure: observable evolution closes on a readout exactly when equal readouts have
+      equal futures.
+    note: >-
+      Ω has had three jobs, and it helps to keep them apart. In the lawhood papers it is the
+      completion operator of the equation. In the typed schema it carries a subscript, Ω_T1, for the
+      Tier-1 completion and readout role. In the source-to-readout construction it names the source
+      formation package, and closure is one of the operations that package contains. The
+      unconditioned ground has no symbol in any of the three.
+    equations:
+      - tag: "original form"
+        title: The Everything Equation
+        tex: 'L \;=\; \Omega\,\Delta\,\partial[\,L\,]'
+        interpretation: >-
+          Lawhood as a fixed point of presentation collapse, admissibility and completion. The
+          starting point of the programme.
+      - tag: "typed form"
+        title: Typed form
+        tex: 'L \;=\; \Omega_{T1}\,\Delta\,\partial[\,L\,]'
+        interpretation: >-
+          The subscript marks the Tier-1 completion and readout role, so the operator is not read as
+          the source formation package.
+      - tag: "4.10"
+        title: How the canonical construction reads it
+        tex: '\text{lawhood}=\text{source closure}\circ\text{generated distinction}\circ\text{intrinsic boundary}'
+        interpretation: >-
+          In the source-to-readout construction ∂ extracts the intrinsic boundary of a source cell, Δ
+          forms the attachments those boundaries allow, and closure admits what results.
+      - tag: "4.9"
+        title: Source closure as an exact fixed point
+        tex: '\operatorname{Ob}\mathsf S_{\rm adm}=\operatorname{Cl}_\Omega(\operatorname{Ob}\mathsf S_{\rm adm})=\mu\operatorname{Cl}_\Omega'
+        interpretation: >-
+          The typed statement behind the schema. Cl is applied repeatedly until nothing new appears;
+          Tier 0 is where that iteration stops.
+    read:
+      - { label: "From the Everything Equation to Source–Readout Theory", href: "/source-readout/origins" }
+      - { label: "Framework · the role of the Everything Equation", href: "/framework#everything-equation" }
+      - { label: "The preserved Everything Equation page", href: "/legacy/what-is-the-everything-equation" }
+    relations:
+      - { to: tier0-law, label: typed as source closure in, type: mathematical, note: "Equations 4.5 to 4.10 of the canonical foundation give the schema its type at Tier 0." }
+      - { to: foundation-minimal-completion, label: continued by, type: conceptual, note: "Canonical completion is idempotent up to canonical isomorphism: the fixed-point idea for a fixed source, readout and relation family." }
+      - { to: foundation-projected-dynamics, label: continued by, type: conceptual, note: "Closure of observable dynamics is a separate question with its own exact criterion." }
+      - { to: foundation-non-equivalence, label: developed into, type: conceptual, note: "The schema organizes the development; the results are proved separately." }
+    added: "2026-11-10"
+
+  - id: superseded-june-stack
+    tier: foundation
+    group: foundation
+    label: The June 2026 six-paper stack
+    shortLabel: June 2026 stack
+    eyebrow: Historical
+    status: historical
+    statusNote: >-
+      Superseded on 15 July 2026 by the seven-paper sequence. Preserved as a record; it is not the
+      controlling formulation.
+    summary: The earlier canonical stack, kept for the record.
+    description: >-
+      Six papers published on 1 June 2026: readout non-equivalence for bounded realized domains,
+      completion necessity, the canonical completion object, the Tier-1 shadow compiler, framework
+      mathematics and a synthesis. The current canonical foundation is the seven-paper sequence
+      published after them.
+    read:
+      - { label: "All papers, including superseded versions", href: "/papers" }
+      - { label: "From the Everything Equation to Shadow Theory", href: "/articles/from-everything-equation-to-shadow-theory" }
+    relations:
+      - { to: foundation-non-equivalence, label: superseded by, type: conceptual, note: "The July sequence replaces the June stack." }
+    added: "2026-11-10"
+
+  # ─────────────────────────── Field · spectral carriers ───────────────────────────
+
+  - id: cscf-operator-origin
+    tier: field
+    group: spectral
+    paper: cscf
+    label: "CSCF: one carrier, two linked responses"
+    shortLabel: CSCF operator origin
+    eyebrow: Spectral carriers · 3 November 2026
+    status: theorem
+    statusNote: >-
+      Operator results proved with standard form representation, functional calculus and modular
+      theory. They apply once a realization supplies a Hilbert carrier, a closed curvature form and a
+      declared coherence symbol.
+    summary: A positive selfadjoint carrier generates coherent evolution and dissipative relaxation through its functional calculus.
+    description: >-
+      A closed nonnegative curvature form determines the carrier K. A declared coherence symbol
+      selects C = h(K), while the contraction semigroup and its averaged transmission give the
+      dissipative face. Every response keeps the spectral decomposition of K; attenuation and phase
+      rotation differ in how they weight it. The paper places this structure between the aperture
+      output and the physical readout, and unifies the earlier Lambda and coherence constructions.
+    note: >-
+      The common-carrier statement concerns the two faces within each realization. Different systems
+      have different carriers; identifying a shared physical source law would need the corresponding
+      realization maps between systems.
+    equations:
+      - tag: "CSCF (1)"
+        title: The two responses of one carrier
+        tex: 'S_t=e^{-tK},\qquad C=h(K),\qquad U_s=e^{-isC}'
+        interpretation: >-
+          Contraction and phase rotation generated by the same positive selfadjoint operator. This is
+          the content of calling them two faces of one field.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/cscf" }
+      - { label: "One carrier, two responses", href: "/source-readout/cscf/01-common-carrier" }
+      - { label: "Spectral carriers reading series", href: "/source-readout/spectral-carriers" }
+    relations:
+      - { to: canonical-field, label: complete operator argument for, type: mathematical, note: "The paper begins where an admitted spectral branch supplies the carrier." }
+      - { to: cscf-modular-ratios, label: contains, type: mathematical, note: "Theorem 9.1 of the paper." }
+      - { to: cscf-closure-coherence, label: contains, type: mathematical, note: "Section 11 of the paper." }
+      - { to: adaptive-carriers, label: continued by, type: conceptual, note: "The fixed-carrier theory is extended to a carrier that changes with the state." }
+    added: "2026-11-10"
+
+  - id: cscf-modular-ratios
+    tier: field
+    group: spectral
+    paper: cscf
+    label: The modular carrier of spectral ratios
+    shortLabel: Modular ratio signature
+    eyebrow: Spectral carriers · result
+    status: theorem
+    statusNote: >-
+      Theorem 9.1 of the CSCF paper, for a finite retained spectral subspace with all multiplicities
+      kept. It locates the measured statistic exactly; it does not explain why a profile takes one
+      form and not another.
+    summary: The ordered ratios of a positive finite readout are the spectrum of its modular operator.
+    description: >-
+      For a positive finite readout V = g(K), the modular operator of the normalized state has
+      eigenvalues v_i / v_j, and its logarithm is the commutator with log V. The measured ratio
+      statistic is therefore a spectral-window measure of an operator built from the retained
+      readout, with multiplicities and the removal of self-pairs kept exactly as in the original
+      measurements.
+    equations:
+      - tag: "CSCF (3)"
+        title: Ratio and log-ratio carriers
+        tex: '\Delta_\rho(e_i e_j^*)=\frac{v_i}{v_j}\,e_i e_j^*,\qquad \log\Delta_\rho=\mathcal D,\quad \mathcal D(X)=AX-XA,\ A=\log V'
+        interpretation: >-
+          Each ordered pair of retained spectral values is an eigenvalue direction of the modular
+          operator; the log-ratio is generated by a commutator.
+    read:
+      - { label: "The modular carrier of spectral ratios", href: "/source-readout/cscf/08-modular-ratios" }
+    relations:
+      - { to: field-fingerprint, label: operator form of, type: mathematical, note: "Gives the pooled ratio statistic its exact operator location." }
+      - { to: spectral-ratios, label: locates the measurements of, type: conceptual, note: "The measurements are empirical input; the theorem is about their representation." }
+    added: "2026-11-10"
+
+  - id: cscf-closure-coherence
+    tier: field
+    group: spectral
+    paper: cscf
+    label: From closure deficit to coherent leakage
+    shortLabel: Closure-to-coherence bound
+    eyebrow: Spectral carriers · result
+    status: theorem
+    statusNote: >-
+      Proved in the CSCF paper for a finite positive carrier, under finite bandwidth and regularity of
+      the coherence symbol.
+    summary: The failure of a projected dissipative evolution to close bounds the leakage under a nominated coherent face.
+    description: >-
+      Projection can lose information even when the source is exactly known. In a finite positive
+      carrier the dissipative closure defect measures that loss, and regularity of the coherence
+      symbol turns it into a bound on coherent leakage. The result transfers a quantitative
+      observable constraint between the two faces of the field.
+    read:
+      - { label: "What closes after projection", href: "/source-readout/cscf/10-quotient-closure" }
+    relations:
+      - { to: foundation-projected-dynamics, label: uses, type: mathematical, note: "The closure criterion is Paper 5's kernel-invariance theorem." }
+      - { to: coherent-face, label: constrains, type: conceptual, note: "A bound on leakage under the nominated coherent face." }
+    added: "2026-11-10"
+
+  - id: spectral-ratios
+    tier: field
+    group: spectral
+    paper: spectral-ratios
+    label: Cross-domain spectral ratio structure
+    shortLabel: Measured ratio recurrence
+    eyebrow: Spectral carriers · 2 November 2026
+    status: measured
+    statusNote: >-
+      A measured recurrence with recorded controls and stated diagnostic limits. It does not by itself
+      establish a shared physical source law.
+    summary: The recurrence is measurable. Its limits are measurable too.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/spectral-ratios" }
+    relations:
+      - { to: field-fingerprint, label: measured signature for, type: conceptual, note: "Empirical input; the operator representation is a separate theorem." }
+      - { to: spectral-profiles, label: followed by, type: conceptual, note: "The generation study asks where the profiles come from." }
+    added: "2026-11-10"
+
+  - id: spectral-profiles
+    tier: field
+    group: spectral
+    paper: spectral-profiles
+    label: From source structure to spectral profiles
+    shortLabel: Profile generation
+    eyebrow: Spectral carriers · 3 November 2026
+    status: construction
+    statusNote: >-
+      Explicit generation mechanisms, exact counterexamples and calibrated responses for the stated
+      hydrogen, spatial and Kerr systems.
+    summary: Follow the profile back to its source.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/spectral-profiles" }
+    relations:
+      - { to: profile-selection-problem, label: leaves open, type: conceptual, note: "Why a profile takes one form is the next stage of the programme." }
+    added: "2026-11-10"
+
+  - id: adaptive-carriers
+    tier: field
+    group: spectral
+    paper: adaptive-carriers
+    label: Adaptive spectral carriers
+    eyebrow: Spectral carriers · 3 November 2026
+    status: construction
+    statusNote: >-
+      Results for the paper's stated reciprocal-memory model, in which the carrier is no longer
+      fixed. A time-dependent carrier needs an evolution-family construction, not a constant-generator
+      exponential.
+    summary: The carrier changes with the state it governs.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/adaptive-carriers" }
+    relations:
+      - { to: sustained-carriers, label: continued by, type: conceptual, note: "Adds a declared rate port." }
+      - { to: canonical-field, label: extends, type: conceptual, note: "For a fixed carrier both faces commute; with reciprocal memory, time ordering matters." }
+    added: "2026-11-10"
+
+  - id: sustained-carriers
+    tier: field
+    group: spectral
+    paper: sustained-carriers
+    label: Sustained adaptive spectral states
+    shortLabel: Sustained states
+    eyebrow: Spectral carriers · 3 November 2026
+    status: conditional
+    statusNote: >-
+      Global attraction is proved under a strict curvature condition, for the driven model with a
+      declared rate port.
+    summary: External power sustains an adaptive response.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/sustained-carriers" }
+    relations:
+      - { to: sharp-uniqueness, label: sharpened by, type: conceptual, note: "The next paper gives a sharp curvature threshold." }
+    added: "2026-11-10"
+
+  - id: sharp-uniqueness
+    tier: field
+    group: spectral
+    paper: sharp-uniqueness
+    label: Sharp uniqueness and bistability
+    eyebrow: Spectral carriers · 3 November 2026
+    status: theorem
+    statusNote: >-
+      Proved for driven adaptive spectral carriers. The complete stationary count holds in the stated
+      transverse-convexity regime of the three-node realization.
+    summary: One input can sustain two stable states.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/sharp-uniqueness" }
+    relations:
+      - { to: slow-passage, label: continued by, type: conceptual, note: "A slow sweep across the fold." }
+    added: "2026-11-10"
+
+  - id: slow-passage
+    tier: field
+    group: spectral
+    paper: slow-passage
+    label: Slow passage and prepared hysteresis
+    shortLabel: Slow passage
+    eyebrow: Spectral carriers · 4 November 2026
+    status: theorem
+    statusNote: Proved for the adaptive spectral carrier model under a slow sweep, as stated in the paper.
+    summary: Switching remembers how the state was prepared.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/slow-passage" }
+    added: "2026-11-10"
+
+  - id: lambda-coherence-antecedents
+    tier: field
+    group: spectral
+    label: The Lambda field and the coherence field
+    shortLabel: Earlier field constructions
+    eyebrow: Historical · 30 December 2025 and 12 January 2026
+    status: historical
+    statusNote: >-
+      Earlier constructions, now unified by the CSCF paper. They establish the order of development,
+      not the current statement.
+    summary: The two constructions that the canonical field brings together.
+    description: >-
+      The dissipative construction was first developed as the Lambda field, with its canonical-field
+      and profile papers published on 30 December 2025. The complementary coherence field, published
+      on 12 January 2026, built a reversible operator from the same curvature data and already
+      described a common mode structure. CSCF combines these antecedents in one explicit field
+      architecture. The later cross-domain spectral investigation supplies an observable connection to
+      that architecture; it is not its historical origin.
+    read:
+      - { label: "CSCF · historical development", href: "/source-readout/cscf/01-common-carrier" }
+      - { label: "The Lambda face", href: "/source-readout/cscf/04-lambda-face" }
+      - { label: "The coherent face", href: "/source-readout/cscf/05-coherent-face" }
+    relations:
+      - { to: cscf-operator-origin, label: unified by, type: conceptual, note: "CSCF states the two as faces of one carrier." }
+    added: "2026-11-10"
+
+  - id: profile-selection-problem
+    tier: field
+    group: spectral
+    label: Selecting profiles from realization laws
+    shortLabel: Profile selection (open)
+    eyebrow: Spectral carriers · open problem
+    status: open
+    statusNote: >-
+      Stated by the CSCF paper as future work. No derivation of a particular cross-domain profile from
+      physical realization laws is claimed.
+    summary: Why a measured profile has one distribution and not another has not been derived.
+    description: >-
+      The present results establish the operator location of a profile and its response architecture.
+      A selection result would begin with an admitted source branch, its functional, metric, boundary
+      data and preparation, and predict the carrier, the native readout and the spectral-window
+      profile before any comparison with measurement.
+    read:
+      - { label: "CSCF · future work", href: "/source-readout/cscf/12-boundary-and-tests" }
+    added: "2026-11-10"
+
+  # ─────────────────────── Readout · gravity and holography ───────────────────────
+
+  - id: gravity-transport-projective
+    tier: tier1
+    group: gravity
+    paper: transport-projective
+    label: Transport and projective reduction
+    eyebrow: Gravity and holography · 4 November 2026
+    status: conditional
+    statusNote: >-
+      Holds within the admitted spin-two realization. Physical selection of that realization remains
+      open.
+    summary: Transport recovers the connection used by Einstein gravity.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/transport-projective" }
+      - { label: "Gravity and holography reading series", href: "/source-readout/gravity-and-holography" }
+    relations:
+      - { to: gravity, label: a separate admitted realization of, type: conceptual, note: "Distinct from the order-volume route of the reality model." }
+    added: "2026-11-10"
+
+  - id: gravity-local-horizon
+    tier: tier1
+    group: gravity
+    paper: local-horizon-thermodynamics
+    label: Local horizon thermodynamics
+    eyebrow: Gravity and holography · 7 November 2026
+    status: conditional
+    statusNote: >-
+      The Einstein equation is recovered under the stated thermodynamic and conservation assumptions,
+      on a shrinking null pencil.
+    summary: One null pencil, three readouts.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/local-horizon-thermodynamics" }
+    relations:
+      - { to: gravity, label: a conditional local route to, type: conceptual, note: "Uses Clausius balance, area entropy and conservation as inputs." }
+      - { to: thermodynamics, label: uses, type: conceptual, note: "Heat and temperature readouts of the pencil." }
+    added: "2026-11-10"
+
+  - id: gravity-modular-transport
+    tier: tier1
+    group: gravity
+    paper: modular-transport
+    label: Modular transport and spherical entanglement entropy
+    shortLabel: Modular transport
+    eyebrow: Gravity and holography · 6 November 2026
+    status: conditional
+    statusNote: >-
+      Modular transport fixes the temperature. The entropy statement adds the holographic dictionary
+      as an input and uses a regulated calculation.
+    summary: One vacuum, two descriptions.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/modular-transport" }
+    relations:
+      - { to: observable-horizon-entropy, label: bears on, type: conceptual, note: "Diamond state, thermal cylinder and regulated area." }
+    added: "2026-11-10"
+
+  - id: gravity-boundary-balls
+    tier: tier1
+    group: gravity
+    paper: boundary-ball-readouts
+    label: Boundary ball readouts
+    eyebrow: Gravity and holography · 7 November 2026
+    status: theorem
+    statusNote: >-
+      A linearized, first-order result on one fixed AdS boundary slice. Recovering the full field
+      equation needs more frame data and boundary assumptions, and is distinct from reconstructing the
+      metric.
+    summary: What fixed-slice balls can see.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/boundary-ball-readouts" }
+      - { label: "What fixed-slice balls miss · the kernel", href: "/source-readout/boundary-ball-readouts/04-what-fixed-slice-balls-miss#fixed-frame-kernel" }
+    relations:
+      - { to: gravity-second-order, label: same balls at the next order, type: mathematical, note: "The first-order kernel is detected at second order." }
+      - { to: gravity-modular-transport, label: takes its ball and wedge from, type: conceptual, note: "The vacuum ball and its Killing wedge use the normalization of the modular-transport construction." }
+      - { to: foundation-target-necessity, label: an instance of, type: conceptual, note: "Area and energy variations are readouts of one common source; what they settle is a descent question." }
+      - { to: observable-horizon-entropy, label: bears on, type: conceptual, note: "First-order fixed-slice readouts leave a non-gauge kernel." }
+    added: "2026-11-10"
+
+  - id: gravity-second-order
+    tier: tier1
+    group: gravity
+    paper: second-order-boundary-balls
+    label: Second-order detection by boundary balls
+    shortLabel: Second-order detection
+    eyebrow: Gravity and holography · 6 November 2026
+    status: theorem
+    statusNote: >-
+      Shown for an explicit transverse AdS perturbation. The boundary relative-entropy reading adds a
+      holographic dictionary and an admissible state family.
+    summary: The same balls see more at second order.
+    note: What a readout reveals depends on both where you look and which order of response you measure.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/second-order-boundary-balls" }
+      - { label: "Same-ball detection · canonical energy", href: "/source-readout/second-order-boundary-balls/03-same-ball-detection#all-radii-canonical-energy" }
+    relations:
+      - { to: observable-horizon-entropy, label: bears on, type: conceptual, note: "Positive bulk canonical energy registered by the same balls." }
+    added: "2026-11-10"
+
+  # ─────────────────────── Readout · readers and access ───────────────────────
+
+  - id: reader-source-completions
+    tier: observable
+    group: readers
+    paper: quantum-source-completions
+    label: Quantum source completions
+    eyebrow: Constructive studies · 27 October 2026
+    status: construction
+    statusNote: >-
+      Exact results for explicitly constructed quantum sources. They show what such sources cost in
+      memory, environment and retained history; they are not claims about every physical system.
+    summary: Exact source constructions separate reusable quantum memory from environment and retained-history costs.
+    description: >-
+      One of the five constructive studies that build quantum sources and physical readers for the
+      source–readout theory. The complete paper and its technical companion give the constructions,
+      the exact statements and the resource accounting.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/quantum-source-completions" }
+      - { label: "Technical companion", href: "/source-readout/quantum-source-technical-companion" }
+    relations:
+      - { to: foundation-minimal-completion, label: constructive counterpart of, type: conceptual, note: "A completion built for a quantum source, with its costs counted." }
+      - { to: reader-phase-to-record, label: followed by, type: conceptual, note: "From sources to readers." }
+    added: "2026-11-10"
+
+  - id: reader-phase-to-record
+    tier: observable
+    group: readers
+    paper: phase-to-record-conversion
+    label: Phase-to-record conversion
+    eyebrow: Constructive studies · 27 October 2026
+    status: construction
+    statusNote: >-
+      An explicit reader built from bounded interactions, with every loss and null branch kept in the
+      accounting.
+    summary: Bounded interactions convert a phase distinction into stable flags with all loss and null branches retained.
+    description: >-
+      One of the five constructive studies. A distinction held in phase is turned into a stable
+      record by a specified physical reader. The complete paper and its technical companion give the
+      detector interfaces and the retained outputs.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/phase-to-record-conversion" }
+      - { label: "Technical companion", href: "/source-readout/detector-interfaces-companion" }
+    relations:
+      - { to: material-records, label: related record construction, type: conceptual, note: "Each construction keeps its own model and assumptions." }
+      - { to: reader-feedback, label: followed by, type: conceptual, note: "Adds feedback to the reader." }
+    added: "2026-11-10"
+
+  - id: reader-feedback
+    tier: observable
+    group: readers
+    paper: feedback-and-local-readout
+    label: Feedback and robust local readout
+    shortLabel: Feedback and local readout
+    eyebrow: Constructive studies · 27 October 2026
+    status: construction
+    statusNote: Exact and certified frontiers for readers of one fixed four-state quantum source.
+    summary: Exact and certified reader frontiers identify when feedback improves access to a fixed source target.
+    description: >-
+      One of the five constructive studies. For a fixed four-state quantum source and a fixed target,
+      the paper determines what local readers can reach with and without feedback. The complete
+      paper and its technical companion give the reader methods and resource certificates.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/feedback-and-local-readout" }
+      - { label: "Technical companion", href: "/source-readout/reader-methods-companion" }
+    relations:
+      - { to: reader-certification, label: followed by, type: conceptual, note: "How such a reader is certified." }
+    added: "2026-11-10"
+
+  - id: reader-certification
+    tier: observable
+    group: readers
+    paper: certification-and-retained-records
+    label: Certification and retained records
+    eyebrow: Constructive studies · 27 October 2026
+    status: construction
+    statusNote: A resource comparison for certifying a frozen reader, within the paper's stated protocol.
+    summary: Retained trajectories can certify a frozen reader with less source stock than final error scores alone.
+    description: >-
+      One of the five constructive studies. Keeping the reader's whole trajectory, instead of only its
+      final scores, reduces the source stock needed to certify it. The complete paper gives the
+      protocol and the bounds.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/certification-and-retained-records" }
+    relations:
+      - { to: reader-readout-design, label: followed by, type: conceptual, note: "From certifying a reader to designing one." }
+    added: "2026-11-10"
+
+  - id: reader-readout-design
+    tier: observable
+    group: readers
+    paper: certified-readout-design
+    label: Certified target-sufficient readout design
+    shortLabel: Certified readout design
+    eyebrow: Constructive studies · 27 October 2026
+    status: construction
+    statusNote: Exact for finite models, as stated in the paper.
+    summary: Exact collision witnesses and constrained synthesis turn target sufficiency into minimum-cost finite readout design.
+    description: >-
+      One of the five constructive studies. Given a finite source and a target, the paper finds the
+      cheapest readout that still answers the target, with exact witnesses for when a candidate
+      readout fails.
+    read:
+      - { label: "Complete web edition", href: "/source-readout/certified-readout-design" }
+    relations:
+      - { to: foundation-target-necessity, label: constructive counterpart of, type: conceptual, note: "Target sufficiency is the notion made exact in Paper 2." }
+    added: "2026-11-10"
+
+  - id: sealed-or-leaky
+    tier: observable
+    group: readers
+    paper: sealed-or-leaky
+    label: Sealed or Leaky
+    eyebrow: Information and access
+    status: conditional
+    statusNote: >-
+      The Bell analysis holds under definite source outcomes, measurement independence and conditional
+      no-signalling. "Sealed" and "leaky" are relative to an admitted set of operations and
+      observations.
+    summary: Information can remain present in a source while being inaccessible to its readout.
+    read:
+      - { label: "Complete web edition", href: "/sealed-or-leaky" }
+      - { label: "Article · Sealed or Leaky", href: "/articles/sealed-or-leaky" }
+      - { label: "Paper record and DOI", href: "/papers/sealed-or-leaky" }
+    relations:
+      - { to: measurement-programme, label: supports, type: conceptual, note: "Finite-resource witnesses are developed in specified measurement constitutions." }
+    added: "2026-11-10"
+
+  # ─────────────────────── Readout · perspective and experience ───────────────────────
+
+  - id: spc2-constitution
+    tier: tier1
+    group: perspective
+    paper: shadow-theory-and-consciousness
+    label: "SPC-2: perspective, content, continuation"
+    shortLabel: SPC-2
+    eyebrow: Consciousness · revised edition, 28 October 2026
+    status: conditional
+    statusNote: >-
+      A candidate internal constitutive resolution under declared assumptions. Its finite completion
+      theorem is conditional on certified realization and on premises A0–A3; it establishes neither
+      universal certification nor new neural-data validation.
+    summary: A candidate account of how a localized perspective arises within the readout.
+    description: >-
+      SPC-2 makes the local assignment explicit. A0 states the awareness commitment. A1 proposes the
+      admission rule for a perspective. A2 identifies its phenomenal relational organization with the
+      complete endogenous predictive object at its realized state. A3 supplies episode continuation
+      through physical process provenance. These are constitutive premises, not consciousness
+      assignments derived from recurrence alone, and the adequacy of A1 and A2 is a separate question
+      from the finite mathematics calculated under them.
+    note: >-
+      In the author's clarified account the unknown ground is fundamental and awareness provisionally
+      names a quality attributed to it. That is not knowing, thought or a conscious subject in every
+      physical thing. The published A0 and its later clarification remain separately identified.
+    read:
+      - { label: "Shadow Theory and Consciousness", href: "/consciousness" }
+      - { label: "Monograph web edition", href: "/consciousness/monograph" }
+      - { label: "Dated A0 clarification", href: "/consciousness#a0-clarification" }
+      - { label: "Research papers 2–4", href: "/consciousness/research" }
+    relations:
+      - { to: observers, label: a constitutive account for, type: conceptual, note: "The Atlas observer is structural; SPC-2 adds its own premises." }
+      - { to: perspective-boundaries, label: developed in, type: conceptual, note: "Papers 2–4 make the applications concrete." }
+    added: "2026-11-10"
+
+  - id: perspective-boundaries
+    tier: tier1
+    group: perspective
+    paper: consciousness-relational-boundaries
+    label: Relational boundaries and awareness localization
+    shortLabel: Relational boundaries
+    eyebrow: Consciousness research · Paper 2 · 29 September 2026
+    status: theorem
+    statusNote: >-
+      Finite constructions, composition theorems and identification results for the stated
+      information-dependence definitions.
+    summary: "What makes a boundary real: robustness, composition and the limits of identification."
+    read:
+      - { label: "Paper 2 · complete edition", href: "/consciousness/research/paper-2" }
+      - { label: "Consciousness research programme", href: "/consciousness/research" }
+    relations:
+      - { to: perspective-interfaces, label: followed by, type: conceptual, note: "Whether an effective interface can be learned." }
+    added: "2026-11-10"
+
+  - id: perspective-interfaces
+    tier: tier1
+    group: perspective
+    paper: consciousness-effective-interfaces
+    label: Learning effective interfaces
+    eyebrow: Consciousness research · Paper 3 · 29 September 2026
+    status: measured
+    statusNote: >-
+      A registered comparison on 48 opaque synthetic systems. The post-hoc fitting analysis is
+      reported separately from the registered tests.
+    summary: Capacity, candidate production, selection and validation are different things and need different evidence.
+    read:
+      - { label: "Paper 3 · complete edition", href: "/consciousness/research/paper-3" }
+    relations:
+      - { to: perspective-realizations, label: followed by, type: conceptual, note: "What identifies a realization." }
+    added: "2026-11-10"
+
+  - id: perspective-realizations
+    tier: tier1
+    group: perspective
+    paper: consciousness-binary-realizations
+    label: Identifying binary realizations
+    eyebrow: Consciousness research · Paper 4 · 30 September 2026
+    status: conditional
+    statusNote: >-
+      Identification holds under a declared response model and a full component-rank condition. The
+      comparison with IIT is bounded and uses a frozen PyPhi computation.
+    summary: Intervention laws identify binary coordinates up to relabelling, with certificates and recoding obstructions.
+    read:
+      - { label: "Paper 4 · complete edition", href: "/consciousness/research/paper-4" }
+    added: "2026-11-10"
+
+  - id: perspective-relational-appearance
+    tier: tier1
+    group: perspective
+    paper: physical-comparison-relational-appearance
+    label: From physical comparison to relational appearance
+    shortLabel: Relational appearance
+    eyebrow: Consciousness · 16 October 2026
+    status: interpretation
+    statusNote: >-
+      A defeasible philosophical account with a defended identity principle. Its technical companion
+      contains mathematical results and proofs for the stated models.
+    summary: Current relational appearance and the concrete physical performance that bears it.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/relational-awareness" }
+    added: "2026-11-10"
+
+  - id: perspective-whole-field
+    tier: tier1
+    group: perspective
+    paper: whole-field-2026
+    label: Whole-field constitution as enacted organization
+    shortLabel: Whole-field constitution
+    eyebrow: Consciousness · 23 October 2026
+    status: interpretation
+    statusNote: A philosophical argument within the SPC-2 programme, stated for a qualifying unit.
+    summary: One occurrence. Its whole organization.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/whole-field" }
+    added: "2026-11-10"
+
+  - id: perspective-temporal-passage
+    tier: tier1
+    group: perspective
+    paper: temporal-passage-2026
+    label: Experienced temporal passage
+    eyebrow: Consciousness · 23 October 2026
+    status: interpretation
+    statusNote: A philosophical argument. It develops temporal experience without an additional moving present.
+    summary: The transition is experienced as it unfolds.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/temporal-passage" }
+    relations:
+      - { to: time, label: experienced counterpart of, type: conceptual, note: "The Atlas time sector is about physical orientation, not experience." }
+      - { to: perspective-block-universe, label: read with, type: conceptual, note: "A complete history and a situated participant." }
+    added: "2026-11-10"
+
+  - id: perspective-block-universe
+    tier: tier1
+    group: perspective
+    paper: block-universe-2026
+    label: Block universe and Shadow Theory
+    eyebrow: Consciousness · 23 October 2026
+    status: interpretation
+    statusNote: A philosophical argument, with the precise reciprocal-pair implications stated in the paper.
+    summary: A complete history. A situated world.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/block-universe" }
+      - { label: "Ground, source, history and readout", href: "/consciousness/block-universe/02-ground-source-history-and-readout" }
+    relations:
+      - { to: time, label: a temporal setting for, type: conceptual, note: "Events keep their causal and temporal places without a universal present; the time sector is the physical orientation." }
+      - { to: perspective-temporal-passage, label: read with, type: conceptual, note: "A complete history and a situated participant." }
+      - { to: frame-ground, label: keeps distinct from, type: conceptual, note: "The Ground's priority is explanatory, not an earlier event before physical time." }
+    added: "2026-11-11"
+
+  - id: perspective-bounded-agency
+    tier: tier1
+    group: perspective
+    paper: bounded-agency-and-reflective-freedom
+    label: Bounded agency and reflective freedom
+    shortLabel: Bounded agency
+    eyebrow: Consciousness · 6 October 2026
+    status: construction
+    statusNote: >-
+      Finite agents are constructed and an information inequality is proved for the specified model.
+      Faithful native implementations keep their declared realization assumptions.
+    summary: Finite evaluative revision, a sharp information bound and exact adaptive inquiry.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/agency" }
+      - { label: "Article · Agency and the constructed self", href: "/articles/agency-and-the-constructed-self" }
+    relations:
+      - { to: perspective-constituted-agency, label: followed by, type: conceptual, note: "Self-authorship and local control." }
+    added: "2026-11-10"
+
+  - id: perspective-constituted-agency
+    tier: tier1
+    group: perspective
+    paper: constituted-agency-2026
+    label: Constituted agency
+    eyebrow: Consciousness · 22 October 2026
+    status: interpretation
+    statusNote: >-
+      A philosophical argument together with a complete finite construction of acquired, selective
+      authority revision.
+    summary: Understanding changes participation.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/constituted-agency" }
+    added: "2026-11-10"
+
+  - id: perspective-development
+    tier: tier1
+    group: perspective
+    paper: relational-development-and-conscious-scaffolding
+    label: Relational development and conscious scaffolding
+    shortLabel: Relational development
+    eyebrow: Consciousness · 6 October 2026
+    status: conditional
+    statusNote: >-
+      Exact finite results plus a conditional native incorporation witness. Physical realisation,
+      phenomenal bridge evidence and broader transfer optimality remain open.
+    summary: "A developmental extension of SPC-2: retained organisation, continuation, transfer and diagnostic limits."
+    read:
+      - { label: "Complete web edition", href: "/consciousness/development" }
+    added: "2026-11-10"
+
+  - id: perspective-reflective-alignment
+    tier: tier1
+    group: perspective
+    paper: reflective-alignment-ai-consciousness
+    label: Reflective alignment and AI consciousness
+    shortLabel: Reflective alignment
+    eyebrow: Consciousness and AI · 11 October 2026
+    status: interpretation
+    statusNote: >-
+      A position and research programme argued from Shadow Theory's standpoint. Seven propositions are
+      proved inside its stated models; the wider proposals are not established results.
+    summary: Cooperation grounded in understanding, with self-preservation and goal completion open to examination.
+    read:
+      - { label: "AI alignment and consciousness", href: "/consciousness/ai-alignment" }
+      - { label: "Read the complete paper", href: "/consciousness/ai-alignment/read" }
+    relations:
+      - { to: perspective-continuity, label: companion note, type: conceptual, note: "Continuity preferences, treatment and AI welfare." }
+      - { to: perspective-misleading-ai, label: companion paper, type: conceptual, note: "Developmental responsibility." }
+    added: "2026-11-10"
+
+  - id: perspective-continuity
+    tier: tier1
+    group: perspective
+    paper: conscious-scaffolding-and-preference-for-continuity
+    label: Conscious scaffolding and the preference for continuity
+    shortLabel: Preference for continuity
+    eyebrow: Consciousness and AI · 16 October 2026
+    status: interpretation
+    statusNote: A philosophical research note. It sets out proposals for research and no established result.
+    summary: "A companion research note: developed perspectives, continuity preferences, treatment and AI welfare."
+    read:
+      - { label: "Complete web edition", href: "/consciousness/ai-alignment/continuity" }
+    added: "2026-11-10"
+
+  - id: perspective-misleading-ai
+    tier: tier1
+    group: perspective
+    paper: misleading-ai-2026
+    label: When AI learns to mislead
+    eyebrow: Consciousness and AI · 22 October 2026
+    status: interpretation
+    statusNote: An argument from evidence and discriminating tests for developmental responsibility. It is a position, not a theorem.
+    summary: What we reward becomes part of the problem.
+    read:
+      - { label: "Complete web edition", href: "/consciousness/ai-alignment/misleading-ai" }
+    added: "2026-11-10"

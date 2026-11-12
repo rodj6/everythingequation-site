@@ -252,12 +252,12 @@ export default function MonographPage() {
                         </span>
                       </Link>
                       {c.sections.length > 0 ? (
-                        <ol className="mt-3 grid gap-x-6 gap-y-1 text-[0.83rem] leading-snug text-mute sm:grid-cols-2">
+                        <ol className="mt-3 grid gap-x-6 gap-y-0.5 text-[0.83rem] leading-snug text-mute sm:grid-cols-2">
                           {c.sections.map((s) => (
                             <li key={s.anchor}>
                               <Link
                                 href={`/monograph/${c.slug}#${s.anchor}`}
-                                className="hover:text-fg"
+                                className="inline-block py-[3px] hover:text-fg"
                               >
                                 <span className="font-mono text-faint">{s.number}</span>{" "}
                                 {s.title}
@@ -286,10 +286,10 @@ export default function MonographPage() {
                     </span>
                   </Link>
                   {a.sections.length > 0 ? (
-                    <ol className="mt-3 grid gap-x-6 gap-y-1 text-[0.83rem] leading-snug text-mute sm:grid-cols-2">
+                    <ol className="mt-3 grid gap-x-6 gap-y-0.5 text-[0.83rem] leading-snug text-mute sm:grid-cols-2">
                       {a.sections.map((s) => (
                         <li key={s.anchor}>
-                          <Link href={`/monograph/${a.slug}#${s.anchor}`} className="hover:text-fg">
+                          <Link href={`/monograph/${a.slug}#${s.anchor}`} className="inline-block py-[3px] hover:text-fg">
                             <span className="font-mono text-faint">{s.number}</span> {s.title}
                           </Link>
                         </li>

@@ -29,68 +29,70 @@ import type { ComponentProps, ReactNode } from "react";
 
 export const mdxComponents = {
   h1: (props: ComponentProps<"h1">) => (
-    <h1 className="mt-12 mb-4 text-3xl font-bold tracking-tight text-fg" {...props} />
+    <h1 className="mt-14 mb-4 text-[2rem] font-semibold leading-[1.15] text-fg sm:text-[2.25rem]" {...props} />
   ),
   h2: (props: ComponentProps<"h2">) => (
     <h2
-      className="mt-10 mb-3 border-b border-edge pb-2 text-2xl font-semibold tracking-tight text-fg"
+      className="mt-14 mb-3 border-b border-edge pb-2.5 text-[1.55rem] font-semibold leading-[1.2] text-fg sm:text-[1.75rem]"
       {...props}
     />
   ),
   h3: (props: ComponentProps<"h3">) => (
-    <h3 className="mt-8 mb-2 text-xl font-semibold text-fg" {...props} />
+    <h3 className="mt-10 mb-2 text-[1.3rem] font-semibold leading-[1.25] text-fg" {...props} />
   ),
   h4: (props: ComponentProps<"h4">) => (
-    <h4 className="mt-6 mb-2 text-lg font-medium text-fg" {...props} />
+    <h4 className="mt-8 mb-2 text-[1.125rem] font-medium leading-[1.3] text-fg" {...props} />
   ),
+  // Body text: the site's reading voice (serif, comfortable size and leading).
   p: (props: ComponentProps<"p">) => (
-    <p className="mt-4 text-base leading-relaxed text-fg/90" {...props} />
+    <p className="mt-5 font-serif text-[length:var(--reading-size)] leading-[var(--reading-leading)] text-fg/90" {...props} />
   ),
   ul: (props: ComponentProps<"ul">) => (
-    <ul className="mt-4 list-disc space-y-1.5 pl-6 text-fg/90 marker:text-mute" {...props} />
+    <ul className="mt-5 list-disc space-y-2 pl-6 font-serif text-[length:var(--reading-size)] text-fg/90 marker:text-brass" {...props} />
   ),
   ol: (props: ComponentProps<"ol">) => (
-    <ol className="mt-4 list-decimal space-y-1.5 pl-6 text-fg/90 marker:text-mute" {...props} />
+    <ol className="mt-5 list-decimal space-y-2 pl-6 font-serif text-[length:var(--reading-size)] text-fg/90 marker:text-brass" {...props} />
   ),
-  li: (props: ComponentProps<"li">) => <li className="leading-relaxed" {...props} />,
+  li: (props: ComponentProps<"li">) => <li className="leading-[var(--reading-leading)]" {...props} />,
   a: (props: ComponentProps<"a">) => (
     <a
-      className="text-glow underline decoration-1 underline-offset-2 hover:text-glow-strong"
+      className="text-glow underline decoration-[hsl(var(--accent)/0.45)] decoration-1 underline-offset-[0.2em] transition-colors hover:text-glow-strong hover:decoration-current"
       {...props}
     />
   ),
   code: (props: ComponentProps<"code">) => (
     <code
-      className="rounded bg-raised px-1.5 py-0.5 font-mono text-[0.875em] text-fg"
+      className="rounded bg-raised px-1.5 py-0.5 font-mono text-[0.84em] text-fg"
       {...props}
     />
   ),
   pre: (props: ComponentProps<"pre">) => (
     <pre
-      className="my-6 overflow-auto rounded-lg border border-edge bg-surface p-5 text-sm leading-relaxed text-fg [&>code]:rounded-none [&>code]:bg-transparent [&>code]:p-0"
+      tabIndex={0}
+      className="my-7 overflow-auto rounded-lg border border-edge bg-surface p-5 text-sm leading-relaxed text-fg [&>code]:rounded-none [&>code]:bg-transparent [&>code]:p-0"
       {...props}
     />
   ),
   blockquote: (props: ComponentProps<"blockquote">) => (
     <blockquote
-      className="my-6 border-l-[3px] border-[hsl(var(--accent)/0.5)] py-1 pl-5 italic text-mute [&>p]:mt-2 [&>p]:text-mute"
+      className="my-7 border-l-2 border-brass py-0.5 pl-5 italic text-mute [&>p]:mt-2 [&>p]:text-mute"
       {...props}
     />
   ),
-  hr: (props: ComponentProps<"hr">) => <hr className="my-10 border-edge" {...props} />,
+  hr: (props: ComponentProps<"hr">) => <hr className="my-12 border-edge" {...props} />,
   table: (props: ComponentProps<"table">) => (
-    <div className="my-6 overflow-auto rounded-lg border border-edge">
-      <table className="w-full text-sm text-fg" {...props} />
+    <div className="my-7 overflow-auto rounded-lg border border-edge" tabIndex={0} role="region" aria-label="Table (scrolls sideways on small screens)">
+      <table className="w-full text-sm leading-relaxed text-fg" {...props} />
     </div>
   ),
   th: (props: ComponentProps<"th">) => (
     <th
-      className="border-b border-edge-strong bg-raised px-4 py-2.5 text-left text-xs font-semibold uppercase tracking-wider"
+      className="border-b border-edge-strong bg-raised px-4 py-2.5 text-left font-mono text-[0.6875rem] font-medium uppercase tracking-[0.1em] text-mute"
       {...props}
     />
   ),
   td: (props: ComponentProps<"td">) => (
-    <td className="border-b border-edge px-4 py-2.5" {...props} />
+    <td className="border-b border-edge px-4 py-2.5 align-top" {...props} />
   ),
   strong: (props: ComponentProps<"strong">) => (
     <strong className="font-semibold text-fg" {...props} />
@@ -137,11 +139,11 @@ function MathEnv({
       className={`card-surface math-environment my-6 border-l-4 ${accent} px-5 py-4 [&>p:first-of-type]:mt-2`}
       data-kind={kind.toLowerCase().replace(" ", "-")}
     >
-      <p className={`m-0 font-mono text-xs font-semibold uppercase tracking-[0.15em] ${label}`}>
+      <p className={`m-0 font-mono text-[0.6875rem] font-medium uppercase tracking-[0.14em] ${label}`}>
         {kind}
         {title ? <span className="normal-case tracking-normal text-fg">: {title}</span> : null}
       </p>
-      <div className="text-[0.97rem]">{children}</div>
+      <div>{children}</div>
     </section>
   );
 }

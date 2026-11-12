@@ -1,55 +1,204 @@
-@import "./atlas.css";
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ============================================================
    SHADOW THEORY DESIGN SYSTEM
-   Dark "mathematical observatory" theme.
-   Edit the CSS variables below to retune the whole site.
+   "The instrument": black anodised graphite, warm lamp light,
+   brass for marks, one cool colour for anything you can act on.
+
+   Everything is driven by the variables in :root. Change a value
+   here and the whole site follows. See DESIGN.md for the rules.
    ============================================================ */
 
+/* ---------- Typefaces (self-hosted, SIL Open Font Licence) ----------
+   Source Serif 4  headings and long-form reading
+   IBM Plex Sans   interface, navigation, short text
+   IBM Plex Mono   labels, data, code
+   Files live in public/fonts/v1 and are cached for a year; put a new
+   version in a new folder rather than replacing a file in place.     */
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-greek-wght-normal.woff2") format("woff2");
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-latin-wght-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-latin-ext-wght-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url("/fonts/v1/source-serif-4-greek-wght-italic.woff2") format("woff2");
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-sans-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-sans-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-sans-greek-wght-normal.woff2") format("woff2");
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
+  font-style: italic;
+  font-weight: 100 700;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-sans-latin-wght-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-mono-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url("/fonts/v1/ibm-plex-mono-latin-500-normal.woff2") format("woff2");
+}
+
+/* Metric-matched stand-ins: while a web font loads, the system font takes
+   the same space, so text does not jump when the real face arrives. */
+@font-face {
+  font-family: "Source Serif 4 Fallback";
+  src: local("Times New Roman"), local("Times"), local("Liberation Serif");
+  size-adjust: 106.87%;
+  ascent-override: 96.94%;
+  descent-override: 31.35%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "IBM Plex Sans Fallback";
+  src: local("Arial"), local("Helvetica Neue"), local("Liberation Sans");
+  size-adjust: 97.85%;
+  ascent-override: 104.75%;
+  descent-override: 28.1%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "IBM Plex Mono Fallback";
+  src: local("Courier New"), local("Liberation Mono");
+  size-adjust: 100%;
+  ascent-override: 102.5%;
+  descent-override: 27.5%;
+  line-gap-override: 0%;
+}
+
 :root {
-  /* Core surfaces */
-  --background: 224 50% 4.5%;        /* deep space navy-black */
-  --surface: 223 42% 8%;             /* card background */
-  --surface-raised: 222 38% 11%;     /* hover / raised card */
-  --border: 222 30% 17%;             /* hairline borders */
-  --border-strong: 221 28% 26%;
+  /* Core surfaces: neutral graphite, the colour of the Atlas bench. */
+  --background: 220 16% 3.7%;        /* #08090b, the Atlas backdrop */
+  --surface: 220 11% 7.4%;           /* card background */
+  --surface-raised: 220 10% 10.4%;   /* hover / raised card */
+  --border: 220 8% 15.5%;            /* hairline borders */
+  --border-strong: 220 7% 25%;
 
-  /* Text */
-  --foreground: 220 35% 93%;
-  --muted-foreground: 221 18% 66%;
-  --faint-foreground: 222 14% 48%;
+  /* Text: warm off-white, like paper under a lamp. */
+  --foreground: 40 20% 91.5%;
+  --muted-foreground: 222 8% 67%;
+  --faint-foreground: 222 7% 53%;
 
-  /* Luminous accents */
-  --accent: 187 80% 62%;             /* observatory cyan */
-  --accent-strong: 187 90% 72%;
-  --violet: 258 82% 74%;             /* projection violet */
-  --amber: 38 92% 62%;               /* research-status amber */
-  --green: 152 55% 55%;              /* statused green */
+  /* Light. One cool colour marks anything interactive; brass marks
+     structure (rules, numerals, status); the rest stay semantic. */
+  --accent: 188 50% 65%;             /* coherent light: links, focus, active */
+  --accent-strong: 188 68% 77%;
+  --brass: 41 44% 58%;               /* engraved marks, rules, numerals */
+  --lamp: 38 90% 84%;                /* the source: warm highlights */
+  --violet: 256 52% 77%;             /* proved results */
+  --amber: 38 74% 63%;               /* research-status amber */
+  --green: 152 38% 60%;              /* recovered / verified */
 
-  --ring: 187 80% 62%;
+  --ring: 188 68% 72%;
+
+  --font-sans: "IBM Plex Sans", "IBM Plex Sans Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4", "Source Serif 4 Fallback", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-mono: "IBM Plex Mono", "IBM Plex Mono Fallback", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Long-form reading. */
+  --reading-size: clamp(1.0625rem, 1rem + 0.28vw, 1.1875rem);
+  --reading-leading: 1.72;
+  --reading-measure: 44rem;
+
+  --header-height: 4rem;
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color-scheme: dark;
+  scroll-padding-top: calc(var(--header-height) + 1.25rem);
 }
 
 body {
   background-color: hsl(var(--background));
-  background-image:
-    radial-gradient(circle at 50% -20%, hsl(var(--accent) / 0.055), transparent 38rem),
-    linear-gradient(180deg, hsl(var(--background)), hsl(226 52% 3.8%));
-  background-attachment: fixed;
   color: hsl(var(--foreground));
+  font-family: var(--font-sans);
   font-feature-settings: "kern", "liga", "calt";
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: hsl(var(--accent) / 0.25);
+  background: hsl(var(--accent) / 0.28);
   color: hsl(var(--foreground));
 }
 
@@ -58,6 +207,82 @@ body {
   outline: 2px solid hsl(var(--ring));
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+/* ---------- Headings ----------
+   Serif, medium weight, quietly tightened. Section stylesheets may set
+   their own sizes; the family and rhythm come from here.            */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  text-wrap: balance;
+  /* A long word may break only when it would otherwise push the page wider (very large text on a small screen). */
+  overflow-wrap: break-word;
+}
+h1 { letter-spacing: -0.02em; }
+h1.font-bold, h2.font-bold, h3.font-bold, h4.font-bold { font-weight: 620; }
+h1.font-semibold, h2.font-semibold, h3.font-semibold, h4.font-semibold { font-weight: 580; }
+h1.font-medium, h2.font-medium, h3.font-medium, h4.font-medium { font-weight: 520; }
+
+p, li, dd, figcaption, blockquote { text-wrap: pretty; }
+
+code, kbd, samp, pre { font-family: var(--font-mono); }
+
+/* A link inside running text is underlined, so it never relies on colour
+   alone. Links styled as buttons are left as they are. */
+main p a:not([class*="rounded"]):not([class*="button"]):not([class*="btn"]),
+main .quantum-reader-byline a {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  text-decoration-color: color-mix(in srgb, currentColor 50%, transparent);
+}
+main p a:not([class*="rounded"]):not([class*="button"]):not([class*="btn"]):hover,
+main .quantum-reader-byline a:hover {
+  text-decoration-color: currentColor;
+}
+
+/* Very large text on a small screen (a window under 20em wide: a phone
+   with text at 125% or more, or a phone zoomed in). A word longer than its
+   line breaks instead of pushing the page sideways, and a DOI may break
+   anywhere, except in a table, where columns keep their natural width.
+   At ordinary sizes nothing here applies. */
+@media (max-width: 19.9em) {
+  main { overflow-wrap: break-word; }
+  main a[href*="doi.org/"]:not(:is(td, th) a) { overflow-wrap: anywhere; }
+}
+
+/* ---------- Long-form reading ----------
+   Every full-length text on the site (articles, paper editions, the
+   monograph, programme readers) shares one reading voice.           */
+
+.reading,
+.pi-prose,
+.quantum-publication-text,
+.c-editorial-body,
+.sr-technical,
+.sr-prose {
+  font-family: var(--font-serif);
+  font-size: var(--reading-size);
+  line-height: var(--reading-leading);
+}
+
+.reading :is(table, th, td, figcaption),
+.pi-prose :is(table, th, td, figcaption),
+.quantum-publication-text :is(table, th, td, figcaption) {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+}
+
+/* A table written directly in an article (without the MDX table wrapper)
+   scrolls sideways on a small screen; it must never widen the page. */
+article table:not([class]) {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* ============================================================
@@ -105,22 +330,23 @@ a[id]:empty {
    BACKGROUND MOTIFS
    ============================================================ */
 
-/* Fine grid used behind hero sections */
+/* Fine engraved grid used behind some hero sections */
 .bg-observatory-grid {
   background-image:
-    linear-gradient(hsl(var(--border) / 0.55) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(var(--border) / 0.55) 1px, transparent 1px);
+    linear-gradient(hsl(var(--border) / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--border) / 0.5) 1px, transparent 1px);
   background-size: 44px 44px;
   mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
   -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 30%, black 30%, transparent 75%);
 }
 
-/* Luminous aurora blobs */
+/* Soft pools of light behind a feature. Deliberately faint: light on the
+   site comes from content, not from coloured fog. */
 .glow-cyan {
-  background: radial-gradient(circle farthest-side, hsl(var(--accent) / 0.16), transparent);
+  background: radial-gradient(circle farthest-side, hsl(var(--accent) / 0.07), transparent);
 }
 .glow-violet {
-  background: radial-gradient(circle farthest-side, hsl(var(--violet) / 0.14), transparent);
+  background: radial-gradient(circle farthest-side, hsl(var(--lamp) / 0.05), transparent);
 }
 
 /* ============================================================
@@ -176,14 +402,6 @@ a[id]:empty {
 .animate-rise-3        { animation: rise-in 0.7s 0.24s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .animate-shimmer       { animation: shimmer 4s ease-in-out infinite; }
 
-@supports (animation-timeline: view()) {
-  main > div > section {
-    animation: section-reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 5% cover 24%;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -197,38 +415,29 @@ a[id]:empty {
    UTILITIES
    ============================================================ */
 
-/* Gradient headline text */
+/* Headline emphasis: lamp-warm to paper-white, no rainbow. */
 .text-luminous {
-  background: linear-gradient(
-    100deg,
-    hsl(var(--foreground)) 20%,
-    hsl(var(--accent-strong)) 55%,
-    hsl(var(--violet)) 85%
-  );
+  background: linear-gradient(100deg, hsl(var(--lamp)) 0%, hsl(var(--foreground)) 62%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-/* Hairline card */
+/* Hairline card: a flat plate with one lit edge. */
 .card-surface {
-  background:
-    linear-gradient(145deg, hsl(var(--surface-raised) / 0.64), hsl(var(--surface) / 0.93));
+  background: hsl(var(--surface));
   border: 1px solid hsl(var(--border));
-  border-radius: 1rem;
-  box-shadow:
-    inset 0 1px 0 hsl(var(--foreground) / 0.035),
-    0 18px 50px -42px hsl(var(--accent) / 0.36);
-  backdrop-filter: blur(12px);
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.035);
 }
 
 .card-surface-hover {
-  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.25s var(--ease-out);
 }
 .card-surface-hover:hover {
-  border-color: hsl(var(--accent) / 0.45);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px -18px hsl(var(--accent) / 0.25);
+  border-color: hsl(var(--border-strong));
+  background: hsl(var(--surface-raised));
+  transform: translateY(-1px);
 }
 
 .paper-architecture {
@@ -397,26 +606,25 @@ a[id]:empty {
   position: absolute;
   right: 1rem;
   top: 0.85rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.58rem;
-  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
   letter-spacing: 0.16em;
-  color: hsl(var(--violet) / 0.46);
+  color: hsl(var(--violet) / 0.7);
 }
 
 .equation-panel {
-  box-shadow:
-    inset 0 1px 0 hsl(var(--accent) / 0.08),
-    0 24px 70px -52px hsl(var(--accent) / 0.62);
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.04);
 }
 
-/* Small uppercase section label */
+/* Small uppercase section label: engraved, brass. */
 .section-label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: hsl(var(--accent));
+  color: hsl(var(--brass));
 }
 
 /* ============================================================
@@ -433,9 +641,7 @@ a[id]:empty {
     linear-gradient(90deg, hsl(var(--accent) / 0.035) 1px, transparent 1px),
     linear-gradient(hsl(var(--accent) / 0.035) 1px, transparent 1px);
   background-size: auto, 32px 32px, 32px 32px;
-  box-shadow:
-    inset 0 1px 0 hsl(var(--foreground) / 0.05),
-    0 32px 90px -55px hsl(var(--accent) / 0.46);
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / 0.05);
 }
 
 .projection-field::after {
@@ -448,7 +654,7 @@ a[id]:empty {
 
 .projection-label {
   fill: hsl(var(--muted-foreground));
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2.2px;
@@ -488,7 +694,362 @@ a[id]:empty {
 
 /* Complete October paper articles: shared observatory reading system. */
 .pi-edition{max-width:1200px;margin:auto;padding:1.5rem 0 4rem}.pi-breadcrumb{display:flex;flex-wrap:wrap;gap:.6rem;font-size:.8rem;color:hsl(var(--muted-foreground));margin-bottom:3rem}.pi-breadcrumb a,.pi-main a,.pi-actions a,.pi-toc a,.pi-card-action{color:hsl(var(--accent))}.pi-hero{padding:1rem 0 3rem;border-bottom:1px solid hsl(var(--border))}.pi-hero h1{font-size:clamp(2.2rem,5vw,4.5rem);line-height:1.08;letter-spacing:-.04em;max-width:1000px;margin:1.2rem 0}.pi-subtitle{font-size:clamp(1.05rem,2vw,1.4rem);max-width:850px;line-height:1.6;color:hsl(var(--muted-foreground))}.pi-byline{margin-top:1.5rem;line-height:1.8;font-size:.85rem}.pi-actions{display:flex;align-items:center;flex-wrap:wrap;gap:1rem;margin-top:1.5rem;font-size:.85rem}.pi-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:3rem;margin-top:2.5rem}.pi-toc{font-size:.85rem;align-self:start;position:sticky;top:6rem;max-height:78vh;overflow:auto;padding-right:.8rem}.pi-toc summary{font-weight:600;cursor:pointer}.pi-toc ol{padding-left:1.2rem}.pi-toc li{margin:.75rem 0}.pi-toc ul{padding-left:.6rem;font-size:.78rem}.pi-toc>a{display:block;margin-top:1rem}.pi-toc [aria-current=page]{color:hsl(var(--foreground));font-weight:700}.pi-main{min-width:0;line-height:1.8}.pi-main h2{font-size:1.8rem;line-height:1.25;margin:2rem 0 1rem}.pi-main h3{line-height:1.4}.pi-introduction>p,.pi-related>p{margin:1.2rem 0}.pi-scope{border-left:2px solid hsl(var(--accent));padding:.2rem 1.25rem;margin:2rem 0;background:hsl(var(--accent)/.04)}.pi-chapter-list{list-style:none;padding:0}.pi-chapter-list li{margin:1rem 0;border:1px solid hsl(var(--border));border-radius:12px;padding:1.3rem}.pi-chapter-list h3{font-size:1.2rem}.pi-chapter-list p{color:hsl(var(--muted-foreground));margin:.5rem 0}.pi-prose{overflow-wrap:anywhere}.pi-prose img{max-width:100%;height:auto;margin:1.5rem auto}.pi-prose figure{margin:2rem 0}.pi-prose figcaption{font-size:.85rem;color:hsl(var(--muted-foreground))}.pi-prose .katex-display{max-width:100%;overflow-x:auto;overflow-y:hidden;padding:.4rem 0}.pi-prose [id]{scroll-margin-top:7rem}.pi-pagination{display:flex;justify-content:space-between;gap:2rem;margin:3rem 0;padding-top:1.5rem;border-top:1px solid hsl(var(--border))}.pi-pagination a{max-width:48%}.pi-source{font-size:.8rem;color:hsl(var(--muted-foreground))}.pi-feature{margin:3rem 0;padding:2rem 0}.pi-feature-heading{max-width:800px}.pi-feature-heading h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15;margin:1rem 0}.pi-feature-heading>p:last-child{color:hsl(var(--muted-foreground));line-height:1.8}.pi-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin-top:1.5rem}.pi-card{border:1px solid hsl(var(--accent)/.25);background:linear-gradient(135deg,hsl(var(--accent)/.05),hsl(var(--violet)/.06));border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;gap:1rem}.pi-card:hover{border-color:hsl(var(--accent)/.65)}.pi-card h3{font-size:1.5rem;line-height:1.2}.pi-card>p{line-height:1.7;color:hsl(var(--muted-foreground))}.pi-card-action{margin-top:auto;font-size:.8rem}.pi-card:only-child{grid-column:1/-1}
-@media(max-width:800px){.pi-layout{grid-template-columns:1fr;gap:1.5rem}.pi-toc{position:static;max-height:none;border-bottom:1px solid hsl(var(--border));padding-bottom:1.5rem}.pi-cards{grid-template-columns:1fr}.pi-hero{padding-bottom:2rem}.pi-pagination{gap:1rem;font-size:.85rem}.pi-edition{padding-top:.5rem}.pi-prose .katex{font-size:1.02em}}
+@media(max-width:800px){.pi-layout{grid-template-columns:minmax(0,1fr);gap:1.5rem}.pi-toc{position:static;max-height:none;border-bottom:1px solid hsl(var(--border));padding-bottom:1.5rem}.pi-cards{grid-template-columns:minmax(0,1fr)}.pi-hero{padding-bottom:2rem}.pi-pagination{gap:1rem;font-size:.85rem}.pi-edition{padding-top:.5rem}.pi-prose .katex{font-size:1.02em}}
 
 /* Keep reader action text legible on its pale violet fill. */
 .pi-actions .c-button-primary{color:#101425}
+
+/* ============================================================
+   SITE CHROME: header, menu, footer
+   Tabs come from src/config/navigation.ts.
+   Breakpoints here are in em, so a reader who has raised the browser's
+   default text size gets the roomier layout sooner (80em = 1280px at
+   the usual 16px).
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid hsl(var(--border));
+  background: hsl(var(--background) / 0.9);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  backdrop-filter: blur(14px) saturate(1.15);
+}
+.site-header-bar {
+  margin: 0 auto;
+  display: flex;
+  height: var(--header-height);
+  width: 100%;
+  max-width: 96rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: min(1.5rem, 4vw);
+  padding: 0 min(1rem, 4vw);
+}
+.site-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.65rem;
+  color: hsl(var(--foreground));
+  font-family: var(--font-serif);
+  font-size: min(1.14rem, 5.8vw);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+/* The name stays on one line while there is room and folds to two when the reader's text is very large. */
+.site-brand span { min-width: 0; line-height: 1.08; overflow-wrap: normal; text-wrap: balance; }
+
+.site-nav { display: none; }
+.site-nav ul { display: flex; height: var(--header-height); align-items: center; }
+.site-nav li { display: flex; height: 100%; align-items: center; }
+.site-nav a {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 0.5rem;
+  font-size: 0.78rem;
+  color: hsl(var(--muted-foreground));
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+.site-nav a:hover { color: hsl(var(--foreground)); }
+.site-nav a[aria-current="page"] { color: hsl(var(--foreground)); }
+/* The current tab carries a brass index mark on the header's lower edge. */
+.site-nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: -1px;
+  height: 2px;
+  background: hsl(var(--brass));
+}
+.site-nav li.site-nav-rule {
+  width: 1px;
+  height: 1.05rem;
+  margin: 0 0.45rem;
+  background: hsl(var(--border-strong));
+}
+
+.site-menu-toggle {
+  display: flex;
+  height: 2.75rem;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 0.85rem;
+  border: 1px solid hsl(var(--border-strong));
+  border-radius: 0.5rem;
+  color: hsl(var(--foreground));
+  font-size: 0.8125rem;
+  transition: background-color 0.15s ease;
+}
+.site-menu-toggle:hover { background: hsl(var(--surface-raised)); }
+
+.site-menu {
+  max-height: calc(100dvh - var(--header-height));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border-top: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+}
+.site-menu-inner {
+  margin: 0 auto;
+  display: grid;
+  max-width: 72rem;
+  gap: 1.75rem;
+  padding: 1.5rem 1rem 2.5rem;
+}
+.site-menu ul { margin-top: 0.5rem; display: grid; gap: 0.125rem; }
+.site-menu a {
+  display: grid;
+  gap: 0.1rem;
+  margin: 0 -0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.site-menu a:hover { background: hsl(var(--surface)); }
+.site-menu a strong {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 560;
+  color: hsl(var(--foreground));
+}
+.site-menu a span { font-size: 0.8125rem; line-height: 1.45; color: hsl(var(--muted-foreground)); }
+.site-menu a[aria-current="page"] { background: hsl(var(--surface-raised)); }
+.site-menu a[aria-current="page"] strong { color: hsl(var(--lamp)); }
+
+@media (min-width: 40em) {
+  .site-header-bar { padding: 0 1.5rem; }
+  .site-menu-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 2rem 1.5rem 3rem; }
+}
+@media (min-width: 64em) {
+  .site-header-bar { padding: 0 2rem; }
+  .site-menu-inner { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 80em) {
+  .site-nav { display: block; }
+  .site-menu-toggle, .site-menu, .site-menu-fallback { display: none; }
+}
+@media (min-width: 96em) {
+  .site-nav a { padding: 0 0.7rem; font-size: 0.875rem; }
+  .site-nav a[aria-current="page"]::after { left: 0.7rem; right: 0.7rem; }
+  .site-nav li.site-nav-rule { margin: 0 0.6rem; }
+}
+
+/* A page that needs the full window (the Atlas) opts out of the centred column. */
+#main:has(> .page-enter > .page-bleed) {
+  max-width: none;
+  padding: 0;
+}
+
+.site-footer { margin-top: 6rem; border-top: 1px solid hsl(var(--border)); }
+#main:has(> .page-enter > .page-bleed) + .site-footer { margin-top: 0; }
+.site-footer-inner {
+  margin: 0 auto;
+  display: grid;
+  width: 100%;
+  max-width: 72rem;
+  gap: 2.5rem;
+  padding: 3.5rem 1rem 2.5rem;
+}
+.site-footer-name { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: hsl(var(--foreground)); }
+.site-footer-tagline { margin-top: 0.5rem; max-width: 20rem; font-size: 0.875rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+.site-footer-nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 1.5rem; }
+.site-footer ul { margin-top: 0.75rem; display: grid; gap: 0.5rem; }
+.site-footer a { font-size: 0.875rem; color: hsl(var(--muted-foreground)); overflow-wrap: anywhere; transition: color 0.15s ease; }
+.site-footer a:hover { color: hsl(var(--foreground)); }
+.site-footer-colophon {
+  border-top: 1px solid hsl(var(--border));
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: hsl(var(--faint-foreground));
+}
+@media (min-width: 40em) {
+  .site-footer-inner { padding: 3.5rem 1.5rem 2.5rem; }
+  .site-footer-nav { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (min-width: 60em) {
+  .site-footer-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 2.5fr) minmax(0, 1.1fr); padding: 3.5rem 2rem 2.5rem; }
+  .site-footer-colophon { grid-column: 1 / -1; }
+}
+
+/* ============================================================
+   ATMOSPHERE
+   The rest of the site shares the Atlas's setting: a dark room, one
+   warm light, one cool one, and a few fixed stars. The cool light is
+   allowed to glow a little (the only "neon" on the site), and only on
+   things that mark a place or respond to the visitor: the dash before
+   a label, the rule under the header, a link or card under the
+   pointer, the central question on the homepage. Text and equations
+   never glow. Change the two --glow values to retune all of it.
+   ============================================================ */
+
+:root {
+  --glow: 187 92% 62%;        /* the cool light, at full strength */
+  --glow-warm: 36 96% 66%;    /* the lamp */
+  --dur-quick: 140ms;         /* presses, colour changes */
+  --dur: 240ms;               /* panels, cards, menus */
+}
+
+.site-atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(64rem 38rem at 8% -10%, hsl(var(--glow) / 0.085), transparent 62%),
+    radial-gradient(56rem 36rem at 100% 112%, hsl(var(--glow-warm) / 0.055), transparent 60%),
+    radial-gradient(1.2px 1.2px at 23px 41px, hsl(0 0% 100% / 0.5) 50%, transparent 51%) 0 0 / 347px 331px,
+    radial-gradient(1px 1px at 190px 120px, hsl(200 80% 90% / 0.42) 50%, transparent 51%) 0 0 / 521px 467px,
+    radial-gradient(1.4px 1.4px at 310px 262px, hsl(40 80% 88% / 0.36) 50%, transparent 51%) 0 0 / 733px 619px,
+    radial-gradient(1px 1px at 77px 505px, hsl(0 0% 100% / 0.3) 50%, transparent 51%) 0 0 / 911px 797px;
+}
+
+/* The header carries a fine engraved scale, as the brass ring of the plate does. */
+.site-header::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 5px;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(90deg, hsl(var(--brass) / 0.5) 0 1px, transparent 1px 60px),
+    repeating-linear-gradient(90deg, hsl(var(--brass) / 0.28) 0 1px, transparent 1px 12px) 0 0 / 100% 3px no-repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+  opacity: 0.55;
+}
+
+/* Page entrance */
+@keyframes page-in { from { opacity: 0.4; } to { opacity: 1; } }
+@keyframes reading-line {
+  0% { transform: scaleX(0); opacity: 0.95; }
+  70% { transform: scaleX(1); opacity: 0.8; }
+  100% { transform: scaleX(1); opacity: 0; }
+}
+.page-enter { animation: page-in var(--dur) var(--ease-out); }
+.page-enter::before {
+  content: "";
+  position: fixed;
+  z-index: 49;
+  top: var(--header-height);
+  right: 0;
+  left: 0;
+  height: 1px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, hsl(var(--glow) / 0.95) 30%, hsl(var(--glow-warm) / 0.85) 78%, transparent);
+  box-shadow: 0 0 12px hsl(var(--glow) / 0.75);
+  transform-origin: left center;
+  animation: reading-line 780ms var(--ease-out) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-enter { animation: none; }
+  .page-enter::before { display: none; }
+}
+
+/* A label is preceded by a short lit dash: "you are here". */
+.section-label::before {
+  content: "";
+  display: inline-block;
+  width: 0.85rem;
+  height: 1px;
+  margin-right: 0.6rem;
+  vertical-align: middle;
+  background: hsl(var(--glow));
+  box-shadow: 0 0 8px hsl(var(--glow) / 0.9), 0 0 2px hsl(var(--glow));
+}
+
+/* What responds to the pointer or the keyboard takes a little of the cool light. */
+main p a:not([class*="rounded"]):not([class*="button"]):not([class*="btn"]):hover { text-shadow: 0 0 14px hsl(var(--glow) / 0.5); }
+.card-surface-hover:hover,
+.pi-card:hover { box-shadow: 0 0 0 1px hsl(var(--glow) / 0.22), 0 18px 44px -24px hsl(var(--glow) / 0.5); }
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible { box-shadow: 0 0 0 1px hsl(var(--background)), 0 0 14px hsl(var(--glow) / 0.55); }
+:where(button, a[class*="button"], a[class*="btn"]) { transition-duration: var(--dur-quick); }
+:where(button, a[class*="button"]):active { transform: translateY(1px); }
+.site-footer { position: relative; }
+.site-footer::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  width: min(34rem, 70%);
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, hsl(var(--glow) / 0.7), transparent);
+  box-shadow: 0 0 14px hsl(var(--glow) / 0.5);
+}
+
+/* ---------- Question threads and "Keep exploring" ---------- */
+.thread-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); }
+.thread-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.35rem 1.4rem 1.2rem;
+  overflow: hidden;
+  border: 1px solid hsl(var(--border));
+  border-radius: 0.75rem;
+  background: linear-gradient(160deg, hsl(var(--surface-raised) / 0.75), hsl(var(--surface) / 0.9));
+  transition: border-color var(--dur) ease, box-shadow var(--dur) ease, transform var(--dur) var(--ease-out);
+}
+.thread-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1.4rem;
+  width: 2.2rem;
+  height: 1px;
+  background: hsl(var(--glow));
+  box-shadow: 0 0 10px hsl(var(--glow) / 0.9);
+  transition: width var(--dur) var(--ease-out);
+}
+.thread-card:hover,
+.thread-card:focus-within { border-color: hsl(var(--glow) / 0.4); box-shadow: 0 20px 48px -28px hsl(var(--glow) / 0.55); transform: translateY(-2px); }
+.thread-card:hover::before,
+.thread-card:focus-within::before { width: calc(100% - 2.8rem); }
+.thread-card h3, .thread-card > p { overflow-wrap: anywhere; }
+.thread-card h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 580; line-height: 1.25; letter-spacing: -0.01em; color: hsl(var(--foreground)); }
+.thread-card > p { margin-top: 0.6rem; font-size: 0.9375rem; line-height: 1.6; color: hsl(var(--muted-foreground)); }
+.thread-card ol { margin-top: auto; padding-top: 1rem; }
+.thread-card li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.15rem 0.8rem; padding: 0.5rem 0; border-top: 1px solid hsl(var(--border)); }
+.thread-card li span { flex: 0 0 6.2rem; }
+.thread-card li a { flex: 1 1 11em; min-width: 0; overflow-wrap: anywhere; }
+.thread-card li span { font-family: var(--font-mono); font-size: 0.625rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: hsl(var(--brass)); }
+.thread-card li a { font-size: 0.9375rem; line-height: 1.4; color: hsl(var(--accent)); text-decoration: underline; text-decoration-color: hsl(var(--accent) / 0.45); text-decoration-thickness: 1px; text-underline-offset: 0.22em; transition: color var(--dur-quick) ease, text-shadow var(--dur-quick) ease; }
+.thread-card li a:hover { color: hsl(var(--accent-strong)); text-shadow: 0 0 14px hsl(var(--glow) / 0.5); }
+
+.keep-exploring { margin-top: 5rem; padding: 0 1rem; }
+.keep-exploring-inner { margin: 0 auto; width: 100%; max-width: 72rem; padding-top: 2.5rem; border-top: 1px solid hsl(var(--border)); }
+.keep-exploring .thread-grid { margin-top: 1.1rem; }
+.keep-exploring + .site-footer { margin-top: 4rem; }
+.trail { margin-top: 2rem; }
+.trail ol { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.7rem; }
+.trail a {
+  display: inline-block;
+  max-width: 100%;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid hsl(var(--border-strong));
+  border-radius: 0.6rem;
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+  color: hsl(var(--muted-foreground));
+  transition: color var(--dur-quick) ease, border-color var(--dur-quick) ease;
+}
+.trail a:hover { border-color: hsl(var(--glow) / 0.5); color: hsl(var(--foreground)); }
+@media (min-width: 40em) { .keep-exploring { padding: 0 1.5rem; } }
+@media (min-width: 64em) { .keep-exploring { padding: 0 2rem; } }
+
+/* A long formula inside a sentence scrolls within its paragraph on a narrow screen, so the page itself never scrolls sideways. */
+@media (max-width: 40em) {
+  .pi-prose p:has(.katex),
+  .pi-prose li:has(.katex) { overflow-x: auto; overflow-y: hidden; padding-bottom: 1px; }
+}
+.site-footer .section-label::before { display: none; }

@@ -21,6 +21,40 @@ const tex = (src: string, displayMode = true) => ({
   __html: katex.renderToString(src, { displayMode, throwOnError: false, strict: "ignore" }),
 });
 
+/** How the ground, the two uses of Ω and the closures relate. Each row follows the cited source. */
+const groundOmegaClosure: Array<{ term: string; def: string; href?: string; link?: string }> = [
+  {
+    term: "Unconditioned ground",
+    def: "What the theory takes as fundamental. It is left unspecified, because any specification already supplies distinctions, and it has no symbol in the equations.",
+    href: "/articles/full-shadow-model#the-ground-before-distinction",
+    link: "The full model",
+  },
+  {
+    term: "Ω, the formation package",
+    def: "Where the formal construction begins: a source signature, elementary cells, witnesses, formation operations, invariants and a deposition potential. It is a model of source structure with mathematical content of its own.",
+    href: "/atlas?focus=omega",
+    link: "Ω in the Atlas",
+  },
+  {
+    term: "Source closure, Tier 0",
+    def: "The lawful source structures. One application of the source-law operator adds what the source’s own operations generate; repeating it until nothing new appears gives the least fixed point.",
+    href: "/atlas?focus=tier0-law",
+    link: "Tier 0 in the Atlas",
+  },
+  {
+    term: "Ω in the Everything Equation",
+    def: "The completion operator of the original lawhood equation, L = ΩΔ∂[L]. The typed form writes it with a subscript, as the Tier-1 completion and readout role, so that it is read apart from the formation package.",
+    href: "/atlas?focus=everything-equation-schema",
+    link: "Then and now",
+  },
+  {
+    term: "Canonical completion",
+    def: "The least extension of a readout that keeps a nominated family of source relations. Completing a second time adds nothing: the fixed-point idea in its present, exact form.",
+    href: "/atlas?focus=foundation-minimal-completion",
+    link: "The theorem",
+  },
+];
+
 const vocabulary: Array<{ term: string; def: string }> = [
   {term: "Unconditioned ground", def: "The unspecified ground prior to the distinctions used in the broader model. No mathematical state space, probability law or potential-energy function is assigned to it."},
   {term: "The unsplit", def: "Unity before the operational source–readout distinction. U retains this meaning in the consciousness manuscript. In the awareness interpretation there is no separate subject reflecting on itself."},
@@ -225,6 +259,20 @@ export default async function FrameworkPage() {
           <p className="mt-3 leading-relaxed text-mute">For a fixed source, readout and target family, canonical completion adds exactly the nominated distinctions. Applying that completion again adds none, up to canonical isomorphism. This gives the original fixed-point idea a concrete mathematical descendant. It does not identify every later construction with the historical operator triple.</p>
           <Link href="/source-readout/origins" className="mt-5 inline-block text-sm font-medium text-glow">Read the full development and its mathematical connections →</Link>
         </div>
+
+        <h3 id="ground-omega-closure" className="mt-10 scroll-mt-24 text-xl font-semibold tracking-tight">The ground, Ω and closure</h3>
+        <p className="mt-3 leading-relaxed text-mute">Five things are easy to run together, because two share a letter and three are fixed points. Each has its own place.</p>
+        <dl className="mt-5 divide-y divide-edge border-y border-edge">
+          {groundOmegaClosure.map((row) => (
+            <div key={row.term} className="grid gap-1 py-4 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-6">
+              <dt className="font-serif text-[1.02rem] font-semibold text-fg">{row.term}</dt>
+              <dd className="leading-relaxed text-mute">
+                {row.def}{" "}
+                {row.href ? <Link href={row.href} className="whitespace-nowrap text-sm font-medium text-glow">{row.link} →</Link> : null}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section aria-labelledby="measurement-framework-heading" className="mx-auto max-w-3xl">

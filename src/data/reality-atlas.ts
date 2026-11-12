@@ -1,134 +1,73 @@
 import {firstOrderKernel,gravityHub,sameBallTakeaway,secondOrderDetection} from '@/config/paper-integrations';
 
-export type AtlasTier =
-  | "source"
-  | "tier0"
-  | "aperture"
-  | "field"
-  | "tier1"
-  | "observable"
-  | "recovery";
+import { atlasResearchEntries, atlasSourceStats } from "@/generated/atlas-research";
+import {
+  eq,
+  groupMeta,
+  stageMeta,
+  stageOrder,
+  statusMeta,
+  statusOrder,
+  tierMeta,
+  type AtlasEdge,
+  type AtlasEquation,
+  type AtlasKind,
+  type AtlasLink,
+  type AtlasNode,
+  type AtlasPaperRef,
+  type AtlasResearchEntry,
+  type AtlasStage,
+  type AtlasStatus,
+  type AtlasTier,
+  type AtlasTour,
+  type ObservableRoute,
+} from "@/data/atlas/schema";
 
-export type AtlasKind =
-  | "stage"
-  | "operator"
-  | "route"
-  | "sector"
-  | "equation"
-  | "observable"
-  | "limit"
-  | "gate";
-
-export interface AtlasEquation {
-  tag: string;
-  tex: string;
-  title: string;
-  interpretation: string;
-}
-
-export interface AtlasNode {
-  id: string;
-  label: string;
-  shortLabel: string;
-  eyebrow: string;
-  tier: AtlasTier;
-  kind: AtlasKind;
-  lod: 0 | 1 | 2 | 3 | 4;
-  position: [number, number, number];
-  cameraDistance?: number;
-  color: string;
-  chapter: string;
-  section: string;
-  summary: string;
-  description: string;
-  mathematicalType: string;
-  domain: string;
-  codomain: string;
-  regularity: string;
-  covariance: string;
-  units: string;
-  stateVariables: string;
-  boundaryClass: string;
-  branchDomain: string;
-  approximationOrder: string;
-  errorNorm: string;
-  equations: AtlasEquation[];
-  upstream: string[];
-  downstream: string[];
-  recovery: string[];
-  gate?: string;
-  atlasNote?: string;
-  provenance?: string;
-  readingLinks?: { label: string; href: string }[];
-}
-
-export interface AtlasEdge {
-  id: string;
-  from: string;
-  to: string;
-  label: string;
-  kind: "descent" | "interface" | "trace" | "recovery" | "feedback";
-  relationship: "mathematical" | "conceptual";
-  map: string;
-  domain: string;
-  codomain: string;
-  linearization: string;
-  adjoint: string;
-  validityDomain: string;
-  verifier: string;
-  errorModel: string;
-  partial: boolean;
-}
-
-type AtlasNodeDefinition = Omit<
+/**
+ * THE REALITY ATLAS · CONTENT
+ *
+ * This file holds the typed architecture of the Atlas: the realization
+ * programme of the twelve-chapter reality model (content/reality-model/), with
+ * its equations, typed interfaces, traces and tours.
+ *
+ * Entries that summarize a published paper or article do NOT live here. They
+ * are in content/atlas/research.yaml and are joined in below. To add a paper to
+ * the Atlas, edit that file; see ATLAS-UPDATING.md.
+ *
+ * Shapes and vocabularies (tiers, stages, groups, statuses) are defined in
+ * src/data/atlas/schema.ts and re-exported here, so existing imports keep working.
+ */
+export { eq, groupMeta, stageMeta, stageOrder, statusMeta, statusOrder, tierMeta };
+export type {
+  AtlasEdge,
+  AtlasEquation,
+  AtlasKind,
+  AtlasLink,
   AtlasNode,
-  "stateVariables" | "boundaryClass" | "branchDomain" |
-  "approximationOrder" | "errorNorm" | "recovery"
-> & Partial<Pick<
-  AtlasNode,
-  "stateVariables" | "boundaryClass" | "branchDomain" |
-  "approximationOrder" | "errorNorm" | "recovery"
->>;
-
-export interface ObservableRoute {
-  id: string;
-  label: string;
-  shortLabel: string;
-  color: string;
-  description: string;
-  nodeIds: string[];
-  output: string;
-}
-
-export const tierMeta: Record<
+  AtlasPaperRef,
+  AtlasResearchEntry,
+  AtlasStage,
+  AtlasStatus,
   AtlasTier,
-  { label: string; color: string; order: number }
-> = {
-  source: { label: "Ω · Source", color: "#9eefff", order: 0 },
-  tier0: { label: "Tier 0 · Law", color: "#75d8ff", order: 1 },
-  aperture: { label: "Tier 0.5 · Aperture", color: "#ae8cff", order: 2 },
-  field: { label: "Canonical field", color: "#57e4c2", order: 3 },
-  tier1: { label: "Tier 1 · Readout", color: "#f0f5ff", order: 4 },
-  observable: { label: "Observable", color: "#ffc96b", order: 5 },
-  recovery: { label: "Recovery limit", color: "#72e6a5", order: 6 },
+  AtlasTour,
+  ObservableRoute,
 };
 
-const eq = (
-  tag: string,
-  title: string,
-  tex: string,
-  interpretation: string,
-): AtlasEquation => ({ tag, title, tex, interpretation });
+/** An architecture entry as written below. Stage, group and status are filled in when omitted. */
+type AtlasNodeDefinition = Omit<AtlasNode, "stage" | "group" | "status" | "statusNote" | "recovery">
+  & Partial<Pick<AtlasNode, "stage" | "group" | "status" | "statusNote" | "recovery">>;
 
 const measurementNode = (
-  node: Pick<AtlasNodeDefinition, "id" | "label" | "shortLabel" | "position" | "summary" | "description" | "mathematicalType" | "domain" | "codomain" | "equations" | "upstream" | "downstream"> & Partial<AtlasNodeDefinition>,
+  node: Pick<AtlasNodeDefinition, "id" | "label" | "shortLabel" | "summary" | "description" | "mathematicalType" | "domain" | "codomain" | "equations" | "upstream" | "downstream"> & Partial<AtlasNodeDefinition>,
 ): AtlasNodeDefinition => ({
   eyebrow: "Quantum Measurement · Version 2",
   tier: "tier1",
   kind: "sector",
   lod: 1,
-  cameraDistance: 6,
   color: "#78e4d2",
+  group: "measurement",
+  status: "conditional",
+  statusNote: "An internal resolution within the cited physical constitution. Its interaction, guidance and preparation premises are stated, not derived, and no empirical confirmation is claimed.",
   chapter: "Quantum Measurement · Two constitutive completions",
   section: "Integrated monograph and companion papers · 15 September 2026",
   regularity: "Fixed finite programme and physical horizon; the two constitutions have distinct regularity hypotheses",
@@ -151,7 +90,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "measurement-programme",
     label: "Quantum Measurement · Equilibrium, events and records",
     shortLabel: "Measurement",
-    position: [-12, 4.5, 7.7],
     color: "#bca5ff",
     summary: "Equilibrium, conditional preparation, deterministic histories and faithful physical records define the expanded measurement programme.",
     description: "The October papers extend the September monograph and companions. Control consistency and engineered exact returns characterize equilibrium under distinct statistical premises. Hybrid and equilibrium constructions control complete Bell paths and retained records, while two effective models cover restricted nonequilibrium laws. The 9 October portfolio adds conditional Gaussian preparation with archives, repeated position records and calibrated reset, deterministic flows with singular interactions, and complete-current estimates for coherent sources. Each result keeps its own preparation, analytic and control requirements.",
@@ -174,7 +112,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "measurement-source",
     label: "Source dynamics and individual currents",
     shortLabel: "Source currents",
-    position: [-14.8, 3.7, 9.9],
     summary: "A coherent source supplies individual currents. A population continuity equation still leaves the actual event law undetermined.",
     description: "In the pilot construction a primitive canonical bond action and its binary interaction premises fix edge torques. Conservative exporters turn the individual currents into signed packets. Net population change alone allows balanced surplus traffic and different waiting laws; those are resolved only by the additional physical mechanisms and initial ensemble.",
     mathematicalType: "Finite Hermitian source dynamics and antisymmetric individual edge currents",
@@ -194,7 +131,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "pilot-medium",
     label: "Pilot medium · Declared interactions",
     shortLabel: "Pilot medium",
-    position: [-16.8, 1.3, 10.4],
     color: "#74e3cc",
     summary: "Signed export, independently prepared spatial contacts, finite recombination and residence tracking supply the Bell limit.",
     description: "Under P1–P4, deterministic contacts are drawn from the initial spatial gas rather than resampled during the run. Recombination suppresses opposite-packet surplus. Calibrated carrier populations supply the residence denominator. Finite members retain memory and controlled deviations; the theorem compares complete tagged paths in unchanged physical time on a fixed graph and horizon.",
@@ -217,7 +153,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "bell-event-law",
     label: "The controlled Bell event law",
     shortLabel: "Bell path law",
-    position: [-16.3, -1.5, 11.7],
     color: "#7be6a5",
     kind: "limit",
     summary: "The positive current determines event direction; residence weight determines the rate; the theorem also fixes the complete conditional timing law.",
@@ -238,7 +173,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "massive-configuration",
     label: "Massive configuration · Guidance and equilibrium",
     shortLabel: "Massive configuration",
-    position: [-11.9, 3.1, 13.7],
     color: "#c2a4ff",
     summary: "A separate continuum constitution uses Schrödinger dynamics, kinetic-momentum guidance and complete initial equilibrium.",
     description: "All source contacts, recorders, fuel, reset receivers and the retained controller use one massive, semibounded material inventory. Actual coordinates move continuously; internal spin labels remain in the wave. Smooth traps write and protect records. A finite autonomous controller has stated output and archive-flux errors. The construction derives neither discrete Bell jumps nor a Bell waiting law.",
@@ -266,7 +200,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "born-statistics",
     label: "Born statistics and preparation",
     shortLabel: "Born statistics",
-    position: [-13.1, -0.4, 15.6],
     color: "#ffd081",
     kind: "observable",
     tier: "observable",
@@ -293,7 +226,6 @@ const measurementNodes: AtlasNodeDefinition[] = [
     id: "material-records",
     label: "Physical records and retained histories",
     shortLabel: "Material histories",
-    position: [-12.8, -3.7, 12.9],
     color: "#f0bf8a",
     kind: "observable",
     tier: "observable",
@@ -329,8 +261,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "source",
     kind: "stage",
     lod: 0,
-    position: [0, 0, 0],
-    cameraDistance: 7,
     color: "#9eefff",
     chapter: "01 · Canonical foundation",
     section: "§3 · Source signature",
@@ -369,8 +299,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier0",
     kind: "stage",
     lod: 0,
-    position: [0, 0.15, 3.25],
-    cameraDistance: 8,
     color: "#75d8ff",
     chapter: "02 · Source substrate",
     section: "§5–§7 · Law operator and Tier-0 fixed point",
@@ -380,7 +308,7 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     mathematicalType: "Least fixed point in a complete lattice of source isomorphism classes",
     domain: "Piso(Ob S0) with primitive witnesses W0",
     codomain: "The lawful source category S_adm",
-    regularity: "Monotone, inflationary and accessible closure operator",
+    regularity: "Closure-generating operator: monotone, inflationary and κ-ary. Iterating it stabilizes by stage κ at the least fixed point (S2.24)",
     covariance: "Presentation-independent under strong source equivalence",
     units: "Dimensionless source law",
     equations: [
@@ -388,13 +316,19 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
         "S2.17",
         "Source-law operator",
         String.raw`\mathbb L_\Omega(A)=\operatorname{IsoSat}\!\left(\mathcal W_0\cup A\cup\mathscr O_\Omega^{\rm NFE}(A)\right)`,
-        "Lawful closure admits source-generated structure while forbidding unrelated free extension.",
+        "One step of lawful generation. It adds what the source’s own operations produce from A and admits nothing unrelated. Tier 0 is what remains when repeating the step adds nothing new.",
       ),
       eq(
         "S2.19",
         "Tier-0 fixed point",
         String.raw`\operatorname{Ob}\mathsf S_{\rm adm}=\mu\mathbb L_\Omega`,
         "Tier 0 is the least closed class, not a chosen Tier-1 Lagrangian.",
+      ),
+      eq(
+        "S2.24",
+        "Iteration to closure",
+        String.raw`A_0=\varnothing,\quad A_{\alpha+1}=\mathbb L_\Omega(A_\alpha),\quad A_\lambda=\bigcup_{\beta<\lambda}A_\beta,\qquad A_\kappa=A_{\kappa+1}=\operatorname{Ob}\mathsf S_{\rm adm}`,
+        "The operator is applied again and again; under the small-generation condition (S2.22a) the sequence stops growing by stage κ. Formation rank measures depth of lawful generation. It is not time.",
       ),
     ],
     upstream: ["omega"],
@@ -408,8 +342,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier0",
     kind: "operator",
     lod: 1,
-    position: [0, -0.2, 4.75],
-    cameraDistance: 6,
     color: "#6cccf5",
     chapter: "02 · Source substrate",
     section: "§15 · Aperture-preparation theorem",
@@ -441,8 +373,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "stage",
     lod: 0,
-    position: [0, 0, 6.2],
-    cameraDistance: 9,
     color: "#ae8cff",
     chapter: "03 · Recursive aperture",
     section: "§1–§27 · Routed realization",
@@ -480,7 +410,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 2,
-    position: [-2.5, 1.9, 6.0],
     color: "#a67dff",
     chapter: "03 · Recursive aperture",
     section: "§3 · Reduction before visibility",
@@ -512,7 +441,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 2,
-    position: [-0.9, 2.65, 6.1],
     color: "#bb97ff",
     chapter: "03 · Recursive aperture",
     section: "§5–§6 · Visibility and observational quotient",
@@ -544,7 +472,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 2,
-    position: [0.9, 2.65, 6.1],
     color: "#c6a7ff",
     chapter: "03 · Recursive aperture",
     section: "§7–§10 · Completion and dynamical visibility",
@@ -576,7 +503,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "route",
     lod: 1,
-    position: [2.5, 1.9, 6.0],
     color: "#d3b8ff",
     chapter: "03 · Recursive aperture",
     section: "§21 · Carrier routing and emission",
@@ -608,7 +534,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "route",
     lod: 2,
-    position: [3.6, 0.85, 6.4],
     color: "#b99aff",
     chapter: "03 · Recursive aperture",
     section: "A3 §14 · F4 §13–§14",
@@ -640,7 +565,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "gate",
     lod: 2,
-    position: [4.15, 0, 6.4],
     color: "#ffb66f",
     chapter: "03 · Recursive aperture",
     section: "§21–§26",
@@ -672,7 +596,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "gate",
     lod: 2,
-    position: [3.6, -0.85, 6.4],
     color: "#74809c",
     chapter: "03 · Recursive aperture",
     section: "§21 · Carrier routing",
@@ -704,7 +627,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "gate",
     lod: 3,
-    position: [4.9, 1.5, 6.7],
     color: "#ff9d73",
     chapter: "03 · Recursive aperture",
     section: "§22 · Spectral-determinant face",
@@ -737,7 +659,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "gate",
     lod: 3,
-    position: [5.2, 0.35, 6.7],
     color: "#ffad7a",
     chapter: "03 · Recursive aperture",
     section: "§23 · Fluid continuation face",
@@ -770,7 +691,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 3,
-    position: [4.8, -0.9, 6.7],
     color: "#d99bff",
     chapter: "03 · Recursive aperture",
     section: "§24 · Critical-scaling face",
@@ -802,7 +722,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 2,
-    position: [3.9, -1.85, 6.45],
     color: "#c7a4ff",
     chapter: "03 and 08",
     section: "A3 §25 · P8 §6–§7",
@@ -840,14 +759,17 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "aperture",
     kind: "operator",
     lod: 1,
-    position: [0, 0, 7.65],
-    cameraDistance: 6,
     color: "#c8b0ff",
     chapter: "03 · Recursive aperture",
     section: "§15 · Weighted spectral spine",
     summary: "The CSCF-eligible carrier, spectral measure, weights, relation channels, symbol and damping selected by the aperture.",
     description:
-      "The spine is the common object from which coherent and dissipative field responses are generated. It carries K, its spectral resolution, weight measure, inherited relations, selected coherence symbol h and damping response γ.",
+      "The spine is the common object from which coherent and dissipative field responses are generated. It carries K, its spectral resolution, weight measure, inherited relations, the declared coherence symbol h and damping response γ.",
+    atlasNote: "The spine is an output structure of an admitted spectral branch, not the whole aperture. The CSCF paper writes such a branch as (H, K, h(K), J, W): a Hilbert carrier, the positive carrier, the declared coherence operator, an optional mirror involution and a law-visible algebra.",
+    readingLinks: [
+      { label: "CSCF · the spectral spine and realization data", href: "/source-readout/cscf/01-common-carrier" },
+    ],
+    added: "2026-11-10",
     mathematicalType: "Weighted positive selfadjoint spectral datum",
     domain: "A full-route aperture emission",
     codomain: "Carrier family and canonical-field input",
@@ -869,19 +791,20 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     id: "canonical-field",
     label: "Canonical spectral-curvature field",
     shortLabel: "CSCF",
-    eyebrow: "One carrier · two faces",
+    eyebrow: "One carrier · two linked responses",
     tier: "field",
     kind: "stage",
     lod: 0,
-    position: [0, 0, 8.95],
-    cameraDistance: 9,
+    status: "conditional",
+    statusNote: "The operator statements are proved in the CSCF paper of 3 November 2026. Using them needs an admitted spectral branch to supply the Hilbert carrier, the closed curvature form and the declared coherence symbol.",
+    added: "2026-11-10",
     color: "#57e4c2",
     chapter: "04 · Canonical field",
     section: "§1–§28",
-    summary: "The common field whose coherent and dissipative responses are functions of the same spectral carrier.",
+    summary: "The field layer through which an admitted spectral realization is organized into coherent and dissipative readouts.",
     description:
-      "Coherence and dissipation are not separate substances. The aperture-selected positive carrier K produces a contraction semigroup; the selected real symbol h produces a unitary group; together they form one normal accretive evolution with a shared spectral fingerprint.",
-    atlasNote: "For a fixed carrier, both faces commute. In the reciprocal-memory realization, the carrier evolves with the state. Conditional alignment holds along a realized history, while time ordering and full feedback can alter the measured response.",
+      "A closed nonnegative curvature form on a Hilbert carrier determines a positive selfadjoint operator K. The same K generates a contraction semigroup, and a declared real coherence symbol h selects C = h(K) and the unitary group it generates. Attenuation and phase rotation therefore share one spectral decomposition and differ only in how they weight it. The field begins where an admitted spectral branch of the aperture supplies that carrier. Source/readout and coherent/dissipative are two distinct relationships.",
+    atlasNote: "For a fixed carrier, both faces commute. In the reciprocal-memory realization, the carrier evolves with the state. Conditional alignment holds along a realized history, while time ordering and full feedback can alter the measured response. The common-carrier statement holds within each realization: comparing different systems needs realization maps between them, and deriving a particular measured profile from physical realization laws remains open.",
     readingLinks: [
       { label: "The complete CSCF operator argument", href: "/source-readout/cscf" },
       { label: "Spectral origins and adaptive carrier dynamics", href: "/source-readout/spectral-carriers" },
@@ -917,13 +840,18 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "field",
     kind: "operator",
     lod: 1,
-    position: [-2.6, 2.2, 9.0],
     color: "#6eecc9",
     chapter: "04 · Canonical field",
     section: "§2 · Two canonical faces",
     summary: "The unitary phase evolution generated by C=h(K).",
     description:
-      "The coherent branch preserves norm and spectral expectations when dissipation is absent. Its oscillation spectrum is a nonlinear image of the common carrier spectrum through the aperture-selected symbol h.",
+      "The coherent branch preserves norm and spectral expectations when dissipation is absent. Its oscillation spectrum is a nonlinear image of the common carrier spectrum through the declared symbol h.",
+    atlasNote: "The two faces have different uniqueness results. Under explicit axioms the dissipative face has a classification theorem; the reversible axioms still leave the coherence symbol to be declared.",
+    readingLinks: [
+      { label: "CSCF · the coherent face", href: "/source-readout/cscf/05-coherent-face" },
+      { label: "CSCF · classification under explicit axioms", href: "/source-readout/cscf/07-classification" },
+    ],
+    added: "2026-11-10",
     mathematicalType: "Strongly continuous unitary group",
     domain: "Selfadjoint C=h(K) on D(C)",
     codomain: "Unitary automorphisms and phase response",
@@ -949,13 +877,18 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "field",
     kind: "operator",
     lod: 1,
-    position: [2.6, -2.2, 9.0],
     color: "#48cdb3",
     chapter: "04 · Canonical field",
     section: "§2 and §5 · Dissipation",
     summary: "The contractive, entropy-producing response generated by the positive carrier K.",
     description:
       "The dissipative face selects stable stationary sectors and sets relaxation rates. Its gap controls convergence to ker K, while factorization of its capacity into Lindblad channels determines the realized form of decoherence or transport.",
+    atlasNote: "Under the explicit axioms of the CSCF paper, an admissible dissipative scalar is unique up to a bounded modulation within the declared Fejér-calibrated determinant class. The proof does not classify arbitrary dissipative spectral scalars, and no comparable result selects the coherent symbol.",
+    readingLinks: [
+      { label: "CSCF · the Lambda (dissipative) face", href: "/source-readout/cscf/04-lambda-face" },
+      { label: "CSCF · classification under explicit axioms", href: "/source-readout/cscf/07-classification" },
+    ],
+    added: "2026-11-10",
     mathematicalType: "Strongly continuous selfadjoint contraction semigroup",
     domain: "Positive selfadjoint K and damping response γ≥0",
     codomain: "Contractive evolution, entropy production and stable records",
@@ -987,7 +920,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "field",
     kind: "equation",
     lod: 2,
-    position: [0, 3.2, 9.15],
     color: "#78f2d3",
     chapter: "04 · Canonical field",
     section: "§24 · Dual-sector fingerprint",
@@ -1024,7 +956,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "field",
     kind: "operator",
     lod: 3,
-    position: [-3.5, -1.2, 9.15],
     color: "#72d9c1",
     chapter: "04 · Canonical field",
     section: "§19 · Exact inverse reconstruction",
@@ -1056,8 +987,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-7.4, 4.2, 10.6],
-    cameraDistance: 5.5,
     color: "#84d7ff",
     chapter: "05a · Locally covariant QFT",
     section: "§1–§16",
@@ -1102,8 +1031,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-10.0, 1.5, 9.4],
-    cameraDistance: 5.5,
     color: "#78c9ff",
     chapter: "05 · Quantum-record projection",
     section: "§1–§10",
@@ -1152,8 +1079,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-9.5, -2.0, 9.6],
-    cameraDistance: 5.5,
     color: "#6ed8dc",
     chapter: "05 · Quantum-record projection",
     section: "§11–§21",
@@ -1195,8 +1120,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-6.6, -4.8, 10.5],
-    cameraDistance: 5.5,
     color: "#65cfbf",
     chapter: "06 · Pregeometry and gravity",
     section: "§1–§10",
@@ -1235,8 +1158,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-2.3, -6.2, 11.0],
-    cameraDistance: 5.5,
     color: "#66d4a9",
     chapter: "06 · Pregeometry and gravity",
     section: "§11–§22",
@@ -1280,7 +1201,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "operator",
     lod: 2,
-    position: [2.0, 5.9, 10.8],
     color: "#d8a2ff",
     chapter: "07 · Matter and gauge sector",
     section: "§1–§8",
@@ -1318,8 +1238,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [5.6, 4.5, 10.8],
-    cameraDistance: 5.5,
     color: "#ce93ff",
     chapter: "07 · Matter and gauge sector",
     section: "§3–§24",
@@ -1364,8 +1282,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [8.4, 1.8, 10.2],
-    cameraDistance: 5.5,
     color: "#f0a6d8",
     chapter: "08 · Parameter selection",
     section: "§1–§17",
@@ -1410,8 +1326,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [9.0, -1.8, 10.0],
-    cameraDistance: 5.5,
     color: "#f3b071",
     chapter: "09 · Cosmology, vacuum and time",
     section: "§1–§18",
@@ -1455,8 +1369,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [6.2, -4.8, 10.7],
-    cameraDistance: 5.5,
     color: "#f2c75f",
     chapter: "09a · Thermodynamic limit",
     section: "§1–§11",
@@ -1500,8 +1412,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [2.1, -6.4, 11.0],
-    cameraDistance: 5.5,
     color: "#ffd26f",
     chapter: "09 · Cosmology, vacuum and time",
     section: "§13–§14",
@@ -1533,8 +1443,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "sector",
     lod: 1,
-    position: [-1.8, 6.5, 11.0],
-    cameraDistance: 5.5,
     color: "#dce6ff",
     chapter: "09 and 10",
     section: "C9 §13–§14 · G10 §3.10",
@@ -1566,8 +1474,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "stage",
     lod: 0,
-    position: [0, 0, 12.25],
-    cameraDistance: 13,
     color: "#eef5ff",
     chapter: "10 · Global compatibility",
     section: "§1–§15",
@@ -1612,7 +1518,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "operator",
     lod: 4,
-    position: [0.0, -2.1, 13.7],
     color: "#b9cdf8",
     chapter: "10 · Global compatibility",
     section: "§8 and §11 · Certified closure and sensitivity",
@@ -1662,7 +1567,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "tier1",
     kind: "operator",
     lod: 4,
-    position: [10.1, 0.7, 12.9],
     color: "#f5b6df",
     chapter: "08 · Parameter selection",
     section: "§13–§15 · Forward map, certification and identifiability",
@@ -1706,8 +1610,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [11.5, 3.0, 11.0],
-    cameraDistance: 4.8,
     color: "#ffc96b",
     chapter: "08 · Parameter selection",
     section: "§13–§14",
@@ -1740,8 +1642,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [-6.0, -8.2, 11.7],
-    cameraDistance: 4.8,
     color: "#9be6a8",
     chapter: "06 · Pregeometry and gravity",
     section: "§14–§19",
@@ -1773,8 +1673,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [-12.0, -3.8, 10.6],
-    cameraDistance: 4.8,
     color: "#7ee6d8",
     chapter: "05 · Quantum-record projection",
     section: "§17–§20",
@@ -1806,8 +1704,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [9.2, 6.7, 11.5],
-    cameraDistance: 4.8,
     color: "#e4a4ff",
     chapter: "07 and 08",
     section: "M7 §11–§18 · P8 §9–§13",
@@ -1839,8 +1735,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [11.6, -4.1, 10.8],
-    cameraDistance: 4.8,
     color: "#ffbd73",
     chapter: "09 · Cosmology, vacuum and time",
     section: "§8–§12",
@@ -1872,8 +1766,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [3.1, -9.1, 11.8],
-    cameraDistance: 4.8,
     color: "#ffd874",
     chapter: "09 and 09a",
     section: "Temporal and thermodynamic orientation",
@@ -1905,8 +1797,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [10.0, 8.5, 12.1],
-    cameraDistance: 4.8,
     color: "#dca2ff",
     chapter: "05a · Locally covariant QFT",
     section: "§10 · QCD completion, confinement and mass gap",
@@ -1945,8 +1835,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [13.0, -2.2, 11.8],
-    cameraDistance: 4.8,
     color: "#eeb476",
     chapter: "09 and 09a",
     section: "C9 §6–§7 · TH9a §6",
@@ -1984,8 +1872,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [10.2, -6.6, 12.4],
-    cameraDistance: 4.8,
     color: "#f2c16f",
     chapter: "09a · Thermodynamic limit",
     section: "§7 · Baryogenesis and leptogenesis branches",
@@ -2018,8 +1904,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "observable",
     kind: "observable",
     lod: 2,
-    position: [-7.8, -7.2, 13.0],
-    cameraDistance: 4.8,
     color: "#9edca9",
     chapter: "09a · Thermodynamic limit",
     section: "§8 · Generalized entropy and gravitational ownership",
@@ -2064,7 +1948,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [-8.4, 7.2, 12.4],
     color: "#72e6a5",
     chapter: "05a and 10",
     section: "Recovery limits",
@@ -2096,7 +1979,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [-5.0, -10.0, 12.6],
     color: "#72e6a5",
     chapter: "06 and 10",
     section: "Gravity recovery",
@@ -2134,7 +2016,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [-11.7, 0.0, 12.0],
     color: "#72e6a5",
     chapter: "10 · Global compatibility",
     section: "§10 · Recovery limits",
@@ -2172,7 +2053,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [-1.0, -10.2, 12.8],
     color: "#72e6a5",
     chapter: "05a, 06 and 10",
     section: "QFT recovery · G6 §18 · G10 §10",
@@ -2210,7 +2090,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [7.4, -8.0, 12.5],
     color: "#72e6a5",
     chapter: "09a and 10",
     section: "Thermodynamic recovery",
@@ -2248,7 +2127,6 @@ const atlasNodeDefinitions: AtlasNodeDefinition[] = [
     tier: "recovery",
     kind: "limit",
     lod: 3,
-    position: [11.0, -7.0, 12.2],
     color: "#72e6a5",
     chapter: "09 and 10",
     section: "Cosmological recovery",
@@ -2306,18 +2184,107 @@ function defaultErrorNorm(node: AtlasNodeDefinition): string {
   return "Zero structural defect for the exact map; numerical realizations must attach a certified LOD-4 norm";
 }
 
-export const atlasNodes: AtlasNode[] = atlasNodeDefinitions.map((node) => ({
-  ...node,
-  stateVariables: node.stateVariables
-    ?? `Typed ${node.mathematicalType} variables on: ${node.domain}`,
-  boundaryClass: node.boundaryClass ?? defaultBoundaryClass(node),
-  branchDomain: node.branchDomain
-    ?? node.gate
-    ?? `Admitted ${tierMeta[node.tier].label} branch satisfying the stated domain, regularity and covariance gates`,
-  approximationOrder: node.approximationOrder ?? defaultApproximationOrder(node),
-  errorNorm: node.errorNorm ?? defaultErrorNorm(node),
-  recovery: node.recovery ?? [],
-}));
+/** Aperture faces are listed apart from the aperture's operations and routes. */
+const APERTURE_FACES = new Set(["rh-face", "fluid-face", "critical-face", "em-face"]);
+
+function defaultGroup(node: AtlasNodeDefinition): string {
+  switch (node.tier) {
+    case "frame": return "frame";
+    case "foundation": return "foundation";
+    case "source": return "source";
+    case "tier0": return "law";
+    case "aperture": return APERTURE_FACES.has(node.id) ? "aperture-faces" : "aperture-core";
+    case "field": return "field";
+    case "tier1": return node.lod === 4 ? "numerics" : "sectors";
+    case "observable": return "observables";
+    case "recovery": return "limits";
+  }
+}
+
+/**
+ * Status of architecture entries.
+ *
+ * The reality model is a typed construction: it states what a branch must
+ * supply and how the parts connect. An entry with a gate is conditional on that
+ * gate. The entries below are marked open because their gate is a problem that
+ * has not been solved, or a number that has not been computed; the Atlas claims
+ * no result for them.
+ */
+const OPEN_ARCHITECTURE_ENTRIES: Record<string, string> = {
+  "rh-face": "The full route needs an explicit selfadjoint spectral realization. None is claimed; without it the face stays a residue.",
+  "fluid-face": "Global strong regularity is a route gate. The required a priori estimate is not supplied.",
+  "observable-alpha": "No numerical value is claimed. Evaluation is an executable computation gate that has not been run to a certified result.",
+  "observable-qcd": "The physical gap and confinement criteria must come from a nonperturbative QCD completion, which is not supplied.",
+  "observable-baryogenesis": "No baryon asymmetry value is emitted. The required CP invariants, rates and washout have not been computed.",
+};
+
+const ARCHITECTURE_NOTE =
+  "Part of the typed realization programme (the twelve-chapter reality model). It states what a branch must supply and how the parts connect; it reports no experimental confirmation.";
+
+function defaultStatus(node: AtlasNodeDefinition): { status: AtlasStatus; statusNote: string } {
+  const open = OPEN_ARCHITECTURE_ENTRIES[node.id];
+  if (open) return { status: "open", statusNote: open };
+  if (node.gate) return { status: "conditional", statusNote: `Holds on a branch that passes its gate: ${node.gate}` };
+  return { status: "construction", statusNote: ARCHITECTURE_NOTE };
+}
+
+/** A research entry (content/atlas/research.yaml) as an Atlas entry. */
+function researchDefinition(entry: AtlasResearchEntry): AtlasNodeDefinition {
+  return {
+    id: entry.id,
+    label: entry.label,
+    shortLabel: entry.shortLabel ?? entry.label,
+    eyebrow: entry.eyebrow,
+    tier: entry.tier,
+    kind: entry.tier === "frame" ? "frame" : "result",
+    lod: entry.tier === "frame" || entry.tier === "foundation" ? 1 : 2,
+    color: tierMeta[entry.tier].color,
+    group: entry.group,
+    status: entry.status,
+    statusNote: entry.statusNote,
+    chapter: entry.paper ? entry.paper.title : entry.read[0].label,
+    section: entry.paper
+      ? [entry.paper.date, entry.paper.doi ? `doi:${entry.paper.doi}` : ""].filter(Boolean).join(" · ")
+      : "Article on this site",
+    summary: entry.summary,
+    description: entry.description,
+    atlasNote: entry.note,
+    readingLinks: entry.read,
+    paper: entry.paper,
+    added: entry.added,
+    equations: entry.equations,
+    upstream: [],
+    downstream: [],
+  };
+}
+
+const researchDefinitions = atlasResearchEntries.map(researchDefinition);
+
+/** Ids of entries that come from content/atlas/research.yaml. */
+export const researchEntryIds = new Set(researchDefinitions.map((node) => node.id));
+
+export const atlasNodes: AtlasNode[] = [...atlasNodeDefinitions, ...researchDefinitions].map((node) => {
+  const typed = node.mathematicalType !== undefined;
+  return {
+    ...node,
+    stage: node.stage ?? tierMeta[node.tier].stage,
+    group: node.group ?? defaultGroup(node),
+    ...(node.status && node.statusNote ? { status: node.status, statusNote: node.statusNote } : defaultStatus(node)),
+    // The typed contract belongs to architecture entries only.
+    ...(typed
+      ? {
+          stateVariables: node.stateVariables ?? `Typed ${node.mathematicalType} variables on: ${node.domain}`,
+          boundaryClass: node.boundaryClass ?? defaultBoundaryClass(node),
+          branchDomain: node.branchDomain
+            ?? node.gate
+            ?? `Admitted ${tierMeta[node.tier].label} branch satisfying the stated domain, regularity and covariance gates`,
+          approximationOrder: node.approximationOrder ?? defaultApproximationOrder(node),
+          errorNorm: node.errorNorm ?? defaultErrorNorm(node),
+        }
+      : {}),
+    recovery: node.recovery ?? [],
+  };
+});
 
 export const atlasNodeMap = new Map(atlasNodes.map((node) => [node.id, node]));
 
@@ -2474,6 +2441,19 @@ export const atlasEdges: AtlasEdge[] = [
   edge("gravity", "recovery-semiclassical-gravity", "suppress stochastic remainder", "recovery", "Nq→∞", "positive noise kernel and uniform fluctuation bound"),
   edge("thermodynamics", "recovery-thermo", "mixing/kinetic limit", "recovery", "τmix/τobs,Kn→0", "detailed balance and collision gap"),
   edge("cosmology", "recovery-cosmology", "standard-cosmology limit", "recovery", "εFLRW,εEFT,εnonCDM→0", "consistent truncation"),
+  // Connections declared by research entries (content/atlas/research.yaml).
+  ...atlasResearchEntries.flatMap((entry) =>
+    entry.relations.map((relation) =>
+      measurementEdge(
+        entry.id,
+        relation.to,
+        relation.label,
+        relation.type,
+        `${entry.label} → ${atlasNodeMap.get(relation.to)?.label ?? relation.to}`,
+        relation.note,
+      ),
+    ),
+  ),
 ];
 
 export const observableRoutes: ObservableRoute[] = [
@@ -2624,6 +2604,104 @@ export const stageRail = [
   { id: "global-closure", label: "T1", sublabel: "Readout" },
 ] as const;
 
+/** Research entries whose paper appeared within this many days of the newest one count as recent. */
+const RECENT_WINDOW_DAYS = 21;
+
+function recentResearchIds(): string[] {
+  const dated = atlasNodes.filter((node) => node.paper?.date);
+  if (!dated.length) return [];
+  const newest = Math.max(...dated.map((node) => Date.parse(node.paper!.date!)));
+  const cutoff = newest - RECENT_WINDOW_DAYS * 86_400_000;
+  return dated
+    .filter((node) => Date.parse(node.paper!.date!) >= cutoff)
+    .sort((a, b) => groupMeta[a.group].order - groupMeta[b.group].order || a.paper!.date!.localeCompare(b.paper!.date!))
+    .map((node) => node.id);
+}
+
+/**
+ * Guided tours. `descent` is the original full tour and keeps its address
+ * (/atlas?mode=guided). `recent` is computed from paper dates, so it stays
+ * current as entries are added.
+ */
+export const atlasTours: AtlasTour[] = [
+  {
+    id: "essentials",
+    label: "The instrument in ten stops",
+    description: "From the whole model to the readout, one stop at a time.",
+    nodeIds: [
+      "frame-complement", "foundation-non-equivalence", "omega", "tier0-law", "aperture",
+      "canonical-field", "global-closure", "measurement-programme", "gravity", "spc2-constitution",
+    ],
+  },
+  {
+    id: "descent",
+    label: "The full descent",
+    description: "Every primary structure of the realization programme, from Ω to the globally compatible readout.",
+    nodeIds: [...guidedTour],
+  },
+  {
+    id: "foundation",
+    label: "The seven papers",
+    description: "The canonical foundation in reading order.",
+    nodeIds: [
+      "foundation-non-equivalence", "foundation-target-necessity", "foundation-minimal-completion",
+      "foundation-geometric-realization", "foundation-projected-dynamics", "foundation-identifiability",
+      "foundation-rs2-witness",
+    ],
+  },
+  {
+    id: "ground",
+    label: "From the ground to Ω",
+    description: "The unspecified ground, the unsplit, source and readout, and where the formal construction begins.",
+    nodeIds: ["frame-ground", "frame-unsplit", "frame-complement", "frame-differentiation", "omega", "tier0-law", "everything-equation-schema"],
+  },
+  {
+    id: "spectral",
+    label: "CSCF and the spectral carriers",
+    description: "The canonical field, its two responses, and the papers on its spectrum and adaptive carriers.",
+    nodeIds: [
+      "spectral-spine", "canonical-field", "coherent-face", "dissipative-face", "cscf-operator-origin", "cscf-modular-ratios",
+      "cscf-closure-coherence", "spectral-ratios", "spectral-profiles", "adaptive-carriers", "sustained-carriers", "sharp-uniqueness", "slow-passage",
+    ],
+  },
+  {
+    id: "boundary",
+    label: "Gravity: reading the boundary",
+    description: "The gravitational readouts, ending with what boundary balls see at first and at second order.",
+    nodeIds: [
+      "gravity", "gravity-modular-transport", "gravity-transport-projective", "gravity-local-horizon",
+      "gravity-boundary-balls", "gravity-second-order", "observable-horizon-entropy",
+    ],
+  },
+  {
+    id: "measurement",
+    label: "Quantum measurement",
+    description: "From the measurement programme to events, statistics and material records.",
+    nodeIds: ["measurement-programme", "measurement-source", "pilot-medium", "bell-event-law", "massive-configuration", "born-statistics", "material-records"],
+  },
+  {
+    id: "perspective",
+    label: "Consciousness and perspective",
+    description: "Observers in the readout, and the consciousness programme built on them.",
+    nodeIds: [
+      "observers", "spc2-constitution", "perspective-boundaries", "perspective-interfaces", "perspective-realizations",
+      "perspective-whole-field", "perspective-bounded-agency", "perspective-constituted-agency",
+    ],
+  },
+  {
+    id: "time",
+    label: "Time and the observer",
+    description: "Physical time as a Tier 1 orientation, a complete history, and passage as it is experienced within one.",
+    nodeIds: ["time", "observable-time", "perspective-block-universe", "perspective-temporal-passage", "perspective-whole-field"],
+  },
+  {
+    id: "recent",
+    label: "Recent papers",
+    description: "Entries drawn from the most recently published papers.",
+    nodeIds: recentResearchIds(),
+  },
+];
+
 function certifyAtlasTopology() {
   const ids = new Set(atlasNodes.map((node) => node.id));
   if (ids.size !== atlasNodes.length) throw new Error("Reality Atlas contains duplicate node identifiers.");
@@ -2638,17 +2716,34 @@ function certifyAtlasTopology() {
   for (const node of atlasNodes) {
     node.upstream.forEach((id) => requireNode(id, `${node.id} upstream interface`));
     node.downstream.forEach((id) => requireNode(id, `${node.id} downstream interface`));
-    if (node.position.some((coordinate) => !Number.isFinite(coordinate))) {
-      throw new Error(`Reality Atlas node “${node.id}” has a non-finite position.`);
+    if (!statusMeta[node.status]) throw new Error(`Reality Atlas node “${node.id}” has an unknown status “${node.status}”.`);
+    if (!node.statusNote.trim()) throw new Error(`Reality Atlas node “${node.id}” has no status note.`);
+    const group = groupMeta[node.group];
+    if (!group) throw new Error(`Reality Atlas node “${node.id}” is in an unknown group “${node.group}”.`);
+    if (group.stage !== node.stage) {
+      throw new Error(`Reality Atlas node “${node.id}” is at stage “${node.stage}” but its group “${node.group}” belongs to “${group.stage}”.`);
     }
-    for (const [field, value] of Object.entries({
-      stateVariables: node.stateVariables,
-      boundaryClass: node.boundaryClass,
-      branchDomain: node.branchDomain,
-      approximationOrder: node.approximationOrder,
-      errorNorm: node.errorNorm,
-    })) {
-      if (!value.trim()) throw new Error(`Reality Atlas node “${node.id}” has an empty ${field} contract.`);
+    if (!node.summary.trim() || !node.description.trim()) {
+      throw new Error(`Reality Atlas node “${node.id}” needs a summary and a description.`);
+    }
+    for (const link of node.readingLinks ?? []) {
+      if (!link.label.trim() || !link.href.startsWith("/")) {
+        throw new Error(`Reality Atlas node “${node.id}” has a reading link without a label or a site path.`);
+      }
+    }
+    // Architecture entries carry a complete typed contract; research entries carry a source instead.
+    if (node.mathematicalType !== undefined) {
+      for (const [field, value] of Object.entries({
+        stateVariables: node.stateVariables,
+        boundaryClass: node.boundaryClass,
+        branchDomain: node.branchDomain,
+        approximationOrder: node.approximationOrder,
+        errorNorm: node.errorNorm,
+      })) {
+        if (!value?.trim()) throw new Error(`Reality Atlas node “${node.id}” has an empty ${field} contract.`);
+      }
+    } else if (!node.readingLinks?.length) {
+      throw new Error(`Reality Atlas node “${node.id}” has neither a typed contract nor a source to read.`);
     }
     const localEquationTags = new Set<string>();
     for (const equation of node.equations) {
@@ -2683,17 +2778,35 @@ function certifyAtlasTopology() {
   }
   guidedTour.forEach((id) => requireNode(id, "guided tour"));
   stageRail.forEach((stage) => requireNode(stage.id, "stage rail"));
+  for (const tour of atlasTours) {
+    if (!tour.nodeIds.length) throw new Error(`Reality Atlas tour “${tour.id}” is empty.`);
+    tour.nodeIds.forEach((id) => requireNode(id, `tour “${tour.id}”`));
+  }
 }
 
 certifyAtlasTopology();
 
+/**
+ * Counts shown in the Atlas and published in llms.txt and graph.json.
+ * Everything except `sectors` and `primaryStages` is computed: chapters and
+ * equation tags from the reality-model text, the rest from the entries above.
+ */
 export const atlasStats = {
-  chapters: 12,
-  equationTags: 1133,
+  chapters: atlasSourceStats.chapters,
+  equationTags: atlasSourceStats.equationTags,
+  /** The ten sectors of the Tier 1 equalizer named in the reality model (chapter 10). */
   sectors: 10,
-  primaryStages: 5,
+  primaryStages: stageRail.length,
   representedNodes: atlasNodes.length,
   representedEdges: atlasEdges.length,
+  architectureEntries: atlasNodes.length - researchEntryIds.size,
+  researchEntries: researchEntryIds.size,
+  papersLinked: new Set(atlasNodes.map((node) => node.paper?.slug).filter(Boolean)).size,
+  equationsShown: atlasNodes.reduce((total, node) => total + node.equations.length, 0),
+  traces: observableRoutes.length,
+  statusCounts: Object.fromEntries(
+    statusOrder.map((status) => [status, atlasNodes.filter((node) => node.status === status).length]),
+  ) as Record<AtlasStatus, number>,
 };
 
 export function getAtlasNode(id: string): AtlasNode {
@@ -2711,6 +2824,51 @@ export function getConnectedNodes(id: string): AtlasNode[] {
     .filter((node): node is AtlasNode => Boolean(node));
 }
 
+export interface AtlasConnection {
+  node: AtlasNode;
+  edge?: AtlasEdge;
+}
+
+/** Everything that leads into an entry and everything it leads to, with the connecting edge when one is declared. */
+export function getConnections(id: string): { incoming: AtlasConnection[]; outgoing: AtlasConnection[] } {
+  const node = atlasNodeMap.get(id);
+  if (!node) return { incoming: [], outgoing: [] };
+  const collect = (ids: string[], direction: "in" | "out") => {
+    const seen = new Set<string>();
+    const result: AtlasConnection[] = [];
+    const add = (otherId: string) => {
+      if (seen.has(otherId) || otherId === id) return;
+      const other = atlasNodeMap.get(otherId);
+      if (!other) return;
+      seen.add(otherId);
+      const edge = atlasEdges.find((candidate) =>
+        direction === "in" ? candidate.from === otherId && candidate.to === id : candidate.from === id && candidate.to === otherId);
+      result.push({ node: other, edge });
+    };
+    ids.forEach(add);
+    for (const edge of atlasEdges) {
+      if (direction === "in" && edge.to === id) add(edge.from);
+      if (direction === "out" && edge.from === id) add(edge.to);
+    }
+    return result;
+  };
+  return { incoming: collect(node.upstream, "in"), outgoing: collect(node.downstream, "out") };
+}
+
+/** Entries of one stage, arranged in their groups, in display order. */
+export function getStageGroups(stage: AtlasStage): Array<{ id: string; label: string; blurb: string; nodes: AtlasNode[] }> {
+  return Object.entries(groupMeta)
+    .filter(([, meta]) => meta.stage === stage)
+    .sort(([, a], [, b]) => a.order - b.order)
+    .map(([id, meta]) => ({
+      id,
+      label: meta.label,
+      blurb: meta.blurb,
+      nodes: atlasNodes.filter((node) => node.group === id).sort((a, b) => a.lod - b.lod),
+    }))
+    .filter((group) => group.nodes.length > 0);
+}
+
 export function searchAtlas(query: string): AtlasNode[] {
   const normalized = query.trim().toLowerCase();
   if (!normalized) return [];
@@ -2724,6 +2882,11 @@ export function searchAtlas(query: string): AtlasNode[] {
         node.description,
         node.chapter,
         node.section,
+        node.statusNote,
+        statusMeta[node.status].label,
+        node.paper?.title,
+        node.paper?.doi,
+        node.atlasNote,
         node.mathematicalType,
         node.stateVariables,
         node.boundaryClass,
@@ -2731,8 +2894,10 @@ export function searchAtlas(query: string): AtlasNode[] {
         node.approximationOrder,
         node.errorNorm,
         ...node.recovery,
+        ...(node.readingLinks ?? []).map((link) => link.label),
         ...node.equations.flatMap((item) => [item.tag, item.title, item.interpretation]),
       ]
+        .filter(Boolean)
         .join(" ")
         .toLowerCase();
       const score =
@@ -2743,6 +2908,6 @@ export function searchAtlas(query: string): AtlasNode[] {
     })
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score || a.node.lod - b.node.lod)
-    .slice(0, 12)
+    .slice(0, 14)
     .map((item) => item.node);
 }

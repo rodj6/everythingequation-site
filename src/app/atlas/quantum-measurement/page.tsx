@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { atlasEdges, atlasNodeMap, getAtlasNode, measurementNodeIds } from "@/data/reality-atlas";
 import { site } from "@/config/site";
+import "./guide.css";
 
 const description = "Explore equilibrium, conditional preparation, deterministic histories, retained quantum sources and faithful records in the Reality Atlas, with complete research articles and their mathematical relationships.";
 
