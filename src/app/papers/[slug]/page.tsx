@@ -11,6 +11,7 @@ import { manualPapers } from "@/generated/manualPapers";
 import { consciousnessPublication } from "@/config/consciousness";
 import { externalDescriptionText } from "@/lib/external-metadata";
 import { jsonLdText } from "@/lib/json-ld";
+import { rhPublication } from "@/lib/riemann-hypothesis";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -55,6 +56,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const paper = await getPaper(slug);
   if (!paper || paper.status !== "public") notFound();
+  const isRiemannHypothesis = paper.slug === "riemann-hypothesis";
   const correctedEdition = gravityEditions.find(edition => edition.paperSlug === slug && edition.previousDoi);
 
   const problems = await loadProblems();
@@ -75,6 +77,10 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         : { affiliation: { "@type": "Organization", name: site.author.affiliation } }),
     },
     datePublished: paper.date ?? undefined,
+    ...(isRiemannHypothesis ? {
+      alternateName: `${rhPublication.title}: ${rhPublication.subtitle}`,
+      creditText: "Human-readable reconstruction by Jeremy Rodgers. Underlying mathematical argument credited to Levent Alpöge and Claude.",
+    } : {}),
     version: paper.version ?? undefined,
     ...(paper.slug === consciousnessPublication.paperSlug ? { bookEdition: "Revised edition, 28 October 2026" } : {}),
     ...(paper.researchProgramme === "consciousness" ? { inLanguage: "en" } : {}),
@@ -135,6 +141,13 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         {paper.subtitle ? (
           <p className="mt-3 text-lg leading-relaxed text-mute">{paper.subtitle}</p>
         ) : null}
+        {isRiemannHypothesis && (
+          <div className="mt-5 space-y-3 leading-relaxed text-mute">
+            <p>Jeremy Rodgers, Independent Researcher. The underlying mathematical argument is credited to Levent Alpöge and Claude.</p>
+            <p>The supplied manuscript is titled <cite>{rhPublication.title}: {rhPublication.subtitle}</cite>.</p>
+            <p>The manuscript records a textual scan of 175,187 local Lean modules and targeted audits of the reconstructed argument. A local Lean 4 kernel check of the pinned environment was outside the reported verification scope.</p>
+          </div>
+        )}
 
         {paper.category === "superseded" ? (
           <aside className="mt-6 rounded-xl border border-[hsl(var(--amber)/0.35)] bg-[hsl(var(--amber)/0.06)] px-5 py-4 text-sm leading-relaxed text-fg/90">
@@ -186,7 +199,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         <div className="mt-6 flex flex-wrap gap-3">
           {paper.webUrl ? (
             <Link href={paper.webUrl} className="rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-[hsl(var(--accent-strong))]">
-              {paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text web edition →' : 'Read the complete web edition →'}
+              {isRiemannHypothesis ? 'Open the reading edition →' : paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text web edition →' : 'Read the complete web edition →'}
             </Link>
           ) : null}
           {paper.doiUrl ? (
@@ -220,7 +233,8 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
             {correctedEdition?.supplementUrl && <a href={correctedEdition.supplementUrl} download className="hover:text-glow-strong">{correctedEdition.supplementDescription} ↓</a>}
             {paper.supplementPdfUrl ? <a href={paper.supplementPdfUrl} download className="hover:text-glow-strong">Technical supplement PDF ↓</a> : null}
             {paper.texUrl ? <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a> : null}
-            {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">Complete Markdown ↓</a> : null}
+            {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">{isRiemannHypothesis ? 'Markdown transcription ↓' : 'Complete Markdown ↓'}</a> : null}
+            {isRiemannHypothesis && <a href={rhPublication.manifestUrl} className="hover:text-glow-strong">Chapter inventory →</a>}
           </div>
         ) : null}
         {paper.slug === 'yang-mills' && <section className="mt-6" aria-labelledby="shared-reading-editions"><h2 id="shared-reading-editions">Two complete works in this record</h2><ul>{liftEditions.map(p=><li className="mt-4" key={p.id}><Link href={p.url}>{p.title} →</Link><br/><a href={p.pdfUrl}>Original PDF ↓</a> · <a href={p.markdownUrl}>Complete Markdown ↓</a></li>)}</ul></section>}

@@ -1,0 +1,209 @@
+[
+  {
+    "page": 6,
+    "tag": "1",
+    "bbox": [
+      96,
+      293,
+      541,
+      328
+    ],
+    "latex": "\\forall s\\in\\mathbb C,\\qquad \\zeta(s)=0,\\quad \\neg\\exists n\\in\\mathbb N\\;s=-2(n+1),\\quad s\\ne 1\\quad \\Longrightarrow\\quad \\operatorname{Re}s=\\frac12.",
+    "note": "Ordinary RH as stated in the manuscript. The natural-number index starts at zero."
+  },
+  {
+    "page": 6,
+    "tag": "2",
+    "bbox": [
+      218,
+      438,
+      544,
+      456
+    ],
+    "latex": "\\zeta(1-w)=2(2\\pi)^{-w}\\Gamma(w)\\cos(\\pi w/2)\\zeta(w).",
+    "note": "Functional equation with the manuscript’s gamma and cosine normalization."
+  },
+  {
+    "page": 6,
+    "tag": "3",
+    "bbox": [
+      214,
+      552,
+      544,
+      566
+    ],
+    "latex": "\\cos z=0\\quad\\Longleftrightarrow\\quad\\exists k\\in\\mathbb{Z}\\ z=(2k+1)\\pi/2.",
+    "note": "Integer-indexed zero set of the cosine."
+  },
+  {
+    "page": 6,
+    "tag": "4",
+    "bbox": [
+      252,
+      622,
+      544,
+      636
+    ],
+    "latex": "L(s,1_1)=\\zeta(s)\\qquad (s\\in\\mathbb{C}).",
+    "note": "The character modulo one and zeta agree as total functions."
+  },
+  {
+    "page": 7,
+    "tag": "5",
+    "bbox": [
+      181,
+      113,
+      544,
+      145
+    ],
+    "latex": "\\forall w\\in\\mathbb{C},\\qquad\\operatorname{Re}w>\\frac12,\\quad w\\ne1\\quad\\Longrightarrow\\quad\\zeta(w)\\ne0.",
+    "note": "The right half-plane excludes s = 1 in this statement."
+  },
+  {
+    "page": 7,
+    "tag": "6",
+    "bbox": [
+      115,
+      392,
+      541,
+      419
+    ],
+    "latex": "\\forall N\\ge1\\;\\forall\\chi\\bmod N\\;\\forall s\\in\\mathbb C,\\qquad \\operatorname{Re}s>\\frac12,\\quad (\\chi\\ne 1_N\\text{ or }s\\ne1)\\quad\\Longrightarrow\\quad L(s,\\chi)\\ne0.",
+    "note": "EC excludes only the trivial-character pole."
+  },
+  {
+    "page": 8,
+    "tag": "7",
+    "bbox": [
+      193,
+      129,
+      541,
+      156
+    ],
+    "latex": "\\forall\\psi\\;\\forall s\\in\\mathbb C,\\qquad \\operatorname{Re}s>\\frac12\\quad\\Longrightarrow\\quad L(s,\\chi_\\psi)\\ne0.",
+    "note": "ZF includes the assigned total-function value at s = 1."
+  },
+  {
+    "page": 8,
+    "tag": "8",
+    "bbox": [
+      217,
+      493,
+      544,
+      530
+    ],
+    "latex": "L(s,\\chi)=L(s,\\chi')\\prod_{p\\mid N}(1-\\chi'(p)p^{-s}).",
+    "note": "The continuation identity has one factor for each distinct prime divisor of N."
+  },
+  {
+    "page": 444,
+    "bbox": [
+      184,
+      550,
+      455,
+      569
+    ],
+    "latex": "D_{\\mathrm{dR}}(q_{\\mathrm{Rep}}(\\rho'_m))\\le\\mathrm{Fil}^{-N},\\qquad D_{\\mathrm{dR}}(q_{\\mathrm{Rep}}(\\rho'_m))\\cap\\mathrm{Fil}^{N+1}=0,",
+    "note": "Proposition 7.102(1), two filtration conditions."
+  },
+  {
+    "page": 445,
+    "bbox": [
+      128,
+      445,
+      484,
+      469
+    ],
+    "latex": "\\operatorname{Img}(n,m)=\\left\\{w\\in W(\\mathbb C_\\ell^{\\flat})^d:\\exists s\\in\\mathfrak S^{d'_m},\\ w\\equiv R_m\\operatorname{ev}_W(s)\\pmod{\\ell^nW(\\mathbb C_\\ell^{\\flat})}\\right\\}.",
+    "note": "Proposition 7.102, Step 3a. The module rank is d prime sub m."
+  },
+  {
+    "page": 445,
+    "bbox": [
+      251,
+      706,
+      388,
+      724
+    ],
+    "latex": "\\ell^n\\mid \\operatorname{ev}(u)^c-\\tau^{2N}y\\qquad\\text{in }A_{\\inf}",
+    "note": "c and y depend on the fixed n and are independent of the layer index m."
+  },
+  {
+    "page": 446,
+    "bbox": [
+      123,
+      244,
+      516,
+      296
+    ],
+    "latex": "\\begin{aligned}\nT_0R_m\\operatorname{incl}_W(a)&\\equiv\\operatorname{incl}_W(y)\\,\\Pi_m(F_m.T\\operatorname{incl}_W(Y'_m))S_m\\Pi_n\\operatorname{incl}_W(Y_n)\\operatorname{ev}_W(s)\\\\\n&\\equiv\\operatorname{incl}_W(y)\\operatorname{incl}_W(\\tau)^N(\\Pi_m S_m)\\Pi_n(\\operatorname{incl}_W(\\tau)^N F_n.T)\\operatorname{ev}_W(s)\\\\\n&\\equiv\\operatorname{incl}_W(\\tau)^{2N}\\operatorname{incl}_W(y)\\,\\Pi_n F_n.T\\operatorname{ev}_W(s)\\equiv T_0R_n\\operatorname{ev}_W(u^c s)\\pmod{\\ell^n}.\n\\end{aligned}",
+    "note": "Keep the m and n indices distinct across the three-line uniform-containment argument."
+  },
+  {
+    "page": 446,
+    "bbox": [
+      156,
+      568,
+      484,
+      584
+    ],
+    "latex": "w\\equiv R_n\\operatorname{ev}_W(s)\\equiv R_n\\operatorname{ev}_W(s')+R_n\\operatorname{ev}_W(u^c b_0)\\in\\operatorname{Img}(n,m)\\pmod{\\ell^n}.",
+    "note": "The stabilization step returns to congruence modulo ell^n alone."
+  },
+  {
+    "page": 815,
+    "bbox": [
+      98,
+      640,
+      541,
+      654
+    ],
+    "latex": "K(\\ell(u)-N\\phi(u))+h(u)\\ge(CNB+1)(\\ell(u)-N\\phi(u))-CN\\phi(u)\\ge CN(B-\\phi(u))+1\\ge1>0.",
+    "note": "Lemma 10.65, part (c). The chain applies to the strictly positive integer-gap case."
+  },
+  {
+    "page": 815,
+    "bbox": [
+      248,
+      710,
+      391,
+      724
+    ],
+    "latex": "K(\\ell(\\beta)-N\\phi(\\beta))+h(\\beta)\\ge0,",
+    "note": "Lemma 10.65, part (d). Equality is the conjunction stated at the top of page 816."
+  },
+  {
+    "page": 969,
+    "tag": "398",
+    "bbox": [
+      187,
+      296,
+      541,
+      309
+    ],
+    "latex": "\\bigl(\\operatorname{Row0b}(\\operatorname{IsRecT}),\\quad\\operatorname{RecTExists},\\quad\\operatorname{Row0b}(\\operatorname{IsRecT})\\bigr).",
+    "note": "The first and third fields have identical mathematical types and both receive h."
+  },
+  {
+    "page": 970,
+    "bbox": [
+      198,
+      456,
+      415,
+      471
+    ],
+    "latex": "c_{\\mathrm{dep}}:=\\max(CF_0,CF_1),\\qquad A:=\\operatorname{GridA}(c_{\\mathrm{dep}}),",
+    "note": "Use the same dependence scale for the evaluation grid and functional condition."
+  },
+  {
+    "page": 970,
+    "bbox": [
+      72,
+      699,
+      642,
+      723
+    ],
+    "latex": "\\mathcal P_A:=\\operatorname{parametersOfExtension}\\bigl(\\mathtt{extensionWithAtProperty}\\ h_L\\ (\\mathtt{extensionWithOrigin}\\ h_L\\ c_{\\mathrm{dep}})\\ A,\\ \\mathtt{SExt.none},\\ \\mathtt{geoCl}\\ \\mathtt{anyGeometry}\\bigr).",
+    "note": "The right edge overflows the PDF page. The full token and closing marks are present in its encoded glyphs."
+  }
+]

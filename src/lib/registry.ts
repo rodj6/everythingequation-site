@@ -22,9 +22,10 @@ import { development } from '@/lib/development';
 import { agency } from '@/lib/agency';
 import { alignment } from '@/lib/alignment';
 import { researchPapers } from '@/lib/consciousness-research';
+import { rhPublication } from '@/lib/riemann-hypothesis';
 
 export type Visibility = 'draft' | 'public';
-export type PaperCategory = 'canonical' | 'branch' | 'superseded' | 'historical';
+export type PaperCategory = 'canonical' | 'branch' | 'independent' | 'superseded' | 'historical';
 export type Programme = 'featured' | 'additional' | 'legacy';
 
 // ---------------------------------------------------------------------------
@@ -188,14 +189,25 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const agential = slug === agency.paperSlug ? agency : undefined;
     const relational = slug === relationalAwareness.paperSlug ? relationalAwareness : undefined;
     const integrated = paperIntegrations.find(p=>p.paperSlug===slug);
+    const rh = slug === 'riemann-hypothesis' ? rhPublication : undefined;
     const continuity = slug === continuityNote.paperSlug ? continuityNote : undefined;
     const reflective = slug === alignment.paperSlug ? alignment : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
-    const zenodoId: string | undefined = quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
+    const zenodoId: string | undefined = rh?.doi.split('.').at(-1) ?? quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
-    if (integrated) {
+    if (rh) {
+      // DataCite and the public Zenodo record confirm this deposit's title and date.
+      metadata = {
+        id: zenodoId!,
+        doi: rh.doi,
+        title: rh.citationTitle,
+        url: `https://zenodo.org/records/${zenodoId}`,
+        creators: ['Jeremy Rodgers'],
+        published: rh.date,
+      };
+    } else if (integrated) {
       metadata={id:integrated.doi,doi:integrated.doi,title:integrated.title,creators:[integrated.author],published:integrated.date,files:[{filename:'Original publication PDF',url:integrated.pdfUrl},{filename:'Complete Markdown',url:integrated.markdownUrl},...(integrated.supplementUrl?[{filename:'Public verification archive',url:integrated.supplementUrl}]:[])]};
     } else if (continuity) {
       metadata={id:continuity.doi,doi:continuity.doi,title:continuity.title,creators:[continuity.author],published:continuity.date,files:[{filename:"Research note PDF",url:continuity.pdfUrl}]};
@@ -243,10 +255,10 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       }
     }
 
-    const doi: string | undefined = integrated?.doi ?? research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
+    const doi: string | undefined = rh?.doi ?? integrated?.doi ?? research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
     const title: string | undefined = integrated?.title ?? research?.title ?? publication?.title ?? raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
-      raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'superseded'
+      raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'independent' || raw.category === 'superseded'
         ? raw.category
         : 'historical';
 
@@ -261,14 +273,14 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       title,
       subtitle: publication?.subtitle ?? raw.subtitle,
       role: raw.role,
-      summary: raw.summary,
+      summary: rh?.description ?? raw.summary,
       version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? (consciousness ? publication.version : `Version ${publication.version}`) : raw.version,
-      date: research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
-      webUrl: sourceReadout ? paperUrl(sourceReadout) : integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
-      pdfUrl: sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
+      date: rh?.date ?? research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
+      webUrl: sourceReadout ? paperUrl(sourceReadout) : rh?.route ?? integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
+      pdfUrl: rh?.pdfUrl ?? sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: sourceReadout?.texUrl ?? research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
-      markdownUrl: sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
+      markdownUrl: rh?.markdownUrl ?? sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
       researchProgramme: slug==='yang-mills'||sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,

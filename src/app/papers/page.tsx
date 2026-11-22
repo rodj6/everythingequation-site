@@ -6,13 +6,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { loadPapers } from "@/lib/registry";
 import { PaperCard } from "@/components/cards";
+import RiemannHypothesisFeature from "@/components/riemann-hypothesis-feature";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Papers",
   description:
-    "The Shadow Theory foundation, AI alignment and AI consciousness, Quantum Measurement, SPC-2, agency and related research: complete website editions, PDFs and DOIs.",
+    "Papers and DOIs for the Riemann Hypothesis reconstruction from Lean, the Shadow Theory foundation, Quantum Measurement, consciousness, and related research.",
   alternates: { canonical: "/papers" },
 };
 
@@ -47,6 +48,7 @@ export default async function PapersPage() {
           authority.
         </p>
       </header>
+      <RiemannHypothesisFeature />
       <SourceLiftFeature/>
       <section aria-labelledby="source-readout-heading" className="card-surface p-6">
         <p className="section-label">Mathematical foundations and constructive development</p>

@@ -1,18 +1,20 @@
 import type { Metadata } from "next";
 import { listArticles } from "@/lib/articles";
 import { ArticleCard } from "@/components/cards";
+import RiemannHypothesisFeature from "@/components/riemann-hypothesis-feature";
+import { rhPublication } from "@/lib/riemann-hypothesis";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Research notes, explanations, and updates from the Shadow Theory programme.",
+    "Read the Riemann Hypothesis reconstruction from Lean and explore Shadow Theory research, explanations, and updates.",
   alternates: { canonical: "/articles" },
 };
 
 export default function ArticlesPage() {
-  const articles = listArticles();
+  const articles = listArticles().filter(article => article.href !== rhPublication.route);
 
   return (
     <div className="space-y-12">
@@ -25,6 +27,8 @@ export default function ArticlesPage() {
           website edition.
         </p>
       </header>
+
+      <RiemannHypothesisFeature />
 
       <h2 className="sr-only">All articles</h2>
       {articles.length > 0 ? (

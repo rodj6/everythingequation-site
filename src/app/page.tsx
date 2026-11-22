@@ -1,4 +1,5 @@
 import SourceLiftFeature from '@/components/source-lift-feature';
+import RiemannHypothesisFeature from '@/components/riemann-hypothesis-feature';
 import SpectralProgrammeFeature from '@/components/spectral-programme-feature';
 import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
@@ -10,6 +11,7 @@ import katex from "katex";
 import { site } from "@/config/site";
 import { getCanonicalPapers, loadProblems } from "@/lib/registry";
 import { listArticles } from "@/lib/articles";
+import { rhPublication } from "@/lib/riemann-hypothesis";
 import PaperChain from "@/components/paper-chain";
 import { ProblemCard, ArticleCard } from "@/components/cards";
 import ProjectionField from "@/components/projection-field";
@@ -80,6 +82,7 @@ export default async function HomePage() {
           <nav className="home-start" aria-label="Where to start">
             <p className="section-label">Where to start</p>
             <ul>
+              <li><Link href={rhPublication.route}><strong>Riemann Hypothesis in Lean</strong><span>The referee reconstruction in a chaptered reader.</span></Link></li>
               <li><Link href="/quantum-measurement"><strong>Quantum Measurement &amp; Born Rule</strong><span>Events, statistics and physical records.</span></Link></li>
               <li><Link href="/consciousness/ai-alignment"><strong>AI Alignment &amp; Consciousness</strong><span>Cooperation grounded in understanding.</span></Link></li>
               <li><Link href="/monograph"><strong>Read the TOE monograph</strong><span>The complete Version {site.monograph.version} web edition.</span></Link></li>
@@ -160,6 +163,7 @@ export default async function HomePage() {
         </nav>
 
         <p className="home-band" id="home-research"><span>New research</span></p>
+      <RiemannHypothesisFeature />
       <section aria-labelledby="source-readout-heading" className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
         <p className="section-label">Source–Readout Theory · Complete technical articles</p>
         <h2 id="source-readout-heading" className="mt-3 max-w-3xl text-2xl font-bold tracking-tight sm:text-4xl">What a shadow preserves. What a reader can reveal.</h2>
