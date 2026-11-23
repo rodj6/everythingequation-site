@@ -8,7 +8,10 @@ const base = args.includes('--base') ? args[args.indexOf('--base') + 1] : undefi
 const origin = (process.env.NEXT_PUBLIC_SITE_URL || 'https://everythingequation.com').replace(/\/$/, '');
 const reader = '/articles/riemann-hypothesis';
 const citation = '/papers/riemann-hypothesis';
-const doi = '10.5281/zenodo.24433884';
+const doi = '10.5281/zenodo.24473551';
+const previousDoi = '10.5281/zenodo.24433884';
+const archivePdf = '/publications/riemann-hypothesis/v1/paper.pdf';
+const doiUrl = doi => 'https://doi.org/' + doi;
 const chapters = JSON.parse(await readFile('content/riemann-hypothesis/chapters.json', 'utf8'));
 assert(chapters.length > 0, 'Missing chapter index');
 
@@ -54,6 +57,10 @@ const citationPage = inspect(await load(citation), citation);
 assert.deepEqual(citationPage.canonicals, [origin + citation], 'Citation canonical mismatch');
 assert.equal(citationPage.metadata.get('citation_doi'), doi);
 assert.equal(citationPage.metadata.get('citation_author'), 'Jeremy Rodgers');
+assert.equal(citationPage.metadata.get('citation_publication_date'), '2026-11-23');
+assert(citationPage.links.has(doiUrl(doi)), 'Citation omits Version 2 DOI');
+assert(citationPage.links.has(doiUrl(previousDoi)), 'Citation omits Version 1 DOI');
+assert(citationPage.links.has(archivePdf), 'Citation omits Version 1 PDF');
 assert(citationPage.metadata.get('citation_title')?.includes('A Full Human-Readable Reconstruction from Lean'));
 assert(citationPage.links.has(reader), 'Citation page does not link to the reader');
 
@@ -68,6 +75,14 @@ assert(llms.includes(origin + reader + '/search'), 'Full-text search missing fro
 assert(robots.includes(`Sitemap: ${origin}/sitemap.xml`), 'Missing robots sitemap pointer');
 const manifest = JSON.parse(manifestSource);
 assert.equal(manifest.doi, doi);
+assert.equal(manifest.version, 2);
+assert.equal(manifest.versionDate, '2026-11-22');
+assert.equal(manifest.publicationDate, '2026-11-23');
+assert.equal(manifest.pdf.pages, 1061);
+assert.equal(manifest.previousVersion.doi, previousDoi);
+assert.equal(manifest.previousVersion.pdfUrl, archivePdf);
+assert(llms.includes(doi) && llms.includes(previousDoi), 'llms.txt omits version provenance');
+assert(feed.includes(doi), 'Feed omits the active DOI');
 assert.deepEqual(manifest.chapters.map(chapter => chapter.url), chapterRoutes, 'Manifest chapter inventory differs from the site index');
 assert.deepEqual(inspect(searchPage, manifest.search).canonicals, [origin + manifest.search], 'Search canonical mismatch');
 for (const match of robots.matchAll(/^Disallow:\s*(\S+)/gm)) {
@@ -91,6 +106,21 @@ for (const route of readingRoutes) {
   }
   const response = inspect(await load(route), route);
   assert.deepEqual(response.canonicals, [origin + route], `${route} canonical mismatch`);
+  if (route === reader) {
+    assert(response.links.has(doiUrl(doi)) && response.links.has(doiUrl(previousDoi)), 'Reader omits DOI history');
+    assert(response.links.has(archivePdf), 'Reader omits the original Version 1 PDF');
+  }
+}
+
+if (base) {
+  const aliases = JSON.parse(await readFile("content/riemann-hypothesis/legacy-chapters.json", "utf8"));
+  for (const [oldSlug, newSlug] of Object.entries(aliases)) {
+    const old = `${reader}/${oldSlug}`;
+    const next = `${reader}/${newSlug}`;
+    const response = await fetch(new URL(old, base), { redirect: "manual", signal: AbortSignal.timeout(5000) });
+    assert([301, 308].includes(response.status), `${old} is missing its permanent redirect`);
+    assert.equal(new URL(response.headers.get("location"), base).pathname, next, `${old} redirects to the wrong reading division`);
+  }
 }
 
 console.log(`Verified RH discovery for the reader, citation and ${chapterRoutes.length} chapters.`);

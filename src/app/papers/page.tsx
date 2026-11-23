@@ -7,13 +7,15 @@ import Link from "next/link";
 import { loadPapers } from "@/lib/registry";
 import { PaperCard } from "@/components/cards";
 import RiemannHypothesisFeature from "@/components/riemann-hypothesis-feature";
+import NewReadingEditionFeatures from "@/components/new-reading-edition-features";
+import { ads4Edition } from "@/config/new-reading-editions";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Papers",
   description:
-    "Papers and DOIs for the Riemann Hypothesis reconstruction from Lean, the Shadow Theory foundation, Quantum Measurement, consciousness, and related research.",
+    "Papers and DOIs for AdS4 gravitational reconstruction, Haar unitary derivative moments, the Riemann Hypothesis reconstruction from Lean, and Shadow Theory research.",
   alternates: { canonical: "/papers" },
 };
 
@@ -48,6 +50,7 @@ export default async function PapersPage() {
           authority.
         </p>
       </header>
+      <NewReadingEditionFeatures />
       <RiemannHypothesisFeature />
       <SourceLiftFeature/>
       <section aria-labelledby="source-readout-heading" className="card-surface p-6">
@@ -59,7 +62,10 @@ export default async function PapersPage() {
         <h3 className="mt-6 text-lg font-semibold"><Link href={spectralHub}>CSCF and spectral carriers →</Link></h3>
         <ul className="mt-3 grid gap-3 md:grid-cols-2">{spectralEditions.filter(p=>p.id!=='transport-projective').map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
         <h3 className="mt-6 text-lg font-semibold"><Link href={gravityHub}>Gravity and holography →</Link></h3>
-        <ul className="mt-3 grid gap-3 md:grid-cols-2">{gravityEditions.map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}</ul>
+        <ul className="mt-3 grid gap-3 md:grid-cols-2">
+          {gravityEditions.map(p=><li key={p.id}><Link className="text-glow" href={p.url}>{p.title} →</Link></li>)}
+          <li><Link className="text-glow" href={ads4Edition.route}>{ads4Edition.title} →</Link></li>
+        </ul>
       </section>
       <SealedLeakyFeature />
 

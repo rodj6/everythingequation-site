@@ -151,7 +151,7 @@ export const boundaryView = {
     text: "Research under way asks how far this reaches: what the readings of a single ball determine about a localized perturbation, and what they leave open. The view is built so that a further set of readings can be added when that work is published.",
   },
   links: [
-    { label: "Gravity and holography: the five editions", href: "/source-readout/gravity-and-holography" },
+    { label: "Gravity and holography reading editions", href: "/source-readout/gravity-and-holography" },
     { label: "Boundary ball readouts", entry: "gravity-boundary-balls" },
     { label: "Second-order detection by boundary balls", entry: "gravity-second-order" },
     { label: "Modular transport", entry: "gravity-modular-transport" },

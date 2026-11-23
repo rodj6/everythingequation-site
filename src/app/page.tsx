@@ -1,5 +1,6 @@
 import SourceLiftFeature from '@/components/source-lift-feature';
 import RiemannHypothesisFeature from '@/components/riemann-hypothesis-feature';
+import NewReadingEditionFeatures from '@/components/new-reading-edition-features';
 import SpectralProgrammeFeature from '@/components/spectral-programme-feature';
 import PaperIntegrationFeature from '@/components/paper-integration-feature';
 import RelationalAwarenessFeature from '@/components/relational-awareness-feature';
@@ -163,6 +164,7 @@ export default async function HomePage() {
         </nav>
 
         <p className="home-band" id="home-research"><span>New research</span></p>
+      <NewReadingEditionFeatures />
       <RiemannHypothesisFeature />
       <section aria-labelledby="source-readout-heading" className="card-surface relative overflow-hidden px-6 py-8 sm:px-10 sm:py-10">
         <p className="section-label">Source–Readout Theory · Complete technical articles</p>

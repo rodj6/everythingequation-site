@@ -1,0 +1,98 @@
+[
+  {
+    "page": 11,
+    "tag": "2.9",
+    "bbox": [
+      218,
+      209,
+      525,
+      234
+    ],
+    "latex": "F_B''(0)=\\mathcal E_B(h)=W_{\\Sigma_B}\\bigl(\\gamma,\\mathcal L_{\\xi_B}\\gamma\\bigr),",
+    "note": "Surface-fixed Hollands–Wald gauge."
+  },
+  {
+    "page": 11,
+    "tag": "2.10",
+    "bbox": [
+      76,
+      294,
+      525,
+      332
+    ],
+    "latex": "\\mathcal E_B(h)=W_{\\Sigma_B}\\bigl(h,\\mathcal L_{\\xi_B}h\\bigr)+\\int_{\\widetilde B}\\rho(h,V),\\qquad \\rho(h,V):=\\chi\\bigl(h+\\mathcal L_V\\bar g;[\\xi_B,V]\\bigr)-\\chi\\bigl(\\mathcal L_{\\xi_B}h;V\\bigr).",
+    "note": "Boundary-preserving representative; the first surface term is positive in this convention."
+  },
+  {
+    "page": 11,
+    "tag": "2.11",
+    "bbox": [
+      147,
+      353,
+      525,
+      392
+    ],
+    "latex": "DF_B[v]=DE_B^{\\mathrm{grav}}[v]-\\frac14 DA_B[v]=+\\frac{1}{8\\pi}\\int_{\\Sigma_B}\\xi_B^t\\,D\\mathcal F_{tt}[v]\\,\\frac{\\mathrm dz\\,\\mathrm d^2x}{z^2}",
+    "note": "Preserve the +1/(8π) prefactor."
+  },
+  {
+    "page": 11,
+    "tag": "2.12",
+    "bbox": [
+      133,
+      415,
+      525,
+      454
+    ],
+    "latex": "\\mathcal E_B(h)=-\\frac14 A''_{\\mathrm{ext}}[h]-I[h],\\qquad I[h]:=\\frac{1}{8\\pi}\\int_{\\Sigma_B}\\xi_B^t D^2\\mathcal F_{tt}[h,h]\\,\\frac{\\mathrm dz\\,\\mathrm d^2x}{z^2},",
+    "note": "A second-order gauge elimination and affine path convention."
+  },
+  {
+    "page": 63,
+    "tag": "7.32",
+    "bbox": [
+      135,
+      663,
+      525,
+      687
+    ],
+    "latex": "\\mathcal E_{B(R_0,0,t)}\\bigl(h[\\mu_1]\\bigr)=\\mathcal E_{B(R_0,0,t)}\\bigl(h[\\mu_2]\\bigr)\\quad\\forall\\,t\\in I\\qquad\\Longrightarrow\\qquad\\mu_1=\\pm\\mu_2",
+    "note": "Single-radius physical rank-one injectivity. Keep the common sign."
+  },
+  {
+    "page": 64,
+    "tag": "7.33",
+    "bbox": [
+      168,
+      141,
+      525,
+      224
+    ],
+    "latex": "\\begin{aligned}\nc_n[\\mu]&:=-48\\binom{n+9}{9}\\operatorname{Re}\\left(i^n\\int_{a_{\\min}}^{a_{\\max}}a^n\\,\\mathrm d\\mu(a)\\right)\\\\\n&=\\begin{cases}\n-48(-1)^r\\binom{2r+9}{9}\\int_{a_{\\min}}^{a_{\\max}}a^{2r}\\,\\mathrm d\\mu_w(a),&n=2r,\\\\\n-48(-1)^r\\binom{2r+10}{9}\\int_{a_{\\min}}^{a_{\\max}}a^{2r+1}\\,\\mathrm d\\mu_u(a),&n=2r+1,\n\\end{cases}\n\\end{aligned}",
+    "note": "Separate even and odd moments in the same width interval."
+  },
+  {
+    "page": 64,
+    "tag": "7.34",
+    "bbox": [
+      251,
+      256,
+      525,
+      284
+    ],
+    "latex": "E_{2k}=\\frac{8\\pi}{105}R_0^8 c_k[\\mu]^2>0,",
+    "note": "The leading exterior coefficient fixes the first index and signed amplitude."
+  },
+  {
+    "page": 64,
+    "tag": "7.35",
+    "bbox": [
+      134,
+      306,
+      525,
+      336
+    ],
+    "latex": "E_{2k+j}=\\frac{16\\pi}{105}R_0^8 c_k[\\mu]\\,c_{k+j}[\\mu]+\\mathcal P_j\\bigl(R_0;\\,c_k[\\mu],c_{k+1}[\\mu],\\dots,c_{k+j-1}[\\mu]\\bigr),",
+    "note": "Strictly triangular recurrence with the prior moments in its remainder."
+  }
+]

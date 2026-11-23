@@ -24,7 +24,12 @@ function normalize(text: string) {
     .trim();
 }
 
-export default function RhSearch({ indexUrl, readingUrl }: { indexUrl: string; readingUrl: string }) {
+export default function RhSearch({
+  indexUrl,
+  readingUrl,
+  label = "Find a theorem, Lean declaration, or term",
+  prioritizeResultStatements = false,
+}: { indexUrl: string; readingUrl: string; label?: string; prioritizeResultStatements?: boolean }) {
   const index = useRef<SearchIndex | null>(null);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Passage[]>([]);
@@ -48,18 +53,21 @@ export default function RhSearch({ indexUrl, readingUrl }: { indexUrl: string; r
       const identifier = /[_/.]/.test(phrase) && phrase.length >= 8
         ? phrase.replace(/\s/g, "")
         : "";
+      const resultLabel = prioritizeResultStatements && /^(?:theorem|lemma|proposition|corollary|definition) \d[\w.-]*$/.test(phrase);
+      const statements: Passage[] = [];
       const exact: Passage[] = [];
       const related: Passage[] = [];
       for (const passage of index.current.passages) {
         const text = normalize(passage.text);
-        if (text.includes(phrase)) exact.push(passage);
+        if (resultLabel && (text.startsWith(phrase + " (") || text.startsWith(phrase + ". "))) statements.push(passage);
+        else if (text.includes(phrase)) exact.push(passage);
         else if (
           (identifier && text.replace(/\s/g, "").includes(identifier)) ||
           terms.every(term => text.includes(term))
         ) related.push(passage);
       }
-      const count = exact.length + related.length;
-      setResults(exact.concat(related).slice(0, visibleLimit));
+      const count = statements.length + exact.length + related.length;
+      setResults(statements.concat(exact, related).slice(0, visibleLimit));
       setStatus(count === 0 ? "No matching passages." : `${count} matching ${count === 1 ? "passage" : "passages"}${count > visibleLimit ? `. Showing the first ${visibleLimit}.` : "."}`);
     } catch {
       setStatus("The search index could not be loaded. Try again or browse the contents.");
@@ -71,7 +79,7 @@ export default function RhSearch({ indexUrl, readingUrl }: { indexUrl: string; r
   return (
     <>
       <form onSubmit={search} role="search">
-        <label htmlFor="rh-search-query">Find a theorem, Lean declaration, or term</label>
+        <label htmlFor="rh-search-query">{label}</label>
         <div>
           <input id="rh-search-query" type="search" value={query} onChange={event => setQuery(event.target.value)} required />
           <button disabled={searching} type="submit">Search</button>

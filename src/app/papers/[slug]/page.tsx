@@ -11,7 +11,8 @@ import { manualPapers } from "@/generated/manualPapers";
 import { consciousnessPublication } from "@/config/consciousness";
 import { externalDescriptionText } from "@/lib/external-metadata";
 import { jsonLdText } from "@/lib/json-ld";
-import { rhPublication } from "@/lib/riemann-hypothesis";
+import { rhFinalAssemblyUrl, rhLiteratureAuditUrl, rhPublication } from "@/lib/riemann-hypothesis";
+import { newReadingEditions } from "@/config/new-reading-editions";
 
 export const dynamic = "force-static";
 export const dynamicParams = false;
@@ -57,6 +58,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
   const paper = await getPaper(slug);
   if (!paper || paper.status !== "public") notFound();
   const isRiemannHypothesis = paper.slug === "riemann-hypothesis";
+  const readingEdition = newReadingEditions.find(edition => edition.id === paper.slug);
   const correctedEdition = gravityEditions.find(edition => edition.paperSlug === slug && edition.previousDoi);
 
   const problems = await loadProblems();
@@ -78,8 +80,14 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
     },
     datePublished: paper.date ?? undefined,
     ...(isRiemannHypothesis ? {
+      "@id": site.url + rhPublication.citationRoute + "#publication",
       alternateName: `${rhPublication.title}: ${rhPublication.subtitle}`,
       creditText: "Human-readable reconstruction by Jeremy Rodgers. Underlying mathematical argument credited to Levent Alpöge and Claude.",
+    } : {}),
+    ...(readingEdition ? {
+      "@id": site.url + readingEdition.citationRoute + "#publication",
+      alternateName: readingEdition.zenodoTitle ?? readingEdition.title,
+      isAccessibleForFree: true,
     } : {}),
     version: paper.version ?? undefined,
     ...(paper.slug === consciousnessPublication.paperSlug ? { bookEdition: "Revised edition, 28 October 2026" } : {}),
@@ -144,8 +152,17 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         {isRiemannHypothesis && (
           <div className="mt-5 space-y-3 leading-relaxed text-mute">
             <p>Jeremy Rodgers, Independent Researcher. The underlying mathematical argument is credited to Levent Alpöge and Claude.</p>
-            <p>The supplied manuscript is titled <cite>{rhPublication.title}: {rhPublication.subtitle}</cite>.</p>
-            <p>The manuscript records a textual scan of 175,187 local Lean modules and targeted audits of the reconstructed argument. A local Lean 4 kernel check of the pinned environment was outside the reported verification scope.</p>
+            <p>The supplied manuscript is titled <cite>{rhPublication.title}: {rhPublication.subtitle}</cite> and dated <time dateTime={rhPublication.versionDate}>22 November 2026</time>. Zenodo issued Version 2 on <time dateTime={rhPublication.date}>23 November 2026</time>.</p>
+            <p>The <Link className="text-glow" href={rhFinalAssemblyUrl}>final assembly in Section 17.4</Link> and the <Link className="text-glow" href={rhLiteratureAuditUrl}>field-by-field input audit in Section 18.1</Link> connect the repaired prose argument with its classical literature basis.</p>
+            <p>The manuscript reports a textual scan of 175,187 local Lean modules, with zero missing local modules and zero textual axiom, sorry or admit declarations. A local Lean 4 elaboration and kernel check of the pinned environment and direct inspection of exact clauses and pages in unopened primary print sources remain outside the reported checks.</p>
+          </div>
+        )}
+        {readingEdition && (
+          <div className="mt-5 space-y-3 leading-relaxed text-mute">
+            <p>Jeremy Rodgers · Independent Researcher</p>
+            {readingEdition.citationTitle && <p>Manuscript title <cite>{readingEdition.title}</cite></p>}
+            {readingEdition.zenodoTitle && <p>Zenodo record title <cite>{readingEdition.zenodoTitle}</cite></p>}
+            {readingEdition.publicationStatus === "published" && <p>Zenodo preprint · {readingEdition.pages} manuscript pages</p>}
           </div>
         )}
 
@@ -199,7 +216,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         <div className="mt-6 flex flex-wrap gap-3">
           {paper.webUrl ? (
             <Link href={paper.webUrl} className="rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-ink transition hover:bg-[hsl(var(--accent-strong))]">
-              {isRiemannHypothesis ? 'Open the reading edition →' : paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text web edition →' : 'Read the complete web edition →'}
+              {isRiemannHypothesis ? 'Read Version 2 →' : readingEdition ? 'Open the reading edition →' : paper.slug === 'relational-development-and-conscious-scaffolding' ? 'Read the full-text web edition →' : 'Read the complete web edition →'}
             </Link>
           ) : null}
           {paper.doiUrl ? (
@@ -208,7 +225,7 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
               rel="noopener"
               className="rounded-lg bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-[hsl(var(--background))] transition hover:bg-[hsl(var(--accent-strong))]"
             >
-              DOI: {paper.doi}
+              {isRiemannHypothesis ? 'Version 2 DOI' : 'DOI'}: {paper.doi}
             </a>
           ) : null}
           {paper.zenodoUrl ? (
@@ -229,12 +246,16 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         </div>
         {paper.pdfUrl ? (
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-3 text-sm text-glow">
-            <a href={paper.pdfUrl} download className="hover:text-glow-strong">Download PDF ↓</a>
+            <a href={paper.pdfUrl} download className="hover:text-glow-strong">{isRiemannHypothesis ? 'Version 2 PDF ↓' : 'Download PDF ↓'}</a>
             {correctedEdition?.supplementUrl && <a href={correctedEdition.supplementUrl} download className="hover:text-glow-strong">{correctedEdition.supplementDescription} ↓</a>}
             {paper.supplementPdfUrl ? <a href={paper.supplementPdfUrl} download className="hover:text-glow-strong">Technical supplement PDF ↓</a> : null}
             {paper.texUrl ? <a href={paper.texUrl} download className="hover:text-glow-strong">LaTeX source ↓</a> : null}
-            {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">{isRiemannHypothesis ? 'Markdown transcription ↓' : 'Complete Markdown ↓'}</a> : null}
+            {paper.markdownUrl ? <a href={paper.markdownUrl} download className="hover:text-glow-strong">{isRiemannHypothesis || readingEdition ? 'Markdown transcription ↓' : 'Complete Markdown ↓'}</a> : null}
             {isRiemannHypothesis && <a href={rhPublication.manifestUrl} className="hover:text-glow-strong">Chapter inventory →</a>}
+            {readingEdition && <a href={readingEdition.manifestUrl} className="hover:text-glow-strong">Chapter inventory →</a>}
+            {readingEdition?.supplements?.map(asset => (
+              <a key={asset.href} href={asset.href} download className="hover:text-glow-strong">{asset.title} ↓</a>
+            ))}
           </div>
         ) : null}
         {paper.slug === 'yang-mills' && <section className="mt-6" aria-labelledby="shared-reading-editions"><h2 id="shared-reading-editions">Two complete works in this record</h2><ul>{liftEditions.map(p=><li className="mt-4" key={p.id}><Link href={p.url}>{p.title} →</Link><br/><a href={p.pdfUrl}>Original PDF ↓</a> · <a href={p.markdownUrl}>Complete Markdown ↓</a></li>)}</ul></section>}
@@ -327,6 +348,11 @@ export default async function PaperPage({ params }: { params: Promise<{ slug: st
         <pre tabIndex={0} className="mt-3 overflow-auto rounded-lg border border-edge bg-surface p-4 font-mono text-xs leading-relaxed text-fg/90">
           {citation}
         </pre>
+        {isRiemannHypothesis && <div className="mt-6 space-y-2 text-mute">
+          <h3 className="font-semibold text-fg">Frozen Version 1 archive</h3>
+          <a className="text-glow" href={rhPublication.previousVersion.pdfUrl}>Version 1 PDF</a>
+          <p>DOI <a className="text-glow" href={rhPublication.previousVersion.doiUrl}>{rhPublication.previousVersion.doi}</a></p>
+        </div>}
       </section>
 
       <nav className="mt-12 border-t border-edge pt-6">

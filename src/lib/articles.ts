@@ -13,6 +13,7 @@ import {relationalAwareness} from '@/lib/relational-awareness';
 import { articleMetas, type ArticleMeta as GeneratedArticleMeta } from '@/generated/articles';
 import { alignment } from '@/lib/alignment';
 import { rhPublication } from '@/lib/riemann-hypothesis';
+import { newReadingEditions } from '@/config/new-reading-editions';
 
 export interface ArticleMeta extends GeneratedArticleMeta {
   /** A complete edition can live in its programme instead of a duplicate article route. */
@@ -28,6 +29,18 @@ const riemannHypothesisArticle: ArticleMeta = {
   status: 'published',
   href: rhPublication.route,
 };
+
+const readingEditionArticles: ArticleMeta[] = newReadingEditions.map(edition => ({
+  slug: edition.id,
+  title: edition.title,
+  description: edition.description,
+  date: edition.publicationDate ?? edition.date,
+  tags: edition.id === 'haar-critical'
+    ? ['Random matrix theory', 'Haar unitary', 'Derivative moments']
+    : ['Source and readout', 'AdS4', 'Gravity and holography'],
+  status: 'published',
+  href: edition.route,
+}));
 
 export function articleUrl(article: ArticleMeta): string {
   return article.href || `/articles/${article.slug}`;
@@ -47,11 +60,11 @@ function programmeArticles(): ArticleMeta[] {
 
 /** Published articles, newest first. */
 export function listArticles(): ArticleMeta[] {
-  return [riemannHypothesisArticle, ...programmeArticles(), ...articleMetas]
+  return [...readingEditionArticles, riemannHypothesisArticle, ...programmeArticles(), ...articleMetas]
     .filter((a) => a.status !== 'draft')
     .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
 }
 
 export function getArticleMeta(slug: string): ArticleMeta | undefined {
-  return [riemannHypothesisArticle, ...programmeArticles(), ...articleMetas].find((a) => a.slug === slug);
+  return [...readingEditionArticles, riemannHypothesisArticle, ...programmeArticles(), ...articleMetas].find((a) => a.slug === slug);
 }

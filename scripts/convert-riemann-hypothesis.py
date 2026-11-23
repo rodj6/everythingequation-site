@@ -30,7 +30,8 @@ PUBLIC = ROOT / "public/publications/riemann-hypothesis"
 DOCS = ROOT / "docs/riemann-hypothesis"
 ROUTE = "/articles/riemann-hypothesis"
 ASSETS = "/publications/riemann-hypothesis"
-SOURCE_SHA256 = "bae1f777817c69c9a3ca7eac08543538547315c640a31ff24d13ac02666c3fb3"
+PDF_PAGES = 1061
+SOURCE_SHA256 = "dbb02e1656b98611c49380f6f4b3af07b45e0022de5525d43d70b3aaf210a0e8"
 SVG = "{http://www.w3.org/2000/svg}"
 XLINK = "{http://www.w3.org/1999/xlink}"
 ET.register_namespace("", SVG[1:-1])
@@ -377,6 +378,8 @@ class PageVectors:
         self.page = page
         self.root = None
         self.glyphs = []
+        self.other = []
+        self.page_symbol = None
 
     def initialize(self):
         self.root = ET.Element(SVG+"svg", {"version": "1.1"})
@@ -401,7 +404,31 @@ class PageVectors:
                 if len(coordinates) == 6:
                     self.glyphs.append((coordinates[-2], coordinates[-1], node))
                     continue
-            self.glyphs.append((None, None, node))
+            self.other.append(node)
+        self.glyphs.sort(key=lambda glyph: glyph[1])
+        self.glyph_ys = [glyph[1] for glyph in self.glyphs]
+
+    def page_details(self, right_edge):
+        if self.root is None:
+            self.initialize()
+        if self.page_symbol is None:
+            width = int(max(self.page.rect.width, right_edge + 3))
+            height = int(self.page.rect.height)
+            identifier = f"source-page-{self.page.number+1}"
+            symbol = ET.SubElement(self.root, SVG+"symbol", {
+                "id": identifier, "viewBox": f"0 0 {width} {height}",
+            })
+            self.page_symbol = identifier, width, height
+            symbol.extend(node for _, _, node in sorted(self.glyphs, key=lambda item: item[1]))
+            symbol.extend(self.other)
+        identifier, width, height = self.page_symbol
+        page = self.page.number + 1
+        uri = f"{ASSETS}/notation/p-{page:04d}.svg#{identifier}"
+        return (f'<details class="rh-printed-source" data-source-page="{page}">'
+                f'<summary>View printed source page {page}</summary><div class="rh-formula-original">'
+                f'<svg class="rh-notation-vector" role="img" aria-label="Printed source page {page}"'
+                f' width="{width}" height="{height}" viewBox="0 0 {width} {height}">'
+                f'<use href="{uri}" width="{width}" height="{height}"/></svg></div></details>')
 
     def formula(self, identifier, spans, rect, inline=False):
         if self.root is None:
@@ -412,13 +439,14 @@ class PageVectors:
         })
         # Bounding boxes admit glyphs from the source block, rather than
         # ending an inline crop with the first letter of the next word.
-        for x, y, node in self.glyphs:
-            if x is None or (
-                box.x0 - 1 <= x <= box.x1 + 1 and box.y0 - 1 <= y <= box.y1 + 4
-                and (not inline or any(
+        start = bisect_right(self.glyph_ys, box.y0 - 1)
+        end = bisect_right(self.glyph_ys, box.y1 + 4)
+        for x, y, node in self.glyphs[start:end]:
+            if box.x0 - 1 <= x <= box.x1 + 1 and (not inline or any(
                     span.box.x0 - .36 <= x < span.box.x1 - .03
-                    and abs(y - span.baseline) <= .12 for span in spans))):
+                    and abs(y - span.baseline) <= .12 for span in spans)):
                 symbol.append(node)
+        symbol.extend(self.other)
         uri = f"{ASSETS}/notation/p-{self.page.number+1:04d}.svg#{identifier}"
         size_style = (f' style="width:{box.width/10.909:.3f}em;height:{box.height/10.909:.3f}em"'
                       if inline else "")
@@ -443,7 +471,12 @@ def read_overlay():
     if not path.exists():
         return defaultdict(list)
     out = defaultdict(list)
-    for record in json.loads(path.read_text(encoding="utf-8")):
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if isinstance(data, dict):
+        if data.get("sourceSha256") != SOURCE_SHA256:
+            raise ValueError("Checked overlay source hash differs from the controlling PDF")
+        data = data["formulas"]
+    for record in data:
         if "latex" in record:
             out[record["page"]].append(record)
     return out
@@ -523,14 +556,10 @@ def inline_markup(row, vector, identifier, links, math_records):
             box = rectangle([s.box for s in formula])
             # All compound inline expressions retain both the printed notation
             # and a selectable candidate transcription on the same page.
-            complex_run = any(abs(s.baseline - row.y) > .85 or s.font.startswith("CMEX") for s in formula)
-            if complex_run:
-                v = vector.formula(fid, formula, box, inline=True)
-                out.append(f'<span id="{fid}" class="rh-inline-math" tabindex="0" aria-label="{esc(notation)}">{v}'
-                           f'<span class="rh-inline-transcript"><code>{esc(notation)}</code></span></span>')
-                math_records.append({"anchor": fid, "bbox": list(box), "status": "geometry retained, inline transcription unchecked"})
-            else:
-                out.append(f'<span class="rh-inline-text">{esc(notation)}</span>')
+            v = vector.formula(fid, formula, box, inline=True)
+            out.append(f'<span id="{fid}" class="rh-inline-math" tabindex="0" aria-label="{esc(notation)}">{v}'
+                       f'<span class="rh-inline-transcript"><code>{esc(notation)}</code></span></span>')
+            math_records.append({"anchor": fid, "bbox": list(box), "status": "geometry retained, inline transcription unchecked"})
             source.append(notation)
             if span is not None and formula[-1].text.endswith(" ") and not span.text.startswith(" "):
                 out.append(" ")
@@ -591,6 +620,48 @@ def section_title(row, page_number):
                 and row.spans and all("Bold" in s.font or not s.prose for s in row.spans))
 
 
+# The exact horizontal extents follow the longtable rules in the Version 2 PDF.
+# Table 4's continuation pages omit a bottom rule until its last segment.
+TABLE_BOUNDS = {
+    122: [(1, 107.9, 713.6)], 123: [(1, 72.4, 595.4)],
+    1035: [(2, 330.3, 569.6), (3, 663.6, 715.5)], 1036: [(3, 72.4, 404.1)],
+    1042: [(4, 505.2, 730)], 1043: [(4, 72.4, 730)], 1044: [(4, 72.4, 563.4)],
+    1045: [(5, 387.2, 688.9)], 1046: [(5, 72.4, 685.2)], 1047: [(5, 72.4, 720.6)],
+    1048: [(5, 72.4, 721.7)], 1049: [(5, 72.4, 534.7)],
+    1050: [(6, 131.9, 698.5)], 1051: [(6, 72.4, 710.1)], 1052: [(6, 72.4, 699.8)],
+    1053: [(6, 72.4, 386.1)],
+}
+TABLE_COLUMNS = {
+    1: ([93, 152, 350, 428], ["#", "Field", "Exact mathematical statement", "MS prose status", "Primary citation"]),
+    2: ([93, 205, 320], ["#", "Record", "Lean fields", "Discharge / manuscript location"]),
+    3: ([154, 316], ["Field(s)", "Lean type", "Manuscript proposition / section"]),
+    4: ([114, 266], ["Branch", "Mathematical input", "Proof and closure status"]),
+    5: ([93, 184.5, 350, 446.5], ["#", "Field", "Mathematical statement", "MS discharge / Lean", "Primary citation"]),
+    6: ([93, 184.5, 350, 446.5], ["#", "Field", "Mathematical statement", "MS discharge / Lean", "Primary citation"]),
+}
+TABLE_LABELS = {
+    1: "Classical literature fields of LiteratureRankNHypothesis",
+    2: "Input records for topCovolG_alt_alt",
+    3: "Fields of PublishedHodgeBundleTheorems",
+    4: "Essential inputs and closure status",
+    5: "Fields of UnitaryGroupThirdPlaceHypotheses",
+    6: "Fields of ThetaLocalInputs",
+}
+
+
+def partition_tables(spans, page_number):
+    prose_spans = []
+    tables = defaultdict(list)
+    for span in spans:
+        number = next((num for num, start, end in TABLE_BOUNDS.get(page_number, [])
+                       if start <= span.baseline < end), None)
+        if number is None:
+            prose_spans.append(span)
+        else:
+            tables[number].append(span)
+    return prose_spans, tables
+
+
 def group_paragraphs(rows, page_number, boundaries):
     groups = []
     for row in rows:
@@ -602,14 +673,13 @@ def group_paragraphs(rows, page_number, boundaries):
         if tagged_display:
             row.kind = "math"
         kind = row.kind if row.kind in {"math", "checked"} else "heading" if heading else "prose"
-        table_bounds = {973: (114, 577), 974: (78, 594), 975: (78, 353)}
-        if page_number in table_bounds and table_bounds[page_number][0] < row.y < table_bounds[page_number][1]:
+        if row.kind == "table":
             kind = "table"
         elif page_number <= 5 and (CONTENTS_LINE.search(text) or (page_number in (2, 3, 4))):
             kind = "contents"
         previous = groups[-1] if groups else None
         new_paragraph = (
-            previous is None or kind != previous[0] or kind in ("heading", "contents", "checked")
+            previous is None or kind != previous[0] or kind in ("heading", "contents", "checked", "table")
             or any(previous[1][-1].y < cutoff <= row.y for cutoff in boundaries)
             or (kind == "prose" and (
                 row.y - previous[1][-1].y > 15.7
@@ -626,44 +696,55 @@ def group_paragraphs(rows, page_number, boundaries):
     return groups
 
 
-def table_transcript(spans, links):
-    columns = [[], [], []]
-    for span in spans:
-        coordinate = span.box.x0
-        columns[2 if coordinate >= 267 else 1 if coordinate >= 115 else 0].append(span)
-    starts = sorted(s.baseline for s in columns[0] if re.fullmatch(r"F-\d+|Branch", prose(s.text).strip()))
+def table_transcript(number, spans, links):
+    cuts, headers = TABLE_COLUMNS[number]
+    first_header = re.compile(r"Field\(s\)|Branch|#(?: Field| Record)?")
+    first_cell = {3: r"[pq]\d+(?:, [pq]\d+)*", 4: r"F-\d+"}.get(number, r"\d+")
+    first_column = [s for s in spans if s.box.x0 < cuts[0] and s.prose]
+    header = next((s for s in first_column if first_header.fullmatch(s.text.strip())), None)
+    if header is None:
+        raise ValueError(f"Table {number} lacks a printed header")
+    starts = sorted((s.baseline, s.text.strip()) for s in first_column
+                    if s.baseline > header.baseline and re.fullmatch(first_cell, s.text.strip()))
     if not starts:
-        starts = [min(span.baseline for span in spans)]
-    rendered = []
+        raise ValueError(f"Table {number} has no reading rows")
+    plain_rows = []
     linked_rows = []
-    for i, y in enumerate(starts):
-        upper = starts[i + 1] if i + 1 < len(starts) else float("inf")
-        cells = []
-        linked_cells = []
-        for column in columns:
-            values = [s for s in column if y - .1 <= s.baseline < upper - .1]
+    for i, (y, label) in enumerate(starts):
+        upper = starts[i + 1][0] if i + 1 < len(starts) else float("inf")
+        cells = [[] for _ in headers]
+        for span in spans:
+            # Numerators or superscripts can begin slightly above the printed row baseline.
+            if y - 6.5 <= span.baseline < upper - 6.5:
+                index = bisect_right(cuts, span.box.x0)
+                cells[index].append(span)
+        plain = []
+        linked = []
+        for cell in cells:
             byrow = defaultdict(list)
-            for span in values:
+            for span in cell:
                 byrow[round(span.baseline, 1)].append(span)
-            cells.append(compact_join([inline_parse(values, base) for base, values in sorted(byrow.items())]))
-            markup = []
             lines = []
             for _, items in sorted(byrow.items()):
                 previous = None
+                markup = []
                 for span in sorted(items, key=lambda item: item.box.x0):
                     if approximate_gap(previous, span):
                         markup.append(" ")
                     markup.append(linked_span(span, links))
                     previous = span
                 lines.append("".join(markup))
-                markup.clear()
-            linked_cells.append(repair_breaks(compact_join(lines)))
-        rendered.append(cells)
-        linked_rows.append(linked_cells)
-    return rendered, linked_rows
+            cell_html = repair_breaks(compact_join(lines))
+            linked.append(cell_html)
+            plain.append(html.unescape(strip_styles(cell_html)))
+        plain[0] = label
+        linked[0] = esc(label)
+        plain_rows.append(plain)
+        linked_rows.append(linked)
+    return headers, plain_rows, linked_rows
 
 
-def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, resume=False):
+def convert(pdf, start_page=1, end_page=PDF_PAGES, checkpoints=True, state_dir=None, resume=False):
     source_bytes = pdf.read_bytes()
     if sha256(source_bytes).hexdigest() != SOURCE_SHA256:
         raise ValueError("Supplied manuscript SHA-256 does not match the controlling PDF")
@@ -673,7 +754,7 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
     chapters = json.loads((CONTENT / "chapters.json").read_text(encoding="utf-8"))
     locations = [(c["firstPage"], c["startY"]) for c in chapters]
     doc = fitz.open(pdf)
-    if len(doc) != 980:
+    if len(doc) != PDF_PAGES:
         raise ValueError("Wrong manuscript page count")
     fonts = FontMap(doc)
     overlay = read_overlay()
@@ -719,7 +800,11 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
         page = doc[pn - 1]
         applied_overlays = set()
         spans, omitted = extract_spans(page, fonts)
-        rows = cluster_page(spans, pn, overlay[pn])
+        reading_spans, table_spans = partition_tables(spans, pn)
+        rows = cluster_page(reading_spans, pn, overlay[pn])
+        for number, start, _ in TABLE_BOUNDS.get(pn, []):
+            rows.append(Row(start + 1, table_spans[number], kind="table", overlay={"tableNumber": number}))
+        rows.sort(key=lambda row: row.y)
         bounds = [y for p, y in locations if p == pn]
         groups = group_paragraphs(rows, pn, bounds)
         links = local_links(page, urls)
@@ -735,6 +820,7 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
             identifier = f"p-{pn:04d}-b-{i:02d}"
             if key not in used_chapters:
                 html_chunks[key].append(f'<span class="rh-page-break" id="page-{pn}" data-source-page="{pn}" aria-hidden="true"></span>')
+                html_chunks[key].append(vector.page_details(max(span.box.x1 for span in spans)))
                 md_chunks[key].append(f"<!-- Source PDF page {pn} -->")
                 used_chapters.add(key)
 
@@ -783,19 +869,24 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
                               notationSha256=sha256(notation.encode()).hexdigest())
                 totals["checkedMathBlocks" if checked else "unverifiedMathBlocks"] += 1
             elif kind == "table":
-                data, linked_rows = table_transcript(spans_in_block, links)
-                v = vector.formula(identifier, spans_in_block, box)
-                rows_html = []
-                for row, linked_cells in zip(data, linked_rows):
-                    element = "th" if row[0] == "Branch" else "td"
-                    rows_html.append("<tr>" + "".join(f"<{element}>{cell}</{element}>" for cell in linked_cells) + "</tr>")
-                cells = "".join(rows_html)
-                markup = (f'<figure class="rh-formula rh-table-source" id="{identifier}" data-source-page="{pn}">'
-                          f'<div class="rh-formula-original">{v}</div><details class="rh-formula-transcript">'
-                          f'<summary>Selectable table transcription</summary><table><tbody>{cells}</tbody></table></details></figure>')
-                md = "\n".join("| " + " | ".join(row) + " |" if i else
-                              "| " + " | ".join(row) + " |\n| --- | --- | --- |" for i, row in enumerate(data))
-                record["transcription"] = "unverified-column-transcription"
+                number = block[0].overlay["tableNumber"]
+                headers, data, linked_rows = table_transcript(number, spans_in_block, links)
+                lo, hi = next((lo, hi) for n, lo, hi in TABLE_BOUNDS[pn] if n == number)
+                v = vector.formula(identifier, spans_in_block, fitz.Rect(box.x0-4, lo, box.x1+4, hi))
+                table_title = f"Table {number}. {TABLE_LABELS[number]}"
+                heading = f"<thead><tr>{''.join(f'<th scope="col">{esc(cell)}</th>' for cell in headers)}</tr></thead>"
+                body = "".join(f'<tr id="table-{number}-row-{slug(record[0])}">' + "".join(
+                    f'<th scope="row">{cell}</th>' if j == 0 else f"<td>{cell}</td>"
+                    for j, cell in enumerate(row)) + "</tr>" for record, row in zip(data, linked_rows))
+                markup = (f'<figure class="rh-formula rh-table-source" id="{identifier}" data-source-page="{pn}" data-table-number="{number}">'
+                          f'<figcaption>{esc(table_title)}</figcaption><div class="rh-formula-original">{v}</div>'
+                          f'<details class="rh-formula-transcript"><summary>Selectable table transcription</summary>'
+                          f'<table aria-label="{esc(table_title)}">{heading}<tbody>{body}</tbody></table></details></figure>')
+                md_rows = [headers, ["---"] * len(headers), *data]
+                md = "\n".join("| " + " | ".join(cell.replace("|", r"\|") for cell in row) + " |" for row in md_rows)
+                record.update(tableNumber=number, tableHeaders=headers,
+                              rows=[{"label": row[0], "anchor": f"table-{number}-row-{slug(row[0])}", "columns": row} for row in data],
+                              transcription="unverified-column-transcription")
                 totals["tablePanels"] += 1
             else:
                 parts = [inline_markup(row, vector, f"{identifier}-l-{li}", links, formulas)
@@ -853,7 +944,7 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
                        "sourceSha256": SOURCE_SHA256, "counts": dict(totals)})
             print(f"Processed {pn:3} / {end_page}; {dict(totals)}", flush=True)
 
-    markdown = ["# The ordinary Riemann Hypothesis argument in the supplied Lean source",
+    markdown = ["# The ordinary Riemann Hypothesis argument in the supplied Lean source (Version 2)",
                 "> PDF-based reading transcript. Unicode notation is provisional. Compare geometry with the web reader or the controlling PDF. Checked TeX displays are marked by display delimiters."]
     for chapter in chapters:
         key = chapter["slug"]
@@ -863,7 +954,9 @@ def convert(pdf, start_page=1, end_page=980, checkpoints=True, state_dir=None, r
         (CONTENT / f"{key}.html").write_text("\n".join(parts) + "\n", encoding="utf-8")
         markdown.append(f"## {chapter['title']}\n\n" + "\n\n".join(md_chunks[key]))
     (PUBLIC / "complete.md").write_text("\n\n".join(markdown) + "\n", encoding="utf-8")
-    shutil.copyfile(pdf, PUBLIC / "paper.pdf")
+    output_pdf = PUBLIC / "paper.pdf"
+    if not output_pdf.exists() or not pdf.samefile(output_pdf):
+        shutil.copyfile(pdf, output_pdf)
     write_json(DOCS / "coverage.json", {"sourceSha256": SOURCE_SHA256, "pages": coverage,
                "counts": dict(totals), "unidentifiedGlyphs": dict(fonts.unknown),
                "status": "provisional PDF-derived conversion",
@@ -875,7 +968,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("pdf", type=Path)
     parser.add_argument("--start-page", type=int, default=1)
-    parser.add_argument("--end-page", type=int, default=980)
+    parser.add_argument("--end-page", type=int, default=PDF_PAGES)
     parser.add_argument("--state-dir", type=Path, help="Save resumable HTML, Markdown, coverage and anchor state every 50 PDF pages")
     parser.add_argument("--resume", action="store_true", help="Resume from the last compatible saved checkpoint")
     args = parser.parse_args()

@@ -23,6 +23,7 @@ import { agency } from '@/lib/agency';
 import { alignment } from '@/lib/alignment';
 import { researchPapers } from '@/lib/consciousness-research';
 import { rhPublication } from '@/lib/riemann-hypothesis';
+import { ads4Edition, newReadingEditions } from '@/config/new-reading-editions';
 
 export type Visibility = 'draft' | 'public';
 export type PaperCategory = 'canonical' | 'branch' | 'independent' | 'superseded' | 'historical';
@@ -190,10 +191,12 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
     const relational = slug === relationalAwareness.paperSlug ? relationalAwareness : undefined;
     const integrated = paperIntegrations.find(p=>p.paperSlug===slug);
     const rh = slug === 'riemann-hypothesis' ? rhPublication : undefined;
+    const readingEdition = newReadingEditions.find(edition => edition.id === slug);
     const continuity = slug === continuityNote.paperSlug ? continuityNote : undefined;
     const reflective = slug === alignment.paperSlug ? alignment : undefined;
     const publication = quantumResearch ?? quantum ?? consciousness;
-    const zenodoId: string | undefined = rh?.doi.split('.').at(-1) ?? quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
+    const knownDoi = rh?.doi ?? (readingEdition?.zenodoUrl ? readingEdition.doi : undefined);
+    const zenodoId: string | undefined = knownDoi?.split('.').at(-1) ?? quantumResearch?.doi.split('.').at(-1) ?? research?.doi.split('.').at(-1) ?? quantum?.doi.split('.').at(-1) ?? (raw.zenodo != null ? String(raw.zenodo) : undefined);
 
     // Zenodo metadata: cache first, network as fallback (never fatal).
     let metadata: ZenodoMetadata | null = null;
@@ -206,6 +209,15 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
         url: `https://zenodo.org/records/${zenodoId}`,
         creators: ['Jeremy Rodgers'],
         published: rh.date,
+      };
+    } else if (readingEdition) {
+      metadata = {
+        id: zenodoId ?? readingEdition.doi,
+        title: readingEdition.zenodoTitle ?? readingEdition.citationTitle ?? readingEdition.title,
+        doi: readingEdition.doi,
+        url: readingEdition.zenodoUrl,
+        creators: [readingEdition.author],
+        published: readingEdition.publicationDate,
       };
     } else if (integrated) {
       metadata={id:integrated.doi,doi:integrated.doi,title:integrated.title,creators:[integrated.author],published:integrated.date,files:[{filename:'Original publication PDF',url:integrated.pdfUrl},{filename:'Complete Markdown',url:integrated.markdownUrl},...(integrated.supplementUrl?[{filename:'Public verification archive',url:integrated.supplementUrl}]:[])]};
@@ -255,8 +267,8 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       }
     }
 
-    const doi: string | undefined = rh?.doi ?? integrated?.doi ?? research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
-    const title: string | undefined = integrated?.title ?? research?.title ?? publication?.title ?? raw.title ?? metadata?.title ?? undefined;
+    const doi: string | undefined = rh?.doi ?? readingEdition?.doi ?? integrated?.doi ?? research?.doi ?? publication?.doi ?? raw.doi ?? metadata?.doi ?? undefined;
+    const title: string | undefined = (readingEdition ? readingEdition.citationTitle ?? readingEdition.title : undefined) ?? integrated?.title ?? research?.title ?? publication?.title ?? raw.title ?? metadata?.title ?? undefined;
     const category: PaperCategory =
       raw.category === 'canonical' || raw.category === 'branch' || raw.category === 'independent' || raw.category === 'superseded'
         ? raw.category
@@ -273,15 +285,15 @@ async function loadPapersUncached(): Promise<LoadedPaper[]> {
       title,
       subtitle: publication?.subtitle ?? raw.subtitle,
       role: raw.role,
-      summary: rh?.description ?? raw.summary,
-      version: quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? (consciousness ? publication.version : `Version ${publication.version}`) : raw.version,
-      date: rh?.date ?? research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
-      webUrl: sourceReadout ? paperUrl(sourceReadout) : rh?.route ?? integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
-      pdfUrl: rh?.pdfUrl ?? sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
+      summary: rh?.description ?? readingEdition?.description ?? raw.summary,
+      version: rh ? `Version ${rh.version}` : quantumResearch ? quantumResearch.version : research ? `Version ${research.version}` : publication ? (consciousness ? publication.version : `Version ${publication.version}`) : raw.version,
+      date: rh?.date ?? readingEdition?.publicationDate ?? research?.date ?? publication?.published ?? raw.date ?? metadata?.published,
+      webUrl: sourceReadout ? paperUrl(sourceReadout) : rh?.route ?? readingEdition?.route ?? integrated?.url ?? research?.url ?? publication?.webUrl ?? raw.webUrl,
+      pdfUrl: rh?.pdfUrl ?? readingEdition?.pdfUrl ?? sourceReadout?.pdfUrl ?? integrated?.pdfUrl ?? research?.pdfUrl ?? publication?.pdfUrl ?? raw.pdfUrl,
       supplementPdfUrl: raw.supplementPdfUrl,
       texUrl: sourceReadout?.texUrl ?? research?.texUrl ?? publication?.texUrl ?? raw.texUrl,
-      markdownUrl: rh?.markdownUrl ?? sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
-      researchProgramme: slug==='yang-mills'||sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
+      markdownUrl: rh?.markdownUrl ?? readingEdition?.markdownUrl ?? sourceReadout?.markdownUrl ?? integrated?.markdownUrl ?? research?.markdownUrl ?? publication?.markdownUrl ?? raw.markdownUrl,
+      researchProgramme: slug===ads4Edition.id || slug==='yang-mills'||sourceReadout || integrated?.programme === 'source-readout' ? 'source-readout' : quantum || quantumResearch ? 'quantum-measurement' : consciousness || research || developmental || agential || reflective || relational || continuity || integrated ? 'consciousness' : undefined,
       zenodoId,
       doi,
       supports: Array.isArray(raw.supports)

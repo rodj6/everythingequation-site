@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RhContents from "@/components/rh-contents";
-import { rhChapters, rhChapterUrl, rhPublication as paper } from "@/lib/riemann-hypothesis";
+import { rhChapters, rhChapterUrl, rhFinalAssemblyUrl, rhLiteratureAuditUrl, rhPublication as paper } from "@/lib/riemann-hypothesis";
 import { site } from "@/config/site";
 import { jsonLdText } from "@/lib/json-ld";
 
@@ -38,6 +38,7 @@ export default function RiemannHypothesis() {
     author: { "@type": "Person", name: site.author.name, jobTitle: "Independent Researcher" },
     creditText: "Underlying mathematical argument by Levent Alpöge and Anthropic’s Claude. Reconstruction by Jeremy Rodgers.",
     datePublished: paper.date,
+    version: paper.version,
     identifier: paper.doi,
     sameAs: paper.doiUrl,
     url: site.url + paper.route,
@@ -52,34 +53,42 @@ export default function RiemannHypothesis() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdText(schema) }} />
       <nav className="rh-breadcrumb" aria-label="Breadcrumb"><Link href="/articles">Articles</Link> / Riemann Hypothesis</nav>
       <header className="rh-hero">
-        <p className="rh-kicker">Riemann Hypothesis · Lean 4 · Referee reconstruction</p>
+        <p className="rh-kicker">Riemann Hypothesis · Lean 4 · Version 2</p>
         <h1>Read the Riemann Hypothesis argument from Lean</h1>
         <p className="rh-lead">Follow the argument from the reduction for Dirichlet characters to the final assembly for ordinary RH. Jeremy Rodgers reconstructs the mathematics of Levent Alpöge and Anthropic’s Claude in a manuscript for referee checking.</p>
-        <p className="rh-byline">Jeremy Rodgers · Independent Researcher · <time dateTime={paper.date}>22 November 2026</time></p>
+        <p className="rh-byline">Jeremy Rodgers · Independent Researcher · Manuscript dated <time dateTime={paper.versionDate}>22 November 2026</time></p>
         <div className="rh-actions">
           <Link className="rh-primary" href={rhChapterUrl(rhChapters[0].slug)}>Start reading</Link>
           <Link href={paper.searchUrl}>Search the argument</Link>
           <Link href={paper.citationRoute}>Citation record</Link>
-          <a href={paper.doiUrl}>DOI</a>
+          <a href={paper.doiUrl}>Version 2 DOI</a>
         </div>
       </header>
       <div className="rh-intro">
         <h2>{paper.title}</h2>
-        <p>{paper.subtitle}. The manuscript reconstructs 45 handoff gap groups and 14 original frontier branches. Proposition 17.4 constructs a compatible family-selection bundle. Theorem 17.5 traces the discharge of the terminal inputs and assembles the argument for ordinary RH.</p>
+        <p>{paper.subtitle}. The repaired edition reconstructs 45 handoff gap groups and 14 original frontier branches relative to the classical literature listed in the manuscript.</p>
+        <h2>What Version 2 adds</h2>
+        <p>Version 2 expands the proofs behind the <Link href={rhFinalAssemblyUrl}>final assembly in Section 17.4</Link>. Proposition 17.4 constructs one compatible family-selection bundle and Theorem 17.5 traces the discharge of the terminal inputs. The new <Link href={rhLiteratureAuditUrl}>field-by-field audit in Section 18.1</Link> records the 60 and 53 fields of the two input packages, their sources, and how they enter the mathematics.</p>
         <ul className="rh-key-links">
           <li><Link href={rhChapterUrl("the-precise-target-and-the-endpoint-reduction")}>Endpoint reduction <span>Section 2</span></Link></li>
           <li><Link href={rhChapterUrl("the-analytic-window-principle")}>Analytic window <span>Section 3</span></Link></li>
-          <li><Link href={rhChapterUrl("construction-of-the-compatible-family-bundle-and-final-assembly")}>Final assembly <span>Section 17.4</span></Link></li>
+          <li><Link href={rhFinalAssemblyUrl}>Final assembly <span>Section 17.4</span></Link></li>
           <li><Link href={rhChapterUrl("essential-inputs-and-their-present-status")}>Essential inputs <span>Section 18</span></Link></li>
+          <li><Link href={rhLiteratureAuditUrl}>Literature-input audit <span>Section 18.1</span></Link></li>
         </ul>
         <h2>Reading edition and verification scope</h2>
-        <p>The chaptered edition covers the 980-page preprint. Copyable notation is still undergoing transcription checks. The reader identifies provisional text and provides the source notation for comparison.</p>
-        <p>The manuscript reports a textual dependency scan of 175,187 local Lean modules and targeted manuscript audits. Local Lean 4 kernel checking of the full pinned environment was outside the reported checks.</p>
+        <p>The chaptered edition follows the 1,061-page manuscript. The reader identifies provisional notation and provides the printed source for comparison.</p>
+        <p>The manuscript distinguishes its repaired prose arguments, the published mathematical results they use, and the scope of external verification. It reports a textual scan of 175,187 local Lean modules, with zero missing local modules and zero textual axiom, sorry or admit declarations. A local Lean 4 elaboration and kernel check of the pinned environment and direct inspection of exact clauses and pages in unopened primary print sources remain outside the reported checks.</p>
         <div className="rh-actions">
-          <a href={paper.pdfUrl}>Original PDF</a>
+          <a href={paper.pdfUrl}>Version 2 PDF</a>
           <a href={paper.markdownUrl}>Markdown transcript</a>
           <a href={paper.manifestUrl}>Chapter manifest</a>
         </div>
+        <section className="rh-version-archive" aria-labelledby="version-history">
+          <h2 id="version-history">Frozen Version 1 archive</h2>
+          <a href={paper.previousVersion.pdfUrl}>Version 1 PDF</a>
+          <p>DOI <a href={paper.previousVersion.doiUrl}>{paper.previousVersion.doi}</a></p>
+        </section>
         <h2 id="contents">Contents</h2>
         <RhContents />
       </div>

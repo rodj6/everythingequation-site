@@ -3,18 +3,21 @@ import { listArticles } from "@/lib/articles";
 import { ArticleCard } from "@/components/cards";
 import RiemannHypothesisFeature from "@/components/riemann-hypothesis-feature";
 import { rhPublication } from "@/lib/riemann-hypothesis";
+import NewReadingEditionFeatures from "@/components/new-reading-edition-features";
+import { newReadingEditions } from "@/config/new-reading-editions";
 
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "Articles",
   description:
-    "Read the Riemann Hypothesis reconstruction from Lean and explore Shadow Theory research, explanations, and updates.",
+    "Read the AdS4 boundary-ball and Haar unitary derivative-moment editions, the Riemann Hypothesis reconstruction from Lean, and Shadow Theory research.",
   alternates: { canonical: "/articles" },
 };
 
 export default function ArticlesPage() {
-  const articles = listArticles().filter(article => article.href !== rhPublication.route);
+  const featured = new Set([rhPublication.route, ...newReadingEditions.map(edition => edition.route)]);
+  const articles = listArticles().filter(article => !article.href || !featured.has(article.href));
 
   return (
     <div className="space-y-12">
@@ -28,6 +31,7 @@ export default function ArticlesPage() {
         </p>
       </header>
 
+      <NewReadingEditionFeatures />
       <RiemannHypothesisFeature />
 
       <h2 className="sr-only">All articles</h2>

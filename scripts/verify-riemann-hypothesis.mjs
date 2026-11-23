@@ -13,8 +13,11 @@ const root = "/articles/riemann-hypothesis";
 const publication = "/publications/riemann-hypothesis";
 const sourceDir = "content/riemann-hypothesis";
 const docsDir = "docs/riemann-hypothesis";
-const expectedHash = "bae1f777817c69c9a3ca7eac08543538547315c640a31ff24d13ac02666c3fb3";
-const expectedPageCount = 980;
+const expectedHash = "dbb02e1656b98611c49380f6f4b3af07b45e0022de5525d43d70b3aaf210a0e8";
+const v1Hash = "bae1f777817c69c9a3ca7eac08543538547315c640a31ff24d13ac02666c3fb3";
+const v2Doi = "10.5281/zenodo.24473551";
+const v1Doi = "10.5281/zenodo.24433884";
+const expectedPageCount = 1061;
 const failures = [];
 let failureCount = 0;
 
@@ -54,6 +57,7 @@ function index(fragment, slug) {
   const hrefs = [];
   const destinations = [];
   const pageMarkers = new Set();
+  const printedPages = new Set();
   const copies = [];
   for (const node of descend(fragment)) {
     const id = attr(node, "id");
@@ -65,6 +69,7 @@ function index(fragment, slug) {
     if (destination) destinations.push(destination);
     const sourcePage = attr(node, "data-source-page");
     if (sourcePage && hasClass(node, "rh-page-break")) pageMarkers.add(Number(sourcePage));
+    if (sourcePage && hasClass(node, "rh-printed-source")) printedPages.add(Number(sourcePage));
     const href = attr(node, "href");
     if (href) hrefs.push(href);
     const copy = attr(node, "data-rh-copy");
@@ -74,7 +79,7 @@ function index(fragment, slug) {
     const target = ids.get(copy);
     check(target?.nodeName === "pre" && text(target).trim(), `${slug}: missing copy text at ${copy}`);
   }
-  return { ids, hrefs, destinations, pageMarkers, copies };
+  return { ids, hrefs, destinations, pageMarkers, printedPages, copies };
 }
 
 async function production(route, extension) {
@@ -105,19 +110,23 @@ function verifyProductionBody(html, fragment, chapter, checkedCount) {
   check(serialize(body) === serialize(fragment), `${chapter.slug}: initial HTML manuscript differs from generated chapter`);
 }
 
-const [chapters, coverage, overlays, manuscript, markdown, search] = await Promise.all([
+const [chapters, coverage, overlays, manuscript, archivedManuscript, markdown, search] = await Promise.all([
   json(join(sourceDir, "chapters.json")),
   json(join(docsDir, "coverage.json")),
   json(join(docsDir, "checked-math.json")),
   readFile(join("public", publication, "paper.pdf")),
+  readFile(join("public", publication, "v1", "paper.pdf")),
   readFile(join("public", publication, "complete.md"), "utf8"),
   json(join("public", publication, "search.json")),
 ]);
 
 check(digest(manuscript) === expectedHash, "The copied PDF has a different SHA-256");
+check(digest(archivedManuscript) === v1Hash, "The preserved Version 1 PDF differs from its original checksum");
 check(coverage.sourceSha256 === expectedHash, "Coverage ledger refers to a different PDF");
-check(coverage.pages.length === expectedPageCount, "Coverage ledger must contain 980 pages");
-check(chapters.length > 140, "Chapter inventory has fewer than 141 reading divisions");
+check(coverage.pages.length === expectedPageCount, "Coverage ledger must contain 1061 pages");
+check(chapters.length === 155, "Expected 145 source bookmarks, eight continuation divisions, front matter, and references");
+check(chapters.filter(chapter => /^(?:section|subsection|subsubsection)\.\d/.test(chapter.outlineAnchor)).length === 145,
+  "The chapter inventory omitted native PDF bookmarks");
 for (const overlay of overlays) {
   const math = katex.renderToString(overlay.latex, { displayMode: true, output: "mathml", strict: "error" });
   check(math.includes("<math"), `Page ${overlay.page}: checked LaTeX did not compile to MathML`);
@@ -145,7 +154,8 @@ const chaptersBySlug = new Map();
 const destinations = new Set();
 const linkedAssets = new Map();
 const checkedMath = new Set();
-const tableBranches = [];
+const tableLabels = new Map();
+const tableOverlaps = new Set();
 const totals = { anchors: 0, references: 0, displayBlocks: 0, checkedDisplays: 0, provisionalDisplays: 0,
   provisionalInlineRuns: 0, tablePanels: 0, pages: new Set(), textBlocks: 0, markdownBlocks: 0, copyTargets: 0 };
 let markdownOffset = 0;
@@ -192,13 +202,28 @@ for (const chapter of chapters) {
       }
     } else if (block.type === "table") {
       totals.tablePanels++;
-      check(node && [...descend(node)].some(item => item.nodeName === "table"), `${block.anchor}: missing selectable table`);
-      if (node) {
-        for (const row of descend(node)) {
+      const table = node && [...descend(node)].find(item => item.nodeName === "table");
+      check(table, `${block.anchor}: missing selectable table`);
+      const number = Number(block.tableNumber ?? attr(node ?? {}, "data-table-number"));
+      check(number >= 1 && number <= 6, `${block.anchor}: missing native table number`);
+      if (table && number >= 1 && number <= 6) {
+        const labels = tableLabels.get(number) ?? [];
+        for (const row of descend(table)) {
           if (row.nodeName !== "tr") continue;
-          const first = row.childNodes.find(cell => cell.nodeName === "td");
-          if (first && /^F-\d+$/.test(text(first).trim())) tableBranches.push(text(first).trim());
+          const first = row.childNodes.find(cell => cell.nodeName === "th" && attr(cell, "scope") === "row");
+          if (!first) continue;
+          const label = text(first).trim();
+          if (number === 6) {
+            const overlap = text(row).match(/\[\s*=\s*P\s*#\s*(\d+)/);
+            if (overlap) tableOverlaps.add(label + ":" + overlap[1]);
+          }
+          const rowRecord = block.rows?.find(item => item.anchor === attr(row, "id"));
+          check(rowRecord?.label === label, `${block.anchor}: table row label differs from coverage`);
+          check(row.childNodes.filter(cell => cell.nodeName === "th" || cell.nodeName === "td").length === block.tableHeaders?.length,
+            `${block.anchor}: rendered row ${label} has an incorrect column count`);
+          labels.push(label);
         }
+        tableLabels.set(number, labels);
       }
     } else {
       totals.textBlocks++;
@@ -206,6 +231,7 @@ for (const chapter of chapters) {
     }
     if (previousPage !== block.page) {
       totals.pages.add(block.page);
+      check(inventory.printedPages.has(block.page), `${chapter.slug}: missing printed source illustration for page ${block.page}`);
       check(inventory.pageMarkers.has(block.page), `${chapter.slug}: missing PDF page marker ${block.page}`);
       const marker = `<!-- Source PDF page ${block.page} -->\n\n`;
       const markerStart = markdown.indexOf(marker, markdownOffset);
@@ -268,25 +294,56 @@ for (const overlay of overlays) {
     `PDF page ${overlay.page}: checked display ${overlay.tag ?? overlay.bbox.join(",")} missing from edition`);
 }
 for (const term of ["theorem.7.102", "theorem.7.114", "theorem.10.65", "theorem.17.3", "theorem.17.4",
-  "theorem.17.5", "equation.2.7", "equation.17.398", "table.1", "section.18", "section*.267"]) {
+  "theorem.17.5", "equation.2.7", "equation.17.402", "section.18", "subsection.18.1", "section*.267"]) {
   check(destinations.has(term), `Missing required PDF destination ${term}`);
 }
-check(destinations.size === 3532 && destinations.size === coverage.destinationCount,
+check(destinations.size === 3755 && destinations.size === coverage.destinationCount,
   "HTML native destination count differs from the controlling PDF or coverage");
-check([...destinations].filter(name => name.startsWith("cite.")).length === 65, "Expected 65 native citation destinations");
+check([...destinations].filter(name => name.startsWith("cite.")).length === 129, "Expected 129 native citation destinations");
 check(totals.pages.size === expectedPageCount, "Site reading divisions do not cover 980 PDF pages");
-check(tableBranches.join(",") === Array.from({ length: 14 }, (_, index) => `F-${index + 1}`).join(","),
-  "Section 18 did not retain all 14 branches in table order");
+function numberedRows(count, prefix = "") {
+  return Array.from({ length: count }, (_, index) => prefix + (index + 1));
+}
+
+const expectedLabels = new Map([
+  [1, numberedRows(27)],
+  [2, numberedRows(7)],
+  [3, ["p1", "p2,p3,q9", "p4,q11", "p5", "p8", "p12", "p13", "p14", "p16", "p19", "p20",
+       "p22", "p23", "p25,p26", "q1", "q4", "q6", "q7", "q8", "q10", "q13", "q15", "q16", "q18"]],
+  [4, numberedRows(14, "F-")],
+  [5, numberedRows(60)],
+  [6, numberedRows(53)],
+]);
+for (const [number, expected] of expectedLabels) {
+  check(destinations.has(`table.${number}`), `Missing native destination for Table ${number}`);
+  const labels = (tableLabels.get(number) ?? []).map(label => label.replace(/\s+/g, ""));
+  check(labels.join("|") === expected.join("|"), `Table ${number} row labels differ from the PDF: ${labels.join(" ")}`);
+}
+const expectedOverlaps = [
+  "6:16", "7:29", "8:14", "9:44", "10:46", "11:10", "13:12", "14:13", "19:45", "20:53",
+  "28:41", "35:36", "36:35", "41:15", "44:39", "45:27", "46:9", "47:38", "48:49", "50:37",
+];
+check([...tableOverlaps].join(" ") === expectedOverlaps.join(" "),
+  `Table 6 overlap marks differ from the PDF: ${[...tableOverlaps].join(" ")}`);
 
 for (const hit of search.passages) {
   check(hit.text.trim(), `Empty search hit ${hit.slug}#${hit.anchor}`);
   check(chaptersBySlug.get(hit.slug)?.ids.has(hit.anchor), `Missing search target ${hit.slug}#${hit.anchor}`);
 }
-for (const term of ["riemannHypothesis", "riemannZeta_ne_zero_of_one_le_re", "Theorem 17.5", "Proposition 7.102"]) {
+for (const term of ["riemannHypothesis", "riemannZeta_ne_zero_of_one_le_re", "Theorem 17.5", "Proposition 7.102", "extensionWithAtProperty",
+  "UnitaryGroupThirdPlaceHypotheses", "ThetaLocalInputs", "PublishedHodgeBundleTheorems"]) {
   check(search.passages.some(hit => hit.text.includes(term)), `Full-text index cannot find ${term}`);
 }
 if (!sourceOnly) {
   const manifest = JSON.parse(await production(root + "/manifest.json", "body"));
+  check(manifest.version === 2 && manifest.doi === v2Doi, "Manifest does not identify Version 2 with its DOI");
+  check(manifest.previousVersion?.sha256 === v1Hash, "Manifest has the wrong Version 1 checksum");
+  check(manifest.previousVersion?.doi === v1Doi, "Manifest omits the frozen Version 1 DOI");
+  check(manifest.previousVersion?.pdfUrl === publication + "/v1/paper.pdf", "Manifest omits the Version 1 PDF");
+  check(manifest.verificationScope?.localLean4ElaborationOrKernelCheck === false, "Manifest changes the Lean verification scope");
+  const scan = manifest.verificationScope?.textualSourceScan;
+  check(scan?.localModules === 175187 && scan?.missingLocalModules === 0 && scan?.textualAxiomSorryAdmitDeclarations === 0,
+    "Manifest textual source scan inventory differs from the manuscript");
   check(manifest.pdf.pages === expectedPageCount && manifest.pdf.sha256 === expectedHash, "Production PDF identity mismatch");
   check(manifest.chapters.map(item => item.slug).join(",") === chapters.map(item => item.slug).join(","),
     "Production manifest order differs from the chapter inventory");
@@ -305,7 +362,8 @@ if (requireComplete) {
 
 console.log(JSON.stringify({ ...totals, pages: totals.pages.size, chapters: chapters.length,
   nativeDestinations: destinations.size, vectorFiles: linkedAssets.size, searchHits: search.passages.length,
-  pagesWithUncheckedNotation: affectedPages.length, unidentifiedGlyphs,
+  tableRows: Object.fromEntries([...tableLabels].map(([number, labels]) => [number, labels.length])),
+  tableSixOverlapFields: tableOverlaps.size, pagesWithUncheckedNotation: affectedPages.length, unidentifiedGlyphs,
   production: !sourceOnly, failureCount }, null, 2));
 if (failureCount) {
   for (const failure of failures) console.error(failure);

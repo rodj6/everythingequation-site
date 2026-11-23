@@ -47,11 +47,17 @@ def main():
                 target = targets[link["nameddest"]] if link["kind"] == fitz.LINK_NAMED else link["uri"]
                 source[page.number + 1, target] += 1
 
+    native_counts = Counter()
+    native_counts["internal"] = sum(count for (_, href), count in source.items() if href.startswith(ROUTE))
+    native_counts["external"] = sum(count for (_, href), count in source.items() if not href.startswith(ROUTE))
+    if native_counts != {"internal": 4529, "external": 137}:
+        raise ValueError(f"The bundled PDF annotation inventory differs from Version 2: {native_counts}")
+
     missing = source - rendered
     extra = rendered - source
     report = {
-        "nativeInternalAnnotations": sum(count for (_, href), count in source.items() if href.startswith(ROUTE)),
-        "nativeExternalAnnotations": sum(count for (_, href), count in source.items() if not href.startswith(ROUTE)),
+        "nativeInternalAnnotations": native_counts["internal"],
+        "nativeExternalAnnotations": native_counts["external"],
         "htmlInternalAnchors": sum(count for (_, href), count in rendered.items() if href.startswith(ROUTE)),
         "htmlExternalAnchors": sum(count for (_, href), count in rendered.items() if not href.startswith(ROUTE)),
         "missingNativeAnnotations": missing.total(),

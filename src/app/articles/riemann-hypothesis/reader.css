@@ -69,6 +69,8 @@
 
 .rh-intro, .rh-reading-body { font: var(--reading-size)/var(--reading-leading) var(--font-serif); }
 .rh-intro > p { margin-block: .85em; }
+.rh-version-archive { border-block: 1px solid var(--rh-rule); padding-block: 1rem; }
+.rh-version-archive h2 { margin: 0 0 .55rem; font-size: 1.35rem; }
 
 .rh-key-links {
   display: grid;
@@ -114,8 +116,15 @@
 .rh-formula-original, .rh-reading-body img[src$=".svg"] { background: #fff; }
 .rh-source-note { font-size: .94em; color: var(--rh-quiet); }
 .rh-page-break { color: var(--rh-quiet); font: .84rem/1.35 var(--font-sans); }
-.rh-reading-body table { max-width: 100%; display: block; overflow-x: auto; }
-.rh-reading-body td, .rh-reading-body th { padding: .35rem .55rem; border: 1px solid var(--rh-rule); }
+.rh-table-source .rh-formula-transcript { overflow-x: auto; }
+.rh-reading-body table { width: 100%; min-width: 38rem; border-collapse: collapse; }
+.rh-reading-body td, .rh-reading-body th {
+  vertical-align: top;
+  text-align: start;
+  padding: .35rem .55rem;
+  border: 1px solid var(--rh-rule);
+}
+.rh-reading-body :is(thead th, tbody th) { background: hsl(var(--surface-raised)); }
 
 .rh-pagination {
   display: grid;
@@ -152,6 +161,7 @@
   padding: .55rem .65rem;
   max-width: 100%;
   overflow-x: auto;
+  overscroll-behavior-x: contain;
 }
 .rh-formula-original .rh-notation-vector {
   display: block;
@@ -159,6 +169,13 @@
   margin-inline: auto;
 }
 .rh-formula-transcript { margin-top: .35rem; }
+.rh-printed-source { max-width: 100%; margin-block: .65rem 1rem; }
+.rh-printed-source > summary {
+  color: var(--rh-quiet);
+  width: fit-content;
+  margin-bottom: .4rem;
+}
+.rh-printed-source .rh-formula-original { border: 1px solid var(--rh-rule); }
 .rh-formula-transcript pre {
   margin-block: .5rem;
   padding: .55rem .65rem;
@@ -168,28 +185,28 @@
 .rh-semantic-display { max-width: 100%; overflow-x: auto; }
 .rh-inline-math {
   display: inline-block;
-  position: relative;
   vertical-align: -.3em;
   max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 .rh-inline-math .rh-notation-vector {
   display: inline-block;
   filter: invert(.92);
 }
 .rh-inline-transcript {
-  position: absolute;
+  display: none;
+  position: fixed;
   z-index: 1;
-  top: 100%;
-  left: 0;
+  inset: auto max(1rem, calc(50% - 16rem)) 1rem;
   background: hsl(var(--surface-raised));
   color: hsl(var(--foreground));
   border: 1px solid var(--rh-rule);
   padding: .25rem .42rem;
-  width: max-content;
-  max-width: min(20rem, 75vw);
+  max-height: 40vh;
+  overflow: auto;
   line-height: 1.42;
-  visibility: hidden;
 }
 .rh-inline-math:hover .rh-inline-transcript,
 .rh-inline-math:focus .rh-inline-transcript,
-.rh-inline-math:focus-within .rh-inline-transcript { visibility: visible; }
+.rh-inline-math:focus-within .rh-inline-transcript { display: block; }

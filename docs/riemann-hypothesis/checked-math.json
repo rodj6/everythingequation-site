@@ -3,10 +3,10 @@
     "page": 6,
     "tag": "1",
     "bbox": [
-      96,
-      293,
-      541,
-      328
+      127,
+      435,
+      542,
+      463
     ],
     "latex": "\\forall s\\in\\mathbb C,\\qquad \\zeta(s)=0,\\quad \\neg\\exists n\\in\\mathbb N\\;s=-2(n+1),\\quad s\\ne 1\\quad \\Longrightarrow\\quad \\operatorname{Re}s=\\frac12.",
     "note": "Ordinary RH as stated in the manuscript. The natural-number index starts at zero."
@@ -15,34 +15,34 @@
     "page": 6,
     "tag": "2",
     "bbox": [
-      218,
-      438,
-      544,
-      456
+      222,
+      605,
+      542,
+      620
     ],
     "latex": "\\zeta(1-w)=2(2\\pi)^{-w}\\Gamma(w)\\cos(\\pi w/2)\\zeta(w).",
     "note": "Functional equation with the manuscript’s gamma and cosine normalization."
   },
   {
-    "page": 6,
+    "page": 7,
     "tag": "3",
     "bbox": [
-      214,
-      552,
-      544,
-      566
+      216,
+      86,
+      542,
+      101
     ],
     "latex": "\\cos z=0\\quad\\Longleftrightarrow\\quad\\exists k\\in\\mathbb{Z}\\ z=(2k+1)\\pi/2.",
     "note": "Integer-indexed zero set of the cosine."
   },
   {
-    "page": 6,
+    "page": 7,
     "tag": "4",
     "bbox": [
-      252,
-      622,
-      544,
-      636
+      254,
+      154,
+      542,
+      168
     ],
     "latex": "L(s,1_1)=\\zeta(s)\\qquad (s\\in\\mathbb{C}).",
     "note": "The character modulo one and zeta agree as total functions."
@@ -51,10 +51,10 @@
     "page": 7,
     "tag": "5",
     "bbox": [
-      181,
-      113,
-      544,
-      145
+      185,
+      303,
+      542,
+      330
     ],
     "latex": "\\forall w\\in\\mathbb{C},\\qquad\\operatorname{Re}w>\\frac12,\\quad w\\ne1\\quad\\Longrightarrow\\quad\\zeta(w)\\ne0.",
     "note": "The right half-plane excludes s = 1 in this statement."
@@ -64,9 +64,9 @@
     "tag": "6",
     "bbox": [
       115,
-      392,
-      541,
-      419
+      570,
+      542,
+      597
     ],
     "latex": "\\forall N\\ge1\\;\\forall\\chi\\bmod N\\;\\forall s\\in\\mathbb C,\\qquad \\operatorname{Re}s>\\frac12,\\quad (\\chi\\ne 1_N\\text{ or }s\\ne1)\\quad\\Longrightarrow\\quad L(s,\\chi)\\ne0.",
     "note": "EC excludes only the trivial-character pole."
@@ -76,9 +76,9 @@
     "tag": "7",
     "bbox": [
       193,
-      129,
-      541,
-      156
+      230,
+      542,
+      258
     ],
     "latex": "\\forall\\psi\\;\\forall s\\in\\mathbb C,\\qquad \\operatorname{Re}s>\\frac12\\quad\\Longrightarrow\\quad L(s,\\chi_\\psi)\\ne0.",
     "note": "ZF includes the assigned total-function value at s = 1."
@@ -87,123 +87,145 @@
     "page": 8,
     "tag": "8",
     "bbox": [
-      217,
-      493,
-      544,
-      530
+      220,
+      584,
+      542,
+      608
     ],
     "latex": "L(s,\\chi)=L(s,\\chi')\\prod_{p\\mid N}(1-\\chi'(p)p^{-s}).",
     "note": "The continuation identity has one factor for each distinct prime divisor of N."
   },
   {
-    "page": 444,
+    "page": 472,
     "bbox": [
       184,
-      550,
+      289,
       455,
-      569
+      309
     ],
     "latex": "D_{\\mathrm{dR}}(q_{\\mathrm{Rep}}(\\rho'_m))\\le\\mathrm{Fil}^{-N},\\qquad D_{\\mathrm{dR}}(q_{\\mathrm{Rep}}(\\rho'_m))\\cap\\mathrm{Fil}^{N+1}=0,",
     "note": "Proposition 7.102(1), two filtration conditions."
   },
   {
-    "page": 445,
+    "page": 473,
     "bbox": [
-      128,
-      445,
+      127,
+      510,
       484,
-      469
+      535
     ],
     "latex": "\\operatorname{Img}(n,m)=\\left\\{w\\in W(\\mathbb C_\\ell^{\\flat})^d:\\exists s\\in\\mathfrak S^{d'_m},\\ w\\equiv R_m\\operatorname{ev}_W(s)\\pmod{\\ell^nW(\\mathbb C_\\ell^{\\flat})}\\right\\}.",
     "note": "Proposition 7.102, Step 3a. The module rank is d prime sub m."
   },
   {
-    "page": 445,
+    "page": 474,
     "bbox": [
       251,
-      706,
+      124,
       388,
-      724
+      143
     ],
     "latex": "\\ell^n\\mid \\operatorname{ev}(u)^c-\\tau^{2N}y\\qquad\\text{in }A_{\\inf}",
     "note": "c and y depend on the fixed n and are independent of the layer index m."
   },
   {
-    "page": 446,
+    "page": 474,
     "bbox": [
       123,
-      244,
-      516,
-      296
+      324,
+      517,
+      378
     ],
     "latex": "\\begin{aligned}\nT_0R_m\\operatorname{incl}_W(a)&\\equiv\\operatorname{incl}_W(y)\\,\\Pi_m(F_m.T\\operatorname{incl}_W(Y'_m))S_m\\Pi_n\\operatorname{incl}_W(Y_n)\\operatorname{ev}_W(s)\\\\\n&\\equiv\\operatorname{incl}_W(y)\\operatorname{incl}_W(\\tau)^N(\\Pi_m S_m)\\Pi_n(\\operatorname{incl}_W(\\tau)^N F_n.T)\\operatorname{ev}_W(s)\\\\\n&\\equiv\\operatorname{incl}_W(\\tau)^{2N}\\operatorname{incl}_W(y)\\,\\Pi_n F_n.T\\operatorname{ev}_W(s)\\equiv T_0R_n\\operatorname{ev}_W(u^c s)\\pmod{\\ell^n}.\n\\end{aligned}",
     "note": "Keep the m and n indices distinct across the three-line uniform-containment argument."
   },
   {
-    "page": 446,
+    "page": 474,
     "bbox": [
       156,
-      568,
+      650,
       484,
-      584
+      667
     ],
     "latex": "w\\equiv R_n\\operatorname{ev}_W(s)\\equiv R_n\\operatorname{ev}_W(s')+R_n\\operatorname{ev}_W(u^c b_0)\\in\\operatorname{Img}(n,m)\\pmod{\\ell^n}.",
     "note": "The stabilization step returns to congruence modulo ell^n alone."
   },
   {
-    "page": 815,
+    "page": 873,
     "bbox": [
       98,
-      640,
+      454,
       541,
-      654
+      467
     ],
     "latex": "K(\\ell(u)-N\\phi(u))+h(u)\\ge(CNB+1)(\\ell(u)-N\\phi(u))-CN\\phi(u)\\ge CN(B-\\phi(u))+1\\ge1>0.",
     "note": "Lemma 10.65, part (c). The chain applies to the strictly positive integer-gap case."
   },
   {
-    "page": 815,
+    "page": 873,
     "bbox": [
       248,
-      710,
+      535,
       391,
-      724
+      548
     ],
     "latex": "K(\\ell(\\beta)-N\\phi(\\beta))+h(\\beta)\\ge0,",
     "note": "Lemma 10.65, part (d). Equality is the conjunction stated at the top of page 816."
   },
   {
-    "page": 969,
-    "tag": "398",
+    "page": 1038,
+    "tag": "402",
     "bbox": [
       187,
-      296,
-      541,
-      309
+      230,
+      542,
+      243
     ],
     "latex": "\\bigl(\\operatorname{Row0b}(\\operatorname{IsRecT}),\\quad\\operatorname{RecTExists},\\quad\\operatorname{Row0b}(\\operatorname{IsRecT})\\bigr).",
     "note": "The first and third fields have identical mathematical types and both receive h."
   },
   {
-    "page": 970,
+    "page": 1039,
     "bbox": [
-      198,
-      456,
+      113,
+      128,
+      499,
+      177.5
+    ],
+    "latex": "\\begin{aligned}\n&\\mathtt{LinkedAt}\\Bigl(\\mathcal P_0(c_{\\mathrm{dep}}),\\ (Q,L)\\mapsto\\mathtt{SlotNormCondition}\\ Q\\ L\\\\\n&\\qquad\\bigl(C\\mapsto\\mathtt{Closed}\\ C\\ (\\lambda Fm\\ \\_\\mapsto\\mathtt{BoundAtTwoThreeFamilyFonAlt}\\ Fm)\\bigr)\\Bigr)\n\\end{aligned}",
+    "note": "New linked-closure premise of Proposition 17.4. Fm is the Lean binder printed here."
+  },
+  {
+    "page": 1039,
+    "bbox": [
+      197,
+      523,
       415,
-      471
+      538
     ],
     "latex": "c_{\\mathrm{dep}}:=\\max(CF_0,CF_1),\\qquad A:=\\operatorname{GridA}(c_{\\mathrm{dep}}),",
     "note": "Use the same dependence scale for the evaluation grid and functional condition."
   },
   {
-    "page": 970,
+    "page": 1040,
     "bbox": [
-      72,
-      699,
-      642,
-      723
+      120,
+      137,
+      492,
+      186
     ],
-    "latex": "\\mathcal P_A:=\\operatorname{parametersOfExtension}\\bigl(\\mathtt{extensionWithAtProperty}\\ h_L\\ (\\mathtt{extensionWithOrigin}\\ h_L\\ c_{\\mathrm{dep}})\\ A,\\ \\mathtt{SExt.none},\\ \\mathtt{geoCl}\\ \\mathtt{anyGeometry}\\bigr).",
-    "note": "The right edge overflows the PDF page. The full token and closing marks are present in its encoded glyphs."
+    "latex": "\\begin{aligned}\nN_{\\mathrm{list}}&:=\\mathtt{extensionWithList}\\ h_L\\ c_{\\mathrm{dep}}=\\mathtt{extensionWithLaw}\\ h_L\\times\\mathtt{PLift}(\\mathtt{ListPin}\\ \\ldots),\\\\\nN_{\\mathrm{orig}}&:=\\mathtt{extensionWithOrigin}\\ h_L\\ c_{\\mathrm{dep}}=N_{\\mathrm{list}}\\times\\mathtt{PLift}(\\mathtt{OriginData}\\ h_L\\ c_{\\mathrm{dep}}\\ \\ldots),\\\\\nN_A&:=\\mathtt{extensionWithAtProperty}\\ h_L\\ N_{\\mathrm{orig}}\\ A=N_{\\mathrm{orig}}\\times\\mathtt{PLift}(A\\ \\ldots),\n\\end{aligned}",
+    "note": "New V2 norm-choice extensions. The ellipses are printed in the published display."
+  },
+  {
+    "page": 1040,
+    "bbox": [
+      152,
+      213,
+      460,
+      237
+    ],
+    "latex": "\\mathcal P_A:=\\operatorname{parametersOfExtension}\\bigl(N_A,\\ \\mathtt{SExt.none},\\ \\mathtt{geoCl}\\ \\mathtt{anyGeometry}\\bigr).",
+    "note": "Version 2 gives a named argument N_A from the three-step product tower; the full expression fits printed bounds."
   }
 ]

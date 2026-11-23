@@ -1,43 +1,39 @@
-# Riemann Hypothesis reading edition verification
+# Riemann Hypothesis Version 2 website update
 
-**Status: provisional website checkpoint.** This update is packaged for local review. The complete, checked mathematical transcription remains open.
+Version 2 is the primary reading edition at `/articles/riemann-hypothesis` and citation at `/papers/riemann-hypothesis`. The site identifies the repaired referee edition, retains a separate Frozen Version 1 archive link and PDF, and directs readers to the final assembly and the expanded literature-input audit. Author credit and the reported limits on Lean and print-source verification follow the manuscript. [Source provenance](source-provenance.md)
 
-## Site changes
+## Changes
 
-- The reader at `/articles/riemann-hypothesis` spans the title, abstract, contents, 18 numbered sections, and bibliography. The manuscript outline and additional result boundaries divide the reader into 154 permanent routes.
-- An independent publication record at `/papers/riemann-hypothesis` gives the verified Zenodo DOI and credits Jeremy Rodgers for the reconstruction and Levent Alpöge and Anthropic’s Claude for the underlying argument.
-- The homepage, article and paper indexes, sitemap, feed, research graph, and `llms.txt` link to the work. The reader has full-text search, a chapter manifest, a Markdown transcript, and the exact PDF.
-- The HTML pages contain the transcript and proof links before any client JavaScript runs. Checked displays include semantic MathML and selectable LaTeX. Provisional notation is labeled, and vector panels show the source shapes of display and compound inline mathematics.
+- Rebuilt the reader from all 1,061 pages of the Version 2 PDF. The same 154 Version 1 chapter URLs remain available and Section 18.1 has a new route. The audit compares the edition changes by section, mathematical result, and native PDF destination. [Edition comparison](version-comparison.md)
+- Rebuilt the sitemap, discovery metadata, chapter manifest, searchable text and Markdown transcript against Version 2. Kept the proof order, numbering and bibliography. The coverage ledger records source page, chapter, anchor, bounding box and transcription status. [Coverage ledger](coverage.json)
+- Preserved visible mathematics and table layouts with source vectors. Selectable prose, confirmed LaTeX and provisional notation remain available beside the printed notation. The printed-source disclosures provide a full page view directly inside the reader. Source vectors preserve notation whose transcription is provisional.
+- Included all six tables. Counts by table are 27 fields, seven inputs, 24 grouped rows for 28 fields, 14 frontier branches, 60 fields, and 53 fields. Table 6 retains all 20 overlap mappings. [Targeted notation and table audit](targeted-audit.md)
 
-## What the checks establish
+## Source identity
 
-The controlling PDF has 980 pages and SHA-256 `bae1f777817c69c9a3ca7eac08543538547315c640a31ff24d13ac02666c3fb3`. The PDF shipped in this checkpoint has the same checksum. The [provenance record](source-provenance.md) records the Zenodo and DataCite verification and the search for the matching editable source.
+The active PDF SHA-256 is `dbb02e1656b98611c49380f6f4b3af07b45e0022de5525d43d70b3aaf210a0e8`. The frozen Version 1 PDF SHA-256 is `bae1f777817c69c9a3ca7eac08543538547315c640a31ff24d13ac02666c3fb3`. The versions are identified separately in the manifest and downloads.
 
-The [targeted audit](targeted-audit.md) documents the review of the endpoint conventions, Propositions 7.102 and 7.114, Lemma 10.65, Propositions 17.3 and 17.4, and Theorem 17.5. The [checked LaTeX overlays](checked-math.json) apply to specific displays. The [Section 2 fixture](section-2-transcription.md) is a separate comparison record.
+## Verification
 
-[Coverage](coverage.json) enumerates every PDF page, the generated block and reading anchor, source bounding boxes, and the exact blocks and inline runs still needing notation review. Per-block comparison tests verify that the generated Markdown and production reader carry the same conversion. That validates the delivery pipeline. Faithfulness of each proposed transcription must still be checked against the source, including attachment of subscripts, proof paragraph joins, wrapped Lean identifiers, and the table transcription.
+The verification covers preservation and display of the manuscript, its links and its edition metadata. It does not independently verify the mathematical argument or run Lean.
 
-| Coverage measure | Checkpoint result |
+The source, TypeScript and security-header unit checks passed. These receipts reconcile the delivered reading edition.
+
+| Check | Result |
 | --- | ---: |
-| PDF pages represented | 980 |
-| Reading divisions | 154 |
-| Mapped manuscript and Markdown blocks | 15,251 |
-| Native PDF destinations | 3,532 |
-| Native PDF links preserved | 3,864 |
-| Search passages | 4,980 |
-| Checked LaTeX displays | 18 |
-| Display blocks awaiting checked transcription | 3,434 |
-| Compound inline runs awaiting checked transcription | 38,941 |
-| Table panels awaiting transcription review | 3 |
+| Source pages and chapter routes | 1,061 pages across 155 routes |
+| Source spans and mapped Markdown blocks | 580,253 spans in 16,149 blocks |
+| Native PDF destinations | 3,755 |
+| Native PDF link annotations represented | 4,666 |
+| Printed-page vector primitives compared | 3,115,233 |
+| Search index passages, including individual table rows | 5,648, including 185 table rows |
+| Checked LaTeX overlays | 20 |
+| Security-header unit checks | 22 passed |
 
-The four unidentified glyph occurrences are CMEX10 brace tips in PDF page 547, block `p-0547-b-07`, in Section 8.15. The embedded vector retains the original shapes. The notation remains provisional on 971 source pages.
+The copied text is provisional for 3,627 display blocks, 82,332 inline runs and 17 table panels. Printed notation is present in the associated vectors. The four unresolved text glyphs are underbrace components in Section 8.15, PDF page 581, block `p-0581-b-07`. The printed vector shows the brace, and the targeted audit gives a checked transcription for that expression. [Targeted audit](targeted-audit.md)
 
-## Browser and release status
+The full Next.js 16.4.5 production build passed. Production verification matched all 155 chapter bodies and the versioned manifest. The discovery check passed for the reader, citation page, chapter routes, sitemap, Atom feed, research graph and machine-readable reading links. The built content security policy was verified on 1,341 HTML routes. The build used Node 24 with a 3,584 MB JavaScript heap and two build threads in the verification environment.
 
-The available terminal Chromium fails at startup because the environment denies its process socket. The cloud browser could not connect to the local Next server. Clipboard, keyboard interaction, and mobile layout therefore await the packaged browser smoke test in an environment with browser access. HTTP and build output checks cover delivery and static indexing.
+The real Chromium run passed on the final production build. It tested mobile page width, independently scrollable long inline mathematics and tables, focus and clipboard copying of the revised Section 17.4 formula, the Version 2 and Frozen Version 1 DOI labels, search navigation to Theorem 17.5 and Table 6 row 53, the visible proof without JavaScript, and visible vector and selectable table panels for all six tables on desktop. Browser screenshots were inspected locally during verification.
 
-The supplied Next.js 16.4.2 pin triggered a security build error. The package updates Next.js and its MDX integration to 16.4.5 within the same release series. The full-site production build and local HTTP discovery passed earlier with the baseline dependencies. The final full-site Webpack and Turbopack attempts on 16.4.5 were killed during compilation in this environment. A full rebuild and site-wide security header verification remain release checks for the patched package. [Next.js security release](https://nextjs.org/blog/november-2026-security-release)
-
-The updated full source tree passed TypeScript and the source coverage and PDF link checks. An isolated production build using the same reader code and 16.4.5 successfully prerendered all 154 divisions. HTTP verification matched each initial chapter body to its generated fragment, with the 18 verified MathML displays checked separately. The isolated test covered the reader and manifest. The earlier full-site discovery test covered the homepage, Articles, Papers, sitemap, feed, graph, and canonical URLs.
-
-The final editable manuscript, with its includes, macros and bibliography, would allow verified semantic conversion across the remaining passages. Keep the website checkpoint provisional until the exact notation, proof text and references compare successfully to the controlling PDF.
+The ZIP is prepared for review and public deployment remains a separate step.

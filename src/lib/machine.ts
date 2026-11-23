@@ -1,5 +1,5 @@
 import {liftEditions,liftChapters,yangMillsHub} from '@/lib/source-lift';
-import {paperIntegrations,spectralEditions,spectralHub,gravityEditions,gravityHub,gravityReleaseDate,firstOrderKernel,secondOrderDetection,sameBallTakeaway} from '@/config/paper-integrations';
+import {paperIntegrations,spectralEditions,spectralHub,gravityEditions,gravityHub,firstOrderKernel,secondOrderDetection,sameBallTakeaway} from '@/config/paper-integrations';
 import {sourcePapers,paperUrl,chapterUrl} from '@/lib/source-readout';
 import {integrationChapters} from '@/lib/paper-integrations';
 import {continuityNote, getContinuitySections} from '@/lib/continuity-note';
@@ -8,7 +8,8 @@ import { development, listDevelopmentDocuments } from '@/lib/development';
 import { agency, listAgencyDocuments } from '@/lib/agency';
 import { alignment, getAlignmentSections } from '@/lib/alignment';
 import { sealedLeaky, listSealedDocuments } from '@/lib/sealed-leaky';
-import { rhChapters, rhChapterUrl, rhPublication } from '@/lib/riemann-hypothesis';
+import { rhChapters, rhChapterUrl, rhFinalAssemblyUrl, rhLiteratureAuditUrl, rhPublication } from '@/lib/riemann-hypothesis';
+import { ads4Edition, newReadingEditions, readingChapterUrl } from '@/config/new-reading-editions';
 /**
  * MACHINE-READABLE ENDPOINT GENERATORS
  *
@@ -68,7 +69,11 @@ function atomTimestamp(value: string): string {
 const gravityNew = gravityEditions.filter(p => p.series === 'gravity-holography');
 const gravityEditionDates = new Map(gravityNew.map(p => [p.id, p.date]));
 const editionDate = (id: string, sourceReadout: boolean) => paperIntegrations.find(p=>p.id===id&&p.series==='source-lift')?.date ?? gravityEditionDates.get(id) ?? (sourceReadout ? '2026-11-05' : '2026-10-23');
-const rhListingRoutes = new Set(['/', '/articles', '/papers']);
+const publicationListingRoutes = new Set(['/', '/articles', '/papers', '/source-readout']);
+const readingReleaseDate = newReadingEditions.reduce((latest, edition) => {
+  const date = edition.publicationDate ?? edition.date;
+  return date > latest ? date : latest;
+}, rhPublication.date);
 
 export async function generateSitemap(baseUrl: string): Promise<string> {
   const canonicalBase = normalizeBaseUrl(baseUrl);
@@ -77,6 +82,13 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
   const articles = listArticles();
 
   const urls: Array<{ loc: string; lastmod?: string; priority: string }> = [
+    ...newReadingEditions.flatMap(edition => {
+      const lastmod = edition.publicationDate ?? edition.date;
+      return [
+        { loc: edition.route, lastmod, priority: '0.9' },
+        ...edition.chapters.map(chapter => ({ loc: readingChapterUrl(edition, chapter.slug), lastmod, priority: '0.8' })),
+      ];
+    }),
     { loc: rhPublication.route, lastmod: rhPublication.date, priority: '0.9' },
     ...rhChapters.map(chapter => ({
       loc: rhChapterUrl(chapter.slug),
@@ -87,7 +99,7 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     ...liftEditions.flatMap(p=>[{loc:p.url,lastmod:p.date,priority:'0.9'},...liftChapters(p.id).map(c=>({loc:p.url+'/'+c.slug,lastmod:p.date,priority:'0.8'}))]),
     {loc:'/source-readout/origins',lastmod:'2026-10-28',priority:'0.8'},
     {loc:spectralHub,lastmod:'2026-11-05',priority:'0.9'},
-    {loc:gravityHub,lastmod:gravityReleaseDate,priority:'0.9'},
+    {loc:gravityHub,lastmod:ads4Edition.publicationDate??ads4Edition.date,priority:'0.9'},
     ...sourcePapers().flatMap(p=>[{loc:paperUrl(p),lastmod:'2026-10-28',priority:'0.9'},...p.chapters.map(c=>({loc:chapterUrl(p,c),lastmod:'2026-10-28',priority:'0.8'}))]),
     ...paperIntegrations.map(p=>({loc:p.url,lastmod:editionDate(p.id,Boolean(p.programme)),priority:'0.9'})),
     ...integrationChapters.map(c=>({loc:c.url,lastmod:editionDate(c.paperId,c.url.startsWith('/source-readout/')),priority:'0.8'})),
@@ -105,8 +117,8 @@ export async function generateSitemap(baseUrl: string): Promise<string> {
     { loc: '/atlas/quantum-measurement', lastmod: quantumResearchDate, priority: '0.8' },
     ...navigation.map((n) => ({
       loc: n.href,
-      ...(rhListingRoutes.has(n.href)
-        ? { lastmod: rhPublication.date }
+      ...(publicationListingRoutes.has(n.href)
+        ? { lastmod: readingReleaseDate }
         : ['/framework', '/consciousness', '/about'].includes(n.href) ? { lastmod: editorialUpdateDate } : {}),
       priority:
         n.href === '/'
@@ -165,6 +177,12 @@ export async function generateFeed(baseUrl: string): Promise<string> {
   const canonical = await getCanonicalPapers();
 
   const entries = [
+    ...newReadingEditions.map(edition => ({
+      title: edition.title,
+      url: canonicalBase + edition.route,
+      date: edition.publicationDate ?? edition.date,
+      summary: `${edition.description} DOI ${edition.doi}.`,
+    })),
     {
       title: rhPublication.searchTitle,
       url: canonicalBase + rhPublication.route,
@@ -174,7 +192,7 @@ export async function generateFeed(baseUrl: string): Promise<string> {
     {title:'Recovering Yang–Mills through Shadow Theory',url:canonicalBase+yangMillsHub,date:'2026-11-12',summary:'The complete source–readout reconstruction and its standalone mathematical companion.'},
     ...[...liftEditions,...paperIntegrations.filter(p=>p.series==='source-lift')].map(p=>({title:p.title,url:canonicalBase+p.url,date:p.date,summary:p.description})),
     ...liftEditions.flatMap(p=>liftChapters(p.id).map(c=>({title:c.title,url:canonicalBase+p.url+'/'+c.slug,date:p.date,summary:p.title}))),
-    {title:'Gravity and holography',url:`${canonicalBase}${gravityHub}`,date:gravityReleaseDate,summary:sameBallTakeaway+' Five complete editions trace connections, horizons, and boundary balls.'},
+    {title:'Gravity and holography',url:`${canonicalBase}${gravityHub}`,date:ads4Edition.publicationDate??ads4Edition.date,summary:sameBallTakeaway+' Six reading editions trace connections, horizons, boundary-ball detection, and AdS4 reconstruction.'},
     ...gravityNew.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:p.date,summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
     {title:'CSCF and spectral carriers',url:`${canonicalBase}${spectralHub}`,date:'2026-11-05',summary:'Seven complete web editions connect the common spectral carrier to profile generation, reciprocal memory, forcing, bistability and slow passage.'},
     ...spectralEditions.map(p=>({title:p.title,url:`${canonicalBase}${p.url}`,date:'2026-11-05',summary:`${p.description} Complete web edition. DOI ${p.doi}.`})),
@@ -284,9 +302,19 @@ export async function generateLlmsTxt(): Promise<string> {
     '',
     site.description,
     '',
+    '## AdS4 gravitational reconstruction and Haar unitary derivative moments',
+    ...newReadingEditions.flatMap(edition => [
+      `- [${edition.title}](${baseUrl}${edition.route}): ${edition.description}`,
+      `  - [Citation record](${baseUrl}${edition.citationRoute}) · [DOI](${edition.doiUrl}) · [Original PDF](${baseUrl}${edition.pdfUrl}) · [Markdown transcription](${baseUrl}${edition.markdownUrl}) · [Chapter inventory](${baseUrl}${edition.manifestUrl}) · [Full-text search](${baseUrl}${edition.searchUrl})`,
+      ...(edition.supplements ?? []).map(asset => `  - [${asset.title}](${baseUrl}${asset.href})`),
+      ...edition.chapters.map(chapter => `  - [${chapter.title}](${baseUrl}${readingChapterUrl(edition, chapter.slug)})`),
+    ]),
+    '',
     '## Independent mathematics: The Riemann Hypothesis in Lean',
-    `- [${rhPublication.title}](${baseUrl}${rhPublication.route}): Jeremy Rodgers reconstructs the supplied Lean argument credited to Levent Alpöge and Claude. The mathematical web transcription is provisional.`,
-    `- [Citation and provenance](${baseUrl}${rhPublication.citationRoute}) · [DOI](${rhPublication.doiUrl}) · [Original PDF](${baseUrl}${rhPublication.pdfUrl}) · [Markdown transcription](${baseUrl}${rhPublication.markdownUrl}) · [Chapter inventory](${baseUrl}${rhPublication.manifestUrl}) · [Full-text search](${baseUrl}${rhPublication.searchUrl})`,
+    `- [${rhPublication.title}, Version ${rhPublication.version}](${baseUrl}${rhPublication.route}): Jeremy Rodgers reconstructs the supplied Lean argument credited to Levent Alpöge and Claude. The mathematical web transcription is provisional.`,
+    `- [Citation and provenance](${baseUrl}${rhPublication.citationRoute}) · [Version 2 DOI](${rhPublication.doiUrl}) · [Version 2 PDF](${baseUrl}${rhPublication.pdfUrl}) · [Markdown transcription](${baseUrl}${rhPublication.markdownUrl}) · [Chapter inventory](${baseUrl}${rhPublication.manifestUrl}) · [Full-text search](${baseUrl}${rhPublication.searchUrl})`,
+    `- [Final assembly, Section 17.4](${baseUrl}${rhFinalAssemblyUrl}) · [Field-by-field literature input audit, Section 18.1](${baseUrl}${rhLiteratureAuditUrl})`,
+    `- Frozen Version 1: [DOI](${rhPublication.previousVersion.doiUrl}) · [PDF](${baseUrl}${rhPublication.previousVersion.pdfUrl})`,
     ...rhChapters.map(chapter => `  - [${chapter.title}](${baseUrl}${rhChapterUrl(chapter.slug)}) (PDF pp. ${chapter.firstPage}–${chapter.lastPage})`),
     '',
     '## Source and readout: complete mathematical editions',
@@ -299,7 +327,7 @@ export async function generateLlmsTxt(): Promise<string> {
     '## Complete paper articles',
     `- [Yang–Mills through Shadow Theory](${baseUrl}${yangMillsHub}): two independently complete reading editions under one publication record.`,
     ...liftEditions.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [manifest](${baseUrl}${p.manifestUrl})`,...liftChapters(p.id).map(c=>`  - [${c.title}](${baseUrl}${p.url}/${c.slug})`)]),
-    `- [Gravity and holography: five-paper reading path](${baseUrl}${gravityHub}): ${sameBallTakeaway}`,
+    `- [Gravity and holography: six-paper reading path](${baseUrl}${gravityHub}): ${sameBallTakeaway}`,
     `  - [First-order fixed-slice kernel](${baseUrl}${firstOrderKernel}) · [Second-order canonical-energy detection](${baseUrl}${secondOrderDetection})`,
     `- [CSCF and spectral carriers](${baseUrl}${spectralHub}): the shared operator, spectral profile generation, reciprocal memory, forcing, bistability and prepared hysteresis.`,
     ...paperIntegrations.flatMap(p=>[`- [${p.title}](${baseUrl}${p.url}): ${p.description} DOI https://doi.org/${p.doi}; [original PDF](${baseUrl}${p.pdfUrl}); [complete Markdown](${baseUrl}${p.markdownUrl}); [inventory](${baseUrl}${p.manifestUrl})${p.supplementUrl?`; [${p.supplementDescription??'verification archive'}](${p.supplementUrl.startsWith('/')?baseUrl:''}${p.supplementUrl})`:''}`,...integrationChapters.filter(c=>c.paperId===p.id).map(c=>`  - [${c.title}](${baseUrl}${c.url})`)]),
@@ -523,6 +551,14 @@ export async function generateGraph() {
   const publicProblemSlugs = new Set(problems.map((problem) => problem.slug));
 
   const nodes = [
+    ...newReadingEditions.flatMap(edition => edition.chapters.map(chapter => ({
+      id: `article:${edition.id}:${chapter.slug}`,
+      type: 'manuscript-reading-chapter',
+      title: chapter.title,
+      description: chapter.description,
+      url: baseUrl + readingChapterUrl(edition, chapter.slug),
+      pageRange: [chapter.firstPage, chapter.lastPage],
+    }))),
     ...rhChapters.map(chapter => ({
       id: `article:riemann-hypothesis:${chapter.slug}`,
       type: 'manuscript-reading-chapter',
@@ -567,20 +603,39 @@ export async function generateGraph() {
       target: p.target.trim(),
       url: `${baseUrl}/problems/${p.slug}`,
     })),
-    ...articles.map((a) => ({
-      id: `article:${a.slug}`,
-      type: 'article',
-      title: a.title,
-      date: a.date ?? null,
-      tags: a.tags ?? [],
-      url: `${baseUrl}${articleUrl(a)}`,
-      ...(a.href === rhPublication.route ? {
-        doi: rhPublication.doi,
-        manifest: baseUrl + rhPublication.manifestUrl,
-        search: baseUrl + rhPublication.searchUrl,
-        transcriptionStatus: 'provisional',
-      } : {}),
-    })),
+    ...articles.map((a) => {
+      const edition = newReadingEditions.find(item => item.route === a.href);
+      return {
+        id: `article:${a.slug}`,
+        type: 'article',
+        title: a.title,
+        date: a.date ?? null,
+        tags: a.tags ?? [],
+        url: `${baseUrl}${articleUrl(a)}`,
+        ...(edition ? {
+          doi: edition.doi,
+          manifest: baseUrl + edition.manifestUrl,
+          search: baseUrl + edition.searchUrl,
+          markdown: baseUrl + edition.markdownUrl,
+          pdf: baseUrl + edition.pdfUrl,
+          ...(edition.supplements ? { supplements: edition.supplements.map(asset => ({
+            title: asset.title, url: baseUrl + asset.href,
+          })) } : {}),
+        } : {}),
+        ...(a.href === rhPublication.route ? {
+          doi: rhPublication.doi,
+          version: rhPublication.version,
+          versionDate: rhPublication.versionDate,
+          previousVersion: {
+            doi: rhPublication.previousVersion.doi,
+            pdf: baseUrl + rhPublication.previousVersion.pdfUrl,
+          },
+          manifest: baseUrl + rhPublication.manifestUrl,
+          search: baseUrl + rhPublication.searchUrl,
+          transcriptionStatus: 'provisional',
+        } : {}),
+      };
+    }),
     {id:'consciousness:continuity-note',type:'philosophical-research-note',title:continuityNote.title,url:`${baseUrl}${continuityNote.url}`,doi:continuityNote.doi,date:continuityNote.date,version:continuityNote.version,manifest:`${baseUrl}${continuityNote.manifestUrl}`,parent:`${baseUrl}${continuityNote.parentUrl}`,markdown:`${baseUrl}${continuityNote.markdownUrl}`},
     ...getContinuitySections().map(s=>({id:`consciousness:continuity-note:${s.id}`,type:'research-note-section',title:s.title,url:`${baseUrl}${continuityNote.url}#${s.id}`})),
     {id:'consciousness:relational-awareness',type:'complete-web-edition',title:relationalAwareness.fullTitle,url:`${baseUrl}${relationalAwareness.url}`,doi:relationalAwareness.doi,date:relationalAwareness.date,version:relationalAwareness.version,manifest:`${baseUrl}${relationalAwareness.manifestUrl}`,completeText:`${baseUrl}${relationalAwareness.readUrl}`,markdown:`${baseUrl}${relationalAwareness.markdownUrl}`},
@@ -745,6 +800,22 @@ export async function generateGraph() {
     relation: string;
     [key: string]: unknown;
   }> = [];
+  for (const edition of newReadingEditions) {
+    const articleId = `article:${edition.id}`;
+    edges.push({ from: articleId, to: `paper:${edition.id}`, relation: 'publication-record' });
+    for (const [index, chapter] of edition.chapters.entries()) {
+      const chapterId = `${articleId}:${chapter.slug}`;
+      edges.push({ from: articleId, to: chapterId, relation: 'contains-reading-chapter' });
+      const next = edition.chapters[index + 1];
+      if (next) edges.push({ from: chapterId, to: `${articleId}:${next.slug}`, relation: 'reading-order' });
+    }
+  }
+  const ads4ArticleId = `article:${ads4Edition.id}`;
+  edges.push(
+    { from: 'series:gravity-and-holography', to: ads4ArticleId, relation: 'contains-reading-edition' },
+    { from: 'integrated:boundary-ball-readouts', to: ads4ArticleId, relation: 'related-gravitational-readout' },
+    { from: 'integrated:second-order-boundary-balls', to: ads4ArticleId, relation: 'related-gravitational-readout' },
+  );
   edges.push({ from: 'article:riemann-hypothesis', to: 'paper:riemann-hypothesis', relation: 'publication-record' });
   for (const [index, chapter] of rhChapters.entries()) {
     const chapterId = `article:riemann-hypothesis:${chapter.slug}`;
